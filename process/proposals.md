@@ -66,7 +66,7 @@ Historical events rarely appear in isolation: a seizure may become a commercial 
 
 The complete earlier report, **How newspaper attention rises, persists, and returns**, is now available in [`reports/`](https://github.com/Major-Studio-1/Project-02-newspapers/tree/85ba363414d55edd68c96fef4b9ee944b99acef1/reports). It covers the full dataset audit, exploratory topic trends, all 24 candidate topics, supporting newspaper passages, and methods and limitations.
 
-**[Read the complete report on GitHub](https://github.com/Major-Studio-1/Project-02-newspapers/blob/85ba363414d55edd68c96fef4b9ee944b99acef1/reports/attention_pilot_report.md)** · [Original standalone HTML](https://haolong.github.io/newspaper-pulsar/notes/attention/attention_pilot_report.html) · [Report files and download instructions](https://github.com/Major-Studio-1/Project-02-newspapers/blob/85ba363414d55edd68c96fef4b9ee944b99acef1/reports/README.md)
+**[Read the complete report on GitHub](https://github.com/Major-Studio-1/Project-02-newspapers/blob/85ba363414d55edd68c96fef4b9ee944b99acef1/reports/attention_pilot_report.md)** · [Original standalone HTML](https://major-studio-1.github.io/Project-02-newspaper-pulsar/notes/attention/attention_pilot_report.html) · [Report files and download instructions](https://github.com/Major-Studio-1/Project-02-newspapers/blob/85ba363414d55edd68c96fef4b9ee944b99acef1/reports/README.md)
 
 ## Data, provenance, and limits
 
