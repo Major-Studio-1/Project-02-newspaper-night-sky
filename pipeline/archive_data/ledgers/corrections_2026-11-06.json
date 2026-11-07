@@ -1,0 +1,23 @@
+{
+  "ledger_id": "ledger:corrections-2026-11-06",
+  "ledger_version": 1,
+  "base_release": "0.2.0",
+  "target_release": "0.2.1",
+  "recorded_date": "2026-11-06",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "corrections": [
+    {
+      "object_id": "obs:expansion-1797:E02",
+      "annotation_type": "observation_review",
+      "supersedes": "review:expansion-1797:E02:1",
+      "new_annotation_id": "review:expansion-1797:E02:2",
+      "value": {
+        "summary": "Captain Dunbar of the brig Peace and Plenty reports being boarded and plundered by a French privateer from Guadeloupe.",
+        "note": "The scan prints Dunbar's full quoted statement (about 350 words) after this introduction. The RevX transcription drops it; the CA transcription keeps it. The excerpt is limited to the RevX text, so read the statement on the scan.",
+        "scan_findings": ["RevX omits the quoted statement that the scan prints in full.", "Scan reads 'Guadaloupe', 'Sisson', '50,000 dollars', 'inhumanely flogged'."],
+        "independent_review": false
+      },
+      "reason": "The length of the omitted statement was recounted: 366 words in this page's CA transcription and 347 in the New Hampshire Gazette version (RevX). The first note said about 280 words."
+    }
+  ]
+}

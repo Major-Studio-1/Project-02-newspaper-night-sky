@@ -1,0 +1,189 @@
+{
+  "ledger_id": "ledger:expansion-1797",
+  "ledger_version": 1,
+  "target_release": "0.2.0",
+  "base_release": "0.1.0",
+  "recorded_date": "2026-11-06",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "scope": "All 1,587 pages dated 1797 in the pinned dataset revision, both OCR fields. Codex ran the targeted retrieval (work/search_pilot_1797.py) on 2026-11-05 and found 54 candidate pages. This ledger reviews every candidate and adds two supplementary phrase sweeps over the same pages.",
+  "retrieval": {
+    "primary": "outputs/pilot_expansion_2026-11-05/search_candidates.json",
+    "supplementary_patterns": {
+      "two_sisters": "two\\s+si[sf]ters",
+      "peace_plenty": "peace\\s+(?:and|&)\\s+plenty",
+      "dunbar_privateer": "dunbar.{0,300}privateer|privateer.{0,300}dunbar",
+      "pelham": "\\bpelham\\b",
+      "dublin_castle": "dublin.{0,2}ca[sf]tle",
+      "dalrymple": "dalrymple",
+      "ville_orient": "ville\\s*de\\s*l.?orient",
+      "late_arrivals": "intelligence\\s+brought\\s+by\\s+the\\s+late\\s+arrivals",
+      "three_divisions": "three\\s+divi[sf]ions",
+      "de_galles": "de\\s*galles",
+      "curse_country": "cur[sf]e\\s+on\\s+(?:my|his)\\s+country",
+      "flogged": "inhuman\\w*\\s+flog",
+      "burnt_coal": "burnt\\s+to\\s+a\\s+coal",
+      "briggs_cape": "briggs.{0,40}cape.?francois",
+      "favorite_taylor": "favou?rite.{0,80}taylor",
+      "late_arrivals2": "compar\\w+\\s+the\\s+various\\s+accounts"
+    },
+    "recall_note": "Targeted retrieval, not exhaustive recall. Reprints whose OCR is badly damaged in both fields can still be missed."
+  },
+  "scan_check": {
+    "method": "Pinned scan PDFs downloaded from the dataset revision; each passage located with the PDF text layer and cropped (work/scan_expansion_1797.py). Every crop was read against the RevX excerpt.",
+    "crop_manifest": "outputs/pilot_expansion_2026-11-05/evidence/crop_manifest.json"
+  },
+  "observations": [
+    {
+      "id": "E01",
+      "page_key": "sn84038410|1797-03-30|1|3",
+      "excerpt_start": "Of the intelligence brought by the late arrivals",
+      "excerpt_end": "to give an account of his expedition.",
+      "crops": ["E01.jpg"],
+      "roles": ["later_related_account"],
+      "groups": ["fleet-return-account", "boyd-bantry-coverage"],
+      "summary": "Two weeks after printing Boyd's capture prediction, the Patowmac Guardian prints a summary saying the fleet dispersed and returned to Brest.",
+      "note": "The same summary the Kentucky Gazette printed on 19 April (H007), here 20 days earlier under a Martinsburg dateline. Neither paper names a source, so the copying route is unknown. The wording differs: Kentucky adds 'We have collected under this head…' and 'Notwithstanding the above failure'; this version adds the Fraternité's return, the 'great alarm' sentences and a Paris date about Hoche.",
+      "scan_findings": ["Passage present in the scan as an editorial summary.", "The low-resolution scan appears to read 'January 22' where RevX has '29'."]
+    },
+    {
+      "id": "E02",
+      "page_key": "sn83025881|1797-10-13|1|3",
+      "excerpt_start": "PIRACY AND CRUELTY.",
+      "excerpt_end": "is thus recorded by him.",
+      "crops": ["E02.jpg"],
+      "roles": ["report"],
+      "groups": ["peace-and-plenty-report", "peace-and-plenty-boarding"],
+      "summary": "Captain Dunbar of the brig Peace and Plenty reports being boarded and plundered by a French privateer from Guadeloupe.",
+      "note": "The scan prints Dunbar's full quoted statement (about 280 words) after this introduction. The RevX transcription drops it; the CA transcription keeps it. The excerpt is limited to the RevX text, so read the statement on the scan.",
+      "scan_findings": ["RevX omits the quoted statement that the scan prints in full.", "Scan reads 'Guadaloupe', 'Sisson', '50,000 dollars', 'inhumanely flogged'."]
+    },
+    {
+      "id": "E03",
+      "page_key": "sn83025881|1797-10-16|1|3",
+      "excerpt_start": "BOSTON, OCT. 11. Fraternity.",
+      "excerpt_end": "that could not be made a prize of.",
+      "crops": ["E03.jpg"],
+      "roles": ["condensed_report"],
+      "groups": ["peace-and-plenty-boarding"],
+      "summary": "Three days later the same paper prints a shorter retelling of Dunbar's account under a Boston, Oct. 11 dateline, headed 'Fraternity'.",
+      "note": "A condensed paraphrase rather than the quoted statement, so it belongs to the boarding group but not the core report group.",
+      "scan_findings": ["Scan reads 'Sciffon' (Sisson) where RevX has 'Scituate'.", "Heading 'Fraternity.—' is printed in italics."]
+    },
+    {
+      "id": "E04",
+      "page_key": "sn83025588|1797-10-17|1|2",
+      "excerpt_start": "Same day, brig Peace and Plenty, Dunbar",
+      "excerpt_end": "rob every American vessel he could not make a prize of.",
+      "crops": ["E04-1.jpg", "E04-2.jpg"],
+      "roles": ["report"],
+      "groups": ["peace-and-plenty-report", "peace-and-plenty-boarding"],
+      "summary": "The New Hampshire Gazette prints the full report with Dunbar's quoted statement.",
+      "note": "Corresponds closely to the Gazette of the United States text of 13 October as printed on the scan.",
+      "scan_findings": ["Scan reads 'long. 65, 35'; RevX's '65, 55' is a transcription error."]
+    },
+    {
+      "id": "E05",
+      "page_key": "sn84023150|1797-10-23|1|3",
+      "excerpt_start": "Piracy and Cruelty. Arrived, brig Peace and Plenty",
+      "excerpt_end": "he could not make a prize of.\"",
+      "crops": ["E05-1.jpg", "E05-2.jpg"],
+      "roles": ["report"],
+      "groups": ["peace-and-plenty-report", "peace-and-plenty-boarding"],
+      "summary": "The Eagle prints the full report under a Boston, Oct. 8 dateline.",
+      "note": "'St. Caoix' and '24 day' are printed that way in the paper. The Eagle prints a Boston execution report directly after it; that story also appears in the New Hampshire Gazette of 17 October.",
+      "scan_findings": ["Scan reads 'inhumanly flogged' (RevX 'fluted'), 'Haynes' (RevX 'Hayoc'), 'Barns, of Marblehead' (RevX 'Marsthead').", "The cargo value is faint; it appears to read 50 000 where RevX has 30,000."]
+    },
+    {
+      "id": "E06",
+      "page_key": "sn83025588|1797-11-22|1|3",
+      "excerpt_start": "Dreadful SHIPWRECK!!",
+      "excerpt_end": "he thinks the wreck hauled him overboard.",
+      "crops": ["E06-1.jpg", "E06-2.jpg"],
+      "roles": ["report"],
+      "groups": ["two-sisters-wreck"],
+      "summary": "The New Hampshire Gazette reprints a Bantry Bay hand-bill dated 12 August 1797 on the wreck of the Rhode Island ship Two Sisters.",
+      "note": "Hand-bill account: lightning struck the ship, one man survived, seven men were burnt and the mate died. The captain is missing.",
+      "scan_findings": ["Passage present in the scan as printed, in italics, with the hand-bill heading."]
+    },
+    {
+      "id": "E07",
+      "page_key": "sn83025881|1797-11-28|1|3",
+      "excerpt_start": "A melancholy narrative appears",
+      "excerpt_end": "masts, spars, sails, &c. worth nothing.",
+      "crops": ["E07.jpg"],
+      "roles": ["attributed_summary"],
+      "groups": ["two-sisters-wreck"],
+      "summary": "The Gazette of the United States summarizes the same wreck, citing the Irish papers, and adds the cargo, captain and owner.",
+      "note": "Different wording from the hand-bill, but the details correspond: six men on the main topsail yard, seven men burnt and the mate dead.",
+      "scan_findings": ["Scan reads 'appears in the Irish papers' where RevX has 'in the lists'.", "Scan reads 'canted overboard' (RevX 'wanted'), 'fore topmast' (RevX 'fore topsail'), 'Mozely' (RevX 'Mosely')."]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "peace-and-plenty-boarding",
+      "kind": "context_group",
+      "label": "Peace and Plenty boarding",
+      "definition": "Printed accounts of the brig Peace and Plenty (Capt. Dunbar) being boarded and plundered by a French privateer, October 1797. A different vessel from the brig Peace (Capt. Allen). The accounts are not independently verified.",
+      "admission_rule": "Reviewed 1797 passages about Dunbar's Peace and Plenty boarding, checked against the scan."
+    },
+    {
+      "id": "peace-and-plenty-report",
+      "kind": "message_group",
+      "label": "Peace and Plenty report",
+      "definition": "Corresponding versions of the 'Piracy and Cruelty' marine report with Dunbar's quoted statement. Excludes the condensed 16 October retelling.",
+      "admission_rule": "Reviewed 1797 passages whose scan prints the same report and quoted statement."
+    },
+    {
+      "id": "two-sisters-wreck",
+      "kind": "context_group",
+      "label": "Two Sisters wreck",
+      "definition": "Printed accounts of the Rhode Island ship Two Sisters found wrecked off Bantry Bay in August 1797: a reprinted hand-bill and a summary attributed to the Irish papers. Different wording; the wreck itself is not independently verified.",
+      "admission_rule": "Reviewed 1797 passages describing the Two Sisters wreck off Bantry Bay, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {"parent": "peace-and-plenty-boarding", "child": "peace-and-plenty-report"}
+  ],
+  "candidate_dispositions": [
+    {
+      "decision": "already_in_release",
+      "candidates": [8, 9, 13, 15, 18, 20, 26],
+      "reason": "Pages already in release 0.1.0 (H001, H002/R07, H006, H007, H012, X016, H013/R08)."
+    },
+    {
+      "decision": "admitted",
+      "candidates": [11, 39, 40, 41, 48, 49],
+      "reason": "Reviewed and checked against the scan; see observations E01, E02, E04, E05, E06 and E07."
+    },
+    {
+      "decision": "excluded",
+      "candidates": [0, 1, 2, 3, 4, 5, 7, 14, 16, 17, 22, 23, 24, 25, 27, 30, 31, 32, 33, 42, 43, 44, 45, 46, 47, 51, 52, 53],
+      "reason": "The Boyd pattern hit is not the Boyd fleet report: another person named Boyd (ship masters, a Portsmouth merchant, a Berkeley County candidate, a London banker) or OCR noise such as 'a bove'."
+    },
+    {
+      "decision": "not_admitted_distinct_account",
+      "candidates": [10, 12],
+      "reason": "A different attributed account of the Bantry expedition: Pelham's Dublin Castle letter of 29 Dec. 1796 (page 10), and Paris and Brest letters (page 12). Each is found on one page only in the 1797 corpus. The Patowmac Guardian's Ville de l'Orient capture account on page 11 is in the same situation. The Boyd/Bantry groups follow specific messages; an expedition-wide coverage group would need a broader search (Hoche, Brest, Ireland), not 'Bantry' alone."
+    },
+    {
+      "decision": "excluded",
+      "candidates": [29, 35, 38],
+      "reason": "A later mention of Bantry inside another story (United Irishmen papers, a Brest letter on a second descent, the Bandon plot), not a report of the expedition."
+    },
+    {
+      "decision": "lead_identity_unresolved",
+      "candidates": [28, 34, 36, 37],
+      "reason": "A brig named Peace in later 1797 shipping news: Peace, Allen, of Providence at Surinam on 11 June (28); the crew of the Peace of Providence taken on the way home from Surinam (34); Peace, Allen, of New York, from Martinique, carried into Porto Rico, printed twice (36, 37). It is unresolved whether any is the vessel seized at Cayenne, so none is admitted."
+    },
+    {
+      "decision": "excluded",
+      "candidates": [6, 19, 21, 50],
+      "reason": "Unrelated uses of 'peace', 'Allen' or 'Cayenne' (a Burke pamphlet advertisement, a congressional election, a House vote list, Barthélemy's banishment to Cayenne)."
+    }
+  ],
+  "supplementary_dispositions": [
+    {"page_key": "sn83025881|1797-10-16|1|3", "decision": "admitted", "reason": "Condensed Dunbar account; observation E03."},
+    {"page_key": "sn83025881|1797-12-01|1|3", "decision": "excluded", "reason": "'Wrecked, Two Sisters, Delano, from Liverpool for Boston' names a different master and voyage."},
+    {"page_key": "sn83025588|1797-10-17|1|2", "decision": "incidental_lead", "reason": "The Stephen Smith execution report (Boston, Oct. 13) also appears in The Eagle of 23 October. Outside the targeted topics; not reviewed for admission."}
+  ]
+}

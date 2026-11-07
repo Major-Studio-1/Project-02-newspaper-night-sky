@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "release_version": "0.5.2",
+  "newspapers": 8,
+  "curated_passages": 107,
+  "group_views": 33,
+  "stories_in_overview": 21,
+  "overview_categories": 3,
+  "years": 41,
+  "matched_families": 48127,
+  "year_files_mb": 112.9,
+  "telescope_stars": 48148,
+  "telescope_mb": 7.5,
+  "telescope_text_mb": 24.3,
+  "story_topic_lanes": 24,
+  "edges": 0,
+  "checks": [
+    "All displayed sources have scan assets and excerpts",
+    "All displayed publications join to observed date coverage",
+    "No duplicate observation within a group",
+    "Read-only release with verified input hashes",
+    "Matched families are labelled as not checked against scans",
+    "Every page carries the shared header and footer"
+  ],
+  "pages_sha256": {
+    "index.html": "19b8095c35b8238d2167555b16361dabe71f1b825c62d5ab4fda07e5f616605d",
+    "telescope.html": "071f296938d6b04f45641d3befaf4ed6ec41ba8227cfa184b2a474e719323841",
+    "pulses.html": "9251769ef6184188f0005f7b4e25c1323f0a159a501dc627d5e48b32a64c8520",
+    "method.html": "0eaadae65a9563fca9b01b49c3f58f0fcc5aa13fa29cb8d0ecb76c32a2e98d45",
+    "notes.html": "d7e7b5a4e1097994ca120d157ee654bda9b22dd8e2135bf658c15601fe27b128",
+    "site.css": "d2e07b5b9efa298ac5afddc6ac44c470a07ef334f9a3bbf9031d92ee5643f478"
+  }
+}

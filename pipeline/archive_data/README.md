@@ -1,0 +1,212 @@
+# Newspaper research data foundation
+
+This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
+
+## Changes in v0.5.2 (2026-11-07)
+
+v0.5.2 is v0.5.1 plus **automatic topics for stories**, made by `add_story_topics.py` from `work/story_topics_all.py`. Nothing else changes.
+
+- **How:** the project's frozen 24-topic model (`work/topic_model.joblib`, TF-IDF + NMF; its hash is in the run parameters) scores every printed excerpt. A story's topic weights are the sum over its printings, normalised. This covers every matched story and every reviewed group.
+- **`derived/story_topics.parquet`:** one row per story, with
+  - `story_id` and `kind` (matched / reviewed);
+  - `top_topic`, `top_share` and `second_topic`;
+  - `printings` and `printing_agreement` (the share of the story's printings whose own top topic is the story's);
+  - `no_signal` and `weights_json` (24 weights).
+
+  Run `run:story-topics-v1`, automatic.
+- **Check:** printings of the same story share its top topic 89% of the time across all stories with 2 or more printings. For stories with 3 or more printings (a 4,000-story sample) it is 76%. Chance would be about 7%.
+- **Limits:**
+  - Topic labels are the model's top words, not reviewed names. Three topics were unstable in the earlier sensitivity checks.
+  - Excerpts are up to 70 words, shorter than the 220-word passages the model was trained on.
+- **Metadata `story_topics`:** the topics, their top words, and a display order in which similar topics sit next to each other.
+
+## Changes in v0.5.1 (2026-11-07)
+
+v0.5.1 is v0.5.0 plus **automatic titles for the matched stories**, made by `add_reuse_titles.py` from `work/reuse_titles_all.py`. Nothing else changes.
+
+- **Why:** a matched story's shared wording often starts a few words into a sentence, so its old label (the first 12 shared words) began mid-sentence, for example "days from Liverpool. By the politeness of…".
+- **How:** for every printing, the script reads the transcription just before the shared wording:
+  - **Opening:** if the item's paragraph starts within 30 words, the title begins there: "The ship Dumfries, Captain Hancock, arrived at this port, in 25 days from Liverpool…".
+  - **Place:** a dateline place ("NEW-YORK, August 8.") is added in front only when 2 or more printings carry the same one.
+  - **Headings:** recorded but not shown, because they were too often section names or the signature of the item above.
+- **`derived/reuse_family_titles.parquet`:** one row per matched story with
+  - `title` and `title_source`;
+  - `dateline_place` and `dateline_place_support` (how many printings agree);
+  - `starts_at_item`.
+
+  Run `run:reuse-titles-v1`, automatic, not reviewed.
+- **Measured on a sample of 300 stories (3+ papers; 1776, 1797, 1808):** 294 titles start where the item starts, and 60 also get an agreed dateline place.
+- **All 48,127 matched stories:**
+  - 45,103 titles (94%) start where the item starts;
+  - 4,018 (8%) also show an agreed dateline place;
+  - 3,024 keep the shared words as their start, because the item began more than 30 words earlier or the text could not be located.
+
+## Changes in v0.5.0 (2026-11-06)
+
+v0.5.0 is v0.4.0 plus an **automatic text-reuse layer for all 41 years**, made by `add_reuse_layer.py`. Nothing reviewed changes, and the layer is kept apart from the reviewed tables.
+
+- **Reviewed vs. automatic:**
+  - *Reviewed* tables (`observations`, `groups`, `memberships`, `relations`): read, grouped by hand and checked against scans. Same as v0.4.0.
+  - *Automatic* tables (`derived/reuse_*.parquet`): passages that share long runs of wording across different newspapers. **Not read, not checked against scans.** Each row carries `run_id = run:reuse-all-v1`, and the `runs` table records the method with `independent_review = 0`.
+- **`derived/reuse_matches.parquet`:** every matched pair of page spans (broad profile: ≥60 corresponding words, ≥60% similarity), with `main` (80 / 70%) and `strict` (120 / 80%) flags. Spans are token offsets into the selected transcription of the pinned shard.
+- **`derived/reuse_families.parquet`:** matched stories. Main-profile matches whose spans overlap on a page are joined into one family. Fields: `family_id` (`R<first year>-<nnnn>`), first and last dates, newspaper and page counts, an opening-words `label`, `keywords_json`, and `long_running`. That flag marks families over 120 days or 40 pages, often serial documents or debates that were chained together.
+- **`derived/reuse_family_appearances.parquet`:** one row per printed appearance (page, date, LCCN, span, transcription and an excerpt of up to 70 words in the original spelling).
+- **Metadata:** `reuse_layer` holds the totals and the per-year run statistics. The code that made the layer is snapshotted in `sources/`.
+- **Limits:**
+  - A family can join neighbouring items printed together.
+  - One story can split in two when transcription damage breaks a match.
+  - Printings in damaged transcriptions are missed.
+  - Same-series reprints are not matched.
+  - A family is not a verified historical event.
+
+
+v0.4.0 is v0.3.0 plus `ledgers/stories_1797_round2.json` (generated by `ledgers/make_stories_1797_round2.py`).
+
+- **Passages:** 61 new ones (E43–E103), all checked against their scans. Three use the CA transcription because RevX lacks the item (E82, E95, plus E23 from v0.3.0).
+- **16 new groups:**
+  - Opening of Congress (Nov 1797)
+  - Special session of Congress, 1797 (a parent story containing the proclamation, the existing speech group and the House's answer)
+  - *Hermione* mutiny (with the "Particulars" message group)
+  - Quito earthquake
+  - Kościuszko's land warrant
+  - Jefferson's letter to Madison
+  - Barney escapes the blockade
+  - Sonthonax leaves Saint-Domingue
+  - French captures at Havana
+  - New Hampshire governor's address
+  - Blount affair (a parent story containing the existing letter group, the Knoxville welcome and the House committee report)
+- **Adams's farewell:** adds his reply to the Senate.
+- **`apply_ledger.py` gains two fields:**
+  - `added_memberships`: passages from earlier releases joining a new parent story;
+  - `new_relations`: typed links with both passages as evidence. Used here for three `printed_alongside` links between the Greenock letter (E101–E103) and Boyd's report, printed on the same pages.
+
+## Changes in v0.3.0 (2026-11-06)
+
+v0.3.0 is v0.2.1 plus `ledgers/stories_1797.json`, applied with the general `apply_ledger.py`.
+
+- **Source of the stories:** Codex's 1797 text-reuse matches, grouped into 629 candidate families. 8 stories from the largest families were admitted, after phrase searches for missed printings and scan checks of all 35 printings (`work/scan_ledger.py`).
+- **New groups:** `tenerife-defeat-report`, `adams-special-session-speech`, `adams-senate-farewell`, `camperdown-dispatches`, `algerine-sicilian-battle`, `blount-letter`, `brothers-privateer-boarding`, `brown-house-fire`.
+- **Per-passage transcription:** an observation can now name its transcription (`transcription_field`). E23 uses CA because RevX is empty for that page.
+- **Scan findings** separate printed differences from OCR errors. Printed differences include *New Hampshire Gazette* "Sept. 18" and "39 boats" in the Tenerife report, *The Eagle*'s "MAY 6" dateline, and the *Mirror*'s "13 days". OCR errors include "CARBY" for Carey and "fumes" for smoke.
+
+## Changes in v0.2.0 (2026-11-06)
+
+v0.2.0 is v0.1.0 plus one reviewed ledger, `work/archive_data/ledgers/expansion_1797.json`. All earlier rows are unchanged.
+
+- **Retrieval reviewed:** all 54 candidate pages from Codex's targeted 1797 search (every 1797 page, both OCR fields), plus supplementary phrase sweeps. Each candidate has exactly one recorded decision: 6 admitted, 7 already in v0.1.0, 35 excluded, 2 distinct expedition accounts not admitted, and 4 *Peace* same-name leads with unresolved identity.
+- **7 new passage selections** (`obs:expansion-1797:E01`–`E07`). Each was checked against its pinned scan, and the crops are in `assets/`. Scan findings and transcription discrepancies are stored as `observation_review` annotations.
+- **Fleet-return account:** the Kentucky Gazette's 19 April summary (H007) also appears in the Patowmac Guardian on 30 March (E01). It joins `fleet-return-account` and `boyd-bantry-coverage`.
+- **New groups:** `peace-and-plenty-boarding` (context, 4 selections) contains `peace-and-plenty-report` (message, 3 newspapers). `two-sisters-wreck` (context, 2 newspapers) is separate.
+- **The Boyd core report and the *Peace* seizure report have no new printings in the 1797 corpus.**
+- **RevX omission found:** on 13 October 1797 the Gazette of the United States prints Captain Dunbar's full statement, but RevX drops it (E02). The excerpt keeps the RevX text, and the note points to the scan.
+- **Validation now reads `expected_counts` from the release metadata.** v0.1.0 still validates against its original counts.
+
+Earlier counts below describe v0.1.0. Current counts are in `validation.json` and `manifest.json`.
+
+## What is included
+
+- An inventory of all 77,793 source pages, 19,445 issue/edition combinations, and 110 newspaper series. The existing analysis policy marks 77,749 pages eligible; eligibility is stored separately from the inventory.
+- 24 existing curated passage selections: nine from the message-family study and fifteen from the relation study. Some selections overlap on the same page. They are not 24 distinct articles or historical events.
+- Seven typed groups and four organizational parent–child links. The broader Boyd/Bantry and Peace/Cayenne collections retain their more specific message/document groups.
+- Fifteen claim records and 22 relation records: fifteen printed relation assertions, six existing text/context comparisons, and one explicit newspaper-to-document citation. These are heterogeneous evidence records, not 22 established historical causal connections.
+- The 24 provisional topic definitions and page-level allocations for all 77,749 eligible pages, with stable page IDs and a model-run ID.
+- Source snapshots, scanned passage crops, input hashes, an append-only annotation history, and an executable validation report.
+
+## Files and reuse
+
+| File or directory | Purpose |
+|---|---|
+| `research.sqlite` | Canonical joined tables, foreign keys, constraints, and useful views. Standard SQLite; no server required. |
+| `tables/*.jsonl` | One record per line for other analysis and visualization tools. Fields ending in `_json` in SQLite become native JSON objects/arrays without that suffix. |
+| `derived/page_topic_census.parquet` | Existing topic allocations plus `page_id` and `model_run_id`. T01–T24 contain allocated wordlike-token amounts, not probabilities of historical truth. |
+| `views/pulse_boyd.json` | A consumer projection for the existing four-observation pulse demo. Contains no node positions, colors, brightness, or inferred propagation edges. |
+| `assets/` | Copied scan crops with hashes and links to their evidence selections. |
+| `sources/` | Snapshots of the previous ledgers, review results, relevant metadata and analysis code. Their wording is preserved, including older Chinese notes. |
+| `schemas/schema.sql` | Executable schema and integrity rules. |
+| `examples.sql` | Examples for group summaries, coverage, pulse records, and evidence relationships. |
+| `manifest.json` | Version, source revision, record counts, and output hashes. |
+| `validation.json` | Executed checks and explicit limitations. |
+
+The six original Parquet shards remain in the project's `work/data` directory, rather than duplicating about 1.9 GB in each release. Their exact hashes are verified during the build; their version-pinned download URLs and row locations are recorded. The frozen model file also remains external. Inspectable group records, excerpts, scan crops, model allocations, and provenance snapshots are included in this release. Reading an entire source page's transcription requires the external pinned shard.
+
+## Data model and boundaries
+
+```mermaid
+flowchart LR
+    N[Newspaper] --> I[Issue / edition]
+    I --> P[Page]
+    P --> V[Versioned source row]
+    V --> O[Curated passage selection]
+    O --> M[Membership decision]
+    M --> G[Message, document or context group]
+    G --> H[Organizational hierarchy]
+    O --> E[Claim and relationship evidence]
+    V --> T[Versioned topic-model output]
+    M --> A[Annotation history and provenance]
+    E --> A
+```
+
+**Identity:** newspaper identity uses LCCN, not a title string. Page identity is LCCN + publication date + edition + page number. A page version additionally identifies the dataset revision and exact source shard/row. Curated selections use namespaced legacy identifiers, so `H001` from a different search is not accidentally treated as the same selection. These IDs survive sorting and additional records.
+
+**Text and location:** imported excerpts preserve source spelling. Corrections and limits live in the evidence records; no silent rewriting is performed. Each segment is searched in the source RevX transcription after the recorded normalization. Exact unique matches receive start/end character offsets in that normalized text and its hash. Ambiguous or unmatched segments retain null offsets and an explicit status. These offsets are not raw OCR byte offsets or scan coordinates. A scan review is not a claim that every character on the page was checked.
+
+**Time:** issue publication dates are stored separately from dates mentioned inside texts. Missing years, ambiguous source dates, and unknown event dates are not filled using the publication date. Historical event phases remain unassigned in the pulse projection. First and last dates in group summaries mean first and last *observed publications in the admitted material*.
+
+**Grouping:** one observation can belong to several groups. Message groups, document groups and broad contextual collections have explicit definitions. The current seven groups organize existing selections; they are not seven independently established historical events. A parent–child link organizes exploration and does not assert causation. Future event records can use the separate `event` kind once their scope is defined.
+
+**Relations:** endpoints have explicit object kinds. For example, the fifteen older relation records connect conceptual categories, supported by quoted statements; they have not been silently relabeled as links between uniquely identified historical events. The Peace citation links a newspaper selection to a document fragment. Automatic similarity candidates are retained in source snapshots, outside the admitted relation table.
+
+**Reviews:** this release imports prior same-assistant reviews and adds structural grouping decisions. It is not an independent second-reader replication or a new scan adjudication. No numerical truth/confidence probabilities are invented. The low-legibility limits and unresolved identities remain in the attached source reviews.
+
+## Counting rules
+
+Choose the unit before aggregating: passage selection, page, issue/edition, newspaper, or model-allocated text. These units are not interchangeable.
+
+- A selection admitted to two groups appears in both views. For their union, use `COUNT(DISTINCT observation_id)` rather than summing group totals.
+- Several selections may overlap on the same page. Use distinct page or issue IDs for those totals; article counts are unavailable without article segmentation.
+- Repeated publications in different issues remain separate observations. The pulse export does not deduplicate corresponding stories across newspapers.
+- `newspaper_date_coverage` counts archive availability under the declared revision and eligibility policy. An absent row means no page was observed in this release, not that a historical newspaper did not publish.
+- The eligible-page policy currently prefers RevX with at least 200 wordlike tokens, otherwise CA with at least 200, excluding flagged duplicate pages. Raw inventory rows are never discarded from the foundation.
+- Topic scores are outputs of the frozen pilot model. Join the Parquet table using `page_id`; retain `model_run_id` when comparing versions. Preserve unassigned text mass and the existing sensitivity studies.
+
+## Extending and correcting the data
+
+1. Pin and register new source inputs and their hashes. Keep the original archive and previous released packages unchanged.
+2. Add a source-linked observation or candidate. Record excerpt normalization, exact or unresolved location, review method, and a namespaced ID.
+3. Add a group membership decision explicitly; do not silently force every candidate into a group. Store candidate, admitted, excluded, or withdrawn status. Add relationships only with typed endpoints and supporting evidence.
+4. To change a membership, insert a new annotation with `supersedes_id` pointing to the active decision, then insert its membership row in the same transaction. The database rejects silent annotation edits and inconsistent or competing active memberships. `current_annotations` and `current_memberships` expose the active decisions; old rows remain available.
+5. Keep an existing group ID when clarifying its wording. A materially different group or split gets new IDs and an explicit migration record. New hierarchy, entity-resolution, or annotation types should be introduced with a schema migration; do not repurpose an existing field.
+6. Regenerate consumer projections and validation, then publish a new version. A released directory is immutable; `CURRENT.json` points to the active release. JSONL and Parquet are exports and should be regenerated, not manually edited as separate authorities.
+
+The current builder is a migration of the existing project files, not an annotation-editing application. Subsequent reviewed additions should be recorded in a new versioned input ledger and migration. Entity resolution, a general annotation UI, broader automatic event grouping, and independent review remain future work.
+
+## Reproduction
+
+From the project directory, with its existing Python environment and local PyArrow/NumPy dependencies:
+
+```text
+python work/archive_data/build.py                 # v0.1.0 from the original project files
+python work/archive_data/migrate_v0_2_0.py        # v0.2.0 = v0.1.0 + ledgers/expansion_1797.json
+python work/archive_data/apply_corrections.py work/archive_data/ledgers/corrections_2026-11-06.json   # v0.2.1
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1797.json   # v0.3.0
+python work/archive_data/ledgers/make_stories_1797_round2.py work/archive_data/ledgers/stories_1797_round2_review.json
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1797_round2.json   # v0.4.0
+python work/reuse_all.py tokens && python work/reuse_all.py match   # all-years matches (work/reuse_all/, ~1.7 GB, hours)
+python work/reuse_families_all.py                                     # outputs/story_discovery_all/
+python work/archive_data/add_reuse_layer.py 0.4.0 0.5.0               # v0.5.0
+python work/reuse_titles_all.py all                                   # outputs/story_discovery_all/titles.json
+python work/archive_data/add_reuse_titles.py 0.5.0 0.5.1              # v0.5.1
+python work/story_topics_all.py                                       # outputs/story_discovery_all/story_topics.json
+python work/archive_data/add_story_topics.py 0.5.1 0.5.2              # v0.5.2
+python work/archive_data/validate.py outputs/data_foundation/v0.5.2
+```
+
+For the next release, write a new ledger (base = current version, target = next) and run `apply_ledger.py` on it. Before that, run `work/scan_ledger.py <ledger>` to make the scan crops; on pages with an unusable text layer, add `scan_boxes` by hand.
+
+`apply_corrections.py` handles small fixes. It copies a release and appends annotations that supersede the ones they correct, so old values stay in the history.
+
+Use Python 3.12; the vendored packages in `work/python_packages` are built for it. The scan check (`work/scan_expansion_1797.py`) also needs `pdfplumber` and `pypdf`.
+
+The builder verifies the pinned raw shards, imports existing results without retraining, exports the tables, validates integrity and counting behavior, and freezes the release only after checks pass. It refuses to overwrite a released version. `sources/work__archive_data__build.py` and the schema snapshot preserve the migration used here.
+
+Further explanation of how topics and event candidates are generated will be a separate process introduction, using the actual training/search/review records rather than treating this schema as a clustering algorithm.

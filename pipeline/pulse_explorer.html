@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Newspaper pulses · 1797</title>
+__SITE_HEAD__
+<style>
+:root{color-scheme:dark;--bg:#050711;--ink:#edf2ff;--muted:#a2afc8;--line:#28334c;--blue:#8ccfff;--amber:#ffc68a;--violet:#b7a3ff;--mint:#96dfc4;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 28% 25%,#101b32 0,transparent 48%),var(--bg)}button,select,input{font:inherit}button,select{color:var(--ink);background:#11192b;border:1px solid var(--line);border-radius:7px;padding:8px 12px}button{cursor:pointer}button:hover,select:hover{background:#1a2740}button:disabled{opacity:.35;cursor:default}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px}a{color:var(--blue)}h1,h2,h3,p{margin:0}h1{font-size:26px;font-weight:500;letter-spacing:-.03em}h2{font-size:20px;font-weight:500}h3{font-size:16px;font-weight:500}.muted{color:var(--muted)}.small{font-size:12px}.mono{font-variant-numeric:tabular-nums}.toolbar{position:sticky;top:0;z-index:30;background:#080d1cf5;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.toolbar-inner{max-width:1480px;margin:auto;padding:12px 24px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}.toolbar label{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}#group{max-width:330px;width:100%}#play{background:var(--ink);color:#090e1b;min-width:94px;font-weight:600;border-color:var(--ink)}.group-field{flex:1;min-width:270px}.speed-field{margin-left:4px}.step{padding-inline:12px}.shell{max-width:1480px;margin:auto;padding:28px 24px 42px}.heading{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.heading p{margin-top:5px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:36px}.clock{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap}.sky{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:center;min-height:420px;padding:30px 0}.sky:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 20% 40%,#152c5033,transparent 55%),radial-gradient(ellipse at 80% 45%,#33204433,transparent 60%)}.stars{position:absolute;inset:0;z-index:-1;pointer-events:none}.stars i{position:absolute;width:1px;height:1px;background:#cadbff;border-radius:50%}.paper{position:relative;text-align:center;display:flex;align-items:center;flex-direction:column;min-width:0}.paper:nth-of-type(2n){transform:translateY(25px)}.node{display:block;width:104px;height:104px;overflow:visible}.paper-name{padding:3px 5px;border:0;background:none;max-width:170px;font-size:13px;line-height:1.35;min-height:40px}.paper-name:hover{background:#17213a}.paper[data-active="false"] .paper-name{color:#8a97b1}.node-last,.node-coverage{font-size:11px;color:var(--muted);min-height:17px}.node-coverage.available{color:var(--mint)}.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;margin:12px 0 20px}.legend span{display:flex;align-items:center;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:var(--blue)}.dot.challenge{background:var(--amber)}.dot.later{background:var(--violet)}.dot.document{background:var(--mint)}.time-header{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px}#day{width:100%;accent-color:var(--blue);margin:12px 0 6px;cursor:pointer}.ticks{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.context{margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}.context p{max-width:80ch;font-size:13px;color:var(--muted);margin-top:6px}.evidence{border-left:1px solid var(--line);padding-left:24px;min-width:0}.evidence h2{margin-bottom:10px}#appearances{display:flex;flex-direction:column;gap:2px;max-height:250px;overflow:auto;margin-bottom:22px}.appearance{background:none;border:0;border-left:2px solid transparent;border-radius:0;text-align:left;display:grid;grid-template-columns:59px 1fr;gap:8px;padding:10px;font-size:13px}.appearance[aria-pressed="true"]{border-color:var(--blue);background:#142039}.appearance time{color:var(--muted)}.appearance small{color:var(--muted);display:block}#source-summary{font-size:14px;margin:10px 0;color:var(--muted)}#source-role{color:var(--amber);font-size:12px;margin:6px 0}details{margin:15px 0}summary{cursor:pointer;font-size:14px}blockquote{font-family:Georgia,serif;white-space:pre-wrap;font-size:15px;line-height:1.65;margin:12px 0;padding:0 0 0 13px;border-left:2px solid var(--line)}.scan{display:block;width:100%;height:auto;margin:12px 0}.source-link{display:inline-block;margin-top:8px}.coverage-list{display:grid;gap:6px;margin-top:12px;font-size:12px}.coverage-row{display:flex;justify-content:space-between;gap:12px}.empty{color:var(--muted);font-size:13px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}footer{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media(max-width:1050px){.layout{display:block}.sky{min-height:360px}.paper:nth-of-type(2n){transform:translateY(12px)}.evidence{border-left:0;border-top:1px solid var(--line);padding:22px 0 0;margin-top:24px}.toolbar-inner{gap:8px;padding:10px 16px}.group-field{min-width:230px}}
+@media(max-width:720px){.layout{display:block}.evidence{border-left:0;border-top:1px solid var(--line);padding:22px 0 0;margin-top:24px}.shell{padding:20px 16px}.heading{display:block}.heading>span{display:block;margin-top:8px}.toolbar-inner{gap:7px;padding:9px 12px}.group-field{min-width:100%;order:2}.group-field select{max-width:none!important;flex:1}.speed-field{margin-left:4px}.toolbar label{gap:5px}button,select{padding:8px}.sky{grid-template-columns:repeat(2,minmax(0,1fr));min-height:570px;padding-top:15px}.node{width:90px;height:90px}.node-coverage{font-size:11px}#appearances{max-height:none}.clock h2{font-size:18px}.step{padding-inline:10px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+.legend.overview{flex-direction:column;gap:8px}.legend-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.legend-cat{display:flex;align-items:center;gap:6px;font-weight:600;margin-right:4px}.legend button{display:flex;align-items:center;gap:6px;padding:4px 8px;font-size:12px;background:none}.legend button:hover{background:#17213a}#focus-story{display:none;margin:4px 0 6px;font-size:13px}.appearance .dot{display:inline-block;margin-right:6px}
+</style>
+<style>
+.year-field select{min-width:150px}.transport{display:flex;align-items:center;gap:8px;flex-wrap:nowrap}.search-all{display:flex;gap:6px;margin-top:10px;max-width:460px}.search-all input{flex:1;min-width:0;font:inherit;color:var(--ink);background:#0b1222;border:1px solid var(--line);border-radius:8px;padding:7px 10px}.search-all input::placeholder{color:#6f7d99}.search-all button{padding:7px 12px}.heading h1{display:inline}.telescope-link{margin-left:14px;font-size:14px;white-space:nowrap}
+/* Coverage strip: surviving pages per day, aligned with the date slider (range thumb inset about 8px). */
+.strip-wrap{position:relative;margin-top:10px}#strip{display:block;width:100%;height:30px;cursor:pointer;touch-action:none}#day{margin:2px 0 6px}.strip-tip{position:absolute;bottom:34px;transform:translateX(-50%);background:#0d1526;border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:11.5px;white-space:nowrap;pointer-events:none;color:var(--ink);z-index:2}.strip-tip[hidden]{display:none}.strip-note{font-size:12px;color:var(--muted);margin:6px 0 0}#speed{width:120px;accent-color:var(--blue);cursor:pointer;margin:0}#speed-value{min-width:72px;color:var(--ink);font-size:13px}
+/* Map layout: nodes are placed by town (JS sets left/top), so the grid rules above no longer apply. */
+.sky{display:block;min-height:0;padding:0;margin:8px 0 4px}.sky .paper{position:absolute;width:132px;transform:none}.sky .node{width:64px;height:64px}
+.sky .paper-name{min-height:0;font-size:12.5px;line-height:1.3;max-width:132px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.sky .node-last,.sky .node-coverage{min-height:15px;line-height:1.35;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.map-note{font-size:12px;color:var(--muted);margin:0 0 6px}.compass{position:absolute;right:4px;top:4px;font-size:11px;color:var(--muted);letter-spacing:.04em;pointer-events:none}
+/* Constellations: one story's printings joined on request; resonance: same-story papers glow together. */
+.constellation{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:0}
+.constellation line{stroke-linecap:round;animation:cfade .7s ease both}@keyframes cfade{from{opacity:0}}
+.sky .paper{z-index:1;transition:opacity .35s ease}.sky.focusing .paper:not(.in-story){opacity:.25}.sky .node{cursor:pointer}
+.constellation-note{display:flex;gap:10px;align-items:baseline;justify-content:space-between;font-size:12.5px;color:var(--ink);background:#0d1526;border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:4px 0 8px}
+.constellation-note{height:60px;align-items:center;overflow:hidden}.constellation-note span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}.constellation-note.idle{color:var(--muted)}.constellation-note.idle button{visibility:hidden}@media(max-width:560px){.constellation-note{height:96px}.constellation-note span{-webkit-line-clamp:4}}.constellation-note button{padding:3px 9px;font-size:12px;flex:none}
+.filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12px;color:var(--muted);margin-top:4px}.filter-row[hidden]{display:none}.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}.seg button{border:0;border-radius:0;padding:4px 11px;font-size:12px;background:#11192b;color:var(--muted)}.seg button+button{border-left:1px solid var(--line)}.seg button:hover{background:#1a2740;color:var(--ink)}.seg button[aria-pressed="true"]{background:var(--ink);color:#090e1b;font-weight:600}
+@media(prefers-reduced-motion:reduce){.constellation line{animation:none}.sky .paper{transition:none}}
+@media(max-width:560px){.sky .paper{width:108px}.sky .paper-name{max-width:108px;font-size:12px}.sky .node-last{font-size:10.5px}}
+@media(max-width:720px){.year-field select{min-width:0;width:118px}.group-field{min-width:0!important;flex:1 1 200px;order:2}.transport{flex:1 1 100%}.speed-field{margin-left:auto}.group-field{flex-basis:150px!important}.group-field .lbl,.speed-field .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#speed{width:72px}#speed-value{min-width:58px;font-size:12px}}#notice{color:var(--amber);font-size:12px;margin-top:6px}#notice:empty{display:none}.more-row{font-size:12px;color:var(--muted);padding:8px 10px}
+/* Site frame (7 Nov): timeline in the pinned bar, one-line head, caption over the map, phone passage card. */
+.timebar{flex:1 1 100%;display:grid;grid-template-columns:190px minmax(0,1fr);gap:16px;align-items:center;padding-top:2px}
+.timebar-date{display:flex;flex-direction:column;line-height:1.25}#current-date{font-size:18px;font-weight:500}
+.timebar-track .strip-wrap{margin:0}.timebar-track #strip{height:24px}.timebar-track #day{margin:0;display:block}.timebar .ticks{font-size:11.5px;gap:10px}
+.strip-tip{bottom:auto;top:calc(100% + 4px)}
+.pagehead{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin:0 0 10px}.pagehead h1{font-size:22px}#notice{margin:0 0 8px}
+.sky-wrap{position:relative}.sky-top{position:absolute;left:0;right:0;top:0;z-index:5;pointer-events:none}.sky-top>*{pointer-events:auto}
+.sky-top .filter-row{margin:0 0 6px}.sky-top .constellation-note{margin:0;background:#0d1526e8}
+.sky-link{display:inline-block;margin-top:8px;font-size:14px}
+.mini-card{display:none}.page-notes{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+@media(max-width:720px){.timebar{grid-template-columns:1fr;gap:4px;order:3}.year-field{order:2}.timebar .ticks{display:none}.timebar-date{flex-direction:row;align-items:baseline;gap:10px}#current-date{font-size:15px}
+  .timebar-track #strip{height:16px}.timebar .ticks #day-coverage{display:none}.pagehead h1{font-size:19px}
+  .mini-card{display:block;position:sticky;bottom:8px;z-index:20;margin:10px 0 4px;padding:10px 12px;background:#0d1526f2;border:1px solid var(--line);border-radius:10px;font-size:13px;box-shadow:0 -6px 24px #0009}
+  .mini-card p{margin:0}.mc-title{font-weight:600}.mc-role{color:var(--amber);font-size:12px;margin:2px 0 4px!important}
+  .mc-text{font-family:Georgia,serif;color:#c6d0e4;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}#mc-more{display:inline-block;margin-top:6px}}
+</style>
+</head>
+<body>
+__SITE_HEADER__
+<header class="toolbar"><div class="toolbar-inner">
+<div class="transport" role="group" aria-label="Playback"><button id="play" type="button" aria-pressed="false">Play</button><button id="previous" class="step" type="button" aria-label="Previous appearance">←</button><button id="next" class="step" type="button" aria-label="Next appearance">→</button><label class="speed-field"><span class="lbl">Speed</span><input id="speed" type="range" min="0" max="9" step="1" value="3" aria-label="Playback speed"><output id="speed-value" for="speed" class="mono">18 days/s</output></label></div>
+<label class="year-field">Year<select id="year" aria-label="Year"></select></label>
+<label class="group-field"><span class="lbl">Focus</span><select id="group" aria-label="Story or group"></select></label>
+<div class="timebar"><div class="timebar-date"><span id="current-date" class="mono"></span><span id="count" class="small mono muted"></span></div>
+<div class="timebar-track"><div class="strip-wrap"><canvas id="strip" aria-hidden="true"></canvas><div id="strip-tip" class="strip-tip" hidden></div></div>
+<input id="day" type="range" min="0" max="34" value="0" step="0.05" aria-label="Publication date"><div class="ticks"><span id="first-date"></span><span id="day-coverage" class="muted"></span><span id="last-date"></span></div></div></div>
+</div></header>
+<main class="shell">
+<div class="pagehead"><h1>Newspaper pulses</h1><span id="scope" class="small muted"></span><a id="to-telescope" class="small" href="telescope.html">See this year in the sky ↗</a></div><p id="notice"></p>
+<div class="layout"><section aria-label="Publication pulses">
+<div class="sky-wrap"><div class="sky-top" id="sky-top"><div id="filter-row" class="filter-row" hidden><span id="min-label">Show stories in</span><span id="min-papers" class="seg" role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers. Papers that printed the same story glow together.</span></div><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
+<div id="sky" class="sky" aria-label="Newspaper nodes placed roughly by town of publication, north at the top. Light marks observed publications, with no transmission edges."></div></div>
+<div id="mini-card" class="mini-card" aria-live="polite"><p class="mc-title" id="mc-title"></p><p class="mc-role" id="mc-role"></p><p class="mc-text" id="mc-text"></p><a href="#selected-evidence" id="mc-more">Read the passage and see the scan ↓</a></div>
+<p class="map-note">Newspapers sit roughly where they were printed: north at the top, east to the right. Papers are nudged apart so names stay readable, so distances are not to scale.</p>
+<div id="legend" class="legend"><span><i class="dot"></i>Report</span><span><i class="dot challenge"></i>Challenge / commentary ring</span><span><i class="dot later"></i>Later account</span><span><i class="dot document"></i>Document</span><span><i class="dot" style="background:#aab6cf"></i>Matched text, not checked</span></div>
+<p class="strip-note">Bars show how many of the newspapers on the map have surviving pages each week (each day in short views). A low or missing bar means few or no pages survive in the archive, not that the papers were silent. Click a bar to jump there.</p>
+<div class="context"><h3 id="focus-title"></h3><p id="definition"></p><p id="group-counts"></p><a id="sky-link" class="sky-link" href="telescope.html">See it in the sky ↗</a><details><summary>Archive coverage in this period</summary><div id="coverage-list" class="coverage-list"></div><p>Available pages are surviving pages in this dataset. A date without a passage is not proof that a newspaper was silent.</p></details></div>
+</section>
+<aside class="evidence" aria-label="Observed publications and source evidence"><h2>Observed appearances</h2><div id="appearances"></div>
+<div id="selected-evidence"><h3 id="source-title"></h3><p id="source-role"></p><p id="source-summary"></p><button id="focus-story" type="button"></button><details id="passage"><summary>Read the passage</summary><blockquote id="excerpt"></blockquote><p id="source-note" class="small muted"></p></details><details id="scan-detail"><summary>View the newspaper scan</summary><div id="scans"></div></details><a id="original" class="source-link" target="_blank" rel="noopener">Open full original page ↗</a><p id="source-page" class="small muted"></p></div>
+</aside></div>
+<p class="page-notes">Each pulse marks one printed passage on its publication date. Reviewed stories were read and checked against the scans; matched stories were found automatically by shared wording and are not checked. In a single story, colours describe textual roles; in the reviewed overview, colours identify story categories. Glow is an animation effect: papers that printed the same story within 40 days glow again together. Constellation lines appear only when you pick a story; they group its printings by nearness on the map and never show who copied whom. Nodes are placed roughly by town of publication, not to scale. <a href="method.html#pulses">More on what a pulse shows</a>. <span id="release"></span></p>
+<div id="announcement" class="sr-only" aria-live="polite"></div>
+</main>
+__SITE_FOOTER__
+<script type="application/json" id="pulse-data">__PULSE_DATA__</script>
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id), MS = 86400000;
+const BOOT = JSON.parse($('pulse-data').textContent);
+const dateValue = s => Date.parse(s + 'T00:00:00Z');
+const fmt = (ms, year = false) => new Date(ms).toLocaleDateString('en-GB', {day: 'numeric', month: 'short', ...(year ? {year: 'numeric'} : {}), timeZone: 'UTC'});
+const ROLE_NAMES = {report: 'Report', challenge: 'Appended challenge', commentary: 'Commentary', later_related_account: 'Later account',
+  translated_document: 'Translated document', published_document: 'Published document', reply: 'Reply', condensed_report: 'Condensed report',
+  attributed_summary: 'Attributed summary', accusation: 'Editorial allegation', matched_text: 'Matched text (not checked)'};
+const role = e => e.roles.map(r => ROLE_NAMES[r] || r.replaceAll('_', ' ')).join(' + ');
+// Overview colours: one per reviewed-story category (dataviz slots 1-3, validated all-pairs on #050711);
+// matched stories share one neutral colour, which marks their status rather than a category.
+const CATEGORY_COLORS = ['#3987e5', '#d95926', '#199e70'], AUTO_COLOR = '#aab6cf', LINGER = 40, LIST_LIMIT = 400;
+const roleColor = e => !e ? AUTO_COLOR : e.roles.includes('matched_text') ? AUTO_COLOR
+  : e.roles.some(r => r.endsWith('document') || r === 'reply') ? '#96dfc4' : e.roles.includes('later_related_account') ? '#b7a3ff' : '#8ccfff';
+const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+const ROLE_LEGEND = $('legend').innerHTML;
+const yearCache = new Map();
+const SVGNS = 'http://www.w3.org/2000/svg', ECHO = .9, STORE = 'newspaper-pulses-v6';
+const SPEEDS = [6, 9, 13, 18, 25, 36, 50, 72, 100, 144];  // days per second, slider steps
+let Y = null, mode = 'group';
+let events = [], nodeEvents = new Map(), storyEvents = new Map(), group, start = 0, end = 0, maxDay = 0, day = 0, selected = 0;
+let speed = 18, playing = false, lastFrame = 0, raf = 0, lastInteger = -1, nodes = [], nodeById = new Map(), skyLayer = null;
+let minPapers = {reviewed: 1, matched: 3};  // overview filter: fewer, larger stories are easier to follow
+let focus = null, hover = null, focusByNode = new Map();  // the story shown as a constellation (pinned, or under the mouse)
+
+function buildState(year, base, extra) {
+  const newspapers = [], seen = new Set();
+  for (const p of [...(base?.newspapers || []), ...(extra?.newspapers || [])]) if (!seen.has(p.lccn)) { seen.add(p.lccn); newspapers.push(p); }
+  const observations = [...(base?.observations || []), ...(extra?.observations || [])];
+  const groups = [...(base?.groups || []), ...(extra?.groups || [])];
+  const categories = (base?.categories || []).map((c, i) => ({...c, color: CATEGORY_COLORS[i]}));
+  const catOf = new Map(categories.map(c => [c.id, c]));
+  const stories = (base?.stories || []).map(s => ({...s, color: catOf.get(s.category)?.color || '#8ccfff'}));
+  const autoGroups = groups.filter(g => g.kind === 'auto_family');
+  const coverageRows = extra?.coverage || base?.coverage || [];
+  const S = {year, newspapers, groups, categories, stories, autoGroups, coverageRows, observationsCount: observations.length,
+    papers: new Map(newspapers.map(n => [n.lccn, n])), byId: new Map(observations.map(o => [o.id, o])),
+    coverage: new Map(coverageRows.map(c => [c.newspaper_id + '|' + c.publication_date, c]))};
+  S.storyOf = new Map(stories.flatMap(s => s.members.map(m => [m, s])));
+  S.familyOf = new Map(autoGroups.flatMap(g => g.members.map(m => [m.id, g])));
+  S.memberRoles = new Map(stories.flatMap(s => groups.find(g => g.id === s.id).members.map(m => [m.id, m.roles])));
+  for (const s of stories) s.papers = new Set(s.members.map(id => S.byId.get(id).node)).size;
+  // Long-running families (a debate or serial document chained over months) are listed on their own, not in the overview.
+  S.shortGroups = autoGroups.filter(g => !g.long_running); S.longCount = autoGroups.length - S.shortGroups.length;
+  S.hasReviewed = stories.length > 0; S.hasMatched = S.shortGroups.length > 0;
+  return S;
+}
+
+// The two overviews are rebuilt whenever the "printed in at least N newspapers" filter changes.
+function overview(kind) {
+  // If no story reaches the chosen level (years with only 2-3 surviving series), fall back to the highest level that has stories.
+  const sizes = kind === 'reviewed' ? Y.stories.map(s => s.papers) : Y.shortGroups.map(g => g.newspapers);
+  const wanted = minPapers[kind], k = sizes.some(s => s >= wanted) ? wanted : [6, 4, 3, 2, 1].find(x => sizes.some(s => s >= x)) || 1;
+  const fellBack = k !== wanted ? ` No story this year reaches ${wanted} newspapers, so stories in at least ${k} are shown.` : '';
+  const atLeast = k > 1 ? ` printed in at least ${k} newspapers` : '';
+  if (kind === 'reviewed') {
+    const st = Y.stories.filter(s => s.papers >= k);
+    return {id: 'all', kind: 'overview', label: 'All reviewed stories', count: st.length, k,
+      definition: `Every story reviewed for ${Y.year}${atLeast}, played together: ${st.length} of ${Y.stories.length} stories in ${Y.categories.length} categories, one colour per category. A newspaper keeps the colour for ${LINGER} days after printing a story, then fades. Only stories that were searched for and checked against the scans appear here.` + fellBack,
+      members: st.flatMap(s => s.members.map(id => ({id, roles: Y.memberRoles.get(id)})))};
+  }
+  const fams = Y.shortGroups.filter(g => g.newspapers >= k);
+  return {id: 'auto-all', kind: 'overview', label: 'All matched stories', count: fams.length, k,
+    definition: fellBack.trim() + (fellBack ? ' ' : '') + `Stories found automatically that start in ${Y.year}${atLeast || ' (each in at least 2 newspapers)'}: ${fams.length} of ${Y.shortGroups.length}. Each is a passage with shared wording. Not checked against the scans; a match can join neighbouring items, and printings with damaged transcriptions are missed.`
+      + (Y.longCount ? ` ${Y.longCount} long-running matches (over 120 days or 40 pages, such as serial documents or debates) are left out here and listed in Focus.` : ''),
+    members: fams.flatMap(g => g.members)};
+}
+
+const paperName = lccn => Y.papers.get(lccn)?.name || lccn;
+const storyFor = e => mode === 'reviewed' ? Y.storyOf.get(e.id) : mode === 'matched' ? Y.familyOf.get(e.id) : null;
+const color = e => mode === 'reviewed' ? Y.storyOf.get(e?.id)?.color || '#8ccfff' : mode === 'matched' ? AUTO_COLOR : roleColor(e);
+const short = (s, n = 42) => s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s;
+const storyKey = e => mode === 'group' ? 'group' : storyFor(e)?.id || e.id;
+const plural = (n, word) => n.toLocaleString('en-US') + ' ' + word + (n === 1 ? '' : 's');
+
+function buildSky() {
+  $('sky').replaceChildren();
+  const stars = document.createElement('div'); stars.className = 'stars'; stars.setAttribute('aria-hidden', 'true');
+  let seed = Y.year; const random = () => { seed = seed * 16807 % 2147483647; return seed / 2147483647; };
+  for (let i = 0; i < 110; i++) { const s = document.createElement('i'); s.style.cssText = `left:${random() * 100}%;top:${random() * 100}%;opacity:${.12 + random() * .4}`; stars.append(s); }
+  $('sky').append(stars);
+  skyLayer = document.createElementNS(SVGNS, 'svg'); skyLayer.setAttribute('class', 'constellation'); skyLayer.setAttribute('aria-hidden', 'true');
+  $('sky').append(skyLayer); focus = hover = null;
+  // The paper's current story: its latest printing up to now, else its first printing in this view.
+  const currentEvent = lccn => { const list = nodeEvents.get(lccn) || []; return lastBefore(list, day) || list[0] || null; };
+  nodes = Y.newspapers.map(p => {
+    const el = document.createElement('div'); el.className = 'paper'; el.dataset.active = 'false';
+    el.innerHTML = '<svg class="node" viewBox="0 0 104 104" aria-hidden="true"><circle class="echo" cx="52" cy="52" r="22" opacity="0"/><circle class="halo" cx="52" cy="52" r="38" opacity="0"/><circle class="wave" cx="52" cy="52" r="20" fill="none" stroke-width="1.5" opacity="0"/><circle class="role-ring" cx="52" cy="52" r="14" fill="none" stroke="#ffc68a" stroke-width="2" opacity="0"/><circle class="core" cx="52" cy="52" r="3" fill="#7282a0"/></svg><button type="button" class="paper-name"></button><span class="node-last"></span><span class="node-coverage"></span>';
+    el.querySelector('button').textContent = p.name;
+    el.querySelector('button').title = (p.title || p.name) + ' · ' + (p.place_raw || p.place || '') + ' · ' + p.lccn;
+    const open = () => {
+      const ids = events.flatMap((e, i) => e.node === p.lccn ? [i] : []);
+      if (!ids.length) { $('announcement').textContent = p.name + ': no passage in this view.'; return; }
+      const past = ids.filter(i => events[i].day <= day + .0001), i = past.length ? past.at(-1) : ids[0];
+      seek(events[i].day, i);
+    };
+    el.querySelector('button').addEventListener('click', open);
+    el.querySelector('svg').addEventListener('click', open);
+    el.addEventListener('pointerenter', ev => { if (ev.pointerType === 'mouse') { hover = focusFor(currentEvent(p.lccn)); renderConstellation(); } });
+    el.addEventListener('pointerleave', ev => { if (ev.pointerType === 'mouse' && hover) { hover = null; renderConstellation(); } });
+    $('sky').append(el);
+    return {id: p.lccn, paper: p, el, core: el.querySelector('.core'), wave: el.querySelector('.wave'), halo: el.querySelector('.halo'), ring: el.querySelector('.role-ring'),
+      echoEl: el.querySelector('.echo'), age: Infinity, echo: Infinity, echoColor: AUTO_COLOR, last: el.querySelector('.node-last'), available: el.querySelector('.node-coverage')};
+  });
+  nodeById = new Map(nodes.map(n => [n.id, n]));
+  const compass = document.createElement('span'); compass.className = 'compass'; compass.setAttribute('aria-hidden', 'true'); compass.textContent = 'N ↑';
+  $('sky').append(compass);
+  layoutSky();
+}
+
+// Place each newspaper by its town. North-south: papers fill bands from north to south, nudged within the band by
+// latitude. West-east: each paper sits at its longitude (half true position, half rank order, so the crowded coast
+// spreads out), and papers in one band are pushed sideways just enough not to overlap. No two boxes can overlap.
+let skyWidth = 0;
+function layoutSky() {
+  const sky = $('sky'), W = sky.clientWidth, n = nodes.length; if (!W || !n) return;
+  skyWidth = W;
+  const BW = W < 560 ? 108 : 132, GAP = 8, JIT = 26, TOP = $('sky-top').offsetHeight + 10;  // room for the filter row and caption over the map
+  const compass = sky.querySelector('.compass'); if (compass) compass.style.top = TOP + 'px';
+  const BH = Math.max(100, ...nodes.map(nd => nd.el.offsetHeight));
+  const spread = (key, tie) => {
+    const vals = nodes.map(nd => nd.paper[key]), lo = Math.min(...vals), hi = Math.max(...vals);
+    const order = nodes.map((nd, i) => i).sort((a, b) => vals[a] - vals[b] || tie(a, b));
+    const rank = new Array(n); order.forEach((i, r) => rank[i] = n > 1 ? r / (n - 1) : .5);
+    return nodes.map((nd, i) => .5 * (hi > lo ? (vals[i] - lo) / (hi - lo) : .5) + .5 * rank[i]);
+  };
+  const byId = (a, b) => nodes[a].id.localeCompare(nodes[b].id);
+  const fx = spread('lon', byId), fy = spread('lat', (a, b) => -byId(a, b));
+  const cap = Math.max(1, Math.floor((W - GAP) / (BW + GAP)));
+  let R = Math.max(Math.ceil(n / cap) + (n > cap ? 1 : 0), Math.ceil(n / 3));
+  const rowOf = nodes.map((nd, i) => Math.min(R - 1, Math.floor((1 - fy[i]) * R)));
+  for (let r = 0; r < R; r++) {  // a full band passes its southernmost papers on to the next band
+    const members = nodes.map((nd, i) => i).filter(i => rowOf[i] === r).sort((a, b) => fy[b] - fy[a]);
+    if (members.length > cap) { if (r === R - 1) R++; members.slice(cap).forEach(i => rowOf[i] = r + 1); }
+  }
+  const rowH = BH + GAP + JIT, x0 = BW / 2 + 4, x1 = W - BW / 2 - 4, pos = new Array(n);
+  for (let r = 0; r < R; r++) {
+    const members = nodes.map((nd, i) => i).filter(i => rowOf[i] === r);
+    if (!members.length) continue;
+    const top = Math.max(...members.map(i => fy[i])), bottom = Math.min(...members.map(i => fy[i]));
+    const xs = members.map(i => ({i, x: x0 + fx[i] * (x1 - x0)})).sort((a, b) => a.x - b.x || a.i - b.i);
+    for (let k = 1; k < xs.length; k++) xs[k].x = Math.max(xs[k].x, xs[k - 1].x + BW + GAP);
+    if (xs.at(-1).x > x1) { xs.at(-1).x = x1; for (let k = xs.length - 2; k >= 0; k--) xs[k].x = Math.min(xs[k].x, xs[k + 1].x - BW - GAP); }
+    for (const {i, x} of xs) pos[i] = {x, y: 6 + r * rowH + (top > bottom ? (top - fy[i]) / (top - bottom) : .5) * JIT};
+  }
+  const used = Math.max(...pos.map(p => p.y)) + BH + 6 + TOP;
+  sky.style.height = Math.ceil(used) + 'px';
+  nodes.forEach((nd, i) => { nd.el.style.left = (pos[i].x - BW / 2) + 'px'; nd.el.style.top = (pos[i].y + TOP) + 'px'; nd.cx = pos[i].x; nd.cy = pos[i].y + TOP + 32; });
+  if (focus || hover) renderConstellation();
+}
+
+// A constellation joins the papers that printed one story. Lines link nearest neighbours on the map (a minimum
+// spanning tree), never in date order, and appear all at once: they group the printings, they are not routes.
+function focusFor(e) {
+  if (!e) return null;
+  return {key: storyKey(e), color: color(e), label: mode === 'group' ? group?.label || '' : storyFor(e)?.label || e.summary || ''};
+}
+function renderConstellation() {
+  if (!skyLayer) return;
+  const f = hover || focus, evs = f ? storyEvents.get(f.key) || [] : [];
+  skyLayer.replaceChildren(); focusByNode = new Map();
+  for (const e of evs) { if (!focusByNode.has(e.node)) focusByNode.set(e.node, []); focusByNode.get(e.node).push(e); }
+  $('sky').classList.toggle('focusing', evs.length > 0);
+  for (const nd of nodes) nd.el.classList.toggle('in-story', focusByNode.has(nd.id));
+  const note = $('constellation-note'); note.classList.toggle('idle', !evs.length);
+  if (!evs.length) { $('constellation-text').textContent = 'Hover over or tap a star to see its story as a constellation.'; if (Y) draw(); return; }
+  const tree = nodes.filter(nd => focusByNode.has(nd.id) && nd.cx != null), rest = tree.splice(1);
+  while (rest.length) {
+    let best = null;
+    for (const a of tree) for (const b of rest) { const d = (a.cx - b.cx) ** 2 + (a.cy - b.cy) ** 2; if (!best || d < best.d) best = {a, b, d}; }
+    tree.push(best.b); rest.splice(rest.indexOf(best.b), 1);
+    const len = Math.sqrt(best.d) || 1, ux = (best.b.cx - best.a.cx) / len, uy = (best.b.cy - best.a.cy) / len, cut = Math.min(13, len / 3);
+    const line = document.createElementNS(SVGNS, 'line');
+    line.setAttribute('x1', best.a.cx + ux * cut); line.setAttribute('y1', best.a.cy + uy * cut);
+    line.setAttribute('x2', best.b.cx - ux * cut); line.setAttribute('y2', best.b.cy - uy * cut);
+    line.setAttribute('stroke', f.color); line.setAttribute('stroke-width', '1.4'); line.setAttribute('stroke-opacity', '.75');
+    line.style.filter = 'drop-shadow(0 0 3px ' + f.color + ')';
+    skyLayer.append(line);
+  }
+  $('constellation-text').textContent = `${short(f.label, 64)} · ${plural(evs.length, 'printing')} in ${plural(focusByNode.size, 'newspaper')}, ${fmt(dateValue(evs[0].date), true)} – ${fmt(dateValue(evs.at(-1).date), true)}. `
+    + (focusByNode.size > 1 ? 'Lines group its papers by nearness; they do not show who copied whom.' : 'Printed in one newspaper in this view.');
+  if (Y) draw();
+}
+function clearFocus() { if (focus || hover) { focus = hover = null; renderConstellation(); } }
+new ResizeObserver(() => { if (nodes.length && Math.abs($('sky').clientWidth - skyWidth) > 2) layoutSky(); }).observe($('sky'));
+
+// Coverage strip: for each day in view, how many of the mapped newspapers have surviving pages. It separates
+// archive gaps (no bar) from days with material, and doubles as a scrubber.
+// Most papers were weekly, so long views count papers per week (a single day would look empty on most days).
+const STRIP_H = 30, STRIP_INSET = 8;
+let stripCounts = new Uint16Array(0), stripBucket = 1;
+function buildStrip() {
+  stripBucket = maxDay > 60 ? 7 : 1;
+  const buckets = Array.from({length: Math.floor(Math.round(maxDay) / stripBucket) + 1}, () => new Set());
+  const ids = new Set(Y.newspapers.map(p => p.id));
+  for (const c of Y.coverageRows) {
+    if (!ids.has(c.newspaper_id)) continue;
+    const d = Math.round((dateValue(c.publication_date) - start) / MS); if (d >= 0 && d <= maxDay) buckets[Math.floor(d / stripBucket)].add(c.newspaper_id);
+  }
+  stripCounts = Uint16Array.from(buckets, s => s.size);
+  drawStrip();
+}
+function drawStrip() {
+  const cv = $('strip'), W = cv.clientWidth, dpr = window.devicePixelRatio || 1; if (!W) return;
+  if (cv.width !== Math.round(W * dpr) || cv.height !== Math.round(STRIP_H * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(STRIP_H * dpr); }
+  const ctx = cv.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, STRIP_H);
+  const n = stripCounts.length, total = Math.max(1, nodes.length), span = W - 2 * STRIP_INSET;
+  const step = maxDay ? stripBucket / maxDay * span : span, bw = Math.max(1, Math.min(10, step * .7));
+  ctx.fillStyle = '#1e2840'; ctx.fillRect(STRIP_INSET, STRIP_H - 1, span, 1);
+  ctx.fillStyle = '#56698f';
+  for (let d = 0; d < n; d++) {
+    const c = stripCounts[d]; if (!c) continue;
+    const x = STRIP_INSET + (maxDay ? Math.min(maxDay, d * stripBucket + (stripBucket - 1) / 2) / maxDay * span : span / 2), h = Math.max(2, c / total * (STRIP_H - 5));
+    ctx.fillRect(x - bw / 2, STRIP_H - 1 - h, bw, h);
+  }
+  const cx = STRIP_INSET + (maxDay ? day / maxDay : .5) * span; ctx.fillStyle = '#edf2ff'; ctx.fillRect(Math.round(cx), 0, 1, STRIP_H);
+}
+function stripDay(ev) {
+  const r = $('strip').getBoundingClientRect(), span = r.width - 2 * STRIP_INSET;
+  return Math.max(0, Math.min(Math.round(maxDay), Math.round((ev.clientX - r.left - STRIP_INSET) / span * maxDay)));
+}
+function stripTip(ev) {
+  if (!events.length) return;
+  const d = stripDay(ev), b = Math.floor(d / stripBucket), c = stripCounts[b] || 0, tip = $('strip-tip'), r = $('strip').getBoundingClientRect();
+  tip.textContent = (stripBucket > 1 ? 'Week of ' + fmt(start + b * stripBucket * MS, true) : fmt(start + d * MS, true)) + ' · '
+    + (c ? `${c} of ${nodes.length} newspapers have pages` : 'no pages in the archive');
+  tip.hidden = false; const half = tip.offsetWidth / 2;
+  tip.style.left = Math.max(half, Math.min(r.width - half, STRIP_INSET + (maxDay ? d / maxDay : .5) * (r.width - 2 * STRIP_INSET))) + 'px';
+}
+$('strip').addEventListener('pointermove', stripTip);
+$('strip').addEventListener('pointerleave', () => { $('strip-tip').hidden = true; });
+$('strip').addEventListener('pointerdown', ev => { if (events.length) { seek(stripDay(ev)); stripTip(ev); } });
+new ResizeObserver(() => drawStrip()).observe($('strip'));
+
+function buildOptions() {
+  const sel = $('group'); sel.replaceChildren();
+  const opt = (value, text) => { const o = document.createElement('option'); o.value = value; o.textContent = text; return o; };
+  if (Y.hasReviewed) sel.append(opt('all', 'All reviewed stories · overview'));
+  for (const c of Y.categories) {
+    const og = document.createElement('optgroup'); og.label = 'Reviewed · ' + c.label;
+    Y.groups.filter(g => g.category === c.id).forEach(g => og.append(opt(g.id, (g.child ? '↳ ' : '') + g.label + (g.kind === 'context_group' ? ' · context' : ''))));
+    sel.append(og);
+  }
+  if (Y.hasMatched) {
+    const og = document.createElement('optgroup'); og.label = 'Matched automatically · not checked';
+    og.append(opt('auto-all', 'All matched stories · overview'));
+    Y.autoGroups.filter(g => g.newspapers >= 3 && !g.long_running).forEach(g => og.append(opt(g.id, short(g.label, 60) + ` (${g.newspapers} papers)`)));
+    const two = Y.autoGroups.filter(g => g.newspapers < 3 && !g.long_running).length;
+    if (two) { const o = opt('', `+ ${two} two-paper matches (overview, with "at least 2")`); o.disabled = true; og.append(o); }
+    sel.append(og);
+  }
+  const long = Y.autoGroups.filter(g => g.long_running);
+  if (long.length) {
+    const og = document.createElement('optgroup'); og.label = 'Matched · long-running (serials, debates) · not checked';
+    long.forEach(g => og.append(opt(g.id, short(g.label, 60) + ` (${g.newspapers} papers, ${g.members.length} printings)`)));
+    sel.append(og);
+  }
+}
+
+function renderLegend() {
+  const L = $('legend'); L.classList.toggle('overview', mode === 'reviewed');
+  if (mode !== 'reviewed') { L.innerHTML = ROLE_LEGEND; return; }
+  L.replaceChildren();
+  for (const c of Y.categories) {
+    const row = document.createElement('div'); row.className = 'legend-row';
+    const head = document.createElement('span'); head.className = 'legend-cat';
+    const d = document.createElement('i'); d.className = 'dot'; d.style.background = c.color;
+    head.append(d, document.createTextNode(c.label)); row.append(head);
+    for (const s of Y.stories.filter(s => s.category === c.id)) {
+      const b = document.createElement('button'); b.type = 'button'; b.title = 'Focus this story'; b.textContent = s.label + ' (' + s.members.length + ')';
+      b.addEventListener('click', () => { changeGroup(s.id); save(); }); row.append(b);
+    }
+    L.append(row);
+  }
+}
+
+function save() { try { localStorage.setItem(STORE, JSON.stringify({year: Y.year, group: group?.id, day, selected, speed, minPapers})); } catch {} }
+
+function source(i) {
+  selected = i; const e = events[i];
+  if (!e) { for (const id of ['source-title', 'source-role', 'source-summary', 'excerpt', 'source-note', 'source-page']) $(id).textContent = ''; $('focus-story').style.display = 'none'; return; }
+  $('source-title').textContent = fmt(dateValue(e.date)) + ' · ' + paperName(e.node);
+  $('mc-title').textContent = $('source-title').textContent; $('mc-text').textContent = e.excerpt;
+  const story = storyFor(e);
+  $('source-role').textContent = (story ? short(story.label, 70) + ' · ' : '') + role(e); $('mc-role').textContent = $('source-role').textContent;
+  $('source-summary').textContent = e.summary;
+  $('focus-story').style.display = story ? 'inline-block' : 'none';
+  if (story) { $('focus-story').textContent = 'Focus this story →'; $('focus-story').dataset.group = story.id; }
+  $('excerpt').textContent = e.excerpt; $('source-note').textContent = e.note; $('original').href = e.source_url;
+  $('source-page').textContent = 'Page ' + e.page + ' · ' + e.legacy_id + ' · ' + (e.transcription || 'RevX') + ' transcription';
+  $('scan-detail').style.display = e.scans.length ? '' : 'none';
+  $('scans').replaceChildren();
+  for (const src of e.scans) { const img = document.createElement('img'); img.className = 'scan'; img.loading = 'lazy'; img.src = src; img.alt = paperName(e.node) + ' · ' + e.date + ' · inspected source crop'; $('scans').append(img); }
+  Array.from($('appearances').querySelectorAll('.appearance')).forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.index) === i)));
+}
+
+// Resonance: when a paper prints a story, the papers that printed the same story in the previous LINGER days glow
+// again at the same moment. Nothing travels between them, so it groups without implying a copying route.
+function burst(e) {
+  const n = nodeById.get(e.node); if (n) n.age = 0;
+  if (reduced.matches) return;
+  const c = color(e);
+  for (const o of storyEvents.get(storyKey(e)) || []) {
+    if (o.node === e.node || o.day > e.day + 1e-7 || e.day - o.day > LINGER) continue;
+    const m = nodeById.get(o.node); if (m) { m.echo = 0; m.echoColor = c; }
+  }
+}
+function lastBefore(list, d) {  // binary search: last event with day <= d
+  let lo = 0, hi = list.length - 1, best = -1;
+  while (lo <= hi) { const mid = (lo + hi) >> 1; if (list[mid].day <= d + 1e-7) { best = mid; lo = mid + 1; } else hi = mid - 1; }
+  return best < 0 ? null : list[best];
+}
+
+function draw() {
+  drawStrip();
+  const integer = Math.floor(day + 1e-7);
+  if (integer !== lastInteger) {
+    lastInteger = integer; const iso = new Date(start + integer * MS).toISOString().slice(0, 10);
+    $('current-date').textContent = events.length ? fmt(start + integer * MS, true) : String(Y.year);
+    let count = 0;
+    for (const n of nodes) {
+      const c = Y.coverage.get(Y.papers.get(n.id).id + '|' + iso);
+      n.available.textContent = c ? c.observed_pages + ' pages available' : 'No page in archive';
+      n.available.classList.toggle('available', !!c); if (c) count++;
+    }
+    $('day-coverage').textContent = count + ' of ' + nodes.length + ' series have pages on this date';
+  }
+  $('day').value = String(day); $('day').setAttribute('aria-valuetext', fmt(start + Math.floor(day) * MS, true));
+  const shown = events.length ? events.findLastIndex(e => e.day <= day + 1e-7) + 1 : 0;
+  $('count').textContent = shown.toLocaleString('en-US') + ' / ' + events.length.toLocaleString('en-US') + ' passages';
+  $('play').textContent = playing ? 'Pause' : day >= maxDay && events.length ? 'Replay' : 'Play';
+  $('play').setAttribute('aria-pressed', String(playing)); $('play').disabled = !events.length;
+  $('previous').disabled = selected <= 0; $('next').disabled = selected >= events.length - 1;
+  const overview = mode !== 'group';
+  const f = hover || focus;
+  for (const n of nodes) {
+    const e = lastBefore(nodeEvents.get(n.id) || [], day), live = e && (!overview || day - e.day <= LINGER);
+    const strength = e && !reduced.matches ? Math.pow(1 - Math.min(n.age / .6, 1), 1.5) : 0, c = color(e);
+    const echo = n.echo < ECHO && !reduced.matches ? Math.pow(1 - n.echo / ECHO, 1.4) : 0;
+    const fe = f ? focusByNode.get(n.id) : null;  // this paper's printings of the story shown as a constellation
+    const lit = live || fe, coreColor = fe ? f.color : c, printedYet = !fe || fe.some(x => x.day <= day + 1e-7);
+    n.core.setAttribute('fill', lit ? coreColor : '#7282a0');
+    n.core.setAttribute('r', lit ? String(Math.max(fe ? 5 : 0, 4 + 8 * strength + 4 * echo)) : e ? '3' : '2.5');
+    n.core.setAttribute('opacity', lit ? (printedYet ? '1' : '.5') : '.45'); n.core.style.filter = lit ? 'drop-shadow(0 0 7px ' + coreColor + ')' : 'none';
+    n.echoEl.setAttribute('fill', n.echoColor); n.echoEl.setAttribute('opacity', String(.4 * echo)); n.echoEl.setAttribute('r', String(12 + 14 * echo));
+    n.halo.setAttribute('fill', c); n.halo.setAttribute('opacity', String(.2 * strength));
+    n.wave.setAttribute('stroke', c); n.wave.setAttribute('r', String(12 + Math.min(n.age / .6, 1) * 34)); n.wave.setAttribute('opacity', String(.8 * strength));
+    n.ring.setAttribute('opacity', !overview && e && (e.roles.includes('challenge') || e.roles.includes('commentary') || e.roles.includes('accusation')) ? '.85' : '0');
+    n.last.textContent = fe ? fe.slice(0, 2).map(x => fmt(dateValue(x.date))).join(' · ') + (fe.length > 2 ? ` +${fe.length - 2}` : '')
+      : e ? fmt(dateValue(e.date)) + ' · ' + (overview ? short(storyFor(e)?.label || '', 34)
+      : e.roles.includes('matched_text') ? 'matched text' : e.roles.includes('later_related_account') ? 'later account'
+      : e.roles.some(r => r.endsWith('document') || r === 'reply') ? 'document' : e.roles.includes('challenge') ? 'report + challenge' : 'report')
+      : n.el.dataset.active === 'true' ? 'Not yet observed' : 'No passage in this view';
+  }
+}
+
+function pause() { playing = false; cancelAnimationFrame(raf); lastFrame = 0; if (Y) draw(); }
+function seek(value, index = null) {
+  if (!events.length) return;
+  pause(); day = Math.max(0, Math.min(maxDay, value));
+  if (index === null) index = Math.max(0, events.findLastIndex(e => e.day <= day + 1e-7));
+  nodes.forEach(n => { n.age = Infinity; n.echo = Infinity; }); events.filter(e => Math.abs(e.day - day) < .05).forEach(burst);
+  source(index); focus = focusFor(events[index]); renderConstellation(); save();
+  $('announcement').textContent = events[index].date + ', ' + paperName(events[index].node) + (focus ? '. Story: ' + short(focus.label, 80) : '');
+}
+function tick(now) {
+  if (!playing) return;
+  const dt = lastFrame ? Math.min((now - lastFrame) / 1000, .15) : 0; lastFrame = now; nodes.forEach(n => { n.age += dt; n.echo += dt; });
+  const previous = day; day = Math.min(maxDay, day + dt * speed);
+  let last = -1;
+  for (let i = 0; i < events.length && events[i].day <= day + 1e-7; i++) if (events[i].day > previous + 1e-7) { burst(events[i]); last = i; }
+  if (last >= 0) source(last);
+  draw();
+  if (day >= maxDay && nodes.every(n => n.age >= .6)) { pause(); save(); $('announcement').textContent = 'Playback complete. ' + events.length + ' passages.'; return; }
+  raf = requestAnimationFrame(tick);
+}
+
+function changeGroup(id) {
+  playing = false; cancelAnimationFrame(raf);
+  const g = Y.groups.find(g => g.id === id);
+  if (id === 'all' && Y.hasReviewed) { mode = 'reviewed'; group = overview('reviewed'); }
+  else if (id === 'auto-all' && Y.hasMatched) { mode = 'matched'; group = overview('matched'); }
+  else if (g) { mode = 'group'; group = g; }
+  else if (Y.hasReviewed) { mode = 'reviewed'; group = overview('reviewed'); }
+  else if (Y.hasMatched) { mode = 'matched'; group = overview('matched'); }
+  else { mode = 'group'; group = null; }
+  if (group && ![...$('group').options].some(o => o.value === group.id)) {
+    const og = document.createElement('optgroup'); og.label = 'Opened from the telescope';
+    const o = document.createElement('option'); o.value = group.id; o.textContent = short(group.label, 60) + (group.newspapers ? ` (${group.newspapers} papers)` : ''); og.append(o); $('group').prepend(og);
+  }
+  if (group) $('group').value = group.id;
+  events = group ? group.members.map(m => ({...Y.byId.get(m.id), roles: m.roles})).sort((a, b) => a.date.localeCompare(b.date) || a.node.localeCompare(b.node) || a.id.localeCompare(b.id)) : [];
+  start = events.length ? dateValue(events[0].date) : Date.UTC(Y.year, 0, 1); end = events.length ? dateValue(events.at(-1).date) : start;
+  maxDay = (end - start) / MS; events.forEach((e, i) => { e.day = (dateValue(e.date) - start) / MS; e.index = i; });
+  nodeEvents = new Map(); for (const e of events) { if (!nodeEvents.has(e.node)) nodeEvents.set(e.node, []); nodeEvents.get(e.node).push(e); }
+  storyEvents = new Map(); for (const e of events) { const k = storyKey(e); if (!storyEvents.has(k)) storyEvents.set(k, []); storyEvents.get(k).push(e); }
+  day = 0; selected = 0; lastInteger = -1; focus = hover = null;
+  nodes.forEach(n => { n.age = Infinity; n.echo = Infinity; n.el.dataset.active = String(nodeEvents.has(n.id)); });
+  $('filter-row').hidden = mode === 'group'; layoutSky();
+  // See it in the sky: the telescope star for this story (a child group points to its top-level story), or the year.
+  const topStory = group && mode === 'group' ? (group.id.startsWith('auto:') ? group.id.slice(5) : (Y.storyOf.get(group.members[0]?.id)?.id || '')) : '';
+  $('sky-link').href = topStory ? 'telescope.html?story=' + encodeURIComponent(topStory) : 'telescope.html?year=' + Y.year;
+  $('sky-link').textContent = topStory ? 'See this story in the sky ↗' : 'See ' + Y.year + ' in the sky ↗';
+  for (const b of $('min-papers').querySelectorAll('button')) b.setAttribute('aria-pressed', String(mode !== 'group' && Number(b.dataset.k) === group.k));
+  $('day').max = String(maxDay); $('day').disabled = maxDay === 0;
+  $('first-date').textContent = fmt(start, true); $('last-date').textContent = fmt(end, true);
+  $('focus-title').textContent = group ? group.label : 'No stories found for ' + Y.year;
+  $('definition').textContent = group ? group.definition : 'Neither reviewed nor matched stories exist for this year yet.';
+  const storyCount = mode === 'reviewed' ? ' · ' + plural(group.count, 'story').replace('storys', 'stories') : mode === 'matched' ? ' · ' + plural(group.count, 'matched story').replace('storys', 'stories') : '';
+  $('group-counts').textContent = `${events.length.toLocaleString('en-US')} passages · ${new Set(events.map(e => e.issue_id)).size.toLocaleString('en-US')} issues / editions · ${nodeEvents.size} newspapers${storyCount}. Dates are first and last observed publications in this view.`;
+  const list = $('appearances'); list.replaceChildren();
+  events.slice(0, LIST_LIMIT).forEach((e, i) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'appearance'; b.dataset.index = String(i);
+    const t = document.createElement('time'); t.dateTime = e.date; t.textContent = fmt(dateValue(e.date));
+    const text = document.createElement('span'); text.textContent = paperName(e.node);
+    const label = document.createElement('small'); const story = storyFor(e);
+    label.textContent = (story ? short(story.label, 48) + ' · ' : '') + role(e); text.append(label);
+    if (mode !== 'group') { const d = document.createElement('i'); d.className = 'dot'; d.style.background = color(e); text.prepend(d); }
+    b.append(t, text); b.addEventListener('click', () => seek(e.day, i)); list.append(b);
+  });
+  if (events.length > LIST_LIMIT) { const more = document.createElement('div'); more.className = 'more-row'; more.textContent = `Showing the first ${LIST_LIMIT} of ${events.length} passages; pick a story in Focus to see all of its printings.`; list.append(more); }
+  $('coverage-list').replaceChildren();
+  for (const p of Y.newspapers) {
+    const rows = Y.coverageRows.filter(c => c.newspaper_id === p.id && dateValue(c.publication_date) >= start && dateValue(c.publication_date) <= end);
+    const row = document.createElement('div'); row.className = 'coverage-row';
+    const label = document.createElement('span'); label.textContent = p.name;
+    const amount = document.createElement('span'); amount.textContent = rows.reduce((n, c) => n + c.observed_pages, 0) + ' pages / ' + rows.reduce((n, c) => n + c.observed_issues_editions, 0) + ' issues';
+    row.append(label, amount); $('coverage-list').append(row);
+  }
+  renderLegend(); events.filter(e => e.day === 0).forEach(burst); source(0); buildStrip(); renderConstellation(); draw();
+  $('announcement').textContent = 'Selected ' + (group ? group.label : 'no story');
+}
+
+// Year files store matched stories compactly; expand them to the same shape as reviewed records.
+function expandYear(raw) {
+  const fams = new Map(raw.groups.map(g => [g.id, g]));
+  const observations = raw.observations.map(o => {
+    const fid = o.id.split(':')[1], g = fams.get('auto:' + fid);
+    return {id: o.id, legacy_id: fid, node: o.node, date: o.date, page: o.page, excerpt: o.excerpt, transcription: o.tr, scans: [],
+      page_id: `page:${o.node}:${o.date}:${o.ed}:${o.page}`, issue_id: `issue:${o.node}:${o.date}:${o.ed}`,
+      source_url: `${raw.scan_base}${o.node}/${o.date}_${o.ed}_${o.page}.pdf?download=true`, summary: g.label,
+      note: `Found automatically: shared wording across ${g.newspapers} newspapers (${g.members.length} printings). Not checked against the scan.`};
+  });
+  const groups = raw.groups.map(g => ({id: g.id, kind: 'auto_family', label: g.label, newspapers: g.newspapers, long_running: g.long_running, category: null, child: false,
+    definition: `Passages with shared wording in ${g.newspapers} newspapers, ${g.first} to ${g.last}. Found automatically; not checked against the scans. Family ${g.id.slice(5)}.`
+      + (g.long_running ? ' Long-running: probably a serial document or a debate printed in parts, joined by overlapping matches.' : ''),
+    members: g.members.map(id => ({id, roles: ['matched_text']}))}));
+  return {year: raw.year, newspapers: raw.newspapers, coverage: raw.coverage, groups, observations};
+}
+
+async function loadYear(year, wanted) {
+  pause();
+  let extra = yearCache.get(year);
+  if (extra === undefined) {
+    try { const r = await fetch(`years/${year}.json?v=${BOOT.year_stamp || ''}`); extra = r.ok ? expandYear(await r.json()) : null; } catch { extra = null; }
+    yearCache.set(year, extra);
+  }
+  const base = year === BOOT.reviewed.year ? BOOT.reviewed : null;
+  if (!base && !extra) {
+    $('notice').textContent = `Could not load ${year}. Other years need the page served over HTTP (for example: python -m http.server).`;
+    if (Y) $('year').value = String(Y.year); return;
+  }
+  $('notice').textContent = extra ? '' : 'Matched stories and other years need the page served over HTTP; showing the reviewed stories only.';
+  Y = buildState(year, base, extra); $('year').value = String(year); document.title = 'Newspaper pulses · ' + year;
+  $('to-telescope').href = 'telescope.html?year=' + year;
+  buildSky(); buildOptions();
+  $('scope').textContent = `In ${year}: ${plural(Y.newspapers.length, 'newspaper')} · ${Y.stories.length} reviewed ${Y.stories.length === 1 ? 'story' : 'stories'} · ${Y.autoGroups.length.toLocaleString('en-US')} matched ${Y.autoGroups.length === 1 ? 'story' : 'stories'}`;
+  const ok = wanted && ((wanted === 'all' && Y.hasReviewed) || (wanted === 'auto-all' && Y.hasMatched) || Y.groups.some(g => g.id === wanted));
+  changeGroup(ok ? wanted : Y.hasReviewed ? 'all' : 'auto-all');
+}
+
+for (const y of BOOT.years) {
+  const o = document.createElement('option'); o.value = String(y.year);
+  o.textContent = y.reviewed ? `${y.year} (reviewed)` : String(y.year); $('year').append(o);
+}
+$('release').textContent = 'Data foundation v' + BOOT.release_version + '.';
+$('play').addEventListener('click', () => {
+  if (!events.length) return;
+  if (playing) { pause(); save(); return; }
+  if (day >= maxDay) { day = 0; source(0); nodes.forEach(n => { n.age = Infinity; n.echo = Infinity; }); }
+  focus = hover = null; renderConstellation();
+  events.filter(e => e.day === day).forEach(burst); playing = true; lastFrame = 0; draw(); save(); raf = requestAnimationFrame(tick);
+});
+$('min-papers').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || mode === 'group') return;
+  minPapers[mode] = Number(b.dataset.k); changeGroup(group.id); save();
+});
+$('constellation-clear').addEventListener('click', clearFocus);
+$('sky').addEventListener('click', e => { if (!e.target.closest('.paper')) clearFocus(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') clearFocus(); });
+$('previous').addEventListener('click', () => { const i = Math.max(0, selected - 1); seek(events[i].day, i); });
+$('next').addEventListener('click', () => { const i = Math.min(events.length - 1, selected + 1); seek(events[i].day, i); });
+$('day').addEventListener('input', e => seek(Number(e.target.value)));
+$('group').addEventListener('change', e => { changeGroup(e.target.value); save(); });
+$('year').addEventListener('change', e => { loadYear(Number(e.target.value)).then(save); });
+function setSpeed(i) {
+  i = Math.max(0, Math.min(SPEEDS.length - 1, i)); speed = SPEEDS[i]; $('speed').value = String(i);
+  $('speed-value').textContent = speed + ' days/s'; $('speed').setAttribute('aria-valuetext', speed + ' days per second');
+}
+$('speed').addEventListener('input', e => { setSpeed(Number(e.target.value)); save(); });
+$('focus-story').addEventListener('click', e => { changeGroup(e.currentTarget.dataset.group); save(); });
+$('mc-more').addEventListener('click', () => { $('passage').open = true; });
+for (const id of ['passage', 'scan-detail']) $(id).addEventListener('toggle', () => { if ($(id).open && playing) { pause(); save(); } });
+document.addEventListener('visibilitychange', () => { if (document.hidden && playing) { pause(); save(); } });
+
+let saved; try { saved = JSON.parse(localStorage.getItem(STORE)); } catch {}
+setSpeed(SPEEDS.indexOf(saved && SPEEDS.includes(saved.speed) ? saved.speed : 18));
+for (const k of ['reviewed', 'matched']) if ([1, 2, 3, 4, 6].includes(saved?.minPapers?.[k])) minPapers[k] = saved.minPapers[k];
+const params = new URLSearchParams(location.search), urlYear = Number(params.get('year')), fromUrl = BOOT.years.some(y => y.year === urlYear);
+const firstYear = fromUrl ? urlYear : saved && BOOT.years.some(y => y.year === saved.year) ? saved.year : BOOT.reviewed.year;
+loadYear(firstYear, fromUrl ? params.get('focus') : saved?.group).then(() => {
+  if (!fromUrl && saved && saved.year === Y.year && saved.group === group?.id && Number.isFinite(saved.day) && events.length) {
+    day = Math.min(maxDay, Math.max(0, saved.day)); selected = Math.max(0, Math.min(events.length - 1, Number.isInteger(saved.selected) ? saved.selected : 0)); source(selected); draw();
+  }
+});
+})();
+</script>
+</body></html>

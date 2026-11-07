@@ -1,0 +1,294 @@
+# How the newspaper data becomes topics, groups and pulses
+
+*Process introduction · Project 02 · 7 November 2026*
+
+This project works with 77,793 newspaper pages printed between 1770 and 1810: 110 newspaper series from the Library of Congress's Chronicling America collection, published on Hugging Face as part of the Smithsonian's Revolution Crossroads project. The pages arrive as scans with two machine transcriptions. One is the original Chronicling America OCR ("CA"). The other is a newer AI transcription ("RevX").
+
+Two separate processes turn those pages into the things you see in the project:
+
+- **Topics** are broad themes, such as *shipping and naval encounters* or *land sales*. A computer finds them automatically by grouping words that tend to appear together. They are good for long trends, but a topic is not an event.
+- **Groups** are specific stories, such as *Captain Dunbar's report of being plundered by a French privateer*. They are found by searching for the story, reading every candidate, and checking each one against the original scan. The newspaper pulses are built only from these reviewed groups.
+
+The two processes share the same page records, but neither feeds automatically into the other.
+
+```mermaid
+flowchart TB
+    A["77,793 pages<br/>scans + two transcriptions"] --> B["Usability check<br/>77,749 pages kept"]
+
+    subgraph T["Track 1 · Topics (automatic)"]
+        direction TB
+        T1["Sample 4,100 pages<br/>≤100 per year, spread across papers"] --> T2["Cut into 220-word passages"]
+        T2 --> T3["Word statistics + NMF<br/>24 topics"]
+        T3 --> T4["Stability check + human-readable labels"]
+        T4 --> T5["Score every usable page"]
+        T5 --> T6["Trends, shown three ways"]
+    end
+
+    subgraph G["Track 2 · Story groups (reviewed)"]
+        direction TB
+        G1["A specific story or lead"] --> G2["Targeted search<br/>both transcriptions, fixed dates"]
+        G2 --> G3["Read every candidate"]
+        G3 --> G4["Check against the scan"]
+        G4 --> G5{"Decision"}
+        G5 -->|admit| G6["Group + role"]
+        G5 -->|exclude / lead| G7["Kept in the ledger with a reason"]
+    end
+
+    B --> T1
+    B --> G2
+    G6 --> R["Versioned data release<br/>(ledger → migration → validation)"]
+    G7 --> R
+    T5 --> R
+    R --> P["Newspaper pulses<br/>one pulse = one printed appearance"]
+```
+
+---
+
+## Step 0 · Decide which pages are usable
+
+- **Download:** we take a fixed version of the dataset (revision `0b97906…`), so results can be repeated exactly. All six data files are checked against their published checksums.
+- **Usability rule:** a page is usable if one of its transcriptions has at least 200 words. RevX is preferred, and CA is the fallback. Exact duplicate pages are removed.
+- **Result:** 77,749 of 77,793 pages are usable.
+
+The audit also exposed a basic limit of the archive: coverage is very uneven. 1786 has 356 pages and 1808 has 4,466. In 1785 and 1786 only two newspaper series survive. No series covers all 41 years.
+
+**Why it matters:** if a theme looks bigger in one year, that can simply be because different newspapers survive from that year. Every trend in this project is therefore shown alongside the coverage behind it.
+
+## Track 1 · Topics: finding broad themes automatically
+
+**1. Sample.** Up to 100 usable pages per year are picked, spread evenly across the newspapers available that year. Within each newspaper the pages are chosen by a fixed random rule. The result is 4,100 pages covering all 41 years and all 110 series. Each page carries a weight, so the sample can later be scaled back to the real collection.
+
+**2. Cut into passages.** A newspaper page mixes many unrelated items, so each page is cut into consecutive spans of 220 words. That gives 49,585 passages. These are fixed-length spans, not real article boundaries. About one page in five is held out so we can check later how the topics behave on text the model never saw.
+
+**3. Find the topics.** Each passage becomes a list of word scores (TF-IDF): words that are frequent in that passage but rare overall score highest. A method called non-negative matrix factorization (NMF) then finds 24 recurring word patterns. Each passage gets a weight on each pattern. The settings were:
+- Single words and two-word phrases.
+- Words appearing in fewer than 12 passages, or in more than 65%, are ignored.
+- Common filler words are ignored, including old printing forms such as *fuch* and *faid* (long-s misreadings of "such" and "said").
+
+Nobody told the model what topics to look for.
+
+**4. Check stability and add labels.** The model was fitted a second time from a different random start, and the two runs were compared.
+- **Stable topics:** most reappear almost identically (median similarity 0.99).
+- **Unstable topics:**
+  - T16 *escape and capture-reward notices*: 0.04
+  - T20 *Crown, Parliament and royal authority*: 0.20
+  - T19 *letter extracts*: 0.50
+
+  These are flagged and not presented as reliable.
+
+Each topic was then labelled by reading its top words and example passages. This was AI-assisted, in Codex. The labels sorted the 24 topics into seven provisional categories, for example *politics and public institutions* and *war, diplomacy and shipping*. Some topics turned out to be formats rather than subjects, such as name lists or letter extracts, and they are marked as such.
+
+**5. Score every page.** The frozen model was applied, without refitting, to all 77,749 usable pages: 1,063,079 passages in total. Re-scoring the whole collection instead of the sample changed the peak year for 12 of the 24 topics. That is a good reminder that the sample-based curves were only a first look.
+
+**6. Show trends three ways.** A topic's share of the text in a year can be calculated against three baselines:
+
+| Baseline | Question it answers |
+|---|---|
+| Whole collection | How much of the surviving text in this year is about the topic? |
+| Each newspaper counted equally | Is the picture driven by one big paper? |
+| Only papers present in both years | Does the change survive when the set of newspapers stays the same? |
+
+These baselines can disagree. Between 1774 and 1775, political argument *falls* by 1.5 points in the whole collection but *rises* by 1.4 points among the three papers present in both years. The project shows such disagreements instead of picking one curve.
+
+**What a topic share is not:** it is not how much society cared about something. It is not a count of articles, and it does not say whether a problem was solved. It is a share of the model's word signal in the newspapers that happen to survive.
+
+## Track 2 · Story groups: following specific messages
+
+Topics are too broad to follow one story through the papers. For that, the project uses a slower, reviewed process.
+
+**1. Start from a specific story or lead.** Leads come from two places:
+- **Close reading.** Examples: Captain Boyd's report that the French fleet at Bantry Bay "must inevitably be captured", and the seizure of the brig *Peace* at Cayenne.
+- **Automatic text-reuse matching.** Code looks across all 1797 pages for passages in different newspapers that share long runs of wording, printed within 120 days of each other. Overlapping matches are grouped into candidate *families*: 629 in 1797, of which 23 reach 4 or 5 papers. The largest families are read first. That is how the report of the British defeat at Tenerife, Duncan's Camperdown dispatches and the Blount letter were found.
+
+**2. Search for it in a fixed window.** Patterns for names and phrases are run over **both** transcriptions of every page in a set date range. For example, the 1797 search looks for "Bantry", "Boyd" near "fleet", and "brig" near "Peace", across all 1,587 usable pages from 1797. Both transcriptions are searched because each one misreads different words. The output is a candidate list, not a result.
+
+**3. Read every candidate.** Most candidates are false hits. In 1797, 28 of 54 were another person named Boyd, or OCR noise such as "a bove" for "above". A candidate counts as the same message only if the actual wording corresponds. Sharing a place name or a date is not enough. When a real match turns up, a second search with its distinctive phrases looks for further printings.
+
+**4. Check against the scan.** Each passage to be admitted is cropped from the original page scan and read. This step regularly changes the picture:
+- RevX printed *distressed* where the paper says *dismasted*.
+- RevX gave "65, 55" for a longitude printed as "65, 35".
+- In one case RevX dropped a printed statement of about 350 words entirely.
+
+Differences between transcription and scan are recorded as transcription errors, not as changes the newspapers made.
+
+**5. Decide and record.** Every candidate gets one recorded decision with a reason:
+- **admitted** to a group;
+- **excluded**, for example as a false match;
+- **lead**, for example a ship with the same name whose identity is unresolved.
+
+Nothing is silently dropped. The decisions live in a ledger file, such as `pipeline/archive_data/ledgers/expansion_1797.json`.
+
+**6. Choose the kind of group.**
+
+| Group kind | Contains | Example |
+|---|---|---|
+| Message group | Printings of the *same* text | Boyd's fleet report in three papers |
+| Context group | Different texts about the same matter | Hand-bill and summary of the Two Sisters wreck |
+| Document group | Printings of a document | The 1794 clearance resolution |
+
+A passage can belong to more than one group, and groups can sit inside each other. In the totals, each passage counts once.
+
+**7. Label each appearance's role.** Examples are *report*, *appended challenge*, *later related account*, *condensed report* and *translated document*. A role describes what the printed text does. It is not a verdict on whether the text is true.
+
+### Connections between stories
+
+Connections were found the same way: search, read, then record. Passages in which two topic groups are both strong, for example shipping and European politics, were read. Fifteen connections that the newspapers state themselves were recorded, such as a decree that cites American newspapers. Each connection is recorded with its type (citation, challenge, claimed cause and so on) and the passage that supports it. Four counterexamples were kept as well, where items merely sat next to each other on a page. A connection a newspaper *asserts* is recorded as an assertion. It does not prove that one thing caused the other. Plainer links are recorded too. For example, a Greenock letter and Boyd's Bantry report were printed side by side in the same three issues, after arriving on the same ship. That is recorded as `printed_alongside` and nothing more.
+
+## Track 3 · Matched stories for every year (automatic, not checked)
+
+Reviewing every story by hand cannot cover 41 years, so coverage comes in two tiers:
+
+| Tier | What it is | Checked against scans? | Where |
+|---|---|---|---|
+| **Reviewed stories** | Read, grouped by hand, every printing checked on its scan | Yes | Data release tables (observations, groups) |
+| **Matched stories** | Found automatically: passages in different newspapers that share long runs of wording | No | Data release derived tables (`reuse_*.parquet`) |
+
+**How matched stories are made:**
+1. The text of every usable page is turned into overlapping 5-word fingerprints, the same method used first for 1797.
+2. Pages from different newspapers that share many fingerprints, and were printed within 120 days of each other, are compared word by word. A match needs at least 80 corresponding words with 70% similarity.
+3. Matches that overlap on the same page are joined into one *matched story*, a family.
+4. Each year is processed with a 120-day look-back, so stories that cross a new year are not lost.
+
+**The matcher takes the transcriptions as they are.** It finds what the database's text supports. A matched story can still join two neighbouring items on a page, and printings with badly damaged transcriptions are missed.
+
+**What the first run found (run `run:reuse-all-v1`, data release v0.5.0):**
+- 310,155 matches across all 41 years, from 77,749 pages;
+- 48,127 matched stories with 179,966 printed appearances;
+- 32,870 of these stories are in two newspapers, 8,549 in three and 6,708 in four or more (the largest reaches 15).
+
+**Titles (data release v0.5.1).** The shared wording often starts a few words into a sentence, so each matched story's title is read from the text printed just before it:
+- It starts where the item starts, if that is within 30 words. This works for 98% of a 300-story sample and 94% of all 48,127 stories.
+- A dateline place is added in front when 2 or more printings agree on it, as in "France · You would be astonished…". That happened for 20% of the sample and 8% of all stories.
+- Headings above the item are not used, because they were often section names or the signature of the item before.
+
+**Topics (data release v0.5.2).** The frozen 24-topic model from Track 1 scores the excerpt of every printing, and each story takes its strongest topic. Printings of the same story share their story's topic 89% of the time across all stories with two or more printings, and 76% in a sample of stories with three or more; chance would be about 7%. The telescope's Topic view uses these topics.
+
+**Long-running matches.** Overlapping matches can chain a serial document or a long debate into one family that runs for months, for example Erskine's instructions in 1809–10 (330 pages in 12 newspapers). A family that spans more than 120 days or more than 40 pages is flagged `long_running`. The pulse page lists these separately and leaves them out of the year overview.
+
+**On the pulse page, matched stories appear under "Matched automatically · not checked",** in one neutral colour, with a link to the original page instead of a scan crop. A **Year** menu switches between 1770 and 1810. Each year shows the matched stories that *start* in that year, so a story begun in December can run into January.
+
+## From reviewed data to a data release
+
+New decisions never overwrite old ones. Each round of review becomes one release:
+
+**ledger** (the decisions) → **migration script** (applies them to the previous release) → **validation** (automated checks of counts, links, scan files and double counting: 66 for the first reviewed release, 176 for v0.5.2) → **frozen release** ([`data/`](../data)).
+
+Earlier releases stay unchanged, so any chart can say which version of the evidence it uses. Corrections follow the same path. For example, v0.2.1 fixes one note that undercounted the length of the dropped statement. It adds a corrected annotation that points back to the old one, and the old one stays in the history.
+
+## From groups to pulses
+
+The pulse view is a direct translation of the admitted group records:
+
+- **Each newspaper is a fixed point, placed by its town of publication.** 1797 has 8 newspapers in the collection.
+  - The town comes from the catalogue record (`places_json`), and its coordinates from a short table in `pipeline/build_pulse_explorer.py` (32 towns).
+  - North is at the top and east to the right. Crowded coastal towns are spread out, and papers are nudged apart so names stay readable, so the layout keeps the order of places but not distances.
+  - Papers from the same town sit side by side.
+- **Each admitted passage is one pulse,** placed at its newspaper on its publication date. The same story in three papers makes three pulses. If one paper prints it twice, both printings pulse.
+- **Colour shows the passage's role** (report, challenge, later account, document). It does not show truth or a historical phase.
+- **There are no copying lines between newspapers.** We show where and when a story appeared, not who copied whom. Most printings name no source, so copying routes are unknown.
+- **Seeing which pulses belong together:**
+  - *Resonance:* when a paper prints a story, the papers that printed the same story in the previous 40 days glow again at the same moment. Nothing travels between them.
+  - *Constellations:* hovering over or tapping a star pauses on its story. The story's papers light up with their printing dates and are joined by faint lines; everything else dims. The lines join nearest neighbours on the map, not printings in date order, and appear all at once, so they group the printings without suggesting a route. The caption says so.
+  - *Filter:* "Show stories printed in at least N newspapers". The matched overview defaults to 3, which removes the two-paper matches (68% of all matched stories). The default speed is now 18 days per second.
+- **The archive coverage display shows which dates have pages at all.** A dark newspaper can mean the paper printed nothing on the story, or that its issues for those dates did not survive.
+  - Under each newspaper: whether the archive has a page from it on the current date.
+  - A coverage strip above the date slider: for each week (each day in short views), how many of the newspapers on the map have surviving pages. A low or missing bar is a gap in the archive, not silence.
+  - Weeks are used because most papers were weekly. Counted by single days, most days would look empty.
+- **The "All reviewed stories" overview plays every top-level story together.**
+  - **Categories and colours:** there are 21 stories in 1797 so far, in three categories with one colour each: *war, revolution and foreign news*, *ships, privateers and wrecks*, and *American public life*. Three colours is the most that stay distinguishable, including for colour-blind viewers, when any two are on screen together. So the colour shows the category, and the story's name appears under the newspaper.
+  - **Fading:** a newspaper keeps the colour for 40 days after a printing, then fades.
+  - **No double pulses:** each passage belongs to exactly one top-level story.
+  - **A sample, not a census:** the overview shows only reviewed stories, a small part of what the papers printed, not every story of the year.
+
+## The story telescope
+
+**Version 2 (7 November 2026)** treats time like looking into the night sky: **the further away, the earlier.**
+- **Time and depth:** the front frame is "now"; earlier stories sit further back. "Look back" sets how many years deep you see. The timeline bar, the Earlier/Later buttons and the arrow keys travel through time.
+- **Drift:** lets time pass slowly. New stories arrive at the front and older ones recede into the distance.
+- **Three views of the same tunnel of time**, with the stars gliding between them:
+  - **Place:** the town where each story was first printed in this archive, on a face-on map.
+  - **Topic:** a ring of the project's 24 topics, with similar topics next to each other. Printings of the same story agree on the topic 89% of the time.
+  - **Orbit:** a ring of the calendar. Because time also runs into the distance, each year becomes one turn of a spiral, so stories that return at the same season line up as streaks. A check found strong yearly rhythms for Independence Day, Thanksgiving, the President's annual speech, ice, fever and Congress, and none for fires; see [the seasons check](seasons-check.md).
+- **Angle:** Front looks straight back through time; Side shows the time axis from an angle.
+- **Moving around:** drag to turn the view, right-drag (or two fingers) to move it, and scroll or pinch to zoom. "Reset view" brings back the whole picture.
+- **Timeline bar:** under the view, a full 1770–1810 bar shows how many stories each month has, and which stretch of time you are looking through.
+- **Search:** typing a word lights up every story that mentions it in its title or opening words. The caption says how many match, in which years, and whether they keep to a season.
+
+Version 1 (below) is kept as `telescope-v1.html`.
+
+
+`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones.
+
+- **Left to right:** the date of first printing.
+- **Up and down:** the average latitude of the towns whose papers printed the story, north at the top. A small fixed scatter, up to 0.12°, keeps stories printed by the same papers from stacking into a line.
+- **Size and brightness:** the number of newspapers.
+- **Colours:** reviewed stories keep their category colours, and matched stories are grey-blue and labelled "not checked".
+- **Moving around:** zoom and pan through time. The latitude axis fits the stars in view.
+- **Opening a story:** click a star (or tap it twice on a phone) to open it in the pulse view with its printings and passages.
+- **Accessible list:** a "Brightest stories in view" list gives the same stories as plain links.
+- **Reading it with care:** the field follows the surviving archive. Where few papers survive (for example the South, or 1785–86), there are few stars. That is a gap in the collection, not proof that nothing was printed.
+
+## The website
+
+The views are joined into one site with five pages and a shared header:
+- **Home** (`index.html`): a short introduction, a slow time tunnel of stars, and three ways in.
+- **Telescope** (`telescope.html`): every story as a star.
+- **Pulses** (`pulses.html`): one story or one year, paper by paper.
+- **How it works** (`method.html`): the method in plain language.
+- **Research notes** (`notes.html`): the earlier studies.
+
+The header and footer come from one file, `pipeline/site_parts.py`, so they cannot drift apart. The header's search box searches every story in the telescope. The pages link to each other where it helps: a story on the pulse page has "See it in the sky", and a star in the telescope opens its pulses. The public repository is made from this project by `pipeline/export_public_repo.py`.
+
+## Worked example · *Peace and Plenty*, October 1797
+
+1. **The lead.** The 1797 search for the seized brig *Peace* used the pattern "brig" near "Peace". It also matched "brig *Peace and Plenty*" in three papers. That is a different ship, so it was not added to the *Peace* group.
+2. **Reading.** All three passages carry the same Boston marine report: Captain Dunbar, arriving from St. Croix, says a French privateer from Guadeloupe boarded his brig and took money, letters, stores and rigging.
+3. **Second search.** Searching for Dunbar's distinctive phrases ("curse on my country", "inhumanly flogged") across all 1797 pages found a fourth item: a condensed retelling headed *Fraternity* in the *Gazette of the United States* on 16 October.
+4. **Scan check.** On 13 October the *Gazette of the United States* scan prints Dunbar's full statement, but RevX leaves it out. The *New Hampshire Gazette*'s "65, 55" is a transcription error; the scan reads "65, 35". Both findings are recorded.
+5. **Groups.** The three full versions form a **message group**. That group sits inside a **context group**, which also holds the condensed retelling.
+6. **Pulses.** There are four pulses across three newspapers in ten days:
+
+| Date | Newspaper | Role |
+|---|---|---|
+| 13 Oct 1797 | Gazette of the United States (Philadelphia) | report |
+| 16 Oct 1797 | Gazette of the United States | condensed report |
+| 17 Oct 1797 | New Hampshire Gazette (Portsmouth) | report |
+| 23 Oct 1797 | The Eagle (Hanover, N.H.) | report |
+
+**What the example shows:** when and where this account was printed, and how its wording varied.
+
+**What it does not show:**
+- whether Dunbar's account is accurate;
+- which paper copied which;
+- whether newspapers outside the collection printed it.
+
+## What counts mean
+
+| Unit | Meaning | Not the same as |
+|---|---|---|
+| Page | One scanned newspaper page | An article |
+| Passage (topics) | A fixed 220-word span | An article or a story |
+| Selection (groups) | A reviewed excerpt about one story | An event |
+| Group | Reviewed selections about one message or matter | A verified historical event |
+| Pulse | One admitted selection on its publication date | How many people read it |
+
+## Limits to keep in view
+
+- **Not exhaustive:** the searches find candidates, and they cannot guarantee every printing. Badly damaged transcriptions can hide a match.
+- **Not independent:** all reading and scan checks so far were done by AI assistants (Codex, then Claude Code). A second human reader is still needed.
+- **Fragile topics:** topic labels and the number 24 are provisional, and three topics are unstable.
+- **Not public opinion:** newspaper coverage in a surviving archive is not the same as public opinion, and changes in coverage are not proof of cause or of resolution.
+
+## Where to find things
+
+| What | Where |
+|---|---|
+| Topic model and sampling | `pipeline/audit_dataset.py`, `pipeline/discover_topics.py` |
+| Full-collection scoring and trend checks | `pipeline/recheck_full_corpus.py` |
+| Story searches | `pipeline/search_chains.py`, `pipeline/search_pilot_1797.py`, `pipeline/story_phrase_search_1797.py` |
+| Text-reuse families, 1797 | `pipeline/reuse_1797.py` (matching), `pipeline/reuse_families_1797.py` (grouping) |
+| Matched stories, all years | `pipeline/reuse_all.py`, `pipeline/reuse_families_all.py`, `pipeline/reuse_titles_all.py`, `pipeline/story_topics_all.py`; added to the release by `pipeline/archive_data/add_reuse_layer.py`, `add_reuse_titles.py` and `add_story_topics.py` |
+| Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
+| Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
+| Data release | [`data/`](../data) (v0.5.2) |
+| Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

@@ -1,0 +1,884 @@
+{
+  "ledger_id": "ledger:stories-1797",
+  "ledger_version": 1,
+  "base_release": "0.2.1",
+  "target_release": "0.3.0",
+  "recorded_date": "2026-11-06",
+  "namespace": "expansion-1797",
+  "evidence_dir": "outputs/story_discovery_1797/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Reuse families from the 1797 text-reuse run, supplementary phrase searches on all 1,587 pages, reading of every printing, and scan checks of each admitted passage",
+  "supporting_files": {
+    "work/reuse_families_1797.py": "retrieval_code",
+    "work/story_phrase_search_1797.py": "retrieval_code",
+    "outputs/story_discovery_1797/families.json": "retrieval_candidates",
+    "outputs/story_discovery_1797/phrase_hits.json": "retrieval_candidates",
+    "outputs/story_discovery_1797/top_family_review.json": "candidate_review"
+  },
+  "scan_scope": "Each crop covers the excerpt, which is the opening of the printed item. Long items (speeches, dispatches) were not proofread in full.",
+  "observations": [
+    {
+      "id": "E08",
+      "family": "F97-001",
+      "page_key": "sn83025881|1797-10-05|1|3",
+      "excerpt_start": "NORFOLK, September 28. By a gentleman passenger",
+      "excerpt_end": "to have landed in town before day",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tenerife-defeat-report"
+      ],
+      "summary": "A Norfolk report, from a passenger on a Danish ship, of the British attack on Santa Cruz de Tenerife being driven off.",
+      "note": "Earliest printing found in the collection. The account continues further down the page.",
+      "scan_findings": [
+        "Scan matches: 'NORFOLK, September 28', 'Christians Haven', '7 English ships', '36 armed boats'."
+      ],
+      "crops": [
+        "E08.jpg"
+      ]
+    },
+    {
+      "id": "E09",
+      "family": "F97-001",
+      "page_key": "sn83025588|1797-10-17|1|2",
+      "excerpt_start": "NORFOLK, Sept. 18. By a gentleman passenger",
+      "excerpt_end": "to have landed in town before day",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tenerife-defeat-report"
+      ],
+      "summary": "The New Hampshire Gazette prints the same Norfolk report.",
+      "note": "Same wording as the Gazette of the United States version, with small differences in numbers and spelling.",
+      "scan_findings": [
+        "The paper prints 'NORFOLK, Sept. 18.' (the other printings have 28) and '39 armed boats' (others 36): differences in the printed text, not OCR."
+      ],
+      "crops": [
+        "E09.jpg"
+      ]
+    },
+    {
+      "id": "E10",
+      "family": "F97-001",
+      "page_key": "sn84023150|1797-10-23|1|2",
+      "excerpt_start": "By a gentleman passenger in the Danish ship Christian Haven",
+      "excerpt_end": "to have landed in town before day",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tenerife-defeat-report"
+      ],
+      "summary": "The Eagle prints the same report, without the Norfolk dateline.",
+      "note": "The account continues on page 3 of the same issue.",
+      "scan_findings": [
+        "No dateline in the printed text; '36 armed boats'."
+      ],
+      "crops": [
+        "E10.jpg"
+      ]
+    },
+    {
+      "id": "E11",
+      "family": "F97-001",
+      "page_key": "sn83025525|1797-10-24|1|3",
+      "excerpt_start": "English Defeat at Teneriffe. SEPT. 28.",
+      "excerpt_end": "to have landed in town before day",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tenerife-defeat-report"
+      ],
+      "summary": "The Mirror prints the report under its own heading, 'English Defeat at Teneriffe'.",
+      "note": "Same report; the heading differs.",
+      "scan_boxes": [
+        [
+          440,
+          4620,
+          1420,
+          5420
+        ]
+      ],
+      "scan_findings": [
+        "Heading 'English Defeat at Teneriffe' and 'SEPT. 28' printed in italics as transcribed. Crop located by hand: the page's text layer was unusable."
+      ],
+      "crops": [
+        "E11.jpg"
+      ]
+    },
+    {
+      "id": "E12",
+      "family": "F97-001",
+      "page_key": "sn82014782|1797-10-25|1|2",
+      "excerpt_start": "NORFOLK, September 28. By a gentleman passenger",
+      "excerpt_end": "to have landed in town before day",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tenerife-defeat-report"
+      ],
+      "summary": "The Kentucky Gazette prints the same Norfolk report.",
+      "note": "The account continues on page 3 of the same issue.",
+      "scan_findings": [
+        "Scan appears to read 'Patrick Gorran'; RevX 'sailing in that attempt' is a misreading of the printed 'failing'."
+      ],
+      "crops": [
+        "E12.jpg"
+      ]
+    },
+    {
+      "id": "E13",
+      "family": "F97-005",
+      "page_key": "sn83025588|1797-05-23|1|3",
+      "excerpt_start": "TUESDAY, May 16. The Senate attended",
+      "excerpt_end": "rendered the convention of Congress indispensable.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "adams-special-session-speech"
+      ],
+      "summary": "The New Hampshire Gazette prints President Adams's speech opening the special session of Congress, 16 May 1797.",
+      "note": "Full speech; only the opening is excerpted and scan-checked.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E13.jpg"
+      ]
+    },
+    {
+      "id": "E14",
+      "family": "F97-005",
+      "page_key": "sn84023150|1797-05-29|1|3",
+      "excerpt_start": "Tuesday, the 16th, the PRESIDENT met both Houses",
+      "excerpt_end": "rendered the convention of Congress indispensable.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "adams-special-session-speech"
+      ],
+      "summary": "The Eagle prints the same speech.",
+      "note": "Full speech; only the opening is excerpted and scan-checked.",
+      "scan_findings": [
+        "Scan matches the excerpt ('indispensable' printed with long s)."
+      ],
+      "crops": [
+        "E14.jpg"
+      ]
+    },
+    {
+      "id": "E15",
+      "family": "F97-005",
+      "page_key": "sn82014782|1797-06-07|1|2",
+      "excerpt_start": "This day at 12 o'clock, the president of the United States met both houses",
+      "excerpt_end": "rendered the convention of Congress indispensable.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "adams-special-session-speech"
+      ],
+      "summary": "The Kentucky Gazette prints the same speech, three weeks after delivery.",
+      "note": "Continues on page 3. The Gazette of the United States pages that matched only quote phrases from the speech and are not admitted.",
+      "scan_boxes": [
+        [
+          190,
+          190,
+          580,
+          560
+        ]
+      ],
+      "scan_findings": [
+        "Scan matches the excerpt. Crop located by hand."
+      ],
+      "crops": [
+        "E15.jpg"
+      ]
+    },
+    {
+      "id": "E16",
+      "family": "F97-007",
+      "page_key": "sn83025881|1797-02-16|1|3",
+      "excerpt_start": "In Senate of the United States, February 15, 1797. On request",
+      "excerpt_end": "for so long a period;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "adams-senate-farewell"
+      ],
+      "summary": "Vice President Adams's farewell address to the Senate, 15 February 1797, the day after it was given.",
+      "note": "Address only; the Senate's reply appears separately a week later.",
+      "scan_findings": [
+        "Scan matches; this printing reads 'center', the others 'centre'."
+      ],
+      "crops": [
+        "E16.jpg"
+      ]
+    },
+    {
+      "id": "E17",
+      "family": "F97-007",
+      "page_key": "sn83025881|1797-02-23|1|3",
+      "excerpt_start": "The answer to the Address of the Vice President",
+      "excerpt_end": "so honorably filled, as their President.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "adams-senate-farewell"
+      ],
+      "summary": "The Senate's formal answer to Adams's farewell address.",
+      "note": "A separate document from the address. Later printings in other papers carry both together.",
+      "scan_findings": [
+        "Scan matches: 'Senate of the United States, February 22' heading."
+      ],
+      "crops": [
+        "E17.jpg"
+      ]
+    },
+    {
+      "id": "E18",
+      "family": "F97-007",
+      "page_key": "sn84038410|1797-02-23|1|3",
+      "excerpt_start": "In Senate of the United States, February 15, '97. On request",
+      "excerpt_end": "for so long a period;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "adams-senate-farewell"
+      ],
+      "summary": "The Patowmac Guardian prints the farewell address.",
+      "note": "Same address text.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E18.jpg"
+      ]
+    },
+    {
+      "id": "E19",
+      "family": "F97-007",
+      "page_key": "sn83025588|1797-03-11|1|1",
+      "excerpt_start": "In the SENATE of the UNITED STATES, Feb. 15, 1797. ON request",
+      "excerpt_end": "for so long a period;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "adams-senate-farewell"
+      ],
+      "summary": "The New Hampshire Gazette opens its front page with the farewell address.",
+      "note": "Printed under 'Federal Legislative Sketches', with the Senate's reply.",
+      "scan_findings": [
+        "Scan matches the excerpt; printed under a decorated initial."
+      ],
+      "crops": [
+        "E19.jpg"
+      ]
+    },
+    {
+      "id": "E20",
+      "family": "F97-007",
+      "page_key": "sn82014782|1797-03-25|1|2",
+      "excerpt_start": "In the Senate of the United States, February 15, 1797. On request",
+      "excerpt_end": "for so long a period;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "adams-senate-farewell"
+      ],
+      "summary": "The Kentucky Gazette prints the farewell address, about five weeks after it was given.",
+      "note": "Printed with the Senate's reply.",
+      "scan_boxes": [
+        [
+          490,
+          1670,
+          875,
+          1950
+        ]
+      ],
+      "scan_findings": [
+        "Scan matches the excerpt. Crop located by hand."
+      ],
+      "crops": [
+        "E20.jpg"
+      ]
+    },
+    {
+      "id": "E21",
+      "family": "F97-010",
+      "page_key": "sn83025881|1797-12-21|1|3",
+      "excerpt_start": "I dispatched the Rose cutter at three P.M.",
+      "excerpt_end": "immediately after the action was ended.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "camperdown-dispatches"
+      ],
+      "summary": "The Gazette of the United States prints Admiral Duncan's dispatch on the defeat of the Dutch fleet at Camperdown (11 October 1797).",
+      "note": "The dispatch begins at the foot of page 2; this page carries most of it, with the lists of ships and casualties.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E21.jpg"
+      ]
+    },
+    {
+      "id": "E22",
+      "family": "F97-010",
+      "page_key": "sn84024710|1797-12-23|1|1",
+      "excerpt_start": "This signal victory was yesterday announced by the following",
+      "excerpt_end": "of which the following is a copy:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "camperdown-dispatches"
+      ],
+      "summary": "The Virginia Argus prints the London Gazette Extraordinary with both of Duncan's letters, under a London paper's celebration of the victory.",
+      "note": "Includes Duncan's short first letter of 12 October and the longer dispatch.",
+      "scan_boxes": [
+        [
+          85,
+          1080,
+          470,
+          1300
+        ]
+      ],
+      "scan_findings": [
+        "Scan matches the excerpt. Crop located by hand."
+      ],
+      "crops": [
+        "E22.jpg"
+      ]
+    },
+    {
+      "id": "E23",
+      "family": "F97-010",
+      "page_key": "sn83025588|1797-12-27|1|3",
+      "transcription_field": "ca_ocr_text",
+      "excerpt_start": "Naval Engagement.",
+      "excerpt_end": "Admiral of the Blue",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "camperdown-dispatches"
+      ],
+      "summary": "The New Hampshire Gazette prints the dispatch, brought by a passenger on a ship from Liverpool to Boston.",
+      "note": "RevX has no text for this page, so the excerpt comes from the older CA transcription, with its OCR errors.",
+      "scan_findings": [
+        "Scan clearly reads 'dispatches from Adam Duncan' and 'ship Orono, Captain Jameson'; the CA text garbles both. A dark blot covers the left edge."
+      ],
+      "crops": [
+        "E23.jpg"
+      ]
+    },
+    {
+      "id": "E24",
+      "family": "F97-010",
+      "page_key": "sn84038410|1797-12-28|1|2",
+      "excerpt_start": "LONDON GAZETTE EXTRAORDINARY. Admiralty Office, October 16",
+      "excerpt_end": "of which the following are copies:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "camperdown-dispatches"
+      ],
+      "summary": "The Patowmac Guardian prints the London Gazette Extraordinary dispatch.",
+      "note": "Same dispatch text.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E24.jpg"
+      ]
+    },
+    {
+      "id": "E25",
+      "family": "F97-011",
+      "page_key": "sn83025588|1797-10-10|1|3",
+      "excerpt_start": "Desperate Conflict. CIVITA VECCHIA, JUNE 30.",
+      "excerpt_end": "lasted till near three in the afternoon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "algerine-sicilian-battle"
+      ],
+      "summary": "A Civitavecchia report of a day-long fight near Messina between an Algerine cruiser and a Sicilian ship.",
+      "note": "Earliest printing found in the collection.",
+      "scan_findings": [
+        "Scan matches; this printing spells 'Scicilies'."
+      ],
+      "crops": [
+        "E25.jpg"
+      ]
+    },
+    {
+      "id": "E26",
+      "family": "F97-011",
+      "page_key": "sn84023150|1797-10-23|1|2",
+      "excerpt_start": "DREADFUL CONFLICT. CIVITA' VECCHIA, JUNE 30.",
+      "excerpt_end": "lasted till near three in the afternoon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "algerine-sicilian-battle"
+      ],
+      "summary": "The Eagle prints the same report as 'Dreadful Conflict'.",
+      "note": "Same report; the heading differs.",
+      "scan_findings": [
+        "Scan matches; this printing spells 'begining'."
+      ],
+      "crops": [
+        "E26.jpg"
+      ]
+    },
+    {
+      "id": "E27",
+      "family": "F97-011",
+      "page_key": "sn83025525|1797-10-24|1|1",
+      "excerpt_start": "DESPERATE CONFLICT. CIVITTA-VECCHIA, JUNE 30.",
+      "excerpt_end": "lasted till near 3 in the afternoon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "algerine-sicilian-battle"
+      ],
+      "summary": "The Mirror prints the same report on its front page.",
+      "note": "Same report.",
+      "scan_findings": [
+        "Scan matches; Messina carries a printed footnote mark."
+      ],
+      "crops": [
+        "E27.jpg"
+      ]
+    },
+    {
+      "id": "E28",
+      "family": "F97-011",
+      "page_key": "sn82014782|1797-11-08|1|2",
+      "excerpt_start": "CIVITTA VECCHIA, June 30. The beginning",
+      "excerpt_end": "lasted till near three in the afternoon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "algerine-sicilian-battle"
+      ],
+      "summary": "The Kentucky Gazette prints the same report, about four months after the dateline.",
+      "note": "Same report.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E28.jpg"
+      ]
+    },
+    {
+      "id": "E29",
+      "family": "F97-013",
+      "page_key": "sn83025881|1797-07-06|1|3",
+      "excerpt_start": "Colonel King's Iron-works, April 21st, 1797.",
+      "excerpt_end": "which commences on the 15th May.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "blount-letter"
+      ],
+      "summary": "The Gazette of the United States prints Senator Blount's intercepted letter to the Indian interpreter James Carey, after the British minister's statement.",
+      "note": "The letter as a document. RevX reads 'CARBY' for Carey.",
+      "scan_findings": [
+        "Scan reads 'DEAR CAREY'; RevX 'CARBY' is a transcription error."
+      ],
+      "crops": [
+        "E29.jpg"
+      ]
+    },
+    {
+      "id": "E30",
+      "family": "F97-013",
+      "page_key": "sn83025588|1797-07-18|1|2",
+      "excerpt_start": "PHILADELPHIA, July 6. High Treason!",
+      "excerpt_end": "to a person of the name of Carey, an Indian Interpreter",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-letter"
+      ],
+      "summary": "The New Hampshire Gazette prints the Philadelphia report, headed 'High Treason!', that makes the letter public.",
+      "note": "The report is followed by the letter. Only this version is headed 'High Treason!'.",
+      "scan_findings": [
+        "Scan matches, including the 'High Treason!' heading."
+      ],
+      "crops": [
+        "E30.jpg"
+      ]
+    },
+    {
+      "id": "E31",
+      "family": "F97-013",
+      "page_key": "sn84023150|1797-07-24|1|1",
+      "excerpt_start": "PHILADELPHIA, MAY 6. The subject of the last confidential message",
+      "excerpt_end": "to a person of the name of Carey, an Indian interpreter",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-letter"
+      ],
+      "summary": "The Eagle prints the same report on its front page.",
+      "note": "The paper prints the dateline as 'MAY 6'; the report is from July.",
+      "scan_findings": [
+        "The paper itself prints 'PHILADELPHIA, MAY 6.' for this July report: an error in the 1797 printing, not OCR."
+      ],
+      "crops": [
+        "E31.jpg"
+      ]
+    },
+    {
+      "id": "E32",
+      "family": "F97-013",
+      "page_key": "sn82014782|1797-07-26|1|2",
+      "excerpt_start": "PHILADELPHIA, July 6. The subject of the last confidential message",
+      "excerpt_end": "to a person of the name of Carey, an Indian interpreter",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-letter"
+      ],
+      "summary": "The Kentucky Gazette prints the report after the President's confidential message and Pickering's report.",
+      "note": "Same report, then the letter.",
+      "scan_boxes": [
+        [
+          915,
+          1130,
+          1300,
+          1600
+        ]
+      ],
+      "scan_findings": [
+        "Scan matches the excerpt. Crop located by hand."
+      ],
+      "crops": [
+        "E32.jpg"
+      ]
+    },
+    {
+      "id": "E33",
+      "family": "F97-014",
+      "page_key": "sn83025588|1797-10-10|1|3",
+      "excerpt_start": "Arrived here the brig Brothers",
+      "excerpt_end": "but afterwards hoisted French.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brothers-privateer-boarding"
+      ],
+      "summary": "In Portsmouth's own paper, Captain Kennard of the brig Brothers reports being boarded by a small privateer on the way from Grenada.",
+      "note": "Printed under 'Ship News' without a dateline; the other papers credit Portsmouth.",
+      "scan_findings": [
+        "Scan reads 'Sept. 13th'; RevX '19th' is a transcription error."
+      ],
+      "crops": [
+        "E33.jpg"
+      ]
+    },
+    {
+      "id": "E34",
+      "family": "F97-014",
+      "page_key": "sn83025881|1797-10-16|1|3",
+      "excerpt_start": "PORTSMOUTH, (N. H.) October 7. Arrived here the brig Brothers",
+      "excerpt_end": "but afterwards hoisted French.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brothers-privateer-boarding"
+      ],
+      "summary": "The Gazette of the United States prints Kennard's report under a Portsmouth, Oct. 7 dateline.",
+      "note": "Same report.",
+      "scan_findings": [
+        "Scan matches: 'September 13th', '23 days'."
+      ],
+      "crops": [
+        "E34.jpg"
+      ]
+    },
+    {
+      "id": "E35",
+      "family": "F97-014",
+      "page_key": "sn84023150|1797-10-23|1|3",
+      "excerpt_start": "FORTSMOUTH, (N. H.) OCT. 7. Arrived here",
+      "excerpt_end": "but afterwards hoisted French.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brothers-privateer-boarding"
+      ],
+      "summary": "The Eagle prints Kennard's report, just before Dunbar's Peace and Plenty account.",
+      "note": "Same report; the printed boarding date differs (see scan findings).",
+      "scan_findings": [
+        "Scan reads 'PORTSMOUTH' (RevX 'FORTSMOUTH' is OCR) and appears to read 'September 18th', where two other printings have 13th."
+      ],
+      "crops": [
+        "E35.jpg"
+      ]
+    },
+    {
+      "id": "E36",
+      "family": "F97-014",
+      "page_key": "sn83025525|1797-10-24|1|3",
+      "excerpt_start": "PORTSMOUTH, OCT. 7. Arrived here the brig Brothers",
+      "excerpt_end": "but afterwards hoisted French.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brothers-privateer-boarding"
+      ],
+      "summary": "The Mirror prints Kennard's report under 'New Hampshire'.",
+      "note": "Same report.",
+      "scan_findings": [
+        "The paper prints '13 days from Grenada' where the other printings have 23: a difference in the printed text."
+      ],
+      "crops": [
+        "E36.jpg"
+      ]
+    },
+    {
+      "id": "E37",
+      "page_key": "sn84038410|1797-02-02|1|3",
+      "excerpt_start": "January 27. MELANCHOLLY AND DISTRESSING.",
+      "excerpt_end": "is dangerously ill",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brown-house-fire"
+      ],
+      "summary": "First report of the fire at the Philadelphia house of the printer Andrew Brown on 27 January 1797.",
+      "note": "Found by phrase search, not by the reuse family. The report goes on to describe what happened to Mrs Brown and her three children.",
+      "scan_findings": [
+        "Scan matches the excerpt; the item runs into the next column."
+      ],
+      "crops": [
+        "E37-1.jpg",
+        "E37-2.jpg"
+      ]
+    },
+    {
+      "id": "E38",
+      "page_key": "sn83025588|1797-02-11|1|3",
+      "excerpt_start": "PHILADELPHIA, Jan. 28. Melancholy Event.",
+      "excerpt_end": "faint hopes of his recovery are entertained.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brown-house-fire"
+      ],
+      "summary": "A different Philadelphia report of the fire: it says Mrs Brown, two daughters, a son and a Black boy died in the flames.",
+      "note": "Found by phrase search. Different wording from the Patowmac Guardian report.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E38-1.jpg",
+        "E38-2.jpg"
+      ]
+    },
+    {
+      "id": "E39",
+      "family": "F97-022",
+      "page_key": "sn83025881|1797-02-06|1|3",
+      "excerpt_start": "The mournful tale of the dreadful catastrophe",
+      "excerpt_end": "who expired on Saturday morning.",
+      "roles": [
+        "later_related_account"
+      ],
+      "groups": [
+        "brown-house-fire"
+      ],
+      "summary": "The Gazette of the United States reports Andrew Brown's own death after the fire.",
+      "note": "A shorter, differently worded notice than the version the other papers carry.",
+      "scan_boxes": [
+        [
+          2580,
+          1000,
+          3700,
+          1215
+        ]
+      ],
+      "scan_findings": [
+        "Scan reads 'The mournfulness of the dreadful catastrophe'; RevX 'mournful tale' is a transcription error. Crop located by hand."
+      ],
+      "crops": [
+        "E39.jpg"
+      ]
+    },
+    {
+      "id": "E40",
+      "family": "F97-022",
+      "page_key": "sn84024710|1797-02-14|1|3",
+      "excerpt_start": "The mournful catastrophe which has lately overwhelmed",
+      "excerpt_end": "extricated from the fire.",
+      "roles": [
+        "later_related_account"
+      ],
+      "groups": [
+        "brown-house-fire"
+      ],
+      "summary": "The Virginia Argus prints the longer notice of Brown's death.",
+      "note": "Same wording as the Patowmac Guardian and New Hampshire Gazette notices.",
+      "scan_findings": [
+        "Scan reads 'he had imbibed'; RevX 'inhaled' is a transcription error."
+      ],
+      "crops": [
+        "E40.jpg"
+      ]
+    },
+    {
+      "id": "E41",
+      "family": "F97-022",
+      "page_key": "sn84038410|1797-02-16|1|3",
+      "excerpt_start": "PHILADELPHIA, February 6. The mournful catastrophe",
+      "excerpt_end": "extricated from the fire.",
+      "roles": [
+        "later_related_account"
+      ],
+      "groups": [
+        "brown-house-fire"
+      ],
+      "summary": "The Patowmac Guardian prints the notice of Brown's death.",
+      "note": "Same notice; Philadelphia, February 6 dateline.",
+      "scan_findings": [
+        "Scan matches; this printing spells 'smoak'."
+      ],
+      "crops": [
+        "E41.jpg"
+      ]
+    },
+    {
+      "id": "E42",
+      "family": "F97-022",
+      "page_key": "sn83025588|1797-02-25|1|3",
+      "excerpt_start": "The mournful catastrophe which has lately overwhelmed",
+      "excerpt_end": "extricated from the fire.",
+      "roles": [
+        "later_related_account"
+      ],
+      "groups": [
+        "brown-house-fire"
+      ],
+      "summary": "The New Hampshire Gazette prints the notice of Brown's death, four weeks after the fire.",
+      "note": "Same notice as the Virginia Argus and Patowmac Guardian versions.",
+      "scan_findings": [
+        "Scan reads 'smoke'; RevX 'fumes' is a transcription error."
+      ],
+      "crops": [
+        "E42.jpg"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "tenerife-defeat-report",
+      "kind": "message_group",
+      "label": "Tenerife defeat report",
+      "definition": "Printings of a Norfolk report, from a passenger on the Danish ship Christian Haven, that the British attack on Santa Cruz de Tenerife (July 1797) was driven off. Other Tenerife accounts in the collection are different texts and are not included.",
+      "admission_rule": "Reviewed 1797 printings of this report, checked against the scan."
+    },
+    {
+      "id": "adams-special-session-speech",
+      "kind": "document_group",
+      "label": "Adams's speech to Congress",
+      "definition": "Printings of President Adams's speech of 16 May 1797 opening the special session of Congress. Pages that only quote phrases from it are not included.",
+      "admission_rule": "Reviewed 1797 printings of the speech text, checked against the scan (opening only)."
+    },
+    {
+      "id": "adams-senate-farewell",
+      "kind": "context_group",
+      "label": "Adams's farewell to the Senate",
+      "definition": "Printings of Vice President Adams's farewell address to the Senate (15 February 1797), plus the Senate's answer where printed separately.",
+      "admission_rule": "Reviewed 1797 printings of the address or the answer, checked against the scan."
+    },
+    {
+      "id": "camperdown-dispatches",
+      "kind": "document_group",
+      "label": "Duncan's Camperdown dispatches",
+      "definition": "Printings of Admiral Duncan's official dispatches on the defeat of the Dutch fleet off Camperdown (11 October 1797), from the London Gazette Extraordinary. Earlier first-news reports are not included.",
+      "admission_rule": "Reviewed 1797 printings of the dispatches, checked against the scan (opening only)."
+    },
+    {
+      "id": "algerine-sicilian-battle",
+      "kind": "message_group",
+      "label": "Algerine–Sicilian sea battle",
+      "definition": "Printings of a Civitavecchia report (30 June 1797) of a battle near Messina between an Algerine cruiser and a ship of the King of the Two Sicilies. The battle itself is not independently verified.",
+      "admission_rule": "Reviewed 1797 printings of this report, checked against the scan."
+    },
+    {
+      "id": "blount-letter",
+      "kind": "context_group",
+      "label": "Blount letter made public",
+      "definition": "Printings of Senator William Blount's intercepted letter to the interpreter James Carey (July 1797): the letter as a document, and a Philadelphia report that introduces and quotes it. The wider Blount affair coverage is not included.",
+      "admission_rule": "Reviewed 1797 printings of the letter or of this report, checked against the scan."
+    },
+    {
+      "id": "brothers-privateer-boarding",
+      "kind": "message_group",
+      "label": "Brothers boarded by privateer",
+      "definition": "Printings of Captain Kennard's report that the brig Brothers was boarded by a privateer on the way from Grenada to Portsmouth, N.H. (September 1797). Not independently verified.",
+      "admission_rule": "Reviewed 1797 printings of this report, checked against the scan."
+    },
+    {
+      "id": "brown-house-fire",
+      "kind": "context_group",
+      "label": "Andrew Brown house fire",
+      "definition": "Reports of the fire at the Philadelphia house of the printer Andrew Brown (27 January 1797) and notices of his death a week later. Several different texts.",
+      "admission_rule": "Reviewed 1797 reports of the fire or of Brown's death, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "dispositions_summary": {
+    "families_reviewed": [
+      "F97-001",
+      "F97-005",
+      "F97-007",
+      "F97-010",
+      "F97-011",
+      "F97-013",
+      "F97-014",
+      "F97-022"
+    ],
+    "admitted_printings": 35,
+    "not_admitted": {
+      "F97-005 Gazette of the United States 5 and 12 June": "quotes phrases from the speech; not a printing of it",
+      "Tenerife: GUS 30 Aug, GUS 5 Sep, NH 12 Sep, NH 1 Nov, GUS 14 Nov, KY 25 Nov": "other Tenerife accounts with different texts",
+      "Camperdown: other 'Admiral Duncan' and 'De Winter' pages": "first-news reports, the peerage notice and other items, not the dispatches",
+      "Blount: GUS 7 and 10 July, NH 18 July p1, KY 29 July p3 and later pages": "committee report, expulsion, documents and debate on the wider affair",
+      "Kennard: other NH pages": "ship arrivals and advertisements naming Kennard"
+    }
+  }
+}

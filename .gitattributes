@@ -1,0 +1,3 @@
+# Store every file byte for byte (no line-ending conversion),
+# so the data files keep the SHA-256 hashes recorded in data/manifest.json.
+* -text

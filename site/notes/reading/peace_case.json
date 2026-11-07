@@ -1,0 +1,159 @@
+{
+  "title": "Peace: a reported seizure, a circulating account, and an institutional record",
+  "timeline": [
+    {
+      "id": "E0",
+      "date": null,
+      "date_type": "event date unknown",
+      "title": "Reported seizure of the brig Peace",
+      "source": "Newspaper accounts H012 and X016",
+      "observation": "They attribute news to Captain Whitney of Maria and identify Peace, Captain Samuel Allen, Dover–Surinam via Cayenne. The date of seizure is not supplied.",
+      "boundary": "Reported event, not an independently verified court finding."
+    },
+    {
+      "id": "E1",
+      "date": "1797-05-13",
+      "date_type": "internal news dateline",
+      "title": "Providence dateline",
+      "source": "Dateline printed above H012 and X016",
+      "observation": "Both carry Providence, May 13. This is distinct from their publication dates.",
+      "boundary": "An internal dateline does not by itself identify the original newspaper or the seizure date."
+    },
+    {
+      "id": "E2",
+      "date": "1797-05-18",
+      "date_type": "publication date",
+      "title": "Gazette of the United States",
+      "source": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-05-18_1_3.pdf?download=true",
+      "observation": "Prints the seizure account, attributed to Whitney, including the $25,000 valuation and claimed British-port pretext.",
+      "boundary": "Earliest version currently admitted to this case record; not necessarily the first publication."
+    },
+    {
+      "id": "E3",
+      "date": "1797-05-30",
+      "date_type": "publication date",
+      "title": "New Hampshire Gazette",
+      "source": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-05-30_1_1.pdf?download=true",
+      "observation": "Prints corresponding text and additional commentary attributed to Mercury about a bill demanded for remitted funds.",
+      "boundary": "Direct copying from H012 is unproven. The annotation itself is not independently confirmed."
+    },
+    {
+      "id": "E4",
+      "date": "1797-06-21",
+      "date_type": "report date",
+      "title": "Secretary of State report",
+      "source": "https://dheller.org/Timeline-files/US-American-State-Papers/Foreign-Relations-2.pdf#page=32",
+      "observation": "The report explains the use of two Philadelphia newspapers to supplement missing official records. Its annex lists Peace and explicitly cites Gazette of the United States, May 18.",
+      "boundary": "The report documents an institutional use of newspaper evidence, not an independent adjudication of Peace."
+    },
+    {
+      "id": "E5",
+      "date": "1797-06-22",
+      "date_type": "transmission date",
+      "title": "Report transmitted to the House",
+      "source": "https://dheller.org/Timeline-files/US-American-State-Papers/Foreign-Relations-2.pdf#page=32",
+      "observation": "Adams transmits the collection in response to the House resolution of June 10, according to the printed covering message.",
+      "boundary": "The collection concerns many captures. It does not establish that this particular story caused the request or a policy change."
+    },
+    {
+      "id": "E6",
+      "date": "1797-06-27",
+      "date_type": "publication date; contextual branch",
+      "title": "Cayenne decree translation and accusation",
+      "source": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-06-27_1_3.pdf?download=true",
+      "observation": "A translated decree and editorial allegation concern Cayenne and newspaper accounts.",
+      "boundary": "The original decree and itemized eight allegations remain missing. No verified legal link to Peace is assigned."
+    },
+    {
+      "id": "E7",
+      "date": null,
+      "date_type": "outcome unknown",
+      "title": "Adjudication, repayment or return",
+      "source": null,
+      "observation": "No case-matched independent judgment, repayment or release record has been admitted.",
+      "boundary": "Unknown is not evidence that nothing happened. The institutional report is not the resolution of the case."
+    },
+    {
+      "id": "E8",
+      "date": "1832",
+      "date_type": "compilation publication year",
+      "title": "American State Papers, Foreign Relations, volume 2",
+      "source": "https://dheller.org/Timeline-files/US-American-State-Papers/Foreign-Relations-2.pdf#page=3",
+      "observation": "The consulted compilation was published in 1832 and reproduces the dated 1797 documents.",
+      "boundary": "Do not label the compilation itself as a newspaper publication in June 1797."
+    }
+  ],
+  "relations": [
+    {
+      "a": "E2",
+      "b": "E3",
+      "type": "shared wording",
+      "directed": false
+    },
+    {
+      "a": "E4",
+      "b": "E2",
+      "type": "explicit source citation",
+      "directed": true
+    },
+    {
+      "a": "E5",
+      "b": "E4",
+      "type": "document transmission",
+      "directed": true
+    },
+    {
+      "a": "E6",
+      "b": "E0",
+      "type": "context only; legal connection unverified",
+      "directed": false
+    }
+  ],
+  "review": "Newly inspected the full scans of ASP printed pp.28–29 (PDF pp.32–33); prior admitted newspaper crops and explicit citation retained. No independent second reader.",
+  "search": "See peace_search.json and peace_search_review.json for the additional 1796–1805 corpus search.",
+  "sources": [
+    {
+      "url": "https://tile.loc.gov/storage-services/service/ll/llscd/llsp002/llsp002.pdf",
+      "consulted_mirror": "https://dheller.org/Timeline-files/US-American-State-Papers/Foreign-Relations-2.pdf",
+      "pages": "Printed 28–29, 57, 60, 62; title page for compilation year"
+    }
+  ],
+  "unresolved_identity_leads": [
+    {
+      "id": "P031",
+      "publication_date": "1797-07-17",
+      "title": "Peace, Allen, of Providence, listed at Surinam on June 11",
+      "note": "The scan supports the name, master surname, home port and Surinam listing. This is a plausible continuation lead; it neither states a release from Cayenne nor establishes the identity beyond doubt.",
+      "scan_checked": true,
+      "scan_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-07-17_1_3.pdf?download=true",
+      "crop": "evidence/P031_context.jpg"
+    },
+    {
+      "id": "P032",
+      "publication_date": "1797-09-02",
+      "title": "Crew of Peace of Providence reported after a capture homeward from Surinam",
+      "note": "The scan supports the place and route, but does not name the master or connect the capture to the May Cayenne account. Keep as a possible continuation, not a confirmed second capture of the same vessel.",
+      "scan_checked": true,
+      "scan_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-09-02_1_3.pdf?download=true",
+      "crop": "evidence/P032_2.jpg"
+    },
+    {
+      "id": "P033",
+      "publication_date": "1797-09-08",
+      "title": "Peace, Allen, of New York, reported captured from Martinique",
+      "note": "The port and route differ from the May account. Matching name and surname alone do not resolve vessel identity.",
+      "scan_checked": true,
+      "scan_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-09-08_1_3.pdf?download=true",
+      "crop": "evidence/P033_1.jpg"
+    },
+    {
+      "id": "P034",
+      "publication_date": "1797-09-11",
+      "title": "Corresponding Peace/Allen/New York account appears again",
+      "note": "The scan repeats the Porto Rico condemnation account, with Martinico as the departure place. This is another publication, not an independent confirmation or an established continuation of the Cayenne case.",
+      "scan_checked": true,
+      "scan_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-09-11_1_3.pdf?download=true",
+      "crop": "evidence/P034_0.jpg"
+    }
+  ]
+}

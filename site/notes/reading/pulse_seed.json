@@ -1,0 +1,275 @@
+{
+  "status": "Design feasibility seed, not an implemented animation or complete event census.",
+  "nodes": [
+    {
+      "id": "sn84038410",
+      "label": "The Patowmac guardian, and Berkeley advertiser"
+    },
+    {
+      "id": "sn83025588",
+      "label": "The New Hampshire gazette"
+    },
+    {
+      "id": "sn82014782",
+      "label": "The Kentucky gazette"
+    }
+  ],
+  "observations": [
+    {
+      "id": "H001",
+      "node": "sn84038410",
+      "publication_date": "1797-03-16",
+      "message_group": "Boyd/Bantry coverage",
+      "roles": [
+        "report"
+      ],
+      "phase": null,
+      "phase_note": "No independently verified historical event phase assigned.",
+      "excerpt": "Captain Boye positively asserts, that previous to his failing, accounts were received at the custom-house of Liverpool, of 17 sail of French vessels, men of war and transports, having a number of troops on board, destined for a descent on Ireland, being through gusts of weather blown into Bantry Bay, most of them distressed; some of the people went on shore, were made prisoners, and sent to Dublin; from the situation of the place the whole must inevitably be captured. They intended to have effected a landing at Londonderry in the North of Ireland.",
+      "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84038410/1797-03-16_1_3.pdf?download=true",
+      "page": 3,
+      "evidence_status": "Previously inspected newspaper scan; same-assistant review",
+      "note": "原版为 dismasted；RevX 的 distressed 是转写差异。扫描中船长姓名字形与 RevX 的 Boye 也不宜用于人物去重。此处未附后见版本的 CHRONICLE 质疑。"
+    },
+    {
+      "id": "H002",
+      "node": "sn83025588",
+      "publication_date": "1797-03-25",
+      "message_group": "Boyd/Bantry coverage",
+      "roles": [
+        "report",
+        "challenge"
+      ],
+      "phase": null,
+      "phase_note": "No independently verified historical event phase assigned.",
+      "excerpt": "Capt. Boyd, positively asserts, that previous to his sailing, accounts were received at the custom house of Liverpool, of 17 sail of French vessels, men of war and transports, having a number of troops on board, destined for a DESCENT ON IRELAND, being through stress of weather, blown into Bantry Bay, most of them dismasted; some of the people went on shore, were made prisoners, and went to Dublin; from the situation of the place the whole must inevitably be captured. They intended to have effected a landing at Londonderry in the North of Ireland. [NOTE. Capt. Boyd failed from Liverpool on the 29th December, and the French fleet left Brest, on the 26th of the same month: How then is it possible they should have reached Ireland in 3 days, and the accounts from thence received at Liverpool? Can it be thought that 20,000 French troops, and 17 ships of the line, have surrendered to the inhabitants of Bantry, whose population does not exceed 10,000 souls? It is more natural to think the French have taken that town.—Why were those 20,000 French sent to Dublin, 154 miles from Bantry Bay, and not to Cork, that lies but 9 miles from it? Can it be presumed, that the French fleet, in order to effect a landing at Londonderry, had entered the channel of Ireland so full of dangers, instead of sailing westward, on the main; a route much shorter and less difficult, free from the dangers of the channel, and which would not have exposed them to discovery from Liverpool or Dublin, and meet with every obstacle, that could have frustrated their design. CHRONICLE.]",
+      "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-03-25_1_2.pdf?download=true",
+      "page": 2,
+      "evidence_status": "Previously inspected newspaper scan; same-assistant review",
+      "note": "质疑同时提出日期、路线与人数问题；它也是当时人的解释，不能自动充当事实核查结果。RevX 的 failed 在此为原报 sailed。"
+    },
+    {
+      "id": "H006",
+      "node": "sn82014782",
+      "publication_date": "1797-04-12",
+      "message_group": "Boyd/Bantry coverage",
+      "roles": [
+        "report"
+      ],
+      "phase": null,
+      "phase_note": "No independently verified historical event phase assigned.",
+      "excerpt": "Capt. Boyd positively asserts, that previous to his sailing, accounts were received at the Custom house of Liverpool of 17 sail of French vessels, men of war and transports, having a number of troops on board, destined for a descent on Ireland, being thro' stress of weather, blown into Bantry Bay, most of them dismasted; some of the people went on shore, were made prisoners, and sent to Dublin; from the situation of the place, the whole must inevitably be captured. They intended to have effected a landing at Londonderry, in the North of Ireland.",
+      "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-04-12_1_3.pdf?download=true",
+      "page": 3,
+      "evidence_status": "Previously inspected newspaper scan; same-assistant review",
+      "note": "核心段落再次出现，保留 inevitably be captured 的预测语气。它没有紧跟 H002 的 CHRONICLE 注释；尚未证明此版本取自 H002。"
+    },
+    {
+      "id": "H007",
+      "node": "sn82014782",
+      "publication_date": "1797-04-19",
+      "message_group": "Boyd/Bantry coverage",
+      "roles": [
+        "later_related_account"
+      ],
+      "phase": null,
+      "phase_note": "No independently verified historical event phase assigned.",
+      "excerpt": "Of the intelligence brought by the late arrivals, the most important relates to the French expedition against Ireland. We have collected under this head, every interesting detail we have been able to meet with. By comparing the various accounts, it appears, that the French force when it failed from Brest, consisted of about 50 sail, including transports, of which 17 were of the line, and had on board 25,000 men.—They failed in three divisions, under the command of De Galles, Bouvet and Neuilly; the land troops under the command of general Hoche. They had scarcely left the port when bad weather dispersed them. Chief part of the fleet however rendezvoused at Bantry Bay, but the frigate la Fraternite, on board of which were the commanders of the fleet and land forces, not joining the fleet, after some delay left the Bay, without molestation, except by the wind, and by the best and latest accounts, reached Brest, in divisions without material loss. The expedition appears to have been planned on a large scale. The Toulon fleet which came round to l'Orient, and the armament at Dunkirk were probably to co-operate. Notwithstanding the above failure, the French appear still to have an expedition to Ireland in contemplation.",
+      "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-04-19_1_2.pdf?download=true",
+      "page": 2,
+      "evidence_status": "Previously inspected newspaper scan; same-assistant review",
+      "note": "The later account concerns the main body returning to Brest; no explicit retraction of the Boyd report."
+    }
+  ],
+  "relations": [],
+  "coverage": [
+    {
+      "node": "sn82014782",
+      "date": "1797-03-01",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-03-04",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-03-04",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-03-08",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn84038410",
+      "date": "1797-03-09",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-03-11",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-03-11",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-03-15",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn84038410",
+      "date": "1797-03-16",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-03-18",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-03-18",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-03-22",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn84038410",
+      "date": "1797-03-23",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-03-25",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-03-25",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-03-29",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn84038410",
+      "date": "1797-03-30",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-01",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-04-01",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-05",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn84038410",
+      "date": "1797-04-06",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-08",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-04-08",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-12",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn84038410",
+      "date": "1797-04-13",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-15",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-04-15",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-19",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn84038410",
+      "date": "1797-04-20",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-22",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-04-22",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-26",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn84038410",
+      "date": "1797-04-27",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn82014782",
+      "date": "1797-04-29",
+      "eligible_pages_observed": 4
+    },
+    {
+      "node": "sn83025588",
+      "date": "1797-04-29",
+      "eligible_pages_observed": 4
+    }
+  ],
+  "coverage_note": "Observed model-eligible pages only. A date absent from this calendar is unknown here, not proof of no issue, no story or no historical activity.",
+  "animation_rules": {
+    "clock": "publication date",
+    "node_positions": "fixed",
+    "pulse": "observed dated publication; fixed brightness by default",
+    "afterglow": "presentation-only fade, explicitly distinct from historical duration",
+    "edge_motion": "none: publication-pulse display has no inferred newspaper-to-newspaper edges",
+    "default_filter": "one inspected message group",
+    "historical_phase": "unassigned; textual roles may be shown instead",
+    "unknown": "visible missing-evidence state, not zero",
+    "repeat_publications": "retain every admitted observed publication; reuse adjudication is not a prerequisite"
+  },
+  "user_clarification": "Show the fact of a message appearing in a newspaper on a publication date. Do not build reprint relationships."
+}

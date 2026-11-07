@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research notes · Newspaper Pulsar</title>
+<meta name="description" content="Earlier studies behind Newspaper Pulsar: topic and coverage report, a close-reading notebook, story discovery, and the technical process.">
+__SITE_HEAD__
+<style>
+:root{color-scheme:dark;--bg:#050711;--ink:#edf2ff;--muted:#a2afc8;--line:#28334c;--blue:#8ccfff;--gold:#ffd27a;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg)}a{color:var(--blue)}a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+main{max-width:980px;margin:auto;padding:40px 24px 0}h1{font-size:clamp(30px,3.6vw,42px);font-weight:500;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:18px;color:#c6d0e4;margin:0 0 30px;max-width:70ch}h2{font-size:15px;font-weight:500;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin:34px 0 10px}
+.list{display:grid;gap:10px}.item{display:block;text-decoration:none;color:var(--ink);background:#0b1222;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.item:hover{border-color:#8ccfff88}.item h3{font-size:17px;font-weight:500;margin:0 0 4px}.item p{margin:0;color:#b9c4da;font-size:14.5px}.item .meta{font-size:12.5px;color:var(--muted);margin-top:8px}
+@media(max-width:720px){main{padding:24px 16px 0}}
+</style>
+</head>
+<body>
+__SITE_HEADER__
+<main>
+<h1>Research notes</h1>
+<p class="lede">The studies behind this site, as they were written. They are working documents, and some numbers were revised later. For how the site itself works, start with <a href="method.html">How it works</a>.</p>
+<h2>Reports</h2>
+<div class="list">
+<a class="item" href="notes/attention/attention_pilot_report.html"><h3>How newspaper attention rises, persists, and returns</h3><p>A coverage audit of the whole archive and a 24-topic pilot: which themes the papers carried over 41 years, and how much the surviving pages shape what we can see.</p><p class="meta">English · November 2026 · report with charts</p></a>
+<a class="item" href="notes/reading/reading_notebook.html"><h3>Reading an incomplete archive · 1797</h3><p>A close-reading notebook: how far one can follow a story through the papers of 1797, the case of the seized ship <i>Peace</i>, and a first test of text reuse.</p><p class="meta">English · November 2026 · notebook with scan crops</p></a>
+<a class="item" href="__REPO__/blob/main/docs/seasons-check.md"><h3>Do stories come back at the same season?</h3><p>The check behind the Orbit view: yearly rhythms for Independence Day, Thanksgiving, the President's speech, fever, ice and Congress, with fires as a control.</p><p class="meta">English · November 2026 · on GitHub</p></a></div>
+<h2>Method and data</h2>
+<div class="list">
+<a class="item" href="__REPO__/blob/main/docs/process.md"><h3>Full process introduction</h3><p>The technical account of every step: topics, story groups, matched stories for every year, data releases, and the pulse and telescope rules.</p><p class="meta">English · on GitHub</p></a>
+<a class="item" href="__REPO__/tree/main/data"><h3>Data release</h3><p>The versioned data foundation (currently v__RELEASE__): tables, checks, provenance, and how to extend it.</p><p class="meta">English · on GitHub</p></a>
+<a class="item" href="__REPO__/tree/main/pipeline"><h3>The pipeline</h3><p>The scripts that audit the archive, find and check stories, cut the data releases and build this site, in the order they run.</p><p class="meta">Python · on GitHub</p></a>
+<a class="item" href="__REPO__/tree/main/process"><h3>From proposal to site</h3><p>The three original project proposals and sketches, and how they became the telescope and the pulse view.</p><p class="meta">English · on GitHub</p></a>
+</div>
+</main>
+__SITE_FOOTER__
+</body>
+</html>

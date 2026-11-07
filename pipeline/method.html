@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How it works · Newspaper Pulsar</title>
+<meta name="description" content="How Newspaper Pulsar was made: the archive, matched and reviewed stories, pulses, the telescope, topics, seasons, and what this cannot tell you.">
+__SITE_HEAD__
+<style>
+:root{color-scheme:dark;--bg:#050711;--ink:#edf2ff;--muted:#a2afc8;--line:#28334c;--blue:#8ccfff;--gold:#ffd27a;font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg)}a{color:var(--blue)}a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1160px;margin:auto;padding:40px 24px 0;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px}
+.toc{position:sticky;top:20px;align-self:start;font-size:14px}.toc p{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
+.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}.toc a{display:block;color:var(--muted);text-decoration:none;padding:5px 10px;border-left:2px solid #1c2640}.toc a:hover{color:var(--ink);border-color:var(--blue)}
+article{max-width:74ch}h1{font-size:clamp(30px,3.6vw,42px);font-weight:500;letter-spacing:-.02em;margin:0 0 12px;line-height:1.15}
+.lede{font-size:19px;color:#c6d0e4;margin:0 0 10px}
+section{padding-top:30px;margin-top:22px;border-top:1px solid #1c2640;scroll-margin-top:16px}h2{font-size:24px;font-weight:500;margin:0 0 12px}h3{font-size:17px;font-weight:500;margin:22px 0 6px}
+p,li{color:#c6d0e4}p{margin:0 0 14px}ul,ol.steps{padding-left:22px;margin:0 0 14px}li{margin:4px 0}
+.k{color:var(--ink);font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:6px 0 16px}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #1c2640;vertical-align:top}th{color:var(--muted);font-weight:500;font-size:13px}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{border-left:2px solid var(--gold);padding:4px 0 4px 14px;color:#d9e1f0;margin:18px 0}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted);margin-right:4px}.pill.r{border-color:#199e7088;color:#96dfc4}
+@media(max-width:860px){.wrap{display:block;padding:24px 16px 0}.toc{position:static;margin-bottom:10px}.toc ol{display:flex;flex-wrap:wrap;gap:4px}.toc a{border:1px solid #1c2640;border-radius:99px;padding:3px 10px}}
+</style>
+</head>
+<body>
+__SITE_HEADER__
+<div class="wrap">
+<nav class="toc" aria-label="On this page"><p>On this page</p><ol>
+<li><a href="#archive">The archive</a></li><li><a href="#matched">Matched stories</a></li><li><a href="#reviewed">Reviewed stories</a></li>
+<li><a href="#pulses">What a pulse shows</a></li><li><a href="#telescope">The telescope</a></li><li><a href="#topics">Topics</a></li>
+<li><a href="#seasons">Seasons</a></li><li><a href="#limits">What this cannot tell you</a></li><li><a href="#data">Data and code</a></li></ol></nav>
+<article>
+<h1>How it works</h1>
+<p class="lede">Newspaper Pulsar shows what one surviving archive of American newspapers printed, and when. It does not show everything that was printed, or what people thought. Here is how it was made, and what to keep in mind.</p>
+
+<section id="archive"><h2>The archive</h2>
+<p>The newspapers come from the Smithsonian's <i>Revolution Crossroads</i> collection, drawn from the Library of Congress's <i>Chronicling America</i>: <span class="k">77,793 pages</span> from <span class="k">110 newspaper series</span>, 1770 to 1810. Of these, 77,749 pages have enough readable text to use.</p>
+<p>What survived is uneven. In 1785 and 1786 only two series are in the collection, and 1786 has 356 pages against 4,466 for 1808. Many papers appear for a few years and vanish. So the site always shows <a href="pulses.html">which pages survive</a> next to what they printed: an empty stretch usually means missing pages, not silence.</p>
+<p>The text of each page is a machine transcription of the scan, either a recent AI transcription or older OCR. Both make mistakes. One printed “dismasted”, and the transcription read “distressed”; in another case the AI transcription left out a whole 350-word statement that is plainly on the page. That is why every page links to its scan.</p>
+</section>
+
+<section id="matched"><h2>Matched stories <span class="pill">automatic · not checked</span></h2>
+<p>Newspapers of this period copied each other constantly: a report printed in Boston would reappear in Portsmouth, Philadelphia and Richmond over the following weeks. When two papers print a long run of the same wording, it is almost certainly the same item. A computer can find those runs across all 41 years.</p>
+<ol class="steps">
+<li>Each page's text is cut into overlapping five-word fingerprints.</li>
+<li>Pages from different newspapers printed within 120 days of each other are compared, and a match needs at least 80 words in the same order with 70% similarity.</li>
+<li>Matches that overlap on the same page are joined into one <span class="k">matched story</span>.</li>
+<li>Each story gets a title from the text printed just before the shared words, so it starts where the item starts (this works for 94% of stories).</li></ol>
+<p>The result: <span class="k">310,155 matches</span>, joined into <span class="k">__N_MATCHED__ matched stories</span> with __N_PRINTINGS__ printings. About two thirds were printed in exactly two papers; 15,257 reached three or more.</p>
+<p class="note">Matched stories are not read or checked by a person. A match can join two neighbouring items on a page; printings in badly damaged text are missed; reprints within the same paper are not counted; and serial documents or long debates can chain together over months (these are marked “long-running”).</p>
+</section>
+
+<section id="reviewed"><h2>Reviewed stories <span class="pill r">read · checked against the scans</span></h2>
+<p>For 1797, stories were also found, read and grouped by hand, and every printing was checked against its page scan: <span class="k">21 stories</span> with 107 printings, from Boyd's report of the French fleet at Bantry Bay to the Blount affair and the mutiny on the <i>Hermione</i>.</p>
+<p>Each printing is labelled by what the text does — a report, an appended challenge, a later account, a translated document — not by whether it is true. The scan checks keep transcription errors apart from real differences between printings: one paper's “65, 55” turned out to be a transcription error for “65, 35”, while another paper really did print a different date.</p>
+<p>The reading and scan checks so far were done with AI assistants (Codex and Claude Code). An independent human second reader is still to come.</p>
+</section>
+
+<section id="pulses"><h2>What a pulse shows</h2>
+<p>On the <a href="pulses.html">pulse page</a>, each newspaper is a point on a map, placed roughly by its town. When a paper printed a story, its point pulses on that date. That is the whole claim: <span class="k">newspaper X printed this on date Y</span>.</p>
+<ul><li>There are no lines showing who copied whom. Most printings do not name their source, so the route a story took is unknown.</li>
+<li>When a paper prints a story, the papers that printed the same story in the previous 40 days glow again with it. Constellation lines, shown only when you pick a story, group its printings by nearness on the map; they are not routes either.</li>
+<li>The bars along the timeline show how many papers survive each week. A missing bar is a gap in the archive.</li></ul>
+</section>
+
+<section id="telescope"><h2>The telescope</h2>
+<p>The <a href="telescope.html">telescope</a> shows all __N_STORIES__ stories at once, as stars. Time runs into the distance, as when we look at the night sky: the front is “now”, and the further away a star is, the earlier the story. Drift lets time pass slowly. Bigger, brighter stars were printed in more newspapers.</p>
+<p>The same stars can be arranged three ways: by the town where each story was first printed (Place), by what it is about (Topic), or by the time of year (Orbit). Search lights up every story whose title or opening words mention a word or name.</p>
+</section>
+
+<section id="topics"><h2>Topics</h2>
+<p>The Topic view uses a model the project trained earlier on the whole archive: it finds 24 groups of words that tend to appear together, such as <i>ship · capt · arrived</i> or <i>french · france · war</i>. Each story is placed in its strongest topic. The labels are the model's top words, not names chosen by a person, and three of the 24 were unstable when the model was retrained. As a check, different printings of the same story land in the same topic 89% of the time.</p>
+</section>
+
+<section id="seasons"><h2>Seasons</h2>
+<p>Some news comes back at the same time every year. A check on the matched stories found clear yearly rhythms for these kinds of story (keyword searches; the archive's surviving pages are spread almost perfectly evenly over the year, so this is not a gap in the collection):</p>
+<table><thead><tr><th>Kind of story</th><th>Stories</th><th>When</th></tr></thead><tbody>
+<tr><td>Independence Day</td><td class="num">119</td><td>81% in July–September, in 25 of 30 years</td></tr>
+<tr><td>Thanksgiving</td><td class="num">25</td><td>October–January</td></tr>
+<tr><td>The President's annual speech or message</td><td class="num">84</td><td>November–January, every year it appears</td></tr>
+<tr><td>Ice and frozen rivers</td><td class="num">45</td><td>Winter and spring</td></tr>
+<tr><td>Fever and epidemics</td><td class="num">122</td><td>July–September</td></tr>
+<tr><td>Congress proceedings</td><td class="num">1,474</td><td>December–May, while Congress sits</td></tr>
+<tr><td>Fires (for comparison)</td><td class="num">124</td><td>No yearly rhythm</td></tr></tbody></table>
+<p>A four-year rhythm around presidential elections shows clearly only from 1800. In the telescope's Orbit view, a search shows its months as petals; if the petals all reach the dashed circle, there is no rhythm.</p>
+</section>
+
+<section id="limits"><h2>What this cannot tell you</h2>
+<ul><li><span class="k">Not everything printed.</span> Only what survives in this collection, and only what could be read in its transcriptions.</li>
+<li><span class="k">Not public opinion.</span> How often papers printed something is not the same as how much people cared.</li>
+<li><span class="k">Not who copied whom.</span> Printing order is not a copying route unless a paper names its source.</li>
+<li><span class="k">Not truth.</span> A story printed in thirteen papers can still be wrong; roles describe what a text does, not whether it is accurate.</li>
+<li><span class="k">Counts depend on the archive.</span> More surviving pages mean more stories; compare years with care.</li></ul>
+</section>
+
+<section id="data"><h2>Data and code</h2>
+<p>Everything shown here is built from a versioned data release (currently <span class="k">v__RELEASE__</span>). New evidence never overwrites old: each round of review or automatic analysis becomes a new release with its own checks, so any view can say which version it uses.</p>
+<ul><li><a href="__REPO__/tree/main/data">Data release</a>: tables, checks and versions</li>
+<li><a href="__REPO__/blob/main/docs/process.md">Full process introduction</a>: the technical account of every step</li>
+<li><a href="__REPO__/blob/main/docs/seasons-check.md">The seasons check</a>, with its script</li>
+<li><a href="notes.html">Research notes</a>: earlier studies behind this site</li></ul>
+<p>Dataset: Hugging Face <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision. Made as Project 02 for Major Studio 1, with research and code developed together with AI assistants.</p>
+</section>
+</article>
+</div>
+__SITE_FOOTER__
+</body>
+</html>

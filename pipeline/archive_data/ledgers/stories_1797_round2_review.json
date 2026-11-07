@@ -1,0 +1,485 @@
+{
+ "boxes": {
+  "E45": [
+   [
+    3430,
+    1480,
+    4780,
+    2200
+   ]
+  ],
+  "E55": [
+   [
+    770,
+    1010,
+    1310,
+    1170
+   ]
+  ],
+  "E57": [
+   [
+    1120,
+    235,
+    1570,
+    480
+   ]
+  ],
+  "E61": [
+   [
+    130,
+    515,
+    510,
+    730
+   ]
+  ],
+  "E66": [
+   [
+    2450,
+    2900,
+    3420,
+    3460
+   ]
+  ],
+  "E67": [
+   [
+    1250,
+    1510,
+    1660,
+    1730
+   ]
+  ],
+  "E71": [
+   [
+    510,
+    240,
+    880,
+    405
+   ]
+  ],
+  "E74": [
+   [
+    840,
+    2505,
+    1250,
+    2550
+   ],
+   [
+    1240,
+    195,
+    1640,
+    340
+   ]
+  ],
+  "E85": [
+   [
+    3180,
+    4960,
+    4150,
+    5230
+   ]
+  ],
+  "E94": [
+   [
+    1900,
+    2650,
+    3200,
+    2980
+   ]
+  ],
+  "E97": [
+   [
+    1250,
+    195,
+    1660,
+    430
+   ]
+  ],
+  "E100": [
+   [
+    3550,
+    5890,
+    4800,
+    6420
+   ]
+  ],
+  "E103": [
+   [
+    422,
+    2313,
+    799,
+    2514
+   ]
+  ]
+ },
+ "findings": {
+  "E43": [
+   "Scan matches the excerpt."
+  ],
+  "E44": [
+   "Scan matches the excerpt."
+  ],
+  "E45": [
+   "Scan matches, under a 'NOV. 23' heading. Crop located by hand."
+  ],
+  "E46": [
+   "Scan matches, under 'Philad. 27th Nov. 1797'."
+  ],
+  "E47": [
+   "Scan matches the excerpt."
+  ],
+  "E48": [
+   "Scan matches the excerpt."
+  ],
+  "E49": [
+   "Scan matches: the committee's draft 'reported ... and referred to a committee of the whole'."
+  ],
+  "E50": [
+   "Scan matches the excerpt."
+  ],
+  "E51": [
+   "Scan matches the excerpt."
+  ],
+  "E52": [
+   "Scan matches the excerpt."
+  ],
+  "E53": [
+   "Scan matches the excerpt."
+  ],
+  "E54": [
+   "Scan matches the excerpt."
+  ],
+  "E55": [
+   "Scan matches; 'claim their attention' is printed in italics. Crop located by hand."
+  ],
+  "E56": [
+   "Scan matches: 'claim their consideration'."
+  ],
+  "E57": [
+   "Scan matches. Crop located by hand."
+  ],
+  "E58": [
+   "Scan matches: '[The following is a Copy of the Address, as reported.]'."
+  ],
+  "E59": [
+   "Scan matches the excerpt."
+  ],
+  "E60": [
+   "Scan matches the excerpt."
+  ],
+  "E61": [
+   "Scan matches the excerpt. Crop located by hand."
+  ],
+  "E62": [
+   "Scan matches: the frigate 'has been rose upon by the crew'."
+  ],
+  "E63": [
+   "Scan reads 'THURSDAY EVENING, NOVEMBER 16' and 'British Frigate HERMIONE'; RevX 'Brigs Hermione' and 'mizen topgall' are transcription errors, and RevX abridges the item."
+  ],
+  "E64": [
+   "Scan matches the excerpt."
+  ],
+  "E65": [
+   "Scan matches the excerpt."
+  ],
+  "E66": [
+   "Scan reads 'British Frigate Hermoine'; RevX 'Brigantine' is a transcription error. Crop located by hand."
+  ],
+  "E67": [
+   "Scan matches (faint). Crop located by hand."
+  ],
+  "E68": [
+   "Scan matches: 'British Frigate Hermoine'."
+  ],
+  "E69": [
+   "Scan matches the excerpt."
+  ],
+  "E70": [
+   "Scan matches, with the printed footnote on Quito."
+  ],
+  "E71": [
+   "Scan matches. Crop located by hand."
+  ],
+  "E72": [
+   "Scan matches: 'General KOSCIUSKO ... General WHITE, of New Brunswick'."
+  ],
+  "E73": [
+   "Scan matches the excerpt."
+  ],
+  "E74": [
+   "The paper prints 'his friend General Gates, in the state of New York': a difference in the printed text. Crop located by hand, in two pieces across a column break."
+  ],
+  "E75": [
+   "Scan matches the excerpt."
+  ],
+  "E76": [
+   "Scan matches; the dateline is badly printed ('BOSLON')."
+  ],
+  "E77": [
+   "Scan matches the excerpt."
+  ],
+  "E78": [
+   "Scan matches the excerpt."
+  ],
+  "E79": [
+   "Scan reads 'dated Medusa' and 'five ships to two'; RevX 'Mafuda' and 'to one' are transcription errors."
+  ],
+  "E80": [
+   "Scan matches: 'Medusa', 'five ships to two'."
+  ],
+  "E81": [
+   "Scan appears to read 'Medula' for Medusa; 'five ships to two'."
+  ],
+  "E82": [
+   "Scan reads 'had a black representative on board'; the CA text drops 'black representative'."
+  ],
+  "E83": [
+   "Scan matches the excerpt."
+  ],
+  "E84": [
+   "Scan matches the excerpt."
+  ],
+  "E85": [
+   "Scan matches the excerpt. Crop located by hand."
+  ],
+  "E86": [
+   "Scan matches: 'Sept. 25', 'FRENCH PIRACIES'."
+  ],
+  "E87": [
+   "Scan appears to read 'CHARLESTON, Oct. 25.' on a 24 October page: a printed error. Heading 'FRENCH PIRACIES'; RevX 'Pirates' is a transcription error."
+  ],
+  "E88": [
+   "Scan matches the excerpt."
+  ],
+  "E89": [
+   "Scan matches the excerpt."
+  ],
+  "E90": [
+   "Scan matches the excerpt."
+  ],
+  "E91": [
+   "Scan matches the excerpt."
+  ],
+  "E92": [
+   "Scan matches the excerpt."
+  ],
+  "E93": [
+   "Scan matches the excerpt."
+  ],
+  "E94": [
+   "Scan matches. Crop located by hand."
+  ],
+  "E95": [
+   "Scan reads 'KNOXVILLE, September 18' and 'returned to this town'; the CA text's errors ('KNOXVILM:', 'towa', 'conduced') are OCR."
+  ],
+  "E96": [
+   "Scan matches, with the 'Blount Forever.' heading."
+  ],
+  "E97": [
+   "Scan matches (faint). Crop located by hand."
+  ],
+  "E98": [
+   "Scan matches the excerpt."
+  ],
+  "E99": [
+   "Scan reads 'Mr. Sitgreaves' and 'Dr. Romaine'; RevX 'Sngreaves' is a transcription error."
+  ],
+  "E100": [
+   "Scan reads 'Mr. Sitgreaves' and 'Dr. Romaine'. Crop located by hand."
+  ],
+  "E101": [
+   "Scan matches: 'received by the Peggy, Capt. Boyd, arrived in Hampton Roads from Liverpool'."
+  ],
+  "E102": [
+   "The paper prints 'Capt. Pool' and omits 'arrived in Hampton Roads from Liverpool': differences in the printed text."
+  ],
+  "E103": [
+   "Scan reads 'Grenock' and 'dated the 25th of December' (others 29th). Crop located by hand."
+  ]
+ },
+ "crops": {
+  "E43": [
+   "E43.jpg"
+  ],
+  "E44": [
+   "E44.jpg"
+  ],
+  "E45": [
+   "E45.jpg"
+  ],
+  "E46": [
+   "E46.jpg"
+  ],
+  "E47": [
+   "E47.jpg"
+  ],
+  "E48": [
+   "E48.jpg"
+  ],
+  "E49": [
+   "E49.jpg"
+  ],
+  "E50": [
+   "E50.jpg"
+  ],
+  "E51": [
+   "E51.jpg"
+  ],
+  "E52": [
+   "E52.jpg"
+  ],
+  "E53": [
+   "E53.jpg"
+  ],
+  "E54": [
+   "E54.jpg"
+  ],
+  "E55": [
+   "E55.jpg"
+  ],
+  "E56": [
+   "E56.jpg"
+  ],
+  "E57": [
+   "E57.jpg"
+  ],
+  "E58": [
+   "E58.jpg"
+  ],
+  "E59": [
+   "E59.jpg"
+  ],
+  "E60": [
+   "E60.jpg"
+  ],
+  "E61": [
+   "E61.jpg"
+  ],
+  "E62": [
+   "E62.jpg"
+  ],
+  "E63": [
+   "E63.jpg"
+  ],
+  "E64": [
+   "E64.jpg"
+  ],
+  "E65": [
+   "E65.jpg"
+  ],
+  "E66": [
+   "E66.jpg"
+  ],
+  "E67": [
+   "E67.jpg"
+  ],
+  "E68": [
+   "E68.jpg"
+  ],
+  "E69": [
+   "E69.jpg"
+  ],
+  "E70": [
+   "E70.jpg"
+  ],
+  "E71": [
+   "E71.jpg"
+  ],
+  "E72": [
+   "E72.jpg"
+  ],
+  "E73": [
+   "E73.jpg"
+  ],
+  "E74": [
+   "E74-1.jpg",
+   "E74-2.jpg"
+  ],
+  "E75": [
+   "E75.jpg"
+  ],
+  "E76": [
+   "E76.jpg"
+  ],
+  "E77": [
+   "E77.jpg"
+  ],
+  "E78": [
+   "E78.jpg"
+  ],
+  "E79": [
+   "E79.jpg"
+  ],
+  "E80": [
+   "E80.jpg"
+  ],
+  "E81": [
+   "E81.jpg"
+  ],
+  "E82": [
+   "E82.jpg"
+  ],
+  "E83": [
+   "E83.jpg"
+  ],
+  "E84": [
+   "E84.jpg"
+  ],
+  "E85": [
+   "E85.jpg"
+  ],
+  "E86": [
+   "E86.jpg"
+  ],
+  "E87": [
+   "E87.jpg"
+  ],
+  "E88": [
+   "E88.jpg"
+  ],
+  "E89": [
+   "E89.jpg"
+  ],
+  "E90": [
+   "E90.jpg"
+  ],
+  "E91": [
+   "E91.jpg"
+  ],
+  "E92": [
+   "E92.jpg"
+  ],
+  "E93": [
+   "E93.jpg"
+  ],
+  "E94": [
+   "E94.jpg"
+  ],
+  "E95": [
+   "E95.jpg"
+  ],
+  "E96": [
+   "E96.jpg"
+  ],
+  "E97": [
+   "E97.jpg"
+  ],
+  "E98": [
+   "E98.jpg"
+  ],
+  "E99": [
+   "E99.jpg"
+  ],
+  "E100": [
+   "E100.jpg"
+  ],
+  "E101": [
+   "E101.jpg"
+  ],
+  "E102": [
+   "E102.jpg"
+  ],
+  "E103": [
+   "E103.jpg"
+  ]
+ }
+}

@@ -1,0 +1,1624 @@
+{
+  "ledger_id": "ledger:stories-1797-round2",
+  "ledger_version": 1,
+  "base_release": "0.3.0",
+  "target_release": "0.4.0",
+  "recorded_date": "2026-11-06",
+  "namespace": "expansion-1797",
+  "evidence_dir": "outputs/story_discovery_1797/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Three-paper reuse families, round-two phrase searches on all 1,587 pages, reading of every printing, and scan checks of each admitted passage",
+  "supporting_files": {
+    "work/story_phrase_search_1797.py": "retrieval_code",
+    "outputs/story_discovery_1797/phrase_patterns_round2.json": "retrieval_patterns",
+    "outputs/story_discovery_1797/phrase_hits_round2.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1797_round2.py": "ledger_code"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "E43",
+      "page_key": "sn83025881|1797-11-23|1|3",
+      "excerpt_start": "PRESIDENT'S SPEECH. THIS DAY, At Twelve o'Clock",
+      "excerpt_end": "to convene the National Legislature at some other place;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "Adams's speech opening the second session of Congress, which met in Philadelphia after the yellow fever.",
+      "note": "Earliest printing in the collection, on the day of the speech.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E43.jpg"
+      ]
+    },
+    {
+      "id": "E44",
+      "page_key": "sn83025588|1797-12-06|1|2",
+      "excerpt_start": "On Thursday at 12 o'clock, the Senate having assembled",
+      "excerpt_end": "to convene the national Legislature, at some other place.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The New Hampshire Gazette prints the speech.",
+      "note": "Same speech; only the opening is excerpted.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E44.jpg"
+      ]
+    },
+    {
+      "id": "E45",
+      "page_key": "sn83025525|1797-12-12|1|2",
+      "excerpt_start": "At 12 o'clock, the Senate having assembled in the Representatives' Hall",
+      "excerpt_end": "to convene the National Legislature, at some other place.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The Mirror prints the speech.",
+      "note": "The speech continues on page 3.",
+      "scan_findings": [
+        "Scan matches, under a 'NOV. 23' heading. Crop located by hand."
+      ],
+      "crops": [
+        "E45.jpg"
+      ],
+      "scan_boxes": [
+        [
+          3430,
+          1480,
+          4780,
+          2200
+        ]
+      ]
+    },
+    {
+      "id": "E46",
+      "page_key": "sn83025881|1797-11-28|1|2",
+      "excerpt_start": "The Senate, in a body, this day waited on the President",
+      "excerpt_end": "which have always marked your official character.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The Senate's answer to the speech.",
+      "note": "Printed the day it was presented.",
+      "scan_findings": [
+        "Scan matches, under 'Philad. 27th Nov. 1797'."
+      ],
+      "crops": [
+        "E46.jpg"
+      ]
+    },
+    {
+      "id": "E47",
+      "page_key": "sn83025588|1797-12-13|1|1",
+      "excerpt_start": "The following is the address of the Senate, in answer",
+      "excerpt_end": "which have always marked your official character.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The New Hampshire Gazette prints the Senate's answer.",
+      "note": "Same page as the House's answer.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E47.jpg"
+      ]
+    },
+    {
+      "id": "E48",
+      "page_key": "sn83025525|1797-12-19|1|2",
+      "excerpt_start": "The following is the Address of the Senate in answer",
+      "excerpt_end": "which have always marked your official character.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The Mirror prints the Senate's answer.",
+      "note": "Same page as the House's answer.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E48.jpg"
+      ]
+    },
+    {
+      "id": "E49",
+      "page_key": "sn83025881|1797-11-28|1|3",
+      "excerpt_start": "Mr. OTIS, from the committee appointed to draft an address",
+      "excerpt_end": "the duration of the late calamity was so limited",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The House committee's draft answer, opening with sympathy for Philadelphia's sufferings.",
+      "note": "The draft as first reported; the House amended it before passing.",
+      "scan_findings": [
+        "Scan matches: the committee's draft 'reported ... and referred to a committee of the whole'."
+      ],
+      "crops": [
+        "E49.jpg"
+      ]
+    },
+    {
+      "id": "E50",
+      "page_key": "sn83025588|1797-12-13|1|1",
+      "excerpt_start": "The Answer of the House stands as follows",
+      "excerpt_end": "the duration of the late calamity was so limited",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The New Hampshire Gazette prints the House's answer as passed.",
+      "note": "After a report of the amendment debate.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E50.jpg"
+      ]
+    },
+    {
+      "id": "E51",
+      "page_key": "sn83025525|1797-12-19|1|2",
+      "excerpt_start": "Then answer was then reported to the House, and passed in the following words",
+      "excerpt_end": "the duration of the late calamity was so limited",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The Mirror prints the House's answer as passed.",
+      "note": "After a report of the amendment debate.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E51.jpg"
+      ]
+    },
+    {
+      "id": "E52",
+      "page_key": "sn83025881|1797-11-29|1|3",
+      "excerpt_start": "To which the President made the following reply",
+      "excerpt_end": "with peculiar pleasure.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "Adams's reply to the House's answer.",
+      "note": "Printed the day after it was given.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E52.jpg"
+      ]
+    },
+    {
+      "id": "E53",
+      "page_key": "sn83025525|1797-12-19|1|3",
+      "excerpt_start": "The President's Reply, to the Answer of the House.",
+      "excerpt_end": "with peculiar pleasure.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The Mirror prints Adams's reply to the House.",
+      "note": "Follows Adams's reply to the Senate on the same page.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E53.jpg"
+      ]
+    },
+    {
+      "id": "E54",
+      "page_key": "sn84023150|1797-12-25|1|3",
+      "excerpt_start": "To which the President returned the following answer",
+      "excerpt_end": "with peculiar pleasure.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "congress-opening-nov-1797"
+      ],
+      "summary": "The Eagle prints Adams's reply to the House.",
+      "note": "Same reply.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E54.jpg"
+      ]
+    },
+    {
+      "id": "E55",
+      "page_key": "sn84038410|1797-04-06|1|3",
+      "excerpt_start": "By the President of the United States of America. A PROCLAMATION.",
+      "excerpt_end": "divers great and weighty matters claim their attention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "special-session-1797",
+        "special-session-proclamation"
+      ],
+      "summary": "Adams's proclamation of 25 March 1797 summoning Congress to a special session.",
+      "note": "Reads 'claim their attention' where the other printings read 'consideration'.",
+      "scan_findings": [
+        "Scan matches; 'claim their attention' is printed in italics. Crop located by hand."
+      ],
+      "crops": [
+        "E55.jpg"
+      ],
+      "scan_boxes": [
+        [
+          770,
+          1010,
+          1310,
+          1170
+        ]
+      ]
+    },
+    {
+      "id": "E56",
+      "page_key": "sn83025588|1797-04-08|1|2",
+      "excerpt_start": "By the President of the United States of America, A Proclamation.",
+      "excerpt_end": "divers great and weighty matters claim their consideration",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "special-session-1797",
+        "special-session-proclamation"
+      ],
+      "summary": "The New Hampshire Gazette prints the proclamation.",
+      "note": "Same proclamation.",
+      "scan_findings": [
+        "Scan matches: 'claim their consideration'."
+      ],
+      "crops": [
+        "E56.jpg"
+      ]
+    },
+    {
+      "id": "E57",
+      "page_key": "sn82014782|1797-04-19|1|2",
+      "excerpt_start": "By the President of the United States of America, A PROCLAMATION.",
+      "excerpt_end": "divers great and weighty matters claim their consideration",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "special-session-1797",
+        "special-session-proclamation"
+      ],
+      "summary": "The Kentucky Gazette prints the proclamation under 'By Authority'.",
+      "note": "Same proclamation.",
+      "scan_findings": [
+        "Scan matches. Crop located by hand."
+      ],
+      "crops": [
+        "E57.jpg"
+      ],
+      "scan_boxes": [
+        [
+          1120,
+          235,
+          1570,
+          480
+        ]
+      ]
+    },
+    {
+      "id": "E58",
+      "page_key": "sn83025588|1797-05-30|1|3",
+      "excerpt_start": "In committee of the whole, Mr. Dent in the chair on the address reported",
+      "excerpt_end": "has excited in us the strongest emotions.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "special-session-1797",
+        "special-session-house-answer"
+      ],
+      "summary": "The House's draft answer to Adams's special-session speech, as first reported.",
+      "note": "Draft text; the House debated amendments before passing it.",
+      "scan_findings": [
+        "Scan matches: '[The following is a Copy of the Address, as reported.]'."
+      ],
+      "crops": [
+        "E58.jpg"
+      ]
+    },
+    {
+      "id": "E59",
+      "page_key": "sn83025881|1797-06-05|1|3",
+      "excerpt_start": "The house then withdrew, and waited upon the President",
+      "excerpt_end": "has excited in us the strongest emotions.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "special-session-1797",
+        "special-session-house-answer"
+      ],
+      "summary": "The House's answer as presented to the President.",
+      "note": "Final text.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E59.jpg"
+      ]
+    },
+    {
+      "id": "E60",
+      "page_key": "sn82014782|1797-06-17|1|2",
+      "excerpt_start": "On motion, the house resolved itself into a committee of the whole",
+      "excerpt_end": "has excited in us the strongest emotions.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "special-session-1797",
+        "special-session-house-answer"
+      ],
+      "summary": "The Kentucky Gazette prints the draft answer.",
+      "note": "Draft text; the same paper printed the final answer two weeks later.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E60.jpg"
+      ]
+    },
+    {
+      "id": "E61",
+      "page_key": "sn82014782|1797-07-01|1|2",
+      "excerpt_start": "At twelve o'clock the speaker and house went to the president's",
+      "excerpt_end": "has excited in us the strongest emotions.",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "special-session-1797",
+        "special-session-house-answer"
+      ],
+      "summary": "The Kentucky Gazette prints the answer as presented.",
+      "note": "Final text, with a note that Mr. Lyon tried to end the custom of waiting on the president in a body.",
+      "scan_findings": [
+        "Scan matches the excerpt. Crop located by hand."
+      ],
+      "crops": [
+        "E61.jpg"
+      ],
+      "scan_boxes": [
+        [
+          130,
+          515,
+          510,
+          730
+        ]
+      ]
+    },
+    {
+      "id": "E62",
+      "page_key": "sn83025881|1797-11-15|1|3",
+      "excerpt_start": "There is a report in circulation that the British frigate HERMIONE",
+      "excerpt_end": "carried into Leguira.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hermione-mutiny"
+      ],
+      "summary": "First report: the crew of the British frigate Hermione are said to have seized her and taken her to La Guaira.",
+      "note": "A rumour, one sentence long.",
+      "scan_findings": [
+        "Scan matches: the frigate 'has been rose upon by the crew'."
+      ],
+      "crops": [
+        "E62.jpg"
+      ]
+    },
+    {
+      "id": "E63",
+      "page_key": "sn83025881|1797-11-16|1|2",
+      "excerpt_start": "Particulars of the Mutiny on board the Brigs Hermione.",
+      "excerpt_end": "part of the crew were engaged handling the mizen topgall",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hermione-mutiny",
+        "hermione-particulars"
+      ],
+      "summary": "The detailed account of the mutiny, printed the next day.",
+      "note": "RevX abridges this item with '…'; read the scan for the full text.",
+      "scan_findings": [
+        "Scan reads 'THURSDAY EVENING, NOVEMBER 16' and 'British Frigate HERMIONE'; RevX 'Brigs Hermione' and 'mizen topgall' are transcription errors, and RevX abridges the item."
+      ],
+      "crops": [
+        "E63.jpg"
+      ]
+    },
+    {
+      "id": "E64",
+      "page_key": "sn83025881|1797-11-21|1|3",
+      "excerpt_start": "The British frigate Hermione, which was lately carried into Laguira",
+      "excerpt_end": "is sent to Porto Caballo and there laid up",
+      "roles": [
+        "later_related_account"
+      ],
+      "groups": [
+        "hermione-mutiny"
+      ],
+      "summary": "Follow-up: the Spanish have laid the Hermione up at Puerto Cabello and the crew are dispersing.",
+      "note": "Later report.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E64.jpg"
+      ]
+    },
+    {
+      "id": "E65",
+      "page_key": "sn82014782|1797-12-06|1|3",
+      "excerpt_start": "PHILADELPHIA November 15. We can say from the best authority that a mutiny",
+      "excerpt_end": "delivered up to the Spaniards.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hermione-mutiny"
+      ],
+      "summary": "The Kentucky Gazette's first report of the mutiny, from Philadelphia, 15 November.",
+      "note": "Different wording from the Gazette of the United States rumour.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E65.jpg"
+      ]
+    },
+    {
+      "id": "E66",
+      "page_key": "sn83025525|1797-12-12|1|2",
+      "excerpt_start": "PHILAD. NOV. 16. Particulars of the mutiny",
+      "excerpt_end": "when the others came down they were reprimanded",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hermione-mutiny",
+        "hermione-particulars"
+      ],
+      "summary": "The Mirror prints the detailed account.",
+      "note": "Same account; the scan reads 'Frigate', where RevX has 'Brigantine'.",
+      "scan_findings": [
+        "Scan reads 'British Frigate Hermoine'; RevX 'Brigantine' is a transcription error. Crop located by hand."
+      ],
+      "crops": [
+        "E66.jpg"
+      ],
+      "scan_boxes": [
+        [
+          2450,
+          2900,
+          3420,
+          3460
+        ]
+      ]
+    },
+    {
+      "id": "E67",
+      "page_key": "sn82014782|1797-12-16|1|2",
+      "excerpt_start": "Particulars of the Mutiny on board the British Frigate Hermione.",
+      "excerpt_end": "when the others came down they were reprimanded",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hermione-mutiny",
+        "hermione-particulars"
+      ],
+      "summary": "The Kentucky Gazette prints the detailed account, ten days after its first report.",
+      "note": "Same account.",
+      "scan_findings": [
+        "Scan matches (faint). Crop located by hand."
+      ],
+      "crops": [
+        "E67.jpg"
+      ],
+      "scan_boxes": [
+        [
+          1250,
+          1510,
+          1660,
+          1730
+        ]
+      ]
+    },
+    {
+      "id": "E68",
+      "page_key": "sn84023150|1797-12-25|1|3",
+      "excerpt_start": "PHILADELPHIA, NOV. 16. Particulars of the Mutiny onboard",
+      "excerpt_end": "when the others came down they were reprimanded",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hermione-mutiny",
+        "hermione-particulars"
+      ],
+      "summary": "The Eagle prints the detailed account.",
+      "note": "Same account.",
+      "scan_findings": [
+        "Scan matches: 'British Frigate Hermoine'."
+      ],
+      "crops": [
+        "E68.jpg"
+      ]
+    },
+    {
+      "id": "E69",
+      "page_key": "sn83025881|1797-09-03|1|3",
+      "excerpt_start": "JAMAICA, July 15. Quito, 6th February, 1797.",
+      "excerpt_end": "at half past 7 A. M.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "quito-earthquake"
+      ],
+      "summary": "An account from Quito of the earthquake of 4 February 1797, via Jamaica.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E69.jpg"
+      ]
+    },
+    {
+      "id": "E70",
+      "page_key": "sn83025588|1797-09-19|1|2",
+      "excerpt_start": "Earthquake in South-America. JAMAICA, July 15.",
+      "excerpt_end": "THIS dreadful calamity begun",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "quito-earthquake"
+      ],
+      "summary": "The New Hampshire Gazette prints the same account under 'Earthquake in South-America'.",
+      "note": "Adds a footnote explaining where Quito is.",
+      "scan_findings": [
+        "Scan matches, with the printed footnote on Quito."
+      ],
+      "crops": [
+        "E70.jpg"
+      ]
+    },
+    {
+      "id": "E71",
+      "page_key": "sn82014782|1797-09-27|1|2",
+      "excerpt_start": "JAMAICA, July 15. Quito, 6th February, 1797.",
+      "excerpt_end": "at half past 7, A. M.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "quito-earthquake"
+      ],
+      "summary": "The Kentucky Gazette prints the same account.",
+      "note": "Same account.",
+      "scan_findings": [
+        "Scan matches. Crop located by hand."
+      ],
+      "crops": [
+        "E71.jpg"
+      ],
+      "scan_boxes": [
+        [
+          510,
+          240,
+          880,
+          405
+        ]
+      ]
+    },
+    {
+      "id": "E72",
+      "page_key": "sn83025881|1797-09-06|1|3",
+      "excerpt_start": "General Kosciusko, we hear, has left the city",
+      "excerpt_end": "for his services in the cause of this country.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "kosciuszko-land-warrant"
+      ],
+      "summary": "General Kościuszko, visiting Philadelphia, is offered a land warrant and back pay for his Revolutionary War service.",
+      "note": "Printed beside a yellow-fever burial report signed by Stephen Girard.",
+      "scan_findings": [
+        "Scan matches: 'General KOSCIUSKO ... General WHITE, of New Brunswick'."
+      ],
+      "crops": [
+        "E72.jpg"
+      ]
+    },
+    {
+      "id": "E73",
+      "page_key": "sn83025588|1797-09-19|1|3",
+      "excerpt_start": "PHILADELPHIA, Sept. 6. General Kosciuszko, we hear",
+      "excerpt_end": "for his services in the cause of this country.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "kosciuszko-land-warrant"
+      ],
+      "summary": "The New Hampshire Gazette prints the same item.",
+      "note": "Same item.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E73.jpg"
+      ]
+    },
+    {
+      "id": "E74",
+      "page_key": "sn82014782|1797-09-27|1|2",
+      "excerpt_start": "General Kosciuszko, we hear, has left the city",
+      "excerpt_end": "for his services in the cause of this country.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "kosciuszko-land-warrant"
+      ],
+      "summary": "The Kentucky Gazette prints the item.",
+      "note": "Says he left to visit 'his friend General Gates, in the state of New York', not General White of New Brunswick.",
+      "scan_findings": [
+        "The paper prints 'his friend General Gates, in the state of New York': a difference in the printed text. Crop located by hand, in two pieces across a column break."
+      ],
+      "crops": [
+        "E74-1.jpg",
+        "E74-2.jpg"
+      ],
+      "scan_boxes": [
+        [
+          840,
+          2505,
+          1250,
+          2550
+        ],
+        [
+          1240,
+          195,
+          1640,
+          340
+        ]
+      ]
+    },
+    {
+      "id": "E75",
+      "page_key": "sn83025588|1797-01-21|1|2",
+      "excerpt_start": "We are informed, and from an authority which we rely on",
+      "excerpt_end": "will be unquestionable.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "jefferson-madison-letter"
+      ],
+      "summary": "Report that Jefferson wrote to Madison that Adams alone ought to have been elected, and that he would serve as Vice President under him.",
+      "note": "No dateline in this printing.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E75.jpg"
+      ]
+    },
+    {
+      "id": "E76",
+      "page_key": "sn83025881|1797-01-23|1|3",
+      "excerpt_start": "BOSTON, January 14. We are informed",
+      "excerpt_end": "will be unquestionable.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "jefferson-madison-letter"
+      ],
+      "summary": "The Gazette of the United States prints the report under a Boston dateline.",
+      "note": "Same report.",
+      "scan_findings": [
+        "Scan matches; the dateline is badly printed ('BOSLON')."
+      ],
+      "crops": [
+        "E76.jpg"
+      ]
+    },
+    {
+      "id": "E77",
+      "page_key": "sn84038410|1797-02-09|1|3",
+      "excerpt_start": "WASHINGTON CITY, January 28. We are informed",
+      "excerpt_end": "acceptance of Mr. Jefferson will be unquestion",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "jefferson-madison-letter"
+      ],
+      "summary": "The Patowmac Guardian prints the report under a Washington City dateline.",
+      "note": "Same report; spells out 'Mr. Jefferson' where others have 'Mr. J.'.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E77.jpg"
+      ]
+    },
+    {
+      "id": "E78",
+      "page_key": "sn83025881|1797-01-31|1|2",
+      "excerpt_start": "STOCKBRIDGE, January 23. It is true that Mr. Jefferson has written to Mr. Madison",
+      "excerpt_end": "if there should be an equal vote between Mr. Adams and himself,",
+      "roles": [
+        "later_related_account"
+      ],
+      "groups": [
+        "jefferson-madison-letter"
+      ],
+      "summary": "A Stockbridge report confirms the letter and gives a different account of what it asked.",
+      "note": "Different text: says the letter asked Madison to act if the vote was tied.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E78.jpg"
+      ]
+    },
+    {
+      "id": "E79",
+      "page_key": "sn83025881|1797-08-31|1|3",
+      "excerpt_start": "NORFOLK, August 24. Extract of a letter from Commodore Barney",
+      "excerpt_end": "that is one ship of the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barney-escapes-blockade"
+      ],
+      "summary": "Commodore Barney, commanding French ships, writes that he has escaped a seven-month British blockade.",
+      "note": "Earliest printing found. RevX misreads the ship's name and a number; see the scan findings.",
+      "scan_findings": [
+        "Scan reads 'dated Medusa' and 'five ships to two'; RevX 'Mafuda' and 'to one' are transcription errors."
+      ],
+      "crops": [
+        "E79.jpg"
+      ]
+    },
+    {
+      "id": "E80",
+      "page_key": "sn83025588|1797-09-12|1|2",
+      "excerpt_start": "NORFOLK, Aug. 24. Extract of a letter from Commodore Barney",
+      "excerpt_end": "that is one ship of the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barney-escapes-blockade"
+      ],
+      "summary": "The New Hampshire Gazette prints Barney's letter.",
+      "note": "Same letter.",
+      "scan_findings": [
+        "Scan matches: 'Medusa', 'five ships to two'."
+      ],
+      "crops": [
+        "E80.jpg"
+      ]
+    },
+    {
+      "id": "E81",
+      "page_key": "sn82014782|1797-09-27|1|2",
+      "excerpt_start": "NORFOLK, August 24. Extract of a letter from Commodore BARNEY",
+      "excerpt_end": "that is one ship of the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barney-escapes-blockade"
+      ],
+      "summary": "The Kentucky Gazette prints Barney's letter.",
+      "note": "Same letter.",
+      "scan_findings": [
+        "Scan appears to read 'Medula' for Medusa; 'five ships to two'."
+      ],
+      "crops": [
+        "E81.jpg"
+      ]
+    },
+    {
+      "id": "E82",
+      "page_key": "sn83025881|1797-09-26|1|3",
+      "excerpt_start": "Capt, Cowper informs that Santhonax failed on the",
+      "excerpt_end": "where he was hourly expefled.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sonthonax-departure"
+      ],
+      "summary": "Captain Cowper, from Cape François, reports that Sonthonax has sailed for France and Toussaint holds the chief command.",
+      "note": "RevX lacks this item, so the excerpt comes from the older CA transcription.",
+      "scan_findings": [
+        "Scan reads 'had a black representative on board'; the CA text drops 'black representative'."
+      ],
+      "crops": [
+        "E82.jpg"
+      ],
+      "transcription_field": "ca_ocr_text"
+    },
+    {
+      "id": "E83",
+      "page_key": "sn83025588|1797-10-10|1|3",
+      "excerpt_start": "NORFOLK, Sept. 18. Yesterday arrived in Hampton roads the schooner Peggy",
+      "excerpt_end": "where he was hourly expected.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sonthonax-departure"
+      ],
+      "summary": "The New Hampshire Gazette prints Cowper's report.",
+      "note": "Same report.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E83.jpg"
+      ]
+    },
+    {
+      "id": "E84",
+      "page_key": "sn83025525|1797-10-24|1|3",
+      "excerpt_start": "NORFOLK, SEPT. 18. Yesterday arrived in Hampton-Roads",
+      "excerpt_end": "where he was hourly expected.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sonthonax-departure"
+      ],
+      "summary": "The Mirror prints Cowper's report.",
+      "note": "Same report.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E84.jpg"
+      ]
+    },
+    {
+      "id": "E85",
+      "page_key": "sn83025881|1797-10-17|1|3",
+      "excerpt_start": "Norfolk, Oct. 9. The fchr. Charles, 13 days from the Havana",
+      "excerpt_end": "returned to the Havana.",
+      "roles": [
+        "later_related_account"
+      ],
+      "groups": [
+        "sonthonax-departure"
+      ],
+      "summary": "A later report from Havana: Sonthonax sailed for France escorted by the Spanish frigate Juno.",
+      "note": "Different source and wording.",
+      "scan_findings": [
+        "Scan matches the excerpt. Crop located by hand."
+      ],
+      "crops": [
+        "E85.jpg"
+      ],
+      "scan_boxes": [
+        [
+          3180,
+          4960,
+          4150,
+          5230
+        ]
+      ]
+    },
+    {
+      "id": "E86",
+      "page_key": "sn83025525|1797-10-24|1|2",
+      "excerpt_start": "Sept. 25. By a gentleman of this city, who arrived at Savannah",
+      "excerpt_end": "exceeds one hundred.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "havana-french-captures"
+      ],
+      "summary": "A Charleston report that more than a hundred American vessels have been carried into Havana by French privateers and condemned.",
+      "note": "Headed 'French Piracies'.",
+      "scan_findings": [
+        "Scan matches: 'Sept. 25', 'FRENCH PIRACIES'."
+      ],
+      "crops": [
+        "E86.jpg"
+      ]
+    },
+    {
+      "id": "E87",
+      "page_key": "sn83025881|1797-10-24|1|3",
+      "excerpt_start": "CHARLESTON, Oct. 25. By a gentleman of this city",
+      "excerpt_end": "exceed one hundred.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "havana-french-captures"
+      ],
+      "summary": "The Gazette of the United States prints the report, headed 'French Piracies'.",
+      "note": "The printed dateline reads 'Oct. 25' on a 24 October page, where the other printings have Sept. 25: an error in the 1797 printing.",
+      "scan_findings": [
+        "Scan appears to read 'CHARLESTON, Oct. 25.' on a 24 October page: a printed error. Heading 'FRENCH PIRACIES'; RevX 'Pirates' is a transcription error."
+      ],
+      "crops": [
+        "E87.jpg"
+      ]
+    },
+    {
+      "id": "E88",
+      "page_key": "sn83025588|1797-10-25|1|2",
+      "excerpt_start": "CHARLESTON, Sept. 25. By a gentleman of this city",
+      "excerpt_end": "exceeds one hundred.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "havana-french-captures"
+      ],
+      "summary": "The New Hampshire Gazette prints the report.",
+      "note": "Same report.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E88.jpg"
+      ]
+    },
+    {
+      "id": "E89",
+      "page_key": "sn83025588|1797-11-29|1|3",
+      "excerpt_start": "The honorable Senate being assembled with the House",
+      "excerpt_end": "afford so much cause for mutual congratulation,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "nh-governor-address-1797"
+      ],
+      "summary": "The New Hampshire governor's address opening the legislature's session, 22 November 1797.",
+      "note": "Printed in the legislature's journal.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E89.jpg"
+      ]
+    },
+    {
+      "id": "E90",
+      "page_key": "sn83025525|1797-12-05|1|3",
+      "excerpt_start": "The Senate being assembled with the House in the Representatives' Chamber",
+      "excerpt_end": "afford so much cause for mutual congratulation,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "nh-governor-address-1797"
+      ],
+      "summary": "The Mirror prints the governor's address.",
+      "note": "Same address.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E90.jpg"
+      ]
+    },
+    {
+      "id": "E91",
+      "page_key": "sn83025881|1797-12-08|1|2",
+      "excerpt_start": "PORTSMOUTH, (N.H.) Nov. 25. On Wednesday last",
+      "excerpt_end": "afford so much cause for mutual congratulation,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "nh-governor-address-1797"
+      ],
+      "summary": "The Gazette of the United States in Philadelphia prints the New Hampshire governor's address.",
+      "note": "The only printing outside New Hampshire.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E91.jpg"
+      ]
+    },
+    {
+      "id": "E92",
+      "page_key": "sn83025881|1797-02-24|1|3",
+      "excerpt_start": "The reply of the Vice-President of the United States, to the address of the Senate",
+      "excerpt_end": "established character in public affairs,",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "adams-senate-farewell"
+      ],
+      "summary": "Adams's reply to the Senate's answer to his farewell address, 23 February 1797.",
+      "note": "Completes the exchange: address, answer, reply.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E92.jpg"
+      ]
+    },
+    {
+      "id": "E93",
+      "page_key": "sn84038410|1797-03-09|1|3",
+      "excerpt_start": "The reply of the Vice President of the United States, to the Address of the Senate",
+      "excerpt_end": "established character in public affairs,",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "adams-senate-farewell"
+      ],
+      "summary": "The Patowmac Guardian prints Adams's reply.",
+      "note": "Same reply.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E93.jpg"
+      ]
+    },
+    {
+      "id": "E94",
+      "page_key": "sn83025588|1797-03-11|1|1",
+      "excerpt_start": "REPLY Of the Vice-President of the United States to the address of the Senate",
+      "excerpt_end": "established character in public affairs,",
+      "roles": [
+        "reply"
+      ],
+      "groups": [
+        "adams-senate-farewell"
+      ],
+      "summary": "The New Hampshire Gazette prints Adams's reply on the same page as his address.",
+      "note": "Same reply.",
+      "scan_findings": [
+        "Scan matches. Crop located by hand."
+      ],
+      "crops": [
+        "E94.jpg"
+      ],
+      "scan_boxes": [
+        [
+          1900,
+          2650,
+          3200,
+          2980
+        ]
+      ]
+    },
+    {
+      "id": "E95",
+      "page_key": "sn83025881|1797-10-12|1|3",
+      "excerpt_start": "On Saturday last returned to this towa the Hon. WILLIAM BLOUNT.",
+      "excerpt_end": "conduced into town iu the following order",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-affair",
+        "blount-knoxville-welcome"
+      ],
+      "summary": "A Knoxville report of Blount's welcome home: a cavalry troop and a crowd ride out eight miles to meet him.",
+      "note": "RevX lacks this item, so the excerpt comes from the older CA transcription.",
+      "scan_findings": [
+        "Scan reads 'KNOXVILLE, September 18' and 'returned to this town'; the CA text's errors ('KNOXVILM:', 'towa', 'conduced') are OCR."
+      ],
+      "crops": [
+        "E95.jpg"
+      ],
+      "transcription_field": "ca_ocr_text"
+    },
+    {
+      "id": "E96",
+      "page_key": "sn83025588|1797-10-25|1|2",
+      "excerpt_start": "KNOXVILLE, Sept. 18. Blount Forever.",
+      "excerpt_end": "he was conducted into town in the following order",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-affair",
+        "blount-knoxville-welcome"
+      ],
+      "summary": "The New Hampshire Gazette prints the Knoxville report under the heading 'Blount Forever'.",
+      "note": "Only this printing has the heading.",
+      "scan_findings": [
+        "Scan matches, with the 'Blount Forever.' heading."
+      ],
+      "crops": [
+        "E96.jpg"
+      ]
+    },
+    {
+      "id": "E97",
+      "page_key": "sn82014782|1797-11-01|1|2",
+      "excerpt_start": "KNOXVILLE, Sept. 18. On Saturday last returned to this town",
+      "excerpt_end": "he was conducted into town in the following order",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-affair",
+        "blount-knoxville-welcome"
+      ],
+      "summary": "The Kentucky Gazette prints the Knoxville report.",
+      "note": "Same report.",
+      "scan_findings": [
+        "Scan matches (faint). Crop located by hand."
+      ],
+      "crops": [
+        "E97.jpg"
+      ],
+      "scan_boxes": [
+        [
+          1250,
+          195,
+          1660,
+          430
+        ]
+      ]
+    },
+    {
+      "id": "E98",
+      "page_key": "sn83025881|1797-12-05|1|3",
+      "excerpt_start": "He then presented the report, which the clerk proceeded to read.",
+      "excerpt_end": "was intimately connected with Mr. Blount;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-affair",
+        "blount-committee-report"
+      ],
+      "summary": "The House committee's report on evidence against Blount, as read on 4 December, naming Nicholas Romayne.",
+      "note": "Fuller account than the summaries in the other two papers.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "E98.jpg"
+      ]
+    },
+    {
+      "id": "E99",
+      "page_key": "sn83025588|1797-12-20|1|2",
+      "excerpt_start": "Of William Blount. Mr. Sngreaves, from the Committee",
+      "excerpt_end": "made it necessary to secure their persons and papers.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-affair",
+        "blount-committee-report"
+      ],
+      "summary": "The New Hampshire Gazette's summary of the committee report.",
+      "note": "RevX reads 'Sngreaves' for Sitgreaves.",
+      "scan_findings": [
+        "Scan reads 'Mr. Sitgreaves' and 'Dr. Romaine'; RevX 'Sngreaves' is a transcription error."
+      ],
+      "crops": [
+        "E99.jpg"
+      ]
+    },
+    {
+      "id": "E100",
+      "page_key": "sn83025525|1797-12-26|1|2",
+      "excerpt_start": "OF WILLIAM BLOUNT. Mr. Sirgreaves, from the Committee",
+      "excerpt_end": "made it necessary to secure their persons and papers.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "blount-affair",
+        "blount-committee-report"
+      ],
+      "summary": "The Mirror's summary of the committee report.",
+      "note": "Same summary as the New Hampshire Gazette.",
+      "scan_findings": [
+        "Scan reads 'Mr. Sitgreaves' and 'Dr. Romaine'. Crop located by hand."
+      ],
+      "crops": [
+        "E100.jpg"
+      ],
+      "scan_boxes": [
+        [
+          3550,
+          5890,
+          4800,
+          6420
+        ]
+      ]
+    },
+    {
+      "id": "E101",
+      "page_key": "sn84038410|1797-03-16|1|3",
+      "excerpt_start": "NORFOLK, March 6. Extract of a letter from a gentleman in Greenock",
+      "excerpt_end": "ordered to leave Paris about three days ago",
+      "roles": [],
+      "groups": [],
+      "summary": "A Greenock letter on Lord Malmesbury's recall, brought by the Peggy, Capt. Boyd.",
+      "note": "Printed on the same page as Boyd's Bantry report (H001).",
+      "scan_findings": [
+        "Scan matches: 'received by the Peggy, Capt. Boyd, arrived in Hampton Roads from Liverpool'."
+      ],
+      "crops": [
+        "E101.jpg"
+      ]
+    },
+    {
+      "id": "E102",
+      "page_key": "sn83025588|1797-03-25|1|2",
+      "excerpt_start": "NORFOLK, March 6. Extract of a letter from a gentleman in Greenock",
+      "excerpt_end": "ordered to leave Paris about three days ago",
+      "roles": [],
+      "groups": [],
+      "summary": "The same Greenock letter.",
+      "note": "Printed on the same page as Boyd's report (H002).",
+      "scan_findings": [
+        "The paper prints 'Capt. Pool' and omits 'arrived in Hampton Roads from Liverpool': differences in the printed text."
+      ],
+      "crops": [
+        "E102.jpg"
+      ]
+    },
+    {
+      "id": "E103",
+      "page_key": "sn82014782|1797-04-12|1|3",
+      "excerpt_start": "BALTIMORE, March 9. We are indebted to Captain Deglan",
+      "excerpt_end": "which place she left the 2d of January.",
+      "roles": [],
+      "groups": [],
+      "summary": "The same Greenock letter, under a Baltimore dateline.",
+      "note": "Printed on the same page as Boyd's report (H006). Dates the letter 25 December where the others have 29 December.",
+      "scan_findings": [
+        "Scan reads 'Grenock' and 'dated the 25th of December' (others 29th). Crop located by hand."
+      ],
+      "crops": [
+        "E103.jpg"
+      ],
+      "scan_boxes": [
+        [
+          422,
+          2313,
+          799,
+          2514
+        ]
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "congress-opening-nov-1797",
+      "kind": "context_group",
+      "label": "Opening of Congress, November 1797",
+      "definition": "Printings of Adams's speech opening the second session of the Fifth Congress (23 November 1797), the Senate's and House's answers, and his reply to the House.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "special-session-1797",
+      "kind": "context_group",
+      "label": "Special session of Congress, 1797",
+      "definition": "The special session of 1797: Adams's summoning proclamation (25 March), his speech (16 May) and the House's answer. Contains the speech, proclamation and answer groups.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "special-session-proclamation",
+      "kind": "document_group",
+      "label": "Proclamation summoning Congress",
+      "definition": "Printings of Adams's proclamation of 25 March 1797 convening Congress on 15 May.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "special-session-house-answer",
+      "kind": "document_group",
+      "label": "House's answer to the special-session speech",
+      "definition": "Printings of the House of Representatives' answer to Adams's speech of 16 May 1797, in draft and final form.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "hermione-mutiny",
+      "kind": "context_group",
+      "label": "Hermione mutiny",
+      "definition": "Reports of the mutiny on the British frigate Hermione (September 1797) and her delivery to the Spanish at La Guaira: first rumours, the detailed 'Particulars', and a follow-up.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "hermione-particulars",
+      "kind": "message_group",
+      "label": "'Particulars of the mutiny'",
+      "definition": "Printings of the detailed account of the Hermione mutiny first printed in Philadelphia on 16 November 1797.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "quito-earthquake",
+      "kind": "message_group",
+      "label": "Quito earthquake",
+      "definition": "Printings of a Quito account (6 February 1797), via Jamaica, of the earthquake of 4 February.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "kosciuszko-land-warrant",
+      "kind": "message_group",
+      "label": "Kościuszko's land warrant",
+      "definition": "Printings of a Philadelphia item (September 1797): Kościuszko is offered a land warrant and back pay for his Revolutionary War service and declines the money.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "jefferson-madison-letter",
+      "kind": "context_group",
+      "label": "Jefferson's letter to Madison",
+      "definition": "Reports (January 1797) that Jefferson wrote to Madison about the election result, and a later report giving a different account of the letter.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "barney-escapes-blockade",
+      "kind": "message_group",
+      "label": "Barney escapes the blockade",
+      "definition": "Printings of an extract of Commodore Barney's letter of 21 August 1797 on escaping a seven-month blockade.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "sonthonax-departure",
+      "kind": "context_group",
+      "label": "Sonthonax leaves Saint-Domingue",
+      "definition": "Reports (September–October 1797) that the commissioner Sonthonax had sailed for France and Toussaint Louverture held the chief command.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "havana-french-captures",
+      "kind": "message_group",
+      "label": "French captures at Havana",
+      "definition": "Printings of a Charleston report (September 1797) that more than a hundred American vessels had been carried into Havana by French privateers.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "nh-governor-address-1797",
+      "kind": "document_group",
+      "label": "New Hampshire governor's address",
+      "definition": "Printings of the New Hampshire governor's address to the legislature, 22 November 1797.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "blount-affair",
+      "kind": "context_group",
+      "label": "Blount affair",
+      "definition": "The Blount affair in the 1797 papers: the letter made public (July), Blount's welcome home at Knoxville (September), and the House committee's report (December). Contains those three groups; the wider coverage is not included.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "blount-knoxville-welcome",
+      "kind": "message_group",
+      "label": "Blount's welcome at Knoxville",
+      "definition": "Printings of a Knoxville report (18 September 1797) of Blount's welcome home.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "blount-committee-report",
+      "kind": "context_group",
+      "label": "House committee report on Blount",
+      "definition": "Reports of the House committee's evidence report on Blount, 4 December 1797: a fuller account and a shorter summary.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "special-session-1797",
+      "child": "adams-special-session-speech"
+    },
+    {
+      "parent": "special-session-1797",
+      "child": "special-session-proclamation"
+    },
+    {
+      "parent": "special-session-1797",
+      "child": "special-session-house-answer"
+    },
+    {
+      "parent": "hermione-mutiny",
+      "child": "hermione-particulars"
+    },
+    {
+      "parent": "blount-affair",
+      "child": "blount-letter"
+    },
+    {
+      "parent": "blount-affair",
+      "child": "blount-knoxville-welcome"
+    },
+    {
+      "parent": "blount-affair",
+      "child": "blount-committee-report"
+    }
+  ],
+  "added_memberships": [
+    {
+      "observation": "E13",
+      "group": "special-session-1797",
+      "roles": [
+        "published_document"
+      ],
+      "basis": "Passage already admitted in an earlier release; joins the new parent story."
+    },
+    {
+      "observation": "E14",
+      "group": "special-session-1797",
+      "roles": [
+        "published_document"
+      ],
+      "basis": "Passage already admitted in an earlier release; joins the new parent story."
+    },
+    {
+      "observation": "E15",
+      "group": "special-session-1797",
+      "roles": [
+        "published_document"
+      ],
+      "basis": "Passage already admitted in an earlier release; joins the new parent story."
+    },
+    {
+      "observation": "E29",
+      "group": "blount-affair",
+      "roles": [
+        "published_document"
+      ],
+      "basis": "Passage already admitted in an earlier release; joins the new parent story."
+    },
+    {
+      "observation": "E30",
+      "group": "blount-affair",
+      "roles": [
+        "report"
+      ],
+      "basis": "Passage already admitted in an earlier release; joins the new parent story."
+    },
+    {
+      "observation": "E31",
+      "group": "blount-affair",
+      "roles": [
+        "report"
+      ],
+      "basis": "Passage already admitted in an earlier release; joins the new parent story."
+    },
+    {
+      "observation": "E32",
+      "group": "blount-affair",
+      "roles": [
+        "report"
+      ],
+      "basis": "Passage already admitted in an earlier release; joins the new parent story."
+    }
+  ],
+  "new_relations": [
+    {
+      "id": "greenock-boyd-pg",
+      "subject": "E101",
+      "predicate": "printed_alongside",
+      "object": "obs:chain-20261030:H001",
+      "directed": false,
+      "evidence_level": "context_only",
+      "note": "The Greenock letter and Boyd's Bantry report are printed on the same page and both say they came on the Peggy, Capt. Boyd. Side-by-side printing, not a claim that one caused the other."
+    },
+    {
+      "id": "greenock-boyd-nh",
+      "subject": "E102",
+      "predicate": "printed_alongside",
+      "object": "obs:chain-20261030:H002",
+      "directed": false,
+      "evidence_level": "context_only",
+      "note": "The Greenock letter and Boyd's Bantry report are printed on the same page and both say they came on the Peggy, Capt. Boyd. Side-by-side printing, not a claim that one caused the other."
+    },
+    {
+      "id": "greenock-boyd-ky",
+      "subject": "E103",
+      "predicate": "printed_alongside",
+      "object": "obs:chain-20261030:H006",
+      "directed": false,
+      "evidence_level": "context_only",
+      "note": "The Greenock letter and Boyd's Bantry report are printed on the same page and both say they came on the Peggy, Capt. Boyd. Side-by-side printing, not a claim that one caused the other."
+    }
+  ],
+  "dispositions_summary": {
+    "families_admitted": [
+      "F97-030",
+      "F97-032",
+      "F97-060",
+      "F97-092",
+      "F97-074",
+      "F97-025",
+      "F97-068",
+      "F97-052",
+      "F97-088",
+      "F97-095",
+      "F97-097",
+      "F97-119",
+      "F97-065",
+      "F97-039",
+      "F97-093",
+      "F97-120",
+      "F97-033",
+      "F97-066"
+    ],
+    "added_by_phrase_search": [
+      "GUS 1797-11-15 p3",
+      "GUS 1797-11-16 p2",
+      "GUS 1797-11-21 p3",
+      "KY 1797-12-06 p3",
+      "GUS 1797-01-31 p2",
+      "GUS 1797-10-17 p3"
+    ],
+    "not_admitted": {
+      "GUS 1797-06-07 p2 (F97-025)": "answer text not found on this page",
+      "GUS 1797-10-25 p3": "ship arrival list naming the Cleopatra, not the report",
+      "other Kosciuszko and Romayne pages": "different items about the same people"
+    }
+  }
+}

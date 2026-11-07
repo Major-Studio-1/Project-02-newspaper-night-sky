@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+# Restored copies of the compressed page tables (gunzip -k data/tables/*.gz)
+data/tables/pages.jsonl
+data/tables/page_assessments.jsonl
+data/tables/page_versions.jsonl

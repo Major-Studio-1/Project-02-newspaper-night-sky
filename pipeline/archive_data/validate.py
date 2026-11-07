@@ -1,0 +1,135 @@
+"""Integrity and counting checks for a generated data release."""
+from pathlib import Path
+import json
+import sqlite3
+import datetime
+import hashlib
+import sys
+
+# Release 0.1.0 had no expected_counts metadata; these are its declared counts.
+V010_EXPECTED={'observations':24,'claims':15,'relations':22,'groups':7,'memberships':16,'group_hierarchy':4,
+               'distinct_current_members':9,'boyd_coverage_selections':4,'boyd_core_selections':3}
+
+def validate(release):
+    release=Path(release).resolve()
+    db=sqlite3.connect((release/'research.sqlite').as_uri()+'?mode=ro',uri=True)
+    db.row_factory=sqlite3.Row
+    checks=[]
+    def check(name,condition):
+        if not condition: raise AssertionError(name)
+        checks.append(name)
+    check('SQLite structural integrity',db.execute('PRAGMA integrity_check').fetchone()[0]=='ok')
+    check('All foreign-key references resolve',not db.execute('PRAGMA foreign_key_check').fetchall())
+    row=db.execute("SELECT value_json FROM metadata WHERE key='expected_counts'").fetchone()
+    expected=json.loads(row[0]) if row else V010_EXPECTED
+    counts={t:db.execute('SELECT COUNT(*) FROM '+t).fetchone()[0] for t in ['newspapers','issues','pages','observations','groups','memberships','group_hierarchy','claims','relations','topics','date_assertions']}
+    counts['eligible_pages']=db.execute('SELECT SUM(eligible) FROM page_assessments').fetchone()[0]
+    check('Full source inventory reconciles',counts['pages']==77793 and counts['issues']==19445 and counts['newspapers']==110)
+    check('Eligibility remains analysis-specific',counts['eligible_pages']==77749)
+    check('Reviewed selections, claims and links match the declared counts',all(counts[k]==expected[k] for k in ['observations','claims','relations']))
+    check('Only reviewed selections populate the explicitly typed groups',all(counts[k]==expected[k] for k in ['groups','memberships','group_hierarchy']))
+    check('Every group has at least one admitted selection',db.execute("SELECT COUNT(*) FROM groups g WHERE NOT EXISTS(SELECT 1 FROM group_publications p WHERE p.group_id=g.id)").fetchone()[0]==0)
+    check('Every relation has attached evidence',db.execute('SELECT COUNT(*) FROM relations r WHERE NOT EXISTS(SELECT 1 FROM relation_evidence e WHERE e.relation_id=r.id)').fetchone()[0]==0)
+    check('No independent review invented',db.execute('SELECT SUM(independent_review) FROM runs').fetchone()[0]==0)
+    check('Membership annotations target the correct observation and group',db.execute("SELECT COUNT(*) FROM memberships m JOIN annotations a ON a.id=m.annotation_id WHERE a.object_id<>m.observation_id OR a.annotation_type<>'membership:'||m.group_id OR json_extract(a.value_json,'$.decision')<>m.decision").fetchone()[0]==0)
+    for row in db.execute('SELECT publication_date FROM issues'):
+        datetime.date.fromisoformat(row[0])
+    check('All publication dates are valid ISO calendar dates',True)
+    source_map={r['id']:r for r in db.execute('SELECT * FROM sources')}
+    anchor_statuses={}
+    for obs in db.execute('SELECT * FROM observations'):
+        segments=json.loads(obs['excerpts_json']);loc=json.loads(obs['locator_json'])
+        check_digest=hashlib.sha256(json.dumps(segments,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+        if check_digest!=obs['excerpt_sha256']: raise AssertionError('Excerpt hash differs: '+obs['id'])
+        if len(segments)!=len(loc['segments']): raise AssertionError('Missing segment locator')
+        for anchor in loc['segments']:
+            status=anchor['status'];anchor_statuses[status]=anchor_statuses.get(status,0)+1
+            if status=='unique_normalized_match':
+                if not (anchor['start']>=0 and anchor['end']>anchor['start'] and anchor['matches']==1): raise AssertionError('Invalid anchor')
+            elif anchor['start'] is not None or anchor['end'] is not None: raise AssertionError('Uncertain offsets must remain null')
+    check('Excerpt hashes and explicit locator states are valid',True)
+    for row in db.execute('SELECT * FROM assets'):
+        path=(release/row['path']).resolve()
+        check('Asset present with preserved bytes: '+row['id'],path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==row['sha256'])
+    seed=json.loads((release/source_map[next(r['id'] for r in source_map.values() if r['kind']=='prototype_seed')]['path']).read_text(encoding='utf8'))
+    pulse=json.loads((release/'views/pulse_boyd.json').read_text(encoding='utf8'))
+    projected={r['id']:r for r in pulse['observations']}
+    check('Pulse projection keeps every prototype observation',all(r['id'] in projected for r in seed['observations']))
+    for old in seed['observations']:
+        new=projected[old['id']]
+        for key in ['id','node','publication_date','page','roles','phase','excerpt','source_url']:
+            if old[key]!=new[key]: raise AssertionError('Pulse source data changed: '+old['id']+' '+key)
+    check('Pulse projection exactly preserves dates, pages, roles, excerpts and source URLs',True)
+    admitted={r[0] for r in db.execute("SELECT legacy_id FROM group_publications WHERE group_id='group:boyd-bantry-coverage'")}
+    check('Pulse projection matches the admitted Boyd/Bantry coverage group',set(projected)==admitted)
+    check('Pulse projection contains no edges',pulse['relations']==[])
+    group_counts={r['group_id']:dict(r) for r in db.execute('SELECT * FROM observed_group_summary')}
+    check('Overlapping group memberships do not inflate union counts',db.execute('SELECT COUNT(DISTINCT observation_id) FROM current_memberships').fetchone()[0]==expected['distinct_current_members'])
+    check('Boyd parent and child groups keep distinct identities',group_counts['group:boyd-bantry-coverage']['passage_selections']==expected['boyd_coverage_selections'] and group_counts['group:boyd-core-report']['passage_selections']==expected['boyd_core_selections'])
+
+    # Destructive probes run only in an in-memory clone, never the release.
+    sandbox=sqlite3.connect(':memory:');db.backup(sandbox);sandbox.execute('PRAGMA foreign_keys=ON')
+    def rejected(name,sql,args=()):
+        sandbox.execute('SAVEPOINT probe')
+        try:
+            sandbox.execute(sql,args)
+        except sqlite3.IntegrityError:
+            sandbox.execute('ROLLBACK TO probe');sandbox.execute('RELEASE probe');checks.append(name)
+        else:
+            sandbox.execute('ROLLBACK TO probe');sandbox.execute('RELEASE probe');raise AssertionError(name)
+    rejected('Dangling provenance is rejected',"INSERT INTO runs VALUES ('bad','bad','{}','missing','2026-11-04','automated',0)")
+    rejected('Silent annotation edits are rejected',"UPDATE annotations SET value_json='{}'")
+    rejected('Deleting review history is rejected','DELETE FROM annotations')
+    h=sandbox.execute('SELECT * FROM group_hierarchy LIMIT 1').fetchone()
+    rejected('Hierarchy cycles are rejected','INSERT INTO group_hierarchy VALUES (?,?,?)',(h[0],h[2],h[1]))
+    row=sandbox.execute("SELECT * FROM annotations WHERE id='membership:boyd-core-report:H001:1'").fetchone()
+    sandbox.execute('INSERT INTO annotations VALUES (?,?,?,?,?,?,?,?,?)',('test:withdraw',row[1],row[2],'{"decision":"withdrawn","roles":[]}',row[4],row[5],row[6],row[0],row[8]))
+    sandbox.execute('INSERT INTO memberships VALUES (?,?,?,?,?)',('test:withdraw',row[1],'group:boyd-core-report','withdrawn','[]'))
+    check('A superseding decision changes the projection while preserving the old annotation',sandbox.execute("SELECT COUNT(*) FROM group_publications WHERE group_id='group:boyd-core-report'").fetchone()[0]==2 and sandbox.execute('SELECT COUNT(*) FROM annotations WHERE id=?',(row[0],)).fetchone()[0]==1)
+    sandbox.close()
+
+    sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'python_packages'))
+    import pyarrow.parquet as pq
+    import numpy as np
+    scores=pq.read_table(release/'derived/page_topic_census.parquet')
+    check('Every topic vector joins to an eligible source page',len(scores)==77749 and set(scores['page_id'].to_pylist())=={r[0] for r in db.execute('SELECT v.page_id FROM page_versions v JOIN page_assessments a ON a.page_version_id=v.id WHERE a.eligible=1')})
+    matrix=np.column_stack([scores[f'T{i:02}'].to_numpy() for i in range(1,25)])
+    check('Topic allocations are finite and nonnegative',bool(np.isfinite(matrix).all() and (matrix>=0).all()))
+    check('Topic allocations plus unassigned mass recover page word totals',bool(np.allclose(matrix.sum(axis=1)+scores['unassigned_words'].to_numpy(),scores['words'].to_numpy(),rtol=1e-7,atol=1e-5)))
+    # Optional automatic reuse layer (v0.5.0 on): it must join to known pages and stay apart from reviewed tables.
+    if (release/'derived/reuse_families.parquet').exists():
+        fams = pq.read_table(release/'derived/reuse_families.parquet').to_pylist()
+        apps = pq.read_table(release/'derived/reuse_family_appearances.parquet', columns=['family_id', 'page_id', 'lccn']).to_pylist()
+        page_ids = {r[0] for r in db.execute('SELECT id FROM pages')}
+        check('Reuse family ids are unique', len({f['family_id'] for f in fams}) == len(fams))
+        check('Every reuse appearance joins to a known page', all(a['page_id'] in page_ids for a in apps))
+        by_family = {}
+        for a in apps:
+            by_family.setdefault(a['family_id'], set()).add(a['lccn'])
+        check('Every reuse family spans at least two newspaper series', all(len(by_family.get(f['family_id'], ())) >= 2 for f in fams))
+        check('Reuse layer is recorded as automatic with no review', tuple(db.execute("SELECT reviewer_kind, independent_review FROM runs WHERE id='run:reuse-all-v1'").fetchone() or ()) == ('automated', 0))
+    # Optional automatic titles (v0.5.1 on): exactly one non-empty title per matched story, recorded as automatic.
+    if (release/'derived/reuse_family_titles.parquet').exists():
+        titles = pq.read_table(release/'derived/reuse_family_titles.parquet', columns=['family_id', 'title']).to_pylist()
+        fam_ids = [f['family_id'] for f in pq.read_table(release/'derived/reuse_families.parquet', columns=['family_id']).to_pylist()]
+        check('Every matched story has exactly one title', sorted(t['family_id'] for t in titles) == sorted(fam_ids))
+        check('Titles are non-empty', all(t['title'].strip(' …') for t in titles))
+        check('Titles are recorded as automatic with no review', tuple(db.execute("SELECT reviewer_kind, independent_review FROM runs WHERE id='run:reuse-titles-v1'").fetchone() or ()) == ('automated', 0))
+    # Optional story topics (v0.5.2 on): one row per matched story, reviewed rows name real groups, topics are T01-T24.
+    if (release/'derived/story_topics.parquet').exists():
+        st = pq.read_table(release/'derived/story_topics.parquet', columns=['story_id', 'kind', 'top_topic', 'second_topic']).to_pylist()
+        fam_ids = {f['family_id'] for f in pq.read_table(release/'derived/reuse_families.parquet', columns=['family_id']).to_pylist()}
+        group_ids = {r[0] for r in db.execute('SELECT id FROM groups')}
+        check('Every matched story has exactly one topic row', sorted(r['story_id'] for r in st if r['kind'] == 'matched') == sorted(fam_ids))
+        check('Reviewed topic rows name released groups', all(r['story_id'] in group_ids for r in st if r['kind'] == 'reviewed'))
+        check('Story topics are model topics T01-T24', all(r['top_topic'] in {f'T{i:02}' for i in range(1, 25)} and r['second_topic'] in {f'T{i:02}' for i in range(1, 25)} for r in st))
+        check('Story topics are recorded as automatic with no review', tuple(db.execute("SELECT reviewer_kind, independent_review FROM runs WHERE id='run:story-topics-v1'").fetchone() or ()) == ('automated', 0))
+    for line in (release/'examples.sql').read_text().split('-- QUERY\n')[1:]:
+        db.execute(line.strip()).fetchall()
+    check('All supplied example queries execute',True)
+    db.close()
+    return {'passed':True,'counts':counts,'normalized_segment_locator_statuses':anchor_statuses,'checks':checks,'limitations':['No new event census or independent human review.','A curated selection is not an article; selections on the same page may overlap.','Raw full-corpus transcriptions remain in the six pinned source shards.','Non-exact excerpt locations remain explicitly unresolved.']}
+
+if __name__=='__main__':
+    release=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).resolve().parents[2]/'outputs/data_foundation/v0.1.0'
+    print(json.dumps(validate(release),indent=2))
