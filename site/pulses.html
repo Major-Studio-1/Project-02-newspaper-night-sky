@@ -30,7 +30,7 @@
 .filter-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:12px;color:var(--muted);margin-top:4px}.filter-row[hidden]{display:none}.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}.seg button{border:0;border-radius:0;padding:4px 11px;font-size:12px;background:#11192b;color:var(--muted)}.seg button+button{border-left:1px solid var(--line)}.seg button:hover{background:#1a2740;color:var(--ink)}.seg button[aria-pressed="true"]{background:var(--ink);color:#090e1b;font-weight:600}
 @media(prefers-reduced-motion:reduce){.constellation line{animation:none}.sky .paper{transition:none}}
 @media(max-width:560px){.sky .paper{width:108px}.sky .paper-name{max-width:108px;font-size:12px}.sky .node-last{font-size:10.5px}}
-@media(max-width:720px){.year-field select{min-width:0;width:118px}.group-field{min-width:0!important;flex:1 1 200px;order:2}.transport{flex:1 1 100%}.speed-field{margin-left:auto}.group-field{flex-basis:150px!important}.group-field .lbl,.speed-field .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#speed{width:72px}#speed-value{min-width:58px;font-size:12px}}#notice{color:var(--amber);font-size:12px;margin-top:6px}#notice:empty{display:none}.more-row{font-size:12px;color:var(--muted);padding:8px 10px}
+@media(max-width:720px){.year-field select{min-width:0;width:auto;max-width:170px}.year-field .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.group-field{min-width:0!important;flex:1 1 200px;order:2}.transport{flex:1 1 100%}.speed-field{margin-left:auto}.group-field{flex-basis:150px!important}.group-field .lbl,.speed-field .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}#speed{width:72px}#speed-value{min-width:58px;font-size:12px}}#notice{color:var(--amber);font-size:12px;margin-top:6px}#notice:empty{display:none}.more-row{font-size:12px;color:var(--muted);padding:8px 10px}
 /* Site frame (7 Nov): timeline in the pinned bar, one-line head, caption over the map, phone passage card. */
 .timebar{flex:1 1 100%;display:grid;grid-template-columns:190px minmax(0,1fr);gap:16px;align-items:center;padding-top:2px}
 .timebar-date{display:flex;flex-direction:column;line-height:1.25}#current-date{font-size:18px;font-weight:500}
@@ -46,13 +46,24 @@
   .mini-card{display:block;position:sticky;bottom:8px;z-index:20;margin:10px 0 4px;padding:10px 12px;background:#0d1526f2;border:1px solid var(--line);border-radius:10px;font-size:13px;box-shadow:0 -6px 24px #0009}
   .mini-card p{margin:0}.mc-title{font-weight:600}.mc-role{color:var(--amber);font-size:12px;margin:2px 0 4px!important}
   .mc-text{font-family:Georgia,serif;color:#c6d0e4;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}#mc-more{display:inline-block;margin-top:6px}}
+/* Phones: the map fits the screen under the controls. The filter sits above it and the constellation caption below,
+   instead of over it; the passage card follows the map instead of covering it; compact newspaper markers. */
+@media(max-width:720px){
+  .sky-wrap{display:flex;flex-direction:column}.sky-top{display:contents}
+  .sky-top .filter-row{order:0;margin:0 0 4px}.filter-hint{display:none}.sky{order:1;margin:0}
+  .sky-top .constellation-note{order:2;height:auto;min-height:38px;margin:4px 0 0}.constellation-note span{-webkit-line-clamp:3}
+  .sky .node{width:46px;height:46px}.sky .paper-name{min-height:0;line-height:1.25;padding:2px 4px}
+  .sky .node-last,.sky .node-coverage{min-height:14px;line-height:14px}   /* fixed, so markers keep their size as the text fills in */
+  .mini-card{position:static;box-shadow:none;margin:8px 0 4px}
+  .evidence{display:flex;flex-direction:column}#selected-evidence{order:-1;margin-bottom:20px}#appearances{max-height:340px}
+}
 </style>
 </head>
 <body class="page-pulses">
 <header class="site-header" id="site-header"><div class="site-inner"><a class="brand" href="index.html" aria-label="Newspaper Pulsar, home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.4" fill="currentColor"/><path d="M12 1.5v6.2M12 16.3v6.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1"/></svg><span>Newspaper Pulsar</span></a><nav class="site-nav" aria-label="Main"><a href="telescope.html">Telescope</a><a href="pulses.html" aria-current="page">Pulses</a><a href="method.html">How it works</a></nav><form class="site-search" action="telescope.html" role="search"><label class="sr-only" for="site-q">Search every story</label><input id="site-q" name="q" type="search" placeholder="Search 48,148 stories" autocomplete="off" spellcheck="false"></form><button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header">Menu</button></div></header><script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script>
 <header class="toolbar"><div class="toolbar-inner">
 <div class="transport" role="group" aria-label="Playback"><button id="play" type="button" aria-pressed="false">Play</button><button id="previous" class="step" type="button" aria-label="Previous appearance">←</button><button id="next" class="step" type="button" aria-label="Next appearance">→</button><label class="speed-field"><span class="lbl">Speed</span><input id="speed" type="range" min="0" max="9" step="1" value="3" aria-label="Playback speed"><output id="speed-value" for="speed" class="mono">18 days/s</output></label></div>
-<label class="year-field">Year<select id="year" aria-label="Year"></select></label>
+<label class="year-field"><span class="lbl">Year</span><select id="year" aria-label="Year"></select></label>
 <label class="group-field"><span class="lbl">Focus</span><select id="group" aria-label="Story or group"></select></label>
 <div class="timebar"><div class="timebar-date"><span id="current-date" class="mono"></span><span id="count" class="small mono muted"></span></div>
 <div class="timebar-track"><div class="strip-wrap"><canvas id="strip" aria-hidden="true"></canvas><div id="strip-tip" class="strip-tip" hidden></div></div>
@@ -61,7 +72,7 @@
 <main class="shell">
 <div class="pagehead"><h1>Newspaper pulses</h1><span id="scope" class="small muted"></span><a id="to-telescope" class="small" href="telescope.html">See this year in the sky ↗</a></div><p id="notice"></p>
 <div class="layout"><section aria-label="Publication pulses">
-<div class="sky-wrap"><div class="sky-top" id="sky-top"><div id="filter-row" class="filter-row" hidden><span id="min-label">Show stories in</span><span id="min-papers" class="seg" role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers. Papers that printed the same story glow together.</span></div><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
+<div class="sky-wrap"><div class="sky-top" id="sky-top"><div id="filter-row" class="filter-row" hidden><span id="min-label">Show stories in</span><span id="min-papers" class="seg" role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers.</span><span class="filter-hint">Papers that printed the same story glow together.</span></div><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
 <div id="sky" class="sky" aria-label="Newspaper nodes placed roughly by town of publication, north at the top. Light marks observed publications, with no transmission edges."></div></div>
 <div id="mini-card" class="mini-card" aria-live="polite"><p class="mc-title" id="mc-title"></p><p class="mc-role" id="mc-role"></p><p class="mc-text" id="mc-text"></p><a href="#selected-evidence" id="mc-more">Read the passage and see the scan ↓</a></div>
 <p class="map-note">Newspapers sit roughly where they were printed: north at the top, east to the right. Papers are nudged apart so names stay readable, so distances are not to scale.</p>
@@ -196,9 +207,11 @@ let skyWidth = 0;
 function layoutSky() {
   const sky = $('sky'), W = sky.clientWidth, n = nodes.length; if (!W || !n) return;
   skyWidth = W;
-  const BW = W < 560 ? 108 : 132, GAP = 8, JIT = 26, TOP = $('sky-top').offsetHeight + 10;  // room for the filter row and caption over the map
+  // Room for the filter row and caption over the map (on phones they sit above and below it, so the sky-top box is empty).
+  const small = W < 560, BW = small ? 108 : 132, GAP = 8, JIT = small ? 12 : 26, TOP = $('sky-top').offsetHeight + 10;
   const compass = sky.querySelector('.compass'); if (compass) compass.style.top = TOP + 'px';
-  const BH = Math.max(100, ...nodes.map(nd => nd.el.offsetHeight));
+  const BH = Math.max(small ? 60 : 100, ...nodes.map(nd => nd.el.offsetHeight));
+  const NH = nodes[0].el.querySelector('.node')?.getBoundingClientRect().height || 64;   // marker size, for the constellation lines
   const spread = (key, tie) => {
     const vals = nodes.map(nd => nd.paper[key]), lo = Math.min(...vals), hi = Math.max(...vals);
     const order = nodes.map((nd, i) => i).sort((a, b) => vals[a] - vals[b] || tie(a, b));
@@ -226,7 +239,7 @@ function layoutSky() {
   }
   const used = Math.max(...pos.map(p => p.y)) + BH + 6 + TOP;
   sky.style.height = Math.ceil(used) + 'px';
-  nodes.forEach((nd, i) => { nd.el.style.left = (pos[i].x - BW / 2) + 'px'; nd.el.style.top = (pos[i].y + TOP) + 'px'; nd.cx = pos[i].x; nd.cy = pos[i].y + TOP + 32; });
+  nodes.forEach((nd, i) => { nd.el.style.left = (pos[i].x - BW / 2) + 'px'; nd.el.style.top = (pos[i].y + TOP) + 'px'; nd.cx = pos[i].x; nd.cy = pos[i].y + TOP + NH / 2; });
   if (focus || hover) renderConstellation();
 }
 
@@ -533,6 +546,7 @@ async function loadYear(year, wanted) {
   pause();
   let extra = yearCache.get(year);
   if (extra === undefined) {
+    $('notice').textContent = `Loading ${year}…`;
     try { const r = await fetch(`years/${year}.json?v=${BOOT.year_stamp || ''}`); extra = r.ok ? expandYear(await r.json()) : null; } catch { extra = null; }
     yearCache.set(year, extra);
   }

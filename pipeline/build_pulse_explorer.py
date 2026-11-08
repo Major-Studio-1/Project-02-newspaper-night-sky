@@ -203,7 +203,9 @@ tele={'epoch':'1770-01-01','count':len(stars),**{k:[s[k] for s in stars] for k i
 (OUT/'telescope.json').write_text(json.dumps(tele,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 (OUT/'telescope-text.json').write_text(json.dumps({'count':len(stars),'text':[s['text'] for s in stars]},ensure_ascii=False,separators=(',',':')),encoding='utf8')
 tele_stamp=hashlib.sha256((OUT/'telescope.json').read_bytes()+(OUT/'telescope-text.json').read_bytes()).hexdigest()[:12]
-tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,
+tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'stories':len(stars),
+           # Sizes as served, so the loading bar can measure progress even when the server compresses the files.
+           'bytes':{'data':(OUT/'telescope.json').stat().st_size,'text':(OUT/'telescope-text.json').stat().st_size},
            'towns':[{'name':n.split(',')[0],'lat':la,'lon':lo,'stories':town_count[n]} for n,_,la,lo in TOWNS if town_count[n]],'categories':[{'label':c['label'],'color':col} for c,col in zip(categories,['#3987e5','#d95926','#199e70'])]}
 # ---- The site: five pages sharing one header and footer (work/site_parts.py, work/site.css) ----
 from site_parts import fill, REPO
