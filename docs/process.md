@@ -212,7 +212,12 @@ The pulse view is a direct translation of the admitted group records:
 - **Angle:** Front looks straight back through time; Side shows the time axis from an angle.
 - **Moving around:** drag to turn the view, right-drag (or two fingers) to move it, and scroll or pinch to zoom. "Reset view" brings back the whole picture.
 - **Timeline bar:** under the view, a full 1770–1810 bar shows how many stories each month has, and which stretch of time you are looking through.
-- **Search:** typing a word lights up every story that mentions it in its title or opening words. The caption says how many match, in which years, and whether they keep to a season.
+- **Search:** typing a word lights up every story that mentions it in its title or opening words, in gold. The other stories stay faintly visible behind the matches. The caption says how many match, in which years, and whether they keep to a season.
+- **Region colours (on by default; the "Regions" button turns them off):** each star takes the region of the town where its story was first printed in this archive.
+  - Violet is New England, aqua the Middle States, and orange the South and West (Washington, Virginia, Kentucky and South Carolina).
+  - Three hues is the most a scatter can carry and stay distinguishable for colour-blind readers; the three were checked on the telescope's background.
+  - The colours show the shape of the archive: in the 1780s and 1790s most stories were first printed in the Middle States, and after 1800 most in the South and West.
+  - Region colours are drawn one over another, not added, so overlapping regions never mix into a false colour.
 
 Version 1 (below) is kept as `telescope-v1.html`.
 

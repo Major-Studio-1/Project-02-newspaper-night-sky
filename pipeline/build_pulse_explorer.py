@@ -37,6 +37,18 @@ TOWNS=[('Portland, Me.',r'portland',43.661,-70.255),('Portsmouth, N.H.',r'portsm
        ('Martinsburg, W. Va.',r'martinsburg',39.456,-77.964),('Wheeling, W. Va.',r'wheeling',40.064,-80.721),('Richmond, Va.',r'richmond',37.541,-77.436),
        ('Williamsburg, Va.',r'williamsburg',37.271,-76.707),('Norfolk, Va.',r'norfolk',36.851,-76.286),('Lynchburg, Va.',r'lynchburg',37.414,-79.142),
        ('Lexington, Ky.',r'lexington',38.040,-84.503),('Charleston, S.C.',r'charles-?town|charleston',32.777,-79.931)]
+# Regions colour the telescope's stars by the town where each story was first printed in this archive, grouped as the
+# early republic grouped its states. Three hues at most: the stars form a scatter, where any two colours can meet, and only
+# three categorical hues stay distinguishable there for colour-blind readers (dataviz check, all pairs, on #050711).
+REGIONS=[('New England','Maine, New Hampshire, Massachusetts, Rhode Island and Connecticut','#9085e9',{'Me.','N.H.','Mass.','R.I.','Conn.','Vt.'}),
+         ('Middle States','New York, New Jersey, Pennsylvania and Delaware','#199e70',{'N.Y.','N.J.','Pa.','Del.'}),
+         ('South and West','Washington, Virginia (with today\'s West Virginia), Kentucky and South Carolina','#d95926',{'D.C.','Va.','W. Va.','Ky.','S.C.'})]
+def region_of(place):
+    state_abbr=place.split(', ',1)[1]
+    found=[i for i,r in enumerate(REGIONS) if state_abbr in r[3]]
+    assert len(found)==1, 'Give this town a region in REGIONS: '+place
+    return found[0]
+for t in TOWNS: region_of(t[0])
 def town(places_json):
     raw='; '.join(json.loads(places_json)); low=raw.lower().replace('[','').replace(']','')
     hits=[t for t in TOWNS if re.search(t[1],low)]
@@ -192,18 +204,20 @@ for s in stories:
     first_town[s['id']]=towns[min((observations[m] for m in s['members']),key=lambda o:o['date'])['node']]
 town_count=collections.Counter()
 for s in stars:
-    ft=first_town[s['id']]; s['flat']=ft['lat']; s['flon']=ft['lon']; town_count[ft['place']]+=1
+    ft=first_town[s['id']]; s['flat']=ft['lat']; s['flon']=ft['lon']; s['reg']=region_of(ft['place']); town_count[ft['place']]+=1
 for s in stars:
     r=topic_rows.get(s['id'])
     s['topic']=lane_of[r['top_topic']] if r else -1; s['tconf']=round(r['top_share'],2) if r else 0
     s['text']=re.sub(r'\s+',' ',(s['title']+' '+(first_excerpt.get(s['id']) or '')).replace('ſ','s')).lower().strip()
 stars.sort(key=lambda s:(s['first'],-s['papers'],s['id']))
-tele={'epoch':'1770-01-01','count':len(stars),**{k:[s[k] for s in stars] for k in ['id','year','kind','cat','first','last','papers','prints','lat','long','title','topic','tconf','flat','flon']},
+tele={'epoch':'1770-01-01','count':len(stars),**{k:[s[k] for s in stars] for k in ['id','year','kind','cat','first','last','papers','prints','lat','long','title','topic','tconf','flat','flon','reg']},
       'topics':[{'id':x['id'],'label':' · '.join(x['terms'][:3])} for x in topic_list]}
 (OUT/'telescope.json').write_text(json.dumps(tele,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 (OUT/'telescope-text.json').write_text(json.dumps({'count':len(stars),'text':[s['text'] for s in stars]},ensure_ascii=False,separators=(',',':')),encoding='utf8')
 tele_stamp=hashlib.sha256((OUT/'telescope.json').read_bytes()+(OUT/'telescope-text.json').read_bytes()).hexdigest()[:12]
+reg_count=collections.Counter(s['reg'] for s in stars)
 tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'stories':len(stars),
+           'regions':[{'label':label,'states':states,'color':color,'stories':reg_count[i]} for i,(label,states,color,_) in enumerate(REGIONS)],
            # Sizes as served, so the loading bar can measure progress even when the server compresses the files.
            'bytes':{'data':(OUT/'telescope.json').stat().st_size,'text':(OUT/'telescope-text.json').stat().st_size},
            'towns':[{'name':n.split(',')[0],'lat':la,'lon':lo,'stories':town_count[n]} for n,_,la,lo in TOWNS if town_count[n]],'categories':[{'label':c['label'],'color':col} for c,col in zip(categories,['#3987e5','#d95926','#199e70'])]}
