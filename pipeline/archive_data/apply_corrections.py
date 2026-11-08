@@ -5,6 +5,11 @@ Usage (from the project root, Python 3.12):
 
 The base release stays untouched. Old annotations remain in the database; the new rows
 point to them with supersedes_id, so current_annotations shows only the corrected values.
+
+A ledger may also carry "table_corrections" for text fields of plain tables that have no annotation history (only
+those listed in TABLE_FIELDS). Each names the current value ("from") and the new one ("to"); the release changes the
+field, and the metadata key table_corrections keeps every old value with its ledger and reason. With
+"update_readme": true the release gets the current work/archive_data/README.md.
 """
 from pathlib import Path
 import hashlib
@@ -18,6 +23,7 @@ PROJECT = HERE.parents[1]
 FOUNDATION = PROJECT/'outputs/data_foundation'
 J = lambda x: json.dumps(x, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
 sha = lambda text: hashlib.sha256(text.encode('utf8')).hexdigest()
+TABLE_FIELDS = {'date_assertions': {'date_role'}}   # plain-table text fields a correction ledger may change
 
 
 def file_sha(path):
@@ -58,16 +64,20 @@ def main(ledger_path):
     path = f'sources/v{ledger["target_release"]}__'+relative.replace('/', '__')
     shutil.copyfile(ledger_path, target/path)
     db.execute('INSERT INTO sources VALUES (?,?,?,?,?,?,?)', (sid, path, digest, ledger_path.stat().st_size, 'correction_ledger', None, 'sha256_verified_at_build'))
-    code = HERE/'apply_corrections.py'
-    code_rel = code.relative_to(PROJECT).as_posix()
-    code_digest = file_sha(code)
-    code_sid = 'source:'+sha(code_rel+'@'+code_digest)[:24]
-    if not db.execute('SELECT 1 FROM sources WHERE id=?', (code_sid,)).fetchone():
-        code_path = f'sources/v{ledger["target_release"]}__'+code_rel.replace('/', '__')
-        shutil.copyfile(code, target/code_path)
-        db.execute('INSERT INTO sources VALUES (?,?,?,?,?,?,?)', (code_sid, code_path, code_digest, code.stat().st_size, 'migration_code', None, 'sha256_verified_at_build'))
+    for code, kind in [(HERE/'apply_corrections.py', 'migration_code'), (HERE/'validate.py', 'validation_code')]:
+        code_rel = code.relative_to(PROJECT).as_posix()
+        code_digest = file_sha(code)
+        code_sid = 'source:'+sha(code_rel+'@'+code_digest)[:24]
+        if not db.execute('SELECT 1 FROM sources WHERE id=?', (code_sid,)).fetchone():
+            code_path = f'sources/v{ledger["target_release"]}__'+code_rel.replace('/', '__')
+            shutil.copyfile(code, target/code_path)
+            db.execute('INSERT INTO sources VALUES (?,?,?,?,?,?,?)', (code_sid, code_path, code_digest, code.stat().st_size, kind, None, 'sha256_verified_at_build'))
     run = 'run:'+ledger['ledger_id'].split(':', 1)[1]
-    db.execute('INSERT INTO runs VALUES (?,?,?,?,?,?,?)', (run, 'Correction of recorded annotations', J({'release': ledger['target_release'], 'corrections': len(ledger['corrections'])}),
+    table_fixes = ledger.get('table_corrections', [])
+    params = {'release': ledger['target_release'], 'corrections': len(ledger['corrections'])}
+    if table_fixes:
+        params['table_corrections'] = len(table_fixes)
+    db.execute('INSERT INTO runs VALUES (?,?,?,?,?,?,?)', (run, 'Correction of recorded annotations', J(params),
                                                           sid, ledger['recorded_date'], 'ai_assistant', 0))
     for i, c in enumerate(ledger['corrections']):
         old = db.execute('SELECT * FROM current_annotations WHERE id=?', (c['supersedes'],)).fetchone()
@@ -76,6 +86,19 @@ def main(ledger_path):
         value = dict(c['value'], correction_reason=c['reason'])
         db.execute('INSERT INTO annotations VALUES (?,?,?,?,?,?,?,?,?)', (c['new_annotation_id'], c['object_id'], c['annotation_type'], J(value), run, sid,
                                                                          f'/corrections/{i}', c['supersedes'], ledger['recorded_date']))
+    log = []
+    for i, c in enumerate(table_fixes):
+        if c['column'] not in TABLE_FIELDS.get(c['table'], ()):
+            raise ValueError('Table corrections may change only '+json.dumps({k: sorted(v) for k, v in TABLE_FIELDS.items()}))
+        row = db.execute(f"SELECT {c['column']} FROM {c['table']} WHERE id=?", (c['id'],)).fetchone()
+        if row is None or row[0] != c['from']:
+            raise ValueError('A table correction must start from the current value: '+c['id'])
+        db.execute(f"UPDATE {c['table']} SET {c['column']}=? WHERE id=?", (c['to'], c['id']))
+        log.append({'release': ledger['target_release'], 'ledger': ledger['ledger_id'], 'pointer': f'/table_corrections/{i}', 'run_id': run,
+                    **{k: c[k] for k in ('table', 'id', 'column', 'from', 'to', 'reason')}})
+    if log:
+        old = db.execute("SELECT value_json FROM metadata WHERE key='table_corrections'").fetchone()
+        db.execute('INSERT OR REPLACE INTO metadata VALUES (?,?)', ('table_corrections', J((json.loads(old[0]) if old else []) + log)))
     release_meta = json.loads(db.execute("SELECT value_json FROM metadata WHERE key='release'").fetchone()[0])
     release_meta.update(version=ledger['target_release'], date=ledger['recorded_date'], previous_release=ledger['base_release'])
     db.execute("UPDATE metadata SET value_json=? WHERE key='release'", (J(release_meta),))
@@ -100,6 +123,8 @@ def main(ledger_path):
                         values[k[:-5]] = json.loads(values.pop(k))
                 f.write(J(values)+'\n')
     db.close()
+    if ledger.get('update_readme'):
+        shutil.copyfile(HERE/'README.md', target/'README.md')
 
     sys.path.insert(0, str(HERE))
     from validate import validate
@@ -109,7 +134,7 @@ def main(ledger_path):
              for p in sorted(target.rglob('*')) if p.is_file() and p.name != 'manifest.json']
     out = dict(manifest, version=ledger['target_release'], status='released', created_date=ledger['recorded_date'], previous_release=ledger['base_release'],
                build_command='python work/archive_data/apply_corrections.py '+relative, counts=results['counts'], files=files,
-               corrections_applied=len(ledger['corrections']))
+               corrections_applied=len(ledger['corrections']), **({'table_corrections_applied': len(table_fixes)} if table_fixes else {}))
     (target/'manifest.json').write_text(json.dumps(out, indent=2), encoding='utf8')
     (FOUNDATION/'CURRENT.json').write_text(json.dumps({'version': ledger['target_release'], 'path': 'v'+ledger['target_release'], 'manifest_sha256': file_sha(target/'manifest.json')}, indent=2), encoding='utf8')
     print(json.dumps({'release': str(target), 'checks': len(results['checks']), 'corrections': len(ledger['corrections'])}), flush=True)

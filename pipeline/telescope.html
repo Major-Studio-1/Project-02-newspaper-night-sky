@@ -39,6 +39,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#ti
 .heading{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:10px}.heading p{margin-top:4px}
 .caption{display:flex;align-items:center;gap:10px;min-height:46px;font-size:13px;margin-bottom:8px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
 .caption .text{flex:1}.caption b{color:var(--gold);font-weight:600}.caption.idle{color:var(--muted)}.caption button{padding:3px 9px;font-size:12px;flex:none}
+/* Compared searches: one line each, a colour swatch beside the words (the text itself stays in ink colours). */
+.caption .cmp{display:flex;align-items:baseline;gap:2px 6px;flex-wrap:wrap}.caption .cmp+.cmp{margin-top:3px}.caption .t{color:var(--ink);font-weight:600}
+.sw{display:inline-block;width:9px;height:9px;border-radius:50%;flex:none;transform:translateY(1px)}
+.caption .x{border:0;background:none;padding:0 4px;color:var(--muted);font-size:13px;line-height:1}.caption .x:hover{color:var(--ink);background:none}
+.chips button.cmp-chip{color:var(--ink)}.chips .tri{display:inline-flex;gap:2px;margin-right:6px;vertical-align:0}.chips .tri i{width:6px;height:6px;border-radius:50%}
 .chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px}.chips button{font-size:12px;padding:3px 10px;border-radius:99px;color:var(--muted)}
 .chips button:hover{color:var(--ink)}
 .view{position:relative;height:clamp(420px,62vh,720px);border:1px solid var(--line);border-radius:10px 10px 0 0;overflow:hidden;cursor:grab;touch-action:none;
@@ -80,7 +85,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#ti
 __SITE_HEADER__
 <header class="toolbar"><div class="toolbar-inner">
 <label class="search" role="search"><span class="sr-only">Search stories</span>
-<input id="q" type="search" placeholder="Search any word or name, e.g. fever, Bonaparte, thanksgiving" autocomplete="off" spellcheck="false"><button type="button" id="q-clear" aria-label="Clear search">✕</button></label>
+<input id="q" type="search" placeholder="Search any word or name, or compare: fever vs ice" autocomplete="off" spellcheck="false"><button type="button" id="q-clear" aria-label="Clear search">✕</button></label>
 <span class="seg slide" id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">Place</button><button type="button" data-layout="topic" title="What each story is about">Topic</button><button type="button" data-layout="orbit" title="The time of year">Orbit</button></span>
 <button type="button" id="drift" class="toggle" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance">Drift</button>
 <span class="ctl"><span class="label" id="colour-label">Colour</span><span class="seg slide" id="colour" role="group" aria-labelledby="colour-label"><button type="button" data-colour="region" title="Colour each star by the region where its story was first printed in this archive">Region</button><button type="button" data-colour="off" title="Pale stars; reviewed stories in their own colours">Off</button></span></span>
@@ -95,7 +100,7 @@ __SITE_HEADER__
 </div></header>
 <main class="shell">
 <div class="heading"><div><h1>Story telescope</h1><p class="muted">Every story printed in at least two newspapers of this archive, 1770–1810. The further away, the earlier. <a href="telescope-v1.html">Version 1</a></p></div><p id="status" class="small muted mono"></p></div>
-<div id="caption" class="caption idle" aria-live="polite"><span class="text" id="caption-text"></span><button type="button" id="caption-clear" hidden>Clear</button></div>
+<div id="caption" class="caption idle" aria-live="polite"><span class="text" id="caption-text"></span><button type="button" id="caption-compare" hidden title="Add another search in its own colour">Compare with…</button><button type="button" id="caption-clear" hidden>Clear</button></div>
 <div class="chips" id="chips"><span class="label">Try:</span></div>
 <div id="view" class="view" tabindex="0" role="application" aria-roledescription="star map" aria-label="Story telescope. Up and down arrows travel through time; left and right turn the view; plus and minus zoom; 0 resets the view. The list below names the stories shown.">
 <canvas id="gl"></canvas><canvas id="axes"></canvas><div id="tip" class="tip" hidden></div><div id="message" class="message" hidden></div><div id="key" class="key" aria-hidden="true"></div>
@@ -118,6 +123,12 @@ const fmt = (day, opts = {day: 'numeric', month: 'short', year: 'numeric'}) => n
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const STORE = 'story-telescope-v3';
+// Compare: up to three searches, separated by "vs", each in its own colour (validated together on the sky's background:
+// dark-mode lightness band, colour-blind separation ΔE 11 or more). One search alone keeps the brighter gold.
+// A story that mentions more than one of the compared searches is drawn white.
+const COMPARE = ['#bd862c', '#3987e5', '#d55181'], MULTI = '#f4f6ff';
+const COMPARE_CHIPS = [['France · Britain · Congress', 'france, french, paris, bonaparte, buonaparte vs britain, british, england, english, london, parliament vs congress, senate, house of representatives'],
+  ['Fever · Ice', 'yellow fever, malignant fever, prevailing fever vs the ice, frozen'], ['Independence Day · Thanksgiving', 'anniversary of independence, fourth of july, 4th of july vs thanksgiving']];
 const CHIPS = [['Independence Day', 'anniversary of independence, fourth of july, 4th of july'], ["President's speech", "fellow citizens of the senate, gentlemen of the senate, president's speech, president's message"],
   ['Congress', 'house of representatives, in senate, in congress'], ['Fever', 'yellow fever, malignant fever, prevailing fever'], ['Thanksgiving', 'thanksgiving'],
   ['Ice', 'the ice, frozen'], ['Hurricanes', 'hurricane, gale'], ['Fire', 'fire broke out, conflagration'], ['Bonaparte', 'bonaparte, buonaparte'], ['Embargo', 'embargo']];
@@ -249,11 +260,13 @@ const attr = (name, arr, n) => geo.setAttribute(name, new THREE.BufferAttribute(
 attr('position', pos, 3); attr('aColor', col, 3); attr('aRegC', regCol, 3); attr('aSize', size, 1); attr('aKind', kind, 1); attr('aHit', hit, 1);
 attr('aPlace', place, 2); attr('aTopic', topic, 2); attr('aOrbit', orbit, 2);
 const uniforms = {uNow: {value: state.now}, uSpan: {value: state.span}, uLZ: {value: LZ}, uCross: {value: 1}, uMix: {value: new THREE.Vector3(1, 0, 0)},
-  uMin: {value: 3}, uShow: {value: new THREE.Vector3(1, 1, 0)}, uSearch: {value: 0}, uPR: {value: 1}, uScale: {value: 1}, uRef: {value: 3}, uGold: {value: new THREE.Color(GOLD)},
+  uMin: {value: 3}, uShow: {value: new THREE.Vector3(1, 1, 0)}, uSearch: {value: 0}, uPR: {value: 1}, uScale: {value: 1}, uRef: {value: 3},
+  // Search colours (raw sRGB, like the regions): uC1-uC3 for the compared searches (all gold for a single search), uC4 for "more than one".
+  uC1: {value: new THREE.Vector3()}, uC2: {value: new THREE.Vector3()}, uC3: {value: new THREE.Vector3()}, uC4: {value: new THREE.Vector3()}, uCold: {value: .5}, uCmp: {value: 0},
   uRegW: {value: state.colour === 'region' ? 1 : 0}, uNeutral: {value: new THREE.Color(AUTO)}, uDense: {value: 1}};
 const VERTEX = `
     attribute vec3 aColor; attribute vec3 aRegC; attribute float aSize; attribute float aKind; attribute float aHit; attribute vec2 aPlace; attribute vec2 aTopic; attribute vec2 aOrbit;
-    uniform float uNow, uSpan, uLZ, uCross, uMin, uSearch, uPR, uScale, uRef, uRegW; uniform vec3 uMix, uShow, uGold, uNeutral;
+    uniform float uNow, uSpan, uLZ, uCross, uMin, uSearch, uPR, uScale, uRef, uRegW, uCold; uniform vec3 uMix, uShow, uC1, uC2, uC3, uC4, uNeutral;
     varying vec3 vColor; varying float vAlpha, vHot;
     void main() {
       float day = position.x, papers = position.z, age = uNow - day;
@@ -263,37 +276,41 @@ const VERTEX = `
       vec2 xy = (aPlace * uMix.x + aTopic * uMix.y + aOrbit * uMix.z) * uCross;
       vec4 mv = modelViewMatrix * vec4(xy, -age / uSpan * uLZ, 1.0);
       gl_Position = projectionMatrix * mv;
-      // Search: matches turn gold and grow; the other stories stay visible, a little smaller, dimmer and paler,
-      // so the population behind the matches can still be read.
-      float hot = uSearch * aHit, cold = uSearch * (1.0 - aHit);
+      // Search: matches take their search's colour and grow (aHit 1-3: which search, 4: more than one); the other stories
+      // stay visible, a little smaller, dimmer and paler, so the population behind the matches can still be read. When
+      // searches are compared (uCold 1), the others lose their own colour entirely, so a colour only ever means a search.
+      float isHit = step(0.5, aHit), hot = uSearch * isHit, cold = uSearch * (1.0 - isHit);
       gl_PointSize = shown * fade > 0.0 ? aSize * uScale * uPR * (uRef / -mv.z) * (1.0 + 0.45 * hot - 0.12 * cold) : 0.0;
-      vec3 base = mix(mix(aColor, aRegC, uRegW), uNeutral, 0.5 * cold);
-      vColor = mix(base, uGold, hot * 0.85); vHot = hot;
+      vec3 base = mix(mix(aColor, aRegC, uRegW), uNeutral, uCold * cold);
+      vec3 hc = aHit < 1.5 ? uC1 : aHit < 2.5 ? uC2 : aHit < 3.5 ? uC3 : uC4;
+      vColor = mix(base, hc, hot * 0.9); vHot = hot;
       vAlpha = shown * fade * (0.62 + 0.38 * clamp((papers - 2.0) / 9.0, 0.0, 1.0)) * (1.0 + 0.3 * hot - 0.58 * cold);
     }`;
 const STAR = `float r = length(gl_PointCoord - 0.5) * 2.0; if (r > 1.0) discard;
       float core = smoothstep(0.5, 0.0, r), glow = exp(-r * r * 4.0) * 0.7, a = (core + glow) * vAlpha;`;
 // Two layers of the same stars. Plain colours glow additively, as in a night sky. Region colours are laid over each other
 // instead (nearer, newer stars on top), so overlapping regions never add up to a false third colour such as yellow, which
-// could be mistaken for the gold of a search. Switching cross-fades the two layers. Search matches always glow in the
-// additive layer, which is drawn last, so no coloured star can cover them.
+// could be mistaken for the gold of a search. Switching cross-fades the two layers. A single search's matches glow in the
+// additive layer, drawn last, so no coloured star can cover them. Compared searches (uCmp) are laid over instead, and
+// that layer is then drawn last: added together, crowded amber, blue and magenta stars would turn white, which is the
+// colour for a story that mentions more than one search.
 const tintNow = () => uniforms.uRegW.value;
 const material = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: 1 - tintNow()}}, transparent: true, depthTest: false, depthWrite: false,
   blending: THREE.AdditiveBlending, vertexShader: VERTEX,
-  fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot; uniform float uWeight;
-    void main() { ${STAR} gl_FragColor = vec4(vColor * a * max(uWeight, vHot), a); }`});
+  fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot; uniform float uWeight, uCmp;
+    void main() { ${STAR} gl_FragColor = vec4(vColor * a * mix(uWeight, 1.0 - uCmp, vHot), a); }`});
 const materialOver = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: tintNow()}}, transparent: true, depthTest: false, depthWrite: false,
   blending: THREE.CustomBlending, blendEquation: THREE.AddEquation, blendSrc: THREE.OneFactor, blendDst: THREE.OneMinusSrcAlphaFactor, vertexShader: VERTEX,
-  fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot; uniform float uWeight, uDense;
-    void main() { ${STAR} float o = min(1.0, a) * 0.5 * uDense * uWeight * (1.0 - vHot);   // translucent, more so in crowded views; matches glow in the other layer
+  fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot; uniform float uWeight, uDense, uCmp;
+    void main() { ${STAR} float o = min(1.0, a) * mix(0.5 * uDense * uWeight, 0.92 * uCmp, vHot);   // translucent, more so in crowded views; compared matches nearly opaque
       vec3 c = mix(vColor, vec3(1.0), core * core * 0.35);           // a whiter centre: a star's sparkle, which shifts no hue
       gl_FragColor = vec4(c * o, o); }`});
 const points = new THREE.Points(geo, material), pointsOver = new THREE.Points(geo, materialOver);
-points.renderOrder = 1; pointsOver.renderOrder = 0;   // the glowing layer (and with it the search matches) is drawn last
 for (const p of [points, pointsOver]) { p.frustumCulled = false; scene.add(p); }   // positions are mapped in the shader
-function applyTint() {   // cross-fade the two layers by the current colour mix
-  const t = Math.min(1, tintNow()); material.uniforms.uWeight.value = 1 - t; materialOver.uniforms.uWeight.value = t;
-  points.visible = t < 1 || uniforms.uSearch.value > 0; pointsOver.visible = t > 0;
+function applyTint() {   // cross-fade the two layers by the current colour mix; the layer holding the matches is drawn last
+  const t = Math.min(1, tintNow()), cmp = uniforms.uCmp.value > 0; material.uniforms.uWeight.value = 1 - t; materialOver.uniforms.uWeight.value = t;
+  points.visible = t < 1 || (uniforms.uSearch.value > 0 && !cmp); pointsOver.visible = t > 0 || cmp;
+  points.renderOrder = cmp ? 0 : 1; pointsOver.renderOrder = cmp ? 1 : 0;
 }
 applyTint();
 
@@ -507,19 +524,32 @@ function drawTopicRing(c) {
   }
 }
 let topicSteps = {key: '', steps: []};
-// Search on the orbit: twelve petals around the "now" ring; the dashed circle is the size every petal would have with no yearly rhythm.
-let yearRates = null, monthShares = null, monthCounts = null;
+// Search on the orbit. One search: twelve petals around the "now" ring. Compared searches: one outline per search, in its
+// colour. The dashed circle is the size every petal would have with no yearly rhythm.
+let yearRates = null, monthShares = null;
 function drawMonthPetals(c) {
   if (!monthShares) return;
   const base = c * 1.08, scale = c * .42, even = circle(base + scale / 12, 0);
-  actx.setLineDash([3, 4]); line(even, '#ffd27a88'); actx.setLineDash([]);
-  actx.fillStyle = '#ffd27a55';
-  for (let m = 0; m < 12; m++) {
-    const a0 = m / 12 * TAU + .01, a1 = (m + 1) / 12 * TAU - .01, r = base + scale * monthShares[m], pts = [];
-    for (let k = 0; k <= 8; k++) { const t = a0 + (a1 - a0) * k / 8; pts.push(project(r * Math.sin(t), r * Math.cos(t), 0)); }
-    for (let k = 8; k >= 0; k--) { const t = a0 + (a1 - a0) * k / 8; pts.push(project(base * Math.sin(t), base * Math.cos(t), 0)); }
-    actx.beginPath(); pts.forEach(([x, y], k) => k ? actx.lineTo(x, y) : actx.moveTo(x, y)); actx.closePath(); actx.fill();
+  actx.setLineDash([3, 4]); line(even, compared() ? '#cfd6e699' : '#ffd27a88'); actx.setLineDash([]);
+  if (!compared()) {
+    actx.fillStyle = '#ffd27a55';
+    for (let m = 0; m < 12; m++) {
+      const a0 = m / 12 * TAU + .01, a1 = (m + 1) / 12 * TAU - .01, r = base + scale * monthShares[0][m], pts = [];
+      for (let k = 0; k <= 8; k++) { const t = a0 + (a1 - a0) * k / 8; pts.push(project(r * Math.sin(t), r * Math.cos(t), 0)); }
+      for (let k = 8; k >= 0; k--) { const t = a0 + (a1 - a0) * k / 8; pts.push(project(base * Math.sin(t), base * Math.cos(t), 0)); }
+      actx.beginPath(); pts.forEach(([x, y], k) => k ? actx.lineTo(x, y) : actx.moveTo(x, y)); actx.closePath(); actx.fill();
+    }
+    return;
   }
+  monthShares.forEach((shares, s) => {   // a closed line through the twelve month centres
+    const pts = [];
+    for (let k = 0; k <= 120; k++) {
+      const t = k / 120 * TAU, f = t / TAU * 12 - .5, m0 = Math.floor(f), w = f - m0;
+      const r = base + scale * (shares[(m0 + 12) % 12] * (1 - w) + shares[(m0 + 13) % 12] * w);
+      pts.push(project(r * Math.sin(t), r * Math.cos(t), 0));
+    }
+    line(pts, COMPARE[s], 2);
+  });
 }
 
 // ---- The timeline bar (always fully visible): stories per month, search share per year, and the stretch you look back through ----
@@ -538,9 +568,15 @@ function drawTimeline() {
   const max = Math.max(...perMonth, 1), base = h - 20, bw = Math.max(1, (w - 2 * TL_PAD) / perMonth.length);
   tctx.fillStyle = '#2c3955';
   for (let k = 0; k < perMonth.length; k++) { if (!perMonth[k]) continue; const bh = Math.sqrt(perMonth[k] / max) * (base - 8); tctx.fillRect(tlX(k * YEAR / 12), base - bh, Math.max(1, bw - .5), bh); }
-  if (searching() && yearRates) {
-    const top = Math.max(...yearRates.map(r => r.rate), 1e-9); tctx.fillStyle = '#ffd27a99';
-    for (const r of yearRates) { if (!r.rate) continue; const bh = r.rate / top * (base - 8); tctx.fillRect(tlX(r.d0) + 1, base - bh, Math.max(1, tlX(r.d1) - tlX(r.d0) - 2), bh); }
+  if (searching() && yearRates) {   // each year's share of stories, side by side when searches are compared (one scale for all)
+    const k = SLOTS.length, top = Math.max(1e-9, ...yearRates.flatMap(r => r.rates));
+    for (const r of yearRates) {
+      const x0 = tlX(r.d0) + 1, bw = Math.max(1, tlX(r.d1) - tlX(r.d0) - 2) / k;
+      r.rates.forEach((rate, s) => {
+        if (!rate) return; const bh = rate / top * (base - 8);
+        tctx.fillStyle = (k > 1 ? COMPARE[s] : GOLD) + (k > 1 ? 'dd' : '99'); tctx.fillRect(x0 + s * bw, base - bh, Math.max(1, bw - (k > 1 ? .6 : 0)), bh);
+      });
+    }
   }
   const a = tlX(Math.max(0, state.now - state.span)), b = tlX(state.now);
   tctx.fillStyle = '#8ccfff22'; tctx.fillRect(a, 2, b - a, base - 2);
@@ -570,32 +606,60 @@ function updateStatus() {
 }
 const pulseUrl = i => `pulses.html?year=${D.year[i]}&focus=${encodeURIComponent(D.kind[i] ? D.id[i] : 'auto:' + D.id[i])}`;
 function updateList() {
-  const s = searching(), [a, b] = s ? [0, N] : inWindow(), top = [];
+  const s = searching(), [a, b] = s ? [0, N] : inWindow(), byReach = (x, y) => D.papers[y] - D.papers[x] || D.prints[y] - D.prints[x] || D.first[x] - D.first[y];
+  let top = [];
   for (let i = a; i < b; i++) if (visible(i) && (!s || hit[i])) top.push(i);
-  top.sort((x, y) => D.papers[y] - D.papers[x] || D.prints[y] - D.prints[x] || D.first[x] - D.first[y]);
-  $('list-title').textContent = s ? `Most widely printed matches for “${state.q}”` : 'Brightest stories in view';
+  top.sort(byReach);
+  if (s && compared()) {   // the most widely printed matches of each compared search, so every search is represented
+    const per = Math.ceil(20 / SLOTS.length), pick = new Set();
+    SLOTS.forEach((_, j) => top.filter(i => hitMask[i] & (1 << j)).slice(0, per).forEach(i => pick.add(i)));
+    top = [...pick].sort(byReach);
+  }
+  $('list-title').textContent = s ? (compared() ? 'Most widely printed matches of each search' : `Most widely printed matches for “${state.q}”`) : 'Brightest stories in view';
   const ol = $('list'); ol.replaceChildren();
   for (const i of top.slice(0, s ? 20 : 12)) {
     const li = document.createElement('li'), link = document.createElement('a'); link.href = pulseUrl(i);
     const t = document.createElement('time'); t.textContent = fmt(D.first[i]);
-    const title = document.createElement('span'); title.textContent = D.title[i] + (D.kind[i] ? ' · reviewed' : '');
+    const title = document.createElement('span');
+    if (s && compared()) title.append(...slotDots(hitMask[i]));
+    title.append(D.title[i] + (D.kind[i] ? ' · reviewed' : ''));
     const n = document.createElement('span'); n.className = 'n'; n.textContent = `${D.papers[i]} papers · ${D.prints[i]} printings`;
     link.append(t, title, n); li.append(link); ol.append(li);
   }
   if (!top.length) { const li = document.createElement('li'); li.className = 'muted small'; li.textContent = s ? 'No stories match with these settings.' : 'No stories in view with these settings.'; ol.append(li); }
 }
-// Query: commas (or "or") separate alternatives; the words of one alternative must all appear; "quotes" keep a phrase.
-// Words match at the start of a word, so "fever" also finds "fevers"; hyphens and spaces are interchangeable.
-function parseQuery(q) {
+// Query: "vs" separates up to three searches to compare. Within one search, commas (or "or") separate alternatives; the
+// words of one alternative must all appear; "quotes" keep a phrase. Words match at the start of a word, so "fever" also
+// finds "fevers"; hyphens and spaces are interchangeable.
+function parseGroups(q) {
   return q.toLowerCase().split(/\s*(?:,|\bor\b|\|)\s*/).map(part => part.trim()).filter(Boolean).map(part => {
     const terms = []; part.replace(/"([^"]+)"|(\S+)/g, (_, phrase, word) => { terms.push(phrase || word); return ''; });
     return terms.map(t => new RegExp('(^|[^a-z])' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/[\s-]+/g, '[\\s-]+')));
-  });
+  }).filter(g => g.length);
+}
+const parseSlots = q => q.replace(/\s+vs\.?\s*$/i, '').split(/\s+vs\.?\s+/i).map(s => s.trim()).filter(Boolean).slice(0, 3)
+  .map(label => ({label, groups: parseGroups(label)})).filter(s => s.groups.length);
+// A short name for a search: its first words, up to about 30 characters.
+const shortLabel = q => { if (q.length <= 32) return q; const cut = q.slice(0, 30), at = cut.lastIndexOf(','); return (at > 8 ? cut.slice(0, at) : cut).trim() + '…'; };
+let SLOTS = [], slotCounts = [];
+const hitMask = new Uint8Array(N);   // which of the searches each story matches (bit per search)
+const compared = () => SLOTS.length > 1;
+const slotColour = j => compared() ? COMPARE[j] : GOLD;
+function slotDots(mask) {
+  return SLOTS.flatMap((_, j) => mask & (1 << j) ? [Object.assign(document.createElement('i'), {className: 'sw', style: `background:${slotColour(j)};margin-right:5px`})] : []);
+}
+function setSearchColours() {
+  [uniforms.uC1, uniforms.uC2, uniforms.uC3].forEach((u, j) => { const c = srgb(slotColour(j)); u.value.set(c.r, c.g, c.b); });
+  const m = srgb(MULTI); uniforms.uC4.value.set(m.r, m.g, m.b); uniforms.uCold.value = compared() ? 1 : .5; uniforms.uCmp.value = compared() ? 1 : 0; applyTint();
 }
 async function runSearch(q) {
   state.q = (q || '').trim(); $('q').value = state.q;
   const url = new URL(location.href); if (state.q) url.searchParams.set('q', state.q); else url.searchParams.delete('q'); history.replaceState(null, '', url);
-  if (!state.q) { hitCount = -1; hit.fill(0); geo.attributes.aHit.needsUpdate = true; uniforms.uSearch.value = 0; yearRates = monthShares = null; caption(); refresh(); return; }
+  const slots = parseSlots(state.q);
+  if (!slots.length) {
+    hitCount = -1; SLOTS = []; hit.fill(0); hitMask.fill(0); geo.attributes.aHit.needsUpdate = true; uniforms.uSearch.value = 0; uniforms.uCmp.value = 0; applyTint(); yearRates = monthShares = null;
+    caption(); buildLegend(); refresh(); return;
+  }
   if (!TEXT) {
     const TB = BOOT.bytes && BOOT.bytes.text;
     caption(`Loading the search text, once${TB ? ` (${MB(TB)} MB)` : ''}…`);
@@ -603,37 +667,59 @@ async function runSearch(q) {
       (f, got) => caption(`Loading the search text, once: ${MB(got)} of ${MB(TB)} MB…`)).then(j => { TEXT = j.text; });
     try { await textLoading; } catch { textLoading = null; caption('Could not load the search text.'); return; }
   }
-  const groups = parseQuery(state.q); let n = 0;
-  for (let i = 0; i < N; i++) { const t = TEXT[i], m = groups.some(g => g.every(rx => rx.test(t))); hit[i] = m ? 1 : 0; if (m) n++; }
-  hitCount = n; geo.attributes.aHit.needsUpdate = true; uniforms.uSearch.value = 1;
-  summarise(); refresh();
+  SLOTS = slots; slotCounts = SLOTS.map(() => 0); let n = 0;
+  for (let i = 0; i < N; i++) {
+    const t = TEXT[i]; let mask = 0;
+    SLOTS.forEach((s, j) => { if (s.groups.some(g => g.every(rx => rx.test(t)))) { mask |= 1 << j; slotCounts[j]++; } });
+    hitMask[i] = mask; hit[i] = !mask ? 0 : mask & (mask - 1) ? 4 : Math.log2(mask) + 1;
+    if (mask) n++;
+  }
+  hitCount = n; geo.attributes.aHit.needsUpdate = true; uniforms.uSearch.value = 1; setSearchColours();
+  buildLegend(); summarise(); refresh();
 }
-// What the matches show: how many, in which years, and whether they keep to a season (circular statistics on the day of year).
+// What the matches show, for each search: how many, which year has the largest share, and whether they keep to a season
+// (circular statistics on the day of year). Years with fewer than MIN_YEAR stories in view are left out of the shares.
+const MIN_YEAR = 20;
 function summarise() {
   if (!searching()) return;
-  const months = new Array(12).fill(0), perYear = new Map(), allYear = new Map();
-  let n = 0, C = 0, S = 0;
+  const k = SLOTS.length, months = SLOTS.map(() => new Array(12).fill(0)), perYear = SLOTS.map(() => new Map()), allYear = new Map();
+  const n = SLOTS.map(() => 0), C = SLOTS.map(() => 0), S = SLOTS.map(() => 0);
   for (let i = 0; i < N; i++) {
     if (!visible(i)) continue;
     const y = D.year[i]; allYear.set(y, (allYear.get(y) || 0) + 1);
-    if (!hit[i]) continue;
-    n++; perYear.set(y, (perYear.get(y) || 0) + 1); months[month[i]]++; C += Math.cos(TAU * doy[i]); S += Math.sin(TAU * doy[i]);
+    const mask = hitMask[i]; if (!mask) continue;
+    for (let j = 0; j < k; j++) if (mask & (1 << j)) {
+      n[j]++; perYear[j].set(y, (perYear[j].get(y) || 0) + 1); months[j][month[i]]++; C[j] += Math.cos(TAU * doy[i]); S[j] += Math.sin(TAU * doy[i]);
+    }
   }
-  yearRates = [...allYear.keys()].sort((a, b) => a - b).map(y => ({d0: (Date.UTC(y, 0, 1) - EPOCH) / MS, d1: (Date.UTC(y + 1, 0, 1) - EPOCH) / MS, rate: (perYear.get(y) || 0) / allYear.get(y)}));
-  monthShares = months.map(v => n ? v / n : 0);
-  if (!n) { caption(`<b>“${esc(state.q)}”</b> · no stories match with these filters.`); return; }
-  const Rn = Math.hypot(C, S), R = Rn / n, p = Math.exp(Math.sqrt(1 + 4 * n + 4 * (n * n - Rn * Rn)) - (1 + 2 * n));
-  let best = 0, bestM = 0; for (let m = 0; m < 12; m++) { const v = months[(m + 11) % 12] + months[m] + months[(m + 1) % 12]; if (v > best) { best = v; bestM = m; } }
-  const rhythm = n < 12 ? 'too few stories to judge a yearly rhythm' : R >= .3 && p < .001 ? 'a strong yearly rhythm' : R >= .12 && p < .01 ? 'some yearly rhythm' : 'no clear yearly rhythm';
-  caption(`<b>“${esc(state.q)}”</b> · ${n.toLocaleString('en-US')} ${n === 1 ? 'story' : 'stories'} in ${perYear.size} ${perYear.size === 1 ? 'year' : 'years'}`
-    + (n >= 12 ? ` · ${Math.round(100 * best / n)}% first printed ${MONTHS[(bestM + 11) % 12]}–${MONTHS[(bestM + 1) % 12]} · ${rhythm} (R ${R.toFixed(2)})` : ` · ${rhythm}`)
-    + `. <span class="muted">Gold bars on the timeline show each year's share of stories${mixTarget[2] > .5 ? '; gold petals show the months, and the dashed circle is what no rhythm would look like' : '; switch to Orbit to see the time of year'}.</span>`);
+  yearRates = [...allYear.keys()].sort((a, b) => a - b).filter(y => allYear.get(y) >= MIN_YEAR)
+    .map(y => ({y, d0: (Date.UTC(y, 0, 1) - EPOCH) / MS, d1: (Date.UTC(y + 1, 0, 1) - EPOCH) / MS, rates: perYear.map(p => (p.get(y) || 0) / allYear.get(y))}));
+  monthShares = months.map((m, j) => m.map(v => n[j] ? v / n[j] : 0));
+  const season = j => {
+    const Rn = Math.hypot(C[j], S[j]), R = Rn / n[j], p = Math.exp(Math.sqrt(1 + 4 * n[j] + 4 * (n[j] * n[j] - Rn * Rn)) - (1 + 2 * n[j]));
+    let best = 0, bestM = 0; for (let m = 0; m < 12; m++) { const v = months[j][(m + 11) % 12] + months[j][m] + months[j][(m + 1) % 12]; if (v > best) { best = v; bestM = m; } }
+    const rhythm = n[j] < 12 ? 'too few stories to judge a yearly rhythm' : R >= .3 && p < .001 ? 'a strong yearly rhythm' : R >= .12 && p < .01 ? 'some yearly rhythm' : 'no clear yearly rhythm';
+    return n[j] >= 12 ? `${Math.round(100 * best / n[j])}% first printed ${MONTHS[(bestM + 11) % 12]}–${MONTHS[(bestM + 1) % 12]} · ${rhythm}${k === 1 ? ` (R ${R.toFixed(2)})` : ''}` : rhythm;
+  };
+  const stories = x => `${x.toLocaleString('en-US')} ${x === 1 ? 'story' : 'stories'}`;
+  if (k === 1) {
+    if (!n[0]) { caption(`<b>“${esc(state.q)}”</b> · no stories match with these filters.`); return; }
+    caption(`<b>“${esc(state.q)}”</b> · ${stories(n[0])} in ${perYear[0].size} ${perYear[0].size === 1 ? 'year' : 'years'} · ${season(0)}`
+      + `. <span class="muted">Gold bars on the timeline show each year's share of stories${mixTarget[2] > .5 ? '; gold petals show the months, and the dashed circle is what no rhythm would look like' : '; switch to Orbit to see the time of year'}.</span>`);
+    return;
+  }
+  const peak = j => { const r = yearRates.reduce((a, b) => b.rates[j] > (a ? a.rates[j] : 0) ? b : a, null); return r ? ` · largest share in ${r.y} (${Math.round(100 * r.rates[j])}%)` : ''; };
+  caption(SLOTS.map((s, j) => `<div class="cmp"><span class="sw" style="background:${COMPARE[j]}"></span><span class="t">“${esc(shortLabel(s.label))}”</span>`
+      + `<button type="button" class="x" data-remove="${j}" aria-label="Remove “${esc(shortLabel(s.label))}” from the comparison" title="Remove this search">✕</button>`
+      + `<span>${n[j] ? stories(n[j]) + peak(j) + ' · ' + season(j) : 'no stories match with these filters'}</span></div>`).join('')
+    + `<div class="muted small" style="margin-top:3px">Each search keeps its colour; a white star mentions more than one. Bars on the timeline compare each year's share of stories (years with fewer than ${MIN_YEAR} stories left out)${mixTarget[2] > .5 ? '; the coloured lines show the months, against the dashed circle of no rhythm' : '; switch to Orbit to compare the months'}.</div>`);
 }
 const esc = s => s.replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 function caption(html) {
   $('caption').classList.toggle('idle', !html);
-  $('caption-text').innerHTML = html || 'Search any word or name to light up every story that mentions it, in every year. Try a suggestion below, or switch to Orbit and search to see whether something comes back at the same season each year.';
+  $('caption-text').innerHTML = html || 'Search any word or name to light up every story that mentions it, in every year, or compare up to three in colour, such as fever vs ice. Try a suggestion below; Orbit shows whether something comes back at the same season each year.';
   $('caption-clear').hidden = !state.q;
+  $('caption-compare').hidden = !state.q || SLOTS.length >= 3;
 }
 
 // ---- Animation: time passing (Drift), view changes and a slight parallax that follows the pointer ----
@@ -765,7 +851,12 @@ function showTip(best) {
       + (sp && sp[2].length > 1 ? ` · ${FAMS[T.family].short}` : '') + (T.provisional ? ' · a provisional topic' : '');
   }
   const hint = document.createElement('div'); hint.className = 'kind'; hint.textContent = matchMedia('(hover: hover)').matches ? 'Click to open in the pulse view' : 'Tap again to open in the pulse view';
-  tip.append(strong, k, n, ...[where, about].filter(x => x.textContent), hint); tip.hidden = false;
+  const mentions = document.createElement('div'); mentions.className = 'kind';   // which searches it matches, by colour and words
+  if (searching() && hitMask[best]) {
+    mentions.append('Mentions ');
+    SLOTS.forEach((s, j) => { if (hitMask[best] & (1 << j)) mentions.append(...slotDots(1 << j), `“${shortLabel(s.label)}” `); });
+  }
+  tip.append(strong, k, n, ...[mentions, where, about].filter(x => x.textContent), hint); tip.hidden = false;
   const [x, y, z] = world(best), p = project(x, y, z), tw = tip.offsetWidth, th = tip.offsetHeight;
   tip.style.left = Math.max(6, Math.min(W - tw - 6, p[0] + 14)) + 'px'; tip.style.top = (p[1] - th - 12 < 6 ? p[1] + 14 : p[1] - th - 12) + 'px';
 }
@@ -855,6 +946,7 @@ function syncButtons() {
   syncSpanButtons();
   $('how').innerHTML = '<b>Time runs into the distance:</b> the front is “now”, and the further away a star is, the earlier the story. ' + HOW[state.layout]
     + ' Bigger, brighter stars were printed in more newspapers. ' + COLOUR_HOW[state.colour]
+    + ' <b>Compare:</b> put “vs” between up to three searches (fever vs ice), or use “Compare with…” after a search. Each search gets its own colour, the other stories turn faint and pale, and a white star mentions more than one. The timeline compares their yearly shares, and Orbit their months.'
     + ' <b>Moving around:</b> drag to turn the view, right-drag (or Shift-drag, or two fingers) to move it, and scroll or pinch to zoom; “Reset view” brings back the whole picture.'
     + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see. Click a star to open it in the pulse view.'
     + (reduced ? '' : ' Drift lets time pass slowly: new stories arrive at the front and older ones recede. It pauses while you explore.');
@@ -883,6 +975,19 @@ $('q').addEventListener('input', e => { clearTimeout(qTimer); qTimer = setTimeou
 $('q').addEventListener('keydown', e => { if (e.key === 'Enter') { clearTimeout(qTimer); runSearch(e.target.value); } if (e.key === 'Escape') runSearch(''); });
 $('q-clear').addEventListener('click', () => runSearch(''));
 $('caption-clear').addEventListener('click', () => runSearch(''));
+$('caption-compare').addEventListener('click', () => {   // start the next search in the box, after "vs"
+  const q = $('q'); q.value = state.q.replace(/\s+$/, '') + ' vs '; q.focus(); q.setSelectionRange(q.value.length, q.value.length);
+});
+$('caption-text').addEventListener('click', e => {   // remove one search from a comparison
+  const b = e.target.closest('button[data-remove]'); if (!b) return;
+  runSearch(SLOTS.filter((_, j) => j !== Number(b.dataset.remove)).map(s => s.label).join(' vs '));
+});
+for (const [label, query] of COMPARE_CHIPS) {   // ready-made comparisons, marked with their colours
+  const b = document.createElement('button'), tri = document.createElement('span'); b.type = 'button'; b.className = 'cmp-chip'; b.title = 'Compare: ' + query;
+  tri.className = 'tri'; tri.setAttribute('aria-hidden', 'true');
+  for (const c of COMPARE.slice(0, query.split(/\s+vs\s+/).length)) tri.append(Object.assign(document.createElement('i'), {style: 'background:' + c}));
+  b.append(tri, label); b.addEventListener('click', () => runSearch(query)); $('chips').append(b);
+}
 for (const [label, query] of CHIPS) { const b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.title = query; b.addEventListener('click', () => runSearch(query)); $('chips').append(b); }
 // Legend under the timeline, and a small key inside the view while Regions is on. Labels stay in text colours; the dot carries the hue.
 const legend = $('legend');
@@ -892,6 +997,13 @@ const swatch = (label, color, title, cls) => {
 };
 function buildLegend() {
   const lead = document.createElement('span'); lead.className = 'lead';
+  if (compared()) {   // while comparing, colour means only the searches, in the key inside the view as well
+    lead.textContent = 'Compared searches:';
+    legend.replaceChildren(lead, ...SLOTS.map((s, j) => swatch(`“${shortLabel(s.label)}” (${slotCounts[j].toLocaleString('en-US')})`, COMPARE[j], s.label)),
+      swatch('More than one', MULTI), swatch('Other stories, faint', AUTO));
+    $('key').replaceChildren(...SLOTS.map((s, j) => swatch(shortLabel(s.label), COMPARE[j], '', 'k')), swatch('more than one', MULTI, '', 'k'));
+    $('key').hidden = false; return;
+  }
   if (state.colour === 'region') {
     lead.textContent = 'Region of first printing:';
     legend.replaceChildren(lead, ...REGIONS.map(r => swatch(`${r.label} (${r.stories.toLocaleString('en-US')})`, r.color, r.states)), swatch('Search match', GOLD));

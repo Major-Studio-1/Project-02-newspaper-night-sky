@@ -1,4 +1,4 @@
-# Data release v0.5.2
+# Data release v0.6.1
 
 This is the data behind the site. It holds:
 
@@ -6,14 +6,16 @@ This is the data behind the site. It holds:
 - the reviewed 1797 stories;
 - the automatic matched stories for all 41 years.
 
-A release is never edited. New evidence makes a new version with its own checks: this one passes all 176. The code is in [`../pipeline/archive_data/`](../pipeline/archive_data).
+A release is never edited. New evidence makes a new version with its own checks: this one passes all 190. The code is in [`../pipeline/archive_data/`](../pipeline/archive_data).
 
 ## Two tiers
 
 | Tier | Where | Checked against the scans? |
 |---|---|---|
 | **Reviewed stories:** 127 passages in 34 groups, with roles, notes and relations | `tables/` | Yes |
-| **Matched stories:** 48,127 stories found by shared wording, with 179,966 printings | `derived/reuse_*.parquet` | No |
+| **Matched stories:** 48,127 stories found by shared wording, with 163,926 printings (one per page) | `derived/reuse_*.parquet` | Not one by one. Every printing has a machine check against the page's other transcription, and a random 200 stories were audited against the scans. |
+
+**What the audit found:** 86% of matched stories are one item in every printing, and every located passage is on its page. But about 1 passage in 5, up to 1 in 3, has a misread word that changes a fact, so check the scan before quoting a matched transcription.
 
 ## Files
 
@@ -29,13 +31,15 @@ A release is never edited. New evidence makes a new version with its own checks:
 | `tables/sources.jsonl`, `runs.jsonl`, `metadata.jsonl`, `assets.jsonl` | Provenance: input files and their hashes, the runs that made each layer, scan crops |
 | `derived/reuse_matches.parquet` | 376,036 automatic matches between passages in different newspapers. The 310,155 marked `main` make up the stories. |
 | `derived/reuse_families.parquet` | The matched stories: first and last date, newspapers, pages, and the `long_running` flag |
-| `derived/reuse_family_appearances.parquet` | Every printing of a matched story: page, date, newspaper, position, and an excerpt |
+| `derived/reuse_family_appearances.parquet` | Every printing of a matched story, one per page: page, date, newspaper, the matched blocks on the page, and an excerpt |
+| `derived/transcription_checks.parquet` | For every printing, whether its passage also appears in the page's other machine transcription (`confirmed`, `partly`, `missing_in_other`, `other_unreadable`, `no_second_transcription`) |
+| `derived/matched_audit.parquet` | The audit of 200 random matched stories against the scans: the reviewers' verdicts, the harmonised verdicts, notes, and a blind second reading of 30 |
 | `derived/reuse_family_titles.parquet` | A title for each matched story |
 | `derived/story_topics.parquet` | The topic of each story, with the share and how far its printings agree |
 | `derived/page_topic_census.parquet` | Topic scores for all 77,749 usable pages |
 | `schemas/schema.sql`, `examples.sql` | The table definitions and example queries |
 | `manifest.json` | Every file of the release with its SHA-256 hash, the counts, and the dataset revision |
-| `validation.json` | The 176 checks and their results |
+| `validation.json` | The 190 checks and their results |
 | `release-notes.md` | The release's own notes: changes in each version, the data model, counting rules, and how to extend it |
 
 ## Left out of this copy
@@ -44,7 +48,7 @@ These files are listed in `manifest.json` with their hashes:
 
 - `research.sqlite` (107 MB): the same tables as one SQLite database;
 - `assets/`: scan crops of the reviewed passages, which the site also serves from `site/assets/`;
-- `sources/`: snapshots of the earlier pilot files that the first release was built from.
+- `sources/`: snapshots of the input files and code each release was built from, including the audit's verdicts and protocol.
 
 The raw dataset is not here either. It is six Parquet files, about 1.8 GB, on Hugging Face (`RevolutionCrossroads/loc_chronicling_america_1770-1810`, revision `0b97906ad32e269376872934820357fc333151d8`).
 

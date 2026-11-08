@@ -17,7 +17,7 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 
 | Page | What it shows |
 |---|---|
-| **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,148 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic** (24 topics in seven families), or **orbit** (time of year), and colour them by **region**. You can also search any word, turn and zoom the view, and let time drift. |
+| **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,148 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic** (24 topics in seven families), or **orbit** (time of year), and colour them by **region**. You can search any word, **compare** up to three searches in colour (for example France · Britain · Congress), turn and zoom the view, and let time drift. |
 | **[Pulses](https://newspapers.icare.love/pulses.html)** | One story at a time. Each newspaper is a point on a map, and it pulses when it printed the story. The passage and the page scan are shown beside the map. A constellation joins a story's printings, and a coverage strip shows which pages survive. |
 | **[How it works](https://newspapers.icare.love/method.html)** | The method in plain language, and what the site cannot tell you. |
 
@@ -27,7 +27,7 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 
 ## What it shows
 
-- **Reprinting was how news travelled.** The archive holds 48,127 stories printed in two or more of its papers (179,966 printings in all). About two thirds of them were printed in exactly two. In 1776 the Declaration of Independence appears in 13 of the archive's papers.
+- **Reprinting was how news travelled.** The archive holds 48,127 stories printed in two or more of its papers (163,926 printings in all). About two thirds of them were printed in exactly two. In 1776 the Declaration of Independence appears in 13 of the archive's papers.
 - **Some news returns with the seasons.** Independence Day stories cluster in summer: 81% fall in July–September, in 25 of the 30 years that have them. The President's annual speech comes in November–January, fever in late summer, ice in winter, and Congress while it sits. Fires show no rhythm. The surviving pages are spread evenly over the year, so these rhythms do not come from gaps in the archive. ([the check](docs/seasons-check.md))
 - **The archive has a shape.** Only two newspaper series survive for 1785–86, against 11 to 17 a year after 1800. Before 1800 the papers are mostly from New England and the Middle States; from 1802 about half are from Virginia, Washington, Kentucky and South Carolina. The site keeps these gaps visible.
 - **Machine transcriptions need checking.** For 1797, 21 stories were read closely and every printing was checked against its scan. In one, the transcription reads "distressed" where the paper printed "dismasted". Another transcription leaves out a 350-word statement that is plainly on the page.
@@ -57,7 +57,7 @@ The reading and scan checks were done with AI assistants. An independent human s
 | Folder | What is in it |
 |---|---|
 | [`site/`](site) | The website, ready to serve: five pages and the data they load. The first telescope is kept as `telescope-v1.html`. |
-| [`data/`](data) | The current data release (v0.5.2): tables, the matched-story data, the schema and the validation |
+| [`data/`](data) | The current data release (v0.6.1): tables, the matched-story data, the schema and the validation |
 | [`pipeline/`](pipeline) | The code, in the order it runs: audit, topics, finding stories, data releases, the site |
 | [`docs/`](docs) | The full process, the seasons check, and the site plan |
 | [`process/`](process) | How the three original proposals and their sketches became this site |

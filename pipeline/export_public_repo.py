@@ -127,10 +127,11 @@ for src in sorted((RELEASE / 'tables').glob('*.jsonl')):
 SCRIPTS = ['audit_dataset.py', 'discover_topics.py', 'recheck_full_corpus.py',
            'search_chains.py', 'search_pilot_1797.py', 'reuse_1797.py', 'reuse_families_1797.py', 'story_phrase_search_1797.py', 'scan_ledger.py',
            'reuse_all.py', 'reuse_families_all.py', 'reuse_titles_all.py', 'story_topics_all.py', 'check_cycles_topics.py',
+           'transcription_check.py', 'audit_matched.py',
            'build_pulse_explorer.py', 'site_parts.py', 'site.css', 'home.html', 'telescope.html', 'pulse_explorer.html', 'method.html', 'notes.html',
            'export_public_repo.py']
 ARCHIVE = ['build.py', 'migrate_v0_2_0.py', 'apply_ledger.py', 'apply_corrections.py', 'add_reuse_layer.py', 'add_reuse_titles.py',
-           'add_story_topics.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
+           'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
 for name in SCRIPTS:
     copy(WORK / name, f'pipeline/{name}')
 for name in ARCHIVE:
@@ -156,6 +157,7 @@ process = head + f'''## Where to find things
 | Text-reuse families, 1797 | `pipeline/reuse_1797.py` (matching), `pipeline/reuse_families_1797.py` (grouping) |
 | Matched stories, all years | `pipeline/reuse_all.py`, `pipeline/reuse_families_all.py`, `pipeline/reuse_titles_all.py`, `pipeline/story_topics_all.py`; added to the release by `pipeline/archive_data/add_reuse_layer.py`, `add_reuse_titles.py` and `add_story_topics.py` |
 | Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
+| Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
 | Data release | [`data/`](../data) (v{VERSION}) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

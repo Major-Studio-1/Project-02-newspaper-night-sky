@@ -167,11 +167,26 @@ Reviewing every story by hand cannot cover 41 years, so coverage comes in two ti
 
 **On the pulse page, matched stories appear under "Matched automatically · not checked",** in one neutral colour, with a link to the original page instead of a scan crop. A **Year** menu switches between 1770 and 1810. Each year shows the matched stories that *start* in that year, so a story begun in December can run into January.
 
+**Checks of the matched stories (data release v0.6.0, 8 November 2026).** Matched stories are not read one by one, so they were checked in two ways, and the results are stored in the release.
+- **One printing per page** (run `run:printings-merge-v1`). The matcher had listed some pages more than once for a story: overlapping matches with different partner pages, or separate blocks of one page, such as neighbouring items of a news digest. 3,945 stories listed 11,400 pages more than once. Each page now counts once, so the 179,966 appearances became **163,926 printings**. Newspaper counts did not change.
+- **Every printing, by machine** (`pipeline/transcription_check.py`, run `run:transcription-check-v1`, `derived/transcription_checks.parquet`).
+  - Each page has two machine transcriptions, RevX (AI) and CA (Library of Congress OCR). The check asks whether a printing's passage also appears in the page's other transcription. It counts shared 4-word sequences, compared with how well the two transcriptions agree on the rest of the page.
+  - 81.0% of printings are confirmed, 5.4% partly, 2.3% missing from the other transcription although it reads the rest of the page, 10.5% unreadable in the other transcription, and 0.8% have no second transcription.
+  - 97.7% of stories have at least one confirmed printing. The pulse page states each printing's result in words.
+- **200 stories, against the scans** (`pipeline/audit_matched.py`, run `run:matched-audit-v1`, `derived/matched_audit.parquet`; the protocol, verdicts and crop list are kept in the release's sources). The stories were drawn at random (seed 20261108). Eight AI reviewers read every printing side by side and compared one printing per story with its scan crop. Their verdicts were harmonised under one written rule (`PROTOCOL.md` version 2), and a blind second reader re-judged 30.
+  - **One item:** 86% (two-paper stories 91%, three or more papers 75%).
+  - **On the page:** every one of the 187 located passages.
+  - **Misreadings:** about 1 passage in 5, up to 1 in 3, has a misread word that changes a fact or the sense, such as "persecution" for *perfection*, "2,500" for *3,500*, or "failed" for *ſailed*. The machine check does not catch these: confirmed printings were misread about as often as the rest.
+  - So the pulse page carries a standing caution: check the scan before quoting a matched passage.
+  - The reviewers were AI assistants, not an independent human reading.
+
+**English notes (data release v0.6.1).** The 6 relation reviews and 16 date roles still in Chinese from the first pilots are now in English. The annotations are superseded; the date roles change in place, with the old values kept in the metadata (`apply_corrections.py`, `ledgers/corrections_2026-11-08.json`).
+
 ## From reviewed data to a data release
 
 New decisions never overwrite old ones. Each round of review becomes one release:
 
-**ledger** (the decisions) → **migration script** (applies them to the previous release) → **validation** (automated checks of counts, links, scan files and double counting: 66 for the first reviewed release, 176 for v0.5.2) → **frozen release** ([`data/`](../data)).
+**ledger** (the decisions) → **migration script** (applies them to the previous release) → **validation** (automated checks of counts, links, scan files and double counting: 66 for the first reviewed release, 190 for v0.6.1) → **frozen release** ([`data/`](../data)).
 
 Earlier releases stay unchanged, so any chart can say which version of the evidence it uses. Corrections follow the same path. For example, v0.2.1 fixes one note that undercounted the length of the dropped statement. It adds a corrected annotation that points back to the old one, and the old one stays in the history.
 
@@ -214,6 +229,9 @@ The pulse view is a direct translation of the admitted group records:
 - **Moving around:** drag to turn the view, right-drag (or two fingers) to move it, and scroll or pinch to zoom. "Reset view" brings back the whole picture.
 - **Timeline bar:** under the view, a full 1770–1810 bar shows how many stories each month has, and which stretch of time you are looking through.
 - **Search:** typing a word lights up every story that mentions it in its title or opening words, in gold. The other stories stay faintly visible behind the matches. The caption says how many match, in which years, and whether they keep to a season.
+- **Compare (8 November 2026):** "vs" between up to three searches gives each its own colour (amber, blue, magenta; a white star mentions more than one). The timeline shows each year's share side by side, Orbit draws each search's months as a line, and ready-made comparisons sit among the suggestions. A colour means only that the words occur, so no classifier can be wrong about it.
+  - We chose this after two other ideas failed their checks. Colouring by kind of item (from the topic model) mislabelled most notices. Colouring by where the news came from, read from datelines, works for only about 1 story in 10. Where it does work, European news was a median 65 days old when first printed here, Caribbean news 32 days and American news 6.
+  - France · Britain · Congress shows the clearest history: Britain leads the 1770s, France reaches 45–46% of stories in three or more papers in 1793, 1796 and 1798, Congress peaks in 1789 (29%), and Britain returns in 1807–09.
 - **Controls:** each single-choice setting is a sliding glass control: tap an option, drag the thumb, or use the arrow keys. Every setting can also come from the address, for example `telescope.html?view=topic&lookback=5&angle=side&colour=off&min=4&year=1797&drift=off`, so a view can be linked or scripted.
 - **Colour: Region or Off (Region by default):** each star takes the region of the town where its story was first printed in this archive.
   - Violet is New England, aqua the Middle States, and orange the South and West (Washington, Virginia, Kentucky and South Carolina).
@@ -296,6 +314,7 @@ The header and footer come from one file, `pipeline/site_parts.py`, so they cann
 | Text-reuse families, 1797 | `pipeline/reuse_1797.py` (matching), `pipeline/reuse_families_1797.py` (grouping) |
 | Matched stories, all years | `pipeline/reuse_all.py`, `pipeline/reuse_families_all.py`, `pipeline/reuse_titles_all.py`, `pipeline/story_topics_all.py`; added to the release by `pipeline/archive_data/add_reuse_layer.py`, `add_reuse_titles.py` and `add_story_topics.py` |
 | Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
+| Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.5.2) |
+| Data release | [`data/`](../data) (v0.6.1) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

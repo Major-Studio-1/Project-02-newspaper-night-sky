@@ -2,6 +2,59 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.6.1 (2026-11-08)
+
+v0.6.1 is v0.6.0 with **English for the 22 notes that were still in Chinese**, made by `apply_corrections.py` from `ledgers/corrections_2026-11-08.json`.
+
+- **Relation reviews:** 6 notes from the first chain pilot (`relation:chain:L01` to `L06`). New annotations supersede the old ones, so `current_annotations` shows the English and the Chinese stays in the history.
+- **Date roles:** 16 `date_assertions.date_role` values from the first relation pilot.
+  - This table keeps no history of its own, so the release changes the field, and the metadata key `table_corrections` keeps every old value with its ledger and reason.
+  - `apply_corrections.py` allows this only for the fields listed in its `TABLE_FIELDS`.
+- **Meaning kept:** the English says what the Chinese said. Snapshots in `sources/` keep their original wording.
+- **New checks:** current annotations and date roles carry no untranslated Chinese, and every table correction keeps its old value and reason.
+
+## Changes in v0.6.0 (2026-11-08)
+
+v0.6.0 is v0.5.2 plus **one printing per page** and **the checks of the matched stories**, made by `add_checks_layer.py`. Titles and topics are unchanged.
+
+- **One printing per story and page** (`merge_printings.py`, run `run:printings-merge-v1`):
+  - **The problem:** the matcher could list the same page more than once for one story. Overlapping matches with different partner pages each became a row. So did separate blocks of the page that join the same story, such as neighbouring items of a news digest, a continuing report, or a passage repeated on the page.
+  - **Size:** v0.5.2 had 179,966 appearance rows for 163,926 distinct pages. 3,945 stories listed 11,400 pages more than once, and 6,204 of those pages hold separate blocks.
+  - **Rule:** `derived/reuse_family_appearances.parquet` now has one row per story and page.
+    - `seq` is the page's first row's `seq`, so ids built from it stay stable, but `seq` is no longer contiguous within a story.
+    - `blocks_json` lists the page's matched spans, with overlapping or touching spans (a gap of 5 words or less) joined.
+    - `span_start` and `span_end` are the first block. `excerpt` comes from the page's earliest row.
+    - `segments` and `merged_seqs_json` record what was merged.
+  - **Counts:** `reuse_families.appearances` is recounted and now equals `pages` for every story. Newspaper counts never changed.
+  - **Not changed:** `story_topics.printings` still counts the matched segments of v0.5.2, and the topic weights include every segment.
+- **`derived/transcription_checks.parquet`** (`work/transcription_check.py`, run `run:transcription-check-v1`, automatic): one row per printing. It asks whether the passage also appears in the page's other transcription (CA or RevX).
+  - **Measure:** `contain` is the share of the passage's word 4-grams also found in the other transcription, with f and s folded for the long s. `page_agree` is the same share for the whole page, a baseline for how well the two transcriptions agree there.
+  - **Combining:** the segments of a page were measured separately and combined, each weighted by its number of 4-grams.
+  - **Status** (from contain ÷ page_agree):
+
+    | Status | Printings | Meaning |
+    |---|---|---|
+    | `confirmed` | 132,858 (81.0%) | 0.6 or more: the passage agrees as well as the rest of its page |
+    | `partly` | 8,930 (5.4%) | 0.3 to 0.6 |
+    | `missing_in_other` | 3,700 (2.3%) | under 0.3, although the other transcription reads the rest of the page |
+    | `other_unreadable` | 17,190 (10.5%) | the other transcription shares too little of the page to tell |
+    | `no_second_transcription` | 1,248 (0.8%) | under 50 words in the other transcription |
+
+  - **By story:** 29,160 stories (60.6%) have every printing confirmed, 17,855 (37.1%) at least one, and 1,112 (2.3%) none.
+  - **Limit:** a confirmed passage is on the page, but its words can still be misread. The audit below found fact-changing misreadings as often in confirmed printings as in the rest.
+- **`derived/matched_audit.parquet`** (`work/audit_matched.py`, run `run:matched-audit-v1`): the random-sample audit of 200 matched stories (seed 20261108, from the 47,601 stories that are not long-running).
+  - **Reviewers:** eight AI reviewers compared every printing's passage side by side and one printing per story with its scan crop. Their verdicts were then harmonised under one written rule (`PROTOCOL.md` version 2; changes and reasons in `adjustments.json`). A blind AI second reader re-judged 30 stories. This is not an independent human review.
+  - **Columns:** the harmonised verdicts (`one_item`, `joined`, `on_page`, `transcription`), the reviewers' own verdicts (`reviewer_*`), `confidence`, `notes`, `harmonisation_note`, the scan-checked printing (`scan_check_page_id`), and the second reader's verdicts (`second_*`) for the 30.
+  - **Results:**
+    - One item: 172 of 200 (86%; 95% range 81–90%). Two-paper stories 91%, three or more papers 75%.
+    - On the page: all 187 located passages.
+    - Fact-changing misreadings: 35 of 187 by the reviewers' own calls (19%), 64 by the harmonised rule (34%), and 6 of 30 by the second reader (20%). That is about 1 passage in 5, up to 1 in 3.
+  - **Not stored:** the 61 MB of scan crops stay outside the release. `sources/` keeps `crop_manifest.json` with the pinned scan URLs, so they can be cut again.
+- **Metadata:**
+  - `printings`, `transcription_check` and `matched_audit` keys hold the summaries;
+  - `reuse_layer.family_appearances` is now 163,926, with the old count beside it;
+  - the manifest's `checks` key gives the totals.
+
 ## Changes in v0.5.2 (2026-11-07)
 
 v0.5.2 is v0.5.1 plus **automatic topics for stories**, made by `add_story_topics.py` from `work/story_topics_all.py`. Nothing else changes.
@@ -198,12 +251,18 @@ python work/reuse_titles_all.py all                                   # outputs/
 python work/archive_data/add_reuse_titles.py 0.5.0 0.5.1              # v0.5.1
 python work/story_topics_all.py                                       # outputs/story_discovery_all/story_topics.json
 python work/archive_data/add_story_topics.py 0.5.1 0.5.2              # v0.5.2
-python work/archive_data/validate.py outputs/data_foundation/v0.5.2
+python work/transcription_check.py                                    # outputs/transcription_check/ (10-20 minutes)
+python work/audit_matched.py sample && python work/audit_matched.py crops && python work/audit_matched.py batches
+# ... reviewers write outputs/matched_audit/verdicts/; adjustments.json and second_reader/ record the harmonisation
+python work/audit_matched.py summarise                                # outputs/matched_audit/summary.json
+python work/archive_data/add_checks_layer.py 0.5.2 0.6.0              # v0.6.0
+python work/archive_data/apply_corrections.py work/archive_data/ledgers/corrections_2026-11-08.json   # v0.6.1
+python work/archive_data/validate.py outputs/data_foundation/v0.6.1
 ```
 
 For the next release, write a new ledger (base = current version, target = next) and run `apply_ledger.py` on it. Before that, run `work/scan_ledger.py <ledger>` to make the scan crops; on pages with an unusable text layer, add `scan_boxes` by hand.
 
-`apply_corrections.py` handles small fixes. It copies a release and appends annotations that supersede the ones they correct, so old values stay in the history.
+`apply_corrections.py` handles small fixes. It copies a release and appends annotations that supersede the ones they correct, so old values stay in the history. For the few plain-table text fields it allows (`TABLE_FIELDS`), it changes the field and keeps the old value in the metadata key `table_corrections`.
 
 Use Python 3.12; the vendored packages in `work/python_packages` are built for it. The scan check (`work/scan_expansion_1797.py`) also needs `pdfplumber` and `pypdf`.
 

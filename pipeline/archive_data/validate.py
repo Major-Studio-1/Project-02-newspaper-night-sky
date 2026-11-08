@@ -124,6 +124,43 @@ def validate(release):
         check('Reviewed topic rows name released groups', all(r['story_id'] in group_ids for r in st if r['kind'] == 'reviewed'))
         check('Story topics are model topics T01-T24', all(r['top_topic'] in {f'T{i:02}' for i in range(1, 25)} and r['second_topic'] in {f'T{i:02}' for i in range(1, 25)} for r in st))
         check('Story topics are recorded as automatic with no review', tuple(db.execute("SELECT reviewer_kind, independent_review FROM runs WHERE id='run:story-topics-v1'").fetchone() or ()) == ('automated', 0))
+    run_kind = lambda run: tuple(db.execute('SELECT reviewer_kind, independent_review FROM runs WHERE id=?', (run,)).fetchone() or ())
+    # One printing per story and page (v0.6.0 on): merged appearances, recounted families.
+    if (release/'derived/reuse_family_appearances.parquet').exists() and 'blocks_json' in pq.read_schema(release/'derived/reuse_family_appearances.parquet').names:
+        prints = pq.read_table(release/'derived/reuse_family_appearances.parquet', columns=['family_id', 'page_id', 'seq', 'segments', 'blocks_json']).to_pylist()
+        fams = pq.read_table(release/'derived/reuse_families.parquet', columns=['family_id', 'appearances', 'pages']).to_pylist()
+        per_story = {}
+        for p in prints:
+            per_story[p['family_id']] = per_story.get(p['family_id'], 0) + 1
+        check('No matched story lists a page twice', len({(p['family_id'], p['page_id']) for p in prints}) == len(prints))
+        check('Story printing counts match their printings and pages', all(f['appearances'] == per_story.get(f['family_id']) == f['pages'] for f in fams))
+        check('Printing ids are unique within each story', len({(p['family_id'], p['seq']) for p in prints}) == len(prints))
+        check('Every printing keeps at least one matched block', all(p['segments'] >= 1 and json.loads(p['blocks_json']) for p in prints))
+        check('The printing merge is recorded as automatic with no review', run_kind('run:printings-merge-v1') == ('automated', 0))
+    # Transcription checks (v0.6.0 on): exactly one per printing, with a known status.
+    if (release/'derived/transcription_checks.parquet').exists():
+        tc = pq.read_table(release/'derived/transcription_checks.parquet', columns=['family_id', 'seq', 'page_id', 'status']).to_pylist()
+        check('Exactly one transcription check per printing', sorted((c['family_id'], c['seq'], c['page_id']) for c in tc) == sorted((p['family_id'], p['seq'], p['page_id']) for p in prints))
+        check('Transcription checks use the documented statuses', {c['status'] for c in tc} <= {'confirmed', 'partly', 'missing_in_other', 'other_unreadable', 'no_second_transcription'})
+        check('Transcription checks are recorded as automatic with no review', run_kind('run:transcription-check-v1') == ('automated', 0))
+    # Audit of matched stories (v0.6.0 on): released stories, protocol values, an AI review that is not independent.
+    if (release/'derived/matched_audit.parquet').exists():
+        au = pq.read_table(release/'derived/matched_audit.parquet').to_pylist()
+        fam_ids = {f['family_id'] for f in pq.read_table(release/'derived/reuse_families.parquet', columns=['family_id']).to_pylist()}
+        check('Audit rows name distinct released matched stories', len({a['family_id'] for a in au}) == len(au) and all(a['family_id'] in fam_ids for a in au))
+        check('Audit verdicts use the protocol values', all(a['one_item'] in ('yes', 'no', 'unsure') and a['on_page'] in ('yes', 'partly', 'no', 'not_located')
+                                                             and a['transcription'] in ('faithful', 'minor_errors', 'major_problem', 'not_checked') for a in au))
+        printing_pages = {(p['family_id'], p['page_id']) for p in prints}
+        check('Every scan-checked printing is a printing of its story', all((a['family_id'], a['scan_check_page_id']) in printing_pages for a in au))
+        check('The audit is recorded as an AI review, not an independent one', run_kind('run:matched-audit-v1') == ('ai_assistant', 0))
+    # English notes (v0.6.1 on): once table corrections exist, no current annotation or date role is left untranslated.
+    if db.execute("SELECT 1 FROM metadata WHERE key='table_corrections'").fetchone():
+        import re
+        han = re.compile('[㐀-鿿]')
+        texts = [r[0] for r in db.execute('SELECT value_json FROM current_annotations')] + [r[0] for r in db.execute('SELECT date_role FROM date_assertions')]
+        check('Current annotations and date roles carry no untranslated Chinese', not any(han.search(t) for t in texts))
+        log = json.loads(db.execute("SELECT value_json FROM metadata WHERE key='table_corrections'").fetchone()[0])
+        check('Every table correction keeps its old value and reason', all(c['from'] and c['to'] and c['reason'] for c in log))
     for line in (release/'examples.sql').read_text().split('-- QUERY\n')[1:]:
         db.execute(line.strip()).fetchall()
     check('All supplied example queries execute',True)

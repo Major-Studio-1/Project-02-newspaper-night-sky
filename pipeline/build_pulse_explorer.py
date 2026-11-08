@@ -130,6 +130,14 @@ if (release/'derived/reuse_family_titles.parquet').exists():
 apps_by=collections.defaultdict(list)
 if families:
     for a in pq.read_table(verified_file('derived/reuse_family_appearances.parquet',release)).to_pylist(): apps_by[a['family_id']].append(a)
+# Transcription checks (v0.6.0 on): whether each printing's passage is also in the page's other machine transcription.
+# Stored per observation in the year files as one letter; the pulse page says it in words.
+CHECK_CODE={'confirmed':'c','partly':'p','missing_in_other':'m','other_unreadable':'u','no_second_transcription':'n'}
+printing_checks={}
+if (release/'derived/transcription_checks.parquet').exists():
+    printing_checks={(r['family_id'],r['seq']):CHECK_CODE[r['status']] for r in pq.read_table(verified_file('derived/transcription_checks.parquet',release),columns=['family_id','seq','status']).to_pylist()}
+    assert len(printing_checks)==sum(len(v) for v in apps_by.values()), 'every printing needs exactly one transcription check'
+    assert all(len({a['page_id'] for a in v})==len(v) for v in apps_by.values()), 'one printing per story and page'
 by_year=collections.defaultdict(list)
 for f in families: by_year[int(f['first_date'][:4])].append(f)
 years_index=[]
@@ -163,7 +171,8 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
                 _,lccn,date,ed,page=a['page_id'].split(':')
                 assert (titles[lccn][0],date) in days, 'Every matched appearance joins to observed date coverage'
                 oid=f"auto:{f['family_id']}:{a['seq']}"
-                obs.append({'id':oid,'node':lccn,'date':date,'ed':int(ed),'page':int(page),'excerpt':a['excerpt'],'tr':a['transcription']})
+                obs.append({'id':oid,'node':lccn,'date':date,'ed':int(ed),'page':int(page),'excerpt':a['excerpt'],'tr':a['transcription'],
+                            **({'ck':printing_checks[f['family_id'],a['seq']]} if printing_checks else {})})
                 members.append(oid)
             grps.append({'id':'auto:'+f['family_id'],'label':story_titles.get(f['family_id'],f['label']),'newspapers':f['newspapers'],'first':f['first_date'],'last':f['last_date'],
                          'long_running':bool(f['long_running']),'members':members})
@@ -318,7 +327,9 @@ for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','
 pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','method.html','notes.html','site.css']}
 receipt={'passed':True,'release_version':VER,'newspapers':len(newspapers),'curated_passages':len(observations),'group_views':len(groups),'stories_in_overview':len(stories),'overview_categories':len(categories),
          'years':len(years_index),'matched_families':len(families),'year_files_mb':round(sum(p.stat().st_size for p in years_dir.glob('*.json'))/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
-         'checks':['All displayed sources have scan assets and excerpts','All displayed publications join to observed date coverage','No duplicate observation within a group','Read-only release with verified input hashes','Matched families are labelled as not checked against scans','Every page carries the shared header and footer'],
+         'checks':['All displayed sources have scan assets and excerpts','All displayed publications join to observed date coverage','No duplicate observation within a group','Read-only release with verified input hashes','Matched families are labelled as not checked against scans','Every page carries the shared header and footer']
+                  +(['Every matched printing carries its transcription check, one printing per page'] if printing_checks else []),
+         'matched_printings':sum(len(v) for v in apps_by.values()),
          'pages_sha256':pages}
 (OUT/'build_validation.json').write_text(json.dumps(receipt,indent=2),encoding='utf8')
 print(json.dumps(receipt,indent=2))

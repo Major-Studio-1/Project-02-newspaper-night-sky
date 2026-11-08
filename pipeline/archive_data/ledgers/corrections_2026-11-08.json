@@ -1,0 +1,100 @@
+{
+  "ledger_id": "ledger:corrections-2026-11-08",
+  "ledger_version": 1,
+  "base_release": "0.6.0",
+  "target_release": "0.6.1",
+  "recorded_date": "2026-11-08",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "purpose": "English for the 22 notes imported in Chinese from the first relation and chain pilots: 6 relation reviews and 16 date roles. The meaning is kept. The Chinese text stays in the superseded annotations, in the metadata key table_corrections, and in the source snapshots.",
+  "update_readme": true,
+  "corrections": [
+    {
+      "object_id": "relation:chain:L01",
+      "annotation_type": "relation_review",
+      "supersedes": "review:relation:chain:L01:1",
+      "new_annotation_id": "review:relation:chain:L01:2",
+      "value": {"historical_causality_established": false, "independent_review": false,
+                "note": "The core passages match; the later printing adds a challenge. A common source cannot be told apart from direct reprinting."},
+      "reason": "English translation of a note imported in Chinese."
+    },
+    {
+      "object_id": "relation:chain:L02",
+      "annotation_type": "relation_review",
+      "supersedes": "review:relation:chain:L02:1",
+      "new_annotation_id": "review:relation:chain:L02:2",
+      "value": {"historical_causality_established": false, "independent_review": false,
+                "note": "The core passages match; the earlier printing carries a CHRONICLE note. There is no evidence that the later printing removed that note."},
+      "reason": "English translation of a note imported in Chinese."
+    },
+    {
+      "object_id": "relation:chain:L03",
+      "annotation_type": "relation_review",
+      "supersedes": "review:relation:chain:L03:1",
+      "new_annotation_id": "review:relation:chain:L03:2",
+      "value": {"historical_causality_established": false, "independent_review": false,
+                "note": "The reports of the Peace correspond; the later one adds an explanation signed Mercury."},
+      "reason": "English translation of a note imported in Chinese."
+    },
+    {
+      "object_id": "relation:chain:L04",
+      "annotation_type": "relation_review",
+      "supersedes": "review:relation:chain:L04:1",
+      "new_annotation_id": "review:relation:chain:L04:2",
+      "value": {"historical_causality_established": false, "independent_review": false,
+                "note": "The same clearance resolution, printed in two forms; the direction of any direct reprinting is uncertain."},
+      "reason": "English translation of a note imported in Chinese."
+    },
+    {
+      "object_id": "relation:chain:L05",
+      "annotation_type": "relation_review",
+      "supersedes": "review:relation:chain:L05:1",
+      "new_annotation_id": "review:relation:chain:L05:2",
+      "value": {"historical_causality_established": false, "independent_review": false,
+                "note": "The same newspaper reports a different outcome seven days later; this is not an identified explicit correction."},
+      "reason": "English translation of a note imported in Chinese."
+    },
+    {
+      "object_id": "relation:chain:L06",
+      "annotation_type": "relation_review",
+      "supersedes": "review:relation:chain:L06:1",
+      "new_annotation_id": "review:relation:chain:L06:2",
+      "value": {"historical_causality_established": false, "independent_review": false,
+                "note": "The place and the policy are related, but this is not enough to show that the case was handled under this decree."},
+      "reason": "English translation of a note imported in Chinese."
+    }
+  ],
+  "table_corrections": [
+    {"table": "date_assertions", "id": "date:R01:0", "column": "date_role", "from": "来信日期；原文此处未写年份",
+     "to": "Date of the letter; the printed text gives no year here", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R02:0", "column": "date_role", "from": "信件署期；保留法国共和历，未换算",
+     "to": "Date line of the letter; kept in the French Republican calendar, not converted", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R03:0", "column": "date_role", "from": "决议批准日（按刊载文本）",
+     "to": "Date the resolution was approved (as printed)", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R04:0", "column": "date_role", "from": "航程与离港前禁运的相对时间；征用未给确切日期",
+     "to": "Length of the voyage and of the embargo before sailing, as relative times; the requisition is given no exact date", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R05:0", "column": "date_role", "from": "咨文提交日；此处未明写年份",
+     "to": "Date the message was delivered; no year is stated here", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R06:0", "column": "date_role", "from": "来信依据船长返回后的消息；案发与审理日期不明",
+     "to": "The letter relies on news brought by the returning captain; the dates of the incident and the trial are unknown", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R07:0", "column": "date_role", "from": "按语援引的两次出航日；仅记录其质疑依据，未核实日期正确性",
+     "to": "Two sailing dates cited in the editor's note; recorded only as the grounds of its challenge, and not checked for accuracy", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R08:0", "column": "date_role", "from": "法令署期；保留共和历，未换算",
+     "to": "Date line of the decree; kept in the Republican calendar, not converted", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R08:1", "column": "date_role", "from": "被援引美国报纸日期的节录；完整列表见下文原文",
+     "to": "Some of the dates of the American newspapers cited; the full list is in the printed text", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R09:0", "column": "date_role", "from": "摘录涉及多个欧洲案例，没有统一事件日期",
+     "to": "The extract covers several European cases, with no single event date", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R10:0", "column": "date_role", "from": "消息栏日期及相对返航时间；不换算为确切战斗日期",
+     "to": "Dateline of the news column and the time of the return voyage, as relative times; not converted to an exact date of the battle", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R11:0", "column": "date_role", "from": "来信日期；扣船被称为“昨天”",
+     "to": "Date of the letter; the seizure is described as \"yesterday\"", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R12:0", "column": "date_role", "from": "来稿消息栏日期与反事实回顾；不是宣战发生日期",
+     "to": "Dateline of a contributed item, with a look back at what might have happened; not the date of a declaration of war", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R13:0", "column": "date_role", "from": "回顾外交保证、提名与Gerry报告；本段未给具体发生日期",
+     "to": "Looks back on diplomatic assurances, nominations and Gerry's report; this passage gives no specific dates", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R14:0", "column": "date_role", "from": "船长自利物浦离港日；庆祝发生的确切日期未写明",
+     "to": "Date the captain left Liverpool; the exact date of the celebration is not stated", "reason": "English translation of a note imported in Chinese."},
+    {"table": "date_assertions", "id": "date:R15:0", "column": "date_role", "from": "该段辩论所处日期标题；年份据本期1800年判断",
+     "to": "Date heading of this part of the debate; the year, 1800, is taken from the issue", "reason": "English translation of a note imported in Chinese."}
+  ]
+}

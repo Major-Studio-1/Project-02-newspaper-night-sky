@@ -35,6 +35,8 @@ This folder holds the code that turns the archive into the data release and the 
 | `reuse_titles_all.py` | Gives each story a title from the text printed just before its shared wording, so the title starts where the item starts. |
 | `story_topics_all.py` | Applies the frozen topic model to every printing. A story takes its strongest topic. |
 | `check_cycles_topics.py` | The seasons check behind the telescope's Orbit view ([results](../docs/seasons-check.md)). |
+| `transcription_check.py` | Checks every printing against the page's other machine transcription: is the passage in both? |
+| `audit_matched.py` | The audit of 200 random matched stories: draws the sample, cuts the scan crops, prepares the reviewers' batches and sums up their verdicts. |
 
 ## 4 · Data releases (`archive_data/`)
 
@@ -42,9 +44,10 @@ This folder holds the code that turns the archive into the data release and the 
 |---|---|
 | `build.py` | Builds the first release (v0.1.0) from the pinned project inputs. |
 | `migrate_v0_2_0.py`, `apply_ledger.py` | Apply a reviewed ledger to the previous release to make the next one. |
-| `apply_corrections.py` | Makes a correction release. It adds notes that supersede the old ones and never edits them. |
+| `apply_corrections.py` | Makes a correction release. It adds notes that supersede the old ones and never edits them; a few plain text fields can change, with the old value kept (v0.6.1, the English notes). |
 | `add_reuse_layer.py`, `add_reuse_titles.py`, `add_story_topics.py` | Add the matched-story layers: v0.5.0, v0.5.1 and v0.5.2. |
-| `validate.py` | Integrity and count checks. Every release must pass them; v0.5.2 passes 176. |
+| `add_checks_layer.py`, `merge_printings.py` | v0.6.0: count each printing once per page, and add the transcription checks and the audit. |
+| `validate.py` | Integrity and count checks. Every release must pass them; v0.6.1 passes 190. |
 | `consumer.py`, `check_consumers.py` | Read a release without the website, and check that the site agrees with the release. |
 
 Releases are never edited. New evidence always makes a new version; see [`archive_data/README.md`](archive_data/README.md) for the commands.
