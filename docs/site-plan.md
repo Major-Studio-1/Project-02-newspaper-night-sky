@@ -82,12 +82,12 @@ flowchart TB
 One shared header on every page, above each page's own controls.
 
 ```
-[◉ Newspaper Pulsar]   Telescope   Pulses   How it works          [ Search 48,000 stories…  ⌕ ]
+[✦ Newspaper Night Sky]   Telescope   Pulses   How it works       [ Search 48,000 stories…  ⌕ ]
 ──────────────────────────────────────────────────────────────────────────────────────────────
 (page toolbar: the Telescope's views and filters, or the Pulses playback bar)
 ```
 
-- **Brand:** a small pulsar mark and the site name, linking home.
+- **Brand:** a small star mark and the site name, linking home.
 - **Menu:** three items, with the current page marked. Research notes and Exhibition mode sit in the footer, not the menu.
 - **Search:** in the header on every page; it opens the Telescope with the results lit.
 - **Height and stacking:**
@@ -157,7 +157,7 @@ A separate page, `exhibit.html`, directs a loop of **scenes**. Each scene is one
 
 ## Decisions that shape the build
 
-- **Site name:** *Newspaper Pulsar*, the project name, unless a public title is preferred.
+- **Site name:** *Newspaper Night Sky*, a simpler name chosen on 7 November 2026. The project was called *Newspaper Pulsar* until then.
 - **Home page tone:** immersive (the sky fills the page) or editorial (text first, with featured stories). The built Home mixes both: the sky as the top band, featured stories below it.
 - **Featured stories** for Home and the exhibit. Suggested:
   - *Peace and Plenty* (reviewed, with scans);

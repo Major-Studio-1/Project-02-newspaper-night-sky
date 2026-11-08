@@ -1,4 +1,4 @@
-/* Newspaper Pulsar: shared header, footer and page basics. Copied next to the pages by work/build_pulse_explorer.py. */
+/* Newspaper Night Sky: shared header, footer and page basics. Copied next to the pages by work/build_pulse_explorer.py. */
 .site-header{background:#050711;border-bottom:1px solid #1c2640;position:relative;z-index:40}
 .site-inner{max-width:1480px;margin:auto;padding:0 24px;display:flex;align-items:center;gap:22px;min-height:52px}
 .brand{display:flex;align-items:center;gap:9px;color:#edf2ff;text-decoration:none;font-weight:600;font-size:15px;letter-spacing:-.01em;white-space:nowrap}

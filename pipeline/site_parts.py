@@ -1,4 +1,4 @@
-"""Shared site parts for Newspaper Pulsar: one header and one footer for every page.
+"""Shared site parts for Newspaper Night Sky: one header and one footer for every page.
 
 Templates carry three placeholders, filled by work/build_pulse_explorer.py through fill():
   __SITE_HEAD__    stylesheet and icon links, in <head>
@@ -9,18 +9,19 @@ Because every page gets its header and footer from here, they cannot drift apart
 import html
 
 # Public repository: a curated export of this project, made by work/export_public_repo.py.
-REPO = 'https://github.com/Major-Studio-1/Project-02-newspaper-pulsar'
+REPO = 'https://github.com/Major-Studio-1/Project-02-newspaper-night-sky'
 # Where GitHub Pages serves that repository's site/ folder.
-PAGES = 'https://major-studio-1.github.io/Project-02-newspaper-pulsar/'
+PAGES = 'https://major-studio-1.github.io/Project-02-newspaper-night-sky/'
 # The course repository keeps the proposal as submitted on 1 November 2026, at this commit.
 PROPOSAL = 'https://github.com/Major-Studio-1/Project-02-newspapers/tree/85ba363414d55edd68c96fef4b9ee944b99acef1'
 MENU = [('telescope', 'telescope.html', 'Telescope'), ('pulses', 'pulses.html', 'Pulses'), ('method', 'method.html', 'How it works')]
-# A pulsar: a bright core with two beams.
-MARK = ('<svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.4" fill="currentColor"/>'
-        '<path d="M12 1.5v6.2M12 16.3v6.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>'
-        '<circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1"/></svg>')
+# A night sky: one bright four-pointed star and a small companion.
+MARK = ('<svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">'
+        '<path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/>'
+        '<circle cx="19" cy="19" r="1.7" fill="currentColor" fill-opacity=".6"/></svg>')
 ICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23050711'/%3E"
-        "%3Ccircle cx='12' cy='12' r='3.4' fill='%238ccfff'/%3E%3Cpath d='M12 2v6M12 16v6' stroke='%238ccfff' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E")
+        "%3Cpath d='M10.5 3l1.6 5.9 5.9 1.6-5.9 1.6-1.6 5.9-1.6-5.9-5.9-1.6 5.9-1.6z' fill='%238ccfff'/%3E"
+        "%3Ccircle cx='18.5' cy='18.5' r='1.6' fill='%238ccfff' fill-opacity='.6'/%3E%3C/svg%3E")
 
 
 def head():
@@ -30,7 +31,7 @@ def head():
 def header(active, stories):
     links = ''.join(f'<a href="{href}"' + (' aria-current="page"' if key == active else '') + f'>{label}</a>' for key, href, label in MENU)
     return (f'<header class="site-header" id="site-header"><div class="site-inner">'
-            f'<a class="brand" href="index.html" aria-label="Newspaper Pulsar, home">{MARK}<span>Newspaper Pulsar</span></a>'
+            f'<a class="brand" href="index.html" aria-label="Newspaper Night Sky, home">{MARK}<span>Newspaper Night Sky</span></a>'
             f'<nav class="site-nav" aria-label="Main">{links}</nav>'
             f'<form class="site-search" action="telescope.html" role="search"><label class="sr-only" for="site-q">Search every story</label>'
             f'<input id="site-q" name="q" type="search" placeholder="Search {stories:,} stories" autocomplete="off" spellcheck="false"></form>'
@@ -45,7 +46,7 @@ def footer(release):
              ('notes.html', 'Research notes'), (f'{REPO}/tree/main/data', 'Data release'), (REPO, 'Code')]
     nav = ''.join(f'<a href="{html.escape(h)}">{t}</a>' for h, t in links)
     return (f'<footer class="site-footer"><div class="site-inner">'
-            f'<div class="foot-brand"><b>Newspaper Pulsar</b><span>American newspapers, 1770–1810, seen through one surviving archive.</span></div>'
+            f'<div class="foot-brand"><b>Newspaper Night Sky</b><span>American newspapers, 1770–1810, seen through one surviving archive.</span></div>'
             f'<nav aria-label="More">{nav}</nav>'
             f'<p class="foot-note">Source: Smithsonian Revolution Crossroads, drawn from the Library of Congress <i>Chronicling America</i> newspapers '
             f'(Hugging Face dataset <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision). '

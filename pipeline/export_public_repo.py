@@ -1,4 +1,4 @@
-"""Make the public repository of Newspaper Pulsar from the working project.
+"""Make the public repository of Newspaper Night Sky from the working project.
 
 The working project keeps everything: the raw dataset, every release, the review ledgers and
 the intermediate outputs. The public repository keeps what a reader needs, in five folders:
