@@ -190,11 +190,30 @@ for f in families:
 # Story topics (release v0.5.2 on): the frozen 24-topic model applied to every printing; lanes in display order.
 topic_rows,topic_list={},[]
 if (release/'derived/story_topics.parquet').exists():
-    topic_rows={r['story_id']:r for r in pq.read_table(verified_file('derived/story_topics.parquet',release),columns=['story_id','top_topic','top_share']).to_pylist()}
+    topic_rows={r['story_id']:r for r in pq.read_table(verified_file('derived/story_topics.parquet',release),columns=['story_id','top_topic','top_share','second_topic']).to_pylist()}
     with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro',uri=True) as db2:
         topic_meta=json.loads(db2.execute("SELECT value_json FROM metadata WHERE key='story_topics'").fetchone()[0])
     topic_list=sorted(topic_meta['topics'],key=lambda x:x['display_order'])
-lane_of={x['id']:x['display_order'] for x in topic_list}
+# The Topic view groups the 24 topics into the seven reviewed (provisional) families of the first study, with plain names.
+# The families are not used for colour: a spot check (8 Nov 2026) found that among matched stories the model's notice and
+# "other" families mostly hold news (fires, bridges, courts), because advertisements were rarely reprinted across papers.
+# Each family: (name in the study, short name, name for phones).
+FAMILIES=[('Politics and public institutions','Politics','Politics'),('War, diplomacy and shipping','War, diplomacy and shipping','War and ships'),
+          ('Commerce, property and everyday transactions','Commerce and property','Commerce'),('Law, debt and taxation','Law, debt and taxes','Law and debt'),
+          ('Coercion and escape','Escape and capture','Escape'),('Literature and reflection','Poetry and reflection','Poetry'),
+          ('Formats and unresolved clusters','Formats and mixed','Mixed')]
+SHORT={'T01':'Political argument','T02':'Laws and statutes','T03':'Shipping and ports','T04':'Cloth and dry goods','T05':'Stray horses',
+       'T06':'Federal government','T07':'Land for sale','T08':'Court orders','T09':'Battles and armies','T10':'Estates and debts',
+       'T11':'France and Europe','T12':'Legislatures','T13':'Places, mixed','T14':'Poetry and reflection','T15':'Lotteries and money',
+       'T16':'Escape and capture notices','T17':'Food and drink for sale','T18':'Name lists','T19':'Letter extracts','T20':'Crown and Parliament',
+       'T21':'Britain and America','T22':'Shops and premises','T23':'Land-tax sales','T24':'Insolvent estates'}
+topic_labels=json.loads(verified_file('sources/work__topic_labels.json',release).read_text(encoding='utf8'))
+topic_rel={json.loads(l)['id'].split(':')[-1]:json.loads(l) for l in verified_file('tables/topics.jsonl',release).read_text(encoding='utf8').splitlines() if l.strip()}
+fam_index={f[0]:i for i,f in enumerate(FAMILIES)}
+tid=lambda x:x['id'].split(':')[-1]
+assert topic_list and all(tid(x) in SHORT and topic_labels[tid(x)]['category'] in fam_index for x in topic_list), 'every topic needs a short name and a family'
+topic_list.sort(key=lambda x:(fam_index[topic_labels[tid(x)]['category']],x['display_order']))   # by family, then by shared vocabulary
+lane_of={x['id']:i for i,x in enumerate(topic_list)}
 # Search text: the title plus the opening words of the first printing (lower case), loaded by the page only when searching.
 first_excerpt={fid:min(apps,key=lambda a:a['seq'])['excerpt'] for fid,apps in apps_by.items()}
 for s in stories:
@@ -208,10 +227,13 @@ for s in stars:
 for s in stars:
     r=topic_rows.get(s['id'])
     s['topic']=lane_of[r['top_topic']] if r else -1; s['tconf']=round(r['top_share'],2) if r else 0
+    s['topic2']=lane_of.get(r['second_topic'],s['topic']) if r else -1   # the second-strongest topic: which way a mixed story leans
     s['text']=re.sub(r'\s+',' ',(s['title']+' '+(first_excerpt.get(s['id']) or '')).replace('ſ','s')).lower().strip()
 stars.sort(key=lambda s:(s['first'],-s['papers'],s['id']))
-tele={'epoch':'1770-01-01','count':len(stars),**{k:[s[k] for s in stars] for k in ['id','year','kind','cat','first','last','papers','prints','lat','long','title','topic','tconf','flat','flon','reg']},
-      'topics':[{'id':x['id'],'label':' · '.join(x['terms'][:3])} for x in topic_list]}
+tele={'epoch':'1770-01-01','count':len(stars),**{k:[s[k] for s in stars] for k in ['id','year','kind','cat','first','last','papers','prints','lat','long','title','topic','topic2','tconf','flat','flon','reg']},
+      'topics':[{'id':x['id'],'label':SHORT[tid(x)],'name':topic_labels[tid(x)]['label'],'family':fam_index[topic_labels[tid(x)]['category']],
+                 'provisional':topic_rel[tid(x)]['restart_agreement']<0.6,'terms':' · '.join(x['terms'][:3])} for x in topic_list],
+      'families':[{'name':f,'short':s,'tiny':t} for f,s,t in FAMILIES]}
 (OUT/'telescope.json').write_text(json.dumps(tele,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 (OUT/'telescope-text.json').write_text(json.dumps({'count':len(stars),'text':[s['text'] for s in stars]},ensure_ascii=False,separators=(',',':')),encoding='utf8')
 tele_stamp=hashlib.sha256((OUT/'telescope.json').read_bytes()+(OUT/'telescope-text.json').read_bytes()).hexdigest()[:12]

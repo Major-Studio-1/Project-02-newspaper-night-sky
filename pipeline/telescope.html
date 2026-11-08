@@ -17,9 +17,23 @@ button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#ti
 .search{flex:1 1 260px;display:flex;align-items:center;gap:6px;background:#0b1222;border:1px solid var(--line);border-radius:8px;padding:2px 4px 2px 10px;min-width:0}
 .search input{flex:1;min-width:0;background:none;border:0;padding:6px 2px;outline:none}.search input::placeholder{color:#6f7d99}
 .search button{border:0;background:none;padding:4px 8px;color:var(--muted)}.search:focus-within{border-color:var(--blue)}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;overflow:hidden}.seg button{border:0;border-radius:0;padding:5px 10px;font-size:12.5px;color:var(--muted)}
-.seg button+button{border-left:1px solid var(--line)}.seg button[aria-pressed="true"]{background:var(--ink);color:#090e1b;font-weight:600}
-.toggle{padding:5px 10px;font-size:12.5px}.toggle[aria-pressed="true"]{background:var(--ink);color:#090e1b;font-weight:600;border-color:var(--ink)}
+/* Glass controls: a frosted pill. In a single-choice group (.slide) a glass thumb slides to the chosen option: tap an
+   option, drag the thumb, or use the arrow keys. In the other groups each pressed button carries the same glass. */
+.ctl{display:inline-flex;align-items:center;gap:7px}
+.seg{position:relative;display:inline-flex;align-items:center;padding:2px;border-radius:999px;background:linear-gradient(180deg,#ffffff0e,#ffffff05);border:1px solid #ffffff1f;
+  box-shadow:inset 0 1px 0 #ffffff12,inset 0 -1px 0 #00000059,0 1px 12px #00000059;-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%)}
+.seg button{position:relative;z-index:1;border:0;border-radius:999px;background:none;padding:4px 11px;font-size:12.5px;color:var(--muted);transition:color .2s,background-color .2s}
+.seg button:hover{background:none;color:var(--ink)}.seg button[aria-pressed="true"]{color:var(--ink)}
+.seg:not(.slide) button:hover{background:#ffffff0f}
+.glass,.seg .thumb,.seg:not(.slide) button[aria-pressed="true"],.toggle[aria-pressed="true"]{background:linear-gradient(180deg,#ffffff3d,#ffffff12 52%,#ffffff1c);
+  border:1px solid #ffffff42;box-shadow:inset 0 1px 1px #ffffff5c,inset 0 -1px 2px #00000047,0 2px 10px #00000052}
+.seg:not(.slide) button[aria-pressed="true"]{border:0;box-shadow:inset 0 0 0 1px #ffffff42,inset 0 1px 1px #ffffff5c,inset 0 -1px 2px #00000047}
+.seg .thumb{position:absolute;z-index:0;top:2px;bottom:2px;left:0;width:0;border-radius:999px;pointer-events:none;opacity:0;
+  transition:transform .34s cubic-bezier(.3,1.3,.5,1),width .34s cubic-bezier(.3,1.3,.5,1),opacity .2s}
+.seg,.toggle{-webkit-user-select:none;user-select:none}.seg.slide{touch-action:pan-y;cursor:default}.seg.slide:not(.ready) .thumb,.seg.dragging .thumb{transition:none}.seg.dragging{cursor:grabbing}
+.toggle{border-radius:999px;padding:5px 13px;font-size:12.5px;color:var(--muted);background:linear-gradient(180deg,#ffffff0e,#ffffff05);border:1px solid #ffffff1f}
+.toggle:hover{color:var(--ink);background:linear-gradient(180deg,#ffffff14,#ffffff08)}.toggle[aria-pressed="true"]{color:var(--ink)}
+@media(prefers-reduced-motion:reduce){.seg .thumb,.seg button{transition:none}}
 .label{font-size:12px;color:var(--muted)}.row2{width:100%;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
 .shell{max-width:1480px;margin:auto;padding:18px 24px 40px}
 .heading{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:10px}.heading p{margin-top:4px}
@@ -55,7 +69,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#ti
 .list a{display:grid;grid-template-columns:96px 1fr auto;gap:10px;padding:8px 10px;border-left:2px solid transparent;text-decoration:none;color:var(--ink);font-size:13px}
 .list a:hover,.list a:focus-visible{background:#142039;border-color:var(--blue)}.list time,.list .n{color:var(--muted)}
 .page-notes{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-@media(max-width:720px){.toolbar{position:static}.toolbar-inner{padding:8px 12px;gap:7px}.shell{padding:14px 12px 32px}.view{height:min(60vh,118vw)}.seg button{padding:5px 8px}
+@media(max-width:720px){.toolbar{position:static}.toolbar-inner{padding:8px 12px;gap:7px}.shell{padding:14px 12px 32px}.view{height:min(60vh,118vw)}.seg button{padding:5px 9px}
   .search{flex-basis:100%;order:-1}.list a{grid-template-columns:74px 1fr}.list .n{grid-column:2}h1{font-size:22px}
   /* Phones: the sky comes straight after the controls; the search summary sits right under it, the introduction further down. */
   .shell{display:flex;flex-direction:column}.view{order:1}.caption{order:2;margin:8px 0 0}.timeline-wrap{order:3}.time-controls{order:4}.chips{order:5}
@@ -67,15 +81,15 @@ __SITE_HEADER__
 <header class="toolbar"><div class="toolbar-inner">
 <label class="search" role="search"><span class="sr-only">Search stories</span>
 <input id="q" type="search" placeholder="Search any word or name, e.g. fever, Bonaparte, thanksgiving" autocomplete="off" spellcheck="false"><button type="button" id="q-clear" aria-label="Clear search">✕</button></label>
-<span class="seg" id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">Place</button><button type="button" data-layout="topic" title="What each story is about">Topic</button><button type="button" data-layout="orbit" title="The time of year">Orbit</button></span>
+<span class="seg slide" id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">Place</button><button type="button" data-layout="topic" title="What each story is about">Topic</button><button type="button" data-layout="orbit" title="The time of year">Orbit</button></span>
 <button type="button" id="drift" class="toggle" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance">Drift</button>
-<button type="button" id="tint" class="toggle" aria-pressed="true" title="Colour each star by the region where its story was first printed in this archive">Regions</button>
+<span class="ctl"><span class="label" id="colour-label">Colour</span><span class="seg slide" id="colour" role="group" aria-labelledby="colour-label"><button type="button" data-colour="region" title="Colour each star by the region where its story was first printed in this archive">Region</button><button type="button" data-colour="off" title="Pale stars; reviewed stories in their own colours">Off</button></span></span>
 <div class="row2">
-<span class="label" id="span-label">Look back</span><span class="seg" id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span>
-<span class="seg" id="angle" role="group" aria-label="Viewing angle"><button type="button" data-angle="front" title="Look straight back through time">Front</button><button type="button" data-angle="side" title="See the time axis from the side">Side</button></span>
+<span class="ctl"><span class="label" id="span-label">Look back</span><span class="seg slide" id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span></span>
+<span class="seg slide" id="angle" role="group" aria-label="Viewing angle"><button type="button" data-angle="front" title="Look straight back through time">Front</button><button type="button" data-angle="side" title="See the time axis from the side">Side</button></span>
 <span class="seg" role="group" aria-label="Camera"><button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button type="button" id="reset-view" title="Back to the whole picture">Reset view</button></span>
-<span class="label" id="min-label">Stories in</span><span class="seg" id="min-papers" role="group" aria-labelledby="min-label">
-<button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button><button type="button" data-k="10" title="at least 10 newspapers">10+</button></span>
+<span class="ctl"><span class="label" id="min-label">Stories in</span><span class="seg slide" id="min-papers" role="group" aria-labelledby="min-label">
+<button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button><button type="button" data-k="10" title="at least 10 newspapers">10+</button></span></span>
 <span class="seg" id="kinds" role="group" aria-label="Kinds of story"><button type="button" data-kind="reviewed" title="Read and checked against the scans">Reviewed</button><button type="button" data-kind="matched" title="Found by shared wording; not checked">Matched</button><button type="button" data-kind="long" title="Serial documents and debates joined over months">Long-running</button></span>
 </div>
 </div></header>
@@ -151,11 +165,26 @@ const mapXY = (lat, lon) => [(lon - lonC) * COS / MAPHALF, (lat - latC) / MAPHAL
 const townBusy = new Map(towns.map(t => [t.lat + ',' + t.lon, t.stories])), busiest = Math.max(...towns.map(t => t.stories));
 const place = new Float32Array(N * 2), topic = new Float32Array(N * 2), orbit = new Float32Array(N * 2), doy = new Float32Array(N), month = new Uint8Array(N);
 const ringR = i => .3 + .6 * Math.min(1, Math.sqrt(Math.max(0, D.papers[i] - 2) / 12)) + (hash(i, 91.7) - .5) * .06;   // more papers, further out
+// Topic: the 24 topics in equal wedges around the ring, in their seven families, with a gap between families.
+// A star sits under its topic's name the more purely its story is about that topic (its share of the story's topic
+// weight, top_share); a story that mixes topics leans toward the edge of the wedge facing its second topic.
+const FAMS = D.families || [], GAP = .6, WEDGE = TAU / (L + GAP * Math.max(1, FAMS.length));
+const famOf = k => D.topics[k] ? D.topics[k].family || 0 : 0;
+const wedgeA0 = k => (k + GAP * (famOf(k) + .5)) * WEDGE, wedgeMid = k => wedgeA0(k) + WEDGE / 2;
+const angDiff = (a, b) => { const d = (a - b) % TAU; return d > Math.PI ? d - TAU : d < -Math.PI ? d + TAU : d; };
+const famSpan = FAMS.map((f, j) => { const ks = D.topics.map((t, k) => t.family === j ? k : -1).filter(k => k >= 0); return ks.length ? [wedgeA0(ks[0]), wedgeA0(ks[ks.length - 1]) + WEDGE, ks] : null; });
+const purity = i => Math.min(1, Math.max(0, (D.tconf[i] - .2) / .55));   // top_share .2 or less: fully mixed; .75 or more: pure
 for (let i = 0; i < N; i++) {
   const [mx, my] = mapXY(D.flat[i], D.flon[i]), spread = .025 + .045 * Math.sqrt((townBusy.get(D.flat[i] + ',' + D.flon[i]) || 1) / busiest);
   const a = TAU * hash(i, 12.9898), rr = spread * Math.sqrt(hash(i, 78.233));
   place[i * 2] = mx + rr * Math.cos(a); place[i * 2 + 1] = my + rr * Math.sin(a);
-  const lane = D.topic[i] >= 0 ? D.topic[i] : L - 1, tt = (lane + .5 + (hash(i, 4.1) - .5) * .8) / L * TAU, r = ringR(i);
+  const k = D.topic[i], r = ringR(i);
+  let tt;
+  if (k >= 0) {
+    const k2 = D.topic2[i], side = k2 >= 0 && k2 !== k ? Math.sign(angDiff(wedgeMid(k2), wedgeMid(k))) || 1 : hash(i, 5.7) < .5 ? -1 : 1;
+    const off = (hash(i, 4.1) - .5) * .16 + side * (1 - purity(i)) * (.25 + .7 * hash(i, 7.3));   // a little width, so pure stories do not form a thin line
+    tt = wedgeMid(k) + Math.max(-.92, Math.min(.92, off)) * WEDGE / 2;
+  } else tt = TAU * hash(i, 4.1);   // no topic (none known): anywhere around the ring
   topic[i * 2] = r * Math.sin(tt); topic[i * 2 + 1] = r * Math.cos(tt);
   const dt = new Date(EPOCH + D.first[i] * MS), y = dt.getUTCFullYear(), jan1 = Date.UTC(y, 0, 1);
   doy[i] = (dt - jan1) / (Date.UTC(y + 1, 0, 1) - jan1); month[i] = dt.getUTCMonth();
@@ -164,11 +193,23 @@ for (let i = 0; i < N; i++) {
 
 // ---- State: "now" is the date at the front; the view looks back "span" days into the past. ----
 const PRESETS = [1, 5, 10, 41];
-const state = {now: (Date.UTC(1781, 0, 1) - EPOCH) / MS, span: 10 * YEAR, min: 3, show: {reviewed: true, matched: true, long: false}, layout: 'place', angle: 'front', drift: !reduced, tint: true, q: ''};
-try { const s = JSON.parse(localStorage.getItem(STORE)); if (s && s.span > 0) Object.assign(state, {...s, show: {...state.show, ...s.show}, q: ''}); } catch {}
+const COLOURS = ['region', 'off'];
+const state = {now: (Date.UTC(1781, 0, 1) - EPOCH) / MS, span: 10 * YEAR, min: 3, show: {reviewed: true, matched: true, long: false}, layout: 'place', angle: 'front', drift: !reduced, colour: 'region', q: ''};
+try {
+  const s = JSON.parse(localStorage.getItem(STORE));
+  if (s && s.span > 0) { if (!s.colour && s.tint === false) s.colour = 'off'; delete s.tint; Object.assign(state, {...s, show: {...state.show, ...s.show}, q: ''}); }   // an earlier "Regions" off is kept
+} catch {}
+if (!COLOURS.includes(state.colour)) state.colour = 'region';
 if (reduced) state.drift = false;
+// Every setting can also come from the address, so a view can be linked or scripted:
+// ?view=topic&colour=region&lookback=5&angle=side&min=4&year=1797&drift=off (and ?q= for a search, ?story= for one story).
 const params = new URLSearchParams(location.search), wantYear = Number(params.get('year'));
 if (wantYear >= 1770 && wantYear <= 1810) { state.now = (Date.UTC(wantYear + 1, 0, 1) - EPOCH) / MS - 1; state.span = YEAR; }
+if (COLOURS.includes(params.get('colour') || params.get('color'))) state.colour = params.get('colour') || params.get('color');
+if (PRESETS.includes(Number(params.get('lookback')))) state.span = Number(params.get('lookback')) * YEAR; else if (params.get('lookback') === 'all') state.span = 41 * YEAR;
+if (['front', 'side'].includes(params.get('angle'))) state.angle = params.get('angle');
+if ([2, 3, 4, 6, 10].includes(Number(params.get('min')))) state.min = Number(params.get('min'));
+if (['on', 'off'].includes(params.get('drift'))) state.drift = params.get('drift') === 'on' && !reduced;
 let saveTimer = 0;
 const save = () => { clearTimeout(saveTimer); saveTimer = setTimeout(() => { try { const {q, ...rest} = state; localStorage.setItem(STORE, JSON.stringify(rest)); } catch {} }, 400); };
 const clampNow = d => Math.min(maxDay, Math.max(0, d));
@@ -190,28 +231,29 @@ const scene = new THREE.Scene(), FOV = 38, LZ = 6;  // LZ: depth of the look-bac
 const camera = new THREE.PerspectiveCamera(FOV, 1, .05, 80);
 const pos = new Float32Array(N * 3), col = new Float32Array(N * 3), size = new Float32Array(N), kind = new Float32Array(N), hit = new Float32Array(N);
 const catColors = BOOT.categories.map(c => new THREE.Color(c.color)), auto = new THREE.Color(AUTO), longc = new THREE.Color(LONG);
-// Regions: a second colour per star (the region of its first printing), blended in by uTint when "Regions" is on.
-// The shader writes its colours straight to the screen, so the region hues are passed as plain sRGB (not converted to
-// three.js's linear space): what shows is the validated palette itself.
+// Colour: Region (where the story was first printed in this archive) or Off (pale stars, with the reviewed stories in
+// their own colours). Each star carries both colours; the shader blends them by uRegW. The shader writes its colours
+// straight to the screen, so the hues are passed as plain sRGB (not converted to three.js's linear space): what shows
+// is the validated palette itself.
 const srgb = hex => { const n = parseInt(hex.slice(1), 16); return {r: (n >> 16 & 255) / 255, g: (n >> 8 & 255) / 255, b: (n & 255) / 255}; };
-const REGIONS = BOOT.regions || [], regColors = REGIONS.map(r => srgb(r.color)), tintCol = new Float32Array(N * 3);
+const REGIONS = BOOT.regions || [], regColors = REGIONS.map(r => srgb(r.color)), regCol = new Float32Array(N * 3);
 const townAt = new Map(BOOT.towns.map(t => [t.lat + ',' + t.lon, t.name]));   // first-printing town, for the hover card
 for (let i = 0; i < N; i++) {
   pos[i * 3] = D.first[i]; pos[i * 3 + 1] = 0; pos[i * 3 + 2] = D.papers[i];
   const c = D.kind[i] ? catColors[D.cat[i]] : D.long[i] ? longc : auto; col[i * 3] = c.r; col[i * 3 + 1] = c.g; col[i * 3 + 2] = c.b;
-  const rc = D.reg && regColors[D.reg[i]] || c; tintCol[i * 3] = rc.r; tintCol[i * 3 + 1] = rc.g; tintCol[i * 3 + 2] = rc.b;
+  const rc = D.reg && regColors[D.reg[i]] || c; regCol[i * 3] = rc.r; regCol[i * 3 + 1] = rc.g; regCol[i * 3 + 2] = rc.b;
   size[i] = 2 + 2.6 * Math.sqrt(Math.max(D.papers[i] - 1, 0)) * (D.kind[i] ? 1.35 : 1); kind[i] = D.kind[i] ? 1 : D.long[i] ? 2 : 0;
 }
 const geo = new THREE.BufferGeometry();
 const attr = (name, arr, n) => geo.setAttribute(name, new THREE.BufferAttribute(arr, n));
-attr('position', pos, 3); attr('aColor', col, 3); attr('aTint', tintCol, 3); attr('aSize', size, 1); attr('aKind', kind, 1); attr('aHit', hit, 1);
+attr('position', pos, 3); attr('aColor', col, 3); attr('aRegC', regCol, 3); attr('aSize', size, 1); attr('aKind', kind, 1); attr('aHit', hit, 1);
 attr('aPlace', place, 2); attr('aTopic', topic, 2); attr('aOrbit', orbit, 2);
 const uniforms = {uNow: {value: state.now}, uSpan: {value: state.span}, uLZ: {value: LZ}, uCross: {value: 1}, uMix: {value: new THREE.Vector3(1, 0, 0)},
   uMin: {value: 3}, uShow: {value: new THREE.Vector3(1, 1, 0)}, uSearch: {value: 0}, uPR: {value: 1}, uScale: {value: 1}, uRef: {value: 3}, uGold: {value: new THREE.Color(GOLD)},
-  uTint: {value: state.tint ? 1 : 0}, uNeutral: {value: new THREE.Color(AUTO)}, uDense: {value: 1}};
+  uRegW: {value: state.colour === 'region' ? 1 : 0}, uNeutral: {value: new THREE.Color(AUTO)}, uDense: {value: 1}};
 const VERTEX = `
-    attribute vec3 aColor; attribute vec3 aTint; attribute float aSize; attribute float aKind; attribute float aHit; attribute vec2 aPlace; attribute vec2 aTopic; attribute vec2 aOrbit;
-    uniform float uNow, uSpan, uLZ, uCross, uMin, uSearch, uPR, uScale, uRef, uTint; uniform vec3 uMix, uShow, uGold, uNeutral;
+    attribute vec3 aColor; attribute vec3 aRegC; attribute float aSize; attribute float aKind; attribute float aHit; attribute vec2 aPlace; attribute vec2 aTopic; attribute vec2 aOrbit;
+    uniform float uNow, uSpan, uLZ, uCross, uMin, uSearch, uPR, uScale, uRef, uRegW; uniform vec3 uMix, uShow, uGold, uNeutral;
     varying vec3 vColor; varying float vAlpha, vHot;
     void main() {
       float day = position.x, papers = position.z, age = uNow - day;
@@ -225,7 +267,7 @@ const VERTEX = `
       // so the population behind the matches can still be read.
       float hot = uSearch * aHit, cold = uSearch * (1.0 - aHit);
       gl_PointSize = shown * fade > 0.0 ? aSize * uScale * uPR * (uRef / -mv.z) * (1.0 + 0.45 * hot - 0.12 * cold) : 0.0;
-      vec3 base = mix(mix(aColor, aTint, uTint), uNeutral, 0.5 * cold);
+      vec3 base = mix(mix(aColor, aRegC, uRegW), uNeutral, 0.5 * cold);
       vColor = mix(base, uGold, hot * 0.85); vHot = hot;
       vAlpha = shown * fade * (0.62 + 0.38 * clamp((papers - 2.0) / 9.0, 0.0, 1.0)) * (1.0 + 0.3 * hot - 0.58 * cold);
     }`;
@@ -235,11 +277,12 @@ const STAR = `float r = length(gl_PointCoord - 0.5) * 2.0; if (r > 1.0) discard;
 // instead (nearer, newer stars on top), so overlapping regions never add up to a false third colour such as yellow, which
 // could be mistaken for the gold of a search. Switching cross-fades the two layers. Search matches always glow in the
 // additive layer, which is drawn last, so no coloured star can cover them.
-const material = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: 1 - uniforms.uTint.value}}, transparent: true, depthTest: false, depthWrite: false,
+const tintNow = () => uniforms.uRegW.value;
+const material = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: 1 - tintNow()}}, transparent: true, depthTest: false, depthWrite: false,
   blending: THREE.AdditiveBlending, vertexShader: VERTEX,
   fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot; uniform float uWeight;
     void main() { ${STAR} gl_FragColor = vec4(vColor * a * max(uWeight, vHot), a); }`});
-const materialOver = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: uniforms.uTint.value}}, transparent: true, depthTest: false, depthWrite: false,
+const materialOver = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: tintNow()}}, transparent: true, depthTest: false, depthWrite: false,
   blending: THREE.CustomBlending, blendEquation: THREE.AddEquation, blendSrc: THREE.OneFactor, blendDst: THREE.OneMinusSrcAlphaFactor, vertexShader: VERTEX,
   fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot; uniform float uWeight, uDense;
     void main() { ${STAR} float o = min(1.0, a) * 0.5 * uDense * uWeight * (1.0 - vHot);   // translucent, more so in crowded views; matches glow in the other layer
@@ -248,8 +291,8 @@ const materialOver = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: 
 const points = new THREE.Points(geo, material), pointsOver = new THREE.Points(geo, materialOver);
 points.renderOrder = 1; pointsOver.renderOrder = 0;   // the glowing layer (and with it the search matches) is drawn last
 for (const p of [points, pointsOver]) { p.frustumCulled = false; scene.add(p); }   // positions are mapped in the shader
-function applyTint() {   // cross-fade the two layers by the current Regions mix
-  const t = uniforms.uTint.value; material.uniforms.uWeight.value = 1 - t; materialOver.uniforms.uWeight.value = t;
+function applyTint() {   // cross-fade the two layers by the current colour mix
+  const t = Math.min(1, tintNow()); material.uniforms.uWeight.value = 1 - t; materialOver.uniforms.uWeight.value = t;
   points.visible = t < 1 || uniforms.uSearch.value > 0; pointsOver.visible = t > 0;
 }
 applyTint();
@@ -346,17 +389,13 @@ function drawAxes() {
     actx.fillStyle = '#8b98b5'; actx.textAlign = 'left'; actx.fillText(t.label, corner[0] + 4, corner[1] - 8);
   }
   actx.globalAlpha = 1;
-  // The "now" frame at the front.
+  // The "now" frame at the front (in Topic, the ring is drawn in family arcs below).
   if (sq > .02) line(rect(c * .98, 0), `rgba(140,207,255,${.45 * sq})`, 1.2);
-  if (ring > .02) line(circle(c * .93, 0), `rgba(140,207,255,${.45 * ring})`, 1.2);
-  // A label is nudged inwards where it would run past the edge of the view (narrow phone screens).
-  function fitText(s, x, y, align) {
-    const tw = actx.measureText(s).width, left = align === 'right' ? x - tw : align === 'center' ? x - tw / 2 : x;
-    actx.textAlign = 'left'; actx.fillText(s, Math.max(6, Math.min(W - 6 - tw, left)), y);
-  }
-  // "Now" sits in a fixed corner of the view, so it never overlaps labels or leaves the view.
+  if (mixNow[2] > .02) line(circle(c * .93, 0), `rgba(140,207,255,${.45 * mixNow[2]})`, 1.2);
+  // "Now" sits in a fixed corner of the view, so it never overlaps labels or leaves the view; under it, how to read positions.
   actx.font = '600 12.5px system-ui, sans-serif'; actx.fillStyle = '#cfe9ff'; actx.textAlign = 'left'; actx.fillText('Now · ' + fmt(state.now), 12, 16);
-  actx.font = '11px system-ui, sans-serif'; actx.fillStyle = '#8b98b5'; actx.fillText('further away = earlier', 12, 32);
+  actx.font = '11px system-ui, sans-serif'; actx.fillStyle = '#8b98b5';
+  ['further away = earlier', ...READ[state.layout]].forEach((s, k) => actx.fillText(s, 12, 32 + 15 * k));
   if (sq > .02) {   // towns, on the "now" frame
     actx.globalAlpha = sq; const placed = [];
     for (const t of [...towns].sort((a, b) => b.stories - a.stories)) {
@@ -366,14 +405,7 @@ function drawAxes() {
       placed.push(p); actx.fillStyle = '#8b98b5'; fitText(t.name, p[0] + 5, p[1], 'left');
     }
   }
-  if (mixNow[1] > .02) {   // topic labels around the "now" ring
-    actx.globalAlpha = mixNow[1];
-    for (let k = 0; k < L; k++) {
-      const t = (k + .5) / L * TAU, p = project(c * 1.0 * Math.sin(t), c * 1.0 * Math.cos(t), 0);
-      actx.fillStyle = '#8b98b5';
-      fitText(D.topics[k].label.split(' · ').slice(0, 2).join(' · '), p[0], p[1], Math.sin(t) > .15 ? 'left' : Math.sin(t) < -.15 ? 'right' : 'center');
-    }
-  }
+  if (mixNow[1] > .02) drawTopicRing(c);
   if (mixNow[2] > .02) {   // months around the "now" ring, and the track of time (one turn per year) receding
     actx.globalAlpha = mixNow[2];
     for (let m = 0; m < 12; m++) {
@@ -397,6 +429,84 @@ function drawAxes() {
     actx.strokeStyle = '#edf2ff'; actx.lineWidth = 1.2; actx.beginPath(); actx.arc(p[0], p[1], r, 0, TAU); actx.stroke(); actx.lineWidth = 1;
   }
 }
+// A label is nudged inwards where it would run past the edge of the view (narrow phone screens).
+function fitText(s, x, y, align) {
+  const tw = actx.measureText(s).width, left = align === 'right' ? x - tw : align === 'center' ? x - tw / 2 : x;
+  actx.textAlign = 'left'; actx.fillText(s, Math.max(6, Math.min(W - 6 - tw, left)), y);
+}
+// How to read positions, under "Now" in the corner of the view.
+const READ = {place: ['map, north up'], topic: ['each wedge is one topic (? = provisional)', 'nearer its middle = more purely that topic', 'toward the rim = more newspapers'],
+  orbit: ['around = time of year', 'toward the rim = more newspapers']};
+// ---- Topic: the ring in family arcs, family names along the arcs, topic names outside, and the wedge of the star under the pointer ----
+const ringPt = (r, t, z = 0) => project(r * Math.sin(t), r * Math.cos(t), z);
+const arcPts = (r, a0, a1, z = 0, n = 32) => { const pts = []; for (let k = 0; k <= n; k++) pts.push(ringPt(r, a0 + (a1 - a0) * k / n, z)); return pts; };
+const outward = (p, ctr) => { const dx = p[0] - ctr[0], d = Math.hypot(dx, p[1] - ctr[1]) || 1; return dx / d > .08 ? 'left' : dx / d < -.08 ? 'right' : 'center'; };
+// Text along an arc of the ring, centred and upright: read clockwise, except across the lower half, which reads left to right.
+// Returns false (and draws nothing) when the text does not fit the arc.
+function arcText(s, r, a0, a1, font, spacing) {
+  actx.font = font;
+  let P = arcPts(r, a0, a1, 0, 40); const m = P.length >> 1, dx = P[m + 1][0] - P[m - 1][0], dy = P[m + 1][1] - P[m - 1][1];
+  if (dx < 0 && Math.abs(dx) > Math.abs(dy) * .2) P = P.reverse();
+  const len = [0]; for (let k = 1; k < P.length; k++) len.push(len[k - 1] + Math.hypot(P[k][0] - P[k - 1][0], P[k][1] - P[k - 1][1]));
+  const chars = [...s], wid = chars.map(ch => actx.measureText(ch).width), tw = wid.reduce((a, b) => a + b, 0) + spacing * (chars.length - 1), total = len[len.length - 1];
+  if (tw > total * .94) return false;
+  let at = (total - tw) / 2, k = 0; actx.textAlign = 'center';
+  chars.forEach((ch, j) => {
+    const mid = at + wid[j] / 2; while (k < P.length - 2 && len[k + 1] < mid) k++;
+    const f = (mid - len[k]) / Math.max(1e-6, len[k + 1] - len[k]), x = P[k][0] + (P[k + 1][0] - P[k][0]) * f, y = P[k][1] + (P[k + 1][1] - P[k][1]) * f;
+    actx.save(); actx.translate(x, y); actx.rotate(Math.atan2(P[k + 1][1] - P[k][1], P[k + 1][0] - P[k][0])); actx.fillText(ch, 0, 0); actx.restore();
+    at += wid[j] + spacing;
+  });
+  actx.textAlign = 'left'; return true;
+}
+function drawTopicRing(c) {
+  const a = mixNow[1], narrow = W < 760, ctr = ringPt(0, 0), hk = hover >= 0 ? D.topic[hover] : -1, col = '#8ccfff';
+  // Seen at a slant (Side, or turned by hand), the stars of the tunnel run out under the topic names; then, as on narrow
+  // screens, only the family names are written, plus the topic of the star under the pointer.
+  const span = (t1, t2) => { const p = ringPt(c, t1), q = ringPt(c, t2); return Math.hypot(p[0] - q[0], p[1] - q[1]); };
+  const sparse = narrow || Math.min(span(0, Math.PI), span(Math.PI / 2, -Math.PI / 2)) / Math.max(1, span(0, Math.PI), span(Math.PI / 2, -Math.PI / 2)) < .8;
+  famSpan.forEach(sp => {   // one arc per family, with a gap between families; small ticks between its topics
+    if (!sp) return;
+    actx.globalAlpha = a * .5; line(arcPts(c * .93, sp[0], sp[1]), col, 1.4);
+    actx.globalAlpha = a * .45; for (const k of sp[2].slice(1)) line([ringPt(c * .93, wedgeA0(k)), ringPt(c * .958, wedgeA0(k))], col);
+  });
+  if (hk >= 0) {   // the wedge of the star under the pointer, at the star's own depth
+    const z = zOf(D.first[hover]), a0 = wedgeA0(hk), a1 = a0 + WEDGE; actx.globalAlpha = a * .55;
+    line([ringPt(c * .22, a0, z), ringPt(c * .93, a0, z), ...arcPts(c * .93, a0, a1, z, 8), ringPt(c * .22, a1, z)], '#cfe9ff');
+  }
+  actx.globalAlpha = a; actx.fillStyle = '#c3cde3';
+  famSpan.forEach((sp, j) => {   // family names along their arcs (where topic names are written, a one-topic family is named by its topic)
+    if (!sp || (!sparse && sp[2].length === 1)) return;
+    const f = FAMS[j], names = narrow ? [f.tiny || f.short] : [f.short, f.tiny];
+    for (const nm of names) if (nm && arcText(nm.toUpperCase(), c * .972, sp[0], sp[1], `600 ${narrow ? 9 : 9.5}px system-ui, sans-serif`, 1.3)) return;
+    const t = (sp[0] + sp[1]) / 2, p = ringPt(c * 1.05, t);   // an arc too short for its name: write it level, just outside the arc
+    actx.font = '600 9px system-ui, sans-serif'; fitText((f.tiny || f.short).toUpperCase(), p[0], p[1], outward(p, ctr));
+  });
+  // Topic names outside the ring. Each name steps outwards past names already placed, or is left out where there is no free
+  // place. The steps are worked out once per view size, so names never jump as the view sways with the pointer.
+  const topicText = k => D.topics[k].label + (D.topics[k].provisional ? ' ?' : '');
+  const topicFont = (k, hot) => `${D.topics[k].provisional ? 'italic ' : ''}${hot ? '600 ' : ''}11px system-ui, sans-serif`;
+  const at = (k, step) => { const p = ringPt(c * (1.05 + .055 * step), wedgeMid(k)), al = outward(p, ctr), tw = actx.measureText(topicText(k)).width;
+    return [Math.max(6, Math.min(W - 6 - tw, al === 'right' ? p[0] - tw : al === 'center' ? p[0] - tw / 2 : p[0])), p[1], tw]; };
+  const key = [W, H, Math.round(span(Math.PI / 2, -Math.PI / 2) / 6), c].join('|');
+  if (!sparse && topicSteps.key !== key) {
+    const placed = []; topicSteps = {key, steps: []};
+    for (let k = 0; k < L; k++) {
+      actx.font = topicFont(k, false); topicSteps.steps[k] = -1;
+      for (let step = 0; step < 4; step++) {
+        const [x, y, tw] = at(k, step), b = [x, y - 7, x + tw, y + 7];
+        if (!placed.some(q => q[0] < b[2] + 6 && b[0] < q[2] + 6 && q[1] < b[3] && b[1] < q[3])) { placed.push(b); topicSteps.steps[k] = step; break; }
+      }
+    }
+  }
+  for (let k = 0; k < L; k++) {   // and always the topic of the star under the pointer
+    const hot = k === hk, step = sparse ? (hot ? 0 : -1) : topicSteps.steps[k];
+    if (step < 0 && !hot) continue;
+    actx.font = topicFont(k, hot); actx.fillStyle = hot ? '#edf2ff' : D.topics[k].provisional ? '#7a87a2' : '#8b98b5';
+    const [x, y] = at(k, Math.max(0, step)); actx.textAlign = 'left'; actx.fillText(topicText(k), x, y);
+  }
+}
+let topicSteps = {key: '', steps: []};
 // Search on the orbit: twelve petals around the "now" ring; the dashed circle is the size every petal would have with no yearly rhythm.
 let yearRates = null, monthShares = null, monthCounts = null;
 function drawMonthPetals(c) {
@@ -537,8 +647,8 @@ function frame(now) {
   let moved = dirty;
   for (let k = 0; k < 3; k++) { if (Math.abs(mixTarget[k] - mixNow[k]) > .0005) { mixNow[k] = ease(mixNow[k], mixTarget[k], 2.4); moved = true; } else mixNow[k] = mixTarget[k]; }
   uniforms.uMix.value.set(mixNow[0], mixNow[1], mixNow[2]);
-  const tintTo = state.tint ? 1 : 0;   // Regions on or off: the colours fade in or out over about half a second
-  if (Math.abs(uniforms.uTint.value - tintTo) > .002) { uniforms.uTint.value = ease(uniforms.uTint.value, tintTo, 4); moved = true; } else uniforms.uTint.value = tintTo;
+  const tintTo = +(state.colour === 'region'), u = uniforms.uRegW;   // the colours fade in or out over about half a second
+  if (Math.abs(u.value - tintTo) > .002) { u.value = ease(u.value, tintTo, 4); moved = true; } else u.value = tintTo;
   applyTint();
   for (const k of CAMKEYS) { if (Math.abs(camTarget[k] - cam[k]) > .0005) { cam[k] = ease(cam[k], camTarget[k], 2.2); moved = true; } else cam[k] = camTarget[k]; }
   const sx = reduced ? 0 : pointer.x * .05, sy = reduced ? 0 : pointer.y * .035;
@@ -641,15 +751,21 @@ function showTip(best) {
   const tip = $('tip'); tip.replaceChildren();
   const strong = document.createElement('strong'); strong.textContent = D.title[best];
   const k = document.createElement('div'); k.className = 'kind';
-  k.textContent = (D.kind[best] ? 'Reviewed · ' + BOOT.categories[D.cat[best]].label : D.long[best] ? 'Matched · long-running · not checked' : 'Matched by shared wording · not checked')
-    + (D.topic[best] >= 0 ? ' · topic: ' + D.topics[D.topic[best]].label : '');
+  k.textContent = D.kind[best] ? 'Reviewed · ' + BOOT.categories[D.cat[best]].label : D.long[best] ? 'Matched · long-running · not checked' : 'Matched by shared wording · not checked';
   const n = document.createElement('div'); n.className = 'mono';
   n.textContent = `${D.papers[best]} newspapers · ${D.prints[best]} printings · ${fmt(D.first[best])}${D.last[best] > D.first[best] ? ' – ' + fmt(D.last[best]) : ''}`;
   const where = document.createElement('div'); where.className = 'kind';
   const town = townAt.get(D.flat[best] + ',' + D.flon[best]), region = REGIONS[D.reg ? D.reg[best] : -1];
   where.textContent = town ? `First printed in this archive in ${town}${region ? ' · ' + region.label : ''}` : '';
+  // What it is about, as the topic model sees it: the main topic and its share of the story's topic mix, and the next topic.
+  const about = document.createElement('div'); about.className = 'kind';
+  if (D.topic[best] >= 0) {
+    const T = D.topics[D.topic[best]], k2 = D.topic2[best], T2 = k2 >= 0 && k2 !== D.topic[best] ? D.topics[k2] : null, sp = famSpan[T.family];
+    about.textContent = `Topic: ${T.name} (${Math.round(D.tconf[best] * 100)}% of its topic mix${T2 ? '; next, ' + T2.label : ''})`
+      + (sp && sp[2].length > 1 ? ` · ${FAMS[T.family].short}` : '') + (T.provisional ? ' · a provisional topic' : '');
+  }
   const hint = document.createElement('div'); hint.className = 'kind'; hint.textContent = matchMedia('(hover: hover)').matches ? 'Click to open in the pulse view' : 'Tap again to open in the pulse view';
-  tip.append(strong, k, n, ...(where.textContent ? [where] : []), hint); tip.hidden = false;
+  tip.append(strong, k, n, ...[where, about].filter(x => x.textContent), hint); tip.hidden = false;
   const [x, y, z] = world(best), p = project(x, y, z), tw = tip.offsetWidth, th = tip.offsetHeight;
   tip.style.left = Math.max(6, Math.min(W - tw - 6, p[0] + 14)) + 'px'; tip.style.top = (p[1] - th - 12 < 6 ? p[1] + 14 : p[1] - th - 12) + 'px';
 }
@@ -670,24 +786,75 @@ $('later').addEventListener('click', () => travel(state.span * .25));
 // ---- Controls (one-tap buttons) ----
 const HOW = {
   place: '<b>Place.</b> Each star sits at the town where the story was first printed in this archive, on a map seen face-on (north up). Busier towns form larger clouds.',
-  topic: '<b>Topic.</b> Around the ring is what the story is about: its main topic in the project\'s 24-topic model, labelled by the model\'s top words (provisional). Similar topics sit next to each other. Stories printed in more newspapers sit further out.',
+  topic: '<b>Topic.</b> Around the ring is what each story is about. Each wedge is one of the 24 topics of the project\'s topic model, a computer grouping of words that tend to appear together, named by hand and grouped into seven families, with a gap between families. A star sits in the wedge of its main topic: on the wedge\'s middle line if the story is about that topic alone, and toward the edge facing its next topic if it mixes topics. The model goes by vocabulary, not by what an item is, so a report of a fire can land among the shop notices. Names with a question mark are provisional: re-running the model does not keep those topics stable. Stories printed in more newspapers sit toward the rim.',
   orbit: '<b>Orbit.</b> Around the ring is the time of year, with the months marked. Because time also runs into the distance, each year is one turn of a spiral; the faint line is that track of time. Stories that come back at the same season line up as streaks running into the distance. Stories printed in more newspapers sit further out.'};
+const COLOUR_HOW = {
+  region: '<b>Colour: Region.</b> Where each story was first printed in this archive: New England, the Middle States, or the South and West.',
+  off: '<b>Colour: Off.</b> Pale stars were found automatically; coloured ones were reviewed.'};
+// Glass sliding controls: each single-choice group gets a thumb that slides to the chosen option. Tap an option, drag the
+// thumb along the group (it settles on the nearest option when let go), or use the left and right arrow keys.
+const slides = [...document.querySelectorAll('.seg.slide')], thumbAt = new Map();
+for (const seg of slides) { const t = document.createElement('i'); t.className = 'thumb'; t.setAttribute('aria-hidden', 'true'); seg.prepend(t); }
+function syncThumbs(force) {
+  for (const seg of slides) {
+    if (seg.classList.contains('dragging')) continue;
+    const t = seg.firstElementChild, b = seg.querySelector('button[aria-pressed="true"]');
+    if (!force && thumbAt.get(seg) === b) continue;
+    if (!b) { t.style.opacity = '0'; thumbAt.set(seg, b); continue; }
+    if (!b.offsetWidth) continue;   // not laid out yet
+    thumbAt.set(seg, b); t.style.opacity = '1'; t.style.width = b.offsetWidth + 'px'; t.style.transform = `translateX(${b.offsetLeft}px)`;
+    if (!seg.classList.contains('ready')) requestAnimationFrame(() => requestAnimationFrame(() => seg.classList.add('ready')));   // no slide in from nowhere at first
+  }
+}
+let swallowClick = false;
+for (const seg of slides) {
+  const thumb = seg.firstElementChild, buttons = [...seg.querySelectorAll('button')];
+  const thumbX = (d, dx) => Math.max(2, Math.min(seg.clientWidth - thumb.offsetWidth - 2, d.left + dx));
+  let drag = null;
+  seg.addEventListener('pointerdown', e => {   // only the chosen option's thumb can be dragged; a tap on another option chooses it
+    const b = e.target.closest('button');
+    drag = b && e.button === 0 && b.getAttribute('aria-pressed') === 'true' ? {id: e.pointerId, x0: e.clientX, left: b.offsetLeft, moved: false} : null;
+  });
+  seg.addEventListener('pointermove', e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const dx = e.clientX - drag.x0;
+    if (!drag.moved) { if (Math.abs(dx) < 5) return; drag.moved = true; seg.classList.add('dragging'); try { seg.setPointerCapture(e.pointerId); } catch {} }
+    thumb.style.transform = `translateX(${thumbX(drag, dx)}px)`;
+  });
+  seg.addEventListener('pointerup', e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const d = drag; drag = null; if (!d.moved) return;
+    seg.classList.remove('dragging');
+    const centre = thumbX(d, e.clientX - d.x0) + thumb.offsetWidth / 2;
+    const best = buttons.reduce((a, b) => Math.abs(b.offsetLeft + b.offsetWidth / 2 - centre) < Math.abs(a.offsetLeft + a.offsetWidth / 2 - centre) ? b : a);
+    if (best.getAttribute('aria-pressed') === 'true') syncThumbs(true); else best.click();
+    swallowClick = true; setTimeout(() => { swallowClick = false; }, 0);   // the browser's own click at the end of a drag
+  });
+  seg.addEventListener('pointercancel', e => { if (drag && e.pointerId === drag.id) { drag = null; seg.classList.remove('dragging'); syncThumbs(true); } });
+  seg.addEventListener('click', e => { if (swallowClick) { e.stopImmediatePropagation(); e.preventDefault(); } }, true);
+  seg.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    const at = buttons.indexOf(document.activeElement); if (at < 0) return;
+    const next = buttons[Math.max(0, Math.min(buttons.length - 1, at + (e.key === 'ArrowRight' ? 1 : -1)))];
+    e.preventDefault(); if (next !== buttons[at]) { next.focus(); next.click(); }
+  });
+  new ResizeObserver(() => syncThumbs(true)).observe(seg);
+}
 function syncSpanButtons() {
   const y = state.span / YEAR, near = PRESETS.reduce((a, b) => Math.abs(Math.log(b / y)) < Math.abs(Math.log(a / y)) ? b : a);
   for (const b of $('span').querySelectorAll('button')) b.setAttribute('aria-pressed', String(Number(b.dataset.years) === near && Math.abs(Math.log(near / y)) < .2));
+  syncThumbs();
 }
 function syncButtons() {
   for (const b of $('min-papers').querySelectorAll('button')) b.setAttribute('aria-pressed', String(Number(b.dataset.k) === state.min));
   for (const b of $('kinds').querySelectorAll('button')) b.setAttribute('aria-pressed', String(state.show[b.dataset.kind]));
   for (const b of $('layout').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout));
   for (const b of $('angle').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.angle === state.angle));
+  for (const b of $('colour').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.colour === state.colour));
   $('drift').setAttribute('aria-pressed', String(state.drift)); $('drift').disabled = reduced;
-  $('tint').setAttribute('aria-pressed', String(state.tint));
   syncSpanButtons();
   $('how').innerHTML = '<b>Time runs into the distance:</b> the front is “now”, and the further away a star is, the earlier the story. ' + HOW[state.layout]
-    + ' Bigger, brighter stars were printed in more newspapers.'
-    + (state.tint ? ' <b>Colours</b> show the region where each story was first printed in this archive: New England, the Middle States, or the South and West. “Regions” turns them off.'
-                  : ' Pale stars were found automatically; coloured ones were reviewed. “Regions” colours every star by the region where it was first printed.')
+    + ' Bigger, brighter stars were printed in more newspapers. ' + COLOUR_HOW[state.colour]
     + ' <b>Moving around:</b> drag to turn the view, right-drag (or Shift-drag, or two fingers) to move it, and scroll or pinch to zoom; “Reset view” brings back the whole picture.'
     + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see. Click a star to open it in the pulse view.'
     + (reduced ? '' : ' Drift lets time pass slowly: new stories arrive at the front and older ones recede. It pauses while you explore.');
@@ -703,10 +870,11 @@ $('layout').addEventListener('click', e => { const b = e.target.closest('button'
 $('angle').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.angle = b.dataset.angle; syncButtons(); resetCamera(); refresh(); save(); });
 $('span').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; setSpan(Number(b.dataset.years) * YEAR); });
 $('drift').addEventListener('click', () => { state.drift = !state.drift; lastInteract = -1e9; syncButtons(); save(); });
-$('tint').addEventListener('click', () => {
-  state.tint = !state.tint; syncButtons(); buildLegend(); save();
-  if (reduced || document.hidden) { uniforms.uTint.value = state.tint ? 1 : 0; applyTint(); }   // no fade when motion is reduced or nothing is animating
-  redrawNow();
+$('colour').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || !COLOURS.includes(b.dataset.colour)) return;
+  state.colour = b.dataset.colour; syncButtons(); buildLegend(); save();
+  if (reduced || document.hidden) { uniforms.uRegW.value = +(state.colour === 'region'); applyTint(); }   // no fade when motion is reduced or nothing is animating
+  dirty = true; redrawNow();
 });
 $('min-papers').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.min = Number(b.dataset.k); perMonth = null; syncButtons(); hideTip(); summarise(); refresh(); save(); });
 $('kinds').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.show[b.dataset.kind] = !state.show[b.dataset.kind]; perMonth = null; syncButtons(); hideTip(); summarise(); refresh(); save(); });
@@ -724,7 +892,7 @@ const swatch = (label, color, title, cls) => {
 };
 function buildLegend() {
   const lead = document.createElement('span'); lead.className = 'lead';
-  if (state.tint) {
+  if (state.colour === 'region') {
     lead.textContent = 'Region of first printing:';
     legend.replaceChildren(lead, ...REGIONS.map(r => swatch(`${r.label} (${r.stories.toLocaleString('en-US')})`, r.color, r.states)), swatch('Search match', GOLD));
     $('key').replaceChildren(...REGIONS.map(r => swatch(r.label, r.color, '', 'k')));
@@ -734,7 +902,7 @@ function buildLegend() {
       swatch('Long-running match', LONG), swatch('Search match', GOLD));
     $('key').replaceChildren();
   }
-  $('key').hidden = !state.tint;
+  $('key').hidden = state.colour === 'off';
 }
 buildLegend();
 new ResizeObserver(() => { const dpr = devicePixelRatio || 1; tl.width = tl.clientWidth * dpr; tl.height = tl.clientHeight * dpr; tctx.setTransform(dpr, 0, 0, dpr, 0, 0); drawTimeline(); }).observe(tl);

@@ -207,13 +207,15 @@ The pulse view is a direct translation of the admitted group records:
 - **Drift:** lets time pass slowly. New stories arrive at the front and older ones recede into the distance.
 - **Three views of the same tunnel of time**, with the stars gliding between them:
   - **Place:** the town where each story was first printed in this archive, on a face-on map.
-  - **Topic:** a ring of the project's 24 topics, with similar topics next to each other. Printings of the same story agree on the topic 89% of the time.
+  - **Topic:** a ring of the project's 24 topics, named by hand and grouped into the seven families of the first study, with a gap between families. A star sits on its topic's middle line when the story is about that topic alone, and leans toward its next topic when it mixes topics. Stories in more papers sit toward the rim. Printings of the same story agree on the topic 89% of the time.
+    - The families are not used for colour. A spot check of matched stories in three or more papers found that only 2 or 3 of 14 "notices" were notices and 4 of 14 "other" were poems or essays; the rest were news. Advertisements were rarely reprinted across papers, and the model goes by vocabulary, so fire and bridge reports land among the property notices.
   - **Orbit:** a ring of the calendar. Because time also runs into the distance, each year becomes one turn of a spiral, so stories that return at the same season line up as streaks. A check found strong yearly rhythms for Independence Day, Thanksgiving, the President's annual speech, ice, fever and Congress, and none for fires; see [the seasons check](seasons-check.md).
 - **Angle:** Front looks straight back through time; Side shows the time axis from an angle.
 - **Moving around:** drag to turn the view, right-drag (or two fingers) to move it, and scroll or pinch to zoom. "Reset view" brings back the whole picture.
 - **Timeline bar:** under the view, a full 1770–1810 bar shows how many stories each month has, and which stretch of time you are looking through.
 - **Search:** typing a word lights up every story that mentions it in its title or opening words, in gold. The other stories stay faintly visible behind the matches. The caption says how many match, in which years, and whether they keep to a season.
-- **Region colours (on by default; the "Regions" button turns them off):** each star takes the region of the town where its story was first printed in this archive.
+- **Controls:** each single-choice setting is a sliding glass control: tap an option, drag the thumb, or use the arrow keys. Every setting can also come from the address, for example `telescope.html?view=topic&lookback=5&angle=side&colour=off&min=4&year=1797&drift=off`, so a view can be linked or scripted.
+- **Colour: Region or Off (Region by default):** each star takes the region of the town where its story was first printed in this archive.
   - Violet is New England, aqua the Middle States, and orange the South and West (Washington, Virginia, Kentucky and South Carolina).
   - Three hues is the most a scatter can carry and stay distinguishable for colour-blind readers; the three were checked on the telescope's background.
   - The colours show the shape of the archive: in the 1780s and 1790s most stories were first printed in the Middle States, and after 1800 most in the South and West.
