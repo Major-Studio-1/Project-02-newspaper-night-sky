@@ -39,4 +39,4 @@ The recommendation was to develop *News in Transit* as the bounded study and use
 | 6 Nov | Matched stories for all 41 years; the pulse page shows every year | v0.5.0 |
 | 7 Nov | Story titles and topics; the telescope; the site | v0.5.1, v0.5.2 |
 
-The earlier studies are on the site's [Research notes](https://major-studio-1.github.io/Project-02-newspaper-night-sky/notes.html) page.
+The earlier studies are on the site's [Research notes](https://newspapers.icare.love/notes.html) page.

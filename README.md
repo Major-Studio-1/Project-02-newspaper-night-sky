@@ -3,7 +3,7 @@
 **How news moved through American newspapers, 1770–1810.**
 Every story printed in two or more papers of one surviving archive, 48,148 in all. You can explore them as a sky of stars, or follow one story from paper to paper as it pulses through them.
 
-**[Open the website →](https://major-studio-1.github.io/Project-02-newspaper-night-sky/)** · [How it works](https://major-studio-1.github.io/Project-02-newspaper-night-sky/method.html) · Major Studio 1, Project 02
+**[Open the website →](https://newspapers.icare.love/)** · [How it works](https://newspapers.icare.love/method.html) · Major Studio 1, Project 02
 
 ![The story telescope: every story is a star, and the further away a star is, the earlier the story](docs/images/telescope-side.jpg)
 
@@ -17,9 +17,9 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 
 | Page | What it shows |
 |---|---|
-| **[Telescope](https://major-studio-1.github.io/Project-02-newspaper-night-sky/telescope.html)** | All 48,148 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic**, or **orbit** (time of year), and colour them by **region**. You can also search any word, turn and zoom the view, and let time drift. |
-| **[Pulses](https://major-studio-1.github.io/Project-02-newspaper-night-sky/pulses.html)** | One story at a time. Each newspaper is a point on a map, and it pulses when it printed the story. The passage and the page scan are shown beside the map. A constellation joins a story's printings, and a coverage strip shows which pages survive. |
-| **[How it works](https://major-studio-1.github.io/Project-02-newspaper-night-sky/method.html)** | The method in plain language, and what the site cannot tell you. |
+| **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,148 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic**, or **orbit** (time of year), and colour them by **region**. You can also search any word, turn and zoom the view, and let time drift. |
+| **[Pulses](https://newspapers.icare.love/pulses.html)** | One story at a time. Each newspaper is a point on a map, and it pulses when it printed the story. The passage and the page scan are shown beside the map. A constellation joins a story's printings, and a coverage strip shows which pages survive. |
+| **[How it works](https://newspapers.icare.love/method.html)** | The method in plain language, and what the site cannot tell you. |
 
 | | |
 |---|---|

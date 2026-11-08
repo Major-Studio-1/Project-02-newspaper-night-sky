@@ -10,8 +10,9 @@ import html
 
 # Public repository: a curated export of this project, made by work/export_public_repo.py.
 REPO = 'https://github.com/Major-Studio-1/Project-02-newspaper-night-sky'
-# Where GitHub Pages serves that repository's site/ folder.
-PAGES = 'https://major-studio-1.github.io/Project-02-newspaper-night-sky/'
+# Where GitHub Pages serves that repository's site/ folder: the custom domain newspapers.icare.love (a CNAME to
+# major-studio-1.github.io; the github.io address forwards here).
+PAGES = 'https://newspapers.icare.love/'
 # The course repository keeps the proposal as submitted on 1 November 2026, at this commit.
 PROPOSAL = 'https://github.com/Major-Studio-1/Project-02-newspapers/tree/85ba363414d55edd68c96fef4b9ee944b99acef1'
 MENU = [('telescope', 'telescope.html', 'Telescope'), ('pulses', 'pulses.html', 'Pulses'), ('method', 'method.html', 'How it works')]
