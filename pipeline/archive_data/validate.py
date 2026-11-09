@@ -124,6 +124,11 @@ def validate(release):
         check('Reviewed topic rows name released groups', all(r['story_id'] in group_ids for r in st if r['kind'] == 'reviewed'))
         check('Story topics are model topics T01-T24', all(r['top_topic'] in {f'T{i:02}' for i in range(1, 25)} and r['second_topic'] in {f'T{i:02}' for i in range(1, 25)} for r in st))
         check('Story topics are recorded as automatic with no review', tuple(db.execute("SELECT reviewer_kind, independent_review FROM runs WHERE id='run:story-topics-v1'").fetchone() or ()) == ('automated', 0))
+        # Topic rows for reviewed groups added later (v0.7.1 on): every reviewed group with printings has exactly one.
+        if db.execute("SELECT 1 FROM runs WHERE id='run:story-topics-reviewed-v1'").fetchone():
+            printed = sorted(r[0] for r in db.execute('SELECT DISTINCT group_id FROM group_publications'))
+            check('Every reviewed group with printings has exactly one topic row', sorted(r['story_id'] for r in st if r['kind'] == 'reviewed') == printed)
+            check('Topics of later reviewed groups are recorded as automatic with no review', tuple(db.execute("SELECT reviewer_kind, independent_review FROM runs WHERE id='run:story-topics-reviewed-v1'").fetchone() or ()) == ('automated', 0))
     run_kind = lambda run: tuple(db.execute('SELECT reviewer_kind, independent_review FROM runs WHERE id=?', (run,)).fetchone() or ())
     # One printing per story and page (v0.6.0 on): merged appearances, recounted families.
     if (release/'derived/reuse_family_appearances.parquet').exists() and 'blocks_json' in pq.read_schema(release/'derived/reuse_family_appearances.parquet').names:

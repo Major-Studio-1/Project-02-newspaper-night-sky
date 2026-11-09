@@ -21,7 +21,7 @@ The recommendation was to develop *News in Transit* as the bounded study and use
 2. **Transit became pulses.** Following Captain Boyd's report of the French fleet at Bantry Bay through the papers became the pulse view, where each paper flashes when it printed the story. There are no who-copied-whom lines, because papers rarely name their source.
 3. **Reviewed stories (1797).** Every candidate was searched, read and checked against the scan, and its decision recorded. Every candidate gets a decision, so nothing is dropped silently. The result is 21 stories with 107 printings, and transcription errors kept apart from real differences between printings.
 4. **Matched stories (all years).** The text-reuse method from 1797 was run on all 41 years. It found 48,127 stories printed in two or more papers, kept apart as "not checked".
-5. **The telescope.** The event telescope became a sky of all 48,148 stories. Time runs into the depth (the further away, the earlier), with Place, Topic and Orbit views and a search. Orbit grew out of the first question, about problems that keep coming back: it shows which stories return at the same season.
+5. **The telescope.** The event telescope became a sky of all 48,170 stories. Time runs into the depth (the further away, the earlier), with Place, Topic and Orbit views and a search. Orbit grew out of the first question, about problems that keep coming back: it shows which stories return at the same season.
 6. **The site.** Home, Telescope, Pulses, How it works and Research notes now share one header. The plan for it is in [`docs/site-plan.md`](../docs/site-plan.md).
 
 ![The site's Home page](../docs/images/home.jpg)

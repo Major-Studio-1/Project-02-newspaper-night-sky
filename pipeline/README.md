@@ -14,7 +14,7 @@ This folder holds the code that turns the archive into the data release and the 
 | `discover_topics.py` | Samples 4,100 pages, at most 100 per year and spread across the papers, and cuts them into 220-word passages. Fits the 24-topic model (TF-IDF and NMF), then fits it a second time from another random start to check stability. |
 | `recheck_full_corpus.py` | Applies the frozen model to all 77,749 usable pages without refitting, for trend checks, and runs the phrase-led evidence search. |
 
-## 2 · Reviewed stories (1797)
+## 2 · Reviewed stories (1797 and 1776)
 
 | Script | What it does |
 |---|---|
@@ -23,8 +23,11 @@ This folder holds the code that turns the archive into the data release and the 
 | `reuse_1797.py` | Text reuse in 1797. It compares five-word fingerprints, then aligns the texts word by word: at least 80 words, at least 70% similar, at most 120 days apart. |
 | `reuse_families_1797.py` | Groups the 1797 matches into candidate story families, which were then read. |
 | `story_phrase_search_1797.py` | Phrase searches over all 1797 pages, to find printings the matcher missed. |
+| `year_search_pages.py` | For 1776 (or any year): writes the year's pages with both transcriptions, for the two scripts below. |
+| `story_items.py` | Splits the year's matched stories into single printed items, since many join neighbouring items, and finds every page that prints each one. |
+| `story_phrase_search.py` | Phrase searches over the year's pages, in both transcriptions, to confirm the printings of the chosen items. |
 | `scan_ledger.py` | Downloads the pinned scan of every passage in a ledger and crops the passage for checking. |
-| `archive_data/ledgers/` | The review decisions. Each candidate is recorded as admitted, excluded or kept as a lead, with a reason and the scan findings. |
+| `archive_data/ledgers/` | The review decisions. Each candidate is recorded as admitted, excluded or kept as a lead, with a reason and the scan findings. `make_stories_1776.py` writes the 1776 ledger from the chosen stories and the review findings. |
 
 ## 3 · Matched stories, all years
 
@@ -47,7 +50,8 @@ This folder holds the code that turns the archive into the data release and the 
 | `apply_corrections.py` | Makes a correction release. It adds notes that supersede the old ones and never edits them; a few plain text fields can change, with the old value kept (v0.6.1, the English notes). |
 | `add_reuse_layer.py`, `add_reuse_titles.py`, `add_story_topics.py` | Add the matched-story layers: v0.5.0, v0.5.1 and v0.5.2. |
 | `add_checks_layer.py`, `merge_printings.py` | v0.6.0: count each printing once per page, and add the transcription checks and the audit. |
-| `validate.py` | Integrity and count checks. Every release must pass them; v0.6.1 passes 190. |
+| `add_reviewed_topics.py` | v0.7.1: topics for reviewed groups added after the topic layer (the 1776 stories), from the same frozen model. |
+| `validate.py` | Integrity and count checks. Every release must pass them; v0.7.1 passes 449. |
 | `consumer.py`, `check_consumers.py` | Read a release without the website, and check that the site agrees with the release. |
 
 Releases are never edited. New evidence always makes a new version; see [`archive_data/README.md`](archive_data/README.md) for the commands.

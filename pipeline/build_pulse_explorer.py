@@ -7,21 +7,36 @@ ROOT=Path(__file__).resolve().parent
 OUT=ROOT.parent/'outputs/newspaper_pulses_space'
 release=release_path()
 manifest=json.loads((release/'manifest.json').read_text(encoding='utf8'))
-# Display categories for the overview (an editorial grouping for colour, not part of the data release).
-# Three colours are the most that stay distinguishable when any two can be on screen together.
-CATEGORIES=[
-    ('war','War, revolution and foreign news',['boyd-bantry-coverage','tenerife-defeat-report','camperdown-dispatches','algerine-sicilian-battle',
-                                               'hermione-mutiny','barney-escapes-blockade','sonthonax-departure','quito-earthquake']),
-    ('ships','Ships, privateers and wrecks',['peace-cayenne-context','peace-and-plenty-boarding','brothers-privateer-boarding','two-sisters-wreck','havana-french-captures']),
-    ('public','American public life',['adams-senate-farewell','special-session-1797','blount-affair','brown-house-fire','congress-opening-nov-1797',
-                                      'kosciuszko-land-warrant','jefferson-madison-letter','nh-governor-address-1797'])]
-CHILDREN={'boyd-bantry-coverage':['boyd-core-report','fleet-return-account'],'peace-cayenne-context':['peace-seizure-report','cayenne-decree-commentary'],
-          'peace-and-plenty-boarding':['peace-and-plenty-report'],'hermione-mutiny':['hermione-particulars'],
-          'special-session-1797':['adams-special-session-speech','special-session-proclamation','special-session-house-answer'],
-          'blount-affair':['blount-letter','blount-knoxville-welcome','blount-committee-report']}
-# Focus-menu order: by category, each top-level story followed by its child groups.
-group_ids=[g for _,_,tops in CATEGORIES for top in tops for g in [top]+CHILDREN.get(top,[])]
-category_of={g:c for c,_,tops in CATEGORIES for top in tops for g in [top]+CHILDREN.get(top,[])}
+# The reviewed years. Each has display categories for its overview (an editorial grouping for colour, not part of the
+# data release), named for that year, in the same three colour slots: the first is war in both years and the third
+# American public life and government. Three colours are the most that stay distinguishable when any two can be on screen
+# together. Every top-level story of a reviewed year needs exactly one category, or the build fails. 'children' lists the
+# sub-stories shown under a story; 'expect' is the year's newspapers and surviving pages, checked against the release.
+REVIEWED={
+  1776:{'categories':[
+          ('war','War and the armies',['quebec-siege-1776','boston-evacuation-letter','hopkins-nassau-letter','campbell-captured-letter',
+                                       'washington-patterson-interview','hudson-warships-1776','eighty-eight-battalions','congress-intelligence-october-1776']),
+          ('britain','Britain and Europe',['king-speech-october-1775','dublin-paper-naval-force','ethan-allen-cork','london-address-to-king-1776','king-speech-may-1776']),
+          ('government','Independence and American government',['congress-opens-ports','rhode-island-renunciation','congress-may-15-resolution',
+                                       'virginia-independence-resolution','pennsylvania-new-instructions','declaration-of-independence','cedars-cartel-report',
+                                       'prize-resolutions-extended','staten-island-conference'])],
+        'children':{'quebec-siege-1776':['montgomery-letter-to-carleton','quebec-assault-report','quebec-camp-letter'],
+                    'hudson-warships-1776':['haverstraw-bay-report','tappan-meadows-report','gondolas-attack-report','fire-ships-attack-report'],
+                    'staten-island-conference':['conference-committee-departs','conference-committee-report']},
+        'expect':(16,2319)},
+  1797:{'categories':[
+          ('war','War, revolution and foreign news',['boyd-bantry-coverage','tenerife-defeat-report','camperdown-dispatches','algerine-sicilian-battle',
+                                                     'hermione-mutiny','barney-escapes-blockade','sonthonax-departure','quito-earthquake']),
+          ('ships','Ships, privateers and wrecks',['peace-cayenne-context','peace-and-plenty-boarding','brothers-privateer-boarding','two-sisters-wreck','havana-french-captures']),
+          ('public','American public life',['adams-senate-farewell','special-session-1797','blount-affair','brown-house-fire','congress-opening-nov-1797',
+                                            'kosciuszko-land-warrant','jefferson-madison-letter','nh-governor-address-1797'])],
+        'children':{'boyd-bantry-coverage':['boyd-core-report','fleet-return-account'],'peace-cayenne-context':['peace-seizure-report','cayenne-decree-commentary'],
+                    'peace-and-plenty-boarding':['peace-and-plenty-report'],'hermione-mutiny':['hermione-particulars'],
+                    'special-session-1797':['adams-special-session-speech','special-session-proclamation','special-session-house-answer'],
+                    'blount-affair':['blount-letter','blount-knoxville-welcome','blount-committee-report']},
+        'expect':(8,1587),
+        'order':['sn84038410','sn83025588','sn82014782','sn83025881','sn83025525','sn84023150','sn83025527','sn84024710']}}   # the pilot papers first
+CATEGORY_COLORS=['#3987e5','#d95926','#199e70']   # dataviz slots 1-3, validated all-pairs on #050711
 short_names={'sn82014782':'Kentucky Gazette','sn83025525':'The Mirror','sn83025527':'Republican Gazetteer','sn83025588':'New Hampshire Gazette','sn83025881':'Gazette of the United States','sn84023150':'The Eagle','sn84024710':'Virginia Argus','sn84038410':'Patowmac Guardian'}
 # Map layout: each series is placed at its town of publication (from the catalogue's places_json).
 # Coordinates are present-day town centres (latitude, longitude), used only for display.
@@ -60,52 +75,7 @@ old={o['observation_id']:o for o in boyd['observations']}
 summaries={'H012':'A report of the seizure of Peace, attributed to Captain Whitney.','X016':'The Peace seizure report with additional Mercury-attributed commentary.','H013':'A translated Cayenne decree with an attached editorial allegation.'}
 notes={'H012':'Publication date differs from the internal Providence dateline of May 13. The seizure date is not supplied.','X016':'The shared report and appended commentary are distinct textual elements. The commentary is not independently corroborated.','H013':'A contextual document, not an established legal cause of the Peace seizure. The original decree and itemized allegations remain unresolved.'}
 OUT.mkdir(exist_ok=True);(OUT/'assets').mkdir(exist_ok=True)
-observations={};groups=[]
-with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro',uri=True) as db:
-    db.row_factory=sqlite3.Row
-    newspapers=[]
-    for r in db.execute("SELECT n.*,COUNT(DISTINCT i.id) AS issues FROM newspapers n JOIN issues i ON i.newspaper_id=n.id WHERE i.publication_date LIKE '1797%' GROUP BY n.id ORDER BY n.lccn"):
-        newspapers.append({'id':r['id'],'lccn':r['lccn'],'name':short_names[r['lccn']],'title':json.loads(r['titles_json'])[0],'issues_1797':r['issues'],**town(r['places_json'])})
-    coverage=[dict(r) for r in db.execute("SELECT * FROM newspaper_date_coverage WHERE publication_date LIKE '1797%' ORDER BY publication_date,newspaper_id")]
-    # Keep the same positions across groups; pilot papers occupy the first row.
-    order=['sn84038410','sn83025588','sn82014782','sn83025881','sn83025525','sn84023150','sn83025527','sn84024710']
-    newspapers.sort(key=lambda p:order.index(p['lccn']))
-    for short in group_ids:
-        g=dict(db.execute('SELECT * FROM groups WHERE id=?',('group:'+short,)).fetchone())
-        rows=list(db.execute('SELECT * FROM group_publications WHERE group_id=? ORDER BY publication_date,newspaper_id,observation_id',(g['id'],)))
-        g['members']=[]
-        for r in rows:
-            oid=r['observation_id'];g['members'].append({'id':oid,'roles':json.loads(r['roles_json'])})
-            if oid in observations:continue
-            assets=[]
-            for a in db.execute('SELECT path FROM assets WHERE object_id=? ORDER BY path',(oid,)):
-                path=verified_file(a['path'],release);shutil.copyfile(path,OUT/a['path']);assets.append(a['path'])
-            o=dict(r);legacy=o['legacy_id'];prior=old.get(oid,{})
-            # Selections added after v0.1.0 carry their summary and note in an observation_review annotation.
-            review=db.execute("SELECT value_json FROM current_annotations WHERE object_id=? AND annotation_type='observation_review'",(oid,)).fetchone()
-            review=json.loads(review[0]) if review else {}
-            field=db.execute('SELECT transcription_field FROM observations WHERE id=?',(oid,)).fetchone()[0]
-            observations[oid]={'id':oid,'legacy_id':legacy,'node':o['lccn'],'page_id':o['page_id'],'issue_id':o['issue_id'],'date':o['publication_date'],'page':o['page_number'],'excerpt':'\n\n'.join(json.loads(o['excerpts_json'])),'source_url':o['pinned_scan_url'],'scans':assets,'transcription':{'RevX_OCR_text':'RevX','ca_ocr_text':'CA'}[field],'summary':prior.get('summary',summaries.get(legacy,review.get('summary',''))),'note':prior.get('note',notes.get(legacy,review.get('note','')))}
-        groups.append({**{k:g[k] for k in ['id','kind','label','definition','members']},'category':category_of[short],'child':short not in [t for _,_,tops in CATEGORIES for t in tops]})
-    # Stories for the all-stories view: the top-level groups (no parent among the shown groups).
-    children={r[0] for r in db.execute('SELECT child_id FROM group_hierarchy')}
-    stories=[{'id':g['id'],'label':g['label'],'category':g['category'],'members':[m['id'] for m in g['members']]} for g in groups if g['id'] not in children]
-assert {s['id'][6:] for s in stories}=={t for _,_,tops in CATEGORIES for t in tops}, 'Every top-level story needs exactly one display category'
-stories.sort(key=lambda s:min(observations[m]['date'] for m in s['members']))
-# Each passage must belong to exactly one story, so the overview never pulses a passage twice.
-story_members=[m for s in stories for m in s['members']]
-assert len(story_members)==len(set(story_members))==len(observations), 'Top-level stories must partition the passages'
-categories=[{'id':c,'label':label,'stories':['group:'+t for t in tops]} for c,label,tops in CATEGORIES]
-data={'release_version':manifest['version'],'year':1797,'newspapers':newspapers,'coverage':coverage,'groups':groups,'categories':categories,'stories':stories,'observations':list(observations.values()),'edges':[]}
-assert len(newspapers)==8 and sum(c['observed_pages'] for c in coverage)==1587
-assert len(observations)==len({m['id'] for g in groups for m in g['members']})
-for o in observations.values():
-    assert o['scans'] and o['excerpt'] and o['summary'] and o['date'].startswith('1797')
-    paper_id=next(p['id'] for p in newspapers if p['lccn']==o['node'])
-    assert any(c['newspaper_id']==paper_id and c['publication_date']==o['date'] for c in coverage)
-for g in groups:assert len({m['id'] for m in g['members']})==len(g['members'])
-# ---- All years: automatic reuse families (not checked against scans), one data file per year ----
-import re, collections, sys
+import collections, sys
 sys.path.insert(0,str(ROOT/'python_packages'))
 import pyarrow.parquet as pq
 REV='0b97906ad32e269376872934820357fc333151d8';DATASET='RevolutionCrossroads/loc_chronicling_america_1770-1810'
@@ -133,6 +103,64 @@ def name_papers(papers):
         if names[p['name']]>1 and p['lccn'] not in short_names: p['name']+=' · '+p['lccn']
     assert len({p['name'] for p in papers})==len(papers), 'newspaper names must be distinct'
     return papers
+# ---- The reviewed years: stories read and grouped by hand, every printing checked against its scan ----
+observations={};stories=[];reviewed_data={}
+with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro',uri=True) as db:
+    db.row_factory=sqlite3.Row
+    titles={r['lccn']:(r['id'],json.loads(r['titles_json'])[0]) for r in db.execute('SELECT * FROM newspapers')}
+    towns={r['lccn']:town(r['places_json']) for r in db.execute('SELECT lccn,places_json FROM newspapers')}
+    # Newspaper names, distinct over all years: the same names as in the all-years index below.
+    paper_name={p['lccn']:p['name'] for p in name_papers([{'lccn':l,'name':short_name(l,t),'title':t} for l,(_,t) in sorted(titles.items())])}
+    children={r[0] for r in db.execute('SELECT child_id FROM group_hierarchy')}
+    for year,spec in sorted(REVIEWED.items()):
+        tops=[t for _,_,ts in spec['categories'] for t in ts]
+        shown=[g for t in tops for g in [t]+spec['children'].get(t,[])]   # by category: each top-level story, then its sub-stories
+        cat_of={g:f'{year}-{c}' for c,_,ts in spec['categories'] for t in ts for g in [t]+spec['children'].get(t,[])}
+        released={r[0][6:] for r in db.execute('SELECT DISTINCT group_id FROM group_publications WHERE publication_date LIKE ?',(f'{year}%',))}
+        assert released==set(shown) and len(shown)==len(set(shown)), \
+            f'{year}: list every reviewed group of the year once (not listed: {sorted(released-set(shown))}; not in the release: {sorted(set(shown)-released)})'
+        papers=[{'id':r['id'],'lccn':r['lccn'],'name':paper_name[r['lccn']],'title':titles[r['lccn']][1],'issues':r['issues'],**towns[r['lccn']]}
+                for r in db.execute('SELECT n.id,n.lccn,COUNT(DISTINCT i.id) AS issues FROM newspapers n JOIN issues i ON i.newspaper_id=n.id WHERE i.publication_date LIKE ? GROUP BY n.id ORDER BY n.lccn',(f'{year}%',))]
+        if 'order' in spec: papers.sort(key=lambda p:spec['order'].index(p['lccn']))
+        coverage=[dict(r) for r in db.execute('SELECT * FROM newspaper_date_coverage WHERE publication_date LIKE ? ORDER BY publication_date,newspaper_id',(f'{year}%',))]
+        assert (len(papers),sum(c['observed_pages'] for c in coverage))==spec['expect'], f"{year}: newspapers and surviving pages differ from {spec['expect']}"
+        groups=[];year_obs={}
+        for short in shown:
+            g=dict(db.execute('SELECT * FROM groups WHERE id=?',('group:'+short,)).fetchone())
+            rows=list(db.execute('SELECT * FROM group_publications WHERE group_id=? ORDER BY publication_date,newspaper_id,observation_id',(g['id'],)))
+            g['members']=[]
+            for r in rows:
+                oid=r['observation_id'];g['members'].append({'id':oid,'roles':json.loads(r['roles_json'])})
+                if oid in year_obs:continue
+                assets=[]
+                for a in db.execute('SELECT path FROM assets WHERE object_id=? ORDER BY path',(oid,)):
+                    path=verified_file(a['path'],release);shutil.copyfile(path,OUT/a['path']);assets.append(a['path'])
+                o=dict(r);legacy=o['legacy_id'];prior=old.get(oid,{})
+                # Selections added after v0.1.0 carry their summary and note in an observation_review annotation.
+                review=db.execute("SELECT value_json FROM current_annotations WHERE object_id=? AND annotation_type='observation_review'",(oid,)).fetchone()
+                review=json.loads(review[0]) if review else {}
+                field=db.execute('SELECT transcription_field FROM observations WHERE id=?',(oid,)).fetchone()[0]
+                year_obs[oid]={'id':oid,'legacy_id':legacy,'node':o['lccn'],'page_id':o['page_id'],'issue_id':o['issue_id'],'date':o['publication_date'],'page':o['page_number'],'excerpt':'\n\n'.join(json.loads(o['excerpts_json'])),'source_url':o['pinned_scan_url'],'scans':assets,'transcription':{'RevX_OCR_text':'RevX','ca_ocr_text':'CA'}[field],'summary':prior.get('summary',summaries.get(legacy,review.get('summary',''))),'note':prior.get('note',notes.get(legacy,review.get('note','')))}
+            groups.append({**{k:g[k] for k in ['id','kind','label','definition','members']},'category':cat_of[short],'child':short not in tops})
+        # The year's overview plays its top-level stories (groups with no parent).
+        year_stories=[{'id':g['id'],'label':g['label'],'category':g['category'],'members':[m['id'] for m in g['members']]} for g in groups if g['id'] not in children]
+        assert {s['id'][6:] for s in year_stories}==set(tops), f'{year}: every top-level story needs exactly one display category'
+        year_stories.sort(key=lambda s:min(year_obs[m]['date'] for m in s['members']))
+        # Each passage must belong to exactly one story, so the overview never pulses a passage twice.
+        members=[m for s in year_stories for m in s['members']]
+        assert len(members)==len(set(members))==len(year_obs), f'{year}: top-level stories must partition the passages'
+        for o in year_obs.values():
+            assert o['scans'] and o['excerpt'] and o['summary'] and o['date'].startswith(str(year))
+            paper_id=next(p['id'] for p in papers if p['lccn']==o['node'])
+            assert any(c['newspaper_id']==paper_id and c['publication_date']==o['date'] for c in coverage)
+        for g in groups: assert len({m['id'] for m in g['members']})==len(g['members'])
+        assert not set(year_obs)&set(observations), 'a passage belongs to one reviewed year'
+        observations.update(year_obs); stories+=[{**s,'year':year} for s in year_stories]
+        reviewed_data[year]={'year':year,'newspapers':papers,'coverage':coverage,'groups':groups,
+                             'categories':[{'id':f'{year}-{c}','label':label,'stories':['group:'+t for t in ts]} for c,label,ts in spec['categories']],
+                             'stories':year_stories,'observations':list(year_obs.values())}
+reviewed_list=[reviewed_data[y] for y in sorted(reviewed_data)]
+# ---- All years: automatic reuse families (not checked against scans), one data file per year ----
 years_dir=OUT/'years';years_dir.mkdir(exist_ok=True)
 fam_path=release/'derived/reuse_families.parquet'
 families=pq.read_table(verified_file('derived/reuse_families.parquet',release)).to_pylist() if fam_path.exists() else []
@@ -156,13 +184,12 @@ for f in families: by_year[int(f['first_date'][:4])].append(f)
 years_index=[]
 with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro',uri=True) as db:
     db.row_factory=sqlite3.Row
-    titles={r['lccn']:(r['id'],json.loads(r['titles_json'])[0]) for r in db.execute('SELECT * FROM newspapers')}
-    towns={r['lccn']:town(r['places_json']) for r in db.execute('SELECT lccn,places_json FROM newspapers')}
     for year in range(1770,1811):
         fams=sorted(by_year.get(year,[]),key=lambda f:(f['first_date'],-f['newspapers']))
         last=max([f['last_date'] for f in fams]+[f'{year}-12-31'])
         lccns=[r[0] for r in db.execute("SELECT DISTINCT n.lccn FROM newspapers n JOIN issues i ON i.newspaper_id=n.id WHERE i.publication_date LIKE ? ORDER BY n.lccn",(f'{year}%',))]
-        if year==1797: lccns=[p['lccn'] for p in newspapers]+[l for l in lccns if l not in {p['lccn'] for p in newspapers}]
+        if year in reviewed_data:   # a reviewed year keeps its papers in the reviewed order
+            first=[p['lccn'] for p in reviewed_data[year]['newspapers']]; lccns=first+[l for l in lccns if l not in first]
         extra_l=sorted({a['lccn'] for f in fams for a in apps_by[f['family_id']]}-set(lccns))
         papers=name_papers([{'id':titles[l][0],'lccn':l,'name':short_name(l,titles[l][1]),'title':titles[l][1],**towns[l]} for l in lccns+extra_l])
         cov=[dict(r) for r in db.execute("SELECT * FROM newspaper_date_coverage WHERE publication_date BETWEEN ? AND ? ORDER BY publication_date,newspaper_id",(f'{year}-01-01',last))]
@@ -183,18 +210,20 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
                                                           'newspapers':papers,'coverage':cov,'groups':grps,'observations':obs},ensure_ascii=False,separators=(',',':')),encoding='utf8')
         # The year strip on the pulse page: how many newspapers and pages survive each year (the archive's shape).
         pages_y=db.execute("SELECT COUNT(*) FROM pages p JOIN issues i ON i.id=p.issue_id WHERE i.publication_date LIKE ?",(f'{year}%',)).fetchone()[0]
-        years_index.append({'year':year,'reviewed':len(stories) if year==1797 else 0,'matched':len(fams),'matched3':sum(f['newspapers']>=3 for f in fams),
+        years_index.append({'year':year,'reviewed':len(reviewed_data[year]['stories']) if year in reviewed_data else 0,'matched':len(fams),'matched3':sum(f['newspapers']>=3 for f in fams),
                             'papers':len(set(lccns)),'pages':pages_y})
 # ---- Story telescope: every story as a star, placed by real values ----
 # day = first printing (days since 1 Jan 1770); lat = mean latitude of the towns of the papers that printed it.
 EPOCH=datetime.date(1770,1,1).toordinal()
 dnum=lambda s:datetime.date.fromisoformat(s).toordinal()-EPOCH
 stars=[]
-cat_index={c['id']:i for i,c in enumerate(categories)}
+# Reviewed stars carry their year's category: one list over all reviewed years, each category in its year's colour slot.
+tele_cats=[{'id':c['id'],'label':c['label'],'year':y,'slot':i,'color':CATEGORY_COLORS[i]} for y in sorted(reviewed_data) for i,c in enumerate(reviewed_data[y]['categories'])]
+cat_index={c['id']:i for i,c in enumerate(tele_cats)}
 for s in stories:
     obs_s=[observations[m] for m in s['members']]
     ls=sorted({o['node'] for o in obs_s})
-    stars.append({'id':s['id'],'year':1797,'kind':1,'cat':cat_index[s['category']],'first':min(dnum(o['date']) for o in obs_s),'last':max(dnum(o['date']) for o in obs_s),
+    stars.append({'id':s['id'],'year':s['year'],'kind':1,'cat':cat_index[s['category']],'first':min(dnum(o['date']) for o in obs_s),'last':max(dnum(o['date']) for o in obs_s),
                   'papers':len(ls),'prints':len(obs_s),'lat':round(sum(towns[l]['lat'] for l in ls)/len(ls),3),'long':0,'title':s['label']})
 for f in families:
     ls=sorted({a['lccn'] for a in apps_by[f['family_id']]})
@@ -257,7 +286,7 @@ tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'stories':le
            'regions':[{'label':label,'states':states,'color':color,'stories':reg_count[i]} for i,(label,states,color,_) in enumerate(REGIONS)],
            # Sizes as served, so the loading bar can measure progress even when the server compresses the files.
            'bytes':{'data':(OUT/'telescope.json').stat().st_size,'text':(OUT/'telescope-text.json').stat().st_size},
-           'towns':[{'name':n.split(',')[0],'lat':la,'lon':lo,'stories':town_count[n]} for n,_,la,lo in TOWNS if town_count[n]],'categories':[{'label':c['label'],'color':col} for c,col in zip(categories,['#3987e5','#d95926','#199e70'])]}
+           'towns':[{'name':n.split(',')[0],'lat':la,'lon':lo,'stories':town_count[n]} for n,_,la,lo in TOWNS if town_count[n]],'categories':[{'label':c['label'],'year':c['year'],'color':c['color']} for c in tele_cats]}
 # ---- The site: five pages sharing one header and footer (work/site_parts.py, work/site.css) ----
 from site_parts import fill, REPO
 from urllib.parse import quote
@@ -278,6 +307,7 @@ id_to_lccn={v[0]:k for k,v in titles.items()}
 all_l=sorted({id_to_lccn[c['newspaper_id']] for c in cov_all}|{a['lccn'] for v in apps_by.values() for a in v})
 idx_papers=name_papers([{'id':titles[l][0],'lccn':l,'name':short_name(l,titles[l][1]),'title':titles[l][1],**towns[l]} for l in all_l])
 pix={p['lccn']:i for i,p in enumerate(idx_papers)}
+assert all(p['name']==paper_name[p['lccn']] for p in idx_papers), 'a newspaper has one name in every view'
 S_={k:[] for k in ['id','label','papers','first','last','long','topic','off','n']};P_={k:[] for k in ['p','d','e','g','q']};checks=[]
 for f in sorted(families,key=lambda f:(f['first_date'],-f['newspapers'],f['family_id'])):   # stories in date order, so a stretch of years is one slice
     fid=f['family_id'];apps=[]
@@ -296,7 +326,7 @@ index={'epoch':'1770-01-01','scan_base':f'https://huggingface.co/datasets/{DATAS
 (years_dir/'index.json').write_text(json.dumps(index,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 # A stamp of the year files' contents (and the index), so browsers fetch fresh copies after a rebuild.
 year_stamp=hashlib.sha256(b''.join(hashlib.sha256((years_dir/f'{y}.json').read_bytes()).digest() for y in range(1770,1811))+hashlib.sha256((years_dir/'index.json').read_bytes()).digest()).hexdigest()[:12]
-boot={'release_version':VER,'reviewed':data,'years':years_index,'year_stamp':year_stamp,'index_bytes':(years_dir/'index.json').stat().st_size,
+boot={'release_version':VER,'reviewed':reviewed_list,'years':years_index,'year_stamp':year_stamp,'index_bytes':(years_dir/'index.json').stat().st_size,
       # Topics for the story shelf's chips: each topic's plain name and family (as in the telescope).
       'topics':[{'label':SHORT[tid(x)],'family':fam_index[topic_labels[tid(x)]['category']]} for x in topic_list],
       'families':[{'name':f,'short':s,'tiny':t} for f,s,t in FAMILIES]}
@@ -304,13 +334,15 @@ payload=json.dumps(boot,ensure_ascii=False).replace('</','<\\/')
 html=(ROOT/'pulse_explorer.html').read_text(encoding='utf8').replace('__PULSE_DATA__',payload)
 assert '__PULSE_DATA__' not in html
 (OUT/'pulses.html').write_text(fill(html,'pulses',VER,N_STARS),encoding='utf8')
-(OUT/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf8')
+(OUT/'data.json').write_text(json.dumps({'release_version':VER,'reviewed':reviewed_list},ensure_ascii=False,indent=2),encoding='utf8')
 
 # Home: featured stories, the archive in numbers, and a small sample of stars for the hero sky.
 by_id={s['id']:s for s in stars}
 when=lambda s:datetime.date.fromordinal(EPOCH+s['first']).strftime('%B %Y')
 peace=by_id['group:peace-and-plenty-boarding']
-decl=max((s for s in stars if s['kind']==0 and s['year']==1776 and 'declaration by the representatives' in s['title'].lower()),key=lambda s:s['papers'])
+decl=by_id['group:declaration-of-independence']   # reviewed in data release v0.7.0
+day_text=lambda d:datetime.date.fromordinal(EPOCH+d).strftime('%d %B %Y').lstrip('0')
+assert day_text(decl['first'])=='6 July 1776', 'The Declaration card says its first printing came two days after it was adopted'
 pulse_link=lambda s:f"pulses.html?year={s['year']}&focus={quote(s['id'] if s['kind'] else 'auto:'+s['id'])}"
 sky_link=lambda s:f"telescope.html?story={quote(s['id'])}"
 search_link=lambda q:f"telescope.html?view=orbit&q={quote(q)}"
@@ -318,8 +350,8 @@ featured=[
   {'title':'A privateer boards the Peace and Plenty','meta':f"{when(peace)} · {peace['papers']} newspapers · {peace['prints']} printings",'reviewed':True,
    'text':"Captain Dunbar's account of a French privateer boarding his brig, printed in three papers and retold in a fourth. Every printing was checked against its scan.",
    'links':[['Follow the story',pulse_link(peace)],['See it in the sky',sky_link(peace)]]},
-  {'title':'The Declaration of Independence','meta':f"{when(decl)} · {decl['papers']} newspapers · {decl['prints']} printings",'reviewed':False,
-   'text':'Found automatically by its shared wording in the papers that survive, like every matched story. Not yet checked against the scans.',
+  {'title':'The Declaration of Independence','meta':f"{when(decl)} · {decl['papers']} newspapers · {decl['prints']} printings",'reviewed':True,
+   'text':f"First printed in this archive on {day_text(decl['first'])}, two days after Congress adopted it, and in {decl['papers']} papers by {day_text(decl['last'])[:-5]}. Every printing was checked against its scan.",
    'links':[['Follow the story',pulse_link(decl)],['See it in the sky',sky_link(decl)]]},
   {'title':'Fever comes back in summer','meta':'41 years · a search','reviewed':False,
    'text':'Reports of yellow and malignant fever cluster in July to September in most years. The Orbit view shows the season.',
@@ -328,13 +360,13 @@ featured=[
    'text':'Accounts of the Fourth of July come back each summer, in most years of the archive. The Orbit view shows the season.',
    'links':[['See the rhythm',search_link('anniversary of independence, fourth of july, 4th of july')]]}]
 numbers=[[f"{manifest['counts']['eligible_pages']:,}",'pages read'],[str(manifest['counts']['newspapers']),'newspaper series'],['41','years'],
-         [f"{len(families):,}",'matched stories'],[str(len(stories)),'reviewed stories (1797)'],[f"{sum(f['appearances'] for f in families):,}",'printings found']]
+         [f"{len(families):,}",'matched stories'],[str(len(stories)),'reviewed stories ('+', '.join(map(str,sorted(reviewed_data)))+')'],[f"{sum(f['appearances'] for f in families):,}",'printings found']]
 sample=sorted((s for s in stars if not s['long']),key=lambda s:(-s['papers'],-s['prints'],s['first']))[:4500]
 sample.sort(key=lambda s:s['first'])
 palette=['rgba(170,182,207,A)','rgba(57,135,229,A)','rgba(217,89,38,A)','rgba(25,158,112,A)']
 home_data={'featured':featured,'numbers':numbers,'towns':tele_boot['towns'],'palette':palette,
            'sky':{'day':[s['first'] for s in sample],'lat':[s['flat'] for s in sample],'lon':[s['flon'] for s in sample],'papers':[s['papers'] for s in sample],
-                  'color':[s['cat']+1 if s['kind'] else 0 for s in sample]}}
+                  'color':[tele_cats[s['cat']]['slot']+1 if s['kind'] else 0 for s in sample]}}
 home=(ROOT/'home.html').read_text(encoding='utf8').replace('__HOME_DATA__',json.dumps(home_data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
 home=home.replace('__N_STORIES__',f'{N_STARS:,}').replace('__FEATURED_PULSE__',pulse_link(peace))
 (OUT/'index.html').write_text(fill(home,'home',VER,N_STARS),encoding='utf8')
@@ -362,9 +394,12 @@ for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','
     raise AssertionError('Unfilled placeholder '+leftover)
 
 pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','method.html','notes.html','site.css','glass.js']}
-receipt={'passed':True,'release_version':VER,'newspapers':len(newspapers),'curated_passages':len(observations),'group_views':len(groups),'stories_in_overview':len(stories),'overview_categories':len(categories),
+receipt={'passed':True,'release_version':VER,
+         'reviewed_years':[{'year':y,'newspapers':len(d['newspapers']),'passages':len(d['observations']),'group_views':len(d['groups']),'stories':len(d['stories']),'categories':len(d['categories'])} for y,d in sorted(reviewed_data.items())],
+         'curated_passages':len(observations),'group_views':sum(len(d['groups']) for d in reviewed_list),'stories_in_overview':len(stories),'overview_categories':len(tele_cats),
          'years':len(years_index),'matched_families':len(families),'year_files_mb':round(sum((years_dir/f'{y}.json').stat().st_size for y in range(1770,1811))/1e6,1),'year_index_mb':round((years_dir/'index.json').stat().st_size/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
-         'checks':['All displayed sources have scan assets and excerpts','All displayed publications join to observed date coverage','No duplicate observation within a group','Read-only release with verified input hashes','Matched families are labelled as not checked against scans','Every page carries the shared header and footer']
+         'checks':['All displayed sources have scan assets and excerpts','All displayed publications join to observed date coverage','No duplicate observation within a group','Read-only release with verified input hashes','Matched families are labelled as not checked against scans','Every page carries the shared header and footer',
+                   'Each reviewed year lists every one of its groups once, and every top-level story has a display category']
                   +(['Every matched printing carries its transcription check, one printing per page'] if printing_checks else []),
          'matched_printings':sum(len(v) for v in apps_by.values()),
          'pages_sha256':pages}

@@ -879,7 +879,7 @@ function showTip(best) {
   const tip = $('tip'); tip.replaceChildren();
   const strong = document.createElement('strong'); strong.textContent = D.title[best];
   const k = document.createElement('div'); k.className = 'kind';
-  k.textContent = D.kind[best] ? 'Reviewed · ' + BOOT.categories[D.cat[best]].label : D.long[best] ? 'Matched · long-running · not checked' : 'Matched by shared wording · not checked';
+  k.textContent = D.kind[best] ? `Reviewed${BOOT.categories[D.cat[best]].year ? ' ' + BOOT.categories[D.cat[best]].year : ''} · ${BOOT.categories[D.cat[best]].label}` : D.long[best] ? 'Matched · long-running · not checked' : 'Matched by shared wording · not checked';
   const n = document.createElement('div'); n.className = 'mono';
   n.textContent = `${D.papers[best]} newspapers · ${D.prints[best]} printings · ${fmt(D.first[best])}${D.last[best] > D.first[best] ? ' – ' + fmt(D.last[best]) : ''}`;
   const where = document.createElement('div'); where.className = 'kind';
@@ -1059,8 +1059,9 @@ function buildLegend() {   // one colour meaning at a time, the same in the lege
     $('key').replaceChildren(...REGIONS.map((r, j) => swatch(r.label, r.color, '', 'k', 'r' + (j + 1))));
   } else {
     lead.textContent = 'Colours:';
-    legend.replaceChildren(lead, ...BOOT.categories.map(c => swatch('Reviewed · ' + c.label, c.color)), swatch('Matched by shared wording · not checked', AUTO),
-      swatch('Long-running match', LONG), ...note);
+    const years = [...new Set(BOOT.categories.map(c => c.year))], heading = text => Object.assign(document.createElement('span'), {className: 'lead', textContent: text});
+    const reviewed = years.flatMap(y => [heading(y ? `Reviewed, ${y}:` : 'Reviewed:'), ...BOOT.categories.filter(c => c.year === y).map(c => swatch(c.label, c.color))]);
+    legend.replaceChildren(lead, ...reviewed, swatch('Matched by shared wording · not checked', AUTO), swatch('Long-running match', LONG), ...note);
     $('key').replaceChildren();
   }
   $('key').hidden = mode === 'off'; keepEm();

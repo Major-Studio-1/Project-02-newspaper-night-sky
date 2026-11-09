@@ -1,0 +1,1968 @@
+{
+  "findings": {
+    "S76-001": [
+      "Scan matches the excerpt. Above 'My Lords, and Gentlemen' the crop shows the end of the lead-in, '…session of Parliament with the following Speech:'."
+    ],
+    "S76-002": [
+      "Scan matches the excerpt. Above the speech the crop shows the last line of a heading, '…PARLIAMENT, on October 26, 1775.'"
+    ],
+    "S76-003": [
+      "Scan matches the excerpt. The crop's top line ends the lead-in, '…ment with the following speech:'."
+    ],
+    "S76-004": [
+      "Scan matches the excerpt up to 'colonies'. The paper prints the full speech there ('and to their subordinate relation to Great-Britain, now openly avow their revolt …'), so the '...' is RevX dropping printed text, not the paper abridging."
+    ],
+    "S76-005": [
+      "Scan matches the excerpt. The crop's top line ends the lead-in, '…of Parliament with the following Speech:'."
+    ],
+    "S76-006": [
+      "Scan matches the excerpt, including the semicolon after 'misrepresentations'. The crop's top line ends the lead-in, '…Parliament with the following SPEECH:'."
+    ],
+    "S76-007": [
+      "Scan matches the excerpt up to 'colonies'. The paper prints the full text there ('and to their subordinate relation to Great-Britain, now openly avow their …'), so the '...' is RevX dropping printed text."
+    ],
+    "S76-008": [
+      "Scan matches the excerpt and dates the letter 'Holland-House, Dec. 6, 1775.'"
+    ],
+    "S76-009": [
+      "Scan matches the excerpt. The paper itself prints 'an my constant desire': a printed error, not a transcription error."
+    ],
+    "S76-010": [
+      "Crop placed by hand. Scan matches the excerpt. The paper prints the speech under 'PHILADELPHIA, Jan. 8. The following SPEECH was received this morning by express from NEW-YORK', and its heading dates it 'Friday the 27th of October, 1775', where the New-Hampshire Gazette's heading has October 26."
+    ],
+    "S76-011": [
+      "Scan matches the excerpt and reads 'Dec. 16, 1775'. RevX 'shown' for the printed 'shewn' is a minor spelling change."
+    ],
+    "S76-012": [
+      "Scan confirms the heading 'The following is a genuine Copy of a Letter' and also prints a date line, 'Holland House, Dec. 6, 1775.', which RevX drops. So the New-York Gazette dates the letter Dec. 6, as the New-York Packet and the Evening Post do."
+    ],
+    "S76-013": [
+      "Scan matches the excerpt and dates the letter 'Dec. 6, 1775'. Just after the excerpt it prints 'induced me' where the other printings checked have 'induce me'."
+    ],
+    "S76-014": [
+      "Scan reads 'NEW-YORK, January 18.'; RevX 'January 13' is a transcription error, not a printed one. The letter is dated 'Dec. 16, 1775'."
+    ],
+    "S76-015": [
+      "Scan matches the excerpt."
+    ],
+    "S76-016": [
+      "Scan matches the excerpt; the doubled 'the' is the printer's. The dateline above it is plain 'PHILADELPHIA.', with no date."
+    ],
+    "S76-017": [
+      "Scan matches the excerpt."
+    ],
+    "S76-018": [
+      "Scan matches the excerpt."
+    ],
+    "S76-019": [
+      "Scan matches the excerpt."
+    ],
+    "S76-020": [
+      "Scan matches the excerpt, including 'Quebeck' and 'Dec. 16, 1775'."
+    ],
+    "S76-021": [
+      "Scan matches the excerpt and reads 'December 16, 1775'."
+    ],
+    "S76-022": [
+      "Scan matches the excerpt."
+    ],
+    "S76-023": [
+      "Scan reads 'between the hours of 2 and 5' where the other printings have 2 and 7: a printed difference, which RevX transcribes correctly. RevX 'Quebec' for the printed 'Quebeck' is a minor spelling change."
+    ],
+    "S76-024": [
+      "Scan matches the excerpt, including 'the 17th inst. about 9 o'clock in the forenoon'. The heading's first line is clipped at the top of the hand-placed crop but legible."
+    ],
+    "S76-025": [
+      "Scan matches the excerpt, which ends at 'on Sunday'; the time of the evacuation is not in the crop. The second crop shows only the line '[Num. 184.'."
+    ],
+    "S76-026": [
+      "Crop located by hand. Scan matches the excerpt: 'Extract of a letter, received by expreſs, from the beſt authority, dated Head Quarters, Cambridge, 19th March, 1776', with 'on Sunday laſt the 17th inſt. about 9 o'clock in the forenoon'."
+    ],
+    "S76-027": [
+      "Crop located by hand. Scan reads 'Extract of a letter received by express from the best authority, dated Head quarters, Cambridge, March 19th, 1776' and 'on Sunday last the 17th inst. about 9 o'clock in the forenoon'; RevX 'Excerpt' is a transcription error that keeps the sense."
+    ],
+    "S76-028": [
+      "Scan matches the excerpt. The Ledger's heading leaves out 'from the best authority' and the letter has no 'SIR,', as RevX shows."
+    ],
+    "S76-029": [
+      "Scan matches the excerpt. The paper prints 'about 4 o'clock in the forenoon' where the other printings checked have 9 o'clock, and the dateline 'PHILADELPHIA, March 15.' above a letter dated March 19: both are printed, not transcription errors."
+    ],
+    "S76-030": [
+      "Scan matches the excerpt, including 'about 9 o'clock in the forenoon'."
+    ],
+    "S76-031": [
+      "Scan reads 'IN CONGRESS, March 6, 1776' where most printings have April 6: a printed error, not a transcription error. Scan reads 'ſtaves'; RevX 'slaves' is a transcription error that changes the sense."
+    ],
+    "S76-032": [
+      "Scan reads 'April 6, 1776' and 'ſtaves'; RevX 'slaves' is a transcription error that changes the sense."
+    ],
+    "S76-033": [
+      "Scan reads 'April 6, 1776', 'ſtaves' and 'melaſſes'; RevX 'slaves' is a transcription error that changes the sense, while 'melasses' is the printed spelling."
+    ],
+    "S76-034": [
+      "Scan matches the excerpt: 'April 6, 1776', 'ſtaves' and 'molaſſes'."
+    ],
+    "S76-035": [
+      "Scan reads 'In CONGRESS, March 6.' where most printings have April 6: a printed error, as in Dunlap's Pennsylvania Packet, not a transcription error. Scan reads 'ſtaves'; RevX 'slaves' is a transcription error that changes the sense."
+    ],
+    "S76-036": [
+      "Scan reads 'April 6, 1776', 'ſtaves' and 'melaſſes'; RevX 'slaves' is a transcription error that changes the sense."
+    ],
+    "S76-037": [
+      "Crop located by hand. Scan matches the excerpt and reads 'ESECK HOPKINS', 'a cold coaſt' and 'Abacco' (the box runs on to the end of the first sentence); a tear at the left edge has taken the 'P' of 'PHILADELPHIA' and 'Extr' of 'Extract', which the transcription supplies."
+    ],
+    "S76-038": [
+      "Scan reads 'Extract'; RevX 'Extra' is a transcription error. The rest matches; just past the excerpt the print reads 'cold coast' and 'Abacco'."
+    ],
+    "S76-039": [
+      "Scan reads 'Extract of a letter from Eseck Hopkins'; RevX 'Extrait' and 'Esck' are transcription errors. The print has 'cold coast', 'Abacco' and 'president of Congress' without 'the', as transcribed."
+    ],
+    "S76-040": [
+      "Scan reads 'April 6, 1776' and 'ſtaves'; RevX 'slaves' is a transcription error that changes the sense. The small crop reads 'moloſſes', a spelling unlike the other printings, which RevX gives as 'molasses'."
+    ],
+    "S76-041": [
+      "Scan matches the excerpt, with 'ESECK HOPKINS', 'cold coast' and 'Abacco'."
+    ],
+    "S76-042": [
+      "Scan reads 'April 6, 1776' and, as far as the small crop shows, 'ſtaves'; RevX 'slaves' is a transcription error that changes the sense."
+    ],
+    "S76-043": [
+      "Scan reads 'Abacco'; RevX 'Abacoo' is a transcription error. The rest matches the excerpt."
+    ],
+    "S76-044": [
+      "Scan reads 'a coald coast', the paper's spelling of 'cold' (the other papers print 'cold'); RevX 'coal coast' is a transcription error that changes the sense. Scan also reads 'Eseck'; RevX 'Esck' is a minor error."
+    ],
+    "S76-045": [
+      "Scan reads 'April 6, 1776' and 'ſtaves'; RevX 'slaves' is a transcription error that changes the sense."
+    ],
+    "S76-046": [
+      "Crop located by hand. The print has version A, with ink loss in two words: 'firing ſo[me] days' and 'is n[o]t quite finiſhed'. RevX's 'four days' and 'is quite finished' are transcription errors at the damaged spots; the second reverses the sense. RevX's 'Excerpt' is 'Extract' in print."
+    ],
+    "S76-047": [
+      "Crop located by hand. Scan matches the excerpt: 'Extract of a letter ... before Quebec, dated April 6', 'Point Levy has been firing some days' and 'is not quite finished' (Version A)."
+    ],
+    "S76-048": [
+      "Scan matches the excerpt; past it the print reads 'cold coast' and 'Abacco'."
+    ],
+    "S76-049": [
+      "Scan matches the excerpt: version A, with 'firing some days', 'not quite finished' and 'Point Levy'."
+    ],
+    "S76-050": [
+      "Scan matches the excerpt: 'Yeſterday arrived', 'the 2d of March', 'was coming out for America', 'ſail the 10th of April'."
+    ],
+    "S76-051": [
+      "Crop 2 shows the whole excerpt and it matches; crop 1 shows the preceding item, a Portsmouth letter of February 23. The first letter of 'other' is filled with ink and cannot be read, so RevX 'ether' can be neither confirmed nor ruled out."
+    ],
+    "S76-052": [
+      "Crop located by hand. Scan matches the excerpt in the version B wording ('firing ſome Days', 'not quite finiſhed', 'Point Levy'); 'ar' and 'forne' for 'at' and 'ſome' are minor garbles, and just below the crop the print reads 'General Lee's not coming' where the transcription has 'General Let's'."
+    ],
+    "S76-053": [
+      "Scan matches the excerpt. This paper sets both dates in words ('ſecond of March', 'tenth of April') and spells out 'eight hundred' and 'ſix hundred' in the London paragraph that follows."
+    ],
+    "S76-054": [
+      "Scan matches the excerpt: 'Corke', 'fifty other priſoners', 'to inquire'."
+    ],
+    "S76-055": [
+      "Scan matches the excerpt, including the Gazette's own wording: 'By a Gentleman arrived here', 'the following Intelligence' and 'a large naval Force is coming out to America'."
+    ],
+    "S76-056": [
+      "Scan matches the excerpt, with 'about 50 other priſoners' in figures. The heading above it reads 'Extract of a letter from Corke.'"
+    ],
+    "S76-057": [
+      "Scan matches the excerpt: version B, with 'Point Levy' and 'at Little River'."
+    ],
+    "S76-058": [
+      "Scan reads 'ordered to ſail the 10th of April'; RevX 'fail' is a transcription error that changes the sense. In the crop the lead-in is followed by a London paragraph of Jan. 10, not the Packet's February 18 paragraph."
+    ],
+    "S76-059": [
+      "Scan reads 'Extract'; RevX 'Excerpt' is a transcription error. The doubled 'dated' and 'a prodigious quantities of snow' are in the print, not transcription errors."
+    ],
+    "S76-060": [
+      "Scan matches the excerpt: 'fifty other priſoners'. The heading above it reads 'Extract of a letter from Corke.'"
+    ],
+    "S76-061": [
+      "Scan matches the excerpt, including the dateline 'HARTFORD, May 6.' above the extract."
+    ],
+    "S76-062": [
+      "Scan matches the excerpt, except that the paper misprints 'from' as 'frrm', which RevX silently corrects."
+    ],
+    "S76-063": [
+      "Scan matches the excerpt in sense; the paper prints 'by' twice across a line break and spells 'comeing', and RevX silently corrects both. As in the Pennsylvania Journal, a London paragraph of Jan. 10 follows."
+    ],
+    "S76-064": [
+      "Scan matches the excerpt: 'Cork', 'fifty other priſoners'."
+    ],
+    "S76-065": [
+      "Scan matches the excerpt and reads 'May Sessions'; RevX 'intitled' and 'RHODE ISLAND' for the printed 'intituled' and 'RHODE-ISLAND' are minor changes. The act is introduced by 'The following Act came to hand by yesterday's post.'"
+    ],
+    "S76-066": [
+      "Scan matches the excerpt and reads 'May Sessions'; RevX 'entitled' for the printed 'entituled' is a minor spelling change. The act is printed as the enclosure of a letter: 'Inclosed I have sent you the copy of an Act of General Assembly of Rhode-Island, which was received yesterday by General Washington from that colony'."
+    ],
+    "S76-067": [
+      "Scan matches the excerpt: 'Yeſterday arrived', 'the ſecond of March', 'ſail the 10th of April'. In the crop a London paragraph of Feb. 19 follows, not the Packet's February 18 paragraph."
+    ],
+    "S76-068": [
+      "Scan reads 'about 90 other priſoners' where the other printings have fifty or 50: a printed difference, not a transcription error. The rest matches the excerpt."
+    ],
+    "S76-069": [
+      "Crop located by hand. Scan matches the excerpt but reads 'protection', and further down 'Repreſentatives'; RevX's 'protestion' and 'Resentatives' are transcription errors."
+    ],
+    "S76-070": [
+      "Scan matches the excerpt: version A, with 'Quebeck', 'Point Levi' and 'at Little river' without 'the'."
+    ],
+    "S76-071": [
+      "Scan matches the excerpt; the paper gives the members present in figures, '112'."
+    ],
+    "S76-072": [
+      "Scan matches the excerpt, including 'May Sessions' and 'intitled'. The only difference is '&amp;c.' for the printed '&c.', an HTML escape in the stored text."
+    ],
+    "S76-073": [
+      "Scan matches the excerpt and reads 'May Sessions'; RevX 'intitled' for the printed 'intituled' is a minor spelling change."
+    ],
+    "S76-074": [
+      "The paper prints 'his Brittannic Majesty', a misspelling that RevX regularises to 'Britannic' (a minor transcription change). The rest of the excerpt matches the scan."
+    ],
+    "S76-075": [
+      "Scan matches the excerpt. The paper introduces the letter in running text ('A letter from a Gentleman ... says,') rather than under an 'Extract' heading, and prints 'Point Levi'."
+    ],
+    "S76-076": [
+      "Scan matches the excerpt (small crop): 'Yeſterday arrived', 'the 2d of March', 'ſail the 10th of April'."
+    ],
+    "S76-077": [
+      "Scan matches the excerpt (small crop): 'CORKE', 'fifty other priſoners', 'to inquire'."
+    ],
+    "S76-078": [
+      "Scan matches the excerpt."
+    ],
+    "S76-079": [
+      "Scan matches the excerpt, including 'Britannic'."
+    ],
+    "S76-080": [
+      "Scan matches the excerpt and reads 'May Sessions'; RevX 'entitled' for the printed 'entituled' is a minor spelling change."
+    ],
+    "S76-081": [
+      "Scan matches the excerpt, including 'May Sessions'. Just after the excerpt the paper prints 'the latter being only in consequence of the former', without the 'due' that the other crops of the act show."
+    ],
+    "S76-082": [
+      "Scan matches the excerpt. The paper itself prints 'no Answers whatever', where the other printings checked have 'answer' (or the New-York Packet's 'protection'), and 'the humble Petition' in the singular: printed differences, not transcription errors."
+    ],
+    "S76-083": [
+      "Scan matches the excerpt. The crop's top line, 'Whereupon it was read in the following words:', shows the resolution printed inside a report of other proceedings."
+    ],
+    "S76-084": [
+      "Scan matches the excerpt up to 'Great-Britain', and the print runs on ('has, by a late act of Parliament, excluded the inhabitants of these United Colonies …'), so the '...' is RevX dropping printed text. The crop ends there, so it does not show whether the whole resolution is printed."
+    ],
+    "S76-085": [
+      "Scan matches the excerpt, including 'Britannic'."
+    ],
+    "S76-086": [
+      "Scan reads 'May Session', singular, where the other printings have 'May Sessions', and 'in his Colony' without 'this': printed differences, which RevX transcribes correctly. RevX 'entitled' for the printed 'entituled' is a minor spelling change."
+    ],
+    "S76-087": [
+      "The second crop matches the excerpt: version B, with 'Quebeck', 'Point Levi' and 'on Little river' where the Pennsylvania Gazette and Journal have 'at Little River'. The first crop shows the preceding letters from the camp, dated March 28 and 30."
+    ],
+    "S76-088": [
+      "Scan matches the excerpt: 'Yeſterday arrived', 'the 2d of March', 'ſail the 10th of April'. A tear at the right edge takes part of the 's' of 'was'."
+    ],
+    "S76-089": [
+      "Scan matches the excerpt: 'Cork', 'fifty other priſoners'. The left edge of the column is faded but legible."
+    ],
+    "S76-090": [
+      "Scan matches the excerpt. The paper itself prints the dateline 'WILLIAMSBURG, May 11.' above the resolution of Wednesday, May 15: a printed date, not a transcription error."
+    ],
+    "S76-091": [
+      "Crop located by hand. Scan matches the excerpt: 'PRESENT One Hundred and Twelve MEMBERS', 'WEDNESDAY, MAY 15, 1776' and 'FORASMUCH as all the endeavours', after the 'WILLIAMSBURG, May 18.' paragraph."
+    ],
+    "S76-092": [
+      "Scan matches the excerpt up to 'crown', and the print runs on ('---And whereas no answer whatever, to the humble petition of the colonies for redress …'), so the '...' is RevX dropping printed text. The crop does not show the rest of the resolution."
+    ],
+    "S76-093": [
+      "Scan reads 'all the endeavours' (faint, worn type); RevX 'enjoyments' is a transcription error that changes the sense. The rest of the excerpt matches."
+    ],
+    "S76-094": [
+      "Crop located by hand. Scan matches the excerpt and reads 'Britannick', 'protection' and 'no anſwer whatever'; below the crop the same column prints the full resolution down to 'JOHN HANCOCK, preſident'."
+    ],
+    "S76-095": [
+      "Scan matches the excerpt."
+    ],
+    "S76-096": [
+      "Scan matches the excerpt, including 'Britannick'. Above the heading the crop shows the end of the preceding item, 'Published by order of Congress. CHARLES THOMSON, Sec'ry.'"
+    ],
+    "S76-097": [
+      "Scan reads 'whether original, judicial, or executory, civil and criminal'; RevX puts two Chinese characters in place of 'executory', a transcription error. The rest of the one-sentence summary matches the scan."
+    ],
+    "S76-098": [
+      "Scan matches the excerpt, including 'Earl of Hartford'."
+    ],
+    "S76-099": [
+      "Scan reads 'some of the Com-mon Council' (split at a line end, with the left margin worn), so RevX 'Councillors' is a transcription error, not a printed difference. The paper prints 'Earl of Hertford'; the rest of the excerpt matches."
+    ],
+    "S76-100": [
+      "Scan matches the excerpt, including 'Earl of Hertford' and the lower-case 'common council'. RevX 'household' for the printed 'houshould' is a minor spelling change."
+    ],
+    "S76-101": [
+      "Scan reads 'Forasmuch as all the endeavours'; RevX drops 'all', a small transcription error, not a printed difference. The rest of the excerpt matches."
+    ],
+    "S76-102": [
+      "Scan reads 'And whereas no protection whatever, to the humble petition': the paper itself prints 'protection' where the other printings have 'answer', a printed error, not a transcription error. The resolution is quoted inside another document, after 'And whereas the Continental Congress did resolve as followeth, to wit.'"
+    ],
+    "S76-103": [
+      "Scan matches the excerpt, except that the paper prints 'St. Eustatia', which RevX gives as 'St. Eustatius'. The lead-in stands under the heading 'PHILADELPHIA, June 4.', and the paper prints 'Earl of Hartford'."
+    ],
+    "S76-104": [
+      "Scan matches the excerpt, including 'the humble petition' in the singular."
+    ],
+    "S76-105": [
+      "Scan matches the excerpt; the lead-in reads 'This day the Honorable House of Assembly'."
+    ],
+    "S76-106": [
+      "Scan matches the excerpt, including 'Earl of Hartford'. RevX 'Household' for the printed 'Houshold' is a minor spelling change."
+    ],
+    "S76-107": [
+      "Scan matches the excerpt up to 'Majesty'. The paper prints the full text there ('(being introduced by the Earl of Hartford, Lord Chamberlain of his Majesty's house-…'), so the '...' is RevX dropping printed text, not the paper abridging."
+    ],
+    "S76-108": [
+      "Scan matches the excerpt."
+    ],
+    "S76-109": [
+      "Scan matches the excerpt."
+    ],
+    "S76-110": [
+      "Scan reads 'no protection whatever', as on 6 June: a printed error, not a transcription error. The text is set line for line as in the 6 June printing and is again quoted inside another document."
+    ],
+    "S76-111": [
+      "Scan matches the excerpt, except that the paper prints 'this co-colony' across a line break, which RevX silently corrects."
+    ],
+    "S76-112": [
+      "Scan matches the excerpt, including 'Earl of Hertford' and the singular 'the Sheriff'. RevX 'household' for the printed 'houshold' is a minor spelling change."
+    ],
+    "S76-113": [
+      "Scan matches the excerpt. The crop's top line, '…was by order read and is in the words following, to wit,', and the quotation marks down the margin show the resolution quoted inside a report of proceedings."
+    ],
+    "S76-114": [
+      "Scan matches the excerpt. The lead-in names 'Captain Farrey, from St. Eustatia' (the New-York Packet prints 'Capt. Farey'), and the paper prints 'Earl of Hertford'; the King's answer is outside the crop."
+    ],
+    "S76-115": [
+      "Crop located by hand. Scan matches the excerpt. The New-York Packet's lead-in is 'The Hon. Houſe of Aſſembly gave the following Inſtructions', under 'PHILADELPHIA, June 10.', and the instructions open 'WHEN'."
+    ],
+    "S76-116": [
+      "Scan matches the excerpt, including 'Earl of Hartford', except that the paper misprints 'which' as 'wich' and spells 'houshold'; RevX silently corrects both."
+    ],
+    "S76-117": [
+      "Scan matches the excerpt, including 'Earl of Hartford'."
+    ],
+    "S76-118": [
+      "Crop located by hand. Scan reads 'This day the Hon. House of Assembly ...' and 'Gentlemen, WEN, by our instructions': the paper misprints 'WHEN' as 'WEN', and RevX 'WE' is a transcription error; the rest matches."
+    ],
+    "S76-119": [
+      "Scan matches the excerpt."
+    ],
+    "S76-120": [
+      "Scan reads 'Present 12 Members.' where the other printings have 112: a printed error, not a transcription error. Otherwise the scan matches the excerpt."
+    ],
+    "S76-121": [
+      "Scan matches the excerpt; 'Hon.' in the lead-in is mostly hidden by a blot."
+    ],
+    "S76-122": [
+      "Scan matches the excerpt, and the next paragraph reads 'the George and Annabella transports'."
+    ],
+    "S76-123": [
+      "Scan matches the excerpt. RevX's 'dated S I R, Boston' follows the print's layout, and 'which has occasioned' is the paper's own wording."
+    ],
+    "S76-124": [
+      "Scan matches the excerpt. The place and date stand in the heading ('dated Boston, June 19, 1776'), and the paper spells 'reflexion'."
+    ],
+    "S76-125": [
+      "Scan matches the excerpt. The heading is set in large roman type, and further on the paper spells 'intitle' where the other printings' crops show 'entitle'."
+    ],
+    "S76-126": [
+      "Scan matches the excerpt."
+    ],
+    "S76-127": [
+      "Scan matches the excerpt, including 'one People' with a capital P. The heading mixes small capitals, italic capitals and italics, and the initial W sits in an ornamental block."
+    ],
+    "S76-128": [
+      "Scan matches the excerpt up to 'Boston harbour'. The paper prints the letter on without a break ('; but when the circumstances which have occasioned this disaster are understood ...'), so the '...' is RevX dropping printed text, not the paper abridging."
+    ],
+    "S76-129": [
+      "Scan matches the excerpt. 'A DECLARATION' stands alone on a line in large spaced capitals."
+    ],
+    "S76-130": [
+      "Scan matches the excerpt. The heading follows the masthead dated July 10, 1776, with 'A DECLARATION' in large spaced capitals."
+    ],
+    "S76-131": [
+      "Scan matches the excerpt. A fold crosses the last heading line, but every word can be read."
+    ],
+    "S76-132": [
+      "Scan matches the excerpt. The Declaration follows an ornamental rule under the previous item."
+    ],
+    "S76-133": [
+      "Scan matches the excerpt; a few worn letters are still legible. The Declaration stands under a 'PHILADELPHIA.' dateline."
+    ],
+    "S76-134": [
+      "Scan matches the excerpt, except that the paper misprints 'UUITED' in the heading, which RevX silently corrects to 'UNITED'. The print also spells 'seperate'."
+    ],
+    "S76-135": [
+      "Scan matches the excerpt. A fold crosses the heading, but every word can be read."
+    ],
+    "S76-136": [
+      "Scan matches the excerpt, including the dateline 'PHILADELPHIA, July 4.'."
+    ],
+    "S76-137": [
+      "Scan matches the excerpt. The print itself reads 'make in proper' and 'your steady adherence' (others 'make it' and 'steady attention and adherence'): printed differences, not transcription errors."
+    ],
+    "S76-138": [
+      "Scan matches the excerpt; RevX's 'W HEN' is the large initial W followed by 'HEN'. The paper spells 'seperate', as the American Gazette does."
+    ],
+    "S76-139": [
+      "Scan matches the excerpt and confirms 'which will be published at full length in next week's Gazette'. The italic summary leads into the Declaration's closing paragraphs, 'IN every stage of these oppressions ...'."
+    ],
+    "S76-140": [
+      "Crop shows the opening, but its right edge cuts every line of the large display heading, so the transcription's gaps in the heading cannot be checked here. What the crop shows of the heading, and the body text, match the excerpt."
+    ],
+    "S76-141": [
+      "Crop shows the heading and the first two lines of text, to 'which connected them'; the rest of the excerpt ('with another, and to assume, among the powers of') is below the crop. The paper prints 'which connected them' without 'have': a printed difference, not a transcription error."
+    ],
+    "S76-142": [
+      "Scan matches the excerpt, though the type is worn. The heading has 'A DECLARATION,' with a comma, as the excerpt does."
+    ],
+    "S76-143": [
+      "Scan matches the excerpt, but the paper prints the heading 'In CONGRESS, July 10, 1776.' above the report, which RevX drops; so the Evening Post carries the heading like the other papers. Scan reads 'three hundred and ninety' and 'about forty-three miles above Montreal'."
+    ],
+    "S76-144": [
+      "Scan matches the excerpt, including 'NEW-YORK, July 24.', 'lie in Haverstraw-Bay', 'last Saturday' and 'a thirty-two pounder'."
+    ],
+    "S76-145": [
+      "Scan matches the excerpt. A week after its 19 July summary, Purdie's paper prints the full text, and it reads 'which have connected them'."
+    ],
+    "S76-146": [
+      "Scan matches the excerpt, except that the paper prints 'midle', which RevX silently corrects to 'middle'."
+    ],
+    "S76-147": [
+      "Scan matches the excerpt, with the dateline 'PHILADELPHIA, July 27.' and 'Patterson'. 'Adjutant-General' is broken across a line at the hyphen."
+    ],
+    "S76-148": [
+      "Scan matches the excerpt, including the heading 'In CONGRESS, July 24, 1776.' and 'the twenty-third day of April last'."
+    ],
+    "S76-149": [
+      "Scan matches the excerpt apart from two printer's errors that RevX silently corrects: the drop initial is a 'W' ('WHE Committee') and the number is printed 'three hundreed and ninety'. The sense is unchanged: 390 troops, 'about forty-three miles above Montreal'."
+    ],
+    "S76-150": [
+      "Scan matches the excerpt, including the heading 'In CONGRESS, July 24.' without the year and 'the 23d day of April last'."
+    ],
+    "S76-151": [
+      "Scan matches the excerpt where it can be read ('NEW-YORK, July 24.', 'lie in Haverstraw-Bay', 'last Saturday'). The right-hand ends of three lines are faded, so 'cruise' or 'cruize', 'near' and the end of 'thirty-two' cannot be read in full."
+    ],
+    "S76-152": [
+      "Scan matches the excerpt, including 'enquiry'. Scan reads 'three hundred and ninety' and 'about forty-three miles above Montreal'."
+    ],
+    "S76-153": [
+      "Scan matches the excerpt, including 'lie in Haverstraw-Bay', 'last Saturday' and 'a thirty-two pounder'; RevX 'cruise' for the printed 'cruize' is a minor error."
+    ],
+    "S76-154": [
+      "Scan matches the excerpt. There is no dateline: the italic introduction follows the signature 'By order of Congress, JOHN HANCOCK, President.' of the previous item, and the scan reads 'Adjutant General' without a hyphen."
+    ],
+    "S76-155": [
+      "Scan matches the excerpt, including 'the twenty third day of April last'; RevX 'merchandise' for the printed 'merchandize' is a minor error. The same paper's 5 August printing names March and April instead."
+    ],
+    "S76-156": [
+      "Scan reads 'last Saturday Sen'night' (the Saturday before last); RevX 'last Saturday night' is a fact-changing transcription error. The print also runs on after 'near the Fort' ('upon which our People fired a 32 Pounder at her …'), so the '...' is RevX shortening, not the paper."
+    ],
+    "S76-157": [
+      "Crop located by hand. Scan matches the excerpt; the heading is printed in full, apparently as 'Lieutenent Colonel', which the transcription regularises, and the box runs on two lines to show 'the George and Annabella tranſports'."
+    ],
+    "S76-158": [
+      "Scan matches the excerpt, including 'harbor'. Above the heading the paper prints the dateline 'PHILADELPHIA, JULY 5.', where the New-England Chronicle has July 4."
+    ],
+    "S76-159": [
+      "Scan matches the excerpt, including the comma after 'Committee'. Scan reads 'three hundred and ninety' and 'about forty-three miles above Montreal'."
+    ],
+    "S76-160": [
+      "Scan matches the excerpt, including 'lie in Haverstraw-Bay', 'cruise' (printed with a long s), 'last Saturday' and 'a thirty-two pounder'."
+    ],
+    "S76-161": [
+      "Scan matches the excerpt, with the dateline 'PHILADELPHIA, July 31.' (not July 27) and 'Adjutant-General' hyphenated."
+    ],
+    "S76-162": [
+      "Scan matches the excerpt, including 'IN CONGRESS, July 24, 1776.' and 'the 23d day of April last'; RevX 'merchandise' for the printed 'merchandize' is a minor error."
+    ],
+    "S76-163": [
+      "Scan matches the excerpt. Scan reads 'three hundred and ninety' and 'about forty-three miles above Mon-' (the crop ends at the line break)."
+    ],
+    "S76-164": [
+      "Scan matches the excerpt. There is no dateline: the italic introduction follows an ornamental rule, and the scan reads 'Adjutant General' without a hyphen."
+    ],
+    "S76-165": [
+      "Scan reads 'lie in Haverstraw-Bay' in worn type at the end of the line; RevX 'being' is a transcription error, not a printed difference. The rest matches the excerpt."
+    ],
+    "S76-166": [
+      "Scan matches the excerpt, including 'In CONGRESS, July 24, 1776.' and 'the 23d day of April last'; RevX 'merchandise' for the printed 'merchandize' is a minor error."
+    ],
+    "S76-167": [
+      "Scan matches the excerpt, including 'endeavored' and 'about fifteen inhabitants'."
+    ],
+    "S76-168": [
+      "Scan matches the excerpt, with the dateline 'NEW-YORK, July 25.', the lead-in 'By the last account we had' and 'last Saturday'; RevX 'cruising' for the printed 'cruizing' is a minor error."
+    ],
+    "S76-169": [
+      "Scan matches the excerpt. Directly above it the paper prints a 'PHILADELPHIA.' heading without a date, so the Pennsylvania Ledger has a place heading but no dated dateline; the scan reads 'Adjutant General' without a hyphen."
+    ],
+    "S76-170": [
+      "Scan matches the excerpt, including 'endeavoured' and 'about 15 inhabitants'. The paragraph is dated 'July 31.', where the Packet's printing is headed 'NEW-YORK, August 1.'"
+    ],
+    "S76-171": [
+      "Scan matches the excerpt, including 'NEW-YORK, August 1.', 'endeavoured' and 'about 15 inhabitants'."
+    ],
+    "S76-172": [
+      "Scan matches the excerpt. The paper printed 'the twenty-third day of March last, and on the third day of April last', where its own 29 July printing and the other papers read 'April' alone: a printed difference, not a transcription error."
+    ],
+    "S76-173": [
+      "Scan matches the excerpt, including 'Cartel' and 'enquiry'. Scan reads 'three hundred and ninety' and 'about forty-three miles above Montreal'."
+    ],
+    "S76-174": [
+      "Scan matches the excerpt, with the dateline 'PHILADELPHIA, July 27.' and 'Adjutant-General' hyphenated. The print appears to read 'uſial' for 'usual', a misprint that RevX corrects."
+    ],
+    "S76-175": [
+      "Crop 2 shows the item and matches the excerpt, including 'July 24, 1776' and 'the 23d day of April last'; RevX 'merchandise' for the printed 'merchandize' is a minor error. Crop 1 shows the preceding 22 July resolution on Colonel Ethan Allen."
+    ],
+    "S76-176": [
+      "Scan matches the excerpt. The crop ends at 'fired a Shot which', before 'hulled'."
+    ],
+    "S76-177": [
+      "Scan matches the excerpt, including 'all the gondolas', which the other printings do not have. The crop ends before 'hulled'."
+    ],
+    "S76-178": [
+      "Scan matches the excerpt; the print reads 'hulled the Rose'."
+    ],
+    "S76-179": [
+      "Scan matches the excerpt up to 'barricaded up'. The paper prints the full report there ('and lay there untill three of the boats were within shot of them …'), so the '...' is RevX dropping printed text, not the paper abridging."
+    ],
+    "S76-180": [
+      "Scan matches the excerpt, including the comma after 'Arnold'. Scan reads 'three hundred and ninety' and 'about forty-three miles above Montreal'."
+    ],
+    "S76-181": [
+      "Crop located by hand. Scan matches the excerpt: 'In CONGRESS, July 24.' (no year), extending the resolutions 'paſſed on the 23d day of April laſt'."
+    ],
+    "S76-182": [
+      "Scan matches the excerpt, including 'endeavouring' and 'about 15 inhabitants'. The first letters of some lines are faint at the crop's left edge but can be read."
+    ],
+    "S76-183": [
+      "Scan matches the excerpt, with 'make it proper for me to give you some recess'."
+    ],
+    "S76-184": [
+      "Scan matches the excerpt. This paper sets both numbers in figures: '390 continental troops' and 'about 43 miles above Montreal'."
+    ],
+    "S76-185": [
+      "Scan matches the excerpt, including 'lie in Haverstraw bay', 'last Saturday' and 'a 32 pounder'. The paragraph opens with the date 'July 24.', before the point where the excerpt begins."
+    ],
+    "S76-186": [
+      "Scan matches the excerpt, including 'endeavouring' and 'about 15 inhabitants'."
+    ],
+    "S76-187": [
+      "Scan matches the excerpt; the print reads 'hulled the Rose' and 'an hour and twenty minutes'. The item starts at 'At about a quarter after one', with no introduction visible above it."
+    ],
+    "S76-188": [
+      "Scan matches the excerpt, with 'makes it proper'; the heading reads 'On Thursday, May 23, 1776'."
+    ],
+    "S76-189": [
+      "Crop located by hand. Scan matches the excerpt, under the heading 'IN CONGRESS, July 10, 1776.', with '390 continental troops' and 'about 43 miles above Montreal' in figures."
+    ],
+    "S76-190": [
+      "Crop located by hand. The item starts at the foot of column 1 under 'July 24.' and ends at the top of column 2; the scan matches the excerpt and reads 'lie in Haverſtraw Bay', 'laſt Saturday' and 'a 32 pounder'."
+    ],
+    "S76-191": [
+      "Scan reads 'makes it proper for me to give you some recess'; RevX 'recels' is a minor garble. The heading reads 'On Thursday, May 23, 1776'."
+    ],
+    "S76-192": [
+      "Scan matches the introduction as far as 'Parliament'; the print goes on with 'on Thursday the 23d of May, 1776' and 'My Lords and Gentlemen,', which RevX replaces with '...'. The crop ends at the salutation, so it cannot show whether the speech is printed in full."
+    ],
+    "S76-193": [
+      "Scan matches the excerpt. The print itself reads 'the foremast' where the other printings have 'foremost': a printed error, not a transcription error."
+    ],
+    "S76-194": [
+      "Scan matches the excerpt, with the dateline 'NEW-YORK, August 5.' and 'Adjutant General' without a hyphen."
+    ],
+    "S76-195": [
+      "Scan matches the excerpt; the note runs under its own heading and ends 'Dated Cove, Jan. 24, 1776.', followed by a House of Commons item. The crop shows nothing above the heading, so it cannot confirm that the letter itself is absent."
+    ],
+    "S76-196": [
+      "Scan reads 'July 20, 1776' for the date of the interview; RevX 'July 25' is a transcription error. Otherwise the scan matches the excerpt, with the dateline 'PHILADELPHIA, July 27.' and 'Adjutant-General'."
+    ],
+    "S76-197": [
+      "Scan matches the excerpt, including 'IN CONGRESS, July 24, 1776.' and 'the 23d day of April last'."
+    ],
+    "S76-198": [
+      "Crop located by hand. Scan matches the excerpt ('endeavoured', '15 inhabitants') except that the print reads 'concealed themſelves is a fiſhing hut': a printed misprint for 'in', which RevX silently corrects."
+    ],
+    "S76-199": [
+      "Scan matches the excerpt. The print reads 'At about half a quarter after 1', where the other printings have 'a quarter after one': a printed difference, not a transcription error."
+    ],
+    "S76-200": [
+      "Scan matches the excerpt, including 'Capt. Foster' and 'three hundred & ninety'. The crop ends at 'about forty-three miles'; the line with 'above Montreal' is cut off."
+    ],
+    "S76-201": [
+      "Scan matches the excerpt: the paper itself prints 'in which, as through the whole conversation', leaving out 'well as', a printed difference, not a transcription error. Above the item stands a 'PHILADELPHIA' heading without a date."
+    ],
+    "S76-202": [
+      "Scan matches the excerpt, including the heading 'In CONGRESS. July 24.', 'the 23d day of April last' and 'their tackle apparel' without a comma."
+    ],
+    "S76-203": [
+      "Scan matches the excerpt, with the dateline 'PHILADELPHIA, July 27.' and 'July 20, 1776'. The crop is small but legible."
+    ],
+    "S76-204": [
+      "Scan matches the excerpt and confirms 'from a New York paper of August 5th' and 'hulled the Rose'; RevX 'row-galleys' modernises the printed 'row-gallies'. Just after the excerpt the print reads 'a heavy fire' where other printings have 'a very heavy fire'."
+    ],
+    "S76-205": [
+      "Scan matches the excerpt: 'Capts. Fosdyke', 'a suitable warming' and 'the 12th of July'."
+    ],
+    "S76-206": [
+      "Scan reads 'a suitable warming'; RevX 'warning' is a transcription error that changes the sense. The rest matches: 'Captains Fosdyke', 'the 12th of July'."
+    ],
+    "S76-207": [
+      "Scan reads 'Capts. Fosdyke' and 'a suitable warming'; RevX 'Fossdyke' and 'warning' are transcription errors, and 'warning' changes the sense."
+    ],
+    "S76-208": [
+      "Scan matches the excerpt. In print the first letter of 'hulled' looks like a b, which would explain a 'bulled' reading; RevX 'hulled' gives the intended word."
+    ],
+    "S76-209": [
+      "Scan reads 'some Recess' and 'your steady Attention'; RevX 'Receipts' and 'ready' are transcription errors that change the sense. The heading is cut through the middle, so 'Tuesday' or 'Thursday' cannot be confirmed from the crop."
+    ],
+    "S76-210": [
+      "Scan matches the excerpt. The print itself reads 'Same day', 'the twelfth of July' and 'warning', where the other printings have 'Last Friday', '12th' and 'warming': printed differences, not transcription errors."
+    ],
+    "S76-211": [
+      "Scan matches the excerpt, with 'make it proper'; the heading reads 'on THURSDAY the 23d of May, 1776'."
+    ],
+    "S76-212": [
+      "Scan reads 'Capts. Fos-dyke' and 'a suitable warming'; RevX 'Folyke' and 'warning' are transcription errors. The dateline is printed 'NEW-YOKK, August 14', where other printings have 'NEW-YORK, August 19': a printed difference, not a transcription error."
+    ],
+    "S76-213": [
+      "Scan matches the excerpt: 'NEW-YORK, August 19', 'Capts. Fosdyke', 'Warming' and 'the 12th of July'."
+    ],
+    "S76-214": [
+      "Scan reads 'Capts. Fosdyke' and 'a suitable Warming'; RevX 'Capt.' and 'warning' are transcription errors, and 'warning' changes the sense. The dateline 'NEW-YORK, August 19' and 'the 12th of July' match."
+    ],
+    "S76-215": [
+      "Scan reads 'capts. Fosdyke' and 'a suitable warming'; RevX 'capt.' and 'warning' are transcription errors, and 'warning' changes the sense. In print the item opens with the date 'August 19.'"
+    ],
+    "S76-216": [
+      "Scan matches the excerpt, including the dateline 'Philadelphia, September 8, 1776.' and the lead-in 'Yesterday'."
+    ],
+    "S76-217": [
+      "Scan matches the CA excerpt, which opens 'Monday last'. CA 'fubje&' and 'pro positions' are garbles of the printed 'subject' and 'pro-positions'."
+    ],
+    "S76-218": [
+      "Scan matches the excerpt, which opens 'On Monday last'; the print goes on to 'by Gen. Sullivan.'"
+    ],
+    "S76-219": [
+      "Scan matches the excerpt, which sits at the foot of a long crop: 'PHILADELPHIA, Sept. 14. Last Monday the Hon. Benjamin Franklin…'."
+    ],
+    "S76-220": [
+      "Scan matches the excerpt, including 'Staten-island'."
+    ],
+    "S76-221": [
+      "Scan matches the excerpt."
+    ],
+    "S76-222": [
+      "Scan matches the excerpt, which opens 'Yesterday'. The crop cuts off the line above, so it does not show whether a date stood there."
+    ],
+    "S76-223": [
+      "Scan matches the excerpt. The signature just above it is printed 'CHARLES THOMPSON' (the Pennsylvania Gazette, Dunlap's Packet and Dixon and Hunter's Gazette have THOMSON)."
+    ],
+    "S76-224": [
+      "Scan matches the excerpt. The paragraph opens 'Sept. 8. Yesterday', as the Packet's 'September 8, 1776. Yesterday' does; the excerpt begins after the date."
+    ],
+    "S76-225": [
+      "Crop located by hand. Scan matches the excerpt and the quota table: 'eighty-eight battalions', with Massachusetts-Bay 15, Pennsylvania 12 and Virginia 15 (13 quotas, total 88)."
+    ],
+    "S76-226": [
+      "Scan matches the excerpt across the two crops; the column breaks after 'Wednesday last'."
+    ],
+    "S76-227": [
+      "Scan matches the excerpt. The Evening Post gives the quotas in words: Massachusetts-Bay fifteen, Pennsylvania twelve, Virginia fifteen."
+    ],
+    "S76-228": [
+      "Scan matches the excerpt, with the quotas in a table: Massachusetts-Bay 15, Pennsylvania 12, Virginia 15."
+    ],
+    "S76-229": [
+      "Scan matches the excerpt, with the quotas run on in the text: Massachusetts-Bay 15, Pennsylvania 12, Virginia 15."
+    ],
+    "S76-230": [
+      "Scan matches the excerpt but prints 'be inlisted', which RevX modernises to 'enlisted' (a minor spelling change). The crop ends at Maryland, so Virginia's quota is not shown."
+    ],
+    "S76-231": [
+      "Scan matches the excerpt. This printing's wording differs from the other printings: 'of the public business', 'your affectionate attachment', 'the true interests'."
+    ],
+    "S76-232": [
+      "Scan matches the excerpt. The small crop cuts through its last word, 'politeness', at the lower edge."
+    ],
+    "S76-233": [
+      "Crop located by hand. The box takes in the whole short item; the scan matches the excerpt and confirms '88 battalions' and 'the State of Virginia, as their quota, to furniſh 15 battalions', with no other state's quota."
+    ],
+    "S76-234": [
+      "Scan matches the excerpt. Purdie's sets the lead-in in italics and prints the report without quotation marks."
+    ],
+    "S76-235": [
+      "Crop located by hand. Scan matches the excerpt and its continuation: '88 battalions', with Massachusetts Bay 15, Pennsylvania 12 and Virginia 15. The box runs two lines past the excerpt, to the end of the quota list ('Georgia 1.')."
+    ],
+    "S76-236": [
+      "Scan matches the excerpt: 'PHILADELPHIA, September 14. LAST Monday the honourable Benjamin Franklin…', the Evening Post's dateline and lead-in. The print is faint but legible."
+    ],
+    "S76-237": [
+      "Scan matches the excerpt; the report is set in italics. The print is faint, and 'were' in the lead-in shows only as 'we', so the crop cannot tell a printer's slip from letters that did not ink."
+    ],
+    "S76-238": [
+      "Scan matches the excerpt, with 'Massachusetts Bay 15 ditto' and 'Pennsylvania 12 ditto'. The crop ends at Delaware, so Virginia's quota is not shown."
+    ],
+    "S76-239": [
+      "Scan matches the excerpt and reads 'October 21st'."
+    ],
+    "S76-240": [
+      "Scan matches the excerpt, which prints '88 battalions' in figures under 'PHILADELPHIA, Sept. 24.'"
+    ],
+    "S76-241": [
+      "Scan matches the excerpt and reads 'October 21'."
+    ],
+    "S76-242": [
+      "Crop located by hand. Scan matches the excerpt, including 'October 21st'. A second crop shows the Lake Champlain passage later in the item: the scan reads '12 or 18 pounder', so the the Pennsylvania Gazette transcription '12 or 13' is a transcription error outside the excerpt."
+    ],
+    "S76-243": [
+      "Scan matches the excerpt and reads 'October 21st'."
+    ],
+    "S76-244": [
+      "Scan matches the excerpt and reads 'October 21'."
+    ],
+    "S76-245": [
+      "Crop located by hand. Scan matches the excerpt and reads 'October 21ſt'; the crop shows the heading and the start of the Staten Island report."
+    ],
+    "S76-246": [
+      "Scan reads 'October 31st', as RevX does, where the other printings have October 21st or 21: a printed error, not a transcription error. An ink blot covers 'from'; the rest matches."
+    ]
+  },
+  "crops": {
+    "S76-001": [
+      "S76-001.jpg"
+    ],
+    "S76-002": [
+      "S76-002.jpg"
+    ],
+    "S76-003": [
+      "S76-003.jpg"
+    ],
+    "S76-004": [
+      "S76-004-1.jpg",
+      "S76-004-2.jpg"
+    ],
+    "S76-005": [
+      "S76-005.jpg"
+    ],
+    "S76-006": [
+      "S76-006.jpg"
+    ],
+    "S76-007": [
+      "S76-007.jpg"
+    ],
+    "S76-008": [
+      "S76-008.jpg"
+    ],
+    "S76-009": [
+      "S76-009.jpg"
+    ],
+    "S76-010": [
+      "S76-010.jpg"
+    ],
+    "S76-011": [
+      "S76-011.jpg"
+    ],
+    "S76-012": [
+      "S76-012.jpg"
+    ],
+    "S76-013": [
+      "S76-013.jpg"
+    ],
+    "S76-014": [
+      "S76-014.jpg"
+    ],
+    "S76-015": [
+      "S76-015.jpg"
+    ],
+    "S76-016": [
+      "S76-016.jpg"
+    ],
+    "S76-017": [
+      "S76-017.jpg"
+    ],
+    "S76-018": [
+      "S76-018.jpg"
+    ],
+    "S76-019": [
+      "S76-019.jpg"
+    ],
+    "S76-020": [
+      "S76-020.jpg"
+    ],
+    "S76-021": [
+      "S76-021.jpg"
+    ],
+    "S76-022": [
+      "S76-022.jpg"
+    ],
+    "S76-023": [
+      "S76-023-1.jpg",
+      "S76-023-2.jpg"
+    ],
+    "S76-024": [
+      "S76-024.jpg"
+    ],
+    "S76-025": [
+      "S76-025-1.jpg",
+      "S76-025-2.jpg"
+    ],
+    "S76-026": [
+      "S76-026.jpg"
+    ],
+    "S76-027": [
+      "S76-027.jpg"
+    ],
+    "S76-028": [
+      "S76-028.jpg"
+    ],
+    "S76-029": [
+      "S76-029.jpg"
+    ],
+    "S76-030": [
+      "S76-030.jpg"
+    ],
+    "S76-031": [
+      "S76-031.jpg"
+    ],
+    "S76-032": [
+      "S76-032.jpg"
+    ],
+    "S76-033": [
+      "S76-033.jpg"
+    ],
+    "S76-034": [
+      "S76-034.jpg"
+    ],
+    "S76-035": [
+      "S76-035.jpg"
+    ],
+    "S76-036": [
+      "S76-036.jpg"
+    ],
+    "S76-037": [
+      "S76-037.jpg"
+    ],
+    "S76-038": [
+      "S76-038.jpg"
+    ],
+    "S76-039": [
+      "S76-039.jpg"
+    ],
+    "S76-040": [
+      "S76-040.jpg"
+    ],
+    "S76-041": [
+      "S76-041.jpg"
+    ],
+    "S76-042": [
+      "S76-042.jpg"
+    ],
+    "S76-043": [
+      "S76-043.jpg"
+    ],
+    "S76-044": [
+      "S76-044.jpg"
+    ],
+    "S76-045": [
+      "S76-045.jpg"
+    ],
+    "S76-046": [
+      "S76-046.jpg"
+    ],
+    "S76-047": [
+      "S76-047.jpg"
+    ],
+    "S76-048": [
+      "S76-048.jpg"
+    ],
+    "S76-049": [
+      "S76-049.jpg"
+    ],
+    "S76-050": [
+      "S76-050.jpg"
+    ],
+    "S76-051": [
+      "S76-051-1.jpg",
+      "S76-051-2.jpg"
+    ],
+    "S76-052": [
+      "S76-052.jpg"
+    ],
+    "S76-053": [
+      "S76-053.jpg"
+    ],
+    "S76-054": [
+      "S76-054.jpg"
+    ],
+    "S76-055": [
+      "S76-055.jpg"
+    ],
+    "S76-056": [
+      "S76-056.jpg"
+    ],
+    "S76-057": [
+      "S76-057.jpg"
+    ],
+    "S76-058": [
+      "S76-058.jpg"
+    ],
+    "S76-059": [
+      "S76-059.jpg"
+    ],
+    "S76-060": [
+      "S76-060.jpg"
+    ],
+    "S76-061": [
+      "S76-061.jpg"
+    ],
+    "S76-062": [
+      "S76-062.jpg"
+    ],
+    "S76-063": [
+      "S76-063.jpg"
+    ],
+    "S76-064": [
+      "S76-064.jpg"
+    ],
+    "S76-065": [
+      "S76-065.jpg"
+    ],
+    "S76-066": [
+      "S76-066.jpg"
+    ],
+    "S76-067": [
+      "S76-067.jpg"
+    ],
+    "S76-068": [
+      "S76-068.jpg"
+    ],
+    "S76-069": [
+      "S76-069.jpg"
+    ],
+    "S76-070": [
+      "S76-070.jpg"
+    ],
+    "S76-071": [
+      "S76-071.jpg"
+    ],
+    "S76-072": [
+      "S76-072.jpg"
+    ],
+    "S76-073": [
+      "S76-073.jpg"
+    ],
+    "S76-074": [
+      "S76-074.jpg"
+    ],
+    "S76-075": [
+      "S76-075.jpg"
+    ],
+    "S76-076": [
+      "S76-076.jpg"
+    ],
+    "S76-077": [
+      "S76-077.jpg"
+    ],
+    "S76-078": [
+      "S76-078.jpg"
+    ],
+    "S76-079": [
+      "S76-079.jpg"
+    ],
+    "S76-080": [
+      "S76-080.jpg"
+    ],
+    "S76-081": [
+      "S76-081.jpg"
+    ],
+    "S76-082": [
+      "S76-082.jpg"
+    ],
+    "S76-083": [
+      "S76-083.jpg"
+    ],
+    "S76-084": [
+      "S76-084.jpg"
+    ],
+    "S76-085": [
+      "S76-085.jpg"
+    ],
+    "S76-086": [
+      "S76-086.jpg"
+    ],
+    "S76-087": [
+      "S76-087-1.jpg",
+      "S76-087-2.jpg"
+    ],
+    "S76-088": [
+      "S76-088.jpg"
+    ],
+    "S76-089": [
+      "S76-089.jpg"
+    ],
+    "S76-090": [
+      "S76-090.jpg"
+    ],
+    "S76-091": [
+      "S76-091.jpg"
+    ],
+    "S76-092": [
+      "S76-092.jpg"
+    ],
+    "S76-093": [
+      "S76-093.jpg"
+    ],
+    "S76-094": [
+      "S76-094.jpg"
+    ],
+    "S76-095": [
+      "S76-095.jpg"
+    ],
+    "S76-096": [
+      "S76-096.jpg"
+    ],
+    "S76-097": [
+      "S76-097-1.jpg",
+      "S76-097-2.jpg"
+    ],
+    "S76-098": [
+      "S76-098.jpg"
+    ],
+    "S76-099": [
+      "S76-099.jpg"
+    ],
+    "S76-100": [
+      "S76-100.jpg"
+    ],
+    "S76-101": [
+      "S76-101.jpg"
+    ],
+    "S76-102": [
+      "S76-102.jpg"
+    ],
+    "S76-103": [
+      "S76-103.jpg"
+    ],
+    "S76-104": [
+      "S76-104.jpg"
+    ],
+    "S76-105": [
+      "S76-105.jpg"
+    ],
+    "S76-106": [
+      "S76-106.jpg"
+    ],
+    "S76-107": [
+      "S76-107.jpg"
+    ],
+    "S76-108": [
+      "S76-108.jpg"
+    ],
+    "S76-109": [
+      "S76-109.jpg"
+    ],
+    "S76-110": [
+      "S76-110.jpg"
+    ],
+    "S76-111": [
+      "S76-111.jpg"
+    ],
+    "S76-112": [
+      "S76-112.jpg"
+    ],
+    "S76-113": [
+      "S76-113.jpg"
+    ],
+    "S76-114": [
+      "S76-114.jpg"
+    ],
+    "S76-115": [
+      "S76-115.jpg"
+    ],
+    "S76-116": [
+      "S76-116.jpg"
+    ],
+    "S76-117": [
+      "S76-117.jpg"
+    ],
+    "S76-118": [
+      "S76-118.jpg"
+    ],
+    "S76-119": [
+      "S76-119.jpg"
+    ],
+    "S76-120": [
+      "S76-120.jpg"
+    ],
+    "S76-121": [
+      "S76-121.jpg"
+    ],
+    "S76-122": [
+      "S76-122.jpg"
+    ],
+    "S76-123": [
+      "S76-123.jpg"
+    ],
+    "S76-124": [
+      "S76-124.jpg"
+    ],
+    "S76-125": [
+      "S76-125.jpg"
+    ],
+    "S76-126": [
+      "S76-126.jpg"
+    ],
+    "S76-127": [
+      "S76-127.jpg"
+    ],
+    "S76-128": [
+      "S76-128.jpg"
+    ],
+    "S76-129": [
+      "S76-129.jpg"
+    ],
+    "S76-130": [
+      "S76-130.jpg"
+    ],
+    "S76-131": [
+      "S76-131.jpg"
+    ],
+    "S76-132": [
+      "S76-132.jpg"
+    ],
+    "S76-133": [
+      "S76-133.jpg"
+    ],
+    "S76-134": [
+      "S76-134.jpg"
+    ],
+    "S76-135": [
+      "S76-135.jpg"
+    ],
+    "S76-136": [
+      "S76-136.jpg"
+    ],
+    "S76-137": [
+      "S76-137.jpg"
+    ],
+    "S76-138": [
+      "S76-138.jpg"
+    ],
+    "S76-139": [
+      "S76-139.jpg"
+    ],
+    "S76-140": [
+      "S76-140-1.jpg",
+      "S76-140-2.jpg"
+    ],
+    "S76-141": [
+      "S76-141.jpg"
+    ],
+    "S76-142": [
+      "S76-142.jpg"
+    ],
+    "S76-143": [
+      "S76-143.jpg"
+    ],
+    "S76-144": [
+      "S76-144.jpg"
+    ],
+    "S76-145": [
+      "S76-145.jpg"
+    ],
+    "S76-146": [
+      "S76-146.jpg"
+    ],
+    "S76-147": [
+      "S76-147.jpg"
+    ],
+    "S76-148": [
+      "S76-148.jpg"
+    ],
+    "S76-149": [
+      "S76-149.jpg"
+    ],
+    "S76-150": [
+      "S76-150.jpg"
+    ],
+    "S76-151": [
+      "S76-151.jpg"
+    ],
+    "S76-152": [
+      "S76-152.jpg"
+    ],
+    "S76-153": [
+      "S76-153.jpg"
+    ],
+    "S76-154": [
+      "S76-154.jpg"
+    ],
+    "S76-155": [
+      "S76-155.jpg"
+    ],
+    "S76-156": [
+      "S76-156.jpg"
+    ],
+    "S76-157": [
+      "S76-157.jpg"
+    ],
+    "S76-158": [
+      "S76-158.jpg"
+    ],
+    "S76-159": [
+      "S76-159.jpg"
+    ],
+    "S76-160": [
+      "S76-160.jpg"
+    ],
+    "S76-161": [
+      "S76-161.jpg"
+    ],
+    "S76-162": [
+      "S76-162.jpg"
+    ],
+    "S76-163": [
+      "S76-163.jpg"
+    ],
+    "S76-164": [
+      "S76-164.jpg"
+    ],
+    "S76-165": [
+      "S76-165.jpg"
+    ],
+    "S76-166": [
+      "S76-166.jpg"
+    ],
+    "S76-167": [
+      "S76-167.jpg"
+    ],
+    "S76-168": [
+      "S76-168.jpg"
+    ],
+    "S76-169": [
+      "S76-169.jpg"
+    ],
+    "S76-170": [
+      "S76-170.jpg"
+    ],
+    "S76-171": [
+      "S76-171.jpg"
+    ],
+    "S76-172": [
+      "S76-172.jpg"
+    ],
+    "S76-173": [
+      "S76-173.jpg"
+    ],
+    "S76-174": [
+      "S76-174.jpg"
+    ],
+    "S76-175": [
+      "S76-175-1.jpg",
+      "S76-175-2.jpg"
+    ],
+    "S76-176": [
+      "S76-176.jpg"
+    ],
+    "S76-177": [
+      "S76-177.jpg"
+    ],
+    "S76-178": [
+      "S76-178.jpg"
+    ],
+    "S76-179": [
+      "S76-179.jpg"
+    ],
+    "S76-180": [
+      "S76-180.jpg"
+    ],
+    "S76-181": [
+      "S76-181.jpg"
+    ],
+    "S76-182": [
+      "S76-182.jpg"
+    ],
+    "S76-183": [
+      "S76-183.jpg"
+    ],
+    "S76-184": [
+      "S76-184.jpg"
+    ],
+    "S76-185": [
+      "S76-185.jpg"
+    ],
+    "S76-186": [
+      "S76-186.jpg"
+    ],
+    "S76-187": [
+      "S76-187.jpg"
+    ],
+    "S76-188": [
+      "S76-188.jpg"
+    ],
+    "S76-189": [
+      "S76-189.jpg"
+    ],
+    "S76-190": [
+      "S76-190-1.jpg",
+      "S76-190-2.jpg"
+    ],
+    "S76-191": [
+      "S76-191.jpg"
+    ],
+    "S76-192": [
+      "S76-192.jpg"
+    ],
+    "S76-193": [
+      "S76-193.jpg"
+    ],
+    "S76-194": [
+      "S76-194.jpg"
+    ],
+    "S76-195": [
+      "S76-195.jpg"
+    ],
+    "S76-196": [
+      "S76-196.jpg"
+    ],
+    "S76-197": [
+      "S76-197.jpg"
+    ],
+    "S76-198": [
+      "S76-198.jpg"
+    ],
+    "S76-199": [
+      "S76-199.jpg"
+    ],
+    "S76-200": [
+      "S76-200.jpg"
+    ],
+    "S76-201": [
+      "S76-201.jpg"
+    ],
+    "S76-202": [
+      "S76-202.jpg"
+    ],
+    "S76-203": [
+      "S76-203.jpg"
+    ],
+    "S76-204": [
+      "S76-204.jpg"
+    ],
+    "S76-205": [
+      "S76-205.jpg"
+    ],
+    "S76-206": [
+      "S76-206.jpg"
+    ],
+    "S76-207": [
+      "S76-207.jpg"
+    ],
+    "S76-208": [
+      "S76-208.jpg"
+    ],
+    "S76-209": [
+      "S76-209.jpg"
+    ],
+    "S76-210": [
+      "S76-210.jpg"
+    ],
+    "S76-211": [
+      "S76-211.jpg"
+    ],
+    "S76-212": [
+      "S76-212.jpg"
+    ],
+    "S76-213": [
+      "S76-213.jpg"
+    ],
+    "S76-214": [
+      "S76-214.jpg"
+    ],
+    "S76-215": [
+      "S76-215.jpg"
+    ],
+    "S76-216": [
+      "S76-216.jpg"
+    ],
+    "S76-217": [
+      "S76-217.jpg"
+    ],
+    "S76-218": [
+      "S76-218.jpg"
+    ],
+    "S76-219": [
+      "S76-219.jpg"
+    ],
+    "S76-220": [
+      "S76-220.jpg"
+    ],
+    "S76-221": [
+      "S76-221.jpg"
+    ],
+    "S76-222": [
+      "S76-222.jpg"
+    ],
+    "S76-223": [
+      "S76-223.jpg"
+    ],
+    "S76-224": [
+      "S76-224.jpg"
+    ],
+    "S76-225": [
+      "S76-225.jpg"
+    ],
+    "S76-226": [
+      "S76-226-1.jpg",
+      "S76-226-2.jpg"
+    ],
+    "S76-227": [
+      "S76-227.jpg"
+    ],
+    "S76-228": [
+      "S76-228.jpg"
+    ],
+    "S76-229": [
+      "S76-229.jpg"
+    ],
+    "S76-230": [
+      "S76-230.jpg"
+    ],
+    "S76-231": [
+      "S76-231.jpg"
+    ],
+    "S76-232": [
+      "S76-232.jpg"
+    ],
+    "S76-233": [
+      "S76-233.jpg"
+    ],
+    "S76-234": [
+      "S76-234.jpg"
+    ],
+    "S76-235": [
+      "S76-235.jpg"
+    ],
+    "S76-236": [
+      "S76-236.jpg"
+    ],
+    "S76-237": [
+      "S76-237.jpg"
+    ],
+    "S76-238": [
+      "S76-238.jpg"
+    ],
+    "S76-239": [
+      "S76-239.jpg"
+    ],
+    "S76-240": [
+      "S76-240.jpg"
+    ],
+    "S76-241": [
+      "S76-241.jpg"
+    ],
+    "S76-242": [
+      "S76-242-1.jpg",
+      "S76-242-2.jpg"
+    ],
+    "S76-243": [
+      "S76-243.jpg"
+    ],
+    "S76-244": [
+      "S76-244.jpg"
+    ],
+    "S76-245": [
+      "S76-245.jpg"
+    ],
+    "S76-246": [
+      "S76-246.jpg"
+    ]
+  },
+  "boxes": {
+    "S76-024": [
+      [
+        1765,
+        3995,
+        2830,
+        4440
+      ]
+    ],
+    "S76-010": [
+      [
+        490,
+        120,
+        1000,
+        735
+      ]
+    ],
+    "S76-026": [
+      [
+        2840,
+        4380,
+        4025,
+        4812
+      ]
+    ],
+    "S76-046": [
+      [
+        2455,
+        1780,
+        3480,
+        2235
+      ]
+    ],
+    "S76-069": [
+      [
+        1690,
+        632,
+        3030,
+        960
+      ]
+    ],
+    "S76-115": [
+      [
+        280,
+        5082,
+        1295,
+        5546
+      ]
+    ],
+    "S76-181": [
+      [
+        1428,
+        3698,
+        2578,
+        4176
+      ]
+    ],
+    "S76-198": [
+      [
+        536,
+        2135,
+        1015,
+        2330
+      ]
+    ],
+    "S76-235": [
+      [
+        30,
+        158,
+        497,
+        496
+      ]
+    ],
+    "S76-027": [
+      [
+        2800,
+        1420,
+        4005,
+        1755
+      ]
+    ],
+    "S76-047": [
+      [
+        290,
+        3482,
+        1645,
+        3818
+      ]
+    ],
+    "S76-091": [
+      [
+        2715,
+        2692,
+        3895,
+        2985
+      ]
+    ],
+    "S76-118": [
+      [
+        603,
+        835,
+        1142,
+        956
+      ]
+    ],
+    "S76-189": [
+      [
+        584,
+        633,
+        1126,
+        782
+      ]
+    ],
+    "S76-225": [
+      [
+        1467,
+        3474,
+        2617,
+        4562
+      ]
+    ],
+    "S76-242": [
+      [
+        1540,
+        3558,
+        2720,
+        3910
+      ],
+      [
+        1540,
+        5110,
+        2720,
+        5495
+      ]
+    ],
+    "S76-037": [
+      [
+        100,
+        2185,
+        1515,
+        2700
+      ]
+    ],
+    "S76-052": [
+      [
+        320,
+        4988,
+        1345,
+        5333
+      ]
+    ],
+    "S76-094": [
+      [
+        5,
+        712,
+        500,
+        957
+      ]
+    ],
+    "S76-157": [
+      [
+        62,
+        966,
+        625,
+        1174
+      ]
+    ],
+    "S76-190": [
+      [
+        30,
+        1396,
+        578,
+        1448
+      ],
+      [
+        582,
+        88,
+        1125,
+        147
+      ]
+    ],
+    "S76-233": [
+      [
+        38,
+        1182,
+        592,
+        1425
+      ]
+    ],
+    "S76-245": [
+      [
+        600,
+        842,
+        1150,
+        949
+      ]
+    ]
+  },
+  "notes": {
+    "S76-002": "The heading dates the speech October 26, 1775. The only 1776 issue of this paper in the collection.",
+    "S76-004": "The paper prints the speech in full; RevX shortens it with an ellipsis.",
+    "S76-007": "The paper prints the speech in full; RevX shortens it with an ellipsis.",
+    "S76-008": "Dates the letter 'Holland-House, Dec. 6, 1775'.",
+    "S76-009": "Prints 'an my constant desire', a misprint.",
+    "S76-010": "Printed under 'PHILADELPHIA, Jan. 8. The following SPEECH was received this morning by express from NEW-YORK.' The heading dates the speech Friday 27 October 1775.",
+    "S76-011": "Dates the letter 16 December 1775.",
+    "S76-012": "Headed 'The following is a genuine Copy of a Letter'. Dates the letter 6 December 1775, a line RevX drops.",
+    "S76-013": "Dates the letter 6 December 1775.",
+    "S76-014": "Dates the letter 16 December 1775. RevX misreads the dateline as January 13; the paper prints January 18.",
+    "S76-016": "Under a 'PHILADELPHIA.' heading with no date.",
+    "S76-020": "Dates the letter 16 December 1775.",
+    "S76-021": "Dates the letter December 16, 1775.",
+    "S76-023": "Appears to print 'between the hours of 2 and 5', where the other printings have two and seven.",
+    "S76-025": "The letter begins at the foot of page 1 and continues on page 2.",
+    "S76-028": "The heading leaves out 'from the best authority', and the letter has no 'SIR'.",
+    "S76-029": "Prints 'about 4 o'clock in the forenoon', where the other printings have 9 o'clock, under the dateline 'PHILADELPHIA, March 15', four days before the letter's date.",
+    "S76-031": "Heads the resolutions 'IN CONGRESS, March 6, 1776', where the other papers have April 6.",
+    "S76-035": "Heads the resolutions 'In CONGRESS, March 6.', as Dunlap's Packet does.",
+    "S76-037": "The page is torn at the left edge, taking the first letters of the dateline and heading.",
+    "S76-040": "Spells 'moloſſes'.",
+    "S76-044": "Prints 'a coald coast'.",
+    "S76-046": "Version A of the letter. The worn print reads 'firing some days' and 'not quite finished'; RevX reads 'four days' and 'is quite finished'.",
+    "S76-047": "Version A of the letter.",
+    "S76-049": "Version A of the letter: 'we will have another battery'.",
+    "S76-052": "Version B of the letter. The excerpt comes from the older CA transcription.",
+    "S76-053": "Sets the dates in words: 'second of March', 'tenth of April'.",
+    "S76-055": "The Gazette's own wording: 'By a Gentleman arrived here', 'a large naval Force is coming out to America'.",
+    "S76-056": "Gives the number of prisoners in figures, '50'.",
+    "S76-057": "Version B of the letter: 'they will have another battery at Little River'.",
+    "S76-058": "Followed by a London paragraph of 10 January, not the paragraph of 18 February that most papers print.",
+    "S76-059": "Version B of the letter. The paper prints 'dated' twice and 'a prodigious quantities of snow'.",
+    "S76-061": "Version A of the letter, under the dateline 'HARTFORD, May 6.'",
+    "S76-063": "Followed by a London paragraph of 10 January, as in the Pennsylvania Journal.",
+    "S76-065": "Introduced by 'The following Act came to hand by yesterday's post.'",
+    "S76-066": "Printed as the enclosure of a letter: the act 'was received yesterday by General Washington from that colony'.",
+    "S76-067": "Followed by a London paragraph of 19 February.",
+    "S76-068": "Prints 'about 90 other prisoners', where the other printings have fifty or 50.",
+    "S76-070": "Version A of the letter.",
+    "S76-071": "Gives the members present in figures, '112'.",
+    "S76-074": "Prints 'Brittannic'.",
+    "S76-075": "Version A of the letter, introduced in running text: 'A letter from a Gentleman ... says'.",
+    "S76-080": "Printed as the enclosure of a letter, as in the Pennsylvania Journal.",
+    "S76-081": "Just after the excerpt, prints 'the latter being only in consequence of the former', without 'due'.",
+    "S76-082": "Prints 'no Answers whatever' and 'the humble Petition'.",
+    "S76-084": "The paper prints on where RevX shortens the resolution with an ellipsis.",
+    "S76-086": "Prints 'May Session' and 'in his Colony', where the other printings have 'May Sessions' and 'in this his colony'.",
+    "S76-087": "Version B of the letter, a week after this paper printed version A, with 'on Little river'.",
+    "S76-090": "Under the dateline 'WILLIAMSBURG, May 11.', four days before the date of the resolutions.",
+    "S76-092": "The paper prints on where RevX shortens the resolution with an ellipsis.",
+    "S76-093": "RevX reads 'enjoyments' where the paper prints 'endeavours'.",
+    "S76-097": "A one-sentence summary of the act. A second scanned copy of this issue (edition 2) has the same text.",
+    "S76-102": "Quoted in the New York Provincial Congress's resolution of 31 May. Prints 'no protection whatever' where the resolution has 'no answer whatever'.",
+    "S76-103": "Says the address was taken from a St. Kitts paper brought by Capt. Farey from St. Eustatia.",
+    "S76-105": "Lead-in: 'This day the Honorable House of Assembly'.",
+    "S76-107": "The paper prints on where RevX shortens the address with an ellipsis.",
+    "S76-110": "The New York Provincial Congress's resolution of 31 May again, set line for line as on 6 June, with 'no protection whatever'.",
+    "S76-112": "Prints 'the Sheriff', singular.",
+    "S76-114": "Says the address was taken from a St. Kitt's paper brought by Captain Farrey from St. Eustatia.",
+    "S76-115": "Lead-in: 'The Hon. House of Assembly', under 'PHILADELPHIA, June 10.'",
+    "S76-118": "Lead-in 'This day', as in the Evening Post. The paper misprints 'WHEN' as 'WEN'.",
+    "S76-120": "Prints 'Present 12 Members', where the other printings have 112.",
+    "S76-125": "Earliest printing found, two days after the Declaration was adopted. Spells 'intitle'.",
+    "S76-128": "The paper prints the letter on where RevX shortens it with an ellipsis.",
+    "S76-133": "The only 1776 issue of this paper in the collection.",
+    "S76-134": "Misprints 'UUITED' in the heading and spells 'seperate'.",
+    "S76-136": "Dateline 'PHILADELPHIA, July 4.'",
+    "S76-137": "Printed on 18 July, saying the Lord Hyde packet had reached Staten Island a few days before; the Evening Post (8 August) says it arrived on 29 July. Prints 'make in proper' and 'your steady adherence'.",
+    "S76-138": "The only 1776 issue of this paper in the collection. Spells 'seperate'.",
+    "S76-140": "The heading is set in large display type across the page.",
+    "S76-141": "Prints 'which connected them' without 'have'. A second scanned copy of this issue (edition 2) has the same text.",
+    "S76-142": "The only 1776 issue of this paper in the collection.",
+    "S76-143": "The paper prints the heading 'In CONGRESS, July 10, 1776.', which RevX drops.",
+    "S76-145": "The full text, a week after this paper's summary of 19 July; it reads 'which have connected them'. Printed under the Virginia Council's order of 20 July. A second scanned copy of this issue (edition 2) has the same text.",
+    "S76-149": "Misprints 'WHE Committee' and 'three hundreed'.",
+    "S76-154": "No dateline; follows the signature of the previous item.",
+    "S76-155": "The first printing in this paper, with 'the twenty third day of April last'.",
+    "S76-156": "A different lead-in: 'By the last Account we have had of the two Men of War'. Prints 'last Saturday Sen'night'.",
+    "S76-157": "Dateline 'PHILADELPHIA, July 3.'",
+    "S76-158": "Dateline 'PHILADELPHIA, JULY 5.', and spells 'harbor'.",
+    "S76-161": "Dateline 'PHILADELPHIA, July 31.'",
+    "S76-164": "No dateline.",
+    "S76-165": "RevX reads 'being Haverstraw-Bay' where the paper prints 'lie in Haverstraw-Bay'.",
+    "S76-168": "Lead-in 'By the last account we had of the two men of war', under 'NEW-YORK, July 25.'",
+    "S76-169": "Under a 'PHILADELPHIA.' heading with no date.",
+    "S76-170": "Dated 'July 31.'",
+    "S76-171": "Headed 'NEW-YORK, August 1.'",
+    "S76-172": "Printed again a week later with 'the twenty-third day of March last, and on the third day of April last', where this paper's first printing and the other papers have April alone.",
+    "S76-177": "Prints 'all the gondolas'.",
+    "S76-179": "The paper prints the full report where RevX shortens it with an ellipsis.",
+    "S76-183": "Introduced 'By the Lord Hyde Packet, which left Falmouth the third of June, and arrived at Staten-Island the 29th of July'.",
+    "S76-184": "Sets the numbers in figures: '390' troops, '43 miles'.",
+    "S76-187": "Starts at 'At about a quarter after one', without the introduction the other papers print.",
+    "S76-189": "Sets the numbers in figures: '390' troops, '43 miles'.",
+    "S76-190": "The item runs from the foot of one column to the top of the next.",
+    "S76-192": "Introduced 'By the Lord Hyde Packet'; RevX shortens the heading and the start of the speech with an ellipsis.",
+    "S76-193": "Prints 'the foremast' for 'foremost'.",
+    "S76-194": "Dateline 'NEW-YORK, August 5.'",
+    "S76-195": "Prints only Allen's note, under its own heading, three months after the other papers. Neither transcription of this page has the Cork letter.",
+    "S76-196": "RevX dates the interview July 25; the paper prints July 20.",
+    "S76-198": "Misprints 'concealed themselves is a fishing hut'.",
+    "S76-199": "Prints 'At about half a quarter after 1'.",
+    "S76-201": "Prints 'in which, as through the whole conversation', without 'well as', under a 'PHILADELPHIA' heading with no date.",
+    "S76-204": "Says it took the particulars 'from a New York paper of August 5th'.",
+    "S76-209": "RevX reads 'Receipts' and 'ready' where the paper prints 'Recess' and 'steady'.",
+    "S76-210": "Prints 'Same day', 'the twelfth of July' and 'warning', where the other printings have 'Last Friday', '12th' and 'warming'.",
+    "S76-212": "Dateline misprinted 'NEW-YOKK, August 14', where the other printings have August 19.",
+    "S76-216": "Dated 'Philadelphia, September 8, 1776' and says the committee left 'Yesterday'; the papers of 11 and 14 September say 'Monday last'.",
+    "S76-217": "The excerpt comes from the older CA transcription.",
+    "S76-224": "Dated 'Sept. 8.' and says 'Yesterday', as Dunlap's Packet does.",
+    "S76-227": "Gives the quotas in words.",
+    "S76-231": "Printed on 30 September, more than seven weeks after the Evening Post, with different wording: 'of the public business', 'your affectionate attachment'.",
+    "S76-233": "A short summary; the same paper printed the full resolutions a week later.",
+    "S76-242": "Later in the item RevX reads '12 or 13 pounder' where the paper prints 12 or 18.",
+    "S76-246": "Prints 'October 31st', where the other printings have October 21."
+  },
+  "dispositions": {
+    "method": "The 310 matched families first printed in 1776 that reach 4 or more newspapers were split into 1,219 single printed items by work/story_items.py (each printing's opening, looked for on all 2,319 pages of 1776 in both transcriptions). The 188 items printed in 7 or more newspapers (101 distinct documents or reports) were read; 28 were admitted as 22 stories, and phrase searches (phrase_patterns.json) confirmed their printings.",
+    "selection_rule": "Every single item printed in 9 or more newspapers was admitted, except digests of unrelated paragraphs. Items in 7 or 8 newspapers were chosen to cover the months from January to November and the main kinds of news: congressional and colonial documents, British documents, war reports and letters. One item a paper printed again later counts as a separate printing.",
+    "items_admitted": {
+      "king-speech-october-1775": [
+        "I76-0027",
+        "I76-0052",
+        "I76-0020"
+      ],
+      "montgomery-letter-to-carleton": [
+        "I76-0111"
+      ],
+      "quebec-assault-report": [
+        "I76-0114"
+      ],
+      "quebec-camp-letter": [
+        "I76-0022"
+      ],
+      "boston-evacuation-letter": [
+        "I76-0127"
+      ],
+      "congress-opens-ports": [
+        "I76-0028"
+      ],
+      "hopkins-nassau-letter": [
+        "I76-0132"
+      ],
+      "dublin-paper-naval-force": [
+        "I76-0029",
+        "I76-0010"
+      ],
+      "ethan-allen-cork": [
+        "I76-0030"
+      ],
+      "rhode-island-renunciation": [
+        "I76-0141",
+        "I76-0048"
+      ],
+      "congress-may-15-resolution": [
+        "I76-0007"
+      ],
+      "virginia-independence-resolution": [
+        "I76-0065",
+        "I76-0064"
+      ],
+      "london-address-to-king-1776": [
+        "I76-0011",
+        "I76-0012"
+      ],
+      "pennsylvania-new-instructions": [
+        "I76-0038",
+        "I76-0023",
+        "I76-0067",
+        "I76-0068",
+        "I76-0069",
+        "I76-0070"
+      ],
+      "declaration-of-independence": [
+        "I76-0001",
+        "I76-0002",
+        "I76-0003",
+        "I76-0004",
+        "I76-0005"
+      ],
+      "campbell-captured-letter": [
+        "I76-0032",
+        "I76-0031",
+        "I76-0033"
+      ],
+      "cedars-cartel-report": [
+        "I76-0013",
+        "I76-0014",
+        "I76-0015",
+        "I76-0016",
+        "I76-0017",
+        "I76-0018"
+      ],
+      "washington-patterson-interview": [
+        "I76-0019"
+      ],
+      "prize-resolutions-extended": [
+        "I76-0006"
+      ],
+      "haverstraw-bay-report": [
+        "I76-0034"
+      ],
+      "tappan-meadows-report": [
+        "I76-0154"
+      ],
+      "gondolas-attack-report": [
+        "I76-0082",
+        "I76-0083",
+        "I76-0157"
+      ],
+      "fire-ships-attack-report": [
+        "I76-0085"
+      ],
+      "king-speech-may-1776": [
+        "I76-0075",
+        "I76-0076",
+        "I76-0077",
+        "I76-0078"
+      ],
+      "conference-committee-departs": [
+        "I76-0168"
+      ],
+      "conference-committee-report": [
+        "I76-0172"
+      ],
+      "eighty-eight-battalions": [
+        "I76-0086",
+        "I76-0087"
+      ],
+      "congress-intelligence-october-1776": [
+        "I76-0177",
+        "I76-0178",
+        "I76-0179"
+      ]
+    },
+    "added_by_phrase_search": [
+      "VGa 1776-10-04 p7 (condensed report of the 88 battalions)"
+    ],
+    "duplicate_copies_counted_once": {
+      "VGa 1776-06-01 edition 2": "second scanned copy of the issue",
+      "VGa 1776-07-20 edition 2": "second scanned copy of the issue",
+      "VGb 1776-07-26 edition 2": "second scanned copy of the issue"
+    },
+    "not_admitted": {
+      "London and Halifax news digest (R1776-0003, 13 papers)": "several unrelated London and Halifax paragraphs printed in pieces, not one item",
+      "VGa 1776-02-03 p2, PG 02-07 p2, NYP 02-08 p1, PP 02-12 p4": "Parliament's address in answer to the King's speech, which repeats its words; a different document",
+      "PJ 1776-05-01 p2, PEP 05-02 p3, PL 05-04 p2, NEC 05-16 p3": "different reports about the batteries at Point Levy, not the camp letter of 6 April",
+      "PEP 1776-04-18 p2, NEC 04-25 p1": "the inventory of stores taken at New Providence, printed apart from Hopkins's letter",
+      "VGb 1776-05-17 p2": "the London paragraphs from the Dublin paper, without the report of the naval force",
+      "FJ 1776-06-08 p2": "a paraphrase of the 15 May resolution inside another item; the full text is on p4 of the same issue",
+      "NYG 1776-07-08 p3": "a report of Congress's vote for independence, not the Virginia resolutions",
+      "PP 1776-06-24 p2, PG 06-26 p1": "commentary that quotes the preamble of Pennsylvania's new instructions",
+      "PJ 1776-06-19 p3, VGa 07-13 p5": "another colony's instructions to its deputies, which share a phrase with Pennsylvania's",
+      "NEC 1776-08-08 p3": "a notice that the Patterson interview was published in the New-York papers; the New-England Chronicle printed the account itself on 15 August",
+      "Congress's privateering resolutions of 23 March (PEP 03-26, PG 03-27, NYP 04-04, VGa 04-13, VGb 04-19, NEC 05-02)": "an earlier document that shares the wording of the 24 July resolution; not admitted in this round",
+      "Candidates in 7 or 8 papers, not admitted in this round": "Wilkes's speech in the Commons; Governor Penn examined in the Lords; the debate on the American restraining (Prohibitory) bill; deserters from the Cork regiments; Congress on refusing Continental bills (a notice repeated for weeks); Congress's fast day of 17 May; Barry's capture of the Edward; the sloop Liberty's gunpowder; the Howe brothers' declarations; Gates's letter on Carleton's retreat; reports of Cherokee and Creek plans, which need careful framing"
+    }
+  },
+  "manual": {
+    "S76-010": {
+      "located": "yes",
+      "transcription": "faithful",
+      "transcription_errors": [],
+      "printed_differences": [
+        "heading: 'on Friday the 27th of October, 1775'; the New-Hampshire Gazette's heading has October 26, 1775",
+        "lead-in: 'PHILADELPHIA, Jan. 8. The following SPEECH was received this morning by express from NEW-YORK.'"
+      ],
+      "finding": "Crop placed by hand. Scan matches the excerpt. The paper prints the speech under 'PHILADELPHIA, Jan. 8. The following SPEECH was received this morning by express from NEW-YORK', and its heading dates it 'Friday the 27th of October, 1775', where the New-Hampshire Gazette's heading has October 26.",
+      "confidence": "high"
+    }
+  },
+  "verdict_summary": {
+    "yes": 244,
+    "partly": 2,
+    "no": 0
+  }
+}

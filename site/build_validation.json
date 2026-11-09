@@ -1,16 +1,33 @@
 {
   "passed": true,
-  "release_version": "0.6.1",
-  "newspapers": 8,
-  "curated_passages": 107,
-  "group_views": 33,
-  "stories_in_overview": 21,
-  "overview_categories": 3,
+  "release_version": "0.7.1",
+  "reviewed_years": [
+    {
+      "year": 1776,
+      "newspapers": 16,
+      "passages": 246,
+      "group_views": 31,
+      "stories": 22,
+      "categories": 3
+    },
+    {
+      "year": 1797,
+      "newspapers": 8,
+      "passages": 107,
+      "group_views": 33,
+      "stories": 21,
+      "categories": 3
+    }
+  ],
+  "curated_passages": 353,
+  "group_views": 64,
+  "stories_in_overview": 43,
+  "overview_categories": 6,
   "years": 41,
   "matched_families": 48127,
   "year_files_mb": 105.6,
   "year_index_mb": 8.8,
-  "telescope_stars": 48148,
+  "telescope_stars": 48170,
   "telescope_mb": 7.7,
   "telescope_text_mb": 24.3,
   "story_topic_lanes": 24,
@@ -22,15 +39,16 @@
     "Read-only release with verified input hashes",
     "Matched families are labelled as not checked against scans",
     "Every page carries the shared header and footer",
+    "Each reviewed year lists every one of its groups once, and every top-level story has a display category",
     "Every matched printing carries its transcription check, one printing per page"
   ],
   "matched_printings": 163926,
   "pages_sha256": {
-    "index.html": "38b5039df574e4697daf59e9ebf9a52e04d23be516403f6bba82895ee4e15d66",
-    "telescope.html": "7b7d632af0d1b1a0dacb93558adf6e342988fc037c8ad5d161c1cb7cba995dc5",
-    "pulses.html": "12ecb156debedb1eca05fc1d60caa81194a3d11bfb023bb957e504000506dbd7",
-    "method.html": "b4d33c9ad9528fd7cc1bad9176f7cfdc6906d6014ff62b399e4acef3258cf2a5",
-    "notes.html": "12797192f0bbe9387cd8533022e39d700090414287e4928b7411026ee6de55cd",
+    "index.html": "62338d1f1576874c7068cc8a3022636ecbbaa2b9505635fc7572d1b607a74ebe",
+    "telescope.html": "a06e80ef4559d9bb3570dcec141983843434acbb0757707d781c46850e6e788b",
+    "pulses.html": "8277f1b808e198f55978ebd5a262824691e875d09b4aee159d9a9b3277feb0df",
+    "method.html": "b3e9fc1e3ceddb4105132812a1a458311eb3703247ee33129c48299e90829891",
+    "notes.html": "f5e628de651f4de2f5dc5530cf5c03586e7bfb5ed0b9627822c44a883d005a1a",
     "site.css": "e1b8ec5f016a4c7684e7925e02f6f6340ef0c26377c50a4459d9374585fd0659",
     "glass.js": "a08cefb1f3fa663e59f8027354420ca9c89bbb52f24e44571a829611fec6605a"
   }

@@ -130,6 +130,15 @@ A passage can belong to more than one group, and groups can sit inside each othe
 
 **7. Label each appearance's role.** Examples are *report*, *appended challenge*, *later related account*, *condensed report* and *translated document*. A role describes what the printed text does. It is not a verdict on whether the text is true.
 
+### A second reviewed year: 1776 (data releases v0.7.0 and v0.7.1)
+
+The same steps were run for 1776, chosen over 1800 because more of its stories reached many papers and its coverage is steadier.
+- **Splitting chains.** Most large automatic families of 1776 joined neighbouring items printed side by side. `pipeline/story_items.py` split them into single printed items and counted where each was printed, on all 2,319 pages of 1776 in both transcriptions. Phrase searches (`pipeline/story_phrase_search.py`) confirmed the printings.
+- **Selection.** Every single item printed in 9 or more papers was admitted, except news digests. Items in 7 or 8 papers were chosen to cover January to November and the kinds of news. The result is 22 stories, 31 groups and 246 printings in 16 papers, from the King's speech of October 1775 to the Declaration of Independence and Congress's 88 battalions. Candidates not admitted are recorded, with reasons, in the ledger's `dispositions_summary` (`pipeline/archive_data/ledgers/stories_1776.json`).
+- **Scan check.** Every printing was checked against its scan; 23 crops were placed by hand where the page's text layer failed. All 246 printings are on their pages. Of the excerpts, 171 transcriptions are faithful, 44 have minor errors and 31 have errors that change a fact. Every paper printed Congress's resolutions opening the ports with "ſtaves" (staves), and RevX reads "slaves" in eight of the nine.
+- **Printed differences** are kept apart from transcription errors. Two papers head those resolutions "March 6" where the others have April 6, and Montgomery's letter to Carleton is dated 6 December in three papers and 16 December in four.
+- **Topics.** v0.7.1 adds topic rows for the 31 new groups, from the same frozen model as the matched stories, so the telescope's Topic view can place them.
+
 ### Connections between stories
 
 Connections were found the same way: search, read, then record. Passages in which two topic groups are both strong, for example shipping and European politics, were read. Fifteen connections that the newspapers state themselves were recorded, such as a decree that cites American newspapers. Each connection is recorded with its type (citation, challenge, claimed cause and so on) and the passage that supports it. Four counterexamples were kept as well, where items merely sat next to each other on a page. A connection a newspaper *asserts* is recorded as an assertion. It does not prove that one thing caused the other. Plainer links are recorded too. For example, a Greenock letter and Boyd's Bantry report were printed side by side in the same three issues, after arriving on the same ship. That is recorded as `printed_alongside` and nothing more.
@@ -186,7 +195,7 @@ Reviewing every story by hand cannot cover 41 years, so coverage comes in two ti
 
 New decisions never overwrite old ones. Each round of review becomes one release:
 
-**ledger** (the decisions) → **migration script** (applies them to the previous release) → **validation** (automated checks of counts, links, scan files and double counting: 66 for the first reviewed release, 190 for v0.6.1) → **frozen release** ([`data/`](../data)).
+**ledger** (the decisions) → **migration script** (applies them to the previous release) → **validation** (automated checks of counts, links, scan files and double counting: 66 for the first reviewed release, 190 for v0.6.1, 449 for v0.7.1) → **frozen release** ([`data/`](../data)).
 
 Earlier releases stay unchanged, so any chart can say which version of the evidence it uses. Corrections follow the same path. For example, v0.2.1 fixes one note that undercounted the length of the dropped statement. It adds a corrected annotation that points back to the old one, and the old one stays in the history.
 
@@ -194,7 +203,7 @@ Earlier releases stay unchanged, so any chart can say which version of the evide
 
 The pulse view is a direct translation of the admitted group records:
 
-- **Each newspaper is a fixed point, placed by its town of publication.** 1797 has 8 newspapers in the collection.
+- **Each newspaper is a fixed point, placed by its town of publication.** 1797 has 8 newspapers in the collection, and 1776 has 16.
   - The town comes from the catalogue record (`places_json`), and its coordinates from a short table in `pipeline/build_pulse_explorer.py` (32 towns).
   - North is at the top and east to the right. Crowded coastal towns are spread out, and papers are nudged apart so names stay readable, so the layout keeps the order of places but not distances.
   - Papers from the same town sit side by side.
@@ -206,18 +215,21 @@ The pulse view is a direct translation of the admitted group records:
   - *Constellations:* hovering over or tapping a star pauses on its story. The story's papers light up with their printing dates and are joined by faint lines; everything else dims. The lines join nearest neighbours on the map, not printings in date order, and appear all at once, so they group the printings without suggesting a route. The caption says so.
   - *Filter:* "Show stories printed in at least N newspapers". The matched overview defaults to 3, which removes the two-paper matches (68% of all matched stories).
 - **Choosing what to follow (9 November 2026).** Nothing is hidden in menus; the page offers what there is.
-  - *Years:* a strip of 41 slots, 1770–1810, drawn like the telescope's timeline. Each slot has a bar for how many newspapers survive that year, and a gold dot marks 1797, the reviewed year. The chosen years sit in the same pale blue bracket as the telescope's look-back. Tap a year, drag across several, or choose All. A view of many years opens on all its matched stories (1797 alone opens on the reviewed ones) and puts every newspaper of those years on the map, with smaller markers.
-  - *Story shelf:* the stories of the chosen years as cards above the map: the overviews, the reviewed stories (when 1797 is included), then the matched stories (most widely printed first, or earliest first), and the long-running ones. Each card gives the reach, the dates and a row of dots for when it was printed.
+  - *Years:* a strip of 41 slots, 1770–1810, drawn like the telescope's timeline. Each slot has a bar for how many newspapers survive that year, and a gold dot marks each reviewed year, 1776 and 1797. The chosen years sit in the same pale blue bracket as the telescope's look-back. Tap a year, drag across several, or choose All. A view of many years opens on all its matched stories (a reviewed year on its own opens on its reviewed stories) and puts every newspaper of those years on the map, with smaller markers.
+  - *Story shelf:* the stories of the chosen years as cards above the map: the overviews (one for each reviewed year in view, and one for the matched stories), the reviewed stories under their year, then the matched stories (most widely printed first, or earliest first), and the long-running ones. Each card gives the reach, the dates and a row of dots for when it was printed.
   - *Topics and words:* topic chips hold the seven families of the project's topic model. A family chip chooses the whole family and opens its topics, all 24 in all, as a second row to choose one by one; a family with only some topics chosen shows a half light. A find box narrows the stories by the words of their titles. Topics and words narrow the shelf and the map's overview together, so choosing "War" plays every war story of the chosen years.
   - *Speed:* one week to one year of printing per second, as a sliding glass control.
   - *Tour:* the page plays on its own, the current view and then the next card on the shelf. Any click, tap or key holds it for 20 seconds; an open passage or scan holds it while it is read.
-  - *Data:* one slim index of all years (`years/index.json`, 8.8 MB, 2.3 MB compressed) holds the newspapers, stories, printings and surviving pages; a passage loads from its year file when it is opened. The reviewed stories of 1797 show at once, before the index arrives.
+  - *Data:* one slim index of all years (`years/index.json`, 8.8 MB, 2.3 MB compressed) holds the newspapers, stories, printings and surviving pages; a passage loads from its year file when it is opened. The reviewed stories of 1776 and 1797 show at once, before the index arrives.
 - **The archive coverage display shows which dates have pages at all.** A dark newspaper can mean the paper printed nothing on the story, or that its issues for those dates did not survive.
   - Under each newspaper: whether the archive has a page from it on the current date.
   - A coverage strip above the date slider: for each week (each day in short views), how many of the newspapers on the map have surviving pages. A low or missing bar is a gap in the archive, not silence.
   - Weeks are used because most papers were weekly. Counted by single days, most days would look empty.
-- **The "All reviewed stories" overview plays every top-level story together.**
-  - **Categories and colours:** there are 21 stories in 1797 so far, in three categories with one colour each: *war, revolution and foreign news*, *ships, privateers and wrecks*, and *American public life*. Three colours is the most that stay distinguishable, including for colour-blind viewers, when any two are on screen together. So the colour shows the category, and the story's name appears under the newspaper.
+- **Each reviewed year has its own overview, "All reviewed stories of 1776" or "… of 1797", which plays all its top-level stories together.**
+  - **Categories and colours:** each year names its own three categories, one colour each. Three colours is the most that stay distinguishable, including for colour-blind viewers, when any two are on screen together. So the colour shows the category, and the story's name appears under the newspaper.
+    - 1776 (22 stories): *war and the armies* (8), *Britain and Europe* (5) and *independence and American government* (9).
+    - 1797 (21 stories): *war, revolution and foreign news* (8), *ships, privateers and wrecks* (5) and *American public life* (8).
+    - The years share the three colours: blue is war in both, and green is American public life and government. An overview plays one year, so two years' categories never share the map.
   - **Fading:** a newspaper keeps the colour for 40 days after a printing, then fades.
   - **No double pulses:** each passage belongs to exactly one top-level story.
   - **A sample, not a census:** the overview shows only reviewed stories, a small part of what the papers printed, not every story of the year.
@@ -321,9 +333,10 @@ The header and footer come from one file, `pipeline/site_parts.py`, so they cann
 | Full-collection scoring and trend checks | `pipeline/recheck_full_corpus.py` |
 | Story searches | `pipeline/search_chains.py`, `pipeline/search_pilot_1797.py`, `pipeline/story_phrase_search_1797.py` |
 | Text-reuse families, 1797 | `pipeline/reuse_1797.py` (matching), `pipeline/reuse_families_1797.py` (grouping) |
+| Reviewed stories, 1776 | `pipeline/year_search_pages.py` (the year's pages), `pipeline/story_items.py` (single printed items), `pipeline/story_phrase_search.py`; the ledger is written by `pipeline/archive_data/ledgers/make_stories_1776.py`, and `pipeline/archive_data/add_reviewed_topics.py` adds the new groups' topics |
 | Matched stories, all years | `pipeline/reuse_all.py`, `pipeline/reuse_families_all.py`, `pipeline/reuse_titles_all.py`, `pipeline/story_topics_all.py`; added to the release by `pipeline/archive_data/add_reuse_layer.py`, `add_reuse_titles.py` and `add_story_topics.py` |
 | Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.6.1) |
+| Data release | [`data/`](../data) (v0.7.1) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

@@ -2,6 +2,36 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.7.1 (2026-11-09)
+
+v0.7.1 is v0.7.0 plus **topic rows for the 31 reviewed groups of 1776**, made by `add_reviewed_topics.py`. Nothing else changes.
+
+- **Why:** `derived/story_topics.parquet` had rows for the reviewed groups of 1797 only, because v0.7.0 copied the derived layers as they were.
+- **How:** the same frozen model and method as v0.5.2 (`work/story_topics_all.py`): each printing's excerpt is scored, and a group's weights are the sum over its printings, normalised.
+  - The model's solver stops on a whole batch, so a weight can move in the fourth decimal when other printings share the batch. Scored together with the 1776 groups, one 1797 row moved by 0.0001.
+  - So the 34 groups that had rows are scored together, as they were. The script stops unless that reproduces their rows exactly; it did.
+  - The 31 new groups are then scored together and added. Existing rows are unchanged.
+- **Run:** `run:story-topics-reviewed-v1`, automatic. Its parameters repeat the model file and hash of `run:story-topics-v1`.
+- **Metadata:** `story_topics.stories` counts 65 reviewed rows, and `story_topics.runs` names both runs.
+- **New checks:** every reviewed group with printings has exactly one topic row, and the new run is recorded as automatic.
+
+## Changes in v0.7.0 (2026-11-08)
+
+v0.7.0 is v0.6.1 plus **the reviewed stories of 1776**, from `ledgers/stories_1776.json` applied with `apply_ledger.py`. Nothing else changes; the derived layers are copied as they are.
+
+- **22 stories, 31 groups, 246 printings in 16 newspapers,** from January to November 1776 (`obs:expansion-1776:S76-001` to `S76-246`).
+  - Three are parent stories: the siege of Quebec (3 groups), British warships in the Hudson (4) and the Staten Island peace conference (2).
+  - 1776 is the second reviewed year, after 1797.
+- **How they were found:** most automatic 1776 families chain separate items printed side by side.
+  - `work/story_items.py` split them into single printed items and counted where each was printed, on all 2,319 pages of 1776 in both transcriptions.
+  - `work/story_phrase_search.py` confirmed the printings.
+  - The selection rule and the items not admitted are in the ledger's `dispositions_summary` and in `outputs/story_discovery_1776/README.md`.
+- **Scan check of every printing** (`work/scan_ledger.py`; protocol in `outputs/story_discovery_1776/SCAN_PROTOCOL.md`).
+  - 23 crops were placed by hand where the text layer failed.
+  - Findings keep transcription errors apart from printed differences. Example: every printing of Congress's resolutions of 6 April prints "ſtaves", and RevX reads "slaves" in eight of the nine.
+- **New role values:** `quoted_document` (a document printed inside a report of other proceedings) and `document_excerpt` (part of a document, with a summary).
+- **Second scanned copies:** five Virginia Gazette issues are filed twice, as editions 1 and 2. A printing is admitted once, and its note names the second copy.
+
 ## Changes in v0.6.1 (2026-11-08)
 
 v0.6.1 is v0.6.0 with **English for the 22 notes that were still in Chinese**, made by `apply_corrections.py` from `ledgers/corrections_2026-11-08.json`.
@@ -257,7 +287,15 @@ python work/audit_matched.py sample && python work/audit_matched.py crops && pyt
 python work/audit_matched.py summarise                                # outputs/matched_audit/summary.json
 python work/archive_data/add_checks_layer.py 0.5.2 0.6.0              # v0.6.0
 python work/archive_data/apply_corrections.py work/archive_data/ledgers/corrections_2026-11-08.json   # v0.6.1
-python work/archive_data/validate.py outputs/data_foundation/v0.6.1
+python work/year_search_pages.py 1776 outputs/story_discovery_1776/search_pages.json
+python work/story_items.py 1776 outputs/story_discovery_1776/search_pages.json outputs/story_discovery_1776/items.json
+python work/story_phrase_search.py outputs/story_discovery_1776/search_pages.json outputs/story_discovery_1776/phrase_patterns.json outputs/story_discovery_1776/phrase_hits.json
+python work/archive_data/ledgers/make_stories_1776.py && python work/scan_ledger.py work/archive_data/ledgers/stories_1776.json
+# ... reviewers write outputs/story_discovery_1776/scan_verdicts/; findings, hand-placed boxes and notes go into ledgers/stories_1776_review.json
+python work/archive_data/ledgers/make_stories_1776.py
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1776.json   # v0.7.0
+python work/archive_data/add_reviewed_topics.py 0.7.0 0.7.1           # v0.7.1
+python work/archive_data/validate.py outputs/data_foundation/v0.7.1
 ```
 
 For the next release, write a new ledger (base = current version, target = next) and run `apply_ledger.py` on it. Before that, run `work/scan_ledger.py <ledger>` to make the scan crops; on pages with an unusable text layer, add `scan_boxes` by hand.

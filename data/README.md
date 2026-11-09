@@ -1,12 +1,12 @@
-# Data release v0.6.1
+# Data release v0.7.1
 
 This is the data behind the site. It holds:
 
 - every page, issue and newspaper in the archive;
-- the reviewed 1797 stories;
+- the reviewed stories of 1776 and 1797;
 - the automatic matched stories for all 41 years.
 
-A release is never edited. New evidence makes a new version with its own checks: this one passes all 190. The code is in [`../pipeline/archive_data/`](../pipeline/archive_data).
+A release is never edited. New evidence makes a new version with its own checks: this one passes all 449. The code is in [`../pipeline/archive_data/`](../pipeline/archive_data).
 
 ## Two tiers
 

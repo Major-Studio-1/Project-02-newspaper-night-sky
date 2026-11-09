@@ -139,7 +139,7 @@ __SITE_HEADER__
 <aside class="evidence" aria-label="Observed publications and source evidence"><h2>Observed appearances</h2><div id="appearances"></div>
 <div id="selected-evidence"><h3 id="source-title"></h3><p id="source-role"></p><p id="source-summary"></p><p id="source-check" class="check" hidden></p><button id="focus-story" type="button"></button><details id="passage"><summary>Read the passage</summary><blockquote id="excerpt"></blockquote><p id="source-note" class="small muted"></p></details><details id="scan-detail"><summary>View the newspaper scan</summary><div id="scans"></div></details><a id="original" class="source-link" target="_blank" rel="noopener">Open full original page ↗</a><p id="source-page" class="small muted"></p></div>
 </aside></div>
-<p class="page-notes">Each pulse marks one printed passage on its publication date. Reviewed stories were read and checked against the scans; matched stories were found automatically by shared wording and are not checked. In a single story, colours describe textual roles; in the reviewed overview, colours identify story categories. Glow is an animation effect: papers that printed the same story within 40 days glow again together. Constellation lines appear only when you pick a story; they group its printings by nearness on the map and never show who copied whom. Nodes are placed roughly by town of publication, not to scale. <a href="method.html#pulses">More on what a pulse shows</a>. Each matched printing says whether its passage is in both machine transcriptions of its page; an audit of 200 matched stories found that about 1 passage in 5, up to 1 in 3, has a misreading that changes a fact, so check the scan before quoting. <a href="method.html#checks">How the matched stories were checked</a>. <span id="release"></span></p>
+<p class="page-notes">Each pulse marks one printed passage on its publication date. Reviewed stories were read and checked against the scans; matched stories were found automatically by shared wording and are not checked. In a single story, colours describe textual roles; in a reviewed year's overview, colours identify that year's story categories. Glow is an animation effect: papers that printed the same story within 40 days glow again together. Constellation lines appear only when you pick a story; they group its printings by nearness on the map and never show who copied whom. Nodes are placed roughly by town of publication, not to scale. <a href="method.html#pulses">More on what a pulse shows</a>. Each matched printing says whether its passage is in both machine transcriptions of its page; an audit of 200 matched stories found that about 1 passage in 5, up to 1 in 3, has a misreading that changes a fact, so check the scan before quoting. <a href="method.html#checks">How the matched stories were checked</a>. <span id="release"></span></p>
 <div id="announcement" class="sr-only" aria-live="polite"></div>
 </main>
 __SITE_FOOTER__
@@ -154,13 +154,14 @@ const dateValue = s => Date.parse(s + 'T00:00:00Z');
 const fmt = (ms, year = false) => new Date(ms).toLocaleDateString('en-GB', {day: 'numeric', month: 'short', ...(year ? {year: 'numeric'} : {}), timeZone: 'UTC'});
 const ROLE_NAMES = {report: 'Report', challenge: 'Appended challenge', commentary: 'Commentary', later_related_account: 'Later account',
   translated_document: 'Translated document', published_document: 'Published document', reply: 'Reply', condensed_report: 'Condensed report',
-  attributed_summary: 'Attributed summary', accusation: 'Editorial allegation', matched_text: 'Matched text (not checked)'};
+  attributed_summary: 'Attributed summary', accusation: 'Editorial allegation', quoted_document: 'Quoted document', document_excerpt: 'Document excerpt',
+  matched_text: 'Matched text (not checked)'};
 const role = e => e.roles.map(r => ROLE_NAMES[r] || r.replaceAll('_', ' ')).join(' + ');
-// Overview colours: one per reviewed-story category (dataviz slots 1-3, validated all-pairs on #050711);
-// matched stories share one neutral colour, which marks their status rather than a category.
+// Overview colours: one per reviewed-story category (dataviz slots 1-3, validated all-pairs on #050711). Each reviewed year
+// names its own categories in the same three slots. Matched stories share one neutral colour, which marks their status.
 const CATEGORY_COLORS = ['#3987e5', '#d95926', '#199e70'], AUTO_COLOR = '#aab6cf', LINGER = 40, LIST_LIMIT = 400;
 const roleColor = e => !e ? AUTO_COLOR : e.roles.includes('matched_text') ? AUTO_COLOR
-  : e.roles.some(r => r.endsWith('document') || r === 'reply') ? '#96dfc4' : e.roles.includes('later_related_account') ? '#b7a3ff' : '#8ccfff';
+  : e.roles.some(r => r.endsWith('document') || r.startsWith('document') || r === 'reply') ? '#96dfc4' : e.roles.includes('later_related_account') ? '#b7a3ff' : '#8ccfff';
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const ROLE_LEGEND = $('legend').innerHTML;
 const SVGNS = 'http://www.w3.org/2000/svg', ECHO = .9, STORE = 'newspaper-pulses-v7', OLD_STORE = 'newspaper-pulses-v6';
@@ -243,16 +244,18 @@ function rangeData(from, to) {
   return {from, to, newspapers: [...shown].sort((x, y) => x - y).map(i => I.papers[i]), coverage, groups, printings};
 }
 
-function buildState(from, to, base, extra) {
+// bases: the reviewed years among the chosen years (each with its newspapers, stories, categories and passages); extra:
+// the matched stories of the chosen years, from the index of all years.
+function buildState(from, to, bases, extra) {
   const newspapers = [], seen = new Set();
-  for (const p of [...(base?.newspapers || []), ...(extra?.newspapers || [])]) if (!seen.has(p.lccn)) { seen.add(p.lccn); newspapers.push(p); }
-  const groups = [...(base?.groups || []), ...(extra?.groups || [])];
-  const categories = (base?.categories || []).map((c, i) => ({...c, color: CATEGORY_COLORS[i]}));
+  for (const p of [...bases.flatMap(b => b.newspapers), ...(extra?.newspapers || [])]) if (!seen.has(p.lccn)) { seen.add(p.lccn); newspapers.push(p); }
+  const groups = [...bases.flatMap(b => b.groups), ...(extra?.groups || [])];
+  const categories = bases.flatMap(b => b.categories.map((c, i) => ({...c, year: b.year, color: CATEGORY_COLORS[i]})));   // each year's own slots
   const catOf = new Map(categories.map(c => [c.id, c]));
-  const stories = (base?.stories || []).map(s => ({...s, color: catOf.get(s.category)?.color || '#8ccfff'}));
+  const stories = bases.flatMap(b => b.stories.map(s => ({...s, year: b.year, color: catOf.get(s.category)?.color || '#8ccfff'})));
   const autoGroups = extra?.groups || [];
-  const coverageRows = extra?.coverage || base?.coverage || [];
-  const baseObs = new Map((base?.observations || []).map(o => [o.id, o]));
+  const coverageRows = extra?.coverage || bases.flatMap(b => b.coverage);
+  const baseObs = new Map(bases.flatMap(b => b.observations).map(o => [o.id, o]));
   const label = from === to ? String(from) : from === 1770 && to === 1810 ? 'all years' : from + '–' + to;
   const S = {year: from, from, to, label, newspapers, groups, categories, stories, autoGroups, coverageRows, observationsCount: baseObs.size + (extra?.printings || 0),
     papers: new Map(newspapers.map(n => [n.lccn, n])), byId: {get: id => baseObs.get(id) || matchedObs(id)},
@@ -264,22 +267,24 @@ function buildState(from, to, base, extra) {
   for (const s of stories) s.papers = new Set(s.members.map(id => S.byId.get(id).node)).size;
   // Long-running families (a debate or serial document chained over months) are listed on their own, not in the overview.
   S.shortGroups = autoGroups.filter(g => !g.long_running); S.longCount = autoGroups.length - S.shortGroups.length;
-  S.hasReviewed = stories.length > 0; S.hasMatched = S.shortGroups.length > 0;
+  S.hasReviewed = stories.length > 0; S.hasMatched = S.shortGroups.length > 0; S.reviewedYears = bases.map(b => b.year);
   return S;
 }
 
-// The two overviews are rebuilt whenever the "printed in at least N newspapers" filter changes.
-function overview(kind) {
+// The overviews are rebuilt whenever the "printed in at least N newspapers" filter changes. Each reviewed year has its own
+// overview ('all:1776') with its own categories; the matched overview ('auto-all') takes the matched stories in view.
+function overview(kind, year) {
   // If no story reaches the chosen level (years with only 2-3 surviving series), fall back to the highest level that has stories.
-  const pool = kind === 'reviewed' ? null : narrowed(Y.shortGroups);
-  const sizes = kind === 'reviewed' ? Y.stories.map(s => s.papers) : pool.map(g => g.newspapers);
+  const pool = kind === 'reviewed' ? Y.stories.filter(s => s.year === year) : narrowed(Y.shortGroups);
+  const sizes = kind === 'reviewed' ? pool.map(s => s.papers) : pool.map(g => g.newspapers);
   const wanted = minPapers[kind], k = sizes.some(s => s >= wanted) ? wanted : [6, 4, 3, 2, 1].find(x => sizes.some(s => s >= x)) || 1;
-  const fellBack = k !== wanted ? ` No story ${Y.from === Y.to ? 'this year' : 'in these years'} reaches ${wanted} newspapers, so stories in at least ${k} are shown.` : '';
+  const where = kind === 'reviewed' ? 'reviewed story of ' + year : 'story ' + (Y.from === Y.to ? 'this year' : 'in these years');
+  const fellBack = k !== wanted ? ` No ${where} reaches ${wanted} newspapers, so stories in at least ${k} are shown.` : '';
   const atLeast = k > 1 ? ` printed in at least ${k} newspapers` : '';
   if (kind === 'reviewed') {
-    const st = Y.stories.filter(s => s.papers >= k);
-    return {id: 'all', kind: 'overview', label: 'All reviewed stories', count: st.length, k,
-      definition: `Every story reviewed for ${BOOT.reviewed.year}${atLeast}, played together: ${st.length} of ${Y.stories.length} stories in ${Y.categories.length} categories, one colour per category. A newspaper keeps the colour for ${LINGER} days after printing a story, then fades. Only stories that were searched for and checked against the scans appear here.` + fellBack,
+    const st = pool.filter(s => s.papers >= k), cats = Y.categories.filter(c => c.year === year);
+    return {id: 'all:' + year, kind: 'overview', year, label: 'All reviewed stories of ' + year, count: st.length, k,
+      definition: `Every story reviewed for ${year}${atLeast}, played together: ${st.length} of ${pool.length} stories in ${cats.length} categories, one colour per category. A newspaper keeps the colour for ${LINGER} days after printing a story, then fades. Only stories that were searched for and checked against the scans appear here.` + fellBack,
       members: st.flatMap(s => s.members.map(id => ({id, roles: Y.memberRoles.get(id)})))};
   }
   const fams = pool.filter(g => g.newspapers >= k), when = Y.from === Y.to ? 'in ' + Y.from : `between ${Y.from} and ${Y.to}`;
@@ -306,6 +311,14 @@ function following() {   // the topics and words chosen, in a few words
   return parts.join(' · ');
 }
 
+// The reviewed overview an id names: 'all:1776' for one year; a bare 'all' (older links and saved views) means the latest
+// reviewed year in view. Null when that year is not in view.
+function reviewedYearOf(id) {
+  if (!Y || !Y.hasReviewed || typeof id !== 'string') return null;
+  if (id === 'all') return Y.reviewedYears.at(-1);
+  const m = /^all:(\d{4})$/.exec(id); return m && Y.reviewedYears.includes(Number(m[1])) ? Number(m[1]) : null;
+}
+const isReviewedOverview = id => id === 'all' || /^all:\d{4}$/.test(id || '');
 const paperName = lccn => Y.papers.get(lccn)?.name || lccn;
 const storyFor = e => mode === 'reviewed' ? Y.storyOf.get(e.id) : mode === 'matched' ? Y.familyOf.get(e.id) : null;
 const color = e => mode === 'reviewed' ? Y.storyOf.get(e?.id)?.color || '#8ccfff' : mode === 'matched' ? AUTO_COLOR : roleColor(e);
@@ -474,9 +487,10 @@ $('strip').addEventListener('pointerleave', () => { $('strip-tip').hidden = true
 $('strip').addEventListener('pointerdown', ev => { if (events.length) { seek(stripDay(ev)); stripTip(ev); } });
 new ResizeObserver(() => drawStrip()).observe($('strip'));
 
-// The story shelf: what there is to follow in the chosen years, in view at once instead of hidden in a menu. The two
-// overviews come first, then the reviewed stories (1797), then the matched stories, most widely printed first, then the
-// long-running ones. Topic chips narrow the matched stories and their overview; "More" adds cards.
+// The story shelf: what there is to follow in the chosen years, in view at once instead of hidden in a menu. The overviews
+// come first (one for each reviewed year in view, one for the matched stories), then the reviewed stories by year, then
+// the matched stories, most widely printed first, then the long-running ones. Topic chips narrow the matched stories and
+// their overview; "More" adds cards.
 const monthSpan = (a, b) => { const A = new Date(a * MS + EPOCH_MS), B = new Date(b * MS + EPOCH_MS), o = {month: 'short', timeZone: 'UTC'};
   return A.getUTCFullYear() === B.getUTCFullYear() ? (A.getUTCMonth() === B.getUTCMonth() ? A.toLocaleDateString('en-GB', {...o, year: 'numeric'}) : A.toLocaleDateString('en-GB', o) + '–' + B.toLocaleDateString('en-GB', {...o, year: 'numeric'}))
     : A.toLocaleDateString('en-GB', {...o, year: 'numeric'}) + ' – ' + B.toLocaleDateString('en-GB', {...o, year: 'numeric'}); };
@@ -509,16 +523,17 @@ function buildShelf() {
   const order = shelfSort === 'date' ? (a, b) => a.firstDay - b.firstDay || b.newspapers - a.newspapers : (a, b) => b.newspapers - a.newspapers || b.printings - a.printings || a.firstDay - b.firstDay;
   const listed = (fams.length ? fams : pool).slice().sort(order);
   const reviewed = topicsOn.size ? [] : Y.stories.filter(s => !findRx.length || findRx.every(rx => rx.test(s.label.toLowerCase())));
-  if (Y.hasReviewed && !what) rail.append(card({id: 'all', cls: 'overview', tag: 'Overview · checked against the scans', title: 'All reviewed stories',
-    meta: `${Y.stories.length} stories · ${BOOT.reviewed.year} · one colour per category`}));
+  if (Y.hasReviewed && !what) for (const y of Y.reviewedYears) rail.append(card({id: 'all:' + y, cls: 'overview', tag: 'Overview · checked against the scans',
+    title: 'All reviewed stories of ' + y, meta: `${Y.stories.filter(s => s.year === y).length} stories · one colour per category`}));
   if (Y.hasMatched) rail.append(card({id: 'auto-all', cls: 'overview', tag: 'Overview · found automatically', title: what ? 'All · ' + what : 'All matched stories',
     meta: `${(fams.length || pool.length).toLocaleString('en-US')} stories${fams.length ? ` in ${k}+ papers` : ''} · ${Y.label}`}));
   const shownIds = new Set(listed.slice(0, shelfLimit).map(g => g.id));
   const current = group && group.kind === 'auto_family' && !shownIds.has(group.id) ? group : null;   // e.g. opened from the telescope
   if (current) { sep('Now'); rail.append(matchedCard(current)); }
-  if (Y.hasReviewed && reviewed.length) {
-    sep('Reviewed');
-    for (const s of reviewed) {
+  if (Y.hasReviewed && reviewed.length) for (const y of Y.reviewedYears) {
+    const mine = reviewed.filter(s => s.year === y); if (!mine.length) continue;
+    sep(Y.reviewedYears.length > 1 ? 'Reviewed · ' + y : 'Reviewed');
+    for (const s of mine) {
       const ds = s.members.map(id => dayNum(Y.byId.get(id).date));
       rail.append(card({id: s.id, tag: (Y.categories.find(c => c.id === s.category)?.label || 'Reviewed'), dot: s.color, title: s.label, colour: s.color,
         meta: `${s.papers} papers · ${s.members.length} printings · ${monthSpan(Math.min(...ds), Math.max(...ds))}`, days: ds}));
@@ -599,7 +614,7 @@ function renderLegend() {
   const L = $('legend'); L.classList.toggle('overview', mode === 'reviewed');
   if (mode !== 'reviewed') { L.innerHTML = ROLE_LEGEND; return; }
   L.replaceChildren();
-  for (const c of Y.categories) {
+  for (const c of Y.categories.filter(c => c.year === group.year)) {
     const row = document.createElement('div'); row.className = 'legend-row';
     const head = document.createElement('span'); head.className = 'legend-cat';
     const d = document.createElement('i'); d.className = 'dot'; d.style.background = c.color;
@@ -762,11 +777,11 @@ function tick(now) {
 
 function changeGroup(id) {
   playing = false; cancelAnimationFrame(raf);
-  const g = Y.groupById.get(id);
-  if (id === 'all' && Y.hasReviewed) { mode = 'reviewed'; group = overview('reviewed'); }
+  const g = Y.groupById.get(id), ry = reviewedYearOf(id);
+  if (ry) { mode = 'reviewed'; group = overview('reviewed', ry); }
   else if (id === 'auto-all' && Y.hasMatched) { mode = 'matched'; group = overview('matched'); }
   else if (g) { mode = 'group'; group = g; }
-  else if (Y.hasReviewed) { mode = 'reviewed'; group = overview('reviewed'); }
+  else if (Y.hasReviewed) { mode = 'reviewed'; group = overview('reviewed', Y.reviewedYears[0]); }
   else if (Y.hasMatched) { mode = 'matched'; group = overview('matched'); }
   else { mode = 'group'; group = null; }
   // The shelf shows the chosen story (a story not on it, such as one opened from the telescope, gets a card of its own).
@@ -823,29 +838,30 @@ const skyUrl = () => { const n = Y.to - Y.from + 1, look = n <= 1 ? 1 : n <= 5 ?
 async function loadRange(from, to, wanted) {
   from = Math.max(1770, Math.min(1810, from)); to = Math.max(from, Math.min(1810, to));
   const token = ++loadToken; pause(); setYearsUI(from, to);
-  const base = BOOT.reviewed && BOOT.reviewed.year >= from && BOOT.reviewed.year <= to ? BOOT.reviewed : null;
+  const bases = (BOOT.reviewed || []).filter(r => r.year >= from && r.year <= to);   // the reviewed years in view
   let earlyPick = null;
-  if (!INDEX && base) {   // the reviewed stories are in the page itself: show them while the index of all years loads
-    Y = buildState(from, to, base, null); buildSky(); buildChips(); group = null; buildShelf();
-    changeGroup(wanted && (wanted === 'all' || Y.groupById.has(wanted)) ? wanted : 'all'); earlyPick = group?.id;
+  if (!INDEX && bases.length) {   // the reviewed stories are in the page itself: show them while the index of all years loads
+    Y = buildState(from, to, bases, null); buildSky(); buildChips(); group = null; buildShelf();
+    changeGroup(wanted && (reviewedYearOf(wanted) || Y.groupById.has(wanted)) ? wanted : 'all:' + Y.reviewedYears[0]); earlyPick = group?.id;
   }
   let extra = null;
   try { await loadIndex(); extra = rangeData(from, to); } catch { extra = null; }
   if (token !== loadToken) return;   // a later choice has taken over
   if (earlyPick && group && group.id !== earlyPick) wanted = group.id;   // the visitor chose a story meanwhile
-  if (!base && !extra) {
+  if (!bases.length && !extra) {
     $('notice').textContent = 'Could not load these years. The page needs to be served over HTTP (for example: python -m http.server).';
     if (Y) setYearsUI(Y.from, Y.to); return;
   }
   $('notice').textContent = extra ? '' : 'Matched stories and other years need the page served over HTTP; showing the reviewed stories only.';
-  Y = buildState(from, to, base, extra); setYearsUI(from, to);
+  Y = buildState(from, to, bases, extra); setYearsUI(from, to);
   document.title = 'Newspaper pulses · ' + Y.label;
   $('to-telescope').href = skyUrl(); $('to-telescope').textContent = `See ${from === to ? 'this year' : 'these years'} in the sky ↗`;
   buildSky(); buildChips(); shelfLimit = 24; group = null; buildShelf();
   $('scope').textContent = `${Y.label === 'all years' ? 'In all years' : 'In ' + Y.label}: ${plural(Y.newspapers.length, 'newspaper')}${Y.stories.length ? ` · ${Y.stories.length} reviewed stories` : ''} · ${Y.autoGroups.length.toLocaleString('en-US')} matched ${Y.autoGroups.length === 1 ? 'story' : 'stories'}`;
-  const ok = wanted && ((wanted === 'all' && Y.hasReviewed) || (wanted === 'auto-all' && Y.hasMatched) || Y.groupById.has(wanted));
-  // The reviewed overview opens 1797 on its own; a stretch of years opens on all its matched stories.
-  changeGroup(ok ? wanted : Y.hasReviewed && (from === to || !Y.hasMatched) ? 'all' : Y.hasMatched ? 'auto-all' : 'all');
+  const ok = wanted && (reviewedYearOf(wanted) || (wanted === 'auto-all' && Y.hasMatched) || Y.groupById.has(wanted));
+  // A reviewed year on its own opens on its reviewed overview; a stretch of years opens on all its matched stories.
+  const reviewedFirst = Y.hasReviewed ? 'all:' + Y.reviewedYears[0] : 'auto-all';
+  changeGroup(ok ? wanted : Y.hasReviewed && (from === to || !Y.hasMatched) ? reviewedFirst : Y.hasMatched ? 'auto-all' : reviewedFirst);
   if (from === to) setTimeout(() => loadPassages(from), 1200);   // one year: its passages are ready by the time one is opened
 }
 
@@ -861,7 +877,7 @@ for (const y of BOOT.years) {
   yearsEl.append(b); yearButtons.push(b);
 }
 for (let y = 1770; y <= 1810; y += 5) { const s = document.createElement('span'); s.dataset.year = String(y); s.textContent = y; if (y % 10) s.className = 'minor'; $('years-axis').append(s); }   // as on the telescope timeline
-let pickFrom = 1797, pickTo = 1797;
+let pickFrom = (BOOT.reviewed || []).at(-1)?.year || 1797, pickTo = pickFrom;
 const yearBtn = y => yearButtons[y - 1770];
 function placeYears() {
   const a = yearBtn(pickFrom), b = yearBtn(pickTo); if (!a || !b || !a.offsetWidth) return;
@@ -907,9 +923,9 @@ yearsEl.addEventListener('keydown', e => {
 });
 function pickYears(from, to) {
   if (Y && from === Y.from && to === Y.to) { setYearsUI(from, to); return; }
-  // A chosen story, or the matched overview, stays chosen when the new years still hold it; the 1797 reviewed overview
+  // A chosen story, or the matched overview, stays chosen when the new years still hold it; a reviewed year's overview
   // does not carry over, so a stretch of years opens on its own stories.
-  loadRange(from, to, group && group.id !== 'all' ? group.id : undefined).then(save);
+  loadRange(from, to, group && !isReviewedOverview(group.id) ? group.id : undefined).then(save);
 }
 $('years-all').addEventListener('click', () => pickYears(1770, 1810));
 
@@ -970,7 +986,8 @@ let first = null;
 if (yp === 'all') first = [1770, 1810];
 else if (ym) { const a = Number(ym[1]), b = Number(ym[2] || ym[1]); if (a >= 1770 && b <= 1810 && a <= b) first = [a, b]; }
 const fromUrl = !!first;
-if (!first) first = saved && saved.from >= 1770 && saved.to <= 1810 && saved.from <= saved.to ? [saved.from, saved.to] : [BOOT.reviewed.year, BOOT.reviewed.year];
+const opening = (BOOT.reviewed || []).at(-1)?.year || 1797;   // a first visit opens on the latest reviewed year
+if (!first) first = saved && saved.from >= 1770 && saved.to <= 1810 && saved.from <= saved.to ? [saved.from, saved.to] : [opening, opening];
 tourHold = performance.now() + (fromUrl && params.get('focus') ? TOUR_WAIT : 2500);   // a story opened by a link is read first
 setYearsUI(first[0], first[1]);
 loadRange(first[0], first[1], fromUrl ? params.get('focus') : saved?.group).then(() => {
