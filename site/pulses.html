@@ -55,19 +55,26 @@
    dot marks a year with reviewed stories. Tap a year, drag across several, or press All. */
 .year-pick{display:flex;align-items:center;gap:8px;flex:1 1 440px;min-width:0}.years-now{font-size:14px;color:var(--ink);min-width:78px;font-weight:600;white-space:nowrap}
 .years-wrap{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:1px}
-.years{position:relative;display:flex;align-items:stretch;height:30px;padding:2px;border-radius:9px;background:linear-gradient(180deg,#ffffff0e,#ffffff05);border:1px solid #ffffff1f;
-  box-shadow:inset 0 1px 0 #ffffff12,inset 0 -1px 0 #00000059;touch-action:pan-y;-webkit-user-select:none;user-select:none;cursor:pointer}
-.years button{position:relative;z-index:1;flex:1 1 0;min-width:0;padding:0;border:0;border-radius:4px;background:none;display:flex;align-items:flex-end;justify-content:center}
-.years button:hover{background:#ffffff0f}.years button:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
-.years .bar{display:block;width:max(2px,42%);border-radius:2px 2px 1px 1px;background:#4f5d82;margin-bottom:2px;transition:background .2s}
-.years button.in .bar{background:var(--ink)}
-.years button.reviewed::before{content:"";position:absolute;top:3px;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#ffd27a}
-.years .band{position:absolute;z-index:0;top:2px;bottom:2px;left:0;width:0;border-radius:6px;pointer-events:none;transition:transform .3s cubic-bezier(.3,1.3,.5,1),width .3s cubic-bezier(.3,1.3,.5,1)}
+.years{position:relative;display:flex;align-items:stretch;height:30px;padding:3px 4px 0;border-radius:8px;background:#070b17;border:1px solid var(--line);touch-action:pan-y;-webkit-user-select:none;user-select:none;cursor:pointer}
+.years button{position:relative;z-index:1;flex:1 1 0;min-width:0;padding:0;border:0;border-radius:2px;background:none;display:flex;align-items:flex-end;justify-content:center}
+.years button:hover .bar{background:#46587e}.years button:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+.years .bar{display:block;width:max(2px,56%);border-radius:1px 1px 0 0;background:#2c3955;transition:background .2s}
+.years button.in .bar{background:#56698f}
+.years button.reviewed::before{content:"";position:absolute;top:2px;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:#ffd27a}
+/* The chosen years: the telescope timeline's look-back bracket (pale blue fill, blue edge). */
+.years .band{position:absolute;z-index:0;top:3px;bottom:0;left:0;width:0;border-radius:2px;pointer-events:none;background:#8ccfff22;box-shadow:inset 0 0 0 1px #8ccfff88;
+  transition:transform .3s cubic-bezier(.3,1.3,.5,1),width .3s cubic-bezier(.3,1.3,.5,1)}
 .years.dragging .band,.years:not(.ready) .band{transition:none}
-.years-axis{position:relative;height:12px;font-size:10px;color:var(--muted)}.years-axis span{position:absolute;top:0;transform:translateX(-50%)}
+.years-axis{position:relative;height:15px;font-size:11px;color:#8b98b5}.years-axis span{position:absolute;top:2px;transform:translateX(-50%)}
+.years-axis span::before{content:"";position:absolute;left:50%;top:-2px;width:1px;height:3px;background:#28334c}
+@media(max-width:720px){.years-axis span.minor{display:none}}
 /* Story shelf: the stories of the chosen years as cards, the most widely printed first; topic chips narrow it (and the overview). */
 .shelf{margin:0 0 14px}.shelf-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:8px}.shelf-head h2{font-size:16px}
-.topic-chips{margin-left:auto}.topic-chips .toggle{font-size:12px;padding:3px 11px 3px 9px}.topic-chips .n{color:var(--muted);font-size:11px}
+.topic-chips{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 6px}.topic-chips .toggle{font-size:12px;padding:3px 11px 3px 9px}.topic-chips .n{color:var(--muted);font-size:11px}
+.topic-chips.sub{margin:-1px 0 8px 14px;padding-left:10px;border-left:1px solid #ffffff1f}.topic-chips.sub[hidden]{display:none}.topic-chips.sub .toggle{font-size:11.5px}
+.toggle[aria-pressed="mixed"]{color:var(--ink);border-color:#ffffff33}.toggle[aria-pressed="mixed"]::before{background:linear-gradient(90deg,#eef8ff 50%,transparent 50%);box-shadow:0 0 0 1px #eef8ffb3}   /* some of a family's topics */
+.find{flex:1 1 220px;max-width:320px;margin-left:auto}.find input{width:100%;font:inherit;font-size:13px;color:var(--ink);border-radius:999px;padding:5px 12px;
+  background:linear-gradient(180deg,#0000003d,#ffffff08);border:1px solid #ffffff21;box-shadow:inset 0 1px 2px #0000004d}.find input::placeholder{color:#6f7d99}.find input:focus{outline:none;border-color:var(--blue)}
 .shelf-rail{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;padding:2px 2px 10px;scrollbar-width:thin;scrollbar-color:#28334c transparent}
 .card{flex:0 0 212px;scroll-snap-align:start;display:flex;flex-direction:column;gap:3px;text-align:left;padding:9px 11px 8px;border-radius:12px;color:var(--ink);font-size:13px;line-height:1.3;
   background:linear-gradient(180deg,#ffffff0b,#ffffff03);border:1px solid #ffffff1a;box-shadow:inset 0 1px 0 #ffffff0d,0 1px 8px #0000004d;transition:background .2s,border-color .2s,box-shadow .2s}
@@ -86,7 +93,8 @@
 @media(prefers-reduced-motion:reduce){.years .band,.card{transition:none}}
 @media(max-width:720px){.year-pick{flex:1 1 100%;order:2}.years-now{min-width:0;font-size:13px}.card{flex-basis:178px}.transport{flex:1 1 100%}
   .topic-chips{margin-left:0;flex-wrap:nowrap;overflow-x:auto;max-width:100%;padding-bottom:4px;scrollbar-width:none}.topic-chips .toggle{flex:none}   /* one line that scrolls sideways */
-  #speed-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}}
+  #speed-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+  .find{flex:1 1 150px;max-width:none;margin-left:0}#shelf-sort button{padding:5px 8px}}   /* Find and the order share one line */
 @media(max-width:720px){
   .sky-wrap{display:flex;flex-direction:column}.sky-top{display:contents}
   .sky-top .filter-row{order:0;margin:0 0 4px}.filter-hint{display:none}.sky{order:1;margin:0}
@@ -113,7 +121,11 @@
 </div></header>
 <main class="shell">
 <div class="pagehead"><h1>Newspaper pulses</h1><span id="scope" class="small muted"></span><a id="to-telescope" class="small" href="telescope.html">See this year in the sky ↗</a></div><p id="notice"></p>
-<section class="shelf" aria-labelledby="shelf-title"><div class="shelf-head"><h2 id="shelf-title">Stories</h2><span id="shelf-count" class="small muted"></span><span id="topic-chips" class="toggles topic-chips" role="group" aria-label="Topics"></span></div>
+<section class="shelf" aria-labelledby="shelf-title"><div class="shelf-head"><h2 id="shelf-title">Stories</h2><span id="shelf-count" class="small muted"></span>
+<label class="find"><span class="sr-only">Find stories by their words</span><input id="shelf-find" type="search" placeholder="Find stories by their words…" autocomplete="off" spellcheck="false"></label>
+<span class="seg slide" id="shelf-sort" role="group" aria-label="Order of the stories"><button type="button" data-sort="reach" title="Printed in the most newspapers first">Most printed</button><button type="button" data-sort="date" title="The earliest first">Earliest</button></span></div>
+<div id="topic-chips" class="toggles topic-chips" role="group" aria-label="Topic families"></div>
+<div id="topic-sub" class="toggles topic-chips sub" role="group" aria-label="Topics in the chosen family" hidden></div>
 <div id="shelf" class="shelf-rail" role="list"></div></section>
 <div class="layout"><section aria-label="Publication pulses">
 <div class="sky-wrap"><div class="sky-top" id="sky-top"><div id="filter-row" class="filter-row" hidden><span id="min-label">Show stories in</span><span id="min-papers" class="seg slide" role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers.</span><span class="filter-hint">Papers that printed the same story glow together.</span></div><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
@@ -161,7 +173,9 @@ let events = [], nodeEvents = new Map(), storyEvents = new Map(), group, start =
 let speed = 14, playing = false, lastFrame = 0, raf = 0, lastInteger = -1, nodes = [], nodeById = new Map(), skyLayer = null;
 let minPapers = {reviewed: 1, matched: 3};  // overview filter: fewer, larger stories are easier to follow
 let focus = null, hover = null, focusByNode = new Map();  // the story shown as a constellation (pinned, or under the mouse)
-let topicsOn = new Set(), shelfLimit = 24;  // topic families chosen on the shelf (none: all topics); matched cards shown
+// What the visitor follows: topics (lanes of the topic model, none chosen: all), words to find in the titles, the shelf's
+// order and how many matched cards it shows. Topics and words narrow both the shelf and the overview on the map.
+let topicsOn = new Set(), openFamily = -1, findText = '', findRx = [], shelfSort = 'reach', shelfLimit = 24;
 let tour = !reduced.matches, tourHold = 0;  // Tour: play each story on the shelf in turn, waiting while the visitor explores
 const passages = new Map(), yearFiles = new Map();  // passage text of matched printings, loaded a year file at a time
 
@@ -257,7 +271,7 @@ function buildState(from, to, base, extra) {
 // The two overviews are rebuilt whenever the "printed in at least N newspapers" filter changes.
 function overview(kind) {
   // If no story reaches the chosen level (years with only 2-3 surviving series), fall back to the highest level that has stories.
-  const pool = kind === 'reviewed' ? null : inTopics(Y.shortGroups);
+  const pool = kind === 'reviewed' ? null : narrowed(Y.shortGroups);
   const sizes = kind === 'reviewed' ? Y.stories.map(s => s.papers) : pool.map(g => g.newspapers);
   const wanted = minPapers[kind], k = sizes.some(s => s >= wanted) ? wanted : [6, 4, 3, 2, 1].find(x => sizes.some(s => s >= x)) || 1;
   const fellBack = k !== wanted ? ` No story ${Y.from === Y.to ? 'this year' : 'in these years'} reaches ${wanted} newspapers, so stories in at least ${k} are shown.` : '';
@@ -269,14 +283,28 @@ function overview(kind) {
       members: st.flatMap(s => s.members.map(id => ({id, roles: Y.memberRoles.get(id)})))};
   }
   const fams = pool.filter(g => g.newspapers >= k), when = Y.from === Y.to ? 'in ' + Y.from : `between ${Y.from} and ${Y.to}`;
-  const topics = topicsOn.size ? ` About ${[...topicsOn].map(i => BOOT.families[i].short.toLowerCase()).join(' or ')} (the project's topic model).` : '';
-  return {id: 'auto-all', kind: 'overview', label: 'All matched stories', count: fams.length, k,
-    definition: fellBack.trim() + (fellBack ? ' ' : '') + `Stories found automatically that start ${when}${atLeast || ' (each in at least 2 newspapers)'}: ${fams.length.toLocaleString('en-US')} of ${Y.shortGroups.length.toLocaleString('en-US')}.${topics} Each is a passage with shared wording. Not checked against the scans; a match can join neighbouring items, and printings with damaged transcriptions are missed.`
+  const what = following();
+  return {id: 'auto-all', kind: 'overview', label: 'All matched stories' + (what ? ' · ' + what : ''), count: fams.length, k,
+    definition: fellBack.trim() + (fellBack ? ' ' : '') + `Stories found automatically that start ${when}${atLeast || ' (each in at least 2 newspapers)'}${what ? ', ' + what : ''}: ${fams.length.toLocaleString('en-US')} of ${Y.shortGroups.length.toLocaleString('en-US')}.${topicsOn.size ? ' Topics come from the project\'s topic model, which goes by vocabulary.' : ''} Each is a passage with shared wording. Not checked against the scans; a match can join neighbouring items, and printings with damaged transcriptions are missed.`
       + (Y.longCount ? ` ${Y.longCount.toLocaleString('en-US')} long-running matches (over 120 days or 40 pages, such as serial documents or debates) are left out here; they are at the end of the shelf.` : ''),
     members: fams.flatMap(g => g.members)};
 }
-// The topic families chosen on the shelf (none chosen: every story).
-const inTopics = list => topicsOn.size ? list.filter(g => { const t = BOOT.topics[g.topic]; return t && topicsOn.has(t.family); }) : list;
+// The stories the visitor follows: in the chosen topics (none chosen: every topic), with every word to find in the title
+// (words match at the start of a word, so "fever" finds "fevers").
+const inTopics = list => topicsOn.size ? list.filter(g => topicsOn.has(g.topic)) : list;
+const inFind = list => findRx.length ? list.filter(g => { const t = g.label.toLowerCase().replace(/ſ/g, 's'); return findRx.every(rx => rx.test(t)); }) : list;
+const narrowed = list => inFind(inTopics(list));
+const famLanes = (BOOT.families || []).map((_, i) => (BOOT.topics || []).flatMap((t, j) => t.family === i ? [j] : []));
+function following() {   // the topics and words chosen, in a few words
+  const parts = [];
+  if (topicsOn.size) {
+    const whole = famLanes.flatMap((ls, i) => ls.length && ls.every(j => topicsOn.has(j)) ? [i] : []), inWhole = new Set(whole.flatMap(i => famLanes[i]));
+    const names = [...whole.map(i => BOOT.families[i].short), ...[...topicsOn].filter(j => !inWhole.has(j)).map(j => BOOT.topics[j].label)];
+    parts.push(names.length <= 3 ? names.join(', ') : `${names.length} topics`);
+  }
+  if (findRx.length) parts.push(`“${findText}”`);
+  return parts.join(' · ');
+}
 
 const paperName = lccn => Y.papers.get(lccn)?.name || lccn;
 const storyFor = e => mode === 'reviewed' ? Y.storyOf.get(e.id) : mode === 'matched' ? Y.familyOf.get(e.id) : null;
@@ -477,36 +505,40 @@ function matchedCard(g) {
 function buildShelf() {
   const rail = $('shelf'), keep = rail.scrollLeft; rail.replaceChildren();
   const sep = text => { const s = document.createElement('span'); s.className = 'shelf-sep'; s.textContent = text; s.setAttribute('aria-hidden', 'true'); rail.append(s); };
-  const k = Math.max(2, minPapers.matched), pool = inTopics(Y.shortGroups), fams = pool.filter(g => g.newspapers >= k);
-  const listed = (fams.length ? fams : pool).slice().sort((a, b) => b.newspapers - a.newspapers || b.printings - a.printings || a.firstDay - b.firstDay);
-  if (Y.hasReviewed) rail.append(card({id: 'all', cls: 'overview', tag: 'Overview · checked against the scans', title: 'All reviewed stories',
+  const k = Math.max(2, minPapers.matched), pool = narrowed(Y.shortGroups), fams = pool.filter(g => g.newspapers >= k), what = following();
+  const order = shelfSort === 'date' ? (a, b) => a.firstDay - b.firstDay || b.newspapers - a.newspapers : (a, b) => b.newspapers - a.newspapers || b.printings - a.printings || a.firstDay - b.firstDay;
+  const listed = (fams.length ? fams : pool).slice().sort(order);
+  const reviewed = topicsOn.size ? [] : Y.stories.filter(s => !findRx.length || findRx.every(rx => rx.test(s.label.toLowerCase())));
+  if (Y.hasReviewed && !what) rail.append(card({id: 'all', cls: 'overview', tag: 'Overview · checked against the scans', title: 'All reviewed stories',
     meta: `${Y.stories.length} stories · ${BOOT.reviewed.year} · one colour per category`}));
-  if (Y.hasMatched) rail.append(card({id: 'auto-all', cls: 'overview', tag: 'Overview · found automatically', title: 'All matched stories',
-    meta: `${(fams.length || pool.length).toLocaleString('en-US')} stories${fams.length ? ` in ${k}+ papers` : ''}${topicsOn.size ? ' · chosen topics' : ''}`}));
+  if (Y.hasMatched) rail.append(card({id: 'auto-all', cls: 'overview', tag: 'Overview · found automatically', title: what ? 'All · ' + what : 'All matched stories',
+    meta: `${(fams.length || pool.length).toLocaleString('en-US')} stories${fams.length ? ` in ${k}+ papers` : ''} · ${Y.label}`}));
   const shownIds = new Set(listed.slice(0, shelfLimit).map(g => g.id));
   const current = group && group.kind === 'auto_family' && !shownIds.has(group.id) ? group : null;   // e.g. opened from the telescope
   if (current) { sep('Now'); rail.append(matchedCard(current)); }
-  if (Y.hasReviewed && !topicsOn.size) {
+  if (Y.hasReviewed && reviewed.length) {
     sep('Reviewed');
-    for (const s of Y.stories) {
+    for (const s of reviewed) {
       const ds = s.members.map(id => dayNum(Y.byId.get(id).date));
       rail.append(card({id: s.id, tag: (Y.categories.find(c => c.id === s.category)?.label || 'Reviewed'), dot: s.color, title: s.label, colour: s.color,
         meta: `${s.papers} papers · ${s.members.length} printings · ${monthSpan(Math.min(...ds), Math.max(...ds))}`, days: ds}));
     }
   }
   if (listed.length) {
-    if (Y.hasReviewed && !topicsOn.size) sep('Matched');
+    if (Y.hasReviewed && reviewed.length) sep('Matched');
     for (const g of listed.slice(0, shelfLimit)) rail.append(matchedCard(g));
     if (listed.length > shelfLimit) {
       const more = document.createElement('button'); more.type = 'button'; more.className = 'card more';
-      more.textContent = `More · ${(listed.length - shelfLimit).toLocaleString('en-US')} left`;
+      more.textContent = `${Math.min(24, listed.length - shelfLimit)} more · ${(listed.length - shelfLimit).toLocaleString('en-US')} left`;
       more.addEventListener('click', () => { shelfLimit += 24; buildShelf(); }); rail.append(more);
     }
+  } else if (Y.hasMatched) {
+    const none = document.createElement('span'); none.className = 'card more'; none.textContent = 'No matched story with these words and topics.'; rail.append(none);
   }
-  const long = inTopics(Y.autoGroups.filter(g => g.long_running)).sort((a, b) => b.newspapers - a.newspapers).slice(0, 8);
+  const long = narrowed(Y.autoGroups.filter(g => g.long_running)).sort((a, b) => b.newspapers - a.newspapers).slice(0, 8);
   if (long.length) { sep('Long-running'); long.forEach(g => rail.append(matchedCard(g))); }
   $('shelf-title').textContent = 'Stories · ' + Y.label;
-  $('shelf-count').textContent = Y.hasMatched ? `${(fams.length || pool.length).toLocaleString('en-US')} matched ${fams.length ? `in ${k}+ papers` : ''}${topicsOn.size ? ' in these topics' : ''}, the most widely printed first` : '';
+  $('shelf-count').textContent = Y.hasMatched ? `${(fams.length || pool.length).toLocaleString('en-US')} matched${fams.length ? ` in ${k}+ papers` : ''}${what ? ' · ' + what : ''}, ${shelfSort === 'date' ? 'the earliest' : 'the most widely printed'} first; ${Math.min(shelfLimit, listed.length).toLocaleString('en-US')} shown` : '';
   rail.scrollLeft = keep; syncShelf();
 }
 function syncShelf() { for (const c of $('shelf').querySelectorAll('.card[data-group]')) c.setAttribute('aria-pressed', String(c.dataset.group === group?.id)); }
@@ -514,26 +546,54 @@ function showCard(id) {   // bring a card into view inside the shelf, without sc
   const rail = $('shelf'), c = rail.querySelector(`.card[data-group="${CSS.escape(id)}"]`); if (!c) return;
   rail.scrollTo({left: c.offsetLeft - rail.offsetLeft - (rail.clientWidth - c.offsetWidth) / 2, behavior: reduced.matches ? 'auto' : 'smooth'});
 }
-// Topic chips: the families of the project's topic model, with how many matched stories each holds in these years.
+// Topic chips: the seven families of the project's topic model, each with how many matched stories it holds here (in
+// the current N+ newspapers and with the words to find). A family chip chooses all its topics and opens them as a second
+// row, where each topic can be chosen on its own; a family with only some topics chosen shows a half light.
 function buildChips() {
-  const host = $('topic-chips'); host.replaceChildren();
-  const counts = new Array((BOOT.families || []).length).fill(0);
-  for (const g of Y.shortGroups) { const t = BOOT.topics[g.topic]; if (t) counts[t.family]++; }
-  for (const i of [...topicsOn]) if (!counts[i]) topicsOn.delete(i);
-  const chip = (label, n, on, click, title) => {
-    const b = document.createElement('button'); b.type = 'button'; b.className = 'toggle'; b.setAttribute('aria-pressed', String(on)); b.title = title;
+  const host = $('topic-chips'), sub = $('topic-sub'); host.replaceChildren(); sub.replaceChildren();
+  if (!Y.hasMatched) { sub.hidden = true; return; }
+  const k = Math.max(2, minPapers.matched), lanes = BOOT.topics || [], counts = new Array(lanes.length).fill(0);
+  for (const g of inFind(Y.shortGroups)) if (g.newspapers >= k && g.topic >= 0) counts[g.topic]++;
+  const chip = (where, label, n, state, click, title) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'toggle'; b.title = title;
+    b.setAttribute('aria-pressed', state === 'some' ? 'mixed' : String(!!state));
     b.append(label); if (n != null) { const s = document.createElement('span'); s.className = 'n'; s.textContent = n.toLocaleString('en-US'); b.append(' ', s); }
-    b.addEventListener('click', click); host.append(b);
+    b.addEventListener('click', click); where.append(b);
   };
-  if (!Y.hasMatched) return;
-  chip('All topics', null, !topicsOn.size, () => { topicsOn.clear(); topicsChanged(); }, 'Every matched story');
-  (BOOT.families || []).forEach((f, i) => { if (counts[i]) chip(f.short, counts[i], topicsOn.has(i), () => { topicsOn.has(i) ? topicsOn.delete(i) : topicsOn.add(i); topicsChanged(); }, f.name + ' · matched stories in these years'); });
+  chip(host, 'All topics', null, !topicsOn.size, () => { topicsOn.clear(); openFamily = -1; topicsChanged(); }, 'Every matched story, whatever its topic');
+  (BOOT.families || []).forEach((f, i) => {
+    const ls = famLanes[i], n = ls.reduce((a, j) => a + counts[j], 0), on = ls.filter(j => topicsOn.has(j)).length;
+    if (!n && !on) return;
+    chip(host, f.short, n, on === 0 ? false : on === ls.length ? true : 'some', () => {
+      if (on === ls.length) { ls.forEach(j => topicsOn.delete(j)); if (openFamily === i) openFamily = -1; }   // all chosen: let go of the family
+      else { ls.forEach(j => topicsOn.add(j)); openFamily = i; }                                              // choose the whole family and open it
+      topicsChanged();
+    }, `${f.name}: ${ls.map(j => lanes[j].label).join(', ')}`);
+  });
+  if (openFamily >= 0 && famLanes[openFamily].some(j => topicsOn.has(j))) {
+    sub.hidden = false;
+    for (const j of famLanes[openFamily]) if (counts[j] || topicsOn.has(j)) chip(sub, lanes[j].label, counts[j], topicsOn.has(j), () => { topicsOn.has(j) ? topicsOn.delete(j) : topicsOn.add(j); topicsChanged(); }, lanes[j].label + ' · a topic of ' + BOOT.families[openFamily].name);
+  } else sub.hidden = true;
 }
-function topicsChanged() {
+function topicsChanged() {   // the shelf and the map follow the chosen topics and words at once
   shelfLimit = 24; buildChips();
-  if (mode === 'matched') changeGroup('auto-all'); else buildShelf();   // the overview plays only the chosen topics
-  save();
+  if (Y.hasMatched) changeGroup('auto-all');
+  buildShelf(); save();
 }
+let findTimer = 0;
+$('shelf-find').addEventListener('input', e => {
+  clearTimeout(findTimer);
+  findTimer = setTimeout(() => {
+    findText = e.target.value.trim();
+    findRx = findText.toLowerCase().replace(/ſ/g, 's').split(/\s+/).filter(Boolean).map(w => new RegExp('(^|[^a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+    if (Y) topicsChanged();
+  }, 300);
+});
+$('shelf-sort').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  shelfSort = b.dataset.sort; syncSort(); shelfLimit = 24; if (Y) buildShelf(); save();
+});
+function syncSort() { for (const b of $('shelf-sort').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.sort === shelfSort)); Glass.sync(); }
 
 function renderLegend() {
   const L = $('legend'); L.classList.toggle('overview', mode === 'reviewed');
@@ -552,7 +612,7 @@ function renderLegend() {
   }
 }
 
-function save() { if (Y) try { localStorage.setItem(STORE, JSON.stringify({from: Y.from, to: Y.to, group: group?.id, day, selected, speed, minPapers, tour, topics: [...topicsOn]})); } catch {} }
+function save() { if (Y) try { localStorage.setItem(STORE, JSON.stringify({from: Y.from, to: Y.to, group: group?.id, day, selected, speed, minPapers, tour, topicLanes: [...topicsOn], open: openFamily, sort: shelfSort})); } catch {} }
 
 // How far a passage was checked, in words. Matched printings carry the automatic transcription check (data release
 // v0.6.0 on): whether the passage is also in the page's other machine transcription. That shows the passage is on the
@@ -784,13 +844,14 @@ async function loadRange(from, to, wanted) {
   buildSky(); buildChips(); shelfLimit = 24; group = null; buildShelf();
   $('scope').textContent = `${Y.label === 'all years' ? 'In all years' : 'In ' + Y.label}: ${plural(Y.newspapers.length, 'newspaper')}${Y.stories.length ? ` · ${Y.stories.length} reviewed stories` : ''} · ${Y.autoGroups.length.toLocaleString('en-US')} matched ${Y.autoGroups.length === 1 ? 'story' : 'stories'}`;
   const ok = wanted && ((wanted === 'all' && Y.hasReviewed) || (wanted === 'auto-all' && Y.hasMatched) || Y.groupById.has(wanted));
-  changeGroup(ok ? wanted : Y.hasReviewed ? 'all' : 'auto-all');
+  // The reviewed overview opens 1797 on its own; a stretch of years opens on all its matched stories.
+  changeGroup(ok ? wanted : Y.hasReviewed && (from === to || !Y.hasMatched) ? 'all' : Y.hasMatched ? 'auto-all' : 'all');
   if (from === to) setTimeout(() => loadPassages(from), 1200);   // one year: its passages are ready by the time one is opened
 }
 
 // The year strip: one slot per year, its bar the number of newspapers that survive that year. Tap a year or drag across
 // several; the arrow keys move a year, and with Shift they widen the stretch; All takes every year.
-const yearsEl = $('years'), yearButtons = [], band = document.createElement('i'); band.className = 'band glass'; yearsEl.append(band);
+const yearsEl = $('years'), yearButtons = [], band = document.createElement('i'); band.className = 'band'; yearsEl.append(band);
 const maxPapers = Math.max(1, ...BOOT.years.map(y => y.papers || 0));
 for (const y of BOOT.years) {
   const b = document.createElement('button'); b.type = 'button'; b.dataset.year = String(y.year); b.tabIndex = -1;
@@ -799,7 +860,7 @@ for (const y of BOOT.years) {
   const bar = document.createElement('i'); bar.className = 'bar'; bar.style.height = Math.max(10, Math.round(100 * (y.papers || 0) / maxPapers)) + '%'; b.append(bar);
   yearsEl.append(b); yearButtons.push(b);
 }
-for (const y of [1770, 1780, 1790, 1800, 1810]) { const s = document.createElement('span'); s.dataset.year = String(y); s.textContent = y; $('years-axis').append(s); }
+for (let y = 1770; y <= 1810; y += 5) { const s = document.createElement('span'); s.dataset.year = String(y); s.textContent = y; if (y % 10) s.className = 'minor'; $('years-axis').append(s); }   // as on the telescope timeline
 let pickFrom = 1797, pickTo = 1797;
 const yearBtn = y => yearButtons[y - 1770];
 function placeYears() {
@@ -846,7 +907,9 @@ yearsEl.addEventListener('keydown', e => {
 });
 function pickYears(from, to) {
   if (Y && from === Y.from && to === Y.to) { setYearsUI(from, to); return; }
-  loadRange(from, to, group?.id).then(save);   // a story stays chosen when the new years still hold it
+  // A chosen story, or the matched overview, stays chosen when the new years still hold it; the 1797 reviewed overview
+  // does not carry over, so a stretch of years opens on its own stories.
+  loadRange(from, to, group && group.id !== 'all' ? group.id : undefined).then(save);
 }
 $('years-all').addEventListener('click', () => pickYears(1770, 1810));
 
@@ -892,7 +955,10 @@ if (!saved) try { const old = JSON.parse(localStorage.getItem(OLD_STORE)); if (o
 Glass.init();
 setSpeed(saved && Number.isFinite(saved.speed) ? saved.speed : 14);
 for (const k of ['reviewed', 'matched']) if ([1, 2, 3, 4, 6].includes(saved?.minPapers?.[k])) minPapers[k] = saved.minPapers[k];
-if (saved && Array.isArray(saved.topics)) topicsOn = new Set(saved.topics.filter(i => Number.isInteger(i) && i >= 0 && i < (BOOT.families || []).length));
+if (saved && Array.isArray(saved.topicLanes)) topicsOn = new Set(saved.topicLanes.filter(i => Number.isInteger(i) && i >= 0 && i < (BOOT.topics || []).length));
+if (saved && Number.isInteger(saved.open) && famLanes[saved.open]) openFamily = saved.open;
+if (saved && ['reach', 'date'].includes(saved.sort)) shelfSort = saved.sort;
+syncSort();
 if (saved && typeof saved.tour === 'boolean' && !reduced.matches) tour = saved.tour;
 // Every choice can come from the address, for links and an exhibition: ?year=1797 (or all), ?years=1795-1799,
 // ?focus=<story>, ?tour=on|off.
