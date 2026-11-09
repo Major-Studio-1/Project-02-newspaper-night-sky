@@ -37,7 +37,8 @@ RADIO_SWITCH = ('<button type="button" id="radio" class="toggle radio-switch" ar
 
 def header(active, stories):
     links = ''.join(f'<a href="{href}"' + (' aria-current="page"' if key == active else '') + f'>{label}</a>' for key, href, label in MENU)
-    return (f'<header class="site-header" id="site-header"><div class="site-inner">'
+    return (f'<a class="skip-link" href="#content">Skip to content</a>'
+            f'<header class="site-header" id="site-header"><div class="site-inner">'
             f'<a class="brand" href="index.html" aria-label="Newspaper Night Sky, home">{MARK}<span>Newspaper Night Sky</span></a>'
             f'<nav class="site-nav" aria-label="Main">{links}</nav>'
             f'<form class="site-search" action="telescope.html" role="search"><label class="sr-only" for="site-q">Search every story</label>'
@@ -46,7 +47,8 @@ def header(active, stories):
             f'<button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header">Menu</button>'
             f'</div></header>'
             "<script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');"
-            "b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script>")
+            "b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script>"
+            '<div id="content" tabindex="-1"></div>')
 
 
 def footer(release):

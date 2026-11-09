@@ -7,7 +7,7 @@
 __SITE_HEAD__
 <style>
 :root{color-scheme:dark;--bg:#050711;--ink:#edf2ff;--muted:#a2afc8;--line:#28334c;--blue:#8ccfff;--gold:#ffd27a;font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg)}a{color:var(--blue)}a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg)}code{overflow-wrap:anywhere}a{color:var(--blue)}a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .wrap{max-width:1160px;margin:auto;padding:40px 24px 0;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px}
 .toc{position:sticky;top:20px;align-self:start;font-size:14px}.toc p{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
 .toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}.toc a{display:block;color:var(--muted);text-decoration:none;padding:5px 10px;border-left:2px solid #1c2640}.toc a:hover{color:var(--ink);border-color:var(--blue)}
@@ -25,11 +25,11 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 </head>
 <body>
 __SITE_HEADER__
-<div class="wrap">
+<main class="wrap">
 <nav class="toc" aria-label="On this page"><p>On this page</p><ol>
 <li><a href="#archive">The archive</a></li><li><a href="#matched">Matched stories</a></li><li><a href="#checks">How matched stories were checked</a></li><li><a href="#reviewed">Reviewed stories</a></li>
 <li><a href="#pulses">What a pulse shows</a></li><li><a href="#telescope">The telescope</a></li><li><a href="#radio">The radio</a></li><li><a href="#exhibit">Exhibition mode</a></li><li><a href="#topics">Topics</a></li>
-<li><a href="#seasons">Seasons</a></li><li><a href="#limits">What this cannot tell you</a></li><li><a href="#data">Data and code</a></li></ol></nav>
+<li><a href="#seasons">Seasons</a></li><li><a href="#access">Without a mouse or without sight</a></li><li><a href="#limits">What this cannot tell you</a></li><li><a href="#data">Data and code</a></li></ol></nav>
 <article>
 <h1>How it works</h1>
 <p class="lede">Newspaper Night Sky shows what one surviving archive of American newspapers printed, and when. It does not show everything that was printed, or what people thought. Here is how it was made, and what to keep in mind.</p>
@@ -125,6 +125,15 @@ __SITE_HEADER__
 <p>A four-year rhythm around presidential elections shows clearly only from 1800. In the telescope's Orbit view, a search shows its months as petals; if the petals all reach the dashed circle, there is no rhythm.</p>
 </section>
 
+<section id="access"><h2>Using the site without a mouse or without sight</h2>
+<ul>
+<li><b>Keyboard:</b> the first Tab shows <i>Skip to content</i>, which jumps past the menu to the page's own controls. Each single-choice control (speed, look-back, view and the like) is one stop for Tab; the arrow keys move within it, and Home and End go to its ends. The year strip on Pulses works the same way: the arrows move a year, and Shift with an arrow widens the stretch. In the telescope, the up and down arrows travel through time, left and right turn the view, and plus and minus zoom.</li>
+<li><b>Screen readers:</b> every control has a name. The telescope's stars are listed as links under the sky (<i>Brightest stories in view</i>), and Pulses announces each printing as you move to it. What the radio reads is also written on screen, with the other papers on air named below it.</li>
+<li><b>Motion and sound:</b> with reduced motion set on your device, nothing drifts, glows or plays on its own. Sound never starts until you turn the radio on, and the Radio switch in the header turns it off again.</li>
+<li><b>Phones:</b> every page fits a 320-pixel-wide screen without sideways scrolling, and controls are at least 24 pixels tall.</li>
+</ul>
+</section>
+
 <section id="limits"><h2>What this cannot tell you</h2>
 <ul><li><span class="k">Not everything printed.</span> Only what survives in this collection, and only what could be read in its transcriptions.</li>
 <li><span class="k">Not public opinion.</span> How often papers printed something is not the same as how much people cared.</li>
@@ -142,7 +151,7 @@ __SITE_HEADER__
 <p>Dataset: Hugging Face <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision. Made as Project 02 for Major Studio 1, with research and code developed together with AI assistants.</p>
 </section>
 </article>
-</div>
+</main>
 __SITE_FOOTER__
 </body>
 </html>

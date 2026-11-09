@@ -26,13 +26,13 @@ __SITE_HEAD__
 .start{position:fixed;inset:0;z-index:10;display:grid;place-items:center;text-align:center;background:radial-gradient(ellipse at 50% 40%,#101b32,#050711 70%);cursor:pointer}
 .start h1{margin:0;font:400 clamp(34px,4.4vw,96px)/1.1 var(--serif)}.start p{color:var(--muted);font-size:clamp(15px,1.3vw,28px);margin:2vh 0 0}
 .start small{display:block;margin-top:3vh;color:#6f7d99;font-size:clamp(12px,.9vw,18px)}
-.start.gone{display:none}
+.start.gone{display:none}.start:focus-visible{outline:3px solid var(--gold);outline-offset:-10px}
 body.still,body.still *{cursor:none!important}
 @media(max-width:720px){.caption{max-width:none;left:12px!important;right:12px!important}.qr{display:none}}
 </style>
 </head>
 <body>
-<iframe id="stage" title="Exhibition scene" allow="autoplay; fullscreen"></iframe>
+<main><iframe id="stage" title="Exhibition scene" allow="autoplay; fullscreen"></iframe></main>
 <div class="dots" id="dots" aria-hidden="true"></div>
 <div class="caption left hide" id="caption" aria-live="polite"><p class="count" id="count"></p><h1 id="title"></h1><p id="text"></p></div>
 <div class="qr hide" id="qr" aria-hidden="true"><span id="qr-text">Continue on your phone</span></div>

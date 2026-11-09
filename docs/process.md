@@ -287,6 +287,15 @@ The views are joined into one site with six pages and a shared header, plus an e
 
 The header and footer come from one file, `pipeline/site_parts.py`, so they cannot drift apart. The header's search box searches every story in the telescope. The pages link to each other where it helps: a story on the pulse page has "See it in the sky", and a star in the telescope opens its pulses. The public repository is made from this project by `pipeline/export_public_repo.py`.
 
+**Accessibility (9 November 2026).** An audit of every page checked names, labels, contrast, targets, landmarks and reflow. Fixes:
+- a *Skip to content* link that lands right after the menu;
+- a main landmark on How it works and the exhibition;
+- sliders and legend entries at least 24 pixels tall;
+- one Tab stop per single-choice control (arrow keys within it);
+- footers and long code that wrap on a 320-pixel screen.
+
+How it works has a section on using the site by keyboard and screen reader.
+
 **The radio (9 November 2026)** reads the newspapers aloud, as if a set could be tuned to the past. Nothing runs on a server and nothing is generated: the browser's own voice (the Web Speech API) reads what was printed, and the sounds are synthesised in the browser (the Web Audio API). The shared code is `pipeline/radio.js`.
 - **The radio page:** a year dial over bars of the newspapers that survive each year. It starts on today's date in the year on the dial and greets the town of the first paper: *"Good morning, Philadelphia! It is Saturday, the sixth of July, seventeen seventy-six. From the Pennsylvania Evening Post."* Then it reads one passage from each paper that printed that day, reviewed passages first, then matched passages whose transcription the cross-check confirmed, then the most widely printed. Days with no surviving page are skipped.
 - **The switch** sits at the top right of the header, the same on every page that reads aloud (Telescope, Pulses, Radio), and stays on as you move between them in one tab.

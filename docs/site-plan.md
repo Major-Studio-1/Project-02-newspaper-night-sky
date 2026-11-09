@@ -152,7 +152,7 @@ A separate page, `exhibit.html`, directs a loop of **scenes**. Each scene is one
 
 **Phase 3: polish**
 - first-visit hints;
-- an accessibility pass;
+- an accessibility pass. Done on 9 November: a skip link on every page, landmarks, 24-pixel targets, one Tab stop per single-choice control, no sideways scrolling at 320 pixels, and a section in How it works;
 - hosting: GitHub Pages for the public repository's `site/` folder (the workflow is ready in `.github/workflows/pages.yml`).
 
 ## Decisions that shape the build
