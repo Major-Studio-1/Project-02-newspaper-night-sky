@@ -75,6 +75,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#ti
 .on-air-head{display:block;color:#ffd27a;font:600 11.5px/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
 .on-air-text{display:block;font:17px/1.5 Georgia,"Times New Roman",serif;color:#7f8aa3}.on-air-text .now{color:var(--ink)}
 .on-air-text:empty::before{content:"The radio reads the brightest story as it arrives at the front. Let time drift, or move it.";color:var(--muted);font:14px system-ui,sans-serif}
+.on-air-chorus{display:block;margin-top:6px;color:var(--muted);font:12.5px/1.4 system-ui,sans-serif}.on-air-chorus:empty{display:none}
 /* Exhibition (?exhibit=1): the sky, the timeline and what is being read, large; no menus or lists; the cursor hides when still. */
 body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .toolbar,body.exhibit .heading,body.exhibit .chips,body.exhibit .time-controls,body.exhibit .how,
 body.exhibit .list,body.exhibit .page-notes,body.exhibit .caption.idle{display:none!important}
@@ -85,12 +86,12 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 </style>
 </head>
 <body class="page-telescope">
-<header class="site-header" id="site-header"><div class="site-inner"><a class="brand" href="index.html" aria-label="Newspaper Night Sky, home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/><circle cx="19" cy="19" r="1.7" fill="currentColor" fill-opacity=".6"/></svg><span>Newspaper Night Sky</span></a><nav class="site-nav" aria-label="Main"><a href="telescope.html" aria-current="page">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html">Radio</a><a href="method.html">How it works</a></nav><form class="site-search" action="telescope.html" role="search"><label class="sr-only" for="site-q">Search every story</label><input id="site-q" name="q" type="search" placeholder="Search 48,170 stories" autocomplete="off" spellcheck="false"></form><button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header">Menu</button></div></header><script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script>
+<header class="site-header" id="site-header"><div class="site-inner"><a class="brand" href="index.html" aria-label="Newspaper Night Sky, home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/><circle cx="19" cy="19" r="1.7" fill="currentColor" fill-opacity=".6"/></svg><span>Newspaper Night Sky</span></a><nav class="site-nav" aria-label="Main"><a href="telescope.html" aria-current="page">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html">Radio</a><a href="method.html">How it works</a></nav><form class="site-search" action="telescope.html" role="search"><label class="sr-only" for="site-q">Search every story</label><input id="site-q" name="q" type="search" placeholder="Search 48,170 stories" autocomplete="off" spellcheck="false"></form><button type="button" id="radio" class="toggle radio-switch" aria-pressed="false" title="Read the newspapers aloud, in your browser's own voice">Radio</button><button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header">Menu</button></div></header><script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script>
 <header class="toolbar"><div class="toolbar-inner">
 <label class="search" role="search"><span class="sr-only">Search stories</span>
 <input id="q" type="search" placeholder="Search any word or name, or compare: fever vs ice" autocomplete="off" spellcheck="false"><button type="button" id="q-clear" aria-label="Clear search">✕</button></label>
 <span class="seg slide" id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">Place</button><button type="button" data-layout="topic" title="What each story is about">Topic</button><button type="button" data-layout="orbit" title="The time of year">Orbit</button></span>
-<button type="button" id="drift" class="toggle" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance">Drift</button><button type="button" id="radio" class="toggle" aria-pressed="false" title="Read aloud the brightest story as it arrives at the front, in your browser's own voice">Radio</button>
+<button type="button" id="drift" class="toggle" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance">Drift</button>
 <span class="ctl"><span class="label" id="colour-label">Colour</span><span class="seg slide" id="colour" role="group" aria-labelledby="colour-label"><button type="button" data-colour="region" title="Colour each star by the region where its story was first printed in this archive">Region</button><button type="button" data-colour="search" title="Colour the stories that match your search: gold for one search, one colour per search when you compare">Search</button><button type="button" data-colour="off" title="Pale stars; reviewed stories in their own colours">Off</button></span></span>
 <div class="row2">
 <span class="ctl"><span class="label" id="span-label">Look back</span><span class="seg slide" id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span></span>
@@ -110,7 +111,7 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 <div id="loading" class="loading indeterminate" role="status" aria-live="polite"><div class="loading-box"><p id="loading-text">Opening the telescope…</p><div class="loading-bar" aria-hidden="true"><i id="loading-fill"></i></div><p id="loading-sub"></p></div></div>
 </div>
 <div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Click to move 'now'; the bright bracket is the stretch of time you are looking back through."></canvas></div>
-<p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span></p>
+<p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
 <div class="time-controls"><button type="button" id="earlier" title="Move 'now' earlier">‹ Earlier</button><button type="button" id="later" title="Move 'now' later">Later ›</button><span class="small muted">Move through time with these buttons, by clicking or dragging the timeline, or with the ↑ ↓ keys.</span></div>
 <p class="how" id="how"></p>
 <div class="legend" id="legend"></div>
@@ -1003,22 +1004,47 @@ setInterval(() => {
   const item = {date: isoOf(D.first[best]), place: townAt.get(D.flat[best] + ',' + D.flon[best]) || '', paper: '', title: D.title[best], text: '',
     war: !!D.kind[best] && /war|armies/i.test(BOOT.categories[D.cat[best]]?.label || '')};
   const greet = radioFirst, previous = radioPrev; radioFirst = false; radioPrev = item;
-  Radio.say(item, {greet, previous, chime: greet, mode: 'title', rate: state.span > 6 * YEAR ? 1.12 : state.span > 2 * YEAR ? 1.06 : 1});
+  Radio.say(item, {greet, previous, chime: greet, mode: 'title', rate: () => state.span > 6 * YEAR ? 1.45 : state.span > 2 * YEAR ? 1.25 : 1});
 }, 400);
+// The chorus (radio.js, eSpeak): the other stories that reach the front at the same moment read their opening words
+// together, each town in its own voice, placed left or right by where the story was first printed. A longer look-back
+// drifts faster, so more voices speak at once and faster. A jump in time starts afresh instead of reading the stories
+// passed over.
+let chorusNow = null;
+function chorusArrivals() {
+  if (!radioOn || !W || !Radio.unlocked) { chorusNow = null; return; }
+  const now = state.now;
+  if (chorusNow === null || now < chorusNow || now - chorusNow > Math.max(30, state.span * .05)) { chorusNow = now; return; }
+  const [max, wpm, words] = state.span > 6 * YEAR ? [5, 270, 8] : state.span > 2 * YEAR ? [4, 230, 10] : [3, 185, 13];
+  const arrived = [];
+  for (let i = lowerBound(chorusNow + 1e-6), b = lowerBound(now + 1e-6); i < b; i++) if (visible(i) && !radioRead.has(i)) arrived.push(i);
+  chorusNow = now;
+  arrived.sort((x, y) => D.kind[y] - D.kind[x] || (searching() ? hit[y] - hit[x] : 0) || D.papers[y] - D.papers[x]);
+  if (!Radio.speaking) arrived.shift();   // the brightest is left for the clear voice
+  for (const i of arrived) {
+    if (Radio.chorus.count >= max) break;
+    radioRead.add(i);
+    const town = townAt.get(D.flat[i] + ',' + D.flon[i]) || '', [x] = mapXY(D.flat[i], D.flon[i]);
+    Radio.chorus.say(Radio.chorus.firstWords(D.title[i], words), {pan: Math.max(-.9, Math.min(.9, x * .9)), wpm, ...Radio.chorus.voiceOf(town || i), label: town});
+  }
+}
+setInterval(chorusArrivals, 300);
+Radio.chorus.onChange(list => { $('on-air-chorus').textContent = list.length ? 'Also on air: ' + [...new Set(list.filter(Boolean))].join(' · ') : ''; });
 Radio.onCaption(({intro, lines, index}) => {
   $('on-air-head').textContent = intro || 'Radio';
   const box = $('on-air-text'); box.replaceChildren();
   lines.forEach((line, k) => { const s = document.createElement('span'); if (k === index) s.className = 'now'; s.textContent = line + ' '; box.append(s); });
 });
 $('radio').addEventListener('click', () => {
-  radioOn = !radioOn; syncRadio();
-  if (radioOn) { Radio.unlock(); radioFirst = true; radioPrev = null; radioRead = new Set(); } else Radio.stop(true);
+  radioOn = !radioOn; syncRadio(); try { sessionStorage.setItem('nns-radio', radioOn ? 'on' : 'off'); } catch {}
+  if (radioOn) { Radio.unlock(); Radio.chorus.preload(); radioFirst = true; radioPrev = null; radioRead = new Set(); chorusNow = null; } else Radio.stop(true);
 });
 // ?radio=on turns the radio on (sound starts at the first touch, click or key); ?exhibit=1 is the exhibition mode: the sky,
 // the timeline and what is being read, large, with no menus or lists.
-if (params.get('radio') === 'on') {
+let radioKept = null; try { radioKept = sessionStorage.getItem('nns-radio'); } catch {}
+if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !== 'off')) {
   radioOn = true; syncRadio();
-  const start = () => Radio.unlock();
+  const start = () => { Radio.unlock(); Radio.chorus.preload(); };
   for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
   start();
 }

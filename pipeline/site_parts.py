@@ -29,6 +29,12 @@ def head():
     return f'<link rel="stylesheet" href="site.css"><link rel="icon" href="{ICON}">'
 
 
+# The pages where the radio reads aloud. Its switch sits in the same place on each: the top right of the header.
+RADIO_PAGES = ('telescope', 'pulses', 'radio')
+RADIO_SWITCH = ('<button type="button" id="radio" class="toggle radio-switch" aria-pressed="false" '
+                'title="Read the newspapers aloud, in your browser\'s own voice">Radio</button>')
+
+
 def header(active, stories):
     links = ''.join(f'<a href="{href}"' + (' aria-current="page"' if key == active else '') + f'>{label}</a>' for key, href, label in MENU)
     return (f'<header class="site-header" id="site-header"><div class="site-inner">'
@@ -36,6 +42,7 @@ def header(active, stories):
             f'<nav class="site-nav" aria-label="Main">{links}</nav>'
             f'<form class="site-search" action="telescope.html" role="search"><label class="sr-only" for="site-q">Search every story</label>'
             f'<input id="site-q" name="q" type="search" placeholder="Search {stories:,} stories" autocomplete="off" spellcheck="false"></form>'
+            + (RADIO_SWITCH if active in RADIO_PAGES else '') +
             f'<button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header">Menu</button>'
             f'</div></header>'
             "<script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');"

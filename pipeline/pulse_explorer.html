@@ -111,6 +111,7 @@ __SITE_HEAD__
 .on-air-text{display:block;font:17px/1.5 Georgia,"Times New Roman",serif;color:#7f8aa3}.on-air-text .now{color:var(--ink)}
 .on-air-text:empty::before{content:"The radio reads the printings as they pulse. Press Play, or pick a printing.";color:var(--muted);font:14px system-ui,sans-serif}
 .sky .paper.on-air .paper-name{color:#ffd27a}.sky .paper.on-air .node{filter:drop-shadow(0 0 8px #ffd27a99)}
+.sky .paper.voiced .paper-name{color:#f1dfb6}.on-air-chorus{display:block;margin-top:6px;color:var(--muted);font:12.5px/1.4 system-ui,sans-serif}.on-air-chorus:empty{display:none}
 /* Exhibition (?exhibit=1): the map, the date and what is being read, large; no menus or lists; the cursor hides when still. */
 body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .transport,body.exhibit .year-pick,body.exhibit .timebar-track,body.exhibit .shelf,body.exhibit .evidence,
 body.exhibit .context,body.exhibit .page-notes,body.exhibit .strip-note,body.exhibit #filter-row,body.exhibit #notice,body.exhibit #to-telescope,body.exhibit .mini-card,body.exhibit .map-note,body.exhibit .pagehead,body.exhibit .sky-top{display:none!important}
@@ -127,7 +128,7 @@ __SITE_HEADER__
 <header class="toolbar"><div class="toolbar-inner">
 <div class="transport" role="group" aria-label="Playback"><button id="play" class="toggle play" type="button" aria-pressed="false">Play</button><span class="seg steps"><button id="previous" type="button" aria-label="Previous printing" title="Previous printing">←</button><button id="next" type="button" aria-label="Next printing" title="Next printing">→</button></span>
 <span class="ctl"><span class="label" id="speed-label">Per second</span><span class="seg slide" id="speed" role="group" aria-labelledby="speed-label"><button type="button" data-days="7" title="One week of printing per second">1 wk</button><button type="button" data-days="14" title="Two weeks of printing per second">2 wk</button><button type="button" data-days="30" title="One month of printing per second">1 mo</button><button type="button" data-days="61" title="Two months of printing per second">2 mo</button><button type="button" data-days="122" title="Four months of printing per second">4 mo</button><button type="button" data-days="365" title="One year of printing per second">1 yr</button></span></span>
-<button id="tour" class="toggle" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">Tour</button><button id="radio" class="toggle" type="button" aria-pressed="false" title="Read the printings aloud as they pulse, in your browser's own voice">Radio</button></div>
+<button id="tour" class="toggle" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">Tour</button></div>
 <div class="year-pick" role="group" aria-labelledby="years-label"><span class="label" id="years-label">Years</span><b id="years-now" class="years-now mono"></b>
 <div class="years-wrap"><div id="years" class="years" title="Tap a year, or drag across several"></div><div id="years-axis" class="years-axis" aria-hidden="true"></div></div>
 <button id="years-all" class="toggle" type="button" aria-pressed="false" title="All years, 1770–1810">All</button></div>
@@ -146,7 +147,7 @@ __SITE_HEADER__
 <div class="layout"><section aria-label="Publication pulses">
 <div class="sky-wrap"><div class="sky-top" id="sky-top"><div id="filter-row" class="filter-row" hidden><span id="min-label">Show stories in</span><span id="min-papers" class="seg slide" role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers.</span><span class="filter-hint">Papers that printed the same story glow together.</span></div><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
 <div id="sky" class="sky" aria-label="Newspaper nodes placed roughly by town of publication, north at the top. Light marks observed publications, with no transmission edges."></div></div>
-<p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span></p>
+<p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
 <div id="mini-card" class="mini-card" aria-live="polite"><p class="mc-title" id="mc-title"></p><p class="mc-role" id="mc-role"></p><p class="mc-text" id="mc-text"></p><a href="#selected-evidence" id="mc-more">Read the passage and see the scan ↓</a></div>
 <p class="map-note">Newspapers sit roughly where they were printed: north at the top, east to the right. Papers are nudged apart so names stay readable, so distances are not to scale.</p>
 <div id="legend" class="legend"><span><i class="dot"></i>Report</span><span><i class="dot challenge"></i>Challenge / commentary ring</span><span><i class="dot later"></i>Later account</span><span><i class="dot document"></i>Document</span><span><i class="dot" style="background:#aab6cf"></i>Matched text, not checked</span></div>
@@ -767,7 +768,7 @@ function play() {
   if (!events.length) return;
   if (day >= maxDay) { day = 0; source(0); nodes.forEach(n => { n.age = Infinity; n.echo = Infinity; }); }
   focus = hover = null; renderConstellation();
-  if (radioOn) { Radio.stop(); radioReset(); }   // each Play starts with a greeting
+  if (radioOn) { Radio.stop(); radioReset(); chorusQuiet(); Radio.chorus.preload(); }   // each Play starts with a greeting
   events.filter(e => e.day === day).forEach(burst); playing = true; lastFrame = 0; draw(); save(); raf = requestAnimationFrame(tick);
 }
 function seek(value, index = null) {
@@ -783,9 +784,10 @@ function tick(now) {
   if (!playing) return;
   const dt = lastFrame ? Math.min((now - lastFrame) / 1000, .15) : 0; lastFrame = now; nodes.forEach(n => { n.age += dt; n.echo += dt; });
   const previous = day; day = Math.min(maxDay, day + dt * speed);
-  let last = -1;
-  for (let i = countUpTo(previous); i < events.length && events[i].day <= day + 1e-7; i++) { burst(events[i]); last = i; }   // the printings since the last frame
+  let last = -1; const fresh = countUpTo(previous);
+  for (let i = fresh; i < events.length && events[i].day <= day + 1e-7; i++) { burst(events[i]); last = i; }   // the printings since the last frame
   if (last >= 0) source(last);
+  if (radioOn && last >= 0) { radioLeadPick(); for (let i = fresh; i <= last && Radio.chorus.count < chorusMax(); i++) chorusFor(events[i]); }
   draw();
   if (day >= maxDay && nodes.every(n => n.age >= .6)) {
     pause(); save(); $('announcement').textContent = 'Playback complete. ' + events.length + ' passages.';
@@ -797,7 +799,7 @@ function tick(now) {
 
 function changeGroup(id) {
   playing = false; cancelAnimationFrame(raf);
-  if (radioOn) { Radio.stop(); radioReset(); onAir(null); }
+  if (radioOn) { Radio.stop(); radioReset(); onAir(null); chorusQuiet(); }
   const g = Y.groupById.get(id), ry = reviewedYearOf(id);
   if (ry) { mode = 'reviewed'; group = overview('reviewed', ry); }
   else if (id === 'auto-all' && Y.hasMatched) { mode = 'matched'; group = overview('matched'); }
@@ -970,8 +972,9 @@ setInterval(() => {
 //    cross-check confirmed, then the most widely printed; at two months a second or faster, only the story's title;
 //  - in one story, its first printing, then one line on how far it went in this archive.
 // Faster speeds read a little faster. Paused, it reads the printing you pick. Each Play starts with a greeting.
-const RADIO_RATE = {7: 1, 14: 1.03, 30: 1.07, 61: 1.12, 122: 1.18, 365: 1.24};
-let radioOn = false, radioFirst = true, radioPrev = null, radioDone = new Set(), radioFull = false, radioNode = null, radioPickTimer = 0;
+const RADIO_RATE = {7: 1, 14: 1.1, 30: 1.22, 61: 1.36, 122: 1.5, 365: 1.65};
+const radioRate = () => RADIO_RATE[speed] || 1;
+let radioOn = false, radioFirst = true, radioPrev = null, radioDone = new Set(), radioFull = false, radioNode = null, radioPickTimer = 0, radioLeadId = null;
 const storyOf = e => storyFor(e) || (mode === 'group' ? group : null);
 function syncRadio() { $('radio').setAttribute('aria-pressed', String(radioOn)); $('on-air').hidden = !radioOn; }
 function onAir(e) {
@@ -984,14 +987,14 @@ function radioSay(e, how) {   // how: 'full' (the passage) or 'title' (the story
   if (how === 'full' && e.excerpt == null && e.year) { loadPassages(e.year); how = 'title'; }   // its year file comes for the next time
   const p = Y.papers.get(e.node), st = storyOf(e);
   const item = {date: e.date, place: p?.place || '', paper: paperName(e.node), title: st?.label || e.summary || '', text: e.excerpt || '', war: /war/i.test(st?.category || '')};
-  const greet = radioFirst, previous = radioPrev; radioFirst = false; radioPrev = item; onAir(e);
-  return Radio.say(item, {greet, previous, chime: greet, rate: RADIO_RATE[speed] || 1, mode: how});
+  const greet = radioFirst, previous = radioPrev; radioFirst = false; radioPrev = item; radioLeadId = e.id; onAir(e);
+  return Radio.say(item, {greet, previous, chime: greet, rate: radioRate, mode: how});
 }
 function spreadLine() {   // one story: how far it went, in this archive
   const papers = new Set(events.map(e => e.node)), last = events.at(-1), p = Y.papers.get(last.node);
   return `This story appears in ${papers.size} newspapers of this archive, the last in ${Radio.town(p?.place)} on ${Radio.spokenDate(last.date, false)}.`;
 }
-setInterval(async () => {   // playing: the next printing to read, from what has just pulsed
+async function radioLeadPick() {   // playing: the next printing for the clear voice, from what has just pulsed
   if (!radioOn || !playing || !Y || !events.length || Radio.speaking || (mode === 'group' && radioFull)) return;
   const lo = countUpTo(day - speed * 1.5), hi = countUpTo(day);
   let best = -1, score = -Infinity;
@@ -1004,14 +1007,35 @@ setInterval(async () => {   // playing: the next printing to read, from what has
   const e = events[best]; radioDone.add(storyKey(e));
   if (mode === 'group') {
     radioFull = true;
-    if (await radioSay(e, 'full') && radioOn && new Set(events.map(x => x.node)).size > 1) Radio.sayLine(spreadLine(), {head: group.label});
+    if (await radioSay(e, 'full') && radioOn && new Set(events.map(x => x.node)).size > 1) Radio.sayLine(spreadLine(), {head: group.label, rate: radioRate});
   } else radioSay(e, speed >= 61 ? 'title' : 'full');
-}, 350);
+}
+setInterval(radioLeadPick, 350);
+// The chorus (radio.js, eSpeak): the other papers that pulse at the same moment read their opening words together, each
+// in its own voice, placed left or right by where the paper sits on the map and heard like distant sets. How many speak
+// at once and how fast follow the speed control. Everything else that pulses meanwhile is skipped, not queued.
+const CHORUS = {7: [2, 175], 14: [3, 195], 30: [3, 220], 61: [4, 250], 122: [5, 280], 365: [6, 310]};
+const chorusMax = () => (CHORUS[speed] || [3])[0];
+let chorusVoiced = new Set();
+function chorusFor(e) {
+  if (!Radio.unlocked || e.id === radioLeadId || chorusVoiced.has(e.id)) return;
+  chorusVoiced.add(e.id);
+  if (e.excerpt == null && passages.has(e.id)) { const got = passages.get(e.id); e.excerpt = got.excerpt; e.transcription = got.tr; }
+  const st = storyOf(e), n = nodeById.get(e.node), p = Y.papers.get(e.node), text = e.excerpt || st?.label || e.summary || '';
+  if (!text) return;
+  const pan = n && skyWidth ? (n.cx / skyWidth) * 2 - 1 : 0;
+  n?.el.classList.add('voiced');
+  Radio.chorus.say(Radio.chorus.firstWords(text, speed >= 61 ? 9 : speed >= 30 ? 13 : 18),
+    {pan: pan * .9, wpm: CHORUS[speed]?.[1] || 200, ...Radio.chorus.voiceOf(e.node), label: Radio.town(p?.place) + ' · ' + paperName(e.node)})
+    .then(() => n?.el.classList.remove('voiced'));
+}
+function chorusQuiet() { Radio.chorus.stop(); chorusVoiced = new Set(); nodes.forEach(n => n.el.classList.remove('voiced')); }
 function radioPicked() {   // paused: read the printing the visitor picked, once they stop moving
   if (!radioOn || playing) return;
   clearTimeout(radioPickTimer);
   radioPickTimer = setTimeout(() => { const e = events[selected]; if (radioOn && !playing && e) radioSay(e, 'full'); }, 700);
 }
+Radio.chorus.onChange(list => { $('on-air-chorus').textContent = list.length ? 'Also on air: ' + [...new Set(list)].join(' · ') : ''; });
 Radio.onCaption(({intro, lines, index}) => {
   $('on-air-head').textContent = intro || 'Radio';
   const box = $('on-air-text'); box.replaceChildren();
@@ -1019,13 +1043,13 @@ Radio.onCaption(({intro, lines, index}) => {
 });
 Radio.onState(s => { if (s !== 'speaking') tourHold = Math.max(tourHold, performance.now() + 1500); if (s === 'off') onAir(null); });
 $('radio').addEventListener('click', () => {
-  radioOn = !radioOn; syncRadio(); tourHold = performance.now() + 600;
-  if (radioOn) { Radio.unlock(); radioReset(); if (!playing && events[selected]) radioSay(events[selected], 'full'); }
-  else { Radio.stop(true); onAir(null); }
+  radioOn = !radioOn; syncRadio(); tourHold = performance.now() + 600; try { sessionStorage.setItem('nns-radio', radioOn ? 'on' : 'off'); } catch {}
+  if (radioOn) { Radio.unlock(); Radio.chorus.preload(); radioReset(); if (!playing && events[selected]) radioSay(events[selected], 'full'); }
+  else { Radio.stop(true); onAir(null); chorusQuiet(); }
 });
 
 $('release').textContent = 'Data foundation v' + BOOT.release_version + '.';
-$('play').addEventListener('click', () => { if (playing) { pause(); save(); if (radioOn) { Radio.stop(); onAir(null); } } else play(); });
+$('play').addEventListener('click', () => { if (playing) { pause(); save(); if (radioOn) { Radio.stop(); onAir(null); chorusQuiet(); } } else play(); });
 $('min-papers').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b || mode === 'group') return;
   minPapers[mode] = Number(b.dataset.k); if (mode === 'matched') { shelfLimit = 24; buildShelf(); } changeGroup(group.id); save();
@@ -1070,9 +1094,10 @@ if (exhibit) {
   document.addEventListener('pointermove', wake); wake();
 }
 if (Number(params.get('speed')) > 0) setSpeed(Number(params.get('speed')));   // ?speed=7: days of printing per second
-if (params.get('radio') === 'on') {
+let radioKept = null; try { radioKept = sessionStorage.getItem('nns-radio'); } catch {}
+if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !== 'off')) {
   radioOn = true; syncRadio();
-  const start = () => Radio.unlock();
+  const start = () => { Radio.unlock(); Radio.chorus.preload(); };
   for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
   start();
 }

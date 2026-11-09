@@ -5,7 +5,8 @@
    The sounds are atmosphere, not recordings of the time. The police siren in New York is a deliberate anachronism.
 
    Radio.say(item, options) reads one item: {date: 'YYYY-MM-DD', place: 'Philadelphia, Pa.', paper, title, text, war}.
-     options: {greet: true for the "Good morning" opening, previous: the item read before, rate, mode: 'full' | 'title', chime}
+     options: {greet: true for the "Good morning" opening, previous: the item read before, mode: 'full' | 'title' | 'intro', chime,
+     rate: a number, or a function read before each sentence so the voice follows a speed control}
      It resolves to true when the item was read to the end, false when something else interrupted it.
    Radio.unlock() must run inside a click, tap or key press: browsers only start sound after one.
    Radio.onCaption(state) is called as reading moves on: {item, intro, lines, index}; index -1 means the intro. */
@@ -73,7 +74,7 @@ function loadVoices() {
   voice = voices.find(v => v.name === voiceName) || voices[0] || null;
   listeners.voices.forEach(f => f(voices));
 }
-const listeners = {voices: [], caption: [], state: []};
+const listeners = {voices: [], caption: [], state: [], chorus: []};
 if (synth) { loadVoices(); if (synth.addEventListener) synth.addEventListener('voiceschanged', loadVoices); else synth.onvoiceschanged = loadVoices; }
 
 let session = 0, speaking = false, unlocked = false;
@@ -237,6 +238,7 @@ function intro(item, greet, previous) {
 }
 async function say(item, {greet = false, previous = null, rate = 1, mode = 'full', chime = false} = {}) {
   const my = ++session; if (synth) synth.cancel();
+  const pace = () => typeof rate === 'function' ? rate() : rate;
   const live = () => my === session;
   startBed();
   const name = town(item.place), sc = scheme(name), head = intro(item, greet, previous);
@@ -255,13 +257,13 @@ async function say(item, {greet = false, previous = null, rate = 1, mode = 'full
     for (const [k, line] of head.lines.entries()) {
       if (!live()) return false;
       if (k === head.lines.length - 1) cue(item.war ? 'drum' : sc.cue);   // the town's own sound, under the paper's name
-      await speakOne(line, Math.min(1.15, rate));
+      await speakOne(line, Math.min(1.3, pace()));
     }
     await wait(250);
     for (let i = 0; i < lines.length; i++) {
       if (!live()) return false;
       show(i);
-      await speakOne(lines[i], rate);
+      await speakOne(lines[i], pace());
     }
     if (!live()) return false;
     duck(false); await wait(700);
@@ -279,7 +281,7 @@ async function sayLine(text, {rate = 1, head = ''} = {}) {
     for (let i = 0; i < lines.length; i++) {
       if (!live()) return false;
       listeners.caption.forEach(f => f({item: null, intro: head, lines, index: i}));
-      await speakOne(lines[i], rate);
+      await speakOne(lines[i], typeof rate === 'function' ? rate() : rate);
     }
     await wait(500);
     return live();
@@ -289,9 +291,72 @@ async function sayLine(text, {rate = 1, head = ''} = {}) {
 }
 function stop(silence = false) {
   session++; if (synth) synth.cancel(); speaking = false; duck(false);
-  if (silence) stopBed();
+  if (silence) { chorusStop(); stopBed(); }
   listeners.state.forEach(f => f(silence ? 'off' : 'idle'));
 }
+
+// ---- The chorus: other papers reading at the same moment ----
+// The browser's own voice can say only one thing at a time, so the papers that print alongside the one it reads speak
+// in a second kind of voice: eSpeak (radio-voices.js, a worker), whose speech arrives as sound the page can mix. Each
+// voice is short (a story's opening words), placed left or right by where it was printed, and heard like a distant set,
+// a little quieter than the main voice. Nothing loads until the chorus is first used.
+let chorusWorker = null, chorusReady = null, chorusSeq = 0, chorusEpoch = 0, chorusBus = null, chorusPending = 0;
+const chorusWaiting = new Map(), chorusVoices = new Map();   // source -> label of what it reads
+function chorusStart() {
+  if (chorusReady) return chorusReady;
+  chorusReady = new Promise(resolve => {
+    try { chorusWorker = new Worker(new URL('radio-voices.js', document.baseURI), {type: 'module'}); } catch { resolve(false); return; }
+    chorusWorker.onmessage = e => { const w = chorusWaiting.get(e.data.id); if (w) { chorusWaiting.delete(e.data.id); w(e.data); } };
+    chorusWorker.onerror = () => resolve(false);
+    chorusRender('Good morning.', {speed: 175}).then(out => resolve(!out.error));   // loads eSpeak once
+  });
+  chorusReady.then(ok => { if (!ok) chorusReady = null; });
+  return chorusReady;
+}
+function chorusRender(text, opts) {
+  return new Promise(resolve => {
+    const id = ++chorusSeq; chorusWaiting.set(id, resolve); chorusWorker.postMessage({id, text, opts});
+    setTimeout(() => { if (chorusWaiting.delete(id)) resolve({error: 'timeout'}); }, 8000);
+  });
+}
+const chorusChanged = () => listeners.chorus.forEach(f => f([...chorusVoices.values()]));
+async function chorusSay(text, {pan = 0, wpm = 190, variant = 'm1', pitch = 50, level = .5, label = ''} = {}) {
+  const c = audio(); if (!c || c.state !== 'running' || !text) return false;
+  const epoch = chorusEpoch; chorusPending++; let waiting = true;
+  const done = () => { if (waiting) { waiting = false; chorusPending--; } };
+  try {
+    if (!(await chorusStart()) || epoch !== chorusEpoch) return false;
+    const out = await chorusRender(clean(text), {speed: Math.round(wpm), variant, pitch});
+    if (out.error || epoch !== chorusEpoch) return false;
+    const buf = await c.decodeAudioData(out.buf);
+    if (epoch !== chorusEpoch) return false;
+    if (!chorusBus) {   // a distant set: no deep bass or bright treble, and kept even when several speak together
+      chorusBus = gain(1); const squeeze = c.createDynamicsCompressor(); squeeze.threshold.value = -20; squeeze.ratio.value = 4;
+      chorusBus.connect(filter('highpass', 260)).connect(filter('lowpass', 3800)).connect(squeeze).connect(master);
+    }
+    const src = c.createBufferSource(), g = gain(0), p = c.createStereoPanner ? c.createStereoPanner() : null, t = c.currentTime;
+    src.buffer = buf; if (p) { p.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(p).connect(chorusBus); } else src.connect(g).connect(chorusBus);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(level, t + .06);
+    return await new Promise(resolve => {
+      done(); chorusVoices.set(src, label); chorusChanged();
+      src.onended = () => { chorusVoices.delete(src); chorusChanged(); resolve(epoch === chorusEpoch); };
+      src.start(t);
+    });
+  } catch { return false; }
+  finally { done(); }
+}
+function chorusStop() {
+  chorusEpoch++;
+  for (const src of chorusVoices.keys()) { try { src.stop(); } catch {} }
+  chorusVoices.clear(); chorusChanged();
+}
+// A paper keeps one voice: the same variant and pitch every time it speaks.
+const VARIANTS = ['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'f1', 'f2', 'f3', 'f4'];
+function voiceOf(key) {
+  let h = 2166136261; for (const ch of String(key)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); }
+  h >>>= 0; return {variant: VARIANTS[h % VARIANTS.length], pitch: 32 + (h >>> 8) % 40};
+}
+const firstWords = (text, n) => { const w = clean(text).split(' '); return w.slice(0, n).join(' ') + (w.length > n ? '…' : ''); };
 // Browsers allow sound only after a click, tap or key press: call this inside one. It returns whether sound can play now.
 function unlock() {
   if (!audio()) return false;
@@ -317,6 +382,10 @@ window.Radio = {
   },
   onCaption(f) { listeners.caption.push(f); }, onState(f) { listeners.state.push(f); }, onVoices(f) { listeners.voices.push(f); },
   say, sayLine, stop, unlock, cue: k => { audio(); return cue(k); },
+  chorus: {
+    say: chorusSay, stop: chorusStop, preload: () => { if (audio() && ctx.state === 'running') chorusStart(); },
+    get count() { return chorusVoices.size + chorusPending; }, onChange(f) { listeners.chorus.push(f); }, voiceOf, firstWords
+  },
   spokenDate, writtenDate, town, paperName, clean, chunks, intro
 };
 })();
