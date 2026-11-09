@@ -87,8 +87,9 @@
 .card.overview{flex-basis:230px;border-color:#ffffff2e}.card.overview .title{font-weight:600}
 .card.more{flex-basis:118px;align-items:center;justify-content:center;color:var(--muted);text-align:center}
 .shelf-sep{flex:0 0 auto;align-self:center;writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;color:var(--muted);letter-spacing:.04em}
-/* Many newspapers (several years): smaller markers and one-line names, so the map stays readable. */
-.sky.compact .paper{width:104px}.sky.compact .node{width:40px;height:40px}.sky.compact .paper-name{font-size:11px;max-width:104px;-webkit-line-clamp:1;padding:1px 3px}
+/* Many newspapers (several years, or 1776): smaller markers, so the map stays readable. Names keep two lines:
+   on one line, the four Philadelphia papers all read "Pennsylvania…". */
+.sky.compact .paper{width:104px}.sky.compact .node{width:40px;height:40px}.sky.compact .paper-name{font-size:11px;line-height:1.2;max-width:104px;-webkit-line-clamp:2;padding:1px 3px}
 .sky.compact .node-last,.sky.compact .node-coverage{display:none}
 @media(prefers-reduced-motion:reduce){.years .band,.card{transition:none}}
 @media(max-width:720px){.year-pick{flex:1 1 100%;order:2}.years-now{min-width:0;font-size:13px}.card{flex-basis:178px}.transport{flex:1 1 100%}
