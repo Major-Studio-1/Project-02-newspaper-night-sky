@@ -276,14 +276,42 @@ Version 1 (below) is kept as `telescope-v1.html`.
 
 ## The website
 
-The views are joined into one site with five pages and a shared header:
+The views are joined into one site with six pages and a shared header, plus an exhibition page:
 - **Home** (`index.html`): a short introduction, a slow time tunnel of stars, and three ways in.
 - **Telescope** (`telescope.html`): every story as a star.
 - **Pulses** (`pulses.html`): one story or one year, paper by paper.
+- **Radio** (`radio.html`): the newspapers read aloud, day by day (below).
 - **How it works** (`method.html`): the method in plain language.
 - **Research notes** (`notes.html`): the earlier studies.
+- **Exhibition** (`exhibit.html`, linked from the footer): a self-running loop for a large screen (below).
 
 The header and footer come from one file, `pipeline/site_parts.py`, so they cannot drift apart. The header's search box searches every story in the telescope. The pages link to each other where it helps: a story on the pulse page has "See it in the sky", and a star in the telescope opens its pulses. The public repository is made from this project by `pipeline/export_public_repo.py`.
+
+**The radio (9 November 2026)** reads the newspapers aloud, as if a set could be tuned to the past. Nothing runs on a server and nothing is generated: the browser's own voice (the Web Speech API) reads what was printed, and the sounds are synthesised in the browser (the Web Audio API). The shared code is `pipeline/radio.js`.
+- **The radio page:** a year dial over bars of the newspapers that survive each year. It starts on today's date in the year on the dial and greets the town of the first paper: *"Good morning, Philadelphia! It is Saturday, the sixth of July, seventeen seventy-six. From the Pennsylvania Evening Post."* Then it reads one passage from each paper that printed that day, reviewed passages first, then matched passages whose transcription the cross-check confirmed, then the most widely printed. Days with no surviving page are skipped.
+- **Pulses:** a Radio switch beside Tour. It reads from what has just pulsed and skips the rest, so the voice keeps up with the map. In an overview it reads one printing of each story; in one story, the first printing and then one line on how far it went in this archive. Faster speeds read a little faster, and only titles at two months a second or more. Tour waits for the voice.
+- **Telescope:** a Radio switch beside Drift. As time drifts, it reads the brightest story to reach the front: its title, which starts where the printed item starts.
+- **Sounds, for atmosphere only:** the hiss of the set, church bells for a new day, a ship's bell in harbour towns, horses on busy streets, birds in the country, a drum under war news. New York has a police siren, a deliberate anachronism the user asked for.
+- **Text for speech:** cut marks are dropped, words broken at line ends are joined, and words in capitals are read as words.
+- **Limits:** voices differ between browsers (Edge offers natural ones). A machine misreading in a matched passage is heard as it was transcribed.
+
+**Exhibition mode (9 November 2026)**, phase 2 of `docs/site-plan.md`. `exhibit.html` plays seven scenes in a loop:
+1. the sky of all the stories;
+2. *Peace and Plenty* travelling, with the radio;
+3. the Declaration of Independence, with the radio;
+4. Independence Day vs fever in Orbit;
+5. the topics from the side;
+6. the gaps of 1785–89;
+7. the radio in July 1776.
+
+How it works:
+- **Scenes:** each scene is a page in its exhibition mode (`?exhibit=1`: no menus or lists, large type). It shows a caption that fades after a while, and a QR code for the same view on a phone.
+- **Touch:** a touch pauses the loop for exploring, and a minute without a touch brings it back.
+- **Staff keys:** F full screen, Space pause, arrows for the scene, M for sound.
+- **Burn-in:** the caption changes sides and moves a little every scene.
+- **Daily reload:** the page reloads itself at 4 a.m.
+- **Sound:** browsers play sound only after a first touch. On an unattended screen, start Chrome with `--autoplay-policy=no-user-gesture-required`.
+- **Not built yet:** the offline bundle, with three.js stored locally.
 
 ## Worked example · *Peace and Plenty*, October 1797
 

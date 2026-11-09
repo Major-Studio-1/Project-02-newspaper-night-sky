@@ -69,16 +69,28 @@ button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#ti
   .search{flex-basis:100%;order:-1}.list a{grid-template-columns:74px 1fr}.list .n{grid-column:2}h1{font-size:22px}
   /* Phones: the sky comes straight after the controls; the search summary sits right under it, the introduction further down. */
   .shell{display:flex;flex-direction:column}.view{order:1}.caption{order:2;margin:8px 0 0}.timeline-wrap{order:3}.time-controls{order:4}.chips{order:5}
-  .heading{order:6;margin-top:18px}.how{order:7}.legend{order:8}.list{order:9}.page-notes{order:10}}
+  .heading{order:6;margin-top:18px}.how{order:7}.legend{order:8}.list{order:9}.page-notes{order:10}.on-air{order:3}}
+/* The radio: what is being read, under the timeline. */
+.on-air{margin:8px 0 0;padding:12px 16px;border:1px solid #2a3550;border-left:3px solid var(--gold,#ffd27a);border-radius:10px;background:#070b17}
+.on-air-head{display:block;color:#ffd27a;font:600 11.5px/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.on-air-text{display:block;font:17px/1.5 Georgia,"Times New Roman",serif;color:#7f8aa3}.on-air-text .now{color:var(--ink)}
+.on-air-text:empty::before{content:"The radio reads the brightest story as it arrives at the front. Let time drift, or move it.";color:var(--muted);font:14px system-ui,sans-serif}
+/* Exhibition (?exhibit=1): the sky, the timeline and what is being read, large; no menus or lists; the cursor hides when still. */
+body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .toolbar,body.exhibit .heading,body.exhibit .chips,body.exhibit .time-controls,body.exhibit .how,
+body.exhibit .list,body.exhibit .page-notes,body.exhibit .caption.idle{display:none!important}
+body.exhibit .shell{max-width:none;padding:2vh 2.5vw}body.exhibit .view{height:74vh}
+body.exhibit .caption{font-size:clamp(14px,1.2vw,26px)}body.exhibit .legend{font-size:clamp(12px,.9vw,20px)}
+body.exhibit .on-air-text{font-size:clamp(18px,1.8vw,40px)}body.exhibit .on-air-head{font-size:clamp(11px,.9vw,20px)}
+body.exhibit.still,body.exhibit.still *{cursor:none!important}
 </style>
 </head>
 <body class="page-telescope">
-<header class="site-header" id="site-header"><div class="site-inner"><a class="brand" href="index.html" aria-label="Newspaper Night Sky, home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/><circle cx="19" cy="19" r="1.7" fill="currentColor" fill-opacity=".6"/></svg><span>Newspaper Night Sky</span></a><nav class="site-nav" aria-label="Main"><a href="telescope.html" aria-current="page">Telescope</a><a href="pulses.html">Pulses</a><a href="method.html">How it works</a></nav><form class="site-search" action="telescope.html" role="search"><label class="sr-only" for="site-q">Search every story</label><input id="site-q" name="q" type="search" placeholder="Search 48,170 stories" autocomplete="off" spellcheck="false"></form><button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header">Menu</button></div></header><script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script>
+<header class="site-header" id="site-header"><div class="site-inner"><a class="brand" href="index.html" aria-label="Newspaper Night Sky, home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/><circle cx="19" cy="19" r="1.7" fill="currentColor" fill-opacity=".6"/></svg><span>Newspaper Night Sky</span></a><nav class="site-nav" aria-label="Main"><a href="telescope.html" aria-current="page">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html">Radio</a><a href="method.html">How it works</a></nav><form class="site-search" action="telescope.html" role="search"><label class="sr-only" for="site-q">Search every story</label><input id="site-q" name="q" type="search" placeholder="Search 48,170 stories" autocomplete="off" spellcheck="false"></form><button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header">Menu</button></div></header><script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script>
 <header class="toolbar"><div class="toolbar-inner">
 <label class="search" role="search"><span class="sr-only">Search stories</span>
 <input id="q" type="search" placeholder="Search any word or name, or compare: fever vs ice" autocomplete="off" spellcheck="false"><button type="button" id="q-clear" aria-label="Clear search">✕</button></label>
 <span class="seg slide" id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">Place</button><button type="button" data-layout="topic" title="What each story is about">Topic</button><button type="button" data-layout="orbit" title="The time of year">Orbit</button></span>
-<button type="button" id="drift" class="toggle" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance">Drift</button>
+<button type="button" id="drift" class="toggle" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance">Drift</button><button type="button" id="radio" class="toggle" aria-pressed="false" title="Read aloud the brightest story as it arrives at the front, in your browser's own voice">Radio</button>
 <span class="ctl"><span class="label" id="colour-label">Colour</span><span class="seg slide" id="colour" role="group" aria-labelledby="colour-label"><button type="button" data-colour="region" title="Colour each star by the region where its story was first printed in this archive">Region</button><button type="button" data-colour="search" title="Colour the stories that match your search: gold for one search, one colour per search when you compare">Search</button><button type="button" data-colour="off" title="Pale stars; reviewed stories in their own colours">Off</button></span></span>
 <div class="row2">
 <span class="ctl"><span class="label" id="span-label">Look back</span><span class="seg slide" id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span></span>
@@ -98,15 +110,17 @@ button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#ti
 <div id="loading" class="loading indeterminate" role="status" aria-live="polite"><div class="loading-box"><p id="loading-text">Opening the telescope…</p><div class="loading-bar" aria-hidden="true"><i id="loading-fill"></i></div><p id="loading-sub"></p></div></div>
 </div>
 <div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Click to move 'now'; the bright bracket is the stretch of time you are looking back through."></canvas></div>
+<p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span></p>
 <div class="time-controls"><button type="button" id="earlier" title="Move 'now' earlier">‹ Earlier</button><button type="button" id="later" title="Move 'now' later">Later ›</button><span class="small muted">Move through time with these buttons, by clicking or dragging the timeline, or with the ↑ ↓ keys.</span></div>
 <p class="how" id="how"></p>
 <div class="legend" id="legend"></div>
 <section class="list" aria-labelledby="list-title"><h2 id="list-title">Brightest stories in view</h2><ol id="list"></ol></section>
 <p class="page-notes">Matched stories were found automatically by shared wording across newspapers and are not checked against the scans; a match can join neighbouring items, and printings in damaged transcriptions are missed. Reviewed stories were read and checked; a reviewed story usually also appears as a matched star. Search looks at each story's title and the opening words of its first printing, not every word of every page. Topics come from the project's provisional 24-topic model. Everything follows the surviving archive: where few papers survive there are few stars, which is a gap in the collection, not proof that nothing was printed. <span id="release"></span> <a href="method.html#matched">How stories are found</a>.</p>
 </main>
-<footer class="site-footer"><div class="site-inner"><div class="foot-brand"><b>Newspaper Night Sky</b><span>American newspapers, 1770–1810, seen through one surviving archive.</span></div><nav aria-label="More"><a href="index.html">Home</a><a href="telescope.html">Telescope</a><a href="pulses.html">Pulses</a><a href="method.html">How it works</a><a href="notes.html">Research notes</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky/tree/main/data">Data release</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky">Code</a></nav><p class="foot-note">Source: Smithsonian Revolution Crossroads, drawn from the Library of Congress <i>Chronicling America</i> newspapers (Hugging Face dataset <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision). Reviewed stories were read and checked against the page scans; matched stories were found automatically by shared wording and are not checked. Data foundation v0.7.1.</p></div></footer>
+<footer class="site-footer"><div class="site-inner"><div class="foot-brand"><b>Newspaper Night Sky</b><span>American newspapers, 1770–1810, seen through one surviving archive.</span></div><nav aria-label="More"><a href="index.html">Home</a><a href="telescope.html">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html">Radio</a><a href="method.html">How it works</a><a href="notes.html">Research notes</a><a href="exhibit.html">Exhibition mode</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky/tree/main/data">Data release</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky">Code</a></nav><p class="foot-note">Source: Smithsonian Revolution Crossroads, drawn from the Library of Congress <i>Chronicling America</i> newspapers (Hugging Face dataset <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision). Reviewed stories were read and checked against the page scans; matched stories were found automatically by shared wording and are not checked. Data foundation v0.7.1.</p></div></footer>
 <script type="application/json" id="boot">{"release_version": "0.7.1", "stamp": "6611b9c47d86", "stories": 48170, "regions": [{"label": "New England", "states": "Maine, New Hampshire, Massachusetts, Rhode Island and Connecticut", "color": "#9085e9", "stories": 13304}, {"label": "Middle States", "states": "New York, New Jersey, Pennsylvania and Delaware", "color": "#199e70", "stories": 13990}, {"label": "South and West", "states": "Washington, Virginia (with today's West Virginia), Kentucky and South Carolina", "color": "#d95926", "stories": 20876}], "bytes": {"data": 7696598, "text": 24315879}, "towns": [{"name": "Portland", "lat": 43.661, "lon": -70.255, "stories": 1861}, {"name": "Portsmouth", "lat": 43.071, "lon": -70.763, "stories": 6903}, {"name": "Concord", "lat": 43.208, "lon": -71.538, "stories": 395}, {"name": "Exeter", "lat": 42.981, "lon": -70.948, "stories": 549}, {"name": "Dover", "lat": 43.198, "lon": -70.874, "stories": 9}, {"name": "Hanover", "lat": 43.702, "lon": -72.29, "stories": 68}, {"name": "Keene", "lat": 42.934, "lon": -72.278, "stories": 74}, {"name": "Salem", "lat": 42.519, "lon": -70.897, "stories": 13}, {"name": "Boston", "lat": 42.36, "lon": -71.058, "stories": 886}, {"name": "Providence", "lat": 41.824, "lon": -71.413, "stories": 970}, {"name": "Warren", "lat": 41.73, "lon": -71.282, "stories": 277}, {"name": "Newport", "lat": 41.49, "lon": -71.313, "stories": 419}, {"name": "Hartford", "lat": 41.764, "lon": -72.685, "stories": 880}, {"name": "Kingston", "lat": 41.927, "lon": -73.997, "stories": 2}, {"name": "New York", "lat": 40.713, "lon": -74.006, "stories": 4395}, {"name": "Chatham", "lat": 40.741, "lon": -74.383, "stories": 18}, {"name": "Burlington", "lat": 40.071, "lon": -74.865, "stories": 790}, {"name": "Philadelphia", "lat": 39.952, "lon": -75.165, "stories": 8660}, {"name": "Wilmington", "lat": 39.746, "lon": -75.547, "stories": 124}, {"name": "Dover", "lat": 39.158, "lon": -75.524, "stories": 1}, {"name": "Washington", "lat": 38.895, "lon": -77.036, "stories": 6140}, {"name": "Alexandria", "lat": 38.805, "lon": -77.047, "stories": 5265}, {"name": "Shepherdstown", "lat": 39.43, "lon": -77.804, "stories": 404}, {"name": "Martinsburg", "lat": 39.456, "lon": -77.964, "stories": 158}, {"name": "Wheeling", "lat": 40.064, "lon": -80.721, "stories": 31}, {"name": "Richmond", "lat": 37.541, "lon": -77.436, "stories": 4202}, {"name": "Williamsburg", "lat": 37.271, "lon": -76.707, "stories": 1876}, {"name": "Norfolk", "lat": 36.851, "lon": -76.286, "stories": 2198}, {"name": "Lynchburg", "lat": 37.414, "lon": -79.142, "stories": 40}, {"name": "Lexington", "lat": 38.04, "lon": -84.503, "stories": 295}, {"name": "Charleston", "lat": 32.777, "lon": -79.931, "stories": 267}], "categories": [{"label": "War and the armies", "year": 1776, "color": "#3987e5"}, {"label": "Britain and Europe", "year": 1776, "color": "#d95926"}, {"label": "Independence and American government", "year": 1776, "color": "#199e70"}, {"label": "War, revolution and foreign news", "year": 1797, "color": "#3987e5"}, {"label": "Ships, privateers and wrecks", "year": 1797, "color": "#d95926"}, {"label": "American public life", "year": 1797, "color": "#199e70"}]}</script>
 <script src="glass.js"></script>
+<script src="radio.js"></script>
 <script type="module">
 const $ = id => document.getElementById(id);
 const BOOT = JSON.parse($('boot').textContent);
@@ -968,6 +982,51 @@ $('layout').addEventListener('click', e => { const b = e.target.closest('button'
 $('angle').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.angle = b.dataset.angle; syncButtons(); resetCamera(); refresh(); save(); });
 $('span').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; setSpan(Number(b.dataset.years) * YEAR); });
 $('drift').addEventListener('click', () => { state.drift = !state.drift; lastInteract = -1e9; syncButtons(); save(); });
+
+// ---- Radio (radio.js): as "now" moves, the brightest story to reach the front is read aloud: its title, which starts
+// where the printed item starts, after a greeting to the town where it was first printed. Reviewed stories and search
+// matches come first, then the most widely printed. The voice is the browser's own; nothing is sent anywhere.
+let radioOn = false, radioFirst = true, radioPrev = null, radioRead = new Set();
+const isoOf = d => new Date(EPOCH + d * MS).toISOString().slice(0, 10);
+function syncRadio() { $('radio').setAttribute('aria-pressed', String(radioOn)); $('on-air').hidden = !radioOn; }
+setInterval(() => {
+  if (!radioOn || Radio.speaking || !W) return;
+  const back = Math.max(10, state.span * .012 * 10);   // what reached the front in about the last ten seconds of Drift
+  let best = -1, score = -Infinity;
+  for (let i = lowerBound(state.now - back), b = lowerBound(state.now + 1e-6); i < b; i++) {
+    if (!visible(i) || radioRead.has(i)) continue;
+    const s = (D.kind[i] ? 1e5 : 0) + (searching() && hit[i] ? 1e4 : 0) + D.papers[i] * 10 + D.prints[i] * .01;
+    if (s > score) { score = s; best = i; }
+  }
+  if (best < 0) return;
+  radioRead.add(best);
+  const item = {date: isoOf(D.first[best]), place: townAt.get(D.flat[best] + ',' + D.flon[best]) || '', paper: '', title: D.title[best], text: '',
+    war: !!D.kind[best] && /war|armies/i.test(BOOT.categories[D.cat[best]]?.label || '')};
+  const greet = radioFirst, previous = radioPrev; radioFirst = false; radioPrev = item;
+  Radio.say(item, {greet, previous, chime: greet, mode: 'title', rate: state.span > 6 * YEAR ? 1.12 : state.span > 2 * YEAR ? 1.06 : 1});
+}, 400);
+Radio.onCaption(({intro, lines, index}) => {
+  $('on-air-head').textContent = intro || 'Radio';
+  const box = $('on-air-text'); box.replaceChildren();
+  lines.forEach((line, k) => { const s = document.createElement('span'); if (k === index) s.className = 'now'; s.textContent = line + ' '; box.append(s); });
+});
+$('radio').addEventListener('click', () => {
+  radioOn = !radioOn; syncRadio();
+  if (radioOn) { Radio.unlock(); radioFirst = true; radioPrev = null; radioRead = new Set(); } else Radio.stop(true);
+});
+// ?radio=on turns the radio on (sound starts at the first touch, click or key); ?exhibit=1 is the exhibition mode: the sky,
+// the timeline and what is being read, large, with no menus or lists.
+if (params.get('radio') === 'on') {
+  radioOn = true; syncRadio();
+  const start = () => Radio.unlock();
+  for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
+  start();
+}
+if (['1', 'on'].includes(params.get('exhibit'))) {
+  document.body.classList.add('exhibit'); window.dispatchEvent(new Event('resize'));
+  let still = 0; const wake = () => { document.body.classList.remove('still'); clearTimeout(still); still = setTimeout(() => document.body.classList.add('still'), 3000); };
+  document.addEventListener('pointermove', wake); wake();
+}
 $('colour').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b || !COLOURS.includes(b.dataset.colour)) return;
   if (b.dataset.colour === 'search') {

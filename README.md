@@ -19,7 +19,9 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 |---|---|
 | **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,170 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic** (24 topics in seven families), or **orbit** (time of year), and colour them by **region**. You can search any word, **compare** up to three searches in colour (for example France · Britain · Congress), turn and zoom the view, and let time drift. |
 | **[Pulses](https://newspapers.icare.love/pulses.html)** | Stories travelling through the papers. Each newspaper is a point on a map, and it pulses when it printed a story. Pick one year, several, or all of them on a year strip, and a story from a shelf of cards, narrowed by topic if you like; or let the **tour** play one after another. The passage and the page scan are shown beside the map. A constellation joins a story's printings, and a coverage strip shows which pages survive. |
+| **[Radio](https://newspapers.icare.love/radio.html)** | The newspapers read aloud, as if a radio could be tuned to the past. Turn the dial to a year: it greets the town of the first paper ("Good morning, Philadelphia! It is Saturday, the sixth of July, 1776…") and reads what each paper printed that day, over sounds of the town. Your browser does the reading with its own voice; nothing is sent anywhere. Pulses and the telescope have a Radio switch too. |
 | **[How it works](https://newspapers.icare.love/method.html)** | The method in plain language, and what the site cannot tell you. |
+| **[Exhibition](https://newspapers.icare.love/exhibit.html)** | A self-running loop of seven scenes for a large screen, with captions, QR codes and touch to explore. |
 
 | | |
 |---|---|
@@ -56,7 +58,7 @@ The reading and scan checks were done with AI assistants. An independent human s
 
 | Folder | What is in it |
 |---|---|
-| [`site/`](site) | The website, ready to serve: five pages and the data they load. The first telescope is kept as `telescope-v1.html`. |
+| [`site/`](site) | The website, ready to serve: six pages and an exhibition loop, with the data they load. The first telescope is kept as `telescope-v1.html`. |
 | [`data/`](data) | The current data release (v0.7.1): tables, the matched-story data, the schema and the validation |
 | [`pipeline/`](pipeline) | The code, in the order it runs: audit, topics, finding stories, data releases, the site |
 | [`docs/`](docs) | The full process, the seasons check, and the site plan |

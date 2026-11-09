@@ -293,6 +293,7 @@ from urllib.parse import quote
 VER=manifest['version']; N_STARS=len(stars)
 shutil.copyfile(ROOT/'site.css',OUT/'site.css')
 shutil.copyfile(ROOT/'glass.js',OUT/'glass.js')   # the glass controls shared by the Telescope and Pulses pages
+shutil.copyfile(ROOT/'radio.js',OUT/'radio.js')   # the radio's voice and sounds, made in the browser (Radio page, Pulses, Telescope)
 tele_html=(ROOT/'telescope.html').read_text(encoding='utf8').replace('__TELESCOPE_BOOT__',json.dumps(tele_boot,ensure_ascii=False).replace('</','<\\/'))
 assert '__TELESCOPE_BOOT__' not in tele_html
 (OUT/'telescope.html').write_text(fill(tele_html,'telescope',VER,N_STARS),encoding='utf8')
@@ -335,6 +336,12 @@ html=(ROOT/'pulse_explorer.html').read_text(encoding='utf8').replace('__PULSE_DA
 assert '__PULSE_DATA__' not in html
 (OUT/'pulses.html').write_text(fill(html,'pulses',VER,N_STARS),encoding='utf8')
 (OUT/'data.json').write_text(json.dumps({'release_version':VER,'reviewed':reviewed_list},ensure_ascii=False,indent=2),encoding='utf8')
+# The radio: a year dial over the surviving papers of each year. It reads the year files and data.json, read aloud in the browser.
+radio_boot={'release_version':VER,'year_stamp':year_stamp,'years':[{k:y[k] for k in ('year','papers','pages','matched','reviewed')} for y in years_index],
+            'reviewed_years':sorted(reviewed_data)}
+radio=(ROOT/'radio.html').read_text(encoding='utf8').replace('__RADIO_DATA__',json.dumps(radio_boot,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
+assert '__RADIO_DATA__' not in radio
+(OUT/'radio.html').write_text(fill(radio,'radio',VER,N_STARS),encoding='utf8')
 
 # Home: featured stories, the archive in numbers, and a small sample of stars for the hero sky.
 by_id={s['id']:s for s in stars}
@@ -371,6 +378,37 @@ home=(ROOT/'home.html').read_text(encoding='utf8').replace('__HOME_DATA__',json.
 home=home.replace('__N_STORIES__',f'{N_STARS:,}').replace('__FEATURED_PULSE__',pulse_link(peace))
 (OUT/'index.html').write_text(fill(home,'home',VER,N_STARS),encoding='utf8')
 
+# Exhibition: a self-running loop of scenes, each a page in its exhibition mode (?exhibit=1), for a large screen.
+# The scenes follow docs/site-plan.md (phase 2); each links to the same view on the web for the QR code.
+from site_parts import PAGES
+fever_q,july_q='yellow fever, malignant fever, prevailing fever','anniversary of independence, fourth of july, 4th of july'
+exhibit_scenes=[
+  {'title':f'A sky of {N_STARS:,} stories','seconds':75,
+   'text':'Every story printed in at least two newspapers of this archive, 1770–1810. Time runs into the distance: the front is now, and the further away a star is, the earlier the story. Colours show the region where each story was first printed.',
+   'url':'telescope.html?exhibit=1&view=place&colour=region&lookback=10&year=1780&drift=on','link':'telescope.html?view=place&lookback=10&year=1780'},
+  {'title':'A privateer boards the Peace and Plenty','seconds':60,
+   'text':"Captain Dunbar's account of a French privateer boarding his brig, printed in three papers in 1797 and retold in a fourth. Each pulse is one newspaper printing it on its date; every printing was checked against its scan.",
+   'url':pulse_link(peace)+'&exhibit=1&speed=7&radio=on','link':pulse_link(peace)},
+  {'title':'The Declaration of Independence','seconds':60,
+   'text':f"First printed in this archive on {day_text(decl['first'])}, two days after Congress adopted it, and in {decl['papers']} papers by {day_text(decl['last'])[:-5]}. The radio reads the first printing.",
+   'url':pulse_link(decl)+'&exhibit=1&speed=7&radio=on','link':pulse_link(decl)},
+  {'title':'Some news returns with the seasons','seconds':60,
+   'text':'Independence Day in amber, fever in blue. Time of year runs around the ring, and each turn of the spiral is a year; the coloured lines show the months. The Fourth of July comes back every summer, and fever reports cluster in late summer.',
+   'url':f"telescope.html?exhibit=1&view=orbit&lookback=all&colour=search&drift=off&q={quote(july_q+' vs '+fever_q)}",'link':f"telescope.html?view=orbit&lookback=all&q={quote(july_q+' vs '+fever_q)}"},
+  {'title':'What the papers talked about','seconds':55,
+   'text':"The same stars arranged by topic and seen from the side: each wedge is one of the 24 topics of the project's topic model, and time runs from the front to the back.",
+   'url':'telescope.html?exhibit=1&view=topic&angle=side&lookback=10&year=1800&drift=on','link':'telescope.html?view=topic&angle=side&lookback=10&year=1800'},
+  {'title':'What is missing','seconds':45,
+   'text':'Only two newspaper series survive for 1785–86, against 11 to 17 a year after 1800. A thin sky is a gap in the surviving archive, not silence in the towns.',
+   'url':'telescope.html?exhibit=1&view=place&colour=region&lookback=5&year=1789&drift=off','link':'telescope.html?view=place&lookback=5&year=1789'},
+  {'title':'The radio: a morning in 1776','seconds':120,
+   'text':'Any day from 1770 to 1810, read aloud by the browser: a greeting to the town, then what its newspaper printed. The sounds are atmosphere, not recordings of the time.',
+   'url':'radio.html?exhibit=1&year=1776&date=07-06&on=1','link':'radio.html?year=1776&date=07-06'}]
+assert all(y['papers'] for y in years_index if y['year'] in (1780,1789,1800)), 'every exhibition year has surviving papers'
+exhibit=(ROOT/'exhibit.html').read_text(encoding='utf8').replace('__EXHIBIT_DATA__',json.dumps({'pages':PAGES,'scenes':exhibit_scenes},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
+assert '__EXHIBIT_DATA__' not in exhibit
+(OUT/'exhibit.html').write_text(fill(exhibit,'exhibit',VER,N_STARS),encoding='utf8')
+
 # How it works and Research notes.
 fill_text=lambda s:(s.replace('__N_STORIES__',f'{N_STARS:,}').replace('__N_MATCHED__',f'{len(families):,}')
                      .replace('__N_PRINTINGS__',f"{sum(f['appearances'] for f in families):,}").replace('__RELEASE__',VER).replace('__REPO__',REPO))
@@ -393,7 +431,7 @@ for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','
                  for page in ['index.html','method.html','notes.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
 
-pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','method.html','notes.html','site.css','glass.js']}
+pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','site.css','glass.js','radio.js']}
 receipt={'passed':True,'release_version':VER,
          'reviewed_years':[{'year':y,'newspapers':len(d['newspapers']),'passages':len(d['observations']),'group_views':len(d['groups']),'stories':len(d['stories']),'categories':len(d['categories'])} for y,d in sorted(reviewed_data.items())],
          'curated_passages':len(observations),'group_views':sum(len(d['groups']) for d in reviewed_list),'stories_in_overview':len(stories),'overview_categories':len(tele_cats),

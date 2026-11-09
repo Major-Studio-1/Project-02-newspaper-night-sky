@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radio · Newspaper Night Sky</title>
+<meta name="description" content="A radio tuned to the past: pick a year from 1770 to 1810 and hear what its newspapers printed, day by day, read aloud by your browser.">
+__SITE_HEAD__
+<style>
+:root{color-scheme:dark;--bg:#050711;--ink:#edf2ff;--muted:#a2afc8;--line:#28334c;--blue:#8ccfff;--gold:#ffd27a;--amber:#f3dcae;--needle:#ff6a4d;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg)}a{color:var(--blue)}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.radio{max-width:1040px;margin:auto;padding:34px 24px 10px}
+h1{font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-.02em;margin:0 0 6px}
+.lede{color:#c6d0e4;font-size:17px;margin:0 0 22px;max-width:70ch}
+.set{border:1px solid #2a3550;border-radius:22px;padding:18px;background:linear-gradient(180deg,#0e1628,#090e1b);box-shadow:inset 0 1px 0 #ffffff12,0 20px 60px #00000080}
+/* The dial window: an amber-lit scale of years, with a bar for the newspapers that survive each year. */
+.dial-window{position:relative;height:118px;border-radius:14px;overflow:hidden;background:radial-gradient(120% 140% at 50% 120%,#3b2710 0%,#1c1309 55%,#120c06 100%);
+  box-shadow:inset 0 0 0 1px #6b4e2455,inset 0 10px 30px #00000099}
+.dial-window::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#ffffff10,#ffffff00 40%);border-radius:14px}
+.scale{position:absolute;left:22px;right:22px;top:0;bottom:0}
+.scale .bar{position:absolute;bottom:40px;width:5px;margin-left:-2.5px;border-radius:2px 2px 0 0;background:#8a6a3a66}
+.scale .bar.thin{background:#8a6a3a33}
+.scale .tick{position:absolute;bottom:26px;width:1px;height:6px;background:#c9a96a88}.scale .tick.major{height:11px;background:#e6c98d}
+.scale .lbl{position:absolute;bottom:6px;transform:translateX(-50%);font:12px/1 var(--serif);color:var(--amber);letter-spacing:.03em}
+.scale .rev{position:absolute;bottom:88px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.needle{position:absolute;top:8px;bottom:8px;width:2px;margin-left:-1px;background:var(--needle);box-shadow:0 0 10px #ff6a4dcc;pointer-events:none;transition:left .25s ease}
+.dial{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.dial:focus-visible+.focus-ring{opacity:1}.focus-ring{position:absolute;inset:3px;border-radius:12px;box-shadow:0 0 0 2px var(--blue);opacity:0;pointer-events:none}
+.face{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;padding:18px 6px 4px}
+.power{width:84px;height:84px;border-radius:50%;border:1px solid #ffffff2a;color:var(--ink);font:600 14px/1.1 system-ui,sans-serif;cursor:pointer;
+  background:radial-gradient(circle at 35% 30%,#ffffff22,#ffffff05 60%),#0c1426;box-shadow:inset 0 1px 1px #ffffff40,inset 0 -2px 4px #00000066,0 4px 18px #00000080}
+.power::before{content:"";display:block;width:12px;height:12px;margin:0 auto 7px;border-radius:50%;border:2px solid #6f7d99}
+.power[aria-pressed="true"]{border-color:#ffd27a88;box-shadow:inset 0 1px 1px #ffffff40,0 0 26px #ffd27a33}
+.power[aria-pressed="true"]::before{background:var(--gold);border-color:var(--gold);box-shadow:0 0 12px var(--gold)}
+.now{min-width:0}.now-date{font:400 clamp(24px,3.2vw,36px)/1.15 var(--serif);margin:0;letter-spacing:-.01em}
+.now-where{margin:6px 0 0;color:var(--muted);font-size:15px}
+.knobs{display:flex;flex-direction:column;gap:10px;align-items:stretch;min-width:170px}
+.knobs .row{display:flex;gap:8px;align-items:center}
+.knobs button{flex:1}
+.vol{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}.vol input{flex:1;min-width:0}
+.voice{font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.knob{font:500 13.5px/1.2 system-ui,sans-serif;color:var(--ink);padding:8px 14px;border-radius:99px;cursor:pointer;background:linear-gradient(180deg,#ffffff1c,#ffffff06);
+  border:1px solid #ffffff2e;box-shadow:inset 0 1px 0 #ffffff26,0 2px 8px #0000004d}.knob:hover{background:linear-gradient(180deg,#ffffff28,#ffffff0a)}.knob:disabled{opacity:.45;cursor:default}
+.caption{margin-top:18px;border:1px solid #1c2640;border-radius:16px;padding:20px 22px;background:#070b17;min-height:230px}
+.cap-intro{margin:0 0 10px;color:var(--gold);font:600 12px/1.4 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.cap-text{margin:0;font:400 clamp(19px,2vw,24px)/1.55 var(--serif);color:#7f8aa3;max-width:62ch}
+.cap-text span.now{color:var(--ink)}
+.cap-meta{margin:16px 0 0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:13.5px;color:var(--muted)}
+.tier{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;border:1px solid var(--line)}.tier.r{border-color:#199e7088;color:#96dfc4}
+.hint{margin:12px 2px 0;color:var(--muted);font-size:13.5px;min-height:1.5em}
+.notes{max-width:74ch;margin:30px 0 0;color:#c6d0e4;font-size:15px}.notes h2{font-size:19px;font-weight:500;margin:0 0 8px}.notes li{margin:5px 0}
+.touch{position:fixed;left:50%;bottom:3vh;transform:translateX(-50%);z-index:60;display:none;padding:10px 20px;border-radius:99px;border:1px solid #ffd27a88;
+  background:#0b1222f2;color:var(--ink);font:500 clamp(15px,1.3vw,28px)/1.3 system-ui,sans-serif;cursor:pointer;box-shadow:0 0 30px #ffd27a33}
+.touch.show{display:block}
+/* Exhibition: no header or notes, larger type, the cursor hidden when still. */
+body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .notes,body.exhibit .lede,body.exhibit .knobs .vol,body.exhibit .voice{display:none}
+body.exhibit .radio{max-width:none;padding:3vh 4vw}
+body.exhibit h1{font-size:2.4vw}
+body.exhibit .dial-window{height:18vh}body.exhibit .scale .lbl{font-size:1.25vw}
+body.exhibit .now-date{font-size:4.2vw}body.exhibit .now-where{font-size:1.6vw}
+body.exhibit .caption{min-height:38vh}body.exhibit .cap-text{font-size:2.5vw;max-width:none}body.exhibit .cap-intro{font-size:1.1vw}body.exhibit .cap-meta{font-size:1.1vw}
+body.exhibit.still,body.exhibit.still *{cursor:none!important}
+@media(max-width:720px){
+  .radio{padding:22px 16px 6px}.set{padding:12px;border-radius:18px}
+  .dial-window{height:104px}.scale{left:14px;right:14px}.scale .lbl.minor{display:none}
+  .face{grid-template-columns:auto 1fr;gap:14px}.knobs{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;min-width:0}.knobs .row{flex:1 1 100%}
+  .power{width:70px;height:70px;font-size:13px}.caption{padding:16px;min-height:200px}
+}
+@media(prefers-reduced-motion:reduce){.needle{transition:none}}
+</style>
+</head>
+<body>
+__SITE_HEADER__
+<main class="radio">
+<h1>Radio</h1>
+<p class="lede">Tune to a year between 1770 and 1810 and listen to what its newspapers printed, one morning after another. The radio starts on today's date in the year on the dial. Your browser reads aloud with its own voice; nothing is sent anywhere.</p>
+<section class="set" aria-label="The radio">
+  <div class="dial-window">
+    <div class="scale" id="scale" aria-hidden="true"><div class="needle" id="needle"></div></div>
+    <input id="dial" class="dial" type="range" min="1770" max="1810" step="1" value="1776" aria-label="Year on the dial">
+    <div class="focus-ring"></div>
+  </div>
+  <div class="face">
+    <button id="power" class="power" type="button" aria-pressed="false">Turn on</button>
+    <div class="now"><p class="now-date" id="now-date"></p><p class="now-where" id="now-where"></p></div>
+    <div class="knobs">
+      <div class="row"><button id="skip" class="knob" type="button" disabled title="Skip to the next passage">Next ›</button></div>
+      <label class="vol"><span>Volume</span><input id="volume" class="glass-range" type="range" min="0" max="1" step="0.05"></label>
+      <button id="voice" class="voice knob" type="button" title="Try another of your browser's voices">Voice</button>
+    </div>
+  </div>
+  <div class="caption">
+    <p class="cap-intro" id="cap-intro"></p>
+    <p class="cap-text" id="cap-text"></p>
+    <p class="cap-meta" id="cap-meta"></p>
+  </div>
+  <p class="hint" id="hint" aria-live="polite"></p>
+</section>
+<section class="notes" aria-labelledby="notes-title">
+  <h2 id="notes-title">What you hear</h2>
+  <ul>
+    <li><b>The words</b> are passages the newspapers printed on that date, as the archive transcribed them: one passage from each paper that day. Reviewed passages (1776 and 1797) come first; they were checked against the page scans. Matched passages were found automatically and not checked, so a machine misreading can be heard as it was transcribed.</li>
+    <li><b>The order:</b> each day starts with a greeting to the town of the first paper. Then the radio moves to the next day with surviving pages. Days with no surviving page are skipped, which is a gap in the archive, not silence in the town.</li>
+    <li><b>The voice</b> is your browser's own and differs between browsers and devices. Edge offers natural voices; Voice tries another.</li>
+    <li><b>The sounds</b> are made in your browser for atmosphere: the hiss of the set, church bells, a ship's bell in harbour towns, horses on busy streets, birds in the country and a drum under war news. They are not recordings of the time. New York's police siren is a deliberate anachronism.</li>
+  </ul>
+</section>
+</main>
+<div class="touch" id="touch" role="button" tabindex="0">Touch for sound</div>
+__SITE_FOOTER__
+<script type="application/json" id="radio-data">__RADIO_DATA__</script>
+<script src="glass.js"></script>
+<script src="radio.js"></script>
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const BOOT = JSON.parse($('radio-data').textContent);
+const params = new URLSearchParams(location.search);
+const exhibit = ['1', 'on'].includes(params.get('exhibit'));
+if (exhibit) document.body.classList.add('exhibit');
+const STORE = 'nns-radio', MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const pad = n => String(n).padStart(2, '0');
+const YEARS = new Map(BOOT.years.map(y => [y.year, y]));
+let saved = {}; try { saved = JSON.parse(localStorage.getItem(STORE)) || {}; } catch {}
+const clampYear = y => Math.min(1810, Math.max(1770, Math.round(y)));
+let year = clampYear(Number(params.get('year')) || saved.year || 1776);
+// The day of the year to start from: ?date=07-04 (or 1776-07-04), otherwise today.
+let md = (() => {
+  const m = /^(?:(\d{4})-)?(\d{1,2})-(\d{1,2})$/.exec(params.get('date') || '');
+  if (m) { if (m[1]) year = clampYear(Number(m[1])); return [Number(m[2]), Number(m[3])]; }
+  const t = new Date(); return [t.getMonth() + 1, t.getDate()];
+})();
+let on = false, runToken = 0, cursor = null, qi = 0, previous = null, current = null, first = true, skipping = false;
+const cache = new Map(); let reviewedAll = null;
+
+// ---- The year's printings, day by day: one passage from each paper that printed on a date ----
+const rank = it => (it.tier === 'reviewed' ? 1000 : 0) + (it.check === 'c' ? 100 : 0) + (it.reach || 0);
+function loadReviewed() { return reviewedAll || (reviewedAll = fetch('data.json?v=' + BOOT.year_stamp).then(r => r.json()).then(d => d.reviewed)); }
+function loadYear(y) {
+  if (!cache.has(y)) {
+    const p = (async () => {
+      const res = await fetch(`years/${y}.json?v=${BOOT.year_stamp}`); if (!res.ok) throw new Error('HTTP ' + res.status);
+      const raw = await res.json(), rev = BOOT.reviewed_years.includes(y) ? (await loadReviewed()).find(r => r.year === y) : null;
+      const byDate = new Map(), add = it => { if (it.text && it.date.startsWith(y + '-')) { if (!byDate.has(it.date)) byDate.set(it.date, []); byDate.get(it.date).push(it); } };
+      const papers = new Map(raw.newspapers.map(p => [p.lccn, p])), storyOf = new Map();
+      for (const g of raw.groups) for (const m of g.members) storyOf.set(m.id ?? m, g);
+      for (const o of raw.observations) {
+        const g = storyOf.get(o.id), p = papers.get(o.node); if (!g || !p) continue;
+        add({id: o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: g.label, text: o.excerpt, tier: 'matched', check: o.ck, reach: g.newspapers,
+          pulse: `pulses.html?year=${y}&focus=${encodeURIComponent(g.id)}`, sky: `telescope.html?story=${encodeURIComponent(g.id.replace(/^auto:/, ''))}`});
+      }
+      if (rev) {
+        const rp = new Map(rev.newspapers.map(p => [p.lccn, p])), cat = new Map(rev.categories.map(c => [c.id, c.label])), top = new Map();
+        const node = new Map(rev.observations.map(o => [o.id, o.node])), reach = new Map();
+        for (const s of rev.stories) { const ids = s.members.map(m => m.id ?? m); ids.forEach(id => top.set(id, s)); reach.set(s.id, new Set(ids.map(id => node.get(id))).size); }
+        for (const o of rev.observations) {
+          const s = top.get(o.id), p = rp.get(o.node); if (!s || !p) continue;
+          add({id: o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: s.label, text: o.excerpt, tier: 'reviewed', check: 'c', reach: reach.get(s.id) || 1,
+            war: /war|armies/i.test(cat.get(s.category) || ''), pulse: `pulses.html?year=${y}&focus=${encodeURIComponent(s.id)}`, sky: `telescope.html?story=${encodeURIComponent(s.id)}`});
+        }
+      }
+      for (const [d, list] of byDate) {
+        const best = new Map(); for (const it of list) { const b = best.get(it.lccn); if (!b || rank(it) > rank(b)) best.set(it.lccn, it); }
+        byDate.set(d, [...best.values()].sort((a, b) => rank(b) - rank(a)).slice(0, 6));
+      }
+      return {year: y, byDate, dates: [...byDate.keys()].sort()};
+    })();
+    cache.set(y, p); p.catch(() => cache.delete(y));
+  }
+  return cache.get(y);
+}
+const target = () => `${year}-${pad(md[0])}-${pad(md[1])}`;
+
+// ---- Playing: a greeting for each new morning, then each paper of the day, then the next day with surviving pages ----
+async function run() {
+  const token = ++runToken;
+  while (on && token === runToken) {
+    let data;
+    try { data = await loadYear(year); } catch { hint('Could not load ' + year + '. Check the connection and turn the radio on again.'); setOn(false); return; }
+    if (token !== runToken) return;
+    if (!cursor || !cursor.startsWith(year + '-')) { cursor = data.dates.find(d => d >= target()) || data.dates[0]; qi = 0; }
+    if (!cursor) { year = year >= 1810 ? 1770 : year + 1; syncDial(); continue; }   // a year with nothing to read
+    const items = data.byDate.get(cursor) || [];
+    while (qi < items.length && on && token === runToken) {
+      const it = items[qi]; current = it; show(it);
+      const greet = first || !previous || previous.date !== it.date;
+      const ok = await Radio.say(it, {greet, previous, chime: first, rate: .97});
+      if (token !== runToken) return;
+      first = false;
+      if (!ok && !skipping) return;
+      skipping = false; previous = it; qi++;
+    }
+    if (!on || token !== runToken) return;
+    const i = data.dates.indexOf(cursor);
+    if (i + 1 < data.dates.length) cursor = data.dates[i + 1];
+    else { year = year >= 1810 ? 1770 : year + 1; cursor = null; syncDial(); }
+    if (cursor) md = [Number(cursor.slice(5, 7)), Number(cursor.slice(8, 10))]; else md = [1, 1];
+    qi = 0; save();
+  }
+}
+function setOn(value) {
+  on = value; $('power').setAttribute('aria-pressed', String(on)); $('power').textContent = on ? 'Turn off' : 'Turn on'; $('skip').disabled = !on;
+  if (on) { first = true; previous = null; hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
+  else { runToken++; Radio.stop(true); idle(); }
+}
+function tune(y) {
+  const was = year; year = clampYear(y); syncDial(); save();
+  if (year === was && cursor) return;
+  cursor = null; qi = 0; previous = null;
+  if (on) { first = false; Radio.stop(); runToken++; Radio.cue('sweep'); setTimeout(() => { if (on) run(); }, 450); }
+  else idle();
+}
+
+// ---- What the set shows ----
+function show(it) {
+  $('now-date').textContent = Radio.writtenDate(it.date);
+  $('now-where').textContent = Radio.town(it.place) + ' · ' + Radio.paperName(it.paper);
+  const meta = $('cap-meta'); meta.replaceChildren();
+  const tier = document.createElement('span'); tier.className = 'tier' + (it.tier === 'reviewed' ? ' r' : '');
+  tier.textContent = it.tier === 'reviewed' ? 'Reviewed: checked against the page scan' : 'Matched by shared wording · not checked';
+  const title = document.createElement('span'); title.textContent = it.title.length > 90 ? it.title.slice(0, 88) + '…' : it.title;
+  meta.append(tier, title);
+  if (!exhibit) for (const [label, href] of [['Follow this story ↗', it.pulse], ['See it in the sky ↗', it.sky]]) { const a = document.createElement('a'); a.href = href; a.textContent = label; meta.append(a); }
+}
+function idle() {
+  const [m, d] = md;
+  $('now-date').textContent = `${d} ${MONTHS[m - 1]} ${year}`;
+  const y = YEARS.get(year);
+  $('now-where').textContent = y ? `${y.papers} newspaper${y.papers === 1 ? '' : 's'} survive from ${year}${y.reviewed ? ` · ${y.reviewed} reviewed stories` : ''}` : '';
+  if (!on) { $('cap-intro').textContent = ''; $('cap-text').textContent = 'Turn the radio on to hear the first paper printed on or after this date.'; $('cap-meta').replaceChildren(); }
+}
+Radio.onCaption(({intro, lines, index}) => {
+  $('cap-intro').textContent = intro;
+  const box = $('cap-text'); box.replaceChildren();
+  lines.forEach((line, k) => { const s = document.createElement('span'); if (k === index) s.className = 'now'; s.textContent = line + ' '; box.append(s); });
+});
+function hint(text) { $('hint').textContent = text; }
+
+// ---- The dial ----
+function buildScale() {
+  const scale = $('scale'), max = Math.max(...BOOT.years.map(y => y.papers));
+  for (const y of BOOT.years) {
+    const x = (y.year - 1770) / 40 * 100;
+    const bar = document.createElement('i'); bar.className = 'bar' + (y.papers <= 3 ? ' thin' : ''); bar.style.left = x + '%'; bar.style.height = (6 + 40 * y.papers / max) + 'px'; scale.append(bar);
+    const tick = document.createElement('i'); tick.className = 'tick' + (y.year % 5 ? '' : ' major'); tick.style.left = x + '%'; scale.append(tick);
+    if (y.year % 5 === 0) { const l = document.createElement('span'); l.className = 'lbl' + (y.year % 10 ? ' minor' : ''); l.style.left = x + '%'; l.textContent = y.year; scale.append(l); }
+    if (y.reviewed) { const r = document.createElement('i'); r.className = 'rev'; r.style.left = x + '%'; r.title = y.year + ': reviewed stories'; scale.append(r); }
+  }
+}
+function syncDial() {
+  $('dial').value = String(year); $('needle').style.left = ((year - 1770) / 40 * 100) + '%';
+  const y = YEARS.get(year); $('dial').setAttribute('aria-valuetext', `${year}${y ? `, ${y.papers} newspapers survive` : ''}`);
+  if (!on) idle();
+}
+function save() { try { localStorage.setItem(STORE, JSON.stringify({year})); } catch {} }
+let lastStep = year;
+$('dial').addEventListener('input', () => {
+  const y = clampYear(Number($('dial').value)); $('needle').style.left = ((y - 1770) / 40 * 100) + '%';
+  if (on && y !== lastStep) Radio.cue('sweep'); lastStep = y;
+  if (!on) { year = y; idle(); }
+});
+$('dial').addEventListener('change', () => tune(Number($('dial').value)));
+$('power').addEventListener('click', () => { Radio.unlock(); setOn(!on); });
+$('skip').addEventListener('click', () => { if (!on) return; skipping = true; Radio.stop(); });
+$('volume').value = String(Radio.volume);
+$('volume').addEventListener('input', () => Radio.setVolume(Number($('volume').value)));
+function syncVoice() {
+  const v = Radio.voice; $('voice').disabled = !v;
+  $('voice').textContent = v ? 'Voice: ' + v.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*[-–(].*$/, '') : 'No voice in this browser';
+  $('voice').title = v ? v.name + ' · tap for another voice' : '';
+}
+Radio.onVoices(syncVoice); syncVoice();
+$('voice').addEventListener('click', () => { Radio.nextVoice(); syncVoice(); });
+
+// ---- Exhibition: ?exhibit=1 (and ?on=1) start at once. Until the first touch the browser may not allow sound, so the
+// words show for as long as reading them takes; the first touch anywhere brings the sound. Space turns the radio on or
+// off, the arrows tune, N skips, F is full screen.
+function soundFromTouch() { Radio.unlock(); $('touch').classList.remove('show'); }
+$('touch').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); soundFromTouch(); } });
+for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, () => { if ($('touch').classList.contains('show')) soundFromTouch(); }, {capture: true});
+if (exhibit) {
+  let still = 0;
+  const wake = () => { document.body.classList.remove('still'); clearTimeout(still); still = setTimeout(() => document.body.classList.add('still'), 3000); };
+  document.addEventListener('pointermove', wake); wake();
+  document.addEventListener('keydown', e => {
+    if (e.target instanceof HTMLInputElement) return;
+    if (e.key === ' ') { e.preventDefault(); Radio.unlock(); setOn(!on); }
+    else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') tune(year + (e.key === 'ArrowRight' ? 1 : -1));
+    else if (e.key.toLowerCase() === 'n' && on) { skipping = true; Radio.stop(); }
+    else if (e.key.toLowerCase() === 'f') document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.();
+  });
+}
+buildScale(); syncDial(); idle(); loadYear(year).catch(() => {});
+if (['1', 'on'].includes(params.get('on')) || exhibit) {   // sound needs a touch first, unless the browser already allows it
+  const sound = Radio.unlock(); setOn(true); if (!sound) $('touch').classList.add('show');
+}
+})();
+</script>
+</body>
+</html>

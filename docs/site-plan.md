@@ -145,10 +145,10 @@ A separate page, `exhibit.html`, directs a loop of **scenes**. Each scene is one
 5. **See it in the sky** (`telescope.html?story=…`) and header search on every page.
 6. The Pulses layout changes listed above.
 
-**Phase 2: exhibition mode**
-1. An `exhibit` mode in the Telescope and Pulses.
-2. The `exhibit.html` director with scenes, QR codes, touch and staff keys.
-3. Offline bundle.
+**Phase 2: exhibition mode (items 1 and 2 done, 9 November)**
+1. An `exhibit` mode in the Telescope, Pulses and the Radio (`?exhibit=1`). Done.
+2. The `exhibit.html` director with scenes, QR codes, touch and staff keys. Done: seven scenes, the six above plus the radio, which joined the site the same day (`radio.html`, read aloud in the browser).
+3. Offline bundle. Not built yet.
 
 **Phase 3: polish**
 - first-visit hints;

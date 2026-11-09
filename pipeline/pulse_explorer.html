@@ -105,6 +105,21 @@ __SITE_HEAD__
   .mini-card{position:static;box-shadow:none;margin:8px 0 4px}
   .evidence{display:flex;flex-direction:column}#selected-evidence{order:-1;margin-bottom:20px}#appearances{max-height:340px}
 }
+/* The radio: what is being read, under the map; the paper on air has a gold name. */
+.on-air{margin:8px 0 2px;padding:12px 16px;border:1px solid #2a3550;border-left:3px solid #ffd27a;border-radius:10px;background:#070b17}
+.on-air-head{display:block;color:#ffd27a;font:600 11.5px/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.on-air-text{display:block;font:17px/1.5 Georgia,"Times New Roman",serif;color:#7f8aa3}.on-air-text .now{color:var(--ink)}
+.on-air-text:empty::before{content:"The radio reads the printings as they pulse. Press Play, or pick a printing.";color:var(--muted);font:14px system-ui,sans-serif}
+.sky .paper.on-air .paper-name{color:#ffd27a}.sky .paper.on-air .node{filter:drop-shadow(0 0 8px #ffd27a99)}
+/* Exhibition (?exhibit=1): the map, the date and what is being read, large; no menus or lists; the cursor hides when still. */
+body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .transport,body.exhibit .year-pick,body.exhibit .timebar-track,body.exhibit .shelf,body.exhibit .evidence,
+body.exhibit .context,body.exhibit .page-notes,body.exhibit .strip-note,body.exhibit #filter-row,body.exhibit #notice,body.exhibit #to-telescope,body.exhibit .mini-card,body.exhibit .map-note,body.exhibit .pagehead,body.exhibit .sky-top{display:none!important}
+body.exhibit .layout{display:block}body.exhibit .shell{max-width:none;padding:2vh 3vw}body.exhibit .toolbar-inner{max-width:none;padding:1.4vh 3vw}
+body.exhibit #current-date{font-size:clamp(20px,2.6vw,56px)}body.exhibit #count{font-size:clamp(12px,1vw,22px)}
+body.exhibit .pagehead h1{font-size:clamp(20px,2vw,44px)}body.exhibit #scope{font-size:clamp(13px,1.1vw,24px)}
+body.exhibit .sky .paper-name{font-size:15px}body.exhibit .legend{font-size:clamp(12px,.9vw,20px)}
+body.exhibit .on-air-text{font-size:clamp(18px,1.9vw,42px)}body.exhibit .on-air-head{font-size:clamp(11px,.9vw,20px)}body.exhibit .constellation-note{font-size:clamp(13px,1.1vw,24px)}
+body.exhibit.still,body.exhibit.still *{cursor:none!important}
 </style>
 </head>
 <body>
@@ -112,7 +127,7 @@ __SITE_HEADER__
 <header class="toolbar"><div class="toolbar-inner">
 <div class="transport" role="group" aria-label="Playback"><button id="play" class="toggle play" type="button" aria-pressed="false">Play</button><span class="seg steps"><button id="previous" type="button" aria-label="Previous printing" title="Previous printing">←</button><button id="next" type="button" aria-label="Next printing" title="Next printing">→</button></span>
 <span class="ctl"><span class="label" id="speed-label">Per second</span><span class="seg slide" id="speed" role="group" aria-labelledby="speed-label"><button type="button" data-days="7" title="One week of printing per second">1 wk</button><button type="button" data-days="14" title="Two weeks of printing per second">2 wk</button><button type="button" data-days="30" title="One month of printing per second">1 mo</button><button type="button" data-days="61" title="Two months of printing per second">2 mo</button><button type="button" data-days="122" title="Four months of printing per second">4 mo</button><button type="button" data-days="365" title="One year of printing per second">1 yr</button></span></span>
-<button id="tour" class="toggle" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">Tour</button></div>
+<button id="tour" class="toggle" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">Tour</button><button id="radio" class="toggle" type="button" aria-pressed="false" title="Read the printings aloud as they pulse, in your browser's own voice">Radio</button></div>
 <div class="year-pick" role="group" aria-labelledby="years-label"><span class="label" id="years-label">Years</span><b id="years-now" class="years-now mono"></b>
 <div class="years-wrap"><div id="years" class="years" title="Tap a year, or drag across several"></div><div id="years-axis" class="years-axis" aria-hidden="true"></div></div>
 <button id="years-all" class="toggle" type="button" aria-pressed="false" title="All years, 1770–1810">All</button></div>
@@ -131,6 +146,7 @@ __SITE_HEADER__
 <div class="layout"><section aria-label="Publication pulses">
 <div class="sky-wrap"><div class="sky-top" id="sky-top"><div id="filter-row" class="filter-row" hidden><span id="min-label">Show stories in</span><span id="min-papers" class="seg slide" role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers.</span><span class="filter-hint">Papers that printed the same story glow together.</span></div><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
 <div id="sky" class="sky" aria-label="Newspaper nodes placed roughly by town of publication, north at the top. Light marks observed publications, with no transmission edges."></div></div>
+<p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span></p>
 <div id="mini-card" class="mini-card" aria-live="polite"><p class="mc-title" id="mc-title"></p><p class="mc-role" id="mc-role"></p><p class="mc-text" id="mc-text"></p><a href="#selected-evidence" id="mc-more">Read the passage and see the scan ↓</a></div>
 <p class="map-note">Newspapers sit roughly where they were printed: north at the top, east to the right. Papers are nudged apart so names stay readable, so distances are not to scale.</p>
 <div id="legend" class="legend"><span><i class="dot"></i>Report</span><span><i class="dot challenge"></i>Challenge / commentary ring</span><span><i class="dot later"></i>Later account</span><span><i class="dot document"></i>Document</span><span><i class="dot" style="background:#aab6cf"></i>Matched text, not checked</span></div>
@@ -146,6 +162,7 @@ __SITE_HEADER__
 __SITE_FOOTER__
 <script type="application/json" id="pulse-data">__PULSE_DATA__</script>
 <script src="glass.js"></script>
+<script src="radio.js"></script>
 <script>
 (() => {
 'use strict';
@@ -750,6 +767,7 @@ function play() {
   if (!events.length) return;
   if (day >= maxDay) { day = 0; source(0); nodes.forEach(n => { n.age = Infinity; n.echo = Infinity; }); }
   focus = hover = null; renderConstellation();
+  if (radioOn) { Radio.stop(); radioReset(); }   // each Play starts with a greeting
   events.filter(e => e.day === day).forEach(burst); playing = true; lastFrame = 0; draw(); save(); raf = requestAnimationFrame(tick);
 }
 function seek(value, index = null) {
@@ -759,6 +777,7 @@ function seek(value, index = null) {
   nodes.forEach(n => { n.age = Infinity; n.echo = Infinity; }); events.filter(e => Math.abs(e.day - day) < .05).forEach(burst);
   source(index); focus = focusFor(events[index]); renderConstellation(); save();
   $('announcement').textContent = events[index].date + ', ' + paperName(events[index].node) + (focus ? '. Story: ' + short(focus.label, 80) : '');
+  radioPicked();
 }
 function tick(now) {
   if (!playing) return;
@@ -778,6 +797,7 @@ function tick(now) {
 
 function changeGroup(id) {
   playing = false; cancelAnimationFrame(raf);
+  if (radioOn) { Radio.stop(); radioReset(); onAir(null); }
   const g = Y.groupById.get(id), ry = reviewedYearOf(id);
   if (ry) { mode = 'reviewed'; group = overview('reviewed', ry); }
   else if (id === 'auto-all' && Y.hasMatched) { mode = 'matched'; group = overview('matched'); }
@@ -938,14 +958,74 @@ for (const t of ['pointerdown', 'keydown', 'wheel']) document.addEventListener(t
 $('tour').addEventListener('click', () => { tour = !tour; syncTour(); tourHold = performance.now() + 600; save(); });
 setInterval(() => {
   if (!tour || playing || !Y || !group || document.hidden || performance.now() < tourHold) return;
-  if ($('passage').open || $('scan-detail').open) return;
+  if ($('passage').open || $('scan-detail').open || (radioOn && Radio.speaking)) return;   // the radio finishes its sentence first
   if (events.length && day < maxDay) { play(); return; }
   const ids = [...$('shelf').querySelectorAll('.card[data-group]')].map(c => c.dataset.group); if (!ids.length) return;
   changeGroup(ids[(ids.indexOf(group.id) + 1) % ids.length]); save(); tourHold = performance.now() + 1200;   // a breath before the next story
 }, 700);
 
+// ---- Radio (radio.js): the printings read aloud as they pulse, in the browser's own voice; nothing is sent anywhere.
+// Playing, it reads from what has just pulsed and skips the rest, so the voice keeps up with the map:
+//  - in an overview, one printing of each story, the first that pulsed: reviewed stories first, then transcriptions the
+//    cross-check confirmed, then the most widely printed; at two months a second or faster, only the story's title;
+//  - in one story, its first printing, then one line on how far it went in this archive.
+// Faster speeds read a little faster. Paused, it reads the printing you pick. Each Play starts with a greeting.
+const RADIO_RATE = {7: 1, 14: 1.03, 30: 1.07, 61: 1.12, 122: 1.18, 365: 1.24};
+let radioOn = false, radioFirst = true, radioPrev = null, radioDone = new Set(), radioFull = false, radioNode = null, radioPickTimer = 0;
+const storyOf = e => storyFor(e) || (mode === 'group' ? group : null);
+function syncRadio() { $('radio').setAttribute('aria-pressed', String(radioOn)); $('on-air').hidden = !radioOn; }
+function onAir(e) {
+  if (radioNode) radioNode.classList.remove('on-air');
+  radioNode = e ? nodeById.get(e.node)?.el || null : null; if (radioNode) radioNode.classList.add('on-air');
+}
+function radioReset() { radioDone = new Set(); radioFull = false; radioFirst = true; radioPrev = null; }
+function radioSay(e, how) {   // how: 'full' (the passage) or 'title' (the story's title)
+  if (e.excerpt == null && passages.has(e.id)) { const got = passages.get(e.id); e.excerpt = got.excerpt; e.transcription = got.tr; }
+  if (how === 'full' && e.excerpt == null && e.year) { loadPassages(e.year); how = 'title'; }   // its year file comes for the next time
+  const p = Y.papers.get(e.node), st = storyOf(e);
+  const item = {date: e.date, place: p?.place || '', paper: paperName(e.node), title: st?.label || e.summary || '', text: e.excerpt || '', war: /war/i.test(st?.category || '')};
+  const greet = radioFirst, previous = radioPrev; radioFirst = false; radioPrev = item; onAir(e);
+  return Radio.say(item, {greet, previous, chime: greet, rate: RADIO_RATE[speed] || 1, mode: how});
+}
+function spreadLine() {   // one story: how far it went, in this archive
+  const papers = new Set(events.map(e => e.node)), last = events.at(-1), p = Y.papers.get(last.node);
+  return `This story appears in ${papers.size} newspapers of this archive, the last in ${Radio.town(p?.place)} on ${Radio.spokenDate(last.date, false)}.`;
+}
+setInterval(async () => {   // playing: the next printing to read, from what has just pulsed
+  if (!radioOn || !playing || !Y || !events.length || Radio.speaking || (mode === 'group' && radioFull)) return;
+  const lo = countUpTo(day - speed * 1.5), hi = countUpTo(day);
+  let best = -1, score = -Infinity;
+  for (let i = lo; i < hi; i++) {
+    const e = events[i]; if (radioDone.has(storyKey(e))) continue;
+    const st = storyOf(e), s = mode === 'group' ? -i : (e.id.startsWith('auto:') ? 0 : 1e5) + (e.check === 'c' ? 1e3 : 0) + 10 * (st?.newspapers || st?.papers || 0) - i * 1e-4;
+    if (s > score) { score = s; best = i; }
+  }
+  if (best < 0) return;
+  const e = events[best]; radioDone.add(storyKey(e));
+  if (mode === 'group') {
+    radioFull = true;
+    if (await radioSay(e, 'full') && radioOn && new Set(events.map(x => x.node)).size > 1) Radio.sayLine(spreadLine(), {head: group.label});
+  } else radioSay(e, speed >= 61 ? 'title' : 'full');
+}, 350);
+function radioPicked() {   // paused: read the printing the visitor picked, once they stop moving
+  if (!radioOn || playing) return;
+  clearTimeout(radioPickTimer);
+  radioPickTimer = setTimeout(() => { const e = events[selected]; if (radioOn && !playing && e) radioSay(e, 'full'); }, 700);
+}
+Radio.onCaption(({intro, lines, index}) => {
+  $('on-air-head').textContent = intro || 'Radio';
+  const box = $('on-air-text'); box.replaceChildren();
+  lines.forEach((line, k) => { const s = document.createElement('span'); if (k === index) s.className = 'now'; s.textContent = line + ' '; box.append(s); });
+});
+Radio.onState(s => { if (s !== 'speaking') tourHold = Math.max(tourHold, performance.now() + 1500); if (s === 'off') onAir(null); });
+$('radio').addEventListener('click', () => {
+  radioOn = !radioOn; syncRadio(); tourHold = performance.now() + 600;
+  if (radioOn) { Radio.unlock(); radioReset(); if (!playing && events[selected]) radioSay(events[selected], 'full'); }
+  else { Radio.stop(true); onAir(null); }
+});
+
 $('release').textContent = 'Data foundation v' + BOOT.release_version + '.';
-$('play').addEventListener('click', () => { if (playing) { pause(); save(); } else play(); });
+$('play').addEventListener('click', () => { if (playing) { pause(); save(); if (radioOn) { Radio.stop(); onAir(null); } } else play(); });
 $('min-papers').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b || mode === 'group') return;
   minPapers[mode] = Number(b.dataset.k); if (mode === 'matched') { shelfLimit = 24; buildShelf(); } changeGroup(group.id); save();
@@ -981,6 +1061,21 @@ if (saved && typeof saved.tour === 'boolean' && !reduced.matches) tour = saved.t
 // ?focus=<story>, ?tour=on|off.
 const params = new URLSearchParams(location.search);
 if (['on', 'off'].includes(params.get('tour'))) tour = params.get('tour') === 'on' && !reduced.matches;
+// ?radio=on turns the radio on (sound starts at the first touch, click or key); ?exhibit=1 is the exhibition mode: the map,
+// the date and what is being read, large, playing on its own.
+const exhibit = ['1', 'on'].includes(params.get('exhibit'));
+if (exhibit) {
+  document.body.classList.add('exhibit'); if (!params.get('tour')) tour = !reduced.matches;
+  let still = 0; const wake = () => { document.body.classList.remove('still'); clearTimeout(still); still = setTimeout(() => document.body.classList.add('still'), 3000); };
+  document.addEventListener('pointermove', wake); wake();
+}
+if (Number(params.get('speed')) > 0) setSpeed(Number(params.get('speed')));   // ?speed=7: days of printing per second
+if (params.get('radio') === 'on') {
+  radioOn = true; syncRadio();
+  const start = () => Radio.unlock();
+  for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
+  start();
+}
 syncTour();
 const yp = (params.get('years') || params.get('year') || '').trim(), ym = yp.match(/^(\d{4})(?:\s*[-–]\s*(\d{4}))?$/);
 let first = null;
@@ -989,7 +1084,7 @@ else if (ym) { const a = Number(ym[1]), b = Number(ym[2] || ym[1]); if (a >= 177
 const fromUrl = !!first;
 const opening = (BOOT.reviewed || []).at(-1)?.year || 1797;   // a first visit opens on the latest reviewed year
 if (!first) first = saved && saved.from >= 1770 && saved.to <= 1810 && saved.from <= saved.to ? [saved.from, saved.to] : [opening, opening];
-tourHold = performance.now() + (fromUrl && params.get('focus') ? TOUR_WAIT : 2500);   // a story opened by a link is read first
+tourHold = performance.now() + (fromUrl && params.get('focus') && !exhibit ? TOUR_WAIT : 2500);   // a story opened by a link is read first (an exhibition plays it)
 setYearsUI(first[0], first[1]);
 loadRange(first[0], first[1], fromUrl ? params.get('focus') : saved?.group).then(() => {
   if (!fromUrl && saved && Y && saved.from === Y.from && saved.to === Y.to && saved.group === group?.id && Number.isFinite(saved.day) && events.length) {
