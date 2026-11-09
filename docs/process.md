@@ -204,7 +204,13 @@ The pulse view is a direct translation of the admitted group records:
 - **Seeing which pulses belong together:**
   - *Resonance:* when a paper prints a story, the papers that printed the same story in the previous 40 days glow again at the same moment. Nothing travels between them.
   - *Constellations:* hovering over or tapping a star pauses on its story. The story's papers light up with their printing dates and are joined by faint lines; everything else dims. The lines join nearest neighbours on the map, not printings in date order, and appear all at once, so they group the printings without suggesting a route. The caption says so.
-  - *Filter:* "Show stories printed in at least N newspapers". The matched overview defaults to 3, which removes the two-paper matches (68% of all matched stories). The default speed is now 18 days per second.
+  - *Filter:* "Show stories printed in at least N newspapers". The matched overview defaults to 3, which removes the two-paper matches (68% of all matched stories).
+- **Choosing what to follow (9 November 2026).** Nothing is hidden in menus; the page offers what there is.
+  - *Years:* a strip of 41 slots, 1770–1810, each with a bar for how many newspapers survive that year (a gold dot marks 1797, the reviewed year). Tap a year, drag across several, or choose All. A view of many years puts every newspaper of those years on the map, with smaller markers.
+  - *Story shelf:* the stories of the chosen years as cards above the map: the two overviews, the reviewed stories (when 1797 is included), then the matched stories, most widely printed first, and the long-running ones. Each card gives the reach, the dates and a row of dots for when it was printed. Topic chips, the seven families of the project's topic model, narrow the shelf and the matched overview.
+  - *Speed:* one week to one year of printing per second, as a sliding glass control.
+  - *Tour:* the page plays on its own, the current view and then the next card on the shelf. Any click, tap or key holds it for 20 seconds; an open passage or scan holds it while it is read.
+  - *Data:* one slim index of all years (`years/index.json`, 8.8 MB, 2.3 MB compressed) holds the newspapers, stories, printings and surviving pages; a passage loads from its year file when it is opened. The reviewed stories of 1797 show at once, before the index arrives.
 - **The archive coverage display shows which dates have pages at all.** A dark newspaper can mean the paper printed nothing on the story, or that its issues for those dates did not survive.
   - Under each newspaper: whether the archive has a page from it on the current date.
   - A coverage strip above the date slider: for each week (each day in short views), how many of the newspapers on the map have surviving pages. A low or missing bar is a gap in the archive, not silence.

@@ -9,6 +9,7 @@
   "years": 41,
   "matched_families": 48127,
   "year_files_mb": 105.6,
+  "year_index_mb": 8.8,
   "telescope_stars": 48148,
   "telescope_mb": 7.7,
   "telescope_text_mb": 24.3,
@@ -26,10 +27,11 @@
   "matched_printings": 163926,
   "pages_sha256": {
     "index.html": "38b5039df574e4697daf59e9ebf9a52e04d23be516403f6bba82895ee4e15d66",
-    "telescope.html": "1d01de59c4f2023a9912faa4dae239a3a13d73d4163269e87a7cb3b3ab0d5a8a",
-    "pulses.html": "647a548248df6a4125841810a0cc1dd5b83289fc209c0fa883ffe8e7147bafc5",
-    "method.html": "2cfa59f25b311624370eb7232bf6bc87d30c2dfc997cdfb244993741a26260bf",
+    "telescope.html": "7b7d632af0d1b1a0dacb93558adf6e342988fc037c8ad5d161c1cb7cba995dc5",
+    "pulses.html": "c068a39869e8cc4b0cc7d4031cc9d589e65dc33ca42eba22d19d904b8f7f2a81",
+    "method.html": "079bf8d37f49e4e0c7130ca471635b6c13a400ffad6b198d463f030f407a7db1",
     "notes.html": "12797192f0bbe9387cd8533022e39d700090414287e4928b7411026ee6de55cd",
-    "site.css": "8fec312603ff7c531a9e23f255133d91c184de1a345944382a04ca811c51c30c"
+    "site.css": "e1b8ec5f016a4c7684e7925e02f6f6340ef0c26377c50a4459d9374585fd0659",
+    "glass.js": "a08cefb1f3fa663e59f8027354420ca9c89bbb52f24e44571a829611fec6605a"
   }
 }

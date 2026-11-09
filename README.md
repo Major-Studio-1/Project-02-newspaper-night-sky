@@ -18,7 +18,7 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 | Page | What it shows |
 |---|---|
 | **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,148 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic** (24 topics in seven families), or **orbit** (time of year), and colour them by **region**. You can search any word, **compare** up to three searches in colour (for example France · Britain · Congress), turn and zoom the view, and let time drift. |
-| **[Pulses](https://newspapers.icare.love/pulses.html)** | One story at a time. Each newspaper is a point on a map, and it pulses when it printed the story. The passage and the page scan are shown beside the map. A constellation joins a story's printings, and a coverage strip shows which pages survive. |
+| **[Pulses](https://newspapers.icare.love/pulses.html)** | Stories travelling through the papers. Each newspaper is a point on a map, and it pulses when it printed a story. Pick one year, several, or all of them on a year strip, and a story from a shelf of cards, narrowed by topic if you like; or let the **tour** play one after another. The passage and the page scan are shown beside the map. A constellation joins a story's printings, and a coverage strip shows which pages survive. |
 | **[How it works](https://newspapers.icare.love/method.html)** | The method in plain language, and what the site cannot tell you. |
 
 | | |

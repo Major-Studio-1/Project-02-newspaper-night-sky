@@ -120,6 +120,19 @@ def short_name(lccn,title):
     while len(' '.join(words))>32 and len(words)>1: words.pop()  # cut at a word boundary
     while len(words)>1 and words[-1].lower() in SMALL|{'&'}: words.pop()
     return ' '.join(words) or lccn
+def name_papers(papers):
+    """Make newspaper names distinct within one set (a year, or all years): some years hold several series with the same
+    short name (title changes, rival printers)."""
+    names=collections.Counter(p['name'] for p in papers)
+    for p in papers:
+        if names[p['name']]>1 and p['lccn'] not in short_names:
+            full=' '.join(w[:1].upper()+w[1:] if w.lower().strip(',;') not in SMALL else w.lower() for w in re.sub(r'^\s*the\s+','',p['title'],flags=re.I).strip(' .').split())
+            p['name']=full if len(full)<=60 and sum(q['title'].lower()==p['title'].lower() for q in papers)==1 else p['name']+' · '+p['lccn']
+    names=collections.Counter(p['name'] for p in papers)
+    for p in papers:
+        if names[p['name']]>1 and p['lccn'] not in short_names: p['name']+=' · '+p['lccn']
+    assert len({p['name'] for p in papers})==len(papers), 'newspaper names must be distinct'
+    return papers
 years_dir=OUT/'years';years_dir.mkdir(exist_ok=True)
 fam_path=release/'derived/reuse_families.parquet'
 families=pq.read_table(verified_file('derived/reuse_families.parquet',release)).to_pylist() if fam_path.exists() else []
@@ -151,17 +164,7 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
         lccns=[r[0] for r in db.execute("SELECT DISTINCT n.lccn FROM newspapers n JOIN issues i ON i.newspaper_id=n.id WHERE i.publication_date LIKE ? ORDER BY n.lccn",(f'{year}%',))]
         if year==1797: lccns=[p['lccn'] for p in newspapers]+[l for l in lccns if l not in {p['lccn'] for p in newspapers}]
         extra_l=sorted({a['lccn'] for f in fams for a in apps_by[f['family_id']]}-set(lccns))
-        papers=[{'id':titles[l][0],'lccn':l,'name':short_name(l,titles[l][1]),'title':titles[l][1],**towns[l]} for l in lccns+extra_l]
-        # Some years hold several series with the same short name (title changes, rival printers): tell them apart.
-        names=collections.Counter(p['name'] for p in papers)
-        for p in papers:
-            if names[p['name']]>1 and p['lccn'] not in short_names:
-                full=' '.join(w[:1].upper()+w[1:] if w.lower().strip(',;') not in SMALL else w.lower() for w in re.sub(r'^\s*the\s+','',p['title'],flags=re.I).strip(' .').split())
-                p['name']=full if len(full)<=60 and sum(q['title'].lower()==p['title'].lower() for q in papers)==1 else p['name']+' · '+p['lccn']
-        names=collections.Counter(p['name'] for p in papers)
-        for p in papers:
-            if names[p['name']]>1 and p['lccn'] not in short_names: p['name']+=' · '+p['lccn']
-        assert len({p['name'] for p in papers})==len(papers), f'{year}: newspaper names must be distinct'
+        papers=name_papers([{'id':titles[l][0],'lccn':l,'name':short_name(l,titles[l][1]),'title':titles[l][1],**towns[l]} for l in lccns+extra_l])
         cov=[dict(r) for r in db.execute("SELECT * FROM newspaper_date_coverage WHERE publication_date BETWEEN ? AND ? ORDER BY publication_date,newspaper_id",(f'{year}-01-01',last))]
         # Compact rows: the page expands them (page and issue ids, scan URL, labels and notes are derived, not repeated).
         obs=[];grps=[];days={(c['newspaper_id'],c['publication_date']) for c in cov}
@@ -178,7 +181,10 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
                          'long_running':bool(f['long_running']),'members':members})
         (years_dir/f'{year}.json').write_text(json.dumps({'year':year,'scan_base':f'https://huggingface.co/datasets/{DATASET}/resolve/{REV}/media/',
                                                           'newspapers':papers,'coverage':cov,'groups':grps,'observations':obs},ensure_ascii=False,separators=(',',':')),encoding='utf8')
-        years_index.append({'year':year,'reviewed':len(stories) if year==1797 else 0,'matched':len(fams),'matched3':sum(f['newspapers']>=3 for f in fams)})
+        # The year strip on the pulse page: how many newspapers and pages survive each year (the archive's shape).
+        pages_y=db.execute("SELECT COUNT(*) FROM pages p JOIN issues i ON i.id=p.issue_id WHERE i.publication_date LIKE ?",(f'{year}%',)).fetchone()[0]
+        years_index.append({'year':year,'reviewed':len(stories) if year==1797 else 0,'matched':len(fams),'matched3':sum(f['newspapers']>=3 for f in fams),
+                            'papers':len(set(lccns)),'pages':pages_y})
 # ---- Story telescope: every story as a star, placed by real values ----
 # day = first printing (days since 1 Jan 1770); lat = mean latitude of the towns of the papers that printed it.
 EPOCH=datetime.date(1770,1,1).toordinal()
@@ -257,12 +263,43 @@ from site_parts import fill, REPO
 from urllib.parse import quote
 VER=manifest['version']; N_STARS=len(stars)
 shutil.copyfile(ROOT/'site.css',OUT/'site.css')
+shutil.copyfile(ROOT/'glass.js',OUT/'glass.js')   # the glass controls shared by the Telescope and Pulses pages
 tele_html=(ROOT/'telescope.html').read_text(encoding='utf8').replace('__TELESCOPE_BOOT__',json.dumps(tele_boot,ensure_ascii=False).replace('</','<\\/'))
 assert '__TELESCOPE_BOOT__' not in tele_html
 (OUT/'telescope.html').write_text(fill(tele_html,'telescope',VER,N_STARS),encoding='utf8')
-# A stamp of the year files' contents, so browsers fetch fresh copies after a rebuild.
-year_stamp=hashlib.sha256(b''.join(hashlib.sha256((years_dir/f'{y}.json').read_bytes()).digest() for y in range(1770,1811))).hexdigest()[:12]
-boot={'release_version':VER,'reviewed':data,'years':years_index,'year_stamp':year_stamp}
+# ---- All years in one slim index, for pulse views of several years (any stretch of 1770-1810) ----
+# The year files carry every passage. This index carries only what the map and the story shelf need: the newspapers,
+# the stories (title, reach, dates, topic), the printings (newspaper, day, edition, page, transcription check) and the
+# surviving pages. A passage loads from its year file when it is opened.
+with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro',uri=True) as db3:
+    db3.row_factory=sqlite3.Row
+    cov_all=[dict(r) for r in db3.execute("SELECT newspaper_id,publication_date,observed_pages,observed_issues_editions FROM newspaper_date_coverage ORDER BY publication_date,newspaper_id")]
+id_to_lccn={v[0]:k for k,v in titles.items()}
+all_l=sorted({id_to_lccn[c['newspaper_id']] for c in cov_all}|{a['lccn'] for v in apps_by.values() for a in v})
+idx_papers=name_papers([{'id':titles[l][0],'lccn':l,'name':short_name(l,titles[l][1]),'title':titles[l][1],**towns[l]} for l in all_l])
+pix={p['lccn']:i for i,p in enumerate(idx_papers)}
+S_={k:[] for k in ['id','label','papers','first','last','long','topic','off','n']};P_={k:[] for k in ['p','d','e','g','q']};checks=[]
+for f in sorted(families,key=lambda f:(f['first_date'],-f['newspapers'],f['family_id'])):   # stories in date order, so a stretch of years is one slice
+    fid=f['family_id'];apps=[]
+    for a in apps_by[fid]:
+        _,lccn,date,ed,page=a['page_id'].split(':');apps.append((dnum(date),lccn,int(ed),int(page),a['seq']))
+    apps.sort();r=topic_rows.get(fid);title=story_titles.get(fid,f['label'])
+    for k,v in (('id',fid),('label',title if len(title)<=100 else title[:98].rstrip()+' …'),('papers',f['newspapers']),('first',dnum(f['first_date'])),('last',dnum(f['last_date'])),
+                ('long',int(bool(f['long_running']))),('topic',lane_of[r['top_topic']] if r else -1),('off',len(P_['p'])),('n',len(apps))): S_[k].append(v)
+    for d,lccn,ed,page,seq in apps:
+        P_['p'].append(pix[lccn]);P_['d'].append(d);P_['e'].append(ed);P_['g'].append(page);P_['q'].append(seq)
+        checks.append(printing_checks.get((fid,seq),'-') if printing_checks else '-')
+assert len(P_['p'])==sum(len(v) for v in apps_by.values()), 'the index holds every printing once'
+index={'epoch':'1770-01-01','scan_base':f'https://huggingface.co/datasets/{DATASET}/resolve/{REV}/media/','papers':idx_papers,'stories':S_,'printings':{**P_,'c':''.join(checks)},
+       'coverage':{'p':[pix[id_to_lccn[c['newspaper_id']]] for c in cov_all],'d':[dnum(c['publication_date']) for c in cov_all],
+                   'pages':[c['observed_pages'] for c in cov_all],'issues':[c['observed_issues_editions'] for c in cov_all]}}
+(years_dir/'index.json').write_text(json.dumps(index,ensure_ascii=False,separators=(',',':')),encoding='utf8')
+# A stamp of the year files' contents (and the index), so browsers fetch fresh copies after a rebuild.
+year_stamp=hashlib.sha256(b''.join(hashlib.sha256((years_dir/f'{y}.json').read_bytes()).digest() for y in range(1770,1811))+hashlib.sha256((years_dir/'index.json').read_bytes()).digest()).hexdigest()[:12]
+boot={'release_version':VER,'reviewed':data,'years':years_index,'year_stamp':year_stamp,'index_bytes':(years_dir/'index.json').stat().st_size,
+      # Topics for the story shelf's chips: each topic's plain name and family (as in the telescope).
+      'topics':[{'label':SHORT[tid(x)],'family':fam_index[topic_labels[tid(x)]['category']]} for x in topic_list],
+      'families':[{'name':f,'short':s,'tiny':t} for f,s,t in FAMILIES]}
 payload=json.dumps(boot,ensure_ascii=False).replace('</','<\\/')
 html=(ROOT/'pulse_explorer.html').read_text(encoding='utf8').replace('__PULSE_DATA__',payload)
 assert '__PULSE_DATA__' not in html
@@ -324,9 +361,9 @@ for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','
                  for page in ['index.html','method.html','notes.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
 
-pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','method.html','notes.html','site.css']}
+pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','method.html','notes.html','site.css','glass.js']}
 receipt={'passed':True,'release_version':VER,'newspapers':len(newspapers),'curated_passages':len(observations),'group_views':len(groups),'stories_in_overview':len(stories),'overview_categories':len(categories),
-         'years':len(years_index),'matched_families':len(families),'year_files_mb':round(sum(p.stat().st_size for p in years_dir.glob('*.json'))/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
+         'years':len(years_index),'matched_families':len(families),'year_files_mb':round(sum((years_dir/f'{y}.json').stat().st_size for y in range(1770,1811))/1e6,1),'year_index_mb':round((years_dir/'index.json').stat().st_size/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
          'checks':['All displayed sources have scan assets and excerpts','All displayed publications join to observed date coverage','No duplicate observation within a group','Read-only release with verified input hashes','Matched families are labelled as not checked against scans','Every page carries the shared header and footer']
                   +(['Every matched printing carries its transcription check, one printing per page'] if printing_checks else []),
          'matched_printings':sum(len(v) for v in apps_by.values()),
