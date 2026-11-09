@@ -15,7 +15,7 @@ __SITE_HEAD__
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .hero{position:relative;min-height:clamp(480px,74vh,780px);overflow:hidden;border-bottom:1px solid #1c2640;background:radial-gradient(ellipse at 66% 50%,#0f1a30 0,transparent 62%),var(--bg)}
 #sky{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero-inner{position:relative;max-width:1480px;margin:auto;padding:clamp(40px,9vh,110px) 24px 48px;pointer-events:none}
+.hero-inner{position:relative;max-width:1480px;margin:auto;padding:clamp(40px,9vh,110px) 24px 96px;pointer-events:none}   /* the doors below overlap the hero by 56px: keep the last line clear of them */
 .hero-text{max-width:560px;pointer-events:auto}
 .eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .hero h1{font-size:clamp(32px,4.6vw,56px);line-height:1.08;font-weight:500;letter-spacing:-.025em;margin:14px 0 18px}
@@ -93,10 +93,31 @@ const COS = Math.cos(38.5 * Math.PI / 180), lons = D.towns.map(t => t.lon), lats
 const lonC = (Math.min(...lons) + Math.max(...lons)) / 2, latC = (Math.min(...lats) + Math.max(...lats)) / 2;
 const HALF = Math.max(...lons.map(l => Math.abs(l - lonC) * COS), ...lats.map(l => Math.abs(l - latC))) + .7;
 const hash = (i, k) => { const s = Math.sin((i + 1) * k) * 43758.5453; return s - Math.floor(s); };
-const mx = new Float32Array(N), my = new Float32Array(N);
-for (let i = 0; i < N; i++) { const a = 6.2832 * hash(i, 12.9898), r = .09 * Math.sqrt(hash(i, 78.233)); mx[i] = (S.lon[i] - lonC) * COS / HALF + r * Math.cos(a); my[i] = (S.lat[i] - latC) / HALF + r * Math.sin(a); }
+// Each star sits near the town where its story was first printed. A busier town spreads its stars a little wider, so
+// they stay single points of light instead of one heap.
+const townKey = new Map(), town = new Uint16Array(N);
+for (let i = 0; i < N; i++) { const k = S.lat[i] + ',' + S.lon[i]; if (!townKey.has(k)) townKey.set(k, townKey.size); town[i] = townKey.get(k); }
+const busy = new Uint32Array(townKey.size); for (let i = 0; i < N; i++) busy[town[i]]++;
+const busiest = Math.max(...busy), mx = new Float32Array(N), my = new Float32Array(N);
+for (let i = 0; i < N; i++) {
+  const a = 6.2832 * hash(i, 12.9898), r = (.035 + .1 * Math.sqrt(busy[town[i]] / busiest)) * Math.sqrt(hash(i, 78.233));
+  mx[i] = (S.lon[i] - lonC) * COS / HALF + r * Math.cos(a); my[i] = (S.lat[i] - latC) / HALF + r * Math.sin(a);
+}
 const PAL = D.palette;
-let W = 0, H = 0, dpr = 1, now = reduced ? (Date.UTC(1798, 0, 1) - EPOCH) / MS : (Date.UTC(1776, 2, 1) - EPOCH) / MS, last = 0, visible = true;
+// A star is a soft point of light, not a disc: a small white-hot core fading smoothly into its colour, with no edge.
+// One sprite per colour, drawn larger for stories printed in more papers.
+const SPRITES = PAL.map(rgba => {
+  const c = document.createElement('canvas'), s = 64, g = c.getContext('2d'), grad = g.createRadialGradient(s / 2, s / 2, 0, s / 2, s / 2, s / 2);
+  c.width = c.height = s;
+  [[0, 'rgba(255,255,255,1)'], [.05, rgba.replace('A', '1')], [.13, rgba.replace('A', '.5')], [.3, rgba.replace('A', '.12')], [.55, rgba.replace('A', '.035')], [1, rgba.replace('A', '0')]]
+    .forEach(([at, col]) => grad.addColorStop(at, col));
+  g.fillStyle = grad; g.fillRect(0, 0, s, s); return c;
+});
+const crowd = new Float32Array(townKey.size);
+// ?sky=1806 opens the sky in that year (for links and an exhibition); otherwise it starts in March 1776.
+const skyYear = Number(new URLSearchParams(location.search).get('sky'));
+let W = 0, H = 0, dpr = 1, last = 0, visible = true;
+let now = (Date.UTC(skyYear >= 1771 && skyYear <= 1810 ? skyYear : reduced ? 1798 : 1776, skyYear ? 0 : reduced ? 0 : 2, 1) - EPOCH) / MS;
 function size() { dpr = Math.min(2, devicePixelRatio || 1); W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
 function lower(day) { let lo = 0, hi = N; while (lo < hi) { const m = (lo + hi) >> 1; if (S.day[m] < day) lo = m + 1; else hi = m; } return lo; }
 function draw() {
@@ -109,15 +130,18 @@ function draw() {
     ctx.strokeStyle = `rgba(80,100,140,${a})`; ctx.strokeRect(cx - h, cy - h, 2 * h, 2 * h);
     ctx.fillStyle = `rgba(139,152,181,${a * 1.8})`; ctx.font = '11px system-ui, sans-serif'; ctx.fillText(String(y), cx - h + 4, cy - h - 6);
   }
+  // Where a town's stars crowd together each one is fainter, so the light adds up to a cloud of points, not a white blot.
+  const from = lower(now - SPAN), end = lower(now);
+  crowd.fill(0); for (let i = from; i < end; i++) crowd[town[i]]++;
   ctx.globalCompositeOperation = 'lighter';
-  for (let i = lower(now - SPAN), end = lower(now); i < end; i++) {
+  for (let i = from; i < end; i++) {
     const age = now - S.day[i], t = age / SPAN, z = 1 + t * 2.4;
     const fade = Math.min(1, age / 25) * (1 - Math.max(0, (t - .75) / .25));
-    const x = cx + mx[i] * R / z, y = cy - my[i] * R / z, r = (1.1 + .75 * Math.sqrt(S.papers[i] - 1)) / Math.sqrt(z);
-    ctx.fillStyle = PAL[S.color[i]].replace('A', (.07 * fade).toFixed(3)); ctx.beginPath(); ctx.arc(x, y, r * 3, 0, 6.2832); ctx.fill();
-    ctx.fillStyle = PAL[S.color[i]].replace('A', (.55 * fade).toFixed(3)); ctx.beginPath(); ctx.arc(x, y, r * .8, 0, 6.2832); ctx.fill();
+    const x = cx + mx[i] * R / z, y = cy - my[i] * R / z, s = 3.4 * (1.1 + .75 * Math.sqrt(S.papers[i] - 1)) / Math.sqrt(z);
+    ctx.globalAlpha = fade * Math.min(1, 2.4 / Math.sqrt(crowd[town[i]]));
+    ctx.drawImage(SPRITES[S.color[i]], x - s, y - s, 2 * s, 2 * s);
   }
-  ctx.globalCompositeOperation = 'source-over';
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
   $('now').innerHTML = `Now in the sky: <b>${new Date(EPOCH + now * MS).toLocaleDateString('en-GB', {month: 'long', year: 'numeric', timeZone: 'UTC'})}</b> · looking back nine years`;
 }
 function frame(t) {
