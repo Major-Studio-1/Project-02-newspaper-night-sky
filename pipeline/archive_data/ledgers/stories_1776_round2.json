@@ -1,0 +1,2633 @@
+{
+  "ledger_id": "ledger:stories-1776-round2",
+  "ledger_version": 1,
+  "base_release": "0.7.1",
+  "target_release": "0.7.2",
+  "recorded_date": "2026-11-09",
+  "namespace": "expansion-1776",
+  "evidence_dir": "outputs/story_discovery_1776/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Round two of 1776: the candidates round one read but did not admit, read again with phrase searches on all 2,319 pages in both transcriptions, reading of every hit, and scan checks of each admitted passage",
+  "supporting_files": {
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1776/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1776/phrase_patterns_round2.json": "retrieval_patterns",
+    "outputs/story_discovery_1776/phrase_hits_round2.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1776_round2.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1776_round2_review.json": "scan_review",
+    "outputs/story_discovery_1776/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1776/scan_points_round2.json": "review_protocol",
+    "outputs/story_discovery_1776/extra_crops_round2.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S76-247",
+      "page_key": "sn83025894|1776-01-13|1|1",
+      "excerpt_start": "In CONGRESS, January 11, 1776. W",
+      "excerpt_end": "in payment, or obstruct or discourage the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-bills-of-credit"
+      ],
+      "summary": "Congress's resolution of 11 January 1776: whoever refuses the Continental bills of credit is to be treated as an enemy of his country.",
+      "note": "Earliest printing found. Prints 'regard for his country', as the New-York Packet and the New-York Gazette do; the four other papers print 'this country'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'regard for his country'. The resolution opens the page under the masthead, headed 'In CONGRESS, January 11, 1776.'"
+      ],
+      "crops": [
+        "S76-247.jpg"
+      ],
+      "family": [
+        "R1776-0050"
+      ]
+    },
+    {
+      "id": "S76-248",
+      "page_key": "sn83021126|1776-01-15|1|3",
+      "excerpt_start": "PHILADELPHIA, January 15. IN CONGRESS, January",
+      "excerpt_end": "said bills in payment, or obtrude or",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-bills-of-credit"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints the resolution.",
+      "note": "RevX reads 'obtrude' twice where the paper prints 'obstruct'.",
+      "scan_findings": [
+        "Scan reads 'obſtruct' both times; RevX 'obtrude' is a transcription error that changes the sense. Otherwise the scan matches the excerpt, including 'regard for this country'."
+      ],
+      "crops": [
+        "S76-248.jpg"
+      ],
+      "family": [
+        "R1776-0014",
+        "R1776-0022",
+        "R1776-0050",
+        "R1776-0652",
+        "R1776-0703"
+      ]
+    },
+    {
+      "id": "S76-249",
+      "page_key": "sn84026371|1776-01-17|1|3",
+      "excerpt_start": "IN CONGRESS, January 11, 1776. WHEREAS",
+      "excerpt_end": "payment, or obstruct or discourage the currency",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-bills-of-credit"
+      ],
+      "summary": "The Pennsylvania Gazette prints the resolution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'regard for this country,'. The print is faded but legible."
+      ],
+      "crops": [
+        "S76-249.jpg"
+      ],
+      "family": [
+        "R1776-0022",
+        "R1776-0050",
+        "R1776-0242",
+        "R1776-0395"
+      ]
+    },
+    {
+      "id": "S76-250",
+      "page_key": "sn85047530|1776-01-17|1|2",
+      "excerpt_start": "In CONGRESS January 11, 1776, WHEREAS",
+      "excerpt_end": "payment, or obstruct or discourage the currency",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-bills-of-credit"
+      ],
+      "summary": "The Pennsylvania Journal prints the resolution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'regard for this country'. The heading reads 'In CONGRESS January 11, 1776.,' with both a full stop and a comma."
+      ],
+      "crops": [
+        "S76-250.jpg"
+      ],
+      "family": [
+        "R1776-0014",
+        "R1776-0022",
+        "R1776-0050"
+      ]
+    },
+    {
+      "id": "S76-251",
+      "page_key": "sn83025894|1776-01-18|1|1",
+      "excerpt_start": "The SPEECH of the LORD MAYOR,",
+      "excerpt_end": "to the throne as that now proposed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-speech-commons"
+      ],
+      "summary": "John Wilkes, Lord Mayor of London, speaks in the Commons against the address to the King: every man ought now to speak out.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'intirely', 'ill becomes' and 'fulſome'."
+      ],
+      "crops": [
+        "S76-251.jpg"
+      ],
+      "family": [
+        "R1776-0046"
+      ]
+    },
+    {
+      "id": "S76-252",
+      "page_key": "sn83030135|1776-01-18|1|1",
+      "excerpt_start": "The Speech of the Lord Mayor,",
+      "excerpt_end": "to the Throne, as that now proposed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-speech-commons"
+      ],
+      "summary": "The New-York Packet prints Wilkes's speech.",
+      "note": "RevX reads 'will become' where the paper prints 'ill becomes', which reverses the sense.",
+      "scan_findings": [
+        "Scan reads 'I think it ill becomes the dignity'; RevX 'will become' is a transcription error that reverses the sense, not a printed difference. RevX 'fullsome' for the printed 'fulſome' is a minor misreading."
+      ],
+      "crops": [
+        "S76-252.jpg"
+      ],
+      "family": [
+        "R1776-0014",
+        "R1776-0046"
+      ]
+    },
+    {
+      "id": "S76-253",
+      "page_key": "sn83030135|1776-01-18|1|3",
+      "excerpt_start": "CONGRESS. Jan. 11, 1776. Whereas it",
+      "excerpt_end": "or obstruct or discourage the currency or",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-bills-of-credit"
+      ],
+      "summary": "The New-York Packet prints the resolution.",
+      "note": "Headed 'CONGRESS, Jan. 11, 1776.' Prints 'the defence of our just rights' (the other papers 'their') and 'regard for his country'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading reads 'CONGRESS, Jan. 11, 1776.' (a comma where RevX has a full stop), and the paper prints 'our just rights' and 'his country': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S76-253.jpg"
+      ],
+      "family": [
+        "R1776-0022",
+        "R1776-0050",
+        "R1776-0768"
+      ]
+    },
+    {
+      "id": "S76-254",
+      "page_key": "sn83025898|1776-01-20|1|2",
+      "excerpt_start": "The SPEECH of the LORD MAYOR,",
+      "excerpt_end": "to the Throne, as that now proposed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-speech-commons"
+      ],
+      "summary": "The Pennsylvania Ledger prints Wilkes's speech.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt: it reads 'I think it ill becomes', 'fulſome' and 'entirely'."
+      ],
+      "crops": [
+        "S76-254.jpg"
+      ],
+      "family": [
+        "R1776-0014",
+        "R1776-0046"
+      ],
+      "scan_boxes": [
+        [
+          440,
+          4553,
+          1615,
+          5172
+        ]
+      ]
+    },
+    {
+      "id": "S76-255",
+      "page_key": "sn83021126|1776-01-22|1|4",
+      "excerpt_start": "The SPEECH of the LORD MAYOR,",
+      "excerpt_end": "to the Throne, as that now proposed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-speech-commons"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints Wilkes's speech.",
+      "note": "RevX reads 'will become' and 'solemn' where the paper prints 'ill becomes' and 'fulsome'; the first reverses the sense.",
+      "scan_findings": [
+        "Scan reads 'ill becomes' and 'fulſome'; RevX 'will become', which reverses the sense, and 'solemn' are transcription errors, not printed differences."
+      ],
+      "crops": [
+        "S76-255.jpg"
+      ],
+      "family": [
+        "R1776-0014",
+        "R1776-0022",
+        "R1776-0046",
+        "R1776-0270"
+      ]
+    },
+    {
+      "id": "S76-256",
+      "page_key": "sn83030493|1776-01-22|1|1",
+      "excerpt_start": "In CONGRESS, January 11, 1776. Whereas",
+      "excerpt_end": "or obstruct or discourage the currency or",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-bills-of-credit"
+      ],
+      "summary": "The New-York Gazette prints the resolution.",
+      "note": "RevX reads 'several dispossessed persons' where the paper prints 'several evil disposed persons'. Prints 'regard for his country'.",
+      "scan_findings": [
+        "Scan reads 'several evil disposed persons'; RevX 'several dispossessed persons' is a transcription error that changes the sense. RevX 'loft' for the printed 'loſt' is a minor long-s garble; the paper prints 'his country'."
+      ],
+      "crops": [
+        "S76-256.jpg"
+      ],
+      "family": [
+        "R1776-0022",
+        "R1776-0050",
+        "R1776-0792"
+      ]
+    },
+    {
+      "id": "S76-257",
+      "page_key": "sn84026371|1776-01-24|1|1",
+      "excerpt_start": "The SPEECH of the LORD MAYOR,",
+      "excerpt_end": "to the throne as that now proposed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-speech-commons"
+      ],
+      "summary": "The Pennsylvania Gazette prints Wilkes's speech.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'ill becomes' and 'fulſome', except that the paper prints 'INTIRELY', which RevX gives as 'ENTIRELY' (a minor spelling change)."
+      ],
+      "crops": [
+        "S76-257.jpg"
+      ],
+      "family": [
+        "R1776-0046",
+        "R1776-0601"
+      ]
+    },
+    {
+      "id": "S76-258",
+      "page_key": "sn85047530|1776-01-24|1|1",
+      "excerpt_start": "The SPEECH of the LORD MAYOR,",
+      "excerpt_end": "to the throne as that now proposed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-speech-commons"
+      ],
+      "summary": "The Pennsylvania Journal prints Wilkes's speech.",
+      "note": "RevX reads 'will become' where the paper prints 'ill becomes', which reverses the sense.",
+      "scan_findings": [
+        "Scan reads 'I think it ill becomes'; RevX 'will become' is a transcription error that reverses the sense. RevX 'entirely' for the printed 'intirely' is a minor spelling change."
+      ],
+      "crops": [
+        "S76-258.jpg"
+      ],
+      "family": [
+        "R1776-0046"
+      ]
+    },
+    {
+      "id": "S76-259",
+      "page_key": "sn83025894|1776-02-01|1|1",
+      "excerpt_start": "On Friday in the upper Assembly",
+      "excerpt_end": "the last petition from the Continental Congress",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examined-report"
+      ],
+      "summary": "A London report: Governor Penn was examined in the House of Lords and gave very satisfactory answers.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'a member' and 'deſcanting'. No date line stands above 'On Friday'; the paragraph before ends '…the uſurpations of Great-Britain.'"
+      ],
+      "crops": [
+        "S76-259.jpg"
+      ],
+      "family": [
+        "R1776-0038"
+      ]
+    },
+    {
+      "id": "S76-260",
+      "page_key": "sn84024742|1776-02-02|1|2",
+      "excerpt_start": "PHILADELPHIA, January 15. IN CONGRESS, January",
+      "excerpt_end": "bills in payment, or obstruct or discourage",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-bills-of-credit"
+      ],
+      "summary": "Purdie's Virginia Gazette prints the resolution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'evil-disposed' and 'regard for this country,'. The crop is small but legible."
+      ],
+      "crops": [
+        "S76-260.jpg"
+      ],
+      "family": [
+        "R1776-0050"
+      ]
+    },
+    {
+      "id": "S76-261",
+      "page_key": "sn83025898|1776-02-03|1|2",
+      "excerpt_start": "On Friday in the Upper Assembly",
+      "excerpt_end": "the last petition from the Continental Congress",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examined-report"
+      ],
+      "summary": "The Pennsylvania Ledger prints the report.",
+      "note": "The same page prints another London paragraph, which says that a motion to call Governor Penn to the bar and examine him 'passed in the negative, 56 against 22'.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'a member' and 'deſcanting', and no date line above it. The extra crop confirms the separate House of Lords paragraph as transcribed, including 'paſſed in the negative, 56 againſt 22' and '42 againſt 21'."
+      ],
+      "crops": [
+        "S76-261.jpg",
+        "S76-261-motion-1.jpg",
+        "S76-261-motion-2.jpg"
+      ],
+      "family": [
+        "R1776-0038",
+        "R1776-0356"
+      ]
+    },
+    {
+      "id": "S76-262",
+      "page_key": "sn83021126|1776-02-05|1|6",
+      "excerpt_start": "On Friday in the Upper Assembly",
+      "excerpt_end": "the last petition from the Continental Congress",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examined-report"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints the report.",
+      "note": "RevX reads 'desisting' where the paper prints 'descanting'.",
+      "scan_findings": [
+        "Crop located by hand. Scan reads 'after deſcanting on the neceſſity' and 'when a member'; RevX 'desisting' is a transcription error that changes the sense. No date line stands above the item; it follows the previous London paragraph."
+      ],
+      "crops": [
+        "S76-262.jpg"
+      ],
+      "family": [
+        "R1776-0038",
+        "R1776-0403"
+      ],
+      "scan_boxes": [
+        [
+          2795,
+          2458,
+          3975,
+          2757
+        ]
+      ]
+    },
+    {
+      "id": "S76-263",
+      "page_key": "sn83030493|1776-02-05|1|3",
+      "excerpt_start": "On Friday in the Upper Assembly",
+      "excerpt_end": "the last petition from the Continental Congress",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examined-report"
+      ],
+      "summary": "The New-York Gazette prints the report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'a member' and 'deſcanting'. No date line stands above 'On Friday'; the paragraph before ends '…thence till further orders.'"
+      ],
+      "crops": [
+        "S76-263.jpg"
+      ],
+      "family": [
+        "R1776-0028",
+        "R1776-0038",
+        "R1776-0818",
+        "R1776-0819"
+      ]
+    },
+    {
+      "id": "S76-264",
+      "page_key": "sn84026371|1776-02-07|1|2",
+      "excerpt_start": "On Friday, in the Upper Assembly,",
+      "excerpt_end": "the last Petition from the Continental Congress",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examined-report"
+      ],
+      "summary": "The Pennsylvania Gazette prints the report.",
+      "note": "Opens with the date 'Nov. 17.'",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'a member' and 'deſcanting'. The paper opens the paragraph with the date 'Nov. 17.' before 'On Friday'; the excerpt starts after it."
+      ],
+      "crops": [
+        "S76-264.jpg"
+      ],
+      "family": [
+        "R1776-0038",
+        "R1776-0102",
+        "R1776-0823"
+      ]
+    },
+    {
+      "id": "S76-265",
+      "page_key": "sn83030135|1776-02-08|1|2",
+      "excerpt_start": "On Friday in the upper Assembly",
+      "excerpt_end": "the last petition from the Continental Congress",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examined-report"
+      ],
+      "summary": "The New-York Packet prints the report.",
+      "note": "Prints 'when a number', a misprint for 'member'.",
+      "scan_findings": [
+        "Scan reads 'when a number': a printed error for 'member', not a transcription error. Scan reads 'deſcanting'; RevX 'decanting' is a minor misreading."
+      ],
+      "crops": [
+        "S76-265.jpg"
+      ],
+      "family": [
+        "R1776-0038",
+        "R1776-0167",
+        "R1776-0826"
+      ]
+    },
+    {
+      "id": "S76-266",
+      "page_key": "sn84024739|1776-02-10|1|4",
+      "excerpt_start": "THE SPEECH of the LORD MAYOR,",
+      "excerpt_end": "to the throne, as that now proposed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-speech-commons"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints Wilkes's speech.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt: 'I entirely agree', 'I think it ill becomes the dignity and duty of Parliament' and 'such a fulsome, adulatory address' (the print has a comma after 'the whole empire', where RevX has a full stop)."
+      ],
+      "crops": [
+        "S76-266.jpg"
+      ],
+      "family": [
+        "R1776-0046",
+        "R1776-0602"
+      ],
+      "scan_boxes": [
+        [
+          72,
+          1718,
+          565,
+          1912
+        ]
+      ]
+    },
+    {
+      "id": "S76-267",
+      "page_key": "sn84024742|1776-02-16|1|2",
+      "excerpt_start": "On Friday, in the Upper Assembly,",
+      "excerpt_end": "the last petition from the Continental Congress",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examined-report"
+      ],
+      "summary": "Purdie's Virginia Gazette prints the report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'a member' and 'deſcanting'; RevX 'governor' for the printed 'governour' is a minor spelling change."
+      ],
+      "crops": [
+        "S76-267-1.jpg"
+      ],
+      "family": [
+        "R1776-0038"
+      ]
+    },
+    {
+      "id": "S76-268",
+      "page_key": "sn84024742|1776-02-16|1|5",
+      "excerpt_start": "The speech of the Lord Mayor,",
+      "excerpt_end": "to the throne as that now proposed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-speech-commons"
+      ],
+      "summary": "Purdie's Virginia Gazette prints Wilkes's speech.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt, from the italic heading 'The ſpeech of the Lord Mayor, JOHN WILKES, eſq; laſt Thurſday …' at the head of the first column to 'as that now propoſed'; it reads 'it ill becomes', 'fulſome' and 'ENTIRELY'."
+      ],
+      "crops": [
+        "S76-268.jpg"
+      ],
+      "family": [
+        "R1776-0046"
+      ],
+      "scan_boxes": [
+        [
+          15,
+          160,
+          508,
+          541
+        ]
+      ]
+    },
+    {
+      "id": "S76-269",
+      "page_key": "sn83025894|1776-02-20|1|1",
+      "excerpt_start": "HOUSE of LORDS, Saturday, Nov. 11.",
+      "excerpt_end": "had adopted preparatory to the Governor's examination.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examination-lords"
+      ],
+      "summary": "A London account of the House of Lords: the Lords assemble to examine Governor Penn on the Duke of Richmond's motion.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'HOUSE of LORDS, Saturday, Nov. 11.'; just past it the paper prints 'His Grace confeſſed'."
+      ],
+      "crops": [
+        "S76-269.jpg"
+      ],
+      "family": [
+        "R1776-0036"
+      ]
+    },
+    {
+      "id": "S76-270",
+      "page_key": "sn84026371|1776-02-21|1|2",
+      "excerpt_start": "HOUSE OF LORDS, Saturday, November 11.",
+      "excerpt_end": "had adopted preparatory to the Governor's examination.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examination-lords"
+      ],
+      "summary": "The Pennsylvania Gazette prints the account.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'HOUSE of LORDS, Saturday, November 11.'; just past it the paper prints 'His Grace confeſſed'."
+      ],
+      "crops": [
+        "S76-270.jpg"
+      ],
+      "family": [
+        "R1776-0036"
+      ]
+    },
+    {
+      "id": "S76-271",
+      "page_key": "sn85047530|1776-02-21|1|2",
+      "excerpt_start": "BRITISH HOUSE OF LORDS. Saturday, November",
+      "excerpt_end": "had adopted preparatory to the Governor's examination.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examination-lords"
+      ],
+      "summary": "The Pennsylvania Journal prints the account.",
+      "note": "Headed 'BRITISH HOUSE OF LORDS.'",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'BRITISH HOUSE OF LORDS. Saturday, November 11.'; just past it the paper prints 'His Grace confeſſed'."
+      ],
+      "crops": [
+        "S76-271.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0411",
+        "R1776-0840"
+      ]
+    },
+    {
+      "id": "S76-272",
+      "page_key": "sn85047530|1776-02-21|1|2",
+      "excerpt_start": "When the order of the day",
+      "excerpt_end": "an instruction given by the House before",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-bill-committee"
+      ],
+      "summary": "A London report: the Commons go into committee on the bill to prohibit all trade with the colonies, and the clause on captures is printed with its dates left blank.",
+      "note": "Earliest printing found. The clause is printed with three empty brackets where its dates would be, followed by 'The blanks are proposed to be filled up with the dates of March 1 and April 1'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The extra crop shows the clause with three empty bracketed blanks '(  )' where the dates would be, then 'The blanks are proposed to be filled up with the dates of March 1 and April 1'; its transcription is faithful."
+      ],
+      "crops": [
+        "S76-272.jpg",
+        "S76-272-clause.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0411",
+        "R1776-0840"
+      ]
+    },
+    {
+      "id": "S76-273",
+      "page_key": "sn83025898|1776-02-24|1|1",
+      "excerpt_start": "HOUSE OF LORDS, Saturday, November 11.",
+      "excerpt_end": "had adopted preparatory to the Governor's examination.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examination-lords"
+      ],
+      "summary": "The Pennsylvania Ledger prints the account.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'HOUSE of LORDS, Saturday, November 11.'; just past it the paper prints 'His Grace confeſſed'."
+      ],
+      "crops": [
+        "S76-273.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0092"
+      ]
+    },
+    {
+      "id": "S76-274",
+      "page_key": "sn83025898|1776-02-24|1|2",
+      "excerpt_start": "When the order of the day",
+      "excerpt_end": "an instruction given by the house, before",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-bill-committee"
+      ],
+      "summary": "The Pennsylvania Ledger prints the report.",
+      "note": "The clause is printed with two blank spaces where its dates would be, and without its part on ships 'found trading in'; then the proposed dates, March 1 and April 1.",
+      "scan_findings": [
+        "Scan matches the excerpt. The extra crop shows two blank spaces (no brackets, no dates) where the clause's dates would be, then 'the dates of March 1, and April 1'; its transcription is faithful."
+      ],
+      "crops": [
+        "S76-274.jpg",
+        "S76-274-clause.jpg"
+      ],
+      "family": [
+        "R1776-0036"
+      ]
+    },
+    {
+      "id": "S76-275",
+      "page_key": "sn83021126|1776-02-26|1|2",
+      "excerpt_start": "When the order of the day",
+      "excerpt_end": "an instruction given by the House, before",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-bill-committee"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints the report.",
+      "note": "The clause is printed with two blank spaces where its dates would be, without its part on ships 'found trading in', and ends 'disobedience and rebellion'; then the proposed dates, March 1 and April 1. RevX reads 'seizure' twice where the clause prints 'capture and forfeiture'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The extra crop shows two blank spaces (no brackets, no dates) where the dates would be and 'the dates of March 1, and April 1'; there the print reads 'capture and forfeiture' twice, so RevX 'seizure' is a transcription error, while 'disobedience and rebellion' is the paper's own order."
+      ],
+      "crops": [
+        "S76-275.jpg",
+        "S76-275-clause.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0087",
+        "R1776-0093",
+        "R1776-0108",
+        "R1776-0176",
+        "R1776-0664",
+        "R1776-0847"
+      ]
+    },
+    {
+      "id": "S76-276",
+      "page_key": "sn83021126|1776-02-26|1|4",
+      "excerpt_start": "HOUSE OF LORDS, Saturday, November 11.",
+      "excerpt_end": "had adopted preparatory to the Governor's examination.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examination-lords"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints the account.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'HOUSE OF LORDS, Saturday, November 11.'; just past it the paper prints 'His Grace confeſſed'. The capital in 'Preparatory' is the printer's."
+      ],
+      "crops": [
+        "S76-276.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0278",
+        "R1776-0840"
+      ]
+    },
+    {
+      "id": "S76-277",
+      "page_key": "sn83025894|1776-02-27|1|3",
+      "excerpt_start": "The clause in the American restraining",
+      "excerpt_end": "and after the first of January 1776;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-clause-settled"
+      ],
+      "summary": "A London report: the clause on captures is settled, with American ships liable from 1 January 1776.",
+      "note": "Earliest printing found. Prints 'And be it farther enacted' and 'so far as relates to', where the other papers have 'further' and 'so far as the same relates to'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'farther', 'so far as relates to' and 'the first of January 1776;' without a comma: the paper's own wording, not transcription errors."
+      ],
+      "crops": [
+        "S76-277.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0087",
+        "R1776-0851"
+      ]
+    },
+    {
+      "id": "S76-278",
+      "page_key": "sn84026371|1776-02-28|1|2",
+      "excerpt_start": "The clause in the American restraining",
+      "excerpt_end": "and after the first of January 1776;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-clause-settled"
+      ],
+      "summary": "The Pennsylvania Gazette prints the report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'further', 'so far as the same relates to' and 'the first of January 1776;' without a comma. The item opens with the dateline 'Dec. 8.'"
+      ],
+      "crops": [
+        "S76-278.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0087",
+        "R1776-0108"
+      ]
+    },
+    {
+      "id": "S76-279",
+      "page_key": "sn85047530|1776-02-28|1|2",
+      "excerpt_start": "The clause in the American restraining",
+      "excerpt_end": "and after the first of January, 1776;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-clause-settled"
+      ],
+      "summary": "The Pennsylvania Journal prints the report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'further enacted,' and 'the first of January, 1776;' with a comma."
+      ],
+      "crops": [
+        "S76-279.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0852",
+        "R1776-0859"
+      ]
+    },
+    {
+      "id": "S76-280",
+      "page_key": "sn83030135|1776-02-29|1|2",
+      "excerpt_start": "HOUSE OF LORDS, SATURDAY, November 11.",
+      "excerpt_end": "had adopted preparatory to the Governor's examination.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examination-lords"
+      ],
+      "summary": "The New-York Packet prints the account.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'HOUSE OF LORDS, SATURDAY, November 11.'. Just past it the worn print reads 'His Grace confeſſed', so RevX 'contended' there is a transcription error, not a printed difference."
+      ],
+      "crops": [
+        "S76-280.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0065"
+      ]
+    },
+    {
+      "id": "S76-281",
+      "page_key": "sn83030135|1776-02-29|1|2",
+      "excerpt_start": "When the order of the day",
+      "excerpt_end": "given by the House before the speaker",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-bill-committee"
+      ],
+      "summary": "The New-York Packet prints the report.",
+      "note": "Dated 'Dec. 7.' (the other papers 6 December) and names 'Mr. Dempster' without 'we believe'. The clause is printed with three empty brackets where its dates would be, as in the Pennsylvania Journal, followed by the proposed dates, March 1 and April 1.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt, from 'Dec. 7. When the order of the day was read yesterday' to 'A member (Mr. Dempster) moved', without 'we believe'. The extra crop shows the clause with three empty brackets '(  )' where the dates would stand, and 'the dates of March 1 and April 1'; it is transcribed faithfully."
+      ],
+      "crops": [
+        "S76-281.jpg",
+        "S76-281-clause.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0065"
+      ],
+      "scan_boxes": [
+        [
+          3560,
+          1052,
+          4580,
+          1452
+        ]
+      ]
+    },
+    {
+      "id": "S76-282",
+      "page_key": "sn83025898|1776-03-02|1|1",
+      "excerpt_start": "The clause in the American restraining",
+      "excerpt_end": "and after the first of January 1776;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-clause-settled"
+      ],
+      "summary": "The Pennsylvania Ledger prints the report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'the first of January 1776;' without a comma. Just below the excerpt the paper prints 'forfeitture', a misprint."
+      ],
+      "crops": [
+        "S76-282.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0092",
+        "R1776-0553",
+        "R1776-0861"
+      ]
+    },
+    {
+      "id": "S76-283",
+      "page_key": "sn83021126|1776-03-04|1|4",
+      "excerpt_start": "The clause in the American restraining",
+      "excerpt_end": "and after the first of January, 1776;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-clause-settled"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints the report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'the first of January, 1776;' with a comma. RevX 'afore said' for the printed 'aforesaid' is a minor garble."
+      ],
+      "crops": [
+        "S76-283.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0355",
+        "R1776-0856"
+      ]
+    },
+    {
+      "id": "S76-284",
+      "page_key": "sn84024742|1776-03-08|1|2",
+      "excerpt_start": "When the order of the day",
+      "excerpt_end": "an instruction given by the House, before",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-bill-committee"
+      ],
+      "summary": "Purdie's Virginia Gazette prints the report.",
+      "note": "The clause is printed with two blank spaces, each followed by a comma, and without its part on ships 'found trading in'; then the proposed dates, 'March 1st, and April 1st'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including '(mr. Dempster, we believe)'. The extra crop shows two blank spaces, each followed by a comma, where the dates would be, then 'the dates of March 1st, and April 1st'; its transcription is faithful apart from 'public' for the printed 'publick'."
+      ],
+      "crops": [
+        "S76-284.jpg",
+        "S76-284-clause.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0176",
+        "R1776-0410",
+        "R1776-0844"
+      ]
+    },
+    {
+      "id": "S76-285",
+      "page_key": "sn84024739|1776-03-09|1|2",
+      "excerpt_start": "When the order of the day",
+      "excerpt_end": "an instruction given by the House, before",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prohibitory-bill-commons",
+        "prohibitory-bill-committee"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints the report.",
+      "note": "Dated 'December 6.' The clause is printed with two blank spaces where its dates would be, and without its part on ships 'found trading in'; then the proposed dates, March 1 and April 1.",
+      "scan_findings": [
+        "Scan matches the excerpt; the dateline is 'December 6.'. The extra crop shows two blank spaces (no brackets, no dates) where the clause's dates would be, then 'the dates of March 1, and April 1'; its transcription is faithful."
+      ],
+      "crops": [
+        "S76-285.jpg",
+        "S76-285-clause.jpg"
+      ],
+      "family": [
+        "R1776-0036",
+        "R1776-0063",
+        "R1776-0168",
+        "R1776-0370",
+        "R1776-0407",
+        "R1776-0666",
+        "R1776-0872"
+      ]
+    },
+    {
+      "id": "S76-286",
+      "page_key": "sn84024742|1776-03-15|1|1",
+      "excerpt_start": "HOUSE of LORDS, Saturday, Nov. 11.",
+      "excerpt_end": "had adopted preparatory to the governor's examination.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examination-lords"
+      ],
+      "summary": "Purdie's Virginia Gazette prints the account.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'HOUSE of LORDS, Saturday, Nov. 11.', except that the paper prints 'governour' twice, which RevX gives as 'governor' (a minor spelling change). Just past the excerpt it reads 'His grace confeſſed'."
+      ],
+      "crops": [
+        "S76-286.jpg"
+      ],
+      "family": [
+        "R1776-0036"
+      ]
+    },
+    {
+      "id": "S76-287",
+      "page_key": "sn84024739|1776-03-16|1|1",
+      "excerpt_start": "HOUSE OF LORDS, SATURDAY, November 11.",
+      "excerpt_end": "had adopted preparatory to the Governor's examination.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "penn-before-the-lords",
+        "penn-examination-lords"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints the account.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'HOUSE of LORDS, SATURDAY, November 11.'; just past it the paper prints 'His Grace confeſſed'."
+      ],
+      "crops": [
+        "S76-287.jpg"
+      ],
+      "family": [
+        "R1776-0036"
+      ]
+    },
+    {
+      "id": "S76-288",
+      "page_key": "sn83021126|1776-03-18|1|3",
+      "excerpt_start": "In CONGRESS, Saturday, March 16, 1776.",
+      "excerpt_end": "to acknowledge the over-ruling providence of God;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "Congress's resolution of 16 March 1776: Friday 17 May to be kept as a day of humiliation, fasting and prayer.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'inſidious' and 'over-ruling'. The paper spells 'indiſpenſible' and 'publickly', which RevX normalises (minor), and sets the dateline 'PHILADELPHIA.' above the heading."
+      ],
+      "crops": [
+        "S76-288.jpg"
+      ],
+      "family": [
+        "R1776-0074",
+        "R1776-0178",
+        "R1776-0281",
+        "R1776-0409",
+        "R1776-0414",
+        "R1776-0877",
+        "R1776-0890"
+      ]
+    },
+    {
+      "id": "S76-289",
+      "page_key": "sn83025894|1776-03-19|1|1",
+      "excerpt_start": "In CONGRESS, Saturday, March 16, 1776.",
+      "excerpt_end": "to acknowledge the over-ruling providence of God;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "The Pennsylvania Evening Post prints the resolution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'inſidious' and 'over-ruling'. RevX 'indispensable' for the printed 'indiſpenſible' is a minor spelling change."
+      ],
+      "crops": [
+        "S76-289.jpg"
+      ],
+      "family": [
+        "R1776-0074",
+        "R1776-0280",
+        "R1776-0371",
+        "R1776-0418"
+      ]
+    },
+    {
+      "id": "S76-290",
+      "page_key": "sn84026371|1776-03-20|1|3",
+      "excerpt_start": "PHILADELPHIA, March 20. In CONGRESS, Saturday,",
+      "excerpt_end": "to acknowledge the over-ruling providence of God;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "The Pennsylvania Gazette prints the resolution.",
+      "note": "RevX reads 'invidious' where the paper prints 'insidious'.",
+      "scan_findings": [
+        "Scan reads 'an inſidious and vindictive Adminiſtration'; RevX 'invidious' is a transcription error that changes the sense. The rest matches, apart from the minor 'indispensable' for the printed 'indiſpenſible'."
+      ],
+      "crops": [
+        "S76-290.jpg"
+      ],
+      "family": [
+        "R1776-0074",
+        "R1776-0427",
+        "R1776-0428",
+        "R1776-0891",
+        "R1776-0892",
+        "R1776-0899"
+      ]
+    },
+    {
+      "id": "S76-291",
+      "page_key": "sn85047530|1776-03-20|1|1",
+      "excerpt_start": "In CONGRESS, Saturday, March 16, 1776.",
+      "excerpt_end": "to acknowledge the overruling providence of God;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "The Pennsylvania Journal prints the resolution.",
+      "note": "RevX reads 'invidious' where the paper prints 'insidious'.",
+      "scan_findings": [
+        "Scan reads 'an in-ſidious and vindictive adminiſtration' (split at a line end); RevX 'invidious' is a transcription error that changes the sense. The rest matches, apart from the minor 'indispensable' for the printed 'indiſpenſible'."
+      ],
+      "crops": [
+        "S76-291.jpg"
+      ],
+      "family": [
+        "R1776-0074"
+      ]
+    },
+    {
+      "id": "S76-292",
+      "page_key": "sn83030135|1776-03-21|1|3",
+      "excerpt_start": "IN CONGRESS, Saturday, March 16, 1776.",
+      "excerpt_end": "to acknowledge the over-ruling providence of God;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "The New-York Packet prints the resolution.",
+      "note": "Prints 'devotion to acknowledge' without 'publicly'. RevX reads 'invidious' where the paper prints 'insidious'.",
+      "scan_findings": [
+        "Scan reads 'inſidious' and 'theſe'; RevX 'invidious' is a transcription error that changes the sense, and 'those' a minor one. The paper prints 'devotion to acknowledge' without 'publicly': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S76-292.jpg"
+      ],
+      "family": [
+        "R1776-0074",
+        "R1776-0246",
+        "R1776-0284",
+        "R1776-0887"
+      ]
+    },
+    {
+      "id": "S76-293",
+      "page_key": "sn84024742|1776-03-29|1|2",
+      "excerpt_start": "Friday the 17th of May is",
+      "excerpt_end": "a day of Humiliation, Fasting, and Prayer.",
+      "roles": [
+        "condensed_report"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "Purdie's Virginia Gazette prints the resolution.",
+      "note": "A one-sentence notice of the fast, before an address to the readers; the same paper printed the resolution a week later.",
+      "scan_findings": [
+        "Scan matches the excerpt: a single sentence, '…as a day of Humiliation, Faſting, and Prayer.', set off by a rule from the address to the readers that follows."
+      ],
+      "crops": [
+        "S76-293.jpg"
+      ],
+      "family": [
+        "R1776-0109",
+        "R1776-0888",
+        "R1776-0889",
+        "R1776-0915"
+      ]
+    },
+    {
+      "id": "S76-294",
+      "page_key": "sn84024742|1776-04-05|1|1",
+      "excerpt_start": "IN CONGRESS. SATURDAY, March 16, 1776.",
+      "excerpt_end": "penitence of heart, and the most reverent",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "Purdie's Virginia Gazette prints the resolution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'inſidious', the comma after 'endangered' and the spelling 'indiſpenſable'. Below the excerpt it reads 'publickly' and 'the over-ruling providence of GOD'."
+      ],
+      "crops": [
+        "S76-294.jpg"
+      ],
+      "family": [
+        "R1776-0074",
+        "R1776-0222"
+      ]
+    },
+    {
+      "id": "S76-295",
+      "page_key": "sn83025894|1776-04-11|1|2",
+      "excerpt_start": "In sight of the Capes of",
+      "excerpt_end": "a terrible manner, as you will see.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barry-takes-edward"
+      ],
+      "summary": "Captain John Barry writes from off the Capes of Virginia that he has fought and taken the sloop Edward, a tender of the Liverpool frigate.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'In ſight', 'at one P. M.' and 'two glaſſes'. The letter opens with quotation marks; no dateline shows above it in the crop."
+      ],
+      "crops": [
+        "S76-295.jpg"
+      ],
+      "family": [
+        "R1776-0075",
+        "R1776-0141",
+        "R1776-0249",
+        "R1776-0286"
+      ]
+    },
+    {
+      "id": "S76-296",
+      "page_key": "sn83025898|1776-04-13|1|3",
+      "excerpt_start": "In sight of the Capes of",
+      "excerpt_end": "a terrible manner as you will see.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barry-takes-edward"
+      ],
+      "summary": "The Pennsylvania Ledger prints Barry's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'In ſight', 'at one P. M.' and 'two glaſſes'. There is no dateline: the letter follows straight after a paragraph ending '…carried from the bar.'"
+      ],
+      "crops": [
+        "S76-296.jpg"
+      ],
+      "family": [
+        "R1776-0075",
+        "R1776-0929",
+        "R1776-0930"
+      ]
+    },
+    {
+      "id": "S76-297",
+      "page_key": "sn84024739|1776-04-13|1|3",
+      "excerpt_start": "WILLIAMSBURG, April 13. ON Sunday the",
+      "excerpt_end": "sail to some part of the continent;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sloop-liberty-gunpowder"
+      ],
+      "summary": "A Williamsburg report: the sloop Liberty, from St. Eustatius with 83 barrels of gunpowder, has been taken by a tender and carried into Norfolk.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt: '83 barrels of gunpowder, 21 bales of dry goods, and two hogſheads', '7000 Britiſh troops' and 'to ſail'. The report runs on past 'continent' ('that the Roebuck, and another man of war (which he ſuppoſed was the Mercury) …')."
+      ],
+      "crops": [
+        "S76-297.jpg"
+      ],
+      "family": [
+        "R1776-0047",
+        "R1776-0058",
+        "R1776-0082",
+        "R1776-0430",
+        "R1776-0547",
+        "R1776-0583"
+      ]
+    },
+    {
+      "id": "S76-298",
+      "page_key": "sn83021126|1776-04-15|1|5",
+      "excerpt_start": "In sight of the Capes of",
+      "excerpt_end": "a terrible manner, as you will see.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barry-takes-edward"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints Barry's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt, from '“In ſight of the Capes of Virginia, April 7, 1776.' to 'as you will ſee'; it reads 'at one P. M.' and 'two glaſſes'."
+      ],
+      "crops": [
+        "S76-298.jpg"
+      ],
+      "family": [
+        "R1776-0075",
+        "R1776-0286",
+        "R1776-0321",
+        "R1776-0711",
+        "R1776-0714"
+      ],
+      "scan_boxes": [
+        [
+          1440,
+          5350,
+          2625,
+          5812
+        ]
+      ]
+    },
+    {
+      "id": "S76-299",
+      "page_key": "sn84026371|1776-04-17|1|3",
+      "excerpt_start": "In fight of the Capes of",
+      "excerpt_end": "a terrible manner as you will see.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barry-takes-edward"
+      ],
+      "summary": "The Pennsylvania Gazette prints Barry's letter.",
+      "note": "RevX reads 'In fight' where the paper prints 'In sight'.",
+      "scan_findings": [
+        "Scan reads 'In ſight' and 'near two glaſſes'; RevX 'In fight' is a transcription error that changes the sense, and 'two glass' a minor one. The letter follows a paragraph ending '…which does honour to their country.'"
+      ],
+      "crops": [
+        "S76-299.jpg"
+      ],
+      "family": [
+        "R1776-0052",
+        "R1776-0069",
+        "R1776-0075",
+        "R1776-0093",
+        "R1776-0287",
+        "R1776-0956"
+      ]
+    },
+    {
+      "id": "S76-300",
+      "page_key": "sn83030135|1776-04-18|1|2",
+      "excerpt_start": "In fight of the Capes of",
+      "excerpt_end": "a terrible manner, as you will see.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barry-takes-edward"
+      ],
+      "summary": "The New-York Packet prints Barry's letter.",
+      "note": "RevX reads 'In fight' where the paper prints 'In sight'.",
+      "scan_findings": [
+        "Crop located by hand. Scan reads 'In ſight' with a long s, so RevX 'In fight' is a transcription error; 'at one P. M.' and 'near two glaſſes' match. A paper repair covers the right edge of the column, but the line ends show through it."
+      ],
+      "crops": [
+        "S76-300.jpg"
+      ],
+      "family": [
+        "R1776-0075",
+        "R1776-0123",
+        "R1776-0438",
+        "R1776-0441",
+        "R1776-0957"
+      ],
+      "scan_boxes": [
+        [
+          3600,
+          4322,
+          4635,
+          4817
+        ]
+      ]
+    },
+    {
+      "id": "S76-301",
+      "page_key": "sn83025894|1776-04-23|1|2",
+      "excerpt_start": "On Sunday the 30th ult. the",
+      "excerpt_end": "sail to some part of the continent;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sloop-liberty-gunpowder"
+      ],
+      "summary": "The Pennsylvania Evening Post prints the report.",
+      "note": "Gives the numbers in words, and says the mate saw 'seven regiments of British troops' at Antigua, where the Williamsburg report has 7000.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from RevX 'hogheads' for 'hogſheads'. The paper prints the numbers in words and 'ſeven regiments of Britiſh troops' where the Williamsburg text has '7000 Britiſh troops': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S76-301.jpg"
+      ],
+      "family": [
+        "R1776-0058",
+        "R1776-0111",
+        "R1776-0248"
+      ]
+    },
+    {
+      "id": "S76-302",
+      "page_key": "sn84026371|1776-04-24|1|3",
+      "excerpt_start": "On Sunday the 30th ult. the",
+      "excerpt_end": "sail to some part of the continent.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sloop-liberty-gunpowder"
+      ],
+      "summary": "The Pennsylvania Gazette prints the report.",
+      "note": "Ends the report at 'continent', without its last part, on the Roebuck.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from RevX 'hogheads' for 'hogſheads', including '83', '21' and '7000'. The paper ends the report at 'continent.', without the Roebuck sentence; 'WATERTOWN, April 15.' follows."
+      ],
+      "crops": [
+        "S76-302.jpg"
+      ],
+      "family": [
+        "R1776-0034",
+        "R1776-0058",
+        "R1776-0093",
+        "R1776-0111",
+        "R1776-0319",
+        "R1776-0343",
+        "R1776-0432"
+      ]
+    },
+    {
+      "id": "S76-303",
+      "page_key": "sn85047530|1776-04-24|1|2",
+      "excerpt_start": "On Sunday the 30th ult. the",
+      "excerpt_end": "sail to some part of the Continent;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sloop-liberty-gunpowder"
+      ],
+      "summary": "The Pennsylvania Journal prints the report.",
+      "note": "Prints '700 British troops' (the other papers 7000), 'St. Eustacia' and '2 hogsheads'. RevX reads '22 bales' where the paper prints 21.",
+      "scan_findings": [
+        "Scan reads '21 bales'; RevX '22 bales' is a fact-changing transcription error. The paper itself prints '700 Britiſh troops' (7000 in the other papers), 'St. Euſtacia' and '2 hogſheads': printed differences, which RevX transcribes as printed."
+      ],
+      "crops": [
+        "S76-303.jpg"
+      ],
+      "family": [
+        "R1776-0058",
+        "R1776-0062",
+        "R1776-0111"
+      ]
+    },
+    {
+      "id": "S76-304",
+      "page_key": "sn83030135|1776-04-25|1|3",
+      "excerpt_start": "WILLIAMSBURG, April 13. On Sunday the",
+      "excerpt_end": "fail to some part of the continent;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sloop-liberty-gunpowder"
+      ],
+      "summary": "The New-York Packet prints the report.",
+      "note": "Prints the whole report, with 'which he supposes was the Mercury'. RevX reads 'fail' where the paper prints 'sail'.",
+      "scan_findings": [
+        "Scan reads 'preparations to ſail'; RevX 'fail' is a transcription error that changes the sense, and 'hogheads' drops the long s. '83', '21', 'two hogſheads' and '7000' match, and the paper prints the full report, with 'which he ſuppoſes was the Mercury'."
+      ],
+      "crops": [
+        "S76-304.jpg"
+      ],
+      "family": [
+        "R1776-0034",
+        "R1776-0058",
+        "R1776-0092",
+        "R1776-0224",
+        "R1776-0444",
+        "R1776-0447",
+        "R1776-0562",
+        "R1776-0614",
+        "R1776-0962"
+      ]
+    },
+    {
+      "id": "S76-305",
+      "page_key": "sn84024742|1776-04-26|1|6",
+      "excerpt_start": "P H I L A D",
+      "excerpt_end": "frigate. She engaged us near two glasses.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barry-takes-edward"
+      ],
+      "summary": "Purdie's Virginia Gazette prints Barry's letter.",
+      "note": "Printed under 'PHILADELPHIA, April 11.', with 'at 1 P. M.' in figures.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt: 'PHILADELPHIA, April 11. In sight of the capes of VIRGINIA, April 7, 1776', 'at 1 P. M. this day' and 'near two glasses'."
+      ],
+      "crops": [
+        "S76-305.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0052",
+        "R1776-0075",
+        "R1776-0440",
+        "R1776-0967"
+      ],
+      "scan_boxes": [
+        [
+          55,
+          345,
+          533,
+          598
+        ]
+      ]
+    },
+    {
+      "id": "S76-306",
+      "page_key": "sn83025898|1776-04-27|1|3",
+      "excerpt_start": "On Sunday the 30th ult. the",
+      "excerpt_end": "sail to some part of the continent.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sloop-liberty-gunpowder"
+      ],
+      "summary": "The Pennsylvania Ledger prints the report.",
+      "note": "Ends the report at 'continent', without its last part, on the Roebuck.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from RevX 'hogheads' for 'hogſheads', including '83', '21' and '7000', under the heading 'WILLIAMSBURG, April 13.'. The paper ends the report at 'continent.', without the Roebuck sentence."
+      ],
+      "crops": [
+        "S76-306.jpg"
+      ],
+      "family": [
+        "R1776-0058",
+        "R1776-0550"
+      ]
+    },
+    {
+      "id": "S76-307",
+      "page_key": "sn84024739|1776-04-27|1|4",
+      "excerpt_start": "In sight of the capes of",
+      "excerpt_end": "a terrible manner, as you will see.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "barry-takes-edward"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints Barry's letter.",
+      "note": "Printed under 'PHILADELPHIA, April 11.' Spells 'Liverpool frigat'.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt, under the dateline 'PHILADELPHIA, April 11.', from '“In ſight of the capes of Virginia' to 'as you will ſee'. The paper prints 'Liverpool frigat', which RevX gives as 'frigate': a spelling, not a change of sense."
+      ],
+      "crops": [
+        "S76-307.jpg"
+      ],
+      "family": [
+        "R1776-0052",
+        "R1776-0075",
+        "R1776-0285",
+        "R1776-0286",
+        "R1776-0547",
+        "R1776-0583",
+        "R1776-0613",
+        "R1776-0673",
+        "R1776-0674",
+        "R1776-0908"
+      ],
+      "scan_boxes": [
+        [
+          45,
+          1012,
+          535,
+          1181
+        ]
+      ]
+    },
+    {
+      "id": "S76-308",
+      "page_key": "sn83021126|1776-04-29|1|3",
+      "excerpt_start": "On Sunday the 30th ult. the",
+      "excerpt_end": "fail to some part of the Continent.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sloop-liberty-gunpowder"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints the report.",
+      "note": "Ends the report at 'Continent', without its last part, on the Roebuck. RevX reads 'fail' where the paper prints 'sail'.",
+      "scan_findings": [
+        "Scan reads 'preparations to ſail'; RevX 'fail' is a transcription error that changes the sense, and 'hogheads' drops the long s. '83', '21', '2 hogſheads' and '7000' match; the paper ends the report at 'Continent.', without the Roebuck sentence."
+      ],
+      "crops": [
+        "S76-308.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0034",
+        "R1776-0058",
+        "R1776-0360",
+        "R1776-0432",
+        "R1776-0433",
+        "R1776-0550"
+      ]
+    },
+    {
+      "id": "S76-309",
+      "page_key": "sn83030135|1776-05-02|1|3",
+      "excerpt_start": "The 30th of March last, a",
+      "excerpt_end": "Capes of Delaware, and sent into Norfolk.",
+      "roles": [
+        "condensed_report"
+      ],
+      "groups": [
+        "sloop-liberty-gunpowder"
+      ],
+      "summary": "The New-York Packet prints the report.",
+      "note": "A shorter, reworded report a week after this paper printed the Williamsburg report; it says 'off the Capes of Delaware'.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from RevX 'hogheads' for 'hogſheads'. This condensed retelling prints 'off the Capes of Delaware, and ſent into Norfolk' and ends there, without the mate's account."
+      ],
+      "crops": [
+        "S76-309.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0084",
+        "R1776-0111",
+        "R1776-0248",
+        "R1776-0290"
+      ]
+    },
+    {
+      "id": "S76-310",
+      "page_key": "sn84024739|1776-05-11|1|2",
+      "excerpt_start": "IN CONGRESS, SATURDAY, March 16, 1776.",
+      "excerpt_end": "penitence of heart, and the most reverent",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints the resolution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'inſidious' and the spelling 'indiſpenſable'. Below the excerpt it reads 'publicly' and 'the over-ruling providence of GOD'."
+      ],
+      "crops": [
+        "S76-310.jpg"
+      ],
+      "family": [
+        "R1776-0074",
+        "R1776-0105",
+        "R1776-0718"
+      ]
+    },
+    {
+      "id": "S76-311",
+      "page_key": "sn85047530|1776-05-15|1|1",
+      "excerpt_start": "In CONGRESS, Saturday, March 16, 1776.",
+      "excerpt_end": "to acknowledge the overarching providence of God;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "The Pennsylvania Journal prints the resolution.",
+      "note": "Printed again two days before the fast, eight weeks after its first printing in this paper, and set line for line as then. RevX reads 'overarching' where the paper prints 'over-ruling'.",
+      "scan_findings": [
+        "Scan reads 'the over-ruling providence of God' ('over-' and 'ruling' split at a line end); RevX 'overarching' is a transcription error that changes the sense. The paper sets the resolution line for line as in its 20 March printing."
+      ],
+      "crops": [
+        "S76-311.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0074",
+        "R1776-0616"
+      ]
+    },
+    {
+      "id": "S76-312",
+      "page_key": "sn83030135|1776-05-16|1|3",
+      "excerpt_start": "WHEREAS the Honourable Continental Congress have",
+      "excerpt_end": "people, appease his righteous displeasure against us:",
+      "roles": [
+        "quoted_document"
+      ],
+      "groups": [
+        "congress-fast-day-1776"
+      ],
+      "summary": "The New-York Packet prints the resolution.",
+      "note": "Quoted in the New York committee's notice of 16 May on keeping the fast the next day.",
+      "scan_findings": [
+        "Scan matches the excerpt. The notice stands under the line 'New-York, May 16, 1776.' and quotes the resolution with 'humiliation, faſting and prayer' in lower case."
+      ],
+      "crops": [
+        "S76-312.jpg"
+      ],
+      "family": [
+        "R1776-0074",
+        "R1776-0112",
+        "R1776-0143",
+        "R1776-0719",
+        "R1776-0996",
+        "R1776-0997"
+      ]
+    },
+    {
+      "id": "S76-313",
+      "page_key": "sn83025894|1776-07-20|1|1",
+      "excerpt_start": "In CONGRESS, July 19, 1776. R",
+      "excerpt_end": "forwarded to Congress, by General Washington, be",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-published-by-congress"
+      ],
+      "summary": "Congress orders Lord Howe's circular letter and declaration published, so that the people may see what the commissioners offer.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Mr. Martin'. The resolution runs on 'be publiſhed in the ſeveral Gazettes, that the good people of theſe United States may …'."
+      ],
+      "crops": [
+        "S76-313.jpg"
+      ],
+      "family": [
+        "R1776-0005"
+      ]
+    },
+    {
+      "id": "S76-314",
+      "page_key": "sn83025898|1776-07-20|1|2",
+      "excerpt_start": "In CONGRESS, July 19, 1776. Resolved,",
+      "excerpt_end": "to Congress, by General Washington, be published",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-published-by-congress"
+      ],
+      "summary": "The Pennsylvania Ledger prints the resolution, letter and declaration.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Mr. Martin, and Sir James Wright'. The heading reads 'In CONGRESS, July 19. 1776.'"
+      ],
+      "crops": [
+        "S76-314.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0005",
+        "R1776-0019",
+        "R1776-0115",
+        "R1776-0138",
+        "R1776-0302",
+        "R1776-1106",
+        "R1776-1110"
+      ]
+    },
+    {
+      "id": "S76-315",
+      "page_key": "sn83021126|1776-07-22|1|3",
+      "excerpt_start": "In CONGRESS, July 19, 1776. Resolved,",
+      "excerpt_end": "to Congress by General Washington, be published",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-published-by-congress"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints the resolution, letter and declaration.",
+      "note": "RevX reads 'Mr. Montagu' where the paper prints 'Mr. Martin'.",
+      "scan_findings": [
+        "Crop located by hand. Scan reads 'Mr. Martin'; RevX 'Mr. Montagu' is a transcription error that changes a governor's name. The print continues past 'Gazettes' with the full resolution."
+      ],
+      "crops": [
+        "S76-315.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0005",
+        "R1776-0136",
+        "R1776-0215",
+        "R1776-0234",
+        "R1776-0302",
+        "R1776-0485",
+        "R1776-0571",
+        "R1776-1112"
+      ],
+      "scan_boxes": [
+        [
+          330,
+          478,
+          1505,
+          819
+        ]
+      ]
+    },
+    {
+      "id": "S76-316",
+      "page_key": "sn84026371|1776-07-24|1|3",
+      "excerpt_start": "IN CONGRESS, July 19, 1776. RESOLVED,",
+      "excerpt_end": "to Congress by General Washington, be published",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-published-by-congress"
+      ],
+      "summary": "The Pennsylvania Gazette prints the resolution, letter and declaration.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Mr. Martin, and Sir James Wright'. The crop holds the July 17 resolution above it; the July 19 resolution is at the foot of the crop."
+      ],
+      "crops": [
+        "S76-316.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0009",
+        "R1776-0145",
+        "R1776-0322",
+        "R1776-0345",
+        "R1776-0686"
+      ]
+    },
+    {
+      "id": "S76-317",
+      "page_key": "sn85047530|1776-07-24|1|1",
+      "excerpt_start": "In CONGRESS, July 19, 1776. RESOLVED,",
+      "excerpt_end": "Washington, be published in the several Gazettes...",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-published-by-congress"
+      ],
+      "summary": "The Pennsylvania Journal prints the resolution, letter and declaration.",
+      "note": "The paper prints the resolution in full; RevX shortens it with an ellipsis.",
+      "scan_findings": [
+        "Scan matches the excerpt up to 'Gazettes', including 'Mr. Martin'. The print runs on ('that the good people of theſe United States may be informed of what nature …'), so the '...' is RevX dropping printed text; the crop ends there."
+      ],
+      "crops": [
+        "S76-317.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0303",
+        "R1776-0384"
+      ]
+    },
+    {
+      "id": "S76-318",
+      "page_key": "sn83030493|1776-07-29|1|1",
+      "excerpt_start": "PHILADELPHIA, July 20. IN CONGRESS, July",
+      "excerpt_end": "Washington, be published in the several Gazettes...",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-published-by-congress"
+      ],
+      "summary": "The New-York Gazette prints the resolution, letter and declaration.",
+      "note": "The paper prints the resolution in full; RevX shortens it with an ellipsis. Prints 'my be informed', a misprint for 'may'.",
+      "scan_findings": [
+        "Scan matches the excerpt up to 'Gazettes', including 'PHILADELPHIA, July 20.' and 'Mr. Martin'. The print runs on ('that the good people of theſe United States my be informed of what …', the paper's own slip 'my' for 'may'), so the '...' is RevX dropping printed text."
+      ],
+      "crops": [
+        "S76-318.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0154"
+      ]
+    },
+    {
+      "id": "S76-319",
+      "page_key": "sn84024739|1776-08-03|1|1",
+      "excerpt_start": "CONGRESS, July 19, 1776. Resolved, that",
+      "excerpt_end": "Congress by General Washington, be published in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-published-by-congress"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints the resolution, letter and declaration.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt: 'CONGRESS, July 19, 1776' and 'Mr. Eden, Lord Dunmore, Mr. Martin, and Sir James Wright, late Governors'. Below the crop the page prints the resolution in full after 'be published in the several gazettes', signed 'CHARLES THOMSON, Secretary.'"
+      ],
+      "crops": [
+        "S76-319.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0005"
+      ],
+      "scan_boxes": [
+        [
+          580,
+          731,
+          1135,
+          848
+        ]
+      ]
+    },
+    {
+      "id": "S76-320",
+      "page_key": "sn83030493|1776-09-30|1|1",
+      "excerpt_start": "By RICHARD VISCOUNT HOWE, of the Kingdom of Ireland, and WILLIAM HOWE, Esq; General of his Majesty's Forces in America, the King's Commissioners for restoring Peace to his Majesty's Colonies and Plantations in North-America, &c. &c. &c. DECLARATION.",
+      "excerpt_end": "their Opposition to a Re-establishment of the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-september"
+      ],
+      "summary": "Lord Howe and General Howe declare that the King will revise the acts complained of, and invite the inhabitants to look to their own peace.",
+      "note": "Earliest printing found. Printed below the commissioners' declaration of 14 July.",
+      "scan_findings": [
+        "Scan reads 'whom the misguided Americans'; RevX 'Amisguided' reads the drop capital A of 'ALTHOUGH' a second time, a minor transcription error. The crop also holds the end of the 14 July declaration, printed just above after a rule; the heading reads 'North-America'."
+      ],
+      "crops": [
+        "S76-320.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0045",
+        "R1776-0099",
+        "R1776-0226",
+        "R1776-0513"
+      ]
+    },
+    {
+      "id": "S76-321",
+      "page_key": "sn84026371|1776-10-02|1|3",
+      "excerpt_start": "The following Declaration of Lord and",
+      "excerpt_end": "disavowed every purpose of reconciliation, not consonant",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-september"
+      ],
+      "summary": "The Pennsylvania Gazette prints the declaration.",
+      "note": "Introduced as printed in a handbill at New York, and followed by a parody headed 'EXPLANATION of the above', which makes the Howes the King's commissioners 'for deluding the good people of America'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the lead-in 'printed in a Hand Bill at New York' and 'North-America'."
+      ],
+      "crops": [
+        "S76-321.jpg"
+      ],
+      "family": [
+        "R1776-0099",
+        "R1776-0199",
+        "R1776-0514"
+      ]
+    },
+    {
+      "id": "S76-322",
+      "page_key": "sn83025898|1776-10-05|1|1",
+      "excerpt_start": "The following Declaration was circulated about",
+      "excerpt_end": "direct their Opposition to a Re-establishment of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-september"
+      ],
+      "summary": "The Pennsylvania Ledger prints the declaration.",
+      "note": "Introduced as 'circulated about the City on Tuesday last in hand bills' (1 October).",
+      "scan_findings": [
+        "Scan matches the excerpt, including the lead-in 'circulated about the City on Tuesday last in hand bills' and 'North-America'. The masthead in the crop reads Saturday, October 5, 1776, so 'Tuesday last' is 1 October."
+      ],
+      "crops": [
+        "S76-322.jpg"
+      ],
+      "family": [
+        "R1776-0099",
+        "R1776-0240",
+        "R1776-0335",
+        "R1776-0644"
+      ]
+    },
+    {
+      "id": "S76-323",
+      "page_key": "sn83030493|1776-10-07|1|1",
+      "excerpt_start": "By RICHARD VISCOUNT HOWE, of the Kingdom of Ireland, and WILLIAM HOWE, Esq; General of his Majesty's Forces in America, the King's Commissioners for restoring Peace to his Majesty's Colonies and Plantations in North-America, &c. &c. &c. DECLARATION. ALTHOUGH",
+      "excerpt_end": "their Opposition to a Re-establishment of the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-september"
+      ],
+      "summary": "The New-York Gazette prints the declaration.",
+      "note": "Printed again a week after its first printing in this paper, set line for line as then and again below the declaration of 14 July.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'misguided' and 'North-America'. It is line for line the same setting as in the issue of 30 September , again printed below the 14 July declaration."
+      ],
+      "crops": [
+        "S76-323.jpg"
+      ],
+      "family": [
+        "R1776-0005",
+        "R1776-0099",
+        "R1776-0311",
+        "R1776-1224"
+      ]
+    },
+    {
+      "id": "S76-324",
+      "page_key": "sn84024739|1776-10-11|1|3",
+      "excerpt_start": "By RICHARD VISCOUNT HOWE, of the",
+      "excerpt_end": "direct their opposition to a re-establishment of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-september"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints the declaration.",
+      "note": "Misprints the heading 'D E C L A R A R I O N.'; RevX corrects it without saying so.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'North America' without a hyphen, except that the paper misprints the heading as 'D E C L A R A R I O N.', which RevX silently corrects to 'DECLARATION'."
+      ],
+      "crops": [
+        "S76-324.jpg"
+      ],
+      "family": [
+        "R1776-0043",
+        "R1776-0099",
+        "R1776-0200",
+        "R1776-1211",
+        "R1776-1214"
+      ]
+    },
+    {
+      "id": "S76-325",
+      "page_key": "sn84024742|1776-10-11|1|1",
+      "excerpt_start": "By Richard viscount Howe, of the",
+      "excerpt_end": "N. ALTHOUGH the Congress, whom the misguided",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-september"
+      ],
+      "summary": "Purdie's Virginia Gazette prints the declaration.",
+      "note": "Prints 'iu' (a turned n) for 'in' in the heading.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the lower-case titles and 'North America' without a hyphen; the paper prints a turned n ('iu') for 'in' before 'North America', which RevX silently corrects. No lead-in: a rule separates the heading from the item above."
+      ],
+      "crops": [
+        "S76-325.jpg"
+      ],
+      "family": [
+        "R1776-0099",
+        "R1776-0260"
+      ]
+    },
+    {
+      "id": "S76-326",
+      "page_key": "sn83025583|1776-10-22|1|2",
+      "excerpt_start": "The following Declaration of Lord and",
+      "excerpt_end": "every purpose of reconciliation, not consonant with",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "howe-declarations-1776",
+        "howe-declaration-september"
+      ],
+      "summary": "The Freeman's Journal prints the declaration.",
+      "note": "Introduced as printed in a handbill at New York.",
+      "scan_findings": [
+        "Crop located by hand. The declaration starts at the foot of the second column (lead-in and heading to 'his Majeſ-') and continues at the head of the third ('ty's colonies …', DECLARATION, to 'not conſonant with'); scan matches the excerpt and reads 'miſguided'."
+      ],
+      "crops": [
+        "S76-326-1.jpg",
+        "S76-326-2.jpg"
+      ],
+      "family": [
+        "R1776-0043",
+        "R1776-0099",
+        "R1776-0201",
+        "R1776-0509",
+        "R1776-1259"
+      ],
+      "scan_boxes": [
+        [
+          1585,
+          6192,
+          2835,
+          6685
+        ],
+        [
+          2890,
+          200,
+          4165,
+          830
+        ]
+      ]
+    },
+    {
+      "id": "S76-327",
+      "page_key": "sn83025894|1776-11-14|1|4",
+      "excerpt_start": "In CONGRESS, November 14, 1776. Copy",
+      "excerpt_end": "Crownpoint.— Saturday last, the works being put",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "gates-carleton-retreat"
+      ],
+      "summary": "General Gates writes from Ticonderoga that Carleton's fleet and army have withdrawn from Crown Point.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Major Gen. Gates', 'November 5, 1776' with the year, 'Lieutenant-General Sir Guy Carleton' and 'Crownpoint'."
+      ],
+      "crops": [
+        "S76-327.jpg"
+      ],
+      "family": [
+        "R1776-0037",
+        "R1776-0323",
+        "R1776-0367",
+        "R1776-0594",
+        "R1776-0694"
+      ]
+    },
+    {
+      "id": "S76-328",
+      "page_key": "sn83025898|1776-11-16|1|3",
+      "excerpt_start": "In CONGRESS, November 14, 1776. Copy",
+      "excerpt_end": "last, the works being put in the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "gates-carleton-retreat"
+      ],
+      "summary": "The Pennsylvania Ledger prints Gates's letter.",
+      "note": "Dates the letter 'November 5.' without the year.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Major Gen. Gates', 'November 5.' without the year, 'Lieutenant-General Sir Guy Carleton' and 'Crownpoint'."
+      ],
+      "crops": [
+        "S76-328.jpg"
+      ],
+      "family": [
+        "R1776-0037",
+        "R1776-0228",
+        "R1776-0762"
+      ]
+    },
+    {
+      "id": "S76-329",
+      "page_key": "sn83021126|1776-11-19|1|3",
+      "excerpt_start": "I N C O N G R E S S, November 14,",
+      "excerpt_end": "and army under his command, from Crownpoint.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "gates-carleton-retreat"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints Gates's letter.",
+      "note": "Dates the letter 'Nov. 5.' without the year.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt: the heading reads 'November 14, 1776' and 'dated at Ticonderoga, Nov. 5.' with no year, and the text has 'Lieutenant General Sir Guy Carleton' and 'Crownpoint'."
+      ],
+      "crops": [
+        "S76-329.jpg"
+      ],
+      "family": [
+        "R1776-0037",
+        "R1776-0228",
+        "R1776-0314",
+        "R1776-0535",
+        "R1776-0536",
+        "R1776-1262"
+      ],
+      "scan_boxes": [
+        [
+          275,
+          4857,
+          1445,
+          5205
+        ]
+      ]
+    },
+    {
+      "id": "S76-330",
+      "page_key": "sn84026371|1776-11-20|1|2",
+      "excerpt_start": "IN CONGRESS, November 14, 1776. Copy",
+      "excerpt_end": "last, the works being put in the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "gates-carleton-retreat"
+      ],
+      "summary": "The Pennsylvania Gazette prints Gates's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Major General Gates', 'November 5, 1776' with the year, 'honour' and 'Crownpoint'."
+      ],
+      "crops": [
+        "S76-330.jpg"
+      ],
+      "family": [
+        "R1776-0037",
+        "R1776-0173",
+        "R1776-1203",
+        "R1776-1204",
+        "R1776-1287"
+      ]
+    },
+    {
+      "id": "S76-331",
+      "page_key": "sn84024739|1776-11-29|1|2",
+      "excerpt_start": "IN CONGRESS, November 14, 1776. Copy",
+      "excerpt_end": "Saturday last, the works being put in",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "gates-carleton-retreat"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints Gates's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt: 'In CONGRESS, November 14, 1776. Copy of a letter to the President, from Major General GATES, dated at Ticonderoga, November 5', 'Lieutenant General Sir Guy Carleton' and 'from Crownpoint'."
+      ],
+      "crops": [
+        "S76-331.jpg"
+      ],
+      "family": [
+        "R1776-0037"
+      ],
+      "scan_boxes": [
+        [
+          588,
+          650,
+          1140,
+          782
+        ]
+      ]
+    },
+    {
+      "id": "S76-332",
+      "page_key": "sn84024742|1776-11-29|1|1",
+      "excerpt_start": "IN CONGRESS, November 14, 1776. Copy",
+      "excerpt_end": "Saturday last, the works being put in",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "gates-carleton-retreat"
+      ],
+      "summary": "Purdie's Virginia Gazette prints Gates's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop located by hand. Scan matches the excerpt, from 'IN CONGRESS, November 14, 1776.' at the foot of the first column to 'the works being put in'; the lower left of the passage is faintly printed but legible."
+      ],
+      "crops": [
+        "S76-332.jpg"
+      ],
+      "family": [
+        "R1776-0037"
+      ],
+      "scan_boxes": [
+        [
+          40,
+          2157,
+          515,
+          2443
+        ]
+      ]
+    },
+    {
+      "id": "S76-333",
+      "page_key": "sn83025583|1776-12-10|1|2",
+      "excerpt_start": "Copy of a Letter to the",
+      "excerpt_end": "works being put in the best order,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "gates-carleton-retreat"
+      ],
+      "summary": "The Freeman's Journal prints Gates's letter.",
+      "note": "Has 'at Ticonderoga, Nov. 5. 1776' without 'dated', and 'Crown Point' as two words.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Maj. Gen. Gates, at Ticonderoga, Nov. 5. 1776' (no 'dated'), 'Lieut. General' and 'Crown Point' as two words. The line above reads 'In CONGRESS, Nov. 14. 1776,'; RevX has that line just before where the excerpt starts."
+      ],
+      "crops": [
+        "S76-333.jpg"
+      ],
+      "family": [
+        "R1776-0037",
+        "R1776-0530",
+        "R1776-0542",
+        "R1776-1305"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "wilkes-speech-commons",
+      "kind": "document_group",
+      "label": "Wilkes's speech in the Commons",
+      "definition": "Printings of the speech of John Wilkes, Lord Mayor of London, in the House of Commons on the motion for an address to the King at the opening of the session in October 1775, against the war in America.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "penn-before-the-lords",
+      "kind": "context_group",
+      "label": "Governor Penn before the Lords",
+      "definition": "Reports of the examination of Richard Penn, former governor of Pennsylvania, who had carried Congress's petition to the King, in the House of Lords in November 1775, as the American papers printed them from February 1776: a short London report, and a long account with the questions and answers. Contains those two groups; the wider coverage is not included.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "penn-examined-report",
+      "kind": "message_group",
+      "label": "A London report: Penn examined",
+      "definition": "Printings of a London paragraph of November 1775: on Friday Governor Penn was examined in the Upper Assembly and 'gave very satisfactory answers', and a member then proposed Congress's last petition to the King as the basis of an accommodation.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "penn-examination-lords",
+      "kind": "message_group",
+      "label": "The Lords examine Governor Penn",
+      "definition": "Printings of a London account of the House of Lords on 10 November 1775: the examination of Richard Penn, with the questions put to him and his answers, and the Duke of Richmond's motion grounded on them.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "prohibitory-bill-commons",
+      "kind": "context_group",
+      "label": "The Prohibitory bill in the Commons",
+      "definition": "Reports from London of the bill to prohibit all trade and intercourse with the colonies (the Prohibitory Act) in the House of Commons in December 1775, as printed in February and March 1776: the debate in committee, which printed the clause on captures with blanks for its dates, and the clause as settled. Contains those two groups; the wider coverage is not included.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "prohibitory-bill-committee",
+      "kind": "message_group",
+      "label": "The Commons in committee on the bill",
+      "definition": "Printings of a London report (6 December 1775) of the House of Commons in committee on the bill to prohibit all trade and intercourse with the colonies: the divisions, Lord North's remark on the clause that gives American ships time, and that clause printed with blanks for its dates, 'that the friends of America may have an opportunity' to have them filled with distant ones.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "prohibitory-clause-settled",
+      "kind": "message_group",
+      "label": "The clause on captures settled",
+      "definition": "Printings of a London report (8 December 1775) that the clause of the bill which caused the greatest debate was settled: American ships to be captured from 1 January 1776, and all ships trading with the colonies from 1 June 1776.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "congress-bills-of-credit",
+      "kind": "document_group",
+      "label": "Congress on refusing Continental bills",
+      "definition": "Printings of Congress's resolution of 11 January 1776 that anyone who refused the Continental bills of credit, or discouraged their circulation, should be treated as an enemy of his country.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "congress-fast-day-1776",
+      "kind": "document_group",
+      "label": "Congress's fast day of 17 May",
+      "definition": "Printings of Congress's resolution of 16 March 1776 recommending that Friday 17 May be kept throughout the colonies as a day of humiliation, fasting and prayer. Includes a one-sentence notice of it and a New York committee's notice that quotes it.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "barry-takes-edward",
+      "kind": "message_group",
+      "label": "Barry takes the Edward",
+      "definition": "Printings of Captain John Barry's letter to John Hancock or the Marine Committee ('In sight of the Capes of Virginia, April 7, 1776'): he fell in with the sloop Edward, belonging to the Liverpool frigate, and took her after a fight of near two glasses.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "sloop-liberty-gunpowder",
+      "kind": "message_group",
+      "label": "The sloop Liberty's gunpowder taken",
+      "definition": "Printings of a Williamsburg report (13 April 1776) that on 30 March the sloop Liberty of Perth Amboy, from St. Eustatius with 83 barrels of gunpowder, dry goods and medicines, was taken by a British tender off the capes and carried into Norfolk, with what her mate, who escaped, said of British troops at Antigua.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "howe-declarations-1776",
+      "kind": "context_group",
+      "label": "The Howe brothers' declarations",
+      "definition": "The declarations of Lord Howe and General William Howe as the King's commissioners for restoring peace, as the American papers printed them: Lord Howe's declaration of June 1776, published by order of Congress in July, and the brothers' declaration of 19 September. Contains those two groups; their declaration of 14 July (printed in the New-York Gazette) and their proclamation of 30 November (printed in the Freeman's Journal) are not included.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "howe-declaration-published-by-congress",
+      "kind": "document_group",
+      "label": "Lord Howe's declaration, published by Congress",
+      "definition": "Printings of Congress's resolution of 19 July 1776 ordering that Lord Howe's circular letter to the former royal governors (20 June 1776) and the declaration it enclosed be published, 'that the good people of these United States may be informed of what nature are the Commissioners, and what the terms', followed by the letter and the declaration offering pardons.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "howe-declaration-september",
+      "kind": "document_group",
+      "label": "The declaration of 19 September",
+      "definition": "Printings of the declaration of Lord Howe and General William Howe, the King's commissioners, of 19 September 1776: Congress had disavowed every purpose of reconciliation, the King would revise his instructions and the acts complained of, and the inhabitants were invited to consider whether to trust their fate to Congress.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    },
+    {
+      "id": "gates-carleton-retreat",
+      "kind": "message_group",
+      "label": "Gates on Carleton's retreat",
+      "definition": "Printings of General Gates's letter to the President of Congress (Ticonderoga, 5 November 1776), published by order of Congress, reporting that General Carleton's fleet and army had withdrawn from Crown Point.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "penn-before-the-lords",
+      "child": "penn-examined-report"
+    },
+    {
+      "parent": "penn-before-the-lords",
+      "child": "penn-examination-lords"
+    },
+    {
+      "parent": "prohibitory-bill-commons",
+      "child": "prohibitory-bill-committee"
+    },
+    {
+      "parent": "prohibitory-bill-commons",
+      "child": "prohibitory-clause-settled"
+    },
+    {
+      "parent": "howe-declarations-1776",
+      "child": "howe-declaration-published-by-congress"
+    },
+    {
+      "parent": "howe-declarations-1776",
+      "child": "howe-declaration-september"
+    }
+  ],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "Round two took the ten candidates that round one read but did not admit (each counted by the item finder in 7 or 8 newspapers), leaving out the reports of Cherokee and Creek plans, which need careful framing first. Each candidate's printings were looked for with phrase searches over all 2,319 pages of 1776 in both transcriptions (phrase_patterns_round2.json, phrase_hits_round2.json), and every hit was read. Papers with pages in a story's weeks but no printing were searched by hand for garbled printings; none was found. Nine stories were admitted (15 groups, 87 printings); one candidate was not.",
+    "selection_rule": "As in round one, a story is admitted when it reaches 7 or more newspapers, and printings are counted item by item. Where a candidate turned out to be two related printed items, each item is its own group under a parent story, as in round one; in this round such a sub-story can reach fewer than 7 papers (the Commons committee report on the Prohibitory bill, 6; the settled clause, 5; the Howes' declaration of 19 September, 6). A paper that printed an item again later counts each printing.",
+    "items_admitted": {
+      "wilkes-speech-commons": [
+        "I76-0055",
+        "I76-0053"
+      ],
+      "penn-examined-report": [
+        "I76-0120"
+      ],
+      "penn-examination-lords": [
+        "I76-0057",
+        "I76-0058",
+        "I76-0059",
+        "I76-0060"
+      ],
+      "prohibitory-bill-committee": [
+        "I76-0036"
+      ],
+      "prohibitory-clause-settled": [
+        "I76-0036",
+        "I76-0246"
+      ],
+      "congress-bills-of-credit": [
+        "I76-0110",
+        "I76-0035"
+      ],
+      "congress-fast-day-1776": [
+        "I76-0092"
+      ],
+      "barry-takes-edward": [
+        "I76-0129"
+      ],
+      "sloop-liberty-gunpowder": [
+        "I76-0130"
+      ],
+      "howe-declaration-published-by-congress": [
+        "I76-0090"
+      ],
+      "howe-declaration-september": [
+        "I76-0090",
+        "I76-0193"
+      ],
+      "gates-carleton-retreat": [
+        "I76-0187",
+        "I76-0188"
+      ]
+    },
+    "candidates_split": {
+      "The Commons debate on the Prohibitory bill (item finder: 8 papers, 11 printings)": "two London reports joined by the clause on captures: the committee debate of 5 December 1775 with the clause printed with blanks for its dates (6 papers), and the clause as settled on 8 December (5 papers). Admitted as two groups under a parent story.",
+      "Governor Penn examined in the Lords": "two London items: a short report that Penn was examined (7 papers) and the long account of the examination with questions and answers (8 papers). Admitted as two groups under a parent story.",
+      "Congress on refusing Continental bills (item finder: 8 papers, 25 printings, 'a notice repeated for weeks')": "Congress's resolution of 11 January 1776 (7 papers) is admitted. The other printings are not one notice repeated: they are separate notices of committees of inspection, which quote the resolution and then name people found to have refused the bills (see not_admitted).",
+      "The Howe brothers' declarations (item finder: 7 papers, 14 printings)": "several documents with the same heading: Lord Howe's declaration of June 1776 published by Congress in July (7 papers) and the brothers' declaration of 19 September (6 papers) are admitted as two groups under a parent story; the rest are listed in not_admitted."
+    },
+    "added_by_phrase_search": [
+      "PEP 1776-01-13 p1 to VGb 02-02 p2: the 11 January resolution itself, which the item finder had joined to the committee notices",
+      "VGb 1776-03-29 p2: a one-sentence notice of the fast of 17 May (condensed report)",
+      "NYP 1776-05-02 p3: a shorter, reworded report of the sloop Liberty's capture (condensed report)"
+    ],
+    "not_admitted": {
+      "Deserters from the Cork regiments (PG 01-31, PL 02-03, PP 02-05, VGb 02-16, VGa 02-17)": "a one-sentence London paragraph in 5 papers, below the round's 7. The item finder's 8 papers came from the neighbouring London paragraphs. The New-York Gazette of 5 February prints a different report of desertions at Cork.",
+      "Committee of inspection notices under the bills-of-credit resolution (PJ 02-07 to PJ 04-24; 18 printings in 5 Philadelphia papers)": "separate notices of the Philadelphia committee of inspection and observation (dated 5 and 20 February, 26 March and 9 April) and one Gloucester County committee notice, each quoting the resolution and then publishing the names of people the committee had found to have refused the bills. They are different documents, so they were not added to the resolution's group. Whether to show them, and how, given that they name private persons, is a decision for later.",
+      "Another London report on the Prohibitory bill (NYP 03-07, VGb 03-15, VGa 03-16)": "the bill's second reading of 1 December 1775, on a different clause; 3 papers.",
+      "The Synod's notice on the fast (NYG 04-22, PJ 04-24, PG 05-01 and repeats; 3 papers)": "the Synod of New-York and Philadelphia moves its meeting because Congress's fast falls in its session; a different document.",
+      "Fasts of August 1776 (Massachusetts, 1 August; the Synod, 8 August)": "other fast days, not Congress's of 17 May.",
+      "The sale of the sloop Edward (PEP 04-30, PG 05-01, PJ 05-01)": "an advertisement, not Barry's letter.",
+      "A Philadelphia letter of 11 April on the Edward (NEC 04-25 p3)": "a different report of the same capture; 1 paper.",
+      "The Howes' joint declaration of 14 July (NYG 09-30 and 10-07)": "printed in the New-York Gazette only, next to the declaration of 19 September; its text is that of Lord Howe's June declaration in the July group.",
+      "A parody of the September declaration (PG 10-02, VGa 10-25, VGb 10-25, FJ 10-29)": "'the King's Commissioners for deluding the good people of America': a satirical rewriting, printed after the declaration in the Pennsylvania Gazette ('EXPLANATION of the above') and on its own in three papers. Commentary, not the declaration; 4 papers.",
+      "The Howes' proclamation of 30 November (FJ 12-24)": "1 paper in this collection.",
+      "The London notice of the Howes' commission (PJ 07-31, PEP 08-01, PP 08-05, NEC 08-08, FJ 08-10, VGb 08-16)": "a different document (letters patent of 3 May naming the commissioners); 6 papers.",
+      "Reports of Cherokee and Creek plans (8 papers each)": "left for the user: they need careful framing before they are admitted."
+    }
+  }
+}

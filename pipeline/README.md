@@ -46,12 +46,13 @@ This folder holds the code that turns the archive into the data release and the 
 | Script | What it does |
 |---|---|
 | `build.py` | Builds the first release (v0.1.0) from the pinned project inputs. |
-| `migrate_v0_2_0.py`, `apply_ledger.py` | Apply a reviewed ledger to the previous release to make the next one. |
+| `migrate_v0_2_0.py`, `apply_ledger.py` | Apply a reviewed ledger to the previous release to make the next one, with topic rows for its new groups. `--keep-current` cuts a release without switching the site to it (v0.7.2). |
+| `set_current.py` | Switch `CURRENT.json` to a release, after checking every file of it against its manifest. |
 | `apply_corrections.py` | Makes a correction release. It adds notes that supersede the old ones and never edits them; a few plain text fields can change, with the old value kept (v0.6.1, the English notes). |
 | `add_reuse_layer.py`, `add_reuse_titles.py`, `add_story_topics.py` | Add the matched-story layers: v0.5.0, v0.5.1 and v0.5.2. |
 | `add_checks_layer.py`, `merge_printings.py` | v0.6.0: count each printing once per page, and add the transcription checks and the audit. |
 | `add_reviewed_topics.py` | v0.7.1: topics for reviewed groups added after the topic layer (the 1776 stories), from the same frozen model. |
-| `validate.py` | Integrity and count checks. Every release must pass them; v0.7.1 passes 449. |
+| `validate.py` | Integrity and count checks. Every release must pass them; v0.7.2 passes 545. |
 | `consumer.py`, `check_consumers.py` | Read a release without the website, and check that the site agrees with the release. |
 
 Releases are never edited. New evidence always makes a new version; see [`archive_data/README.md`](archive_data/README.md) for the commands.

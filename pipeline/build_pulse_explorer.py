@@ -13,16 +13,23 @@ manifest=json.loads((release/'manifest.json').read_text(encoding='utf8'))
 # together. Every top-level story of a reviewed year needs exactly one category, or the build fails. 'children' lists the
 # sub-stories shown under a story; 'expect' is the year's newspapers and surviving pages, checked against the release.
 REVIEWED={
+  # Round two (release v0.7.2) added nine stories; the user agreed the categories on 2026-11-09, with the Howe declarations
+  # under Britain and Europe. Each category lists its stories in the order of their first printing.
   1776:{'categories':[
-          ('war','War and the armies',['quebec-siege-1776','boston-evacuation-letter','hopkins-nassau-letter','campbell-captured-letter',
-                                       'washington-patterson-interview','hudson-warships-1776','eighty-eight-battalions','congress-intelligence-october-1776']),
-          ('britain','Britain and Europe',['king-speech-october-1775','dublin-paper-naval-force','ethan-allen-cork','london-address-to-king-1776','king-speech-may-1776']),
-          ('government','Independence and American government',['congress-opens-ports','rhode-island-renunciation','congress-may-15-resolution',
-                                       'virginia-independence-resolution','pennsylvania-new-instructions','declaration-of-independence','cedars-cartel-report',
-                                       'prize-resolutions-extended','staten-island-conference'])],
+          ('war','War and the armies',['quebec-siege-1776','boston-evacuation-letter','barry-takes-edward','sloop-liberty-gunpowder','hopkins-nassau-letter',
+                                       'campbell-captured-letter','hudson-warships-1776','washington-patterson-interview','eighty-eight-battalions',
+                                       'congress-intelligence-october-1776','gates-carleton-retreat']),
+          ('britain','Britain and Europe',['king-speech-october-1775','wilkes-speech-commons','penn-before-the-lords','prohibitory-bill-commons',
+                                           'dublin-paper-naval-force','ethan-allen-cork','london-address-to-king-1776','king-speech-may-1776','howe-declarations-1776']),
+          ('government','Independence and American government',['congress-bills-of-credit','congress-fast-day-1776','congress-opens-ports','rhode-island-renunciation',
+                                       'congress-may-15-resolution','virginia-independence-resolution','pennsylvania-new-instructions','declaration-of-independence',
+                                       'cedars-cartel-report','prize-resolutions-extended','staten-island-conference'])],
         'children':{'quebec-siege-1776':['montgomery-letter-to-carleton','quebec-assault-report','quebec-camp-letter'],
                     'hudson-warships-1776':['haverstraw-bay-report','tappan-meadows-report','gondolas-attack-report','fire-ships-attack-report'],
-                    'staten-island-conference':['conference-committee-departs','conference-committee-report']},
+                    'staten-island-conference':['conference-committee-departs','conference-committee-report'],
+                    'penn-before-the-lords':['penn-examined-report','penn-examination-lords'],
+                    'prohibitory-bill-commons':['prohibitory-bill-committee','prohibitory-clause-settled'],
+                    'howe-declarations-1776':['howe-declaration-published-by-congress','howe-declaration-september']},
         'expect':(16,2319)},
   1797:{'categories':[
           ('war','War, revolution and foreign news',['boyd-bantry-coverage','tenerife-defeat-report','camperdown-dispatches','algerine-sicilian-battle',

@@ -3,9 +3,13 @@
 The topics come from the project's frozen 24-topic model (the model file and hash recorded in run:story-topics-v1),
 applied as in work/story_topics_all.py: each printing's excerpt is scored, and a group's topic weights are the sum over
 its printings, normalised. The model's solver stops on a whole batch, so a weight can move in the fourth decimal with
-other company in the batch. So the reviewed groups that already have rows are scored together, as they were, and the
-script stops unless that reproduces every one of them exactly; then the groups without rows are scored together and
-added. Existing rows are kept as they are; the new rows carry their own run. Automatic and provisional, like the rest.
+other company in the batch. So the reviewed groups that already have rows are scored again batch by batch, as they were
+made (one batch per run), and the script stops unless that reproduces every one of them exactly; then the groups without
+rows are scored together and added. Existing rows are kept as they are; the new rows carry their own run. Automatic and
+provisional, like the rest.
+
+apply_ledger.py calls add_topic_rows() itself when its base release already gives every reviewed group a topic row
+(v0.7.1 on), so a ledger's new groups get their rows in the same release.
 
 Usage (project root, Python 3.12):
     python work/archive_data/add_reviewed_topics.py 0.7.0 0.7.1
@@ -66,6 +70,61 @@ def score(texts, ids, vec, nmf):
     return out
 
 
+def add_topic_rows(db, release, date, run, code_source, method):
+    """Give topic rows to the reviewed groups in db that have none, writing release/derived/story_topics.parquet.
+
+    db is the release's open database (uncommitted rows are seen); the run row and the story_topics metadata are updated
+    here, nothing is committed. Returns (added rows, number of rows reproduced)."""
+    params = json.loads(db.execute('SELECT parameters_json FROM runs WHERE id=?', (BASE_RUN,)).fetchone()[0])
+    model_path = PROJECT/params['model_file']
+    assert file_sha(model_path) == params['model_sha256'], 'The topic model is not the one the story topics were made with'
+    tm = joblib.load(model_path)
+    vec, nmf = tm['vectorizer'], tm['model']
+    meta = json.loads(db.execute("SELECT value_json FROM metadata WHERE key='story_topics'").fetchone()[0])
+    tid = [t['id'] for t in meta['topics']]   # stored in model order
+    assert len(tid) == nmf.n_components
+
+    texts = collections.defaultdict(list)   # reviewed group -> its printed excerpts
+    for gid, ex in db.execute('SELECT group_id, excerpts_json FROM group_publications ORDER BY group_id, publication_date'):
+        texts[gid].append(' '.join(json.loads(ex)))
+    table = pq.read_table(release/'derived/story_topics.parquet')
+    rows = table.to_pylist()
+    have = {r['story_id']: r for r in rows}
+    reviewed = sorted(texts)
+    kept, new = [sid for sid in reviewed if sid in have], [sid for sid in reviewed if sid not in have]
+    if not new:
+        raise SystemExit('Every reviewed group already has a topic row.')
+
+    def as_row(sid, s, run_id):
+        return {'story_id': sid, 'kind': 'reviewed', 'top_topic': tid[s['top']], 'top_share': s['top_share'], 'second_topic': tid[s['second']],
+                'printings': s['printings'], 'printing_agreement': s['agreement'], 'no_signal': s['no_signal'],
+                'weights_json': json.dumps(s['weights']), 'run_id': run_id}
+
+    batches = collections.defaultdict(list)   # the rows of one run were scored together
+    for sid in kept:
+        batches[have[sid]['run_id']].append(sid)
+    for run_id, ids in batches.items():
+        again = score(texts, ids, vec, nmf)
+        for sid in ids:
+            if as_row(sid, again[sid], run_id) != have[sid]:
+                raise SystemExit('Scoring the reviewed groups that have rows does not reproduce the topic row of '+sid)
+    got = score(texts, new, vec, nmf)
+    added = [as_row(sid, got[sid], run) for sid in new]
+    pq.write_table(pa.Table.from_pylist(sorted(rows+added, key=lambda r: r['story_id']), schema=table.schema),
+                   release/'derived/story_topics.parquet', compression='zstd')
+
+    agree = [r['printing_agreement'] for r in added if r['printings'] >= 2 and not r['no_signal']]
+    how = ('the reviewed groups that had rows, together (reproduced exactly); then the added groups, together' if len(batches) == 1 else
+           'the reviewed groups that had rows, batch by batch as they were made, one batch per run (reproduced exactly); then the added groups, together')
+    db.execute('INSERT INTO runs VALUES (?,?,?,?,?,?,?)', (run, method,
+               J({**params, 'batches': how, 'groups_added': len(added), 'reproduced_rows': len(kept),
+                  'mean_agreement_multi_printing': round(float(np.mean(agree)), 3) if agree else None}), code_source, date, 'automated', 0))
+    counts = collections.Counter(r['kind'] for r in rows+added)
+    meta.update(stories=dict(sorted(counts.items())), runs=list(dict.fromkeys(meta.get('runs', [BASE_RUN]) + [run])))
+    db.execute("UPDATE metadata SET value_json=? WHERE key='story_topics'", (J(meta),))
+    return added, len(kept)
+
+
 def main(base_version, version):
     base, release = FOUNDATION/('v'+base_version), FOUNDATION/('v'+version)
     date = datetime.date.today().isoformat()
@@ -101,48 +160,9 @@ def main(base_version, version):
     source('work/archive_data/validate.py', 'validation_code')
 
     # The same frozen model as the layer's first run.
-    params = json.loads(db.execute('SELECT parameters_json FROM runs WHERE id=?', (BASE_RUN,)).fetchone()[0])
-    model_path = PROJECT/params['model_file']
-    assert file_sha(model_path) == params['model_sha256'], 'The topic model is not the one the story topics were made with'
-    tm = joblib.load(model_path)
-    vec, nmf = tm['vectorizer'], tm['model']
-    meta = json.loads(db.execute("SELECT value_json FROM metadata WHERE key='story_topics'").fetchone()[0])
-    tid = [t['id'] for t in meta['topics']]   # stored in model order
-    assert len(tid) == nmf.n_components
-
-    texts = collections.defaultdict(list)   # reviewed group -> its printed excerpts
-    for gid, ex in db.execute('SELECT group_id, excerpts_json FROM group_publications ORDER BY group_id, publication_date'):
-        texts[gid].append(' '.join(json.loads(ex)))
-    table = pq.read_table(release/'derived/story_topics.parquet')
-    rows = table.to_pylist()
-    have = {r['story_id']: r for r in rows}
-    reviewed = sorted(texts)
-    kept, new = [sid for sid in reviewed if sid in have], [sid for sid in reviewed if sid not in have]
-    if not new:
-        raise SystemExit('Every reviewed group already has a topic row.')
-
-    def as_row(sid, s, run):
-        return {'story_id': sid, 'kind': 'reviewed', 'top_topic': tid[s['top']], 'top_share': s['top_share'], 'second_topic': tid[s['second']],
-                'printings': s['printings'], 'printing_agreement': s['agreement'], 'no_signal': s['no_signal'],
-                'weights_json': json.dumps(s['weights']), 'run_id': run}
-
-    again = score(texts, kept, vec, nmf)
-    for sid in kept:
-        if as_row(sid, again[sid], have[sid]['run_id']) != have[sid]:
-            raise SystemExit('Scoring the reviewed groups that have rows does not reproduce the topic row of '+sid)
-    got = score(texts, new, vec, nmf)
-    added = [as_row(sid, got[sid], RUN) for sid in new]
-    pq.write_table(pa.Table.from_pylist(sorted(rows+added, key=lambda r: r['story_id']), schema=table.schema),
-                   release/'derived/story_topics.parquet', compression='zstd')
-
-    agree = [r['printing_agreement'] for r in added if r['printings'] >= 2 and not r['no_signal']]
-    db.execute('INSERT INTO runs VALUES (?,?,?,?,?,?,?)', (RUN, 'Frozen 24-topic model applied to the printed excerpts of reviewed groups added after run:story-topics-v1',
-               J({**params, 'batches': 'the reviewed groups that had rows, together (reproduced exactly); then the added groups, together',
-                  'groups_added': len(added), 'reproduced_rows': len(kept),
-                  'mean_agreement_multi_printing': round(float(np.mean(agree)), 3) if agree else None}), code, date, 'automated', 0))
-    counts = collections.Counter(r['kind'] for r in rows+added)
-    meta.update(stories=dict(sorted(counts.items())), runs=[BASE_RUN, RUN])
-    db.execute("UPDATE metadata SET value_json=? WHERE key='story_topics'", (J(meta),))
+    added, kept = add_topic_rows(db, release, date, RUN, code,
+                                 'Frozen 24-topic model applied to the printed excerpts of reviewed groups added after run:story-topics-v1')
+    counts = collections.Counter(r['kind'] for r in pq.read_table(release/'derived/story_topics.parquet', columns=['kind']).to_pylist())
     release_meta = json.loads(db.execute("SELECT value_json FROM metadata WHERE key='release'").fetchone()[0])
     release_meta.update(version=version, date=date, previous_release=base_version)
     db.execute("UPDATE metadata SET value_json=? WHERE key='release'", (J(release_meta),))

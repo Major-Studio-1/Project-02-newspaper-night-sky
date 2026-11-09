@@ -25,6 +25,7 @@
 {"id":"group:adams-special-session-speech","kind":"group","label":"Adams's speech to Congress"}
 {"id":"group:algerine-sicilian-battle","kind":"group","label":"Algerine–Sicilian sea battle"}
 {"id":"group:barney-escapes-blockade","kind":"group","label":"Barney escapes the blockade"}
+{"id":"group:barry-takes-edward","kind":"group","label":"Barry takes the Edward"}
 {"id":"group:blount-affair","kind":"group","label":"Blount affair"}
 {"id":"group:blount-committee-report","kind":"group","label":"House committee report on Blount"}
 {"id":"group:blount-knoxville-welcome","kind":"group","label":"Blount's welcome at Knoxville"}
@@ -41,6 +42,8 @@
 {"id":"group:clearance-resolution-1794","kind":"group","label":"1794 clearance resolution"}
 {"id":"group:conference-committee-departs","kind":"group","label":"Committee sets off to meet Lord Howe"}
 {"id":"group:conference-committee-report","kind":"group","label":"Committee's report on the conference"}
+{"id":"group:congress-bills-of-credit","kind":"group","label":"Congress on refusing Continental bills"}
+{"id":"group:congress-fast-day-1776","kind":"group","label":"Congress's fast day of 17 May"}
 {"id":"group:congress-intelligence-october-1776","kind":"group","label":"Intelligence received in Congress, October 1776"}
 {"id":"group:congress-may-15-resolution","kind":"group","label":"Congress's resolution of 15 May"}
 {"id":"group:congress-opening-nov-1797","kind":"group","label":"Opening of Congress, November 1797"}
@@ -51,12 +54,16 @@
 {"id":"group:ethan-allen-cork","kind":"group","label":"Ethan Allen at Cork"}
 {"id":"group:fire-ships-attack-report","kind":"group","label":"Fire-ship attack"}
 {"id":"group:fleet-return-account","kind":"group","label":"Later fleet-return account"}
+{"id":"group:gates-carleton-retreat","kind":"group","label":"Gates on Carleton's retreat"}
 {"id":"group:gondolas-attack-report","kind":"group","label":"Row galleys attack the warships"}
 {"id":"group:havana-french-captures","kind":"group","label":"French captures at Havana"}
 {"id":"group:haverstraw-bay-report","kind":"group","label":"Warships in Haverstraw Bay"}
 {"id":"group:hermione-mutiny","kind":"group","label":"Hermione mutiny"}
 {"id":"group:hermione-particulars","kind":"group","label":"'Particulars of the mutiny'"}
 {"id":"group:hopkins-nassau-letter","kind":"group","label":"Hopkins's report from New Providence"}
+{"id":"group:howe-declaration-published-by-congress","kind":"group","label":"Lord Howe's declaration, published by Congress"}
+{"id":"group:howe-declaration-september","kind":"group","label":"The declaration of 19 September"}
+{"id":"group:howe-declarations-1776","kind":"group","label":"The Howe brothers' declarations"}
 {"id":"group:hudson-warships-1776","kind":"group","label":"British warships in the Hudson"}
 {"id":"group:jefferson-madison-letter","kind":"group","label":"Jefferson's letter to Madison"}
 {"id":"group:king-speech-may-1776","kind":"group","label":"The King's speech of May 1776"}
@@ -69,13 +76,20 @@
 {"id":"group:peace-and-plenty-report","kind":"group","label":"Peace and Plenty report"}
 {"id":"group:peace-cayenne-context","kind":"group","label":"Peace / Cayenne context"}
 {"id":"group:peace-seizure-report","kind":"group","label":"Peace seizure report"}
+{"id":"group:penn-before-the-lords","kind":"group","label":"Governor Penn before the Lords"}
+{"id":"group:penn-examination-lords","kind":"group","label":"The Lords examine Governor Penn"}
+{"id":"group:penn-examined-report","kind":"group","label":"A London report: Penn examined"}
 {"id":"group:pennsylvania-new-instructions","kind":"group","label":"Pennsylvania's new instructions"}
 {"id":"group:prize-resolutions-extended","kind":"group","label":"Prize resolutions extended"}
+{"id":"group:prohibitory-bill-committee","kind":"group","label":"The Commons in committee on the bill"}
+{"id":"group:prohibitory-bill-commons","kind":"group","label":"The Prohibitory bill in the Commons"}
+{"id":"group:prohibitory-clause-settled","kind":"group","label":"The clause on captures settled"}
 {"id":"group:quebec-assault-report","kind":"group","label":"Failed assault on Quebec"}
 {"id":"group:quebec-camp-letter","kind":"group","label":"Letter from the camp before Quebec"}
 {"id":"group:quebec-siege-1776","kind":"group","label":"Siege of Quebec"}
 {"id":"group:quito-earthquake","kind":"group","label":"Quito earthquake"}
 {"id":"group:rhode-island-renunciation","kind":"group","label":"Rhode Island renounces allegiance"}
+{"id":"group:sloop-liberty-gunpowder","kind":"group","label":"The sloop Liberty's gunpowder taken"}
 {"id":"group:sonthonax-departure","kind":"group","label":"Sonthonax leaves Saint-Domingue"}
 {"id":"group:special-session-1797","kind":"group","label":"Special session of Congress, 1797"}
 {"id":"group:special-session-house-answer","kind":"group","label":"House's answer to the special-session speech"}
@@ -86,6 +100,7 @@
 {"id":"group:two-sisters-wreck","kind":"group","label":"Two Sisters wreck"}
 {"id":"group:virginia-independence-resolution","kind":"group","label":"Virginia Convention, 15 May 1776"}
 {"id":"group:washington-patterson-interview","kind":"group","label":"Washington meets Colonel Patterson"}
+{"id":"group:wilkes-speech-commons","kind":"group","label":"Wilkes's speech in the Commons"}
 {"id":"obs:chain-20261030:H001","kind":"observation","label":"H001 · 1797-03-16"}
 {"id":"obs:chain-20261030:H002","kind":"observation","label":"H002 · 1797-03-25"}
 {"id":"obs:chain-20261030:H006","kind":"observation","label":"H006 · 1797-04-12"}
@@ -341,6 +356,93 @@
 {"id":"obs:expansion-1776:S76-244","kind":"observation","label":"S76-244 · 1776-10-26"}
 {"id":"obs:expansion-1776:S76-245","kind":"observation","label":"S76-245 · 1776-11-01"}
 {"id":"obs:expansion-1776:S76-246","kind":"observation","label":"S76-246 · 1776-11-01"}
+{"id":"obs:expansion-1776:S76-247","kind":"observation","label":"S76-247 · 1776-01-13"}
+{"id":"obs:expansion-1776:S76-248","kind":"observation","label":"S76-248 · 1776-01-15"}
+{"id":"obs:expansion-1776:S76-249","kind":"observation","label":"S76-249 · 1776-01-17"}
+{"id":"obs:expansion-1776:S76-250","kind":"observation","label":"S76-250 · 1776-01-17"}
+{"id":"obs:expansion-1776:S76-251","kind":"observation","label":"S76-251 · 1776-01-18"}
+{"id":"obs:expansion-1776:S76-252","kind":"observation","label":"S76-252 · 1776-01-18"}
+{"id":"obs:expansion-1776:S76-253","kind":"observation","label":"S76-253 · 1776-01-18"}
+{"id":"obs:expansion-1776:S76-254","kind":"observation","label":"S76-254 · 1776-01-20"}
+{"id":"obs:expansion-1776:S76-255","kind":"observation","label":"S76-255 · 1776-01-22"}
+{"id":"obs:expansion-1776:S76-256","kind":"observation","label":"S76-256 · 1776-01-22"}
+{"id":"obs:expansion-1776:S76-257","kind":"observation","label":"S76-257 · 1776-01-24"}
+{"id":"obs:expansion-1776:S76-258","kind":"observation","label":"S76-258 · 1776-01-24"}
+{"id":"obs:expansion-1776:S76-259","kind":"observation","label":"S76-259 · 1776-02-01"}
+{"id":"obs:expansion-1776:S76-260","kind":"observation","label":"S76-260 · 1776-02-02"}
+{"id":"obs:expansion-1776:S76-261","kind":"observation","label":"S76-261 · 1776-02-03"}
+{"id":"obs:expansion-1776:S76-262","kind":"observation","label":"S76-262 · 1776-02-05"}
+{"id":"obs:expansion-1776:S76-263","kind":"observation","label":"S76-263 · 1776-02-05"}
+{"id":"obs:expansion-1776:S76-264","kind":"observation","label":"S76-264 · 1776-02-07"}
+{"id":"obs:expansion-1776:S76-265","kind":"observation","label":"S76-265 · 1776-02-08"}
+{"id":"obs:expansion-1776:S76-266","kind":"observation","label":"S76-266 · 1776-02-10"}
+{"id":"obs:expansion-1776:S76-267","kind":"observation","label":"S76-267 · 1776-02-16"}
+{"id":"obs:expansion-1776:S76-268","kind":"observation","label":"S76-268 · 1776-02-16"}
+{"id":"obs:expansion-1776:S76-269","kind":"observation","label":"S76-269 · 1776-02-20"}
+{"id":"obs:expansion-1776:S76-270","kind":"observation","label":"S76-270 · 1776-02-21"}
+{"id":"obs:expansion-1776:S76-271","kind":"observation","label":"S76-271 · 1776-02-21"}
+{"id":"obs:expansion-1776:S76-272","kind":"observation","label":"S76-272 · 1776-02-21"}
+{"id":"obs:expansion-1776:S76-273","kind":"observation","label":"S76-273 · 1776-02-24"}
+{"id":"obs:expansion-1776:S76-274","kind":"observation","label":"S76-274 · 1776-02-24"}
+{"id":"obs:expansion-1776:S76-275","kind":"observation","label":"S76-275 · 1776-02-26"}
+{"id":"obs:expansion-1776:S76-276","kind":"observation","label":"S76-276 · 1776-02-26"}
+{"id":"obs:expansion-1776:S76-277","kind":"observation","label":"S76-277 · 1776-02-27"}
+{"id":"obs:expansion-1776:S76-278","kind":"observation","label":"S76-278 · 1776-02-28"}
+{"id":"obs:expansion-1776:S76-279","kind":"observation","label":"S76-279 · 1776-02-28"}
+{"id":"obs:expansion-1776:S76-280","kind":"observation","label":"S76-280 · 1776-02-29"}
+{"id":"obs:expansion-1776:S76-281","kind":"observation","label":"S76-281 · 1776-02-29"}
+{"id":"obs:expansion-1776:S76-282","kind":"observation","label":"S76-282 · 1776-03-02"}
+{"id":"obs:expansion-1776:S76-283","kind":"observation","label":"S76-283 · 1776-03-04"}
+{"id":"obs:expansion-1776:S76-284","kind":"observation","label":"S76-284 · 1776-03-08"}
+{"id":"obs:expansion-1776:S76-285","kind":"observation","label":"S76-285 · 1776-03-09"}
+{"id":"obs:expansion-1776:S76-286","kind":"observation","label":"S76-286 · 1776-03-15"}
+{"id":"obs:expansion-1776:S76-287","kind":"observation","label":"S76-287 · 1776-03-16"}
+{"id":"obs:expansion-1776:S76-288","kind":"observation","label":"S76-288 · 1776-03-18"}
+{"id":"obs:expansion-1776:S76-289","kind":"observation","label":"S76-289 · 1776-03-19"}
+{"id":"obs:expansion-1776:S76-290","kind":"observation","label":"S76-290 · 1776-03-20"}
+{"id":"obs:expansion-1776:S76-291","kind":"observation","label":"S76-291 · 1776-03-20"}
+{"id":"obs:expansion-1776:S76-292","kind":"observation","label":"S76-292 · 1776-03-21"}
+{"id":"obs:expansion-1776:S76-293","kind":"observation","label":"S76-293 · 1776-03-29"}
+{"id":"obs:expansion-1776:S76-294","kind":"observation","label":"S76-294 · 1776-04-05"}
+{"id":"obs:expansion-1776:S76-295","kind":"observation","label":"S76-295 · 1776-04-11"}
+{"id":"obs:expansion-1776:S76-296","kind":"observation","label":"S76-296 · 1776-04-13"}
+{"id":"obs:expansion-1776:S76-297","kind":"observation","label":"S76-297 · 1776-04-13"}
+{"id":"obs:expansion-1776:S76-298","kind":"observation","label":"S76-298 · 1776-04-15"}
+{"id":"obs:expansion-1776:S76-299","kind":"observation","label":"S76-299 · 1776-04-17"}
+{"id":"obs:expansion-1776:S76-300","kind":"observation","label":"S76-300 · 1776-04-18"}
+{"id":"obs:expansion-1776:S76-301","kind":"observation","label":"S76-301 · 1776-04-23"}
+{"id":"obs:expansion-1776:S76-302","kind":"observation","label":"S76-302 · 1776-04-24"}
+{"id":"obs:expansion-1776:S76-303","kind":"observation","label":"S76-303 · 1776-04-24"}
+{"id":"obs:expansion-1776:S76-304","kind":"observation","label":"S76-304 · 1776-04-25"}
+{"id":"obs:expansion-1776:S76-305","kind":"observation","label":"S76-305 · 1776-04-26"}
+{"id":"obs:expansion-1776:S76-306","kind":"observation","label":"S76-306 · 1776-04-27"}
+{"id":"obs:expansion-1776:S76-307","kind":"observation","label":"S76-307 · 1776-04-27"}
+{"id":"obs:expansion-1776:S76-308","kind":"observation","label":"S76-308 · 1776-04-29"}
+{"id":"obs:expansion-1776:S76-309","kind":"observation","label":"S76-309 · 1776-05-02"}
+{"id":"obs:expansion-1776:S76-310","kind":"observation","label":"S76-310 · 1776-05-11"}
+{"id":"obs:expansion-1776:S76-311","kind":"observation","label":"S76-311 · 1776-05-15"}
+{"id":"obs:expansion-1776:S76-312","kind":"observation","label":"S76-312 · 1776-05-16"}
+{"id":"obs:expansion-1776:S76-313","kind":"observation","label":"S76-313 · 1776-07-20"}
+{"id":"obs:expansion-1776:S76-314","kind":"observation","label":"S76-314 · 1776-07-20"}
+{"id":"obs:expansion-1776:S76-315","kind":"observation","label":"S76-315 · 1776-07-22"}
+{"id":"obs:expansion-1776:S76-316","kind":"observation","label":"S76-316 · 1776-07-24"}
+{"id":"obs:expansion-1776:S76-317","kind":"observation","label":"S76-317 · 1776-07-24"}
+{"id":"obs:expansion-1776:S76-318","kind":"observation","label":"S76-318 · 1776-07-29"}
+{"id":"obs:expansion-1776:S76-319","kind":"observation","label":"S76-319 · 1776-08-03"}
+{"id":"obs:expansion-1776:S76-320","kind":"observation","label":"S76-320 · 1776-09-30"}
+{"id":"obs:expansion-1776:S76-321","kind":"observation","label":"S76-321 · 1776-10-02"}
+{"id":"obs:expansion-1776:S76-322","kind":"observation","label":"S76-322 · 1776-10-05"}
+{"id":"obs:expansion-1776:S76-323","kind":"observation","label":"S76-323 · 1776-10-07"}
+{"id":"obs:expansion-1776:S76-324","kind":"observation","label":"S76-324 · 1776-10-11"}
+{"id":"obs:expansion-1776:S76-325","kind":"observation","label":"S76-325 · 1776-10-11"}
+{"id":"obs:expansion-1776:S76-326","kind":"observation","label":"S76-326 · 1776-10-22"}
+{"id":"obs:expansion-1776:S76-327","kind":"observation","label":"S76-327 · 1776-11-14"}
+{"id":"obs:expansion-1776:S76-328","kind":"observation","label":"S76-328 · 1776-11-16"}
+{"id":"obs:expansion-1776:S76-329","kind":"observation","label":"S76-329 · 1776-11-19"}
+{"id":"obs:expansion-1776:S76-330","kind":"observation","label":"S76-330 · 1776-11-20"}
+{"id":"obs:expansion-1776:S76-331","kind":"observation","label":"S76-331 · 1776-11-29"}
+{"id":"obs:expansion-1776:S76-332","kind":"observation","label":"S76-332 · 1776-11-29"}
+{"id":"obs:expansion-1776:S76-333","kind":"observation","label":"S76-333 · 1776-12-10"}
 {"id":"obs:expansion-1797:E01","kind":"observation","label":"E01 · 1797-03-30"}
 {"id":"obs:expansion-1797:E02","kind":"observation","label":"E02 · 1797-10-13"}
 {"id":"obs:expansion-1797:E03","kind":"observation","label":"E03 · 1797-10-16"}

@@ -117,7 +117,7 @@ def validate(release):
         check('Titles are recorded as automatic with no review', tuple(db.execute("SELECT reviewer_kind, independent_review FROM runs WHERE id='run:reuse-titles-v1'").fetchone() or ()) == ('automated', 0))
     # Optional story topics (v0.5.2 on): one row per matched story, reviewed rows name real groups, topics are T01-T24.
     if (release/'derived/story_topics.parquet').exists():
-        st = pq.read_table(release/'derived/story_topics.parquet', columns=['story_id', 'kind', 'top_topic', 'second_topic']).to_pylist()
+        st = pq.read_table(release/'derived/story_topics.parquet', columns=['story_id', 'kind', 'top_topic', 'second_topic', 'run_id']).to_pylist()
         fam_ids = {f['family_id'] for f in pq.read_table(release/'derived/reuse_families.parquet', columns=['family_id']).to_pylist()}
         group_ids = {r[0] for r in db.execute('SELECT id FROM groups')}
         check('Every matched story has exactly one topic row', sorted(r['story_id'] for r in st if r['kind'] == 'matched') == sorted(fam_ids))
@@ -128,7 +128,10 @@ def validate(release):
         if db.execute("SELECT 1 FROM runs WHERE id='run:story-topics-reviewed-v1'").fetchone():
             printed = sorted(r[0] for r in db.execute('SELECT DISTINCT group_id FROM group_publications'))
             check('Every reviewed group with printings has exactly one topic row', sorted(r['story_id'] for r in st if r['kind'] == 'reviewed') == printed)
-            check('Topics of later reviewed groups are recorded as automatic with no review', tuple(db.execute("SELECT reviewer_kind, independent_review FROM runs WHERE id='run:story-topics-reviewed-v1'").fetchone() or ()) == ('automated', 0))
+            # Each later batch of rows has a run of its own (v0.7.2 on: one per ledger); every one must be recorded as automatic.
+            later = {r['run_id'] for r in st if r['kind'] == 'reviewed'} - {'run:story-topics-v1'}
+            check('Topics of later reviewed groups are recorded as automatic with no review',
+                  'run:story-topics-reviewed-v1' in later and all(tuple(db.execute('SELECT reviewer_kind, independent_review FROM runs WHERE id=?', (r,)).fetchone() or ()) == ('automated', 0) for r in later))
     run_kind = lambda run: tuple(db.execute('SELECT reviewer_kind, independent_review FROM runs WHERE id=?', (run,)).fetchone() or ())
     # One printing per story and page (v0.6.0 on): merged appearances, recounted families.
     if (release/'derived/reuse_family_appearances.parquet').exists() and 'blocks_json' in pq.read_schema(release/'derived/reuse_family_appearances.parquet').names:

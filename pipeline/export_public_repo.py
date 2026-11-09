@@ -136,7 +136,7 @@ SCRIPTS = ['audit_dataset.py', 'discover_topics.py', 'recheck_full_corpus.py',
            'build_pulse_explorer.py', 'site_parts.py', 'site.css', 'glass.js', 'radio.js', 'radio-voices.js', 'home.html', 'telescope.html', 'pulse_explorer.html', 'radio.html', 'exhibit.html', 'method.html', 'notes.html',
            'export_public_repo.py']
 ARCHIVE = ['build.py', 'migrate_v0_2_0.py', 'apply_ledger.py', 'apply_corrections.py', 'add_reuse_layer.py', 'add_reuse_titles.py',
-           'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'add_reviewed_topics.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
+           'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'add_reviewed_topics.py', 'set_current.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
 for name in SCRIPTS:
     copy(WORK / name, f'pipeline/{name}')
 for name in ARCHIVE:

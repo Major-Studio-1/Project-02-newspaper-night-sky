@@ -48,7 +48,9 @@ def main(ledger_path, only=None):
     SCANS.mkdir(exist_ok=True)
     manifest_path = evidence/'crop_manifest.json'
     previous = {r['id']: r for r in json.loads(manifest_path.read_text())} if manifest_path.exists() else {}
-    report = []
+    # Several ledgers can share one evidence folder (e.g. two rounds of a year): keep the others' crop records.
+    mine = {o['id'] for o in ledger['observations']}
+    report = [r for r in previous.values() if r['id'] not in mine]
     for o in ledger['observations']:
         if only and o['id'] not in only:
             if o['id'] in previous:
@@ -102,7 +104,7 @@ def main(ledger_path, only=None):
                        'words': nwords, 'crops': crops})
         print(o['id'], o['page_key'], method, 'start', sa and round(sa, 2), 'end', sb and round(sb, 2), 'words', nwords, [c['file'] for c in crops], flush=True)
     order = {o['id']: i for i, o in enumerate(ledger['observations'])}
-    report.sort(key=lambda r: order.get(r['id'], 999))
+    report.sort(key=lambda r: (r['id'] in order, order.get(r['id'], 0)))   # other ledgers' records first, as they were
     manifest_path.write_text(json.dumps(report, indent=2), encoding='utf8')
 
 

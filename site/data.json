@@ -1,5 +1,5 @@
 {
-  "release_version": "0.7.1",
+  "release_version": "0.7.2",
   "reviewed": [
     {
       "year": 1776,
@@ -4289,6 +4289,116 @@
           "child": false
         },
         {
+          "id": "group:barry-takes-edward",
+          "kind": "message_group",
+          "label": "Barry takes the Edward",
+          "definition": "Printings of Captain John Barry's letter to John Hancock or the Marine Committee ('In sight of the Capes of Virginia, April 7, 1776'): he fell in with the sloop Edward, belonging to the Liverpool frigate, and took her after a fight of near two glasses.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-295",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-296",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-298",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-299",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-300",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-305",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-307",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-war",
+          "child": false
+        },
+        {
+          "id": "group:sloop-liberty-gunpowder",
+          "kind": "message_group",
+          "label": "The sloop Liberty's gunpowder taken",
+          "definition": "Printings of a Williamsburg report (13 April 1776) that on 30 March the sloop Liberty of Perth Amboy, from St. Eustatius with 83 barrels of gunpowder, dry goods and medicines, was taken by a British tender off the capes and carried into Norfolk, with what her mate, who escaped, said of British troops at Antigua.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-297",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-301",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-302",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-303",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-304",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-306",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-308",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-309",
+              "roles": [
+                "condensed_report"
+              ]
+            }
+          ],
+          "category": "1776-war",
+          "child": false
+        },
+        {
           "id": "group:hopkins-nassau-letter",
           "kind": "message_group",
           "label": "Hopkins's report from New Providence",
@@ -4396,76 +4506,6 @@
             },
             {
               "id": "obs:expansion-1776:S76-158",
-              "roles": [
-                "report"
-              ]
-            }
-          ],
-          "category": "1776-war",
-          "child": false
-        },
-        {
-          "id": "group:washington-patterson-interview",
-          "kind": "message_group",
-          "label": "Washington meets Colonel Patterson",
-          "definition": "Printings of the account of the interview of 20 July 1776 between General Washington and Colonel Patterson, General Howe's adjutant general.",
-          "members": [
-            {
-              "id": "obs:expansion-1776:S76-147",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-154",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-161",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-164",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-169",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-174",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-194",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-196",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-201",
-              "roles": [
-                "report"
-              ]
-            },
-            {
-              "id": "obs:expansion-1776:S76-203",
               "roles": [
                 "report"
               ]
@@ -4909,6 +4949,76 @@
           "child": true
         },
         {
+          "id": "group:washington-patterson-interview",
+          "kind": "message_group",
+          "label": "Washington meets Colonel Patterson",
+          "definition": "Printings of the account of the interview of 20 July 1776 between General Washington and Colonel Patterson, General Howe's adjutant general.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-147",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-154",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-161",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-164",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-169",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-174",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-194",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-196",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-201",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-203",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-war",
+          "child": false
+        },
+        {
           "id": "group:eighty-eight-battalions",
           "kind": "document_group",
           "label": "Congress orders 88 battalions",
@@ -5025,6 +5135,58 @@
           "child": false
         },
         {
+          "id": "group:gates-carleton-retreat",
+          "kind": "message_group",
+          "label": "Gates on Carleton's retreat",
+          "definition": "Printings of General Gates's letter to the President of Congress (Ticonderoga, 5 November 1776), published by order of Congress, reporting that General Carleton's fleet and army had withdrawn from Crown Point.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-327",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-328",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-329",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-330",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-331",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-332",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-333",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-war",
+          "child": false
+        },
+        {
           "id": "group:king-speech-october-1775",
           "kind": "document_group",
           "label": "The King's speech of October 1775",
@@ -5087,6 +5249,436 @@
           ],
           "category": "1776-britain",
           "child": false
+        },
+        {
+          "id": "group:wilkes-speech-commons",
+          "kind": "document_group",
+          "label": "Wilkes's speech in the Commons",
+          "definition": "Printings of the speech of John Wilkes, Lord Mayor of London, in the House of Commons on the motion for an address to the King at the opening of the session in October 1775, against the war in America.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-251",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-252",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-254",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-255",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-257",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-258",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-266",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-268",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": false
+        },
+        {
+          "id": "group:penn-before-the-lords",
+          "kind": "context_group",
+          "label": "Governor Penn before the Lords",
+          "definition": "Reports of the examination of Richard Penn, former governor of Pennsylvania, who had carried Congress's petition to the King, in the House of Lords in November 1775, as the American papers printed them from February 1776: a short London report, and a long account with the questions and answers. Contains those two groups; the wider coverage is not included.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-259",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-261",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-262",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-263",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-264",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-265",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-267",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-269",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-270",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-271",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-273",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-276",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-280",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-286",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-287",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": false
+        },
+        {
+          "id": "group:penn-examined-report",
+          "kind": "message_group",
+          "label": "A London report: Penn examined",
+          "definition": "Printings of a London paragraph of November 1775: on Friday Governor Penn was examined in the Upper Assembly and 'gave very satisfactory answers', and a member then proposed Congress's last petition to the King as the basis of an accommodation.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-259",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-261",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-262",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-263",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-264",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-265",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-267",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": true
+        },
+        {
+          "id": "group:penn-examination-lords",
+          "kind": "message_group",
+          "label": "The Lords examine Governor Penn",
+          "definition": "Printings of a London account of the House of Lords on 10 November 1775: the examination of Richard Penn, with the questions put to him and his answers, and the Duke of Richmond's motion grounded on them.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-269",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-270",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-271",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-273",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-276",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-280",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-286",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-287",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": true
+        },
+        {
+          "id": "group:prohibitory-bill-commons",
+          "kind": "context_group",
+          "label": "The Prohibitory bill in the Commons",
+          "definition": "Reports from London of the bill to prohibit all trade and intercourse with the colonies (the Prohibitory Act) in the House of Commons in December 1775, as printed in February and March 1776: the debate in committee, which printed the clause on captures with blanks for its dates, and the clause as settled. Contains those two groups; the wider coverage is not included.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-272",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-274",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-275",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-277",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-278",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-279",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-281",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-282",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-283",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-284",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-285",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": false
+        },
+        {
+          "id": "group:prohibitory-bill-committee",
+          "kind": "message_group",
+          "label": "The Commons in committee on the bill",
+          "definition": "Printings of a London report (6 December 1775) of the House of Commons in committee on the bill to prohibit all trade and intercourse with the colonies: the divisions, Lord North's remark on the clause that gives American ships time, and that clause printed with blanks for its dates, 'that the friends of America may have an opportunity' to have them filled with distant ones.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-272",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-274",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-275",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-281",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-284",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-285",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": true
+        },
+        {
+          "id": "group:prohibitory-clause-settled",
+          "kind": "message_group",
+          "label": "The clause on captures settled",
+          "definition": "Printings of a London report (8 December 1775) that the clause of the bill which caused the greatest debate was settled: American ships to be captured from 1 January 1776, and all ships trading with the colonies from 1 June 1776.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-277",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-278",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-279",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-282",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-283",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": true
         },
         {
           "id": "group:dublin-paper-naval-force",
@@ -5342,6 +5934,326 @@
             }
           ],
           "category": "1776-britain",
+          "child": false
+        },
+        {
+          "id": "group:howe-declarations-1776",
+          "kind": "context_group",
+          "label": "The Howe brothers' declarations",
+          "definition": "The declarations of Lord Howe and General William Howe as the King's commissioners for restoring peace, as the American papers printed them: Lord Howe's declaration of June 1776, published by order of Congress in July, and the brothers' declaration of 19 September. Contains those two groups; their declaration of 14 July (printed in the New-York Gazette) and their proclamation of 30 November (printed in the Freeman's Journal) are not included.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-313",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-314",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-315",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-316",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-317",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-318",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-319",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-320",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-321",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-322",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-323",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-324",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-325",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-326",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": false
+        },
+        {
+          "id": "group:howe-declaration-published-by-congress",
+          "kind": "document_group",
+          "label": "Lord Howe's declaration, published by Congress",
+          "definition": "Printings of Congress's resolution of 19 July 1776 ordering that Lord Howe's circular letter to the former royal governors (20 June 1776) and the declaration it enclosed be published, 'that the good people of these United States may be informed of what nature are the Commissioners, and what the terms', followed by the letter and the declaration offering pardons.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-313",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-314",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-315",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-316",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-317",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-318",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-319",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": true
+        },
+        {
+          "id": "group:howe-declaration-september",
+          "kind": "document_group",
+          "label": "The declaration of 19 September",
+          "definition": "Printings of the declaration of Lord Howe and General William Howe, the King's commissioners, of 19 September 1776: Congress had disavowed every purpose of reconciliation, the King would revise his instructions and the acts complained of, and the inhabitants were invited to consider whether to trust their fate to Congress.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-320",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-321",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-322",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-323",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-324",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-325",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-326",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1776-britain",
+          "child": true
+        },
+        {
+          "id": "group:congress-bills-of-credit",
+          "kind": "document_group",
+          "label": "Congress on refusing Continental bills",
+          "definition": "Printings of Congress's resolution of 11 January 1776 that anyone who refused the Continental bills of credit, or discouraged their circulation, should be treated as an enemy of his country.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-247",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-248",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-249",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-250",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-253",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-256",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-260",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1776-government",
+          "child": false
+        },
+        {
+          "id": "group:congress-fast-day-1776",
+          "kind": "document_group",
+          "label": "Congress's fast day of 17 May",
+          "definition": "Printings of Congress's resolution of 16 March 1776 recommending that Friday 17 May be kept throughout the colonies as a day of humiliation, fasting and prayer. Includes a one-sentence notice of it and a New York committee's notice that quotes it.",
+          "members": [
+            {
+              "id": "obs:expansion-1776:S76-288",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-289",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-290",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-291",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-292",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-293",
+              "roles": [
+                "condensed_report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-294",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-310",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-311",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1776:S76-312",
+              "roles": [
+                "quoted_document"
+              ]
+            }
+          ],
+          "category": "1776-government",
           "child": false
         },
         {
@@ -6122,12 +7034,15 @@
           "stories": [
             "group:quebec-siege-1776",
             "group:boston-evacuation-letter",
+            "group:barry-takes-edward",
+            "group:sloop-liberty-gunpowder",
             "group:hopkins-nassau-letter",
             "group:campbell-captured-letter",
-            "group:washington-patterson-interview",
             "group:hudson-warships-1776",
+            "group:washington-patterson-interview",
             "group:eighty-eight-battalions",
-            "group:congress-intelligence-october-1776"
+            "group:congress-intelligence-october-1776",
+            "group:gates-carleton-retreat"
           ]
         },
         {
@@ -6135,16 +7050,22 @@
           "label": "Britain and Europe",
           "stories": [
             "group:king-speech-october-1775",
+            "group:wilkes-speech-commons",
+            "group:penn-before-the-lords",
+            "group:prohibitory-bill-commons",
             "group:dublin-paper-naval-force",
             "group:ethan-allen-cork",
             "group:london-address-to-king-1776",
-            "group:king-speech-may-1776"
+            "group:king-speech-may-1776",
+            "group:howe-declarations-1776"
           ]
         },
         {
           "id": "1776-government",
           "label": "Independence and American government",
           "stories": [
+            "group:congress-bills-of-credit",
+            "group:congress-fast-day-1776",
             "group:congress-opens-ports",
             "group:rhode-island-renunciation",
             "group:congress-may-15-resolution",
@@ -6172,6 +7093,20 @@
             "obs:expansion-1776:S76-007",
             "obs:expansion-1776:S76-009",
             "obs:expansion-1776:S76-010"
+          ]
+        },
+        {
+          "id": "group:congress-bills-of-credit",
+          "label": "Congress on refusing Continental bills",
+          "category": "1776-government",
+          "members": [
+            "obs:expansion-1776:S76-247",
+            "obs:expansion-1776:S76-248",
+            "obs:expansion-1776:S76-249",
+            "obs:expansion-1776:S76-250",
+            "obs:expansion-1776:S76-253",
+            "obs:expansion-1776:S76-256",
+            "obs:expansion-1776:S76-260"
           ]
         },
         {
@@ -6206,6 +7141,78 @@
           ]
         },
         {
+          "id": "group:wilkes-speech-commons",
+          "label": "Wilkes's speech in the Commons",
+          "category": "1776-britain",
+          "members": [
+            "obs:expansion-1776:S76-251",
+            "obs:expansion-1776:S76-252",
+            "obs:expansion-1776:S76-254",
+            "obs:expansion-1776:S76-255",
+            "obs:expansion-1776:S76-257",
+            "obs:expansion-1776:S76-258",
+            "obs:expansion-1776:S76-266",
+            "obs:expansion-1776:S76-268"
+          ]
+        },
+        {
+          "id": "group:penn-before-the-lords",
+          "label": "Governor Penn before the Lords",
+          "category": "1776-britain",
+          "members": [
+            "obs:expansion-1776:S76-259",
+            "obs:expansion-1776:S76-261",
+            "obs:expansion-1776:S76-262",
+            "obs:expansion-1776:S76-263",
+            "obs:expansion-1776:S76-264",
+            "obs:expansion-1776:S76-265",
+            "obs:expansion-1776:S76-267",
+            "obs:expansion-1776:S76-269",
+            "obs:expansion-1776:S76-270",
+            "obs:expansion-1776:S76-271",
+            "obs:expansion-1776:S76-273",
+            "obs:expansion-1776:S76-276",
+            "obs:expansion-1776:S76-280",
+            "obs:expansion-1776:S76-286",
+            "obs:expansion-1776:S76-287"
+          ]
+        },
+        {
+          "id": "group:prohibitory-bill-commons",
+          "label": "The Prohibitory bill in the Commons",
+          "category": "1776-britain",
+          "members": [
+            "obs:expansion-1776:S76-272",
+            "obs:expansion-1776:S76-274",
+            "obs:expansion-1776:S76-275",
+            "obs:expansion-1776:S76-277",
+            "obs:expansion-1776:S76-278",
+            "obs:expansion-1776:S76-279",
+            "obs:expansion-1776:S76-281",
+            "obs:expansion-1776:S76-282",
+            "obs:expansion-1776:S76-283",
+            "obs:expansion-1776:S76-284",
+            "obs:expansion-1776:S76-285"
+          ]
+        },
+        {
+          "id": "group:congress-fast-day-1776",
+          "label": "Congress's fast day of 17 May",
+          "category": "1776-government",
+          "members": [
+            "obs:expansion-1776:S76-288",
+            "obs:expansion-1776:S76-289",
+            "obs:expansion-1776:S76-290",
+            "obs:expansion-1776:S76-291",
+            "obs:expansion-1776:S76-292",
+            "obs:expansion-1776:S76-293",
+            "obs:expansion-1776:S76-294",
+            "obs:expansion-1776:S76-310",
+            "obs:expansion-1776:S76-311",
+            "obs:expansion-1776:S76-312"
+          ]
+        },
+        {
           "id": "group:boston-evacuation-letter",
           "label": "Boston evacuated",
           "category": "1776-war",
@@ -6233,6 +7240,35 @@
             "obs:expansion-1776:S76-040",
             "obs:expansion-1776:S76-042",
             "obs:expansion-1776:S76-045"
+          ]
+        },
+        {
+          "id": "group:barry-takes-edward",
+          "label": "Barry takes the Edward",
+          "category": "1776-war",
+          "members": [
+            "obs:expansion-1776:S76-295",
+            "obs:expansion-1776:S76-296",
+            "obs:expansion-1776:S76-298",
+            "obs:expansion-1776:S76-299",
+            "obs:expansion-1776:S76-300",
+            "obs:expansion-1776:S76-305",
+            "obs:expansion-1776:S76-307"
+          ]
+        },
+        {
+          "id": "group:sloop-liberty-gunpowder",
+          "label": "The sloop Liberty's gunpowder taken",
+          "category": "1776-war",
+          "members": [
+            "obs:expansion-1776:S76-297",
+            "obs:expansion-1776:S76-301",
+            "obs:expansion-1776:S76-302",
+            "obs:expansion-1776:S76-303",
+            "obs:expansion-1776:S76-304",
+            "obs:expansion-1776:S76-306",
+            "obs:expansion-1776:S76-308",
+            "obs:expansion-1776:S76-309"
           ]
         },
         {
@@ -6418,6 +7454,27 @@
           ]
         },
         {
+          "id": "group:howe-declarations-1776",
+          "label": "The Howe brothers' declarations",
+          "category": "1776-britain",
+          "members": [
+            "obs:expansion-1776:S76-313",
+            "obs:expansion-1776:S76-314",
+            "obs:expansion-1776:S76-315",
+            "obs:expansion-1776:S76-316",
+            "obs:expansion-1776:S76-317",
+            "obs:expansion-1776:S76-318",
+            "obs:expansion-1776:S76-319",
+            "obs:expansion-1776:S76-320",
+            "obs:expansion-1776:S76-321",
+            "obs:expansion-1776:S76-322",
+            "obs:expansion-1776:S76-323",
+            "obs:expansion-1776:S76-324",
+            "obs:expansion-1776:S76-325",
+            "obs:expansion-1776:S76-326"
+          ]
+        },
+        {
           "id": "group:hudson-warships-1776",
           "label": "British warships in the Hudson",
           "category": "1776-war",
@@ -6556,6 +7613,20 @@
             "obs:expansion-1776:S76-244",
             "obs:expansion-1776:S76-245",
             "obs:expansion-1776:S76-246"
+          ]
+        },
+        {
+          "id": "group:gates-carleton-retreat",
+          "label": "Gates on Carleton's retreat",
+          "category": "1776-war",
+          "members": [
+            "obs:expansion-1776:S76-327",
+            "obs:expansion-1776:S76-328",
+            "obs:expansion-1776:S76-329",
+            "obs:expansion-1776:S76-330",
+            "obs:expansion-1776:S76-331",
+            "obs:expansion-1776:S76-332",
+            "obs:expansion-1776:S76-333"
           ]
         }
       ],
@@ -7091,6 +8162,261 @@
           "note": "Same item as the other printings."
         },
         {
+          "id": "obs:expansion-1776:S76-295",
+          "legacy_id": "S76-295",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-04-11:1:2",
+          "issue_id": "issue:sn83025894:1776-04-11:1",
+          "date": "1776-04-11",
+          "page": 2,
+          "excerpt": "In sight of the Capes of Virginia, April 7, 1776. \"Gentlemen, \"I have the pleasure to acquaint you, that at one P. M. this day I fell in with the sloop Edward, belonging to the Liverpool frigate. She engaged us near two glasses. They killed two of our men, and wounded two more. We shattered her in a terrible manner, as you will see.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-04-11_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-295.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Captain John Barry writes from off the Capes of Virginia that he has fought and taken the sloop Edward, a tender of the Liverpool frigate.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-296",
+          "legacy_id": "S76-296",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-04-13:1:3",
+          "issue_id": "issue:sn83025898:1776-04-13:1",
+          "date": "1776-04-13",
+          "page": 3,
+          "excerpt": "In sight of the Capes of Virginia, April 7, 1776. GENTLEMEN, \"I have the pleasure to acquaint you, that at one P. M. this day, I fell in with the sloop Edward, belonging to the Liverpool frigate. She engaged us near two glasses. They killed two of our men, and wounded two more. We shattered her in a terrible manner as you will see.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-04-13_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-296.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints Barry's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-298",
+          "legacy_id": "S76-298",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-04-15:1:5",
+          "issue_id": "issue:sn83021126:1776-04-15:1",
+          "date": "1776-04-15",
+          "page": 5,
+          "excerpt": "In sight of the Capes of Virginia, April 7, 1776. Gentlemen, \"I have the pleasure to acquaint you, that at one P.M. this day I fell in with the sloop Edward, belonging to the Liverpool frigate. She engaged us near two glasses. They killed two of our men, and wounded two more. We shattered her in a terrible manner, as you will see.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-04-15_1_5.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-298.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints Barry's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-299",
+          "legacy_id": "S76-299",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-04-17:1:3",
+          "issue_id": "issue:sn84026371:1776-04-17:1",
+          "date": "1776-04-17",
+          "page": 3,
+          "excerpt": "In fight of the Capes of Virginia, April 7, 1776. GENTLEMEN, \"I have the pleasure to acquaint you, that at one P. M. this day I fell in with the sloop Edward, belonging to the Liverpool frigate. She engaged us near two glass. They killed two of our men, and wounded two more. We shattered her in a terrible manner as you will see.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-04-17_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-299.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints Barry's letter.",
+          "note": "RevX reads 'In fight' where the paper prints 'In sight'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-300",
+          "legacy_id": "S76-300",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-04-18:1:2",
+          "issue_id": "issue:sn83030135:1776-04-18:1",
+          "date": "1776-04-18",
+          "page": 2,
+          "excerpt": "In fight of the Capes of Virginia, April 7, 1776. GENTLEMEN, \"I have the pleasure to acquaint you, that at one P. M. this day, I fell in with the sloop Edward, belonging to the Liverpool frigate. She engaged us near two glasses. They killed two of our men, and wounded two more. We shattered her in a terrible manner, as you will see.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-04-18_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-300.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints Barry's letter.",
+          "note": "RevX reads 'In fight' where the paper prints 'In sight'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-305",
+          "legacy_id": "S76-305",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-04-26:1:6",
+          "issue_id": "issue:sn84024742:1776-04-26:1",
+          "date": "1776-04-26",
+          "page": 6,
+          "excerpt": "P H I L A D E L P H I A, April 11. In sight of the capes of VIRGINIA, April 7, 1776. GENTLEMEN, I HAVE the pleasure to acquaint you, that at 1 P.M. this day, I fell in with the sloop Edward , belonging to the Liverpool frigate. She engaged us near two glasses.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-04-26_1_6.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-305.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints Barry's letter.",
+          "note": "Printed under 'PHILADELPHIA, April 11.', with 'at 1 P. M.' in figures."
+        },
+        {
+          "id": "obs:expansion-1776:S76-307",
+          "legacy_id": "S76-307",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-04-27:1:4",
+          "issue_id": "issue:sn84024739:1776-04-27:1",
+          "date": "1776-04-27",
+          "page": 4,
+          "excerpt": "In sight of the capes of Virginia, April 7, 1776.\" \"Gentlemen, I HAVE the pleasure to acquaint you, that at one P.M. this day, I fell in with the sloop Edward, belonging to the Liverpool frigate. She engaged us near two glasses. They killed two of our men and wounded two more. We shattered her in a terrible manner, as you will see.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-04-27_1_4.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-307.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints Barry's letter.",
+          "note": "Printed under 'PHILADELPHIA, April 11.' Spells 'Liverpool frigat'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-297",
+          "legacy_id": "S76-297",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-04-13:1:3",
+          "issue_id": "issue:sn84024739:1776-04-13:1",
+          "date": "1776-04-13",
+          "page": 3,
+          "excerpt": "WILLIAMSBURG, April 13. ON Sunday the 30th ult. the sloop Liberty, of Perth Amboy, from St. Eustatia, with 83 barrels of gunpowder, 21 bales of dry goods, and two hogsheads of medicines, was taken by a tender, off the capes of Philadelphia, and carried into Norfolk. The Captain, and three passengers, are made close prisoners. The mate escaped; he says he was at Antigua, where were 7000 British troops, making preparations to sail to some part of the continent;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-04-13_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-297.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A Williamsburg report: the sloop Liberty, from St. Eustatius with 83 barrels of gunpowder, has been taken by a tender and carried into Norfolk.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-301",
+          "legacy_id": "S76-301",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-04-23:1:2",
+          "issue_id": "issue:sn83025894:1776-04-23:1",
+          "date": "1776-04-23",
+          "page": 2,
+          "excerpt": "On Sunday the 30th ult. the sloop Liberty, of Perth Amboy, from St. Eustatia, with eighty three barrels of gunpowder, twenty-one bales of dry goods, and two hogheads of medicines, was taken by a tender, off the capes of Philadelphia, and carried into Norfolk. The Captain, and three passengers, are made close prisoners. The mate escaped; he says he was at Antigua, where were seven regiments of British troops, making preparations to sail to some part of the continent;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-04-23_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-301.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Evening Post prints the report.",
+          "note": "Gives the numbers in words, and says the mate saw 'seven regiments of British troops' at Antigua, where the Williamsburg report has 7000."
+        },
+        {
+          "id": "obs:expansion-1776:S76-302",
+          "legacy_id": "S76-302",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-04-24:1:3",
+          "issue_id": "issue:sn84026371:1776-04-24:1",
+          "date": "1776-04-24",
+          "page": 3,
+          "excerpt": "On Sunday the 30th ult. the sloop Liberty, of Perth Amboy, from St. Eustatia, with 83 barrels of gunpowder, 21 bales of dry goods, and two hogheads of medicines, was taken by a tender, off the capes of Philadelphia, and carried into Norfolk. The Captain, and three passengers, are made close prisoners. The mate escaped; he says he was at Antigua, where were 7000 British troops, making preparations to sail to some part of the continent.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-04-24_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-302.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the report.",
+          "note": "Ends the report at 'continent', without its last part, on the Roebuck."
+        },
+        {
+          "id": "obs:expansion-1776:S76-303",
+          "legacy_id": "S76-303",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-04-24:1:2",
+          "issue_id": "issue:sn85047530:1776-04-24:1",
+          "date": "1776-04-24",
+          "page": 2,
+          "excerpt": "On Sunday the 30th ult. the sloop Liberty, of Perth Amboy, from St. Eustacia, with 83 barrels of gun-powder, 22 bales of dry goods, and 2 hogheads of medicines, was taken by a tender off the capes of Philadelphia, and carried into Norfolk. The Capt. and three passengers, are made close prisoners. The mate escaped; he says he was at Antigua, where were 700 British troops, making preparations to sail to some part of the Continent;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-04-24_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-303.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints the report.",
+          "note": "Prints '700 British troops' (the other papers 7000), 'St. Eustacia' and '2 hogsheads'. RevX reads '22 bales' where the paper prints 21."
+        },
+        {
+          "id": "obs:expansion-1776:S76-304",
+          "legacy_id": "S76-304",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-04-25:1:3",
+          "issue_id": "issue:sn83030135:1776-04-25:1",
+          "date": "1776-04-25",
+          "page": 3,
+          "excerpt": "WILLIAMSBURG, April 13. On Sunday the 30th ult. the sloop Liberty, of Perth-Amboy, from St. Eustatia, with 83 barrels of gun-powder, 21 bales of dry goods, and two hogheads of medicines, was taken by a tender, off the Capes of Philadelphia, and carried into Norfolk. The Captain and three passengers are made close prisoners. The mate escaped; he says he was at Antigua, where were 7000 British troops, making preparations to fail to some part of the continent;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-04-25_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-304.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints the report.",
+          "note": "Prints the whole report, with 'which he supposes was the Mercury'. RevX reads 'fail' where the paper prints 'sail'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-306",
+          "legacy_id": "S76-306",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-04-27:1:3",
+          "issue_id": "issue:sn83025898:1776-04-27:1",
+          "date": "1776-04-27",
+          "page": 3,
+          "excerpt": "On Sunday the 30th ult. the sloop Liberty, of Perth Amboy, from St. Eustatia, with 83 barrels of gunpowder, 21 bales of dry goods, and two hogheads of medicines, was taken by a tender, off the capes of Philadelphia, and carried into Norfolk. The Captain, and three passengers, are made close prisoners. The mate escaped; he says he was at Antigua, where were 7000 British troops, making preparations to sail to some part of the continent.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-04-27_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-306.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints the report.",
+          "note": "Ends the report at 'continent', without its last part, on the Roebuck."
+        },
+        {
+          "id": "obs:expansion-1776:S76-308",
+          "legacy_id": "S76-308",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-04-29:1:3",
+          "issue_id": "issue:sn83021126:1776-04-29:1",
+          "date": "1776-04-29",
+          "page": 3,
+          "excerpt": "On Sunday the 30th ult. the sloop Liberty, of Perth Amboy, from St. Eustatia, with 83 barrels of gunpowder, 21 bales of dry goods, and 2 hogheads of medicines, was taken by a tender off the Capes of Philadelphia, and carried into Norfolk. The Captain and three passengers are made close prisoners. The Mate escaped; he says he was at Antigua, where were 7000 British troops, making preparations to fail to some part of the Continent.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-04-29_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-308.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the report.",
+          "note": "Ends the report at 'Continent', without its last part, on the Roebuck. RevX reads 'fail' where the paper prints 'sail'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-309",
+          "legacy_id": "S76-309",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-05-02:1:3",
+          "issue_id": "issue:sn83030135:1776-05-02:1",
+          "date": "1776-05-02",
+          "page": 3,
+          "excerpt": "The 30th of March last, a sloop called the Liberty, belonging to Perth-Amboy, from St. Eustatia, with 83 barrels of gun-powder, 21 bales of dry goods, and two hogheads of medicines, was taken by a tender off the Capes of Delaware, and sent into Norfolk.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-05-02_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-309.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints the report.",
+          "note": "A shorter, reworded report a week after this paper printed the Williamsburg report; it says 'off the Capes of Delaware'."
+        },
+        {
           "id": "obs:expansion-1776:S76-037",
           "legacy_id": "S76-037",
           "node": "sn83025894",
@@ -7361,176 +8687,6 @@
           "transcription": "RevX",
           "summary": "The American Gazette prints Campbell's letter.",
           "note": "Dateline 'PHILADELPHIA, JULY 5.', and spells 'harbor'."
-        },
-        {
-          "id": "obs:expansion-1776:S76-147",
-          "legacy_id": "S76-147",
-          "node": "sn83025894",
-          "page_id": "page:sn83025894:1776-07-27:1:3",
-          "issue_id": "issue:sn83025894:1776-07-27:1",
-          "date": "1776-07-27",
-          "page": 3,
-          "excerpt": "PHILADELPHIA, July 27. The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant-General of the army under General Howe, July 20, 1776. A FTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-07-27_1_3.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-147.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "An account of what passed when Colonel Patterson, General Howe's adjutant general, met Washington on 20 July.",
-          "note": "Earliest printing found."
-        },
-        {
-          "id": "obs:expansion-1776:S76-154",
-          "legacy_id": "S76-154",
-          "node": "sn83021126",
-          "page_id": "page:sn83021126:1776-07-29:1:3",
-          "issue_id": "issue:sn83021126:1776-07-29:1",
-          "date": "1776-07-29",
-          "page": 3,
-          "excerpt": "The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-07-29_1_3.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-154.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "Dunlap's Pennsylvania Packet prints the account.",
-          "note": "No dateline; follows the signature of the previous item."
-        },
-        {
-          "id": "obs:expansion-1776:S76-161",
-          "legacy_id": "S76-161",
-          "node": "sn84026371",
-          "page_id": "page:sn84026371:1776-07-31:1:3",
-          "issue_id": "issue:sn84026371:1776-07-31:1",
-          "date": "1776-07-31",
-          "page": 3,
-          "excerpt": "PHILADELPHIA, July 31. The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant-General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-07-31_1_3.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-161.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Pennsylvania Gazette prints the account.",
-          "note": "Dateline 'PHILADELPHIA, July 31.'"
-        },
-        {
-          "id": "obs:expansion-1776:S76-164",
-          "legacy_id": "S76-164",
-          "node": "sn85047530",
-          "page_id": "page:sn85047530:1776-07-31:1:1",
-          "issue_id": "issue:sn85047530:1776-07-31:1",
-          "date": "1776-07-31",
-          "page": 1,
-          "excerpt": "The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-07-31_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-164.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Pennsylvania Journal prints the account.",
-          "note": "No dateline."
-        },
-        {
-          "id": "obs:expansion-1776:S76-169",
-          "legacy_id": "S76-169",
-          "node": "sn83025898",
-          "page_id": "page:sn83025898:1776-08-03:1:2",
-          "issue_id": "issue:sn83025898:1776-08-03:1",
-          "date": "1776-08-03",
-          "page": 2,
-          "excerpt": "The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-08-03_1_2.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-169.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Pennsylvania Ledger prints the account.",
-          "note": "Under a 'PHILADELPHIA.' heading with no date."
-        },
-        {
-          "id": "obs:expansion-1776:S76-174",
-          "legacy_id": "S76-174",
-          "node": "sn83030493",
-          "page_id": "page:sn83030493:1776-08-05:1:1",
-          "issue_id": "issue:sn83030493:1776-08-05:1",
-          "date": "1776-08-05",
-          "page": 1,
-          "excerpt": "PHILADELPHIA, July 27. The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant-General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030493/1776-08-05_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-174.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The New-York Gazette prints the account.",
-          "note": "Same item as the other printings."
-        },
-        {
-          "id": "obs:expansion-1776:S76-194",
-          "legacy_id": "S76-194",
-          "node": "sn83020482",
-          "page_id": "page:sn83020482:1776-08-15:1:4",
-          "issue_id": "issue:sn83020482:1776-08-15:1",
-          "date": "1776-08-15",
-          "page": 4,
-          "excerpt": "NEW-YORK, August 5. The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83020482/1776-08-15_1_4.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-194.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The New-England Chronicle prints the account.",
-          "note": "Dateline 'NEW-YORK, August 5.'"
-        },
-        {
-          "id": "obs:expansion-1776:S76-196",
-          "legacy_id": "S76-196",
-          "node": "sn84024742",
-          "page_id": "page:sn84024742:1776-08-16:1:1",
-          "issue_id": "issue:sn84024742:1776-08-16:1",
-          "date": "1776-08-16",
-          "page": 1,
-          "excerpt": "PHILADELPHIA, July 27. The following is an exact state of what passed at the interview between his Excellency General WASHINGTON and Colonel PATTERSON, Adjutant-General of the army under General HOWE, July 25, 1776. AFTER usual compliments, in which, as well as through the whole conversation, col. Patterson addressed general Washington by the title of Excellency, col.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-08-16_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-196.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "Purdie's Virginia Gazette prints the account.",
-          "note": "RevX dates the interview July 25; the paper prints July 20."
-        },
-        {
-          "id": "obs:expansion-1776:S76-201",
-          "legacy_id": "S76-201",
-          "node": "sn83025583",
-          "page_id": "page:sn83025583:1776-08-17:1:1",
-          "issue_id": "issue:sn83025583:1776-08-17:1",
-          "date": "1776-08-17",
-          "page": 1,
-          "excerpt": "The following is an exact state of what passed at the interview between his Excellency General Washington and Col. Patterson, Adjutant-General of the army under General Howe, July 20, 1776. After usual compliments, in which, as through the whole conversation, Col. Patterson addressed General Washington by the title of Excellency, Col.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025583/1776-08-17_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-201.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Freeman's Journal prints the account.",
-          "note": "Prints 'in which, as through the whole conversation', without 'well as', under a 'PHILADELPHIA' heading with no date."
-        },
-        {
-          "id": "obs:expansion-1776:S76-203",
-          "legacy_id": "S76-203",
-          "node": "sn84024739",
-          "page_id": "page:sn84024739:1776-08-17:1:1",
-          "issue_id": "issue:sn84024739:1776-08-17:1",
-          "date": "1776-08-17",
-          "page": 1,
-          "excerpt": "PHILADELPHIA, July 27. The following is an exact state of what passed at the interview between his Excellency General WASHINGTON and Colonel PATTERSON, Adjutant General of the army under General HOWE, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Colonel Patterson addressed General Washington by the title of Excellency, Col.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-08-17_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1776__evidence__S76-203.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "Dixon and Hunter's Virginia Gazette prints the account.",
-          "note": "Same item as the other printings."
         },
         {
           "id": "obs:expansion-1776:S76-144",
@@ -8078,6 +9234,176 @@
           "note": "Same item as the other printings."
         },
         {
+          "id": "obs:expansion-1776:S76-147",
+          "legacy_id": "S76-147",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-07-27:1:3",
+          "issue_id": "issue:sn83025894:1776-07-27:1",
+          "date": "1776-07-27",
+          "page": 3,
+          "excerpt": "PHILADELPHIA, July 27. The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant-General of the army under General Howe, July 20, 1776. A FTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-07-27_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-147.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "An account of what passed when Colonel Patterson, General Howe's adjutant general, met Washington on 20 July.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-154",
+          "legacy_id": "S76-154",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-07-29:1:3",
+          "issue_id": "issue:sn83021126:1776-07-29:1",
+          "date": "1776-07-29",
+          "page": 3,
+          "excerpt": "The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-07-29_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-154.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the account.",
+          "note": "No dateline; follows the signature of the previous item."
+        },
+        {
+          "id": "obs:expansion-1776:S76-161",
+          "legacy_id": "S76-161",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-07-31:1:3",
+          "issue_id": "issue:sn84026371:1776-07-31:1",
+          "date": "1776-07-31",
+          "page": 3,
+          "excerpt": "PHILADELPHIA, July 31. The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant-General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-07-31_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-161.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the account.",
+          "note": "Dateline 'PHILADELPHIA, July 31.'"
+        },
+        {
+          "id": "obs:expansion-1776:S76-164",
+          "legacy_id": "S76-164",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-07-31:1:1",
+          "issue_id": "issue:sn85047530:1776-07-31:1",
+          "date": "1776-07-31",
+          "page": 1,
+          "excerpt": "The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-07-31_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-164.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints the account.",
+          "note": "No dateline."
+        },
+        {
+          "id": "obs:expansion-1776:S76-169",
+          "legacy_id": "S76-169",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-08-03:1:2",
+          "issue_id": "issue:sn83025898:1776-08-03:1",
+          "date": "1776-08-03",
+          "page": 2,
+          "excerpt": "The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-08-03_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-169.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints the account.",
+          "note": "Under a 'PHILADELPHIA.' heading with no date."
+        },
+        {
+          "id": "obs:expansion-1776:S76-174",
+          "legacy_id": "S76-174",
+          "node": "sn83030493",
+          "page_id": "page:sn83030493:1776-08-05:1:1",
+          "issue_id": "issue:sn83030493:1776-08-05:1",
+          "date": "1776-08-05",
+          "page": 1,
+          "excerpt": "PHILADELPHIA, July 27. The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant-General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen. Washington by the title of Excellency, Col.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030493/1776-08-05_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-174.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Gazette prints the account.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-194",
+          "legacy_id": "S76-194",
+          "node": "sn83020482",
+          "page_id": "page:sn83020482:1776-08-15:1:4",
+          "issue_id": "issue:sn83020482:1776-08-15:1",
+          "date": "1776-08-15",
+          "page": 4,
+          "excerpt": "NEW-YORK, August 5. The following is an exact state of what passed at the interview between his Excellency General Washington and Colonel Patterson, Adjutant General of the army under General Howe, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Col. Patterson addressed Gen.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83020482/1776-08-15_1_4.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-194.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-England Chronicle prints the account.",
+          "note": "Dateline 'NEW-YORK, August 5.'"
+        },
+        {
+          "id": "obs:expansion-1776:S76-196",
+          "legacy_id": "S76-196",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-08-16:1:1",
+          "issue_id": "issue:sn84024742:1776-08-16:1",
+          "date": "1776-08-16",
+          "page": 1,
+          "excerpt": "PHILADELPHIA, July 27. The following is an exact state of what passed at the interview between his Excellency General WASHINGTON and Colonel PATTERSON, Adjutant-General of the army under General HOWE, July 25, 1776. AFTER usual compliments, in which, as well as through the whole conversation, col. Patterson addressed general Washington by the title of Excellency, col.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-08-16_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-196.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the account.",
+          "note": "RevX dates the interview July 25; the paper prints July 20."
+        },
+        {
+          "id": "obs:expansion-1776:S76-201",
+          "legacy_id": "S76-201",
+          "node": "sn83025583",
+          "page_id": "page:sn83025583:1776-08-17:1:1",
+          "issue_id": "issue:sn83025583:1776-08-17:1",
+          "date": "1776-08-17",
+          "page": 1,
+          "excerpt": "The following is an exact state of what passed at the interview between his Excellency General Washington and Col. Patterson, Adjutant-General of the army under General Howe, July 20, 1776. After usual compliments, in which, as through the whole conversation, Col. Patterson addressed General Washington by the title of Excellency, Col.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025583/1776-08-17_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-201.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Freeman's Journal prints the account.",
+          "note": "Prints 'in which, as through the whole conversation', without 'well as', under a 'PHILADELPHIA' heading with no date."
+        },
+        {
+          "id": "obs:expansion-1776:S76-203",
+          "legacy_id": "S76-203",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-08-17:1:1",
+          "issue_id": "issue:sn84024739:1776-08-17:1",
+          "date": "1776-08-17",
+          "page": 1,
+          "excerpt": "PHILADELPHIA, July 27. The following is an exact state of what passed at the interview between his Excellency General WASHINGTON and Colonel PATTERSON, Adjutant General of the army under General HOWE, July 20, 1776. AFTER usual compliments, in which, as well as through the whole conversation, Colonel Patterson addressed General Washington by the title of Excellency, Col.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-08-17_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-203.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints the account.",
+          "note": "Same item as the other printings."
+        },
+        {
           "id": "obs:expansion-1776:S76-225",
           "legacy_id": "S76-225",
           "node": "sn83021126",
@@ -8351,6 +9677,125 @@
           "note": "Prints 'October 31st', where the other printings have October 21."
         },
         {
+          "id": "obs:expansion-1776:S76-327",
+          "legacy_id": "S76-327",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-11-14:1:4",
+          "issue_id": "issue:sn83025894:1776-11-14:1",
+          "date": "1776-11-14",
+          "page": 4,
+          "excerpt": "In CONGRESS, November 14, 1776. Copy of a letter to the President from Major Gen. Gates, dated at Ticonderoga, November 5, 1776. “ Sir—I have the honor to congratulate the Congress upon the retreat of Lieutenant-General Sir Guy Carleton, with the fleet and army under his command, from Crownpoint.— Saturday last, the works being put",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-11-14_1_4.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-327.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "General Gates writes from Ticonderoga that Carleton's fleet and army have withdrawn from Crown Point.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-328",
+          "legacy_id": "S76-328",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-11-16:1:3",
+          "issue_id": "issue:sn83025898:1776-11-16:1",
+          "date": "1776-11-16",
+          "page": 3,
+          "excerpt": "In CONGRESS, November 14, 1776. Copy of a letter to the President from Major Gen. Gates, dated at Ticonderoga, November 5. \" Sir—I have the honor to congratulate the Congress upon the retreat of Lieutenant-General Sir Guy Carleton, with the fleet and army under his command, from Crownpoint.—Saturday last, the works being put in the",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-11-16_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-328.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints Gates's letter.",
+          "note": "Dates the letter 'November 5.' without the year."
+        },
+        {
+          "id": "obs:expansion-1776:S76-329",
+          "legacy_id": "S76-329",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-11-19:1:3",
+          "issue_id": "issue:sn83021126:1776-11-19:1",
+          "date": "1776-11-19",
+          "page": 3,
+          "excerpt": "I N C O N G R E S S, November 14, 1776. Copy of a letter to the President from Major General GATES, dated at Ticonderoga, Nov. 5. S I R. \"I have the honor to congratulate the Congress upon the retreat of Lieutenant General Sir Guy Carleton, with the fleet and army under his command, from Crownpoint.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-11-19_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-329.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints Gates's letter.",
+          "note": "Dates the letter 'Nov. 5.' without the year."
+        },
+        {
+          "id": "obs:expansion-1776:S76-330",
+          "legacy_id": "S76-330",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-11-20:1:2",
+          "issue_id": "issue:sn84026371:1776-11-20:1",
+          "date": "1776-11-20",
+          "page": 2,
+          "excerpt": "IN CONGRESS, November 14, 1776. Copy of a letter to the President from Major General Gates, dated at Ticonderoga, November 5, 1776. \"Sir—I have the honour to congratulate the Congress upon the retreat of Lieutenant-General Sir Guy Carleton, with the fleet and army under his command, from Crownpoint.—Saturday last, the works being put in the",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-11-20_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-330.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints Gates's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-331",
+          "legacy_id": "S76-331",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-11-29:1:2",
+          "issue_id": "issue:sn84024739:1776-11-29:1",
+          "date": "1776-11-29",
+          "page": 2,
+          "excerpt": "IN CONGRESS, November 14, 1776. Copy of a letter to the President, from Major General GATES, dated at Ticonderoga, November 5. \"Sir,—I have the honour to congratulate the Congress upon the retreat of Lieutenant General Sir Guy Carleton, with the fleet and army under his command, from Crownpoint. Saturday last, the works being put in",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-11-29_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-331.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints Gates's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-332",
+          "legacy_id": "S76-332",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-11-29:1:1",
+          "issue_id": "issue:sn84024742:1776-11-29:1",
+          "date": "1776-11-29",
+          "page": 1,
+          "excerpt": "IN CONGRESS, November 14, 1776. Copy of a letter to the President from major-general GATES, dated at Ticonderoga, November 5. SIR, I HAVE the honour to congratulate the Congress upon the retreat of lieutenant-general sir Guy Carleton, with the fleet and army under his command, from Crown Point. Saturday last, the works being put in",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-11-29_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-332.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints Gates's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-333",
+          "legacy_id": "S76-333",
+          "node": "sn83025583",
+          "page_id": "page:sn83025583:1776-12-10:1:2",
+          "issue_id": "issue:sn83025583:1776-12-10:1",
+          "date": "1776-12-10",
+          "page": 2,
+          "excerpt": "Copy of a Letter to the President from Maj. Gen. Gates, at Ticonderoga, Nov. 5. 1776. \"Sir,—I have the honor to congratulate the Congress upon the retreat of Lieut. General Sir Guy Carleton, with the fleet & army under his command, from Crown Point. — Saturday last, the works being put in the best order,",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025583/1776-12-10_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-333.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Freeman's Journal prints Gates's letter.",
+          "note": "Has 'at Ticonderoga, Nov. 5. 1776' without 'dated', and 'Crown Point' as two words."
+        },
+        {
           "id": "obs:expansion-1776:S76-001",
           "legacy_id": "S76-001",
           "node": "sn83030493",
@@ -8503,6 +9948,592 @@
           "transcription": "RevX",
           "summary": "Dixon and Hunter's Virginia Gazette prints the King's speech.",
           "note": "Printed under 'PHILADELPHIA, Jan. 8. The following SPEECH was received this morning by express from NEW-YORK.' The heading dates the speech Friday 27 October 1775."
+        },
+        {
+          "id": "obs:expansion-1776:S76-251",
+          "legacy_id": "S76-251",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-01-18:1:1",
+          "issue_id": "issue:sn83025894:1776-01-18:1",
+          "date": "1776-01-18",
+          "page": 1,
+          "excerpt": "The SPEECH of the LORD MAYOR, JOHN WILKES, Esq; last Thursday in the House of Commons, on the motion for an Address to the King: “ Mr. Speaker, “ I intirely agree with the Honorable Gentleman, who seconded the motion for an Address to his Majesty, that every man ought now to speak out, and in a moment so important as the present to the whole empire, I think it ill becomes the dignity and duty of Parliament to lose itself in such a fulsome, adulatory Address to the throne as that now proposed.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-01-18_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-251.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "John Wilkes, Lord Mayor of London, speaks in the Commons against the address to the King: every man ought now to speak out.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-252",
+          "legacy_id": "S76-252",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-01-18:1:1",
+          "issue_id": "issue:sn83030135:1776-01-18:1",
+          "date": "1776-01-18",
+          "page": 1,
+          "excerpt": "The Speech of the Lord Mayor, John Wilkes, Esq; last Thursday in the House of Commons, on the motion for an Address to the King: \"Mr. Speaker, \"I entirely agree with the Hon. Gentleman who seconded the motion for an Address to his Majesty, that every man ought now to speak out, and in a moment so important as the present, to the whole empire, I think it will become the dignity and duty of Parliament to lose itself in such a fullsome, adulatory Address to the Throne, as that now proposed.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-01-18_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-252.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints Wilkes's speech.",
+          "note": "RevX reads 'will become' where the paper prints 'ill becomes', which reverses the sense."
+        },
+        {
+          "id": "obs:expansion-1776:S76-254",
+          "legacy_id": "S76-254",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-01-20:1:2",
+          "issue_id": "issue:sn83025898:1776-01-20:1",
+          "date": "1776-01-20",
+          "page": 2,
+          "excerpt": "The SPEECH of the LORD MAYOR, JOHN WILKES, Esq; last Thursday in the House of Commons, on the motion for an Address to the King: \" Mr. Speaker, \" I entirely agree with the Hon. Gentleman, who seconded the motion for an Address to his Majesty, that every man ought now to speak out , and in a moment so important as the present, to the whole empire, I think it ill becomes the dignity and duty of Parliament to lose itself in such a fulsome, adulatory Address to the Throne, as that now proposed.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-01-20_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-254.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints Wilkes's speech.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-255",
+          "legacy_id": "S76-255",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-01-22:1:4",
+          "issue_id": "issue:sn83021126:1776-01-22:1",
+          "date": "1776-01-22",
+          "page": 4,
+          "excerpt": "The SPEECH of the LORD MAYOR, JOHN WILKES, Esq; last Thursday in the House of Commons, on the motion for an Address to the King. \"Mr. Speaker, I entirely agree with the Hon. Gentleman, who seconded the motion for an Address to his Majesty, that every man ought now to speak out, and in a moment so important as the present, to the whole empire, I think it will become the dignity and duty of Parliament to lose itself in such a solemn, adulatory Address to the Throne, as that now proposed.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-01-22_1_4.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-255.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints Wilkes's speech.",
+          "note": "RevX reads 'will become' and 'solemn' where the paper prints 'ill becomes' and 'fulsome'; the first reverses the sense."
+        },
+        {
+          "id": "obs:expansion-1776:S76-257",
+          "legacy_id": "S76-257",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-01-24:1:1",
+          "issue_id": "issue:sn84026371:1776-01-24:1",
+          "date": "1776-01-24",
+          "page": 1,
+          "excerpt": "The SPEECH of the LORD MAYOR, JOHN WILKES, Esq; last Thursday in the House of Commons, on the motion for an Address to the King: Mr. SPEAKER, I ENTIRELY agree with the Honourable Gentleman, who seconded the motion for an Address to his Majesty, that every man ought now to speak out, and in a moment so important as the present to the whole empire, I think it ill becomes the dignity and duty of Parliament to lose itself in such a fulsome, adulatory Address to the throne as that now proposed.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-01-24_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-257.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints Wilkes's speech.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-258",
+          "legacy_id": "S76-258",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-01-24:1:1",
+          "issue_id": "issue:sn85047530:1776-01-24:1",
+          "date": "1776-01-24",
+          "page": 1,
+          "excerpt": "The SPEECH of the LORD MAYOR, JOHN WILKES, Esq; last Thursday in the House of Commons, on the motion for an Address to the King: \"Mr Speaker, \"I entirely agree with the Honorable Gentleman, who seconded the motion for an Address to his Majesty, that every man ought now to speak out, and in a moment so important as the present to the whole empire, I think it will become the dignity and duty of Parliament to lose itself in such a fulsome, adulatory Address to the throne as that now proposed.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-01-24_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-258.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints Wilkes's speech.",
+          "note": "RevX reads 'will become' where the paper prints 'ill becomes', which reverses the sense."
+        },
+        {
+          "id": "obs:expansion-1776:S76-266",
+          "legacy_id": "S76-266",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-02-10:1:4",
+          "issue_id": "issue:sn84024739:1776-02-10:1",
+          "date": "1776-02-10",
+          "page": 4,
+          "excerpt": "THE SPEECH of the LORD MAYOR, JOHN WILKES, Esq; last Thursday in the House of Commons, on the motion for an address to the King. \"Mr. Speaker, \"I entirely agree with the Hon. Gentleman, who seconded the motion for an address to his Majesty, that every man ought now to speak out, and in a moment so important as the present, to the whole empire. I think it ill becomes the dignity and duty of Parliament to lose itself in such a fulsome, adulatory address to the throne, as that now proposed.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-02-10_1_4.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-266.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints Wilkes's speech.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-268",
+          "legacy_id": "S76-268",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-02-16:1:5",
+          "issue_id": "issue:sn84024742:1776-02-16:1",
+          "date": "1776-02-16",
+          "page": 5,
+          "excerpt": "The speech of the Lord Mayor, JOHN WILKES, esq; last Thursday, in the House of Commons, on the motion for an address to the King. MR. SPEAKER, I ENTIRELY agree with the honourable gentleman, who seconded the motion for an address to his majesty, that every man ought now to speak out; and, in a moment so important as the present, to the whole empire, I think it ill becomes the dignity and duty of parliament to lose itself in such a fulsome adulatory address to the throne as that now proposed.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-02-16_1_5.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-268.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints Wilkes's speech.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-259",
+          "legacy_id": "S76-259",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-02-01:1:1",
+          "issue_id": "issue:sn83025894:1776-02-01:1",
+          "date": "1776-02-01",
+          "page": 1,
+          "excerpt": "On Friday in the upper Assembly Governor Penn, of Pennsylvania, was examined, and gave very satisfactory answers to the questions put to him; after which he was ordered to withdraw; when a member, after descanting on the necessity of an immediate conciliation, proposed the last petition from the Continental Congress",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-02-01_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-259.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A London report: Governor Penn was examined in the House of Lords and gave very satisfactory answers.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-261",
+          "legacy_id": "S76-261",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-02-03:1:2",
+          "issue_id": "issue:sn83025898:1776-02-03:1",
+          "date": "1776-02-03",
+          "page": 2,
+          "excerpt": "On Friday in the Upper Assembly Governor Penn, of Pennsylvania, was examined, and gave very satisfactory answers to the questions put to him; after which he was ordered to withdraw; when a member, after descanting on the necessity of an immediate conciliation, proposed the last petition from the Continental Congress",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-02-03_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-261-motion-1.jpg",
+            "assets/story_discovery_1776__evidence__S76-261-motion-2.jpg",
+            "assets/story_discovery_1776__evidence__S76-261.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints the report.",
+          "note": "The same page prints another London paragraph, which says that a motion to call Governor Penn to the bar and examine him 'passed in the negative, 56 against 22'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-262",
+          "legacy_id": "S76-262",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-02-05:1:6",
+          "issue_id": "issue:sn83021126:1776-02-05:1",
+          "date": "1776-02-05",
+          "page": 6,
+          "excerpt": "On Friday in the Upper Assembly Governor Penn, of Pennsylvania, was examined, and gave very satisfactory answers to the questions put to him; after which he was ordered to withdraw; when a member, after desisting on the necessity of an immediate conciliation, proposed the last petition from the Continental Congress",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-02-05_1_6.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-262.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the report.",
+          "note": "RevX reads 'desisting' where the paper prints 'descanting'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-263",
+          "legacy_id": "S76-263",
+          "node": "sn83030493",
+          "page_id": "page:sn83030493:1776-02-05:1:3",
+          "issue_id": "issue:sn83030493:1776-02-05:1",
+          "date": "1776-02-05",
+          "page": 3,
+          "excerpt": "On Friday in the Upper Assembly Governor Penn, of Pennsylvania, was examined, and gave very satisfactory answers to the questions put to him; after which he was ordered to withdraw; when a member, after descanting on the necessity of an immediate conciliation, proposed the last petition from the Continental Congress",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030493/1776-02-05_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-263.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Gazette prints the report.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-264",
+          "legacy_id": "S76-264",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-02-07:1:2",
+          "issue_id": "issue:sn84026371:1776-02-07:1",
+          "date": "1776-02-07",
+          "page": 2,
+          "excerpt": "On Friday, in the Upper Assembly, Governor Penn, of Pennsylvania, was examined, and gave very satisfactory answers to the questions put to him, after which he was ordered to withdraw; when a member, after descanting on the necessity of an immediate conciliation, proposed the last Petition from the Continental Congress",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-02-07_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-264.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the report.",
+          "note": "Opens with the date 'Nov. 17.'"
+        },
+        {
+          "id": "obs:expansion-1776:S76-265",
+          "legacy_id": "S76-265",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-02-08:1:2",
+          "issue_id": "issue:sn83030135:1776-02-08:1",
+          "date": "1776-02-08",
+          "page": 2,
+          "excerpt": "On Friday in the upper Assembly Governor Penn, of Pennsylvania, was examined, and gave very satisfactory answers to the questions put to him; after which he was ordered to withdraw; when a number, after decanting on the necessity of an immediate conciliation, proposed the last petition from the Continental Congress",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-02-08_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-265.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints the report.",
+          "note": "Prints 'when a number', a misprint for 'member'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-267",
+          "legacy_id": "S76-267",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-02-16:1:2",
+          "issue_id": "issue:sn84024742:1776-02-16:1",
+          "date": "1776-02-16",
+          "page": 2,
+          "excerpt": "On Friday, in the Upper Assembly, governor Penn, of Pennsylvania, was examined and gave very satisfactory answers to the questions put to him, after which he was ordered to withdraw; when a member, after descanting on the necessity of an immediate conciliation, proposed the last petition from the Continental Congress",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-02-16_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-267-1.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the report.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-269",
+          "legacy_id": "S76-269",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-02-20:1:1",
+          "issue_id": "issue:sn83025894:1776-02-20:1",
+          "date": "1776-02-20",
+          "page": 1,
+          "excerpt": "HOUSE of LORDS, Saturday, Nov. 11. T HE Lords were yesterday assembled for the purposes of examining Governor Penn, and of discussing a motion which the Duke of Richmond proposed to ground on such information as that gentleman should afford the House. Previous to the calling of Mr. Penn to the bar, the Duke of Richmond announced the mode he had adopted preparatory to the Governor's examination.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-02-20_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-269.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A London account of the House of Lords: the Lords assemble to examine Governor Penn on the Duke of Richmond's motion.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-270",
+          "legacy_id": "S76-270",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-02-21:1:2",
+          "issue_id": "issue:sn84026371:1776-02-21:1",
+          "date": "1776-02-21",
+          "page": 2,
+          "excerpt": "HOUSE OF LORDS, Saturday, November 11. THE Lords were yesterday assembled for the purposes of examining Governor Penn, and of discussing a motion which the Duke of Richmond proposed to ground on such information as that gentleman should afford the House. Previous to the calling of Mr. Penn to the bar, the Duke of Richmond announced the mode he had adopted preparatory to the Governor's examination.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-02-21_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-270.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the account.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-271",
+          "legacy_id": "S76-271",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-02-21:1:2",
+          "issue_id": "issue:sn85047530:1776-02-21:1",
+          "date": "1776-02-21",
+          "page": 2,
+          "excerpt": "BRITISH HOUSE OF LORDS. Saturday, November 11. THE Lords were yesterday assembled for the purposes of examining Governor Penn, and of discussing a motion which the Duke of Richmond proposed to ground on such information as that gentleman should afford the House. Previous to the calling of Mr. Penn to the bar, the Duke of Richmond announced the mode he had adopted preparatory to the Governor's examination.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-02-21_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-271.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints the account.",
+          "note": "Headed 'BRITISH HOUSE OF LORDS.'"
+        },
+        {
+          "id": "obs:expansion-1776:S76-273",
+          "legacy_id": "S76-273",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-02-24:1:1",
+          "issue_id": "issue:sn83025898:1776-02-24:1",
+          "date": "1776-02-24",
+          "page": 1,
+          "excerpt": "HOUSE OF LORDS, Saturday, November 11. T H E Lords were yesterday assembled for the purposes of examining Governor Penn, and of discussing a motion which the Duke of Richmond proposed to ground on such information as that gentleman should afford the House. Previous to the calling of Mr. Penn to the bar, the Duke of Richmond announced the mode he had adopted preparatory to the Governor's examination.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-02-24_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-273.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints the account.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-276",
+          "legacy_id": "S76-276",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-02-26:1:4",
+          "issue_id": "issue:sn83021126:1776-02-26:1",
+          "date": "1776-02-26",
+          "page": 4,
+          "excerpt": "HOUSE OF LORDS, Saturday, November 11. THE Lords were yesterday assembled for the purposes of examining Governor Penn, and of discussing a motion which the Duke of Richmond proposed to ground on such information as that gentleman should afford the House. Previous to the calling of Mr. Penn to the bar, the Duke of Richmond announced the mode he had adopted preparatory to the Governor's examination.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-02-26_1_4.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-276.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the account.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-280",
+          "legacy_id": "S76-280",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-02-29:1:2",
+          "issue_id": "issue:sn83030135:1776-02-29:1",
+          "date": "1776-02-29",
+          "page": 2,
+          "excerpt": "HOUSE OF LORDS, SATURDAY, November 11. THE Lords were yesterday assembled for the purposes of examining Governor Penn, and of discussing a motion which the Duke of Richmond proposed to ground on such information, as that gentleman should afford the House. Previous to the calling of Mr. Penn to the bar, the Duke of Richmond announced the mode he had adopted preparatory to the Governor's examination.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-02-29_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-280.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints the account.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-286",
+          "legacy_id": "S76-286",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-03-15:1:1",
+          "issue_id": "issue:sn84024742:1776-03-15:1",
+          "date": "1776-03-15",
+          "page": 1,
+          "excerpt": "HOUSE of LORDS, Saturday, Nov. 11. THE Lords were yesterday assembled for the purposes of examining governor Penn, and of discussing a motion which the duke of Richmond proposed to ground on such information as that gentleman should afford the House. Previous to the calling of Mr. Penn to the bar, the duke of Richmond announced the mode he had adopted preparatory to the governor's examination.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-03-15_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-286.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the account.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-287",
+          "legacy_id": "S76-287",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-03-16:1:1",
+          "issue_id": "issue:sn84024739:1776-03-16:1",
+          "date": "1776-03-16",
+          "page": 1,
+          "excerpt": "HOUSE OF LORDS, SATURDAY, November 11. THE Lords were yesterday assembled for the purposes of examining Governor Penn, and of discussing a motion which the Duke of Richmond proposed to ground on such information as that Gentleman should afford the House. Previous to the calling of Mr. Penn to the bar, the Duke of Richmond announced the mode he had adopted preparatory to the Governor's examination.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-03-16_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-287.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints the account.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-272",
+          "legacy_id": "S76-272",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-02-21:1:2",
+          "issue_id": "issue:sn85047530:1776-02-21:1",
+          "date": "1776-02-21",
+          "page": 2,
+          "excerpt": "When the order of the day was read yesterday in the House of Commons, for going into a committee of the whole House on the bill for prohibiting all trade and intercourse with the Colonies in rebellion, &c. a member (Mr. Dempster we believe) moved, that it be an instruction given by the House before",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-02-21_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-272-clause.jpg",
+            "assets/story_discovery_1776__evidence__S76-272.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A London report: the Commons go into committee on the bill to prohibit all trade with the colonies, and the clause on captures is printed with its dates left blank.",
+          "note": "Earliest printing found. The clause is printed with three empty brackets where its dates would be, followed by 'The blanks are proposed to be filled up with the dates of March 1 and April 1'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-274",
+          "legacy_id": "S76-274",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-02-24:1:2",
+          "issue_id": "issue:sn83025898:1776-02-24:1",
+          "date": "1776-02-24",
+          "page": 2,
+          "excerpt": "When the order of the day was read yesterday in the house of Commons, for going into a committee of the whole house on the bill for prohibiting all trade and intercourse with the colonies in rebellion, &c. A member (Mr. Dempster we believe) moved, that it be an instruction given by the house, before",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-02-24_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-274-clause.jpg",
+            "assets/story_discovery_1776__evidence__S76-274.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints the report.",
+          "note": "The clause is printed with two blank spaces where its dates would be, and without its part on ships 'found trading in'; then the proposed dates, March 1 and April 1."
+        },
+        {
+          "id": "obs:expansion-1776:S76-275",
+          "legacy_id": "S76-275",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-02-26:1:2",
+          "issue_id": "issue:sn83021126:1776-02-26:1",
+          "date": "1776-02-26",
+          "page": 2,
+          "excerpt": "When the order of the day was read yesterday in the House of Commons, for going into a committee of the whole House on the bill for prohibiting all trade and intercourse with the colonies in rebellion, &c. A member (Mr. Dempster we believe) moved, that it be an instruction given by the House, before",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-02-26_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-275-clause.jpg",
+            "assets/story_discovery_1776__evidence__S76-275.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the report.",
+          "note": "The clause is printed with two blank spaces where its dates would be, without its part on ships 'found trading in', and ends 'disobedience and rebellion'; then the proposed dates, March 1 and April 1. RevX reads 'seizure' twice where the clause prints 'capture and forfeiture'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-277",
+          "legacy_id": "S76-277",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-02-27:1:3",
+          "issue_id": "issue:sn83025894:1776-02-27:1",
+          "date": "1776-02-27",
+          "page": 3,
+          "excerpt": "The clause in the American restraining bill, which occasioned the greatest debate at its second reading, was at length settled as follows: “And be it farther enacted, by the authority aforesaid, that this act, so far as relates to the capture and forfeiture of ships and vessels belonging to the inhabitants of the above-mentioned Colonies, shall commence and be in force from and after the first of January 1776;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-02-27_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-277.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A London report: the clause on captures is settled, with American ships liable from 1 January 1776.",
+          "note": "Earliest printing found. Prints 'And be it farther enacted' and 'so far as relates to', where the other papers have 'further' and 'so far as the same relates to'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-278",
+          "legacy_id": "S76-278",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-02-28:1:2",
+          "issue_id": "issue:sn84026371:1776-02-28:1",
+          "date": "1776-02-28",
+          "page": 2,
+          "excerpt": "The clause in the American restraining bill, which occasioned the greatest debate at its second reading, was at length settled as follows: \"And be it further enacted by the authority aforesaid, that this act, so far as the same relates to the capture and forfeiture of ships and vessels belonging to the inhabitants of the above-mentioned colonies, shall commence and be in force from and after the first of January 1776;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-02-28_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-278.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the report.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-279",
+          "legacy_id": "S76-279",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-02-28:1:2",
+          "issue_id": "issue:sn85047530:1776-02-28:1",
+          "date": "1776-02-28",
+          "page": 2,
+          "excerpt": "The clause in the American restraining bill, which occasioned the greatest debate at its second reading, was at length settled as follows: \"And be it further enacted, by the authority aforesaid, that this act, so far as the same relates to the capture and forfeiture of ships and vessels belonging to the inhabitants of the above-mentioned colonies, shall commence and be in force from and after the first of January, 1776;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-02-28_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-279.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints the report.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-281",
+          "legacy_id": "S76-281",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-02-29:1:2",
+          "issue_id": "issue:sn83030135:1776-02-29:1",
+          "date": "1776-02-29",
+          "page": 2,
+          "excerpt": "When the order of the day was read yesterday in the House of Commons, for going into a committee of the whole House on the bill for prohibiting all trade and intercourse with the colonies in rebellion, &c. A member (Mr. Dempster) moved, that it be an instruction given by the House before the speaker",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-02-29_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-281-clause.jpg",
+            "assets/story_discovery_1776__evidence__S76-281.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints the report.",
+          "note": "Dated 'Dec. 7.' (the other papers 6 December) and names 'Mr. Dempster' without 'we believe'. The clause is printed with three empty brackets where its dates would be, as in the Pennsylvania Journal, followed by the proposed dates, March 1 and April 1."
+        },
+        {
+          "id": "obs:expansion-1776:S76-282",
+          "legacy_id": "S76-282",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-03-02:1:1",
+          "issue_id": "issue:sn83025898:1776-03-02:1",
+          "date": "1776-03-02",
+          "page": 1,
+          "excerpt": "The clause in the American restraining bill, which occasioned the greatest debate at its second reading, was at length settled as follows: \"And be it further enacted by the authority aforesaid, that this act, so far as the same relates to the capture and forfeiture of ships and vessels belonging to the inhabitants of the above mentioned colonies, shall commence and be in force from and after the first of January 1776;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-03-02_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-282.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints the report.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-283",
+          "legacy_id": "S76-283",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-03-04:1:4",
+          "issue_id": "issue:sn83021126:1776-03-04:1",
+          "date": "1776-03-04",
+          "page": 4,
+          "excerpt": "The clause in the American restraining bill, which occasioned the greatest debate at its second reading, was at length settled as follows: \"And be it further enacted by the authority afore said, that this act, so far as the same relates to the capture and forfeiture of ships and vessels belonging to the inhabitants of the above-mentioned colonies, shall commence and be in force from and after the first of January, 1776;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-03-04_1_4.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-283.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the report.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-284",
+          "legacy_id": "S76-284",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-03-08:1:2",
+          "issue_id": "issue:sn84024742:1776-03-08:1",
+          "date": "1776-03-08",
+          "page": 2,
+          "excerpt": "When the order of the day was read yesterday, in the House of Commons, for going into a committee of the whole House on the bill for prohibiting all trade and intercourse with the colonies in rebellion, &c. a member (mr. Dempster, we believe) moved, that it be an instruction given by the House, before",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-03-08_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-284-clause.jpg",
+            "assets/story_discovery_1776__evidence__S76-284.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the report.",
+          "note": "The clause is printed with two blank spaces, each followed by a comma, and without its part on ships 'found trading in'; then the proposed dates, 'March 1st, and April 1st'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-285",
+          "legacy_id": "S76-285",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-03-09:1:2",
+          "issue_id": "issue:sn84024739:1776-03-09:1",
+          "date": "1776-03-09",
+          "page": 2,
+          "excerpt": "When the order of the day was read yesterday in the House of Commons, for going into a committee of the whole House on the bill for prohibiting all trade and intercourse with the colonies in rebellion, &c. a member (Mr. Dempster we believe) moved, that it be an instruction given by the House, before",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-03-09_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-285-clause.jpg",
+            "assets/story_discovery_1776__evidence__S76-285.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints the report.",
+          "note": "Dated 'December 6.' The clause is printed with two blank spaces where its dates would be, and without its part on ships 'found trading in'; then the proposed dates, March 1 and April 1."
         },
         {
           "id": "obs:expansion-1776:S76-050",
@@ -9116,6 +11147,534 @@
           "transcription": "RevX",
           "summary": "The New-York Gazette prints the speech.",
           "note": "Printed on 30 September, more than seven weeks after the Evening Post, with different wording: 'of the public business', 'your affectionate attachment'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-313",
+          "legacy_id": "S76-313",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-07-20:1:1",
+          "issue_id": "issue:sn83025894:1776-07-20:1",
+          "date": "1776-07-20",
+          "page": 1,
+          "excerpt": "In CONGRESS, July 19, 1776. R ESOLVED, That a copy of the circular letters and of the declarations they enclosed from Lord Howe to Mr. W. Franklin, Mr. Penn, Mr. Eden, Lord Dunmore, Mr. Martin and Sir James Wright, late Governors, sent to Amboy by a flag and forwarded to Congress, by General Washington, be",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-07-20_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-313.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Congress orders Lord Howe's circular letter and declaration published, so that the people may see what the commissioners offer.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-314",
+          "legacy_id": "S76-314",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-07-20:1:2",
+          "issue_id": "issue:sn83025898:1776-07-20:1",
+          "date": "1776-07-20",
+          "page": 2,
+          "excerpt": "In CONGRESS, July 19, 1776. Resolved, That a copy of the circular letters and of the declarations they enclosed from Lord Howe to Mr. W. Franklin, Mr. Penn, Mr. Eden, Lord Dunmore, Mr. Martin, and Sir James Wright, late Governors, sent to Amboy by a flag and forwarded to Congress, by General Washington, be published",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-07-20_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-314.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints the resolution, letter and declaration.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-315",
+          "legacy_id": "S76-315",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-07-22:1:3",
+          "issue_id": "issue:sn83021126:1776-07-22:1",
+          "date": "1776-07-22",
+          "page": 3,
+          "excerpt": "In CONGRESS, July 19, 1776. Resolved, That a copy of the circular letters and of the declarations they enclosed from Lord Howe to Mr. W. Franklin, Mr. Penn, Mr. Eden, Lord Dunmore, Mr. Montagu, and Sir James Wright, late Governors, sent to Amboy by a flag, and forwarded to Congress by General Washington, be published",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-07-22_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-315.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the resolution, letter and declaration.",
+          "note": "RevX reads 'Mr. Montagu' where the paper prints 'Mr. Martin'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-316",
+          "legacy_id": "S76-316",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-07-24:1:3",
+          "issue_id": "issue:sn84026371:1776-07-24:1",
+          "date": "1776-07-24",
+          "page": 3,
+          "excerpt": "IN CONGRESS, July 19, 1776. RESOLVED, That a copy of the circular letters, and of the declarations they enclosed from Lord Howe to Mr. W. Franklin, Mr. Penn, Mr. Eden, Lord Dunmore, Mr. Martin, and Sir James Wright, late Governors, sent to Amboy by a flag, and forwarded to Congress by General Washington, be published",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-07-24_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-316.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the resolution, letter and declaration.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-317",
+          "legacy_id": "S76-317",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-07-24:1:1",
+          "issue_id": "issue:sn85047530:1776-07-24:1",
+          "date": "1776-07-24",
+          "page": 1,
+          "excerpt": "In CONGRESS, July 19, 1776. RESOLVED, That a copy of the circular letters and of the declarations they enclosed from Lord Howe to Mr. W. Franklin, Mr. Penn, Mr. Eden, Lord Dunmore, Mr. Martin and Sir James Wright, late Governors, sent to Amboy by a flag and forwarded to Congress, by General Washington, be published in the several Gazettes...",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-07-24_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-317.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints the resolution, letter and declaration.",
+          "note": "The paper prints the resolution in full; RevX shortens it with an ellipsis."
+        },
+        {
+          "id": "obs:expansion-1776:S76-318",
+          "legacy_id": "S76-318",
+          "node": "sn83030493",
+          "page_id": "page:sn83030493:1776-07-29:1:1",
+          "issue_id": "issue:sn83030493:1776-07-29:1",
+          "date": "1776-07-29",
+          "page": 1,
+          "excerpt": "PHILADELPHIA, July 20. IN CONGRESS, July 19, 1776. RESOLVED, That a copy of the circular letters and of the declarations they enclosed from Lord Howe to Mr. W. Franklin, Mr. Penn, Mr. Eden, Lord Dunmore, Mr. Martin and Sir James Wright, late Governors, sent to Amboy by a flag and forwarded to Congress, by General Washington, be published in the several Gazettes...",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030493/1776-07-29_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-318.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Gazette prints the resolution, letter and declaration.",
+          "note": "The paper prints the resolution in full; RevX shortens it with an ellipsis. Prints 'my be informed', a misprint for 'may'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-319",
+          "legacy_id": "S76-319",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-08-03:1:1",
+          "issue_id": "issue:sn84024739:1776-08-03:1",
+          "date": "1776-08-03",
+          "page": 1,
+          "excerpt": "CONGRESS, July 19, 1776. Resolved, that a copy of the circular letters and of the declarations they enclosed from Lord Howe to Mr. W. Franklin, Mr. Penn, Mr. Eden, Lord Dunmore, Mr. Martin, and Sir James Wright, late Governors, sent to Amboy by a flag, and forwarded to Congress by General Washington, be published in",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-08-03_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-319.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints the resolution, letter and declaration.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-320",
+          "legacy_id": "S76-320",
+          "node": "sn83030493",
+          "page_id": "page:sn83030493:1776-09-30:1:1",
+          "issue_id": "issue:sn83030493:1776-09-30:1",
+          "date": "1776-09-30",
+          "page": 1,
+          "excerpt": "By RICHARD VISCOUNT HOWE, of the Kingdom of Ireland, and WILLIAM HOWE, Esq; General of his Majesty's Forces in America, the King's Commissioners for restoring Peace to his Majesty's Colonies and Plantations in North-America, &c. &c. &c. DECLARATION. ALTHOUGH the Congress, whom the Amisguided Americans suffer to direct their Opposition to a Re-establishment of the",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030493/1776-09-30_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-320.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Lord Howe and General Howe declare that the King will revise the acts complained of, and invite the inhabitants to look to their own peace.",
+          "note": "Earliest printing found. Printed below the commissioners' declaration of 14 July."
+        },
+        {
+          "id": "obs:expansion-1776:S76-321",
+          "legacy_id": "S76-321",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-10-02:1:3",
+          "issue_id": "issue:sn84026371:1776-10-02:1",
+          "date": "1776-10-02",
+          "page": 3,
+          "excerpt": "The following Declaration of Lord and General Howe was printed in a Hand Bill at New York. By RICHARD Viscount HOWE of the Kingdom of Ireland, and WILLIAM HOWE, Esq; General of his Majesty's forces in America, the King's Commissioners for restoring peace to his Majesty's Colonies and Plantations in North-America, &c. &c. &c. DECLARATION. ALTHOUGH the Congress, whom the misguided Americans suffer to direct their opposition to a re-establishment of the constitutional government of these provinces, have disavowed every purpose of reconciliation, not consonant",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-10-02_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-321.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the declaration.",
+          "note": "Introduced as printed in a handbill at New York, and followed by a parody headed 'EXPLANATION of the above', which makes the Howes the King's commissioners 'for deluding the good people of America'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-322",
+          "legacy_id": "S76-322",
+          "node": "sn83025898",
+          "page_id": "page:sn83025898:1776-10-05:1:1",
+          "issue_id": "issue:sn83025898:1776-10-05:1",
+          "date": "1776-10-05",
+          "page": 1,
+          "excerpt": "The following Declaration was circulated about the City on Tuesday last in hand bills, and as numbers of people have expressed a desire of seeing it we give it a place. By RICHARD VISCOUNT HOWE, of the Kingdom of Ireland, and WILLIAM HOWE, Esq; General of His Majesty's Forces in America, the King's COMMISSIONERS for restoring Peace to His Majesty's Colonies and Plantations in North-America, &c. &c. &c. D E C L A R A T I O N. ALTHOUGH the Congress, whom the misguided Americans suffer to direct their Opposition to a Re-establishment of",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025898/1776-10-05_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-322.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Ledger prints the declaration.",
+          "note": "Introduced as 'circulated about the City on Tuesday last in hand bills' (1 October)."
+        },
+        {
+          "id": "obs:expansion-1776:S76-323",
+          "legacy_id": "S76-323",
+          "node": "sn83030493",
+          "page_id": "page:sn83030493:1776-10-07:1:1",
+          "issue_id": "issue:sn83030493:1776-10-07:1",
+          "date": "1776-10-07",
+          "page": 1,
+          "excerpt": "By RICHARD VISCOUNT HOWE, of the Kingdom of Ireland, and WILLIAM HOWE, Esq; General of his Majesty's Forces in America, the King's Commissioners for restoring Peace to his Majesty's Colonies and Plantations in North-America, &c. &c. &c. DECLARATION. ALTHOUGH the Congress, whom the misguided Americans suffer to direct their Opposition to a Re-establishment of the",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030493/1776-10-07_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-323.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Gazette prints the declaration.",
+          "note": "Printed again a week after its first printing in this paper, set line for line as then and again below the declaration of 14 July."
+        },
+        {
+          "id": "obs:expansion-1776:S76-324",
+          "legacy_id": "S76-324",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-10-11:1:3",
+          "issue_id": "issue:sn84024739:1776-10-11:1",
+          "date": "1776-10-11",
+          "page": 3,
+          "excerpt": "By RICHARD VISCOUNT HOWE, of the Kingdom of IRELAND, and WILLIAM HOWE, Esq; General of his Majesty's forces in America, the King's COMMISSIONERS for restoring peace to his Majesty's colonies and plantations in North America, &c. &c. &c. DECLARATION. ALTHOUGH the Congress, whom the misguided Americans suffer to direct their opposition to a re-establishment of",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-10-11_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-324.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints the declaration.",
+          "note": "Misprints the heading 'D E C L A R A R I O N.'; RevX corrects it without saying so."
+        },
+        {
+          "id": "obs:expansion-1776:S76-325",
+          "legacy_id": "S76-325",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-10-11:1:1",
+          "issue_id": "issue:sn84024742:1776-10-11:1",
+          "date": "1776-10-11",
+          "page": 1,
+          "excerpt": "By Richard viscount Howe, of the kingdom of Ireland, and William Howe, esq; general of his majesty's forces in America, the king's commissioners for restoring peace to his majesty's colonies and plantations in North America, &c. &c. &c. D E C L A R A T I O N. ALTHOUGH the Congress, whom the misguided",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-10-11_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-325.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the declaration.",
+          "note": "Prints 'iu' (a turned n) for 'in' in the heading."
+        },
+        {
+          "id": "obs:expansion-1776:S76-326",
+          "legacy_id": "S76-326",
+          "node": "sn83025583",
+          "page_id": "page:sn83025583:1776-10-22:1:2",
+          "issue_id": "issue:sn83025583:1776-10-22:1",
+          "date": "1776-10-22",
+          "page": 2,
+          "excerpt": "The following Declaration of Lord and General Howe was printed in a Hand-Bill at New-York. By RICHARD Viscount HOWE of the Kingdom of Ireland, and WILLIAM HOWE, Esq; General of his Majesty's forces in America, the King's Commissioners for restoring peace to his Majesty's colonies and plantations in North America, &c. &c. &c. DECLARATION. ALTHOUGH the Congress, whom the misguided Americans suffer to direct their opposition to a re-establishment of the constitutional government of these provinces have disavowed every purpose of reconciliation, not consonant with",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025583/1776-10-22_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-326-1.jpg",
+            "assets/story_discovery_1776__evidence__S76-326-2.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Freeman's Journal prints the declaration.",
+          "note": "Introduced as printed in a handbill at New York."
+        },
+        {
+          "id": "obs:expansion-1776:S76-247",
+          "legacy_id": "S76-247",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-01-13:1:1",
+          "issue_id": "issue:sn83025894:1776-01-13:1",
+          "date": "1776-01-13",
+          "page": 1,
+          "excerpt": "In CONGRESS, January 11, 1776. W HEREAS it appears to this Congress, that several evil disposed persons, in order to obstruct and defeat the efforts of the United Colonies in the defence of their just rights, have attempted to depreciate the BILLS of CREDIT emitted by the authority of this Congress. Resolved therefore, That if any person shall hereafter be so lost to all virtue and regard for his country as to refuse to receive the said bills in payment, or obstruct or discourage the",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-01-13_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-247.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Congress's resolution of 11 January 1776: whoever refuses the Continental bills of credit is to be treated as an enemy of his country.",
+          "note": "Earliest printing found. Prints 'regard for his country', as the New-York Packet and the New-York Gazette do; the four other papers print 'this country'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-248",
+          "legacy_id": "S76-248",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-01-15:1:3",
+          "issue_id": "issue:sn83021126:1776-01-15:1",
+          "date": "1776-01-15",
+          "page": 3,
+          "excerpt": "PHILADELPHIA, January 15. IN CONGRESS, January 11, 1776. WHEREAS it appears to this Congress, that several evil disposed persons, in order to obtrude and defeat the efforts of the United Colonies in the defence of their just rights, have attempted to depreciate the BILLS OF CREDIT emitted by the authority of this Congress. Resolved therefore, That if any person shall hereafter be so lost to all virtue and regard for this country as to refuse to receive the said bills in payment, or obtrude or",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-01-15_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-248.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the resolution.",
+          "note": "RevX reads 'obtrude' twice where the paper prints 'obstruct'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-249",
+          "legacy_id": "S76-249",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-01-17:1:3",
+          "issue_id": "issue:sn84026371:1776-01-17:1",
+          "date": "1776-01-17",
+          "page": 3,
+          "excerpt": "IN CONGRESS, January 11, 1776. WHEREAS it appears to this Congress, that several evil disposed persons, in order to obstruct and defeat the efforts of the United Colonies in the defence of their just rights, have attempted to depreciate the BILLS of CREDIT emitted by the authority of this Congress. Resolved therefore, That if any person shall hereafter be so lost to all virtue and regard for this country, as to refuse to receive the said bills in payment, or obstruct or discourage the currency",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-01-17_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-249.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the resolution.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-250",
+          "legacy_id": "S76-250",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-01-17:1:2",
+          "issue_id": "issue:sn85047530:1776-01-17:1",
+          "date": "1776-01-17",
+          "page": 2,
+          "excerpt": "In CONGRESS January 11, 1776, WHEREAS it appears to this Congress, that several evil disposed persons, in order to obstruct and defeat the efforts of the United Colonies in the defence of their just rights, have attempted to depreciate the BILLS OF CREDIT emitted by the authority of this Congress. Resolved therefore, That if any person shall hereafter be so lost to all virtue and regard for this country as to refuse to receive the said bills in payment, or obstruct or discourage the currency",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-01-17_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-250.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints the resolution.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-253",
+          "legacy_id": "S76-253",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-01-18:1:3",
+          "issue_id": "issue:sn83030135:1776-01-18:1",
+          "date": "1776-01-18",
+          "page": 3,
+          "excerpt": "CONGRESS. Jan. 11, 1776. Whereas it appears to this Congress, that several evil disposed persons, in order to obstruct and defeat the efforts of the United Colonies in the defence of our just rights, have attempted to depreciate the BILLS of CREDIT emitted by the authority of this Congress, Resolved, therefore, that if any person shall hereafter be so lost to all virtue and regard for his country, as to refuse to receive the said bills in payment, or obstruct or discourage the currency or",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-01-18_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-253.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints the resolution.",
+          "note": "Headed 'CONGRESS, Jan. 11, 1776.' Prints 'the defence of our just rights' (the other papers 'their') and 'regard for his country'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-256",
+          "legacy_id": "S76-256",
+          "node": "sn83030493",
+          "page_id": "page:sn83030493:1776-01-22:1:1",
+          "issue_id": "issue:sn83030493:1776-01-22:1",
+          "date": "1776-01-22",
+          "page": 1,
+          "excerpt": "In CONGRESS, January 11, 1776. Whereas it appears to this Congress, that several dispossessed persons, in order to obstruct and defeat the efforts of the United Colonies in the defence of their just rights, have attempted to depreciate the Bills of Credit emitted by the authority of this Congress. Resolved therefore, That if any person shall hereafter be so loft to all virtue and regard for his country as to refuse to receive the said bills in payment, or obstruct or discourage the currency or",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030493/1776-01-22_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-256.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Gazette prints the resolution.",
+          "note": "RevX reads 'several dispossessed persons' where the paper prints 'several evil disposed persons'. Prints 'regard for his country'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-260",
+          "legacy_id": "S76-260",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-02-02:1:2",
+          "issue_id": "issue:sn84024742:1776-02-02:1",
+          "date": "1776-02-02",
+          "page": 2,
+          "excerpt": "PHILADELPHIA, January 15. IN CONGRESS, January 11, 1776. WHEREAS it appears to this Congress, that several evil-disposed persons, in order to obstruct and defeat the efforts of the United Colonies in the defence of their just rights, have attempted to depreciate the bills of credit emitted by the authority of this Congress: Resolved therefore, that if any person shall hereafter be so lost to all virtue, and regard for this country, as to refuse to receive the said bills in payment, or obstruct or discourage",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-02-02_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-260.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the resolution.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-288",
+          "legacy_id": "S76-288",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1776-03-18:1:3",
+          "issue_id": "issue:sn83021126:1776-03-18:1",
+          "date": "1776-03-18",
+          "page": 3,
+          "excerpt": "In CONGRESS, Saturday, March 16, 1776. IN times of impending calamity and distress, when the liberties of America are imminently endangered by the secret machinations and open assaults of an insidious and vindictive Administration, it becomes the indispensable duty of these hitherto free and happy Colonies, with true penitence of heart, and the most reverent devotion, publicly to acknowledge the over-ruling providence of God;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1776-03-18_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-288.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Congress's resolution of 16 March 1776: Friday 17 May to be kept as a day of humiliation, fasting and prayer.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1776:S76-289",
+          "legacy_id": "S76-289",
+          "node": "sn83025894",
+          "page_id": "page:sn83025894:1776-03-19:1:1",
+          "issue_id": "issue:sn83025894:1776-03-19:1",
+          "date": "1776-03-19",
+          "page": 1,
+          "excerpt": "In CONGRESS, Saturday, March 16, 1776. I N times of impending calamity and distress, when the liberties of America are imminently endangered by the secret machinations and open assaults of an insidious and vindictive Administration, it becomes the indispensable duty of these hitherto free and happy Colonies, with true penitence of heart, and the most reverent devotion, publicly to acknowledge the over-ruling providence of God;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025894/1776-03-19_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-289.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Evening Post prints the resolution.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-290",
+          "legacy_id": "S76-290",
+          "node": "sn84026371",
+          "page_id": "page:sn84026371:1776-03-20:1:3",
+          "issue_id": "issue:sn84026371:1776-03-20:1",
+          "date": "1776-03-20",
+          "page": 3,
+          "excerpt": "PHILADELPHIA, March 20. In CONGRESS, Saturday, March 16, 1776. IN times of impending calamity and distress, when the liberties of America are imminently endangered by the secret machinations and open assaults of an invidious and vindictive Administration, it becomes the indispensable duty of these hitherto free and happy Colonies, with true penitence of heart, and the most reverent devotion, publicly to acknowledge the over-ruling providence of God;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026371/1776-03-20_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-290.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Gazette prints the resolution.",
+          "note": "RevX reads 'invidious' where the paper prints 'insidious'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-291",
+          "legacy_id": "S76-291",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-03-20:1:1",
+          "issue_id": "issue:sn85047530:1776-03-20:1",
+          "date": "1776-03-20",
+          "page": 1,
+          "excerpt": "In CONGRESS, Saturday, March 16, 1776. IN times of impending calamity and distress, when the liberties of America are imminently endangered by the secret machinations and open assaults of an invidious and vindictive administration, it becomes the indispensable duty of these hitherto free and happy colonies, with true penitence of heart, and the most reverent devotion, publicly to acknowledge the overruling providence of God;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-03-20_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-291.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints the resolution.",
+          "note": "RevX reads 'invidious' where the paper prints 'insidious'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-292",
+          "legacy_id": "S76-292",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-03-21:1:3",
+          "issue_id": "issue:sn83030135:1776-03-21:1",
+          "date": "1776-03-21",
+          "page": 3,
+          "excerpt": "IN CONGRESS, Saturday, March 16, 1776. IN times of impending calamity and distress, when the liberties of America are imminently endangered by the secret machinations and open assaults of an invidious and vindictive Administration, it becomes the indispensable duty of those hitherto free and happy Colonies, with true penitence of heart, and the most reverent devotion to acknowledge the over-ruling providence of God;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-03-21_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-292.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints the resolution.",
+          "note": "Prints 'devotion to acknowledge' without 'publicly'. RevX reads 'invidious' where the paper prints 'insidious'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-293",
+          "legacy_id": "S76-293",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-03-29:1:2",
+          "issue_id": "issue:sn84024742:1776-03-29:1",
+          "date": "1776-03-29",
+          "page": 2,
+          "excerpt": "Friday the 17th of May is appointed by the Hon. the Continental Congress to be observed, by Christians of all denominations throughout the United Colonies, as a day of Humiliation, Fasting, and Prayer.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-03-29_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-293.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the resolution.",
+          "note": "A one-sentence notice of the fast, before an address to the readers; the same paper printed the resolution a week later."
+        },
+        {
+          "id": "obs:expansion-1776:S76-294",
+          "legacy_id": "S76-294",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1776-04-05:1:1",
+          "issue_id": "issue:sn84024742:1776-04-05:1",
+          "date": "1776-04-05",
+          "page": 1,
+          "excerpt": "IN CONGRESS. SATURDAY, March 16, 1776. IN times of impending calamity and distress, when the liberties of America are imminently endangered, by the secret machinations and open assaults of an insidious and vindictive administration, it becomes the indispensable duty of these hitherto free and happy colonies, with true penitence of heart, and the most reverent",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1776-04-05_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-294.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the resolution.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-310",
+          "legacy_id": "S76-310",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1776-05-11:1:2",
+          "issue_id": "issue:sn84024739:1776-05-11:1",
+          "date": "1776-05-11",
+          "page": 2,
+          "excerpt": "IN CONGRESS, SATURDAY, March 16, 1776. IN times of impending calamity and distress, when the liberties of America are imminently endangered, by the secret machinations and open assaults of an insidious and vindictive Administration, it becomes the indispensable duty of these hitherto free and happy colonies, with true penitence of heart, and the most reverent",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1776-05-11_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-310.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints the resolution.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1776:S76-311",
+          "legacy_id": "S76-311",
+          "node": "sn85047530",
+          "page_id": "page:sn85047530:1776-05-15:1:1",
+          "issue_id": "issue:sn85047530:1776-05-15:1",
+          "date": "1776-05-15",
+          "page": 1,
+          "excerpt": "In CONGRESS, Saturday, March 16, 1776. IN times of impending calamity and distress, when the liberties of America are imminently endangered by the secret machinations and open assaults of an insidious and vindictive administration, it becomes the indispensable duty of these hitherto free and happy colonies, with true penitence of heart, and the most reverent devotion, publicly to acknowledge the overarching providence of God;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn85047530/1776-05-15_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-311.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Pennsylvania Journal prints the resolution.",
+          "note": "Printed again two days before the fast, eight weeks after its first printing in this paper, and set line for line as then. RevX reads 'overarching' where the paper prints 'over-ruling'."
+        },
+        {
+          "id": "obs:expansion-1776:S76-312",
+          "legacy_id": "S76-312",
+          "node": "sn83030135",
+          "page_id": "page:sn83030135:1776-05-16:1:3",
+          "issue_id": "issue:sn83030135:1776-05-16:1",
+          "date": "1776-05-16",
+          "page": 3,
+          "excerpt": "WHEREAS the Honourable Continental Congress have appointed, and earnestly recommended, \"That the 17th inst. (being to-morrow) be observed by the United Colonies, as a day of humiliation, fasting and prayer; that we may with united hearts confess and bewail our manifold sins and transgressions against God, and by a sincere repentance and amendment of life, as a people, appease his righteous displeasure against us:",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030135/1776-05-16_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1776__evidence__S76-312.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-York Packet prints the resolution.",
+          "note": "Quoted in the New York committee's notice of 16 May on keeping the fast the next day."
         },
         {
           "id": "obs:expansion-1776:S76-031",

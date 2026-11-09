@@ -4,9 +4,13 @@ Generic form of migrate_v0_2_0.py. The ledger names its base and target versions
 observation namespace and the folder holding the scan crops. Run from the project root
 with Python 3.12:
 
-    python work/archive_data/apply_ledger.py work/archive_data/ledgers/<ledger>.json
+    python work/archive_data/apply_ledger.py work/archive_data/ledgers/<ledger>.json [--keep-current]
 
 The base release is hash-checked and left untouched. Every new row cites the ledger.
+When the base release gives every reviewed group a topic row (v0.7.1 on), the ledger's new
+groups get theirs in the same release (add_reviewed_topics.add_topic_rows, a run of their own).
+--keep-current leaves CURRENT.json pointing at the release it named before, so the site and
+other consumers stay on it until set_current.py moves them.
 """
 from pathlib import Path
 import collections
@@ -65,7 +69,7 @@ def page_texts(keys, field='RevX_OCR_text'):
     return raw
 
 
-def main(ledger_path):
+def main(ledger_path, keep_current=False):
     ledger_path = Path(ledger_path).resolve()
     ledger = json.loads(ledger_path.read_text(encoding='utf8'))
     base, release = FOUNDATION/('v'+ledger['base_release']), FOUNDATION/('v'+ledger['target_release'])
@@ -235,11 +239,23 @@ def main(ledger_path):
         for oid in (subject, target):
             insert('relation_evidence', relation_id=rid, evidence_object_id=oid, locator='Printed selection named in the ledger')
 
+    # Topic rows for the new groups, when the base release has them for every reviewed group (validate.py requires it).
+    topics = None
+    if db.execute("SELECT 1 FROM runs WHERE id='run:story-topics-reviewed-v1'").fetchone():
+        sys.path.insert(0, str(HERE))
+        from add_reviewed_topics import add_topic_rows
+        topic_run = 'run:story-topics-'+ledger['ledger_id'].split(':', 1)[1]
+        added, reproduced = add_topic_rows(db, release, date, topic_run, source(HERE/'add_reviewed_topics.py', 'analysis_code'),
+                                           'Frozen 24-topic model applied to the printed excerpts of the groups added by '+ledger['ledger_id'])
+        stories = json.loads(db.execute("SELECT value_json FROM metadata WHERE key='story_topics'").fetchone()[0])['stories']
+        topics = {'run_id': topic_run, 'added': len(added), 'reproduced_rows': reproduced, 'stories': stories}
+        print('Topic rows added', topics, flush=True)
+
     meta = lambda key: json.loads(db.execute('SELECT value_json FROM metadata WHERE key=?', (key,)).fetchone()[0])
     release_meta = dict(meta('release'), version=version, date=date, previous_release=ledger['base_release'])
     db.execute("UPDATE metadata SET value_json=? WHERE key='release'", (J(release_meta),))
     history = meta('migration_history') + [{'from': ledger['base_release'], 'to': version, 'date': date, 'ledger': ledger['ledger_id'],
-                                             'ledger_version': ledger['ledger_version'], 'run_id': run}]
+                                             'ledger_version': ledger['ledger_version'], 'run_id': run, **({'topic_run_id': topics['run_id']} if topics else {})}]
     db.execute("UPDATE metadata SET value_json=? WHERE key='migration_history'", (J(history),))
     if 'dispositions_summary' in ledger:
         insert('metadata', key=ledger['ledger_id'].split(':', 1)[1]+'_dispositions', value_json=J(ledger['dispositions_summary']))
@@ -281,10 +297,16 @@ def main(ledger_path):
            'dataset_revision': release_meta['revision'], 'build_command': 'python work/archive_data/apply_ledger.py '+ledger_path.relative_to(PROJECT).as_posix(),
            'counts': results['counts'], 'files': files, 'raw_archive_included': False, 'raw_archive_location': '../../../work/data/',
            'historical_findings_added': False, 'observed_publications_added': len(ids)}
+    if topics:
+        out['story_topics'] = topics
+    if keep_current:
+        out['build_command'] += ' --keep-current'
     (release/'manifest.json').write_text(json.dumps(out, indent=2), encoding='utf8')
-    (FOUNDATION/'CURRENT.json').write_text(json.dumps({'version': version, 'path': 'v'+version, 'manifest_sha256': file_sha(release/'manifest.json')}, indent=2), encoding='utf8')
-    print(json.dumps({'release': str(release), 'counts': results['counts'], 'checks': len(results['checks'])}, indent=2), flush=True)
+    if not keep_current:
+        (FOUNDATION/'CURRENT.json').write_text(json.dumps({'version': version, 'path': 'v'+version, 'manifest_sha256': file_sha(release/'manifest.json')}, indent=2), encoding='utf8')
+    print(json.dumps({'release': str(release), 'counts': results['counts'], 'checks': len(results['checks']),
+                      'current': json.loads((FOUNDATION/'CURRENT.json').read_text(encoding='utf8'))['version']}, indent=2), flush=True)
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1], keep_current='--keep-current' in sys.argv[2:])

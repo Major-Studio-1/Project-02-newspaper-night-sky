@@ -130,7 +130,7 @@ A passage can belong to more than one group, and groups can sit inside each othe
 
 **7. Label each appearance's role.** Examples are *report*, *appended challenge*, *later related account*, *condensed report* and *translated document*. A role describes what the printed text does. It is not a verdict on whether the text is true.
 
-### A second reviewed year: 1776 (data releases v0.7.0 and v0.7.1)
+### A second reviewed year: 1776 (data releases v0.7.0 to v0.7.2)
 
 The same steps were run for 1776, chosen over 1800 because more of its stories reached many papers and its coverage is steadier.
 - **Splitting chains.** Most large automatic families of 1776 joined neighbouring items printed side by side. `pipeline/story_items.py` split them into single printed items and counted where each was printed, on all 2,319 pages of 1776 in both transcriptions. Phrase searches (`pipeline/story_phrase_search.py`) confirmed the printings.
@@ -138,6 +138,12 @@ The same steps were run for 1776, chosen over 1800 because more of its stories r
 - **Scan check.** Every printing was checked against its scan; 23 crops were placed by hand where the page's text layer failed. All 246 printings are on their pages. Of the excerpts, 171 transcriptions are faithful, 44 have minor errors and 31 have errors that change a fact. Every paper printed Congress's resolutions opening the ports with "ſtaves" (staves), and RevX reads "slaves" in eight of the nine.
 - **Printed differences** are kept apart from transcription errors. Two papers head those resolutions "March 6" where the others have April 6, and Montgomery's letter to Carleton is dated 6 December in three papers and 16 December in four.
 - **Topics.** v0.7.1 adds topic rows for the 31 new groups, from the same frozen model as the matched stories, so the telescope's Topic view can place them.
+- **Round two (v0.7.2, 9 November 2026).** The ten candidates in 7 or 8 papers that round one read but did not admit were read again, item by item.
+  - **Admitted:** 9 stories (15 groups, 87 printings in 10 papers). Among them are Wilkes's speech in the Commons, Governor Penn before the Lords, the Prohibitory bill, Barry's capture of the *Edward*, the Howe brothers' declarations and Gates on Carleton's retreat.
+  - **Not admitted:** the Cork deserters' paragraph is in only 5 papers. Philadelphia committee notices that name people who refused Continental bills are left out. The Cherokee and Creek reports wait for careful framing.
+  - **Small sub-stories kept:** three sub-stories in 5 or 6 papers stay, because their stories reach 7.
+  - **Scan check:** all 87 printings are on their pages. 54 excerpts are faithful, 15 have minor errors and 18 have errors that change a fact. For example, Wilkes's "ill becomes" is read as "will become" in 3 of 8 printings. The Commons committee report prints the dates of the clause on captures as blanks, and the dates it expects turned out wrong.
+  - **1776 now:** 31 stories, 46 groups and 333 printings. The round's findings and each printing's notes are in the data release.
 
 ### Connections between stories
 
@@ -227,7 +233,7 @@ The pulse view is a direct translation of the admitted group records:
   - Weeks are used because most papers were weekly. Counted by single days, most days would look empty.
 - **Each reviewed year has its own overview, "All reviewed stories of 1776" or "… of 1797", which plays all its top-level stories together.**
   - **Categories and colours:** each year names its own three categories, one colour each. Three colours is the most that stay distinguishable, including for colour-blind viewers, when any two are on screen together. So the colour shows the category, and the story's name appears under the newspaper.
-    - 1776 (22 stories): *war and the armies* (8), *Britain and Europe* (5) and *independence and American government* (9).
+    - 1776 (31 stories): *war and the armies* (11), *Britain and Europe* (9) and *independence and American government* (11).
     - 1797 (21 stories): *war, revolution and foreign news* (8), *ships, privateers and wrecks* (5) and *American public life* (8).
     - The years share the three colours: blue is war in both, and green is American public life and government. An overview plays one year, so two years' categories never share the map.
   - **Fading:** a newspaper keeps the colour for 40 days after a printing, then fades.
@@ -379,5 +385,5 @@ How it works:
 | Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.7.1) |
+| Data release | [`data/`](../data) (v0.7.2) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

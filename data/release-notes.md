@@ -2,6 +2,25 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.7.2 (2026-11-09)
+
+v0.7.2 is v0.7.1 plus **round two of the reviewed stories of 1776**, from `ledgers/stories_1776_round2.json` applied with `apply_ledger.py`, **with their topic rows**. Nothing else changes. **`CURRENT.json` still points to v0.7.1** (see below).
+
+- **9 stories, 15 groups, 87 printings in 10 newspapers,** January to December 1776 (`obs:expansion-1776:S76-247` to `S76-333`, in round one's namespace).
+  - Three are parent stories: Governor Penn before the Lords (2 groups), the Prohibitory bill in the Commons (2) and the Howe brothers' declarations (2).
+  - They are the candidates that round one read but did not admit. One was not admitted (the Cork deserters, 5 papers), and the Cherokee and Creek reports were left out because they need framing first.
+  - The selection rule and the items not admitted are in the ledger's `dispositions_summary` and in `outputs/story_discovery_1776/README.md`.
+- **Scan check of every printing,** with 15 crops placed by hand.
+  - 7 extra crops check places far below an item's opening. An example is the Prohibitory bill's clause, which all six printings of the committee report print with blanks for its dates.
+  - Transcriptions, judged on the excerpt: 54 faithful, 15 with minor errors and 18 with errors that change a fact.
+- **Topic rows in the same release.** `apply_ledger.py` now calls `add_reviewed_topics.add_topic_rows()` when the base release gives every reviewed group a topic row.
+  - The 65 reviewed rows already there are scored again batch by batch, one batch per run: 34 of `run:story-topics-v1` and 31 of `run:story-topics-reviewed-v1`. That reproduces them exactly.
+  - The 15 new groups are then scored together, under `run:story-topics-stories-1776-round2`.
+  - `story_topics.stories` counts 80 reviewed rows, and the release's `migration_history` entry names the run as `topic_run_id`.
+- **`CURRENT.json` stays on v0.7.1.** The release was cut with `apply_ledger.py --keep-current`, because the site needs categories for the new stories first. `set_current.py 0.7.2` switches it, after checking every file of the release.
+- **Checks:** the check that later topic rows are automatic now covers every run that made reviewed topic rows. 545 checks pass (449 before, plus one for each of the 96 new crops).
+- **Tools:** `scan_ledger.py` now keeps the crop records of other ledgers that share an evidence folder. Both 1776 rounds use `outputs/story_discovery_1776/evidence/`.
+
 ## Changes in v0.7.1 (2026-11-09)
 
 v0.7.1 is v0.7.0 plus **topic rows for the 31 reviewed groups of 1776**, made by `add_reviewed_topics.py`. Nothing else changes.
@@ -296,9 +315,17 @@ python work/archive_data/ledgers/make_stories_1776.py
 python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1776.json   # v0.7.0
 python work/archive_data/add_reviewed_topics.py 0.7.0 0.7.1           # v0.7.1
 python work/archive_data/validate.py outputs/data_foundation/v0.7.1
+python work/story_phrase_search.py outputs/story_discovery_1776/search_pages.json outputs/story_discovery_1776/phrase_patterns_round2.json outputs/story_discovery_1776/phrase_hits_round2.json
+python work/archive_data/ledgers/make_stories_1776_round2.py && python work/scan_ledger.py work/archive_data/ledgers/stories_1776_round2.json
+python work/scan_ledger.py outputs/story_discovery_1776/extra_crops_round2.json   # crops of places far below an item's opening
+# ... reviewers write outputs/story_discovery_1776/scan_verdicts/batch_11.json to batch_15.json; findings, crops, hand-placed boxes and notes go into ledgers/stories_1776_round2_review.json
+python work/archive_data/ledgers/make_stories_1776_round2.py
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1776_round2.json --keep-current   # v0.7.2, with its topic rows
+python work/archive_data/validate.py outputs/data_foundation/v0.7.2
+python work/archive_data/set_current.py 0.7.2                         # when the site is ready for it
 ```
 
-For the next release, write a new ledger (base = current version, target = next) and run `apply_ledger.py` on it. Before that, run `work/scan_ledger.py <ledger>` to make the scan crops; on pages with an unusable text layer, add `scan_boxes` by hand.
+For the next release, write a new ledger (base = current version, target = next) and run `apply_ledger.py` on it. Before that, run `work/scan_ledger.py <ledger>` to make the scan crops; on pages with an unusable text layer, add `scan_boxes` by hand. Since v0.7.2, `apply_ledger.py` also gives the ledger's new groups their topic rows (a run of their own), because every reviewed group must have one. Add `--keep-current` to leave `CURRENT.json` where it is, so the site stays on the previous release until `set_current.py` switches it.
 
 `apply_corrections.py` handles small fixes. It copies a release and appends annotations that supersede the ones they correct, so old values stay in the history. For the few plain-table text fields it allows (`TABLE_FIELDS`), it changes the field and keeps the old value in the metadata key `table_corrections`.
 
