@@ -2,6 +2,64 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.8.1 (2026-11-10)
+
+v0.8.1 is v0.8.0 with **the matched printings filed under the pages they are printed on**, made by `refile_revx_pages.py` from the RevX page check in `outputs/revx_page_shift_check/`. The reviewed tables do not change. **`CURRENT.json` still points to v0.7.2.**
+
+- **The fault:** in 133 issues, the RevX transcription stored with a page transcribes the scan of another page of the same issue. The CA text, which the Library of Congress made from the page's own scan, shows which one.
+  - **One page off:** 238 RevX pages in 121 issues. In 120 of them, one scan page has no RevX text, every later page's RevX text is filed one page early, and the issue's last RevX page is empty.
+  - **Further off:** 7 RevX pages, in the *New Hampshire Gazette* of 4 April and 1 May 1798 (two pages off) and in the scrambled *Kentucky Gazette* of 22 May 1800.
+  - **A repeated page:** 15 RevX pages in 11 issues repeat another page's text, whose own RevX is filed correctly.
+  - **How it was found:** the 1807 review found the first case, the *Herald of the United States* of 4 July 1807. `check_page_shift.py` then compared every RevX page with the CA text of every page of its issue, and a sample of 16 issues was confirmed against the pinned scans.
+- **`derived/revx_page_map.parquet`** (new; run `run:revx-page-shift-check-v1`, automatic): one row for each of the 260 misfiled RevX pages.
+  - `page_id` is the page the text is filed under, and `revx_text_of` the scan page it transcribes.
+  - `status` is `shifted`, `other_page` or `duplicate`, with the `offset`.
+  - The evidence is the share of its word 4-grams found in the CA text of that scan page (`share4_at`) and of its own page (`share4_own`).
+- **`derived/reuse_family_appearances.parquet`:** the matcher read all 260 pages from RevX.
+  - **Moved:** their 532 printings, in 501 matched stories, now name the scan page their text transcribes (`page_id`, `page_number`).
+  - **New column `text_page_id`:** the page the text is filed under. `span_start`, `span_end` and `blocks_json` index into that page's transcription. For every other printing it equals `page_id`.
+  - **One printing per story and page still holds.** On 84 pages, in 74 stories, a moved printing landed where its story already had one, or two moved printings landed together. Each page keeps one printing, so 85 reads were merged into another.
+    - Mostly this is one page read twice: as RevX text filed one page early, and as the CA text of the page whose own RevX is empty or too short (62 pages); or as a repeated RevX page (19).
+    - The read kept follows the matcher's own rule: RevX before CA, then a RevX text filed under its own page, then the smallest `seq`.
+    - The other reads stay in the new column `other_texts_json` (null elsewhere), with their `seq`, transcription, text page, blocks and excerpt.
+  - **Printings:** 163,926 before, 163,841 now.
+- **`derived/reuse_families.parquet`:** `appearances` and `pages` are recounted for those 74 stories. Newspapers and dates cannot change, because a printing only moves within its issue.
+- **`derived/transcription_checks.parquet`:** 515 checks are redone, under run `run:revx-page-refile-v1`, with the rule of `run:transcription-check-v1`.
+  - **What is redone:** the 510 moved printings that were kept, against the CA text of their scan page; and 5 CA printings on scan pages whose RevX text is filed under another page, against that text.
+  - **Safeguard:** the script first computed each of these checks again as it stood, and would have stopped unless that reproduced the stored values exactly. It did.
+  - **Moved printings:** all were `other_unreadable`, because each had been compared with the CA text of the wrong page. Now 428 are confirmed, 31 partly, 12 missing in the other transcription and 39 still other_unreadable.
+  - **The 5 CA printings:** all were `no_second_transcription`. Now 1 is confirmed and 4 are missing in the other: the RevX text agrees with the rest of those pages but lacks the passages (two legal notices, an advertisement and the last verses of a song).
+  - **Dropped:** the checks of the 85 merged reads.
+  - **All printings:** 133,287 confirmed (81.4%), 8,961 partly (5.5%), 3,716 missing in the other (2.3%), 16,697 other unreadable (10.2%), 1,180 no second transcription (0.7%). By story: 29,408 all confirmed, 17,625 at least one, 1,094 none.
+- **`derived/reuse_matches.parquet`:** 2,372 match ends, in 2,369 matches, now name the scan page (`a_page_id`, `b_page_id`). New columns `a_text_page_id` and `b_text_page_id` name the pages the matched texts are filed under.
+- **Not changed:**
+  - **`derived/page_topic_census.parquet`:** the rows of the 260 misfiled pages still hold the topic weights of the text filed there. Correcting them needs the 143 scan pages that no RevX text transcribes to be scored. The matcher never read those pages either. The metadata key `revx_page_map` lists them.
+  - **`derived/matched_audit.parquet`:** sample n 40 (`R1809-2393`) was scan-checked on page 2 of the *Rhode-Island American* of 28 November 1809. That page's RevX text transcribes scan page 3, so its "not located" stands for the page shown.
+  - **Titles, story topics and every reviewed table.** No reviewed printing uses the RevX text of a misfiled page; the one reviewed printing on such a page (`S07-097`) uses the CA text.
+- **Metadata:** `revx_page_map` holds the summary. `reuse_layer.family_appearances`, `printings` and `transcription_check` give the new counts.
+- **New checks:**
+  - the page map names known pages, each filed under another page of its issue;
+  - every printing, merged read and match end is filed under the scan page its text transcribes;
+  - the page map and the refiling are recorded as automatic;
+  - every run in `transcription_checks` is automatic;
+  - an audited printing may be named by its text page.
+
+  829 checks pass (824 before, plus 5). Earlier releases still pass the extended `validate.py` unchanged.
+- **For scripts that read text:** read a printing's text from `text_page_id` (and a match's from `a_text_page_id`, `b_text_page_id`), not from `page_id`. `work/transcription_check.py`, `work/audit_matched.py` and `work/reuse_titles_all.py` read by `page_id`; run on this release, they would read the wrong text for the 510 moved printings. Year searches over the raw pages (`work/year_search_pages.py`) still find a misfiled RevX text under the page it is filed under; the page map says where it belongs.
+
+## Changes in v0.8.0 (2026-11-09)
+
+v0.8.0 is v0.7.2 plus **the reviewed stories of 1807**, the third reviewed year, from `ledgers/stories_1807.json` applied with `apply_ledger.py --keep-current`, **with their topic rows**. Nothing else changes. **`CURRENT.json` still points to v0.7.2**, because the site needs categories for the new stories first.
+
+- **14 stories, 32 groups, 250 printings in 11 newspapers** (`obs:expansion-1807:S07-001` to `S07-250`, namespace `expansion-1807`, run `run:stories-1807`).
+  - Nine are single stories. Five are parent stories with 18 sub-stories: Burr's conspiracy and trial (5 groups), the *Driver* at Charleston (2), the *Chesapeake* affair (5), Commodore Douglas and the Mayor of Norfolk (4), and Congress called early (2).
+  - The selection rule (as for 1776), the items not admitted and the items left out because they need framing are in the ledger's `dispositions_summary` and in `outputs/story_discovery_1807/README.md`.
+- **How they were found:** as for 1776, with one change. `work/story_items.py --long-running` also takes candidates from families flagged as long-running, because several of 1807's most printed documents sit in such chains. The default run is unchanged.
+- **Scan check of every printing:** all 250 are on their pages (one only partly readable, on dark film), and 39 crops were placed by hand. Transcriptions, judged on the excerpt: 153 faithful, 68 with minor errors and 29 with errors that change a fact. A name off by a letter or two counts as minor; a different name changes a fact.
+- **A data fault found here:** the RevX transcriptions of the *Herald of the United States* of 4 July 1807 are filed one page off from the scans. The ledger uses scan page 2 and the CA text for the one printing there. v0.8.1 corrects the automatic layer for every issue with the same fault.
+- **Topic rows:** the 32 new groups are scored under `run:story-topics-stories-1807`; the 80 reviewed rows already there are reproduced exactly.
+- **Checks:** 824 pass (545 before, plus one for each of the 279 new crops).
+
 ## Changes in v0.7.2 (2026-11-09)
 
 v0.7.2 is v0.7.1 plus **round two of the reviewed stories of 1776**, from `ledgers/stories_1776_round2.json` applied with `apply_ledger.py`, **with their topic rows**. Nothing else changes. **`CURRENT.json` still points to v0.7.1** (see below).
@@ -323,6 +381,16 @@ python work/archive_data/ledgers/make_stories_1776_round2.py
 python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1776_round2.json --keep-current   # v0.7.2, with its topic rows
 python work/archive_data/validate.py outputs/data_foundation/v0.7.2
 python work/archive_data/set_current.py 0.7.2                         # when the site is ready for it
+python work/year_search_pages.py 1807 outputs/story_discovery_1807/search_pages.json
+python work/story_items.py 1807 outputs/story_discovery_1807/search_pages.json outputs/story_discovery_1807/items.json --long-running
+python work/story_phrase_search.py outputs/story_discovery_1807/search_pages.json outputs/story_discovery_1807/phrase_patterns.json outputs/story_discovery_1807/phrase_hits.json
+python work/archive_data/ledgers/make_stories_1807.py && python work/scan_ledger.py work/archive_data/ledgers/stories_1807.json
+# ... reviewers write outputs/story_discovery_1807/scan_verdicts/; findings, hand-placed boxes and notes go into ledgers/stories_1807_review.json
+python work/archive_data/ledgers/make_stories_1807.py
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1807.json --keep-current   # v0.8.0, with its topic rows
+python outputs/revx_page_shift_check/check_page_shift.py              # the RevX page map (about 15 minutes); add `scans` for the scan sample
+python work/archive_data/refile_revx_pages.py 0.8.0 0.8.1 --keep-current   # v0.8.1
+python work/archive_data/validate.py outputs/data_foundation/v0.8.1
 ```
 
 For the next release, write a new ledger (base = current version, target = next) and run `apply_ledger.py` on it. Before that, run `work/scan_ledger.py <ledger>` to make the scan crops; on pages with an unusable text layer, add `scan_boxes` by hand. Since v0.7.2, `apply_ledger.py` also gives the ledger's new groups their topic rows (a run of their own), because every reviewed group must have one. Add `--keep-current` to leave `CURRENT.json` where it is, so the site stays on the previous release until `set_current.py` switches it.

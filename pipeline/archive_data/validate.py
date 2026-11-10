@@ -135,7 +135,8 @@ def validate(release):
     run_kind = lambda run: tuple(db.execute('SELECT reviewer_kind, independent_review FROM runs WHERE id=?', (run,)).fetchone() or ())
     # One printing per story and page (v0.6.0 on): merged appearances, recounted families.
     if (release/'derived/reuse_family_appearances.parquet').exists() and 'blocks_json' in pq.read_schema(release/'derived/reuse_family_appearances.parquet').names:
-        prints = pq.read_table(release/'derived/reuse_family_appearances.parquet', columns=['family_id', 'page_id', 'seq', 'segments', 'blocks_json']).to_pylist()
+        app_cols = pq.read_schema(release/'derived/reuse_family_appearances.parquet').names
+        prints = pq.read_table(release/'derived/reuse_family_appearances.parquet', columns=['family_id', 'page_id', 'seq', 'segments', 'blocks_json'] + [c for c in ('text_page_id',) if c in app_cols]).to_pylist()
         fams = pq.read_table(release/'derived/reuse_families.parquet', columns=['family_id', 'appearances', 'pages']).to_pylist()
         per_story = {}
         for p in prints:
@@ -150,7 +151,9 @@ def validate(release):
         tc = pq.read_table(release/'derived/transcription_checks.parquet', columns=['family_id', 'seq', 'page_id', 'status']).to_pylist()
         check('Exactly one transcription check per printing', sorted((c['family_id'], c['seq'], c['page_id']) for c in tc) == sorted((p['family_id'], p['seq'], p['page_id']) for p in prints))
         check('Transcription checks use the documented statuses', {c['status'] for c in tc} <= {'confirmed', 'partly', 'missing_in_other', 'other_unreadable', 'no_second_transcription'})
-        check('Transcription checks are recorded as automatic with no review', run_kind('run:transcription-check-v1') == ('automated', 0))
+        # Checks redone later (v0.8.1 on: under the RevX page map) carry the run that redid them; every run must be automatic.
+        tc_runs = {r['run_id'] for r in pq.read_table(release/'derived/transcription_checks.parquet', columns=['run_id']).to_pylist()} | {'run:transcription-check-v1'}
+        check('Transcription checks are recorded as automatic with no review', all(run_kind(r) == ('automated', 0) for r in tc_runs))
     # Audit of matched stories (v0.6.0 on): released stories, protocol values, an AI review that is not independent.
     if (release/'derived/matched_audit.parquet').exists():
         au = pq.read_table(release/'derived/matched_audit.parquet').to_pylist()
@@ -158,9 +161,31 @@ def validate(release):
         check('Audit rows name distinct released matched stories', len({a['family_id'] for a in au}) == len(au) and all(a['family_id'] in fam_ids for a in au))
         check('Audit verdicts use the protocol values', all(a['one_item'] in ('yes', 'no', 'unsure') and a['on_page'] in ('yes', 'partly', 'no', 'not_located')
                                                              and a['transcription'] in ('faithful', 'minor_errors', 'major_problem', 'not_checked') for a in au))
-        printing_pages = {(p['family_id'], p['page_id']) for p in prints}
+        # v0.8.1 on: a printing moved to the scan page its RevX text transcribes was scan-checked, if at all, on the page its text is filed under.
+        printing_pages = {(p['family_id'], p['page_id']) for p in prints} | {(p['family_id'], p['text_page_id']) for p in prints if p.get('text_page_id')}
         check('Every scan-checked printing is a printing of its story', all((a['family_id'], a['scan_check_page_id']) in printing_pages for a in au))
         check('The audit is recorded as an AI review, not an independent one', run_kind('run:matched-audit-v1') == ('ai_assistant', 0))
+    # RevX page map (v0.8.1 on): RevX transcriptions filed under another page than the scan they transcribe. Matched
+    # printings and match ends read from such a text are filed under the scan page it transcribes; text_page_id keeps
+    # the page the text is filed under, which their spans index into.
+    if (release/'derived/revx_page_map.parquet').exists():
+        pm = pq.read_table(release/'derived/revx_page_map.parquet').to_pylist()
+        to = {m['page_id']: m['revx_text_of'] for m in pm}
+        page_ids = {r[0] for r in db.execute('SELECT id FROM pages')}
+        check('The RevX page map names known pages, each filed under another page of its issue',
+              len(to) == len(pm) and all(m['page_id'] in page_ids and m['revx_text_of'] in page_ids and m['page_id'] != m['revx_text_of']
+                                         and m['page_id'].rsplit(':', 1)[0] == m['revx_text_of'].rsplit(':', 1)[0]
+                                         and m['status'] in ('shifted', 'other_page', 'duplicate') for m in pm))
+        filed = lambda transcription, text_page: to.get(text_page, text_page) if transcription == 'RevX' else text_page
+        full = pq.read_table(release/'derived/reuse_family_appearances.parquet', columns=['page_id', 'transcription', 'text_page_id', 'other_texts_json']).to_pylist()
+        check('Every printing is filed under the scan page its text transcribes', all(p['page_id'] == filed(p['transcription'], p['text_page_id']) for p in full))
+        check('Merged reads of a printing are texts of the same scan page',
+              all(p['page_id'] == filed(o['transcription'], o['text_page_id']) for p in full if p['other_texts_json'] for o in json.loads(p['other_texts_json'])))
+        ends = pq.read_table(release/'derived/reuse_matches.parquet', columns=['a_page_id', 'b_page_id', 'a_text_page_id', 'b_text_page_id']).to_pylist()
+        check('Every reuse match end is filed under the scan page its text transcribes',
+              all(m[s+'_page_id'] == to.get(m[s+'_text_page_id'], m[s+'_text_page_id']) for m in ends for s in 'ab'))
+        check('The page map and the refiling are recorded as automatic with no review',
+              run_kind('run:revx-page-shift-check-v1') == ('automated', 0) and run_kind('run:revx-page-refile-v1') == ('automated', 0))
     # English notes (v0.6.1 on): once table corrections exist, no current annotation or date role is left untranslated.
     if db.execute("SELECT 1 FROM metadata WHERE key='table_corrections'").fetchone():
         import re

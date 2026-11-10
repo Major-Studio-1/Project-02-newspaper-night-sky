@@ -987,10 +987,19 @@ function paperSays(e, words) {   // the paper's name and the date, then the pass
   const words_ = e.excerpt || st?.label || e.summary || '';
   return {text: `${hello}${name}, ${when}. ${Radio.live.firstWords(words_, words)}`, label: `${town} · ${name} · ${when} — ${Radio.live.firstWords(words_, 9)}`};
 }
-function speakPaper(e, words = 14) {
+// The recorded speech for a printing, if it has one: a reviewed passage, or the title of a widely printed matched
+// story. With `intro`, the announcer names the paper and the date first (and greets the town the first time).
+function paperClips(e, intro) {
+  const main = String(e.id).startsWith('auto:') ? 't:' + String(e.id).split(':')[1] : 'p:' + e.id;
+  if (!Radio.live.clips.has(main)) return null;
+  if (!intro) return [main];
+  const town = Radio.town(Y.papers.get(e.node)?.place), [yy, mm, dd] = String(e.date).split('-').map(Number);
+  return [...(radioFirst && town ? ['a:hello:' + town] : []), 'a:paper:' + e.node, 'a:day:' + dd, 'a:month:' + mm, 'a:year:' + yy, main];
+}
+function speakPaper(e, words = 14, intro = false) {
   if (!radioOn || !e) return;
-  const n = nodeById.get(e.node), said = paperSays(e, words);
-  Radio.live.play('paper:' + e.node, said.text, {pan: n && skyWidth ? Math.max(-.9, Math.min(.9, n.cx / skyWidth * 2 - 1)) : 0, ...Radio.live.voiceOf(e.node), label: said.label});
+  const clips = paperClips(e, intro), n = nodeById.get(e.node), said = paperSays(e, words);
+  Radio.live.play('paper:' + e.node, said.text, {pan: n && skyWidth ? Math.max(-.9, Math.min(.9, n.cx / skyWidth * 2 - 1)) : 0, ...Radio.live.voiceOf(e.node), label: said.label, clips, cut: intro ? 0 : 12});
 }
 let paperDwell = 0;
 // The paper under the pointer reads once the pointer has rested on it (120 ms); resting on another stops the first
@@ -1019,13 +1028,13 @@ function radioPicked() {   // a printing picked: it reads that passage, once you
     for (const k of [...pinnedPapers, hoverPaper]) if (k && k !== e.node) Radio.live.stop('paper:' + k);
     pinnedPapers.clear(); hoverPaper = null; pinnedPapers.add(e.node);
     Radio.live.stop('paper:' + e.node, {scratch: false});   // its shorter reading, if any, gives way to the passage
-    setTimeout(() => speakPaper(e, 70), 120);
+    setTimeout(() => speakPaper(e, 70, true), 120);
   }, 500);
 }
 // In an exhibition nobody points or picks, so the scene does: as a story starts, its first printing is read.
 function exhibitRead() {
   if (!radioOn || mode !== 'group' || !events.length) return;
-  const e = events[0]; pinnedPapers.add(e.node); speakPaper(e, 60);
+  const e = events[0]; pinnedPapers.add(e.node); speakPaper(e, 60, true);
 }
 function setRadio(on) {
   radioOn = on; syncRadio(); tourHold = performance.now() + 600;

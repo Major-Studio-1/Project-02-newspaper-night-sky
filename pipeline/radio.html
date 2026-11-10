@@ -157,7 +157,7 @@ function loadYear(y) {
         for (const s of rev.stories) { const ids = s.members.map(m => m.id ?? m); ids.forEach(id => top.set(id, s)); reach.set(s.id, new Set(ids.map(id => node.get(id))).size); }
         for (const o of rev.observations) {
           const s = top.get(o.id), p = rp.get(o.node); if (!s || !p) continue;
-          add({id: o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: s.label, text: o.excerpt, tier: 'reviewed', check: 'c', reach: reach.get(s.id) || 1,
+          add({id: o.id, clip: 'p:' + o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: s.label, text: o.excerpt, tier: 'reviewed', check: 'c', reach: reach.get(s.id) || 1,
             war: /war|armies/i.test(cat.get(s.category) || ''), pulse: `pulses.html?year=${y}&focus=${encodeURIComponent(s.id)}`, sky: `telescope.html?story=${encodeURIComponent(s.id)}`});
         }
       }

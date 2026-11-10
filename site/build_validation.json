@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "release_version": "0.7.2",
+  "release_version": "0.8.1",
   "reviewed_years": [
     {
       "year": 1776,
@@ -17,17 +17,25 @@
       "group_views": 33,
       "stories": 21,
       "categories": 3
+    },
+    {
+      "year": 1807,
+      "newspapers": 12,
+      "passages": 250,
+      "group_views": 32,
+      "stories": 14,
+      "categories": 3
     }
   ],
-  "curated_passages": 440,
-  "group_views": 79,
-  "stories_in_overview": 52,
-  "overview_categories": 6,
+  "curated_passages": 690,
+  "group_views": 111,
+  "stories_in_overview": 66,
+  "overview_categories": 9,
   "years": 41,
   "matched_families": 48127,
   "year_files_mb": 105.6,
   "year_index_mb": 8.8,
-  "telescope_stars": 48179,
+  "telescope_stars": 48193,
   "telescope_mb": 7.7,
   "telescope_text_mb": 24.3,
   "story_topic_lanes": 24,
@@ -42,18 +50,19 @@
     "Each reviewed year lists every one of its groups once, and every top-level story has a display category",
     "Every matched printing carries its transcription check, one printing per page"
   ],
-  "matched_printings": 163926,
+  "matched_printings": 163841,
+  "recorded_voices": null,
   "pages_sha256": {
-    "index.html": "2a8d21aa3435865d7d5d6ed6a3b33d6ce77f5160000cc96f5613f45f3c287aee",
-    "telescope.html": "c3f38c1925e184ebf23f646e83e6b74f31375bf0a6481c567b59bbe90d4e3a3c",
-    "pulses.html": "3a44d62bf3f067187ad3776aee68076e604503038515aaf97c1133e581d158d1",
-    "radio.html": "a3fcb26dff5b831f1c1b013a1a4d12b6cadffca71f837c0a608d8d16242a2d8f",
-    "exhibit.html": "37805b421bd7bdca3cdd6595f068102c7dc87ba4ea13d8a5c5482a04b359a618",
-    "method.html": "3a95d4b23ec0fe767b098b64037da65ecbac19d952b0e232bc4b0ea1a4c2fc57",
-    "notes.html": "d3c18a26ecfc3a1566a243d18672d3463692a9f8cb90f2280f3789ba78edf26f",
+    "index.html": "b81d05998bc343aefa715248f61b1ebffbfe245adf417294181eb3b4ebcc8b33",
+    "telescope.html": "891816534494bc17010908de4a1b77a596b6820f2141ac88f4a087757d9b3633",
+    "pulses.html": "4a9c1ebf2599084379e255b0810fd80f7886fd9727e3ea0d20545f7eb0cb870b",
+    "radio.html": "0406444fca30ed89d76fce3be2a510c8442c58ff4afe2a52bd0f6c73c39a8452",
+    "exhibit.html": "c1b6da5ccfed6c381c3e5a503a0d1cd09dd5e8999d24d94fabd7b40c36c4319e",
+    "method.html": "c18182fbd2c68839a5bd6cc8ecabbed4d1bebb0451634cb1236cd36dad88bfb7",
+    "notes.html": "f21506d20fcec80cea6e1c5e6e4cc2df706d269d1962adb1eaf4ab90a17b0724",
     "site.css": "a561ca7c2cfc80341c9f20794d07383e86afcb8c57a25f9e8c3200e6d12ac434",
     "glass.js": "a08cefb1f3fa663e59f8027354420ca9c89bbb52f24e44571a829611fec6605a",
-    "radio.js": "8871797806707df5f4241140ccfb99cae0d6d2146fb0bf64902d7d9e3f142ffb",
+    "radio.js": "a6b81713f537df68765fc2849d8c6cc7ab079452bdbb0b57ba265d199f329599",
     "radio-voices.js": "a94bdbcd03b3aec036eb34a52d8f162199b8668863651518793bd978602a253f"
   }
 }

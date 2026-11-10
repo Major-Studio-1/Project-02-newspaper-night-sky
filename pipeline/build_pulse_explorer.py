@@ -5,6 +5,24 @@ from archive_data.consumer import release_path, verified_file
 import time
 
 
+# On this Windows machine another process (a scanner or an indexer) sometimes holds a file for a moment, and writing it
+# fails with EINVAL or EACCES. Writes are tried again a few times instead of failing the whole build.
+def _again(write):
+    def go(self, *a, **k):
+        for attempt in range(6):
+            try:
+                return write(self, *a, **k)
+            except OSError as e:
+                if attempt == 5 or e.errno not in (13, 22):
+                    raise
+                time.sleep(.5)
+    return go
+
+
+Path.write_text = _again(Path.write_text)
+Path.write_bytes = _again(Path.write_bytes)
+
+
 def copy_if_changed(src, dst):
     """Copy src to dst unless dst already holds the same bytes. Rewriting every unchanged scan crop on each build sometimes
     failed on Windows (EINVAL while another process held the file for a moment), and it was never needed."""
@@ -57,7 +75,20 @@ REVIEWED={
                     'special-session-1797':['adams-special-session-speech','special-session-proclamation','special-session-house-answer'],
                     'blount-affair':['blount-letter','blount-knoxville-welcome','blount-committee-report']},
         'expect':(8,1587),
-        'order':['sn84038410','sn83025588','sn82014782','sn83025881','sn83025525','sn84023150','sn83025527','sn84024710']}}   # the pilot papers first
+        'order':['sn84038410','sn83025588','sn82014782','sn83025881','sn83025525','sn84023150','sn83025527','sn84024710']},   # the pilot papers first
+  # The third reviewed year (release v0.8.0, page shifts corrected in v0.8.1): 14 stories. The user agreed the proposed
+  # categories on 2026-11-10 ("可以，上线 1807"); the Chesapeake affair is with the ships, as a top-level story takes one category.
+  1807:{'categories':[
+          ('war','War in Europe',['lubeck-stormed','harford-jones-russian-army','bennigsen-pultusk-account','bulletin-66','bulletin-78','armistice-france-russia']),
+          ('ships','Britain, France and American ships',['monroe-pinkney-treaty-letter','driver-at-charleston','chesapeake-affair-1807','douglas-and-the-mayor-of-norfolk',
+                                                         'antwerp-letter-capture-order','britain-answer-peace-or-war']),
+          ('government','American public life and government',['burr-conspiracy-1807','special-session-1807'])],
+        'children':{'burr-conspiracy-1807':['burr-conspiracy-message','burr-in-arms-new-orleans','marshall-commitment-opinion','burr-treason-verdict','marshall-october-opinion'],
+                    'driver-at-charleston':['kalteisen-letter-driver','driver-answer-charleston'],
+                    'chesapeake-affair-1807':['chesapeake-attack-account','july-2-proclamation','berkeley-order','chesapeake-court-of-inquiry','house-report-chesapeake'],
+                    'douglas-and-the-mayor-of-norfolk':['douglas-letter-3-july','mayor-answer-4-july','tazewell-report','douglas-letter-6-july'],
+                    'special-session-1807':['proclamation-convening-congress','president-message-october-27']},
+        'expect':(12,4167)}}
 CATEGORY_COLORS=['#3987e5','#d95926','#199e70']   # dataviz slots 1-3, validated all-pairs on #050711
 short_names={'sn82014782':'Kentucky Gazette','sn83025525':'The Mirror','sn83025527':'Republican Gazetteer','sn83025588':'New Hampshire Gazette','sn83025881':'Gazette of the United States','sn84023150':'The Eagle','sn84024710':'Virginia Argus','sn84038410':'Patowmac Guardian'}
 # Map layout: each series is placed at its town of publication (from the catalogue's places_json).
@@ -455,6 +486,15 @@ for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','
     raise AssertionError('Unfilled placeholder '+leftover)
 
 pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','site.css','glass.js','radio.js','radio-voices.js']}
+# The radio's recorded voices (work/audio_render.py writes audio/ next to the pages; this build leaves it alone). Report
+# how many reviewed passages have a recording; a passage without one is read by eSpeak or the browser's voice.
+audio_summary=None
+if (OUT/'audio'/'index.json').exists():
+    ai=json.loads((OUT/'audio'/'index.json').read_text(encoding='utf8')); clips=ai.get('clips',{})
+    obs_ids=[o['id'] for d in reviewed_list for o in d['observations']]
+    audio_summary={'clips':len(clips),'packs':len(ai.get('packs',[])),'mb':round(sum(f.stat().st_size for f in (OUT/'audio').rglob('*.mp3'))/1e6,1),
+                   'reviewed_passages_recorded':sum(('p:'+i) in clips for i in obs_ids),'reviewed_passages':len(obs_ids),
+                   'titles_recorded':sum(k.startswith('t:') for k in clips),'announcer_clips':sum(k.startswith('a:') for k in clips)}
 receipt={'passed':True,'release_version':VER,
          'reviewed_years':[{'year':y,'newspapers':len(d['newspapers']),'passages':len(d['observations']),'group_views':len(d['groups']),'stories':len(d['stories']),'categories':len(d['categories'])} for y,d in sorted(reviewed_data.items())],
          'curated_passages':len(observations),'group_views':sum(len(d['groups']) for d in reviewed_list),'stories_in_overview':len(stories),'overview_categories':len(tele_cats),
@@ -463,6 +503,7 @@ receipt={'passed':True,'release_version':VER,
                    'Each reviewed year lists every one of its groups once, and every top-level story has a display category']
                   +(['Every matched printing carries its transcription check, one printing per page'] if printing_checks else []),
          'matched_printings':sum(len(v) for v in apps_by.values()),
+         'recorded_voices':audio_summary,
          'pages_sha256':pages}
 (OUT/'build_validation.json').write_text(json.dumps(receipt,indent=2),encoding='utf8')
 print(json.dumps(receipt,indent=2))

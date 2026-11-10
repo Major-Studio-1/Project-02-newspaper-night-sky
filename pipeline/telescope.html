@@ -1148,10 +1148,19 @@ function starSays(i, words) {   // where and when it was first printed, then its
   return {town, text: `${hello}${!hello && town ? town + ', ' : ''}${when}. ${Radio.live.firstWords(D.title[i], words)}`,
     label: `${town || 'Unknown town'} · ${when} — ${Radio.live.firstWords(D.title[i], 9)}`};
 }
-function speakStar(i, words = 16) {
+// The recorded speech for a star, if it has one: a reviewed story's first printing, or the title of one of the forty
+// most widely printed stories of its year. With `intro`, the announcer says the town and the month and year first.
+function starClips(i, intro) {
+  const main = (D.kind[i] ? 's:' : 't:') + D.id[i];
+  if (!Radio.live.clips.has(main)) return null;
+  if (!intro) return [main];
+  const town = townAt.get(D.flat[i] + ',' + D.flon[i]), dt = new Date(EPOCH + D.first[i] * MS);
+  return [...(town ? [(radioFirst ? 'a:hello:' : 'a:town:') + town] : []), 'a:month:' + (dt.getUTCMonth() + 1), 'a:year:' + dt.getUTCFullYear(), main];
+}
+function speakStar(i, words = 16, intro = false) {
   if (!radioOn || i < 0 || !W) return Promise.resolve(false);
-  const [x, y, z] = world(i), p = project(x, y, z), said = starSays(i, words);
-  return Radio.live.play('star:' + i, said.text, {pan: Math.max(-.9, Math.min(.9, p[0] / W * 2 - 1)), ...Radio.live.voiceOf(said.town || 'star' + i), label: said.label});
+  const clips = starClips(i, intro), [x, y, z] = world(i), p = project(x, y, z), said = starSays(i, words);
+  return Radio.live.play('star:' + i, said.text, {pan: Math.max(-.9, Math.min(.9, p[0] / W * 2 - 1)), ...Radio.live.voiceOf(said.town || 'star' + i), label: said.label, clips, cut: intro ? 0 : 12});
 }
 let dwell = 0, relayRun = 0, lastClickAt = 0;
 // Pointing: a star speaks once the pointer has rested on it for a moment (120 ms), so stars passed over in a sweep make
@@ -1181,7 +1190,7 @@ function radioClick(i) {
   pinned.add(i);
   if (pinned.size > Radio.live.MAX) { const old = pinned.values().next().value; pinned.delete(old); Radio.live.stop('star:' + old); }
   if (hoverVoice === i) hoverVoice = -1;   // speaking already: now it stays
-  if (!Radio.live.has('star:' + i)) speakStar(i);
+  if (!Radio.live.has('star:' + i)) speakStar(i, 16, true);
 }
 function radioSelect(list) {   // an area: these stars speak together, entering one by one, and the ones before stop
   relayRun++; clearTimeout(dwell);
@@ -1190,7 +1199,7 @@ function radioSelect(list) {   // an area: these stars speak together, entering 
   list.slice(0, Radio.live.MAX).forEach((i, k) => { pinned.add(i); setTimeout(() => { if (pinned.has(i) && radioOn) speakStar(i); }, k * 350); });
 }
 // A search: a relay through time, not a chorus. Its four most widely printed matches in view (or anywhere, when none is
-// in view) speak one after another in date order, each for up to seven seconds, with the tuning sound between them.
+// in view) speak one after another in date order, each for up to ten seconds, with the tuning sound between them.
 // Pointing at a star, a click or an area takes over.
 async function radioSearch() {
   if (!radioOn || !searching()) return;
@@ -1203,8 +1212,8 @@ async function radioSearch() {
     if (run !== relayRun || !radioOn) return;
     if (n) { Radio.cue('tune'); await new Promise(r => setTimeout(r, 420)); if (run !== relayRun || !radioOn) return; }
     pinned.add(i);
-    const cut = setTimeout(() => { if (run === relayRun) Radio.live.stop('star:' + i); }, 7000);
-    await speakStar(i, 16); clearTimeout(cut); if (run === relayRun) pinned.delete(i);
+    const cut = setTimeout(() => { if (run === relayRun) Radio.live.fade('star:' + i); }, 10000);
+    await speakStar(i, 16, true); clearTimeout(cut); if (run === relayRun) pinned.delete(i);
   }
 }
 function setRadio(on) {

@@ -15,6 +15,10 @@ The output lists candidate items for reading; nothing here admits anything. Run 
 with Python 3.12:
 
     python work/story_items.py 1776 outputs/story_discovery_1776/search_pages.json outputs/story_discovery_1776/items.json
+
+Families flagged long_running are left out by default, as for 1776. --long-running takes their printings
+as candidates too (used for 1807, where the President's message of 27 October and other widely printed
+documents sit in long-running chains); the output then records "long_running_families": true.
 """
 from pathlib import Path
 import collections
@@ -58,11 +62,11 @@ def first_position(ws, query, n=4):
     return best[1]
 
 
-def main(year, pages_path, out_path, min_papers=MIN_PAPERS):
+def main(year, pages_path, out_path, min_papers=MIN_PAPERS, long_running=False):
     year, min_papers = str(year), int(min_papers)
     release = release_path()
     fams = {f['family_id']: f for f in pq.read_table(release/'derived/reuse_families.parquet').to_pylist()
-            if f['first_date'][:4] == year and not f['long_running'] and f['newspapers'] >= min_papers}
+            if f['first_date'][:4] == year and (long_running or not f['long_running']) and f['newspapers'] >= min_papers}
     titles = {t['family_id']: t['title'] for t in pq.read_table(release/'derived/reuse_family_titles.parquet', columns=['family_id', 'title']).to_pylist()}
     apps = [a for a in pq.read_table(release/'derived/reuse_family_appearances.parquet',
                                      columns=['family_id', 'page_id', 'publication_date', 'lccn', 'page_number', 'excerpt', 'transcription']).to_pylist()
@@ -146,8 +150,10 @@ def main(year, pages_path, out_path, min_papers=MIN_PAPERS):
     rows.sort(key=lambda r: (-r['newspapers'], -r['printings'], r['first']))
     for n, r in enumerate(rows, 1):
         r['item'] = f'I{year[2:]}-{n:04}'
-    Path(out_path).write_text(json.dumps({'year': int(year), 'release': release.name, 'min_family_papers': min_papers,
-                                          'join': JOIN, 'contain': CONTAIN, 'weak': WEAK, 'pages_searched': len(pages),
+    head = {'year': int(year), 'release': release.name, 'min_family_papers': min_papers}
+    if long_running:
+        head['long_running_families'] = True
+    Path(out_path).write_text(json.dumps({**head, 'join': JOIN, 'contain': CONTAIN, 'weak': WEAK, 'pages_searched': len(pages),
                                           'families': len(fams), 'candidate_openings': len(cands), 'items': rows},
                                          ensure_ascii=False, indent=1), encoding='utf8')
     print('items printed somewhere', len(rows), '| 10+ papers', sum(r['newspapers'] >= 10 for r in rows), '6+', sum(r['newspapers'] >= 6 for r in rows),
@@ -155,4 +161,4 @@ def main(year, pages_path, out_path, min_papers=MIN_PAPERS):
 
 
 if __name__ == '__main__':
-    main(*sys.argv[1:5])
+    main(*[a for a in sys.argv[1:] if not a.startswith('--')][:4], long_running='--long-running' in sys.argv[1:])

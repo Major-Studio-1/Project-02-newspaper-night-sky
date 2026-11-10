@@ -154,7 +154,7 @@ function stopBed() {
 const SEA = /^(Portland|Portsmouth|Newburyport|Salem|Boston|Providence|Warren|Newport|New York|Philadelphia|Wilmington|Alexandria|Norfolk|Charleston|Baltimore)$/;
 const STREET = /^(Boston|New York|Philadelphia|Charleston|Washington|Richmond|Baltimore|Hartford|Lexington)$/;
 function scheme(name) {
-  if (name === 'New York') return {bed: 'city', cue: 'siren'};
+  if (name === 'New York') return {bed: 'traffic', cue: 'siren'};   // the deliberate anachronism: a modern city morning
   return {bed: SEA.test(name) ? 'sea' : STREET.test(name) ? 'city' : 'country', cue: STREET.test(name) ? 'hooves' : SEA.test(name) ? 'ship' : 'birds'};
 }
 function setTownBed(kind) {
@@ -164,6 +164,20 @@ function setTownBed(kind) {
   if (kind === 'sea') {   // water against a wharf: low noise that swells and falls
     const s = source('brown'), f = filter('lowpass', 520), swell = gain(.5), lfo = ctx.createOscillator(), depth = gain(.45);
     lfo.frequency.value = .11; lfo.connect(depth).connect(swell.gain); s.connect(f).connect(swell).connect(g); s.start(); lfo.start(); stops.push(s, lfo);
+  } else if (kind === 'traffic') {   // New York: the faint hum of city traffic, with a car passing now and then (with the siren, on purpose)
+    const s = source('brown'), f = filter('lowpass', 200); s.connect(f).connect(gain(.85)).connect(g); s.start(); stops.push(s);   // the low rumble
+    const hiss = source('white'), hf = filter('bandpass', 1500, .5); hiss.connect(hf).connect(gain(.035)).connect(g); hiss.start(); stops.push(hiss);   // tyres, far off
+    const pass = () => {   // a car going by: a swell of noise that moves from one side to the other
+      if (!ctx || !townBed || townBed.kind !== 'traffic' || ctx.state !== 'running') return;
+      const t = ctx.currentTime, dur = 3 + Math.random() * 3, n = source('brown'), bp = filter('bandpass', 320 + Math.random() * 320, .9), cg = gain(0);
+      const pn = ctx.createStereoPanner ? ctx.createStereoPanner() : null, dir = Math.random() < .5 ? 1 : -1;
+      n.connect(bp).connect(cg); (pn ? cg.connect(pn) : cg).connect(g);
+      cg.gain.setValueAtTime(0, t); cg.gain.linearRampToValueAtTime(.45 + Math.random() * .4, t + dur * .5); cg.gain.linearRampToValueAtTime(0, t + dur);
+      if (pn) { pn.pan.setValueAtTime(-.85 * dir, t); pn.pan.linearRampToValueAtTime(.85 * dir, t + dur); }
+      n.start(t); n.stop(t + dur + .05);
+    };
+    const timer = setInterval(() => { if (Math.random() < .5) pass(); }, 2300); setTimeout(pass, 400);
+    stops.push({stop: () => clearInterval(timer)});
   } else if (kind === 'city') {   // the murmur of a street
     const s = source('brown'), f = filter('lowpass', 300); s.connect(f).connect(gain(.8)).connect(g); s.start(); stops.push(s);
   } else {   // the country: a faint air
@@ -173,6 +187,34 @@ function setTownBed(kind) {
   townBed = {kind, g, stop: () => stops.forEach(s => { try { s.stop(); } catch {} })};
 }
 function duck(on) { if (townBus && ctx) townBus.gain.setTargetAtTime(on ? .45 : 1, ctx.currentTime, .3); }
+// A street between tall buildings: a few early echoes off the facades (different left and right), then a long tail that
+// grows darker as it fades. Made once; each town sound borrows it for as long as it rings.
+let streetIR = null;
+function streetImpulse(c, seconds = 3.4) {
+  const rate = c.sampleRate, len = Math.round(rate * seconds), b = c.createBuffer(2, len, rate);
+  for (let ch = 0; ch < 2; ch++) {
+    const d = b.getChannelData(ch); let lp = 0;
+    for (let i = 0; i < len; i++) {
+      const t = i / rate, bright = .5 - .44 * Math.min(1, t / 2.2);
+      lp += (Math.random() * 2 - 1 - lp) * bright;
+      d[i] = lp * Math.exp(-t * 1.25) * Math.min(1, t / .03) * .9;
+    }
+    for (const [ms, a] of (ch ? [[63, .55], [131, .42], [217, .32], [349, .22], [503, .14]] : [[47, .6], [109, .45], [188, .34], [301, .24], [457, .15]])) {
+      const at = Math.round(ms / 1000 * rate);
+      for (let k = 0; k < 160 && at + k < len; k++) d[at + k] += (Math.random() * 2 - 1) * a * Math.pow(1 - k / 160, 2);
+    }
+  }
+  return b;
+}
+function echo(from, amount, ms) {   // send a town sound into the street, then let the echo go when it has died away
+  const rev = ctx.createConvolver(); rev.buffer = streetIR || (streetIR = streetImpulse(ctx));
+  const send = gain(amount), back = filter('highpass', 150), dest = townBus || master;
+  from.connect(send); send.connect(rev).connect(back).connect(dest);
+  setTimeout(() => { for (const n of [send, rev, back]) try { n.disconnect(); } catch {} }, ms + 4200);
+}
+// How much each town sound echoes, and how long it lasts (ms): the siren most, a city's sound a few streets away.
+let sirenAt = -1e9;
+const SPACE = {siren: [1.25, 9500], church: [.75, 7000], ship: [.55, 3200], hooves: [.5, 4800], drum: [.4, 2600], birds: [.18, 4200]};
 // Bell-like tones from inharmonic partials.
 function bell(at, base, ratios, decay, level, out) {
   for (const [k, r] of ratios.entries()) {
@@ -188,8 +230,10 @@ function cue(kind) {
     ctx.resume().then(() => { if (ctx.state === 'running' && performance.now() - asked < 1500) cue(kind); }).catch(() => {});
     return 0;
   }
+  if (kind === 'siren' && performance.now() - sirenAt < 45000) return 0;   // not again for a while: once in 45 seconds is a city, more is an alarm
   const t = ctx.currentTime + .05, far = filter('lowpass', 2600); far.connect(townBus || master);
   const pan = ctx.createStereoPanner ? ctx.createStereoPanner() : null, out = pan ? (pan.connect(far), pan) : far;
+  if (SPACE[kind]) echo(far, ...SPACE[kind]);
   if (kind === 'chime') {   // the station's own call: a gentle rising arpeggio
     const o = filter('lowpass', 5000); o.connect(master);
     [440, 554.37, 659.25, 880].forEach((f, i) => bell(t + i * .26, f, [1, 2, 3.01], 1.6, .05, o));
@@ -205,13 +249,20 @@ function cue(kind) {
   }
   if (kind === 'church') { for (let i = 0; i < 3; i++) bell(t + i * 2.1, 196, [.5, 1, 1.183, 1.506, 2, 2.514, 2.662], 4, .07, out); return 1200; }
   if (kind === 'ship') { for (const k of [0, .38, 1.4, 1.78]) bell(t + k, 1046, [1, 2.0, 2.76, 5.4], 1.4, .05, out); return 600; }
-  if (kind === 'siren') {   // a distant wail moving across the city
-    const o = ctx.createOscillator(), f = filter('lowpass', 1500), g = gain(0); o.type = 'sawtooth';
-    o.frequency.setValueAtTime(620, t);
-    for (let k = 0; k < 3; k++) { o.frequency.linearRampToValueAtTime(1180, t + k * 2.6 + 1.3); o.frequency.linearRampToValueAtTime(620, t + k * 2.6 + 2.6); }
-    o.connect(f).connect(g).connect(out); g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.02, t + 1.5); g.gain.linearRampToValueAtTime(.02, t + 5.5); g.gain.linearRampToValueAtTime(0, t + 7.8);
-    if (pan) { pan.pan.setValueAtTime(-.7, t); pan.pan.linearRampToValueAtTime(.6, t + 7.8); }
-    o.start(t); o.stop(t + 8); return 700;
+  if (kind === 'siren') {   // a siren a few streets away: its wail passes across the city and rings between the buildings
+    sirenAt = performance.now();
+    const f = filter('lowpass', 1700), g = gain(0), dur = 9;
+    for (const [type, mul, lvl] of [['sawtooth', 1, .62], ['triangle', 2.004, .22]]) {
+      const o = ctx.createOscillator(), og = gain(lvl), base = 610 * mul; o.type = type;
+      o.frequency.setValueAtTime(base, t);
+      for (let k = 0; k < 3; k++) { o.frequency.linearRampToValueAtTime(base * 1.95, t + k * 3 + 1.5); o.frequency.linearRampToValueAtTime(base, t + k * 3 + 3); }
+      o.detune.setValueAtTime(35, t); o.detune.linearRampToValueAtTime(-70, t + dur);   // passing by: a little lower as it goes away
+      o.connect(og).connect(f); o.start(t); o.stop(t + dur);
+    }
+    f.connect(g).connect(out);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.012, t + 2.2); g.gain.linearRampToValueAtTime(.017, t + 5); g.gain.linearRampToValueAtTime(0, t + dur - .3);
+    if (pan) { pan.pan.setValueAtTime(-.8, t); pan.pan.linearRampToValueAtTime(.7, t + dur); }
+    return 700;
   }
   if (kind === 'hooves') {   // a horse and cart passing
     const g = gain(0); g.connect(out);
@@ -289,7 +340,59 @@ function intro(item, greet, previous) {
   const where = paper ? `${sameTown ? 'Also in' : 'In'} ${name}, ${the(paper)}.` : `In ${name}.`;
   return {lines: [sameDay ? where : `${spokenDate(item.date, false).replace(/^the /, 'The ')}. ${where}`]};
 }
-async function say(item, {greet = false, previous = null, rate = 1, mode = 'full', chime = false} = {}) {
+let saySrc = null;   // the recording being read on the Radio page, so stop() can end it
+function playRecorded(buf, live_) {
+  return new Promise(resolve => {
+    const c = audio(), src = c.createBufferSource(), g = gain(.85); src.buffer = buf; src.connect(g).connect(clearOut(c));
+    const t = c.currentTime; src.playbackRate.setValueAtTime(.6, t); src.playbackRate.exponentialRampToValueAtTime(1, t + .2);
+    saySrc = {src, g}; let done = false;
+    const finish = ok => { if (done) return; done = true; clearInterval(watch); if (saySrc && saySrc.src === src) saySrc = null; resolve(ok); };
+    const watch = setInterval(() => { if (!live_()) { try { g.gain.setTargetAtTime(0, c.currentTime, .08); src.stop(c.currentTime + .3); } catch {} finish(false); } }, 150);
+    src.onended = () => finish(live_()); src.start(t);
+  });
+}
+async function sayRecorded(item, {greet = false, previous = null, chime = false} = {}) {
+  if (!item.clip || !(await ready(800))) return null;
+  await loadClips(); if (!hasClip(item.clip)) return null;
+  const my = ++session, busy = synth && (synth.speaking || synth.pending); if (synth) synth.cancel();
+  const live_ = () => my === session;
+  if (busy) await wait(60);
+  startBed();
+  const name = town(item.place), sc = scheme(name), head = intro(item, greet, previous);
+  const lines = chunks(clean(item.text || item.title));
+  const show = index => listeners.caption.forEach(f => f({item, intro: head.lines.join(' '), lines, index}));
+  speaking = true; listeners.state.forEach(f => f('speaking'));
+  try {
+    show(-1);
+    if (chime) await wait(cue('chime')); else if (!greet && live_()) await wait(cue('tune'));
+    if (!live_()) return false;
+    if (greet) cue('church');
+    setTownBed(sc.bed); duck(true);
+    const {y, m, d, wd} = parts(item.date), sameDay = previous && previous.date === item.date;
+    const date = [`a:day:${d}`, `a:month:${m}`, `a:year:${y}`], paper = item.lccn ? [`a:paper:${item.lccn}`] : [];
+    const ids = greet ? [`a:hello:${name}`, `a:weekday:${DAYS[wd]}`, ...date, ...paper] : sameDay ? paper : [...date, ...paper];
+    cue(item.war ? 'drum' : sc.cue);
+    const head_ = await joinClips(ids.filter(hasClip));
+    if (head_ && live_()) await playRecorded(head_.buf, live_);
+    if (!live_()) return false;
+    await wait(250);
+    const body = await joinClips([item.clip]); if (!body) return null;
+    // The captions follow the reading: each sentence shown for its share of the recording, by its length.
+    const total = lines.reduce((n, l) => n + l.length, 0) || 1; let at = 0;
+    const timers = lines.map((l, i) => { const ms = at / total * body.buf.duration * 1000; at += l.length; return setTimeout(() => { if (live_()) show(i); }, ms); });
+    const ok = await playRecorded(body.buf, live_); timers.forEach(clearTimeout);
+    if (!ok || !live_()) return false;
+    duck(false); await wait(700);
+    return live_();
+  } finally {
+    if (live_()) { speaking = false; listeners.state.forEach(f => f('idle')); }
+  }
+}
+async function say(item, opts = {}) {
+  if (item.clip && opts.mode !== 'title' && opts.mode !== 'intro') { const r = await sayRecorded(item, opts); if (r !== null) return r; }   // no recording: the browser's voice
+  return sayAloud(item, opts);
+}
+async function sayAloud(item, {greet = false, previous = null, rate = 1, mode = 'full', chime = false} = {}) {
   const my = ++session, busy = synth && (synth.speaking || synth.pending); if (synth) synth.cancel();
   const pace = () => typeof rate === 'function' ? rate() : rate;
   const live = () => my === session;
@@ -346,6 +449,7 @@ async function sayLine(text, {rate = 1, head = ''} = {}) {
 }
 function stop(silence = false) {
   session++; if (synth) synth.cancel(); speaking = false; duck(false);
+  if (saySrc && ctx) { try { saySrc.g.gain.setTargetAtTime(0, ctx.currentTime, .06); saySrc.src.stop(ctx.currentTime + .25); } catch {} saySrc = null; }
   if (silence) { liveStopAll({scratch: false}); stopBed(); }
   listeners.state.forEach(f => f(silence ? 'off' : 'idle'));
 }
@@ -394,7 +498,7 @@ function pump() {
 }
 const make = (text, opts, wanted = () => true) => new Promise(resolve => { jobs.push({id: ++liveSeq, text, opts, wanted, resolve}); pump(); });
 function warm() { if (!engineLoaded && workerFails < 2 && !inFlight && !jobs.length) make('Good morning.', {speed: 175}); }   // loads eSpeak before the first voice is wanted
-const liveChanged = () => listeners.live.forEach(f => f([...live.entries()].filter(([, v]) => !v.ending).map(([key, v]) => ({key, label: v.label, text: v.text, silent: !!v.silent}))));
+const liveChanged = () => listeners.live.forEach(f => f([...live.entries()].filter(([, v]) => !v.ending).map(([key, v]) => ({key, label: v.label, text: v.text, silent: !!v.silent, recorded: !!v.recorded}))));
 function roomImpulse(c) {   // a small room: six tenths of a second of decaying noise
   const len = Math.round(c.sampleRate * .6), b = c.createBuffer(2, len, c.sampleRate);
   for (let ch = 0; ch < 2; ch++) { const d = b.getChannelData(ch); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3.4); }
@@ -407,8 +511,8 @@ function liveOut(c) {
   const room = c.createConvolver(); room.buffer = roomImpulse(c); band.connect(room).connect(gain(.12)).connect(master);
   return liveBus;
 }
-async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 50, level = .5, label = '', spin = true} = {}) {
-  const c = audio(); if (!c || !text) return false;
+async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 50, level = .5, label = '', spin = true, clips = null, cut = 0} = {}) {
+  const c = audio(); if (!c || (!text && !clips)) return false;
   const now = live.get(key); if (now && !now.ending) return true;   // already speaking
   const speaking = [...live.entries()].filter(([, v]) => !v.ending);
   if (speaking.length >= LIVE_MAX) liveStop(speaking[0][0]);   // the oldest gives way
@@ -419,9 +523,11 @@ async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 
     if (!(await ready()) || gone()) return false;
     startBed();
     const id = `${variant}|${pitch}|${Math.round(wpm)}|${entry.text}`;
-    let buf = made.get(id);
-    if (buf) { made.delete(id); made.set(id, buf); }
-    else {
+    let buf = null, clear = false;
+    if (clips && clips.length) { const rec = await joinClips(clips); if (gone()) return false; if (rec) { buf = rec.buf; clear = rec.tier <= 1; entry.recorded = true; liveChanged(); } }
+    if (!buf && !entry.text) return false;
+    if (!buf && made.has(id)) { buf = made.get(id); made.delete(id); made.set(id, buf); }
+    else if (!buf) {
       const out = await make(entry.text, {speed: Math.round(wpm), variant, pitch}, () => !gone());
       if (gone()) return false;
       if (out.error) {   // no voice could be made: the words stay on air, silently, for as long as reading them would take
@@ -439,9 +545,12 @@ async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 
     const src = c.createBufferSource(), g = gain(0), pn = c.createStereoPanner ? c.createStereoPanner() : null, t = c.currentTime;
     src.buffer = buf;
     if (spin) { src.playbackRate.setValueAtTime(.55, t); src.playbackRate.exponentialRampToValueAtTime(1, t + .22); }   // spun up, like a record let go
-    if (pn) { pn.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(pn).connect(liveOut(c)); } else src.connect(g).connect(liveOut(c));
+    const bus = clear ? clearOut(c) : liveOut(c);
+    if (pn) { pn.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(pn).connect(bus); } else src.connect(g).connect(bus);
     g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(lvl, t + .08);
     entry.src = src; entry.g = g;
+    // A hover hears the opening only: after `cut` seconds the voice fades away (no scratch), as a station drifts off.
+    if (cut > 0 && buf.duration > cut + 1.5) setTimeout(() => { if (live.get(key) === entry && !entry.ending) liveFade(key); }, cut * 1000);
     return await new Promise(resolve => {
       src.onended = () => { if (live.get(key) === entry) { live.delete(key); liveChanged(); } resolve(!entry.ending); };
       src.start(t);
@@ -449,6 +558,58 @@ async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 
   } catch { return false; }
   finally { if (live.get(key) === entry && !entry.src) { live.delete(key); liveChanged(); } }
 }
+// ---- Recorded voices: speech made once at build time with Kokoro (work/audio_render.py) ----
+// audio/index.json lists every clip: [pack, first byte, end byte, seconds, tier] (tier 0 the announcer, 1 a reviewed
+// passage, 2 a title of a widely printed story), plus aliases (a reviewed story -> its first printing). Each clip is a
+// whole MP3 inside its pack, so a byte range of the pack plays alone. If the server ignores ranges, the whole pack is
+// fetched once and cut here.
+let clipIndex = null, clipLoading = null;
+const clipCache = new Map(), wholePacks = new Map();
+function loadClips() {
+  if (clipIndex) return Promise.resolve(clipIndex);
+  return clipLoading = clipLoading || fetch(new URL('audio/index.json', document.baseURI)).then(r => r.ok ? r.json() : null).catch(() => null).then(j => (clipIndex = j));
+}
+const clipId = id => clipIndex && clipIndex.alias && clipIndex.alias[id] || id;
+const hasClip = id => !!(clipIndex && clipIndex.clips[clipId(id)]);
+async function clipBuffer(id) {
+  const c = audio(); await loadClips(); id = clipId(id);
+  const e = c && clipIndex && clipIndex.clips[id]; if (!e) return null;
+  if (clipCache.has(id)) { const b = clipCache.get(id); clipCache.delete(id); clipCache.set(id, b); return b; }
+  const url = new URL('audio/' + clipIndex.packs[e[0]], document.baseURI).href;
+  let bytes = null;
+  try {
+    if (wholePacks.has(url)) bytes = (await wholePacks.get(url)).slice(e[1], e[2]);
+    else {
+      const r = await fetch(url, {headers: {Range: `bytes=${e[1]}-${e[2] - 1}`}});
+      if (r.status === 206) bytes = await r.arrayBuffer();
+      else if (r.ok) { const whole = r.arrayBuffer(); wholePacks.set(url, whole); bytes = (await whole).slice(e[1], e[2]); }
+    }
+    if (!bytes) return null;
+    const buf = await c.decodeAudioData(bytes);
+    clipCache.set(id, buf); if (clipCache.size > 80) clipCache.delete(clipCache.keys().next().value);
+    return buf;
+  } catch { return null; }
+}
+// Several clips as one: the announcer's words with short breaths between them, then a longer pause before the reader.
+async function joinClips(ids) {
+  await loadClips(); if (!ids.length || !ids.every(hasClip)) return null;
+  const bufs = await Promise.all(ids.map(clipBuffer)); if (bufs.some(b => !b)) return null;
+  if (bufs.length === 1) return {buf: bufs[0], tier: clipIndex.clips[clipId(ids[0])][4]};
+  const rate = bufs[0].sampleRate, gaps = ids.map((id, k) => k === ids.length - 1 ? 0 : clipIndex.clips[clipId(ids[k + 1])][4] > 0 ? .4 : .1);
+  const len = bufs.reduce((n, b, k) => n + b.length + Math.round(gaps[k] * rate), 0), out = ctx.createBuffer(1, len, rate), d = out.getChannelData(0);
+  let at = 0; bufs.forEach((b, k) => { d.set(b.getChannelData(0), at); at += b.length + Math.round(gaps[k] * rate); });
+  return {buf: out, tier: Math.max(...ids.map(id => clipIndex.clips[clipId(id)][4]))};
+}
+// A clear station (the announcer, a reviewed passage): the full voice in a light room. Titles and eSpeak go through the
+// radio band (liveOut) instead, as distant stations.
+let clearBus = null;
+function clearOut(c) {
+  if (clearBus) return clearBus;
+  clearBus = gain(1); const lo = filter('highpass', 90); clearBus.connect(lo).connect(master);
+  const room = c.createConvolver(); room.buffer = roomImpulse(c); lo.connect(room).connect(gain(.07)).connect(master);
+  return clearBus;
+}
+
 // Stopping a voice: like a hand on a record, it slows, drops in pitch and fades, with a scratch.
 function liveStop(key, {scratch = true} = {}) {
   const e = live.get(key); if (!e || e.ending) return;
@@ -463,6 +624,11 @@ function liveStop(key, {scratch = true} = {}) {
   if (scratch && performance.now() - scratchAt > 140) { scratchAt = performance.now(); cue('scratch'); }   // one scratch for several stopped together
 }
 function liveStopAll(opts) { for (const k of [...live.keys()]) liveStop(k, opts); }
+function liveFade(key) {   // a gentle end: the voice fades over most of a second, at its own pitch
+  const e = live.get(key); if (!e || e.ending || !e.src) return;
+  e.ending = true; liveChanged();
+  const t = ctx.currentTime; try { e.g.gain.cancelScheduledValues(t); e.g.gain.setValueAtTime(e.g.gain.value, t); e.g.gain.linearRampToValueAtTime(0, t + .8); e.src.stop(t + .85); } catch {}
+}
 // A paper or a town keeps one voice: the same variant and pitch every time it speaks.
 const VARIANTS = ['m1', 'm2', 'm3', 'm4', 'f2'];   // the others sounded damaged rather than old
 function voiceOf(key) {
@@ -506,8 +672,9 @@ window.Radio = {
   say, sayLine, stop, unlock, ready, cue: k => { audio(); return cue(k); }, welcome: () => { audio(); return welcome(); },
   live: {
     play: livePlay, stop: liveStop, stopAll: liveStopAll, has: key => !!live.get(key) && !live.get(key).ending,
-    preload: () => { if (audio()) ready().then(ok => { if (ok) warm(); }); },
+    preload: () => { loadClips(); if (audio()) ready().then(ok => { if (ok) warm(); }); },
     get count() { return [...live.values()].filter(v => !v.ending).length; }, get failed() { return workerFails >= 2; },
+    fade: liveFade, clips: {load: loadClips, has: hasClip, id: clipId},
     onChange(f) { listeners.live.push(f); }, voiceOf, firstWords, MAX: LIVE_MAX
   },
   spokenDate, writtenDate, town, paperName, clean, chunks, intro
