@@ -19,8 +19,8 @@ __SITE_HEAD__
 .qr{position:fixed;top:3vh;right:2.5vw;z-index:5;display:flex;align-items:center;gap:1vw;padding:1.2vh 1vw;border-radius:12px;background:#050711d9;border:1px solid #ffffff1f;pointer-events:none;transition:opacity .8s}
 .qr.left{right:auto;left:2.5vw}.qr svg{display:block;width:clamp(72px,6.5vw,150px);height:auto;background:#fff;border-radius:6px}
 .qr span{max-width:11vw;color:var(--muted);font-size:clamp(11px,.8vw,18px);line-height:1.35}.qr.hide{opacity:0}
-.dots{position:fixed;left:50%;top:2vh;transform:translateX(-50%);display:flex;gap:.6vw;z-index:5;pointer-events:none}
-.dots i{width:clamp(6px,.5vw,12px);height:clamp(6px,.5vw,12px);border-radius:50%;background:#ffffff33}.dots i.on{background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.dots{position:fixed;left:50%;top:1.2vh;transform:translateX(-50%);display:flex;gap:.2vw;z-index:8}
+.dots button{display:grid;place-items:center;width:clamp(26px,1.6vw,44px);height:clamp(26px,1.6vw,44px);padding:0;border:0;border-radius:50%;background:none;cursor:pointer}.dots button::before{content:"";width:clamp(7px,.5vw,12px);height:clamp(7px,.5vw,12px);border-radius:50%;background:#ffffff40;transition:background .2s}.dots button:hover::before{background:#ffffffa0}.dots button[aria-current="true"]::before{background:var(--gold);box-shadow:0 0 8px var(--gold)}.dots button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .explore{position:fixed;left:50%;bottom:2vh;transform:translateX(-50%);z-index:6;padding:.8vh 1.2vw;border-radius:99px;background:#050711e6;border:1px solid #ffffff26;
   color:var(--muted);font-size:clamp(12px,.9vw,20px);display:none}.explore.show{display:block}
 .start{position:fixed;inset:0;z-index:10;display:grid;place-items:center;text-align:center;background:radial-gradient(ellipse at 50% 40%,#101b32,#050711 70%);cursor:pointer}
@@ -33,7 +33,7 @@ body.still,body.still *{cursor:none!important}
 </head>
 <body>
 <main><iframe id="stage" title="Exhibition scene" allow="autoplay; fullscreen"></iframe></main>
-<div class="dots" id="dots" aria-hidden="true"></div>
+<nav class="dots" id="dots" aria-label="Scenes"></nav>
 <div class="caption left hide" id="caption" aria-live="polite"><p class="count" id="count"></p><h1 id="title"></h1><p id="text"></p></div>
 <div class="qr hide" id="qr" aria-hidden="true"><span id="qr-text">Continue on your phone</span></div>
 <div class="explore" id="explore">Exploring · the tour returns after a minute without a touch</div>
@@ -55,7 +55,10 @@ const params = new URLSearchParams(location.search);
 const IDLE = 60000;
 let index = Math.max(0, Math.min(SCENES.length - 1, Number(params.get('scene')) - 1 || 0)), timer = 0, endsAt = 0, left = 0, paused = false, exploringUntil = 0, muted = false, watchdog = 0, fade = 0;
 
-SCENES.forEach(() => $('dots').append(document.createElement('i')));
+SCENES.forEach((s, k) => {   // a dot per scene: click one to go there (the tour carries on from it)
+  const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', `Scene ${k + 1}: ${s.title}`); b.title = s.title;
+  b.addEventListener('click', () => { exploringUntil = 0; $('explore').classList.remove('show'); paused = false; show(k); }); $('dots').append(b);
+});
 function qr(url) {
   const box = $('qr'); box.querySelector('svg')?.remove();
   if (typeof qrcode !== 'function') { box.classList.add('hide'); return; }   // offline: no code
@@ -67,7 +70,7 @@ function show(i) {
   $('caption').classList.add('hide'); $('qr').classList.add('hide');
   clearTimeout(watchdog); watchdog = setTimeout(() => go(1), 25000);   // a scene that does not load is skipped
   $('stage').src = s.url;
-  [...$('dots').children].forEach((d, k) => d.classList.toggle('on', k === index));
+  [...$('dots').children].forEach((d, k) => d.setAttribute('aria-current', String(k === index)));
   setTimeout(() => {
     $('count').textContent = `${index + 1} of ${SCENES.length}`; $('title').textContent = s.title; $('text').textContent = s.text;
     const c = $('caption'); c.className = 'caption ' + side + ' hide';

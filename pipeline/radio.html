@@ -37,7 +37,8 @@ h1{font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-.02em;margin
 .knobs{display:flex;flex-direction:column;gap:10px;align-items:stretch;min-width:170px}
 .knobs .row{display:flex;gap:8px;align-items:center}
 .knobs button{flex:1}
-.vol{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}.vol input{flex:1;min-width:0}
+.vol{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}.vol .ico,.knob .ico{margin-right:6px}
+.power{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}.power::before{display:none}.power .ico{width:24px;height:24px;color:#8b98b5;transition:color .2s,filter .2s}.power[aria-pressed="true"] .ico{color:var(--gold);filter:drop-shadow(0 0 6px var(--gold))}.vol input{flex:1;min-width:0}
 .voice{font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .knob{font:500 13.5px/1.2 system-ui,sans-serif;color:var(--ink);padding:8px 14px;border-radius:99px;cursor:pointer;background:linear-gradient(180deg,#ffffff1c,#ffffff06);
   border:1px solid #ffffff2e;box-shadow:inset 0 1px 0 #ffffff26,0 2px 8px #0000004d}.knob:hover{background:linear-gradient(180deg,#ffffff28,#ffffff0a)}.knob:disabled{opacity:.45;cursor:default}
@@ -81,12 +82,12 @@ __SITE_HEADER__
     <div class="focus-ring"></div>
   </div>
   <div class="face">
-    <button id="power" class="power" type="button" aria-pressed="false">Turn on</button>
+    <button id="power" class="power" type="button" aria-pressed="false">__ICON_power__<span class="lbl">Turn on</span></button>
     <div class="now"><p class="now-date" id="now-date"></p><p class="now-where" id="now-where"></p></div>
     <div class="knobs">
-      <div class="row"><button id="skip" class="knob" type="button" disabled title="Skip to the next passage">Next ›</button></div>
-      <label class="vol"><span>Volume</span><input id="volume" class="glass-range" type="range" min="0" max="1" step="0.05"></label>
-      <button id="voice" class="voice knob" type="button" title="Try another of your browser's voices">Voice</button>
+      <div class="row"><button id="skip" class="knob" type="button" disabled title="Skip to the next passage">__ICON_skip__Next</button></div>
+      <label class="vol"><span>__ICON_volume__Volume</span><input id="volume" class="glass-range" type="range" min="0" max="1" step="0.05"></label>
+      <button id="voice" class="voice knob" type="button" title="Try another of your browser's voices">__ICON_voice__<span class="lbl">Voice</span></button>
     </div>
   </div>
   <div class="caption">
@@ -200,16 +201,16 @@ async function run() {
   }
 }
 function setOn(value) {
-  on = value; $('power').setAttribute('aria-pressed', String(on)); $('power').textContent = on ? 'Turn off' : 'Turn on'; $('skip').disabled = !on;
+  on = value; $('power').setAttribute('aria-pressed', String(on)); $('power').querySelector('.lbl').textContent = on ? 'Turn off' : 'Turn on'; $('skip').disabled = !on;
   $('radio').setAttribute('aria-pressed', String(on)); try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { first = true; previous = null; hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
+  if (on) { first = true; previous = null; Radio.cue('strings'); hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
   else { runToken++; Radio.stop(true); idle(); }
 }
 function tune(y) {
   const was = year; year = clampYear(y); syncDial(); save();
   if (year === was && cursor) return;
   cursor = null; qi = 0; previous = null;
-  if (on) { first = false; Radio.stop(); runToken++; Radio.cue('sweep'); setTimeout(() => { if (on) run(); }, 450); }
+  if (on) { first = false; Radio.stop(); runToken++; Radio.cue('scratch'); setTimeout(() => Radio.cue('tune'), 180); setTimeout(() => { if (on) run(); }, 650); }   // a new station: the record stops, the dial turns
   else idle();
 }
 
@@ -258,7 +259,7 @@ function save() { try { localStorage.setItem(STORE, JSON.stringify({year})); } c
 let lastStep = year;
 $('dial').addEventListener('input', () => {
   const y = clampYear(Number($('dial').value)); $('needle').style.left = ((y - 1770) / 40 * 100) + '%';
-  if (on && y !== lastStep) Radio.cue('sweep'); lastStep = y;
+  if (on && y !== lastStep) Radio.cue('tune'); lastStep = y;
   if (!on) { year = y; idle(); }
 });
 $('dial').addEventListener('change', () => tune(Number($('dial').value)));
@@ -269,7 +270,7 @@ $('volume').value = String(Radio.volume);
 $('volume').addEventListener('input', () => Radio.setVolume(Number($('volume').value)));
 function syncVoice() {
   const v = Radio.voice; $('voice').disabled = !v;
-  $('voice').textContent = v ? 'Voice: ' + v.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*[-–(].*$/, '') : 'No voice in this browser';
+  $('voice').querySelector('.lbl').textContent = v ? 'Voice: ' + v.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*[-–(].*$/, '') : 'No voice in this browser';
   $('voice').title = v ? v.name + ' · tap for another voice' : '';
 }
 Radio.onVoices(syncVoice); syncVoice();

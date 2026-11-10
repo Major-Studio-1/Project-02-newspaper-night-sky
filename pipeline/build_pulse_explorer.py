@@ -392,8 +392,8 @@ from site_parts import PAGES
 fever_q,july_q='yellow fever, malignant fever, prevailing fever','anniversary of independence, fourth of july, 4th of july'
 exhibit_scenes=[
   {'title':f'A sky of {N_STARS:,} stories','seconds':75,
-   'text':'Every story printed in at least two newspapers of this archive, 1770–1810. Time runs into the distance: the front is now, and the further away a star is, the earlier the story. Colours show the region where each story was first printed.',
-   'url':'telescope.html?exhibit=1&view=place&colour=region&lookback=10&year=1780&drift=on','link':'telescope.html?view=place&lookback=10&year=1780'},
+   'text':'Every story printed in at least two newspapers of this archive, 1770–1810. Each star sits where its story was first printed. Time runs into the distance: the front is now, and the further away a star is, the earlier the story.',
+   'url':'telescope.html?exhibit=1&view=place&lookback=10&year=1780&drift=on','link':'telescope.html?view=place&lookback=10&year=1780'},
   {'title':'A privateer boards the Peace and Plenty','seconds':60,
    'text':"Captain Dunbar's account of a French privateer boarding his brig, printed in three papers in 1797 and retold in a fourth. Each pulse is one newspaper printing it on its date; every printing was checked against its scan.",
    'url':pulse_link(peace)+'&exhibit=1&speed=7&radio=on','link':pulse_link(peace)},
@@ -408,7 +408,7 @@ exhibit_scenes=[
    'url':'telescope.html?exhibit=1&view=topic&angle=side&lookback=10&year=1800&drift=on','link':'telescope.html?view=topic&angle=side&lookback=10&year=1800'},
   {'title':'What is missing','seconds':45,
    'text':'Only two newspaper series survive for 1785–86, against 11 to 17 a year after 1800. A thin sky is a gap in the surviving archive, not silence in the towns.',
-   'url':'telescope.html?exhibit=1&view=place&colour=region&lookback=5&year=1789&drift=off','link':'telescope.html?view=place&lookback=5&year=1789'},
+   'url':'telescope.html?exhibit=1&view=place&lookback=5&year=1789&drift=off','link':'telescope.html?view=place&lookback=5&year=1789'},
   {'title':'The radio: a morning in 1776','seconds':120,
    'text':'Any day from 1770 to 1810, read aloud by the browser: a greeting to the town, then what its newspaper printed. The sounds are atmosphere, not recordings of the time.',
    'url':'radio.html?exhibit=1&year=1776&date=07-06&on=1','link':'radio.html?year=1776&date=07-06'}]

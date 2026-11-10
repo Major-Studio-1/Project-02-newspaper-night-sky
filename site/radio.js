@@ -74,7 +74,7 @@ function loadVoices() {
   voice = voices.find(v => v.name === voiceName) || voices[0] || null;
   listeners.voices.forEach(f => f(voices));
 }
-const listeners = {voices: [], caption: [], state: [], chorus: []};
+const listeners = {voices: [], caption: [], state: [], live: []};
 if (synth) { loadVoices(); if (synth.addEventListener) synth.addEventListener('voiceschanged', loadVoices); else synth.onvoiceschanged = loadVoices; }
 
 let session = 0, speaking = false, unlocked = false;
@@ -224,6 +224,40 @@ function cue(kind) {
     }
     return 400;
   }
+  if (kind === 'scratch') {   // a record pulled back and forth under the hand: two quick strokes of noise and a bent tone
+    const s = source('white', false), bp = filter('bandpass', 900, 3), g = gain(0); s.connect(bp).connect(g).connect(master);
+    for (const [at, dur, f0, f1] of [[0, .085, 650, 2700], [.095, .1, 2500, 480]]) {
+      bp.frequency.setValueAtTime(f0, t + at); bp.frequency.exponentialRampToValueAtTime(f1, t + at + dur);
+      g.gain.setValueAtTime(0, t + at); g.gain.linearRampToValueAtTime(.075, t + at + .012); g.gain.linearRampToValueAtTime(0, t + at + dur);
+    }
+    s.start(t); s.stop(t + .21);
+    const o = ctx.createOscillator(), og = gain(0); o.type = 'triangle';
+    o.frequency.setValueAtTime(210, t); o.frequency.exponentialRampToValueAtTime(540, t + .085); o.frequency.exponentialRampToValueAtTime(150, t + .19);
+    o.connect(og).connect(master); og.gain.setValueAtTime(0, t); og.gain.linearRampToValueAtTime(.022, t + .02); og.gain.linearRampToValueAtTime(0, t + .2); o.start(t); o.stop(t + .21);
+    return 210;
+  }
+  if (kind === 'tune') {   // turning the dial: a breath of static and the whistle of a station drifting past
+    const s = source('white', false), f = filter('bandpass', 1500, 1.1), g = gain(0); s.connect(f).connect(g).connect(master);
+    f.frequency.setValueAtTime(700, t); f.frequency.exponentialRampToValueAtTime(2600, t + .42);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.04, t + .05); g.gain.linearRampToValueAtTime(0, t + .46); s.start(t); s.stop(t + .5);
+    const w = ctx.createOscillator(), wg = gain(0), f0 = 700 + Math.random() * 1300;
+    w.frequency.setValueAtTime(f0, t); w.frequency.exponentialRampToValueAtTime(f0 * (Math.random() < .5 ? .45 : 2.1), t + .42);
+    w.connect(wg).connect(master); wg.gain.setValueAtTime(0, t); wg.gain.linearRampToValueAtTime(.011, t + .08); wg.gain.linearRampToValueAtTime(0, t + .44); w.start(t); w.stop(t + .46);
+    return 460;
+  }
+  if (kind === 'strings') {   // the opening: a long, soft chord of strings that swells in and slowly leaves
+    const out = gain(0), lp = filter('lowpass', 600, .5); lp.connect(out); out.connect(master);
+    const vib = ctx.createOscillator(), depth = gain(3.2); vib.frequency.value = 4.7; vib.connect(depth); vib.start(t); vib.stop(t + 15);
+    for (const [f, level] of [[146.83, .5], [220, .38], [293.66, .32], [369.99, .15], [440, .11]]) {   // D, A, D, F sharp, A: open and warm
+      for (const cents of [-5, 5]) {   // two players to a note, a little apart
+        const o = ctx.createOscillator(), og = gain(level * .5); o.type = 'sawtooth'; o.frequency.value = f; o.detune.value = cents; depth.connect(o.detune);
+        o.connect(og).connect(lp); o.start(t); o.stop(t + 15);
+      }
+    }
+    out.gain.setValueAtTime(0, t); out.gain.linearRampToValueAtTime(.05, t + 3.4); out.gain.setValueAtTime(.05, t + 6.5); out.gain.linearRampToValueAtTime(0, t + 14.5);
+    lp.frequency.setValueAtTime(520, t); lp.frequency.linearRampToValueAtTime(1300, t + 4.2); lp.frequency.linearRampToValueAtTime(650, t + 14);
+    return 0;   // it plays under whatever follows
+  }
   return 0;
 }
 const wait = ms => new Promise(r => setTimeout(r, ms));
@@ -249,7 +283,7 @@ async function say(item, {greet = false, previous = null, rate = 1, mode = 'full
   try {
     show(-1);
     if (chime) await wait(cue('chime'));
-    else if (!greet && live()) await wait(cue('sweep'));
+    else if (!greet && live()) await wait(cue('tune'));
     if (!live()) return false;
     if (greet) cue('church');
     setTownBed(sc.bed);
@@ -291,70 +325,97 @@ async function sayLine(text, {rate = 1, head = ''} = {}) {
 }
 function stop(silence = false) {
   session++; if (synth) synth.cancel(); speaking = false; duck(false);
-  if (silence) { chorusStop(); stopBed(); }
+  if (silence) { liveStopAll({scratch: false}); stopBed(); }
   listeners.state.forEach(f => f(silence ? 'off' : 'idle'));
 }
 
-// ---- The chorus: other papers reading at the same moment ----
-// The browser's own voice can say only one thing at a time, so the papers that print alongside the one it reads speak
-// in a second kind of voice: eSpeak (radio-voices.js, a worker), whose speech arrives as sound the page can mix. Each
-// voice is short (a story's opening words), placed left or right by where it was printed, and heard like a distant set,
-// a little quieter than the main voice. Nothing loads until the chorus is first used.
-let chorusWorker = null, chorusReady = null, chorusSeq = 0, chorusEpoch = 0, chorusBus = null, chorusPending = 0;
-const chorusWaiting = new Map(), chorusVoices = new Map();   // source -> label of what it reads
-function chorusStart() {
-  if (chorusReady) return chorusReady;
-  chorusReady = new Promise(resolve => {
-    try { chorusWorker = new Worker(new URL('radio-voices.js', document.baseURI), {type: 'module'}); } catch { resolve(false); return; }
-    chorusWorker.onmessage = e => { const w = chorusWaiting.get(e.data.id); if (w) { chorusWaiting.delete(e.data.id); w(e.data); } };
-    chorusWorker.onerror = () => resolve(false);
-    chorusRender('Good morning.', {speed: 175}).then(out => resolve(!out.error));   // loads eSpeak once
+// ---- Voices on demand: each star or paper the visitor activates speaks in its own voice ----
+// A voice starts only when the visitor activates something: pointing at a star or a paper, clicking it, selecting an
+// area, or searching. Nothing speaks on its own while time drifts or plays. Several activated at once speak at once
+// (up to five), because they arrive as sound the page can mix: eSpeak (radio-voices.js, a worker), placed left or right
+// by where each story was printed and heard like a distant set in a small room. Moving on to another star stops the old
+// voice the way a hand stops a record (it slows, drops and fades, with a scratch) and spins the new one up. The browser's
+// own voice, which can say one thing at a time, stays for the Radio page. Nothing loads until the first voice is wanted.
+const LIVE_MAX = 5;
+let liveWorker = null, liveReady = null, liveSeq = 0, liveBus = null, scratchAt = 0;
+const liveWaiting = new Map(), live = new Map();   // key -> {src, g, label, text, ending}
+function liveStart() {
+  if (liveReady) return liveReady;
+  liveReady = new Promise(resolve => {
+    try { liveWorker = new Worker(new URL('radio-voices.js', document.baseURI), {type: 'module'}); } catch { resolve(false); return; }
+    liveWorker.onmessage = e => { const w = liveWaiting.get(e.data.id); if (w) { liveWaiting.delete(e.data.id); w(e.data); } };
+    liveWorker.onerror = () => resolve(false);
+    liveRender('Good morning.', {speed: 175}).then(out => resolve(!out.error));   // loads eSpeak once
   });
-  chorusReady.then(ok => { if (!ok) chorusReady = null; });
-  return chorusReady;
+  liveReady.then(ok => { if (!ok) liveReady = null; });
+  return liveReady;
 }
-function chorusRender(text, opts) {
+function liveRender(text, opts) {
   return new Promise(resolve => {
-    const id = ++chorusSeq; chorusWaiting.set(id, resolve); chorusWorker.postMessage({id, text, opts});
-    setTimeout(() => { if (chorusWaiting.delete(id)) resolve({error: 'timeout'}); }, 8000);
+    const id = ++liveSeq; liveWaiting.set(id, resolve); liveWorker.postMessage({id, text, opts});
+    setTimeout(() => { if (liveWaiting.delete(id)) resolve({error: 'timeout'}); }, 8000);
   });
 }
-const chorusChanged = () => listeners.chorus.forEach(f => f([...chorusVoices.values()]));
-async function chorusSay(text, {pan = 0, wpm = 190, variant = 'm1', pitch = 50, level = .5, label = ''} = {}) {
+const liveChanged = () => listeners.live.forEach(f => f([...live.entries()].filter(([, v]) => !v.ending).map(([key, v]) => ({key, label: v.label, text: v.text}))));
+function roomImpulse(c) {   // a small room: a second and a half of decaying noise
+  const len = Math.round(c.sampleRate * 1.5), b = c.createBuffer(2, len, c.sampleRate);
+  for (let ch = 0; ch < 2; ch++) { const d = b.getChannelData(ch); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3.4); }
+  return b;
+}
+function liveOut(c) {
+  if (liveBus) return liveBus;
+  liveBus = gain(1);
+  const squeeze = c.createDynamicsCompressor(); squeeze.threshold.value = -18; squeeze.ratio.value = 3.5;
+  liveBus.connect(filter('highpass', 220)).connect(filter('lowpass', 4200)).connect(squeeze).connect(master);
+  const room = c.createConvolver(); room.buffer = roomImpulse(c); squeeze.connect(room).connect(gain(.16)).connect(master);
+  return liveBus;
+}
+async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 50, level = .8, label = '', spin = true} = {}) {
   const c = audio(); if (!c || c.state !== 'running' || !text) return false;
-  const epoch = chorusEpoch; chorusPending++; let waiting = true;
-  const done = () => { if (waiting) { waiting = false; chorusPending--; } };
+  const now = live.get(key); if (now && !now.ending) return true;   // already speaking
+  const speaking = [...live.entries()].filter(([, v]) => !v.ending);
+  if (speaking.length >= LIVE_MAX) liveStop(speaking[0][0]);   // the oldest gives way
+  const entry = {src: null, g: null, label, text: clean(text), ending: false};
+  live.set(key, entry); liveChanged(); startBed();
+  const gone = () => live.get(key) !== entry || entry.ending;
   try {
-    if (!(await chorusStart()) || epoch !== chorusEpoch) return false;
-    const out = await chorusRender(clean(text), {speed: Math.round(wpm), variant, pitch});
-    if (out.error || epoch !== chorusEpoch) return false;
+    if (!(await liveStart()) || gone()) return false;
+    const out = await liveRender(entry.text, {speed: Math.round(wpm), variant, pitch});
+    if (out.error || gone()) return false;
     const buf = await c.decodeAudioData(out.buf);
-    if (epoch !== chorusEpoch) return false;
-    if (!chorusBus) {   // a distant set: no deep bass or bright treble, and kept even when several speak together
-      chorusBus = gain(1); const squeeze = c.createDynamicsCompressor(); squeeze.threshold.value = -20; squeeze.ratio.value = 4;
-      chorusBus.connect(filter('highpass', 260)).connect(filter('lowpass', 3800)).connect(squeeze).connect(master);
-    }
+    if (gone()) return false;
     const src = c.createBufferSource(), g = gain(0), p = c.createStereoPanner ? c.createStereoPanner() : null, t = c.currentTime;
-    src.buffer = buf; if (p) { p.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(p).connect(chorusBus); } else src.connect(g).connect(chorusBus);
-    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(level, t + .06);
+    src.buffer = buf;
+    if (spin) { src.playbackRate.setValueAtTime(.55, t); src.playbackRate.exponentialRampToValueAtTime(1, t + .22); }   // spun up, like a record let go
+    if (p) { p.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(p).connect(liveOut(c)); } else src.connect(g).connect(liveOut(c));
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(level, t + .08);
+    entry.src = src; entry.g = g;
     return await new Promise(resolve => {
-      done(); chorusVoices.set(src, label); chorusChanged();
-      src.onended = () => { chorusVoices.delete(src); chorusChanged(); resolve(epoch === chorusEpoch); };
+      src.onended = () => { if (live.get(key) === entry) { live.delete(key); liveChanged(); } resolve(!entry.ending); };
       src.start(t);
     });
   } catch { return false; }
-  finally { done(); }
+  finally { if (live.get(key) === entry && !entry.src) { live.delete(key); liveChanged(); } }
 }
-function chorusStop() {
-  chorusEpoch++;
-  for (const src of chorusVoices.keys()) { try { src.stop(); } catch {} }
-  chorusVoices.clear(); chorusChanged();
+// Stopping a voice: like a hand on a record, it slows, drops in pitch and fades, with a scratch.
+function liveStop(key, {scratch = true} = {}) {
+  const e = live.get(key); if (!e || e.ending) return;
+  e.ending = true; liveChanged();
+  if (!e.src) { live.delete(key); return; }   // still being made: it never starts
+  const t = ctx.currentTime;
+  try {
+    e.src.playbackRate.cancelScheduledValues(t); e.src.playbackRate.setValueAtTime(Math.max(.2, e.src.playbackRate.value), t); e.src.playbackRate.exponentialRampToValueAtTime(.16, t + .34);
+    e.g.gain.cancelScheduledValues(t); e.g.gain.setValueAtTime(e.g.gain.value, t); e.g.gain.linearRampToValueAtTime(0, t + .36);
+    e.src.stop(t + .4);
+  } catch {}
+  if (scratch && performance.now() - scratchAt > 140) { scratchAt = performance.now(); cue('scratch'); }   // one scratch for several stopped together
 }
-// A paper keeps one voice: the same variant and pitch every time it speaks.
+function liveStopAll(opts) { for (const k of [...live.keys()]) liveStop(k, opts); }
+// A paper or a town keeps one voice: the same variant and pitch every time it speaks.
 const VARIANTS = ['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'f1', 'f2', 'f3', 'f4'];
 function voiceOf(key) {
   let h = 2166136261; for (const ch of String(key)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); }
-  h >>>= 0; return {variant: VARIANTS[h % VARIANTS.length], pitch: 32 + (h >>> 8) % 40};
+  h >>>= 0; return {variant: VARIANTS[h % VARIANTS.length], pitch: 34 + (h >>> 8) % 34};
 }
 const firstWords = (text, n) => { const w = clean(text).split(' '); return w.slice(0, n).join(' ') + (w.length > n ? '…' : ''); };
 // Browsers allow sound only after a click, tap or key press: call this inside one. It returns whether sound can play now.
@@ -382,9 +443,10 @@ window.Radio = {
   },
   onCaption(f) { listeners.caption.push(f); }, onState(f) { listeners.state.push(f); }, onVoices(f) { listeners.voices.push(f); },
   say, sayLine, stop, unlock, cue: k => { audio(); return cue(k); },
-  chorus: {
-    say: chorusSay, stop: chorusStop, preload: () => { if (audio() && ctx.state === 'running') chorusStart(); },
-    get count() { return chorusVoices.size + chorusPending; }, onChange(f) { listeners.chorus.push(f); }, voiceOf, firstWords
+  live: {
+    play: livePlay, stop: liveStop, stopAll: liveStopAll, has: key => !!live.get(key) && !live.get(key).ending,
+    preload: () => { if (audio() && ctx.state === 'running') liveStart(); },
+    get count() { return [...live.values()].filter(v => !v.ending).length; }, onChange(f) { listeners.live.push(f); }, voiceOf, firstWords, MAX: LIVE_MAX
   },
   spokenDate, writtenDate, town, paperName, clean, chunks, intro
 };
