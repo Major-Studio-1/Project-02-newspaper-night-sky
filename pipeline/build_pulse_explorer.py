@@ -88,7 +88,37 @@ REVIEWED={
                     'chesapeake-affair-1807':['chesapeake-attack-account','july-2-proclamation','berkeley-order','chesapeake-court-of-inquiry','house-report-chesapeake'],
                     'douglas-and-the-mayor-of-norfolk':['douglas-letter-3-july','mayor-answer-4-july','tazewell-report','douglas-letter-6-july'],
                     'special-session-1807':['proclamation-convening-congress','president-message-october-27']},
-        'expect':(12,4167)}}
+        'expect':(11,4162)},   # v0.10.2 dated one Kentucky Gazette issue filed under 1807 to 1805
+  # The fourth reviewed year (release v0.9.0): 20 stories. Categories as proposed by the review; the owner agreed on
+  # 2026-11-10 ("Follow your recommendations on the data review. And then publish all").
+  1808:{'categories':[
+          ('war','War in Spain and Portugal',['latest-from-portugal-dec-1807','alicante-letters-1808','charles-iv-appoints-murat','order-in-council-4-july',
+                                              'arcturus-news-from-spain','reding-dispatch-baylen','conventions-in-portugal']),
+          ('ships','Britain, France and American ships',['decrees-on-neutral-trade','algiers-1808','papers-before-congress-march-1808','canning-on-america-24-june']),
+          ('government','The embargo and American government',['embargo-laws','wilkinson-accused','president-message-25-feb-military-force','embargo-in-force-spring-1808',
+                                              'adams-resigns-senate','jefferson-answers-new-hampshire','jefferson-answer-embargo-petitions','message-8-november',
+                                              'foreign-relations-report-22-november'])],
+        'children':{'embargo-laws':['embargo-act-22-dec-1807','embargo-supplementary-act-9-jan','embargo-additional-act-12-march','embargo-suspension-act-22-april','embargo-act-25-april'],
+                    'wilkinson-accused':['wilkinson-randolph-letters','clark-statement-on-wilkinson','president-message-20-jan-wilkinson','wilkinson-court-of-inquiry'],
+                    'decrees-on-neutral-trade':['orders-in-council-11-nov-1807','amsterdam-letter-milan-decree','british-instructions-11-april'],
+                    'algiers-1808':['algiers-war-report','lear-circular-peace-with-algiers','dey-of-algiers-june'],
+                    'papers-before-congress-march-1808':['president-message-22-march','canning-monroe-chesapeake-correspondence','rose-madison-letters','champagny-letter-15-jan'],
+                    'embargo-in-force-spring-1808':['georgia-letter-mobile-pensacola','proclamation-lake-champlain','president-circular-governors-6-may'],
+                    'alicante-letters-1808':['alicante-letter-aranjuez-rumour','alicante-letter-guards-ordered'],
+                    'conventions-in-portugal':['russian-fleet-tagus-convention','cintra-convention'],
+                    'message-8-november':['message-8-november-text','canning-to-pinkney-23-september','armstrong-letter-28-august','madison-to-erskine-25-march']},
+        'expect':(10,4060)},   # v0.10.2 dated the 98 Kentucky Gazette issues filed under 1808 to 1806
+  # The fifth reviewed year (releases v0.10.0 and v0.10.1): 12 stories. The owner agreed a 6-paper threshold for 1793 (fewer
+  # papers survive) and the proposed categories on 2026-11-10 ("Follow your recommendations on the data review").
+  1793:{'categories':[
+          ('war','The war in Europe',['emigrant-armies-disbanded','dumouriez-letter-brussels','powers-at-war-with-france-list','dumouriez-defection-1793',
+                                      'tournai-bulletin-3-may','death-of-general-dampierre','convention-president-declaration-plot','cadiz-letter-24-june',
+                                      'madeira-report-battle-near-lisle']),
+          ('ships','Ships and the sea',['sea-serpent-captain-crabtree','treasury-circular-rules-on-neutrality']),
+          ('public','American public life',['genet-appeal-to-the-people-1793'])],
+        'children':{'dumouriez-defection-1793':['clairfayt-letter-tournay','sun-rumour-dumouriez-left-army','dumouriez-address-french-nation','cobourg-proclamation-5-april'],
+                    'genet-appeal-to-the-people-1793':['jay-king-statement-on-genet','genet-letter-to-the-president-13-august','jefferson-answer-to-genet-16-august']},
+        'expect':(12,1751)}}
 CATEGORY_COLORS=['#3987e5','#d95926','#199e70']   # dataviz slots 1-3, validated all-pairs on #050711
 short_names={'sn82014782':'Kentucky Gazette','sn83025525':'The Mirror','sn83025527':'Republican Gazetteer','sn83025588':'New Hampshire Gazette','sn83025881':'Gazette of the United States','sn84023150':'The Eagle','sn84024710':'Virginia Argus','sn84038410':'Patowmac Guardian'}
 # Map layout: each series is placed at its town of publication (from the catalogue's places_json).
@@ -251,10 +281,10 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
         for f in fams:
             members=[]
             for a in apps_by[f['family_id']]:
-                _,lccn,date,ed,page=a['page_id'].split(':')
+                _,lccn,filed,ed,page=a['page_id'].split(':'); date=a['publication_date']   # the printed date; the id keeps the filed one
                 assert (titles[lccn][0],date) in days, 'Every matched appearance joins to observed date coverage'
                 oid=f"auto:{f['family_id']}:{a['seq']}"
-                obs.append({'id':oid,'node':lccn,'date':date,'ed':int(ed),'page':int(page),'excerpt':a['excerpt'],'tr':a['transcription'],
+                obs.append({'id':oid,'node':lccn,'date':date,**({'fd':filed} if filed!=date else {}),'ed':int(ed),'page':int(page),'excerpt':a['excerpt'],'tr':a['transcription'],
                             **({'ck':printing_checks[f['family_id'],a['seq']]} if printing_checks else {})})
                 members.append(oid)
             grps.append({'id':'auto:'+f['family_id'],'label':story_titles.get(f['family_id'],f['label']),'newspapers':f['newspapers'],'first':f['first_date'],'last':f['last_date'],
@@ -363,19 +393,20 @@ all_l=sorted({id_to_lccn[c['newspaper_id']] for c in cov_all}|{a['lccn'] for v i
 idx_papers=name_papers([{'id':titles[l][0],'lccn':l,'name':short_name(l,titles[l][1]),'title':titles[l][1],**towns[l]} for l in all_l])
 pix={p['lccn']:i for i,p in enumerate(idx_papers)}
 assert all(p['name']==paper_name[p['lccn']] for p in idx_papers), 'a newspaper has one name in every view'
-S_={k:[] for k in ['id','label','papers','first','last','long','topic','off','n']};P_={k:[] for k in ['p','d','e','g','q']};checks=[]
+S_={k:[] for k in ['id','label','papers','first','last','long','topic','off','n']};P_={k:[] for k in ['p','d','e','g','q']};checks=[];P_fd={}   # fd: filed days that differ from the printed day
 for f in sorted(families,key=lambda f:(f['first_date'],-f['newspapers'],f['family_id'])):   # stories in date order, so a stretch of years is one slice
     fid=f['family_id'];apps=[]
     for a in apps_by[fid]:
-        _,lccn,date,ed,page=a['page_id'].split(':');apps.append((dnum(date),lccn,int(ed),int(page),a['seq']))
+        _,lccn,filed,ed,page=a['page_id'].split(':');apps.append((dnum(a['publication_date']),lccn,int(ed),int(page),a['seq'],dnum(filed)))
     apps.sort();r=topic_rows.get(fid);title=story_titles.get(fid,f['label'])
     for k,v in (('id',fid),('label',title if len(title)<=100 else title[:98].rstrip()+' …'),('papers',f['newspapers']),('first',dnum(f['first_date'])),('last',dnum(f['last_date'])),
                 ('long',int(bool(f['long_running']))),('topic',lane_of[r['top_topic']] if r else -1),('off',len(P_['p'])),('n',len(apps))): S_[k].append(v)
-    for d,lccn,ed,page,seq in apps:
+    for d,lccn,ed,page,seq,fd in apps:
+        if fd!=d: P_fd[str(len(P_['p']))]=fd
         P_['p'].append(pix[lccn]);P_['d'].append(d);P_['e'].append(ed);P_['g'].append(page);P_['q'].append(seq)
         checks.append(printing_checks.get((fid,seq),'-') if printing_checks else '-')
 assert len(P_['p'])==sum(len(v) for v in apps_by.values()), 'the index holds every printing once'
-index={'epoch':'1770-01-01','scan_base':f'https://huggingface.co/datasets/{DATASET}/resolve/{REV}/media/','papers':idx_papers,'stories':S_,'printings':{**P_,'c':''.join(checks)},
+index={'epoch':'1770-01-01','scan_base':f'https://huggingface.co/datasets/{DATASET}/resolve/{REV}/media/','papers':idx_papers,'stories':S_,'printings':{**P_,'c':''.join(checks),'fd':P_fd},
        'coverage':{'p':[pix[id_to_lccn[c['newspaper_id']]] for c in cov_all],'d':[dnum(c['publication_date']) for c in cov_all],
                    'pages':[c['observed_pages'] for c in cov_all],'issues':[c['observed_issues_editions'] for c in cov_all]}}
 (years_dir/'index.json').write_text(json.dumps(index,ensure_ascii=False,separators=(',',':')),encoding='utf8')

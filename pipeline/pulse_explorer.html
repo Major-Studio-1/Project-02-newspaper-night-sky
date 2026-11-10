@@ -242,9 +242,10 @@ function matchedObs(id) {
   const St = INDEX.stories, P = INDEX.printings, seq = Number(seqText), end = St.off[s] + St.n[s];
   let k = St.off[s]; while (k < end && P.q[k] !== seq) k++; if (k === end) return undefined;
   const paper = INDEX.papers[P.p[k]], date = isoDay(P.d[k]), ed = P.e[k], page = P.g[k], got = passages.get(id);
+  const filed = P.fd && P.fd[k] !== undefined ? isoDay(P.fd[k]) : date;   // ids and scans keep the date the collection filed the issue under
   return {id, legacy_id: fid, node: paper.lccn, date, page, excerpt: got ? got.excerpt : null, transcription: got ? got.tr : null, check: P.c[k] === '-' ? null : P.c[k], scans: [],
-    page_id: `page:${paper.lccn}:${date}:${ed}:${page}`, issue_id: `issue:${paper.lccn}:${date}:${ed}`, year: Number(isoDay(St.first[s]).slice(0, 4)),
-    source_url: `${INDEX.scan_base}${paper.lccn}/${date}_${ed}_${page}.pdf?download=true`, summary: St.label[s],
+    page_id: `page:${paper.lccn}:${filed}:${ed}:${page}`, issue_id: `issue:${paper.lccn}:${filed}:${ed}`, year: Number(isoDay(St.first[s]).slice(0, 4)),
+    source_url: `${INDEX.scan_base}${paper.lccn}/${filed}_${ed}_${page}.pdf?download=true`, summary: St.label[s],
     note: `Found automatically: shared wording across ${St.papers[s]} newspapers (${St.n[s]} printings). Not checked against the scan.`};
 }
 // The stories first printed in the chosen years, the newspapers with surviving pages in those years (or a printing of

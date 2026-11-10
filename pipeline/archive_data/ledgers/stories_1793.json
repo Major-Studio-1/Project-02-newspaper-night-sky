@@ -1,0 +1,2236 @@
+{
+  "ledger_id": "ledger:stories-1793",
+  "ledger_version": 1,
+  "base_release": "0.9.0",
+  "target_release": "0.10.0",
+  "recorded_date": "2026-11-10",
+  "namespace": "expansion-1793",
+  "evidence_dir": "outputs/story_discovery_1793/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1793 (long-running ones included), phrase searches on all 1,751 pages in both transcriptions, reading of every hit, and scan checks of each admitted passage",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1793/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1793/items_from_1792.json": "retrieval_candidates",
+    "outputs/story_discovery_1793/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1793/phrase_hits.json": "retrieval_candidates",
+    "outputs/story_discovery_1793/masthead_dates.csv": "date_check",
+    "outputs/story_discovery_1793/check_mastheads_1793.py": "analysis_code",
+    "outputs/story_discovery_1793/page_date_flags.csv": "date_check",
+    "outputs/story_discovery_1793/check_duplicate_pages_1793.py": "analysis_code",
+    "work/archive_data/ledgers/make_stories_1793.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1793_review.json": "scan_review",
+    "outputs/story_discovery_1793/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1793/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S93-001",
+      "page_key": "sn83025887|1793-01-05|1|2",
+      "excerpt_start": "Brussels, Oct. 17. We hear from",
+      "excerpt_end": "or what is to become of them;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "emigrant-armies-disbanded"
+      ],
+      "summary": "Brussels, 17 October 1792: the armies of the French princes and of the Duke de Bourbon are reported disbanded, their men in great distress.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has 'the duke d'Artois' and 'Luxemburgh'."
+      ],
+      "crops": [
+        "S93-001.jpg"
+      ],
+      "family": [
+        "R1793-0001",
+        "R1793-0013",
+        "R1793-0067",
+        "R1793-0190",
+        "R1793-0235",
+        "R1793-0236"
+      ]
+    },
+    {
+      "id": "S93-002",
+      "page_key": "sn83030483|1793-01-05|1|2",
+      "excerpt_start": "B R U S S E",
+      "excerpt_end": "the command of the Duke de Bourbon;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "emigrant-armies-disbanded"
+      ],
+      "summary": "The Gazette of the United States prints the Brussels paragraph.",
+      "note": "The RevX transcription stops after 'the Duke de Bourbon;' and runs on into the next paragraph; the older CA transcription has the rest of the paragraph, so the excerpt ends at 'Bourbon;'. The print has the whole paragraph, to 'and even their clothes.'",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print reads 'Luxemburgh' (RevX 'Luxemburg', minor). After the excerpt the print goes on with the rest of the paragraph ('the individuals of which these armies were composed, are in the greatest distress … and even their clothes.'), which the RevX transcription leaves out; the excerpt ends before the gap."
+      ],
+      "crops": [
+        "S93-002.jpg"
+      ],
+      "family": [
+        "R1793-0013",
+        "R1793-0075"
+      ],
+      "scan_boxes": [
+        [
+          2370,
+          3395,
+          3050,
+          3775
+        ]
+      ]
+    },
+    {
+      "id": "S93-003",
+      "page_key": "sn83025887|1793-01-12|1|2",
+      "excerpt_start": "Paris, Nov. 22. This evening the",
+      "excerpt_end": "brave comrades to shed blood in vain;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-letter-brussels"
+      ],
+      "summary": "Dumouriez writes to the Convention from Brussels (14 November 1792) that he has entered the city after the Austrians disputed the heights of Anderlecht.",
+      "note": "Earliest printing found. The letter's date is given in the introduction: 'dated Brussels, Nov. 14'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print reads 'Andersecht'; RevX 'Anderlecht' silently corrects the printed name. The date 'Nov. 14' is printed in the introduction."
+      ],
+      "crops": [
+        "S93-003.jpg"
+      ],
+      "family": [
+        "R1793-0003",
+        "R1793-0033",
+        "R1793-0192",
+        "R1793-0589",
+        "R1793-0592"
+      ]
+    },
+    {
+      "id": "S93-004",
+      "page_key": "sn83030483|1793-01-12|1|3",
+      "excerpt_start": "Brussels, Nov. 14. CITIZEN PRESIDENT, I",
+      "excerpt_end": "the morning, I was received at Brussels",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-letter-brussels"
+      ],
+      "summary": "The Gazette of the United States prints Dumouriez's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print reads 'Andersecht'; RevX 'Anderlecht' silently corrects the printed name. 'Brussels, Nov. 14.' is the printed date."
+      ],
+      "crops": [
+        "S93-004.jpg"
+      ],
+      "family": [
+        "R1793-0003",
+        "R1793-0033",
+        "R1793-0077",
+        "R1793-0588"
+      ]
+    },
+    {
+      "id": "S93-005",
+      "page_key": "sn84038410|1793-01-14|1|2",
+      "excerpt_start": "Brussels, October 17. We hear from",
+      "excerpt_end": "go, or what to become of them;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "emigrant-armies-disbanded"
+      ],
+      "summary": "The Patowmac Guardian prints the Brussels paragraph.",
+      "note": "Prints 'the Count d'Artois', where NGz, GUS, MIR and KG have 'the Duke d'Artois'.",
+      "scan_findings": [
+        "Scan reads 'or what is to become of them'; RevX drops 'is', a minor transcription error. The print has 'the Count d'Artois' and 'Luxemburg'."
+      ],
+      "crops": [
+        "S93-005.jpg"
+      ],
+      "family": [
+        "R1792-1265",
+        "R1793-0001",
+        "R1793-0013",
+        "R1793-0238",
+        "R1793-0568",
+        "R1793-0594"
+      ],
+      "scan_boxes": [
+        [
+          85,
+          2320,
+          632,
+          2575
+        ]
+      ]
+    },
+    {
+      "id": "S93-006",
+      "page_key": "sn83025587|1793-01-16|1|2",
+      "excerpt_start": "BRUSSELS, Oct. 17. We hear from",
+      "excerpt_end": "or what is to become of them;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "emigrant-armies-disbanded"
+      ],
+      "summary": "The New-Hampshire Gazette and General Advertiser prints the Brussels paragraph.",
+      "note": "Prints 'the Count d'ARTOIS' (NGz, GUS, MIR and KG: 'the Duke') and 'in the greatest distresses, wandering and dispersing', where most printings have 'distress' and 'dispersed'.",
+      "scan_findings": [
+        "Scan reads 'Luxemburgh'; RevX 'Luxembourg' is a minor transcription difference (modernised spelling). 'Count D'Artois', 'distresses' and 'dispersing' are as printed."
+      ],
+      "crops": [
+        "S93-006.jpg"
+      ],
+      "family": [
+        "R1792-0350",
+        "R1793-0001",
+        "R1793-0470",
+        "R1793-0579"
+      ]
+    },
+    {
+      "id": "S93-007",
+      "page_key": "sn84023133|1793-01-16|1|2",
+      "excerpt_start": "We hear from the provinces of",
+      "excerpt_end": "or what is to become of them;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "emigrant-armies-disbanded"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the Brussels paragraph.",
+      "note": "Printed without the Brussels dateline, under an italic heading that appears to read 'Austrian Netherlands'; prints 'the Count d'Artois' and 'distresses, wandering & dispersing'.",
+      "scan_findings": [
+        "Scan matches the excerpt, which runs from the foot of one column to the head of the next. 'Count d'Artois', 'distresses' and '& dispersing' are as printed."
+      ],
+      "crops": [
+        "S93-007-1.jpg",
+        "S93-007-2.jpg"
+      ],
+      "family": [
+        "R1793-0001",
+        "R1793-0013",
+        "R1793-0243",
+        "R1793-0581",
+        "R1793-0597",
+        "R1793-0598"
+      ]
+    },
+    {
+      "id": "S93-008",
+      "page_key": "sn83025523|1793-01-21|1|4",
+      "excerpt_start": "BRUSSELS, October 17. We hear from",
+      "excerpt_end": "or what is to become of them;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "emigrant-armies-disbanded"
+      ],
+      "summary": "The Mirrour prints the Brussels paragraph.",
+      "note": "Prints 'the Duke D'BOURBON', where the others have 'de Bourbon'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has 'the Duke D'Artois', 'Luxemburgh' and 'the Duke D'Bourbon'."
+      ],
+      "crops": [
+        "S93-008.jpg"
+      ],
+      "family": [
+        "R1793-0001",
+        "R1793-0013",
+        "R1793-0613"
+      ]
+    },
+    {
+      "id": "S93-009",
+      "page_key": "sn83025587|1793-01-23|1|3",
+      "excerpt_start": "\"Brussels, Nov. 14, 1792. \"Citizen President,",
+      "excerpt_end": "arms ; and in the morning, I",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-letter-brussels"
+      ],
+      "summary": "The New-Hampshire Gazette and General Advertiser prints Dumouriez's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print reads 'Andersecht'; RevX 'Anderlecht' silently corrects the printed name. The print goes on 'was received at Brussels as the deliverer of the Nation'; the excerpt only stops short."
+      ],
+      "crops": [
+        "S93-009.jpg"
+      ],
+      "family": [
+        "R1793-0003",
+        "R1793-0618"
+      ]
+    },
+    {
+      "id": "S93-010",
+      "page_key": "sn84023133|1793-01-23|1|2",
+      "excerpt_start": "\"Brussels, Nov. 14. 1792. \"Citizen President,",
+      "excerpt_end": "in the morning I was received at",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-letter-brussels"
+      ],
+      "summary": "The New Hampshire Gazetteer prints Dumouriez's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'heighths of Andersecht'; RevX 'heights of Anderlecht' modernises the spelling and corrects the printed name, both minor. The print has 'received at Brussels'; the excerpt only stops short."
+      ],
+      "crops": [
+        "S93-010.jpg"
+      ],
+      "family": [
+        "R1793-0003"
+      ]
+    },
+    {
+      "id": "S93-011",
+      "page_key": "sn83025523|1793-01-28|1|3",
+      "excerpt_start": "Brussels, November 22. Citizen President, I",
+      "excerpt_end": "the Morning, I was received at Brussels",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-letter-brussels"
+      ],
+      "summary": "The Mirrour prints Dumouriez's letter.",
+      "note": "Dated 'Brussels, November 22.', the date of the sitting, where the other printings date the letter 14 November.",
+      "scan_findings": [
+        "Scan reads 'Brussels, November 22.' where the other printings date the letter 14 November: a printed difference, not a transcription error. The print reads 'Andersecht'; RevX 'Anderlecht' silently corrects it."
+      ],
+      "crops": [
+        "S93-011.jpg"
+      ],
+      "family": [
+        "R1793-0003",
+        "R1793-0233",
+        "R1793-0591",
+        "R1793-0616"
+      ]
+    },
+    {
+      "id": "S93-012",
+      "page_key": "sn84038410|1793-01-28|1|2",
+      "excerpt_start": "Brussels, Nov. 12. \"Citizen President, \"I",
+      "excerpt_end": "the morning, I was received at Brussels",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-letter-brussels"
+      ],
+      "summary": "The Patowmac Guardian prints Dumouriez's letter.",
+      "note": "Dated 'Brussels, Nov. 12.', where the other printings have 14 November.",
+      "scan_findings": [
+        "Scan reads 'Brussels, Nov. 12.' where the other printings have Nov. 14: a printed error, not a transcription error. The print reads 'Andersecht'; RevX 'Anderlecht' silently corrects it."
+      ],
+      "crops": [
+        "S93-012.jpg"
+      ],
+      "family": [
+        "R1793-0003",
+        "R1793-0069",
+        "R1793-0110",
+        "R1793-0193",
+        "R1793-0241",
+        "R1793-0242",
+        "R1793-0478",
+        "R1793-0479",
+        "R1793-0599"
+      ]
+    },
+    {
+      "id": "S93-013",
+      "page_key": "sn82014782|1793-02-09|1|1",
+      "excerpt_start": "B R U S S E",
+      "excerpt_end": "which these armies were composed, are in",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "emigrant-armies-disbanded"
+      ],
+      "summary": "The Kentucky Gazette prints the Brussels paragraph.",
+      "note": "A second scanned copy of this issue (edition 2) also holds the item.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print is small and blurred but every word can be made out. The print has 'the Duke D'Artois' and 'Luxemburgh'."
+      ],
+      "crops": [
+        "S93-013.jpg"
+      ],
+      "family": [
+        "R1793-0001",
+        "R1793-0190"
+      ],
+      "scan_boxes": [
+        [
+          1165,
+          1435,
+          1490,
+          1720
+        ]
+      ]
+    },
+    {
+      "id": "S93-014",
+      "page_key": "sn82014782|1793-03-02|1|2",
+      "excerpt_start": "\"Brussels, November 14.\" \"Citizen President, \"I",
+      "excerpt_end": "the morning I was received at Brussels",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-letter-brussels"
+      ],
+      "summary": "The Kentucky Gazette prints Dumouriez's letter.",
+      "note": "A second scanned copy of this issue (edition 2) exists; the item was not found in its transcriptions. Prints 'my bare comrades', where the others have 'brave'.",
+      "scan_findings": [
+        "Scan reads 'my bare comrades' where the other printings have 'brave': a printed error, which RevX keeps. The print reads 'Andersecht'; RevX 'Anderlecht' silently corrects it."
+      ],
+      "crops": [
+        "S93-014.jpg"
+      ],
+      "family": [
+        "R1793-0003",
+        "R1793-0478"
+      ],
+      "scan_boxes": [
+        [
+          190,
+          2095,
+          545,
+          2455
+        ]
+      ]
+    },
+    {
+      "id": "S93-015",
+      "page_key": "sn83025887|1793-05-29|1|1",
+      "excerpt_start": "Brussels, April 3.—A letter from Gen.",
+      "excerpt_end": "morning, four of whom, with Gen. Bournonville,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "clairfayt-letter-tournay"
+      ],
+      "summary": "General Clairfayt writes from Tournay (31 March 1793) that Dumouriez has sent the Convention's commissioners to the Austrian camp as prisoners.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading is dated 'Brussels, April 3' and the letter 'Tournay, March 31. 1793'; the minister is not named."
+      ],
+      "crops": [
+        "S93-015.jpg"
+      ],
+      "family": [
+        "R1793-0002"
+      ]
+    },
+    {
+      "id": "S93-016",
+      "page_key": "sn83025887|1793-05-29|1|1",
+      "excerpt_start": "It is now rumoured, that Dumourier,",
+      "excerpt_end": "cavalry, and gone to the Austrian army.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "sun-rumour-dumouriez-left-army"
+      ],
+      "summary": "London, 10 April 1793: it is rumoured that Dumouriez, doubting his army, has left it and gone over to the Austrians.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph stands among London news, without the New York introduction."
+      ],
+      "crops": [
+        "S93-016.jpg"
+      ],
+      "family": [
+        "R1793-0002"
+      ]
+    },
+    {
+      "id": "S93-017",
+      "page_key": "sn83030483|1793-05-29|1|2",
+      "excerpt_start": "BRUSSELS, April 2. Letter from his",
+      "excerpt_end": "prisoners, this morning; four of whom, with",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "clairfayt-letter-tournay"
+      ],
+      "summary": "The Gazette of the United States prints Clairfayt's letter.",
+      "note": "Headed 'DUMOURIER'S FLIGHT. BRUSSELS, April 2.'; prints 'what Dumourier', without 'M.'",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has 'what Dumourier' without 'M.' and 'Comte Staremberg'; the next line reads 'General Bournonville', so a 'Bourdonville' in the transcription would be a transcription error, not the print."
+      ],
+      "crops": [
+        "S93-017.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0091",
+        "R1793-0890",
+        "R1793-0891"
+      ]
+    },
+    {
+      "id": "S93-018",
+      "page_key": "sn83030483|1793-05-29|1|3",
+      "excerpt_start": "NEW-YORK, May 25. In the Sun,",
+      "excerpt_end": "in his plan of marching to Paris,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "sun-rumour-dumouriez-left-army"
+      ],
+      "summary": "The Gazette of the United States prints the Sun paragraph.",
+      "note": "Prints 'It is rumoured', without 'now'.",
+      "scan_findings": [
+        "Scan reads 'It is rumoured' without 'now': the missing word is in the print, not a transcription error; RevX 'rumored' is a minor spelling change. The paragraph carries the New York introduction under 'NEW-YORK, May 25.'"
+      ],
+      "crops": [
+        "S93-018.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0029",
+        "R1793-0091",
+        "R1793-0092",
+        "R1793-0127",
+        "R1793-0458",
+        "R1793-0894"
+      ]
+    },
+    {
+      "id": "S93-019",
+      "page_key": "sn83025887|1793-06-01|1|1",
+      "excerpt_start": "In the Sun, of the 10th",
+      "excerpt_end": "his plan of marching to Paris, and",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "sun-rumour-dumouriez-left-army"
+      ],
+      "summary": "The National Gazette prints the Sun paragraph.",
+      "note": "Printed again three days later, now with the New York introduction.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph carries the New York introduction, here worded '10th of April'."
+      ],
+      "crops": [
+        "S93-019.jpg"
+      ],
+      "family": [
+        "R1793-0127"
+      ]
+    },
+    {
+      "id": "S93-020",
+      "page_key": "sn84038410|1793-06-03|1|2",
+      "excerpt_start": "BRUSSELS, April 2. Letter from his",
+      "excerpt_end": "this morning, four of whom, with Gen.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "clairfayt-letter-tournay"
+      ],
+      "summary": "The Patowmac Guardian prints Clairfayt's letter.",
+      "note": "Prints 'Gen. Clairfait', 'Mons. Comte Starenberg' and '8 or 9 prisoners'.",
+      "scan_findings": [
+        "Scan reads 'Gen. Clairfait'; RevX 'Clairfayt' is a minor transcription error. The rest matches, with '8 or 9 prisoners' in figures and 'Comte Starenberg' as printed."
+      ],
+      "crops": [
+        "S93-020.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0029",
+        "R1793-0040",
+        "R1793-0050",
+        "R1793-0885"
+      ]
+    },
+    {
+      "id": "S93-021",
+      "page_key": "sn84038410|1793-06-03|1|3",
+      "excerpt_start": "In The Sun, of the 10th",
+      "excerpt_end": "plan of marching to Paris, and placing",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "sun-rumour-dumouriez-left-army"
+      ],
+      "summary": "The Patowmac Guardian prints the Sun paragraph.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph carries the New York introduction."
+      ],
+      "crops": [
+        "S93-021.jpg"
+      ],
+      "family": [
+        "R1793-0127",
+        "R1793-0887",
+        "R1793-0892",
+        "R1793-0899"
+      ]
+    },
+    {
+      "id": "S93-022",
+      "page_key": "sn83025588|1793-06-04|1|3",
+      "excerpt_start": "BRUSSELS, March 31. Letter from His",
+      "excerpt_end": "eight or nine prisoners, this morning, four",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "clairfayt-letter-tournay"
+      ],
+      "summary": "The New Hampshire Gazette prints Clairfayt's letter.",
+      "note": "Headed 'BRUSSELS, March 31.' and dates the letter 'Tourney, April 3, 1793', where NGz, GUS, PG and KG have 31 March; prints 'Conte Starenberg'.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX keeps the line-end hyphen in 'Clair-fait'. The print dates the heading 'BRUSSELS, March 31' and the letter 'Tourney, April 3, 1793', and names 'Conte Starenberg'."
+      ],
+      "crops": [
+        "S93-022.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0127",
+        "R1793-0129",
+        "R1793-0902"
+      ]
+    },
+    {
+      "id": "S93-023",
+      "page_key": "sn83025588|1793-06-04|1|3",
+      "excerpt_start": "In The Sun , of the",
+      "excerpt_end": "his plan of marching to Paris, and",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "sun-rumour-dumouriez-left-army"
+      ],
+      "summary": "The New Hampshire Gazette prints the Sun paragraph.",
+      "note": "Prints 'In The Sun, of the 16th April', where the others have the 10th.",
+      "scan_findings": [
+        "Scan matches the excerpt. Scan reads 'the 16th April' where the other printings have the 10th: a printed error, not a transcription error."
+      ],
+      "crops": [
+        "S93-023.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0127",
+        "R1793-0129",
+        "R1793-0902"
+      ]
+    },
+    {
+      "id": "S93-024",
+      "page_key": "sn84023134|1793-06-04|1|3",
+      "excerpt_start": "Letter from his Excellency General Clairfayt,",
+      "excerpt_end": "this morning, four of whom with Gen.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "clairfayt-letter-tournay"
+      ],
+      "summary": "The American Herald of Liberty prints Clairfayt's letter.",
+      "note": "Headed 'MARCH 31.' and dates the letter 'Tournay, April 3, 1793' (NGz, GUS, PG and KG: 31 March); prints 'at Mons, Conte Starenberg' without 'to'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has 'MARCH 31.' above the letter, dates it 'Tournay, April 3, 1793', and leaves out 'to' before 'Conte Starenberg': a printed slip, not a transcription error."
+      ],
+      "crops": [
+        "S93-024.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0091",
+        "R1793-0129",
+        "R1793-0295",
+        "R1793-0900",
+        "R1793-0901"
+      ]
+    },
+    {
+      "id": "S93-025",
+      "page_key": "sn84023134|1793-06-04|1|3",
+      "excerpt_start": "It is now rumoured, that Dumourier",
+      "excerpt_end": "cavalry, and gone to the Austrian army.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "sun-rumour-dumouriez-left-army"
+      ],
+      "summary": "The American Herald of Liberty prints the Sun paragraph.",
+      "note": "Printed among London paragraphs under the date 'APRIL 10.', without the New York introduction.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph stands among London news under the date 'APRIL 10.', which the excerpt leaves out, and has no New York introduction."
+      ],
+      "crops": [
+        "S93-025.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0091",
+        "R1793-0129",
+        "R1793-0295",
+        "R1793-0900",
+        "R1793-0901"
+      ]
+    },
+    {
+      "id": "S93-026",
+      "page_key": "sn83025523|1793-06-05|1|1",
+      "excerpt_start": "Letter from his Excellency General Clairfayt,",
+      "excerpt_end": "this Morning, four of whom with Gen.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "clairfayt-letter-tournay"
+      ],
+      "summary": "The Mirrour prints Clairfayt's letter.",
+      "note": "Printed in an Extra of Wednesday 5 June; the paper appeared on Mondays. Dates the letter 'Tournay, April 3, 1793' (NGz, GUS, PG and KG: 31 March) and prints 'Conte Stabenberg'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'Conte Stabenberg' and dates the letter 'Tournay, April 3, 1793'; the next line has 'Bournonuille'."
+      ],
+      "crops": [
+        "S93-026.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0063"
+      ]
+    },
+    {
+      "id": "S93-027",
+      "page_key": "sn83025887|1793-06-05|1|1",
+      "excerpt_start": "The marechal prince of Saxe Cobourg,",
+      "excerpt_end": "a virtuous man, who truly loves his",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "cobourg-proclamation-5-april"
+      ],
+      "summary": "The Prince of Saxe-Cobourg tells the French (5 April 1793) that he supports Dumouriez's declaration and will act only as an auxiliary.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'mareschal'; RevX 'marechal' is a minor transcription error. The rest matches the excerpt."
+      ],
+      "crops": [
+        "S93-027.jpg"
+      ],
+      "family": [
+        "R1793-0006",
+        "R1793-0022"
+      ]
+    },
+    {
+      "id": "S93-028",
+      "page_key": "sn83025887|1793-06-05|1|2",
+      "excerpt_start": "Gen. DUMOURIER'S LETTER to the French",
+      "excerpt_end": "of the French name throughout all Europe.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "dumouriez-address-french-nation"
+      ],
+      "summary": "Dumouriez addresses the French nation (St. Amand, 2 April 1793): he will restore the constitution and then give up every public function.",
+      "note": "Earliest printing found. Printed in two parts; the second part is on page 1 of the issue of 8 June. Headed 'Gen. DUMOURIER's LETTER to the French Nation, dated Baths of St. Amand, April 2, 1793'; spells 'Honor'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading is 'Gen. DUMOURIER's LETTER to the French Nation, dated Baths of St. Amand, April 2, 1793', and the print spells 'Honor'."
+      ],
+      "crops": [
+        "S93-028.jpg"
+      ],
+      "family": [
+        "R1793-0006",
+        "R1793-0297",
+        "R1793-0525",
+        "R1793-0903"
+      ]
+    },
+    {
+      "id": "S93-029",
+      "page_key": "sn83030483|1793-06-05|1|2",
+      "excerpt_start": "The Marechal Prince of Saxe Cobourg,",
+      "excerpt_end": "a virtuous man, who truly loves his",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "cobourg-proclamation-5-april"
+      ],
+      "summary": "The Gazette of the United States prints Saxe-Cobourg's proclamation.",
+      "note": "Continues on page 3.",
+      "scan_findings": [
+        "Scan reads 'Mareschal'; RevX 'Marechal' is a minor transcription error. The rest matches the excerpt; the crop does not reach 'a sacred trust'."
+      ],
+      "crops": [
+        "S93-029.jpg"
+      ],
+      "family": [
+        "R1793-0006",
+        "R1793-0022"
+      ]
+    },
+    {
+      "id": "S93-030",
+      "page_key": "sn83030483|1793-06-05|1|2",
+      "excerpt_start": "STATE PAPERS. GENERAL DUMOURIER TO THE",
+      "excerpt_end": "of the French name throughout all Europe.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "dumouriez-address-french-nation"
+      ],
+      "summary": "The Gazette of the United States prints Dumouriez's address.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading is 'STATE PAPERS. GENERAL DUMOURIER TO THE FRENCH NATION', and the print spells 'Honour'."
+      ],
+      "crops": [
+        "S93-030.jpg"
+      ],
+      "family": [
+        "R1793-0006",
+        "R1793-0022"
+      ]
+    },
+    {
+      "id": "S93-031",
+      "page_key": "sn83025523|1793-06-10|1|1",
+      "excerpt_start": "Letter from his Excellency General Clairfayt,",
+      "excerpt_end": "this Morning, four of whom with Gen.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "clairfayt-letter-tournay"
+      ],
+      "summary": "The Mirrour prints Clairfayt's letter.",
+      "note": "Printed again in the regular number of 10 June, after the Extra of 5 June. The same setting of type as the Extra of 5 June: 'Tournay, April 3, 1793' and 'Conte Stabenberg'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print has 'Dumourier' in ordinary letters where RevX gives capitals. The letter reads the same, line for line, as in the Extra of 5 June, with 'Conte Stabenberg' in both."
+      ],
+      "crops": [
+        "S93-031.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0063"
+      ]
+    },
+    {
+      "id": "S93-032",
+      "page_key": "sn83025523|1793-06-10|1|3",
+      "excerpt_start": "It is now rumoured, that DUMOURIER,",
+      "excerpt_end": "Cavalry, and gone to the Austrian Army.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "sun-rumour-dumouriez-left-army"
+      ],
+      "summary": "The Mirrour prints the Sun paragraph.",
+      "note": "Printed among London paragraphs under the date 'April 10.—', without the New York introduction.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph stands among London news under the date 'April 10.—', which the excerpt leaves out, and has no New York introduction."
+      ],
+      "crops": [
+        "S93-032.jpg"
+      ],
+      "family": [
+        "R1793-0091",
+        "R1793-0300",
+        "R1793-0900"
+      ]
+    },
+    {
+      "id": "S93-033",
+      "page_key": "sn84038410|1793-06-17|1|1",
+      "excerpt_start": "STATE PAPERS. GENERAL DUMOURIER TO THE",
+      "excerpt_end": "of the French name throughout all Europe.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "dumouriez-address-french-nation"
+      ],
+      "summary": "The Patowmac Guardian prints Dumouriez's address.",
+      "note": "Continues on page 2.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading is 'STATE PAPERS. GENERAL DUMOURIER To the FRENCH NATION', and the print has 'liberty and honour' in lower case."
+      ],
+      "crops": [
+        "S93-033.jpg"
+      ],
+      "family": [
+        "R1793-0006"
+      ]
+    },
+    {
+      "id": "S93-034",
+      "page_key": "sn84038410|1793-06-17|1|2",
+      "excerpt_start": "The Mareschal Prince of Saxe-Cobourg, General",
+      "excerpt_end": "virtuous man, who truly loves his country,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "cobourg-proclamation-5-april"
+      ],
+      "summary": "The Patowmac Guardian prints Saxe-Cobourg's proclamation.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-034.jpg"
+      ],
+      "family": [
+        "R1793-0006",
+        "R1793-0066",
+        "R1793-0913",
+        "R1793-0914",
+        "R1793-0915",
+        "R1793-0916"
+      ]
+    },
+    {
+      "id": "S93-035",
+      "page_key": "sn83025588|1793-06-18|1|1",
+      "excerpt_start": "LONDON, April 13. State Paper. GENERAL",
+      "excerpt_end": "of the French name throughout all Europe.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "dumouriez-address-french-nation"
+      ],
+      "summary": "The New Hampshire Gazette prints Dumouriez's address.",
+      "note": "Continues on page 2. Spells 'honor'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading is 'State Paper. GENERAL DUMOURIER TO THE FRENCH NATION' under 'LONDON, April 13', and the print spells 'honor'."
+      ],
+      "crops": [
+        "S93-035.jpg"
+      ],
+      "family": [
+        "R1793-0006",
+        "R1793-0858"
+      ]
+    },
+    {
+      "id": "S93-036",
+      "page_key": "sn84023134|1793-06-18|1|1",
+      "excerpt_start": "STATE PAPER. GENERAL DUMOURIER, TO THE",
+      "excerpt_end": "of the French name throughout all Europe.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "dumouriez-address-french-nation"
+      ],
+      "summary": "The American Herald of Liberty prints Dumouriez's address.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading is 'STATE PAPER. GENERAL DUMOURIER, TO THE FRENCH NATION', and the print spells 'honour'."
+      ],
+      "crops": [
+        "S93-036.jpg"
+      ],
+      "family": [
+        "R1793-0006"
+      ]
+    },
+    {
+      "id": "S93-037",
+      "page_key": "sn84023134|1793-06-18|1|2",
+      "excerpt_start": "The Maréchal Prince of Saxe Cobourg,",
+      "excerpt_end": "of a virtuous man, who truly loves",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "cobourg-proclamation-5-april"
+      ],
+      "summary": "The American Herald of Liberty prints Saxe-Cobourg's proclamation.",
+      "note": "Printed under the heading 'Important Papers.', with an asterisk after 'Declaration to the French Nation'.",
+      "scan_findings": [
+        "Scan matches the excerpt, and the print has the asterisk after 'Declaration to the French Nation'. Scan reads 'Mareschal'; RevX 'Maréchal' is a modernised spelling, a minor transcription difference."
+      ],
+      "crops": [
+        "S93-037.jpg"
+      ],
+      "family": [
+        "R1793-0006",
+        "R1793-0051",
+        "R1793-0305",
+        "R1793-0890",
+        "R1793-0891",
+        "R1793-0910",
+        "R1793-0911"
+      ],
+      "scan_boxes": [
+        [
+          3555,
+          540,
+          4600,
+          1200
+        ]
+      ]
+    },
+    {
+      "id": "S93-038",
+      "page_key": "sn83025523|1793-06-24|1|1",
+      "excerpt_start": "The Maréchal Prince of Saxe COU-BOURG,",
+      "excerpt_end": "virtuous man who truly loves his country,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "cobourg-proclamation-5-april"
+      ],
+      "summary": "The Mirrour prints Saxe-Cobourg's proclamation.",
+      "note": "Prints 'THE General Chief, DUMOURIER' without 'in', 'Emperour', and an asterisk after 'Declaration to the French Nation'.",
+      "scan_findings": [
+        "Scan reads 'SAXE CO-BOURG' (divided at the line end), 'Mareschal' and 'Emperour'; RevX 'COU-BOURG', 'Maréchal' and 'Emperor' are minor transcription differences. 'THE General Chief' without 'in' and the asterisk after 'French Nation' are as printed."
+      ],
+      "crops": [
+        "S93-038.jpg"
+      ],
+      "family": [
+        "R1793-0006",
+        "R1793-0092",
+        "R1793-0896"
+      ]
+    },
+    {
+      "id": "S93-039",
+      "page_key": "sn82014782|1793-06-29|1|2",
+      "excerpt_start": "A letter from General Clairfayt to",
+      "excerpt_end": "of whom, with General Bournonville, he says,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "clairfayt-letter-tournay"
+      ],
+      "summary": "The Kentucky Gazette prints Clairfayt's letter.",
+      "note": "A second scanned copy of this issue (edition 2) also holds the item. Prints the misprint 'Gneral Bournonville'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the film is small and soft but readable when enlarged. The print has the misprint 'Gneral', which RevX silently corrects to 'General', and the dateline 'BRUSSELS, April 3.' above the heading."
+      ],
+      "crops": [
+        "S93-039.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0088",
+        "R1793-0515",
+        "R1793-0517"
+      ]
+    },
+    {
+      "id": "S93-040",
+      "page_key": "sn82014782|1793-06-29|1|2",
+      "excerpt_start": "It is now rumoured that Dumourier",
+      "excerpt_end": "cavalry, and gone to the Austrian army.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "sun-rumour-dumouriez-left-army"
+      ],
+      "summary": "The Kentucky Gazette prints the Sun paragraph.",
+      "note": "A second scanned copy of this issue (edition 2) also holds the item. Appears to print 'a great part of the army', where the others have 'his army'; the film is small and soft.",
+      "scan_findings": [
+        "Scan matches the excerpt as far as the small, soft film can be read; 'a great part of the army' appears to be what is printed, where the other printings have 'his army'. The paragraph stands among London news, without the New York introduction."
+      ],
+      "crops": [
+        "S93-040.jpg"
+      ],
+      "family": [
+        "R1793-0002",
+        "R1793-0088",
+        "R1793-0515",
+        "R1793-0517"
+      ]
+    },
+    {
+      "id": "S93-041",
+      "page_key": "sn83025523|1793-07-01|1|1",
+      "excerpt_start": "STATE PAPERS. GENERAL DUMOURIER TO THE",
+      "excerpt_end": "of the French name throughout all Europe.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "dumouriez-defection-1793",
+        "dumouriez-address-french-nation"
+      ],
+      "summary": "The Mirrour prints Dumouriez's address.",
+      "note": "Continues on page 4.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'S INCE' only separates the large initial letter. The heading is 'STATE PAPERS. GENERAL DUMOURIER TO THE FRENCH NATION', and the print spells 'Honour'."
+      ],
+      "crops": [
+        "S93-041.jpg"
+      ],
+      "family": [
+        "R1793-0006"
+      ]
+    },
+    {
+      "id": "S93-042",
+      "page_key": "sn83025588|1793-08-13|1|2",
+      "excerpt_start": "SEA MONSTER. Capt. Crabtree, who lately",
+      "excerpt_end": "having just made Mount-Desert island, distant nearly",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sea-serpent-captain-crabtree"
+      ],
+      "summary": "Portland, 3 August 1793: Captain Crabtree tells of a sea serpent of enormous size seen on his passage from the West Indies.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-042.jpg"
+      ],
+      "family": [
+        "R1793-0019",
+        "R1793-0144",
+        "R1793-0145",
+        "R1793-0334",
+        "R1793-0341"
+      ]
+    },
+    {
+      "id": "S93-043",
+      "page_key": "sn83025887|1793-08-17|1|2",
+      "excerpt_start": "Messrs. Printers, Certain late publications render",
+      "excerpt_end": "asked, on our return from that place,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jay-king-statement-on-genet"
+      ],
+      "summary": "John Jay and Rufus King state in New York (August 1793) that Genêt said he would appeal to the people from the President's decisions.",
+      "note": "Earliest printing found. Prints 'said that he would appeal'.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'said that he would appeal' is as printed."
+      ],
+      "crops": [
+        "S93-043.jpg"
+      ],
+      "family": [
+        "R1793-0019",
+        "R1793-0103"
+      ]
+    },
+    {
+      "id": "S93-044",
+      "page_key": "sn83025887|1793-08-17|1|2",
+      "excerpt_start": "Captain Crabtree, lately from the West",
+      "excerpt_end": "ten leagues, I suddenly got sight of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sea-serpent-captain-crabtree"
+      ],
+      "summary": "The National Gazette prints Captain Crabtree's account.",
+      "note": "Printed without the heading 'Sea Monster', with a shorter introduction: 'Captain Crabtree, lately from the West Indies'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph is printed without the 'Sea Monster' heading and with the shorter introduction 'lately from the West Indies'."
+      ],
+      "crops": [
+        "S93-044.jpg"
+      ],
+      "family": [
+        "R1793-0019",
+        "R1793-0103"
+      ]
+    },
+    {
+      "id": "S93-045",
+      "page_key": "sn83025887|1793-08-17|1|3",
+      "excerpt_start": "By the brig Molly, Capt. Morris,",
+      "excerpt_end": "contained an account of a very bloody",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madeira-report-battle-near-lisle"
+      ],
+      "summary": "Philadelphia, 14 August 1793: the brig Molly from Madeira brings word of English papers telling of a bloody battle near Lisle in which 17,000 men fell.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-045.jpg"
+      ],
+      "family": [
+        "R1793-0017",
+        "R1793-0020",
+        "R1793-0145",
+        "R1793-1138"
+      ]
+    },
+    {
+      "id": "S93-046",
+      "page_key": "sn83030483|1793-08-17|1|2",
+      "excerpt_start": "PORTLAND, (Mass.) Aug. 3. SEA MONSTER.",
+      "excerpt_end": "Indies, in the morning, having just made",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sea-serpent-captain-crabtree"
+      ],
+      "summary": "The Gazette of the United States prints Captain Crabtree's account.",
+      "note": "Prints the misprint 'may be dependended on' and 'Mount-Desart island'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the paper prints 'dependended on', a printer's slip that RevX silently corrects to 'depended on'. Just after the excerpt the scan reads 'Mount-Desart island'."
+      ],
+      "crops": [
+        "S93-046.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0019",
+        "R1793-0145"
+      ]
+    },
+    {
+      "id": "S93-047",
+      "page_key": "sn83030483|1793-08-17|1|3",
+      "excerpt_start": "Messrs. PRINTERS, Certain late publications render",
+      "excerpt_end": "on our return from that place, whether",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jay-king-statement-on-genet"
+      ],
+      "summary": "The Gazette of the United States prints Jay and King's statement.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-047.jpg"
+      ],
+      "family": [
+        "R1793-0017",
+        "R1793-1127",
+        "R1793-1134",
+        "R1793-1139"
+      ]
+    },
+    {
+      "id": "S93-048",
+      "page_key": "sn83030483|1793-08-17|1|3",
+      "excerpt_start": "Philadelphia, Aug. 14. By the brig",
+      "excerpt_end": "June. These papers contained an account of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madeira-report-battle-near-lisle"
+      ],
+      "summary": "The Gazette of the United States prints the Madeira report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Just after it the scan reads 'a very bloody battle having been fought near Lisle between'; no comma is visible after 'fought'."
+      ],
+      "crops": [
+        "S93-048.jpg"
+      ],
+      "family": [
+        "R1793-0017",
+        "R1793-1127",
+        "R1793-1134",
+        "R1793-1139"
+      ]
+    },
+    {
+      "id": "S93-049",
+      "page_key": "sn83025523|1793-08-19|1|2",
+      "excerpt_start": "Sea Monster. Captain CRABTREE, who lately",
+      "excerpt_end": "just made Mount-Desert Island, distant nearly ten",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sea-serpent-captain-crabtree"
+      ],
+      "summary": "The Mirrour prints Captain Crabtree's account.",
+      "note": "Prints the misprint 'being on may Passage'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the paper prints 'on may Passage', a printer's slip that RevX silently corrects to 'my'."
+      ],
+      "crops": [
+        "S93-049.jpg"
+      ],
+      "family": [
+        "R1793-0004",
+        "R1793-0019",
+        "R1793-0144",
+        "R1793-1124",
+        "R1793-1140"
+      ]
+    },
+    {
+      "id": "S93-050",
+      "page_key": "sn84023134|1793-08-20|1|3",
+      "excerpt_start": "SEA MONSTER. PORTLAND, Aug. 3. Capt.",
+      "excerpt_end": "Indies in the morning, having just made",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sea-serpent-captain-crabtree"
+      ],
+      "summary": "The American Herald of Liberty prints Captain Crabtree's account.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has 'extrao dinary' with the r not inked, which RevX gives as 'extra ordinary'; a minor transcription difference."
+      ],
+      "crops": [
+        "S93-050.jpg"
+      ],
+      "family": [
+        "R1793-0019",
+        "R1793-1147"
+      ]
+    },
+    {
+      "id": "S93-051",
+      "page_key": "sn83030483|1793-08-24|1|2",
+      "excerpt_start": "NEW-YORK, Aug. 22. New-York, 13th Aug.",
+      "excerpt_end": "with those of the citizens of America,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "genet-letter-to-the-president-13-august"
+      ],
+      "summary": "Genêt writes to President Washington (New York, 13 August 1793) asking him to declare that Genêt never spoke to him of appealing to the people.",
+      "note": "Earliest printing found. Begins at the foot of page 2 and continues on page 3, where the answer follows.",
+      "scan_findings": [
+        "Scan matches the excerpt. The crop ends at 'never to permit private', before 'the line of duty'."
+      ],
+      "crops": [
+        "S93-051.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0104"
+      ]
+    },
+    {
+      "id": "S93-052",
+      "page_key": "sn83030483|1793-08-24|1|3",
+      "excerpt_start": "Mr. JEFFERSON'S Answer. Philadelphia, August 16,",
+      "excerpt_end": "organ through which their communications should pass.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jefferson-answer-to-genet-16-august"
+      ],
+      "summary": "Jefferson answers Genêt for the President (Philadelphia, 16 August 1793): ministers do not write to the President directly, and he declines to interfere.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt: 'August 16, 1793', '13th instant' and 'communications' are as printed."
+      ],
+      "crops": [
+        "S93-052.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0349",
+        "R1793-1153"
+      ],
+      "scan_boxes": [
+        [
+          190,
+          1655,
+          860,
+          2080
+        ]
+      ]
+    },
+    {
+      "id": "S93-053",
+      "page_key": "sn84038410|1793-08-26|1|2",
+      "excerpt_start": "PHILADELPHIA, August 16. By the brig",
+      "excerpt_end": "These papers contained an account of a",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madeira-report-battle-near-lisle"
+      ],
+      "summary": "The Patowmac Guardian prints the Madeira report.",
+      "note": "Dated 'PHILADELPHIA, August 16.' (GUS: 'Philadelphia, Aug. 14.').",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print reads 'which she left the 8th of July'; RevX drops 'she', a minor transcription error. The crop is small and stops before the battle; an enlarged copy of the page shows that the paper printed 'a very bloody battle'."
+      ],
+      "crops": [
+        "S93-053.jpg"
+      ],
+      "family": [
+        "R1793-0016",
+        "R1793-0017",
+        "R1793-0020",
+        "R1793-0222",
+        "R1793-1160"
+      ]
+    },
+    {
+      "id": "S93-054",
+      "page_key": "sn84038410|1793-08-26|1|3",
+      "excerpt_start": "Messrs. Printers, CERTAIN late publications render",
+      "excerpt_end": "our return from that place, whether he",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jay-king-statement-on-genet"
+      ],
+      "summary": "The Patowmac Guardian prints Jay and King's statement.",
+      "note": "Prints 'to inform, that' without 'the public', and 'had said he would appeal'.",
+      "scan_findings": [
+        "Scan reads 'Messers. Printers'; RevX 'Messrs.' is a minor transcription difference. 'had said he would appeal' and 'to inform, that' without 'the public' are as printed."
+      ],
+      "crops": [
+        "S93-054.jpg"
+      ],
+      "family": [
+        "R1793-0054",
+        "R1793-0103",
+        "R1793-0220"
+      ]
+    },
+    {
+      "id": "S93-055",
+      "page_key": "sn83025588|1793-08-27|1|2",
+      "excerpt_start": "Mss. Printers, CERTAIN late publications render",
+      "excerpt_end": "on our return from that place, whether",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jay-king-statement-on-genet"
+      ],
+      "summary": "The New Hampshire Gazette prints Jay and King's statement.",
+      "note": "Prints the words in quotation marks and italics: 'Appeal to the People from certain decisions of the President;'.",
+      "scan_findings": [
+        "Scan reads 'Mess. Printers'; RevX 'Mss.' is a minor transcription error. The rest matches the excerpt, with the quoted words in quotation marks and capitals as printed."
+      ],
+      "crops": [
+        "S93-055.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0016",
+        "R1793-0017",
+        "R1793-0101",
+        "R1793-0103",
+        "R1793-1130",
+        "R1793-1152",
+        "R1793-1159",
+        "R1793-1162",
+        "R1793-1163"
+      ]
+    },
+    {
+      "id": "S93-056",
+      "page_key": "sn83025588|1793-08-27|1|2",
+      "excerpt_start": "By the brig Molly, Capt. Morris,",
+      "excerpt_end": "contained an account of a very bloody",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madeira-report-battle-near-lisle"
+      ],
+      "summary": "The New Hampshire Gazette prints the Madeira report.",
+      "note": "Prints 'arrived at Philadelphia' and 'in 9 days'.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-056.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0016",
+        "R1793-0017",
+        "R1793-0101",
+        "R1793-0103",
+        "R1793-1130",
+        "R1793-1152",
+        "R1793-1159",
+        "R1793-1162",
+        "R1793-1163"
+      ]
+    },
+    {
+      "id": "S93-057",
+      "page_key": "sn84023134|1793-08-27|1|2",
+      "excerpt_start": "Messrs. Printers, CERTAIN late publications render",
+      "excerpt_end": "on our return from that place, whether",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jay-king-statement-on-genet"
+      ],
+      "summary": "The American Herald of Liberty prints Jay and King's statement.",
+      "note": "Prints 'we are asked', where the others have 'we were asked', and the words in quotation marks and italics.",
+      "scan_findings": [
+        "Scan reads 'authorise'; RevX 'authorize' is a minor transcription difference. 'we are asked' is as printed, where the other printings have 'we were asked'."
+      ],
+      "crops": [
+        "S93-057.jpg"
+      ],
+      "family": [
+        "R1793-0054",
+        "R1793-0102",
+        "R1793-0103",
+        "R1793-0344",
+        "R1793-1110",
+        "R1793-1112",
+        "R1793-1132",
+        "R1793-1162",
+        "R1793-1163",
+        "R1793-1164",
+        "R1793-1165",
+        "R1793-1167"
+      ]
+    },
+    {
+      "id": "S93-058",
+      "page_key": "sn84023134|1793-08-27|1|3",
+      "excerpt_start": "By the brig Molly, Capt. Morris,",
+      "excerpt_end": "at Madeira in nine days from Falmouth...",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madeira-report-battle-near-lisle"
+      ],
+      "summary": "The American Herald of Liberty prints the Madeira report.",
+      "note": "The RevX transcription shortens the paragraph with '...' after 'nine days from Falmouth', dropping the account of the battle; the older CA transcription has it. The print has the whole paragraph, with the battle near Lisle and '17,000 men fell in the combat'; it reads 'arrived at Philadelphia'.",
+      "scan_findings": [
+        "Scan matches the words of the excerpt, but the paper printed the whole paragraph, including the bloody battle near Lisle and '17,000 men fell in the combat'; the RevX '...' leaves that out. The print has 'frigate' with a broken f; RevX 'trigate' is a minor transcription error."
+      ],
+      "crops": [
+        "S93-058.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0348"
+      ]
+    },
+    {
+      "id": "S93-059",
+      "page_key": "sn83025887|1793-08-28|1|1",
+      "excerpt_start": "Citizen GENET, Minister Plenipotentiary from the",
+      "excerpt_end": "my country, and imposed it as a",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "genet-letter-to-the-president-13-august"
+      ],
+      "summary": "The National Gazette prints Genêt's letter.",
+      "note": "Printed under 'From the NEW-YORK DIARY, of August 21.', without the letter's own dateline.",
+      "scan_findings": [
+        "Scan reads 'INTRUSTED' with a drop capital; RevX 'IN TRUSTED' is a minor transcription error. The rest matches, and the letter is headed 'From the New-York Diary, of August 21' without its own dateline."
+      ],
+      "crops": [
+        "S93-059.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0349"
+      ]
+    },
+    {
+      "id": "S93-060",
+      "page_key": "sn83025887|1793-08-28|1|1",
+      "excerpt_start": "Mr. JEFFERSON's Answer. Philadelphia, August 16,",
+      "excerpt_end": "organ through which their communication should pass.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jefferson-answer-to-genet-16-august"
+      ],
+      "summary": "The National Gazette prints the Secretary of State's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The answer begins at the foot of one column and continues at the top of the next; the two crops together show the whole excerpt."
+      ],
+      "crops": [
+        "S93-060-1.jpg",
+        "S93-060-2.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0349"
+      ],
+      "scan_boxes": [
+        [
+          1540,
+          4440,
+          2200,
+          4670
+        ],
+        [
+          2300,
+          845,
+          2975,
+          1085
+        ]
+      ]
+    },
+    {
+      "id": "S93-061",
+      "page_key": "sn83025523|1793-09-02|1|3",
+      "excerpt_start": "By the brig Molly, Capt. MORRIS,",
+      "excerpt_end": "an account of a very bloody battle",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madeira-report-battle-near-lisle"
+      ],
+      "summary": "The Mirrour prints the Madeira report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-061.jpg"
+      ],
+      "family": [
+        "R1793-0017",
+        "R1793-0348",
+        "R1793-1103"
+      ]
+    },
+    {
+      "id": "S93-062",
+      "page_key": "sn84038410|1793-09-02|1|2",
+      "excerpt_start": "NEW-YORK, August 24. New-York, 13th August,",
+      "excerpt_end": "with those of the citizens of America,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "genet-letter-to-the-president-13-august"
+      ],
+      "summary": "The Patowmac Guardian prints Genêt's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The dateline gives the year as ''93' and the heading date reads 'August 24', its first figure broken."
+      ],
+      "crops": [
+        "S93-062.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0104",
+        "R1793-1150",
+        "R1793-1175"
+      ]
+    },
+    {
+      "id": "S93-063",
+      "page_key": "sn84038410|1793-09-02|1|2",
+      "excerpt_start": "Mr. JEFFERSON's Answer. Philadelphia, August 19,",
+      "excerpt_end": "to have any direct correspondence with him.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jefferson-answer-to-genet-16-august"
+      ],
+      "summary": "The Patowmac Guardian prints the Secretary of State's answer.",
+      "note": "Dated 'Philadelphia, August 19, '93', where the other printings have 16 August.",
+      "scan_findings": [
+        "Scan reads 'Philadelphia, August 19, '93' where the other printings have August 16: a printed error, not a transcription error. The crop shows the whole excerpt and ends in the next sentence at 'their communica-', so the word 'communication(s)' cannot be checked."
+      ],
+      "crops": [
+        "S93-063.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0104",
+        "R1793-1150",
+        "R1793-1175"
+      ]
+    },
+    {
+      "id": "S93-064",
+      "page_key": "sn83025588|1793-09-03|1|4",
+      "excerpt_start": "NEW-YORK, 13th Aug. 1793, Second Year",
+      "excerpt_end": "of the citizens of America, I have",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "genet-letter-to-the-president-13-august"
+      ],
+      "summary": "The New Hampshire Gazette prints Genêt's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'INTRUSTED' with a drop capital; RevX 'I TRUSTED' splits the drop capital from its word and loses the N, a minor transcription error (the same kind as 'IN TRUSTED' and 'I NTRUSTED' in two other printings). The rest matches."
+      ],
+      "crops": [
+        "S93-064.jpg"
+      ],
+      "family": [
+        "R1793-0005"
+      ]
+    },
+    {
+      "id": "S93-065",
+      "page_key": "sn83025588|1793-09-03|1|4",
+      "excerpt_start": "Mr. JEFFERSON's Answer. PHILADELPHIA, August 16.",
+      "excerpt_end": "to have any direct correspondence with him.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jefferson-answer-to-genet-16-august"
+      ],
+      "summary": "The New Hampshire Gazette prints the Secretary of State's answer.",
+      "note": "Dated 'PHILADELPHIA, August 16.', without the year.",
+      "scan_findings": [
+        "Scan matches the excerpt. The date is printed 'August 16.' without the year; the answer runs from the foot of one column to the top of the next."
+      ],
+      "crops": [
+        "S93-065-1.jpg",
+        "S93-065-2.jpg"
+      ],
+      "family": [
+        "R1793-0005"
+      ]
+    },
+    {
+      "id": "S93-066",
+      "page_key": "sn84023134|1793-09-03|1|2",
+      "excerpt_start": "NEW YORK, 13th AUGUST, 1793. Second",
+      "excerpt_end": "with those of the citizens of America,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "genet-letter-to-the-president-13-august"
+      ],
+      "summary": "The American Herald of Liberty prints Genêt's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'INTRUSTED' with a drop capital; RevX 'I NTRUSTED' is a minor transcription error. The rest matches."
+      ],
+      "crops": [
+        "S93-066.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0349",
+        "R1793-0356",
+        "R1793-1166",
+        "R1793-1176",
+        "R1793-1178"
+      ]
+    },
+    {
+      "id": "S93-067",
+      "page_key": "sn84023134|1793-09-03|1|2",
+      "excerpt_start": "Mr. JEFFERSON's Answer. PHILADELPHIA, AUG. 16,",
+      "excerpt_end": "organ through which their communication should pass.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jefferson-answer-to-genet-16-august"
+      ],
+      "summary": "The American Herald of Liberty prints the Secretary of State's answer.",
+      "note": "Headed with the misprint 'Mr. JEFFRSON's Answer.'",
+      "scan_findings": [
+        "Scan matches the excerpt except the heading, where the paper misprints 'Mr. JEFFRSON's Answer' and RevX silently corrects it to 'JEFFERSON's'."
+      ],
+      "crops": [
+        "S93-067.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0349",
+        "R1793-0356",
+        "R1793-1166",
+        "R1793-1176",
+        "R1793-1178"
+      ]
+    },
+    {
+      "id": "S93-068",
+      "page_key": "sn84023313|1793-09-04|1|2",
+      "excerpt_start": "New-York, 13th August, 1793. Second Year",
+      "excerpt_end": "the citizens of America, I have sworn",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "genet-letter-to-the-president-13-august"
+      ],
+      "summary": "The Columbian Informer prints Genêt's letter.",
+      "note": "Prints 'from the French Republick'.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the paper prints 'French Republick', which RevX gives as 'Republic': a modernised spelling, not a change of fact."
+      ],
+      "crops": [
+        "S93-068.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0104",
+        "R1793-0116",
+        "R1793-0356"
+      ]
+    },
+    {
+      "id": "S93-069",
+      "page_key": "sn84023313|1793-09-04|1|3",
+      "excerpt_start": "has received the letter which you",
+      "excerpt_end": "it to be within the line of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jefferson-answer-to-genet-16-august"
+      ],
+      "summary": "The Columbian Informer prints the Secretary of State's answer.",
+      "note": "The answer begins at the foot of page 2 ('Mr. JEFFERSON'S ANSWER. PHILADELPHIA, Aug. 16, 1793. SIR, THE President of the United States') and continues on page 3, where the excerpt begins.",
+      "scan_findings": [
+        "The crop shows the page 3 continuation, which matches the excerpt except that the print has the sentence '—the Secretary of State is the organ through which their communication should pass', which RevX leaves out between 'with him.' and 'The President does not conceive'."
+      ],
+      "crops": [
+        "S93-069.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0017",
+        "R1793-1175",
+        "R1793-1177",
+        "R1793-1178",
+        "R1793-1186"
+      ]
+    },
+    {
+      "id": "S93-070",
+      "page_key": "sn84023313|1793-09-04|1|3",
+      "excerpt_start": "By the brig Molly, Capt. Morris,",
+      "excerpt_end": "an account of a very bloody battle",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madeira-report-battle-near-lisle"
+      ],
+      "summary": "The Columbian Informer prints the Madeira report.",
+      "note": "Prints 'to about the 22d of June', where the others have the 24th, and the misprint 'arrived a Madeira'.",
+      "scan_findings": [
+        "Scan reads 'to about the 22d of June' where the other printings have the 24th: a printed difference, not a transcription error. The print also has 'arrived a Madeira', which RevX silently corrects to 'at'; a dark blot covers the first letters of four lines."
+      ],
+      "crops": [
+        "S93-070.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0017",
+        "R1793-1175",
+        "R1793-1177",
+        "R1793-1178",
+        "R1793-1186"
+      ]
+    },
+    {
+      "id": "S93-071",
+      "page_key": "sn84023313|1793-09-04|1|4",
+      "excerpt_start": "Periland, (Mass.) Aug. 3. SEA MONSTER.",
+      "excerpt_end": "in the morning, having just made Mount-Defar",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sea-serpent-captain-crabtree"
+      ],
+      "summary": "The Columbian Informer prints Captain Crabtree's account.",
+      "note": "Introduces the captain as 'who arrived at Frenchman's bay, and is at Portland', and prints 'a serpent of a most enormous' size.",
+      "scan_findings": [
+        "Scan reads 'Portland' in worn italic type and 'Mount-Desar' with a faint last letter (probably 'Mount-Desart'); RevX 'Periland' and 'Mount-Defar' are minor transcription errors. The item runs from the foot of one column to the top of the next, and its introduction reads 'who arrived at Frenchman's bay, and is at Portland'."
+      ],
+      "crops": [
+        "S93-071-1.jpg",
+        "S93-071-2.jpg"
+      ]
+    },
+    {
+      "id": "S93-072",
+      "page_key": "sn84023150|1793-09-09|1|2",
+      "excerpt_start": "Newyork, 13th Aug. 1793. 2d Year",
+      "excerpt_end": "the citizens of America, I have sworn",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "genet-letter-to-the-president-13-august"
+      ],
+      "summary": "The Eagle, or Dartmouth Centinel prints Genêt's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the film is speckled but every word can be read."
+      ],
+      "crops": [
+        "S93-072.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0011",
+        "R1793-1133"
+      ]
+    },
+    {
+      "id": "S93-073",
+      "page_key": "sn84023150|1793-09-09|1|2",
+      "excerpt_start": "Mr. JEFFERSON's answer. Philadelphia, Aug. 16,",
+      "excerpt_end": "organ through which their communications should pass.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "genet-appeal-to-the-people-1793",
+        "jefferson-answer-to-genet-16-august"
+      ],
+      "summary": "The Eagle, or Dartmouth Centinel prints the Secretary of State's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'the diplomatic characters residing here', as the other papers do; RevX 'character' is a minor transcription error, not a printed difference. The rest matches, with 'communications' as printed."
+      ],
+      "crops": [
+        "S93-073.jpg"
+      ],
+      "family": [
+        "R1793-0005",
+        "R1793-0011",
+        "R1793-1133"
+      ]
+    },
+    {
+      "id": "S93-074",
+      "page_key": "sn84023150|1793-09-09|1|3",
+      "excerpt_start": "PORTLAND, August 3. SEA MONSTER. Capt.",
+      "excerpt_end": "the morning, having just made Mount Desert",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sea-serpent-captain-crabtree"
+      ],
+      "summary": "The Eagle, or Dartmouth Centinel prints Captain Crabtree's account.",
+      "note": "Prints 'distant about ten leagues', where the others have 'nearly ten'.",
+      "scan_findings": [
+        "Scan matches the excerpt; a dark line down the right edge of the column touches some line ends. Just after the excerpt the scan reads 'distant about ten' where the other printings have 'nearly ten': a printed difference."
+      ],
+      "crops": [
+        "S93-074.jpg"
+      ],
+      "family": [
+        "R1793-0019",
+        "R1793-1148"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "emigrant-armies-disbanded",
+      "kind": "message_group",
+      "label": "Brussels, 17 October 1792: the emigrant princes' armies disbanded",
+      "definition": "Printings of a Brussels paragraph of 17 October 1792, printed in American papers in January and February 1793: word from the provinces of Namur and Luxembourg that the army of the French princes, Monsieur and the Count (or Duke) d'Artois, and that under the Duke de Bourbon were disbanded, and that their men wandered in great distress. A report ('We hear').",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "dumouriez-letter-brussels",
+      "kind": "message_group",
+      "label": "Dumouriez's letter on entering Brussels, 14 November 1792",
+      "definition": "Printings of General Dumouriez's letter to the President of the National Convention, dated Brussels, 14 November 1792, and read in the Convention on 22 November: the Austrians had disputed the heights of Anderlecht with his advanced guard, and he had entered Brussels. One army's own account.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "dumouriez-defection-1793",
+      "kind": "context_group",
+      "label": "Dumouriez's defection, April 1793",
+      "definition": "News of General Dumouriez's break with the National Convention in April 1793, as American papers printed it from late May: Clairfayt's letter that Dumouriez had sent the Convention's commissioners to the Austrian camp as prisoners, a London rumour that he had left his army, his own address to the French nation, and the Prince of Saxe-Cobourg's proclamation in support of it. Contains those four groups.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "clairfayt-letter-tournay",
+      "kind": "message_group",
+      "label": "Clairfayt's letter from Tournay: the commissioners sent as prisoners",
+      "definition": "Printings of a letter of the Austrian general Clairfayt to Count Starhemberg, the Imperial minister at The Hague (dated Tournay, 31 March 1793; some papers date it 3 April): Dumouriez had written to him that he had sent to the Austrian camp, as prisoners, General Bournonville and the commissioners whom the Convention had sent to arrest him. One side's account of what Dumouriez wrote.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "sun-rumour-dumouriez-left-army",
+      "kind": "message_group",
+      "label": "The Sun of 10 April: Dumouriez rumoured to have left his army",
+      "definition": "Printings of a paragraph of the London Sun of 10 April 1793: it was rumoured that Dumouriez, having found reason to doubt his army's promises to support his plan of marching to Paris and placing young Louis on the throne, had left it at the head of a regiment of cavalry. A rumour, labelled as one. Several papers print it with a New York introduction ('In the Sun, of the 10th April, which is the latest paper received'), the others among London paragraphs.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "dumouriez-address-french-nation",
+      "kind": "document_group",
+      "label": "Dumouriez's address to the French nation, 2 April 1793",
+      "definition": "Printings of General Dumouriez's address 'to the French Nation', dated the Baths of St. Amand, 2 April 1793, printed from London papers: his services since the Revolution, his charges against the Convention and the Jacobins, his plan to restore the constitution with his army, and his oath to give up every public function afterwards. One side's account and a policy argument.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "cobourg-proclamation-5-april",
+      "kind": "document_group",
+      "label": "The Prince of Saxe-Cobourg's proclamation to the French, 5 April 1793",
+      "definition": "Printings of the proclamation 'to the French' of the Austrian commander, the Prince of Saxe-Cobourg (Mons, 5 April 1793): he supported Dumouriez's declaration to the French nation, would act only as an auxiliary, and would hold any fortress handed to him only as a sacred trust. He withdrew these pledges in a proclamation of 9 April, which the same papers printed beside it.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "genet-appeal-to-the-people-1793",
+      "kind": "context_group",
+      "label": "Genêt and the President: the 'appeal to the people', 1793",
+      "definition": "One affair in three printed documents, as the papers printed them from mid-August to early September 1793: John Jay and Rufus King's statement that the French minister, Genêt, had said he would appeal to the people from certain decisions of the President; Genêt's letter to the President asking him to declare that he had never said so to him; and the Secretary of State's answer for the President. Contains those three groups. The statement is an allegation and the letter the minister's own account; whether he said it is not settled here.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "jay-king-statement-on-genet",
+      "kind": "message_group",
+      "label": "Jay and King: Genêt said he would appeal to the people",
+      "definition": "Printings of a card of John Jay and Rufus King to the printers of the New York Diary (August 1793): a report having reached New York from Philadelphia that Mr. Genêt, the French minister, had said he would appeal to the people from certain decisions of the President, they had been asked on their return whether he had said so, and 'we answered, that he had'. An allegation by two named men.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "genet-letter-to-the-president-13-august",
+      "kind": "document_group",
+      "label": "Genêt's letter to the President, 13 August 1793",
+      "definition": "Printings of the letter of Citizen Genêt, minister plenipotentiary of the French Republic, to President Washington (New York, 13 August 1793), printed with the Secretary of State's answer, as published in New York (the National Gazette credits the New York Diary of 21 August): persons were saying that he had threatened to appeal to the people from the President's decisions, and he asked the President for an explicit declaration that he had never intimated such an intention to him. The minister's own account.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "jefferson-answer-to-genet-16-august",
+      "kind": "document_group",
+      "label": "Jefferson's answer for the President, 16 August 1793",
+      "definition": "Printings of the Secretary of State's answer to Genêt for the President (Philadelphia, 16 August 1793): the diplomatic characters residing here should not correspond directly with the President, the Secretary of State being the organ of their communications, and the President did not think it within the line of propriety or duty to bear evidence against a declaration, so he declined to interfere. An official document.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "sea-serpent-captain-crabtree",
+      "kind": "message_group",
+      "label": "Captain Crabtree's sea serpent",
+      "definition": "Printings of a Portland (District of Maine) paragraph of 3 August 1793 headed 'Sea Monster': Captain Crabtree, lately arrived at Frenchman's Bay, says that on 20 June, on his passage from the West Indies and in sight of Mount Desert island, he watched for nearly an hour a serpent of enormous size, which he judged to be 55 to 60 feet long, its head raised six or eight feet out of the water. One man's account, which the paper says 'may be depended on'.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    },
+    {
+      "id": "madeira-report-battle-near-lisle",
+      "kind": "message_group",
+      "label": "By the brig Molly from Madeira: a battle near Lisle reported",
+      "definition": "Printings of a Philadelphia paragraph of 14 August 1793: by the brig Molly, Capt. Morris, from Madeira, word that a frigate from Falmouth had brought English papers to about 24 June with an account of a very bloody battle near Lisle, to the advantage of the French, in which 17,000 men fell; Morris said the account was believed at Madeira. A report at third hand of what newspapers said; the Gazette of the United States and the American Herald of Liberty add that the consul's letter from Madeira of 4 July said there was nothing new.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "dumouriez-defection-1793",
+      "child": "clairfayt-letter-tournay"
+    },
+    {
+      "parent": "dumouriez-defection-1793",
+      "child": "sun-rumour-dumouriez-left-army"
+    },
+    {
+      "parent": "dumouriez-defection-1793",
+      "child": "dumouriez-address-french-nation"
+    },
+    {
+      "parent": "dumouriez-defection-1793",
+      "child": "cobourg-proclamation-5-april"
+    },
+    {
+      "parent": "genet-appeal-to-the-people-1793",
+      "child": "jay-king-statement-on-genet"
+    },
+    {
+      "parent": "genet-appeal-to-the-people-1793",
+      "child": "genet-letter-to-the-president-13-august"
+    },
+    {
+      "parent": "genet-appeal-to-the-people-1793",
+      "child": "jefferson-answer-to-genet-16-august"
+    }
+  ],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1793 that reach 3 or more papers, long-running ones included (story_items.py --long-running, families of 3 or more papers rather than the default 4, because 1793 has few papers in print), were split into single printed items (items.json: 10 items in 7 papers, none in 8 or more, 22 in exactly 6). The script was also run with year 1792 over the 1793 pages (items_from_1792.json); none of those items reaches 6 papers. Two AI reviewers (Claude Fable) read the items of each half of the year in 4 or more papers and proposed the stories; each item's printings were looked for with phrase searches over all 1,751 pages of 1793 in both transcriptions (phrase_patterns.json, phrase_hits.json), and every hit was read. Papers with pages in a story's weeks but no printing were searched with loose keywords. Every admitted printing was then checked against its page scan (SCAN_PROTOCOL.md, scan_points.json).",
+    "selection_rule": "As for 1776, 1807 and 1808: a story needs one printed item found in 7 or more newspapers, counted item by item. No item of 1793 reaches 8 papers; every non-digest item in 7 papers was admitted. Where several documents belong to one affair, each is its own group under a parent story, and a sub-story may have fewer than 7 papers when its parent reaches 7 (the rule the owner agreed for 1776 round two): Dumouriez's address (6 papers), Saxe-Cobourg's proclamation of 5 April (5) and Jay and King's statement on Genet (5). The two titles of one renamed paper (the New-Hampshire Gazette at Portsmouth; Ranlet's paper at Exeter, the New Hampshire Gazetteer and then the American Herald of Liberty) were never counted twice toward a threshold; no admitted story's count depends on them. Both scanned copies of a Kentucky Gazette issue count once. A paper that printed an item again counts each printing. A 6-paper threshold for this year is proposed in the README and was not applied.",
+    "items_admitted": {
+      "emigrant-armies-disbanded": [
+        "I93-0004"
+      ],
+      "dumouriez-letter-brussels": [
+        "I93-0005"
+      ],
+      "clairfayt-letter-tournay": [
+        "I93-0002",
+        "I93-0121",
+        "I93-0122"
+      ],
+      "sun-rumour-dumouriez-left-army": [
+        "I93-0003"
+      ],
+      "dumouriez-address-french-nation": [
+        "I93-0020",
+        "I93-0021",
+        "I93-0022",
+        "I93-0023",
+        "I93-0024"
+      ],
+      "cobourg-proclamation-5-april": [
+        "I93-0064",
+        "I93-0066"
+      ],
+      "jay-king-statement-on-genet": [
+        "I93-0033"
+      ],
+      "genet-letter-to-the-president-13-august": [
+        "I93-0008",
+        "I93-0009"
+      ],
+      "jefferson-answer-to-genet-16-august": [
+        "I93-0010"
+      ],
+      "sea-serpent-captain-crabtree": [
+        "I93-0006"
+      ],
+      "madeira-report-battle-near-lisle": [
+        "I93-0007"
+      ]
+    },
+    "counted_item_by_item": {
+      "Giles's resolutions on the Secretary of the Treasury": "The item finder counts 7 papers and 17 printings. The resolutions as moved are in GUS 2 Mar, NGz 6 Mar, MIR 18 Mar and NHGA 19 Mar, and as the House journal of 28 February and 1 March in NGz 3 and 6 Apr, NHG 23 Apr and AHL 14 May: 6 catalogue numbers but 5 papers, because NHGA and NHG are one paper. The Kentucky Gazette prints only the debate, in which speakers quote single resolutions; votes and speeches in GUS and NGz were not counted.",
+      "Neighbouring paragraphs and chained items": "The finder joins neighbouring paragraphs of a news column into chains: the Brussels paragraph of 17 October 1792 stands beside a Rome paragraph (6 papers) and a paragraph on the suttlers of Clairfayt's army (5); the Madeira paragraph is chained to the Philadelphia paragraphs after it in GUS. Each group here is the single item. Dumouriez's address was split by the finder into five items and Saxe-Cobourg's two proclamations into four; they are one document and two documents.",
+      "Genet's letter and the answer": "Genet's letter of 13 August and the Secretary of State's answer of 16 August were printed together in all seven papers. They are two signed documents, each its own group under a parent, with Jay and King's statement, which the letter answers, as a third group.",
+      "Two settings of one paragraph": "The Sun paragraph of 10 April is printed with a New York introduction ('In the Sun, of the 10th April, which is the latest paper received') in GUS, NGz (1 June), PG and NHG, and among London paragraphs in NGz (29 May), AHL, MIR and KG; the paragraph itself is the same and is counted as one item.",
+      "Quotations": "Pages that only quote or answer an item were not counted: Jay and King's statement quoted in NGz 24 Aug, 4 and 21 Sep and in their own later statement (PG 23 Dec), and commented on in PG 2 Sep and CI 28 Aug."
+    },
+    "not_admitted": {
+      "The 1793 news that no single item carries to 7 papers": "The execution of Louis XVI (six different accounts, none in more than 5 of the 6 papers then in print), France's decree of war on Britain and Holland (5), the French Republic's letter to the United States (5), Giles's resolutions (5 papers), the neutrality proclamation (4 papers by its own text), Washington's second inauguration (4), Genet's arrival and the addresses to him (2 to 4 each), the yellow fever in Philadelphia (no shared item above 4 papers), Toulon (no item above 4), the President's address of 3 December (4 papers, all those then in print) and the Algerine captures (Church's circular, 3).",
+      "Candidates in 6 papers": "Proposed to the owner under a 6-paper threshold, not admitted: the list of the powers at war with France (two introductions, 3 + 3), the London Gazette bulletin from Tournai of 3 May, Hamilton's circular to the collectors with the President's rules on neutrality, the declaration of the President of the National Convention on a plot, the Cadiz letter of 24 June, the commissioners' letter on General Dampierre's death, and (needing framing) the War Office paragraph on the treaty commissioners at the Rapids of the Miami. Weaker: the Rome paragraph and the Paris 'sullen tranquillity' paragraph (digest paragraphs) and Captain Hacket's Amsterdam rumour (two wordings, 4 + 2).",
+      "Left out for framing": "The German Creek letter on a raid on the 'valley Indian towns' (6 papers), Captain Fanning's account of the burning of Cap Francais (6), the brig Mary's report of the dead at Cap Francais (6), the civil commissioners' proclamation giving liberty to the 'negro warriors' (4), the Fugitive Slave Act (its text in 2 papers), the letter of Polverel and Sonthonax to Genet (4), the prosecutions of Singleterry and Henfield (5; private seamen) and a killing near Middletown, New Jersey (5; private people).",
+      "Below 6 papers": "The Ostend news by the ship Fortitude (5), Jefferson's letter to the Philadelphia merchants on spoliations (5), Marat's funeral (5), the Convention's decree arresting foreigners (5, a digest paragraph), the revocation of vice-consul Duplaine's exequatur and Genet's answer (4 each), Saxe-Cobourg's proclamation of 9 April (5), Dumouriez's letter from Louvain (4), the ship William (5), and others listed in the README."
+    },
+    "data_issues": {
+      "Misdated issues": "Two Gazette of the United States issues are filed under dates their mastheads contradict, confirmed on the scans: the issue filed under 4 April 1793 is Saturday 4 May (Whole No. 419), and the one filed under 23 July is Saturday 13 July (No. 439). No admitted printing is on them (masthead_dates.csv).",
+      "A second scan filed under another date": "Pages 3 and 4 filed under the American Herald of Liberty of 2 July 1793 are a second scan of the 9 July issue's pages 3 and 4 (page 3 prints 'BOSTON, JULY 3' and the 9 July heading). No admitted printing is on them (page_date_flags.csv).",
+      "Misfiled RevX pages": "Two 1793 issues have RevX transcriptions filed one page off (Kentucky Gazette 6 April, edition 2; the Mirrour, 22 April). No admitted printing is on them.",
+      "The Kentucky Gazette of 1793": "Its 1793 mastheads agree with the filed dates (all 67 front pages read, both copies counted: 64 agree, and the other 3 are misread or misprinted days), unlike the Kentucky Gazette and General Advertiser of 1806 to 1808. Most issues were scanned twice (editions 1 and 2)."
+    }
+  }
+}

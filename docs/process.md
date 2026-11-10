@@ -50,7 +50,7 @@ flowchart TB
 - **Usability rule:** a page is usable if one of its transcriptions has at least 200 words. RevX is preferred, and CA is the fallback. Exact duplicate pages are removed.
 - **Result:** 77,749 of 77,793 pages are usable.
 
-The audit also exposed a basic limit of the archive: coverage is very uneven. 1786 has 356 pages and 1808 has 4,466. In 1785 and 1786 only two newspaper series survive. No series covers all 41 years.
+The audit also exposed a basic limit of the archive: coverage is very uneven. 1786 has 356 pages and 1808 has 4,466 as filed (4,060 by the dates the papers printed; see the Kentucky Gazette correction below). In 1785 and 1786 only two newspaper series survive. No series covers all 41 years.
 
 **Why it matters:** if a theme looks bigger in one year, that can simply be because different newspapers survive from that year. Every trend in this project is therefore shown alongside the coverage behind it.
 
@@ -149,8 +149,34 @@ The same steps were run for 1776, chosen over 1800 because more of its stories r
 
 1807 was chosen because, after 1776, it has the most widely printed matched stories, and because it opens the embargo years. It was reviewed by the 1776 method, with one change: `pipeline/story_items.py --long-running` also takes candidates from long-running families, where several of 1807's most printed documents sit (the President's message of 27 October, the proclamation of 2 July, the Burr documents).
 - **Release v0.8.0:** 14 stories, 32 groups (9 single stories; 5 parents with 18 sub-stories) and 250 printings in 11 papers, all checked against their scans.
-- **Release v0.8.1, a correction:** a check of the whole corpus found 133 issues whose RevX transcriptions are filed under the wrong page. v0.8.1 re-files the 532 matched printings that this put on the wrong page and merges 85 duplicate reads (163,841 printings now). No reviewed printing was affected.
+- **Release v0.8.1, a correction** (`pipeline/archive_data/refile_revx_pages.py`): a check of the whole corpus found 133 issues whose RevX transcriptions are filed under the wrong page. v0.8.1 re-files the 532 matched printings that this put on the wrong page and merges 85 duplicate reads (163,841 printings now). No reviewed printing was affected.
 - **On the site since 10 November 2026,** in three categories in the usual colour slots: *War in Europe* (6 stories), *Britain, France and American ships* (6, with the Chesapeake affair) and *American public life and government* (2: Burr's conspiracy and trial, and Congress called early).
+
+### A fourth reviewed year: 1808 (data release v0.9.0)
+
+1808 is the embargo year. It was reviewed by the same method, with the change made for 1807. Two AI reviewers chose the stories, each for half of the year, and AI reviewers checked every printing against its scan. `pipeline/story_items.py --long-running` was also run with the year 1807 over the 1808 pages, because the embargo acts and the papers laid before Congress in March sit in families that begin in 1807.
+- **Release v0.9.0:** 20 stories, 50 groups (11 single stories; 9 parents with 30 sub-stories) and 298 printings in 10 papers. Counted item by item, only one item reaches 9 papers: the President's message of February on more troops. Seven sub-stories have 5 or 6 papers, under parents that reach 7.
+- **Scan check:** all 298 printings are on their pages (2 only partly shown). 201 excerpts are faithful, 71 have minor errors and 26 change a fact, for example "exceptional" for "exceptionable", "Juan" for Junot and "towels" for "fowls". Printings on pages whose RevX text is stored under another page use the scan page and the Chronicling America text.
+- **A dating error found:** the *Kentucky Gazette* issues filed under 1808 print 1806 in their mastheads. The correction is below.
+- **On the site since 10 November 2026,** in three categories: *War in Spain and Portugal* (7 stories), *Britain, France and American ships* (4) and *The embargo and American government* (9, from the embargo laws to the charges against General Wilkinson).
+
+### A fifth reviewed year: 1793 (data releases v0.10.0 and v0.10.1)
+
+1793 fills the gap between 1776 and 1797. Fewer of its papers survive: 6 to 8 at a time, 4 to 6 from October, and no Philadelphia paper after 26 October. Only ten items reach 7 papers, and none reaches 8. So the bar for 1793 is 6 papers, agreed with the project's owner after round one. Candidates came from families in 3 or more papers.
+- **Round one (v0.10.0, 7 papers):** Dumouriez's letter on entering Brussels; his defection (four sub-stories, among them Clairfayt's letter and Saxe-Cobourg's proclamation); Genêt and the President (Genêt's letter of 13 August, Jefferson's answer, and Jay and King's statement); a Brussels paragraph on the emigrant princes' armies; the brig *Molly*'s report from Madeira of a battle near Lisle; and Captain Crabtree's sea serpent.
+- **Round two (v0.10.1, 6 papers):** the list of the powers at war with France, the London Gazette's bulletin from Tournai of 3 May, the commissioners' letter on General Dampierre's death, the Convention president's declaration of a plot, a letter from Cadiz of 24 June, and Hamilton's circular with the President's rules on neutrality.
+- **In all:** 12 stories, 19 groups and 111 printings in 9 newspapers, every one on its page. 64 excerpts are faithful, 40 have minor errors and 7 change a fact: RevX leaves out text in four printings and reads "June 23" for 24, "General Dumourier" for Dampierre and "parts" for "ports". It also corrects printers' misprints without a sign: all seven papers printed "Andersecht" for Anderlecht.
+- **Filing errors, recorded and not corrected:** two *Gazette of the United States* issues are filed under the wrong dates (4 April for 4 May, 23 July for 13 July), and the pages filed as 3 and 4 of the *American Herald of Liberty* of 2 July are a second scan of 9 July. No reviewed printing uses them.
+- **On the site since 10 November 2026,** in three categories: *The war in Europe* (9 stories), *Ships and the sea* (2: the sea serpent and the rules on neutrality) and *American public life* (1: Genêt and the President).
+- **Left out for framing:** the treaty commissioners' report, a letter on the German Creek raid, the Saint-Domingue reports, the Fugitive Slave Act and the Henfield prosecutions.
+
+### Corrected dates: the Kentucky Gazette (data release v0.10.2)
+
+A check of every issue of the *Kentucky Gazette and General Advertiser* found 106 filed two years late: 98 of 1806 filed under 1808, 7 of late 1804 under 1806 and 1 of 1805 under 1807. Release v0.10.2 (`pipeline/archive_data/redate_issues.py`) dates them as printed: 91 by their mastheads, 13 by the two-year rule where the masthead cannot be read or reads wrong, and 2 read on the scans.
+- **Ids keep the filed date,** because they are the keys of the source rows and of the scan files. Each change is recorded with its old value and its evidence.
+- **Years:** 1806 now has 4,381 surviving pages, the most of any year, and 1808 has 4,060.
+- **Matched stories:** the pages were matched again in the windows of their printed dates, by the same rules. Their 95 old matches gave way to 4,506 new ones; 27 printings left and 884 joined, 390 of them in 151 new stories. In all there are 48,270 matched stories and 164,698 printings. No reviewed story changed.
+- **On the site,** a printing's date is the date it printed; its scan link still uses the filed one.
 
 ### Connections between stories
 
@@ -177,6 +203,8 @@ Reviewing every story by hand cannot cover 41 years, so coverage comes in two ti
 - 310,155 matches across all 41 years, from 77,749 pages;
 - 48,127 matched stories with 179,966 printed appearances;
 - 32,870 of these stories are in two newspapers, 8,549 in three and 6,708 in four or more (the largest reaches 15).
+
+Later releases change these counts: from v0.6.0 each printing counts once per page (163,926), v0.8.1 re-files printings whose transcription was stored under another page (163,841), and v0.10.2 dates the misfiled Kentucky Gazette issues as printed (48,270 stories and 164,698 printings).
 
 **Titles (data release v0.5.1).** The shared wording often starts a few words into a sentence, so each matched story's title is read from the text printed just before it:
 - It starts where the item starts, if that is within 30 words. This works for 98% of a 300-story sample and 94% of all 48,127 stories.
@@ -208,7 +236,7 @@ Reviewing every story by hand cannot cover 41 years, so coverage comes in two ti
 
 New decisions never overwrite old ones. Each round of review becomes one release:
 
-**ledger** (the decisions) → **migration script** (applies them to the previous release) → **validation** (automated checks of counts, links, scan files and double counting: 66 for the first reviewed release, 190 for v0.6.1, 449 for v0.7.1) → **frozen release** ([`data/`](../data)).
+**ledger** (the decisions) → **migration script** (applies them to the previous release) → **validation** (automated checks of counts, links, scan files and double counting: 66 for the first reviewed release, 190 for v0.6.1, 449 for v0.7.1, 1,263 for v0.10.2) → **frozen release** ([`data/`](../data)).
 
 Earlier releases stay unchanged, so any chart can say which version of the evidence it uses. Corrections follow the same path. For example, v0.2.1 fixes one note that undercounted the length of the dropped statement. It adds a corrected annotation that points back to the old one, and the old one stays in the history.
 
@@ -228,21 +256,24 @@ The pulse view is a direct translation of the admitted group records:
   - *Constellations:* hovering over or tapping a star pauses on its story. The story's papers light up with their printing dates and are joined by faint lines; everything else dims. The lines join nearest neighbours on the map, not printings in date order, and appear all at once, so they group the printings without suggesting a route. The caption says so.
   - *Filter:* "Show stories printed in at least N newspapers". The matched overview defaults to 3, which removes the two-paper matches (68% of all matched stories).
 - **Choosing what to follow (9 November 2026).** Nothing is hidden in menus; the page offers what there is.
-  - *Years:* a strip of 41 slots, 1770–1810, drawn like the telescope's timeline. Each slot has a bar for how many newspapers survive that year, and a gold dot marks each reviewed year, 1776, 1797 and 1807. The chosen years sit in the same pale blue bracket as the telescope's look-back. Tap a year, drag across several, or choose All. A view of many years opens on all its matched stories (a reviewed year on its own opens on its reviewed stories) and puts every newspaper of those years on the map, with smaller markers.
+  - *Years:* a strip of 41 slots, 1770–1810, drawn like the telescope's timeline. Each slot has a bar for how many newspapers survive that year, and a gold dot marks each reviewed year, 1776, 1793, 1797, 1807 and 1808. The chosen years sit in the same pale blue bracket as the telescope's look-back. Tap a year, drag across several, or choose All. A view of many years opens on all its matched stories (a reviewed year on its own opens on its reviewed stories) and puts every newspaper of those years on the map, with smaller markers.
   - *Story shelf:* the stories of the chosen years as cards above the map: the overviews (one for each reviewed year in view, and one for the matched stories), the reviewed stories under their year, then the matched stories (most widely printed first, or earliest first), and the long-running ones. Each card gives the reach, the dates and a row of dots for when it was printed.
   - *Topics and words:* topic chips hold the seven families of the project's topic model. A family chip chooses the whole family and opens its topics, all 24 in all, as a second row to choose one by one; a family with only some topics chosen shows a half light. A find box narrows the stories by the words of their titles. Topics and words narrow the shelf and the map's overview together, so choosing "War" plays every war story of the chosen years.
   - *Speed:* one week to one year of printing per second, as a sliding glass control.
   - *Tour:* the page plays on its own, the current view and then the next card on the shelf. Any click, tap or key holds it for 20 seconds; an open passage or scan holds it while it is read.
-  - *Data:* one slim index of all years (`years/index.json`, 8.8 MB, 2.3 MB compressed) holds the newspapers, stories, printings and surviving pages; a passage loads from its year file when it is opened. The reviewed stories of 1776, 1797 and 1807 show at once, before the index arrives.
+  - *Data:* one slim index of all years (`years/index.json`, 8.8 MB, 2.3 MB compressed) holds the newspapers, stories, printings and surviving pages; a passage loads from its year file when it is opened. The reviewed stories of 1776, 1793, 1797, 1807 and 1808 show at once, before the index arrives.
 - **The archive coverage display shows which dates have pages at all.** A dark newspaper can mean the paper printed nothing on the story, or that its issues for those dates did not survive.
   - Under each newspaper: whether the archive has a page from it on the current date.
   - A coverage strip above the date slider: for each week (each day in short views), how many of the newspapers on the map have surviving pages. A low or missing bar is a gap in the archive, not silence.
   - Weeks are used because most papers were weekly. Counted by single days, most days would look empty.
-- **Each reviewed year has its own overview, "All reviewed stories of 1776", "… of 1797" or "… of 1807", which plays all its top-level stories together.**
+- **Each reviewed year has its own overview, "All reviewed stories of 1776", "… of 1793", "… of 1797", "… of 1807" or "… of 1808", which plays all its top-level stories together.**
   - **Categories and colours:** each year names its own three categories, one colour each. Three colours is the most that stay distinguishable, including for colour-blind viewers, when any two are on screen together. So the colour shows the category, and the story's name appears under the newspaper.
     - 1776 (31 stories): *war and the armies* (11), *Britain and Europe* (9) and *independence and American government* (11).
+    - 1793 (12 stories): *the war in Europe* (9), *ships and the sea* (2) and *American public life* (1).
     - 1797 (21 stories): *war, revolution and foreign news* (8), *ships, privateers and wrecks* (5) and *American public life* (8).
-    - The years share the three colours: blue is war in both, and green is American public life and government. An overview plays one year, so two years' categories never share the map.
+    - 1807 (14 stories): *war in Europe* (6), *Britain, France and American ships* (6) and *American public life and government* (2).
+    - 1808 (20 stories): *war in Spain and Portugal* (7), *Britain, France and American ships* (4) and *the embargo and American government* (9).
+    - The years share the three colours: blue is always war, green American public life and government, and orange Britain and Europe in 1776 and ships and the sea in the later years. An overview plays one year, so two years' categories never share the map.
   - **Fading:** a newspaper keeps the colour for 40 days after a printing, then fades.
   - **No double pulses:** each passage belongs to exactly one top-level story.
   - **A sample, not a census:** the overview shows only reviewed stories, a small part of what the papers printed, not every story of the year.
@@ -276,7 +307,7 @@ The pulse view is a direct translation of the admitted group records:
 Version 1 (below) is kept as `telescope-v1.html`.
 
 
-`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones.
+`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2).
 
 - **Left to right:** the date of first printing.
 - **Up and down:** the average latitude of the towns whose papers printed the story, north at the top. A small fixed scatter, up to 0.12°, keeps stories printed by the same papers from stacking into a line.
@@ -318,7 +349,7 @@ How it works has a section on using the site by keyboard and screen reader.
   - Select an area (drag across the Pulses map; in the telescope, Select or Alt-drag) and up to five papers or stories in it speak together. A telescope search is a relay through time: its four most widely printed matches in view speak one after another, in date order, up to seven seconds each, with a tuning sound between them.
   - The voices come from eSpeak (meSpeak, GPL), made in the browser in a worker (`pipeline/radio-voices.js`), because a browser's own voice can say only one thing at a time. Each paper (or, in the telescope, each town) keeps one voice, placed left or right by where it is on the screen. The papers on air have gold names, and the stars on air gold rings.
 - **Recorded voices (10 November 2026).** Most of what the radio says is now recorded once, at build time, with Kokoro (an open speech model, Apache 2.0), on the owner's computer: `pipeline/audio_render.py` writes the texts to `pipeline/audio_manifest.json` (`manifest`), makes each clip (`render`, resumable, kept outside the repository) and joins them into packs with `audio/index.json` on the site (`pack`).
-  - What is recorded: an announcer (af_heart) for towns, dates and newspaper names (265 clips); every reviewed passage, whole, in its newspaper's reader voice (440); the titles of the 40 most widely printed matched stories of each year (about 1,500). The owner chose "the highest rated" of Kokoro's voices.
+  - What is recorded: two announcers who take turns, a man and a woman (am_michael and af_heart), for towns, dates and newspaper names (265 lines each); every reviewed passage, whole, in its newspaper's reader voice (440); the titles of the 40 most widely printed matched stories of each year (about 1,500). The owner chose "the highest rated" of Kokoro's voices, then asked for more variety: the nine readers are five men and four women, American and British.
   - The browser fetches a clip by byte range from its pack, decodes it once and keeps it, so a voice starts at once and costs almost no work. A reviewed passage sounds clear; a title comes through the radio band, like a distant station; everything else falls back to eSpeak, and on the Radio page to the browser's voice.
   - A click, a pick or a search relay is introduced by the announcer ("Good morning, Boston! March, seventeen ninety-seven."); pointing at a star hears its first twelve seconds.
 - **Steadier sound (10 November 2026),** after the owner heard lag, crackle and a busy fan in Chrome. A design review (`docs/notes/2026-11-10-audio-proposal.md`) traced most of it to the code: every star passed over was sent to eSpeak and then thrown away, the queue could not be cancelled, the old set's crackle and a 60 Hz hum were written into the background, several voices could clip, and the telescope redrew 48,000 stars on every frame. Now one worker gets one text at a time and drops texts nobody wants, the last 60 voices are kept, the context waits for the touch, a limiter guards the output, the crackle and hum are gone, and the telescope draws only when something changes (30 frames a second while it only drifts). If no voice can be made, the words still go on air.
@@ -400,5 +431,5 @@ How it works:
 | Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.8.1) |
+| Data release | [`data/`](../data) (v0.10.2) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

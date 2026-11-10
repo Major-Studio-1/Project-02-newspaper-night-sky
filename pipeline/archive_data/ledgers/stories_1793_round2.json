@@ -1,0 +1,1148 @@
+{
+  "ledger_id": "ledger:stories-1793-round2",
+  "ledger_version": 1,
+  "base_release": "0.10.0",
+  "target_release": "0.10.1",
+  "recorded_date": "2026-11-10",
+  "namespace": "expansion-1793",
+  "evidence_dir": "outputs/story_discovery_1793/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Round two of 1793, at the 6-paper threshold the owner agreed for this year: the candidates in 6 papers that round one listed, read again with phrase searches on all 1,751 pages in both transcriptions, reading of every hit, and scan checks of each admitted passage",
+  "supporting_files": {
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1793/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1793/phrase_patterns_round2.json": "retrieval_patterns",
+    "outputs/story_discovery_1793/phrase_hits_round2.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1793.py": "ledger_code",
+    "work/archive_data/ledgers/make_stories_1793_round2.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1793_round2_review.json": "scan_review",
+    "outputs/story_discovery_1793/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1793/scan_points_round2.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S93-075",
+      "page_key": "sn83030483|1793-05-08|1|2",
+      "excerpt_start": "An account of the Kings, Princes,",
+      "excerpt_end": "King of Spain; the King of Sardinia;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "powers-at-war-with-france-list"
+      ],
+      "summary": "A London list of April 1793 names the kings, princes and states at war with France.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'Metz' and lists the King of Sardinia."
+      ],
+      "crops": [
+        "S93-075.jpg"
+      ],
+      "family": [
+        "R1793-0206",
+        "R1793-0285",
+        "R1793-0517",
+        "R1793-0838",
+        "R1793-0839",
+        "R1793-0842"
+      ]
+    },
+    {
+      "id": "S93-076",
+      "page_key": "sn83025887|1793-05-11|1|3",
+      "excerpt_start": "An account of the kings, princes,",
+      "excerpt_end": "Prussia, the states general of Holland, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "powers-at-war-with-france-list"
+      ],
+      "summary": "The National Gazette prints the list of the powers at war with France.",
+      "note": "Prints the list without the King of Sardinia, and 'Mentz' where GUS and PG have 'Metz'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The King of Sardinia is missing in the print itself, between Spain and Prussia: a printed omission, not a transcription error."
+      ],
+      "crops": [
+        "S93-076.jpg"
+      ],
+      "family": [
+        "R1793-0285",
+        "R1793-0287",
+        "R1793-0843",
+        "R1793-0845",
+        "R1793-0846"
+      ]
+    },
+    {
+      "id": "S93-077",
+      "page_key": "sn83025588|1793-05-14|1|1",
+      "excerpt_start": "LONDON, April 3. The following is",
+      "excerpt_end": "Germany, as King of Hungary and Bohemia.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "powers-at-war-with-france-list"
+      ],
+      "summary": "The New Hampshire Gazette prints the list of the powers at war with France.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the dateline 'LONDON, April 3.' above the item."
+      ],
+      "crops": [
+        "S93-077.jpg"
+      ],
+      "family": [
+        "R1793-0028",
+        "R1793-0206",
+        "R1793-0290",
+        "R1793-0456",
+        "R1793-0855"
+      ]
+    },
+    {
+      "id": "S93-078",
+      "page_key": "sn84023134|1793-05-14|1|2",
+      "excerpt_start": "The following is a list of",
+      "excerpt_end": "Bohemia, Arch Duke of Austria, Brabant, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "powers-at-war-with-france-list"
+      ],
+      "summary": "The American Herald of Liberty prints the list of the powers at war with France.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the print reads 'Emperour'; RevX 'Emperor' is a modernised spelling, a minor transcription difference. The item has no dateline."
+      ],
+      "crops": [
+        "S93-078.jpg"
+      ],
+      "family": [
+        "R1793-0028",
+        "R1793-0289",
+        "R1793-0290",
+        "R1793-0291",
+        "R1793-0851"
+      ]
+    },
+    {
+      "id": "S93-079",
+      "page_key": "sn83025523|1793-05-27|1|1",
+      "excerpt_start": "The following is a List of",
+      "excerpt_end": "and Bohemia, Archduke of Austria, Brabant, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "powers-at-war-with-france-list"
+      ],
+      "summary": "The Mirrour prints the list of the powers at war with France.",
+      "note": "Prints 'Meniz' for Mentz (beyond the crop, read on an enlarged copy of the page).",
+      "scan_findings": [
+        "Scan matches the excerpt except that the print reads 'Greatbritain' as one word; RevX 'Great Britain' is a minor transcription difference. The item has no dateline, and further down the print itself reads 'Meniz' for Mentz."
+      ],
+      "crops": [
+        "S93-079.jpg"
+      ],
+      "family": [
+        "R1793-0028",
+        "R1793-0038",
+        "R1793-0283",
+        "R1793-0290",
+        "R1793-0849"
+      ]
+    },
+    {
+      "id": "S93-080",
+      "page_key": "sn84038410|1793-05-27|1|3",
+      "excerpt_start": "As the events of the present",
+      "excerpt_end": "of Austria, Brabant, &c. The Electors of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "powers-at-war-with-france-list"
+      ],
+      "summary": "The Patowmac Guardian prints the list of the powers at war with France.",
+      "note": "Introduced in the paper's own words: 'we think it may not be unpleasing to our readers, if we lay before them an account of the Kings, Princes, and States, engaged against the Republic of France'. Ends its introduction '—they are,' without 'viz.'",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper's own opening sentence comes before the account, and the print reads 'Metz'."
+      ],
+      "crops": [
+        "S93-080.jpg"
+      ],
+      "family": [
+        "R1793-0285",
+        "R1793-0853",
+        "R1793-0859",
+        "R1793-0867"
+      ]
+    },
+    {
+      "id": "S93-081",
+      "page_key": "sn83025887|1793-06-29|1|2",
+      "excerpt_start": "TOURNAI, May 3. On the 1st",
+      "excerpt_end": "considerable loss both of men and cannon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tournai-bulletin-3-may"
+      ],
+      "summary": "London Gazette, Tournai, 3 May 1793: the French attacks on the advanced posts of the combined army are repulsed.",
+      "note": "Earliest printing found. Dated 'TOURNAY, May 3.' under 'From Tuesday's London Gazette'.",
+      "scan_findings": [
+        "Scan reads 'TOURNAY, May 3.' under 'From Tuesday's London Gazette'; RevX 'TOURNAI' is a minor transcription error. The rest matches the excerpt."
+      ],
+      "crops": [
+        "S93-081.jpg"
+      ],
+      "family": [
+        "R1793-0030",
+        "R1793-0980"
+      ]
+    },
+    {
+      "id": "S93-082",
+      "page_key": "sn83030483|1793-06-29|1|1",
+      "excerpt_start": "Tournay, May 3. ON the 1st",
+      "excerpt_end": "considerable loss both of men and cannon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tournai-bulletin-3-may"
+      ],
+      "summary": "The Gazette of the United States prints the Tournai bulletin.",
+      "note": "Dated 'Tournay, May 3.' under 'From Tuesday's LONDON GAZETTE'.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the dateline 'Tournay, May 3.' under the London Gazette heading."
+      ],
+      "crops": [
+        "S93-082.jpg"
+      ],
+      "family": [
+        "R1793-0030"
+      ]
+    },
+    {
+      "id": "S93-083",
+      "page_key": "sn83025588|1793-07-09|1|3",
+      "excerpt_start": "On the 1st inst. the French",
+      "excerpt_end": "considerable loss both of men and cannon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tournai-bulletin-3-may"
+      ],
+      "summary": "The New Hampshire Gazette prints the Tournai bulletin.",
+      "note": "Printed after a paragraph on the preparations against Condé, without a dateline of its own.",
+      "scan_findings": [
+        "Scan matches the excerpt. The bulletin has no dateline of its own and follows the end of another paragraph."
+      ],
+      "crops": [
+        "S93-083.jpg"
+      ],
+      "family": [
+        "R1793-0043",
+        "R1793-0044",
+        "R1793-1005"
+      ]
+    },
+    {
+      "id": "S93-084",
+      "page_key": "sn84023134|1793-07-09|1|2",
+      "excerpt_start": "On the 1st inst. the French",
+      "excerpt_end": "considerable loss both of men and cannon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tournai-bulletin-3-may"
+      ],
+      "summary": "The American Herald of Liberty prints the Tournai bulletin.",
+      "note": "Printed after a paragraph on the preparations against Condé, without a dateline of its own; prints 'but were there repulsed', without 'likewise'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'but were there repulsed' without 'likewise': a printed difference, not a transcription error. The whole item is in the first crop; the second crop shows only the next heading, 'NAPLES,'."
+      ],
+      "crops": [
+        "S93-084-1.jpg",
+        "S93-084-2.jpg"
+      ],
+      "family": [
+        "R1793-0030",
+        "R1793-0044",
+        "R1793-0135",
+        "R1793-0968",
+        "R1793-0969",
+        "R1793-1002",
+        "R1793-1003"
+      ]
+    },
+    {
+      "id": "S93-085",
+      "page_key": "sn83025523|1793-07-15|1|2",
+      "excerpt_start": "On the 1st inst. the French",
+      "excerpt_end": "considerable loss both of men and cannon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tournai-bulletin-3-may"
+      ],
+      "summary": "The Mirrour prints the Tournai bulletin.",
+      "note": "Printed after a paragraph on the preparations against Condé, without a dateline of its own.",
+      "scan_findings": [
+        "Scan matches the excerpt; the item runs from the foot of one column to the head of the next. It has no dateline of its own."
+      ],
+      "crops": [
+        "S93-085-1.jpg",
+        "S93-085-2.jpg"
+      ],
+      "family": [
+        "R1793-0044",
+        "R1793-0135",
+        "R1793-0213",
+        "R1793-0941",
+        "R1793-0970",
+        "R1793-1001",
+        "R1793-1003"
+      ]
+    },
+    {
+      "id": "S93-086",
+      "page_key": "sn83025588|1793-07-16|1|2",
+      "excerpt_start": "Another letter from the same Commissioners,",
+      "excerpt_end": "when the treachery of Dumourier was discovered;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "death-of-general-dampierre"
+      ],
+      "summary": "Valenciennes, 9 May 1793: the Convention's commissioners report that General Dampierre died of his wound that morning.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-086.jpg"
+      ],
+      "family": [
+        "R1793-0014",
+        "R1793-0097",
+        "R1793-0217",
+        "R1793-1015",
+        "R1793-1016"
+      ]
+    },
+    {
+      "id": "S93-087",
+      "page_key": "sn83025523|1793-07-22|1|2",
+      "excerpt_start": "Another letter from the same Commissioners,",
+      "excerpt_end": "when the treachery of Dumourier was discovered;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "death-of-general-dampierre"
+      ],
+      "summary": "The Mirrour prints the commissioners' letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'Republick' as printed. The print opens the letter with a quotation mark that the transcription leaves out."
+      ],
+      "crops": [
+        "S93-087.jpg"
+      ],
+      "family": [
+        "R1793-0014",
+        "R1793-0031",
+        "R1793-0325",
+        "R1793-1029"
+      ]
+    },
+    {
+      "id": "S93-088",
+      "page_key": "sn84038410|1793-07-22|1|2",
+      "excerpt_start": "On the 1st instant, the French",
+      "excerpt_end": "considerable loss both of men and cannon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tournai-bulletin-3-may"
+      ],
+      "summary": "The Patowmac Guardian prints the Tournai bulletin.",
+      "note": "Printed after a paragraph on the preparations against Condé, without a dateline of its own.",
+      "scan_findings": [
+        "Scan matches the excerpt; the film is faint but readable. The bulletin has no dateline of its own, and reads 'repulsed. They suffered' where the paper's second printing has a colon and a small 't'."
+      ],
+      "crops": [
+        "S93-088.jpg"
+      ],
+      "family": [
+        "R1793-0010",
+        "R1793-0043",
+        "R1793-0044",
+        "R1793-0135",
+        "R1793-1030",
+        "R1793-1032"
+      ]
+    },
+    {
+      "id": "S93-089",
+      "page_key": "sn83030483|1793-07-27|1|2",
+      "excerpt_start": "Another letter from the same Commissioners.",
+      "excerpt_end": "when the treachery of Dumourier was discovered;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "death-of-general-dampierre"
+      ],
+      "summary": "The Gazette of the United States prints the commissioners' letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-089.jpg"
+      ],
+      "family": [
+        "R1793-0014"
+      ]
+    },
+    {
+      "id": "S93-090",
+      "page_key": "sn84023134|1793-07-30|1|2",
+      "excerpt_start": "Another letter from the same Commissioners,",
+      "excerpt_end": "widow their regret for this unfortunate event.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "death-of-general-dampierre"
+      ],
+      "summary": "The American Herald of Liberty prints the commissioners' letter.",
+      "note": "Spells the general 'Dampiere'. The print has the whole letter, to 'which will cover his grave. Signed, &c. &c.'",
+      "scan_findings": [
+        "The print has the whole letter, including 'The confidence which he inspired in the troops … which will cover his grave' and 'Signed, &c. &c.'; RevX drops that passage without a mark, a transcription error. The print spells the name 'Dampiere', which RevX gives as 'Dampierre'."
+      ],
+      "crops": [
+        "S93-090.jpg"
+      ],
+      "family": [
+        "R1793-0326",
+        "R1793-1021",
+        "R1793-1037",
+        "R1793-1048",
+        "R1793-1058",
+        "R1793-1062",
+        "R1793-1071"
+      ],
+      "scan_boxes": [
+        [
+          490,
+          6141,
+          1558,
+          7560
+        ]
+      ]
+    },
+    {
+      "id": "S93-091",
+      "page_key": "sn83030483|1793-08-03|1|2",
+      "excerpt_start": "P A R I S, May",
+      "excerpt_end": "have refused to make their names public.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "convention-president-declaration-plot"
+      ],
+      "summary": "Paris, May 1793: the President of the National Convention declares to the nation that a plot against the Convention exists.",
+      "note": "Earliest printing found. Dated 'PARIS, May 22.'",
+      "scan_findings": [
+        "Scan matches the excerpt, under 'PARIS, May 22.' The print has opening quotation marks before 'CITIZENS,' and 'The scandalous scene', which RevX leaves out."
+      ],
+      "crops": [
+        "S93-091.jpg"
+      ],
+      "family": [
+        "R1793-0015",
+        "R1793-0222",
+        "R1793-1084"
+      ]
+    },
+    {
+      "id": "S93-092",
+      "page_key": "sn84038410|1793-08-05|1|1",
+      "excerpt_start": "On the 1st instant, the French",
+      "excerpt_end": "considerable loss both of men and cannon.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "tournai-bulletin-3-may"
+      ],
+      "summary": "The Patowmac Guardian prints the Tournai bulletin.",
+      "note": "Printed again two weeks after its first printing in this paper. The type was set again: 'repulsed: they suffered', where the printing of 22 July has 'repulsed. They suffered'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The bulletin has no dateline of its own; it differs from the paper's printing of 22 July only in 'repulsed: they' for 'repulsed. They' and in the line breaks."
+      ],
+      "crops": [
+        "S93-092.jpg"
+      ],
+      "family": [
+        "R1793-0025",
+        "R1793-0044"
+      ]
+    },
+    {
+      "id": "S93-093",
+      "page_key": "sn84038410|1793-08-05|1|2",
+      "excerpt_start": "Another letter from the same Commissioners.",
+      "excerpt_end": "in the troops by his noble Proclamation,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "death-of-general-dampierre"
+      ],
+      "summary": "The Patowmac Guardian prints the commissioners' letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-093.jpg"
+      ],
+      "family": [
+        "R1793-0014",
+        "R1793-0018",
+        "R1793-0025",
+        "R1793-0098",
+        "R1793-0100",
+        "R1793-1054",
+        "R1793-1059",
+        "R1793-1087"
+      ],
+      "scan_boxes": [
+        [
+          140,
+          1520,
+          690,
+          1760
+        ]
+      ]
+    },
+    {
+      "id": "S93-094",
+      "page_key": "sn83030483|1793-08-14|1|3",
+      "excerpt_start": "Philadelphia, Aug. 14. Extract of a",
+      "excerpt_end": "being fought between the French and Spaniards;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cadiz-letter-24-june"
+      ],
+      "summary": "A letter from Cadiz (24 June 1793) reports 'a hot war with the Spaniards and French' and a French victory near Malaga.",
+      "note": "Earliest printing found. Heading: 'to his brother in New-York … received by the brig Sisters, Capt. Sheffield, arrived there the 9th instant'; gives the losses in words.",
+      "scan_findings": [
+        "Scan reads 'dated June 24', the same date as the other printings; RevX 'June 23' is a transcription error. The rest of the excerpt matches the print."
+      ],
+      "crops": [
+        "S93-094.jpg"
+      ],
+      "family": [
+        "R1793-0020",
+        "R1793-0166",
+        "R1793-0336",
+        "R1793-0553",
+        "R1793-1098",
+        "R1793-1117",
+        "R1793-1131",
+        "R1793-1132"
+      ]
+    },
+    {
+      "id": "S93-095",
+      "page_key": "sn83025887|1793-08-17|1|1",
+      "excerpt_start": "The following Letter has been transmitted",
+      "excerpt_end": "without having been discovered in time for",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-circular-rules-on-neutrality"
+      ],
+      "summary": "Hamilton's circular of 4 August 1793 tells the collectors to watch the ports for breaches of neutrality, with the President's rules.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has 'The following Letter has been transmitted' and 'repeated contraventions of our neutrality have taken place'."
+      ],
+      "crops": [
+        "S93-095.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0169"
+      ],
+      "scan_boxes": [
+        [
+          215,
+          875,
+          895,
+          1345
+        ]
+      ]
+    },
+    {
+      "id": "S93-096",
+      "page_key": "sn83025887|1793-08-17|1|3",
+      "excerpt_start": "Extract of a letter from a",
+      "excerpt_end": "and the Spaniards upwards of 6000 men.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cadiz-letter-24-june"
+      ],
+      "summary": "The National Gazette prints the Cadiz letter.",
+      "note": "Headed 'Extract of a letter from a gentleman in Cadiz, dated June 24.', without 'to his brother'; gives the losses as '2000 … 6000', without 'lost' or 'loss'.",
+      "scan_findings": [
+        "Scan matches the excerpt. This printing has a shorter heading, without 'to his brother', and reads 'the Spaniards upwards of 6000 men' with no 'lost'."
+      ],
+      "crops": [
+        "S93-096.jpg"
+      ],
+      "family": [
+        "R1793-0017",
+        "R1793-0020",
+        "R1793-0145",
+        "R1793-1138"
+      ],
+      "scan_boxes": [
+        [
+          190,
+          2225,
+          860,
+          2575
+        ]
+      ]
+    },
+    {
+      "id": "S93-097",
+      "page_key": "sn83030483|1793-08-17|1|2",
+      "excerpt_start": "The following Letter has been transmitted",
+      "excerpt_end": "without having been discovered in time for",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-circular-rules-on-neutrality"
+      ],
+      "summary": "The Gazette of the United States prints Hamilton's circular and the rules.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The item stands under the heading 'PHILADELPHIA.' and the print has 'The following Letter has been transmitted' and 'repeated contraventions of our neutrality have taken place'."
+      ],
+      "crops": [
+        "S93-097.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0019",
+        "R1793-0145"
+      ],
+      "scan_boxes": [
+        [
+          180,
+          195,
+          850,
+          795
+        ]
+      ]
+    },
+    {
+      "id": "S93-098",
+      "page_key": "sn83025523|1793-08-19|1|3",
+      "excerpt_start": "CONCORD, August 19. DECLARATION Made by",
+      "excerpt_end": "have refused to make their names publick.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "convention-president-declaration-plot"
+      ],
+      "summary": "The Mirrour prints the President's declaration.",
+      "note": "Prints 'a conspiracy which has been recited to me', where the others have 'revealed'.",
+      "scan_findings": [
+        "Scan matches the excerpt. Scan reads 'recited to me' where the other printings have 'revealed to me': a printed difference, not a transcription error. The declaration stands under 'CONCORD, August 19.' with no Paris dateline."
+      ],
+      "crops": [
+        "S93-098.jpg"
+      ],
+      "family": [
+        "R1793-0004",
+        "R1793-0015",
+        "R1793-0224",
+        "R1793-1120",
+        "R1793-1121",
+        "R1793-1122"
+      ]
+    },
+    {
+      "id": "S93-099",
+      "page_key": "sn84038410|1793-08-19|1|2",
+      "excerpt_start": "Declaration made by the President of",
+      "excerpt_end": "have refused to make their names public.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "convention-president-declaration-plot"
+      ],
+      "summary": "The Patowmac Guardian prints the President's declaration.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'CITIZENS,' is printed without a quotation mark and the text opens with one; no Paris dateline is shown above the heading."
+      ],
+      "crops": [
+        "S93-099.jpg"
+      ],
+      "family": [
+        "R1793-0015",
+        "R1793-0016",
+        "R1793-0055",
+        "R1793-0073",
+        "R1793-0223",
+        "R1793-1084"
+      ]
+    },
+    {
+      "id": "S93-100",
+      "page_key": "sn83025588|1793-08-20|1|1",
+      "excerpt_start": "DECLARATION Made by the PRESIDENT of",
+      "excerpt_end": "have refused to make their names public.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "convention-president-declaration-plot"
+      ],
+      "summary": "The New Hampshire Gazette prints the President's declaration.",
+      "note": "Continues on page 2.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-100.jpg"
+      ],
+      "family": [
+        "R1793-0004",
+        "R1793-0015"
+      ]
+    },
+    {
+      "id": "S93-101",
+      "page_key": "sn83025588|1793-08-20|1|3",
+      "excerpt_start": "NEW-YORK, AUG. 12. Extract of a",
+      "excerpt_end": "Spaniards lost upwards of six thousand men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cadiz-letter-24-june"
+      ],
+      "summary": "The New Hampshire Gazette prints the Cadiz letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-101.jpg"
+      ],
+      "family": [
+        "R1793-0020",
+        "R1793-0340",
+        "R1793-0345",
+        "R1793-1146"
+      ]
+    },
+    {
+      "id": "S93-102",
+      "page_key": "sn84023134|1793-08-20|1|2",
+      "excerpt_start": "NEW-YORK, AUGUST 12. Excerpt of a",
+      "excerpt_end": "the Spaniards loss upwards of 6000 men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cadiz-letter-24-june"
+      ],
+      "summary": "The American Herald of Liberty prints the Cadiz letter.",
+      "note": "Prints 'June, 24' without 'dated', and the losses as 'two thousand … 6000' with 'loss'.",
+      "scan_findings": [
+        "Scan reads 'Extract'; RevX 'Excerpt' is a minor transcription error. The print has 'June, 24' without 'dated' and 'the Spaniards loss upwards of 6000 men', as transcribed."
+      ],
+      "crops": [
+        "S93-102.jpg"
+      ],
+      "family": [
+        "R1793-0015",
+        "R1793-0020",
+        "R1793-0099",
+        "R1793-0101",
+        "R1793-0345",
+        "R1793-0346",
+        "R1793-0553",
+        "R1793-1111",
+        "R1793-1144",
+        "R1793-1145"
+      ]
+    },
+    {
+      "id": "S93-103",
+      "page_key": "sn84023134|1793-08-20|1|2",
+      "excerpt_start": "DECLARATION. Made by the PRESIDENT of",
+      "excerpt_end": "have refused to make their names public.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "convention-president-declaration-plot"
+      ],
+      "summary": "The American Herald of Liberty prints the President's declaration.",
+      "note": "Headed with the misprint 'DECLRAATION.'",
+      "scan_findings": [
+        "Scan reads 'DECLRAATION.', a printer's misprint that RevX silently corrects to 'DECLARATION.'; RevX also leaves out the opening quotation marks. The rest matches the excerpt."
+      ],
+      "crops": [
+        "S93-103.jpg"
+      ],
+      "family": [
+        "R1793-0015",
+        "R1793-0020",
+        "R1793-0099",
+        "R1793-0101",
+        "R1793-0345",
+        "R1793-0346",
+        "R1793-0553",
+        "R1793-1111",
+        "R1793-1144",
+        "R1793-1145"
+      ]
+    },
+    {
+      "id": "S93-104",
+      "page_key": "sn84023313|1793-08-21|1|2",
+      "excerpt_start": "DECLARATION Made by the PRESIDENT of",
+      "excerpt_end": "have refused to make their names public.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "convention-president-declaration-plot"
+      ],
+      "summary": "The Columbian Informer prints the President's declaration.",
+      "note": "Printed under 'FRANCE. PARIS, May 22.'",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'the poignards of the assassins', which is as printed. The declaration stands under 'FRANCE. PARIS, May 22.', a dateline the excerpt leaves out."
+      ],
+      "crops": [
+        "S93-104.jpg"
+      ],
+      "family": [
+        "R1793-0004",
+        "R1793-0015",
+        "R1793-1081",
+        "R1793-1082",
+        "R1793-1083"
+      ]
+    },
+    {
+      "id": "S93-105",
+      "page_key": "sn83025523|1793-08-26|1|3",
+      "excerpt_start": "NEWYORK, AUG. 12. Extra of a",
+      "excerpt_end": "the Spaniards loss upwards of 6000 Men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cadiz-letter-24-june"
+      ],
+      "summary": "The Mirrour prints the Cadiz letter.",
+      "note": "Gives the losses as '2000 … 6000', with 'the Spaniards loss'.",
+      "scan_findings": [
+        "Scan reads 'Extract'; RevX 'Extra' is a minor transcription error. The print has 'the Spaniards loss upwards of 6000 Men', as transcribed."
+      ],
+      "crops": [
+        "S93-105.jpg"
+      ],
+      "family": [
+        "R1793-0020",
+        "R1793-0102",
+        "R1793-0345",
+        "R1793-1105",
+        "R1793-1113",
+        "R1793-1143",
+        "R1793-1145",
+        "R1793-1146",
+        "R1793-1161"
+      ]
+    },
+    {
+      "id": "S93-106",
+      "page_key": "sn84038410|1793-08-26|1|2",
+      "excerpt_start": "Extract of a letter from a gentleman at",
+      "excerpt_end": "Spaniards lost upwards of six thousand men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cadiz-letter-24-june"
+      ],
+      "summary": "The Patowmac Guardian prints the Cadiz letter.",
+      "note": "Prints 'a gentleman at Cadiz', and the losses in words.",
+      "scan_findings": [
+        "Scan matches the excerpt. This printing has 'a gentleman at Cadiz' where the others have 'in Cadiz'."
+      ],
+      "crops": [
+        "S93-106.jpg"
+      ],
+      "family": [
+        "R1793-0016",
+        "R1793-0017",
+        "R1793-0020",
+        "R1793-0222",
+        "R1793-1160"
+      ]
+    },
+    {
+      "id": "S93-107",
+      "page_key": "sn83025588|1793-08-27|1|1",
+      "excerpt_start": "PHILADELPHIA, AUGUST 15. The following letters",
+      "excerpt_end": "the United States, without having been discovered",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-circular-rules-on-neutrality"
+      ],
+      "summary": "The New Hampshire Gazette prints Hamilton's circular and the rules.",
+      "note": "The rules continue on page 2. Prints 'The following letters have been transmitted', under 'PHILADELPHIA, AUGUST 15.', and 'repeated contravention of our neutrality has taken place' (NGz, GUS and AHL: 'contraventions … have').",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself has 'The following letters have been transmitted' under 'PHILADELPHIA, AUGUST 15.' and the singular 'repeated contravention of our neutrality has taken place': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S93-107.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0350"
+      ]
+    },
+    {
+      "id": "S93-108",
+      "page_key": "sn84023134|1793-08-27|1|3",
+      "excerpt_start": "The following Letter has been transmitted",
+      "excerpt_end": "discovered in time for prevention or remedy...",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-circular-rules-on-neutrality"
+      ],
+      "summary": "The American Herald of Liberty prints Hamilton's circular and the rules.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan has the salutation 'SIR,' and goes on in full after 'prevention or remedy, I have it in command from the President'; RevX drops 'SIR,' and shortens the text with '...'. The rest of the excerpt matches, with 'Letter' and 'contraventions ... have taken place' as printed."
+      ],
+      "crops": [
+        "S93-108.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0348"
+      ]
+    },
+    {
+      "id": "S93-109",
+      "page_key": "sn83025523|1793-09-02|1|2",
+      "excerpt_start": "PHILADELPHIA, AUGUST 15. The following Letters",
+      "excerpt_end": "the United States, without having been discovered",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-circular-rules-on-neutrality"
+      ],
+      "summary": "The Mirrour prints Hamilton's circular and the rules.",
+      "note": "Prints 'The following Letters have been transmitted', under 'PHILADELPHIA, AUGUST 15.', and 'repeated Contravention of our Neutrality has taken place' (NGz, GUS and AHL: 'contraventions … have').",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself has 'The following Letters have been transmitted' under 'PHILADELPHIA, AUGUST 15.' and the singular 'repeated Contravention of our Neutrality has taken place': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S93-109.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0104",
+        "R1793-1101"
+      ]
+    },
+    {
+      "id": "S93-110",
+      "page_key": "sn84023150|1793-09-09|1|1",
+      "excerpt_start": "The following papers have been transmitted",
+      "excerpt_end": "discovered in time for prevention or remedy,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-circular-rules-on-neutrality"
+      ],
+      "summary": "The Eagle, or Dartmouth Centinel prints Hamilton's circular and the rules.",
+      "note": "The rules follow on page 2. Headed 'Important State Paper.'; prints 'CIRCULAR of the COLLECTORS of the CUSTOMS', an introduction without 'to the Collectors of', 'repeated contravention … has taken place', and 'I have in command' without 'it'.",
+      "scan_findings": [
+        "Scan reads 'to the different ports' and, in a line damaged by a tear, most likely 'The following letters'; RevX 'parts' and 'papers' are transcription errors. 'CIRCULAR of the COLLECTORS', the missing 'to the Collectors of' in the introduction and the singular 'contravention ... has taken place' are as printed."
+      ],
+      "crops": [
+        "S93-110.jpg"
+      ],
+      "family": [
+        "R1793-0011",
+        "R1793-0151",
+        "R1793-1198"
+      ]
+    },
+    {
+      "id": "S93-111",
+      "page_key": "sn82014782|1793-09-14|1|2",
+      "excerpt_start": "Letter from the Commissioners with the",
+      "excerpt_end": "when the discovery of Dumourier was discovered;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "death-of-general-dampierre"
+      ],
+      "summary": "The Kentucky Gazette prints the commissioners' letter.",
+      "note": "A second scanned copy of this issue (edition 2) also holds the item. Headed with the misprint 'CONVENVENTION', and appears to print 'at the the time'; the film is small and blurred.",
+      "scan_findings": [
+        "Scan reads 'General [D]ampierre' and 'the treachery of Dumourier was discovered', as the other printings do; RevX 'General Dumourier' and 'the discovery of Dumourier' are transcription errors. The film is small and blurred, but these words can be read."
+      ],
+      "crops": [
+        "S93-111.jpg"
+      ],
+      "family": [
+        "R1793-0014",
+        "R1793-0100",
+        "R1793-0176"
+      ],
+      "scan_boxes": [
+        [
+          912,
+          640,
+          1235,
+          945
+        ]
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "powers-at-war-with-france-list",
+      "kind": "message_group",
+      "label": "The kings, princes and states at war with France",
+      "definition": "Printings of a list from a London paper of early April 1793 of the powers combined against France, from the King of Great Britain and the Empress of Russia to the princes of the Empire. Three papers print it as 'An account of the Kings, Princes, and States engaged against the Republic of France', three as 'a list of the combination of Kings, Princes, and States, at war with France', a combination 'without example in the annals of mankind'; the list is counted as one item. A report.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round two, 6-paper threshold for 1793)."
+    },
+    {
+      "id": "tournai-bulletin-3-may",
+      "kind": "message_group",
+      "label": "The London Gazette from Tournai, 3 May: the French attacks repulsed",
+      "definition": "Printings of a bulletin from the London Gazette, dated Tournai, 3 May 1793: on the 1st the French attacked the advanced posts of the left wing and of the centre of the combined army and were repulsed, with the loss of men and cannon. The British government's own account. Four papers print it after another Tournai paragraph on the preparations against Condé.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round two, 6-paper threshold for 1793)."
+    },
+    {
+      "id": "treasury-circular-rules-on-neutrality",
+      "kind": "document_group",
+      "label": "Hamilton's circular to the collectors, with the President's rules on neutrality",
+      "definition": "Printings of the circular of the Secretary of the Treasury to the collectors of the customs (Philadelphia, 4 August 1793): as repeated contraventions of neutrality had taken place in American ports, the collectors were to watch for vessels arming or equipping for the powers at war, with the schedule of 'Rules adopted by the President' on arming, equipping and prizes. The circular and its rules are one publication. An official document.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round two, 6-paper threshold for 1793)."
+    },
+    {
+      "id": "convention-president-declaration-plot",
+      "kind": "document_group",
+      "label": "The President of the National Convention's declaration of a plot",
+      "definition": "Printings of the 'Declaration made by the President of the National Convention to the French Nation' (Paris, May 1793): after a scandalous scene in the galleries, he declared his conviction of a conspiracy, revealed to him by good citizens, to destroy the Convention, and his resolve to wait the event at his post. One man's declaration of an alleged plot.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round two, 6-paper threshold for 1793)."
+    },
+    {
+      "id": "cadiz-letter-24-june",
+      "kind": "message_group",
+      "label": "A letter from Cadiz, 24 June: 'a hot war with the Spaniards and French'",
+      "definition": "Printings of an extract of a letter from a gentleman at Cadiz to his brother in New York, dated 24 June 1793 (New York, 12 August): 'a hot war with the Spaniards and French', a battle near Malaga reported won by the French, and news of the fleets. One writer's account, partly hearsay ('We had accounts').",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round two, 6-paper threshold for 1793)."
+    },
+    {
+      "id": "death-of-general-dampierre",
+      "kind": "message_group",
+      "label": "The commissioners' letter on General Dampierre's death",
+      "definition": "Printings of a letter from the commissioners of the National Convention with the army of the North, Valenciennes, 9 May 1793, read in the Convention: General Dampierre, whose thigh was carried away by a ball the day before, died that morning, regretted by the whole army. The French government's commissioners' own account.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round two, 6-paper threshold for 1793)."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "Round two of 1793. Round one (release v0.10.0) admitted the stories with an item in 7 or more papers and proposed a 6-paper threshold for this year, because 1793 has only 6 to 8 papers in print at a time; the owner agreed on 2026-11-10. The candidates in 6 papers that round one listed were read again with phrase searches over all 1,751 pages of 1793 in both transcriptions (phrase_patterns_round2.json, phrase_hits_round2.json), every hit was read, papers in print without a hit were searched with loose keywords, and every admitted printing was checked against its page scan (SCAN_PROTOCOL.md, scan_points_round2.json).",
+    "selection_rule": "For 1793 only, a story needs one printed item found in 6 or more newspapers, counted item by item, with the two titles of a renamed paper counted once and both scanned copies of a Kentucky Gazette issue counted once. Items that need framing stay out, and items in 6 papers were chosen, as items in 7 or 8 papers are in other years, to cover the months and kinds of news: single paragraphs of news digests that add neither (the Rome paragraph of 29 September 1792, the Paris 'sullen tranquillity' paragraph) and a rumour in two wordings (Captain Hacket's report that Dumouriez had taken Amsterdam, 4 + 2 papers) were not admitted. Dumouriez's address, in 6 papers, was already a sub-story of round one.",
+    "items_admitted": {
+      "powers-at-war-with-france-list": [
+        "I93-0018",
+        "I93-0019",
+        "I93-0167"
+      ],
+      "tournai-bulletin-3-may": [
+        "I93-0015"
+      ],
+      "treasury-circular-rules-on-neutrality": [
+        "I93-0017",
+        "I93-0029",
+        "I93-0030"
+      ],
+      "convention-president-declaration-plot": [
+        "I93-0026",
+        "I93-0027"
+      ],
+      "cadiz-letter-24-june": [
+        "I93-0028"
+      ],
+      "death-of-general-dampierre": [
+        "I93-0016"
+      ]
+    },
+    "counted_item_by_item": {
+      "The list of the powers at war with France": "Printed with two introductions to one list: 'An account of the Kings, Princes, and States engaged against the Republic of France' (GUS, NGz, PG) and 'a list of the combination of Kings, Princes, and States, at war with France' (NHG, AHL, MIR). The list is one item, so they are counted together: 6 papers (3 + 3), a judgement call.",
+      "Hamilton's circular and the President's rules": "The circular of 4 August and the schedule of rules sent with it are one publication, counted once: 6 papers (NGz, GUS, NHG, AHL, MIR, EAG). Not in PG, CI or KG.",
+      "The Tournai bulletin": "NGz and GUS print it as the London Gazette's 'TOURNAI (Tournay), May 3'; NHG, AHL, MIR and PG print the same sentences after a paragraph on the preparations against Condé. PG printed it twice (22 July and 5 August).",
+      "Dampierre's death": "The commissioners' letter of 9 May follows their letter of 8 May on the attack (4 papers), which is not part of the group. The Kentucky Gazette's two scanned copies of 14 September count once."
+    },
+    "not_admitted": {
+      "Left out for framing (6 papers)": "The War Office paragraph on the treaty commissioners at the Rapids of the Miami, the German Creek letter on a raid on the 'valley Indian towns', Captain Fanning's account of the burning of Cap Francais and the brig Mary's report of the dead there; they need framing first (outputs/story_discovery_1793/README.md).",
+      "Not recommended at 6 papers": "The Rome paragraph of 29 September 1792 and the Paris 'sullen tranquillity' paragraph (single digest paragraphs, in months already covered) and Captain Hacket's Amsterdam rumour (two wordings, 4 + 2)."
+    }
+  }
+}

@@ -2,6 +2,73 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.10.2 (2026-11-10)
+
+v0.10.2 is v0.10.1 with **the Kentucky Gazette issues filed two years late dated by their mastheads**, and their pages matched again in the windows of their printed dates. It was made by `redate_issues.py --keep-current` from `outputs/kentucky_gazette_dates/`, at the owner's word. `CURRENT.json` is not moved. Nothing reviewed changes.
+
+- **Issue dates:** the collection files 106 issues of the *Kentucky Gazette and General Advertiser* (sn84038147) two years late. The 7 of November–December 1804 are filed under 1806, the one of 28 May 1805 under 1807, and the 98 of 1806 under 1808 (one, of 5 July 1806, under 3 July 1808). `issues.publication_date` is now the printed date. The dates come from 91 mastheads, 13 by the two-year rule where the masthead cannot be read or reads wrong (the weekday is one of the paper's publication days), and 2 read on the scans.
+  - **Ids keep the filed date**, because they are the keys of the source rows and scan files. Each change is in `table_corrections` with its old value and evidence, and the new metadata key `issue_date_corrections` sums them up.
+  - The topic census's date, year and month follow (439 pages).
+- **Effect on years (newspapers, surviving pages):**
+
+  | Year | Before | After | Change |
+  |---|---|---|---|
+  | 1804 | 14, 3,444 | 14, 3,472 | +7 issues |
+  | 1805 | 13, 3,806 | 14, 3,811 | +1 issue |
+  | 1806 | 12, 4,003 | 12, 4,381 | +98 issues, −7 |
+  | 1807 | 12, 4,167 | 11, 4,162 | −1 issue |
+  | 1808 | 11, 4,466 | 10, 4,060 | −98 issues |
+- **Matched stories:** `outputs/kentucky_gazette_dates/rematch.py` applies the matcher's rules to these pages in the windows of their printed dates. It reproduces their 95 stored matches exactly with the filed dates first. Matches between other papers are kept.
+  - **Matches:** the 95 are replaced by 4,506 new ones (3,935 main).
+  - **Printings:** 27 leave: the 17 on these pages, 9 in 8 two-paper stories that are dropped (their pairs are about two years apart), and 1 that no longer matches its story. 884 are added: 494 join 386 stories, and 390 form 151 new stories, whose ids continue their year's numbering. In all, 163,841 → 164,698 printings.
+  - **Stories:** 48,127 → 48,270.
+  - **Rules:** a passage that would link two stories joins the one it shares the most words with, and stories are not merged (57 cases). Existing printings keep their spans and excerpts. Labels and titles are remade only where the first printing changed (52 stories).
+  - **Derived rows:** the new printings have transcription checks (768 of the 884 confirmed). The 544 stories that changed or are new have topic rows, scored together (`run:story-topics-kentucky-gazette`).
+- **Runs:** `run:kentucky-gazette-dates-v1` (the dates), `run:kentucky-gazette-rematch-v1` (the corrections, matches, stories, printings, titles and checks) and `run:story-topics-kentucky-gazette`, all automatic.
+- **Checks:** `validate.py` adds six checks for releases that carry `issue_date_corrections`:
+  - every corrected issue keeps its filed date in its id;
+  - printings, stories, match ends and the topic census carry their issues' dates;
+  - no match pairs pages more than 120 days apart;
+  - the three runs are automatic.
+
+## Changes in v0.10.1 (2026-11-10)
+
+v0.10.1 is v0.10.0 plus **round two of the reviewed stories of 1793**, from `ledgers/stories_1793_round2.json` applied with `apply_ledger.py --keep-current`, **with their topic rows**. Nothing else changes. `CURRENT.json` is not moved.
+
+- **The rule for 1793:** the owner agreed (2026-11-10) to a 6-paper threshold for this year, which round one had proposed because 1793 has only 6 to 8 papers in print at a time. Items are counted item by item as before; items that need framing stay out.
+- **6 new single stories, 37 printings in 9 newspapers** (`obs:expansion-1793:S93-075` to `S93-111`, run `run:stories-1793-round2`): the list of the powers at war with France (6 papers, two introductions counted as one list), the London Gazette's Tournai bulletin of 3 May (6), Hamilton's circular to the collectors with the President's rules on neutrality (6), the President of the National Convention's declaration of a plot (6), the Cadiz letter of 24 June (6) and the commissioners' letter on General Dampierre's death (6).
+- **1793 in all:** 12 stories, 19 groups, 111 printings in 9 newspapers (11 catalogue series).
+- **Scan check of every new printing:** all 37 on their pages; 6 boxes placed by hand. Transcriptions, judged on the excerpt: 26 faithful, 6 with minor errors and 5 with errors that change a fact.
+- **Topic rows:** the 6 new groups are scored under `run:story-topics-stories-1793-round2`; the reviewed rows already there are reproduced exactly.
+
+## Changes in v0.10.0 (2026-11-10)
+
+v0.10.0 is v0.9.0 plus **the reviewed stories of 1793**, the fifth reviewed year, from `ledgers/stories_1793.json` applied with `apply_ledger.py --keep-current`, **with their topic rows**. Nothing else changes. `CURRENT.json` is not moved; the site needs categories for the new stories first (and for those of 1808, which v0.10.0 also holds).
+
+- **6 stories, 13 groups, 74 printings in 9 newspapers (11 catalogue series)** (`obs:expansion-1793:S93-001` to `S93-074`, namespace `expansion-1793`, run `run:stories-1793`).
+  - Four are single stories: the Brussels paragraph of 17 October 1792 on the emigrant princes' armies, Dumouriez's letter on entering Brussels, Captain Crabtree's sea serpent and the Madeira report of a battle near Lisle. Two are parent stories: Dumouriez's defection (4 groups) and Genêt and the President (3 groups).
+  - Only 10 single items of 1793 reach 7 papers, and none reaches 8, because the year has few papers in print (6 to 8 at a time, 4 to 6 from October). Three sub-stories have fewer than 7 papers under parents that reach 7, the rule agreed for 1776 round two. A 6-paper threshold for this year is proposed in `outputs/story_discovery_1793/README.md` and was not applied.
+  - The selection rule, the items not admitted and the items left out because they need framing are in the ledger's `dispositions_summary` and in that README.
+- **How they were found:** `work/story_items.py --long-running`, with families of 3 or more papers (`items.json`), and once with year 1792 over the 1793 pages (`items_from_1792.json`; nothing reaches 6 papers).
+- **Scan check of every printing:** all 74 are on their pages; 7 boxes were placed by hand, and they are in the ledger (`scan_boxes`). Transcriptions, judged on the excerpt: 38 faithful, 34 with minor errors and 2 with errors that change a fact (RevX drops a sentence or a paragraph's substance).
+- **Data faults found here, not corrected:** two *Gazette of the United States* issues are filed under dates their mastheads contradict (filed 4 April = 4 May; filed 23 July = 13 July; `outputs/story_discovery_1793/masthead_dates.csv`), and pages 3 and 4 filed under the *American Herald of Liberty* of 2 July are a second scan of the 9 July pages (`page_date_flags.csv`). No reviewed printing uses them. The *Kentucky Gazette* of 1793 is filed under its own dates.
+- **Topic rows:** the 13 new groups are scored under `run:story-topics-stories-1793`; the 162 reviewed rows already there are reproduced exactly.
+- **Checks:** 1,218 pass (1,140 before, plus one for each of the 78 new crops).
+
+## Changes in v0.9.0 (2026-11-10)
+
+v0.9.0 is v0.8.1 plus **the reviewed stories of 1808**, the fourth reviewed year, from `ledgers/stories_1808.json` applied with `apply_ledger.py --keep-current`, **with their topic rows**. Nothing else changes. `CURRENT.json` is not moved; the site needs categories for the new stories first.
+
+- **20 stories, 50 groups, 298 printings in 10 newspapers** (`obs:expansion-1808:S08-001` to `S08-298`, namespace `expansion-1808`, run `run:stories-1808`).
+  - Eleven are single stories. Nine are parent stories with 30 sub-stories: the embargo laws (5 groups), the charges against General Wilkinson (4), orders and decrees against neutral trade (3), Algiers and the American ships (3), the British and French papers laid before Congress (4), the embargo at home in spring (3), two letters from Alicante (2), the conventions in Portugal (2), and the President's message of 8 November with its documents (4).
+  - The selection rule, the items not admitted and the items left out because they need framing are in the ledger's `dispositions_summary` and in `outputs/story_discovery_1808/README.md`. Seven sub-stories have fewer than 7 papers under parents that reach 7, the rule agreed for 1776 round two.
+- **How they were found:** as for 1807 (`work/story_items.py --long-running`), run twice over the 1808 pages: with year 1808 (`items.json`) and with year 1807 (`items_from_1807.json`), because the script takes families by their first year, and several of 1808's most printed documents sit in families that began in 1807.
+- **Scan check of every printing:** all 298 are on their pages (2 only partly shown). 43 crops were cut again from the text layer by other rules, 23 had overlapping boxes merged, and 18 boxes were placed by hand; the boxes of all 84 are in the ledger (`scan_boxes`). Transcriptions, judged on the excerpt: 201 faithful, 71 with minor errors and 26 with errors that change a fact.
+- **Misfiled RevX pages:** three printings stand on scan pages whose RevX slot holds another page's text (`derived/revx_page_map.parquet`); their excerpts come from the CA transcription of the scan page.
+- **A data fault found here, not corrected:** every *Kentucky Gazette and General Advertiser* (sn84038147) issue filed under 1806, 1807 or 1808 prints a masthead two years earlier (106 issues; `outputs/story_discovery_1808/kentucky_gazette_dates.csv`). No reviewed printing uses them.
+- **Topic rows:** the 50 new groups are scored under `run:story-topics-stories-1808`; the 112 reviewed rows already there are reproduced exactly.
+- **Checks:** 1,140 pass (829 before, plus one for each of the 311 new crops).
+
 ## Changes in v0.8.1 (2026-11-10)
 
 v0.8.1 is v0.8.0 with **the matched printings filed under the pages they are printed on**, made by `refile_revx_pages.py` from the RevX page check in `outputs/revx_page_shift_check/`. The reviewed tables do not change. **`CURRENT.json` still points to v0.7.2.**
@@ -391,6 +458,35 @@ python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1807.
 python outputs/revx_page_shift_check/check_page_shift.py              # the RevX page map (about 15 minutes); add `scans` for the scan sample
 python work/archive_data/refile_revx_pages.py 0.8.0 0.8.1 --keep-current   # v0.8.1
 python work/archive_data/validate.py outputs/data_foundation/v0.8.1
+python work/year_search_pages.py 1808 outputs/story_discovery_1808/search_pages.json
+python work/story_items.py 1808 outputs/story_discovery_1808/search_pages.json outputs/story_discovery_1808/items.json --long-running
+python work/story_items.py 1807 outputs/story_discovery_1808/search_pages.json outputs/story_discovery_1808/items_from_1807.json --long-running   # 1807 families on the 1808 pages
+python work/story_phrase_search.py outputs/story_discovery_1808/search_pages.json outputs/story_discovery_1808/phrase_patterns.json outputs/story_discovery_1808/phrase_hits.json
+python work/archive_data/ledgers/make_stories_1808.py && python work/scan_ledger.py work/archive_data/ledgers/stories_1808.json
+# ... reviewers write outputs/story_discovery_1808/scan_verdicts/ (batches, then rechecks on new crops); findings, boxes and notes go into ledgers/stories_1808_review.json
+python work/archive_data/ledgers/make_stories_1808.py
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1808.json --keep-current   # v0.9.0, with its topic rows
+python work/archive_data/validate.py outputs/data_foundation/v0.9.0
+python work/year_search_pages.py 1793 outputs/story_discovery_1793/search_pages.json
+python outputs/story_discovery_1793/check_mastheads_1793.py && python outputs/story_discovery_1793/check_duplicate_pages_1793.py
+python work/story_items.py 1793 outputs/story_discovery_1793/search_pages.json outputs/story_discovery_1793/items.json 3 --long-running
+python work/story_items.py 1792 outputs/story_discovery_1793/search_pages.json outputs/story_discovery_1793/items_from_1792.json 3 --long-running   # 1792 families on the 1793 pages
+python work/story_phrase_search.py outputs/story_discovery_1793/search_pages.json outputs/story_discovery_1793/phrase_patterns.json outputs/story_discovery_1793/phrase_hits.json
+python work/archive_data/ledgers/make_stories_1793.py && python work/scan_ledger.py work/archive_data/ledgers/stories_1793.json
+# ... reviewers write outputs/story_discovery_1793/scan_verdicts/ (batches, a recheck on a new crop, harmonised grades); findings, boxes and notes go into ledgers/stories_1793_review.json
+python work/archive_data/ledgers/make_stories_1793.py
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1793.json --keep-current   # v0.10.0, with its topic rows
+python work/archive_data/validate.py outputs/data_foundation/v0.10.0
+python work/story_phrase_search.py outputs/story_discovery_1793/search_pages.json outputs/story_discovery_1793/phrase_patterns_round2.json outputs/story_discovery_1793/phrase_hits_round2.json
+python work/archive_data/ledgers/make_stories_1793_round2.py && python work/scan_ledger.py work/archive_data/ledgers/stories_1793_round2.json
+# ... reviewers write outputs/story_discovery_1793/scan_verdicts/batch_06-08.json; findings, boxes and notes go into ledgers/stories_1793_round2_review.json
+python work/archive_data/ledgers/make_stories_1793_round2.py
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1793_round2.json --keep-current   # v0.10.1, with its topic rows
+python work/archive_data/validate.py outputs/data_foundation/v0.10.1
+python outputs/kentucky_gazette_dates/check_dates.py                     # the printed date of every Kentucky Gazette issue (sn84038147)
+python outputs/kentucky_gazette_dates/rematch.py                         # their pages matched in the windows of their printed dates (about ten minutes)
+python work/archive_data/redate_issues.py 0.10.1 0.10.2 --keep-current   # v0.10.2
+python work/archive_data/validate.py outputs/data_foundation/v0.10.2
 ```
 
 For the next release, write a new ledger (base = current version, target = next) and run `apply_ledger.py` on it. Before that, run `work/scan_ledger.py <ledger>` to make the scan crops; on pages with an unusable text layer, add `scan_boxes` by hand. Since v0.7.2, `apply_ledger.py` also gives the ledger's new groups their topic rows (a run of their own), because every reviewed group must have one. Add `--keep-current` to leave `CURRENT.json` where it is, so the site stays on the previous release until `set_current.py` switches it.

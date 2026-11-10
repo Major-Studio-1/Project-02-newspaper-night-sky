@@ -1,7 +1,7 @@
 # Newspaper Night Sky
 
 **How news moved through American newspapers, 1770–1810.**
-Every story printed in two or more papers of one surviving archive, 48,193 in all. You can explore them as a sky of stars, or follow one story from paper to paper as it pulses through them.
+Every story printed in two or more papers of one surviving archive, 48,368 in all. You can explore them as a sky of stars, or follow one story from paper to paper as it pulses through them.
 
 **[Open the website →](https://newspapers.icare.love/)** · [How it works](https://newspapers.icare.love/method.html) · Major Studio 1, Project 02
 
@@ -17,7 +17,7 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 
 | Page | What it shows |
 |---|---|
-| **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,193 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic** (24 topics in seven families), or **orbit** (time of year), and colour them by **region**. You can search any word, **compare** up to three searches in colour (for example France · Britain · Congress), turn and zoom the view, and let time drift. |
+| **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,368 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic** (24 topics in seven families), or **orbit** (time of year), and colour them by **region**. You can search any word, **compare** up to three searches in colour (for example France · Britain · Congress), turn and zoom the view, and let time drift. |
 | **[Pulses](https://newspapers.icare.love/pulses.html)** | Stories travelling through the papers. Each newspaper is a point on a map, and it pulses when it printed a story. Pick one year, several, or all of them on a year strip, and a story from a shelf of cards, narrowed by topic if you like; or let the **tour** play one after another. The passage and the page scan are shown beside the map. A constellation joins a story's printings, and a coverage strip shows which pages survive. |
 | **[Radio](https://newspapers.icare.love/radio.html)** | The newspapers read aloud, as if a radio could be tuned to the past. Turn the dial to a year: it greets the town of the first paper ("Good morning, Philadelphia! It is Saturday, the sixth of July, 1776…") and reads what each paper printed that day, over sounds of the town. Your browser does the reading; nothing is sent anywhere. On Pulses and the telescope, a newspaper or a star speaks when you point at it, pick it or select an area around it, each in its own voice, placed left or right by where it is on the screen. |
 | **[How it works](https://newspapers.icare.love/method.html)** | The method in plain language, and what the site cannot tell you. |
@@ -29,10 +29,10 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 
 ## What it shows
 
-- **Reprinting was how news travelled.** The archive holds 48,127 stories printed in two or more of its papers (163,841 printings in all). About two thirds of them were printed in exactly two. In 1776, 14 of the archive's 16 papers of that year printed the Declaration of Independence between 6 and 26 July.
+- **Reprinting was how news travelled.** The archive holds 48,270 stories printed in two or more of its papers (164,698 printings in all). About two thirds of them were printed in exactly two. In 1776, 14 of the archive's 16 papers of that year printed the Declaration of Independence between 6 and 26 July.
 - **Some news returns with the seasons.** Independence Day stories cluster in summer: 81% fall in July–September, in 25 of the 30 years that have them. The President's annual speech comes in November–January, fever in late summer, ice in winter, and Congress while it sits. Fires show no rhythm. The surviving pages are spread evenly over the year, so these rhythms do not come from gaps in the archive. ([the check](docs/seasons-check.md))
-- **The archive has a shape.** Only two newspaper series survive for 1785–86, against 11 to 17 a year after 1800. Before 1800 the papers are mostly from New England and the Middle States; from 1802 about half are from Virginia, Washington, Kentucky and South Carolina. The site keeps these gaps visible.
-- **Machine transcriptions need checking.** For 1776, 1797 and 1807, 66 stories were read closely and every printing was checked against its scan. In one, the transcription reads "distressed" where the paper printed "dismasted". Every paper printed Congress's resolutions of 6 April 1776 with "ſtaves" (staves), and the transcription reads "slaves" in eight of the nine. Another transcription leaves out a 350-word statement that is plainly on the page.
+- **The archive has a shape.** Only two newspaper series survive for 1785–86, against 10 to 17 a year after 1800. Before 1800 the papers are mostly from New England and the Middle States; from 1802 about half are from Virginia, Washington, Kentucky and South Carolina. The site keeps these gaps visible.
+- **Machine transcriptions need checking.** For 1776, 1793, 1797, 1807 and 1808, 98 stories were read closely and every printing was checked against its scan. In one, the transcription reads "distressed" where the paper printed "dismasted". Every paper printed Congress's resolutions of 6 April 1776 with "ſtaves" (staves), and the transcription reads "slaves" in eight of the nine. Another transcription leaves out a 350-word statement that is plainly on the page.
 
 ## How it was made
 
@@ -41,7 +41,7 @@ flowchart LR
   A["77,793 scanned pages<br/>110 newspaper series<br/>(Library of Congress, via the Smithsonian)"] --> B["Audit:<br/>which pages are usable"]
   B --> C["Text reuse:<br/>shared wording across papers"]
   C --> D["Matched stories<br/>(automatic, not checked)"]
-  B --> E["Close reading and scan checks<br/>(1776, 1797 and 1807)"]
+  B --> E["Close reading and scan checks<br/>(1776, 1793, 1797, 1807 and 1808)"]
   E --> F["Reviewed stories"]
   D & F --> G["Versioned data release<br/>with validation"]
   G --> H["Website:<br/>telescope and pulses"]
@@ -59,7 +59,7 @@ The reading and scan checks were done with AI assistants. An independent human s
 | Folder | What is in it |
 |---|---|
 | [`site/`](site) | The website, ready to serve: six pages and an exhibition loop, with the data they load. The first telescope is kept as `telescope-v1.html`. |
-| [`data/`](data) | The current data release (v0.8.1): tables, the matched-story data, the schema and the validation |
+| [`data/`](data) | The current data release (v0.10.2): tables, the matched-story data, the schema and the validation |
 | [`pipeline/`](pipeline) | The code, in the order it runs: audit, topics, finding stories, data releases, the site |
 | [`docs/`](docs) | The full process, the seasons check, and the site plan |
 | [`process/`](process) | How the three original proposals and their sketches became this site |

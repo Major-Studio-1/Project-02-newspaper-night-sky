@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "release_version": "0.8.1",
+  "release_version": "0.10.2",
   "reviewed_years": [
     {
       "year": 1776,
@@ -8,6 +8,14 @@
       "passages": 333,
       "group_views": 46,
       "stories": 31,
+      "categories": 3
+    },
+    {
+      "year": 1793,
+      "newspapers": 12,
+      "passages": 111,
+      "group_views": 19,
+      "stories": 12,
       "categories": 3
     },
     {
@@ -20,24 +28,32 @@
     },
     {
       "year": 1807,
-      "newspapers": 12,
+      "newspapers": 11,
       "passages": 250,
       "group_views": 32,
       "stories": 14,
       "categories": 3
+    },
+    {
+      "year": 1808,
+      "newspapers": 10,
+      "passages": 298,
+      "group_views": 50,
+      "stories": 20,
+      "categories": 3
     }
   ],
-  "curated_passages": 690,
-  "group_views": 111,
-  "stories_in_overview": 66,
-  "overview_categories": 9,
+  "curated_passages": 1099,
+  "group_views": 180,
+  "stories_in_overview": 98,
+  "overview_categories": 15,
   "years": 41,
-  "matched_families": 48127,
-  "year_files_mb": 105.6,
-  "year_index_mb": 8.8,
-  "telescope_stars": 48193,
+  "matched_families": 48270,
+  "year_files_mb": 106.1,
+  "year_index_mb": 8.9,
+  "telescope_stars": 48368,
   "telescope_mb": 7.7,
-  "telescope_text_mb": 24.3,
+  "telescope_text_mb": 24.4,
   "story_topic_lanes": 24,
   "edges": 0,
   "checks": [
@@ -50,19 +66,27 @@
     "Each reviewed year lists every one of its groups once, and every top-level story has a display category",
     "Every matched printing carries its transcription check, one printing per page"
   ],
-  "matched_printings": 163841,
-  "recorded_voices": null,
+  "matched_printings": 164698,
+  "recorded_voices": {
+    "clips": 2731,
+    "packs": 138,
+    "mb": 134.3,
+    "reviewed_passages_recorded": 1099,
+    "reviewed_passages": 1099,
+    "titles_recorded": 1102,
+    "announcer_clips": 265
+  },
   "pages_sha256": {
-    "index.html": "b81d05998bc343aefa715248f61b1ebffbfe245adf417294181eb3b4ebcc8b33",
-    "telescope.html": "891816534494bc17010908de4a1b77a596b6820f2141ac88f4a087757d9b3633",
-    "pulses.html": "4a9c1ebf2599084379e255b0810fd80f7886fd9727e3ea0d20545f7eb0cb870b",
-    "radio.html": "0406444fca30ed89d76fce3be2a510c8442c58ff4afe2a52bd0f6c73c39a8452",
-    "exhibit.html": "c1b6da5ccfed6c381c3e5a503a0d1cd09dd5e8999d24d94fabd7b40c36c4319e",
-    "method.html": "c18182fbd2c68839a5bd6cc8ecabbed4d1bebb0451634cb1236cd36dad88bfb7",
-    "notes.html": "f21506d20fcec80cea6e1c5e6e4cc2df706d269d1962adb1eaf4ab90a17b0724",
+    "index.html": "95cf27005b8d15849873752349a2369ae8708d920ccae9cee663c7f0c459a6a6",
+    "telescope.html": "b08a3faa8dbf68f7c0341b7d87f1276526704a2cf09cae9345404e8090291007",
+    "pulses.html": "74dfb25c3446e8a90543900df3494b7ed5596d874d25f59e49473a60bdc08bf8",
+    "radio.html": "4384c526b59421de16affd08649499d66f09109d60a1838e94b6e10de1b11351",
+    "exhibit.html": "be76c635ae4bbe8bf82c2de9304fd13d6903955ee972557ade5421f0679f634a",
+    "method.html": "749908226456597c542eb871e84281d1d734a834b8107708eccc3fe247dd257d",
+    "notes.html": "9d60d09a1945687d1fc4474aed9d1ad938a6526215db4805347cd658041a41cf",
     "site.css": "a561ca7c2cfc80341c9f20794d07383e86afcb8c57a25f9e8c3200e6d12ac434",
     "glass.js": "a08cefb1f3fa663e59f8027354420ca9c89bbb52f24e44571a829611fec6605a",
-    "radio.js": "a6b81713f537df68765fc2849d8c6cc7ab079452bdbb0b57ba265d199f329599",
+    "radio.js": "4c640ba892653c9ea248b214afbecd40216110540abd2aba3a698b1cc9e682ff",
     "radio-voices.js": "a94bdbcd03b3aec036eb34a52d8f162199b8668863651518793bd978602a253f"
   }
 }

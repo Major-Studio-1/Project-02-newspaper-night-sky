@@ -1,0 +1,641 @@
+{
+ "findings": {
+  "S93-001": [
+   "Scan matches the excerpt. The print has 'the duke d'Artois' and 'Luxemburgh'."
+  ],
+  "S93-002": [
+   "Scan matches the excerpt, except that the print reads 'Luxemburgh' (RevX 'Luxemburg', minor). After the excerpt the print goes on with the rest of the paragraph ('the individuals of which these armies were composed, are in the greatest distress … and even their clothes.'), which the RevX transcription leaves out; the excerpt ends before the gap."
+  ],
+  "S93-003": [
+   "Scan matches the excerpt, except that the print reads 'Andersecht'; RevX 'Anderlecht' silently corrects the printed name. The date 'Nov. 14' is printed in the introduction."
+  ],
+  "S93-004": [
+   "Scan matches the excerpt, except that the print reads 'Andersecht'; RevX 'Anderlecht' silently corrects the printed name. 'Brussels, Nov. 14.' is the printed date."
+  ],
+  "S93-005": [
+   "Scan reads 'or what is to become of them'; RevX drops 'is', a minor transcription error. The print has 'the Count d'Artois' and 'Luxemburg'."
+  ],
+  "S93-006": [
+   "Scan reads 'Luxemburgh'; RevX 'Luxembourg' is a minor transcription difference (modernised spelling). 'Count D'Artois', 'distresses' and 'dispersing' are as printed."
+  ],
+  "S93-007": [
+   "Scan matches the excerpt, which runs from the foot of one column to the head of the next. 'Count d'Artois', 'distresses' and '& dispersing' are as printed."
+  ],
+  "S93-008": [
+   "Scan matches the excerpt. The print has 'the Duke D'Artois', 'Luxemburgh' and 'the Duke D'Bourbon'."
+  ],
+  "S93-009": [
+   "Scan matches the excerpt, except that the print reads 'Andersecht'; RevX 'Anderlecht' silently corrects the printed name. The print goes on 'was received at Brussels as the deliverer of the Nation'; the excerpt only stops short."
+  ],
+  "S93-010": [
+   "Scan reads 'heighths of Andersecht'; RevX 'heights of Anderlecht' modernises the spelling and corrects the printed name, both minor. The print has 'received at Brussels'; the excerpt only stops short."
+  ],
+  "S93-011": [
+   "Scan reads 'Brussels, November 22.' where the other printings date the letter 14 November: a printed difference, not a transcription error. The print reads 'Andersecht'; RevX 'Anderlecht' silently corrects it."
+  ],
+  "S93-012": [
+   "Scan reads 'Brussels, Nov. 12.' where the other printings have Nov. 14: a printed error, not a transcription error. The print reads 'Andersecht'; RevX 'Anderlecht' silently corrects it."
+  ],
+  "S93-013": [
+   "Scan matches the excerpt; the print is small and blurred but every word can be made out. The print has 'the Duke D'Artois' and 'Luxemburgh'."
+  ],
+  "S93-014": [
+   "Scan reads 'my bare comrades' where the other printings have 'brave': a printed error, which RevX keeps. The print reads 'Andersecht'; RevX 'Anderlecht' silently corrects it."
+  ],
+  "S93-015": [
+   "Scan matches the excerpt. The heading is dated 'Brussels, April 3' and the letter 'Tournay, March 31. 1793'; the minister is not named."
+  ],
+  "S93-016": [
+   "Scan matches the excerpt. The paragraph stands among London news, without the New York introduction."
+  ],
+  "S93-017": [
+   "Scan matches the excerpt. The print has 'what Dumourier' without 'M.' and 'Comte Staremberg'; the next line reads 'General Bournonville', so a 'Bourdonville' in the transcription would be a transcription error, not the print."
+  ],
+  "S93-018": [
+   "Scan reads 'It is rumoured' without 'now': the missing word is in the print, not a transcription error; RevX 'rumored' is a minor spelling change. The paragraph carries the New York introduction under 'NEW-YORK, May 25.'"
+  ],
+  "S93-019": [
+   "Scan matches the excerpt. The paragraph carries the New York introduction, here worded '10th of April'."
+  ],
+  "S93-020": [
+   "Scan reads 'Gen. Clairfait'; RevX 'Clairfayt' is a minor transcription error. The rest matches, with '8 or 9 prisoners' in figures and 'Comte Starenberg' as printed."
+  ],
+  "S93-021": [
+   "Scan matches the excerpt. The paragraph carries the New York introduction."
+  ],
+  "S93-022": [
+   "Scan matches the excerpt; RevX keeps the line-end hyphen in 'Clair-fait'. The print dates the heading 'BRUSSELS, March 31' and the letter 'Tourney, April 3, 1793', and names 'Conte Starenberg'."
+  ],
+  "S93-023": [
+   "Scan matches the excerpt. Scan reads 'the 16th April' where the other printings have the 10th: a printed error, not a transcription error."
+  ],
+  "S93-024": [
+   "Scan matches the excerpt. The print has 'MARCH 31.' above the letter, dates it 'Tournay, April 3, 1793', and leaves out 'to' before 'Conte Starenberg': a printed slip, not a transcription error."
+  ],
+  "S93-025": [
+   "Scan matches the excerpt. The paragraph stands among London news under the date 'APRIL 10.', which the excerpt leaves out, and has no New York introduction."
+  ],
+  "S93-026": [
+   "Scan matches the excerpt. The print reads 'Conte Stabenberg' and dates the letter 'Tournay, April 3, 1793'; the next line has 'Bournonuille'."
+  ],
+  "S93-027": [
+   "Scan reads 'mareschal'; RevX 'marechal' is a minor transcription error. The rest matches the excerpt."
+  ],
+  "S93-028": [
+   "Scan matches the excerpt. The heading is 'Gen. DUMOURIER's LETTER to the French Nation, dated Baths of St. Amand, April 2, 1793', and the print spells 'Honor'."
+  ],
+  "S93-029": [
+   "Scan reads 'Mareschal'; RevX 'Marechal' is a minor transcription error. The rest matches the excerpt; the crop does not reach 'a sacred trust'."
+  ],
+  "S93-030": [
+   "Scan matches the excerpt. The heading is 'STATE PAPERS. GENERAL DUMOURIER TO THE FRENCH NATION', and the print spells 'Honour'."
+  ],
+  "S93-031": [
+   "Scan matches the excerpt, except that the print has 'Dumourier' in ordinary letters where RevX gives capitals. The letter reads the same, line for line, as in the Extra of 5 June, with 'Conte Stabenberg' in both."
+  ],
+  "S93-032": [
+   "Scan matches the excerpt. The paragraph stands among London news under the date 'April 10.—', which the excerpt leaves out, and has no New York introduction."
+  ],
+  "S93-033": [
+   "Scan matches the excerpt. The heading is 'STATE PAPERS. GENERAL DUMOURIER To the FRENCH NATION', and the print has 'liberty and honour' in lower case."
+  ],
+  "S93-034": [
+   "Scan matches the excerpt."
+  ],
+  "S93-035": [
+   "Scan matches the excerpt. The heading is 'State Paper. GENERAL DUMOURIER TO THE FRENCH NATION' under 'LONDON, April 13', and the print spells 'honor'."
+  ],
+  "S93-036": [
+   "Scan matches the excerpt. The heading is 'STATE PAPER. GENERAL DUMOURIER, TO THE FRENCH NATION', and the print spells 'honour'."
+  ],
+  "S93-037": [
+   "Scan matches the excerpt, and the print has the asterisk after 'Declaration to the French Nation'. Scan reads 'Mareschal'; RevX 'Maréchal' is a modernised spelling, a minor transcription difference."
+  ],
+  "S93-038": [
+   "Scan reads 'SAXE CO-BOURG' (divided at the line end), 'Mareschal' and 'Emperour'; RevX 'COU-BOURG', 'Maréchal' and 'Emperor' are minor transcription differences. 'THE General Chief' without 'in' and the asterisk after 'French Nation' are as printed."
+  ],
+  "S93-039": [
+   "Scan matches the excerpt; the film is small and soft but readable when enlarged. The print has the misprint 'Gneral', which RevX silently corrects to 'General', and the dateline 'BRUSSELS, April 3.' above the heading."
+  ],
+  "S93-040": [
+   "Scan matches the excerpt as far as the small, soft film can be read; 'a great part of the army' appears to be what is printed, where the other printings have 'his army'. The paragraph stands among London news, without the New York introduction."
+  ],
+  "S93-041": [
+   "Scan matches the excerpt; RevX 'S INCE' only separates the large initial letter. The heading is 'STATE PAPERS. GENERAL DUMOURIER TO THE FRENCH NATION', and the print spells 'Honour'."
+  ],
+  "S93-042": [
+   "Scan matches the excerpt."
+  ],
+  "S93-043": [
+   "Scan matches the excerpt. 'said that he would appeal' is as printed."
+  ],
+  "S93-044": [
+   "Scan matches the excerpt. The paragraph is printed without the 'Sea Monster' heading and with the shorter introduction 'lately from the West Indies'."
+  ],
+  "S93-045": [
+   "Scan matches the excerpt."
+  ],
+  "S93-046": [
+   "Scan matches the excerpt, except that the paper prints 'dependended on', a printer's slip that RevX silently corrects to 'depended on'. Just after the excerpt the scan reads 'Mount-Desart island'."
+  ],
+  "S93-047": [
+   "Scan matches the excerpt."
+  ],
+  "S93-048": [
+   "Scan matches the excerpt. Just after it the scan reads 'a very bloody battle having been fought near Lisle between'; no comma is visible after 'fought'."
+  ],
+  "S93-049": [
+   "Scan matches the excerpt, except that the paper prints 'on may Passage', a printer's slip that RevX silently corrects to 'my'."
+  ],
+  "S93-050": [
+   "Scan matches the excerpt. The print has 'extrao dinary' with the r not inked, which RevX gives as 'extra ordinary'; a minor transcription difference."
+  ],
+  "S93-051": [
+   "Scan matches the excerpt. The crop ends at 'never to permit private', before 'the line of duty'."
+  ],
+  "S93-052": [
+   "Scan matches the excerpt: 'August 16, 1793', '13th instant' and 'communications' are as printed."
+  ],
+  "S93-053": [
+   "Scan matches the excerpt, except that the print reads 'which she left the 8th of July'; RevX drops 'she', a minor transcription error. The crop is small and stops before the battle; an enlarged copy of the page shows that the paper printed 'a very bloody battle'."
+  ],
+  "S93-054": [
+   "Scan reads 'Messers. Printers'; RevX 'Messrs.' is a minor transcription difference. 'had said he would appeal' and 'to inform, that' without 'the public' are as printed."
+  ],
+  "S93-055": [
+   "Scan reads 'Mess. Printers'; RevX 'Mss.' is a minor transcription error. The rest matches the excerpt, with the quoted words in quotation marks and capitals as printed."
+  ],
+  "S93-056": [
+   "Scan matches the excerpt."
+  ],
+  "S93-057": [
+   "Scan reads 'authorise'; RevX 'authorize' is a minor transcription difference. 'we are asked' is as printed, where the other printings have 'we were asked'."
+  ],
+  "S93-058": [
+   "Scan matches the words of the excerpt, but the paper printed the whole paragraph, including the bloody battle near Lisle and '17,000 men fell in the combat'; the RevX '...' leaves that out. The print has 'frigate' with a broken f; RevX 'trigate' is a minor transcription error."
+  ],
+  "S93-059": [
+   "Scan reads 'INTRUSTED' with a drop capital; RevX 'IN TRUSTED' is a minor transcription error. The rest matches, and the letter is headed 'From the New-York Diary, of August 21' without its own dateline."
+  ],
+  "S93-060": [
+   "Scan matches the excerpt. The answer begins at the foot of one column and continues at the top of the next; the two crops together show the whole excerpt."
+  ],
+  "S93-061": [
+   "Scan matches the excerpt."
+  ],
+  "S93-062": [
+   "Scan matches the excerpt. The dateline gives the year as ''93' and the heading date reads 'August 24', its first figure broken."
+  ],
+  "S93-063": [
+   "Scan reads 'Philadelphia, August 19, '93' where the other printings have August 16: a printed error, not a transcription error. The crop shows the whole excerpt and ends in the next sentence at 'their communica-', so the word 'communication(s)' cannot be checked."
+  ],
+  "S93-064": [
+   "Scan reads 'INTRUSTED' with a drop capital; RevX 'I TRUSTED' splits the drop capital from its word and loses the N, a minor transcription error (the same kind as 'IN TRUSTED' and 'I NTRUSTED' in two other printings). The rest matches."
+  ],
+  "S93-065": [
+   "Scan matches the excerpt. The date is printed 'August 16.' without the year; the answer runs from the foot of one column to the top of the next."
+  ],
+  "S93-066": [
+   "Scan reads 'INTRUSTED' with a drop capital; RevX 'I NTRUSTED' is a minor transcription error. The rest matches."
+  ],
+  "S93-067": [
+   "Scan matches the excerpt except the heading, where the paper misprints 'Mr. JEFFRSON's Answer' and RevX silently corrects it to 'JEFFERSON's'."
+  ],
+  "S93-068": [
+   "Scan matches the excerpt except that the paper prints 'French Republick', which RevX gives as 'Republic': a modernised spelling, not a change of fact."
+  ],
+  "S93-069": [
+   "The crop shows the page 3 continuation, which matches the excerpt except that the print has the sentence '—the Secretary of State is the organ through which their communication should pass', which RevX leaves out between 'with him.' and 'The President does not conceive'."
+  ],
+  "S93-070": [
+   "Scan reads 'to about the 22d of June' where the other printings have the 24th: a printed difference, not a transcription error. The print also has 'arrived a Madeira', which RevX silently corrects to 'at'; a dark blot covers the first letters of four lines."
+  ],
+  "S93-071": [
+   "Scan reads 'Portland' in worn italic type and 'Mount-Desar' with a faint last letter (probably 'Mount-Desart'); RevX 'Periland' and 'Mount-Defar' are minor transcription errors. The item runs from the foot of one column to the top of the next, and its introduction reads 'who arrived at Frenchman's bay, and is at Portland'."
+  ],
+  "S93-072": [
+   "Scan matches the excerpt; the film is speckled but every word can be read."
+  ],
+  "S93-073": [
+   "Scan reads 'the diplomatic characters residing here', as the other papers do; RevX 'character' is a minor transcription error, not a printed difference. The rest matches, with 'communications' as printed."
+  ],
+  "S93-074": [
+   "Scan matches the excerpt; a dark line down the right edge of the column touches some line ends. Just after the excerpt the scan reads 'distant about ten' where the other printings have 'nearly ten': a printed difference."
+  ]
+ },
+ "crops": {
+  "S93-001": [
+   "S93-001.jpg"
+  ],
+  "S93-002": [
+   "S93-002.jpg"
+  ],
+  "S93-003": [
+   "S93-003.jpg"
+  ],
+  "S93-004": [
+   "S93-004.jpg"
+  ],
+  "S93-005": [
+   "S93-005.jpg"
+  ],
+  "S93-006": [
+   "S93-006.jpg"
+  ],
+  "S93-007": [
+   "S93-007-1.jpg",
+   "S93-007-2.jpg"
+  ],
+  "S93-008": [
+   "S93-008.jpg"
+  ],
+  "S93-009": [
+   "S93-009.jpg"
+  ],
+  "S93-010": [
+   "S93-010.jpg"
+  ],
+  "S93-011": [
+   "S93-011.jpg"
+  ],
+  "S93-012": [
+   "S93-012.jpg"
+  ],
+  "S93-013": [
+   "S93-013.jpg"
+  ],
+  "S93-014": [
+   "S93-014.jpg"
+  ],
+  "S93-015": [
+   "S93-015.jpg"
+  ],
+  "S93-016": [
+   "S93-016.jpg"
+  ],
+  "S93-017": [
+   "S93-017.jpg"
+  ],
+  "S93-018": [
+   "S93-018.jpg"
+  ],
+  "S93-019": [
+   "S93-019.jpg"
+  ],
+  "S93-020": [
+   "S93-020.jpg"
+  ],
+  "S93-021": [
+   "S93-021.jpg"
+  ],
+  "S93-022": [
+   "S93-022.jpg"
+  ],
+  "S93-023": [
+   "S93-023.jpg"
+  ],
+  "S93-024": [
+   "S93-024.jpg"
+  ],
+  "S93-025": [
+   "S93-025.jpg"
+  ],
+  "S93-026": [
+   "S93-026.jpg"
+  ],
+  "S93-027": [
+   "S93-027.jpg"
+  ],
+  "S93-028": [
+   "S93-028.jpg"
+  ],
+  "S93-029": [
+   "S93-029.jpg"
+  ],
+  "S93-030": [
+   "S93-030.jpg"
+  ],
+  "S93-031": [
+   "S93-031.jpg"
+  ],
+  "S93-032": [
+   "S93-032.jpg"
+  ],
+  "S93-033": [
+   "S93-033.jpg"
+  ],
+  "S93-034": [
+   "S93-034.jpg"
+  ],
+  "S93-035": [
+   "S93-035.jpg"
+  ],
+  "S93-036": [
+   "S93-036.jpg"
+  ],
+  "S93-037": [
+   "S93-037.jpg"
+  ],
+  "S93-038": [
+   "S93-038.jpg"
+  ],
+  "S93-039": [
+   "S93-039.jpg"
+  ],
+  "S93-040": [
+   "S93-040.jpg"
+  ],
+  "S93-041": [
+   "S93-041.jpg"
+  ],
+  "S93-042": [
+   "S93-042.jpg"
+  ],
+  "S93-043": [
+   "S93-043.jpg"
+  ],
+  "S93-044": [
+   "S93-044.jpg"
+  ],
+  "S93-045": [
+   "S93-045.jpg"
+  ],
+  "S93-046": [
+   "S93-046.jpg"
+  ],
+  "S93-047": [
+   "S93-047.jpg"
+  ],
+  "S93-048": [
+   "S93-048.jpg"
+  ],
+  "S93-049": [
+   "S93-049.jpg"
+  ],
+  "S93-050": [
+   "S93-050.jpg"
+  ],
+  "S93-051": [
+   "S93-051.jpg"
+  ],
+  "S93-052": [
+   "S93-052.jpg"
+  ],
+  "S93-053": [
+   "S93-053.jpg"
+  ],
+  "S93-054": [
+   "S93-054.jpg"
+  ],
+  "S93-055": [
+   "S93-055.jpg"
+  ],
+  "S93-056": [
+   "S93-056.jpg"
+  ],
+  "S93-057": [
+   "S93-057.jpg"
+  ],
+  "S93-058": [
+   "S93-058.jpg"
+  ],
+  "S93-059": [
+   "S93-059.jpg"
+  ],
+  "S93-060": [
+   "S93-060-1.jpg",
+   "S93-060-2.jpg"
+  ],
+  "S93-061": [
+   "S93-061.jpg"
+  ],
+  "S93-062": [
+   "S93-062.jpg"
+  ],
+  "S93-063": [
+   "S93-063.jpg"
+  ],
+  "S93-064": [
+   "S93-064.jpg"
+  ],
+  "S93-065": [
+   "S93-065-1.jpg",
+   "S93-065-2.jpg"
+  ],
+  "S93-066": [
+   "S93-066.jpg"
+  ],
+  "S93-067": [
+   "S93-067.jpg"
+  ],
+  "S93-068": [
+   "S93-068.jpg"
+  ],
+  "S93-069": [
+   "S93-069.jpg"
+  ],
+  "S93-070": [
+   "S93-070.jpg"
+  ],
+  "S93-071": [
+   "S93-071-1.jpg",
+   "S93-071-2.jpg"
+  ],
+  "S93-072": [
+   "S93-072.jpg"
+  ],
+  "S93-073": [
+   "S93-073.jpg"
+  ],
+  "S93-074": [
+   "S93-074.jpg"
+  ]
+ },
+ "boxes": {
+  "S93-002": [
+   [
+    2370,
+    3395,
+    3050,
+    3775
+   ]
+  ],
+  "S93-005": [
+   [
+    85,
+    2320,
+    632,
+    2575
+   ]
+  ],
+  "S93-013": [
+   [
+    1165,
+    1435,
+    1490,
+    1720
+   ]
+  ],
+  "S93-014": [
+   [
+    190,
+    2095,
+    545,
+    2455
+   ]
+  ],
+  "S93-037": [
+   [
+    3555,
+    540,
+    4600,
+    1200
+   ]
+  ],
+  "S93-052": [
+   [
+    190,
+    1655,
+    860,
+    2080
+   ]
+  ],
+  "S93-060": [
+   [
+    1540,
+    4440,
+    2200,
+    4670
+   ],
+   [
+    2300,
+    845,
+    2975,
+    1085
+   ]
+  ]
+ },
+ "notes": {
+  "S93-002": "The RevX transcription stops after 'the Duke de Bourbon;' and runs on into the next paragraph; the older CA transcription has the rest of the paragraph, so the excerpt ends at 'Bourbon;'. The print has the whole paragraph, to 'and even their clothes.'",
+  "S93-005": "Prints 'the Count d'Artois', where NGz, GUS, MIR and KG have 'the Duke d'Artois'.",
+  "S93-006": "Prints 'the Count d'ARTOIS' (NGz, GUS, MIR and KG: 'the Duke') and 'in the greatest distresses, wandering and dispersing', where most printings have 'distress' and 'dispersed'.",
+  "S93-007": "Printed without the Brussels dateline, under an italic heading that appears to read 'Austrian Netherlands'; prints 'the Count d'Artois' and 'distresses, wandering & dispersing'.",
+  "S93-008": "Prints 'the Duke D'BOURBON', where the others have 'de Bourbon'.",
+  "S93-003": "The letter's date is given in the introduction: 'dated Brussels, Nov. 14'.",
+  "S93-011": "Dated 'Brussels, November 22.', the date of the sitting, where the other printings date the letter 14 November.",
+  "S93-012": "Dated 'Brussels, Nov. 12.', where the other printings have 14 November.",
+  "S93-014": "A second scanned copy of this issue (edition 2) exists; the item was not found in its transcriptions. Prints 'my bare comrades', where the others have 'brave'.",
+  "S93-017": "Headed 'DUMOURIER'S FLIGHT. BRUSSELS, April 2.'; prints 'what Dumourier', without 'M.'",
+  "S93-020": "Prints 'Gen. Clairfait', 'Mons. Comte Starenberg' and '8 or 9 prisoners'.",
+  "S93-022": "Headed 'BRUSSELS, March 31.' and dates the letter 'Tourney, April 3, 1793', where NGz, GUS, PG and KG have 31 March; prints 'Conte Starenberg'.",
+  "S93-024": "Headed 'MARCH 31.' and dates the letter 'Tournay, April 3, 1793' (NGz, GUS, PG and KG: 31 March); prints 'at Mons, Conte Starenberg' without 'to'.",
+  "S93-026": "Printed in an Extra of Wednesday 5 June; the paper appeared on Mondays. Dates the letter 'Tournay, April 3, 1793' (NGz, GUS, PG and KG: 31 March) and prints 'Conte Stabenberg'.",
+  "S93-031": "Printed again in the regular number of 10 June, after the Extra of 5 June. The same setting of type as the Extra of 5 June: 'Tournay, April 3, 1793' and 'Conte Stabenberg'.",
+  "S93-039": "A second scanned copy of this issue (edition 2) also holds the item. Prints the misprint 'Gneral Bournonville'.",
+  "S93-018": "Prints 'It is rumoured', without 'now'.",
+  "S93-023": "Prints 'In The Sun, of the 16th April', where the others have the 10th.",
+  "S93-025": "Printed among London paragraphs under the date 'APRIL 10.', without the New York introduction.",
+  "S93-032": "Printed among London paragraphs under the date 'April 10.—', without the New York introduction.",
+  "S93-040": "A second scanned copy of this issue (edition 2) also holds the item. Appears to print 'a great part of the army', where the others have 'his army'; the film is small and soft.",
+  "S93-028": "Printed in two parts; the second part is on page 1 of the issue of 8 June. Headed 'Gen. DUMOURIER's LETTER to the French Nation, dated Baths of St. Amand, April 2, 1793'; spells 'Honor'.",
+  "S93-035": "Continues on page 2. Spells 'honor'.",
+  "S93-037": "Printed under the heading 'Important Papers.', with an asterisk after 'Declaration to the French Nation'.",
+  "S93-038": "Prints 'THE General Chief, DUMOURIER' without 'in', 'Emperour', and an asterisk after 'Declaration to the French Nation'.",
+  "S93-043": "Prints 'said that he would appeal'.",
+  "S93-054": "Prints 'to inform, that' without 'the public', and 'had said he would appeal'.",
+  "S93-055": "Prints the words in quotation marks and italics: 'Appeal to the People from certain decisions of the President;'.",
+  "S93-057": "Prints 'we are asked', where the others have 'we were asked', and the words in quotation marks and italics.",
+  "S93-059": "Printed under 'From the NEW-YORK DIARY, of August 21.', without the letter's own dateline.",
+  "S93-068": "Prints 'from the French Republick'.",
+  "S93-063": "Dated 'Philadelphia, August 19, '93', where the other printings have 16 August.",
+  "S93-065": "Dated 'PHILADELPHIA, August 16.', without the year.",
+  "S93-067": "Headed with the misprint 'Mr. JEFFRSON's Answer.'",
+  "S93-044": "Printed without the heading 'Sea Monster', with a shorter introduction: 'Captain Crabtree, lately from the West Indies'.",
+  "S93-046": "Prints the misprint 'may be dependended on' and 'Mount-Desart island'.",
+  "S93-049": "Prints the misprint 'being on may Passage'.",
+  "S93-071": "Introduces the captain as 'who arrived at Frenchman's bay, and is at Portland', and prints 'a serpent of a most enormous' size.",
+  "S93-074": "Prints 'distant about ten leagues', where the others have 'nearly ten'.",
+  "S93-053": "Dated 'PHILADELPHIA, August 16.' (GUS: 'Philadelphia, Aug. 14.').",
+  "S93-056": "Prints 'arrived at Philadelphia' and 'in 9 days'.",
+  "S93-058": "The RevX transcription shortens the paragraph with '...' after 'nine days from Falmouth', dropping the account of the battle; the older CA transcription has it. The print has the whole paragraph, with the battle near Lisle and '17,000 men fell in the combat'; it reads 'arrived at Philadelphia'.",
+  "S93-070": "Prints 'to about the 22d of June', where the others have the 24th, and the misprint 'arrived a Madeira'."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1793 that reach 3 or more papers, long-running ones included (story_items.py --long-running, families of 3 or more papers rather than the default 4, because 1793 has few papers in print), were split into single printed items (items.json: 10 items in 7 papers, none in 8 or more, 22 in exactly 6). The script was also run with year 1792 over the 1793 pages (items_from_1792.json); none of those items reaches 6 papers. Two AI reviewers (Claude Fable) read the items of each half of the year in 4 or more papers and proposed the stories; each item's printings were looked for with phrase searches over all 1,751 pages of 1793 in both transcriptions (phrase_patterns.json, phrase_hits.json), and every hit was read. Papers with pages in a story's weeks but no printing were searched with loose keywords. Every admitted printing was then checked against its page scan (SCAN_PROTOCOL.md, scan_points.json).",
+  "selection_rule": "As for 1776, 1807 and 1808: a story needs one printed item found in 7 or more newspapers, counted item by item. No item of 1793 reaches 8 papers; every non-digest item in 7 papers was admitted. Where several documents belong to one affair, each is its own group under a parent story, and a sub-story may have fewer than 7 papers when its parent reaches 7 (the rule the owner agreed for 1776 round two): Dumouriez's address (6 papers), Saxe-Cobourg's proclamation of 5 April (5) and Jay and King's statement on Genet (5). The two titles of one renamed paper (the New-Hampshire Gazette at Portsmouth; Ranlet's paper at Exeter, the New Hampshire Gazetteer and then the American Herald of Liberty) were never counted twice toward a threshold; no admitted story's count depends on them. Both scanned copies of a Kentucky Gazette issue count once. A paper that printed an item again counts each printing. A 6-paper threshold for this year is proposed in the README and was not applied.",
+  "items_admitted": {
+   "emigrant-armies-disbanded": [
+    "I93-0004"
+   ],
+   "dumouriez-letter-brussels": [
+    "I93-0005"
+   ],
+   "clairfayt-letter-tournay": [
+    "I93-0002",
+    "I93-0121",
+    "I93-0122"
+   ],
+   "sun-rumour-dumouriez-left-army": [
+    "I93-0003"
+   ],
+   "dumouriez-address-french-nation": [
+    "I93-0020",
+    "I93-0021",
+    "I93-0022",
+    "I93-0023",
+    "I93-0024"
+   ],
+   "cobourg-proclamation-5-april": [
+    "I93-0064",
+    "I93-0066"
+   ],
+   "jay-king-statement-on-genet": [
+    "I93-0033"
+   ],
+   "genet-letter-to-the-president-13-august": [
+    "I93-0008",
+    "I93-0009"
+   ],
+   "jefferson-answer-to-genet-16-august": [
+    "I93-0010"
+   ],
+   "sea-serpent-captain-crabtree": [
+    "I93-0006"
+   ],
+   "madeira-report-battle-near-lisle": [
+    "I93-0007"
+   ]
+  },
+  "counted_item_by_item": {
+   "Giles's resolutions on the Secretary of the Treasury": "The item finder counts 7 papers and 17 printings. The resolutions as moved are in GUS 2 Mar, NGz 6 Mar, MIR 18 Mar and NHGA 19 Mar, and as the House journal of 28 February and 1 March in NGz 3 and 6 Apr, NHG 23 Apr and AHL 14 May: 6 catalogue numbers but 5 papers, because NHGA and NHG are one paper. The Kentucky Gazette prints only the debate, in which speakers quote single resolutions; votes and speeches in GUS and NGz were not counted.",
+   "Neighbouring paragraphs and chained items": "The finder joins neighbouring paragraphs of a news column into chains: the Brussels paragraph of 17 October 1792 stands beside a Rome paragraph (6 papers) and a paragraph on the suttlers of Clairfayt's army (5); the Madeira paragraph is chained to the Philadelphia paragraphs after it in GUS. Each group here is the single item. Dumouriez's address was split by the finder into five items and Saxe-Cobourg's two proclamations into four; they are one document and two documents.",
+   "Genet's letter and the answer": "Genet's letter of 13 August and the Secretary of State's answer of 16 August were printed together in all seven papers. They are two signed documents, each its own group under a parent, with Jay and King's statement, which the letter answers, as a third group.",
+   "Two settings of one paragraph": "The Sun paragraph of 10 April is printed with a New York introduction ('In the Sun, of the 10th April, which is the latest paper received') in GUS, NGz (1 June), PG and NHG, and among London paragraphs in NGz (29 May), AHL, MIR and KG; the paragraph itself is the same and is counted as one item.",
+   "Quotations": "Pages that only quote or answer an item were not counted: Jay and King's statement quoted in NGz 24 Aug, 4 and 21 Sep and in their own later statement (PG 23 Dec), and commented on in PG 2 Sep and CI 28 Aug."
+  },
+  "not_admitted": {
+   "The 1793 news that no single item carries to 7 papers": "The execution of Louis XVI (six different accounts, none in more than 5 of the 6 papers then in print), France's decree of war on Britain and Holland (5), the French Republic's letter to the United States (5), Giles's resolutions (5 papers), the neutrality proclamation (4 papers by its own text), Washington's second inauguration (4), Genet's arrival and the addresses to him (2 to 4 each), the yellow fever in Philadelphia (no shared item above 4 papers), Toulon (no item above 4), the President's address of 3 December (4 papers, all those then in print) and the Algerine captures (Church's circular, 3).",
+   "Candidates in 6 papers": "Proposed to the owner under a 6-paper threshold, not admitted: the list of the powers at war with France (two introductions, 3 + 3), the London Gazette bulletin from Tournai of 3 May, Hamilton's circular to the collectors with the President's rules on neutrality, the declaration of the President of the National Convention on a plot, the Cadiz letter of 24 June, the commissioners' letter on General Dampierre's death, and (needing framing) the War Office paragraph on the treaty commissioners at the Rapids of the Miami. Weaker: the Rome paragraph and the Paris 'sullen tranquillity' paragraph (digest paragraphs) and Captain Hacket's Amsterdam rumour (two wordings, 4 + 2).",
+   "Left out for framing": "The German Creek letter on a raid on the 'valley Indian towns' (6 papers), Captain Fanning's account of the burning of Cap Francais (6), the brig Mary's report of the dead at Cap Francais (6), the civil commissioners' proclamation giving liberty to the 'negro warriors' (4), the Fugitive Slave Act (its text in 2 papers), the letter of Polverel and Sonthonax to Genet (4), the prosecutions of Singleterry and Henfield (5; private seamen) and a killing near Middletown, New Jersey (5; private people).",
+   "Below 6 papers": "The Ostend news by the ship Fortitude (5), Jefferson's letter to the Philadelphia merchants on spoliations (5), Marat's funeral (5), the Convention's decree arresting foreigners (5, a digest paragraph), the revocation of vice-consul Duplaine's exequatur and Genet's answer (4 each), Saxe-Cobourg's proclamation of 9 April (5), Dumouriez's letter from Louvain (4), the ship William (5), and others listed in the README."
+  },
+  "data_issues": {
+   "Misdated issues": "Two Gazette of the United States issues are filed under dates their mastheads contradict, confirmed on the scans: the issue filed under 4 April 1793 is Saturday 4 May (Whole No. 419), and the one filed under 23 July is Saturday 13 July (No. 439). No admitted printing is on them (masthead_dates.csv).",
+   "A second scan filed under another date": "Pages 3 and 4 filed under the American Herald of Liberty of 2 July 1793 are a second scan of the 9 July issue's pages 3 and 4 (page 3 prints 'BOSTON, JULY 3' and the 9 July heading). No admitted printing is on them (page_date_flags.csv).",
+   "Misfiled RevX pages": "Two 1793 issues have RevX transcriptions filed one page off (Kentucky Gazette 6 April, edition 2; the Mirrour, 22 April). No admitted printing is on them.",
+   "The Kentucky Gazette of 1793": "Its 1793 mastheads agree with the filed dates (all 67 front pages read, both copies counted: 64 agree, and the other 3 are misread or misprinted days), unlike the Kentucky Gazette and General Advertiser of 1806 to 1808. Most issues were scanned twice (editions 1 and 2)."
+  }
+ },
+ "verdict_summary": {
+  "yes": 74
+ },
+ "transcription_summary": {
+  "faithful": 38,
+  "minor_errors": 34,
+  "major_problem": 2
+ },
+ "crop_methods": {
+  "pdf_text_layer": 67,
+  "manual_box": 7
+ }
+}

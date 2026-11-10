@@ -14,7 +14,7 @@ This folder holds the code that turns the archive into the data release and the 
 | `discover_topics.py` | Samples 4,100 pages, at most 100 per year and spread across the papers, and cuts them into 220-word passages. Fits the 24-topic model (TF-IDF and NMF), then fits it a second time from another random start to check stability. |
 | `recheck_full_corpus.py` | Applies the frozen model to all 77,749 usable pages without refitting, for trend checks, and runs the phrase-led evidence search. |
 
-## 2 · Reviewed stories (1797 and 1776)
+## 2 · Reviewed stories (1776, 1793, 1797, 1807 and 1808)
 
 | Script | What it does |
 |---|---|
@@ -23,11 +23,11 @@ This folder holds the code that turns the archive into the data release and the 
 | `reuse_1797.py` | Text reuse in 1797. It compares five-word fingerprints, then aligns the texts word by word: at least 80 words, at least 70% similar, at most 120 days apart. |
 | `reuse_families_1797.py` | Groups the 1797 matches into candidate story families, which were then read. |
 | `story_phrase_search_1797.py` | Phrase searches over all 1797 pages, to find printings the matcher missed. |
-| `year_search_pages.py` | For 1776 (or any year): writes the year's pages with both transcriptions, for the two scripts below. |
+| `year_search_pages.py` | For any year (used for 1776, 1793, 1807 and 1808): writes the year's pages with both transcriptions, for the two scripts below. |
 | `story_items.py` | Splits the year's matched stories into single printed items, since many join neighbouring items, and finds every page that prints each one. |
 | `story_phrase_search.py` | Phrase searches over the year's pages, in both transcriptions, to confirm the printings of the chosen items. |
 | `scan_ledger.py` | Downloads the pinned scan of every passage in a ledger and crops the passage for checking. |
-| `archive_data/ledgers/` | The review decisions. Each candidate is recorded as admitted, excluded or kept as a lead, with a reason and the scan findings. `make_stories_1776.py` writes the 1776 ledger from the chosen stories and the review findings. |
+| `archive_data/ledgers/` | The review decisions. Each candidate is recorded as admitted, excluded or kept as a lead, with a reason and the scan findings. `make_stories_1776.py` (and the scripts for 1793, 1807 and 1808 beside it) writes a year's ledger from the chosen stories and the review findings. |
 
 ## 3 · Matched stories, all years
 
@@ -52,7 +52,9 @@ This folder holds the code that turns the archive into the data release and the 
 | `add_reuse_layer.py`, `add_reuse_titles.py`, `add_story_topics.py` | Add the matched-story layers: v0.5.0, v0.5.1 and v0.5.2. |
 | `add_checks_layer.py`, `merge_printings.py` | v0.6.0: count each printing once per page, and add the transcription checks and the audit. |
 | `add_reviewed_topics.py` | v0.7.1: topics for reviewed groups added after the topic layer (the 1776 stories), from the same frozen model. |
-| `validate.py` | Integrity and count checks. Every release must pass them; v0.7.2 passes 545. |
+| `refile_revx_pages.py` | v0.8.1: files matched printings under the scan pages their RevX text transcribes, in the 133 issues whose RevX pages are stored under other pages. The check behind it is `revx_page_shift_check/check_page_shift.py`. |
+| `redate_issues.py` | v0.10.2: dates the 106 misfiled Kentucky Gazette issues as printed; ids keep the filed date. The checks behind it are `kentucky_gazette_dates/check_dates.py` (every masthead of the series) and `kentucky_gazette_dates/rematch.py` (the pages matched again in the windows of their printed dates). |
+| `validate.py` | Integrity and count checks. Every release must pass them; v0.10.2 passes 1,263. |
 | `consumer.py`, `check_consumers.py` | Read a release without the website, and check that the site agrees with the release. |
 
 Releases are never edited. New evidence always makes a new version; see [`archive_data/README.md`](archive_data/README.md) for the commands.
@@ -62,6 +64,8 @@ Releases are never edited. New evidence always makes a new version; see [`archiv
 | File | What it does |
 |---|---|
 | `build_pulse_explorer.py` | Builds the whole site from the current release: the pages, their data files, and the shared header and footer. |
-| `home.html`, `telescope.html`, `pulse_explorer.html`, `method.html`, `notes.html` | The page templates. |
-| `site_parts.py`, `site.css` | The header and footer that every page shares. |
+| `home.html`, `telescope.html`, `pulse_explorer.html`, `radio.html`, `exhibit.html`, `method.html`, `notes.html` | The page templates. |
+| `site_parts.py`, `site.css`, `glass.js` | The header and footer that every page shares, the styles and the glass controls. |
+| `radio.js`, `radio-voices.js` | The radio in the visitor's browser: the recorded voices, eSpeak voices made in a worker (meSpeak) where no recording exists, and the sounds. |
+| `audio_render.py`, `audio_manifest.json` | Records the radio's voices once, at build time, with Kokoro (an open speech model, Apache 2.0): the list of clips, the recording and the packs in [`site/audio/`](../site/audio). |
 | `export_public_repo.py` | Makes this repository from the working project. |

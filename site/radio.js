@@ -591,8 +591,16 @@ async function clipBuffer(id) {
   } catch { return null; }
 }
 // Several clips as one: the announcer's words with short breaths between them, then a longer pause before the reader.
+// Two announcers take turns, a man (am_michael, 'a:' clips) and a woman (af_heart, 'b:' clips): each introduction is
+// said whole by one of them, and the next introduction goes to the other. Pages ask for 'a:' clips; the host is chosen here.
+let hostTurn = 0;
 async function joinClips(ids) {
-  await loadClips(); if (!ids.length || !ids.every(hasClip)) return null;
+  await loadClips(); if (!ids.length) return null;
+  if (ids.some(id => id.startsWith('a:'))) {
+    const host = ['a:', 'b:'][hostTurn++ % 2], cast = ids.map(id => id.startsWith('a:') ? host + id.slice(2) : id);
+    if (cast.every(hasClip)) ids = cast;   // that host has every line; otherwise the first host speaks
+  }
+  if (!ids.every(hasClip)) return null;
   const bufs = await Promise.all(ids.map(clipBuffer)); if (bufs.some(b => !b)) return null;
   if (bufs.length === 1) return {buf: bufs[0], tier: clipIndex.clips[clipId(ids[0])][4]};
   const rate = bufs[0].sampleRate, gaps = ids.map((id, k) => k === ids.length - 1 ? 0 : clipIndex.clips[clipId(ids[k + 1])][4] > 0 ? .4 : .1);

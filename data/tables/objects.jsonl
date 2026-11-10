@@ -21,11 +21,20 @@
 {"id":"concept:politics","kind":"concept","label":"politics"}
 {"id":"concept:seizure","kind":"concept","label":"seizure"}
 {"id":"document:asp2:p62:item19","kind":"document_fragment","label":"American State Papers, Foreign Relations, vol. 2, p. 62, item 19"}
+{"id":"group:adams-resigns-senate","kind":"group","label":"John Quincy Adams resigns from the Senate"}
 {"id":"group:adams-senate-farewell","kind":"group","label":"Adams's farewell to the Senate"}
 {"id":"group:adams-special-session-speech","kind":"group","label":"Adams's speech to Congress"}
 {"id":"group:algerine-sicilian-battle","kind":"group","label":"Algerine–Sicilian sea battle"}
+{"id":"group:algiers-1808","kind":"group","label":"Algiers and the American ships, 1808"}
+{"id":"group:algiers-war-report","kind":"group","label":"New Bedford: 'War with Algiers'"}
+{"id":"group:alicante-letter-aranjuez-rumour","kind":"group","label":"Alicante letter: 'a rumour being spread at Aranjuez'"}
+{"id":"group:alicante-letter-guards-ordered","kind":"group","label":"Alicante letter: the guards ordered to Aranjuez"}
+{"id":"group:alicante-letters-1808","kind":"group","label":"Revolution in Spain: two letters from Alicante"}
+{"id":"group:amsterdam-letter-milan-decree","kind":"group","label":"An Amsterdam letter on the Milan decree"}
 {"id":"group:antwerp-letter-capture-order","kind":"group","label":"An Antwerp letter: ships to or from England to be taken"}
+{"id":"group:arcturus-news-from-spain","kind":"group","label":"News from Spain by the Arcturus"}
 {"id":"group:armistice-france-russia","kind":"group","label":"Armistice between France and Russia"}
+{"id":"group:armstrong-letter-28-august","kind":"group","label":"Armstrong to Madison, 28 August"}
 {"id":"group:barney-escapes-blockade","kind":"group","label":"Barney escapes the blockade"}
 {"id":"group:barry-takes-edward","kind":"group","label":"Barry takes the Edward"}
 {"id":"group:bennigsen-pultusk-account","kind":"group","label":"Bennigsen's account of Pultusk"}
@@ -38,6 +47,7 @@
 {"id":"group:boyd-bantry-coverage","kind":"group","label":"Boyd / Bantry coverage"}
 {"id":"group:boyd-core-report","kind":"group","label":"Boyd fleet report"}
 {"id":"group:britain-answer-peace-or-war","kind":"group","label":"London: 'the question of peace or war'"}
+{"id":"group:british-instructions-11-april","kind":"group","label":"British instructions of 11 April on provisions for the colonies"}
 {"id":"group:brothers-privateer-boarding","kind":"group","label":"Brothers boarded by privateer"}
 {"id":"group:brown-house-fire","kind":"group","label":"Andrew Brown house fire"}
 {"id":"group:bulletin-66","kind":"group","label":"The French army's 66th bulletin"}
@@ -46,14 +56,24 @@
 {"id":"group:burr-conspiracy-message","kind":"group","label":"The President's message on the conspiracy"}
 {"id":"group:burr-in-arms-new-orleans","kind":"group","label":"News from New Orleans: 'Burr in arms'"}
 {"id":"group:burr-treason-verdict","kind":"group","label":"The verdict: 'not proved to be guilty'"}
+{"id":"group:cadiz-letter-24-june","kind":"group","label":"A letter from Cadiz, 24 June: 'a hot war with the Spaniards and French'"}
 {"id":"group:campbell-captured-letter","kind":"group","label":"Campbell's letter after his capture"}
 {"id":"group:camperdown-dispatches","kind":"group","label":"Duncan's Camperdown dispatches"}
+{"id":"group:canning-monroe-chesapeake-correspondence","kind":"group","label":"Canning and Monroe on the Chesapeake"}
+{"id":"group:canning-on-america-24-june","kind":"group","label":"Canning in the Commons on America, 24 June"}
+{"id":"group:canning-to-pinkney-23-september","kind":"group","label":"Canning's answer to Pinkney, 23 September"}
 {"id":"group:cayenne-decree-commentary","kind":"group","label":"Cayenne decree and commentary"}
 {"id":"group:cedars-cartel-report","kind":"group","label":"Congress on the Cedars cartel"}
+{"id":"group:champagny-letter-15-jan","kind":"group","label":"Champagny to Armstrong, 15 January 1808"}
+{"id":"group:charles-iv-appoints-murat","kind":"group","label":"Charles IV names Murat lieutenant-general of Spain"}
 {"id":"group:chesapeake-affair-1807","kind":"group","label":"The Chesapeake affair"}
 {"id":"group:chesapeake-attack-account","kind":"group","label":"The National Intelligencer's account of the attack"}
 {"id":"group:chesapeake-court-of-inquiry","kind":"group","label":"The court of inquiry on the Chesapeake"}
+{"id":"group:cintra-convention","kind":"group","label":"The convention for the evacuation of Portugal"}
+{"id":"group:clairfayt-letter-tournay","kind":"group","label":"Clairfayt's letter from Tournay: the commissioners sent as prisoners"}
+{"id":"group:clark-statement-on-wilkinson","kind":"group","label":"Daniel Clark's statement to the House"}
 {"id":"group:clearance-resolution-1794","kind":"group","label":"1794 clearance resolution"}
+{"id":"group:cobourg-proclamation-5-april","kind":"group","label":"The Prince of Saxe-Cobourg's proclamation to the French, 5 April 1793"}
 {"id":"group:conference-committee-departs","kind":"group","label":"Committee sets off to meet Lord Howe"}
 {"id":"group:conference-committee-report","kind":"group","label":"Committee's report on the conference"}
 {"id":"group:congress-bills-of-credit","kind":"group","label":"Congress on refusing Continental bills"}
@@ -62,18 +82,38 @@
 {"id":"group:congress-may-15-resolution","kind":"group","label":"Congress's resolution of 15 May"}
 {"id":"group:congress-opening-nov-1797","kind":"group","label":"Opening of Congress, November 1797"}
 {"id":"group:congress-opens-ports","kind":"group","label":"Congress opens the ports"}
+{"id":"group:convention-president-declaration-plot","kind":"group","label":"The President of the National Convention's declaration of a plot"}
+{"id":"group:conventions-in-portugal","kind":"group","label":"The conventions in Portugal, 1808"}
+{"id":"group:death-of-general-dampierre","kind":"group","label":"The commissioners' letter on General Dampierre's death"}
 {"id":"group:declaration-of-independence","kind":"group","label":"Declaration of Independence"}
+{"id":"group:decrees-on-neutral-trade","kind":"group","label":"Orders and decrees against neutral trade"}
+{"id":"group:dey-of-algiers-june","kind":"group","label":"Washington: the Dey of Algiers makes new demands"}
 {"id":"group:douglas-and-the-mayor-of-norfolk","kind":"group","label":"Commodore Douglas and the Mayor of Norfolk"}
 {"id":"group:douglas-letter-3-july","kind":"group","label":"Commodore Douglas's letter of 3 July"}
 {"id":"group:douglas-letter-6-july","kind":"group","label":"Commodore Douglas's letter of 6 July"}
 {"id":"group:driver-answer-charleston","kind":"group","label":"The Driver's commander answers"}
 {"id":"group:driver-at-charleston","kind":"group","label":"The Driver at Charleston"}
 {"id":"group:dublin-paper-naval-force","kind":"group","label":"A Dublin paper: British force coming"}
+{"id":"group:dumouriez-address-french-nation","kind":"group","label":"Dumouriez's address to the French nation, 2 April 1793"}
+{"id":"group:dumouriez-defection-1793","kind":"group","label":"Dumouriez's defection, April 1793"}
+{"id":"group:dumouriez-letter-brussels","kind":"group","label":"Dumouriez's letter on entering Brussels, 14 November 1792"}
 {"id":"group:eighty-eight-battalions","kind":"group","label":"Congress orders 88 battalions"}
+{"id":"group:embargo-act-22-dec-1807","kind":"group","label":"The Embargo Act of 22 December 1807"}
+{"id":"group:embargo-act-25-april","kind":"group","label":"The act of 25 April enforcing the embargo"}
+{"id":"group:embargo-additional-act-12-march","kind":"group","label":"The additional act of 12 March"}
+{"id":"group:embargo-in-force-spring-1808","kind":"group","label":"The embargo at home, spring 1808"}
+{"id":"group:embargo-laws","kind":"group","label":"The embargo laws"}
+{"id":"group:embargo-supplementary-act-9-jan","kind":"group","label":"The supplementary act of 9 January"}
+{"id":"group:embargo-suspension-act-22-april","kind":"group","label":"The act allowing the President to suspend the embargo"}
+{"id":"group:emigrant-armies-disbanded","kind":"group","label":"Brussels, 17 October 1792: the emigrant princes' armies disbanded"}
 {"id":"group:ethan-allen-cork","kind":"group","label":"Ethan Allen at Cork"}
 {"id":"group:fire-ships-attack-report","kind":"group","label":"Fire-ship attack"}
 {"id":"group:fleet-return-account","kind":"group","label":"Later fleet-return account"}
+{"id":"group:foreign-relations-report-22-november","kind":"group","label":"The House committee's report on foreign relations"}
 {"id":"group:gates-carleton-retreat","kind":"group","label":"Gates on Carleton's retreat"}
+{"id":"group:genet-appeal-to-the-people-1793","kind":"group","label":"Genêt and the President: the 'appeal to the people', 1793"}
+{"id":"group:genet-letter-to-the-president-13-august","kind":"group","label":"Genêt's letter to the President, 13 August 1793"}
+{"id":"group:georgia-letter-mobile-pensacola","kind":"group","label":"A Georgia letter: Mobile and Pensacola"}
 {"id":"group:gondolas-attack-report","kind":"group","label":"Row galleys attack the warships"}
 {"id":"group:harford-jones-russian-army","kind":"group","label":"Sir Harford Jones on the Russian army"}
 {"id":"group:havana-french-captures","kind":"group","label":"French captures at Havana"}
@@ -86,20 +126,33 @@
 {"id":"group:howe-declaration-september","kind":"group","label":"The declaration of 19 September"}
 {"id":"group:howe-declarations-1776","kind":"group","label":"The Howe brothers' declarations"}
 {"id":"group:hudson-warships-1776","kind":"group","label":"British warships in the Hudson"}
+{"id":"group:jay-king-statement-on-genet","kind":"group","label":"Jay and King: Genêt said he would appeal to the people"}
+{"id":"group:jefferson-answer-embargo-petitions","kind":"group","label":"Jefferson's answer to the petitions against the embargo"}
+{"id":"group:jefferson-answer-to-genet-16-august","kind":"group","label":"Jefferson's answer for the President, 16 August 1793"}
+{"id":"group:jefferson-answers-new-hampshire","kind":"group","label":"Jefferson's answer to the New Hampshire legislature"}
 {"id":"group:jefferson-madison-letter","kind":"group","label":"Jefferson's letter to Madison"}
 {"id":"group:july-2-proclamation","kind":"group","label":"The President's proclamation of 2 July"}
 {"id":"group:kalteisen-letter-driver","kind":"group","label":"Fort Johnson orders the Driver out"}
 {"id":"group:king-speech-may-1776","kind":"group","label":"The King's speech of May 1776"}
 {"id":"group:king-speech-october-1775","kind":"group","label":"The King's speech of October 1775"}
 {"id":"group:kosciuszko-land-warrant","kind":"group","label":"Kościuszko's land warrant"}
+{"id":"group:latest-from-portugal-dec-1807","kind":"group","label":"Lisbon under the French, December 1807"}
+{"id":"group:lear-circular-peace-with-algiers","kind":"group","label":"Lear's circular: peace with Algiers"}
 {"id":"group:london-address-to-king-1776","kind":"group","label":"London's address to the King"}
 {"id":"group:lubeck-stormed","kind":"group","label":"Lübeck stormed"}
+{"id":"group:madeira-report-battle-near-lisle","kind":"group","label":"By the brig Molly from Madeira: a battle near Lisle reported"}
+{"id":"group:madison-to-erskine-25-march","kind":"group","label":"Madison to Erskine on the Orders in Council, 25 March"}
 {"id":"group:marshall-commitment-opinion","kind":"group","label":"Marshall's opinion on committing Burr"}
 {"id":"group:marshall-october-opinion","kind":"group","label":"Marshall's opinion of 20 October"}
 {"id":"group:mayor-answer-4-july","kind":"group","label":"The Mayor's answer of 4 July"}
+{"id":"group:message-8-november","kind":"group","label":"The President's message of 8 November and its documents"}
+{"id":"group:message-8-november-text","kind":"group","label":"The President's message of 8 November"}
 {"id":"group:monroe-pinkney-treaty-letter","kind":"group","label":"Monroe and Pinkney: a treaty agreed"}
 {"id":"group:montgomery-letter-to-carleton","kind":"group","label":"Montgomery's letter to Carleton"}
 {"id":"group:nh-governor-address-1797","kind":"group","label":"New Hampshire governor's address"}
+{"id":"group:order-in-council-4-july","kind":"group","label":"The British order in council of 4 July: peace with Spain"}
+{"id":"group:orders-in-council-11-nov-1807","kind":"group","label":"The British Order in Council of 11 November 1807"}
+{"id":"group:papers-before-congress-march-1808","kind":"group","label":"The British and French papers laid before Congress, 1808"}
 {"id":"group:peace-and-plenty-boarding","kind":"group","label":"Peace and Plenty boarding"}
 {"id":"group:peace-and-plenty-report","kind":"group","label":"Peace and Plenty report"}
 {"id":"group:peace-cayenne-context","kind":"group","label":"Peace / Cayenne context"}
@@ -108,9 +161,15 @@
 {"id":"group:penn-examination-lords","kind":"group","label":"The Lords examine Governor Penn"}
 {"id":"group:penn-examined-report","kind":"group","label":"A London report: Penn examined"}
 {"id":"group:pennsylvania-new-instructions","kind":"group","label":"Pennsylvania's new instructions"}
+{"id":"group:powers-at-war-with-france-list","kind":"group","label":"The kings, princes and states at war with France"}
+{"id":"group:president-circular-governors-6-may","kind":"group","label":"The President's letter to the governors on flour"}
+{"id":"group:president-message-20-jan-wilkinson","kind":"group","label":"The President's message of 20 January on Wilkinson"}
+{"id":"group:president-message-22-march","kind":"group","label":"The President's message of 22 March"}
+{"id":"group:president-message-25-feb-military-force","kind":"group","label":"The President's message on more troops, February 1808"}
 {"id":"group:president-message-october-27","kind":"group","label":"The President's message of 27 October"}
 {"id":"group:prize-resolutions-extended","kind":"group","label":"Prize resolutions extended"}
 {"id":"group:proclamation-convening-congress","kind":"group","label":"The proclamation calling Congress"}
+{"id":"group:proclamation-lake-champlain","kind":"group","label":"The President's proclamation on Lake Champlain"}
 {"id":"group:prohibitory-bill-committee","kind":"group","label":"The Commons in committee on the bill"}
 {"id":"group:prohibitory-bill-commons","kind":"group","label":"The Prohibitory bill in the Commons"}
 {"id":"group:prohibitory-clause-settled","kind":"group","label":"The clause on captures settled"}
@@ -118,7 +177,11 @@
 {"id":"group:quebec-camp-letter","kind":"group","label":"Letter from the camp before Quebec"}
 {"id":"group:quebec-siege-1776","kind":"group","label":"Siege of Quebec"}
 {"id":"group:quito-earthquake","kind":"group","label":"Quito earthquake"}
+{"id":"group:reding-dispatch-baylen","kind":"group","label":"General Reding's dispatch on the battle of Baylen"}
 {"id":"group:rhode-island-renunciation","kind":"group","label":"Rhode Island renounces allegiance"}
+{"id":"group:rose-madison-letters","kind":"group","label":"Rose and Madison on Rose's mission"}
+{"id":"group:russian-fleet-tagus-convention","kind":"group","label":"The convention for the Russian fleet in the Tagus"}
+{"id":"group:sea-serpent-captain-crabtree","kind":"group","label":"Captain Crabtree's sea serpent"}
 {"id":"group:sloop-liberty-gunpowder","kind":"group","label":"The sloop Liberty's gunpowder taken"}
 {"id":"group:sonthonax-departure","kind":"group","label":"Sonthonax leaves Saint-Domingue"}
 {"id":"group:special-session-1797","kind":"group","label":"Special session of Congress, 1797"}
@@ -126,13 +189,19 @@
 {"id":"group:special-session-house-answer","kind":"group","label":"House's answer to the special-session speech"}
 {"id":"group:special-session-proclamation","kind":"group","label":"Proclamation summoning Congress"}
 {"id":"group:staten-island-conference","kind":"group","label":"Staten Island peace conference"}
+{"id":"group:sun-rumour-dumouriez-left-army","kind":"group","label":"The Sun of 10 April: Dumouriez rumoured to have left his army"}
 {"id":"group:tappan-meadows-report","kind":"group","label":"Boats driven off at Tappan"}
 {"id":"group:tazewell-report","kind":"group","label":"Tazewell's report to the Mayor"}
 {"id":"group:tenerife-defeat-report","kind":"group","label":"Tenerife defeat report"}
+{"id":"group:tournai-bulletin-3-may","kind":"group","label":"The London Gazette from Tournai, 3 May: the French attacks repulsed"}
+{"id":"group:treasury-circular-rules-on-neutrality","kind":"group","label":"Hamilton's circular to the collectors, with the President's rules on neutrality"}
 {"id":"group:two-sisters-wreck","kind":"group","label":"Two Sisters wreck"}
 {"id":"group:virginia-independence-resolution","kind":"group","label":"Virginia Convention, 15 May 1776"}
 {"id":"group:washington-patterson-interview","kind":"group","label":"Washington meets Colonel Patterson"}
 {"id":"group:wilkes-speech-commons","kind":"group","label":"Wilkes's speech in the Commons"}
+{"id":"group:wilkinson-accused","kind":"group","label":"Charges against General Wilkinson, 1808"}
+{"id":"group:wilkinson-court-of-inquiry","kind":"group","label":"The court of inquiry's opinion on Wilkinson"}
+{"id":"group:wilkinson-randolph-letters","kind":"group","label":"Wilkinson's challenge and Randolph's answer"}
 {"id":"obs:chain-20261030:H001","kind":"observation","label":"H001 · 1797-03-16"}
 {"id":"obs:chain-20261030:H002","kind":"observation","label":"H002 · 1797-03-25"}
 {"id":"obs:chain-20261030:H006","kind":"observation","label":"H006 · 1797-04-12"}
@@ -475,6 +544,117 @@
 {"id":"obs:expansion-1776:S76-331","kind":"observation","label":"S76-331 · 1776-11-29"}
 {"id":"obs:expansion-1776:S76-332","kind":"observation","label":"S76-332 · 1776-11-29"}
 {"id":"obs:expansion-1776:S76-333","kind":"observation","label":"S76-333 · 1776-12-10"}
+{"id":"obs:expansion-1793:S93-001","kind":"observation","label":"S93-001 · 1793-01-05"}
+{"id":"obs:expansion-1793:S93-002","kind":"observation","label":"S93-002 · 1793-01-05"}
+{"id":"obs:expansion-1793:S93-003","kind":"observation","label":"S93-003 · 1793-01-12"}
+{"id":"obs:expansion-1793:S93-004","kind":"observation","label":"S93-004 · 1793-01-12"}
+{"id":"obs:expansion-1793:S93-005","kind":"observation","label":"S93-005 · 1793-01-14"}
+{"id":"obs:expansion-1793:S93-006","kind":"observation","label":"S93-006 · 1793-01-16"}
+{"id":"obs:expansion-1793:S93-007","kind":"observation","label":"S93-007 · 1793-01-16"}
+{"id":"obs:expansion-1793:S93-008","kind":"observation","label":"S93-008 · 1793-01-21"}
+{"id":"obs:expansion-1793:S93-009","kind":"observation","label":"S93-009 · 1793-01-23"}
+{"id":"obs:expansion-1793:S93-010","kind":"observation","label":"S93-010 · 1793-01-23"}
+{"id":"obs:expansion-1793:S93-011","kind":"observation","label":"S93-011 · 1793-01-28"}
+{"id":"obs:expansion-1793:S93-012","kind":"observation","label":"S93-012 · 1793-01-28"}
+{"id":"obs:expansion-1793:S93-013","kind":"observation","label":"S93-013 · 1793-02-09"}
+{"id":"obs:expansion-1793:S93-014","kind":"observation","label":"S93-014 · 1793-03-02"}
+{"id":"obs:expansion-1793:S93-015","kind":"observation","label":"S93-015 · 1793-05-29"}
+{"id":"obs:expansion-1793:S93-016","kind":"observation","label":"S93-016 · 1793-05-29"}
+{"id":"obs:expansion-1793:S93-017","kind":"observation","label":"S93-017 · 1793-05-29"}
+{"id":"obs:expansion-1793:S93-018","kind":"observation","label":"S93-018 · 1793-05-29"}
+{"id":"obs:expansion-1793:S93-019","kind":"observation","label":"S93-019 · 1793-06-01"}
+{"id":"obs:expansion-1793:S93-020","kind":"observation","label":"S93-020 · 1793-06-03"}
+{"id":"obs:expansion-1793:S93-021","kind":"observation","label":"S93-021 · 1793-06-03"}
+{"id":"obs:expansion-1793:S93-022","kind":"observation","label":"S93-022 · 1793-06-04"}
+{"id":"obs:expansion-1793:S93-023","kind":"observation","label":"S93-023 · 1793-06-04"}
+{"id":"obs:expansion-1793:S93-024","kind":"observation","label":"S93-024 · 1793-06-04"}
+{"id":"obs:expansion-1793:S93-025","kind":"observation","label":"S93-025 · 1793-06-04"}
+{"id":"obs:expansion-1793:S93-026","kind":"observation","label":"S93-026 · 1793-06-05"}
+{"id":"obs:expansion-1793:S93-027","kind":"observation","label":"S93-027 · 1793-06-05"}
+{"id":"obs:expansion-1793:S93-028","kind":"observation","label":"S93-028 · 1793-06-05"}
+{"id":"obs:expansion-1793:S93-029","kind":"observation","label":"S93-029 · 1793-06-05"}
+{"id":"obs:expansion-1793:S93-030","kind":"observation","label":"S93-030 · 1793-06-05"}
+{"id":"obs:expansion-1793:S93-031","kind":"observation","label":"S93-031 · 1793-06-10"}
+{"id":"obs:expansion-1793:S93-032","kind":"observation","label":"S93-032 · 1793-06-10"}
+{"id":"obs:expansion-1793:S93-033","kind":"observation","label":"S93-033 · 1793-06-17"}
+{"id":"obs:expansion-1793:S93-034","kind":"observation","label":"S93-034 · 1793-06-17"}
+{"id":"obs:expansion-1793:S93-035","kind":"observation","label":"S93-035 · 1793-06-18"}
+{"id":"obs:expansion-1793:S93-036","kind":"observation","label":"S93-036 · 1793-06-18"}
+{"id":"obs:expansion-1793:S93-037","kind":"observation","label":"S93-037 · 1793-06-18"}
+{"id":"obs:expansion-1793:S93-038","kind":"observation","label":"S93-038 · 1793-06-24"}
+{"id":"obs:expansion-1793:S93-039","kind":"observation","label":"S93-039 · 1793-06-29"}
+{"id":"obs:expansion-1793:S93-040","kind":"observation","label":"S93-040 · 1793-06-29"}
+{"id":"obs:expansion-1793:S93-041","kind":"observation","label":"S93-041 · 1793-07-01"}
+{"id":"obs:expansion-1793:S93-042","kind":"observation","label":"S93-042 · 1793-08-13"}
+{"id":"obs:expansion-1793:S93-043","kind":"observation","label":"S93-043 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-044","kind":"observation","label":"S93-044 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-045","kind":"observation","label":"S93-045 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-046","kind":"observation","label":"S93-046 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-047","kind":"observation","label":"S93-047 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-048","kind":"observation","label":"S93-048 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-049","kind":"observation","label":"S93-049 · 1793-08-19"}
+{"id":"obs:expansion-1793:S93-050","kind":"observation","label":"S93-050 · 1793-08-20"}
+{"id":"obs:expansion-1793:S93-051","kind":"observation","label":"S93-051 · 1793-08-24"}
+{"id":"obs:expansion-1793:S93-052","kind":"observation","label":"S93-052 · 1793-08-24"}
+{"id":"obs:expansion-1793:S93-053","kind":"observation","label":"S93-053 · 1793-08-26"}
+{"id":"obs:expansion-1793:S93-054","kind":"observation","label":"S93-054 · 1793-08-26"}
+{"id":"obs:expansion-1793:S93-055","kind":"observation","label":"S93-055 · 1793-08-27"}
+{"id":"obs:expansion-1793:S93-056","kind":"observation","label":"S93-056 · 1793-08-27"}
+{"id":"obs:expansion-1793:S93-057","kind":"observation","label":"S93-057 · 1793-08-27"}
+{"id":"obs:expansion-1793:S93-058","kind":"observation","label":"S93-058 · 1793-08-27"}
+{"id":"obs:expansion-1793:S93-059","kind":"observation","label":"S93-059 · 1793-08-28"}
+{"id":"obs:expansion-1793:S93-060","kind":"observation","label":"S93-060 · 1793-08-28"}
+{"id":"obs:expansion-1793:S93-061","kind":"observation","label":"S93-061 · 1793-09-02"}
+{"id":"obs:expansion-1793:S93-062","kind":"observation","label":"S93-062 · 1793-09-02"}
+{"id":"obs:expansion-1793:S93-063","kind":"observation","label":"S93-063 · 1793-09-02"}
+{"id":"obs:expansion-1793:S93-064","kind":"observation","label":"S93-064 · 1793-09-03"}
+{"id":"obs:expansion-1793:S93-065","kind":"observation","label":"S93-065 · 1793-09-03"}
+{"id":"obs:expansion-1793:S93-066","kind":"observation","label":"S93-066 · 1793-09-03"}
+{"id":"obs:expansion-1793:S93-067","kind":"observation","label":"S93-067 · 1793-09-03"}
+{"id":"obs:expansion-1793:S93-068","kind":"observation","label":"S93-068 · 1793-09-04"}
+{"id":"obs:expansion-1793:S93-069","kind":"observation","label":"S93-069 · 1793-09-04"}
+{"id":"obs:expansion-1793:S93-070","kind":"observation","label":"S93-070 · 1793-09-04"}
+{"id":"obs:expansion-1793:S93-071","kind":"observation","label":"S93-071 · 1793-09-04"}
+{"id":"obs:expansion-1793:S93-072","kind":"observation","label":"S93-072 · 1793-09-09"}
+{"id":"obs:expansion-1793:S93-073","kind":"observation","label":"S93-073 · 1793-09-09"}
+{"id":"obs:expansion-1793:S93-074","kind":"observation","label":"S93-074 · 1793-09-09"}
+{"id":"obs:expansion-1793:S93-075","kind":"observation","label":"S93-075 · 1793-05-08"}
+{"id":"obs:expansion-1793:S93-076","kind":"observation","label":"S93-076 · 1793-05-11"}
+{"id":"obs:expansion-1793:S93-077","kind":"observation","label":"S93-077 · 1793-05-14"}
+{"id":"obs:expansion-1793:S93-078","kind":"observation","label":"S93-078 · 1793-05-14"}
+{"id":"obs:expansion-1793:S93-079","kind":"observation","label":"S93-079 · 1793-05-27"}
+{"id":"obs:expansion-1793:S93-080","kind":"observation","label":"S93-080 · 1793-05-27"}
+{"id":"obs:expansion-1793:S93-081","kind":"observation","label":"S93-081 · 1793-06-29"}
+{"id":"obs:expansion-1793:S93-082","kind":"observation","label":"S93-082 · 1793-06-29"}
+{"id":"obs:expansion-1793:S93-083","kind":"observation","label":"S93-083 · 1793-07-09"}
+{"id":"obs:expansion-1793:S93-084","kind":"observation","label":"S93-084 · 1793-07-09"}
+{"id":"obs:expansion-1793:S93-085","kind":"observation","label":"S93-085 · 1793-07-15"}
+{"id":"obs:expansion-1793:S93-086","kind":"observation","label":"S93-086 · 1793-07-16"}
+{"id":"obs:expansion-1793:S93-087","kind":"observation","label":"S93-087 · 1793-07-22"}
+{"id":"obs:expansion-1793:S93-088","kind":"observation","label":"S93-088 · 1793-07-22"}
+{"id":"obs:expansion-1793:S93-089","kind":"observation","label":"S93-089 · 1793-07-27"}
+{"id":"obs:expansion-1793:S93-090","kind":"observation","label":"S93-090 · 1793-07-30"}
+{"id":"obs:expansion-1793:S93-091","kind":"observation","label":"S93-091 · 1793-08-03"}
+{"id":"obs:expansion-1793:S93-092","kind":"observation","label":"S93-092 · 1793-08-05"}
+{"id":"obs:expansion-1793:S93-093","kind":"observation","label":"S93-093 · 1793-08-05"}
+{"id":"obs:expansion-1793:S93-094","kind":"observation","label":"S93-094 · 1793-08-14"}
+{"id":"obs:expansion-1793:S93-095","kind":"observation","label":"S93-095 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-096","kind":"observation","label":"S93-096 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-097","kind":"observation","label":"S93-097 · 1793-08-17"}
+{"id":"obs:expansion-1793:S93-098","kind":"observation","label":"S93-098 · 1793-08-19"}
+{"id":"obs:expansion-1793:S93-099","kind":"observation","label":"S93-099 · 1793-08-19"}
+{"id":"obs:expansion-1793:S93-100","kind":"observation","label":"S93-100 · 1793-08-20"}
+{"id":"obs:expansion-1793:S93-101","kind":"observation","label":"S93-101 · 1793-08-20"}
+{"id":"obs:expansion-1793:S93-102","kind":"observation","label":"S93-102 · 1793-08-20"}
+{"id":"obs:expansion-1793:S93-103","kind":"observation","label":"S93-103 · 1793-08-20"}
+{"id":"obs:expansion-1793:S93-104","kind":"observation","label":"S93-104 · 1793-08-21"}
+{"id":"obs:expansion-1793:S93-105","kind":"observation","label":"S93-105 · 1793-08-26"}
+{"id":"obs:expansion-1793:S93-106","kind":"observation","label":"S93-106 · 1793-08-26"}
+{"id":"obs:expansion-1793:S93-107","kind":"observation","label":"S93-107 · 1793-08-27"}
+{"id":"obs:expansion-1793:S93-108","kind":"observation","label":"S93-108 · 1793-08-27"}
+{"id":"obs:expansion-1793:S93-109","kind":"observation","label":"S93-109 · 1793-09-02"}
+{"id":"obs:expansion-1793:S93-110","kind":"observation","label":"S93-110 · 1793-09-09"}
+{"id":"obs:expansion-1793:S93-111","kind":"observation","label":"S93-111 · 1793-09-14"}
 {"id":"obs:expansion-1797:E01","kind":"observation","label":"E01 · 1797-03-30"}
 {"id":"obs:expansion-1797:E02","kind":"observation","label":"E02 · 1797-10-13"}
 {"id":"obs:expansion-1797:E03","kind":"observation","label":"E03 · 1797-10-16"}
@@ -828,6 +1008,304 @@
 {"id":"obs:expansion-1807:S07-248","kind":"observation","label":"S07-248 · 1807-12-08"}
 {"id":"obs:expansion-1807:S07-249","kind":"observation","label":"S07-249 · 1807-12-10"}
 {"id":"obs:expansion-1807:S07-250","kind":"observation","label":"S07-250 · 1807-12-25"}
+{"id":"obs:expansion-1808:S08-001","kind":"observation","label":"S08-001 · 1808-01-01"}
+{"id":"obs:expansion-1808:S08-002","kind":"observation","label":"S08-002 · 1808-01-04"}
+{"id":"obs:expansion-1808:S08-003","kind":"observation","label":"S08-003 · 1808-01-05"}
+{"id":"obs:expansion-1808:S08-004","kind":"observation","label":"S08-004 · 1808-01-05"}
+{"id":"obs:expansion-1808:S08-005","kind":"observation","label":"S08-005 · 1808-01-07"}
+{"id":"obs:expansion-1808:S08-006","kind":"observation","label":"S08-006 · 1808-01-07"}
+{"id":"obs:expansion-1808:S08-007","kind":"observation","label":"S08-007 · 1808-01-08"}
+{"id":"obs:expansion-1808:S08-008","kind":"observation","label":"S08-008 · 1808-01-09"}
+{"id":"obs:expansion-1808:S08-009","kind":"observation","label":"S08-009 · 1808-01-11"}
+{"id":"obs:expansion-1808:S08-010","kind":"observation","label":"S08-010 · 1808-01-11"}
+{"id":"obs:expansion-1808:S08-011","kind":"observation","label":"S08-011 · 1808-01-15"}
+{"id":"obs:expansion-1808:S08-012","kind":"observation","label":"S08-012 · 1808-01-15"}
+{"id":"obs:expansion-1808:S08-013","kind":"observation","label":"S08-013 · 1808-01-15"}
+{"id":"obs:expansion-1808:S08-014","kind":"observation","label":"S08-014 · 1808-01-15"}
+{"id":"obs:expansion-1808:S08-015","kind":"observation","label":"S08-015 · 1808-01-18"}
+{"id":"obs:expansion-1808:S08-016","kind":"observation","label":"S08-016 · 1808-01-18"}
+{"id":"obs:expansion-1808:S08-017","kind":"observation","label":"S08-017 · 1808-01-21"}
+{"id":"obs:expansion-1808:S08-018","kind":"observation","label":"S08-018 · 1808-01-21"}
+{"id":"obs:expansion-1808:S08-019","kind":"observation","label":"S08-019 · 1808-01-22"}
+{"id":"obs:expansion-1808:S08-020","kind":"observation","label":"S08-020 · 1808-01-22"}
+{"id":"obs:expansion-1808:S08-021","kind":"observation","label":"S08-021 · 1808-01-22"}
+{"id":"obs:expansion-1808:S08-022","kind":"observation","label":"S08-022 · 1808-01-22"}
+{"id":"obs:expansion-1808:S08-023","kind":"observation","label":"S08-023 · 1808-01-23"}
+{"id":"obs:expansion-1808:S08-024","kind":"observation","label":"S08-024 · 1808-01-25"}
+{"id":"obs:expansion-1808:S08-025","kind":"observation","label":"S08-025 · 1808-01-25"}
+{"id":"obs:expansion-1808:S08-026","kind":"observation","label":"S08-026 · 1808-01-26"}
+{"id":"obs:expansion-1808:S08-027","kind":"observation","label":"S08-027 · 1808-01-26"}
+{"id":"obs:expansion-1808:S08-028","kind":"observation","label":"S08-028 · 1808-01-26"}
+{"id":"obs:expansion-1808:S08-029","kind":"observation","label":"S08-029 · 1808-01-26"}
+{"id":"obs:expansion-1808:S08-030","kind":"observation","label":"S08-030 · 1808-01-28"}
+{"id":"obs:expansion-1808:S08-031","kind":"observation","label":"S08-031 · 1808-01-29"}
+{"id":"obs:expansion-1808:S08-032","kind":"observation","label":"S08-032 · 1808-01-29"}
+{"id":"obs:expansion-1808:S08-033","kind":"observation","label":"S08-033 · 1808-02-01"}
+{"id":"obs:expansion-1808:S08-034","kind":"observation","label":"S08-034 · 1808-02-01"}
+{"id":"obs:expansion-1808:S08-035","kind":"observation","label":"S08-035 · 1808-02-02"}
+{"id":"obs:expansion-1808:S08-036","kind":"observation","label":"S08-036 · 1808-02-04"}
+{"id":"obs:expansion-1808:S08-037","kind":"observation","label":"S08-037 · 1808-02-05"}
+{"id":"obs:expansion-1808:S08-038","kind":"observation","label":"S08-038 · 1808-02-08"}
+{"id":"obs:expansion-1808:S08-039","kind":"observation","label":"S08-039 · 1808-02-08"}
+{"id":"obs:expansion-1808:S08-040","kind":"observation","label":"S08-040 · 1808-02-09"}
+{"id":"obs:expansion-1808:S08-041","kind":"observation","label":"S08-041 · 1808-02-09"}
+{"id":"obs:expansion-1808:S08-042","kind":"observation","label":"S08-042 · 1808-02-09"}
+{"id":"obs:expansion-1808:S08-043","kind":"observation","label":"S08-043 · 1808-02-09"}
+{"id":"obs:expansion-1808:S08-044","kind":"observation","label":"S08-044 · 1808-02-10"}
+{"id":"obs:expansion-1808:S08-045","kind":"observation","label":"S08-045 · 1808-02-10"}
+{"id":"obs:expansion-1808:S08-046","kind":"observation","label":"S08-046 · 1808-02-12"}
+{"id":"obs:expansion-1808:S08-047","kind":"observation","label":"S08-047 · 1808-02-12"}
+{"id":"obs:expansion-1808:S08-048","kind":"observation","label":"S08-048 · 1808-02-13"}
+{"id":"obs:expansion-1808:S08-049","kind":"observation","label":"S08-049 · 1808-02-15"}
+{"id":"obs:expansion-1808:S08-050","kind":"observation","label":"S08-050 · 1808-02-16"}
+{"id":"obs:expansion-1808:S08-051","kind":"observation","label":"S08-051 · 1808-02-17"}
+{"id":"obs:expansion-1808:S08-052","kind":"observation","label":"S08-052 · 1808-02-17"}
+{"id":"obs:expansion-1808:S08-053","kind":"observation","label":"S08-053 · 1808-02-19"}
+{"id":"obs:expansion-1808:S08-054","kind":"observation","label":"S08-054 · 1808-02-19"}
+{"id":"obs:expansion-1808:S08-055","kind":"observation","label":"S08-055 · 1808-02-20"}
+{"id":"obs:expansion-1808:S08-056","kind":"observation","label":"S08-056 · 1808-02-22"}
+{"id":"obs:expansion-1808:S08-057","kind":"observation","label":"S08-057 · 1808-02-23"}
+{"id":"obs:expansion-1808:S08-058","kind":"observation","label":"S08-058 · 1808-02-23"}
+{"id":"obs:expansion-1808:S08-059","kind":"observation","label":"S08-059 · 1808-02-23"}
+{"id":"obs:expansion-1808:S08-060","kind":"observation","label":"S08-060 · 1808-02-23"}
+{"id":"obs:expansion-1808:S08-061","kind":"observation","label":"S08-061 · 1808-02-26"}
+{"id":"obs:expansion-1808:S08-062","kind":"observation","label":"S08-062 · 1808-02-29"}
+{"id":"obs:expansion-1808:S08-063","kind":"observation","label":"S08-063 · 1808-02-29"}
+{"id":"obs:expansion-1808:S08-064","kind":"observation","label":"S08-064 · 1808-02-29"}
+{"id":"obs:expansion-1808:S08-065","kind":"observation","label":"S08-065 · 1808-03-03"}
+{"id":"obs:expansion-1808:S08-066","kind":"observation","label":"S08-066 · 1808-03-03"}
+{"id":"obs:expansion-1808:S08-067","kind":"observation","label":"S08-067 · 1808-03-04"}
+{"id":"obs:expansion-1808:S08-068","kind":"observation","label":"S08-068 · 1808-03-04"}
+{"id":"obs:expansion-1808:S08-069","kind":"observation","label":"S08-069 · 1808-03-04"}
+{"id":"obs:expansion-1808:S08-070","kind":"observation","label":"S08-070 · 1808-03-04"}
+{"id":"obs:expansion-1808:S08-071","kind":"observation","label":"S08-071 · 1808-03-04"}
+{"id":"obs:expansion-1808:S08-072","kind":"observation","label":"S08-072 · 1808-03-04"}
+{"id":"obs:expansion-1808:S08-073","kind":"observation","label":"S08-073 · 1808-03-08"}
+{"id":"obs:expansion-1808:S08-074","kind":"observation","label":"S08-074 · 1808-03-08"}
+{"id":"obs:expansion-1808:S08-075","kind":"observation","label":"S08-075 · 1808-03-10"}
+{"id":"obs:expansion-1808:S08-076","kind":"observation","label":"S08-076 · 1808-03-11"}
+{"id":"obs:expansion-1808:S08-077","kind":"observation","label":"S08-077 · 1808-03-14"}
+{"id":"obs:expansion-1808:S08-078","kind":"observation","label":"S08-078 · 1808-03-17"}
+{"id":"obs:expansion-1808:S08-079","kind":"observation","label":"S08-079 · 1808-03-18"}
+{"id":"obs:expansion-1808:S08-080","kind":"observation","label":"S08-080 · 1808-03-18"}
+{"id":"obs:expansion-1808:S08-081","kind":"observation","label":"S08-081 · 1808-03-25"}
+{"id":"obs:expansion-1808:S08-082","kind":"observation","label":"S08-082 · 1808-03-25"}
+{"id":"obs:expansion-1808:S08-083","kind":"observation","label":"S08-083 · 1808-03-25"}
+{"id":"obs:expansion-1808:S08-084","kind":"observation","label":"S08-084 · 1808-03-26"}
+{"id":"obs:expansion-1808:S08-085","kind":"observation","label":"S08-085 · 1808-03-28"}
+{"id":"obs:expansion-1808:S08-086","kind":"observation","label":"S08-086 · 1808-03-29"}
+{"id":"obs:expansion-1808:S08-087","kind":"observation","label":"S08-087 · 1808-03-29"}
+{"id":"obs:expansion-1808:S08-088","kind":"observation","label":"S08-088 · 1808-03-29"}
+{"id":"obs:expansion-1808:S08-089","kind":"observation","label":"S08-089 · 1808-03-30"}
+{"id":"obs:expansion-1808:S08-090","kind":"observation","label":"S08-090 · 1808-04-01"}
+{"id":"obs:expansion-1808:S08-091","kind":"observation","label":"S08-091 · 1808-04-01"}
+{"id":"obs:expansion-1808:S08-092","kind":"observation","label":"S08-092 · 1808-04-01"}
+{"id":"obs:expansion-1808:S08-093","kind":"observation","label":"S08-093 · 1808-04-01"}
+{"id":"obs:expansion-1808:S08-094","kind":"observation","label":"S08-094 · 1808-04-01"}
+{"id":"obs:expansion-1808:S08-095","kind":"observation","label":"S08-095 · 1808-04-04"}
+{"id":"obs:expansion-1808:S08-096","kind":"observation","label":"S08-096 · 1808-04-05"}
+{"id":"obs:expansion-1808:S08-097","kind":"observation","label":"S08-097 · 1808-04-05"}
+{"id":"obs:expansion-1808:S08-098","kind":"observation","label":"S08-098 · 1808-04-05"}
+{"id":"obs:expansion-1808:S08-099","kind":"observation","label":"S08-099 · 1808-04-05"}
+{"id":"obs:expansion-1808:S08-100","kind":"observation","label":"S08-100 · 1808-04-07"}
+{"id":"obs:expansion-1808:S08-101","kind":"observation","label":"S08-101 · 1808-04-07"}
+{"id":"obs:expansion-1808:S08-102","kind":"observation","label":"S08-102 · 1808-04-07"}
+{"id":"obs:expansion-1808:S08-103","kind":"observation","label":"S08-103 · 1808-04-08"}
+{"id":"obs:expansion-1808:S08-104","kind":"observation","label":"S08-104 · 1808-04-08"}
+{"id":"obs:expansion-1808:S08-105","kind":"observation","label":"S08-105 · 1808-04-08"}
+{"id":"obs:expansion-1808:S08-106","kind":"observation","label":"S08-106 · 1808-04-11"}
+{"id":"obs:expansion-1808:S08-107","kind":"observation","label":"S08-107 · 1808-04-11"}
+{"id":"obs:expansion-1808:S08-108","kind":"observation","label":"S08-108 · 1808-04-12"}
+{"id":"obs:expansion-1808:S08-109","kind":"observation","label":"S08-109 · 1808-04-12"}
+{"id":"obs:expansion-1808:S08-110","kind":"observation","label":"S08-110 · 1808-04-12"}
+{"id":"obs:expansion-1808:S08-111","kind":"observation","label":"S08-111 · 1808-04-14"}
+{"id":"obs:expansion-1808:S08-112","kind":"observation","label":"S08-112 · 1808-04-18"}
+{"id":"obs:expansion-1808:S08-113","kind":"observation","label":"S08-113 · 1808-04-20"}
+{"id":"obs:expansion-1808:S08-114","kind":"observation","label":"S08-114 · 1808-04-20"}
+{"id":"obs:expansion-1808:S08-115","kind":"observation","label":"S08-115 · 1808-04-21"}
+{"id":"obs:expansion-1808:S08-116","kind":"observation","label":"S08-116 · 1808-04-22"}
+{"id":"obs:expansion-1808:S08-117","kind":"observation","label":"S08-117 · 1808-04-25"}
+{"id":"obs:expansion-1808:S08-118","kind":"observation","label":"S08-118 · 1808-04-26"}
+{"id":"obs:expansion-1808:S08-119","kind":"observation","label":"S08-119 · 1808-04-27"}
+{"id":"obs:expansion-1808:S08-120","kind":"observation","label":"S08-120 · 1808-04-29"}
+{"id":"obs:expansion-1808:S08-121","kind":"observation","label":"S08-121 · 1808-04-29"}
+{"id":"obs:expansion-1808:S08-122","kind":"observation","label":"S08-122 · 1808-04-29"}
+{"id":"obs:expansion-1808:S08-123","kind":"observation","label":"S08-123 · 1808-05-02"}
+{"id":"obs:expansion-1808:S08-124","kind":"observation","label":"S08-124 · 1808-05-02"}
+{"id":"obs:expansion-1808:S08-125","kind":"observation","label":"S08-125 · 1808-05-03"}
+{"id":"obs:expansion-1808:S08-126","kind":"observation","label":"S08-126 · 1808-05-03"}
+{"id":"obs:expansion-1808:S08-127","kind":"observation","label":"S08-127 · 1808-05-05"}
+{"id":"obs:expansion-1808:S08-128","kind":"observation","label":"S08-128 · 1808-05-05"}
+{"id":"obs:expansion-1808:S08-129","kind":"observation","label":"S08-129 · 1808-05-10"}
+{"id":"obs:expansion-1808:S08-130","kind":"observation","label":"S08-130 · 1808-05-10"}
+{"id":"obs:expansion-1808:S08-131","kind":"observation","label":"S08-131 · 1808-05-13"}
+{"id":"obs:expansion-1808:S08-132","kind":"observation","label":"S08-132 · 1808-05-13"}
+{"id":"obs:expansion-1808:S08-133","kind":"observation","label":"S08-133 · 1808-05-14"}
+{"id":"obs:expansion-1808:S08-134","kind":"observation","label":"S08-134 · 1808-05-16"}
+{"id":"obs:expansion-1808:S08-135","kind":"observation","label":"S08-135 · 1808-05-16"}
+{"id":"obs:expansion-1808:S08-136","kind":"observation","label":"S08-136 · 1808-05-17"}
+{"id":"obs:expansion-1808:S08-137","kind":"observation","label":"S08-137 · 1808-05-17"}
+{"id":"obs:expansion-1808:S08-138","kind":"observation","label":"S08-138 · 1808-05-17"}
+{"id":"obs:expansion-1808:S08-139","kind":"observation","label":"S08-139 · 1808-05-17"}
+{"id":"obs:expansion-1808:S08-140","kind":"observation","label":"S08-140 · 1808-05-18"}
+{"id":"obs:expansion-1808:S08-141","kind":"observation","label":"S08-141 · 1808-05-18"}
+{"id":"obs:expansion-1808:S08-142","kind":"observation","label":"S08-142 · 1808-05-18"}
+{"id":"obs:expansion-1808:S08-143","kind":"observation","label":"S08-143 · 1808-05-19"}
+{"id":"obs:expansion-1808:S08-144","kind":"observation","label":"S08-144 · 1808-05-19"}
+{"id":"obs:expansion-1808:S08-145","kind":"observation","label":"S08-145 · 1808-05-19"}
+{"id":"obs:expansion-1808:S08-146","kind":"observation","label":"S08-146 · 1808-05-20"}
+{"id":"obs:expansion-1808:S08-147","kind":"observation","label":"S08-147 · 1808-05-20"}
+{"id":"obs:expansion-1808:S08-148","kind":"observation","label":"S08-148 · 1808-05-20"}
+{"id":"obs:expansion-1808:S08-149","kind":"observation","label":"S08-149 · 1808-05-20"}
+{"id":"obs:expansion-1808:S08-150","kind":"observation","label":"S08-150 · 1808-05-23"}
+{"id":"obs:expansion-1808:S08-151","kind":"observation","label":"S08-151 · 1808-05-23"}
+{"id":"obs:expansion-1808:S08-152","kind":"observation","label":"S08-152 · 1808-05-23"}
+{"id":"obs:expansion-1808:S08-153","kind":"observation","label":"S08-153 · 1808-05-23"}
+{"id":"obs:expansion-1808:S08-154","kind":"observation","label":"S08-154 · 1808-05-24"}
+{"id":"obs:expansion-1808:S08-155","kind":"observation","label":"S08-155 · 1808-05-24"}
+{"id":"obs:expansion-1808:S08-156","kind":"observation","label":"S08-156 · 1808-05-24"}
+{"id":"obs:expansion-1808:S08-157","kind":"observation","label":"S08-157 · 1808-05-24"}
+{"id":"obs:expansion-1808:S08-158","kind":"observation","label":"S08-158 · 1808-05-24"}
+{"id":"obs:expansion-1808:S08-159","kind":"observation","label":"S08-159 · 1808-05-24"}
+{"id":"obs:expansion-1808:S08-160","kind":"observation","label":"S08-160 · 1808-05-27"}
+{"id":"obs:expansion-1808:S08-161","kind":"observation","label":"S08-161 · 1808-05-27"}
+{"id":"obs:expansion-1808:S08-162","kind":"observation","label":"S08-162 · 1808-05-27"}
+{"id":"obs:expansion-1808:S08-163","kind":"observation","label":"S08-163 · 1808-05-27"}
+{"id":"obs:expansion-1808:S08-164","kind":"observation","label":"S08-164 · 1808-05-30"}
+{"id":"obs:expansion-1808:S08-165","kind":"observation","label":"S08-165 · 1808-05-30"}
+{"id":"obs:expansion-1808:S08-166","kind":"observation","label":"S08-166 · 1808-05-31"}
+{"id":"obs:expansion-1808:S08-167","kind":"observation","label":"S08-167 · 1808-05-31"}
+{"id":"obs:expansion-1808:S08-168","kind":"observation","label":"S08-168 · 1808-05-31"}
+{"id":"obs:expansion-1808:S08-169","kind":"observation","label":"S08-169 · 1808-06-01"}
+{"id":"obs:expansion-1808:S08-170","kind":"observation","label":"S08-170 · 1808-06-03"}
+{"id":"obs:expansion-1808:S08-171","kind":"observation","label":"S08-171 · 1808-06-13"}
+{"id":"obs:expansion-1808:S08-172","kind":"observation","label":"S08-172 · 1808-06-14"}
+{"id":"obs:expansion-1808:S08-173","kind":"observation","label":"S08-173 · 1808-06-16"}
+{"id":"obs:expansion-1808:S08-174","kind":"observation","label":"S08-174 · 1808-06-17"}
+{"id":"obs:expansion-1808:S08-175","kind":"observation","label":"S08-175 · 1808-06-17"}
+{"id":"obs:expansion-1808:S08-176","kind":"observation","label":"S08-176 · 1808-06-20"}
+{"id":"obs:expansion-1808:S08-177","kind":"observation","label":"S08-177 · 1808-06-21"}
+{"id":"obs:expansion-1808:S08-178","kind":"observation","label":"S08-178 · 1808-06-21"}
+{"id":"obs:expansion-1808:S08-179","kind":"observation","label":"S08-179 · 1808-06-21"}
+{"id":"obs:expansion-1808:S08-180","kind":"observation","label":"S08-180 · 1808-06-24"}
+{"id":"obs:expansion-1808:S08-181","kind":"observation","label":"S08-181 · 1808-06-24"}
+{"id":"obs:expansion-1808:S08-182","kind":"observation","label":"S08-182 · 1808-06-25"}
+{"id":"obs:expansion-1808:S08-183","kind":"observation","label":"S08-183 · 1808-06-28"}
+{"id":"obs:expansion-1808:S08-184","kind":"observation","label":"S08-184 · 1808-06-28"}
+{"id":"obs:expansion-1808:S08-185","kind":"observation","label":"S08-185 · 1808-06-28"}
+{"id":"obs:expansion-1808:S08-186","kind":"observation","label":"S08-186 · 1808-06-29"}
+{"id":"obs:expansion-1808:S08-187","kind":"observation","label":"S08-187 · 1808-07-01"}
+{"id":"obs:expansion-1808:S08-188","kind":"observation","label":"S08-188 · 1808-07-04"}
+{"id":"obs:expansion-1808:S08-189","kind":"observation","label":"S08-189 · 1808-07-04"}
+{"id":"obs:expansion-1808:S08-190","kind":"observation","label":"S08-190 · 1808-07-05"}
+{"id":"obs:expansion-1808:S08-191","kind":"observation","label":"S08-191 · 1808-07-05"}
+{"id":"obs:expansion-1808:S08-192","kind":"observation","label":"S08-192 · 1808-07-08"}
+{"id":"obs:expansion-1808:S08-193","kind":"observation","label":"S08-193 · 1808-07-08"}
+{"id":"obs:expansion-1808:S08-194","kind":"observation","label":"S08-194 · 1808-07-08"}
+{"id":"obs:expansion-1808:S08-195","kind":"observation","label":"S08-195 · 1808-07-08"}
+{"id":"obs:expansion-1808:S08-196","kind":"observation","label":"S08-196 · 1808-07-12"}
+{"id":"obs:expansion-1808:S08-197","kind":"observation","label":"S08-197 · 1808-07-27"}
+{"id":"obs:expansion-1808:S08-198","kind":"observation","label":"S08-198 · 1808-07-29"}
+{"id":"obs:expansion-1808:S08-199","kind":"observation","label":"S08-199 · 1808-07-29"}
+{"id":"obs:expansion-1808:S08-200","kind":"observation","label":"S08-200 · 1808-07-29"}
+{"id":"obs:expansion-1808:S08-201","kind":"observation","label":"S08-201 · 1808-08-01"}
+{"id":"obs:expansion-1808:S08-202","kind":"observation","label":"S08-202 · 1808-08-02"}
+{"id":"obs:expansion-1808:S08-203","kind":"observation","label":"S08-203 · 1808-08-05"}
+{"id":"obs:expansion-1808:S08-204","kind":"observation","label":"S08-204 · 1808-08-16"}
+{"id":"obs:expansion-1808:S08-205","kind":"observation","label":"S08-205 · 1808-08-22"}
+{"id":"obs:expansion-1808:S08-206","kind":"observation","label":"S08-206 · 1808-08-23"}
+{"id":"obs:expansion-1808:S08-207","kind":"observation","label":"S08-207 · 1808-08-24"}
+{"id":"obs:expansion-1808:S08-208","kind":"observation","label":"S08-208 · 1808-08-24"}
+{"id":"obs:expansion-1808:S08-209","kind":"observation","label":"S08-209 · 1808-08-26"}
+{"id":"obs:expansion-1808:S08-210","kind":"observation","label":"S08-210 · 1808-08-26"}
+{"id":"obs:expansion-1808:S08-211","kind":"observation","label":"S08-211 · 1808-08-26"}
+{"id":"obs:expansion-1808:S08-212","kind":"observation","label":"S08-212 · 1808-08-26"}
+{"id":"obs:expansion-1808:S08-213","kind":"observation","label":"S08-213 · 1808-08-27"}
+{"id":"obs:expansion-1808:S08-214","kind":"observation","label":"S08-214 · 1808-08-29"}
+{"id":"obs:expansion-1808:S08-215","kind":"observation","label":"S08-215 · 1808-08-29"}
+{"id":"obs:expansion-1808:S08-216","kind":"observation","label":"S08-216 · 1808-08-30"}
+{"id":"obs:expansion-1808:S08-217","kind":"observation","label":"S08-217 · 1808-08-30"}
+{"id":"obs:expansion-1808:S08-218","kind":"observation","label":"S08-218 · 1808-08-30"}
+{"id":"obs:expansion-1808:S08-219","kind":"observation","label":"S08-219 · 1808-08-30"}
+{"id":"obs:expansion-1808:S08-220","kind":"observation","label":"S08-220 · 1808-08-31"}
+{"id":"obs:expansion-1808:S08-221","kind":"observation","label":"S08-221 · 1808-08-31"}
+{"id":"obs:expansion-1808:S08-222","kind":"observation","label":"S08-222 · 1808-08-31"}
+{"id":"obs:expansion-1808:S08-223","kind":"observation","label":"S08-223 · 1808-09-02"}
+{"id":"obs:expansion-1808:S08-224","kind":"observation","label":"S08-224 · 1808-09-02"}
+{"id":"obs:expansion-1808:S08-225","kind":"observation","label":"S08-225 · 1808-09-09"}
+{"id":"obs:expansion-1808:S08-226","kind":"observation","label":"S08-226 · 1808-09-10"}
+{"id":"obs:expansion-1808:S08-227","kind":"observation","label":"S08-227 · 1808-09-12"}
+{"id":"obs:expansion-1808:S08-228","kind":"observation","label":"S08-228 · 1808-09-12"}
+{"id":"obs:expansion-1808:S08-229","kind":"observation","label":"S08-229 · 1808-09-13"}
+{"id":"obs:expansion-1808:S08-230","kind":"observation","label":"S08-230 · 1808-09-13"}
+{"id":"obs:expansion-1808:S08-231","kind":"observation","label":"S08-231 · 1808-09-14"}
+{"id":"obs:expansion-1808:S08-232","kind":"observation","label":"S08-232 · 1808-09-14"}
+{"id":"obs:expansion-1808:S08-233","kind":"observation","label":"S08-233 · 1808-09-14"}
+{"id":"obs:expansion-1808:S08-234","kind":"observation","label":"S08-234 · 1808-09-14"}
+{"id":"obs:expansion-1808:S08-235","kind":"observation","label":"S08-235 · 1808-09-16"}
+{"id":"obs:expansion-1808:S08-236","kind":"observation","label":"S08-236 · 1808-09-16"}
+{"id":"obs:expansion-1808:S08-237","kind":"observation","label":"S08-237 · 1808-09-16"}
+{"id":"obs:expansion-1808:S08-238","kind":"observation","label":"S08-238 · 1808-09-16"}
+{"id":"obs:expansion-1808:S08-239","kind":"observation","label":"S08-239 · 1808-09-19"}
+{"id":"obs:expansion-1808:S08-240","kind":"observation","label":"S08-240 · 1808-09-21"}
+{"id":"obs:expansion-1808:S08-241","kind":"observation","label":"S08-241 · 1808-09-22"}
+{"id":"obs:expansion-1808:S08-242","kind":"observation","label":"S08-242 · 1808-09-23"}
+{"id":"obs:expansion-1808:S08-243","kind":"observation","label":"S08-243 · 1808-09-26"}
+{"id":"obs:expansion-1808:S08-244","kind":"observation","label":"S08-244 · 1808-09-26"}
+{"id":"obs:expansion-1808:S08-245","kind":"observation","label":"S08-245 · 1808-09-27"}
+{"id":"obs:expansion-1808:S08-246","kind":"observation","label":"S08-246 · 1808-09-27"}
+{"id":"obs:expansion-1808:S08-247","kind":"observation","label":"S08-247 · 1808-09-30"}
+{"id":"obs:expansion-1808:S08-248","kind":"observation","label":"S08-248 · 1808-10-26"}
+{"id":"obs:expansion-1808:S08-249","kind":"observation","label":"S08-249 · 1808-10-26"}
+{"id":"obs:expansion-1808:S08-250","kind":"observation","label":"S08-250 · 1808-10-27"}
+{"id":"obs:expansion-1808:S08-251","kind":"observation","label":"S08-251 · 1808-10-28"}
+{"id":"obs:expansion-1808:S08-252","kind":"observation","label":"S08-252 · 1808-10-28"}
+{"id":"obs:expansion-1808:S08-253","kind":"observation","label":"S08-253 · 1808-10-28"}
+{"id":"obs:expansion-1808:S08-254","kind":"observation","label":"S08-254 · 1808-10-28"}
+{"id":"obs:expansion-1808:S08-255","kind":"observation","label":"S08-255 · 1808-10-28"}
+{"id":"obs:expansion-1808:S08-256","kind":"observation","label":"S08-256 · 1808-10-28"}
+{"id":"obs:expansion-1808:S08-257","kind":"observation","label":"S08-257 · 1808-10-28"}
+{"id":"obs:expansion-1808:S08-258","kind":"observation","label":"S08-258 · 1808-10-31"}
+{"id":"obs:expansion-1808:S08-259","kind":"observation","label":"S08-259 · 1808-11-04"}
+{"id":"obs:expansion-1808:S08-260","kind":"observation","label":"S08-260 · 1808-11-08"}
+{"id":"obs:expansion-1808:S08-261","kind":"observation","label":"S08-261 · 1808-11-09"}
+{"id":"obs:expansion-1808:S08-262","kind":"observation","label":"S08-262 · 1808-11-11"}
+{"id":"obs:expansion-1808:S08-263","kind":"observation","label":"S08-263 · 1808-11-11"}
+{"id":"obs:expansion-1808:S08-264","kind":"observation","label":"S08-264 · 1808-11-11"}
+{"id":"obs:expansion-1808:S08-265","kind":"observation","label":"S08-265 · 1808-11-11"}
+{"id":"obs:expansion-1808:S08-266","kind":"observation","label":"S08-266 · 1808-11-11"}
+{"id":"obs:expansion-1808:S08-267","kind":"observation","label":"S08-267 · 1808-11-11"}
+{"id":"obs:expansion-1808:S08-268","kind":"observation","label":"S08-268 · 1808-11-11"}
+{"id":"obs:expansion-1808:S08-269","kind":"observation","label":"S08-269 · 1808-11-14"}
+{"id":"obs:expansion-1808:S08-270","kind":"observation","label":"S08-270 · 1808-11-14"}
+{"id":"obs:expansion-1808:S08-271","kind":"observation","label":"S08-271 · 1808-11-15"}
+{"id":"obs:expansion-1808:S08-272","kind":"observation","label":"S08-272 · 1808-11-15"}
+{"id":"obs:expansion-1808:S08-273","kind":"observation","label":"S08-273 · 1808-11-15"}
+{"id":"obs:expansion-1808:S08-274","kind":"observation","label":"S08-274 · 1808-11-15"}
+{"id":"obs:expansion-1808:S08-275","kind":"observation","label":"S08-275 · 1808-11-16"}
+{"id":"obs:expansion-1808:S08-276","kind":"observation","label":"S08-276 · 1808-11-16"}
+{"id":"obs:expansion-1808:S08-277","kind":"observation","label":"S08-277 · 1808-11-16"}
+{"id":"obs:expansion-1808:S08-278","kind":"observation","label":"S08-278 · 1808-11-18"}
+{"id":"obs:expansion-1808:S08-279","kind":"observation","label":"S08-279 · 1808-11-18"}
+{"id":"obs:expansion-1808:S08-280","kind":"observation","label":"S08-280 · 1808-11-18"}
+{"id":"obs:expansion-1808:S08-281","kind":"observation","label":"S08-281 · 1808-11-21"}
+{"id":"obs:expansion-1808:S08-282","kind":"observation","label":"S08-282 · 1808-11-21"}
+{"id":"obs:expansion-1808:S08-283","kind":"observation","label":"S08-283 · 1808-11-22"}
+{"id":"obs:expansion-1808:S08-284","kind":"observation","label":"S08-284 · 1808-11-23"}
+{"id":"obs:expansion-1808:S08-285","kind":"observation","label":"S08-285 · 1808-11-23"}
+{"id":"obs:expansion-1808:S08-286","kind":"observation","label":"S08-286 · 1808-11-25"}
+{"id":"obs:expansion-1808:S08-287","kind":"observation","label":"S08-287 · 1808-11-25"}
+{"id":"obs:expansion-1808:S08-288","kind":"observation","label":"S08-288 · 1808-11-25"}
+{"id":"obs:expansion-1808:S08-289","kind":"observation","label":"S08-289 · 1808-11-25"}
+{"id":"obs:expansion-1808:S08-290","kind":"observation","label":"S08-290 · 1808-11-28"}
+{"id":"obs:expansion-1808:S08-291","kind":"observation","label":"S08-291 · 1808-11-28"}
+{"id":"obs:expansion-1808:S08-292","kind":"observation","label":"S08-292 · 1808-11-28"}
+{"id":"obs:expansion-1808:S08-293","kind":"observation","label":"S08-293 · 1808-11-29"}
+{"id":"obs:expansion-1808:S08-294","kind":"observation","label":"S08-294 · 1808-11-29"}
+{"id":"obs:expansion-1808:S08-295","kind":"observation","label":"S08-295 · 1808-11-29"}
+{"id":"obs:expansion-1808:S08-296","kind":"observation","label":"S08-296 · 1808-12-05"}
+{"id":"obs:expansion-1808:S08-297","kind":"observation","label":"S08-297 · 1808-12-06"}
+{"id":"obs:expansion-1808:S08-298","kind":"observation","label":"S08-298 · 1808-12-09"}
 {"id":"obs:relations-20261029:R01","kind":"observation","label":"R01 · 1793-11-12"}
 {"id":"obs:relations-20261029:R02","kind":"observation","label":"R02 · 1794-04-26"}
 {"id":"obs:relations-20261029:R03","kind":"observation","label":"R03 · 1794-05-20"}

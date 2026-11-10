@@ -1,4 +1,4 @@
-# Data release v0.8.1
+# Data release v0.10.2
 
 This is the data behind the site. It holds:
 
@@ -13,7 +13,7 @@ A release is never edited. New evidence makes a new version with its own checks:
 | Tier | Where | Checked against the scans? |
 |---|---|---|
 | **Reviewed stories:** 127 passages in 34 groups, with roles, notes and relations | `tables/` | Yes |
-| **Matched stories:** 48,127 stories found by shared wording, with 163,841 printings (one per page) | `derived/reuse_*.parquet` | Not one by one. Every printing has a machine check against the page's other transcription, and a random 200 stories were audited against the scans. |
+| **Matched stories:** 48,270 stories found by shared wording, with 164,698 printings (one per page) | `derived/reuse_*.parquet` | Not one by one. Every printing has a machine check against the page's other transcription, and a random 200 stories were audited against the scans. |
 
 **What the audit found:** 86% of matched stories are one item in every printing, and every located passage is on its page. But about 1 passage in 5, up to 1 in 3, has a misread word that changes a fact, so check the scan before quoting a matched transcription.
 

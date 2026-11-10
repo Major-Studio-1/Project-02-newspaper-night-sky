@@ -186,6 +186,30 @@ def validate(release):
               all(m[s+'_page_id'] == to.get(m[s+'_text_page_id'], m[s+'_text_page_id']) for m in ends for s in 'ab'))
         check('The page map and the refiling are recorded as automatic with no review',
               run_kind('run:revx-page-shift-check-v1') == ('automated', 0) and run_kind('run:revx-page-refile-v1') == ('automated', 0))
+    # Issue dates corrected (v0.10.1 on): ids keep the date the collection files an issue under (the keys of the source
+    # rows and scan files); issues.publication_date is the printed date, and every date of the derived layers follows it.
+    if db.execute("SELECT 1 FROM metadata WHERE key='issue_date_corrections'").fetchone():
+        issue_dates = dict(db.execute('SELECT id, publication_date FROM issues').fetchall())
+        page_dates = {p: issue_dates[i] for p, i in db.execute('SELECT id, issue_id FROM pages')}
+        fixes = [c for c in json.loads(db.execute("SELECT value_json FROM metadata WHERE key='table_corrections'").fetchone()[0]) if c['table'] == 'issues']
+        check('Every corrected issue keeps its filed date in its id and its printed date in publication_date',
+              bool(fixes) and all(c['column'] == 'publication_date' and c['id'].split(':')[2] == c['from'] and issue_dates[c['id']] == c['to'] for c in fixes))
+        dated = pq.read_table(release/'derived/reuse_family_appearances.parquet', columns=['family_id', 'page_id', 'publication_date']).to_pylist()
+        check('Every matched printing carries the publication date of its issue', all(p['publication_date'] == page_dates[p['page_id']] for p in dated))
+        firsts = {}
+        for p in dated:
+            lo, hi = firsts.get(p['family_id'], (p['publication_date'], p['publication_date']))
+            firsts[p['family_id']] = (min(lo, p['publication_date']), max(hi, p['publication_date']))
+        check('Every matched story runs from its first printing to its last',
+              all((f['first_date'], f['last_date']) == firsts[f['family_id']] for f in pq.read_table(release/'derived/reuse_families.parquet', columns=['family_id', 'first_date', 'last_date']).to_pylist()))
+        ends = pq.read_table(release/'derived/reuse_matches.parquet', columns=['a_page_id', 'b_page_id', 'a_date', 'b_date']).to_pylist()
+        ordinal = lambda d: datetime.date.fromisoformat(d).toordinal()
+        check('Every match end carries the publication date of its page, and no match pairs pages more than 120 days apart',
+              all(m['a_date'] == page_dates[m['a_page_id']] and m['b_date'] == page_dates[m['b_page_id']] and abs(ordinal(m['a_date']) - ordinal(m['b_date'])) <= 120 for m in ends))
+        census = pq.read_table(release/'derived/page_topic_census.parquet', columns=['page_id', 'date', 'year', 'month']).to_pylist()
+        check('Topic census dates follow their issues', all(r['date'] == page_dates[r['page_id']] and r['year'] == int(r['date'][:4]) and r['month'] == r['date'][5:7] for r in census))
+        check('The date correction and its new matches are recorded as automatic with no review',
+              all(run_kind(r) == ('automated', 0) for r in ('run:kentucky-gazette-dates-v1', 'run:kentucky-gazette-rematch-v1', 'run:story-topics-kentucky-gazette')))
     # English notes (v0.6.1 on): once table corrections exist, no current annotation or date role is left untranslated.
     if db.execute("SELECT 1 FROM metadata WHERE key='table_corrections'").fetchone():
         import re
