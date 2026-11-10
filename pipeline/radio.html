@@ -203,7 +203,7 @@ async function run() {
 function setOn(value) {
   on = value; $('power').setAttribute('aria-pressed', String(on)); $('power').querySelector('.lbl').textContent = on ? 'Turn off' : 'Turn on'; $('skip').disabled = !on;
   $('radio').setAttribute('aria-pressed', String(on)); try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { first = true; previous = null; Radio.cue('strings'); hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
+  if (on) { first = true; previous = null; Radio.welcome(); hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
   else { runToken++; Radio.stop(true); idle(); }
 }
 function tune(y) {

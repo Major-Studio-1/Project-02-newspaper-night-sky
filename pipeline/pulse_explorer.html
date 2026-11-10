@@ -370,6 +370,7 @@ function buildSky() {
     el.querySelector('button').addEventListener('click', open);
     el.querySelector('svg').addEventListener('click', open);
     el.addEventListener('pointerenter', ev => { if (ev.pointerType === 'mouse') { hover = focusFor(currentEvent(p.lccn)); renderConstellation(); radioHoverPaper(p.lccn); } });
+    el.addEventListener('pointerleave', ev => { if (ev.pointerType === 'mouse') { clearTimeout(paperDwell); if (hoverPaper === p.lccn && !Radio.live.has('paper:' + p.lccn)) hoverPaper = null; } });
     el.addEventListener('pointerleave', ev => { if (ev.pointerType === 'mouse' && hover) { hover = null; renderConstellation(); } });
     $('sky').append(el);
     return {id: p.lccn, paper: p, el, core: el.querySelector('.core'), wave: el.querySelector('.wave'), halo: el.querySelector('.halo'), ring: el.querySelector('.role-ring'),
@@ -991,11 +992,18 @@ function speakPaper(e, words = 14) {
   const n = nodeById.get(e.node), said = paperSays(e, words);
   Radio.live.play('paper:' + e.node, said.text, {pan: n && skyWidth ? Math.max(-.9, Math.min(.9, n.cx / skyWidth * 2 - 1)) : 0, ...Radio.live.voiceOf(e.node), label: said.label});
 }
-function radioHoverPaper(lccn) {   // the paper under the pointer reads; the one before stops, unless it was picked or selected
-  if (!radioOn || !lccn || lccn === hoverPaper) return;
-  const e = printingOf(lccn); if (!e) return;
-  if (hoverPaper && !pinnedPapers.has(hoverPaper)) Radio.live.stop('paper:' + hoverPaper);
-  hoverPaper = lccn; speakPaper(e, 14);
+let paperDwell = 0;
+// The paper under the pointer reads once the pointer has rested on it (120 ms); resting on another stops the first
+// (unless it was picked or selected). A paper can be heard again once its voice has ended.
+function radioHoverPaper(lccn) {
+  clearTimeout(paperDwell);
+  if (!radioOn || !lccn) return;
+  if (lccn === hoverPaper && Radio.live.has('paper:' + lccn)) return;
+  paperDwell = setTimeout(() => {
+    const e = printingOf(lccn); if (!e || !radioOn) return;
+    if (hoverPaper && hoverPaper !== lccn && !pinnedPapers.has(hoverPaper)) Radio.live.stop('paper:' + hoverPaper);
+    hoverPaper = lccn; speakPaper(e, 14);
+  }, 120);
 }
 function radioSelectPapers(list) {   // an area: these papers read together, and the ones before stop
   const keep = new Set(list);
@@ -1022,13 +1030,13 @@ function exhibitRead() {
 function setRadio(on) {
   radioOn = on; syncRadio(); tourHold = performance.now() + 600;
   try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { Radio.unlock(); Radio.live.preload(); Radio.cue('strings'); radioFirst = true; }
+  if (on) { Radio.unlock(); Radio.live.preload(); Radio.welcome(); radioFirst = true; }
   else { Radio.stop(true); pinnedPapers.clear(); hoverPaper = null; }
 }
 Radio.live.onChange(list => {
   const on = new Set(list.filter(v => v.key.startsWith('paper:')).map(v => v.key.slice(6)));
   for (const n of nodes) n.el.classList.toggle('on-air', on.has(n.id));
-  $('on-air-head').textContent = list.length ? 'On air' : 'Radio';
+  $('on-air-head').textContent = list.length ? (list.some(v => v.silent) ? 'On air · words only: no voice could be made' : 'On air') : 'Radio';
   const box = $('on-air-text'); box.replaceChildren();
   for (const v of list) { const line = document.createElement('span'); line.className = 'now'; line.style.display = 'block'; line.textContent = v.label; box.append(line); }
 });
@@ -1104,9 +1112,9 @@ if (Number(params.get('speed')) > 0) setSpeed(Number(params.get('speed')));   //
 let radioKept = null; try { radioKept = sessionStorage.getItem('nns-radio'); } catch {}
 if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !== 'off')) {
   radioOn = true; syncRadio();
-  let started = false; const start = () => { if (started) return; started = true; Radio.unlock(); Radio.live.preload(); Radio.cue('strings'); };
+  let started = false; const start = () => { if (started) return; started = true; Radio.unlock(); Radio.live.preload(); Radio.welcome(); };
   for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
-  start();
+  if (Radio.unlock()) Radio.live.preload();   // a page reached by a click on this site may already be allowed to play
 }
 syncTour();
 const yp = (params.get('years') || params.get('year') || '').trim(), ym = yp.match(/^(\d{4})(?:\s*[-–]\s*(\d{4}))?$/);

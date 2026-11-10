@@ -48,12 +48,14 @@ function clean(text) {
     .replace(/\s+/g, ' ').trim().replace(/^(?:…\s*)+/, '').replace(/(?:\s*…)+$/, '').trim();
 }
 // Sentences, each short enough that every browser reads it to the end (Chrome stops long utterances after about 15 s).
-function chunks(text, max = 170) {
+// A sentence is split only when it is long, at a semicolon or comma past the middle if there is one, so the voice does
+// not drop as if at a full stop in the middle of a clause.
+function chunks(text, max = 220) {
   const out = [];
   for (const s of text.split(/(?<=[.!?;])\s+(?=["“'‘(]?[A-Z0-9])/)) {
     let rest = s.trim();
     while (rest.length > max) {
-      let cut = rest.lastIndexOf(', ', max); if (cut < max * .4) cut = rest.lastIndexOf(' ', max); if (cut < 1) cut = max;
+      let cut = Math.max(rest.lastIndexOf('; ', max), rest.lastIndexOf(', ', max)); if (cut < max * .5) cut = rest.lastIndexOf(' ', max); if (cut < 1) cut = max;
       out.push(rest.slice(0, cut + 1).trim()); rest = rest.slice(cut + 1).trim();
     }
     if (rest) out.push(rest);
@@ -67,7 +69,8 @@ try { voiceName = localStorage.getItem('nns-radio-voice'); volume = Number(local
 if (!(volume >= 0 && volume <= 1)) volume = .8;
 function loadVoices() {
   if (!synth) return;
-  const score = v => (/natural|neural|online|premium|enhanced/i.test(v.name) ? 40 : 0) + (/google/i.test(v.name) ? 22 : 0)
+  const edge = /\bEdg\//.test(navigator.userAgent), natural = v => /natural|neural|premium|enhanced/i.test(v.name);
+  const score = v => (natural(v) && (edge || v.localService) ? 40 : 0) + (v.localService || (edge && natural(v)) ? 12 : -12)
     + (/samantha|daniel|karen|moira|serena|alex|ava|evan|zoe|aria|guy|jenny|libby|ryan|sonia|andrew|emma|brian/i.test(v.name) ? 14 : 0)
     + (/en[-_]US/i.test(v.lang) ? 4 : /en[-_]GB/i.test(v.lang) ? 3 : 0) + (v.default ? 1 : 0);
   voices = synth.getVoices().filter(v => /^en([-_]|$)/i.test(v.lang)).sort((a, b) => score(b) - score(a) || a.name.localeCompare(b.name));
@@ -77,32 +80,49 @@ function loadVoices() {
 const listeners = {voices: [], caption: [], state: [], live: []};
 if (synth) { loadVoices(); if (synth.addEventListener) synth.addEventListener('voiceschanged', loadVoices); else synth.onvoiceschanged = loadVoices; }
 
-let session = 0, speaking = false, unlocked = false;
+let session = 0, speaking = false, unlocked = false, current = null;   // current: the utterance being read, held so its end event arrives
 function speakOne(text, rate) {
   return new Promise(resolve => {
     if (!synth || !voices.length) return setTimeout(() => resolve(true), Math.max(1200, text.split(' ').length * 330 / rate));   // no voice: the words are shown for as long as reading them would take
     const u = new SpeechSynthesisUtterance(text);
     if (voice) { u.voice = voice; u.lang = voice.lang; } else u.lang = 'en-US';
     u.rate = rate; u.pitch = 1; u.volume = volume;
-    let done = false;
-    const finish = ok => { if (done) return; done = true; clearTimeout(watch); resolve(ok); };
+    let done = false; current = u;
+    const finish = ok => { if (done) return; done = true; clearTimeout(watch); if (current === u) current = null; resolve(ok); };
     // Stopped on purpose: at once. Not allowed yet (no touch so far) or failed: the words stay up for their reading time.
     u.onend = () => finish(true);
     u.onerror = e => ['interrupted', 'canceled'].includes(e.error) ? finish(false) : setTimeout(() => finish(true), Math.max(1200, text.split(' ').length * 330 / rate));
-    const watch = setTimeout(() => finish(true), 5000 + text.length * 140 / rate);   // some browsers never report the end
+    const watch = setTimeout(() => finish(true), 2000 + 1.6 * text.length / (14 * rate) * 1000);   // some browsers never report the end
     synth.speak(u);
   });
 }
 
 // ---- Sounds: made in the browser. A quiet radio bed, a sound for the town, and short cues ----
-let ctx = null, master = null, bed = null, townBus = null, townBed = null, crackleTimer = 0, noise = {};
+let ctx = null, master = null, bed = null, townBus = null, townBed = null, noise = {};
+// The context asks for steady playback (bigger buffers) rather than the smallest delay: nothing here needs a fast
+// response, and small buffers crackle when the computer is busy. A limiter is the last step, so voices together never clip.
 function audio() {
   if (!ctx) {
     const AC = window.AudioContext || window.webkitAudioContext; if (!AC) return null;
-    ctx = new AC(); master = ctx.createGain(); master.gain.value = volume; master.connect(ctx.destination);
+    try { ctx = new AC({latencyHint: 'playback'}); } catch { ctx = new AC(); }
+    master = ctx.createGain(); master.gain.value = volume;
+    const limit = ctx.createDynamicsCompressor(); limit.threshold.value = -3; limit.knee.value = 0; limit.ratio.value = 20; limit.attack.value = .003; limit.release.value = .25;
+    master.connect(limit).connect(ctx.destination);
+    // A hidden page goes quiet and lets the sound card rest; it comes back when the page does.
+    document.addEventListener('visibilitychange', () => {
+      if (!ctx) return;
+      if (document.hidden) { master.gain.setTargetAtTime(0, ctx.currentTime, .08); setTimeout(() => { if (document.hidden && ctx.state === 'running') ctx.suspend().catch(() => {}); }, 400); }
+      else ctx.resume().then(() => master.gain.setTargetAtTime(volume, ctx.currentTime, .1)).catch(() => {});
+    });
   }
-  if (ctx.state === 'suspended') ctx.resume().catch(() => {});
+  if (ctx.state === 'suspended' && !document.hidden) ctx.resume().catch(() => {});
   return ctx;
+}
+// Waits (briefly) for the context to run: resume() is asynchronous, so right after a touch the state can still say "suspended".
+function ready(ms = 1500) {
+  if (!audio()) return Promise.resolve(false);
+  if (ctx.state === 'running') return Promise.resolve(true);
+  return Promise.race([ctx.resume().then(() => ctx.state === 'running', () => false), wait(ms).then(() => ctx.state === 'running')]);
 }
 function noiseBuffer(kind) {
   if (noise[kind]) return noise[kind];
@@ -122,17 +142,11 @@ function gain(v) { const g = ctx.createGain(); g.gain.value = v; return g; }
 function startBed() {
   if (!audio() || bed) return;
   bed = gain(0); bed.connect(master);
-  const hiss = source('white'); hiss.connect(filter('bandpass', 2600, .6)).connect(gain(.010)).connect(bed); hiss.start();
-  const hum = ctx.createOscillator(); hum.frequency.value = 60; hum.connect(gain(.0035)).connect(bed); hum.start();
+  const hiss = source('white'); hiss.connect(filter('bandpass', 2600, .6)).connect(gain(.006)).connect(bed); hiss.start();
   bed.gain.setTargetAtTime(1, ctx.currentTime, .5);
   townBus = gain(1); townBus.connect(master);
-  crackleTimer = setInterval(() => {   // the crackle of an old set
-    if (!ctx || ctx.state !== 'running' || Math.random() > .3) return;
-    const s = source('click', false); s.connect(filter('highpass', 1800)).connect(gain(.012 + Math.random() * .04)).connect(bed); s.start(ctx.currentTime + Math.random() * .1);
-  }, 150);
 }
 function stopBed() {
-  clearInterval(crackleTimer); crackleTimer = 0;
   for (const g of [bed, townBus]) if (g) { g.gain.setTargetAtTime(0, ctx.currentTime, .25); const old = g; setTimeout(() => old.disconnect(), 1500); }
   bed = townBus = townBed = null;
 }
@@ -168,7 +182,12 @@ function bell(at, base, ratios, decay, level, out) {
   }
 }
 function cue(kind) {
-  if (!ctx || ctx.state !== 'running') return 0;
+  if (!ctx) return 0;
+  if (ctx.state !== 'running') {
+    const asked = performance.now();
+    ctx.resume().then(() => { if (ctx.state === 'running' && performance.now() - asked < 1500) cue(kind); }).catch(() => {});
+    return 0;
+  }
   const t = ctx.currentTime + .05, far = filter('lowpass', 2600); far.connect(townBus || master);
   const pan = ctx.createStereoPanner ? ctx.createStereoPanner() : null, out = pan ? (pan.connect(far), pan) : far;
   if (kind === 'chime') {   // the station's own call: a gentle rising arpeggio
@@ -271,9 +290,10 @@ function intro(item, greet, previous) {
   return {lines: [sameDay ? where : `${spokenDate(item.date, false).replace(/^the /, 'The ')}. ${where}`]};
 }
 async function say(item, {greet = false, previous = null, rate = 1, mode = 'full', chime = false} = {}) {
-  const my = ++session; if (synth) synth.cancel();
+  const my = ++session, busy = synth && (synth.speaking || synth.pending); if (synth) synth.cancel();
   const pace = () => typeof rate === 'function' ? rate() : rate;
   const live = () => my === session;
+  if (busy) await wait(60);
   startBed();
   const name = town(item.place), sc = scheme(name), head = intro(item, greet, previous);
   const body = mode === 'intro' ? '' : mode === 'title' ? clean(item.title) : clean(item.text || item.title);
@@ -308,8 +328,9 @@ async function say(item, {greet = false, previous = null, rate = 1, mode = 'full
 }
 // One spoken line of the radio's own, such as where else a story was printed.
 async function sayLine(text, {rate = 1, head = ''} = {}) {
-  const my = ++session; if (synth) synth.cancel();
+  const my = ++session, busy = synth && (synth.speaking || synth.pending); if (synth) synth.cancel();
   const live = () => my === session, lines = chunks(clean(text));
+  if (busy) await wait(60);
   startBed(); speaking = true; listeners.state.forEach(f => f('speaking'));
   try {
     for (let i = 0; i < lines.length; i++) {
@@ -336,59 +357,90 @@ function stop(silence = false) {
 // by where each story was printed and heard like a distant set in a small room. Moving on to another star stops the old
 // voice the way a hand stops a record (it slows, drops and fades, with a scratch) and spins the new one up. The browser's
 // own voice, which can say one thing at a time, stays for the Radio page. Nothing loads until the first voice is wanted.
-const LIVE_MAX = 5;
-let liveWorker = null, liveReady = null, liveSeq = 0, liveBus = null, scratchAt = 0;
-const liveWaiting = new Map(), live = new Map();   // key -> {src, g, label, text, ending}
-function liveStart() {
-  if (liveReady) return liveReady;
-  liveReady = new Promise(resolve => {
-    try { liveWorker = new Worker(new URL('radio-voices.js', document.baseURI), {type: 'module'}); } catch { resolve(false); return; }
-    liveWorker.onmessage = e => { const w = liveWaiting.get(e.data.id); if (w) { liveWaiting.delete(e.data.id); w(e.data); } };
-    liveWorker.onerror = () => resolve(false);
-    liveRender('Good morning.', {speed: 175}).then(out => resolve(!out.error));   // loads eSpeak once
-  });
-  liveReady.then(ok => { if (!ok) liveReady = null; });
-  return liveReady;
+const LIVE_MAX = 5, CACHE_MAX = 60;
+let liveWorker = null, engineLoaded = false, workerFails = 0, liveSeq = 0, liveBus = null, scratchAt = 0, inFlight = null;
+const live = new Map();     // key -> {src, g, label, text, ending, silent}
+const made = new Map();     // the last voices made, by text and voice, newest last: hearing a star again needs no new work
+const jobs = [];            // texts waiting for the worker, oldest first: {id, text, opts, wanted(), resolve}
+// One worker, fed one job at a time. A job nobody wants any more (the pointer moved on) is dropped before it is sent,
+// so a sweep across the sky never builds a queue. The job in flight has a timeout; if it fires, the worker is ended
+// and a new one made for the next job. After two failures in a row the voices give up and the captions carry the words.
+function newWorker() {
+  if (liveWorker) { try { liveWorker.terminate(); } catch {} }
+  liveWorker = null; engineLoaded = false;
+  try { liveWorker = new Worker(new URL('radio-voices.js', document.baseURI), {type: 'module'}); } catch { return false; }
+  liveWorker.onmessage = e => {
+    const job = inFlight; if (!job || job.id !== e.data.id) return;
+    clearTimeout(job.timer); inFlight = null;
+    if (e.data.error) workerFails++; else { workerFails = 0; engineLoaded = true; }
+    job.resolve(e.data); pump();
+  };
+  liveWorker.onerror = () => giveUp('error');
+  return true;
 }
-function liveRender(text, opts) {
-  return new Promise(resolve => {
-    const id = ++liveSeq; liveWaiting.set(id, resolve); liveWorker.postMessage({id, text, opts});
-    setTimeout(() => { if (liveWaiting.delete(id)) resolve({error: 'timeout'}); }, 8000);
-  });
+function giveUp(why) {
+  const job = inFlight; inFlight = null; if (job) { clearTimeout(job.timer); job.resolve({error: why}); }
+  workerFails++; if (liveWorker) { try { liveWorker.terminate(); } catch {} } liveWorker = null; engineLoaded = false;
+  pump();
 }
-const liveChanged = () => listeners.live.forEach(f => f([...live.entries()].filter(([, v]) => !v.ending).map(([key, v]) => ({key, label: v.label, text: v.text}))));
-function roomImpulse(c) {   // a small room: a second and a half of decaying noise
-  const len = Math.round(c.sampleRate * 1.5), b = c.createBuffer(2, len, c.sampleRate);
+function pump() {
+  if (inFlight) return;
+  while (jobs.length && !jobs[0].wanted()) jobs.shift().resolve({error: 'dropped'});
+  const job = jobs.shift(); if (!job) return;
+  if (workerFails >= 2 || (!liveWorker && !newWorker())) { job.resolve({error: 'unavailable'}); pump(); return; }
+  inFlight = job;
+  job.timer = setTimeout(() => giveUp('timeout'), engineLoaded ? 6000 : 25000);   // the first job also loads eSpeak (about 5.6 MB)
+  liveWorker.postMessage({id: job.id, text: job.text, opts: job.opts});
+}
+const make = (text, opts, wanted = () => true) => new Promise(resolve => { jobs.push({id: ++liveSeq, text, opts, wanted, resolve}); pump(); });
+function warm() { if (!engineLoaded && workerFails < 2 && !inFlight && !jobs.length) make('Good morning.', {speed: 175}); }   // loads eSpeak before the first voice is wanted
+const liveChanged = () => listeners.live.forEach(f => f([...live.entries()].filter(([, v]) => !v.ending).map(([key, v]) => ({key, label: v.label, text: v.text, silent: !!v.silent}))));
+function roomImpulse(c) {   // a small room: six tenths of a second of decaying noise
+  const len = Math.round(c.sampleRate * .6), b = c.createBuffer(2, len, c.sampleRate);
   for (let ch = 0; ch < 2; ch++) { const d = b.getChannelData(ch); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3.4); }
   return b;
 }
 function liveOut(c) {
   if (liveBus) return liveBus;
   liveBus = gain(1);
-  const squeeze = c.createDynamicsCompressor(); squeeze.threshold.value = -18; squeeze.ratio.value = 3.5;
-  liveBus.connect(filter('highpass', 220)).connect(filter('lowpass', 4200)).connect(squeeze).connect(master);
-  const room = c.createConvolver(); room.buffer = roomImpulse(c); squeeze.connect(room).connect(gain(.16)).connect(master);
+  const band = filter('lowpass', 4200); liveBus.connect(filter('highpass', 220)).connect(band).connect(master);
+  const room = c.createConvolver(); room.buffer = roomImpulse(c); band.connect(room).connect(gain(.12)).connect(master);
   return liveBus;
 }
-async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 50, level = .8, label = '', spin = true} = {}) {
-  const c = audio(); if (!c || c.state !== 'running' || !text) return false;
+async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 50, level = .5, label = '', spin = true} = {}) {
+  const c = audio(); if (!c || !text) return false;
   const now = live.get(key); if (now && !now.ending) return true;   // already speaking
   const speaking = [...live.entries()].filter(([, v]) => !v.ending);
   if (speaking.length >= LIVE_MAX) liveStop(speaking[0][0]);   // the oldest gives way
-  const entry = {src: null, g: null, label, text: clean(text), ending: false};
-  live.set(key, entry); liveChanged(); startBed();
+  const entry = {src: null, g: null, label, text: clean(text), ending: false, silent: false};
+  live.set(key, entry); liveChanged();
   const gone = () => live.get(key) !== entry || entry.ending;
   try {
-    if (!(await liveStart()) || gone()) return false;
-    const out = await liveRender(entry.text, {speed: Math.round(wpm), variant, pitch});
-    if (out.error || gone()) return false;
-    const buf = await c.decodeAudioData(out.buf);
-    if (gone()) return false;
-    const src = c.createBufferSource(), g = gain(0), p = c.createStereoPanner ? c.createStereoPanner() : null, t = c.currentTime;
+    if (!(await ready()) || gone()) return false;
+    startBed();
+    const id = `${variant}|${pitch}|${Math.round(wpm)}|${entry.text}`;
+    let buf = made.get(id);
+    if (buf) { made.delete(id); made.set(id, buf); }
+    else {
+      const out = await make(entry.text, {speed: Math.round(wpm), variant, pitch}, () => !gone());
+      if (gone()) return false;
+      if (out.error) {   // no voice could be made: the words stay on air, silently, for as long as reading them would take
+        if (out.error === 'dropped') return false;
+        entry.silent = true; liveChanged();
+        await wait(Math.max(2500, entry.text.split(' ').length * 380));
+        return false;
+      }
+      buf = await c.decodeAudioData(out.buf);
+      made.set(id, buf); if (made.size > CACHE_MAX) made.delete(made.keys().next().value);
+      if (gone()) return false;
+    }
+    // Several voices together: each a little quieter (3 dB for every other voice), so the sum stays below the limiter.
+    const together = [...live.values()].filter(v => !v.ending && v.src).length, lvl = level * Math.pow(10, -3 * together / 20);
+    const src = c.createBufferSource(), g = gain(0), pn = c.createStereoPanner ? c.createStereoPanner() : null, t = c.currentTime;
     src.buffer = buf;
     if (spin) { src.playbackRate.setValueAtTime(.55, t); src.playbackRate.exponentialRampToValueAtTime(1, t + .22); }   // spun up, like a record let go
-    if (p) { p.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(p).connect(liveOut(c)); } else src.connect(g).connect(liveOut(c));
-    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(level, t + .08);
+    if (pn) { pn.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(pn).connect(liveOut(c)); } else src.connect(g).connect(liveOut(c));
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(lvl, t + .08);
     entry.src = src; entry.g = g;
     return await new Promise(resolve => {
       src.onended = () => { if (live.get(key) === entry) { live.delete(key); liveChanged(); } resolve(!entry.ending); };
@@ -401,7 +453,7 @@ async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 
 function liveStop(key, {scratch = true} = {}) {
   const e = live.get(key); if (!e || e.ending) return;
   e.ending = true; liveChanged();
-  if (!e.src) { live.delete(key); return; }   // still being made: it never starts
+  if (!e.src) { live.delete(key); liveChanged(); return; }   // still being made (or only a caption): it never starts
   const t = ctx.currentTime;
   try {
     e.src.playbackRate.cancelScheduledValues(t); e.src.playbackRate.setValueAtTime(Math.max(.2, e.src.playbackRate.value), t); e.src.playbackRate.exponentialRampToValueAtTime(.16, t + .34);
@@ -412,12 +464,21 @@ function liveStop(key, {scratch = true} = {}) {
 }
 function liveStopAll(opts) { for (const k of [...live.keys()]) liveStop(k, opts); }
 // A paper or a town keeps one voice: the same variant and pitch every time it speaks.
-const VARIANTS = ['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'f1', 'f2', 'f3', 'f4'];
+const VARIANTS = ['m1', 'm2', 'm3', 'm4', 'f2'];   // the others sounded damaged rather than old
 function voiceOf(key) {
   let h = 2166136261; for (const ch of String(key)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); }
-  h >>>= 0; return {variant: VARIANTS[h % VARIANTS.length], pitch: 34 + (h >>> 8) % 34};
+  h >>>= 0; return {variant: VARIANTS[h % VARIANTS.length], pitch: 40 + (h >>> 8) % 19};
 }
-const firstWords = (text, n) => { const w = clean(text).split(' '); return w.slice(0, n).join(' ') + (w.length > n ? '…' : ''); };
+const firstWords = (text, n) => {
+  const w = clean(text).split(' ').filter(Boolean); if (w.length <= n) return w.join(' ');
+  let cut = n; for (let k = n; k >= Math.ceil(n * .6); k--) if (/[,.;:!?]$/.test(w[k - 1])) { cut = k; break; }
+  return w.slice(0, cut).join(' ').replace(/[,;:]$/, '') + '…';
+};
+// The opening of the radio: the strings once a visit (per tab), a short tuning sound after that.
+function welcome() {
+  let first = true; try { first = !sessionStorage.getItem('nns-strings'); sessionStorage.setItem('nns-strings', '1'); } catch {}
+  return cue(first ? 'strings' : 'tune');
+}
 // Browsers allow sound only after a click, tap or key press: call this inside one. It returns whether sound can play now.
 function unlock() {
   if (!audio()) return false;
@@ -442,11 +503,12 @@ window.Radio = {
     return voice;
   },
   onCaption(f) { listeners.caption.push(f); }, onState(f) { listeners.state.push(f); }, onVoices(f) { listeners.voices.push(f); },
-  say, sayLine, stop, unlock, cue: k => { audio(); return cue(k); },
+  say, sayLine, stop, unlock, ready, cue: k => { audio(); return cue(k); }, welcome: () => { audio(); return welcome(); },
   live: {
     play: livePlay, stop: liveStop, stopAll: liveStopAll, has: key => !!live.get(key) && !live.get(key).ending,
-    preload: () => { if (audio() && ctx.state === 'running') liveStart(); },
-    get count() { return [...live.values()].filter(v => !v.ending).length; }, onChange(f) { listeners.live.push(f); }, voiceOf, firstWords, MAX: LIVE_MAX
+    preload: () => { if (audio()) ready().then(ok => { if (ok) warm(); }); },
+    get count() { return [...live.values()].filter(v => !v.ending).length; }, get failed() { return workerFails >= 2; },
+    onChange(f) { listeners.live.push(f); }, voiceOf, firstWords, MAX: LIVE_MAX
   },
   spokenDate, writtenDate, town, paperName, clean, chunks, intro
 };

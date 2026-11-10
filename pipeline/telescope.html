@@ -9,41 +9,75 @@ __SITE_HEAD__
 *{box-sizing:border-box}body{margin:0;background:var(--bg)}a{color:var(--blue)}h1,h2,p{margin:0}h1{font-size:26px;font-weight:500;letter-spacing:-.03em}h2{font-size:17px;font-weight:500}
 button,input{font:inherit;color:var(--ink)}button{background:#11192b;border:1px solid var(--line);border-radius:7px;padding:7px 11px;cursor:pointer}button:hover{background:#1a2740}
 button:disabled{opacity:.4;cursor:default}
-button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#timeline:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+button:focus-visible,a:focus-visible,input:focus-visible,#timeline:focus-visible{outline:2px solid var(--blue);outline-offset:3px}.view:focus-visible{outline:2px solid var(--blue);outline-offset:-3px}
 .muted{color:var(--muted)}.small{font-size:12px}.mono{font-variant-numeric:tabular-nums}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
-.toolbar{position:sticky;top:0;z-index:30;background:#080d1cf5;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.toolbar-inner{max-width:1480px;margin:auto;padding:8px 24px;display:flex;align-items:center;gap:8px 10px;flex-wrap:wrap}
-.back{font-size:14px;text-decoration:none;padding:6px 2px}
-.search{flex:1 1 260px;display:flex;align-items:center;gap:6px;background:#0b1222;border:1px solid var(--line);border-radius:8px;padding:2px 4px 2px 10px;min-width:0}
+.search{display:flex;align-items:center;gap:6px;background:#0b1222;border:1px solid var(--line);border-radius:8px;padding:2px 4px 2px 10px;min-width:0}
 .search .ico{color:#6f7d99}.search input{flex:1;min-width:0;background:none;border:0;padding:6px 2px;outline:none}.search input::placeholder{color:#6f7d99}
 .search button{border:0;background:none;padding:4px 8px;color:var(--muted)}.search:focus-within{border-color:var(--blue)}
 /* Glass controls (.seg.slide single choices, .toggle on/off buttons) are shared with the Pulses page: styles in site.css,
    behaviour in glass.js. */
-.label{font-size:12px;color:var(--muted)}.row2{width:100%;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
-.shell{max-width:1480px;margin:auto;padding:18px 24px 40px}
-.heading{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:10px}.heading p{margin-top:4px}
-.caption{display:flex;align-items:center;gap:10px;min-height:46px;font-size:13px;margin-bottom:8px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel)}
-.caption .text{flex:1}.caption b{color:var(--gold);font-weight:600}.caption.idle{color:var(--muted)}.caption button{padding:3px 9px;font-size:12px;flex:none}
+.label{font-size:12px;color:var(--muted)}
+/* ---- The instrument: the deck of controls beside the sky; together they fill the screen under the header (--hdr). ---- */
+body.page-telescope .site-inner{max-width:none}
+.scope{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);height:calc(100dvh - var(--hdr,53px));min-height:500px;border-bottom:1px solid var(--line)}
+.deck{position:relative;z-index:20;width:328px;display:flex;flex-direction:column;min-height:0;background:#070b17;border-right:1px solid var(--line);transition:width .25s ease}
+.deck-head{display:flex;align-items:flex-start;gap:8px;padding:14px 12px 12px 18px;border-bottom:1px solid #1a2338}
+.deck-title{flex:1;min-width:0}.deck-title h1{font-size:19px;letter-spacing:-.02em;line-height:1.25}.deck-title p{margin-top:3px;line-height:1.4}
+.deck-toggle{flex:none;display:grid;place-items:center;width:34px;height:34px;padding:0;border-radius:9px;background:none;border:1px solid transparent;color:var(--muted)}
+.deck-toggle:hover{color:var(--ink);background:#11192b;border-color:var(--line)}.deck-toggle .ico{width:18px;height:18px}
+.rail-label{display:none}
+.deck-body{flex:1;min-height:0;overflow-y:auto;padding:0 18px 18px;scrollbar-width:thin;scrollbar-color:#28334c transparent}
+.sec{padding:11px 0 13px;border-bottom:1px solid #141d33}.sec:last-child{border-bottom:0}
+.sec-h{font:600 11px/1.4 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#7d8aa6;margin:0 0 7px}
+.field{margin-top:10px}.field:first-of-type{margin-top:0}.field>.label{display:block;margin-bottom:5px}
+.field.inline{display:flex;align-items:center;justify-content:space-between;gap:10px}.field.inline>.label{margin:0}
+.deck .hint{font-size:12px;color:var(--muted);line-height:1.45;margin:8px 0 0}
+.deck .toggles{display:flex;flex-wrap:wrap;gap:5px}.deck .toggles .toggle{padding:4px 10px 4px 8px;font-size:12px}
+.deck .chips{margin:0}
+.deck .legend{flex-direction:column;align-items:flex-start;gap:5px;margin:0}
+.deck .more{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px}
+@media(min-width:1000px){
+  .scope.collapsed .deck{width:48px}.scope.collapsed .deck-title,.scope.collapsed .deck-body{display:none}
+  .scope.collapsed .deck-head{flex-direction:column;align-items:center;padding:12px 6px;border:0;gap:14px}
+  .scope.collapsed .rail-label{display:block;writing-mode:vertical-rl;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#6f7d99;cursor:pointer}
+}
+.stage{position:relative;display:flex;flex-direction:column;min-width:0;min-height:0}
+.viewport{position:relative;flex:1 1 auto;min-height:0}
+.view{position:absolute;inset:0;overflow:hidden;cursor:grab;touch-action:none;background:radial-gradient(ellipse at 50% 50%,#0f1a30 0,transparent 60%),#050711}
+.view canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.view.dragging{cursor:grabbing}
+/* Things that float over the sky, each in its own corner: the search card top right, the camera buttons bottom right,
+   what is on air at the bottom, the colour key bottom left (inside the view), "now" top left (drawn on the canvas). */
+.hud{position:absolute;z-index:6}
+.cam{right:12px;bottom:12px;display:flex;flex-direction:column;gap:6px}
+.cam button{width:36px;height:36px;padding:0;display:grid;place-items:center;border-radius:50%;font-size:17px;line-height:1;color:var(--ink);background:#0b1222cc;border:1px solid #2a3550;backdrop-filter:blur(8px)}
+.cam button:hover{background:#1a2740}.cam .ico{width:17px;height:17px}
+/* Select is a tool for the sky, like the camera: lit gold while on (a drag then hears an area). */
+.cam .tool{margin-bottom:6px}.cam .tool[aria-pressed="true"]{color:#ffd27a;border-color:#ffd27a99;box-shadow:0 0 0 1px #ffd27a55,0 0 14px #ffd27a33}
+.deck-open{display:none;top:10px;right:12px;align-items:center;gap:7px;font-size:13px;padding:7px 12px;border-radius:999px;background:#0b1222d9;border:1px solid #2a3550;backdrop-filter:blur(8px)}
+/* The search card: what the search found, over the sky's top right corner. */
+.caption{top:10px;right:12px;width:min(430px,42%);display:flex;align-items:flex-start;gap:8px;font-size:12.5px;line-height:1.45;padding:8px 10px 8px 12px;border:1px solid var(--line);border-radius:10px;background:#070b17eb;box-shadow:0 8px 28px #0007}
+.caption.idle{display:none}
+.caption .text{flex:1;min-width:0}.caption b{color:var(--gold);font-weight:600}.caption button{padding:3px 9px;font-size:12px;flex:none}
 /* Compared searches: one line each, a colour swatch beside the words (the text itself stays in ink colours). */
 .caption .cmp{display:flex;align-items:baseline;gap:2px 6px;flex-wrap:wrap}.caption .cmp+.cmp{margin-top:3px}.caption .t{color:var(--ink);font-weight:600}
 .sw{display:inline-block;width:9px;height:9px;border-radius:50%;flex:none;transform:translateY(1px)}
-.caption .x{border:0;background:none;padding:0 4px;color:var(--muted);font-size:13px;line-height:1}.caption .x:hover{color:var(--ink);background:none}
+.caption .x{border:0;background:none;padding:0 4px;color:var(--muted);font-size:13px;line-height:1}.caption .x:hover{color:var(--ink);background:none}.caption .note{display:block;margin-top:4px;color:var(--muted);font-size:11.5px}
 /* Try chips are on/off buttons (.toggle): the chip of the current search is lit. A compare chip shows its colours
    instead of the light, dim when off. */
-.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px}.chips .toggle{font-size:12px;padding:3px 11px 3px 9px}
+.chips{display:flex;flex-wrap:wrap;gap:5px;align-items:center}.chips .toggle{font-size:12px;padding:3px 10px 3px 8px}
 .chips .cmp-chip::before{display:none}.chips .tri{display:inline-flex;gap:2px;opacity:.55;transition:opacity .2s}.chips .tri i{width:6px;height:6px;border-radius:50%}
 .chips .cmp-chip[aria-pressed="true"] .tri{opacity:1}
-.view{position:relative;height:clamp(420px,62vh,720px);border:1px solid var(--line);border-radius:10px 10px 0 0;overflow:hidden;cursor:grab;touch-action:none;
-  background:radial-gradient(ellipse at 50% 50%,#0f1a30 0,transparent 60%),#050711}
-.view canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.view.dragging{cursor:grabbing}
-.time-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:8px}.time-controls button{padding:5px 12px;font-size:13px}
-.timeline-wrap{position:relative;border:1px solid var(--line);border-top:0;border-radius:0 0 10px 10px;background:#070b17}
-#timeline{display:block;width:100%;height:64px;cursor:pointer;touch-action:none}
+/* Time: Drift, Earlier and Later, and the look-back around the timeline, under the sky. */
+.dock{flex:none;display:flex;align-items:center;gap:8px;padding:8px 12px;border-top:1px solid var(--line);background:#070b17}
+.dock .timeline-wrap{flex:1 1 auto;min-width:200px;border-radius:7px;overflow:hidden;background:#050711;border:1px solid #1a2338}
+#timeline{display:block;width:100%;height:52px;cursor:pointer;touch-action:none}
+.dock .step{width:32px;height:32px;padding:0;display:grid;place-items:center;font-size:18px;line-height:1;border-radius:50%}
+.dock .ctl{display:flex;align-items:center;gap:7px}
 .tip{position:absolute;z-index:3;max-width:320px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;pointer-events:none;box-shadow:0 6px 24px #0008}
 .tip[hidden]{display:none}.tip strong{display:block;font-weight:500;margin-bottom:4px;line-height:1.35}.tip .kind{color:var(--muted);font-size:11.5px}
 .message{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted);z-index:2}.message[hidden]{display:none}
-/* Colour key inside the view, shown while Regions is on (the full legend is under the timeline). */
-.key{position:absolute;left:10px;bottom:9px;z-index:2;display:flex;flex-wrap:wrap;gap:4px 12px;max-width:calc(100% - 20px);padding:5px 9px;font-size:11.5px;color:var(--muted);background:#050711b8;border-radius:7px;pointer-events:none}
+/* Colour key inside the view, shown while a colour is on (the full legend is in the deck). */
+.key{position:absolute;left:10px;bottom:9px;z-index:2;display:flex;flex-wrap:wrap;gap:4px 12px;max-width:min(36%,420px);padding:5px 9px;font-size:11.5px;color:var(--muted);background:#050711b8;border-radius:7px;pointer-events:none}
 .key[hidden]{display:none}.key span{display:flex;align-items:center;gap:5px;white-space:nowrap}.key i{width:8px;height:8px;border-radius:50%}
 /* Legend entries that lift their stars: point at one, focus it, or tap it to keep it lifted. */
 .legend [data-em],.key [data-em]{cursor:pointer;border-radius:999px;padding:1px 8px 1px 5px;transition:background .2s,box-shadow .2s}.key [data-em]{pointer-events:auto}
@@ -58,66 +92,110 @@ button:focus-visible,a:focus-visible,input:focus-visible,.view:focus-visible,#ti
 .loading-bar i{display:block;height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#8ccfff,#ffd27a);transition:width .15s linear}
 .loading.indeterminate .loading-bar i{width:28%;animation:loading-slide 1.3s ease-in-out infinite}
 @keyframes loading-slide{from{transform:translateX(-110%)}to{transform:translateX(370%)}}
-@media(prefers-reduced-motion:reduce){.loading.indeterminate .loading-bar i{animation:none;width:100%;opacity:.35}.loading{transition:none}}
-.how{font-size:13px;color:var(--muted);max-width:96ch;margin:12px 0 0}
-.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;margin:10px 0 0}.legend span{display:flex;align-items:center;gap:6px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+@media(prefers-reduced-motion:reduce){.loading.indeterminate .loading-bar i{animation:none;width:100%;opacity:.35}.loading{transition:none}.deck{transition:none}}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px}.legend span{display:flex;align-items:center;gap:6px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+/* Under the instrument: how to read the sky, the brightest stories in view, and notes. */
+.below{max-width:1480px;margin:auto;padding:22px 24px 40px}.below .lead{font-size:15px;margin-bottom:8px}
+.how{font-size:13.5px;color:var(--muted);max-width:96ch}
 .list{margin-top:24px}.list h2{margin-bottom:8px}.list ol{margin:0;padding:0;list-style:none;display:grid;gap:2px}
 .list a{display:grid;grid-template-columns:96px 1fr auto;gap:10px;padding:8px 10px;border-left:2px solid transparent;text-decoration:none;color:var(--ink);font-size:13px}
 .list a:hover,.list a:focus-visible{background:#142039;border-color:var(--blue)}.list time,.list .n{color:var(--muted)}
 .page-notes{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
-@media(max-width:720px){.toolbar{position:static}.toolbar-inner{padding:8px 12px;gap:7px}.shell{padding:14px 12px 32px}.view{height:min(60vh,118vw)}
-  .search{flex-basis:100%;order:-1}.list a{grid-template-columns:74px 1fr}.list .n{grid-column:2}h1{font-size:22px}
-  /* Phones: the sky comes straight after the controls; the search summary sits right under it, the introduction further down. */
-  .shell{display:flex;flex-direction:column}.view{order:1}.caption{order:2;margin:8px 0 0}.timeline-wrap{order:3}.time-controls{order:4}.chips{order:5}
-  .heading{order:6;margin-top:18px}.how{order:7}.legend{order:8}.list{order:9}.page-notes{order:10}.on-air{order:3}}
-/* The radio: what is being read, under the timeline. */
-.on-air{margin:8px 0 0;padding:12px 16px;border:1px solid #2a3550;border-left:3px solid var(--gold,#ffd27a);border-radius:10px;background:#070b17}
-.on-air-head{display:block;color:#ffd27a;font:600 11.5px/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
-.on-air-text{display:block;font:17px/1.5 Georgia,"Times New Roman",serif;color:#7f8aa3}.on-air-text .now{color:var(--ink)}
-.on-air-text:empty::before{content:"Point at a star to hear it; click to keep it speaking. Alt-drag, or Select, to hear an area.";color:var(--muted);font:14px system-ui,sans-serif}
+/* The radio: what is on air, like subtitles at the bottom of the sky; shown only while something is being read. */
+.on-air{left:50%;bottom:14px;transform:translateX(-50%);width:min(640px,46%);margin:0;padding:10px 16px;border:1px solid #2a3550;border-left:3px solid var(--gold,#ffd27a);border-radius:10px;background:#070b17eb;box-shadow:0 8px 28px #0008}
+.on-air[hidden]{display:none}
+.on-air-head{display:block;color:#ffd27a;font:600 11.5px/1.4 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.on-air-text{display:block;font:16px/1.45 Georgia,"Times New Roman",serif;color:#7f8aa3}.on-air-text .now{color:var(--ink)}
 .on-air-chorus{display:block;margin-top:6px;color:var(--muted);font:12.5px/1.4 system-ui,sans-serif}.on-air-chorus:empty{display:none}
 .select-box{position:absolute;z-index:4;border:1px solid #ffd27a;background:#ffd27a14;border-radius:4px;pointer-events:none}.view.selecting{cursor:crosshair}
+/* Narrow screens: the deck becomes a drawer over the sky, opened with Controls; the search card goes under the sky. */
+@media(max-width:999px){
+  .scope{grid-template-columns:minmax(0,1fr)}
+  .deck{position:absolute;left:0;top:0;bottom:0;width:min(330px,88vw);transform:translateX(-104%);visibility:hidden;transition:transform .25s ease,visibility 0s .25s;box-shadow:0 0 44px #000c}
+  .scope.drawer .deck{transform:none;visibility:visible;transition:transform .25s ease}
+  .deck-open{display:inline-flex}
+  .caption{position:static;width:auto;margin:0;border-radius:0;border-width:1px 0 0;box-shadow:none;order:3}
+  .on-air{width:calc(100% - 24px);bottom:10px}
+  .viewport.airing .key{display:none}
+}
+@media(max-width:640px){
+  .scope{height:auto;min-height:0}.viewport{flex:none;height:min(66dvh,118vw)}
+  .dock{flex-wrap:wrap;gap:6px 8px;padding:8px 10px}.dock .timeline-wrap{order:-1;flex-basis:100%}.dock .ctl .label{display:none}
+  .below{padding:18px 12px 32px}.list a{grid-template-columns:74px 1fr}.list .n{grid-column:2}
+  .cam button{width:32px;height:32px}.on-air-text{font-size:15px}
+}
 /* Exhibition (?exhibit=1): the sky, the timeline and what is being read, large; no menus or lists; the cursor hides when still. */
-body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .toolbar,body.exhibit .heading,body.exhibit .chips,body.exhibit .time-controls,body.exhibit .how,
-body.exhibit .list,body.exhibit .page-notes,body.exhibit .caption.idle{display:none!important}
-body.exhibit .shell{max-width:none;padding:2vh 2.5vw}body.exhibit .view{height:74vh}
-body.exhibit .caption{font-size:clamp(14px,1.2vw,26px)}body.exhibit .legend{font-size:clamp(12px,.9vw,20px)}
-body.exhibit .on-air-text{font-size:clamp(18px,1.8vw,40px)}body.exhibit .on-air-head{font-size:clamp(11px,.9vw,20px)}
+body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .deck,body.exhibit .cam,body.exhibit .deck-open,body.exhibit .below,
+body.exhibit .dock>:not(.timeline-wrap),body.exhibit .caption.idle{display:none!important}
+body.exhibit .scope{grid-template-columns:minmax(0,1fr);height:100dvh;border:0}
+body.exhibit .caption{font-size:clamp(14px,1.2vw,26px);width:min(780px,46%)}body.exhibit .legend{font-size:clamp(12px,.9vw,20px)}
+body.exhibit .on-air{width:min(1100px,60%);bottom:2.5vh}body.exhibit .on-air-text{font-size:clamp(18px,1.8vw,40px)}body.exhibit .on-air-head{font-size:clamp(11px,.9vw,20px)}
 body.exhibit.still,body.exhibit.still *{cursor:none!important}
 </style>
 </head>
 <body>
 __SITE_HEADER__
-<header class="toolbar"><div class="toolbar-inner">
+<main class="telescope" id="telescope">
+<div class="scope" id="scope">
+<aside class="deck" id="deck" aria-label="Telescope controls">
+<div class="deck-head">
+<div class="deck-title"><h1>Story telescope</h1><p id="status" class="small muted mono"></p></div>
+<button type="button" id="deck-toggle" class="deck-toggle" aria-expanded="true" aria-controls="deck-body" title="Fold the controls away">__ICON_panel__<span class="sr-only">Controls</span></button>
+<span class="rail-label" id="rail-label" aria-hidden="true">Controls</span>
+</div>
+<div class="deck-body" id="deck-body">
+<section class="sec" aria-labelledby="sec-find"><h2 class="sec-h" id="sec-find">Find</h2>
 <label class="search" role="search"><span class="sr-only">Search stories</span>__ICON_search__
 <input id="q" type="search" placeholder="Search any word or name, or compare: fever vs ice" autocomplete="off" spellcheck="false"><button type="button" id="q-clear" aria-label="Clear search">✕</button></label>
-<span class="seg slide" data-roving id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">__ICON_place__Place</button><button type="button" data-layout="topic" title="What each story is about">__ICON_topic__Topic</button><button type="button" data-layout="orbit" title="The time of year">__ICON_orbit__Orbit</button></span>
-<button type="button" id="drift" class="toggle has-ico" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance">__ICON_drift__Drift</button><button type="button" id="select-area" class="toggle has-ico" aria-pressed="false" hidden title="Drag across the sky to hear the stories in an area (Alt-drag works too)">__ICON_select__Select</button>
-<span class="ctl"><span class="label" id="colour-label">Colour</span><span class="seg slide" data-roving id="colour" role="group" aria-labelledby="colour-label"><button type="button" data-colour="region" title="Colour each star by the region where its story was first printed in this archive">Region</button><button type="button" data-colour="search" title="Colour the stories that match your search: gold for one search, one colour per search when you compare">Search</button><button type="button" data-colour="off" title="Pale stars; reviewed stories in their own colours">Off</button></span></span>
-<div class="row2">
-<span class="ctl"><span class="label" id="span-label">Look back</span><span class="seg slide" data-roving id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span></span>
-<span class="seg slide" data-roving id="angle" role="group" aria-label="Viewing angle"><button type="button" data-angle="front" title="Look straight back through time">__ICON_front__Front</button><button type="button" data-angle="side" title="See the time axis from the side">__ICON_side__Side</button></span>
-<span class="seg" role="group" aria-label="Camera"><button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button type="button" id="reset-view" title="Back to the whole picture">__ICON_fit__Reset view</button></span>
-<span class="ctl"><span class="label" id="min-label">Stories in</span><span class="seg slide" data-roving id="min-papers" role="group" aria-labelledby="min-label">
-<button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button><button type="button" data-k="10" title="at least 10 newspapers">10+</button></span></span>
-<span class="toggles" id="kinds" role="group" aria-label="Kinds of story"><button type="button" class="toggle" data-kind="reviewed" title="Read and checked against the scans">Reviewed</button><button type="button" class="toggle" data-kind="matched" title="Found by shared wording; not checked">Matched</button><button type="button" class="toggle" data-kind="long" title="Serial documents and debates joined over months">Long-running</button></span>
+<p class="hint">Searches each story's title and opening words. A comma means “or”; “vs” compares up to three searches, each in its own colour.</p>
+</section>
+<section class="sec" aria-labelledby="sec-arrange"><h2 class="sec-h" id="sec-arrange">Arrange</h2>
+<div class="field"><span class="label">Stars by where, what, or the time of year</span><span class="seg slide" data-roving id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">__ICON_place__Place</button><button type="button" data-layout="topic" title="What each story is about">__ICON_topic__Topic</button><button type="button" data-layout="orbit" title="The time of year">__ICON_orbit__Orbit</button></span></div>
+<div class="field inline"><span class="label">Angle</span><span class="seg slide" data-roving id="angle" role="group" aria-label="Viewing angle"><button type="button" data-angle="front" title="Look straight back through time">__ICON_front__Front</button><button type="button" data-angle="side" title="See the time axis from the side">__ICON_side__Side</button></span></div>
+</section>
+<section class="sec" aria-labelledby="sec-colour"><h2 class="sec-h" id="sec-colour">Colour</h2>
+<span class="seg slide" data-roving id="colour" role="group" aria-labelledby="sec-colour"><button type="button" data-colour="region" title="Colour each star by the region where its story was first printed in this archive">Region</button><button type="button" data-colour="search" title="Colour the stories that match your search: gold for one search, one colour per search when you compare">Search</button><button type="button" data-colour="off" title="Pale stars; reviewed stories in their own colours">Off</button></span>
+</section>
+<section class="sec" aria-labelledby="sec-show"><h2 class="sec-h" id="sec-show">Show</h2>
+<div class="field"><span class="label" id="min-label">Stories printed in at least</span><span class="seg slide" data-roving id="min-papers" role="group" aria-labelledby="min-label">
+<button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button><button type="button" data-k="10" title="at least 10 newspapers">10+</button></span></div>
+<div class="field"><span class="toggles" id="kinds" role="group" aria-label="Kinds of story"><button type="button" class="toggle" data-kind="reviewed" title="Read and checked against the scans">Reviewed</button><button type="button" class="toggle" data-kind="matched" title="Found by shared wording; not checked">Matched</button><button type="button" class="toggle" data-kind="long" title="Serial documents and debates joined over months">Long-running</button></span></div>
+</section>
+<section class="sec" aria-labelledby="sec-key"><h2 class="sec-h" id="sec-key">Key</h2>
+<div class="legend" id="legend"></div>
+</section>
+<section class="sec" aria-labelledby="sec-try"><h2 class="sec-h" id="sec-try">Ideas to try</h2>
+<div class="chips" id="chips"></div>
+</section>
+<section class="sec"><p class="more"><a href="#how">How to read the sky ↓</a><a href="#list-title">Brightest stories in view ↓</a></p></section>
 </div>
-</div></header>
-<main class="shell">
-<div class="heading"><div><h1>Story telescope</h1><p class="muted">Every story printed in at least two newspapers of this archive, 1770–1810. The further away, the earlier.</p></div><p id="status" class="small muted mono"></p></div>
-<div id="caption" class="caption idle" aria-live="polite"><span class="text" id="caption-text"></span><button type="button" id="caption-compare" hidden title="Add another search in its own colour">Compare with…</button><button type="button" id="caption-clear" hidden>Clear</button></div>
-<div class="chips" id="chips"><span class="label">Try:</span></div>
-<div id="view" class="view" tabindex="0" role="application" aria-roledescription="star map" aria-label="Story telescope. Up and down arrows travel through time; left and right turn the view; plus and minus zoom; 0 resets the view. The list below names the stories shown.">
+</aside>
+<div class="stage">
+<div class="viewport" id="viewport">
+<div id="view" class="view" tabindex="0" role="application" aria-roledescription="star map" aria-label="Story telescope. Up and down arrows travel through time; left and right turn the view; plus and minus zoom; 0 resets the view. The list of the brightest stories in view is further down the page.">
 <canvas id="gl"></canvas><canvas id="axes"></canvas><div id="tip" class="tip" hidden></div><div id="message" class="message" hidden></div><div id="key" class="key" aria-hidden="true"></div>
 <div id="loading" class="loading indeterminate" role="status" aria-live="polite"><div class="loading-box"><p id="loading-text">Opening the telescope…</p><div class="loading-bar" aria-hidden="true"><i id="loading-fill"></i></div><p id="loading-sub"></p></div></div>
 </div>
-<div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Click to move 'now'; the bright bracket is the stretch of time you are looking back through."></canvas></div>
-<p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
-<div class="time-controls"><button type="button" id="earlier" title="Move 'now' earlier">‹ Earlier</button><button type="button" id="later" title="Move 'now' later">Later ›</button><span class="small muted">Move through time with these buttons, by clicking or dragging the timeline, or with the ↑ ↓ keys.</span></div>
+<div class="cam hud" role="group" aria-label="Camera and tools"><button type="button" id="select-area" class="tool" aria-pressed="false" title="Drag across the sky to hear the stories in an area (Alt-drag works too)">__ICON_select__<span class="sr-only">Select an area to hear</span></button><button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button type="button" id="reset-view" title="Back to the whole picture">__ICON_fit__<span class="sr-only">Reset view</span></button></div>
+<p id="on-air" class="on-air hud" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
+<button type="button" id="deck-open" class="deck-open hud" aria-controls="deck" aria-expanded="false">__ICON_menu__Controls</button>
+</div>
+<div id="caption" class="caption hud idle" aria-live="polite"><span class="text" id="caption-text"></span><button type="button" id="caption-compare" hidden title="Add another search in its own colour">Compare with…</button><button type="button" id="caption-clear" hidden>Clear</button></div>
+<div class="dock">
+<button type="button" id="drift" class="toggle has-ico" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance">__ICON_drift__Drift</button>
+<button type="button" id="earlier" class="step" title="Move 'now' earlier" aria-label="Earlier">‹</button>
+<div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Click or drag to move 'now'; the bright bracket is the stretch of time you are looking back through. The up and down arrow keys also move through time."></canvas></div>
+<button type="button" id="later" class="step" title="Move 'now' later" aria-label="Later">›</button>
+<span class="ctl"><span class="label" id="span-label">Look back</span><span class="seg slide" data-roving id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span></span>
+</div>
+</div>
+</div>
+<div class="below">
+<p class="lead">Every story printed in at least two newspapers of this archive, 1770–1810, as a star. The further away, the earlier.</p>
 <p class="how" id="how"></p>
-<div class="legend" id="legend"></div>
 <section class="list" aria-labelledby="list-title"><h2 id="list-title">Brightest stories in view</h2><ol id="list"></ol></section>
 <p class="page-notes">Matched stories were found automatically by shared wording across newspapers and are not checked against the scans; a match can join neighbouring items, and printings in damaged transcriptions are missed. Reviewed stories were read and checked; a reviewed story usually also appears as a matched star. Search looks at each story's title and the opening words of its first printing, not every word of every page. Topics come from the project's provisional 24-topic model. Everything follows the surviving archive: where few papers survive there are few stars, which is a gap in the collection, not proof that nothing was printed. <span id="release"></span> <a href="method.html#matched">How stories are found</a>. The first version of this telescope, from 7 November 2026, is kept as <a href="telescope-v1.html">Version 1</a>.</p>
+</div>
 </main>
 __SITE_FOOTER__
 <script type="application/json" id="boot">__TELESCOPE_BOOT__</script>
@@ -220,7 +298,9 @@ const state ={now: (Date.UTC(1781, 0, 1) - EPOCH) / MS, span: 10 * YEAR, min: 3,
 // The sky is plain until the reader picks a colour: a saved colour counts only once it was picked (colourPicked), so the
 // old default (Region) is not carried over. An exhibition starts from its scene's address alone, and saves nothing.
 const params = new URLSearchParams(location.search), wantYear = Number(params.get('year'));
-const EXHIBIT = ['1', 'on'].includes(params.get('exhibit')), EXHIBIT_SCALE = EXHIBIT ? Math.max(1.6, Math.min(2.8, innerHeight / 480)) : 1;
+// In an exhibition the stars are drawn larger, for a wall seen from a distance: by the square root of the screen height
+// over 480 px, between 1.25 and 1.7 times (1.5 on a 1080-pixel screen). Height / 480 itself, up to 2.8 times, was too large.
+const EXHIBIT = ['1', 'on'].includes(params.get('exhibit')), EXHIBIT_SCALE = EXHIBIT ? Math.max(1.25, Math.min(1.7, Math.sqrt(innerHeight / 480))) : 1;
 if (!EXHIBIT) try {
   const s = JSON.parse(localStorage.getItem(STORE));
   if (s && s.span > 0) { if (!s.colourPicked) delete s.colour; delete s.tint; Object.assign(state, {...s, show: {...state.show, ...s.show}, q: ''}); }
@@ -255,11 +335,16 @@ const view = $('view'), glCanvas = $('gl'), axes = $('axes'), actx = axes.getCon
 let renderer;
 try { renderer = new THREE.WebGLRenderer({canvas: glCanvas, antialias: false, alpha: true}); }
 catch { msg('This browser cannot draw WebGL, which the telescope needs.'); throw new Error('no WebGL'); }
-renderer.setPixelRatio(Math.min(2, devicePixelRatio || 1));
+renderer.setPixelRatio(Math.min(1.5, devicePixelRatio || 1));   // sharper than 1.5 costs the graphics chip a lot for little
 const scene = new THREE.Scene(), FOV = 38, LZ = 6;  // LZ: depth of the look-back, in scene units
 const camera = new THREE.PerspectiveCamera(FOV, 1, .05, 80);
 // hit: which searches a story matches, as a bitmask (1, 2, 4 for the first, second and third search); regIx: its region.
 const pos = new Float32Array(N * 3), col = new Float32Array(N * 3), size = new Float32Array(N), kind = new Float32Array(N), hit = new Float32Array(N), regIx = new Float32Array(N);
+// Crowding: in Place every story sits in its first-printing town's cloud, and plain stars add their light, so a busy town
+// burned into a white blob. Each star's light is thinned by its town's stars in view, CROWD_K / sqrt(n), at most 1 (as on
+// Home), so a busy town reads as a cloud of separate stars and a quiet one keeps its full light. Set in updateStatus().
+const CROWD_K = 5, crowd = new Float32Array(N).fill(1), townIx = new Int32Array(N), townKeys = new Map();
+for (let i = 0; i < N; i++) { const key = D.flat[i] + ',' + D.flon[i]; if (!townKeys.has(key)) townKeys.set(key, townKeys.size); townIx[i] = townKeys.get(key); }
 const catColors = BOOT.categories.map(c => new THREE.Color(c.color)), auto = new THREE.Color(AUTO), longc = new THREE.Color(LONG);
 // Colour: Region (where the story was first printed in this archive), Search (the colours of the searches) or Off (pale
 // stars, with the reviewed stories in their own colours). Each star carries its plain and its region colour; the shader
@@ -277,7 +362,7 @@ for (let i = 0; i < N; i++) {
 }
 const geo = new THREE.BufferGeometry();
 const attr = (name, arr, n) => geo.setAttribute(name, new THREE.BufferAttribute(arr, n));
-attr('position', pos, 3); attr('aColor', col, 3); attr('aRegC', regCol, 3); attr('aSize', size, 1); attr('aKind', kind, 1); attr('aHit', hit, 1); attr('aReg', regIx, 1);
+attr('position', pos, 3); attr('aColor', col, 3); attr('aRegC', regCol, 3); attr('aSize', size, 1); attr('aKind', kind, 1); attr('aHit', hit, 1); attr('aReg', regIx, 1); attr('aCrowd', crowd, 1);
 attr('aPlace', place, 2); attr('aTopic', topic, 2); attr('aOrbit', orbit, 2);
 const uniforms = {uNow: {value: state.now}, uSpan: {value: state.span}, uLZ: {value: LZ}, uCross: {value: 1}, uMix: {value: new THREE.Vector3(1, 0, 0)},
   uMin: {value: 3}, uShow: {value: new THREE.Vector3(1, 1, 0)}, uSearch: {value: 0}, uPR: {value: 1}, uScale: {value: 1}, uRef: {value: 3},
@@ -286,11 +371,11 @@ const uniforms = {uNow: {value: state.now}, uSpan: {value: state.span}, uLZ: {va
   uC1: {value: new THREE.Vector3()}, uC2: {value: new THREE.Vector3()}, uC3: {value: new THREE.Vector3()}, uC4: {value: new THREE.Vector3()}, uByS: {value: 0},
   // A legend entry under the pointer (or tapped) lifts its group: uEmBit, one search's bit; uEmReg, a region (index + 1).
   uEmBit: {value: 0}, uEmReg: {value: 0}, uEm: {value: 0},
-  uRegW: {value: state.colour === 'region' ? 1 : 0}, uNeutral: {value: new THREE.Color(AUTO)}, uDense: {value: 1}};
+  uRegW: {value: state.colour === 'region' ? 1 : 0}, uNeutral: {value: new THREE.Color(AUTO)}, uDense: {value: 1}, uDenseP: {value: 1}};
 const VERTEX = `
-    attribute vec3 aColor; attribute vec3 aRegC; attribute float aSize; attribute float aKind; attribute float aHit; attribute float aReg; attribute vec2 aPlace; attribute vec2 aTopic; attribute vec2 aOrbit;
-    uniform float uNow, uSpan, uLZ, uCross, uMin, uSearch, uPR, uScale, uRef, uRegW, uByS, uEmBit, uEmReg, uEm; uniform vec3 uMix, uShow, uC1, uC2, uC3, uC4, uNeutral;
-    varying vec3 vColor; varying float vAlpha, vHot, vMatch, vDim;
+    attribute vec3 aColor; attribute vec3 aRegC; attribute float aSize; attribute float aKind; attribute float aHit; attribute float aReg; attribute vec2 aPlace; attribute vec2 aTopic; attribute vec2 aOrbit; attribute float aCrowd;
+    uniform float uNow, uSpan, uLZ, uCross, uMin, uSearch, uPR, uScale, uRef, uRegW, uByS, uEmBit, uEmReg, uEm, uDenseP; uniform vec3 uMix, uShow, uC1, uC2, uC3, uC4, uNeutral;
+    varying vec3 vColor; varying float vAlpha, vHot, vMatch, vDim, vCrowd;
     void main() {
       float day = position.x, papers = position.z, age = uNow - day;
       float shown = (aKind > 1.5 ? uShow.z : aKind > 0.5 ? uShow.x : uShow.y) * step(uMin - 0.5, papers);
@@ -313,6 +398,7 @@ const VERTEX = `
       vec3 hc = abs(aHit - 1.0) < 0.5 ? uC1 : abs(aHit - 2.0) < 0.5 ? uC2 : abs(aHit - 4.0) < 0.5 ? uC3 : uC4;
       vHot = hot * uByS; vMatch = max(hot, lift); vColor = mix(base, hc, vHot); vDim = (1.0 - cold * mix(0.55, 0.4, uByS)) * (1.0 - 0.5 * sink);
       vAlpha = shown * fade * (0.62 + 0.38 * clamp((papers - 2.0) / 9.0, 0.0, 1.0));
+      vCrowd = mix(1.0, mix(uDenseP, aCrowd, uMix.x), 1.0 - max(hot, lift));   // plain light thinned where stars crowd; matches keep theirs
     }`;
 const STAR = `float r = length(gl_PointCoord - 0.5) * 2.0; if (r > 1.0) discard;
       float core = smoothstep(0.5, 0.0, r), glow = exp(-r * r * 4.0) * 0.7, a = (core + glow) * vAlpha;`;
@@ -327,11 +413,11 @@ const STAR = `float r = length(gl_PointCoord - 0.5) * 2.0; if (r > 1.0) discard;
 const tintNow = () => uniforms.uRegW.value;
 const material = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: 1 - tintNow()}}, transparent: true, depthTest: false, depthWrite: false,
   blending: THREE.AdditiveBlending, vertexShader: VERTEX,
-  fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot, vMatch, vDim; uniform float uWeight;
-    void main() { ${STAR} gl_FragColor = vec4(vColor * a * uWeight * (1.0 - vHot) * vDim, a); }`});
+  fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot, vMatch, vDim, vCrowd; uniform float uWeight;
+    void main() { ${STAR} gl_FragColor = vec4(vColor * a * uWeight * (1.0 - vHot) * vDim * vCrowd, a); }`});
 const materialOver = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: tintNow()}}, transparent: true, depthTest: false, depthWrite: false,
   blending: THREE.CustomBlending, blendEquation: THREE.AddEquation, blendSrc: THREE.OneFactor, blendDst: THREE.OneMinusSrcAlphaFactor, vertexShader: VERTEX,
-  fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot, vMatch, vDim; uniform float uWeight, uDense;
+  fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot, vMatch, vDim, vCrowd; uniform float uWeight, uDense;
     void main() { ${STAR}
       // Regions: translucent, more so in crowded views (search matches are not thinned); search colours: nearly opaque.
       float p = mix(1.6, 1.6 + 0.55 * dot(vColor, vec3(0.2126, 0.7152, 0.0722)), vHot);
@@ -403,7 +489,7 @@ function resize() {
   else { aimCamera(); for (const k of CAMKEYS) cam[k] = camTarget[k]; }
   refresh();
 }
-new ResizeObserver(resize).observe(view);
+const sizes = new ResizeObserver(resize); sizes.observe(view); sizes.observe(tl);
 
 // ---- Visibility, counts and ranges ----
 const visible = i => (D.kind[i] ? state.show.reviewed : D.long[i] ? state.show.long : state.show.matched) && D.papers[i] >= state.min;
@@ -643,10 +729,15 @@ function jumpTo(e) { interact(); const r = tl.getBoundingClientRect(); state.now
 // ---- Status, list and the search caption ----
 let listTimer = 0, lastList = 0;
 function updateStatus() {
-  let n = 0; const [a, b] = inWindow();
-  for (let i = a; i < b; i++) if (visible(i)) n++;
+  let n = 0; const [a, b] = inWindow(), perTown = new Uint32Array(townKeys.size);
+  for (let i = a; i < b; i++) if (visible(i)) { n++; perTown[townIx[i]]++; }
   // The region layer grows more translucent as more stars crowd the view (Place packs them into a few town clouds).
   uniforms.uDense.value = Math.min(1, Math.max(EXHIBIT ? .8 : .4, Math.sqrt((state.layout === 'place' ? 1500 : 4000) / Math.max(n, 1))));
+  // Plain stars: thinned by their town's stars in view (Place), or by all the stars in view (Topic and Orbit). The stars
+  // about to arrive with Drift (the next twentieth of the look-back) get their value now, so none flares as it comes in.
+  uniforms.uDenseP.value = Math.min(1, Math.max(.35, Math.sqrt(4000 / Math.max(n, 1))));
+  for (let i = a, e = lowerBound(state.now + state.span * .05); i < e; i++) crowd[i] = Math.min(1, CROWD_K / Math.sqrt(Math.max(1, perTown[townIx[i]])));
+  geo.attributes.aCrowd.needsUpdate = true;
   const y = state.span / YEAR;
   $('status').textContent = `Now ${fmt(state.now)} · looking back ${y >= 1.5 ? Math.round(y) + ' years' : Math.round(y * 12) + ' months'} · ${n.toLocaleString('en-US')} stories`;
   const now = performance.now(); clearTimeout(listTimer);
@@ -762,20 +853,20 @@ function summarise() {
   const shows = state.colour === 'region' ? 'Colour shows the region' : 'Colour is off';
   if (k === 1) {
     if (!n[0]) { caption(`<b>“${esc(state.q)}”</b> · no stories match with these filters.`); return; }
-    caption(`<b>“${esc(state.q)}”</b> · ${stories(n[0])} in ${perYear[0].size} ${perYear[0].size === 1 ? 'year' : 'years'} · ${season(0)}. <span class="muted">`
-      + (byColour ? `Gold bars on the timeline show each year's share of stories${orbit ? '; gold petals show the months, and the dashed circle is what no rhythm would look like' : '; switch to Orbit to see the time of year'}.`
-        : `${shows}, so the matches are the bright stars and the others are faint; choose Colour: Search to light them in gold. Pale bars on the timeline show each year's share of stories${orbit ? '; pale petals show the months, against the dashed circle of no rhythm' : ''}.`)
+    caption(`<b>“${esc(state.q)}”</b> · ${stories(n[0])} in ${perYear[0].size} ${perYear[0].size === 1 ? 'year' : 'years'} · ${season(0)}.<span class="note">`
+      + (byColour ? `Gold bars on the timeline: each year's share of stories.${orbit ? ' Gold petals: the months; the dashed circle is no rhythm.' : ' Orbit shows the months.'}`
+        : `${shows}: the matches are the bright stars. Colour: Search lights them gold.`)
       + '</span>');
     return;
   }
-  const peak = j => { const r = yearRates.reduce((a, b) => b.rates[j] > (a ? a.rates[j] : 0) ? b : a, null); return r ? ` · largest share in ${r.y} (${Math.round(100 * r.rates[j])}%)` : ''; };
+  const peak = j => { const r = yearRates.reduce((a, b) => b.rates[j] > (a ? a.rates[j] : 0) ? b : a, null); return r ? ` · peak ${r.y} (${Math.round(100 * r.rates[j])}%)` : ''; };
   caption(SLOTS.map((s, j) => `<div class="cmp">${byColour ? `<span class="sw" style="background:${COMPARE[j]}"></span>` : ''}<span class="t">“${esc(shortLabel(s.label))}”</span>`
       + `<button type="button" class="x" data-remove="${j}" aria-label="Remove “${esc(shortLabel(s.label))}” from the comparison" title="Remove this search">✕</button>`
       + `<span>${n[j] ? stories(n[j]) + peak(j) + ' · ' + season(j) : 'no stories match with these filters'}</span></div>`).join('')
-    + `<div class="muted small" style="margin-top:3px">` + (byColour
-      ? `Each search keeps its colour; a white star mentions more than one. Bars on the timeline compare each year's share of stories (years with fewer than ${MIN_YEAR} stories left out)${orbit ? '; the coloured lines show the months, against the dashed circle of no rhythm' : '; switch to Orbit to compare the months'}.`
-      : `${shows}, so the searches are shown together: the ${stories(n[k])} that match any of them are the bright stars. Choose Colour: Search to give each search its own colour. Pale bars on the timeline show each year's share of those stories${orbit ? '; pale petals show their months' : ''}.`)
-    + '</div>');
+    + `<span class="note">` + (byColour
+      ? `A white star mentions more than one. Bars on the timeline: each year's share (years under ${MIN_YEAR} stories left out)${orbit ? '; lines: the months.' : '. Orbit compares the months.'}`
+      : `${shows}: the ${stories(n[k])} matching any search are the bright stars. Colour: Search gives each its own colour.`)
+    + '</span>');
 }
 const esc = s => s.replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 function caption(html) {
@@ -786,7 +877,15 @@ function caption(html) {
 }
 
 // ---- Animation: time passing (Drift), view changes and a slight parallax that follows the pointer ----
-let lastInteract = -1e9, lastFrame = 0, dirty = true, holdUntil = 0;
+let lastInteract = -1e9, lastFrame = 0, dirty = true, holdUntil = 0, lastSig = '', lastRender = 0;
+// What the picture depends on. The stars are drawn again only when this changes: a still sky costs nothing.
+function renderSig() {
+  const u = uniforms; let v = 0; for (const k in geo.attributes) v += geo.attributes[k].version;
+  return [u.uNow.value, u.uSpan.value, u.uMin.value, u.uSearch.value, u.uScale.value, u.uRef.value, u.uRegW.value, u.uByS.value, u.uEm.value, u.uEmBit.value,
+    u.uEmReg.value, u.uDense.value, u.uDenseP.value, u.uCross.value, u.uMix.value.x, u.uMix.value.y, u.uMix.value.z, u.uShow.value.x, u.uShow.value.y, u.uShow.value.z,
+    material.uniforms.uWeight.value, materialOver.uniforms.uWeight.value, +points.visible, +pointsOver.visible, points.renderOrder,
+    cam.yaw, cam.pitch, cam.dist, cam.tx, cam.ty, cam.tz, cam.swayX, cam.swayY, W, H, renderer.getPixelRatio(), v].join(',');
+}
 const interact = () => { lastInteract = performance.now(); };
 function frame(now) {
   requestAnimationFrame(frame);
@@ -807,6 +906,7 @@ function frame(now) {
   // Drift: "now" moves slowly forward, so stories arrive at the front and recede into the past. Pauses while you explore.
   // At 1810 it starts again where the look-back is first full of stories (1771 for one year back, 1780 for ten), not at
   // 1 January 1770, where the view would be empty. With "All" there is nowhere to drift: the whole archive is in view.
+  const movedBefore = moved;
   if (state.drift && !reduced && state.span < maxDay && now - lastInteract > 6000 && hover < 0 && now > holdUntil) {
     state.now += state.span * .012 * dt;
     if (state.now >= maxDay) { state.now = maxDay; holdUntil = now + 2500; setTimeout(() => { if (state.drift) { state.now = Math.min(maxDay, state.span); refresh(); } }, 2500); }
@@ -814,8 +914,10 @@ function frame(now) {
     if (now - lastList > 1000) updateStatus();
   }
   applyCamera();
+  // While only Drift moves the sky, 30 frames a second are enough; anything you do is drawn at once.
+  if (moved && !movedBefore && now - lastRender < 32) return;
   if (moved) { drawAxes(); drawTimeline(); if (dirty) updateStatus(); dirty = false; }
-  renderer.render(scene, camera);
+  const sig = renderSig(); if (sig !== lastSig) { lastSig = sig; lastRender = now; renderer.render(scene, camera); }
 }
 function refresh() {
   uniforms.uNow.value = state.now; uniforms.uSpan.value = state.span; uniforms.uMin.value = state.min;
@@ -854,7 +956,7 @@ function panBy(dx, dy) {
   cam.tz = camTarget.tz = cam.tz - (e[2] * dx - e[6] * dy) * k; dirty = true; redrawNow();
 }
 // Camera input redraws at once (not only on the next animation frame), so the view answers the hand directly.
-function redrawNow() { if (!W) return; applyCamera(); drawAxes(); renderer.render(scene, camera); }
+function redrawNow() { if (!W) return; applyCamera(); drawAxes(); renderer.render(scene, camera); lastSig = renderSig(); lastRender = performance.now(); }
 function resetCamera() { interact(); userCam = false; hideTip(); aimCamera(); if (reduced) for (const k of CAMKEYS) cam[k] = camTarget[k]; dirty = true; }
 view.addEventListener('wheel', e => { e.preventDefault(); const r = view.getBoundingClientRect(); zoomAt(Math.exp(e.deltaY * (e.ctrlKey ? .01 : .0015)), e.clientX - r.left, e.clientY - r.top); }, {passive: false});
 view.addEventListener('contextmenu', e => e.preventDefault());
@@ -905,7 +1007,7 @@ view.addEventListener('pointerup', e => {
   pointers.delete(e.pointerId);
   if (drag && drag.moved <= 4 && pointers.size === 0 && drag.button === 0) {
     const r = view.getBoundingClientRect(); findHover(e.clientX - r.left, e.clientY - r.top, e.pointerType !== 'mouse' ? 22 : 12);
-    if (radioOn) { if (hover >= 0 && lastClick === hover) location.href = pulseUrl(hover); else if (hover >= 0) radioSelect([hover]); lastClick = hover; }
+    if (radioOn) radioClick(hover);
     else if (e.pointerType === 'mouse') { if (hover >= 0) location.href = pulseUrl(hover); }
     else { if (hover >= 0 && lastTap === hover) location.href = pulseUrl(hover); lastTap = hover; }
   }
@@ -916,11 +1018,13 @@ view.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') { po
 setInterval(() => { if (hoverPending) { const [x, y] = hoverPending; hoverPending = null; findHover(x, y); } }, 50);
 function findHover(px, py, radius = 12) {
   let best = -1, bestD = Infinity;
-  const s = searching(), [a, b] = inWindow();
+  const s = searching(), [a, b] = inWindow(), c = uniforms.uCross.value, m0 = mixNow[0], m1 = mixNow[1], m2 = mixNow[2], e = VP.elements, r2 = radius * radius + 9;
   for (let i = a; i < b; i++) {
     if (!visible(i) || (s && !hit[i]) || fade(state.now - D.first[i]) < .15) continue;
-    const [x, y, z] = world(i), p = project(x, y, z), dx = p[0] - px, dy = p[1] - py, d2 = dx * dx + dy * dy;
-    if (d2 <= radius * radius + 9 && d2 - D.papers[i] * 2 - z * 4 < bestD) { bestD = d2 - D.papers[i] * 2 - z * 4; best = i; }
+    const j = i * 2, x = (place[j] * m0 + topic[j] * m1 + orbit[j] * m2) * c, y = (place[j + 1] * m0 + topic[j + 1] * m1 + orbit[j + 1] * m2) * c, z = zOf(D.first[i]);
+    const w = e[3] * x + e[7] * y + e[11] * z + e[15]; if (w <= 0) continue;
+    const dx = ((e[0] * x + e[4] * y + e[8] * z + e[12]) / w * .5 + .5) * W - px, dy = (1 - ((e[1] * x + e[5] * y + e[9] * z + e[13]) / w * .5 + .5)) * H - py, d2 = dx * dx + dy * dy;
+    if (d2 <= r2 && d2 - D.papers[i] * 2 - z * 4 < bestD) { bestD = d2 - D.papers[i] * 2 - z * 4; best = i; }
   }
   if (best !== hover) { hover = best; drawAxes(); radioHover(best); }
   if (best < 0) { $('tip').hidden = true; return; }
@@ -944,7 +1048,7 @@ function showTip(best) {
       + (sp && sp[2].length > 1 ? ` · ${FAMS[T.family].short}` : '') + (T.provisional ? ' · a provisional topic' : '');
   }
   const hint = document.createElement('div'); hint.className = 'kind';
-  hint.textContent = radioOn ? 'Click to keep it speaking; click again to open it in the pulse view' : matchMedia('(hover: hover)').matches ? 'Click to open in the pulse view' : 'Tap again to open in the pulse view';
+  hint.textContent = radioOn ? 'Click to keep it speaking (more clicks add voices); click twice to open it in the pulse view' : matchMedia('(hover: hover)').matches ? 'Click to open in the pulse view' : 'Tap again to open in the pulse view';
   const mentions = document.createElement('div'); mentions.className = 'kind';   // which searches it matches, by colour and words
   if (searching() && hitMask[best]) {
     mentions.append('Mentions ');
@@ -970,7 +1074,7 @@ $('later').addEventListener('click', () => travel(state.span * .25));
 
 // ---- Controls (one-tap buttons) ----
 const HOW = {
-  place: '<b>Place.</b> Each star sits at the town where the story was first printed in this archive, on a map seen face-on (north up). Busier towns form larger clouds.',
+  place: '<b>Place.</b> Each star sits at the town where the story was first printed in this archive, on a map seen face-on (north up). Busier towns form larger clouds, each star drawn fainter so they stay apart.',
   topic: '<b>Topic.</b> Around the ring is what each story is about. Each wedge is one of the 24 topics of the project\'s topic model, a computer grouping of words that tend to appear together, named by hand and grouped into seven families, with a gap between families. A star sits in the wedge of its main topic: on the wedge\'s middle line if the story is about that topic alone, and toward the edge facing its next topic if it mixes topics. The model goes by vocabulary, not by what an item is, so a report of a fire can land among the shop notices. Names with a question mark are provisional: re-running the model does not keep those topics stable. Stories printed in more newspapers sit toward the rim.',
   orbit: '<b>Orbit.</b> Around the ring is the time of year, with the months marked. Because time also runs into the distance, each year is one turn of a spiral; the faint line is that track of time. Stories that come back at the same season line up as streaks running into the distance. Stories printed in more newspapers sit further out.'};
 const COLOUR_HOW = {
@@ -1028,12 +1132,15 @@ $('drift').addEventListener('click', () => { state.drift = !state.drift; lastInt
 // it speaking (click it again to open it in the pulse view). Select an area (Alt-drag, or Select and drag) and up to
 // five of its most widely printed stories speak together. A search makes its most widely printed matches speak. Each
 // voice sits left or right where its star is on the screen.
-let radioOn = false, radioFirst = true, hoverVoice = -1, selectMode = false, lastClick = -1, selBox = null;
+let radioOn = false, radioFirst = true, hoverVoice = -1, selectMode = false, lastClick = -1, selBox = null, airing = 0;
+const LISTEN_OFF = 'Select an area to hear: drag across the sky (or hold Alt and drag), and its stories speak together. This turns the radio on.';
+const LISTEN_ON = 'Select an area to hear: drag across the sky (or hold Alt and drag), and its stories speak together. Point at a star to hear it alone.';
 const pinned = new Set(), speakingStars = new Set();
-function syncRadio() {
-  $('radio').setAttribute('aria-pressed', String(radioOn)); $('on-air').hidden = !radioOn;
-  $('select-area').hidden = !radioOn; $('select-area').setAttribute('aria-pressed', String(radioOn && selectMode));
-  view.classList.toggle('selecting', radioOn && selectMode);
+function syncRadio() {   // Select is always there: an area selected to hear turns the radio on
+  $('radio').setAttribute('aria-pressed', String(radioOn)); $('on-air').hidden = !radioOn || !airing;
+  $('viewport').classList.toggle('airing', radioOn && !!airing);
+  $('select-area').setAttribute('aria-pressed', String(selectMode)); view.classList.toggle('selecting', selectMode);
+  $('select-area').title = radioOn ? LISTEN_ON : LISTEN_OFF;
 }
 function starSays(i, words) {   // where and when it was first printed, then its opening words
   const town = townAt.get(D.flat[i] + ',' + D.flon[i]) || '', when = new Date(EPOCH + D.first[i] * MS).toLocaleDateString('en-GB', {month: 'long', year: 'numeric', timeZone: 'UTC'});
@@ -1042,46 +1149,112 @@ function starSays(i, words) {   // where and when it was first printed, then its
     label: `${town || 'Unknown town'} · ${when} — ${Radio.live.firstWords(D.title[i], 9)}`};
 }
 function speakStar(i, words = 16) {
-  if (!radioOn || i < 0 || !W) return;
+  if (!radioOn || i < 0 || !W) return Promise.resolve(false);
   const [x, y, z] = world(i), p = project(x, y, z), said = starSays(i, words);
-  Radio.live.play('star:' + i, said.text, {pan: Math.max(-.9, Math.min(.9, p[0] / W * 2 - 1)), ...Radio.live.voiceOf(said.town || 'star' + i), label: said.label});
+  return Radio.live.play('star:' + i, said.text, {pan: Math.max(-.9, Math.min(.9, p[0] / W * 2 - 1)), ...Radio.live.voiceOf(said.town || 'star' + i), label: said.label});
 }
-function radioHover(i) {   // the star under the pointer speaks; the one before stops, unless it was clicked or selected
-  if (!radioOn || i < 0 || i === hoverVoice) return;
-  if (hoverVoice >= 0 && !pinned.has(hoverVoice)) Radio.live.stop('star:' + hoverVoice);
-  hoverVoice = i; speakStar(i, 12);
+let dwell = 0, relayRun = 0, lastClickAt = 0;
+// Pointing: a star speaks once the pointer has rested on it for a moment (120 ms), so stars passed over in a sweep make
+// no work. Resting on another star stops the first (unless it was clicked or selected), so moving from star to star
+// alternates the voices; empty sky in between lets a voice finish. A star can be heard again once its voice has ended.
+function radioHover(i) {
+  clearTimeout(dwell);
+  if (!radioOn) return;
+  if (i < 0) { hoverVoice = -1; return; }
+  if (i === hoverVoice && Radio.live.has('star:' + i)) return;
+  dwell = setTimeout(() => {
+    if (hover !== i || !radioOn) return;
+    relayRun++;   // a search's relay gives way
+    if (hoverVoice >= 0 && hoverVoice !== i && !pinned.has(hoverVoice)) Radio.live.stop('star:' + hoverVoice);
+    hoverVoice = i; speakStar(i, 12);
+  }, 120);
 }
-function radioSelect(list) {   // a click, an area or a search: these stars speak together, and the ones before stop
+// A click pins a star: it reads to the end and keeps its gold ring. More clicks add voices (up to five; the oldest gives
+// way). A click on a pinned star lets it go; a second click within a second and a half opens it in Pulses; a click on
+// empty sky lets every pinned voice go.
+function radioClick(i) {
+  const t = performance.now(), again = i >= 0 && i === lastClick && t - lastClickAt < 1500; lastClick = i; lastClickAt = t;
+  if (again) { location.href = pulseUrl(i); return; }
+  relayRun++; clearTimeout(dwell);
+  if (i < 0) { for (const k of pinned) Radio.live.stop('star:' + k); pinned.clear(); return; }
+  if (pinned.has(i)) { pinned.delete(i); Radio.live.stop('star:' + i); return; }
+  pinned.add(i);
+  if (pinned.size > Radio.live.MAX) { const old = pinned.values().next().value; pinned.delete(old); Radio.live.stop('star:' + old); }
+  if (hoverVoice === i) hoverVoice = -1;   // speaking already: now it stays
+  if (!Radio.live.has('star:' + i)) speakStar(i);
+}
+function radioSelect(list) {   // an area: these stars speak together, entering one by one, and the ones before stop
+  relayRun++; clearTimeout(dwell);
   for (const k of [...pinned, hoverVoice]) if (k >= 0 && !list.includes(k)) Radio.live.stop('star:' + k);
   pinned.clear(); hoverVoice = -1;
-  list.slice(0, Radio.live.MAX).forEach((i, k) => { pinned.add(i); setTimeout(() => speakStar(i), k * 160); });
+  list.slice(0, Radio.live.MAX).forEach((i, k) => { pinned.add(i); setTimeout(() => { if (pinned.has(i) && radioOn) speakStar(i); }, k * 350); });
 }
-function radioSearch() {   // a search: its most widely printed matches in view speak (or anywhere, when none is in view)
+// A search: a relay through time, not a chorus. Its four most widely printed matches in view (or anywhere, when none is
+// in view) speak one after another in date order, each for up to seven seconds, with the tuning sound between them.
+// Pointing at a star, a click or an area takes over.
+async function radioSearch() {
   if (!radioOn || !searching()) return;
   const [a, b] = inWindow(), pick = (from, to) => { const out = []; for (let i = from; i < to; i++) if (hit[i] && visible(i)) out.push(i); return out.sort((x, y) => D.papers[y] - D.papers[x]); };
-  const here = pick(a, b); radioSelect((here.length ? here : pick(0, N)).slice(0, 4));
+  const here = pick(a, b), list = (here.length ? here : pick(0, N)).slice(0, 4).sort((x, y) => D.first[x] - D.first[y]);
+  const run = ++relayRun; clearTimeout(dwell);
+  for (const k of [...pinned, hoverVoice]) if (k >= 0) Radio.live.stop('star:' + k);
+  pinned.clear(); hoverVoice = -1;
+  for (const [n, i] of list.entries()) {
+    if (run !== relayRun || !radioOn) return;
+    if (n) { Radio.cue('tune'); await new Promise(r => setTimeout(r, 420)); if (run !== relayRun || !radioOn) return; }
+    pinned.add(i);
+    const cut = setTimeout(() => { if (run === relayRun) Radio.live.stop('star:' + i); }, 7000);
+    await speakStar(i, 16); clearTimeout(cut); if (run === relayRun) pinned.delete(i);
+  }
 }
 function setRadio(on) {
   radioOn = on; if (!on) selectMode = false; syncRadio();
   try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { Radio.unlock(); Radio.live.preload(); Radio.cue('strings'); radioFirst = true; }
-  else { Radio.stop(true); pinned.clear(); hoverVoice = -1; }
+  if (on) { Radio.unlock(); Radio.live.preload(); Radio.welcome(); radioFirst = true; }
+  else { Radio.stop(true); pinned.clear(); hoverVoice = -1; relayRun++; clearTimeout(dwell); }
 }
 Radio.live.onChange(list => {
   speakingStars.clear(); for (const v of list) if (v.key.startsWith('star:')) speakingStars.add(Number(v.key.slice(5)));
-  $('on-air-head').textContent = list.length ? 'On air' : 'Radio';
+  airing = list.length; $('on-air').hidden = !radioOn || !airing; $('viewport').classList.toggle('airing', radioOn && !!airing);
+  $('on-air-head').textContent = list.length ? (list.some(v => v.silent) ? 'On air · words only: no voice could be made' : 'On air') : 'Radio';
   const box = $('on-air-text'); box.replaceChildren();
   for (const v of list) { const line = document.createElement('span'); line.className = 'now'; line.style.display = 'block'; line.textContent = v.label; box.append(line); }
   drawAxes();
 });
 $('radio').addEventListener('click', () => setRadio(!radioOn));
+// ---- The deck: the controls beside the sky. On a wide screen it folds into a slim rail (remembered); on a narrow one it
+// is a drawer over the sky, opened with Controls and closed with ✕, Escape, or a touch outside it. ----
+const scope = $('scope'), narrow = matchMedia('(max-width: 999px)'), DECK = 'telescope-deck';
+const setHdr = () => document.documentElement.style.setProperty('--hdr', (document.getElementById('site-header')?.offsetHeight || 0) + 'px');
+setHdr(); addEventListener('resize', setHdr);
+function syncDeck() {
+  const open = narrow.matches ? scope.classList.contains('drawer') : !scope.classList.contains('collapsed');
+  $('deck-toggle').setAttribute('aria-expanded', String(open)); $('deck-open').setAttribute('aria-expanded', String(open));
+  $('deck-toggle').title = narrow.matches ? 'Close the controls' : open ? 'Fold the controls away' : 'Show the controls';
+}
+function setDrawer(open) {
+  scope.classList.toggle('drawer', open); syncDeck();
+  if (open) $('deck-toggle').focus(); else if ($('deck').contains(document.activeElement)) $('deck-open').focus();
+}
+function foldDeck(fold) {
+  scope.classList.toggle('collapsed', fold); syncDeck();
+  try { localStorage.setItem(DECK, fold ? 'collapsed' : 'open'); } catch {}
+}
+$('deck-toggle').addEventListener('click', () => narrow.matches ? setDrawer(false) : foldDeck(!scope.classList.contains('collapsed')));
+$('rail-label').addEventListener('click', () => foldDeck(false));
+$('deck-open').addEventListener('click', () => setDrawer(!scope.classList.contains('drawer')));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && scope.classList.contains('drawer')) setDrawer(false); });
+document.addEventListener('pointerdown', e => { if (scope.classList.contains('drawer') && !e.target.closest('#deck, #deck-open')) setDrawer(false); }, true);
+narrow.addEventListener('change', () => { scope.classList.remove('drawer'); syncDeck(); });
+try { if (localStorage.getItem(DECK) === 'collapsed') scope.classList.add('collapsed'); } catch {}
+syncDeck();
 $('select-area').addEventListener('click', () => { selectMode = !selectMode; syncRadio(); });
 // ?radio=on turns the radio on (sound starts at the first touch, click or key); ?exhibit=1 is the exhibition mode: the sky,
 // the timeline and what is being read, large, with no menus or lists.
 let radioKept = null; try { radioKept = sessionStorage.getItem('nns-radio'); } catch {}
 if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !== 'off')) {
   radioOn = true; syncRadio();
-  let started = false; const start = () => { if (started) return; started = true; Radio.unlock(); Radio.live.preload(); Radio.cue('strings'); };
+  let started = false; const start = () => { if (started) return; started = true; Radio.unlock(); Radio.live.preload(); Radio.welcome(); };
   for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
   if (Radio.unlock()) Radio.live.preload();
 }

@@ -2,6 +2,21 @@
 from pathlib import Path
 import json, re, sqlite3, shutil, hashlib, datetime
 from archive_data.consumer import release_path, verified_file
+import time
+
+
+def copy_if_changed(src, dst):
+    """Copy src to dst unless dst already holds the same bytes. Rewriting every unchanged scan crop on each build sometimes
+    failed on Windows (EINVAL while another process held the file for a moment), and it was never needed."""
+    src, dst = Path(src), Path(dst)
+    if dst.exists() and dst.stat().st_size == src.stat().st_size and dst.read_bytes() == src.read_bytes():
+        return
+    for attempt in range(5):
+        try:
+            shutil.copyfile(src, dst); return
+        except OSError:
+            if attempt == 4: raise
+            time.sleep(.5)
 
 ROOT=Path(__file__).resolve().parent
 OUT=ROOT.parent/'outputs/newspaper_pulses_space'
@@ -141,7 +156,7 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
                 if oid in year_obs:continue
                 assets=[]
                 for a in db.execute('SELECT path FROM assets WHERE object_id=? ORDER BY path',(oid,)):
-                    path=verified_file(a['path'],release);shutil.copyfile(path,OUT/a['path']);assets.append(a['path'])
+                    path=verified_file(a['path'],release);copy_if_changed(path,OUT/a['path']);assets.append(a['path'])
                 o=dict(r);legacy=o['legacy_id'];prior=old.get(oid,{})
                 # Selections added after v0.1.0 carry their summary and note in an observation_review annotation.
                 review=db.execute("SELECT value_json FROM current_annotations WHERE object_id=? AND annotation_type='observation_review'",(oid,)).fetchone()
