@@ -438,17 +438,17 @@ How it works has a section on using the site by keyboard and screen reader.
 3. the Declaration of Independence, with the radio;
 4. Independence Day vs fever in Orbit;
 5. the topics from the side;
-6. the gaps of 1785–89;
+6. the gaps of 1784–86;
 7. the radio in July 1776.
 
 How it works:
-- **Scenes:** each scene is a page in its exhibition mode (`?exhibit=1`: no menus or lists, large type). It shows a caption that fades after a while, and a QR code for the same view on a phone.
+- **Scenes:** each scene is a page in its exhibition mode (`?exhibit=1`: no menus or lists, large type), with a caption and a QR code for the same view on a phone.
+- **A band of its own (11 November):** the caption, the QR code and the scene dots sit in a band below the scene (a column on its right on screens wider than 19:9), never over it. The band keeps one size, so the scene does not jump. Before, they floated over the scene and covered the telescope's key and the radio's text on a laptop screen. On the radio, the line being read is kept in view.
 - **Touch:** a touch pauses the loop for exploring, and a minute without a touch brings it back.
 - **Staff keys:** F full screen, Space pause, arrows for the scene, M for sound.
-- **Burn-in:** the caption changes sides and moves a little every scene.
 - **Daily reload:** the page reloads itself at 4 a.m.
 - **Sound:** browsers play sound only after a first touch. On an unattended screen, start Chrome with `--autoplay-policy=no-user-gesture-required`.
-- **Scene dots:** the dots at the top show the scene, and a tap goes to it.
+- **Scene dots:** the dots in the band show the scene, and a tap goes to it.
 - **Stars:** in exhibition mode the telescope draws its stars 1.25 to 1.7 times larger (the square root of the screen height over 480 pixels; 1.6 to 2.8 times was too large), keeps region colours bright, and fits the view to the height of the screen. It ignores saved settings, so a scene looks the same every time.
 - **The radio in a story scene:** nobody points or picks at an exhibition, so the scene reads the story's first printing as it starts.
 - **Not built yet:** the offline bundle, with three.js stored locally.

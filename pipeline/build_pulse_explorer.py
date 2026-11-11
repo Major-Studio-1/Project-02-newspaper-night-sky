@@ -565,7 +565,7 @@ decl_story=next(s for s in stories if s['id']=='group:declaration-of-independenc
 cycles_file=ROOT.parent/'outputs/story_discovery_all/cycle_lengths.json'
 if not cycles_file.exists(): print('findings: no cycle_lengths.json (run work/check_cycle_lengths.py); finding 6 is left out')
 findings_html=findings_parts.render(years=[(y['year'],y['papers'],y['pages']) for y in years_index],stars=stars,
-    decl_printings=[(paper_name[observations[m]['node']],observations[m]['date']) for m in decl_story['members']],
+    decl_printings=[(paper_name[o['node']],o['date'],towns[o['node']]['place'],towns[o['node']]['lat'],towns[o['node']]['lon']) for o in (observations[m] for m in decl_story['members'])],
     audit=json.loads((ROOT.parent/'outputs/matched_audit/summary.json').read_text(encoding='utf8')),
     cycles=json.loads(cycles_file.read_text(encoding='utf8')) if cycles_file.exists() else None,repo=REPO)
 (OUT/'findings.html').write_text(fill(fill_text((ROOT/'findings.html').read_text(encoding='utf8').replace('__FINDINGS__',findings_html)),'findings',VER,N_STARS),encoding='utf8')

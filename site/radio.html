@@ -236,6 +236,8 @@ Radio.onCaption(({intro, lines, index}) => {
   $('cap-intro').textContent = intro;
   const box = $('cap-text'); box.replaceChildren();
   lines.forEach((line, k) => { const s = document.createElement('span'); if (k === index) s.className = 'now'; s.textContent = line + ' '; box.append(s); });
+  // In an exhibition nobody scrolls: the line being read is kept in view (a frame beside the exhibition's band is short).
+  if (exhibit) box.querySelector('.now')?.scrollIntoView({block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
 });
 function hint(text) { $('hint').textContent = text; }
 

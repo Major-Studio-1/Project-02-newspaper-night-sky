@@ -107,7 +107,7 @@ def key(*items):
 # ---- the findings ----
 def render(*, years, stars, decl_printings, audit, cycles, repo):
     """years: [(year, newspapers, pages)]; stars: the sky's stars (year, first, long, papers, text); decl_printings:
-    [(newspaper, 'YYYY-MM-DD')] for the Declaration; audit: the matched audit's summary; cycles: the cycle-length check
+    [(newspaper, 'YYYY-MM-DD', town, lat, lon)] for the Declaration; audit: the matched audit's summary; cycles: the cycle-length check
     (or None); repo: the public repository's URL."""
     arch = {y: (p, pg) for y, p, pg in years}
     keep = [s for s in stars if not s['long']]
@@ -160,31 +160,61 @@ def render(*, years, stars, decl_printings, audit, cycles, repo):
         [('Read the ports resolution, with its scans', 'pulses.html?year=1776&focus=' + quote('group:congress-opens-ports')), ('How the stories were checked', 'method.html#checks')],
         table([(name, f'{f_} ({100 * f_ / located:.0f}%)', f'{m_} ({100 * m_ / located:.0f}%)', f'{x_} ({100 * x_ / located:.0f}%)') for name, f_, m_, x_ in rows], ['', 'Faithful', 'Minor errors', 'Fact-changing'])))
 
-    # 3 · how a story travels: the Declaration, printing by printing
-    pr = sorted((datetime.date.fromisoformat(dt), name) for name, dt in decl_printings)
+    # 3 · how a story travels: the Declaration, each printing by its date and by its town's distance from the town that
+    # printed it first. Both axes are measures, so any slope in the dots is in the data (not made by sorting the rows).
+    pr = sorted((datetime.date.fromisoformat(dt), name, place, lat, lon) for name, dt, place, lat, lon in decl_printings)
+    d0, d1 = pr[0][0], pr[-1][0]; span = (d1 - d0).days; home = pr[0][2].split(',')[0]
+    def km(a, b):
+        la1, lo1, la2, lo2 = map(math.radians, (*a, *b))
+        return 6371 * 2 * math.asin(math.sqrt(math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2))
+    pts = [(dt, name, place.split(',')[0], km((pr[0][3], pr[0][4]), (lat, lon))) for dt, name, place, lat, lon in pr]
     first_of = {}
-    for dt, name in pr: first_of.setdefault(name, dt)
-    papers = sorted(first_of, key=lambda n: (first_of[n], n))
-    d0, d1 = pr[0][0], pr[-1][0]; span = (d1 - d0).days
-    W, L, R, T, rh = 900, 300, 16, 12, 19; H = T + rh * len(papers) + 28; pw = W - L - R
-    short = lambda s: s if len(s) <= 40 else s[:38].rstrip() + '…'   # a long title keeps its full name in the tooltip
-    xd = lambda dt: L + pw * ((dt - d0).days + .5) / (span + 1)
-    svg = [f'<svg viewBox="0 0 {W} {H}" class="chart" role="img" aria-label="The Declaration of Independence, printing by printing">']
+    for dt, name, town, dist in pts: first_of.setdefault(name, (dt, dist))
+    def ranks(a):
+        order = sorted(range(len(a)), key=lambda i: a[i]); r = [0.0] * len(a); i = 0
+        while i < len(a):
+            j = i
+            while j + 1 < len(a) and a[order[j + 1]] == a[order[i]]: j += 1
+            for k in range(i, j + 1): r[order[k]] = (i + j) / 2
+            i = j + 1
+        return r
+    xs, ys = [v[1] for v in first_of.values()], [(v[0] - d0).days for v in first_of.values()]
+    rx, ry = ranks(xs), ranks(ys); mx, my = sum(rx) / len(rx), sum(ry) / len(ry)
+    rho = sum((u - mx) * (v - my) for u, v in zip(rx, ry)) / math.sqrt(sum((u - mx) ** 2 for u in rx) * sum((v - my) ** 2 for v in ry))
+    top = math.ceil(max(d for *_, d in pts) / 100) * 100
+    W, L, R, T, B = 900, 64, 24, 18, 30; H = 270; pw, ph = W - L - R, H - T - B
+    xd = lambda dt: L + pw * ((dt - d0).days + .5) / (span + 1); yd = lambda d: T + ph - ph * d / top
+    svg = [f'<svg viewBox="0 0 {W} {H}" class="chart" role="img" aria-label="Each printing of the Declaration by date and by distance from {esc(home)}">']
+    for v in range(0, top + 1, 100):
+        svg.append(f'<line x1="{L}" x2="{W - R}" y1="{yd(v):.1f}" y2="{yd(v):.1f}" stroke="{GRID}"/><text x="{L - 8}" y="{yd(v) + 4:.1f}" text-anchor="end" fill="{MUTED}" font-size="11">{v} km</text>')
     for k in range(0, span + 1, 5):
-        x = xd(d0 + datetime.timedelta(days=k))
-        svg.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{T - 4}" y2="{H - 22}" stroke="{GRID}"/><text x="{x:.1f}" y="{H - 8}" text-anchor="middle" fill="{MUTED}" font-size="11">{(d0 + datetime.timedelta(days=k)).day} {(d0 + datetime.timedelta(days=k)).strftime("%b")}</text>')
-    for k, name in enumerate(papers):
-        y = T + rh * k + rh / 2
-        svg.append(f'<text x="{L - 10}" y="{y + 4:.1f}" text-anchor="end" fill="{INK}" font-size="12">{esc(short(name))}<title>{esc(name)}</title></text>')
-        for dt, nm in pr:
-            if nm == name: svg.append(f'<circle cx="{xd(dt):.1f}" cy="{y:.1f}" r="4.5" fill="{GOLD}" stroke="{SURFACE}" stroke-width="2"><title>{esc(name)}, {dt.day} {dt.strftime("%B %Y")}</title></circle>')
+        dd = d0 + datetime.timedelta(days=k)
+        svg.append(f'<text x="{xd(dd):.1f}" y="{H - 8}" text-anchor="middle" fill="{MUTED}" font-size="11">{dd.day} {dd.strftime("%b")}</text>')
+    seen, dots = {}, []
+    for dt, name, town, dist in pts:   # printings on the same day in the same town stand one above the other
+        k = seen.get((dt, round(dist)), 0); seen[(dt, round(dist))] = k + 1; cx, cy = xd(dt), yd(dist) - 9 * k; dots.append((cx, cy))
+        svg.append(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="5" fill="{GOLD}" stroke="{SURFACE}" stroke-width="2"><title>{esc(name)}, {esc(town)}, {dt.day} {dt.strftime("%B %Y")} ({dist:.0f} km from {esc(home)})</title></circle>')
+    towns = {}
+    for dt, name, town, dist in pts: towns.setdefault(town, [dt, dist, set()])[2].add(name)
+    # Each town is named once, beside its first printing: the first of right, above, below or left that touches no dot,
+    # no other name and no edge (text width estimated at 6.2 pixels a character).
+    boxes = [(cx - 6, cy - 6, cx + 6, cy + 6) for cx, cy in dots]
+    hit = lambda b: b[0] < L or b[2] > W - R or b[1] < 2 or b[3] > T + ph + 2 or any(b[0] < o[2] and o[0] < b[2] and b[1] < o[3] and o[1] < b[3] for o in boxes)
+    for town, (dt, dist, names) in towns.items():
+        label = town + (f' \u00b7 {len(names)} papers' if len(names) > 1 else ''); w = 6.2 * len(label); cx, cy = xd(dt), yd(dist)
+        for x0, y0, anchor in ((cx + 9, cy + 4, 'start'), (cx - 4, cy - 11, 'start'), (cx - 4, cy + 19, 'start'), (cx - 9, cy + 4, 'end')):
+            b = (x0 - (w if anchor == 'end' else 0), y0 - 10, x0 + (0 if anchor == 'end' else w), y0 + 2)
+            if not hit(b): break
+        boxes.append(b)
+        svg.append(f'<text x="{x0:.1f}" y="{y0:.1f}" text-anchor="{anchor}" fill="{INK}" font-size="11">{esc(label)}</text>')
     svg.append('</svg>')
-    out.append(finding(3, 'A story travels', f'The Declaration reached {len(papers)} newspapers in {span + 1} days',
-        f'Adopted on 4 July 1776, the Declaration of Independence was first printed in this archive on {d0.day} {d0.strftime("%B")} and by {d1.day} {d1.strftime("%B")} had appeared in {len(papers)} of its newspapers, every printing read against its scan.',
-        f'<div class="cap"><b>Each dot is one printing</b>, by newspaper, in the order the papers first printed it</div>{"".join(svg)}',
-        'A reviewed story: each of its printings was found, read and checked against the page scan by hand.',
-        'Who copied whom. A paper may have taken the text from any earlier paper, a handbill or a letter; the dots show when each printed it, not the road it travelled.',
-        [('Watch it pulse from paper to paper', 'pulses.html?year=1776&focus=' + quote('group:declaration-of-independence')), ('See it in the sky', 'telescope.html?story=' + quote('group:declaration-of-independence'))]))
+    out.append(finding(3, 'A story travels', f'The Declaration reached {len(first_of)} newspapers in {span + 1} days: the farther, the later',
+        f'Adopted on 4 July 1776, the Declaration of Independence was first printed in this archive on {d0.day} {d0.strftime("%B")} in {esc(home)}. By {d1.day} {d1.strftime("%B")} it had appeared in {len(first_of)} of its newspapers, and the farther a paper\u2019s town from {esc(home)}, the later it printed it.',
+        f'<div class="cap"><b>Each dot is one printing</b>: across, its date; up, how far its town is from {esc(home)}, as the crow flies</div>{"".join(svg)}',
+        f'A reviewed story: each printing was found, read and checked against its scan. Distance and delay agree closely: a rank correlation of {rho:.2f} over its {len(first_of)} newspapers, as travel by post road and ship would make them. It is one story, so it shows how this one travelled.',
+        'Who copied whom. A paper may have taken the text from any earlier paper, a handbill or a letter; the dots show when and where each printed it, not the road the text took. The distances are straight lines; the roads and the sea were longer.',
+        [('Watch it pulse from paper to paper', 'pulses.html?year=1776&focus=' + quote('group:declaration-of-independence')), ('See it in the sky', 'telescope.html?story=' + quote('group:declaration-of-independence'))],
+        table([(f'{dt.day} {dt.strftime("%b")}', esc(name), esc(town), f'{dist:.0f} km') for dt, name, town, dist in pts], ['Date', 'Newspaper', 'Town', f'From {esc(home)}'])))
 
     # 4 · coming back: the embargo's waves (the telescope's wave rule)
     emb_y = {y: 0 for y in YEARS}
