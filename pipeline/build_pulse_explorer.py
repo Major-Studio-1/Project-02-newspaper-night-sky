@@ -423,6 +423,8 @@ print(f'trace: {len(trace_words):,} words; {trace_cover:,} of {len(stars):,} sto
 assert trace_cover>=.9*len(stars), 'most stories should offer a word to trace'
 reg_count=collections.Counter(s['reg'] for s in stars)
 tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'trace':trace_stamp,'stories':len(stars),'twins':twins,
+           # The archive under the timeline, as on the Pulses year strip: [year, newspapers with surviving pages, pages, reviewed stories].
+           'years':[[y['year'],y['papers'],y['pages'],y['reviewed']] for y in years_index],
            'regions':[{'label':label,'states':states,'color':color,'stories':reg_count[i]} for i,(label,states,color,_) in enumerate(REGIONS)],
            # Sizes as served, so the loading bar can measure progress even when the server compresses the files.
            'bytes':{'data':(OUT/'telescope.json').stat().st_size,'text':(OUT/'telescope-text.json').stat().st_size},

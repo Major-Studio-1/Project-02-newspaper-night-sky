@@ -347,6 +347,28 @@ Of all stars, 95% offer at least one word. A word can still have two senses (Cap
 
 Pulses has the same actions under its map. Hear reads the printing chosen now, and the trace words open the sky with that word traced and the story chosen.
 
+### One time window (11 November 2026)
+
+The telescope's timeline showed the stories in the sky, but not the archive behind them. A thin stretch of sky could therefore be read as a quiet time when it was a gap in what survives, the coverage problem this project keeps apart from attention.
+
+- **A second row.** The timeline now shows, under the stories by month, the newspapers that survive each year in this archive, with a gold dot for each year checked by hand. Each row has its own scale.
+- **The same bars as Pulses.** These are the bars of the Pulses year strip. Both pages draw the stretch in view as a bright bracket and the moment ("now", or the date the pulses have reached) as a bright line.
+- **Naming the year.** Pointing at the telescope's timeline names the year under it: its surviving newspapers and pages, and the stories in the sky first printed that year.
+
+Each page keeps its own way of moving through time: the telescope moves "now" (Drift moves it on its own), and Pulses chooses years and plays them.
+
+### Waves (11 November 2026)
+
+The project began with the question of whether problems keep coming back. A scan of cycle lengths (`pipeline/check_cycle_lengths.py`) found that the year is the only fixed cycle in this archive. A week shows only the printing days, and the other peaks are echoes of the year. Many things come back irregularly instead, in waves.
+
+The telescope's search now says how a word comes back, for example "comes back in waves: 1794; 1796; 1798; 1801; 1808–1810" for *embargo*. A gold line over the timeline marks the wave years.
+
+- **Thin years:** a year is judged when it holds at least a fifth of a typical year's stories in view. Thinner years are named "too little archive to judge", never quiet.
+- **Wave years:** a wave year has at least 3 matches, twice the word's usual share, and more than chance would give (P < .05).
+- **Checked against known history** (`pipeline/check_waves.py`, [the waves check](waves-check.md)). The rule found the Tripoli war (1801–1805) exactly, both US embargoes, the Algiers crisis of 1793–1797 and the great fever years.
+  - **The extra embargo waves are European crises** (1796, 1798, 1801). The rule traces the word, not the policy.
+  - **Fire, the control,** shows at most one borderline year.
+
 ## The website
 
 The views are joined into one site with six pages and a shared header, plus an exhibition page:
@@ -462,6 +484,7 @@ How it works:
 | Reviewed stories, 1776 | `pipeline/year_search_pages.py` (the year's pages), `pipeline/story_items.py` (single printed items), `pipeline/story_phrase_search.py`; the ledger is written by `pipeline/archive_data/ledgers/make_stories_1776.py`, and `pipeline/archive_data/add_reviewed_topics.py` adds the new groups' topics |
 | Matched stories, all years | `pipeline/reuse_all.py`, `pipeline/reuse_families_all.py`, `pipeline/reuse_titles_all.py`, `pipeline/story_topics_all.py`; added to the release by `pipeline/archive_data/add_reuse_layer.py`, `add_reuse_titles.py` and `add_story_topics.py` |
 | Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
+| Cycle lengths and waves | `pipeline/check_cycle_lengths.py` (every period from 6 to 400 days; in [seasons-check.md](seasons-check.md)) and `pipeline/check_waves.py` (how a word comes back, against known history; [waves-check.md](waves-check.md)) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
 | Data release | [`data/`](../data) (v0.10.2) |

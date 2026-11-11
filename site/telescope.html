@@ -87,7 +87,7 @@ body.exhibit .key-more{display:none}body.exhibit .skykey{font-size:clamp(12px,.9
 /* Time: Drift, Earlier and Later, and the look-back around the timeline, under the sky. */
 .dock{flex:none;display:flex;align-items:center;gap:8px;padding:8px 12px;border-top:1px solid var(--line);background:#070b17}
 .dock .timeline-wrap{flex:1 1 auto;min-width:200px;border-radius:7px;overflow:hidden;background:#050711;border:1px solid #1a2338}
-#timeline{display:block;width:100%;height:52px;cursor:pointer;touch-action:none}
+#timeline{display:block;width:100%;height:64px;cursor:pointer;touch-action:none}
 .dock .step{width:32px;height:32px;padding:0;display:grid;place-items:center;font-size:18px;line-height:1;border-radius:50%}
 .dock .ctl{display:flex;align-items:center;gap:7px}
 .tip{position:absolute;z-index:3;max-width:320px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;pointer-events:none;box-shadow:0 6px 24px #0008}
@@ -208,7 +208,7 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 <div class="dock">
 <button type="button" id="drift" class="toggle has-ico" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-drift"/></svg>Drift</button>
 <button type="button" id="earlier" class="step" title="Move 'now' earlier" aria-label="Earlier">‹</button>
-<div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Click or drag to move 'now'; the bright bracket is the stretch of time you are looking back through. The up and down arrow keys also move through time."></canvas></div>
+<div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Above, the stories in the sky by month; below, how many newspapers survive each year in this archive, with gold dots for the years checked by hand. Click or drag to move 'now'; the bright bracket is the stretch of time you are looking back through. The up and down arrow keys also move through time."></canvas></div>
 <button type="button" id="later" class="step" title="Move 'now' later" aria-label="Later">›</button>
 <span class="ctl"><span class="label" id="span-label">Look back</span><span class="seg slide" data-roving id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span></span>
 <button type="button" id="watch" class="watch-btn" title="Watch: hide every control and let the sky play by itself, full screen. Esc brings the controls back."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fit"/></svg><span class="lbl">Watch</span></button>
@@ -224,7 +224,7 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 </main>
 <footer class="site-footer"><div class="site-inner"><div class="foot-brand"><b>Newspaper Night Sky</b><span>American newspapers, 1770–1810, seen through one surviving archive.</span></div><nav aria-label="More"><a href="index.html">Home</a><a href="telescope.html">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html">Radio</a><a href="method.html">How it works</a><a href="notes.html">Research notes</a><a href="exhibit.html">Exhibition mode</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky/tree/main/data">Data release</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky">Code</a></nav><p class="foot-note">Source: Smithsonian Revolution Crossroads, drawn from the Library of Congress <i>Chronicling America</i> newspapers (Hugging Face dataset <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision). Reviewed stories were read and checked against the page scans; matched stories were found automatically by shared wording and are not checked. Data foundation v0.10.2.</p></div></footer>
 <button type="button" id="watch-exit" class="watch-exit" hidden>✕ Exit watch</button>
-<script type="application/json" id="boot">{"release_version": "0.10.2", "stamp": "aae27f7ce47e", "trace": "966e104a0985", "stories": 48289, "twins": {"R1776-0021": "group:king-speech-october-1775", "R1776-0050": "group:congress-bills-of-credit", "R1776-0046": "group:wilkes-speech-commons", "R1776-0036": "group:penn-before-the-lords", "R1776-0074": "group:congress-fast-day-1776", "R1776-0083": "group:boston-evacuation-letter", "R1776-0035": "group:congress-opens-ports", "R1776-0075": "group:barry-takes-edward", "R1776-0058": "group:sloop-liberty-gunpowder", "R1776-0069": "group:hopkins-nassau-letter", "R1776-0012": "group:dublin-paper-naval-force", "R1776-0053": "group:rhode-island-renunciation", "R1776-0029": "group:congress-may-15-resolution", "R1776-0032": "group:virginia-independence-resolution", "R1776-0018": "group:london-address-to-king-1776", "R1776-0010": "group:pennsylvania-new-instructions", "R1776-0015": "group:campbell-captured-letter", "R1776-0004": "group:declaration-of-independence", "R1776-0045": "group:king-speech-may-1776", "R1776-0005": "group:howe-declarations-1776", "R1776-0008": "group:cedars-cartel-report", "R1776-0067": "group:staten-island-conference", "R1776-0042": "group:eighty-eight-battalions", "R1776-0061": "group:congress-intelligence-october-1776", "R1776-0037": "group:gates-carleton-retreat", "R1793-0001": "group:emigrant-armies-disbanded", "R1793-0003": "group:dumouriez-letter-brussels", "R1793-0028": "group:powers-at-war-with-france-list", "R1793-0044": "group:tournai-bulletin-3-may", "R1793-0014": "group:death-of-general-dampierre", "R1793-0015": "group:convention-president-declaration-plot", "R1793-0019": "group:sea-serpent-captain-crabtree", "R1793-0020": "group:cadiz-letter-24-june", "R1793-0017": "group:madeira-report-battle-near-lisle", "R1793-0011": "group:treasury-circular-rules-on-neutrality", "R1793-0005": "group:genet-appeal-to-the-people-1793", "R1797-0045": "group:jefferson-madison-letter", "R1797-0019": "group:brown-house-fire", "R1797-0008": "group:adams-senate-farewell", "R1797-0063": "group:boyd-bantry-coverage", "R1797-0289": "group:peace-cayenne-context", "R1797-0089": "group:barney-escapes-blockade", "R1797-0091": "group:quito-earthquake", "R1797-0092": "group:kosciuszko-land-warrant", "R1797-0025": "group:sonthonax-departure", "R1797-0002": "group:tenerife-defeat-report", "R1797-0024": "group:algerine-sicilian-battle", "R1797-0108": "group:havana-french-captures", "R1797-0031": "group:two-sisters-wreck", "R1797-0012": "group:congress-opening-nov-1797", "R1797-0119": "group:nh-governor-address-1797", "R1797-0032": "group:camperdown-dispatches", "R1807-0003": "group:lubeck-stormed", "R1807-0022": "group:monroe-pinkney-treaty-letter", "R1807-0009": "group:harford-jones-russian-army", "R1807-0004": "group:bennigsen-pultusk-account", "R1807-0027": "group:driver-at-charleston", "R1807-0008": "group:bulletin-66", "R1807-0006": "group:douglas-and-the-mayor-of-norfolk", "R1807-0018": "group:special-session-1807", "R1807-0025": "group:bulletin-78", "R1807-0031": "group:armistice-france-russia", "R1807-0010": "group:antwerp-letter-capture-order", "R1807-0040": "group:britain-answer-peace-or-war", "R1808-0051": "group:latest-from-portugal-dec-1807", "R1808-0003": "group:president-message-25-feb-military-force", "R1807-0001": "group:papers-before-congress-march-1808", "R1808-0014": "group:alicante-letters-1808", "R1808-0016": "group:adams-resigns-senate", "R1808-0013": "group:charles-iv-appoints-murat", "R1808-0057": "group:jefferson-answers-new-hampshire", "R1808-0042": "group:order-in-council-4-july", "R1808-0008": "group:canning-on-america-24-june", "R1808-0032": "group:arcturus-news-from-spain", "R1808-0049": "group:jefferson-answer-embargo-petitions", "R1808-0035": "group:reding-dispatch-baylen", "R1808-0025": "group:conventions-in-portugal", "R1808-0002": "group:message-8-november", "R1808-0001": "group:foreign-relations-report-22-november"}, "regions": [{"label": "New England", "states": "Maine, New Hampshire, Massachusetts, Rhode Island and Connecticut", "color": "#9085e9", "stories": 13313}, {"label": "Middle States", "states": "New York, New Jersey, Pennsylvania and Delaware", "color": "#199e70", "stories": 13971}, {"label": "South and West", "states": "Washington, Virginia (with today's West Virginia), Kentucky and South Carolina", "color": "#d95926", "stories": 21005}], "bytes": {"data": 7714124, "text": 24369033}, "towns": [{"name": "Portland", "lat": 43.661, "lon": -70.255, "stories": 1863}, {"name": "Portsmouth", "lat": 43.071, "lon": -70.763, "stories": 6899}, {"name": "Concord", "lat": 43.208, "lon": -71.538, "stories": 394}, {"name": "Exeter", "lat": 42.981, "lon": -70.948, "stories": 549}, {"name": "Dover", "lat": 43.198, "lon": -70.874, "stories": 9}, {"name": "Hanover", "lat": 43.702, "lon": -72.29, "stories": 68}, {"name": "Keene", "lat": 42.934, "lon": -72.278, "stories": 74}, {"name": "Salem", "lat": 42.519, "lon": -70.897, "stories": 13}, {"name": "Boston", "lat": 42.36, "lon": -71.058, "stories": 885}, {"name": "Providence", "lat": 41.824, "lon": -71.413, "stories": 970}, {"name": "Warren", "lat": 41.73, "lon": -71.282, "stories": 289}, {"name": "Newport", "lat": 41.49, "lon": -71.313, "stories": 420}, {"name": "Hartford", "lat": 41.764, "lon": -72.685, "stories": 880}, {"name": "Kingston", "lat": 41.927, "lon": -73.997, "stories": 2}, {"name": "New York", "lat": 40.713, "lon": -74.006, "stories": 4394}, {"name": "Chatham", "lat": 40.741, "lon": -74.383, "stories": 18}, {"name": "Burlington", "lat": 40.071, "lon": -74.865, "stories": 790}, {"name": "Philadelphia", "lat": 39.952, "lon": -75.165, "stories": 8642}, {"name": "Wilmington", "lat": 39.746, "lon": -75.547, "stories": 124}, {"name": "Dover", "lat": 39.158, "lon": -75.524, "stories": 1}, {"name": "Washington", "lat": 38.895, "lon": -77.036, "stories": 6151}, {"name": "Alexandria", "lat": 38.805, "lon": -77.047, "stories": 5261}, {"name": "Shepherdstown", "lat": 39.43, "lon": -77.804, "stories": 403}, {"name": "Martinsburg", "lat": 39.456, "lon": -77.964, "stories": 162}, {"name": "Wheeling", "lat": 40.064, "lon": -80.721, "stories": 31}, {"name": "Richmond", "lat": 37.541, "lon": -77.436, "stories": 4233}, {"name": "Williamsburg", "lat": 37.271, "lon": -76.707, "stories": 1874}, {"name": "Norfolk", "lat": 36.851, "lon": -76.286, "stories": 2200}, {"name": "Lynchburg", "lat": 37.414, "lon": -79.142, "stories": 42}, {"name": "Lexington", "lat": 38.04, "lon": -84.503, "stories": 381}, {"name": "Charleston", "lat": 32.777, "lon": -79.931, "stories": 267}], "categories": [{"label": "War and the armies", "year": 1776, "color": "#3987e5"}, {"label": "Britain and Europe", "year": 1776, "color": "#d95926"}, {"label": "Independence and American government", "year": 1776, "color": "#199e70"}, {"label": "The war in Europe", "year": 1793, "color": "#3987e5"}, {"label": "Ships and the sea", "year": 1793, "color": "#d95926"}, {"label": "American public life", "year": 1793, "color": "#199e70"}, {"label": "War, revolution and foreign news", "year": 1797, "color": "#3987e5"}, {"label": "Ships, privateers and wrecks", "year": 1797, "color": "#d95926"}, {"label": "American public life", "year": 1797, "color": "#199e70"}, {"label": "War in Europe", "year": 1807, "color": "#3987e5"}, {"label": "Britain, France and American ships", "year": 1807, "color": "#d95926"}, {"label": "American public life and government", "year": 1807, "color": "#199e70"}, {"label": "War in Spain and Portugal", "year": 1808, "color": "#3987e5"}, {"label": "Britain, France and American ships", "year": 1808, "color": "#d95926"}, {"label": "The embargo and American government", "year": 1808, "color": "#199e70"}]}</script>
+<script type="application/json" id="boot">{"release_version": "0.10.2", "stamp": "aae27f7ce47e", "trace": "966e104a0985", "stories": 48289, "twins": {"R1776-0021": "group:king-speech-october-1775", "R1776-0050": "group:congress-bills-of-credit", "R1776-0046": "group:wilkes-speech-commons", "R1776-0036": "group:penn-before-the-lords", "R1776-0074": "group:congress-fast-day-1776", "R1776-0083": "group:boston-evacuation-letter", "R1776-0035": "group:congress-opens-ports", "R1776-0075": "group:barry-takes-edward", "R1776-0058": "group:sloop-liberty-gunpowder", "R1776-0069": "group:hopkins-nassau-letter", "R1776-0012": "group:dublin-paper-naval-force", "R1776-0053": "group:rhode-island-renunciation", "R1776-0029": "group:congress-may-15-resolution", "R1776-0032": "group:virginia-independence-resolution", "R1776-0018": "group:london-address-to-king-1776", "R1776-0010": "group:pennsylvania-new-instructions", "R1776-0015": "group:campbell-captured-letter", "R1776-0004": "group:declaration-of-independence", "R1776-0045": "group:king-speech-may-1776", "R1776-0005": "group:howe-declarations-1776", "R1776-0008": "group:cedars-cartel-report", "R1776-0067": "group:staten-island-conference", "R1776-0042": "group:eighty-eight-battalions", "R1776-0061": "group:congress-intelligence-october-1776", "R1776-0037": "group:gates-carleton-retreat", "R1793-0001": "group:emigrant-armies-disbanded", "R1793-0003": "group:dumouriez-letter-brussels", "R1793-0028": "group:powers-at-war-with-france-list", "R1793-0044": "group:tournai-bulletin-3-may", "R1793-0014": "group:death-of-general-dampierre", "R1793-0015": "group:convention-president-declaration-plot", "R1793-0019": "group:sea-serpent-captain-crabtree", "R1793-0020": "group:cadiz-letter-24-june", "R1793-0017": "group:madeira-report-battle-near-lisle", "R1793-0011": "group:treasury-circular-rules-on-neutrality", "R1793-0005": "group:genet-appeal-to-the-people-1793", "R1797-0045": "group:jefferson-madison-letter", "R1797-0019": "group:brown-house-fire", "R1797-0008": "group:adams-senate-farewell", "R1797-0063": "group:boyd-bantry-coverage", "R1797-0289": "group:peace-cayenne-context", "R1797-0089": "group:barney-escapes-blockade", "R1797-0091": "group:quito-earthquake", "R1797-0092": "group:kosciuszko-land-warrant", "R1797-0025": "group:sonthonax-departure", "R1797-0002": "group:tenerife-defeat-report", "R1797-0024": "group:algerine-sicilian-battle", "R1797-0108": "group:havana-french-captures", "R1797-0031": "group:two-sisters-wreck", "R1797-0012": "group:congress-opening-nov-1797", "R1797-0119": "group:nh-governor-address-1797", "R1797-0032": "group:camperdown-dispatches", "R1807-0003": "group:lubeck-stormed", "R1807-0022": "group:monroe-pinkney-treaty-letter", "R1807-0009": "group:harford-jones-russian-army", "R1807-0004": "group:bennigsen-pultusk-account", "R1807-0027": "group:driver-at-charleston", "R1807-0008": "group:bulletin-66", "R1807-0006": "group:douglas-and-the-mayor-of-norfolk", "R1807-0018": "group:special-session-1807", "R1807-0025": "group:bulletin-78", "R1807-0031": "group:armistice-france-russia", "R1807-0010": "group:antwerp-letter-capture-order", "R1807-0040": "group:britain-answer-peace-or-war", "R1808-0051": "group:latest-from-portugal-dec-1807", "R1808-0003": "group:president-message-25-feb-military-force", "R1807-0001": "group:papers-before-congress-march-1808", "R1808-0014": "group:alicante-letters-1808", "R1808-0016": "group:adams-resigns-senate", "R1808-0013": "group:charles-iv-appoints-murat", "R1808-0057": "group:jefferson-answers-new-hampshire", "R1808-0042": "group:order-in-council-4-july", "R1808-0008": "group:canning-on-america-24-june", "R1808-0032": "group:arcturus-news-from-spain", "R1808-0049": "group:jefferson-answer-embargo-petitions", "R1808-0035": "group:reding-dispatch-baylen", "R1808-0025": "group:conventions-in-portugal", "R1808-0002": "group:message-8-november", "R1808-0001": "group:foreign-relations-report-22-november"}, "years": [[1770, 4, 448, 0], [1771, 4, 546, 0], [1772, 6, 675, 0], [1773, 6, 846, 0], [1774, 8, 1205, 0], [1775, 7, 1286, 0], [1776, 16, 2319, 31], [1777, 11, 1320, 0], [1778, 11, 970, 0], [1779, 9, 1660, 0], [1780, 7, 1406, 0], [1781, 7, 1623, 0], [1782, 8, 1509, 0], [1783, 9, 1100, 0], [1784, 5, 644, 0], [1785, 2, 380, 0], [1786, 2, 356, 0], [1787, 10, 1297, 0], [1788, 7, 2379, 0], [1789, 5, 742, 0], [1790, 5, 950, 0], [1791, 6, 1242, 0], [1792, 8, 1629, 0], [1793, 12, 1751, 12], [1794, 9, 2119, 0], [1795, 11, 1668, 0], [1796, 7, 1552, 0], [1797, 8, 1587, 21], [1798, 8, 1656, 0], [1799, 10, 1772, 0], [1800, 14, 2575, 0], [1801, 14, 2372, 0], [1802, 14, 2968, 0], [1803, 17, 3250, 0], [1804, 14, 3472, 0], [1805, 14, 3811, 0], [1806, 12, 4381, 0], [1807, 11, 4162, 14], [1808, 10, 4060, 20], [1809, 13, 4172, 0], [1810, 11, 3933, 0]], "regions": [{"label": "New England", "states": "Maine, New Hampshire, Massachusetts, Rhode Island and Connecticut", "color": "#9085e9", "stories": 13313}, {"label": "Middle States", "states": "New York, New Jersey, Pennsylvania and Delaware", "color": "#199e70", "stories": 13971}, {"label": "South and West", "states": "Washington, Virginia (with today's West Virginia), Kentucky and South Carolina", "color": "#d95926", "stories": 21005}], "bytes": {"data": 7714124, "text": 24369033}, "towns": [{"name": "Portland", "lat": 43.661, "lon": -70.255, "stories": 1863}, {"name": "Portsmouth", "lat": 43.071, "lon": -70.763, "stories": 6899}, {"name": "Concord", "lat": 43.208, "lon": -71.538, "stories": 394}, {"name": "Exeter", "lat": 42.981, "lon": -70.948, "stories": 549}, {"name": "Dover", "lat": 43.198, "lon": -70.874, "stories": 9}, {"name": "Hanover", "lat": 43.702, "lon": -72.29, "stories": 68}, {"name": "Keene", "lat": 42.934, "lon": -72.278, "stories": 74}, {"name": "Salem", "lat": 42.519, "lon": -70.897, "stories": 13}, {"name": "Boston", "lat": 42.36, "lon": -71.058, "stories": 885}, {"name": "Providence", "lat": 41.824, "lon": -71.413, "stories": 970}, {"name": "Warren", "lat": 41.73, "lon": -71.282, "stories": 289}, {"name": "Newport", "lat": 41.49, "lon": -71.313, "stories": 420}, {"name": "Hartford", "lat": 41.764, "lon": -72.685, "stories": 880}, {"name": "Kingston", "lat": 41.927, "lon": -73.997, "stories": 2}, {"name": "New York", "lat": 40.713, "lon": -74.006, "stories": 4394}, {"name": "Chatham", "lat": 40.741, "lon": -74.383, "stories": 18}, {"name": "Burlington", "lat": 40.071, "lon": -74.865, "stories": 790}, {"name": "Philadelphia", "lat": 39.952, "lon": -75.165, "stories": 8642}, {"name": "Wilmington", "lat": 39.746, "lon": -75.547, "stories": 124}, {"name": "Dover", "lat": 39.158, "lon": -75.524, "stories": 1}, {"name": "Washington", "lat": 38.895, "lon": -77.036, "stories": 6151}, {"name": "Alexandria", "lat": 38.805, "lon": -77.047, "stories": 5261}, {"name": "Shepherdstown", "lat": 39.43, "lon": -77.804, "stories": 403}, {"name": "Martinsburg", "lat": 39.456, "lon": -77.964, "stories": 162}, {"name": "Wheeling", "lat": 40.064, "lon": -80.721, "stories": 31}, {"name": "Richmond", "lat": 37.541, "lon": -77.436, "stories": 4233}, {"name": "Williamsburg", "lat": 37.271, "lon": -76.707, "stories": 1874}, {"name": "Norfolk", "lat": 36.851, "lon": -76.286, "stories": 2200}, {"name": "Lynchburg", "lat": 37.414, "lon": -79.142, "stories": 42}, {"name": "Lexington", "lat": 38.04, "lon": -84.503, "stories": 381}, {"name": "Charleston", "lat": 32.777, "lon": -79.931, "stories": 267}], "categories": [{"label": "War and the armies", "year": 1776, "color": "#3987e5"}, {"label": "Britain and Europe", "year": 1776, "color": "#d95926"}, {"label": "Independence and American government", "year": 1776, "color": "#199e70"}, {"label": "The war in Europe", "year": 1793, "color": "#3987e5"}, {"label": "Ships and the sea", "year": 1793, "color": "#d95926"}, {"label": "American public life", "year": 1793, "color": "#199e70"}, {"label": "War, revolution and foreign news", "year": 1797, "color": "#3987e5"}, {"label": "Ships, privateers and wrecks", "year": 1797, "color": "#d95926"}, {"label": "American public life", "year": 1797, "color": "#199e70"}, {"label": "War in Europe", "year": 1807, "color": "#3987e5"}, {"label": "Britain, France and American ships", "year": 1807, "color": "#d95926"}, {"label": "American public life and government", "year": 1807, "color": "#199e70"}, {"label": "War in Spain and Portugal", "year": 1808, "color": "#3987e5"}, {"label": "Britain, France and American ships", "year": 1808, "color": "#d95926"}, {"label": "The embargo and American government", "year": 1808, "color": "#199e70"}]}</script>
 <script src="glass.js"></script>
 <script src="radio.js"></script>
 <script type="module">
@@ -699,7 +699,7 @@ let topicSteps = {key: '', steps: []};
 // its colour (on the orbit, one outline per search). Under Region or Off no colour is free for them, so all the searches
 // are shown together, in pale ink. On the orbit, twelve petals stand around the "now" ring; the dashed circle is the size
 // every petal would have with no yearly rhythm.
-let yearRates = null, monthShares = null;
+let yearRates = null, monthShares = null, waves = null;
 const PALE = '#cfd6e6';
 const together = () => SLOTS.length > 1 ? SLOTS.length : 0;   // the series of all the searches together (for one search, the search itself)
 const searchSeries = () => colourMode() === 'search' ? SLOTS.map((_, j) => j) : [together()];   // the series to draw
@@ -729,22 +729,41 @@ function drawMonthPetals(c) {
   });
 }
 
-// ---- The timeline bar (always fully visible): stories per month, search share per year, and the stretch you look back through ----
-const TL_PAD = 14;
-const tlX = d => TL_PAD + d / (maxDay + 1) * (tl.clientWidth - 2 * TL_PAD);
-const tlDay = x => (x - TL_PAD) / (tl.clientWidth - 2 * TL_PAD) * (maxDay + 1);
-let perMonth = null;
+// ---- The timeline bar (always fully visible). Two rows on one time line, each with its own scale. Above: the stories in
+// the sky first printed each month (with a search, each year's share that mentions it, in gold). Below: the newspapers
+// that survive each year in this archive, with a gold dot where stories were checked by hand: the same bars as the year
+// strip on Pulses, so a thin stretch of sky can be read as a gap in the archive rather than silence. Over both, the
+// stretch you look back through and "now" (the moment), as on Pulses. On a wide bar the rows are named at the left. ----
+const ARCHIVE = BOOT.years || [], maxPapers = Math.max(1, ...ARCHIVE.map(y => y[1])), TL_R = 14;
+let TL_L = 14, tlHover = 0;
+const tlX = d => TL_L + d / (maxDay + 1) * (tl.clientWidth - TL_L - TL_R);
+const tlDay = x => (x - TL_L) / (tl.clientWidth - TL_L - TL_R) * (maxDay + 1);
+const yearStart = y => (Date.UTC(y, 0, 1) - EPOCH) / MS;
+let perMonth = null, perYear = null;
 function countPerMonth() {
-  perMonth = new Float32Array(Math.ceil((maxDay + 1) / (YEAR / 12)) + 1);
-  for (let i = 0; i < N; i++) if (visible(i)) perMonth[Math.floor(D.first[i] / (YEAR / 12))]++;
+  perMonth = new Float32Array(Math.ceil((maxDay + 1) / (YEAR / 12)) + 1); perYear = new Uint32Array(41);
+  for (let i = 0; i < N; i++) if (visible(i)) { perMonth[Math.floor(D.first[i] / (YEAR / 12))]++; perYear[D.year[i] - 1770]++; }
 }
 function drawTimeline() {
   const w = tl.clientWidth, h = tl.clientHeight; if (!w) return;
+  TL_L = w >= 560 ? 66 : 14;
   tctx.clearRect(0, 0, w, h);
   if (!perMonth) countPerMonth();
-  const max = Math.max(...perMonth, 1), base = h - 20, bw = Math.max(1, (w - 2 * TL_PAD) / perMonth.length);
+  const r2b = h - 17, r2t = r2b - 10, base = r2t - 3, from = Math.max(0, state.now - state.span), a = tlX(from), b = tlX(state.now);
+  tctx.fillStyle = '#8ccfff22'; tctx.fillRect(a, 2, b - a, r2b - 2);   // the stretch in view, under the bars (as the band on Pulses),
+  tctx.strokeStyle = '#8ccfff88'; tctx.strokeRect(a + .5, 2.5, Math.max(1, b - a - 1), r2b - 3);   // so a year of one or two papers still shows
+  const max = Math.max(...perMonth, 1), bw = Math.max(1, (w - TL_L - TL_R) / perMonth.length);
   tctx.fillStyle = '#2c3955';
   for (let k = 0; k < perMonth.length; k++) { if (!perMonth[k]) continue; const bh = Math.sqrt(perMonth[k] / max) * (base - 8); tctx.fillRect(tlX(k * YEAR / 12), base - bh, Math.max(1, bw - .5), bh); }
+  for (const [y, papers, , checked] of ARCHIVE) {   // the archive: newspapers surviving each year
+    const x0 = tlX(yearStart(y)), x1 = tlX(yearStart(y + 1)), cx = (x0 + x1) / 2, sw = Math.max(1.5, (x1 - x0) * .56), inView = yearStart(y + 1) > from && yearStart(y) < state.now;
+    if (papers) { const bh = Math.max(1, papers / maxPapers * (r2b - r2t - 3)); tctx.fillStyle = y === tlHover ? '#46587e' : inView ? '#56698f' : '#2c3955'; tctx.fillRect(cx - sw / 2, r2b - bh, sw, bh); }
+    if (checked) { tctx.fillStyle = '#ffd27a'; tctx.beginPath(); tctx.arc(cx, r2t + 1.2, 1.6, 0, TAU); tctx.fill(); }
+  }
+  if (TL_L > 20) {   // the rows' names
+    tctx.font = '10px system-ui, sans-serif'; tctx.textAlign = 'right'; tctx.textBaseline = 'middle'; tctx.fillStyle = '#6f7d99';
+    tctx.fillText('stories', TL_L - 7, base / 2 + 2); tctx.fillText('newspapers', TL_L - 7, (r2t + r2b) / 2);
+  }
   if (searching() && yearRates) {   // each year's share of stories, side by side when compared searches have colours (one scale for all)
     const series = searchSeries(), k = series.length, top = Math.max(1e-9, ...yearRates.flatMap(r => series.map(s => r.rates[s])));
     for (const r of yearRates) {
@@ -754,17 +773,37 @@ function drawTimeline() {
         tctx.fillStyle = seriesColour(s) + (k > 1 ? 'dd' : '99'); tctx.fillRect(x0 + m * bw, base - bh, Math.max(1, bw - (k > 1 ? .6 : 0)), bh);
       });
     }
+    if (waves) {   // the waves: a line above the bars over the years well above each search's usual share
+      tctx.lineWidth = 2; tctx.lineCap = 'round';
+      series.forEach((s, m) => {
+        const w = waves[s]; if (!w) return; tctx.strokeStyle = seriesColour(s);
+        for (const [y0, y1] of w.runs) { const y = 3.5 + 3 * m; tctx.beginPath(); tctx.moveTo(tlX(yearStart(y0)) + 1.5, y); tctx.lineTo(Math.max(tlX(yearStart(y0)) + 2.5, tlX(yearStart(y1 + 1)) - 1.5), y); tctx.stroke(); }
+      });
+      tctx.lineWidth = 1; tctx.lineCap = 'butt';
+    }
   }
-  const a = tlX(Math.max(0, state.now - state.span)), b = tlX(state.now);
-  tctx.fillStyle = '#8ccfff22'; tctx.fillRect(a, 2, b - a, base - 2);
-  tctx.strokeStyle = '#8ccfff88'; tctx.strokeRect(a + .5, 2.5, Math.max(1, b - a - 1), base - 3);
-  tctx.fillStyle = '#cfe9ff'; tctx.fillRect(b - 1, 0, 2, base + 2);
+  tctx.fillStyle = '#cfe9ff'; tctx.fillRect(b - 1, 0, 2, r2b + 2);   // now
   tctx.font = '11px system-ui, sans-serif'; tctx.textBaseline = 'middle'; tctx.textAlign = 'center';
-  for (let y = 1770; y <= 1810; y += 5) { const x = tlX((Date.UTC(y, 0, 1) - EPOCH) / MS); tctx.fillStyle = '#28334c'; tctx.fillRect(x, base, 1, 4); tctx.fillStyle = '#8b98b5'; tctx.fillText(String(y), Math.max(16, Math.min(w - 16, x)), base + 12); }
+  for (let y = 1770; y <= 1810; y += 5) { const x = tlX(yearStart(y)); tctx.fillStyle = '#28334c'; tctx.fillRect(x, r2b, 1, 4); tctx.fillStyle = '#8b98b5'; tctx.fillText(String(y), Math.max(TL_L + 2, Math.min(w - 16, x)), r2b + 10); }
+}
+// Pointing at the timeline names the year under it: its surviving newspapers and pages, and the stories in the sky.
+function tlYearAt(x) { const y = new Date(EPOCH + tlDay(x) * MS).getUTCFullYear(); return y >= 1770 && y <= 1810 ? y : 0; }
+function tlName(y) {
+  const row = ARCHIVE.find(r => r[0] === y); if (!row) return '';
+  if (!perMonth) countPerMonth();   // the counts, even before the timeline was first drawn
+  const [, papers, pages, checked] = row, n = perYear[y - 1770];
+  const inWave = searching() && waves ? searchSeries().filter(s => waves[s] && waves[s].set.has(y)) : [];
+  return `${y}: ${papers} ${papers === 1 ? 'newspaper survives' : 'newspapers survive'} in this archive (${pages.toLocaleString('en-US')} pages)${checked ? `; ${checked} stories checked by hand` : ''}. ${n.toLocaleString('en-US')} ${n === 1 ? 'story' : 'stories'} in the sky first printed that year, with these settings.`
+    + (inWave.length ? ` A wave year for ${inWave.map(s => s < SLOTS.length ? `“${shortLabel(SLOTS[s].label)}”` : 'the searches together').join(' and ')}.` : '');
 }
 let tlDrag = false;
 tl.addEventListener('pointerdown', e => { tlDrag = true; try { tl.setPointerCapture(e.pointerId); } catch {} jumpTo(e); });
-tl.addEventListener('pointermove', e => { if (tlDrag) jumpTo(e); });
+tl.addEventListener('pointermove', e => {
+  if (tlDrag) { jumpTo(e); return; }
+  const y = tlYearAt(e.clientX - tl.getBoundingClientRect().left); if (y === tlHover) return;
+  tlHover = y; tl.title = tlName(y); drawTimeline();
+});
+tl.addEventListener('pointerleave', () => { if (tlHover) { tlHover = 0; tl.removeAttribute('title'); drawTimeline(); } });
 tl.addEventListener('pointerup', () => { tlDrag = false; });
 tl.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') travel(-state.span * .1); else if (e.key === 'ArrowRight') travel(state.span * .1); else return; e.preventDefault(); });
 function jumpTo(e) { interact(); const r = tl.getBoundingClientRect(); state.now = clampNow(tlDay(e.clientX - r.left)); hideTip(); refresh(); save(); }
@@ -844,7 +883,7 @@ async function runSearch(q, keepColour) {
   const url = new URL(location.href); if (state.q) url.searchParams.set('q', state.q); else url.searchParams.delete('q'); history.replaceState(null, '', url);
   const slots = parseSlots(state.q);
   if (!slots.length) {
-    hitCount = -1; SLOTS = []; hit.fill(0); hitMask.fill(0); geo.attributes.aHit.needsUpdate = true; uniforms.uSearch.value = 0; applyTint(); yearRates = monthShares = null;
+    hitCount = -1; SLOTS = []; hit.fill(0); hitMask.fill(0); geo.attributes.aHit.needsUpdate = true; uniforms.uSearch.value = 0; applyTint(); yearRates = monthShares = waves = null;
     caption(); syncButtons(); buildLegend(); refresh(); return;
   }
   if (!TEXT) {
@@ -870,6 +909,31 @@ async function runSearch(q, keepColour) {
 // (circular statistics on the day of year). Years with fewer than MIN_YEAR stories in view are left out of the shares.
 // Compared searches also get a series for all of them together (index k), drawn when colour shows something else.
 const MIN_YEAR = 20;
+// Waves: how a search comes back over the years (checked against known history: work/check_waves.py,
+// outputs/story_discovery_all/waves_check.md). A year is judged when it holds at least a fifth of a typical year's
+// stories in view; thinner years are too little archive to judge, never quiet. A wave year has at least 3 matches,
+// twice the search's usual share, and more than chance would give (P < .05 for a Poisson count at the usual share).
+// The usual share is the lower of the median share over the judged years in which it appears (a steady word's
+// background) and its overall share (a word that appears only in bursts). Neighbouring wave years form one wave.
+const medianOf = a => { if (!a.length) return 0; const s = [...a].sort((x, y) => x - y), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+const poissonTail = (k, lam) => { if (lam <= 0) return 0; let term = Math.exp(-lam), cdf = 0; for (let i = 0; i < k; i++) { cdf += term; term *= lam / (i + 1); } return Math.max(0, 1 - cdf); };
+const yearRuns = ys => { const out = []; for (const y of ys) { const last = out.at(-1); if (last && y === last[1] + 1) last[1] = y; else out.push([y, y]); } return out; };
+const runText = (runs, max = 8) => runs.slice(0, max).map(([a, b]) => a === b ? String(a) : `${a}–${b}`).join('; ') + (runs.length > max ? '; …' : '');
+function wavesOf(counts, allYear) {
+  const ys = [...allYear.keys()].sort((a, b) => a - b), typical = medianOf(ys.map(y => allYear.get(y)));
+  const judged = ys.filter(y => allYear.get(y) >= typical / 5), thin = ys.filter(y => allYear.get(y) < typical / 5 && counts.get(y));
+  const n = judged.reduce((s, y) => s + (counts.get(y) || 0), 0), total = judged.reduce((s, y) => s + allYear.get(y), 0);
+  if (n < 12) return {runs: [], set: new Set(), thin, few: true};
+  const sh = y => (counts.get(y) || 0) / allYear.get(y);
+  const usual = Math.min(medianOf(judged.filter(y => counts.get(y)).map(sh)), n / total);
+  const wave = judged.filter(y => { const c = counts.get(y) || 0; return c >= 3 && sh(y) >= 2 * usual && poissonTail(c, usual * allYear.get(y)) < .05; });
+  return {runs: yearRuns(wave), set: new Set(wave), thin, few: false};
+}
+function waveText(j) {
+  const w = waves && waves[j]; if (!w) return '';
+  const thin = w.thin.length ? ` (${runText(yearRuns(w.thin))}: too little archive to judge)` : '';
+  return (w.few ? 'too few stories to judge waves' : w.runs.length > 1 ? `comes back in waves: ${runText(w.runs)}` : w.runs.length ? `one wave: ${runText(w.runs)}` : 'no clear waves') + thin;
+}
 function summarise() {
   if (!searching()) return;
   const k = SLOTS.length, K = k > 1 ? k + 1 : 1, byColour = colourMode() === 'search', allYear = new Map();
@@ -886,6 +950,7 @@ function summarise() {
   yearRates = [...allYear.keys()].sort((a, b) => a - b).filter(y => allYear.get(y) >= MIN_YEAR)
     .map(y => ({y, d0: (Date.UTC(y, 0, 1) - EPOCH) / MS, d1: (Date.UTC(y + 1, 0, 1) - EPOCH) / MS, rates: perYear.map(p => (p.get(y) || 0) / allYear.get(y))}));
   monthShares = months.map((m, j) => m.map(v => n[j] ? v / n[j] : 0));
+  waves = perYear.map(p => wavesOf(p, allYear));
   const season = j => {
     const Rn = Math.hypot(C[j], S[j]), R = Rn / n[j], p = Math.exp(Math.sqrt(1 + 4 * n[j] + 4 * (n[j] * n[j] - Rn * Rn)) - (1 + 2 * n[j]));
     let best = 0, bestM = 0; for (let m = 0; m < 12; m++) { const v = months[j][(m + 11) % 12] + months[j][m] + months[j][(m + 1) % 12]; if (v > best) { best = v; bestM = m; } }
@@ -897,8 +962,8 @@ function summarise() {
   const shows = state.colour === 'region' ? 'Colour shows the region' : 'Colour is off';
   if (k === 1) {
     if (!n[0]) { caption(`<b>“${esc(state.q)}”</b> · no stories match with these filters.`); return; }
-    caption(`<b>“${esc(state.q)}”</b> · ${stories(n[0])} in ${state.min}+ newspapers, over ${perYear[0].size} ${perYear[0].size === 1 ? 'year' : 'years'} · ${season(0)}.<span class="note">`
-      + (byColour ? `Gold bars on the timeline: each year's share of stories.${orbit ? ' Gold petals: the months; the dashed circle is no rhythm.' : ' Orbit shows the months.'}`
+    caption(`<b>“${esc(state.q)}”</b> · ${stories(n[0])} in ${state.min}+ newspapers, over ${perYear[0].size} ${perYear[0].size === 1 ? 'year' : 'years'} · ${season(0)} · ${waveText(0)}.<span class="note">`
+      + (byColour ? `Gold bars on the timeline: each year's share of stories; a gold line above them marks a wave (years well above its usual share).${orbit ? ' Gold petals: the months; the dashed circle is no rhythm.' : ' Orbit shows the months.'}`
         : `${shows}: the matches are the bright stars. Colour: Search lights them gold.`)
       + '</span>');
     return;
@@ -906,9 +971,9 @@ function summarise() {
   const peak = j => { const r = yearRates.reduce((a, b) => b.rates[j] > (a ? a.rates[j] : 0) ? b : a, null); return r ? ` · peak ${r.y} (${Math.round(100 * r.rates[j])}%)` : ''; };
   caption(SLOTS.map((s, j) => `<div class="cmp">${byColour ? `<span class="sw" style="background:${COMPARE[j]}"></span>` : ''}<span class="t">“${esc(shortLabel(s.label))}”</span>`
       + `<button type="button" class="x" data-remove="${j}" aria-label="Remove “${esc(shortLabel(s.label))}” from the comparison" title="Remove this search">✕</button>`
-      + `<span>${n[j] ? stories(n[j]) + peak(j) + ' · ' + season(j) : 'no stories match with these filters'}</span></div>`).join('')
+      + `<span>${n[j] ? stories(n[j]) + peak(j) + ' · ' + season(j) + (waves[j].runs.length ? (waves[j].runs.length > 1 ? ' · waves ' : ' · one wave ') + runText(waves[j].runs, 5) : '') : 'no stories match with these filters'}</span></div>`).join('')
     + `<span class="note">` + (byColour
-      ? `A white star mentions more than one. Bars on the timeline: each year's share (years under ${MIN_YEAR} stories left out)${orbit ? '; lines: the months.' : '. Orbit compares the months.'}`
+      ? `A white star mentions more than one. Bars on the timeline: each year's share (years under ${MIN_YEAR} stories left out); lines above them: the waves${orbit ? '. On the orbit, lines: the months.' : '. Orbit compares the months.'}`
       : `${shows}: the ${stories(n[k])} matching any search are the bright stars. Colour: Search gives each its own colour.`)
     + '</span>');
 }
@@ -1162,7 +1227,7 @@ function syncButtons() {
     + ' Bigger, brighter stars were printed in more newspapers. ' + COLOUR_HOW[mode]
     + ' <b>Search and compare:</b> a search draws the matching stories a little larger and makes the others faint, and Colour switches to Search. Put “vs” between up to three searches (fever vs ice), or use “Compare with…” after a search: each search gets its own colour, and a white star mentions more than one. The timeline compares their yearly shares, and Orbit their months. Choose Region or Off to keep those colours; the searches are then shown together, as the bright stars. Point at a search or a region in the legend, or tap it, to lift its stars.'
     + ' <b>Moving around:</b> drag to turn the view, right-drag (or Shift-drag, or two fingers) to move it, and scroll or pinch to zoom; “Reset view” brings back the whole picture.'
-    + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see, and “All” shows the whole archive. <b>A star:</b> point at it to preview it; click it to choose it. Its card stays beside it, with Hear, Follow it in Pulses, and a few words of its title to trace through the years. With the radio on, the chosen story is also heard in full. ✕, Esc or a click on empty sky closes the card.'
+    + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see, and “All” shows the whole archive. The timeline has two rows: above, the stories in the sky by month; below, how many newspapers survive each year (gold dots: years checked by hand). Where the lower row is thin, the sky is thin because little survives, not because little was printed. <b>A star:</b> point at it to preview it; click it to choose it. Its card stays beside it, with Hear, Follow it in Pulses, and a few words of its title to trace through the years. With the radio on, the chosen story is also heard in full. ✕, Esc or a click on empty sky closes the card.'
     + (reduced ? '' : ' Drift lets time pass slowly: new stories arrive at the front and older ones recede. It pauses while you explore.');
 }
 function setLayout(name) {
