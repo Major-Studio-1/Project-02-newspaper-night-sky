@@ -176,7 +176,7 @@ __SITE_HEADER__
 <section class="sec" aria-labelledby="sec-show"><h2 class="sec-h" id="sec-show">Show</h2>
 <div class="field reach"><span class="label" id="min-label">Show stories in</span><span class="seg slide" data-roving id="min-papers" role="group" aria-label="Show stories printed in at least this many newspapers">
 <button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button><button type="button" data-k="10" title="at least 10 newspapers">10+</button></span><span class="label">newspapers</span></div>
-<div class="field"><span class="toggles" id="kinds" role="group" aria-label="Kinds of story"><button type="button" class="toggle" data-kind="reviewed" title="Read and checked against the scans">Reviewed</button><button type="button" class="toggle" data-kind="matched" title="Found by shared wording; not checked">Matched</button><button type="button" class="toggle" data-kind="long" title="Serial documents and debates joined over months">Long-running</button></span></div>
+<div class="field"><span class="toggles" id="kinds" role="group" aria-label="Which stories"><button type="button" class="toggle" data-kind="checked" title="Only the stories read and checked against the page scans by hand (98, in five years). The rest were found automatically by shared wording and are not checked.">Checked by hand only</button><button type="button" class="toggle" data-kind="long" title="Texts printed again and again over a long time: laws and documents, and also standing notices and advertisements">Long-running</button></span></div>
 </section>
 <section class="sec"><p class="more"><a href="#how">How to read the sky ↓</a><a href="#list-title">Brightest stories in view ↓</a></p></section>
 </div>
@@ -199,6 +199,7 @@ __SITE_HEADER__
 <div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Click or drag to move 'now'; the bright bracket is the stretch of time you are looking back through. The up and down arrow keys also move through time."></canvas></div>
 <button type="button" id="later" class="step" title="Move 'now' later" aria-label="Later">›</button>
 <span class="ctl"><span class="label" id="span-label">Look back</span><span class="seg slide" data-roving id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span></span>
+<button type="button" id="watch" class="watch-btn" title="Watch: hide every control and let the sky play by itself, full screen. Esc brings the controls back.">__ICON_fit__<span class="lbl">Watch</span></button>
 </div>
 </div>
 </div>
@@ -210,6 +211,7 @@ __SITE_HEADER__
 </div>
 </main>
 __SITE_FOOTER__
+<button type="button" id="watch-exit" class="watch-exit" hidden>✕ Exit watch</button>
 <script type="application/json" id="boot">__TELESCOPE_BOOT__</script>
 <script src="glass.js"></script>
 <script src="radio.js"></script>
@@ -318,10 +320,12 @@ const state ={now: (Date.UTC(1781, 0, 1) - EPOCH) / MS, span: 10 * YEAR, min: 3,
 const params = new URLSearchParams(location.search), wantYear = Number(params.get('year'));
 // In an exhibition the stars are drawn larger, for a wall seen from a distance: by the square root of the screen height
 // over 480 px, between 1.25 and 1.7 times (1.5 on a 1080-pixel screen). Height / 480 itself, up to 2.8 times, was too large.
-const EXHIBIT = ['1', 'on'].includes(params.get('exhibit')), EXHIBIT_SCALE = EXHIBIT ? Math.max(1.25, Math.min(1.7, Math.sqrt(innerHeight / 480))) : 1;
+const EXHIBIT = ['1', 'on'].includes(params.get('exhibit'));
+let WATCH = false;   // Watch mode (below): the exhibition's look, switched on and off in place
+const bigScreen = () => EXHIBIT || WATCH, bigScale = () => bigScreen() ? Math.max(1.25, Math.min(1.7, Math.sqrt(innerHeight / 480))) : 1;
 if (!EXHIBIT) try {
   const s = JSON.parse(localStorage.getItem(STORE));
-  if (s && s.span > 0) { if (!s.colourPicked) delete s.colour; delete s.tint; Object.assign(state, {...s, show: {...state.show, ...s.show}, q: ''}); }
+  if (s && s.span > 0) { if (!s.colourPicked) delete s.colour; delete s.tint; Object.assign(state, {...s, show: {...state.show, ...s.show, reviewed: true}, q: ''}); }
 } catch {}
 if (!['region', 'off'].includes(state.colour)) state.colour = 'off';
 if (reduced) state.drift = false;
@@ -338,13 +342,14 @@ if (['front', 'side'].includes(params.get('angle'))) state.angle = params.get('a
 if ([2, 3, 4, 6, 10].includes(Number(params.get('min')))) state.min = Number(params.get('min'));
 if (['on', 'off'].includes(params.get('drift'))) state.drift = params.get('drift') === 'on' && !reduced;
 let saveTimer = 0;
-const save = () => { if (EXHIBIT) return; clearTimeout(saveTimer); saveTimer = setTimeout(() => { try { const {q, ...rest} = state; localStorage.setItem(STORE, JSON.stringify(rest)); } catch {} }, 400); };
+const save = () => { if (EXHIBIT || WATCH) return; clearTimeout(saveTimer); saveTimer = setTimeout(() => { try { const {q, ...rest} = state; localStorage.setItem(STORE, JSON.stringify(rest)); } catch {} }, 400); };
 const clampNow = d => Math.min(maxDay, Math.max(0, d));
 state.now = clampNow(state.now); state.span = Math.min(42 * YEAR, Math.max(60, state.span));
-const storyIndex = params.get('story') ? D.id.indexOf(params.get('story')) : -1;
+// The story a link names; a matched story that is the twin of a reviewed one opens as the reviewed star.
+const wantStory = (params.get('story') || '').replace(/^auto:/, ''), storyIndex = !wantStory ? -1 : D.id.includes(wantStory) ? D.id.indexOf(wantStory) : D.id.indexOf((BOOT.twins || {})[wantStory] || '\u0000');
 if (storyIndex >= 0) {
   state.now = clampNow(D.first[storyIndex] + 25); state.span = YEAR; state.min = Math.min(state.min, D.papers[storyIndex]);
-  state.show[D.kind[storyIndex] ? 'reviewed' : D.long[storyIndex] ? 'long' : 'matched'] = true;
+  if (!D.kind[storyIndex]) { state.show.matched = true; if (D.long[storyIndex]) state.show.long = true; }
 }
 if (['place', 'topic', 'orbit'].includes(params.get('view'))) state.layout = params.get('view');
 
@@ -471,14 +476,14 @@ function setCamera(yaw, pitch, dist, tx = PIVOT.x, ty = PIVOT.y, tz = PIVOT.z) {
 const applyCamera = () => setCamera(cam.yaw + cam.swayX, cam.pitch + cam.swayY, cam.dist, cam.tx, cam.ty, cam.tz);
 // The smallest camera distance at which the whole look-back box, with its labels, stays inside the view.
 // The fitted view keeps the whole look-back box inside the view; an exhibition lets it fill the height, a closer view for a wall.
-const FIT = EXHIBIT ? [.97, 1.06] : [.9, .88];
+const FITS = [[.9, .88], [.97, 1.06]], fit = () => FITS[+bigScreen()];   // a big screen fills its height
 function fitDistance(yaw, pitch) {
   const c = uniforms.uCross.value * 1.18, box = [];
   for (const x of [-c, c]) for (const y of [-c, c]) for (const z of [0, -LZ]) box.push([x, y, z]);
   let lo = 1, hi = 60;
   for (let k = 0; k < 28; k++) {
     const mid = (lo + hi) / 2; setCamera(yaw, pitch, mid);
-    const ok = box.every(([x, y, z]) => { const p = ndc(x, y, z); return p[2] > 0 && Math.abs(p[0]) <= FIT[0] && Math.abs(p[1]) <= FIT[1]; });
+    const ok = box.every(([x, y, z]) => { const p = ndc(x, y, z); return p[2] > 0 && Math.abs(p[0]) <= fit()[0] && Math.abs(p[1]) <= fit()[1]; });
     if (ok) hi = mid; else lo = mid;
   }
   return hi;
@@ -510,7 +515,9 @@ function resize() {
 const sizes = new ResizeObserver(resize); sizes.observe(view); sizes.observe(tl);
 
 // ---- Visibility, counts and ranges ----
-const visible = i => (D.kind[i] ? state.show.reviewed : D.long[i] ? state.show.long : state.show.matched) && D.papers[i] >= state.min;
+// One population: reviewed stories always show; "Checked by hand only" hides the ones found automatically (show.matched
+// false), long-running ones among them included.
+const visible = i => (D.kind[i] ? true : state.show.matched && (D.long[i] ? state.show.long : true)) && D.papers[i] >= state.min;
 let hitCount = -1, TEXT = null, textLoading = null;
 const searching = () => !!state.q && hitCount >= 0;
 const colourMode = () => searching() && bySearch ? 'search' : state.colour;   // what colour shows now: 'region', 'search' or 'off'
@@ -750,7 +757,7 @@ function updateStatus() {
   let n = 0; const [a, b] = inWindow(), perTown = new Uint32Array(townKeys.size);
   for (let i = a; i < b; i++) if (visible(i)) { n++; perTown[townIx[i]]++; }
   // The region layer grows more translucent as more stars crowd the view (Place packs them into a few town clouds).
-  uniforms.uDense.value = Math.min(1, Math.max(EXHIBIT ? .8 : .4, Math.sqrt((state.layout === 'place' ? 1500 : 4000) / Math.max(n, 1))));
+  uniforms.uDense.value = Math.min(1, Math.max(bigScreen() ? .8 : .4, Math.sqrt((state.layout === 'place' ? 1500 : 4000) / Math.max(n, 1))));
   // Plain stars: thinned by their town's stars in view (Place), or by all the stars in view (Topic and Orbit). The stars
   // about to arrive with Drift (the next twentieth of the look-back) get their value now, so none flares as it comes in.
   uniforms.uDenseP.value = Math.min(1, Math.max(.35, Math.sqrt(4000 / Math.max(n, 1))));
@@ -940,8 +947,8 @@ function frame(now) {
 }
 function refresh() {
   uniforms.uNow.value = state.now; uniforms.uSpan.value = state.span; uniforms.uMin.value = state.min;
-  uniforms.uShow.value.set(+state.show.reviewed, +state.show.matched, +state.show.long);
-  uniforms.uScale.value = (1 + .25 * Math.log2(Math.max(1, 41 * YEAR / state.span))) * EXHIBIT_SCALE;
+  uniforms.uShow.value.set(1, +state.show.matched, +(state.show.matched && state.show.long));
+  uniforms.uScale.value = (1 + .25 * Math.log2(Math.max(1, 41 * YEAR / state.span))) * bigScale();
   dirty = true; syncSpanButtons();
   if (W) { applyCamera(); updateStatus(); drawAxes(); drawTimeline(); }
 }
@@ -992,7 +999,7 @@ view.addEventListener('pointerdown', e => {
 view.addEventListener('pointermove', e => {
   const r = view.getBoundingClientRect(), px = e.clientX - r.left, py = e.clientY - r.top;
   if (e.pointerType === 'mouse') { pointer.x = px / W * 2 - 1; pointer.y = -(py / H * 2 - 1); }
-  if (!pointers.has(e.pointerId) || !drag) { hoverPending = [px, py]; return; }
+  if (!pointers.has(e.pointerId) || !drag) { if (!WATCH) hoverPending = [px, py]; return; }   // Watch shows no cards
   const prev = pointers.get(e.pointerId); pointers.set(e.pointerId, {x: e.clientX, y: e.clientY});
   if (drag.mode === 'select') {   // drawing the area to hear
     drag.moved = Math.max(drag.moved, Math.abs(px - drag.x0) + Math.abs(py - drag.y0));
@@ -1112,7 +1119,10 @@ function syncSpanButtons() {
 }
 function syncButtons() {
   for (const b of $('min-papers').querySelectorAll('button')) b.setAttribute('aria-pressed', String(Number(b.dataset.k) === state.min));
-  for (const b of $('kinds').querySelectorAll('button')) b.setAttribute('aria-pressed', String(state.show[b.dataset.kind]));
+  for (const b of $('kinds').querySelectorAll('button')) {
+    const k = b.dataset.kind; b.setAttribute('aria-pressed', String(k === 'checked' ? !state.show.matched : state.show[k]));
+    if (k === 'long') b.setAttribute('aria-disabled', String(!state.show.matched));   // long-running stories are all found automatically
+  }
   for (const b of $('layout').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout));
   $('layout-label').textContent = {place: 'Where each story was first printed', topic: 'What each story is about', orbit: 'When in the year it was printed'}[state.layout] || '';
   for (const b of $('angle').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.angle === state.angle));
@@ -1335,6 +1345,33 @@ if (['1', 'on'].includes(params.get('exhibit'))) {
   let still = 0; const wake = () => { document.body.classList.remove('still'); clearTimeout(still); still = setTimeout(() => document.body.classList.add('still'), 3000); };
   document.addEventListener('pointermove', wake); wake();
 }
+// ---- Watch: one click hides every control and lets the sky play by itself, full screen, like a film (the exhibition's
+// look, switched on in place). Esc, the Exit button, or leaving full screen brings the controls back; the settings return
+// as they were. ?watch=1 opens in it. ----
+let watchKeep = null, watchStill = 0;
+const watchWake = () => { if (!WATCH) return; document.body.classList.remove('still'); clearTimeout(watchStill); watchStill = setTimeout(() => { if (WATCH) document.body.classList.add('still'); }, 2500); };
+function setWatch(on, full = true) {
+  if (on === WATCH) return;
+  WATCH = on; document.body.classList.toggle('exhibit', on || EXHIBIT); document.body.classList.toggle('watching', on); $('watch-exit').hidden = !on;
+  if (on) {
+    watchKeep = {drift: state.drift, span: state.span, now: state.now};
+    state.drift = !reduced; hover = -1; hideTip();
+    if (state.span >= maxDay) { state.span = 10 * YEAR; state.now = Math.min(maxDay, state.span); }   // nowhere to drift under All
+    if (full) document.documentElement.requestFullscreen?.().catch(() => {});
+    watchWake();
+  } else {
+    if (watchKeep) Object.assign(state, watchKeep); watchKeep = null;
+    clearTimeout(watchStill); document.body.classList.remove('still');
+    if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+  }
+  syncButtons(); window.dispatchEvent(new Event('resize')); resetCamera(); lastInteract = -1e9; refresh();
+}
+$('watch').addEventListener('click', () => setWatch(true));
+$('watch-exit').addEventListener('click', () => setWatch(false));
+document.addEventListener('keydown', e => { if (WATCH && e.key === 'Escape') setWatch(false); });
+document.addEventListener('fullscreenchange', () => { if (WATCH && !document.fullscreenElement) setWatch(false); });
+document.addEventListener('pointermove', watchWake, {passive: true});
+if (['1', 'on'].includes(params.get('watch')) && !EXHIBIT) setWatch(true, false);
 $('colour').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b || !COLOURS.includes(b.dataset.colour)) return;
   if (b.dataset.colour === 'search') {
@@ -1348,7 +1385,9 @@ $('colour').addEventListener('click', e => {
   refresh(); redrawNow();
 });
 $('min-papers').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.min = Number(b.dataset.k); perMonth = null; syncButtons(); hideTip(); summarise(); refresh(); save(); });
-$('kinds').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.show[b.dataset.kind] = !state.show[b.dataset.kind]; perMonth = null; syncButtons(); hideTip(); summarise(); refresh(); save(); });
+$('kinds').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const k = b.dataset.kind;
+  if (k === 'checked') state.show.matched = !state.show.matched; else if (k === 'long' && !state.show.matched) return; else state.show[k] = !state.show[k];
+  state.show.reviewed = true; perMonth = null; syncButtons(); hideTip(); summarise(); refresh(); save(); });
 let qTimer = 0;
 $('q').addEventListener('input', e => { clearTimeout(qTimer); qTimer = setTimeout(() => runSearch(e.target.value), 350); });
 $('q').addEventListener('keydown', e => { if (e.key === 'Enter') { clearTimeout(qTimer); runSearch(e.target.value); } if (e.key === 'Escape') runSearch(''); });

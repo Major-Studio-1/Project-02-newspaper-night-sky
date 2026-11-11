@@ -1,7 +1,7 @@
 # Newspaper Night Sky
 
 **How news moved through American newspapers, 1770–1810.**
-Every story printed in two or more papers of one surviving archive, 48,368 in all. You can explore them as a sky of stars, or follow one story from paper to paper as it pulses through them.
+Every story printed in two or more papers of one surviving archive, 48,289 in all. You can explore them as a sky of stars, or follow one story from paper to paper as it pulses through them.
 
 **[Open the website →](https://newspapers.icare.love/)** · [How it works](https://newspapers.icare.love/method.html) · Major Studio 1, Project 02
 
@@ -17,7 +17,7 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 
 | Page | What it shows |
 |---|---|
-| **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,368 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic** (24 topics in seven families), or **orbit** (time of year), and colour them by **region**. You can search any word, **compare** up to three searches in colour (for example France · Britain · Congress), turn and zoom the view, and let time drift. |
+| **[Telescope](https://newspapers.icare.love/telescope.html)** | All 48,289 stories as stars. Time runs into the depth: the front is "now", and the further away a star is, the earlier the story. You can arrange the stars by **place** (town of first printing), **topic** (24 topics in seven families), or **orbit** (time of year), and colour them by **region**. You can search any word, **compare** up to three searches in colour (for example France · Britain · Congress), turn and zoom the view, and let time drift. |
 | **[Pulses](https://newspapers.icare.love/pulses.html)** | Stories travelling through the papers. Each newspaper is a point on a map, and it pulses when it printed a story. Pick one year, several, or all of them on a year strip, and a story from a shelf of cards, narrowed by topic if you like; or let the **tour** play one after another. The passage and the page scan are shown beside the map. A constellation joins a story's printings, and a coverage strip shows which pages survive. |
 | **[Radio](https://newspapers.icare.love/radio.html)** | The newspapers read aloud, as if a radio could be tuned to the past. Turn the dial to a year: it greets the town of the first paper ("Good morning, Philadelphia! It is Saturday, the sixth of July, 1776…") and reads what each paper printed that day, over sounds of the town. Your browser does the reading; nothing is sent anywhere. On Pulses and the telescope, a newspaper or a star speaks when you point at it, pick it or select an area around it, each in its own voice, placed left or right by where it is on the screen. |
 | **[How it works](https://newspapers.icare.love/method.html)** | The method in plain language, and what the site cannot tell you. |

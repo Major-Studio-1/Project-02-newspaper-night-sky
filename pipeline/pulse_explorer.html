@@ -129,7 +129,7 @@ __SITE_HEADER__
 <header class="toolbar"><div class="toolbar-inner">
 <div class="transport" role="group" aria-label="Playback"><button id="play" class="toggle play has-ico" type="button" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Play</span></button><span class="seg steps"><button id="previous" type="button" aria-label="Previous printing" title="Previous printing">←</button><button id="next" type="button" aria-label="Next printing" title="Next printing">→</button></span>
 <span class="ctl"><span class="label" id="speed-label">Per second</span><span class="seg slide" data-roving id="speed" role="group" aria-labelledby="speed-label"><button type="button" data-days="7" title="One week of printing per second">1 wk</button><button type="button" data-days="14" title="Two weeks of printing per second">2 wk</button><button type="button" data-days="30" title="One month of printing per second">1 mo</button><button type="button" data-days="61" title="Two months of printing per second">2 mo</button><button type="button" data-days="122" title="Four months of printing per second">4 mo</button><button type="button" data-days="365" title="One year of printing per second">1 yr</button></span></span>
-<button id="tour" class="toggle has-ico" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">__ICON_tour__Tour</button></div>
+<button id="tour" class="toggle has-ico" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">__ICON_tour__Tour</button><button id="watch" class="watch-btn" type="button" title="Watch: hide every control and let the stories play by themselves, full screen. Esc brings the controls back.">__ICON_fit__<span class="lbl">Watch</span></button></div>
 <div class="year-pick" role="group" aria-labelledby="years-label"><span class="label" id="years-label">Years</span><b id="years-now" class="years-now mono"></b>
 <div class="years-wrap"><div id="years" class="years" title="Tap a year, or drag across several"></div><div id="years-axis" class="years-axis" aria-hidden="true"></div></div>
 <button id="years-all" class="toggle" type="button" aria-pressed="false" title="All years, 1770–1810">All</button></div>
@@ -162,6 +162,7 @@ __SITE_HEADER__
 <div id="announcement" class="sr-only" aria-live="polite"></div>
 </main>
 __SITE_FOOTER__
+<button type="button" id="watch-exit" class="watch-exit" hidden>✕ Exit watch</button>
 <script type="application/json" id="pulse-data">__PULSE_DATA__</script>
 <script src="glass.js"></script>
 <script src="radio.js"></script>
@@ -543,8 +544,9 @@ function buildShelf() {
   const sep = text => { const s = document.createElement('span'); s.className = 'shelf-sep'; s.textContent = text; s.setAttribute('aria-hidden', 'true'); rail.append(s); };
   const k = Math.max(2, minPapers.matched), pool = narrowed(Y.shortGroups), fams = pool.filter(g => g.newspapers >= k), what = following();
   const order = shelfSort === 'date' ? (a, b) => a.firstDay - b.firstDay || b.newspapers - a.newspapers : (a, b) => b.newspapers - a.newspapers || b.printings - a.printings || a.firstDay - b.firstDay;
-  const listed = (fams.length ? fams : pool).slice().sort(order);
   const reviewed = topicsOn.size ? [] : Y.stories.filter(s => !findRx.length || findRx.every(rx => rx.test(s.label.toLowerCase())));
+  const twinOf = BOOT.twins || {}, carded = new Set(reviewed.map(s => s.id));   // a story found twice is listed once, as its reviewed card
+  const listed = (fams.length ? fams : pool).filter(g => !carded.has(twinOf[String(g.id).replace(/^auto:/, '')])).sort(order);
   if (Y.hasReviewed && !what) for (const y of Y.reviewedYears) rail.append(card({id: 'all:' + y, cls: 'overview', tag: 'Overview · checked against the scans',
     title: 'All reviewed stories of ' + y, meta: `${Y.stories.filter(s => s.year === y).length} stories · one colour per category`}));
   if (Y.hasMatched) rail.append(card({id: 'auto-all', cls: 'overview', tag: 'Overview · found automatically', title: what ? 'All · ' + what : 'All matched stories',
@@ -649,7 +651,7 @@ function renderLegend() {
   }
 }
 
-function save() { if (Y) try { localStorage.setItem(STORE, JSON.stringify({from: Y.from, to: Y.to, group: group?.id, day, selected, speed, minPapers, tour, topicLanes: [...topicsOn], open: openFamily, sort: shelfSort})); } catch {} }
+function save() { if (Y && !WATCH) try { localStorage.setItem(STORE, JSON.stringify({from: Y.from, to: Y.to, group: group?.id, day, selected, speed, minPapers, tour, topicLanes: [...topicsOn], open: openFamily, sort: shelfSort})); } catch {} }
 
 // How far a passage was checked, in words. Matched printings carry the automatic transcription check (data release
 // v0.6.0 on): whether the passage is also in the page's other machine transcription. That shows the passage is on the
@@ -866,6 +868,8 @@ function changeGroup(id) {
 
 // ---- Years: one year, several or all of them ----
 const skyUrl = () => { const n = Y.to - Y.from + 1, look = n <= 1 ? 1 : n <= 5 ? 5 : n <= 10 ? 10 : 'all'; return `telescope.html?year=${Y.to}&lookback=${look}`; };
+// A link to a matched story that is the twin of a reviewed one opens the reviewed story, when its year is in view.
+const twinFor = w => { const t = w && String(w).startsWith('auto:') && (BOOT.twins || {})[String(w).slice(5)]; return t && Y && Y.groupById.has(t) ? t : w; };
 async function loadRange(from, to, wanted) {
   from = Math.max(1770, Math.min(1810, from)); to = Math.max(from, Math.min(1810, to));
   const token = ++loadToken; pause(); setYearsUI(from, to);
@@ -873,6 +877,7 @@ async function loadRange(from, to, wanted) {
   let earlyPick = null;
   if (!INDEX && bases.length) {   // the reviewed stories are in the page itself: show them while the index of all years loads
     Y = buildState(from, to, bases, null); buildSky(); buildChips(); group = null; buildShelf();
+    wanted = twinFor(wanted);
     changeGroup(wanted && (reviewedYearOf(wanted) || Y.groupById.has(wanted)) ? wanted : 'all:' + Y.reviewedYears[0]); earlyPick = group?.id;
   }
   let extra = null;
@@ -1160,6 +1165,33 @@ if (exhibit) {
   let still = 0; const wake = () => { document.body.classList.remove('still'); clearTimeout(still); still = setTimeout(() => document.body.classList.add('still'), 3000); };
   document.addEventListener('pointermove', wake); wake();
 }
+// ---- Watch: one click hides every control and lets the stories play by themselves, full screen, like a film (the
+// exhibition's look, switched on in place). Esc, the Exit button, or leaving full screen brings the controls back, and
+// Tour as it was. ?watch=1 opens in it. ----
+var WATCH = false;   // var: save() may run before this point
+let watchKeep = null, watchStill = 0;
+const watchWake = () => { if (!WATCH) return; document.body.classList.remove('still'); clearTimeout(watchStill); watchStill = setTimeout(() => { if (WATCH) document.body.classList.add('still'); }, 2500); };
+function setWatch(on, full = true) {
+  if (on === WATCH) return;
+  WATCH = on; document.body.classList.toggle('exhibit', on || exhibit); document.body.classList.toggle('watching', on); $('watch-exit').hidden = !on;
+  if (on) {
+    watchKeep = {tour}; tour = !reduced.matches; syncTour(); tourHold = 0;
+    if (full) document.documentElement.requestFullscreen?.().catch(() => {});
+    if (!playing && events.length) play();
+    watchWake();
+  } else {
+    if (watchKeep) { tour = watchKeep.tour; syncTour(); } watchKeep = null;
+    clearTimeout(watchStill); document.body.classList.remove('still');
+    if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
+  }
+  window.dispatchEvent(new Event('resize'));
+}
+$('watch').addEventListener('click', () => setWatch(true));
+$('watch-exit').addEventListener('click', () => setWatch(false));
+document.addEventListener('keydown', e => { if (WATCH && e.key === 'Escape') setWatch(false); });
+document.addEventListener('fullscreenchange', () => { if (WATCH && !document.fullscreenElement) setWatch(false); });
+document.addEventListener('pointermove', watchWake, {passive: true});
+if (['1', 'on'].includes(params.get('watch')) && !exhibit) setWatch(true, false);
 if (Number(params.get('speed')) > 0) setSpeed(Number(params.get('speed')));   // ?speed=7: days of printing per second
 let radioKept = null; try { radioKept = sessionStorage.getItem('nns-radio'); } catch {}
 if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !== 'off')) {

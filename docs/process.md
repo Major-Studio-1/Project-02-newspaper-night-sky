@@ -318,6 +318,18 @@ Version 1 (below) is kept as `telescope-v1.html`.
 - **Accessible list:** a "Brightest stories in view" list gives the same stories as plain links.
 - **Reading it with care:** the field follows the surviving archive. Where few papers survive (for example the South, or 1785–86), there are few stars. That is a gap in the collection, not proof that nothing was printed.
 
+### One population of stories (11 November 2026)
+
+Reviewed stories and matched stories used to be shown as two separate worlds, so a story found both ways appeared twice: once as a checked star and once as an automatic one. The build now pairs each reviewed story with its *twin*, the matched story that holds at least half of its printings on the same pages. 85 of the 98 reviewed stories have one, and six matched stories are the twin of two reviewed ones (the computer joined items the reviewers kept apart).
+
+- The sky draws each pair once, as the checked star: 48,289 stars instead of 48,368.
+- A link to a twin opens the reviewed story, on the telescope and on Pulses, and the Pulses shelf lists the story once.
+- The telescope's "Reviewed / Matched" switches became one, **Checked by hand only**, because the checked stories are a small marked part of the stories found, not a second set. Long-running texts, all found automatically, step aside with the rest.
+
+### Watch mode (11 November 2026)
+
+A **Watch** button on the telescope and on Pulses turns the current view into the exhibition's look in place, full screen and without controls: the sky drifts, or the stories play one after another. Esc, or Exit in the corner, brings the controls back as they were; `?watch=1` opens a link in it.
+
 ## The website
 
 The views are joined into one site with six pages and a shared header, plus an exhibition page:

@@ -299,6 +299,21 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
 # day = first printing (days since 1 Jan 1770); lat = mean latitude of the towns of the papers that printed it.
 EPOCH=datetime.date(1770,1,1).toordinal()
 dnum=lambda s:datetime.date.fromisoformat(s).toordinal()-EPOCH
+# Each reviewed story's twin in the matched layer: the automatic story that holds at least half of its printings (same
+# newspaper, printed date and page). They are one story found twice, so the sky draws it once (the reviewed star), links
+# to the twin reach the reviewed story, and the Pulses shelf lists it once. 85 of the 98 stories had one on 2026-11-11.
+page_owner=collections.defaultdict(set)
+for fid,apps in apps_by.items():
+    for a in apps: page_owner[(a['lccn'],a['publication_date'],int(a['page_id'].split(':')[4]))].add(fid)
+twins={};paired=[]
+for s in stories:
+    obs_s=[observations[m] for m in s['members']]
+    c=collections.Counter(f for o in obs_s for f in page_owner.get((o['node'],o['date'],int(o['page'])),()))
+    if c:
+        fid,k=min(c.items(),key=lambda x:(-x[1],x[0]))   # ties go to the first id, so every build pairs the same way
+        if k*2>=len(obs_s): paired.append(s['id']); twins.setdefault(fid,s['id'])   # two reviewed stories can share one automatic story
+print(f'twins: {len(paired)} of {len(stories)} reviewed stories have one; {len(twins)} matched stories are twins')
+assert len(paired)>=80, f'only {len(paired)} reviewed stories found their matched twin'
 stars=[]
 # Reviewed stars carry their year's category: one list over all reviewed years, each category in its year's colour slot.
 tele_cats=[{'id':c['id'],'label':c['label'],'year':y,'slot':i,'color':CATEGORY_COLORS[i]} for y in sorted(reviewed_data) for i,c in enumerate(reviewed_data[y]['categories'])]
@@ -309,6 +324,7 @@ for s in stories:
     stars.append({'id':s['id'],'year':s['year'],'kind':1,'cat':cat_index[s['category']],'first':min(dnum(o['date']) for o in obs_s),'last':max(dnum(o['date']) for o in obs_s),
                   'papers':len(ls),'prints':len(obs_s),'lat':round(sum(towns[l]['lat'] for l in ls)/len(ls),3),'long':0,'title':s['label']})
 for f in families:
+    if f['family_id'] in twins: continue   # drawn as its reviewed star
     ls=sorted({a['lccn'] for a in apps_by[f['family_id']]})
     title=story_titles.get(f['family_id'],f['label'])
     stars.append({'id':f['family_id'],'year':int(f['first_date'][:4]),'kind':0,'cat':-1,'first':dnum(f['first_date']),'last':dnum(f['last_date']),
@@ -365,7 +381,7 @@ tele={'epoch':'1770-01-01','count':len(stars),**{k:[s[k] for s in stars] for k i
 (OUT/'telescope-text.json').write_text(json.dumps({'count':len(stars),'text':[s['text'] for s in stars]},ensure_ascii=False,separators=(',',':')),encoding='utf8')
 tele_stamp=hashlib.sha256((OUT/'telescope.json').read_bytes()+(OUT/'telescope-text.json').read_bytes()).hexdigest()[:12]
 reg_count=collections.Counter(s['reg'] for s in stars)
-tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'stories':len(stars),
+tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'stories':len(stars),'twins':twins,
            'regions':[{'label':label,'states':states,'color':color,'stories':reg_count[i]} for i,(label,states,color,_) in enumerate(REGIONS)],
            # Sizes as served, so the loading bar can measure progress even when the server compresses the files.
            'bytes':{'data':(OUT/'telescope.json').stat().st_size,'text':(OUT/'telescope-text.json').stat().st_size},
@@ -411,7 +427,7 @@ index={'epoch':'1770-01-01','scan_base':f'https://huggingface.co/datasets/{DATAS
 (years_dir/'index.json').write_text(json.dumps(index,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 # A stamp of the year files' contents (and the index), so browsers fetch fresh copies after a rebuild.
 year_stamp=hashlib.sha256(b''.join(hashlib.sha256((years_dir/f'{y}.json').read_bytes()).digest() for y in range(1770,1811))+hashlib.sha256((years_dir/'index.json').read_bytes()).digest()).hexdigest()[:12]
-boot={'release_version':VER,'reviewed':reviewed_list,'years':years_index,'year_stamp':year_stamp,'index_bytes':(years_dir/'index.json').stat().st_size,
+boot={'release_version':VER,'reviewed':reviewed_list,'years':years_index,'year_stamp':year_stamp,'twins':twins,'index_bytes':(years_dir/'index.json').stat().st_size,
       # Topics for the story shelf's chips: each topic's plain name and family (as in the telescope).
       'topics':[{'label':SHORT[tid(x)],'family':fam_index[topic_labels[tid(x)]['category']]} for x in topic_list],
       'families':[{'name':f,'short':s,'tiny':t} for f,s,t in FAMILIES]}
@@ -528,7 +544,7 @@ if (OUT/'audio'/'index.json').exists():
 receipt={'passed':True,'release_version':VER,
          'reviewed_years':[{'year':y,'newspapers':len(d['newspapers']),'passages':len(d['observations']),'group_views':len(d['groups']),'stories':len(d['stories']),'categories':len(d['categories'])} for y,d in sorted(reviewed_data.items())],
          'curated_passages':len(observations),'group_views':sum(len(d['groups']) for d in reviewed_list),'stories_in_overview':len(stories),'overview_categories':len(tele_cats),
-         'years':len(years_index),'matched_families':len(families),'year_files_mb':round(sum((years_dir/f'{y}.json').stat().st_size for y in range(1770,1811))/1e6,1),'year_index_mb':round((years_dir/'index.json').stat().st_size/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
+         'years':len(years_index),'matched_families':len(families),'reviewed_twins':len(twins),'sky_stars':len(stars),'year_files_mb':round(sum((years_dir/f'{y}.json').stat().st_size for y in range(1770,1811))/1e6,1),'year_index_mb':round((years_dir/'index.json').stat().st_size/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
          'checks':['All displayed sources have scan assets and excerpts','All displayed publications join to observed date coverage','No duplicate observation within a group','Read-only release with verified input hashes','Matched families are labelled as not checked against scans','Every page carries the shared header and footer',
                    'Each reviewed year lists every one of its groups once, and every top-level story has a display category']
                   +(['Every matched printing carries its transcription check, one printing per page'] if printing_checks else []),

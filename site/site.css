@@ -80,6 +80,12 @@ body.page-telescope .site-search{display:none}
 /* Light line icons (the sprite is in the header): drawn in the text colour. On an on/off button the icon is its light:
    pale when off, lit and glowing when on. A button can carry two icons, .when-off and .when-on (Play and Pause). */
 [hidden]{display:none!important}
+/* Watch (Telescope and Pulses): one button hides the controls and lets the view play; a small Exit shows when the pointer moves */
+.watch-btn{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13px;color:#edf2ff;background:#0b1222;border:1px solid #2a3550;border-radius:999px;padding:5px 13px;min-height:30px;cursor:pointer;white-space:nowrap}
+.watch-btn:hover{border-color:#8ccfff88}.watch-btn .ico{width:15px;height:15px}
+.watch-exit{position:fixed;top:14px;right:14px;z-index:60;font:inherit;font-size:13px;color:#edf2ff;background:#0b1222cc;border:1px solid #2a3550;border-radius:999px;padding:6px 14px;cursor:pointer;backdrop-filter:blur(8px);transition:opacity .4s}
+body.still .watch-exit{opacity:0;pointer-events:none}body.watching .tip{display:none!important}
+@media(max-width:640px){.watch-btn .lbl{display:none}}
 /* Try again, after a load that failed */
 .retry{margin:0 0 0 .6em;padding:5px 14px;min-height:24px;border-radius:999px;border:1px solid #8ccfff66;background:#0b1222;color:#e8edf7;font:inherit;font-size:13px;cursor:pointer}.retry:hover{border-color:#8ccfffcc}.retry:focus-visible{outline:2px solid #8ccfff;outline-offset:2px}   /* a hidden control stays hidden, whatever display its class gives it */
 .ico-sprite{position:absolute;width:0;height:0;overflow:hidden}
