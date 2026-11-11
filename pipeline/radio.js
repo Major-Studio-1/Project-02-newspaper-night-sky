@@ -1,7 +1,8 @@
 /* Newspaper Night Sky · the radio, shared by the Radio page, Pulses and the telescope.
    A voice reads a printed passage after a greeting to the paper's town and date, over sounds of the town.
-   Everything happens in the visitor's browser: the voice is the browser's own (Web Speech API) and the sounds are
-   synthesised (Web Audio API). Nothing is sent anywhere, there are no sound files, and nothing costs anything to play.
+   Everything happens in the visitor's browser. The voices were recorded once, when the site was built (Kokoro, by
+   work/audio_render.py), and play from packs of MP3s; on the Radio page a passage without a recording is read by the
+   browser's own voice (Web Speech API). The sounds are synthesised (Web Audio API). Nothing is sent anywhere.
    The sounds are atmosphere, not recordings of the time. The police siren in New York is a deliberate anachronism.
 
    Radio.say(item, options) reads one item: {date: 'YYYY-MM-DD', place: 'Philadelphia, Pa.', paper, title, text, war}.
@@ -157,8 +158,14 @@ function scheme(name) {
   if (name === 'New York') return {bed: 'traffic', cue: 'siren'};   // the deliberate anachronism: a modern city morning
   return {bed: SEA.test(name) ? 'sea' : STREET.test(name) ? 'city' : 'country', cue: STREET.test(name) ? 'hooves' : SEA.test(name) ? 'ship' : 'birds'};
 }
+// The bed changes at most once in 2.5 seconds: a quick sweep across towns leaves it alone, and the last town wins.
+let bedAt = -1e9, bedTimer = 0;
 function setTownBed(kind) {
-  if (!ctx || !townBus || townBed?.kind === kind) return;
+  if (!ctx || !townBus) return;
+  clearTimeout(bedTimer); if (townBed?.kind === kind) return;
+  const since = performance.now() - bedAt;
+  if (townBed && since < 2500) { bedTimer = setTimeout(() => setTownBed(kind), 2500 - since); return; }
+  bedAt = performance.now();
   if (townBed) { const old = townBed; old.g.gain.setTargetAtTime(0, ctx.currentTime, .6); setTimeout(() => { old.stop(); old.g.disconnect(); }, 3000); }
   const g = gain(0), stops = [];
   if (kind === 'sea') {   // water against a wharf: low noise that swells and falls
@@ -212,9 +219,11 @@ function echo(from, amount, ms) {   // send a town sound into the street, then l
   from.connect(send); send.connect(rev).connect(back).connect(dest);
   setTimeout(() => { for (const n of [send, rev, back]) try { n.disconnect(); } catch {} }, ms + 4200);
 }
-// How much each town sound echoes, and how long it lasts (ms): the siren most, a city's sound a few streets away.
+// How much each town sound echoes, and how long it rings (ms) in its long and short forms: the siren most, a city's
+// sound a few streets away. The long forms open the radio and each item of the Radio page; the short ones (about a
+// second) sit under a voice on Pulses and the telescope.
 let sirenAt = -1e9;
-const SPACE = {siren: [1.25, 9500], church: [.75, 7000], ship: [.55, 3200], hooves: [.5, 4800], drum: [.4, 2600], birds: [.18, 4200]};
+const SPACE = {siren: [1.25, 12500, 4200], church: [.75, 9200, 4500], ship: [.55, 5200, 2200], hooves: [.5, 6400, 2200], drum: [.4, 4300, 1300], birds: [.18, 6800, 1500]};
 // Bell-like tones from inharmonic partials.
 function bell(at, base, ratios, decay, level, out) {
   for (const [k, r] of ratios.entries()) {
@@ -223,17 +232,17 @@ function bell(at, base, ratios, decay, level, out) {
     o.start(at); o.stop(at + decay * 1.3);
   }
 }
-function cue(kind) {
+function cue(kind, short = false) {
   if (!ctx) return 0;
   if (ctx.state !== 'running') {
     const asked = performance.now();
-    ctx.resume().then(() => { if (ctx.state === 'running' && performance.now() - asked < 1500) cue(kind); }).catch(() => {});
+    ctx.resume().then(() => { if (ctx.state === 'running' && performance.now() - asked < 1500) cue(kind, short); }).catch(() => {});
     return 0;
   }
   if (kind === 'siren' && performance.now() - sirenAt < 45000) return 0;   // not again for a while: once in 45 seconds is a city, more is an alarm
   const t = ctx.currentTime + .05, far = filter('lowpass', 2600); far.connect(townBus || master);
   const pan = ctx.createStereoPanner ? ctx.createStereoPanner() : null, out = pan ? (pan.connect(far), pan) : far;
-  if (SPACE[kind]) echo(far, ...SPACE[kind]);
+  if (SPACE[kind]) echo(far, SPACE[kind][0], SPACE[kind][short ? 2 : 1]);
   if (kind === 'chime') {   // the station's own call: a gentle rising arpeggio
     const o = filter('lowpass', 5000); o.connect(master);
     [440, 554.37, 659.25, 880].forEach((f, i) => bell(t + i * .26, f, [1, 2, 3.01], 1.6, .05, o));
@@ -247,28 +256,30 @@ function cue(kind) {
     w.connect(wg).connect(master); wg.gain.setValueAtTime(0, t); wg.gain.linearRampToValueAtTime(.006, t + .2); wg.gain.linearRampToValueAtTime(0, t + .85); w.start(t); w.stop(t + .9);
     return 900;
   }
-  if (kind === 'church') { for (let i = 0; i < 3; i++) bell(t + i * 2.1, 196, [.5, 1, 1.183, 1.506, 2, 2.514, 2.662], 4, .07, out); return 1200; }
-  if (kind === 'ship') { for (const k of [0, .38, 1.4, 1.78]) bell(t + k, 1046, [1, 2.0, 2.76, 5.4], 1.4, .05, out); return 600; }
+  if (kind === 'church') { for (let i = 0; i < (short ? 1 : 4); i++) bell(t + i * 2.1, 196, [.5, 1, 1.183, 1.506, 2, 2.514, 2.662], short ? 3 : 4, .07, out); return short ? 400 : 1200; }
+  if (kind === 'ship') { for (const k of short ? [0, .38] : [0, .38, 1.4, 1.78, 2.8, 3.18]) bell(t + k, 1046, [1, 2.0, 2.76, 5.4], 1.4, .05, out); return short ? 300 : 600; }
   if (kind === 'siren') {   // a siren a few streets away: its wail passes across the city and rings between the buildings
     sirenAt = performance.now();
-    const f = filter('lowpass', 1700), g = gain(0), dur = 9;
+    const wails = short ? 1 : 4, dur = wails * 3, f = filter('lowpass', 1700), g = gain(0);
     for (const [type, mul, lvl] of [['sawtooth', 1, .62], ['triangle', 2.004, .22]]) {
       const o = ctx.createOscillator(), og = gain(lvl), base = 610 * mul; o.type = type;
       o.frequency.setValueAtTime(base, t);
-      for (let k = 0; k < 3; k++) { o.frequency.linearRampToValueAtTime(base * 1.95, t + k * 3 + 1.5); o.frequency.linearRampToValueAtTime(base, t + k * 3 + 3); }
+      for (let k = 0; k < wails; k++) { o.frequency.linearRampToValueAtTime(base * 1.95, t + k * 3 + 1.5); o.frequency.linearRampToValueAtTime(base, t + k * 3 + 3); }
       o.detune.setValueAtTime(35, t); o.detune.linearRampToValueAtTime(-70, t + dur);   // passing by: a little lower as it goes away
       o.connect(og).connect(f); o.start(t); o.stop(t + dur);
     }
     f.connect(g).connect(out);
-    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.012, t + 2.2); g.gain.linearRampToValueAtTime(.017, t + 5); g.gain.linearRampToValueAtTime(0, t + dur - .3);
-    if (pan) { pan.pan.setValueAtTime(-.8, t); pan.pan.linearRampToValueAtTime(.7, t + dur); }
+    g.gain.setValueAtTime(0, t);
+    if (short) { g.gain.linearRampToValueAtTime(.011, t + 1); g.gain.linearRampToValueAtTime(0, t + dur - .2); }
+    else { g.gain.linearRampToValueAtTime(.012, t + 2.2); g.gain.linearRampToValueAtTime(.017, t + 6.5); g.gain.linearRampToValueAtTime(0, t + dur - .3); }
+    if (pan) { pan.pan.setValueAtTime(short ? -.4 : -.8, t); pan.pan.linearRampToValueAtTime(short ? .3 : .7, t + dur); }
     return 700;
   }
   if (kind === 'hooves') {   // a horse and cart passing
-    const g = gain(0); g.connect(out);
-    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.9, t + 1.6); g.gain.linearRampToValueAtTime(0, t + 4.6);
-    if (pan) { pan.pan.setValueAtTime(.8, t); pan.pan.linearRampToValueAtTime(-.8, t + 4.6); }
-    for (let k = 0, at = t; at < t + 4.6; k++) {
+    const g = gain(0), len = short ? 1.5 : 6; g.connect(out);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(.9, t + len * .35); g.gain.linearRampToValueAtTime(0, t + len);
+    if (pan) { pan.pan.setValueAtTime(short ? .4 : .8, t); pan.pan.linearRampToValueAtTime(short ? -.3 : -.8, t + len); }
+    for (let k = 0, at = t; at < t + len; k++) {
       const s = source('click', false), f = filter('bandpass', 700 + 300 * (k % 2), 2), o = ctx.createOscillator(), og = gain(0);
       s.connect(f).connect(gain(.5)).connect(g); s.start(at);
       o.frequency.value = 180 + 60 * (k % 2); o.connect(og).connect(g); og.gain.setValueAtTime(.12, at); og.gain.exponentialRampToValueAtTime(.0001, at + .07); o.start(at); o.stop(at + .08);
@@ -277,7 +288,7 @@ function cue(kind) {
     return 500;
   }
   if (kind === 'birds') {   // morning birds
-    for (let n = 0; n < 3; n++) {
+    for (let n = 0; n < (short ? 1 : 5); n++) {
       const at0 = t + n * 1.3 + Math.random() * .5, base = 2600 + Math.random() * 1600;
       for (let k = 0; k < 3; k++) {
         const o = ctx.createOscillator(), g = gain(0), at = at0 + k * .14; o.frequency.setValueAtTime(base, at); o.frequency.exponentialRampToValueAtTime(base * 1.5, at + .07);
@@ -287,7 +298,7 @@ function cue(kind) {
     return 500;
   }
   if (kind === 'drum') {   // a distant drum, under war news
-    const pattern = [0, .18, .36, .9, 1.08, 1.26, 1.8, 2.25];
+    const pattern = short ? [0, .18, .36] : [0, .18, .36, .9, 1.08, 1.26, 1.8, 2.25, 2.7, 2.88, 3.06, 3.6];
     for (const k of pattern) {
       const s = source('white', false), f = filter('bandpass', 1300, .8), g = gain(0); s.connect(f).connect(g).connect(out);
       g.gain.setValueAtTime(.08, t + k); g.gain.exponentialRampToValueAtTime(.0001, t + k + .12); s.start(t + k); s.stop(t + k + .14);
@@ -454,51 +465,26 @@ function stop(silence = false) {
   listeners.state.forEach(f => f(silence ? 'off' : 'idle'));
 }
 
-// ---- Voices on demand: each star or paper the visitor activates speaks in its own voice ----
-// A voice starts only when the visitor activates something: pointing at a star or a paper, clicking it, selecting an
-// area, or searching. Nothing speaks on its own while time drifts or plays. Several activated at once speak at once
-// (up to five), because they arrive as sound the page can mix: eSpeak (radio-voices.js, a worker), placed left or right
-// by where each story was printed and heard like a distant set in a small room. Moving on to another star stops the old
-// voice the way a hand stops a record (it slows, drops and fades, with a scratch) and spins the new one up. The browser's
-// own voice, which can say one thing at a time, stays for the Radio page. Nothing loads until the first voice is wanted.
-const LIVE_MAX = 5, CACHE_MAX = 60;
-let liveWorker = null, engineLoaded = false, workerFails = 0, liveSeq = 0, liveBus = null, scratchAt = 0, inFlight = null;
-const live = new Map();     // key -> {src, g, label, text, ending, silent}
-const made = new Map();     // the last voices made, by text and voice, newest last: hearing a star again needs no new work
-const jobs = [];            // texts waiting for the worker, oldest first: {id, text, opts, wanted(), resolve}
-// One worker, fed one job at a time. A job nobody wants any more (the pointer moved on) is dropped before it is sent,
-// so a sweep across the sky never builds a queue. The job in flight has a timeout; if it fires, the worker is ended
-// and a new one made for the next job. After two failures in a row the voices give up and the captions carry the words.
-function newWorker() {
-  if (liveWorker) { try { liveWorker.terminate(); } catch {} }
-  liveWorker = null; engineLoaded = false;
-  try { liveWorker = new Worker(new URL('radio-voices.js', document.baseURI), {type: 'module'}); } catch { return false; }
-  liveWorker.onmessage = e => {
-    const job = inFlight; if (!job || job.id !== e.data.id) return;
-    clearTimeout(job.timer); inFlight = null;
-    if (e.data.error) workerFails++; else { workerFails = 0; engineLoaded = true; }
-    job.resolve(e.data); pump();
-  };
-  liveWorker.onerror = () => giveUp('error');
-  return true;
-}
-function giveUp(why) {
-  const job = inFlight; inFlight = null; if (job) { clearTimeout(job.timer); job.resolve({error: why}); }
-  workerFails++; if (liveWorker) { try { liveWorker.terminate(); } catch {} } liveWorker = null; engineLoaded = false;
-  pump();
-}
-function pump() {
-  if (inFlight) return;
-  while (jobs.length && !jobs[0].wanted()) jobs.shift().resolve({error: 'dropped'});
-  const job = jobs.shift(); if (!job) return;
-  if (workerFails >= 2 || (!liveWorker && !newWorker())) { job.resolve({error: 'unavailable'}); pump(); return; }
-  inFlight = job;
-  job.timer = setTimeout(() => giveUp('timeout'), engineLoaded ? 6000 : 25000);   // the first job also loads eSpeak (about 5.6 MB)
-  liveWorker.postMessage({id: job.id, text: job.text, opts: job.opts});
-}
-const make = (text, opts, wanted = () => true) => new Promise(resolve => { jobs.push({id: ++liveSeq, text, opts, wanted, resolve}); pump(); });
-function warm() { if (!engineLoaded && workerFails < 2 && !inFlight && !jobs.length) make('Good morning.', {speed: 175}); }   // loads eSpeak before the first voice is wanted
-const liveChanged = () => listeners.live.forEach(f => f([...live.entries()].filter(([, v]) => !v.ending).map(([key, v]) => ({key, label: v.label, text: v.text, silent: !!v.silent, recorded: !!v.recorded}))));
+// ---- Voices on demand: Pulses and the telescope ----
+// On these pages the radio plays recordings only (see "Recorded voices" below). A star or a paper speaks when the
+// visitor points at it, clicks it or selects an area, and on its own while the radio is on and nobody is at the
+// controls (the pages choose what, and ask for a long or a short opening with `lead`). A story with no recording gets
+// the announcer's recorded introduction (its town or paper and its date) while its words stay on air. Several voices
+// can speak at once (up to five), each placed left or right by where its story is on the screen. Moving on to another
+// star stops the old voice the way a hand stops a record (it slows, drops and fades, with a scratch) and spins the new
+// one up. The atmosphere comes in three layers, so quick switching still reaches the news at once: the town's bed runs
+// all the time and changes only when another kind of town has spoken (setTownBed); a town's own sound, about a second
+// long, starts under a voice that has been heard for half a second, at most once in eight seconds (cueSoft); and the
+// long opening (bells, the town's sound, then the greeting) comes only when the radio is turned on, with a short one
+// (the tuning sound, then the place and date) before each story a page plays on its own.
+const LIVE_MAX = 5;
+let liveBus = null, scratchAt = 0;
+const live = new Map();     // key -> {src, g, label, text, ending, silent, recorded}
+const liveChanged = () => {
+  const on = [...live.entries()].filter(([, v]) => !v.ending);
+  duck(on.some(([, v]) => v.src));   // the town's bed steps back while anyone speaks
+  listeners.live.forEach(f => f(on.map(([key, v]) => ({key, label: v.label, text: v.text, silent: !!v.silent, recorded: !!v.recorded}))));
+};
 function roomImpulse(c) {   // a small room: six tenths of a second of decaying noise
   const len = Math.round(c.sampleRate * .6), b = c.createBuffer(2, len, c.sampleRate);
   for (let ch = 0; ch < 2; ch++) { const d = b.getChannelData(ch); for (let i = 0; i < len; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / len, 3.4); }
@@ -511,52 +497,64 @@ function liveOut(c) {
   const room = c.createConvolver(); room.buffer = roomImpulse(c); band.connect(room).connect(gain(.12)).connect(master);
   return liveBus;
 }
-async function livePlay(key, text, {pan = 0, wpm = 165, variant = 'm1', pitch = 50, level = .5, label = '', spin = true, clips = null, cut = 0} = {}) {
-  const c = audio(); if (!c || (!text && !clips)) return false;
+// A town's own sound under a voice: the short form, and rare enough that a quick sweep across the sky hears none.
+let softAt = -1e9; const softKind = {};
+function cueSoft(kind) {
+  const now = performance.now();
+  if (!kind || now - softAt < 8000 || now - (softKind[kind] || -1e9) < 20000) return;
+  softAt = softKind[kind] = now; cue(kind, true);
+}
+// key: who speaks ('star:12', 'paper:sn123'); text: the words for the caption; clips: the recording (announcer lines,
+// then the story's own); host: the announcer's lines alone, for a story with no recording; label, and words (a longer
+// caption for a story with no recording): what shows on air; town: for the bed and the town's sound; war: a drum
+// instead; lead: 'full' (the radio was just turned on), 'short' (a story the page plays on its own) or none (the visitor
+// asked: the voice starts at once); cut: seconds after which the voice fades (0: to the end).
+// Resolves to true when the voice was heard to the end.
+async function livePlay(key, text, {pan = 0, level = .5, label = '', words = '', spin = true, clips = null, host = null, cut = 0, town = '', war = false, lead = ''} = {}) {
+  const c = audio(); if (!c || (!text && !clips && !host)) return false;
   const now = live.get(key); if (now && !now.ending) return true;   // already speaking
   const speaking = [...live.entries()].filter(([, v]) => !v.ending);
   if (speaking.length >= LIVE_MAX) liveStop(speaking[0][0]);   // the oldest gives way
-  const entry = {src: null, g: null, label, text: clean(text), ending: false, silent: false};
+  const entry = {src: null, g: null, label, text: clean(text), ending: false, silent: false, recorded: false};
   live.set(key, entry); liveChanged();
   const gone = () => live.get(key) !== entry || entry.ending;
+  const hold = async () => {   // the words stay on air for their reading time (or until stopped)
+    const end = performance.now() + Math.max(2500, entry.text.split(' ').length * 330);
+    while (!gone() && performance.now() < end) await wait(150);
+  };
   try {
     if (!(await ready()) || gone()) return false;
     startBed();
-    const id = `${variant}|${pitch}|${Math.round(wpm)}|${entry.text}`;
-    let buf = null, clear = false;
-    if (clips && clips.length) { const rec = await joinClips(clips); if (gone()) return false; if (rec) { buf = rec.buf; clear = rec.tier <= 1; entry.recorded = true; liveChanged(); } }
-    if (!buf && !entry.text) return false;
-    if (!buf && made.has(id)) { buf = made.get(id); made.delete(id); made.set(id, buf); }
-    else if (!buf) {
-      const out = await make(entry.text, {speed: Math.round(wpm), variant, pitch}, () => !gone());
-      if (gone()) return false;
-      if (out.error) {   // no voice could be made: the words stay on air, silently, for as long as reading them would take
-        if (out.error === 'dropped') return false;
-        entry.silent = true; liveChanged();
-        await wait(Math.max(2500, entry.text.split(' ').length * 380));
-        return false;
-      }
-      buf = await c.decodeAudioData(out.buf);
-      made.set(id, buf); if (made.size > CACHE_MAX) made.delete(made.keys().next().value);
-      if (gone()) return false;
+    const sc = scheme(town), own = war ? 'drum' : sc.cue;
+    const asked = clips && clips.length ? joinClips(clips) : Promise.resolve(null);   // fetched while an opening plays
+    if (lead === 'short') { await wait(cue('tune')); if (gone()) return false; }
+    let rec = await asked, wordsOnly = false; if (gone()) return false;
+    if (!rec && host && host.length) { rec = await joinClips(host); wordsOnly = !!rec; if (gone()) return false; }
+    if (town) setTownBed(sc.bed);
+    if (lead === 'full') {   // the radio has just been turned on: church bells, the town's own sound, then the greeting
+      cue('church'); setTimeout(() => { if (!gone()) cue(own); }, 900);
+      await wait(1600); if (gone()) return false;
     }
+    if (!rec || wordsOnly) { entry.label = words || label; entry.silent = !rec; liveChanged(); }
+    if (!rec) { await hold(); return false; }
+    entry.recorded = !wordsOnly;
     // Several voices together: each a little quieter (3 dB for every other voice), so the sum stays below the limiter.
     const together = [...live.values()].filter(v => !v.ending && v.src).length, lvl = level * Math.pow(10, -3 * together / 20);
     const src = c.createBufferSource(), g = gain(0), pn = c.createStereoPanner ? c.createStereoPanner() : null, t = c.currentTime;
-    src.buffer = buf;
+    src.buffer = rec.buf;
     if (spin) { src.playbackRate.setValueAtTime(.55, t); src.playbackRate.exponentialRampToValueAtTime(1, t + .22); }   // spun up, like a record let go
-    const bus = clear ? clearOut(c) : liveOut(c);
+    const bus = rec.tier <= 1 ? clearOut(c) : liveOut(c);
     if (pn) { pn.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(pn).connect(bus); } else src.connect(g).connect(bus);
     g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(lvl, t + .08);
-    entry.src = src; entry.g = g;
+    entry.src = src; entry.g = g; liveChanged();
+    if (lead !== 'full') setTimeout(() => { if (!gone()) cueSoft(own); }, 500);
     // A hover hears the opening only: after `cut` seconds the voice fades away (no scratch), as a station drifts off.
-    if (cut > 0 && buf.duration > cut + 1.5) setTimeout(() => { if (live.get(key) === entry && !entry.ending) liveFade(key); }, cut * 1000);
-    return await new Promise(resolve => {
-      src.onended = () => { if (live.get(key) === entry) { live.delete(key); liveChanged(); } resolve(!entry.ending); };
-      src.start(t);
-    });
+    if (cut > 0 && rec.buf.duration > cut + 1.5) setTimeout(() => { if (live.get(key) === entry && !entry.ending) liveFade(key); }, cut * 1000);
+    const heard = await new Promise(resolve => { src.onended = () => resolve(!entry.ending); src.start(t); });
+    if (heard && wordsOnly && !gone()) { entry.src = null; liveChanged(); await hold(); }
+    return heard;
   } catch { return false; }
-  finally { if (live.get(key) === entry && !entry.src) { live.delete(key); liveChanged(); } }
+  finally { if (live.get(key) === entry) { live.delete(key); liveChanged(); } }
 }
 // ---- Recorded voices: speech made once at build time with Kokoro (work/audio_render.py) ----
 // audio/index.json lists every clip: [pack, first byte, end byte, seconds, tier] (tier 0 the announcer, 1 a reviewed
@@ -600,7 +598,8 @@ async function joinClips(ids) {
     const host = ['a:', 'b:'][hostTurn++ % 2], cast = ids.map(id => id.startsWith('a:') ? host + id.slice(2) : id);
     if (cast.every(hasClip)) ids = cast;   // that host has every line; otherwise the first host speaks
   }
-  if (!ids.every(hasClip)) return null;
+  ids = ids.filter(id => hasClip(id) || !/^[ab]:/.test(id));   // an announcer's line that was never recorded is left out
+  if (!ids.length || !ids.every(hasClip)) return null;
   const bufs = await Promise.all(ids.map(clipBuffer)); if (bufs.some(b => !b)) return null;
   if (bufs.length === 1) return {buf: bufs[0], tier: clipIndex.clips[clipId(ids[0])][4]};
   const rate = bufs[0].sampleRate, gaps = ids.map((id, k) => k === ids.length - 1 ? 0 : clipIndex.clips[clipId(ids[k + 1])][4] > 0 ? .4 : .1);
@@ -608,7 +607,7 @@ async function joinClips(ids) {
   let at = 0; bufs.forEach((b, k) => { d.set(b.getChannelData(0), at); at += b.length + Math.round(gaps[k] * rate); });
   return {buf: out, tier: Math.max(...ids.map(id => clipIndex.clips[clipId(id)][4]))};
 }
-// A clear station (the announcer, a reviewed passage): the full voice in a light room. Titles and eSpeak go through the
+// A clear station (the announcer, a reviewed passage): the full voice in a light room. Titles go through the
 // radio band (liveOut) instead, as distant stations.
 let clearBus = null;
 function clearOut(c) {
@@ -636,12 +635,6 @@ function liveFade(key) {   // a gentle end: the voice fades over most of a secon
   const e = live.get(key); if (!e || e.ending || !e.src) return;
   e.ending = true; liveChanged();
   const t = ctx.currentTime; try { e.g.gain.cancelScheduledValues(t); e.g.gain.setValueAtTime(e.g.gain.value, t); e.g.gain.linearRampToValueAtTime(0, t + .8); e.src.stop(t + .85); } catch {}
-}
-// A paper or a town keeps one voice: the same variant and pitch every time it speaks.
-const VARIANTS = ['m1', 'm2', 'm3', 'm4', 'f2'];   // the others sounded damaged rather than old
-function voiceOf(key) {
-  let h = 2166136261; for (const ch of String(key)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); }
-  h >>>= 0; return {variant: VARIANTS[h % VARIANTS.length], pitch: 40 + (h >>> 8) % 19};
 }
 const firstWords = (text, n) => {
   const w = clean(text).split(' ').filter(Boolean); if (w.length <= n) return w.join(' ');
@@ -677,13 +670,13 @@ window.Radio = {
     return voice;
   },
   onCaption(f) { listeners.caption.push(f); }, onState(f) { listeners.state.push(f); }, onVoices(f) { listeners.voices.push(f); },
-  say, sayLine, stop, unlock, ready, cue: k => { audio(); return cue(k); }, welcome: () => { audio(); return welcome(); },
+  say, sayLine, stop, unlock, ready, cue: (k, short) => { audio(); return cue(k, short); }, welcome: () => { audio(); return welcome(); },
   live: {
     play: livePlay, stop: liveStop, stopAll: liveStopAll, has: key => !!live.get(key) && !live.get(key).ending,
-    preload: () => { loadClips(); if (audio()) ready().then(ok => { if (ok) warm(); }); },
-    get count() { return [...live.values()].filter(v => !v.ending).length; }, get failed() { return workerFails >= 2; },
+    preload: () => { loadClips(); audio(); },
+    get count() { return [...live.values()].filter(v => !v.ending).length; },
     fade: liveFade, clips: {load: loadClips, has: hasClip, id: clipId},
-    onChange(f) { listeners.live.push(f); }, voiceOf, firstWords, MAX: LIVE_MAX
+    onChange(f) { listeners.live.push(f); }, firstWords, MAX: LIVE_MAX
   },
   spokenDate, writtenDate, town, paperName, clean, chunks, intro
 };

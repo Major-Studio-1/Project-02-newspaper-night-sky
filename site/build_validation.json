@@ -68,25 +68,24 @@
   ],
   "matched_printings": 164698,
   "recorded_voices": {
-    "clips": 3139,
+    "clips": 8660,
     "packs": 138,
-    "mb": 141.2,
+    "mb": 229.4,
     "reviewed_passages_recorded": 1099,
     "reviewed_passages": 1099,
-    "titles_recorded": 1510,
+    "titles_recorded": 7031,
     "announcer_clips": 265
   },
   "pages_sha256": {
     "index.html": "95cf27005b8d15849873752349a2369ae8708d920ccae9cee663c7f0c459a6a6",
-    "telescope.html": "b08a3faa8dbf68f7c0341b7d87f1276526704a2cf09cae9345404e8090291007",
-    "pulses.html": "74dfb25c3446e8a90543900df3494b7ed5596d874d25f59e49473a60bdc08bf8",
+    "telescope.html": "f84a0e9a5c8a21fed6e0444ded1e75b51bddb476ad933a68c149a8f1cc1f75b3",
+    "pulses.html": "ea26d072c05cb4d3e4ce5bf9147bb0a25c02f3b9555f103345927e6793df1ba8",
     "radio.html": "4384c526b59421de16affd08649499d66f09109d60a1838e94b6e10de1b11351",
     "exhibit.html": "be76c635ae4bbe8bf82c2de9304fd13d6903955ee972557ade5421f0679f634a",
-    "method.html": "749908226456597c542eb871e84281d1d734a834b8107708eccc3fe247dd257d",
+    "method.html": "42bff775f702bbedc0c3a08e4ca2c369ca167d8f73ba603c6064fc5f38d0f3f6",
     "notes.html": "9d60d09a1945687d1fc4474aed9d1ad938a6526215db4805347cd658041a41cf",
     "site.css": "a561ca7c2cfc80341c9f20794d07383e86afcb8c57a25f9e8c3200e6d12ac434",
     "glass.js": "a08cefb1f3fa663e59f8027354420ca9c89bbb52f24e44571a829611fec6605a",
-    "radio.js": "4c640ba892653c9ea248b214afbecd40216110540abd2aba3a698b1cc9e682ff",
-    "radio-voices.js": "a94bdbcd03b3aec036eb34a52d8f162199b8668863651518793bd978602a253f"
+    "radio.js": "23bf9a9c2831f178c5e36127f8b11bb13286df42ac778c577f68cd42021b8f4f"
   }
 }

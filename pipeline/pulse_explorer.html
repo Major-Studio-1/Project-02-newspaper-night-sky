@@ -969,8 +969,9 @@ setInterval(() => {
 }, 700);
 
 // ---- Radio (radio.js): newspapers speak when you activate them ----
-// Nothing speaks on its own while the stories play. Point at a newspaper and it reads its latest printing on the map so
-// far, in its own voice. Move to another and the first stops like a record under a hand, with a scratch, while the new
+// Point at a newspaper and it reads its latest printing on the map so far (a recorded passage or title; with no
+// recording, the announcer names the paper and the date and the words show on air). With the radio on and nobody at the
+// controls, it follows the playhead on its own (autoplay, below). Move to another and the first stops like a record under a hand, with a scratch, while the new
 // one spins up. Pick a printing (click a paper, a printing in the list, or step with the arrows) and it reads that
 // passage. Drag across the map and up to five of the papers in that area read together. Each voice sits left or right
 // where its paper is on the map, and the papers on air have gold names.
@@ -986,21 +987,22 @@ function paperSays(e, words) {   // the paper's name and the date, then the pass
   const when = new Date(dateValue(e.date)).toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'});
   const hello = radioFirst && town ? `Good morning, ${town}! ` : ''; radioFirst = false;
   const words_ = e.excerpt || st?.label || e.summary || '';
-  return {text: `${hello}${name}, ${when}. ${Radio.live.firstWords(words_, words)}`, label: `${town} · ${name} · ${when} — ${Radio.live.firstWords(words_, 9)}`};
+  return {town, text: `${hello}${name}, ${when}. ${Radio.live.firstWords(words_, words)}`, label: `${town} · ${name} · ${when} — ${Radio.live.firstWords(words_, 9)}`,
+    words: `${town} · ${name} · ${when} — ${Radio.live.firstWords(words_, 24)}`};
 }
-// The recorded speech for a printing, if it has one: a reviewed passage, or the title of a widely printed matched
-// story. With `intro`, the announcer names the paper and the date first (and greets the town the first time).
-function paperClips(e, intro) {
-  const main = String(e.id).startsWith('auto:') ? 't:' + String(e.id).split(':')[1] : 'p:' + e.id;
-  if (!Radio.live.clips.has(main)) return null;
-  if (!intro) return [main];
+// The recorded speech for a printing: a reviewed passage, or the title of a widely printed matched story. With `intro`
+// the announcer names the paper and the date first (and greets the town the first time); for a printing with no
+// recording, the announcer speaks alone and the words show on air.
+const clipOf = e => String(e.id).startsWith('auto:') ? 't:' + String(e.id).split(':')[1] : 'p:' + e.id;
+function paperHost(e) {
   const town = Radio.town(Y.papers.get(e.node)?.place), [yy, mm, dd] = String(e.date).split('-').map(Number);
-  return [...(radioFirst && town ? ['a:hello:' + town] : []), 'a:paper:' + e.node, 'a:day:' + dd, 'a:month:' + mm, 'a:year:' + yy, main];
+  return [...(radioFirst && town ? ['a:hello:' + town] : []), 'a:paper:' + e.node, 'a:day:' + dd, 'a:month:' + mm, 'a:year:' + yy];
 }
-function speakPaper(e, words = 14, intro = false) {
-  if (!radioOn || !e) return;
-  const clips = paperClips(e, intro), n = nodeById.get(e.node), said = paperSays(e, words);
-  Radio.live.play('paper:' + e.node, said.text, {pan: n && skyWidth ? Math.max(-.9, Math.min(.9, n.cx / skyWidth * 2 - 1)) : 0, ...Radio.live.voiceOf(e.node), label: said.label, clips, cut: intro ? 0 : 12});
+function speakPaper(e, words = 14, intro = false, lead = '', cut = intro ? 0 : 12) {
+  if (!radioOn || !e) return Promise.resolve(false);
+  const host = paperHost(e), n = nodeById.get(e.node), said = paperSays(e, words);
+  return Radio.live.play('paper:' + e.node, said.text, {pan: n && skyWidth ? Math.max(-.9, Math.min(.9, n.cx / skyWidth * 2 - 1)) : 0, label: said.label, words: said.words,
+    clips: intro ? [...host, clipOf(e)] : [clipOf(e)], host, town: said.town, lead, cut});
 }
 let paperDwell = 0;
 // The paper under the pointer reads once the pointer has rested on it (120 ms); resting on another stops the first
@@ -1011,12 +1013,13 @@ function radioHoverPaper(lccn) {
   if (lccn === hoverPaper && Radio.live.has('paper:' + lccn)) return;
   paperDwell = setTimeout(() => {
     const e = printingOf(lccn); if (!e || !radioOn) return;
+    autoStop(lccn);   // the autoplay gives way (a paper it is reading carries on)
     if (hoverPaper && hoverPaper !== lccn && !pinnedPapers.has(hoverPaper)) Radio.live.stop('paper:' + hoverPaper);
     hoverPaper = lccn; speakPaper(e, 14);
   }, 120);
 }
 function radioSelectPapers(list) {   // an area: these papers read together, and the ones before stop
-  const keep = new Set(list);
+  const keep = new Set(list); autoStop(keep.has(autoNode) ? autoNode : null);
   for (const k of [...pinnedPapers, hoverPaper]) if (k && !keep.has(k)) Radio.live.stop('paper:' + k);
   pinnedPapers.clear(); hoverPaper = null;
   list.slice(0, Radio.live.MAX).forEach((lccn, k) => { const e = printingOf(lccn); if (!e) return; pinnedPapers.add(lccn); setTimeout(() => speakPaper(e, 18), k * 160); });
@@ -1026,6 +1029,7 @@ function radioPicked() {   // a printing picked: it reads that passage, once you
   clearTimeout(radioPickTimer);
   radioPickTimer = setTimeout(() => {
     const e = events[selected]; if (!radioOn || !e) return;
+    autoStop(e.node);
     for (const k of [...pinnedPapers, hoverPaper]) if (k && k !== e.node) Radio.live.stop('paper:' + k);
     pinnedPapers.clear(); hoverPaper = null; pinnedPapers.add(e.node);
     Radio.live.stop('paper:' + e.node, {scratch: false});   // its shorter reading, if any, gives way to the passage
@@ -1034,19 +1038,50 @@ function radioPicked() {   // a printing picked: it reads that passage, once you
 }
 // In an exhibition nobody points or picks, so the scene does: as a story starts, its first printing is read.
 function exhibitRead() {
-  if (!radioOn || mode !== 'group' || !events.length) return;
-  const e = events[0]; pinnedPapers.add(e.node); speakPaper(e, 60, true);
+  if (!radioOn || mode !== 'group' || !events.length || autoNode) return;
+  autoNext(events[0]);
 }
+// ---- Autoplay: with the radio on, the radio follows the playhead once nobody has touched the page for six seconds ----
+// It reads a printing that has just pulsed: a reviewed passage first (its first 16 seconds), otherwise the title of a
+// widely printed story, each after the short opening (the tuning sound, then the paper and the date). The first after
+// the radio is turned on gets the long opening, at once (paused, it reads the printing at the playhead). Pointing at a
+// paper, picking a printing or selecting an area takes over at once.
+let autoRun = 0, autoNode = null, autoNow = '', autoDay = -1e9, lastInput = -1e9;
+for (const t of ['pointermove', 'pointerdown', 'keydown', 'wheel']) document.addEventListener(t, () => { lastInput = performance.now(); }, {capture: true, passive: true});
+function autoPick() {
+  const to = countUpTo(day), since = autoNow ? -1e9 : Math.max(autoDay <= day ? autoDay : -1e9, day - Math.max(3, speed * 2.5));
+  let best = null, score = 0;
+  for (let i = to - 1; i >= Math.max(0, to - 400) && events[i].day > since; i--) {
+    const e = events[i], s = Radio.live.clips.has(clipOf(e)) ? (String(e.id).startsWith('auto:') ? 1 : 2) : 0;
+    if (s > score) { best = e; score = s; if (s === 2) break; }
+  }
+  return best;
+}
+function autoStop(keep = null) {   // the visitor takes over; a paper the autoplay is reading that the visitor chose carries on
+  autoRun++; autoNow = '';
+  if (autoNode && autoNode !== keep) Radio.live.stop('paper:' + autoNode);
+  autoNode = null;
+}
+async function autoNext(e) {
+  const run = ++autoRun, lead = autoNow || 'short'; autoNow = ''; autoNode = e.node; autoDay = e.day;
+  await speakPaper(e, 30, true, lead, String(e.id).startsWith('auto:') ? 0 : 16);
+  if (run === autoRun) autoNode = null;
+}
+setInterval(() => {
+  if (!radioOn || autoNode || document.hidden || !Y || !events.length || !Radio.unlocked) return;
+  if (!autoNow && (!playing || performance.now() - lastInput < 6000 || Radio.live.count || $('passage').open || $('scan-detail').open)) return;
+  const e = autoPick(); if (e) autoNext(e);
+}, 300);
 function setRadio(on) {
   radioOn = on; syncRadio(); tourHold = performance.now() + 600;
   try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { Radio.unlock(); Radio.live.preload(); Radio.welcome(); radioFirst = true; }
-  else { Radio.stop(true); pinnedPapers.clear(); hoverPaper = null; }
+  if (on) { Radio.unlock(); Radio.live.preload(); Radio.welcome(); radioFirst = true; autoNow = 'full'; }
+  else { autoStop(); Radio.stop(true); pinnedPapers.clear(); hoverPaper = null; }
 }
 Radio.live.onChange(list => {
   const on = new Set(list.filter(v => v.key.startsWith('paper:')).map(v => v.key.slice(6)));
   for (const n of nodes) n.el.classList.toggle('on-air', on.has(n.id));
-  $('on-air-head').textContent = list.length ? (list.some(v => v.silent) ? 'On air · words only: no voice could be made' : 'On air') : 'Radio';
+  $('on-air-head').textContent = list.length ? (list.some(v => v.silent) ? 'On air · words only' : 'On air') : 'Radio';
   const box = $('on-air-text'); box.replaceChildren();
   for (const v of list) { const line = document.createElement('span'); line.className = 'now'; line.style.display = 'block'; line.textContent = v.label; box.append(line); }
 });
@@ -1122,9 +1157,9 @@ if (Number(params.get('speed')) > 0) setSpeed(Number(params.get('speed')));   //
 let radioKept = null; try { radioKept = sessionStorage.getItem('nns-radio'); } catch {}
 if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !== 'off')) {
   radioOn = true; syncRadio();
-  let started = false; const start = () => { if (started) return; started = true; Radio.unlock(); Radio.live.preload(); Radio.welcome(); };
+  let started = false; const start = () => { if (started) return; started = true; Radio.unlock(); Radio.live.preload(); Radio.welcome(); autoNow = 'short'; };
   for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
-  if (Radio.unlock()) Radio.live.preload();   // a page reached by a click on this site may already be allowed to play
+  if (Radio.unlock()) { Radio.live.preload(); autoNow = 'short'; }   // a page reached by a click on this site may already be allowed to play
 }
 syncTour();
 const yp = (params.get('years') || params.get('year') || '').trim(), ym = yp.match(/^(\d{4})(?:\s*[-–]\s*(\d{4}))?$/);

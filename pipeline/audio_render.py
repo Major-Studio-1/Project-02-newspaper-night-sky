@@ -196,7 +196,7 @@ def year_words(y):   # radio.js yearWords()
     return words(y // 100) + ' ' + ('hundred' if y % 100 == 0 else 'oh ' + words(y % 100) if y % 100 < 10 else words(y % 100))
 
 
-def fnv(key):   # radio.js voiceOf(): FNV-1a over the key, so a paper or a town keeps one voice
+def fnv(key):   # FNV-1a over the key (as radio.js once chose its eSpeak voices), so a paper or a town keeps one voice
     h = 2166136261
     for ch in str(key):
         h = ((h ^ ord(ch)) * 16777619) & 0xFFFFFFFF
@@ -205,6 +205,22 @@ def fnv(key):   # radio.js voiceOf(): FNV-1a over the key, so a paper or a town 
 
 def reader_of(key):
     return READERS[fnv(key) % len(READERS)]
+
+
+FEMALE = ['af_bella', 'af_nicole', 'bf_emma', 'af_sarah']
+MALE = ['bm_george', 'bm_fable', 'am_fenrir', 'am_puck']   # am_michael is also a host, so he takes on no new titles
+
+
+def house_of(town, busy):
+    """A town's readers of titles: the voice it had when each town kept one (until 2026-11-10), one of the other kind,
+    and for a busy town one more of each, so women and men read about equally often and old recordings mostly stay."""
+    h, first = fnv(town), reader_of(town)
+    same, other = (FEMALE, MALE) if first[1] == 'f' else (MALE, FEMALE)
+    k = h % len(other); out = [first, other[k]]
+    if busy:
+        out.append(same[(same.index(first) + 1) % len(same)] if first in same else same[h % len(same)])
+        out.append(other[(k + 1) % len(other)])
+    return out
 
 
 def town_of(place):   # radio.js town()
@@ -256,12 +272,22 @@ def manifest():
         for oid, o in obs.items():
             if oid not in packed:
                 add('p:' + oid, 1, f'r/{r["year"]}-other', reader_of(o['node']), clean(o['excerpt']), .95)
-    # Regional stations: the titles of the forty most widely printed matched stories of each year (three papers or more).
+    # Regional stations: the titles of every matched story printed in four or more newspapers, and of the forty most widely
+    # printed of each year in three or more. Most widely printed first (the render follows this order). A title is read
+    # by one of its first-printing town's house of readers (house_of), chosen by the story's id.
     town_at = {(t['lat'], t['lon']): t['name'] for t in boot['towns']}
+    chosen = []
     for y in range(1770, 1811):
         idx = sorted((i for i, yy in enumerate(tel['year']) if yy == y and not tel['kind'][i] and tel['papers'][i] >= 3), key=lambda i: (-tel['papers'][i], tel['first'][i]))
-        for i in idx[:40]:
-            add('t:' + tel['id'][i], 2, f't/{y}', reader_of(town_at.get((tel['flat'][i], tel['flon'][i]), tel['id'][i])), opening(tel['title'][i], 24), 1.0)
+        chosen += [i for k, i in enumerate(idx) if k < 40 or tel['papers'][i] >= 4]
+    town_of_star = {i: town_at.get((tel['flat'][i], tel['flon'][i]), tel['id'][i]) for i in chosen}
+    load = {}
+    for i in chosen:
+        load[town_of_star[i]] = load.get(town_of_star[i], 0) + 1
+    busy = {t for t, n in load.items() if n >= 250}
+    for i in sorted(chosen, key=lambda i: (-tel['papers'][i], tel['first'][i])):
+        town = town_of_star[i]; readers = house_of(town, town in busy)
+        add('t:' + tel['id'][i], 2, f"t/{tel['year'][i]}", readers[fnv(tel['id'][i]) % len(readers)], opening(tel['title'][i], 24), 1.0)
     MANIFEST.write_text(json.dumps({'announcers': [h for _, h in HOSTS], 'readers': READERS, 'entries': entries}, ensure_ascii=False, indent=0), encoding='utf8')
     tiers = {}
     for e in entries:
@@ -274,16 +300,24 @@ def clip_key(e):
     return hashlib.sha1(f"{e['voice']}|{e['speed']}|{e['text']}".encode('utf8')).hexdigest()[:20]
 
 
-def render_all(limit=None):
-    """Render every clip of the manifest that is not made yet. Safe to stop and start again: made clips are kept."""
+def render_all(limit=None, shard=None):
+    """Render every clip of the manifest that is not made yet. Safe to stop and start again: made clips are kept.
+    shard 'k/n' takes every n-th entry from the k-th (0-based), so n renders can share one machine (one renderer uses
+    about two cores). A clip counts as made once its .json is written (after the .mp3), and each render checks again
+    just before making one, so shards and restarts never make a clip twice."""
     from kokoro_onnx import Kokoro
     entries = json.loads(MANIFEST.read_text(encoding='utf8'))['entries']
+    if shard:
+        k, m = map(int, shard.split('/')); entries = entries[k::m]
     CLIPS.mkdir(parents=True, exist_ok=True)
-    todo = [e for e in entries if not (CLIPS / (clip_key(e) + '.mp3')).exists()]
+    made = lambda e: (CLIPS / (clip_key(e) + '.json')).exists()
+    todo = [e for e in entries if not made(e)]
     print(f'{len(entries)} clips, {len(todo)} to make', flush=True)
     kokoro = Kokoro(str(MODELS / 'kokoro-v1.0.onnx'), str(MODELS / 'voices-v1.0.bin'))
     t0, spoken = time.time(), 0.0
     for n, e in enumerate(todo[:limit] if limit else todo, 1):
+        if made(e):
+            continue
         try:
             a = render(kokoro, e['text'], e['voice'], e['speed'])
         except Exception as err:   # one bad text must not stop the night's work
@@ -330,5 +364,6 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('task', choices=['sample', 'manifest', 'render', 'pack'])
     ap.add_argument('--limit', type=int, help='render: make at most this many clips (a trial)')
+    ap.add_argument('--shard', help="render: 'k/n', every n-th clip from the k-th, to run n renders at once")
     args = ap.parse_args()
-    {'sample': sample, 'manifest': manifest, 'render': lambda: render_all(args.limit), 'pack': pack}[args.task]()
+    {'sample': sample, 'manifest': manifest, 'render': lambda: render_all(args.limit, args.shard), 'pack': pack}[args.task]()

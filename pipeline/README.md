@@ -66,6 +66,6 @@ Releases are never edited. New evidence always makes a new version; see [`archiv
 | `build_pulse_explorer.py` | Builds the whole site from the current release: the pages, their data files, and the shared header and footer. |
 | `home.html`, `telescope.html`, `pulse_explorer.html`, `radio.html`, `exhibit.html`, `method.html`, `notes.html` | The page templates. |
 | `site_parts.py`, `site.css`, `glass.js` | The header and footer that every page shares, the styles and the glass controls. |
-| `radio.js`, `radio-voices.js` | The radio in the visitor's browser: the recorded voices, eSpeak voices made in a worker (meSpeak) where no recording exists, and the sounds. |
+| `radio.js` | The radio in the visitor's browser: the recorded voices (the announcer alone, with the words on air, for a story that has no recording) and the synthesised sounds. |
 | `audio_render.py`, `audio_manifest.json` | Records the radio's voices once, at build time, with Kokoro (an open speech model, Apache 2.0): the list of clips, the recording and the packs in [`site/audio/`](../site/audio). |
 | `export_public_repo.py` | Makes this repository from the working project. |

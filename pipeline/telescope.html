@@ -1126,12 +1126,13 @@ $('span').addEventListener('click', e => { const b = e.target.closest('button');
 $('drift').addEventListener('click', () => { state.drift = !state.drift; lastInteract = -1e9; syncButtons(); save(); });
 
 // ---- Radio (radio.js): stars speak when you activate them ----
-// Nothing speaks on its own while time drifts. Point at a star and it says where and when it was first printed and its
-// opening words, in its town's voice. Move on to another star and the first stops like a record under a hand, with a
-// scratch, while the new one spins up, so a quick sweep across the sky alternates between voices. Click a star to keep
-// it speaking (click it again to open it in the pulse view). Select an area (Alt-drag, or Select and drag) and up to
-// five of its most widely printed stories speak together. A search makes its most widely printed matches speak. Each
-// voice sits left or right where its star is on the screen.
+// Point at a star and it says its opening words (a recorded title or passage; a story with no recording gets the
+// announcer naming its town and date, and its words on air). Move on to another star and the first stops like a record
+// under a hand, with a scratch, while the new one spins up, so a quick sweep across the sky alternates between voices.
+// Click a star to keep it speaking (click it again to open it in the pulse view). Select an area (Alt-drag, or Select
+// and drag) and up to five of its most widely printed stories speak together. A search makes its most widely printed
+// matches speak. Left alone for six seconds, the radio plays the sky on its own (autoplay, below). Each voice sits left
+// or right where its star is on the screen.
 let radioOn = false, radioFirst = true, hoverVoice = -1, selectMode = false, lastClick = -1, selBox = null, airing = 0;
 const LISTEN_OFF = 'Select an area to hear: drag across the sky (or hold Alt and drag), and its stories speak together. This turns the radio on.';
 const LISTEN_ON = 'Select an area to hear: drag across the sky (or hold Alt and drag), and its stories speak together. Point at a star to hear it alone.';
@@ -1146,21 +1147,23 @@ function starSays(i, words) {   // where and when it was first printed, then its
   const town = townAt.get(D.flat[i] + ',' + D.flon[i]) || '', when = new Date(EPOCH + D.first[i] * MS).toLocaleDateString('en-GB', {month: 'long', year: 'numeric', timeZone: 'UTC'});
   const hello = radioFirst && town ? `Good morning, ${town}! ` : ''; radioFirst = false;
   return {town, text: `${hello}${!hello && town ? town + ', ' : ''}${when}. ${Radio.live.firstWords(D.title[i], words)}`,
-    label: `${town || 'Unknown town'} · ${when} — ${Radio.live.firstWords(D.title[i], 9)}`};
+    label: `${town || 'Unknown town'} · ${when} — ${Radio.live.firstWords(D.title[i], 9)}`,
+    words: `${town || 'Unknown town'} · ${when} — ${Radio.live.firstWords(D.title[i], 24)}`};
 }
-// The recorded speech for a star, if it has one: a reviewed story's first printing, or the title of one of the forty
-// most widely printed stories of its year. With `intro`, the announcer says the town and the month and year first.
-function starClips(i, intro) {
-  const main = (D.kind[i] ? 's:' : 't:') + D.id[i];
-  if (!Radio.live.clips.has(main)) return null;
-  if (!intro) return [main];
+// The recorded speech for a star: a reviewed story's first printing, or the title of a widely printed story (every one
+// in four or more papers, and the forty most widely printed of each year). With `intro` the announcer says the town and
+// the month and year first; for a story with no recording, the announcer speaks alone and the words show on air.
+const recorded = i => Radio.live.clips.has((D.kind[i] ? 's:' : 't:') + D.id[i]);
+const isWar = i => !!D.kind[i] && /\bwar\b/i.test(BOOT.categories[D.cat[i]]?.label || '');
+function starHost(i) {
   const town = townAt.get(D.flat[i] + ',' + D.flon[i]), dt = new Date(EPOCH + D.first[i] * MS);
-  return [...(town ? [(radioFirst ? 'a:hello:' : 'a:town:') + town] : []), 'a:month:' + (dt.getUTCMonth() + 1), 'a:year:' + dt.getUTCFullYear(), main];
+  return [...(town ? [(radioFirst ? 'a:hello:' : 'a:town:') + town] : []), 'a:month:' + (dt.getUTCMonth() + 1), 'a:year:' + dt.getUTCFullYear()];
 }
-function speakStar(i, words = 16, intro = false) {
+function speakStar(i, words = 16, intro = false, lead = '', cut = intro ? 0 : 12) {
   if (!radioOn || i < 0 || !W) return Promise.resolve(false);
-  const clips = starClips(i, intro), [x, y, z] = world(i), p = project(x, y, z), said = starSays(i, words);
-  return Radio.live.play('star:' + i, said.text, {pan: Math.max(-.9, Math.min(.9, p[0] / W * 2 - 1)), ...Radio.live.voiceOf(said.town || 'star' + i), label: said.label, clips, cut: intro ? 0 : 12});
+  const host = starHost(i), main = (D.kind[i] ? 's:' : 't:') + D.id[i], [x, y, z] = world(i), p = project(x, y, z), said = starSays(i, words);
+  return Radio.live.play('star:' + i, said.text, {pan: Math.max(-.9, Math.min(.9, p[0] / W * 2 - 1)), label: said.label, words: said.words,
+    clips: intro ? [...host, main] : [main], host, town: said.town, war: isWar(i), lead, cut});
 }
 let dwell = 0, relayRun = 0, lastClickAt = 0;
 // Pointing: a star speaks once the pointer has rested on it for a moment (120 ms), so stars passed over in a sweep make
@@ -1173,7 +1176,7 @@ function radioHover(i) {
   if (i === hoverVoice && Radio.live.has('star:' + i)) return;
   dwell = setTimeout(() => {
     if (hover !== i || !radioOn) return;
-    relayRun++;   // a search's relay gives way
+    relayRun++; autoStop(i);   // a search's relay and the autoplay give way (a star the autoplay is reading carries on)
     if (hoverVoice >= 0 && hoverVoice !== i && !pinned.has(hoverVoice)) Radio.live.stop('star:' + hoverVoice);
     hoverVoice = i; speakStar(i, 12);
   }, 120);
@@ -1184,7 +1187,7 @@ function radioHover(i) {
 function radioClick(i) {
   const t = performance.now(), again = i >= 0 && i === lastClick && t - lastClickAt < 1500; lastClick = i; lastClickAt = t;
   if (again) { location.href = pulseUrl(i); return; }
-  relayRun++; clearTimeout(dwell);
+  relayRun++; clearTimeout(dwell); autoStop(i);
   if (i < 0) { for (const k of pinned) Radio.live.stop('star:' + k); pinned.clear(); return; }
   if (pinned.has(i)) { pinned.delete(i); Radio.live.stop('star:' + i); return; }
   pinned.add(i);
@@ -1193,7 +1196,7 @@ function radioClick(i) {
   if (!Radio.live.has('star:' + i)) speakStar(i, 16, true);
 }
 function radioSelect(list) {   // an area: these stars speak together, entering one by one, and the ones before stop
-  relayRun++; clearTimeout(dwell);
+  relayRun++; clearTimeout(dwell); autoStop(list.includes(autoStar) ? autoStar : -1);
   for (const k of [...pinned, hoverVoice]) if (k >= 0 && !list.includes(k)) Radio.live.stop('star:' + k);
   pinned.clear(); hoverVoice = -1;
   list.slice(0, Radio.live.MAX).forEach((i, k) => { pinned.add(i); setTimeout(() => { if (pinned.has(i) && radioOn) speakStar(i); }, k * 350); });
@@ -1205,27 +1208,67 @@ async function radioSearch() {
   if (!radioOn || !searching()) return;
   const [a, b] = inWindow(), pick = (from, to) => { const out = []; for (let i = from; i < to; i++) if (hit[i] && visible(i)) out.push(i); return out.sort((x, y) => D.papers[y] - D.papers[x]); };
   const here = pick(a, b), list = (here.length ? here : pick(0, N)).slice(0, 4).sort((x, y) => D.first[x] - D.first[y]);
-  const run = ++relayRun; clearTimeout(dwell);
+  const run = ++relayRun; clearTimeout(dwell); autoStop(); relayOwner = run;
   for (const k of [...pinned, hoverVoice]) if (k >= 0) Radio.live.stop('star:' + k);
   pinned.clear(); hoverVoice = -1;
-  for (const [n, i] of list.entries()) {
-    if (run !== relayRun || !radioOn) return;
-    if (n) { Radio.cue('tune'); await new Promise(r => setTimeout(r, 420)); if (run !== relayRun || !radioOn) return; }
-    pinned.add(i);
-    const cut = setTimeout(() => { if (run === relayRun) Radio.live.fade('star:' + i); }, 10000);
-    await speakStar(i, 16, true); clearTimeout(cut); if (run === relayRun) pinned.delete(i);
-  }
+  try {
+    for (const [n, i] of list.entries()) {
+      if (run !== relayRun || !radioOn) return;
+      pinned.add(i);
+      await speakStar(i, 16, true, n ? 'short' : '', 10); if (run === relayRun) pinned.delete(i);
+    }
+  } finally { if (relayOwner === run) relayOwner = 0; }
 }
+// ---- Autoplay: with the radio on, the sky plays on its own once nobody has touched the page for six seconds ----
+// While Drift moves "now", it reads the most widely printed recorded story arriving at the front, one at a time; with
+// the sky still, the most widely printed recorded stories in view, a dozen at a time in date order. A search narrows it
+// to its matches. Each story gets the short opening (the tuning sound, then the town, month and year); the first after
+// the radio is turned on gets the long one, at once. A reviewed passage is heard for its first 24 seconds. Pointing at a
+// star, a click, an area or a search takes over at once.
+let autoRun = 0, autoStar = -1, autoNow = '', autoQueue = [], relayOwner = 0, lastMove = -1e9;
+const autoDone = new Set();
+for (const t of ['pointermove', 'pointerdown', 'keydown', 'wheel']) document.addEventListener(t, () => { lastMove = performance.now(); }, {capture: true, passive: true});
+function autoPick() {
+  const [a, b] = inWindow(), ok = i => visible(i) && !autoDone.has(i) && recorded(i) && (!searching() || hitMask[i] > 0);
+  if (state.drift && !reduced && state.span < maxDay) {   // the stories arriving at "now" (the first one: from the nearest quarter of the view)
+    let best = -1; const from = state.now - state.span * (autoNow ? .25 : .05);
+    for (let i = b - 1; i >= a && D.first[i] > from; i--) if (ok(i) && (best < 0 || D.papers[i] > D.papers[best])) best = i;
+    if (best >= 0 || !autoNow) return best;
+  }
+  autoQueue = autoQueue.filter(ok);
+  if (!autoQueue.length) {
+    const list = []; for (let i = a; i < b; i++) if (ok(i)) list.push(i);
+    if (!list.length) { autoDone.clear(); return -1; }   // every one heard: the next round starts again
+    autoQueue = list.sort((x, y) => D.papers[y] - D.papers[x]).slice(0, 12).sort((x, y) => D.first[x] - D.first[y]);
+  }
+  return autoQueue.shift();
+}
+function autoStop(keep = -1) {   // the visitor takes over; a star the autoplay is reading that the visitor chose carries on
+  autoRun++; autoNow = '';
+  if (autoStar >= 0 && autoStar !== keep) Radio.live.stop('star:' + autoStar);
+  autoStar = -1;
+}
+async function autoNext() {
+  const i = autoPick(); if (i < 0) return;
+  const run = ++autoRun, lead = autoNow || 'short'; autoNow = ''; autoStar = i; autoDone.add(i);
+  await speakStar(i, 16, true, lead, D.kind[i] ? 24 : 0);
+  if (run === autoRun) autoStar = -1;
+}
+setInterval(() => {
+  if (!radioOn || autoStar >= 0 || document.hidden || !W || !Radio.unlocked) return;
+  const idle = performance.now() - Math.max(lastInteract, lastMove) > 6000 && hover < 0 && !Radio.live.count && !(relayOwner && relayOwner === relayRun);
+  if (autoNow || idle) autoNext();
+}, 400);
 function setRadio(on) {
   radioOn = on; if (!on) selectMode = false; syncRadio();
   try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { Radio.unlock(); Radio.live.preload(); Radio.welcome(); radioFirst = true; }
-  else { Radio.stop(true); pinned.clear(); hoverVoice = -1; relayRun++; clearTimeout(dwell); }
+  if (on) { Radio.unlock(); Radio.live.preload(); Radio.welcome(); radioFirst = true; autoNow = 'full'; }
+  else { autoStop(); Radio.stop(true); pinned.clear(); hoverVoice = -1; relayRun++; clearTimeout(dwell); }
 }
 Radio.live.onChange(list => {
   speakingStars.clear(); for (const v of list) if (v.key.startsWith('star:')) speakingStars.add(Number(v.key.slice(5)));
   airing = list.length; $('on-air').hidden = !radioOn || !airing; $('viewport').classList.toggle('airing', radioOn && !!airing);
-  $('on-air-head').textContent = list.length ? (list.some(v => v.silent) ? 'On air · words only: no voice could be made' : 'On air') : 'Radio';
+  $('on-air-head').textContent = list.length ? (list.some(v => v.silent) ? 'On air · words only' : 'On air') : 'Radio';
   const box = $('on-air-text'); box.replaceChildren();
   for (const v of list) { const line = document.createElement('span'); line.className = 'now'; line.style.display = 'block'; line.textContent = v.label; box.append(line); }
   drawAxes();
@@ -1263,9 +1306,9 @@ $('select-area').addEventListener('click', () => { selectMode = !selectMode; syn
 let radioKept = null; try { radioKept = sessionStorage.getItem('nns-radio'); } catch {}
 if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !== 'off')) {
   radioOn = true; syncRadio();
-  let started = false; const start = () => { if (started) return; started = true; Radio.unlock(); Radio.live.preload(); Radio.welcome(); };
+  let started = false; const start = () => { if (started) return; started = true; Radio.unlock(); Radio.live.preload(); Radio.welcome(); autoNow = 'short'; };
   for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
-  if (Radio.unlock()) Radio.live.preload();
+  if (Radio.unlock()) { Radio.live.preload(); autoNow = 'short'; }
 }
 if (['1', 'on'].includes(params.get('exhibit'))) {
   document.body.classList.add('exhibit'); window.dispatchEvent(new Event('resize'));

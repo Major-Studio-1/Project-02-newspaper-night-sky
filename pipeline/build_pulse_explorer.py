@@ -377,7 +377,6 @@ VER=manifest['version']; N_STARS=len(stars)
 shutil.copyfile(ROOT/'site.css',OUT/'site.css')
 shutil.copyfile(ROOT/'glass.js',OUT/'glass.js')   # the glass controls shared by the Telescope and Pulses pages
 shutil.copyfile(ROOT/'radio.js',OUT/'radio.js')   # the radio's voice and sounds, made in the browser (Radio page, Pulses, Telescope)
-shutil.copyfile(ROOT/'radio-voices.js',OUT/'radio-voices.js')   # the chorus voices (eSpeak in a worker), for Pulses and the telescope
 tele_html=(ROOT/'telescope.html').read_text(encoding='utf8').replace('__TELESCOPE_BOOT__',json.dumps(tele_boot,ensure_ascii=False).replace('</','<\\/'))
 assert '__TELESCOPE_BOOT__' not in tele_html
 (OUT/'telescope.html').write_text(fill(tele_html,'telescope',VER,N_STARS),encoding='utf8')
@@ -516,9 +515,9 @@ for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','
                  for page in ['index.html','method.html','notes.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
 
-pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','site.css','glass.js','radio.js','radio-voices.js']}
+pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','site.css','glass.js','radio.js']}
 # The radio's recorded voices (work/audio_render.py writes audio/ next to the pages; this build leaves it alone). Report
-# how many reviewed passages have a recording; a passage without one is read by eSpeak or the browser's voice.
+# how many reviewed passages have a recording; a passage without one is read by the browser's voice on the Radio page, and introduced by the announcer elsewhere.
 audio_summary=None
 if (OUT/'audio'/'index.json').exists():
     ai=json.loads((OUT/'audio'/'index.json').read_text(encoding='utf8')); clips=ai.get('clips',{})
