@@ -16,7 +16,7 @@ REPO = 'https://github.com/Major-Studio-1/Project-02-newspaper-night-sky'
 PAGES = 'https://newspapers.icare.love/'
 # The course repository keeps the proposal as submitted on 1 November 2026, at this commit.
 PROPOSAL = 'https://github.com/Major-Studio-1/Project-02-newspapers/tree/85ba363414d55edd68c96fef4b9ee944b99acef1'
-MENU = [('telescope', 'telescope.html', 'Telescope'), ('pulses', 'pulses.html', 'Pulses'), ('radio', 'radio.html', 'Radio'), ('findings', 'findings.html', 'Findings'), ('notebook', 'notebook.html', 'Notebook'), ('method', 'method.html', 'How it works')]
+MENU = [('telescope', 'telescope.html', 'Telescope'), ('pulses', 'pulses.html', 'Pulses'), ('radio', 'radio.html', 'Radio'), ('stories', 'stories.html', 'Stories'), ('findings', 'findings.html', 'Findings'), ('notebook', 'notebook.html', 'Notebook'), ('method', 'method.html', 'How it works')]
 # A night sky: one bright four-pointed star and a small companion.
 MARK = ('<svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">'
         '<path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/>'
@@ -90,7 +90,7 @@ def header(active, stories):
 
 
 def footer(release):
-    links = [('index.html', 'Home'), ('telescope.html', 'Telescope'), ('pulses.html', 'Pulses'), ('radio.html', 'Radio'), ('findings.html', 'Findings'),
+    links = [('index.html', 'Home'), ('telescope.html', 'Telescope'), ('pulses.html', 'Pulses'), ('radio.html', 'Radio'), ('stories.html', 'Stories'), ('findings.html', 'Findings'),
              ('notebook.html', 'Notebook'), ('method.html', 'How it works'), ('notes.html', 'Research notes'), ('exhibit.html', 'Exhibition mode'), (f'{REPO}/tree/main/data', 'Data release'), (REPO, 'Code')]
     nav = ''.join(f'<a href="{html.escape(h)}">{t}</a>' for h, t in links)
     return (f'<footer class="site-footer"><div class="site-inner">'

@@ -243,6 +243,12 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
                              'categories':[{'id':f'{year}-{c}','label':label,'stories':['group:'+t for t in ts]} for c,label,ts in spec['categories']],
                              'stories':year_stories,'observations':list(year_obs.values())}
 reviewed_list=[reviewed_data[y] for y in sorted(reviewed_data)]
+# ---- Stories: storylines from the ledger work/stories.json, checked against the reviewed data and the scan verdicts
+# (work/stories_parts.py). Pulses and the telescope link each story that one tells ('Read the storyline'). ----
+import stories_parts
+storylines=stories_parts.check(json.loads((ROOT/'stories.json').read_text(encoding='utf8')),reviewed_data,{y:spec['children'] for y,spec in REVIEWED.items()},ROOT.parent)
+storyline_links=stories_parts.links(storylines)
+print(f"stories: {len(storylines)} storylines, {sum(len(s['by']) for s in storylines)} pieces, {sum(len(s['every']) for s in storylines)} printings")
 # ---- All years: automatic reuse families (not checked against scans), one data file per year ----
 years_dir=OUT/'years';years_dir.mkdir(exist_ok=True)
 fam_path=release/'derived/reuse_families.parquet'
@@ -422,7 +428,7 @@ trace_cover=sum(1 for s in stars if title_words(s['title'])&trace_words.keys())
 print(f'trace: {len(trace_words):,} words; {trace_cover:,} of {len(stars):,} stories have at least one')
 assert trace_cover>=.9*len(stars), 'most stories should offer a word to trace'
 reg_count=collections.Counter(s['reg'] for s in stars)
-tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'trace':trace_stamp,'stories':len(stars),'twins':twins,
+tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'trace':trace_stamp,'stories':len(stars),'twins':twins,'storylines':storyline_links,
            # The archive under the timeline, as on the Pulses year strip: [year, newspapers with surviving pages, pages, reviewed stories].
            'years':[[y['year'],y['papers'],y['pages'],y['reviewed']] for y in years_index],
            'regions':[{'label':label,'states':states,'color':color,'stories':reg_count[i]} for i,(label,states,color,_) in enumerate(REGIONS)],
@@ -470,7 +476,7 @@ index={'epoch':'1770-01-01','scan_base':f'https://huggingface.co/datasets/{DATAS
 (years_dir/'index.json').write_text(json.dumps(index,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 # A stamp of the year files' contents (and the index), so browsers fetch fresh copies after a rebuild.
 year_stamp=hashlib.sha256(b''.join(hashlib.sha256((years_dir/f'{y}.json').read_bytes()).digest() for y in range(1770,1811))+hashlib.sha256((years_dir/'index.json').read_bytes()).digest()).hexdigest()[:12]
-boot={'release_version':VER,'reviewed':reviewed_list,'years':years_index,'year_stamp':year_stamp,'trace':trace_stamp,'twins':twins,'index_bytes':(years_dir/'index.json').stat().st_size,
+boot={'release_version':VER,'reviewed':reviewed_list,'years':years_index,'year_stamp':year_stamp,'trace':trace_stamp,'twins':twins,'storylines':storyline_links,'index_bytes':(years_dir/'index.json').stat().st_size,
       # Topics for the story shelf's chips: each topic's plain name and family (as in the telescope).
       'topics':[{'label':SHORT[tid(x)],'family':fam_index[topic_labels[tid(x)]['category']]} for x in topic_list],
       'families':[{'name':f,'short':s,'tiny':t} for f,s,t in FAMILIES]}
@@ -572,9 +578,13 @@ findings_html=findings_parts.render(years=[(y['year'],y['papers'],y['pages']) fo
 # Notebook: how the project was made, from the ledger work/notebook.json (work/notebook_parts.py checks every entry first).
 import notebook_parts
 notebook=json.loads((ROOT/'notebook.json').read_text(encoding='utf8'))
-n_notebook=notebook_parts.check(notebook,{'index.html','telescope.html','pulses.html','radio.html','method.html','notes.html','findings.html','exhibit.html','notebook.html'})
+n_notebook=notebook_parts.check(notebook,{'index.html','telescope.html','pulses.html','radio.html','stories.html','method.html','notes.html','findings.html','exhibit.html','notebook.html'})
 (OUT/'notebook.html').write_text(fill(fill_text((ROOT/'notebook.html').read_text(encoding='utf8').replace('__NOTEBOOK__',notebook_parts.render(notebook))),'notebook',VER,N_STARS),encoding='utf8')
 print(f'notebook: {n_notebook} entries')
+# Stories: the storylines checked above, each piece's opening beside its scan crop (the crops are already in assets/).
+from PIL import Image
+stories_html=stories_parts.render(storylines,lambda src:Image.open(OUT/src).size)
+(OUT/'stories.html').write_text(fill(fill_text((ROOT/'stories.html').read_text(encoding='utf8').replace('__STORIES__',stories_html)),'stories',VER,N_STARS),encoding='utf8')
 def copy_with_assets(src,dest):
     """Copy a report and the local files it links to (images, data), keeping their relative paths.
     The site is English only, so links to Chinese quick-read files are dropped from the copy."""
@@ -589,11 +599,12 @@ shutil.rmtree(OUT/'notes',ignore_errors=True)   # notes/ is generated: start cle
 copy_with_assets(ROOT.parent/'outputs/attention_pilot_report.html',OUT/'notes/attention')
 copy_with_assets(ROOT.parent/'outputs/reading_evidence_2026-11-03/reading_notebook.html',OUT/'notes/reading')
 for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__RELEASE__','__REPO__','__HOME_DATA__','__FEATURED_PULSE__']
-                 for page in ['index.html','method.html','notes.html','findings.html','notebook.html'] if m in (OUT/page).read_text(encoding='utf8')]:
+                 for page in ['index.html','method.html','notes.html','findings.html','notebook.html','stories.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
 assert '__FINDINGS__' not in (OUT/'findings.html').read_text(encoding='utf8') and '__NOTEBOOK__' not in (OUT/'notebook.html').read_text(encoding='utf8')
+assert '__STORIES__' not in (OUT/'stories.html').read_text(encoding='utf8')
 
-pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','findings.html','notebook.html','site.css','glass.js','radio.js']}
+pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','stories.html','exhibit.html','method.html','notes.html','findings.html','notebook.html','site.css','glass.js','radio.js']}
 # The radio's recorded voices (work/audio_render.py writes audio/ next to the pages; this build leaves it alone). Report
 # how many reviewed passages have a recording; a passage without one is read by the browser's voice on the Radio page, and introduced by the announcer elsewhere.
 audio_summary=None
@@ -609,8 +620,10 @@ receipt={'passed':True,'release_version':VER,
          'years':len(years_index),'matched_families':len(families),'reviewed_twins':len(twins),'sky_stars':len(stars),'trace_words':len(trace_words),'trace_stories':trace_cover,'year_files_mb':round(sum((years_dir/f'{y}.json').stat().st_size for y in range(1770,1811))/1e6,1),'year_index_mb':round((years_dir/'index.json').stat().st_size/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
          'checks':['All displayed sources have scan assets and excerpts','All displayed publications join to observed date coverage','No duplicate observation within a group','Read-only release with verified input hashes','Matched families are labelled as not checked against scans','Every page carries the shared header and footer',
                    'Each reviewed year lists every one of its groups once, and every top-level story has a display category']
-                  +(['Every matched printing carries its transcription check, one printing per page'] if printing_checks else []),
+                  +(['Every matched printing carries its transcription check, one printing per page'] if printing_checks else [])
+                  +(['Every storyline quotes printed text: each opening is from a printing the scan check found faithful, and every quoted phrase is in a printing, its group or its scan verdict'] if storylines else []),
          'matched_printings':sum(len(v) for v in apps_by.values()),
+         'storylines':[{'id':s['id'],'year':s['year'],'pieces':len(s['by']),'printings':len(s['every']),'newspapers':len({o['node'] for o in s['every']})} for s in storylines],
          'recorded_voices':audio_summary,
          'pages_sha256':pages}
 (OUT/'build_validation.json').write_text(json.dumps(receipt,indent=2),encoding='utf8')

@@ -66,6 +66,9 @@ Releases are never edited. New evidence always makes a new version; see [`archiv
 | `build_pulse_explorer.py` | Builds the whole site from the current release: the pages, their data files, and the shared header and footer. |
 | `home.html`, `telescope.html`, `pulse_explorer.html`, `radio.html`, `exhibit.html`, `method.html`, `notes.html` | The page templates. |
 | `site_parts.py`, `site.css`, `glass.js` | The header and footer that every page shares, the styles and the glass controls. |
+| `findings.html`, `findings_parts.py` | Findings: the page, and the module that computes each finding's numbers and chart from the build's data. |
+| `stories.html`, `stories_parts.py`, `stories.json` | Stories: the page; the storylines, written by hand; and the module that checks each storyline before rendering it (each opening shown comes from a printing whose transcription the scan check found faithful, every quoted phrase is in a printing, its group or its scan verdict, and dates and counts come from the data). The scan verdicts it reads stay in the working project. |
+| `notebook.html`, `notebook_parts.py`, `notebook.json` | Notebook: the page, its checks, and its entries, written as the work goes on. |
 | `radio.js` | The radio in the visitor's browser: the recorded voices (the announcer alone, with the words on air, for a story that has no recording) and the synthesised sounds. |
 | `audio_render.py`, `audio_manifest.json` | Records the radio's voices once, at build time, with Kokoro (an open speech model, Apache 2.0): the list of clips, the recording and the packs in [`site/audio/`](../site/audio). |
 | `export_public_repo.py` | Makes this repository from the working project. |

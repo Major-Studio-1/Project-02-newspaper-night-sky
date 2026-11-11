@@ -371,7 +371,7 @@ The telescope's search now says how a word comes back, for example "comes back i
 
 ### Findings (11 November 2026)
 
-The site offers more than its instruments. In the owner's words, it is also rigorous research with results, storylines assembled from what the papers printed, and the story of how it was made. The first of these now has a page of its own: **Findings** (`findings.html`, in the menu after Radio).
+The site offers more than its instruments. In the owner's words, it is also rigorous research with results, storylines assembled from what the papers printed, and the story of how it was made. The first of these now has a page of its own: **Findings** (`findings.html`, in the menu after Stories).
 
 **What each finding gives:** its claim in plain words, one chart, how sure it is, what it does not say, and doors into the instruments. The source comes first, because every other finding stands on it:
 
@@ -399,20 +399,31 @@ The last of them, the story of how the site was made, has a page of its own too:
 
 **The ledger:** the entries live in `pipeline/notebook.json`, written as the work goes on rather than from memory later. The build (`pipeline/notebook_parts.py`) renders the page and checks every entry: a known phase and kinds, date order, a quote only under the kind "words", and links that open pages of the site.
 
+### Stories (11 November 2026)
+
+The second of them, storylines assembled from what the papers printed, has a page too: **Stories** (`stories.html`, in the menu after Radio). A storyline puts the printed pieces of one affair in the order the papers printed them. The first is the Chesapeake affair of 1807: eleven pieces in six acts, 101 printings in 10 newspapers, from the account of the attack (26 June) to the verdicts of November. Each piece is a reviewed story of 1807; together they are the sub-stories of three parents (the Chesapeake affair, Commodore Douglas and the Mayor of Norfolk, and Congress called early).
+
+- **Each piece:** what it says; its opening as one paper printed it, beside the scan; how the papers set it (headings, lead-ins, changed words), from the scan check's notes; and every paper that printed it, with a door into Pulses.
+- **Each act:** a short paragraph that uses only what the papers printed; at most one note on the machine's reading (in Act III, the Norfolk heading "WAR INEVITABLE!!!", which the machine transcription reads as "NECESSARY INFORMATION!!"); and doors into Pulses, the telescope and the radio.
+- **Perspective without guessing:** the commodore's letters and the town's answers are set side by side, because they answered each other in print. The other perspectives are the papers' own settings. Nothing says who copied whom.
+
+**The ledger:** the storylines live in `pipeline/stories.json`, written by hand. The build (`pipeline/stories_parts.py`) checks each one against the data release and the scan verdicts before rendering it. The pieces must be the sub-stories of the named parents. Each opening shown must come from a printing located on its scan with a faithful transcription. Every phrase in quotation marks must appear in a printing, in the group's reviewed description or in the scan check's notes on that printing. Dates and counts in the paragraphs are filled from the data, and each door must open a reviewed story. Pulses and the telescope link every story a storyline tells ("Read the storyline").
+
 ## The website
 
-The views are joined into one site with eight pages and a shared header, plus an exhibition page:
+The views are joined into one site with nine pages and a shared header, plus an exhibition page:
 - **Home** (`index.html`): a short introduction, a slow time tunnel of stars, and four ways in.
 - **Telescope** (`telescope.html`): every story as a star.
 - **Pulses** (`pulses.html`): one story or one year, paper by paper.
 - **Radio** (`radio.html`): the newspapers read aloud, day by day (below).
+- **Stories** (`stories.html`): storylines from the reviewed papers, each piece beside its scan (above).
 - **Findings** (`findings.html`): what the archive shows, tested (above).
 - **Notebook** (`notebook.html`): how the site was made, as it happened (above).
 - **How it works** (`method.html`): the method in plain language.
 - **Research notes** (`notes.html`): the earlier studies.
 - **Exhibition** (`exhibit.html`, linked from the footer): a self-running loop for a large screen (below).
 
-The header and footer come from one file, `pipeline/site_parts.py`, so they cannot drift apart. The header's search box searches every story in the telescope. The pages link to each other where it helps: a story on the pulse page has "See it in the sky", and a star in the telescope opens its pulses. The public repository is made from this project by `pipeline/export_public_repo.py`.
+The header and footer come from one file, `pipeline/site_parts.py`, so they cannot drift apart. The header's search box searches every story in the telescope. The pages link to each other where it helps: a story on the pulse page has "See it in the sky", a star in the telescope opens its pulses, and a story that a storyline tells has "Read the storyline". The public repository is made from this project by `pipeline/export_public_repo.py`.
 
 **Accessibility (9 November 2026).** An audit of every page checked names, labels, contrast, targets, landmarks and reflow. Fixes:
 - a *Skip to content* link that lands right after the menu;

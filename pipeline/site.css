@@ -68,6 +68,13 @@ body.page-telescope .site-search{display:none}
 @media(prefers-reduced-motion:reduce){.seg .thumb,.seg button,.toggle,.toggle::before{transition:none}.toggle:active{transform:none}}
 @media(max-width:720px){
   .seg button{padding:5px 9px}.toggle{padding:5px 11px 5px 9px}
+}
+/* The header on narrower screens. Seven pages, the search box and the radio switch need about 1,040 pixels, so below
+   1,180 the menu tightens, between 841 and 980 the wordmark gives way (the star stays, and so does its name for screen
+   readers), and from 840 down the pages fold into Menu, as on a phone. */
+@media(max-width:1180px){.site-inner{gap:14px}.site-nav{gap:0}.site-nav a{padding:8px 8px}.site-search{min-width:120px}}
+@media(max-width:980px) and (min-width:841px){.brand span{display:none}}
+@media(max-width:840px){
   .site-inner{padding:0 12px;gap:10px;flex-wrap:wrap;min-height:48px}
   .site-menu{display:inline-flex;align-items:center;gap:6px}
   .site-nav,.site-search{display:none}

@@ -68,9 +68,19 @@
     "Matched families are labelled as not checked against scans",
     "Every page carries the shared header and footer",
     "Each reviewed year lists every one of its groups once, and every top-level story has a display category",
-    "Every matched printing carries its transcription check, one printing per page"
+    "Every matched printing carries its transcription check, one printing per page",
+    "Every storyline quotes printed text: each opening is from a printing the scan check found faithful, and every quoted phrase is in a printing, its group or its scan verdict"
   ],
   "matched_printings": 164698,
+  "storylines": [
+    {
+      "id": "chesapeake-1807",
+      "year": 1807,
+      "pieces": 11,
+      "printings": 101,
+      "newspapers": 10
+    }
+  ],
   "recorded_voices": {
     "clips": 8660,
     "packs": 138,
@@ -81,16 +91,17 @@
     "announcer_clips": 265
   },
   "pages_sha256": {
-    "index.html": "7673c48b60ebfbde22948e3504f9cd2c53c75290840643510821873b03dfd5c7",
-    "telescope.html": "c3c7c0feaace78f07e390551ce5170fd18135a966d82bee747e34f2dd4c7ca91",
-    "pulses.html": "6c1bf9868fd0fd449db953bbfba7d2bbb158eb672b15610e39e4cb254065c802",
-    "radio.html": "77ff003659fbb3d229c1a08e252e19396dec4d55ed207a043c35018ad09e2c46",
+    "index.html": "af5fafe97539a47e3ad8a51a34581b000862f1236641362180558facbecfdb81",
+    "telescope.html": "db32678ec5006c6d59bf26e1c90bac4cca44dcc4e57e780ee4327da2e1ca032b",
+    "pulses.html": "ad26f6c9e7c2b4ad6893b8406f406912187631df192dc4d88aa0fb37610db5ff",
+    "radio.html": "5cde8da5b5a27cd655f27a3481282f4ddf20a800d47f5b6910e98c4506e0b7df",
+    "stories.html": "da7a7b8bea9748a4c58d2f6f1794db4e5eb73158ab5c776c5d523ea3054209d1",
     "exhibit.html": "6df6c52f193b2bc12a1df3a7b2425218ecacbbf84521a5e0729a1d54bff5f79f",
-    "method.html": "4e586dadc824cbf0068b61bd66de02b87f9e7a7a4668d592fa710f81e9d3747a",
-    "notes.html": "685113fbb82c43061e23ebee2c15a10b57e7342d837c46508891373917222b3b",
-    "findings.html": "3642f3ca03b1a583abbdca39922963ed7f37d709633c58566cbf23be2dbd5147",
-    "notebook.html": "7e07ab76c2824c1b77346408461d478b5e4e2841162c921901288b1d70b0fa16",
-    "site.css": "515b0ce167776cbd077ee5c2c0f6ffcba74ba92a49ba7b999ae99b8417bd5b6e",
+    "method.html": "e9667ec9cc31949ef9d73596ecb69d718d097f29b79b18618bfd1fe069d188dc",
+    "notes.html": "654382ec35277911e3bab96b8ecb6d4a8730f0cd0657e088a2608f1b6eedb183",
+    "findings.html": "7f15fb269fc2c7f00f519480046dc25ba57e2d0dc925905b31f66246b8badeb2",
+    "notebook.html": "ec7e41cf3a3f3eb51c5112d98e13a0d1f757e4b0315326e0568ca570e8661773",
+    "site.css": "a18b7ad974b827296904f30bc5124d0389ea73a3155bf1fc14ac2b164ce71d31",
     "glass.js": "a08cefb1f3fa663e59f8027354420ca9c89bbb52f24e44571a829611fec6605a",
     "radio.js": "9614693ce65e4da4ed2d378962a08717529f7f005965a26a563b82f8d46354df"
   }

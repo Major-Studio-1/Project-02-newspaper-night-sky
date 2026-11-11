@@ -199,7 +199,7 @@ __SITE_HEADER__
 <div class="cam hud" role="group" aria-label="Camera and tools"><button type="button" id="select-area" class="tool" aria-pressed="false" title="Drag across the sky to hear the stories in an area (Alt-drag works too)">__ICON_select__<span class="sr-only">Select an area to hear</span></button><span id="angle" class="angle-pair" role="group" aria-label="Viewing angle"><button type="button" class="angle" data-angle="front" title="Front: look straight back through time">__ICON_front__<span class="sr-only">Front</span></button><button type="button" class="angle" data-angle="side" title="Side: see the time axis from the side">__ICON_side__<span class="sr-only">Side</span></button></span><button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button type="button" id="reset-view" title="Back to the whole picture">__ICON_fit__<span class="sr-only">Reset view</span></button></div>
 <div id="skykey" class="skykey hud"><div class="legend" id="legend" hidden></div><div id="key" class="key"></div><button type="button" id="key-more" class="key-more" aria-expanded="false" aria-controls="legend">Key</button></div>
 <section id="card" class="star-card hud" aria-label="The chosen story" hidden><button type="button" id="card-close" class="card-close" aria-label="Close" title="Close (Esc)">✕</button><div id="card-info"></div>
-<div class="acts"><button type="button" id="card-hear" class="toggle has-ico" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Hear</span></button><a id="card-follow" class="act-link" href="pulses.html">__ICON_pulse__<span>Follow it in Pulses</span></a></div>
+<div class="acts"><button type="button" id="card-hear" class="toggle has-ico" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Hear</span></button><a id="card-follow" class="act-link" href="pulses.html">__ICON_pulse__<span>Follow it in Pulses</span></a><a id="card-story" class="act-link" href="stories.html" hidden>__ICON_book__<span>Read the storyline</span></a></div>
 <div id="card-trace" class="trace" role="group" aria-label="Trace a word"></div></section>
 <p id="on-air" class="on-air hud" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
 <button type="button" id="deck-open" class="deck-open hud" aria-controls="deck" aria-expanded="false">__ICON_menu__Controls</button>
@@ -1324,6 +1324,8 @@ function buildCard() {
   const i = sel;
   $('card-info').replaceChildren(...starInfo(i));
   $('card-follow').href = pulseUrl(i); $('card-follow').title = `Follow it from paper to paper: ${D.papers[i]} newspapers, ${D.prints[i]} printings`;
+  const told = D.kind[i] ? (BOOT.storylines || {})[D.id[i]] : null;   // a reviewed story that a storyline tells
+  $('card-story').hidden = !told; if (told) { $('card-story').href = told[0]; $('card-story').title = 'Read it as a storyline: ' + told[1]; }
   syncCard(); traceChips(i); Radio.live.clips.load().then(syncCard);   // whether it has a recording, for Hear's label
 }
 function syncCard() {
