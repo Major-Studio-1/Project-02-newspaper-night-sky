@@ -1,0 +1,554 @@
+{
+ "about": "The Notebook's ledger: how Newspaper Night Sky was made, one dated entry at a time. Add an entry when something happens (a decision, a wrong turn, a difficulty overcome, a moment of care), not later from memory. The build (work/notebook_parts.py) renders notebook.html from it and checks every entry: its phase, its kinds and that its links open pages of the site. Quotes are the maker's own words, as written; edit or remove one only with the maker's OK.",
+ "phases": [
+  {
+   "id": "beginnings",
+   "title": "Beginnings · 27 October – 5 November",
+   "intro": "A dataset of 77,749 newspaper pages, a question about attention, and the decision to show what the papers printed rather than prove a large claim."
+  },
+  {
+   "id": "instruments",
+   "title": "Building the instruments · 6 – 8 November",
+   "intro": "The pulses, the sky, and learning how far the machine's reading of the papers can be trusted."
+  },
+  {
+   "id": "care",
+   "title": "Generosity and care · 9 November",
+   "intro": "A day of asking who the site is for: the visitor in front of it, everyone who visits, and the people named in the papers."
+  },
+  {
+   "id": "voices",
+   "title": "Voices, reviews and the archive's own errors · 9 – 10 November",
+   "intro": "Recorded voices, five reviewed years, and an archive that turned out to misfile some of its own pages."
+  },
+  {
+   "id": "rethinking",
+   "title": "Rethinking · 11 November",
+   "intro": "A hard question from the maker, and a day of testing ideas before building them."
+  }
+ ],
+ "entries": [
+  {
+   "date": "2026-10-27",
+   "when": "27 Oct",
+   "phase": "beginnings",
+   "kinds": [
+    "purpose"
+   ],
+   "title": "The question we started with",
+   "text": "Society has a limited amount of attention, and problems keep coming back. Does lasting change need sustained attention? The archive: American newspapers from 1770 to 1810, as the Smithsonian's Revolution Crossroads prepared them from the Library of Congress.",
+   "changed": {
+    "label": "Still asked",
+    "links": [
+     [
+      "How things come back, on Findings",
+      "findings.html#f4"
+     ]
+    ]
+   },
+   "source": "The project's proposals of 1 November"
+  },
+  {
+   "date": "2026-11-04",
+   "when": "early Nov",
+   "phase": "beginnings",
+   "kinds": [
+    "decision"
+   ],
+   "title": "Show what was printed; let visitors judge",
+   "text": "The share of a topic in the surviving papers is not the share of a society's attention, and the archive could not carry a proof of the big question. We chose an explorer of observed facts, “newspaper X printed this on date Y”, over a thesis.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the whole site: instruments, not a verdict",
+      "index.html"
+     ]
+    ]
+   },
+   "source": "The research plan of 4 November"
+  },
+  {
+   "date": "2026-11-04",
+   "when": "early Nov",
+   "phase": "beginnings",
+   "kinds": [
+    "decision",
+    "care"
+   ],
+   "title": "A count is a target, not a quota",
+   "text": "Some story groups were thin, and the pulses would have looked richer with a few more printings in them. The rule: never pad a thin group to make the animation look better. What the papers did not print stays unprinted.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "what the pulses show",
+      "pulses.html"
+     ]
+    ]
+   },
+   "source": "The project's research rules"
+  },
+  {
+   "date": "2026-11-06",
+   "when": "6 Nov",
+   "phase": "instruments",
+   "kinds": [
+    "frustration",
+    "overcoming"
+   ],
+   "title": "The transcription left out what the paper printed",
+   "text": "On 13 October 1797 the Gazette of the United States printed Captain Dunbar's full statement about a privateer; the archive's AI transcription simply dropped it, about 350 words. From then on, every reviewed printing was read against its page scan, and the misreadings are recorded beside the passages.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "how stories are checked",
+      "method.html#checks"
+     ]
+    ]
+   },
+   "source": "Data release v0.2.1"
+  },
+  {
+   "date": "2026-11-06",
+   "when": "6 Nov",
+   "phase": "instruments",
+   "kinds": [
+    "decision"
+   ],
+   "title": "Trust the transcriptions to find stories, not to quote them",
+   "text": "Reading every page by hand would take years. So the computer matched shared wording across all 41 years, 48,127 stories at first, kept apart from the stories checked by hand and labelled “not checked”.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the sky's population",
+      "telescope.html"
+     ]
+    ]
+   },
+   "source": "Data release v0.5.0"
+  },
+  {
+   "date": "2026-11-07",
+   "when": "7 Nov",
+   "phase": "instruments",
+   "kinds": [
+    "encouraging",
+    "purpose"
+   ],
+   "lift": true,
+   "title": "Time runs into the depth",
+   "text": "The maker's idea: look at the stories as at the night sky, where the farther a star, the older its light. The telescope was built around it the same day, and the project took its name, Newspaper Night Sky.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the telescope",
+      "telescope.html"
+     ]
+    ]
+   },
+   "source": "The telescope, 7 November"
+  },
+  {
+   "date": "2026-11-08",
+   "when": "8 Nov",
+   "phase": "instruments",
+   "kinds": [
+    "wrong"
+   ],
+   "title": "Colouring the stars by kind",
+   "text": "We tried to colour stars as news, notices or other, from the topic model. A spot check found 2 or 3 of 14 “notices” right; a stricter cut still got 10 of 16. The colours would have told visitors something untrue, so they went.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "why topics are a layout, not a colour",
+      "method.html#topics"
+     ]
+    ]
+   },
+   "source": "The telescope's Topic view, 8 November"
+  },
+  {
+   "date": "2026-11-09",
+   "when": "9 Nov",
+   "phase": "care",
+   "kinds": [
+    "care",
+    "words"
+   ],
+   "lift": true,
+   "title": "An inviting and generous portal",
+   "quote": {
+    "text": "are we really making an inviting and generous portal?",
+    "cite": "the maker"
+   },
+   "text": "The Pulses page asked visitors to choose from menus before it showed anything. It gave them up: a strip of all 41 years, each with how much of it survives, and a shelf of stories that shows what there is before anyone asks.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the Pulses page",
+      "pulses.html"
+     ]
+    ]
+   },
+   "source": "Pulses, 9 November"
+  },
+  {
+   "date": "2026-11-09",
+   "when": "9 Nov",
+   "phase": "care",
+   "kinds": [
+    "care",
+    "words"
+   ],
+   "title": "Nobody pays for a visit",
+   "quote": {
+    "text": "for the user viewing the page, i do not want them to use my ai tokens",
+    "cite": "the maker"
+   },
+   "text": "The radio could have called an AI voice for each visitor. It uses the browser's own voice and sounds made in the page; every reviewed passage was recorded once, at build time, and plays from a file.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the radio",
+      "radio.html"
+     ]
+    ]
+   },
+   "source": "The radio, 9 and 10 November"
+  },
+  {
+   "date": "2026-11-09",
+   "when": "9 Nov",
+   "phase": "care",
+   "kinds": [
+    "care"
+   ],
+   "title": "For everyone who visits",
+   "text": "An accessibility pass over every page: a link to skip the menu, names for every control, contrast, targets of at least 24 pixels, keyboard paths through the sliding controls, and pages that still read at 320 pixels wide, all checked with a real keyboard.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "every page",
+      "method.html#access"
+     ]
+    ]
+   },
+   "source": "Accessibility pass, 9 November"
+  },
+  {
+   "date": "2026-11-09",
+   "when": "9 Nov",
+   "phase": "care",
+   "kinds": [
+    "care",
+    "decision"
+   ],
+   "title": "Names we did not print",
+   "text": "In 1776, Philadelphia's committees printed notices naming people who refused the Continental bills, 18 printings. They name private people, singled out in their own day. We left them out of the reviewed stories: they could become a story of their own later, with the context they need.",
+   "changed": {
+    "label": "Kept out of",
+    "links": [
+     [
+      "the reviewed stories of 1776",
+      "pulses.html?year=1776"
+     ]
+    ]
+   },
+   "source": "The reviewed stories of 1776, second round"
+  },
+  {
+   "date": "2026-11-09",
+   "when": "9 Nov",
+   "phase": "care",
+   "kinds": [
+    "encouraging",
+    "words"
+   ],
+   "lift": true,
+   "title": "A siren in 1776",
+   "quote": {
+    "text": "I really like that feeling",
+    "cite": "the maker, hearing the radio's New York"
+   },
+   "text": "Each town got its own morning sound: church bells, a ship's bell, hooves, birds. New York got a police siren, a deliberate anachronism, and How it works says so.",
+   "changed": {
+    "label": "Kept",
+    "links": [
+     [
+      "a morning in New York",
+      "radio.html?year=1776&date=07-11"
+     ]
+    ]
+   },
+   "source": "The radio's sounds"
+  },
+  {
+   "date": "2026-11-10",
+   "when": "9 – 10 Nov",
+   "phase": "voices",
+   "kinds": [
+    "wrong",
+    "words"
+   ],
+   "title": "A chorus that murmured",
+   "quote": {
+    "text": "never be murmuring sounds or some random things",
+    "cite": "the maker"
+   },
+   "text": "Synthesised voices let many stars speak at once, and it sounded like a crowd, not news. They gave way to voices on demand, then to recordings made once with a free local model, and the synthesiser was removed.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "how the stars speak",
+      "method.html#radio"
+     ]
+    ]
+   },
+   "source": "The radio, 9 and 10 November"
+  },
+  {
+   "date": "2026-11-10",
+   "when": "10 Nov",
+   "phase": "voices",
+   "kinds": [
+    "decision"
+   ],
+   "title": "More than one kind of voice",
+   "text": "Nine readers, four women and five men, read the papers, and two hosts, a man and a woman, take turns introducing them.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the radio's voices",
+      "radio.html"
+     ]
+    ]
+   },
+   "source": "The recorded voices, 10 November"
+  },
+  {
+   "date": "2026-11-10",
+   "when": "10 Nov",
+   "phase": "voices",
+   "kinds": [
+    "overcoming"
+   ],
+   "title": "Twenty hours of recording, done by evening",
+   "text": "At half the speed of speech, recording the titles of 7,031 stories would have taken this laptop about twenty hours. Split into two recordings running side by side, they were done the same evening, with no failures.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "every story in four or more papers can be heard",
+      "telescope.html"
+     ]
+    ]
+   },
+   "source": "The recorded voices, 10 November"
+  },
+  {
+   "date": "2026-11-10",
+   "when": "10 Nov",
+   "phase": "voices",
+   "kinds": [
+    "discovery",
+    "overcoming"
+   ],
+   "title": "A newspaper filed two years late",
+   "text": "Reviewing 1808, the mastheads of the Kentucky Gazette said 1806. Every issue filed under 1806–1808 had been printed two years earlier: 106 issues. They were redated from their mastheads and matched again, and 4,506 new matches appeared.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the dates the site uses",
+      "method.html#archive"
+     ]
+    ]
+   },
+   "source": "Data release v0.10.2"
+  },
+  {
+   "date": "2026-11-10",
+   "when": "10 Nov",
+   "phase": "voices",
+   "kinds": [
+    "discovery",
+    "overcoming"
+   ],
+   "title": "Pages filed under the wrong number",
+   "text": "One misplaced page in 1807 led to a check of the whole dataset: 133 issues had their machine transcriptions filed under the wrong pages. 532 printings were moved back to the scans they belong to, so a reader who opens a page now sees the text that is on it.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "which scan each passage opens",
+      "method.html#archive"
+     ]
+    ]
+   },
+   "source": "Data release v0.8.1"
+  },
+  {
+   "date": "2026-11-10",
+   "when": "10 Nov",
+   "phase": "voices",
+   "kinds": [
+    "care",
+    "decision"
+   ],
+   "title": "Stories that wait for their context",
+   "text": "Some reports were not admitted to the reviewed stories yet, among them the act prohibiting the importation of slaves, news from Saint-Domingue and Haiti, and reports on the Cherokee and Creek nations. They are not left out for good: they wait until they can be shown with the framing they need.",
+   "changed": {
+    "label": "Waiting",
+    "links": [],
+    "note": "in the review notes of 1776, 1793 and 1807"
+   },
+   "source": "The review notes of 1776, 1793 and 1807"
+  },
+  {
+   "date": "2026-11-10",
+   "when": "10 Nov",
+   "phase": "voices",
+   "kinds": [
+    "decision",
+    "overcoming"
+   ],
+   "title": "A rule that fits the evidence",
+   "text": "For 1793 only six to eight newspapers survive at a time, and only ten printed items reached the seven papers asked of other years. Rather than stretch the evidence or leave most of the year out, the threshold for 1793 became six, said openly.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the reviewed stories of 1793",
+      "pulses.html?year=1793"
+     ]
+    ]
+   },
+   "source": "Data releases v0.10.0 and v0.10.1"
+  },
+  {
+   "date": "2026-11-11",
+   "when": "11 Nov",
+   "phase": "rethinking",
+   "kinds": [
+    "frustration",
+    "decision",
+    "words"
+   ],
+   "title": "A deep logic behind the plans",
+   "quote": {
+    "text": "we need to have a deep logic behind the plans and strategy we made",
+    "cite": "the maker"
+   },
+   "text": "The controls had grown complex, and the reviews of them were shallow. Thinking again from first principles found the causes: two worlds of evidence, controls of different kinds mixed, one click with two meanings, and the tested findings hidden.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "one sky of stories, and select then act",
+      "telescope.html?story=group%3Adeclaration-of-independence"
+     ],
+     [
+      "Findings",
+      "findings.html"
+     ]
+    ]
+   },
+   "source": "The process introduction, 11 November"
+  },
+  {
+   "date": "2026-11-11",
+   "when": "11 Nov",
+   "phase": "rethinking",
+   "kinds": [
+    "care",
+    "words"
+   ],
+   "title": "The source comes first",
+   "quote": {
+    "text": "help visitors build key frameworks or impressions of the source base instead of moving forward with some doubts",
+    "cite": "the maker"
+   },
+   "text": "So Findings opens with the archive itself: what survives and when, and how far the machine's reading can be trusted, before any pattern.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the order of the findings",
+      "findings.html#f1"
+     ]
+    ]
+   },
+   "source": "Findings, 11 November"
+  },
+  {
+   "date": "2026-11-11",
+   "when": "11 Nov",
+   "phase": "rethinking",
+   "kinds": [
+    "wrong",
+    "discovery",
+    "words",
+    "encouraging"
+   ],
+   "labels": [
+    "Wrong turn, avoided",
+    "Discovery",
+    "In the maker's words"
+   ],
+   "lift": true,
+   "title": "A cycle of any length, tested first",
+   "quote": {
+    "text": "i can be wrong also",
+    "cite": "the maker, suggesting cycles of a week, a month or any length"
+   },
+   "text": "A scan of every cycle from 6 to 400 days found only the year: weeks were the papers' printing days, months were echoes. So the idea was not built. What does come back irregularly, in waves, was: the embargo with every crisis, the war with Tripoli exactly.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the only cycle",
+      "findings.html#f6"
+     ],
+     [
+      "waves in the search",
+      "telescope.html?q=embargo&lookback=all"
+     ]
+    ]
+   },
+   "source": "The seasons and waves checks"
+  },
+  {
+   "date": "2026-11-11",
+   "when": "11 Nov",
+   "phase": "rethinking",
+   "kinds": [
+    "wrong"
+   ],
+   "labels": [
+    "Our mistake"
+   ],
+   "title": "“1784–1789” was wrong",
+   "text": "The thin years were written from memory. Drawing the chart showed 1787 with ten newspapers: only 1784–1786 are thin. It was corrected on the live site the same day.",
+   "changed": {
+    "label": "Changed",
+    "links": [
+     [
+      "the first finding",
+      "findings.html#f1"
+     ]
+    ]
+   },
+   "source": "Findings, 11 November"
+  }
+ ]
+}

@@ -569,6 +569,12 @@ findings_html=findings_parts.render(years=[(y['year'],y['papers'],y['pages']) fo
     audit=json.loads((ROOT.parent/'outputs/matched_audit/summary.json').read_text(encoding='utf8')),
     cycles=json.loads(cycles_file.read_text(encoding='utf8')) if cycles_file.exists() else None,repo=REPO)
 (OUT/'findings.html').write_text(fill(fill_text((ROOT/'findings.html').read_text(encoding='utf8').replace('__FINDINGS__',findings_html)),'findings',VER,N_STARS),encoding='utf8')
+# Notebook: how the project was made, from the ledger work/notebook.json (work/notebook_parts.py checks every entry first).
+import notebook_parts
+notebook=json.loads((ROOT/'notebook.json').read_text(encoding='utf8'))
+n_notebook=notebook_parts.check(notebook,{'index.html','telescope.html','pulses.html','radio.html','method.html','notes.html','findings.html','exhibit.html','notebook.html'})
+(OUT/'notebook.html').write_text(fill(fill_text((ROOT/'notebook.html').read_text(encoding='utf8').replace('__NOTEBOOK__',notebook_parts.render(notebook))),'notebook',VER,N_STARS),encoding='utf8')
+print(f'notebook: {n_notebook} entries')
 def copy_with_assets(src,dest):
     """Copy a report and the local files it links to (images, data), keeping their relative paths.
     The site is English only, so links to Chinese quick-read files are dropped from the copy."""
@@ -583,11 +589,11 @@ shutil.rmtree(OUT/'notes',ignore_errors=True)   # notes/ is generated: start cle
 copy_with_assets(ROOT.parent/'outputs/attention_pilot_report.html',OUT/'notes/attention')
 copy_with_assets(ROOT.parent/'outputs/reading_evidence_2026-11-03/reading_notebook.html',OUT/'notes/reading')
 for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__RELEASE__','__REPO__','__HOME_DATA__','__FEATURED_PULSE__']
-                 for page in ['index.html','method.html','notes.html','findings.html'] if m in (OUT/page).read_text(encoding='utf8')]:
+                 for page in ['index.html','method.html','notes.html','findings.html','notebook.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
-assert '__FINDINGS__' not in (OUT/'findings.html').read_text(encoding='utf8')
+assert '__FINDINGS__' not in (OUT/'findings.html').read_text(encoding='utf8') and '__NOTEBOOK__' not in (OUT/'notebook.html').read_text(encoding='utf8')
 
-pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','findings.html','site.css','glass.js','radio.js']}
+pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','findings.html','notebook.html','site.css','glass.js','radio.js']}
 # The radio's recorded voices (work/audio_render.py writes audio/ next to the pages; this build leaves it alone). Report
 # how many reviewed passages have a recording; a passage without one is read by the browser's voice on the Radio page, and introduced by the announcer elsewhere.
 audio_summary=None

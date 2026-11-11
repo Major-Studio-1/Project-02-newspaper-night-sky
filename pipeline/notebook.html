@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notebook · Newspaper Night Sky</title>
+<meta name="description" content="How Newspaper Night Sky was made, told as it happened: decisions, wrong turns, difficulties overcome, and the care taken for visitors and for the people in the papers.">
+__SITE_HEAD__
+<style>
+:root{color-scheme:dark;--bg:#050711;--panel:#0b1222;--ink:#edf2ff;--muted:#a2afc8;--line:#1d2740;--blue:#8ccfff;--gold:#ffd27a;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg)}a{color:var(--blue)}a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+main{max-width:920px;margin:auto;padding:40px 24px 0}h1{font-size:clamp(30px,3.6vw,42px);font-weight:500;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:18px;color:#c6d0e4;margin:0 0 8px;max-width:72ch}.lede+.lede{font-size:15px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 6px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:3}
+.filters button{font:inherit;font-size:13.5px;min-height:30px;color:var(--muted);background:#ffffff08;border:1px solid #ffffff22;border-radius:999px;padding:4px 13px;cursor:pointer}
+.filters button:hover{color:var(--ink)}.filters button[aria-pressed="true"]{color:var(--ink);border-color:#ffffff66;background:#ffffff1c}.filters button[data-k="words"]{border-color:#ffd27a55}
+.phase{margin:34px 0 8px}.phase h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 4px;font-weight:600}
+.phase p{color:var(--muted);margin:0;max-width:72ch;font-size:15px}
+.tl{position:relative;margin:14px 0 0;padding-left:96px}.tl::before{content:"";position:absolute;left:82px;top:6px;bottom:6px;width:1px;background:#2a3550}
+.e{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 16px;margin:0 0 12px}
+.e::before{content:"";position:absolute;left:-19px;top:19px;width:9px;height:9px;border-radius:50%;background:#56698f;box-shadow:0 0 0 3px var(--bg)}
+.e.lift::before{background:var(--gold)}.e .when{position:absolute;left:-96px;top:13px;width:68px;text-align:right;font-size:13px;color:var(--muted);line-height:1.3}
+.e .kinds{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:5px}.e .k{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid #2a3550;border-radius:999px;padding:0 8px}
+.e h3{font-size:17px;margin:0 0 5px;font-weight:600;line-height:1.35}.e p{margin:0 0 6px;color:#c6d0e4;font-size:15px}
+.e blockquote{margin:2px 0 9px;padding:2px 0 2px 13px;border-left:2px solid var(--gold);color:var(--ink);font:italic 17px/1.5 Georgia,"Times New Roman",serif}
+.e blockquote cite{display:block;font:normal 12px/1.4 system-ui,sans-serif;color:var(--muted);margin-top:3px}
+.e .changed{font-size:14px;color:var(--ink)}.e .changed b{color:var(--muted);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-right:7px}
+.e .src{font-size:12.5px;color:#7d8aa6;margin:0}
+.end{margin:38px 0 0;color:var(--muted);font-size:14.5px;max-width:72ch}
+@media(max-width:640px){main{padding:24px 16px 0}.filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:16px -16px 6px;padding:8px 16px}.filters::-webkit-scrollbar{display:none}.filters button{flex:none}.tl{padding-left:18px}.tl::before{left:5px}.e::before{left:-17px}.e .when{position:static;width:auto;text-align:left;margin-bottom:2px}}
+</style>
+</head>
+<body>
+__SITE_HEADER__
+<main>
+<h1>Notebook</h1>
+<p class="lede">How this project was made, told as it happened: what we wanted to know, what we decided and why, the wrong turns, the difficulties and how we got past them, and the care taken for the people who visit and for the people in the papers.</p>
+<p class="lede">Each entry is dated, says what it changed, and links to the place on the site where that change lives. The quotes in gold are the maker's own words. Choose a kind to read one thread.</p>
+__NOTEBOOK__
+<p class="end">The notebook is kept as the work goes on. What the archive itself shows is on <a href="findings.html">Findings</a>; how each part works is on <a href="method.html">How it works</a>; the full technical account is the <a href="__REPO__/blob/main/docs/process.md">process introduction</a>.</p>
+</main>
+__SITE_FOOTER__
+<script>
+(() => {
+const buttons = [...document.querySelectorAll('.filters button')], entries = [...document.querySelectorAll('.e')];
+buttons.forEach(b => b.addEventListener('click', () => {
+  buttons.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  entries.forEach(e => { e.hidden = !!b.dataset.k && !e.dataset.k.split(' ').includes(b.dataset.k); });
+  document.querySelectorAll('.tl').forEach(tl => { const any = [...tl.children].some(e => !e.hidden); tl.hidden = !any; tl.previousElementSibling.hidden = !any; });
+}));
+})();
+</script>
+</body>
+</html>

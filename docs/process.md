@@ -371,7 +371,7 @@ The telescope's search now says how a word comes back, for example "comes back i
 
 ### Findings (11 November 2026)
 
-The site offers more than its instruments. In the owner's words, it is also rigorous research with results, storylines assembled from what the papers printed, and the story of how it was made. The first of these now has a page of its own: **Findings** (`findings.html`, in the menu between Radio and How it works).
+The site offers more than its instruments. In the owner's words, it is also rigorous research with results, storylines assembled from what the papers printed, and the story of how it was made. The first of these now has a page of its own: **Findings** (`findings.html`, in the menu after Radio).
 
 **What each finding gives:** its claim in plain words, one chart, how sure it is, what it does not say, and doors into the instruments. The source comes first, because every other finding stands on it:
 
@@ -389,13 +389,25 @@ The site offers more than its instruments. In the owner's words, it is also rigo
 
 **Charts:** inline SVG with a tooltip on every mark and the numbers in a table under each chart. Gold marks what a finding is about and slate the rest, as on the telescope's timeline.
 
+### Notebook (11 November 2026)
+
+The last of them, the story of how the site was made, has a page of its own too: **Notebook** (`notebook.html`, in the menu after Findings) tells it as it happened.
+
+- **Phases:** beginnings; building the instruments; generosity and care; voices, reviews and the archive's own errors; rethinking.
+- **Entries:** each is dated, with its kinds (decision, wrong turn, difficulty overcome, care, discovery, encouraging moment, purpose, frustration), what it changed (links into the site) and its source.
+- **The maker's words:** quotes appear in gold, as written. A filter shows one kind at a time, such as only the maker's words or only the wrong turns.
+
+**The ledger:** the entries live in `pipeline/notebook.json`, written as the work goes on rather than from memory later. The build (`pipeline/notebook_parts.py`) renders the page and checks every entry: a known phase and kinds, date order, a quote only under the kind "words", and links that open pages of the site.
+
 ## The website
 
-The views are joined into one site with six pages and a shared header, plus an exhibition page:
-- **Home** (`index.html`): a short introduction, a slow time tunnel of stars, and three ways in.
+The views are joined into one site with eight pages and a shared header, plus an exhibition page:
+- **Home** (`index.html`): a short introduction, a slow time tunnel of stars, and four ways in.
 - **Telescope** (`telescope.html`): every story as a star.
 - **Pulses** (`pulses.html`): one story or one year, paper by paper.
 - **Radio** (`radio.html`): the newspapers read aloud, day by day (below).
+- **Findings** (`findings.html`): what the archive shows, tested (above).
+- **Notebook** (`notebook.html`): how the site was made, as it happened (above).
 - **How it works** (`method.html`): the method in plain language.
 - **Research notes** (`notes.html`): the earlier studies.
 - **Exhibition** (`exhibit.html`, linked from the footer): a self-running loop for a large screen (below).
