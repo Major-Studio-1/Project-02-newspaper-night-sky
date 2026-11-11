@@ -486,7 +486,7 @@ exhibit_scenes=[
    'text':'Only two newspaper series survive for 1785–86, against 11 to 17 a year after 1800. A thin sky is a gap in the surviving archive, not silence in the towns.',
    'url':'telescope.html?exhibit=1&view=place&lookback=5&year=1789&drift=off','link':'telescope.html?view=place&lookback=5&year=1789'},
   {'title':'The radio: a morning in 1776','seconds':120,
-   'text':'Any day from 1770 to 1810, read aloud by the browser: a greeting to the town, then what its newspaper printed. The sounds are atmosphere, not recordings of the time.',
+   'text':'Any day from 1770 to 1810, read aloud: a greeting to the town, then what its newspapers printed that morning. The voices are recorded and modern; the sounds are atmosphere, not recordings of the time.',
    'url':'radio.html?exhibit=1&year=1776&date=07-06&on=1','link':'radio.html?year=1776&date=07-06'}]
 assert all(y['papers'] for y in years_index if y['year'] in (1780,1789,1800)), 'every exhibition year has surviving papers'
 exhibit=(ROOT/'exhibit.html').read_text(encoding='utf8').replace('__EXHIBIT_DATA__',json.dumps({'pages':PAGES,'scenes':exhibit_scenes},ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))

@@ -26,7 +26,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 .hero-search button{font:inherit;font-weight:600;color:#090e1b;background:var(--ink);border:0;border-radius:10px;padding:0 18px;cursor:pointer}
 .now{margin-top:18px;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}.now b{color:var(--ink);font-weight:600}
 .shell{max-width:1480px;margin:auto;padding:0 24px}
-.doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:-56px;position:relative}
+.doors{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:-56px;position:relative}
+@media(max-width:1100px){.doors{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .door{display:block;text-decoration:none;color:var(--ink);background:#0b1222f2;border:1px solid var(--line);border-radius:14px;padding:22px 22px 24px;transition:border-color .2s,transform .2s}
 .door:hover{border-color:#8ccfff88;transform:translateY(-2px)}
 .door .k .ico{margin-right:7px}.door .k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}.door h2{font-size:22px;font-weight:500;margin:8px 0 6px}.door p{color:var(--muted);font-size:14.5px}
@@ -63,6 +64,7 @@ __SITE_HEADER__
 <section class="doors" aria-label="Ways in">
 <a class="door" href="telescope.html"><span class="k">__ICON_telescope__Explore</span><h2>Look into the sky</h2><p>Every story as a star. Travel through time, search for a word, and see which news came back every season.</p><span class="go">Open the telescope →</span></a>
 <a class="door" href="__FEATURED_PULSE__"><span class="k">__ICON_pulse__Follow</span><h2>Follow one story</h2><p>Watch a report travel from paper to paper, with the printed passages and the page scans beside it.</p><span class="go">Open a story →</span></a>
+<a class="door" href="radio.html"><span class="k">__ICON_radio__Listen</span><h2>Hear a morning's news</h2><p>Tune to any day from 1770 to 1810 and hear what its newspapers printed, read aloud over the sounds of the town.</p><span class="go">Turn on the radio →</span></a>
 <a class="door" href="method.html"><span class="k">__ICON_book__Understand</span><h2>How do we know?</h2><p>What was read and checked by hand, what a computer matched, and what this archive cannot show.</p><span class="go">How it works →</span></a>
 </section>
 <h2 class="section-title">Start with a story</h2>

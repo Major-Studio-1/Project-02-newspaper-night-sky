@@ -70,7 +70,7 @@ def head():
 # The pages where the radio reads aloud. Its switch sits in the same place on each: the top right of the header.
 RADIO_PAGES = ('telescope', 'pulses', 'radio')
 RADIO_SWITCH = ('<button type="button" id="radio" class="toggle radio-switch has-ico" aria-pressed="false" '
-                'title="Hear the newspapers: point at a star or a newspaper, pick one, or select an area">' + icon('radio') + 'Radio</button>')
+                'title="Hear the newspapers: turned on, the radio plays on its own; point at a star or a newspaper, pick one, or select an area to choose what you hear">' + icon('radio') + 'Radio</button>')
 
 
 def header(active, stories):

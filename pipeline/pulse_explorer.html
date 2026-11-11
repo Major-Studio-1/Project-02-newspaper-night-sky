@@ -140,7 +140,7 @@ __SITE_HEADER__
 <main class="shell">
 <div class="pagehead"><h1>Newspaper pulses</h1><span id="scope" class="small muted"></span><a id="to-telescope" class="small" href="telescope.html">See this year in the sky ↗</a></div><p id="notice"></p>
 <section class="shelf" aria-labelledby="shelf-title"><div class="shelf-head"><h2 id="shelf-title">Stories</h2><span id="shelf-count" class="small muted"></span>
-<label class="find"><span class="sr-only">Find stories by their words</span><input id="shelf-find" type="search" placeholder="Find stories by their words…" autocomplete="off" spellcheck="false"></label>
+<label class="find"><span class="sr-only">Find stories by their words</span><input id="shelf-find" type="search" placeholder="Find a story in these years…" autocomplete="off" spellcheck="false"></label>
 <span class="seg slide" data-roving id="shelf-sort" role="group" aria-label="Order of the stories"><button type="button" data-sort="reach" title="Printed in the most newspapers first">Most printed</button><button type="button" data-sort="date" title="The earliest first">Earliest</button></span></div>
 <div id="topic-chips" class="toggles topic-chips" role="group" aria-label="Topic families"></div>
 <div id="topic-sub" class="toggles topic-chips sub" role="group" aria-label="Topics in the chosen family" hidden></div>
@@ -548,7 +548,7 @@ function buildShelf() {
   if (Y.hasReviewed && !what) for (const y of Y.reviewedYears) rail.append(card({id: 'all:' + y, cls: 'overview', tag: 'Overview · checked against the scans',
     title: 'All reviewed stories of ' + y, meta: `${Y.stories.filter(s => s.year === y).length} stories · one colour per category`}));
   if (Y.hasMatched) rail.append(card({id: 'auto-all', cls: 'overview', tag: 'Overview · found automatically', title: what ? 'All · ' + what : 'All matched stories',
-    meta: `${(fams.length || pool.length).toLocaleString('en-US')} stories${fams.length ? ` in ${k}+ papers` : ''} · ${Y.label}`}));
+    meta: `${(fams.length || pool.length).toLocaleString('en-US')} stories${fams.length ? ` in ${k}+ newspapers` : ''} · ${Y.label}`}));
   const shownIds = new Set(listed.slice(0, shelfLimit).map(g => g.id));
   const current = group && group.kind === 'auto_family' && !shownIds.has(group.id) ? group : null;   // e.g. opened from the telescope
   if (current) { sep('Now'); rail.append(matchedCard(current)); }
@@ -575,7 +575,7 @@ function buildShelf() {
   const long = narrowed(Y.autoGroups.filter(g => g.long_running)).sort((a, b) => b.newspapers - a.newspapers).slice(0, 8);
   if (long.length) { sep('Long-running'); long.forEach(g => rail.append(matchedCard(g))); }
   $('shelf-title').textContent = 'Stories · ' + Y.label;
-  $('shelf-count').textContent = Y.hasMatched ? `${(fams.length || pool.length).toLocaleString('en-US')} matched${fams.length ? ` in ${k}+ papers` : ''}${what ? ' · ' + what : ''}, ${shelfSort === 'date' ? 'the earliest' : 'the most widely printed'} first; ${Math.min(shelfLimit, listed.length).toLocaleString('en-US')} shown` : '';
+  $('shelf-count').textContent = Y.hasMatched ? `${(fams.length || pool.length).toLocaleString('en-US')} matched${fams.length ? ` in ${k}+ newspapers` : ''}${what ? ' · ' + what : ''}, ${shelfSort === 'date' ? 'the earliest' : 'the most widely printed'} first; ${Math.min(shelfLimit, listed.length).toLocaleString('en-US')} shown` : '';
   rail.scrollLeft = keep; syncShelf();
 }
 function syncShelf() { for (const c of $('shelf').querySelectorAll('.card[data-group]')) c.setAttribute('aria-pressed', String(c.dataset.group === group?.id)); }
@@ -715,6 +715,12 @@ function lastBefore(list, d) {  // binary search: last event with day <= d
 }
 function countUpTo(d) {  // how many events fall on or before day d (events are in date order)
   let lo = 0, hi = events.length; while (lo < hi) { const m = (lo + hi) >> 1; if (events[m].day <= d + 1e-7) lo = m + 1; else hi = m; } return lo;
+}
+// A load that failed: plain words and a way to try again. The hint about serving over HTTP is only for a copy opened from disk.
+function notice(text, local = '') {
+  const n = $('notice'); n.textContent = location.protocol === 'file:' && local ? local : text;
+  const b = document.createElement('button'); b.type = 'button'; b.className = 'retry'; b.textContent = 'Try again';
+  b.addEventListener('click', () => location.reload()); n.append(' ', b);
 }
 function loadPassages(year) {   // one year file's passage texts (fetched once per year)
   if (!yearFiles.has(year)) yearFiles.set(year, fetch(`years/${year}.json?v=${BOOT.year_stamp || ''}`).then(r => r.ok ? r.json() : null)
@@ -874,10 +880,11 @@ async function loadRange(from, to, wanted) {
   if (token !== loadToken) return;   // a later choice has taken over
   if (earlyPick && group && group.id !== earlyPick) wanted = group.id;   // the visitor chose a story meanwhile
   if (!bases.length && !extra) {
-    $('notice').textContent = 'Could not load these years. The page needs to be served over HTTP (for example: python -m http.server).';
+    notice('These years could not be loaded. Check your connection and try again.', 'Could not load these years. The page needs to be served over HTTP (for example: python -m http.server).');
     if (Y) setYearsUI(Y.from, Y.to); return;
   }
-  $('notice').textContent = extra ? '' : 'Matched stories and other years need the page served over HTTP; showing the reviewed stories only.';
+  if (extra) $('notice').textContent = '';
+  else notice('The matched stories could not be loaded, so only the reviewed stories are shown. Check your connection and try again.', 'Matched stories and other years need the page served over HTTP; showing the reviewed stories only.');
   Y = buildState(from, to, bases, extra); setYearsUI(from, to);
   document.title = 'Newspaper pulses · ' + Y.label;
   $('to-telescope').href = skyUrl(); $('to-telescope').textContent = `See ${from === to ? 'this year' : 'these years'} in the sky ↗`;

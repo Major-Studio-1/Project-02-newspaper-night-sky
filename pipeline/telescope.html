@@ -32,8 +32,25 @@ body.page-telescope .site-inner{max-width:none}
 .field{margin-top:10px}.field:first-of-type{margin-top:0}.field>.label{display:block;margin-bottom:5px}
 .field.inline{display:flex;align-items:center;justify-content:space-between;gap:10px}.field.inline>.label{margin:0}
 .deck .hint{font-size:12px;color:var(--muted);line-height:1.45;margin:8px 0 0}
+/* Controls review, steps 1-2: the search help, ideas under the box, the key on the sky, Front/Side with the camera. */
+.q-help{flex:none;width:24px;height:24px;padding:0;border-radius:50%;border:1px solid #2a3550;background:none;color:var(--muted);font:600 12px/1 system-ui,sans-serif;cursor:pointer}
+.q-help[aria-expanded="true"]{color:var(--ink);border-color:#8ccfff88}
+.deck .chips{margin:8px 0 0}
+.more-chips{font:inherit;font-size:12px;color:#8ccfff;background:none;border:0;padding:3px 6px;min-height:24px;cursor:pointer}.more-chips:hover{text-decoration:underline}
+.field.reach{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}.field.reach>.label{margin:0}
+.skykey{position:absolute;left:10px;bottom:9px;z-index:3;max-width:min(42%,440px);display:flex;flex-direction:column;align-items:flex-start;gap:6px;font-size:11.5px;color:var(--muted)}
+.skykey.open{max-width:calc(100% - 70px)}
+.skykey .key{position:static;max-width:none;pointer-events:auto}.skykey.open .key{display:none}
+.skykey .legend{max-height:min(46vh,420px);overflow:auto;padding:8px 10px;background:#050711e6;border:1px solid #ffffff1f;border-radius:8px;flex-direction:column;align-items:flex-start;gap:5px;font-size:12px}
+.key-more{font:inherit;font-size:11.5px;color:var(--ink);background:#0b1222cc;border:1px solid #2a3550;border-radius:999px;padding:3px 12px;min-height:24px;cursor:pointer;backdrop-filter:blur(8px)}
+.key-more[aria-expanded="true"]{border-color:#8ccfff88}
+.cam .angle-pair{display:flex;flex-direction:column;gap:6px;margin-bottom:6px}
+.cam .angle[aria-pressed="true"]{color:#8ccfff;border-color:#8ccfff99;box-shadow:0 0 0 1px #8ccfff44}
+body.exhibit .key-more{display:none}body.exhibit .skykey{font-size:clamp(12px,.9vw,20px)}
+/* A short laptop screen (1333x633 and the like): the deck fits without scrolling. */
+@media(min-width:1000px) and (max-height:700px){.deck-head{padding:10px 12px 8px 18px}.deck .sec{padding:7px 0 9px}.deck .sec-h{margin-bottom:5px}.deck .field{margin-top:6px}.deck-body{padding-bottom:10px}}
 .deck .toggles{display:flex;flex-wrap:wrap;gap:5px}.deck .toggles .toggle{padding:4px 10px 4px 8px;font-size:12px}
-.deck .chips{margin:0}
+
 .deck .legend{flex-direction:column;align-items:flex-start;gap:5px;margin:0}
 .deck .more{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px}
 @media(min-width:1000px){
@@ -116,7 +133,7 @@ body.page-telescope .site-inner{max-width:none}
   .deck-open{display:inline-flex}
   .caption{position:static;width:auto;margin:0;border-radius:0;border-width:1px 0 0;box-shadow:none;order:3}
   .on-air{width:calc(100% - 24px);bottom:10px}
-  .viewport.airing .key{display:none}
+  .viewport.airing .skykey{display:none}
 }
 @media(max-width:640px){
   .scope{height:auto;min-height:0}.viewport{flex:none;height:min(66dvh,118vw)}
@@ -146,26 +163,20 @@ __SITE_HEADER__
 <div class="deck-body" id="deck-body">
 <section class="sec" aria-labelledby="sec-find"><h2 class="sec-h" id="sec-find">Find</h2>
 <label class="search" role="search"><span class="sr-only">Search stories</span>__ICON_search__
-<input id="q" type="search" placeholder="Search any word or name, or compare: fever vs ice" autocomplete="off" spellcheck="false"><button type="button" id="q-clear" aria-label="Clear search">✕</button></label>
-<p class="hint">Searches each story's title and opening words. A comma means “or”; “vs” compares up to three searches, each in its own colour.</p>
+<input id="q" type="search" placeholder="Search all stories, 1770–1810 (try: fever vs ice)" autocomplete="off" spellcheck="false"><button type="button" id="q-clear" aria-label="Clear search">✕</button><button type="button" id="q-help" class="q-help" aria-expanded="false" aria-controls="q-hint" title="How to search">?</button></label>
+<p class="hint" id="q-hint" hidden>Searches each story's title and opening words. A comma means “or”; “vs” compares up to three searches, each in its own colour.</p>
+<div class="chips" id="chips" role="group" aria-label="Ideas to try"></div>
 </section>
 <section class="sec" aria-labelledby="sec-arrange"><h2 class="sec-h" id="sec-arrange">Arrange</h2>
-<div class="field"><span class="label">Stars by where, what, or the time of year</span><span class="seg slide" data-roving id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">__ICON_place__Place</button><button type="button" data-layout="topic" title="What each story is about">__ICON_topic__Topic</button><button type="button" data-layout="orbit" title="The time of year">__ICON_orbit__Orbit</button></span></div>
-<div class="field inline"><span class="label">Angle</span><span class="seg slide" data-roving id="angle" role="group" aria-label="Viewing angle"><button type="button" data-angle="front" title="Look straight back through time">__ICON_front__Front</button><button type="button" data-angle="side" title="See the time axis from the side">__ICON_side__Side</button></span></div>
+<div class="field"><span class="label" id="layout-label">Where each story was first printed</span><span class="seg slide" data-roving id="layout" role="group" aria-label="Arrange the stars by"><button type="button" data-layout="place" title="Where each story was first printed">__ICON_place__Place</button><button type="button" data-layout="topic" title="What each story is about">__ICON_topic__Topic</button><button type="button" data-layout="orbit" title="The time of year">__ICON_orbit__Orbit</button></span></div>
 </section>
 <section class="sec" aria-labelledby="sec-colour"><h2 class="sec-h" id="sec-colour">Colour</h2>
 <span class="seg slide" data-roving id="colour" role="group" aria-labelledby="sec-colour"><button type="button" data-colour="region" title="Colour each star by the region where its story was first printed in this archive">Region</button><button type="button" data-colour="search" title="Colour the stories that match your search: gold for one search, one colour per search when you compare">Search</button><button type="button" data-colour="off" title="Pale stars; reviewed stories in their own colours">Off</button></span>
 </section>
 <section class="sec" aria-labelledby="sec-show"><h2 class="sec-h" id="sec-show">Show</h2>
-<div class="field"><span class="label" id="min-label">Stories printed in at least</span><span class="seg slide" data-roving id="min-papers" role="group" aria-labelledby="min-label">
-<button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button><button type="button" data-k="10" title="at least 10 newspapers">10+</button></span></div>
+<div class="field reach"><span class="label" id="min-label">Show stories in</span><span class="seg slide" data-roving id="min-papers" role="group" aria-label="Show stories printed in at least this many newspapers">
+<button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button><button type="button" data-k="10" title="at least 10 newspapers">10+</button></span><span class="label">newspapers</span></div>
 <div class="field"><span class="toggles" id="kinds" role="group" aria-label="Kinds of story"><button type="button" class="toggle" data-kind="reviewed" title="Read and checked against the scans">Reviewed</button><button type="button" class="toggle" data-kind="matched" title="Found by shared wording; not checked">Matched</button><button type="button" class="toggle" data-kind="long" title="Serial documents and debates joined over months">Long-running</button></span></div>
-</section>
-<section class="sec" aria-labelledby="sec-key"><h2 class="sec-h" id="sec-key">Key</h2>
-<div class="legend" id="legend"></div>
-</section>
-<section class="sec" aria-labelledby="sec-try"><h2 class="sec-h" id="sec-try">Ideas to try</h2>
-<div class="chips" id="chips"></div>
 </section>
 <section class="sec"><p class="more"><a href="#how">How to read the sky ↓</a><a href="#list-title">Brightest stories in view ↓</a></p></section>
 </div>
@@ -173,10 +184,11 @@ __SITE_HEADER__
 <div class="stage">
 <div class="viewport" id="viewport">
 <div id="view" class="view" tabindex="0" role="application" aria-roledescription="star map" aria-label="Story telescope. Up and down arrows travel through time; left and right turn the view; plus and minus zoom; 0 resets the view. The list of the brightest stories in view is further down the page.">
-<canvas id="gl"></canvas><canvas id="axes"></canvas><div id="tip" class="tip" hidden></div><div id="message" class="message" hidden></div><div id="key" class="key" aria-hidden="true"></div>
+<canvas id="gl"></canvas><canvas id="axes"></canvas><div id="tip" class="tip" hidden></div><div id="message" class="message" hidden></div>
 <div id="loading" class="loading indeterminate" role="status" aria-live="polite"><div class="loading-box"><p id="loading-text">Opening the telescope…</p><div class="loading-bar" aria-hidden="true"><i id="loading-fill"></i></div><p id="loading-sub"></p></div></div>
 </div>
-<div class="cam hud" role="group" aria-label="Camera and tools"><button type="button" id="select-area" class="tool" aria-pressed="false" title="Drag across the sky to hear the stories in an area (Alt-drag works too)">__ICON_select__<span class="sr-only">Select an area to hear</span></button><button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button type="button" id="reset-view" title="Back to the whole picture">__ICON_fit__<span class="sr-only">Reset view</span></button></div>
+<div class="cam hud" role="group" aria-label="Camera and tools"><button type="button" id="select-area" class="tool" aria-pressed="false" title="Drag across the sky to hear the stories in an area (Alt-drag works too)">__ICON_select__<span class="sr-only">Select an area to hear</span></button><span id="angle" class="angle-pair" role="group" aria-label="Viewing angle"><button type="button" class="angle" data-angle="front" title="Front: look straight back through time">__ICON_front__<span class="sr-only">Front</span></button><button type="button" class="angle" data-angle="side" title="Side: see the time axis from the side">__ICON_side__<span class="sr-only">Side</span></button></span><button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button type="button" id="reset-view" title="Back to the whole picture">__ICON_fit__<span class="sr-only">Reset view</span></button></div>
+<div id="skykey" class="skykey hud"><div class="legend" id="legend" hidden></div><div id="key" class="key"></div><button type="button" id="key-more" class="key-more" aria-expanded="false" aria-controls="legend">Key</button></div>
 <p id="on-air" class="on-air hud" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
 <button type="button" id="deck-open" class="deck-open hud" aria-controls="deck" aria-expanded="false">__ICON_menu__Controls</button>
 </div>
@@ -220,6 +232,12 @@ const CHIPS = [['Independence Day', 'anniversary of independence, fourth of july
   ['Ice', 'the ice, frozen'], ['Hurricanes', 'hurricane, gale'], ['Fire', 'fire broke out, conflagration'], ['Bonaparte', 'bonaparte, buonaparte'], ['Embargo', 'embargo']];
 $('release').textContent = 'Data foundation v' + BOOT.release_version + '.';
 const msg = text => { $('loading').hidden = true; $('message').textContent = text; $('message').hidden = !text; };
+// A load that failed: plain words and a way to try again. The hint about serving over HTTP is only for a copy opened from disk.
+const fail = (text, local = '') => {
+  msg(location.protocol === 'file:' && local ? local : text);
+  const b = document.createElement('button'); b.type = 'button'; b.className = 'retry'; b.textContent = 'Try again';
+  b.addEventListener('click', () => location.reload()); $('message').append(' ', b);
+};
 
 // Loading: say what is happening, with a real progress bar while the story file downloads. The server may compress
 // the file, so progress is measured against its known size (BOOT.bytes) in the bytes the browser receives unpacked.
@@ -242,11 +260,11 @@ loading('Opening the telescope…', null, 'Loading the 3D library');
 
 let THREE;
 try { THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js'); }
-catch { msg('The telescope needs three.js from the internet (cdn.jsdelivr.net), which could not be loaded.'); throw new Error('three.js unavailable'); }
+catch { fail('The telescope could not load its drawing library from the internet (cdn.jsdelivr.net). Check your connection and try again.'); throw new Error('three.js unavailable'); }
 let D;
 loading(`Loading ${STORIES} stories…`, DATA_BYTES ? 0 : null, DATA_BYTES ? `0.0 of ${MB(DATA_BYTES)} MB` : '');
 try { D = await fetchJSON('telescope.json?v=' + BOOT.stamp, DATA_BYTES, (f, got) => loading(`Loading ${STORIES} stories…`, f, `${MB(got)} of ${MB(DATA_BYTES)} MB`)); }
-catch { msg('Could not load telescope.json. Serve this folder over HTTP (for example: python -m http.server).'); throw new Error('data unavailable'); }
+catch { fail('The stories could not be loaded. Check your connection and try again.', 'Could not load telescope.json. Serve this folder over HTTP (for example: python -m http.server).'); throw new Error('data unavailable'); }
 loading('Placing the stars…', 1, '');
 await new Promise(r => setTimeout(r, 30));   // let the message show before the stars are set up
 
@@ -739,6 +757,7 @@ function updateStatus() {
   for (let i = a, e = lowerBound(state.now + state.span * .05); i < e; i++) crowd[i] = Math.min(1, CROWD_K / Math.sqrt(Math.max(1, perTown[townIx[i]])));
   geo.attributes.aCrowd.needsUpdate = true;
   const y = state.span / YEAR;
+  syncOffKey();
   $('status').textContent = `Now ${fmt(state.now)} · looking back ${y >= 1.5 ? Math.round(y) + ' years' : Math.round(y * 12) + ' months'} · ${n.toLocaleString('en-US')} stories`;
   const now = performance.now(); clearTimeout(listTimer);
   if (now - lastList > 1000) { lastList = now; updateList(); } else listTimer = setTimeout(() => { lastList = performance.now(); updateList(); }, 300);
@@ -853,7 +872,7 @@ function summarise() {
   const shows = state.colour === 'region' ? 'Colour shows the region' : 'Colour is off';
   if (k === 1) {
     if (!n[0]) { caption(`<b>“${esc(state.q)}”</b> · no stories match with these filters.`); return; }
-    caption(`<b>“${esc(state.q)}”</b> · ${stories(n[0])} in ${perYear[0].size} ${perYear[0].size === 1 ? 'year' : 'years'} · ${season(0)}.<span class="note">`
+    caption(`<b>“${esc(state.q)}”</b> · ${stories(n[0])} in ${state.min}+ newspapers, over ${perYear[0].size} ${perYear[0].size === 1 ? 'year' : 'years'} · ${season(0)}.<span class="note">`
       + (byColour ? `Gold bars on the timeline: each year's share of stories.${orbit ? ' Gold petals: the months; the dashed circle is no rhythm.' : ' Orbit shows the months.'}`
         : `${shows}: the matches are the bright stars. Colour: Search lights them gold.`)
       + '</span>');
@@ -1095,6 +1114,7 @@ function syncButtons() {
   for (const b of $('min-papers').querySelectorAll('button')) b.setAttribute('aria-pressed', String(Number(b.dataset.k) === state.min));
   for (const b of $('kinds').querySelectorAll('button')) b.setAttribute('aria-pressed', String(state.show[b.dataset.kind]));
   for (const b of $('layout').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout));
+  $('layout-label').textContent = {place: 'Where each story was first printed', topic: 'What each story is about', orbit: 'When in the year it was printed'}[state.layout] || '';
   for (const b of $('angle').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.angle === state.angle));
   const mode = colourMode();
   for (const b of $('colour').querySelectorAll('button')) {
@@ -1110,7 +1130,7 @@ function syncButtons() {
     + ' Bigger, brighter stars were printed in more newspapers. ' + COLOUR_HOW[mode]
     + ' <b>Search and compare:</b> a search draws the matching stories a little larger and makes the others faint, and Colour switches to Search. Put “vs” between up to three searches (fever vs ice), or use “Compare with…” after a search: each search gets its own colour, and a white star mentions more than one. The timeline compares their yearly shares, and Orbit their months. Choose Region or Off to keep those colours; the searches are then shown together, as the bright stars. Point at a search or a region in the legend, or tap it, to lift its stars.'
     + ' <b>Moving around:</b> drag to turn the view, right-drag (or Shift-drag, or two fingers) to move it, and scroll or pinch to zoom; “Reset view” brings back the whole picture.'
-    + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see, and “All” shows the whole archive. Click a star to open it in the pulse view.'
+    + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see, and “All” shows the whole archive. Click a star to open it in the pulse view (with the radio on, a click keeps the star speaking and a second click opens it).'
     + (reduced ? '' : ' Drift lets time pass slowly: new stories arrive at the front and older ones recede. It pauses while you explore.');
 }
 function setLayout(name) {
@@ -1354,6 +1374,12 @@ for (const [label, query] of CHIPS) {
   const b = document.createElement('button'); b.type = 'button'; b.className = 'toggle'; b.textContent = label; b.title = query; b.dataset.q = query;
   b.addEventListener('click', chipClick(query)); $('chips').append(b);
 }
+{ // Four ideas show under the search box (two on a short screen; the comparisons first); "More ideas" shows the rest.
+  const shown = innerHeight < 700 ? 2 : 4, all = [...$('chips').children], more = document.createElement('button'); more.type = 'button'; more.className = 'more-chips';
+  const set = open => { all.slice(shown).forEach(b => { b.hidden = !open; }); more.textContent = open ? 'Fewer ideas' : `More ideas (${all.length - shown})`; more.setAttribute('aria-expanded', String(open)); };
+  more.addEventListener('click', () => set(more.getAttribute('aria-expanded') !== 'true')); set(false); $('chips').append(more);
+}
+$('q-help').addEventListener('click', () => { const h = $('q-hint'), open = h.hidden; h.hidden = !open; $('q-help').setAttribute('aria-expanded', String(open)); });
 syncChips();
 // Legend under the timeline, and a small key inside the view while Regions is on. Labels stay in text colours; the dot carries the hue.
 const legend = $('legend');
@@ -1395,7 +1421,7 @@ function buildLegend() {   // one colour meaning at a time, the same in the lege
   if (mode === 'search') {
     lead.textContent = k > 1 ? 'Compared searches:' : 'Search:';
     const more = k > 1 ? [swatch('More than one', MULTI)] : [];
-    legend.replaceChildren(lead, ...SLOTS.map((s, j) => swatch(`“${shortLabel(s.label)}” (${slotCounts[j].toLocaleString('en-US')})`, slotColour(j), s.label, '', 'b' + (1 << j))), ...more, swatch('Other stories, faint', AUTO));
+    legend.replaceChildren(lead, ...SLOTS.map((s, j) => swatch(`“${shortLabel(s.label)}” (${slotCounts[j].toLocaleString('en-US')} in all)`, slotColour(j), s.label, '', 'b' + (1 << j))), ...more, swatch('Other stories, faint', AUTO));
     $('key').replaceChildren(...SLOTS.map((s, j) => swatch(shortLabel(s.label), slotColour(j), '', 'k', 'b' + (1 << j))), ...(k > 1 ? [swatch('more than one', MULTI, '', 'k')] : []));
     $('key').hidden = false; keepEm(); return;
   }
@@ -1409,15 +1435,43 @@ function buildLegend() {   // one colour meaning at a time, the same in the lege
     const years = [...new Set(BOOT.categories.map(c => c.year))], heading = text => Object.assign(document.createElement('span'), {className: 'lead', textContent: text});
     const reviewed = years.flatMap(y => [heading(y ? `Reviewed, ${y}:` : 'Reviewed:'), ...BOOT.categories.filter(c => c.year === y).map(c => swatch(c.label, c.color))]);
     legend.replaceChildren(lead, ...reviewed, swatch('Matched by shared wording · not checked', AUTO), swatch('Long-running match', LONG), ...note);
-    $('key').replaceChildren();
+    $('key').replaceChildren(...offKey());
   }
-  $('key').hidden = mode === 'off'; keepEm();
+  $('key').hidden = false; keepEm();
 }
+// The key on the sky with colour Off says only what is in view: the reviewed years inside the look-back (two at most by
+// name, one on a phone; more fold into one line with the three colours) and the matched stories. "Key" opens the full list.
+var keyReady = false;   // var: updateStatus may run before this point, while the key is not built yet
+let offSig = '';
+const reviewedYearsInView = () => { const from = state.now - state.span; return [...new Set(BOOT.categories.map(c => c.year))].filter(y => y && (Date.UTC(y, 11, 31) - EPOCH) / MS >= from && (Date.UTC(y, 0, 1) - EPOCH) / MS <= state.now).sort(); };
+function offKey() {
+  const years = state.show.reviewed ? reviewedYearsInView() : [], out = [];
+  offSig = years.join(',') + '|' + (+state.show.matched) + (+state.show.long);
+  if (years.length && years.length <= (innerWidth < 640 ? 1 : 2)) for (const y of years) out.push(...BOOT.categories.filter(c => c.year === y).map(c => swatch(`${y} · ${c.label}`, c.color, '', 'k')));
+  else if (years.length) {
+    const s = document.createElement('span');
+    for (const c of new Set(BOOT.categories.map(c => c.color))) { const d = document.createElement('i'); d.className = 'k'; d.style.background = c; d.style.boxShadow = '0 0 6px ' + c; s.append(d); }
+    s.append(document.createTextNode(`Reviewed, ${years.join(', ')} · colour by subject`)); out.push(s);
+  }
+  if (state.show.matched) out.push(swatch('Matched · not checked', AUTO, '', 'k'));
+  if (state.show.long) out.push(swatch('Long-running', LONG, '', 'k'));
+  return out;
+}
+function syncOffKey() {   // called as "now" moves: rebuilt only when the years in view change
+  if (!keyReady || colourMode() !== 'off') return;
+  const years = state.show.reviewed ? reviewedYearsInView() : [];
+  if (years.join(',') + '|' + (+state.show.matched) + (+state.show.long) !== offSig) $('key').replaceChildren(...offKey());
+}
+$('key-more').addEventListener('click', () => {
+  const open = $('legend').hidden; $('legend').hidden = !open; $('skykey').classList.toggle('open', open);
+  $('key-more').setAttribute('aria-expanded', String(open)); $('key-more').textContent = open ? 'Close key' : 'Key';
+});
+for (const t of ['pointerdown', 'wheel', 'dblclick']) $('skykey').addEventListener(t, e => e.stopPropagation());
 function keepEm() {   // a lifted group stays lifted only while the legend still shows it
   if (emPinned && !legend.querySelector(`[data-em="${emPinned}"]`)) emPinned = '';
   emHover = ''; applyEm();
 }
-buildLegend();
+buildLegend(); keyReady = true;
 new ResizeObserver(() => { const dpr = devicePixelRatio || 1; tl.width = tl.clientWidth * dpr; tl.height = tl.clientHeight * dpr; tctx.setTransform(dpr, 0, 0, dpr, 0, 0); drawTimeline(); }).observe(tl);
 caption(); setLayout(state.layout); mixNow.splice(0, 3, ...mixTarget);
 syncButtons(); resize(); requestAnimationFrame(frame);
