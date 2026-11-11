@@ -330,6 +330,23 @@ Reviewed stories and matched stories used to be shown as two separate worlds, so
 
 A **Watch** button on the telescope and on Pulses turns the current view into the exhibition's look in place, full screen and without controls: the sky drifts, or the stories play one after another. Esc, or Exit in the corner, brings the controls back as they were; `?watch=1` opens a link in it.
 
+### Select, then act (11 November 2026)
+
+A click on a star used to mean two things: with the radio off it left for Pulses, with the radio on it added a voice. Now a click always *chooses* the star. Pointing previews it; the chosen star's card stays beside it, so its facts no longer depend on hovering. The card offers three actions:
+
+- **Hear:** the announcer's town and date, then the recording. With the radio off it plays on its own; with the radio on, choosing a story already plays it in full.
+- **Follow it in Pulses:** the story paper by paper (a double click does the same).
+- **Trace a word:** up to three words of the title, each with its number of stories. A tap runs the telescope's search on that word: its stories light up, with their yearly shares and season.
+
+The words offered are not simply the rarest. The build (`trace.json`) keeps a title word only when the stories that mention it are spread over the years, or over the months, unlike the archive's stories as a whole (a G-test against all stars, p < .001). A word spread like the archive would only retrace how much of the archive survives, the coverage problem this project keeps apart from attention. A check of 30 stories showed why the test matters:
+
+- Ranking by rarity alone offered words such as *favored*, *recently* and *perusal*.
+- With the test, the first word offered was a fitting theme in most cases: *privateer*, *Havana*, *Lisbon*, *Nelson*, *Claiborne*, *Ratisbon*, *Hawkesbury*.
+
+Of all stars, 95% offer at least one word. A word can still have two senses (Captain *Snow* and snow), which the matches show.
+
+Pulses has the same actions under its map. Hear reads the printing chosen now, and the trace words open the sky with that word traced and the story chosen.
+
 ## The website
 
 The views are joined into one site with six pages and a shared header, plus an exhibition page:

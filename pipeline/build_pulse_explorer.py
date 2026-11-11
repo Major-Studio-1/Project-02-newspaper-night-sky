@@ -380,8 +380,49 @@ tele={'epoch':'1770-01-01','count':len(stars),**{k:[s[k] for s in stars] for k i
 (OUT/'telescope.json').write_text(json.dumps(tele,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 (OUT/'telescope-text.json').write_text(json.dumps({'count':len(stars),'text':[s['text'] for s in stars]},ensure_ascii=False,separators=(',',':')),encoding='utf8')
 tele_stamp=hashlib.sha256((OUT/'telescope.json').read_bytes()+(OUT/'telescope-text.json').read_bytes()).hexdigest()[:12]
+# ---- Trace: the words of a story's title worth following through the years (the story card's "Trace a word") ----
+# Counted the way the telescope's search finds them: at the start of a word, in the title and the opening words. A word
+# is offered when its stories are spread over the years, or over the months, unlike the sky's stories as a whole (a
+# G-test, p < .001 with 40 and 11 degrees of freedom), so that tracing it shows more than the archive's coverage. Each
+# word keeps its number of stories and a score (how far its spread differs, shrunk for small numbers), which orders a
+# title's words on the card. The pages split a title into words the same way (titleWords in both pages).
+TRACE_STOP=set('''that with this from have been were which their there they them then than what when where will would shall
+should could into upon unto your yours ours more most some such other others only also very much many each every both after
+before about above below under over again further once here hers himself herself itself themselves those these being having
+doing does done same just while during against between through without within along among until because since though
+although whether either neither cannot made make makes making said says following extract letter letters dated date
+gentleman gentlemen received receive arrived arrive informed inform learn learned hear heard yesterday today last next first
+second third days week weeks month months year years time times morning evening night january february march april june july
+august september october november december sept monday tuesday wednesday thursday friday saturday sunday inst instant ultimo
+messrs sirs cent copy published publish printed print paper papers account accounts news intelligence advices advice late
+lately former latter public publick great well good part whole number'''.split())
+def title_words(t):
+    return {w for w in re.findall(r'[a-z]+',re.sub(r"['’]s\b",'',t.lower().replace('ſ','s'))) if len(w)>=4 and w not in TRACE_STOP}
+import bisect, math
+post=collections.defaultdict(list)
+for i,s in enumerate(stars):
+    for tok in set(re.findall(r'[a-z]+',s['text'])): post[tok].append(i)
+toks=sorted(post)
+year_of=[s['year'] for s in stars]
+month_of=[(datetime.date(1770,1,1)+datetime.timedelta(days=s['first'])).month for s in stars]
+year_all,month_all,n_all=collections.Counter(year_of),collections.Counter(month_of),len(stars)
+def g_test(obs,base,n): return 2*sum(o*math.log(o*n_all/(n*base[k])) for k,o in obs.items() if o)
+trace_words={}
+for w in sorted(set().union(*(title_words(s['title']) for s in stars))):
+    a,b=bisect.bisect_left(toks,w),bisect.bisect_left(toks,w+'{')
+    if sum(len(post[t]) for t in toks[a:b])<3: continue
+    hit_ix=set().union(*(post[t] for t in toks[a:b])); n=len(hit_ix)
+    if not 3<=n<=3000: continue
+    gy=g_test(collections.Counter(year_of[i] for i in hit_ix),year_all,n); gm=g_test(collections.Counter(month_of[i] for i in hit_ix),month_all,n)
+    if gy<73.4 and gm<31.3: continue   # spread like the archive: its trace would show the archive's coverage
+    trace_words[w]=[n,round(1000*max(gy,gm*40/11)/(2*(n+30)))]
+(OUT/'trace.json').write_text(json.dumps({'words':trace_words},ensure_ascii=False,separators=(',',':')),encoding='utf8')
+trace_stamp=hashlib.sha256((OUT/'trace.json').read_bytes()).hexdigest()[:12]
+trace_cover=sum(1 for s in stars if title_words(s['title'])&trace_words.keys())
+print(f'trace: {len(trace_words):,} words; {trace_cover:,} of {len(stars):,} stories have at least one')
+assert trace_cover>=.9*len(stars), 'most stories should offer a word to trace'
 reg_count=collections.Counter(s['reg'] for s in stars)
-tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'stories':len(stars),'twins':twins,
+tele_boot={'release_version':manifest['version'],'stamp':tele_stamp,'trace':trace_stamp,'stories':len(stars),'twins':twins,
            'regions':[{'label':label,'states':states,'color':color,'stories':reg_count[i]} for i,(label,states,color,_) in enumerate(REGIONS)],
            # Sizes as served, so the loading bar can measure progress even when the server compresses the files.
            'bytes':{'data':(OUT/'telescope.json').stat().st_size,'text':(OUT/'telescope-text.json').stat().st_size},
@@ -427,7 +468,7 @@ index={'epoch':'1770-01-01','scan_base':f'https://huggingface.co/datasets/{DATAS
 (years_dir/'index.json').write_text(json.dumps(index,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 # A stamp of the year files' contents (and the index), so browsers fetch fresh copies after a rebuild.
 year_stamp=hashlib.sha256(b''.join(hashlib.sha256((years_dir/f'{y}.json').read_bytes()).digest() for y in range(1770,1811))+hashlib.sha256((years_dir/'index.json').read_bytes()).digest()).hexdigest()[:12]
-boot={'release_version':VER,'reviewed':reviewed_list,'years':years_index,'year_stamp':year_stamp,'twins':twins,'index_bytes':(years_dir/'index.json').stat().st_size,
+boot={'release_version':VER,'reviewed':reviewed_list,'years':years_index,'year_stamp':year_stamp,'trace':trace_stamp,'twins':twins,'index_bytes':(years_dir/'index.json').stat().st_size,
       # Topics for the story shelf's chips: each topic's plain name and family (as in the telescope).
       'topics':[{'label':SHORT[tid(x)],'family':fam_index[topic_labels[tid(x)]['category']]} for x in topic_list],
       'families':[{'name':f,'short':s,'tiny':t} for f,s,t in FAMILIES]}
@@ -544,7 +585,7 @@ if (OUT/'audio'/'index.json').exists():
 receipt={'passed':True,'release_version':VER,
          'reviewed_years':[{'year':y,'newspapers':len(d['newspapers']),'passages':len(d['observations']),'group_views':len(d['groups']),'stories':len(d['stories']),'categories':len(d['categories'])} for y,d in sorted(reviewed_data.items())],
          'curated_passages':len(observations),'group_views':sum(len(d['groups']) for d in reviewed_list),'stories_in_overview':len(stories),'overview_categories':len(tele_cats),
-         'years':len(years_index),'matched_families':len(families),'reviewed_twins':len(twins),'sky_stars':len(stars),'year_files_mb':round(sum((years_dir/f'{y}.json').stat().st_size for y in range(1770,1811))/1e6,1),'year_index_mb':round((years_dir/'index.json').stat().st_size/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
+         'years':len(years_index),'matched_families':len(families),'reviewed_twins':len(twins),'sky_stars':len(stars),'trace_words':len(trace_words),'trace_stories':trace_cover,'year_files_mb':round(sum((years_dir/f'{y}.json').stat().st_size for y in range(1770,1811))/1e6,1),'year_index_mb':round((years_dir/'index.json').stat().st_size/1e6,1),'telescope_stars':len(stars),'telescope_mb':round((OUT/'telescope.json').stat().st_size/1e6,1),'telescope_text_mb':round((OUT/'telescope-text.json').stat().st_size/1e6,1),'story_topic_lanes':len(topic_list),'edges':0,
          'checks':['All displayed sources have scan assets and excerpts','All displayed publications join to observed date coverage','No duplicate observation within a group','Read-only release with verified input hashes','Matched families are labelled as not checked against scans','Every page carries the shared header and footer',
                    'Each reviewed year lists every one of its groups once, and every top-level story has a display category']
                   +(['Every matched printing carries its transcription check, one printing per page'] if printing_checks else []),

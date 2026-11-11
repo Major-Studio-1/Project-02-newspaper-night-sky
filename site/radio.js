@@ -549,7 +549,7 @@ async function livePlay(key, text, {pan = 0, level = .5, label = '', words = '',
     entry.src = src; entry.g = g; liveChanged();
     if (lead !== 'full') setTimeout(() => { if (!gone()) cueSoft(own); }, 500);
     // A hover hears the opening only: after `cut` seconds the voice fades away (no scratch), as a station drifts off.
-    if (cut > 0 && rec.buf.duration > cut + 1.5) setTimeout(() => { if (live.get(key) === entry && !entry.ending) liveFade(key); }, cut * 1000);
+    if (cut > 0 && rec.buf.duration > cut + 1.5) setTimeout(() => { if (live.get(key) === entry && !entry.ending && !entry.kept) liveFade(key); }, cut * 1000);
     const heard = await new Promise(resolve => { src.onended = () => resolve(!entry.ending); src.start(t); });
     if (heard && wordsOnly && !gone()) { entry.src = null; liveChanged(); await hold(); }
     return heard;
@@ -673,6 +673,7 @@ window.Radio = {
   say, sayLine, stop, unlock, ready, cue: (k, short) => { audio(); return cue(k, short); }, welcome: () => { audio(); return welcome(); },
   live: {
     play: livePlay, stop: liveStop, stopAll: liveStopAll, has: key => !!live.get(key) && !live.get(key).ending,
+    keep: key => { const e = live.get(key); if (e) e.kept = true; },   // a voice heard as a preview, now chosen: it reads to the end
     preload: () => { loadClips(); audio(); },
     get count() { return [...live.values()].filter(v => !v.ending).length; },
     fade: liveFade, clips: {load: loadClips, has: hasClip, id: clipId},

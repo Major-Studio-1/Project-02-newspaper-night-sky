@@ -92,6 +92,15 @@ body.exhibit .key-more{display:none}body.exhibit .skykey{font-size:clamp(12px,.9
 .dock .ctl{display:flex;align-items:center;gap:7px}
 .tip{position:absolute;z-index:3;max-width:320px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;pointer-events:none;box-shadow:0 6px 24px #0008}
 .tip[hidden]{display:none}.tip strong{display:block;font-weight:500;margin-bottom:4px;line-height:1.35}.tip .kind{color:var(--muted);font-size:11.5px}
+/* The chosen story: a click on a star opens its card beside it, and the card stays until it is closed (✕, Esc, a click on
+   empty sky) or its star leaves the view. Pointing only previews (.tip). */
+.star-card{z-index:7;width:310px;max-width:calc(100% - 16px);padding:10px 12px 11px;font-size:12.5px;line-height:1.4;background:#070b17;border:1px solid #33415f;border-radius:10px;box-shadow:0 10px 32px #000a}
+.star-card strong{display:block;font-weight:600;margin:0 24px 4px 0;line-height:1.35}.star-card .kind{color:var(--muted);font-size:11.5px}
+.star-card .acts{margin-top:9px}.star-card .trace{margin-top:9px;padding-top:8px;border-top:1px solid #1d2740}
+.card-close{position:absolute;top:5px;right:5px;width:26px;height:26px;padding:0;display:grid;place-items:center;border:0;border-radius:50%;background:none;color:var(--muted);font-size:13px}
+.card-close:hover{color:var(--ink);background:#ffffff14}
+body.exhibit .star-card{display:none}
+@media(max-width:560px){.star-card{width:calc(100% - 16px)}}
 .message{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted);z-index:2}.message[hidden]{display:none}
 /* Colour key inside the view, shown while a colour is on (the full legend is in the deck). */
 .key{position:absolute;left:10px;bottom:9px;z-index:2;display:flex;flex-wrap:wrap;gap:4px 12px;max-width:min(36%,420px);padding:5px 9px;font-size:11.5px;color:var(--muted);background:#050711b8;border-radius:7px;pointer-events:none}
@@ -189,6 +198,9 @@ __SITE_HEADER__
 </div>
 <div class="cam hud" role="group" aria-label="Camera and tools"><button type="button" id="select-area" class="tool" aria-pressed="false" title="Drag across the sky to hear the stories in an area (Alt-drag works too)">__ICON_select__<span class="sr-only">Select an area to hear</span></button><span id="angle" class="angle-pair" role="group" aria-label="Viewing angle"><button type="button" class="angle" data-angle="front" title="Front: look straight back through time">__ICON_front__<span class="sr-only">Front</span></button><button type="button" class="angle" data-angle="side" title="Side: see the time axis from the side">__ICON_side__<span class="sr-only">Side</span></button></span><button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button type="button" id="reset-view" title="Back to the whole picture">__ICON_fit__<span class="sr-only">Reset view</span></button></div>
 <div id="skykey" class="skykey hud"><div class="legend" id="legend" hidden></div><div id="key" class="key"></div><button type="button" id="key-more" class="key-more" aria-expanded="false" aria-controls="legend">Key</button></div>
+<section id="card" class="star-card hud" aria-label="The chosen story" hidden><button type="button" id="card-close" class="card-close" aria-label="Close" title="Close (Esc)">✕</button><div id="card-info"></div>
+<div class="acts"><button type="button" id="card-hear" class="toggle has-ico" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Hear</span></button><a id="card-follow" class="act-link" href="pulses.html">__ICON_pulse__<span>Follow it in Pulses</span></a></div>
+<div id="card-trace" class="trace" role="group" aria-label="Trace a word"></div></section>
 <p id="on-air" class="on-air hud" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
 <button type="button" id="deck-open" class="deck-open hud" aria-controls="deck" aria-expanded="false">__ICON_menu__Controls</button>
 </div>
@@ -539,7 +551,7 @@ function timeTicks() {
 const line = (pts, color, width = 1) => { actx.strokeStyle = color; actx.lineWidth = width; actx.beginPath(); pts.forEach(([x, y], k) => k ? actx.lineTo(x, y) : actx.moveTo(x, y)); actx.stroke(); actx.lineWidth = 1; };
 const circle = (r, z, n = 72) => { const pts = []; for (let k = 0; k <= n; k++) { const t = k / n * TAU; pts.push(project(r * Math.sin(t), r * Math.cos(t), z)); } return pts; };
 const rect = (h, z) => [[-h, -h], [h, -h], [h, h], [-h, h], [-h, -h]].map(([x, y]) => project(x, y, z));
-let hover = -1;
+let hover = -1, sel = -1;   // the star under the pointer; the chosen star (its card is open)
 function drawAxes() {
   actx.clearRect(0, 0, W, H); if (!W) return;
   actx.font = '11px system-ui, sans-serif'; actx.textBaseline = 'middle';
@@ -598,6 +610,12 @@ function drawAxes() {
     const [x, y, z] = world(i), p = project(x, y, z), r = Math.max(9, size[i] * uniforms.uScale.value * uniforms.uRef.value / p[2] / 2 + 8);
     actx.strokeStyle = '#ffd27a'; actx.lineWidth = 1.5; actx.beginPath(); actx.arc(p[0], p[1], r, 0, TAU); actx.stroke(); actx.lineWidth = 1;
   }
+  if (sel >= 0 && fade(state.now - D.first[sel]) >= .05) {   // the chosen star: a double ring
+    const [x, y, z] = world(sel), p = project(x, y, z), r = Math.max(8, size[sel] * uniforms.uScale.value * uniforms.uRef.value / p[2] / 2 + 6);
+    actx.strokeStyle = '#edf2ff'; actx.lineWidth = 1.8; actx.beginPath(); actx.arc(p[0], p[1], r, 0, TAU); actx.stroke();
+    actx.globalAlpha = .45; actx.lineWidth = 1; actx.beginPath(); actx.arc(p[0], p[1], r + 4, 0, TAU); actx.stroke(); actx.globalAlpha = 1;
+  }
+  placeCard();
 }
 // A label is nudged inwards where it would run past the edge of the view (narrow phone screens).
 function fitText(s, x, y, align) {
@@ -933,7 +951,7 @@ function frame(now) {
   // At 1810 it starts again where the look-back is first full of stories (1771 for one year back, 1780 for ten), not at
   // 1 January 1770, where the view would be empty. With "All" there is nowhere to drift: the whole archive is in view.
   const movedBefore = moved;
-  if (state.drift && !reduced && state.span < maxDay && now - lastInteract > 6000 && hover < 0 && now > holdUntil) {
+  if (state.drift && !reduced && state.span < maxDay && now - lastInteract > 6000 && hover < 0 && sel < 0 && now > holdUntil) {
     state.now += state.span * .012 * dt;
     if (state.now >= maxDay) { state.now = maxDay; holdUntil = now + 2500; setTimeout(() => { if (state.drift) { state.now = Math.min(maxDay, state.span); refresh(); } }, 2500); }
     uniforms.uNow.value = state.now; moved = true;
@@ -986,7 +1004,7 @@ function redrawNow() { if (!W) return; applyCamera(); drawAxes(); renderer.rende
 function resetCamera() { interact(); userCam = false; hideTip(); aimCamera(); if (reduced) for (const k of CAMKEYS) cam[k] = camTarget[k]; dirty = true; }
 view.addEventListener('wheel', e => { e.preventDefault(); const r = view.getBoundingClientRect(); zoomAt(Math.exp(e.deltaY * (e.ctrlKey ? .01 : .0015)), e.clientX - r.left, e.clientY - r.top); }, {passive: false});
 view.addEventListener('contextmenu', e => e.preventDefault());
-const pointers = new Map(); let drag = null, lastTap = -1, hoverPending = null;
+const pointers = new Map(); let drag = null, hoverPending = null;
 const two = () => { const [p, q] = [...pointers.values()]; return {d: Math.hypot(p.x - q.x, p.y - q.y) || 1, x: (p.x + q.x) / 2, y: (p.y + q.y) / 2}; };
 view.addEventListener('pointerdown', e => {
   interact(); try { view.setPointerCapture(e.pointerId); } catch {}
@@ -1031,11 +1049,9 @@ view.addEventListener('pointerup', e => {
     pointers.delete(e.pointerId); drag = null; view.classList.remove('dragging'); return;
   }
   pointers.delete(e.pointerId);
-  if (drag && drag.moved <= 4 && pointers.size === 0 && drag.button === 0) {
+  if (drag && drag.moved <= 4 && pointers.size === 0 && drag.button === 0) {   // a click chooses the star under it (Watch and the exhibition only watch)
     const r = view.getBoundingClientRect(); findHover(e.clientX - r.left, e.clientY - r.top, e.pointerType !== 'mouse' ? 22 : 12);
-    if (radioOn) radioClick(hover);
-    else if (e.pointerType === 'mouse') { if (hover >= 0) location.href = pulseUrl(hover); }
-    else { if (hover >= 0 && lastTap === hover) location.href = pulseUrl(hover); lastTap = hover; }
+    if (!bigScreen()) { choose(hover); if (e.pointerType !== 'mouse') hideTip(); }   // on a touch screen the card says it all
   }
   if (pointers.size === 0) { drag = null; view.classList.remove('dragging'); } else if (drag) drag.mode = 'orbit';
 });
@@ -1056,8 +1072,9 @@ function findHover(px, py, radius = 12) {
   if (best < 0) { $('tip').hidden = true; return; }
   showTip(best);
 }
-function showTip(best) {
-  const tip = $('tip'); tip.replaceChildren();
+// What a star is: its title, how it was found, its reach and dates, which searches it matches, where it was first printed
+// and what it is about. Pointing at a star previews this (the tip); a click keeps it, with what you can do (the card).
+function starInfo(best) {
   const strong = document.createElement('strong'); strong.textContent = D.title[best];
   const k = document.createElement('div'); k.className = 'kind';
   k.textContent = D.kind[best] ? `Reviewed${BOOT.categories[D.cat[best]].year ? ' ' + BOOT.categories[D.cat[best]].year : ''} · ${BOOT.categories[D.cat[best]].label}` : D.long[best] ? 'Matched · long-running · not checked' : 'Matched by shared wording · not checked';
@@ -1073,14 +1090,19 @@ function showTip(best) {
     about.textContent = `Topic: ${T.name} (${Math.round(D.tconf[best] * 100)}% of its topic mix${T2 ? '; next, ' + T2.label : ''})`
       + (sp && sp[2].length > 1 ? ` · ${FAMS[T.family].short}` : '') + (T.provisional ? ' · a provisional topic' : '');
   }
-  const hint = document.createElement('div'); hint.className = 'kind';
-  hint.textContent = radioOn ? 'Click to keep it speaking (more clicks add voices); click twice to open it in the pulse view' : matchMedia('(hover: hover)').matches ? 'Click to open in the pulse view' : 'Tap again to open in the pulse view';
   const mentions = document.createElement('div'); mentions.className = 'kind';   // which searches it matches, by colour and words
   if (searching() && hitMask[best]) {
     mentions.append('Mentions ');
     SLOTS.forEach((s, j) => { if (hitMask[best] & (1 << j)) mentions.append(...slotDots(1 << j), `“${shortLabel(s.label)}” `); });
   }
-  tip.append(strong, k, n, ...[mentions, where, about].filter(x => x.textContent), hint); tip.hidden = false;
+  return [strong, k, n, ...[mentions, where, about].filter(x => x.textContent)];
+}
+function showTip(best) {
+  const tip = $('tip');
+  if (best === sel) { tip.hidden = true; return; }   // its card is open
+  const hint = document.createElement('div'); hint.className = 'kind';
+  hint.textContent = radioOn ? 'Click to hear it in full, follow it, or trace its words' : 'Click to hear it, follow it, or trace its words';
+  tip.replaceChildren(...starInfo(best), hint); tip.hidden = false;
   const [x, y, z] = world(best), p = project(x, y, z), tw = tip.offsetWidth, th = tip.offsetHeight;
   tip.style.left = Math.max(6, Math.min(W - tw - 6, p[0] + 14)) + 'px'; tip.style.top = (p[1] - th - 12 < 6 ? p[1] + 14 : p[1] - th - 12) + 'px';
 }
@@ -1111,7 +1133,7 @@ const COLOUR_HOW = {
 // chosen option. Tap an option, drag the thumb, or use the arrow keys.
 Glass.init();
 function syncThumbs(force) { Glass.sync(force); }
-function syncChips() { for (const b of $('chips').querySelectorAll('button[data-q]')) b.setAttribute('aria-pressed', String(b.dataset.q === state.q)); }
+function syncChips() { for (const b of document.querySelectorAll('#chips button[data-q], #card-trace button[data-q]')) b.setAttribute('aria-pressed', String(b.dataset.q === state.q)); }
 function syncSpanButtons() {
   const y = state.span / YEAR, near = PRESETS.reduce((a, b) => Math.abs(Math.log(b / y)) < Math.abs(Math.log(a / y)) ? b : a);
   for (const b of $('span').querySelectorAll('button')) b.setAttribute('aria-pressed', String(Number(b.dataset.years) === near && Math.abs(Math.log(near / y)) < .2));
@@ -1140,7 +1162,7 @@ function syncButtons() {
     + ' Bigger, brighter stars were printed in more newspapers. ' + COLOUR_HOW[mode]
     + ' <b>Search and compare:</b> a search draws the matching stories a little larger and makes the others faint, and Colour switches to Search. Put “vs” between up to three searches (fever vs ice), or use “Compare with…” after a search: each search gets its own colour, and a white star mentions more than one. The timeline compares their yearly shares, and Orbit their months. Choose Region or Off to keep those colours; the searches are then shown together, as the bright stars. Point at a search or a region in the legend, or tap it, to lift its stars.'
     + ' <b>Moving around:</b> drag to turn the view, right-drag (or Shift-drag, or two fingers) to move it, and scroll or pinch to zoom; “Reset view” brings back the whole picture.'
-    + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see, and “All” shows the whole archive. Click a star to open it in the pulse view (with the radio on, a click keeps the star speaking and a second click opens it).'
+    + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see, and “All” shows the whole archive. <b>A star:</b> point at it to preview it; click it to choose it. Its card stays beside it, with Hear, Follow it in Pulses, and a few words of its title to trace through the years. With the radio on, the chosen story is also heard in full. ✕, Esc or a click on empty sky closes the card.'
     + (reduced ? '' : ' Drift lets time pass slowly: new stories arrive at the front and older ones recede. It pauses while you explore.');
 }
 function setLayout(name) {
@@ -1159,17 +1181,17 @@ $('drift').addEventListener('click', () => { state.drift = !state.drift; lastInt
 // Point at a star and it says its opening words (a recorded title or passage; a story with no recording gets the
 // announcer naming its town and date, and its words on air). Move on to another star and the first stops like a record
 // under a hand, with a scratch, while the new one spins up, so a quick sweep across the sky alternates between voices.
-// Click a star to keep it speaking (click it again to open it in the pulse view). Select an area (Alt-drag, or Select
-// and drag) and up to five of its most widely printed stories speak together. A search makes its most widely printed
-// matches speak. Left alone for six seconds, the radio plays the sky on its own (autoplay, below). Each voice sits left
-// or right where its star is on the screen.
-let radioOn = false, radioFirst = true, hoverVoice = -1, selectMode = false, lastClick = -1, selBox = null, airing = 0;
+// A click chooses a star (below): with the radio on, the chosen story is heard in full. Select an area (Alt-drag, or
+// Select and drag) and up to five of its most widely printed stories speak together. A search makes its most widely
+// printed matches speak. Left alone for six seconds, the radio plays the sky on its own (autoplay, below). Each voice
+// sits left or right where its star is on the screen.
+let radioOn = false, radioFirst = true, hoverVoice = -1, selectMode = false, selBox = null, airing = 0;
 const LISTEN_OFF = 'Select an area to hear: drag across the sky (or hold Alt and drag), and its stories speak together. This turns the radio on.';
 const LISTEN_ON = 'Select an area to hear: drag across the sky (or hold Alt and drag), and its stories speak together. Point at a star to hear it alone.';
 const pinned = new Set(), speakingStars = new Set();
 function syncRadio() {   // Select is always there: an area selected to hear turns the radio on
-  $('radio').setAttribute('aria-pressed', String(radioOn)); $('on-air').hidden = !radioOn || !airing;
-  $('viewport').classList.toggle('airing', radioOn && !!airing);
+  $('radio').setAttribute('aria-pressed', String(radioOn)); $('on-air').hidden = !airing;   // a story heard from its card plays with the radio off too
+  $('viewport').classList.toggle('airing', !!airing);
   $('select-area').setAttribute('aria-pressed', String(selectMode)); view.classList.toggle('selecting', selectMode);
   $('select-area').title = radioOn ? LISTEN_ON : LISTEN_OFF;
 }
@@ -1189,13 +1211,13 @@ function starHost(i) {
   const town = townAt.get(D.flat[i] + ',' + D.flon[i]), dt = new Date(EPOCH + D.first[i] * MS);
   return [...(town ? [(radioFirst ? 'a:hello:' : 'a:town:') + town] : []), 'a:month:' + (dt.getUTCMonth() + 1), 'a:year:' + dt.getUTCFullYear()];
 }
-function speakStar(i, words = 16, intro = false, lead = '', cut = intro ? 0 : 12) {
-  if (!radioOn || i < 0 || !W) return Promise.resolve(false);
+function speakStar(i, words = 16, intro = false, lead = '', cut = intro ? 0 : 12, asked = false) {   // asked: the card's Hear, radio or not
+  if ((!radioOn && !asked) || i < 0 || !W) return Promise.resolve(false);
   const host = starHost(i), main = (D.kind[i] ? 's:' : 't:') + D.id[i], [x, y, z] = world(i), p = project(x, y, z), said = starSays(i, words);
   return Radio.live.play('star:' + i, said.text, {pan: Math.max(-.9, Math.min(.9, p[0] / W * 2 - 1)), label: said.label, words: said.words,
     clips: intro ? [...host, main] : [main], host, town: said.town, war: isWar(i), lead, cut});
 }
-let dwell = 0, relayRun = 0, lastClickAt = 0;
+let dwell = 0, relayRun = 0;
 // Pointing: a star speaks once the pointer has rested on it for a moment (120 ms), so stars passed over in a sweep make
 // no work. Resting on another star stops the first (unless it was clicked or selected), so moving from star to star
 // alternates the voices; empty sky in between lets a voice finish. A star can be heard again once its voice has ended.
@@ -1211,21 +1233,103 @@ function radioHover(i) {
     hoverVoice = i; speakStar(i, 12);
   }, 120);
 }
-// A click pins a star: it reads to the end and keeps its gold ring. More clicks add voices (up to five; the oldest gives
-// way). A click on a pinned star lets it go; a second click within a second and a half opens it in Pulses; a click on
-// empty sky lets every pinned voice go.
-function radioClick(i) {
-  const t = performance.now(), again = i >= 0 && i === lastClick && t - lastClickAt < 1500; lastClick = i; lastClickAt = t;
-  if (again) { location.href = pulseUrl(i); return; }
-  relayRun++; clearTimeout(dwell); autoStop(i);
-  if (i < 0) { for (const k of pinned) Radio.live.stop('star:' + k); pinned.clear(); return; }
-  if (pinned.has(i)) { pinned.delete(i); Radio.live.stop('star:' + i); return; }
-  pinned.add(i);
-  if (pinned.size > Radio.live.MAX) { const old = pinned.values().next().value; pinned.delete(old); Radio.live.stop('star:' + old); }
-  if (hoverVoice === i) hoverVoice = -1;   // speaking already: now it stays
-  if (!Radio.live.has('star:' + i)) speakStar(i, 16, true);
+// ---- The chosen story: select, then act ----
+// A click on a star chooses it, whatever the radio is doing. Its card opens beside it, with the facts of the preview and
+// what you can do: hear it, follow it from paper to paper in Pulses, or trace a word of its title through the years (a
+// search). With the radio on, the chosen story is also heard in full. ✕, Esc or a click on empty sky closes the card and
+// stops its voice; when its star leaves the view (time travelled, a filter), the card goes and the voice may finish.
+// While a story is chosen, Drift and the radio's autoplay wait. The URL keeps it (story=), so a link opens it again.
+// A double click follows it to Pulses at once.
+function choose(i, quiet = false) {
+  if (i < 0) { letGo(); for (const k of pinned) Radio.live.stop('star:' + k); pinned.clear(); return; }   // empty sky: every voice a click or an area started goes
+  if (i !== sel) {
+    if (sel >= 0) { if (Radio.live.has('star:' + sel)) Radio.live.stop('star:' + sel); pinned.delete(sel); }
+    sel = i; $('tip').hidden = true; buildCard(); $('card').hidden = false; storyParam(D.id[i]); drawAxes();
+  }
+  if (radioOn && !quiet) hear(i);
 }
+function letGo(stopVoice = true) {
+  if (sel < 0) return;
+  const i = sel; sel = -1; $('card').hidden = true; storyParam(''); drawAxes();
+  if (stopVoice && Radio.live.has('star:' + i)) Radio.live.stop('star:' + i);
+  pinned.delete(i);
+}
+const storyParam = id => { const url = new URL(location.href); if (id) url.searchParams.set('story', id); else url.searchParams.delete('story'); history.replaceState(null, '', url); };
+function buildCard() {
+  const i = sel;
+  $('card-info').replaceChildren(...starInfo(i));
+  $('card-follow').href = pulseUrl(i); $('card-follow').title = `Follow it from paper to paper: ${D.papers[i]} newspapers, ${D.prints[i]} printings`;
+  syncCard(); traceChips(i); Radio.live.clips.load().then(syncCard);   // whether it has a recording, for Hear's label
+}
+function syncCard() {
+  if (sel < 0) return;
+  const on = Radio.live.has('star:' + sel), b = $('card-hear');
+  b.setAttribute('aria-pressed', String(on)); b.querySelector('.lbl').textContent = on ? 'Stop' : 'Hear';
+  b.title = on ? 'Stop reading' : recorded(sel) ? 'Hear it: the town and the date, then a recorded voice reads it' : 'Hear the town and the date; its words show on air (this story has no recording)';
+}
+// The card sits beside its star (on a phone, across the view, above or below it), clear of the search card.
+function placeCard() {
+  if (sel < 0 || !W) return;
+  if (!visible(sel) || fade(state.now - D.first[sel]) < .05) { letGo(false); return; }   // its star has left the view
+  const card = $('card'), [x, y, z] = world(sel), p = project(x, y, z), cw = card.offsetWidth, ch = card.offsetHeight, m = 8;
+  let left, top;
+  if (W < 560) { left = m; top = p[1] < H / 2 ? p[1] + 24 : p[1] - ch - 24; }
+  else { left = p[0] + 22 + cw <= W - m ? p[0] + 22 : p[0] - 22 - cw; top = p[1] - ch / 2; }
+  left = Math.max(m, Math.min(W - cw - m, left)); top = Math.max(m, Math.min(H - ch - m, top));
+  const cap = $('caption');
+  if (!cap.classList.contains('idle')) {   // the search card floats over the sky on wide screens (under it on narrow ones)
+    const vr = $('viewport').getBoundingClientRect(), cr = cap.getBoundingClientRect(), cl = cr.left - vr.left, ct = cr.top - vr.top, cb = cr.bottom - vr.top;
+    if (ct < H && cb > 0 && left + cw > cl && top < cb && top + ch > ct) top = Math.min(H - ch - m, cb + m);
+  }
+  card.style.left = left + 'px'; card.style.top = top + 'px';
+}
+// Trace a word: up to three words of the title whose stories are spread over the years or the months unlike the archive's
+// own stories (trace.json, from the build: a G-test against the sky), so their traces show more than the archive's
+// coverage; the most different first, each with its number of stories in all. A chip is a search: tap it to light its
+// stories, with their yearly shares and season in the search card; it stays lit while it is the search.
+let TRACE = null, traceLoading = null;
+const titleWords = t => [...new Set(t.toLowerCase().replace(/ſ/g, 's').replace(/['’]s\b/g, '').match(/[a-z]+/g) || [])].filter(w => w.length >= 4);
+async function traceChips(i) {
+  const box = $('card-trace'), label = text => Object.assign(document.createElement('span'), {className: 'label', textContent: text});
+  if (!TRACE) {
+    box.replaceChildren(label('Trace a word through the years…'));
+    traceLoading = traceLoading || fetch('trace.json?v=' + BOOT.trace).then(r => r.ok ? r.json() : null).catch(() => null).then(j => (TRACE = j && j.words));
+    await traceLoading;
+    if (!TRACE) { traceLoading = null; box.replaceChildren(); return; }
+    if (i !== sel) return;
+  }
+  const words = titleWords(D.title[i]).filter(w => TRACE[w]).sort((a, b) => TRACE[b][1] - TRACE[a][1]).slice(0, 3);
+  if (!words.length) { box.replaceChildren(Object.assign(label(''), {className: 'none', textContent: 'No word of this title stands out across the years to trace.'})); placeCard(); return; }
+  box.replaceChildren(label('Trace a word through the years'), ...words.map(w => {
+    const n = TRACE[w][0].toLocaleString('en-US'), b = document.createElement('button');
+    b.type = 'button'; b.className = 'toggle'; b.dataset.q = w; b.title = `Light every story that mentions “${w}” (${n} in all), with its yearly shares and season`;
+    b.append(w + ' ', Object.assign(document.createElement('small'), {textContent: n}));
+    b.addEventListener('click', () => { interact(); runSearch(state.q === w ? '' : w); });
+    return b;
+  }));
+  syncChips(); placeCard();   // the card is taller now
+}
+// Hear the chosen story in full: the announcer's town, month and year, then its recording (a reviewed story's first
+// printing, or the title of a widely printed one; a story with no recording has its words on air). With the radio off
+// it plays on its own, and the radio's hiss goes when it ends.
+async function hear(i, lead = '') {
+  if (i < 0) return;
+  Radio.unlock(); Radio.live.preload();
+  relayRun++; clearTimeout(dwell); autoStop(i);
+  for (const k of [...pinned, hoverVoice]) if (k >= 0 && k !== i) Radio.live.stop('star:' + k);
+  pinned.clear(); hoverVoice = -1; pinned.add(i);
+  if (Radio.live.has('star:' + i)) { Radio.live.keep('star:' + i); return; }   // already speaking (pointed at): now it reads to the end
+  await Radio.live.clips.load();
+  await speakStar(i, 16, true, lead, 0, true);
+  pinned.delete(i);
+  if (!radioOn && !Radio.live.count) Radio.stop(true);
+}
+$('card-hear').addEventListener('click', () => { if (sel < 0) return; if (Radio.live.has('star:' + sel)) Radio.live.stop('star:' + sel); else hear(sel); });
+$('card-close').addEventListener('click', () => { letGo(); view.focus({preventScroll: true}); });
+view.addEventListener('dblclick', () => { if (!bigScreen() && sel >= 0 && hover === sel) location.href = pulseUrl(sel); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && sel >= 0 && !WATCH && !scope.classList.contains('drawer') && !e.target.closest('input, textarea')) letGo(); });
 function radioSelect(list) {   // an area: these stars speak together, entering one by one, and the ones before stop
+  letGo(false);   // an area replaces the chosen story (its voice carries on if the star is in the area)
   relayRun++; clearTimeout(dwell); autoStop(list.includes(autoStar) ? autoStar : -1);
   for (const k of [...pinned, hoverVoice]) if (k >= 0 && !list.includes(k)) Radio.live.stop('star:' + k);
   pinned.clear(); hoverVoice = -1;
@@ -1285,19 +1389,19 @@ async function autoNext() {
   if (run === autoRun) autoStar = -1;
 }
 setInterval(() => {
-  if (!radioOn || autoStar >= 0 || document.hidden || !W || !Radio.unlocked) return;
+  if (!radioOn || autoStar >= 0 || sel >= 0 || document.hidden || !W || !Radio.unlocked) return;   // a chosen story holds it
   const idle = performance.now() - Math.max(lastInteract, lastMove) > 6000 && hover < 0 && !Radio.live.count && !(relayOwner && relayOwner === relayRun);
   if (autoNow || idle) autoNext();
 }, 400);
 function setRadio(on) {
   radioOn = on; if (!on) selectMode = false; syncRadio();
   try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { Radio.unlock(); Radio.live.preload(); Radio.welcome(); radioFirst = true; autoNow = 'full'; }
+  if (on) { Radio.unlock(); Radio.live.preload(); Radio.welcome(); radioFirst = true; autoNow = 'full'; if (sel >= 0) { autoNow = ''; hear(sel, 'full'); } }   // a chosen story is the first heard
   else { autoStop(); Radio.stop(true); pinned.clear(); hoverVoice = -1; relayRun++; clearTimeout(dwell); }
 }
 Radio.live.onChange(list => {
   speakingStars.clear(); for (const v of list) if (v.key.startsWith('star:')) speakingStars.add(Number(v.key.slice(5)));
-  airing = list.length; $('on-air').hidden = !radioOn || !airing; $('viewport').classList.toggle('airing', radioOn && !!airing);
+  airing = list.length; $('on-air').hidden = !airing; $('viewport').classList.toggle('airing', !!airing); syncCard();
   $('on-air-head').textContent = list.length ? (list.some(v => v.silent) ? 'On air · words only' : 'On air') : 'Radio';
   const box = $('on-air-text'); box.replaceChildren();
   for (const v of list) { const line = document.createElement('span'); line.className = 'now'; line.style.display = 'block'; line.textContent = v.label; box.append(line); }
@@ -1355,7 +1459,7 @@ function setWatch(on, full = true) {
   WATCH = on; document.body.classList.toggle('exhibit', on || EXHIBIT); document.body.classList.toggle('watching', on); $('watch-exit').hidden = !on;
   if (on) {
     watchKeep = {drift: state.drift, span: state.span, now: state.now};
-    state.drift = !reduced; hover = -1; hideTip();
+    state.drift = !reduced; hover = -1; hideTip(); letGo();
     if (state.span >= maxDay) { state.span = 10 * YEAR; state.now = Math.min(maxDay, state.span); }   // nowhere to drift under All
     if (full) document.documentElement.requestFullscreen?.().catch(() => {});
     watchWake();
@@ -1516,7 +1620,7 @@ caption(); setLayout(state.layout); mixNow.splice(0, 3, ...mixTarget);
 syncButtons(); resize(); requestAnimationFrame(frame);
 $('loading').classList.add('done'); setTimeout(() => { $('loading').hidden = true; }, 500);   // the stars are in place
 if (params.get('q')) runSearch(params.get('q'), true);   // colour as the link says (bySearch was set from it)
-if (storyIndex >= 0) { hover = storyIndex; showTip(storyIndex); drawAxes(); }   // the linked story, lit and labelled
+if (storyIndex >= 0 && !bigScreen()) choose(storyIndex, true);   // the linked story, chosen: its card is open (no sound before a touch)
 </script>
 </body>
 </html>

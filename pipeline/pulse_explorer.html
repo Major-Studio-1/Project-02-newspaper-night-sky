@@ -39,7 +39,7 @@ __SITE_HEAD__
 .pagehead{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin:0 0 10px}.pagehead h1{font-size:22px}#notice{margin:0 0 8px}
 .sky-wrap{position:relative}.sky-top{position:absolute;left:0;right:0;top:0;z-index:5;pointer-events:none}.sky-top>*{pointer-events:auto}
 .sky-top .filter-row{margin:0 0 6px}.sky-top .constellation-note{margin:0;background:#0d1526e8}
-.sky-link{display:inline-block;margin-top:8px;font-size:14px}
+.story-acts,.story-trace{margin-top:8px}
 .mini-card{display:none}.page-notes{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
 @media(max-width:720px){.timebar{grid-template-columns:1fr;gap:4px;order:3}.timebar .ticks{display:none}.timebar-date{flex-direction:row;align-items:baseline;gap:10px}#current-date{font-size:15px}
   .timebar-track #strip{height:16px}.timebar .ticks #day-coverage{display:none}.pagehead h1{font-size:19px}
@@ -153,7 +153,7 @@ __SITE_HEADER__
 <p class="map-note">Newspapers sit roughly where they were printed: north at the top, east to the right. Papers are nudged apart so names stay readable, so distances are not to scale.</p>
 <div id="legend" class="legend"><span><i class="dot"></i>Report</span><span><i class="dot challenge"></i>Challenge / commentary ring</span><span><i class="dot later"></i>Later account</span><span><i class="dot document"></i>Document</span><span><i class="dot" style="background:#aab6cf"></i>Matched text, not checked</span></div>
 <p class="strip-note">Bars show how many of the newspapers on the map have surviving pages each week (each day in short views). A low or missing bar means few or no pages survive in the archive, not that the papers were silent. Click a bar to jump there.</p>
-<div class="context"><h3 id="focus-title"></h3><p id="definition"></p><p id="group-counts"></p><a id="sky-link" class="sky-link" href="telescope.html">See it in the sky ↗</a><details><summary>Archive coverage in this period</summary><div id="coverage-list" class="coverage-list"></div><p>Available pages are surviving pages in this dataset. A date without a passage is not proof that a newspaper was silent.</p></details></div>
+<div class="context"><h3 id="focus-title"></h3><p id="definition"></p><p id="group-counts"></p><div class="acts story-acts"><button type="button" id="hear" class="toggle has-ico" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Hear</span></button><a id="sky-link" class="act-link" href="telescope.html">__ICON_telescope__<span id="sky-link-text">See it in the sky</span></a></div><div id="trace" class="trace story-trace" role="group" aria-label="Trace a word" hidden></div><details><summary>Archive coverage in this period</summary><div id="coverage-list" class="coverage-list"></div><p>Available pages are surviving pages in this dataset. A date without a passage is not proof that a newspaper was silent.</p></details></div>
 </section>
 <aside class="evidence" aria-label="Observed publications and source evidence"><h2>Observed appearances</h2><div id="appearances"></div>
 <div id="selected-evidence"><h3 id="source-title"></h3><p id="source-role"></p><p id="source-summary"></p><p id="source-check" class="check" hidden></p><button id="focus-story" type="button"></button><details id="passage"><summary>Read the passage</summary><blockquote id="excerpt"></blockquote><p id="source-note" class="small muted"></p></details><details id="scan-detail"><summary>View the newspaper scan</summary><div id="scans"></div></details><a id="original" class="source-link" target="_blank" rel="noopener">Open full original page ↗</a><p id="source-page" class="small muted"></p></div>
@@ -675,7 +675,7 @@ function showCheck(e) {
 }
 function source(i) {
   selected = i; const e = events[i];
-  if (!e) { for (const id of ['source-title', 'source-role', 'source-summary', 'excerpt', 'source-note', 'source-page']) $(id).textContent = ''; $('source-check').hidden = true; $('focus-story').style.display = 'none'; return; }
+  if (!e) { for (const id of ['source-title', 'source-role', 'source-summary', 'excerpt', 'source-note', 'source-page']) $(id).textContent = ''; $('source-check').hidden = true; $('focus-story').style.display = 'none'; syncHear(); return; }
   showCheck(e);
   // A matched passage's text lives in its year file: fetched when the printing is looked at (not during playback, so a
   // long view does not pull in every year), then kept.
@@ -697,6 +697,7 @@ function source(i) {
   $('scans').replaceChildren();
   for (const src of e.scans) { const img = document.createElement('img'); img.className = 'scan'; img.loading = 'lazy'; img.src = src; img.alt = paperName(e.node) + ' · ' + e.date + ' · inspected source crop'; $('scans').append(img); }
   Array.from($('appearances').querySelectorAll('.appearance')).forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.index) === i)));
+  syncHear();
 }
 
 // Resonance: when a paper prints a story, the papers that printed the same story in the previous LINGER days glow
@@ -831,7 +832,8 @@ function changeGroup(id) {
   // See it in the sky: the telescope star for this story (a child group points to its top-level story), or the year.
   const topStory = group && mode === 'group' ? (group.id.startsWith('auto:') ? group.id.slice(5) : (Y.storyOf.get(group.members[0]?.id)?.id || '')) : '';
   $('sky-link').href = topStory ? 'telescope.html?story=' + encodeURIComponent(topStory) : skyUrl();
-  $('sky-link').textContent = topStory ? 'See this story in the sky ↗' : 'See ' + Y.label + ' in the sky ↗';
+  $('sky-link-text').textContent = topStory ? 'See this story in the sky' : 'See ' + Y.label + ' in the sky';
+  traceWords(mode === 'group' && group ? group.label : '', topStory);
   for (const b of $('min-papers').querySelectorAll('button')) b.setAttribute('aria-pressed', String(mode !== 'group' && Number(b.dataset.k) === group.k));
   Glass.sync();
   $('day').max = String(maxDay); $('day').disabled = maxDay === 0;
@@ -1010,8 +1012,8 @@ function paperHost(e) {
   const town = Radio.town(Y.papers.get(e.node)?.place), [yy, mm, dd] = String(e.date).split('-').map(Number);
   return [...(radioFirst && town ? ['a:hello:' + town] : []), 'a:paper:' + e.node, 'a:day:' + dd, 'a:month:' + mm, 'a:year:' + yy];
 }
-function speakPaper(e, words = 14, intro = false, lead = '', cut = intro ? 0 : 12) {
-  if (!radioOn || !e) return Promise.resolve(false);
+function speakPaper(e, words = 14, intro = false, lead = '', cut = intro ? 0 : 12, asked = false) {   // asked: Hear, radio or not
+  if ((!radioOn && !asked) || !e) return Promise.resolve(false);
   const host = paperHost(e), n = nodeById.get(e.node), said = paperSays(e, words);
   return Radio.live.play('paper:' + e.node, said.text, {pan: n && skyWidth ? Math.max(-.9, Math.min(.9, n.cx / skyWidth * 2 - 1)) : 0, label: said.label, words: said.words,
     clips: intro ? [...host, clipOf(e)] : [clipOf(e)], host, town: said.town, lead, cut});
@@ -1047,6 +1049,53 @@ function radioPicked() {   // a printing picked: it reads that passage, once you
     Radio.live.stop('paper:' + e.node, {scratch: false});   // its shorter reading, if any, gives way to the passage
     setTimeout(() => speakPaper(e, 70, true), 120);
   }, 500);
+}
+// ---- Select, then act (as on the telescope's card): under the map, Hear, See it in the sky, and Trace a word ----
+// Hear reads the printing chosen now (the one picked, or the latest pulse while the view plays): the announcer names the
+// paper and the date, then a recorded voice reads it (a reviewed passage, or the story's title). With the radio off it
+// plays on its own, and the radio's hiss goes when it ends.
+async function hearPrinting() {
+  const e = events[selected]; if (!e) return;
+  Radio.unlock(); Radio.live.preload(); clearTimeout(radioPickTimer); autoStop(e.node);
+  for (const k of [...pinnedPapers, hoverPaper]) if (k && k !== e.node) Radio.live.stop('paper:' + k);
+  pinnedPapers.clear(); hoverPaper = null; pinnedPapers.add(e.node);
+  if (Radio.live.has('paper:' + e.node)) Radio.live.stop('paper:' + e.node, {scratch: false});   // another reading of this paper gives way
+  await Radio.live.clips.load();
+  await speakPaper(e, 70, true, '', 0, true);
+  pinnedPapers.delete(e.node);
+  if (!radioOn && !Radio.live.count) Radio.stop(true);
+}
+function syncHear() {
+  const e = events[selected], b = $('hear'), on = !!e && Radio.live.has('paper:' + e.node);
+  b.hidden = !e; if (!e) return;
+  b.setAttribute('aria-pressed', String(on)); b.querySelector('.lbl').textContent = on ? 'Stop' : 'Hear';
+  b.title = on ? 'Stop reading' : `Hear the printing chosen now (${fmt(dateValue(e.date), true)}, ${paperName(e.node)}): the paper and the date, then a recorded voice reads it`;
+}
+$('hear').addEventListener('click', () => { const e = events[selected]; if (!e) return; if (Radio.live.has('paper:' + e.node)) Radio.live.stop('paper:' + e.node); else hearPrinting(); });
+// Trace a word: up to three words of the story's title whose stories are spread over the years or the months unlike the
+// archive's own (trace.json, from the build), each with its number of stories in all. A chip opens the telescope with
+// that word traced (every story that mentions it, with its yearly shares and season) and this story chosen.
+let TRACE = null, traceLoading = null;
+const titleWords = t => [...new Set(t.toLowerCase().replace(/ſ/g, 's').replace(/['’]s\b/g, '').match(/[a-z]+/g) || [])].filter(w => w.length >= 4);
+async function traceWords(title, story) {
+  const box = $('trace'); box.hidden = !title; if (!title) return;
+  if (!TRACE) {
+    box.replaceChildren();
+    traceLoading = traceLoading || fetch('trace.json?v=' + BOOT.trace).then(r => r.ok ? r.json() : null).catch(() => null).then(j => (TRACE = j && j.words));
+    await traceLoading;
+    if (!TRACE) { traceLoading = null; box.hidden = true; return; }
+    if ($('focus-title').textContent !== title) return;   // another story by now
+  }
+  const words = titleWords(title).filter(w => TRACE[w]).sort((a, b) => TRACE[b][1] - TRACE[a][1]).slice(0, 3);
+  const label = Object.assign(document.createElement('span'), {className: 'label', textContent: words.length ? 'Trace a word through the years, in the sky' : ''});
+  if (!words.length) { box.replaceChildren(Object.assign(label, {className: 'none', textContent: 'No word of this title stands out across the years to trace.'})); return; }
+  box.replaceChildren(label, ...words.map(w => {
+    const n = TRACE[w][0].toLocaleString('en-US'), a = document.createElement('a');
+    a.className = 'toggle'; a.href = `telescope.html?q=${encodeURIComponent(w)}${story ? '&story=' + encodeURIComponent(story) : ''}`;
+    a.title = `Open the sky with every story that mentions “${w}” lit (${n} in all), with its yearly shares and season`;
+    a.append(w + ' ', Object.assign(document.createElement('small'), {textContent: n}));
+    return a;
+  }));
 }
 // In an exhibition nobody points or picks, so the scene does: as a story starts, its first printing is read.
 function exhibitRead() {
@@ -1093,6 +1142,7 @@ function setRadio(on) {
 Radio.live.onChange(list => {
   const on = new Set(list.filter(v => v.key.startsWith('paper:')).map(v => v.key.slice(6)));
   for (const n of nodes) n.el.classList.toggle('on-air', on.has(n.id));
+  syncHear();
   $('on-air-head').textContent = list.length ? (list.some(v => v.silent) ? 'On air · words only' : 'On air') : 'Radio';
   const box = $('on-air-text'); box.replaceChildren();
   for (const v of list) { const line = document.createElement('span'); line.className = 'now'; line.style.display = 'block'; line.textContent = v.label; box.append(line); }
