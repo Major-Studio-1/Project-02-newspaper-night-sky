@@ -133,7 +133,7 @@ SCRIPTS = ['audit_dataset.py', 'discover_topics.py', 'recheck_full_corpus.py',
            'year_search_pages.py', 'story_items.py', 'story_phrase_search.py',
            'reuse_all.py', 'reuse_families_all.py', 'reuse_titles_all.py', 'story_topics_all.py', 'check_cycles_topics.py', 'check_cycle_lengths.py', 'check_waves.py',
            'transcription_check.py', 'audit_matched.py',
-           'build_pulse_explorer.py', 'site_parts.py', 'site.css', 'glass.js', 'radio.js', 'home.html', 'telescope.html', 'pulse_explorer.html', 'radio.html', 'exhibit.html', 'method.html', 'notes.html',
+           'build_pulse_explorer.py', 'site_parts.py', 'site.css', 'glass.js', 'radio.js', 'home.html', 'telescope.html', 'pulse_explorer.html', 'radio.html', 'exhibit.html', 'method.html', 'notes.html', 'findings.html', 'findings_parts.py',
            'export_public_repo.py', 'audio_render.py', 'audio_manifest.json']
 ARCHIVE = ['build.py', 'migrate_v0_2_0.py', 'apply_ledger.py', 'apply_corrections.py', 'add_reuse_layer.py', 'add_reuse_titles.py',
            'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'add_reviewed_topics.py', 'refile_revx_pages.py', 'redate_issues.py', 'set_current.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']

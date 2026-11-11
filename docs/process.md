@@ -369,6 +369,26 @@ The telescope's search now says how a word comes back, for example "comes back i
   - **The extra embargo waves are European crises** (1796, 1798, 1801). The rule traces the word, not the policy.
   - **Fire, the control,** shows at most one borderline year.
 
+### Findings (11 November 2026)
+
+The site offers more than its instruments. In the owner's words, it is also rigorous research with results, storylines assembled from what the papers printed, and the story of how it was made. The first of these now has a page of its own: **Findings** (`findings.html`, in the menu between Radio and How it works).
+
+**What each finding gives:** its claim in plain words, one chart, how sure it is, what it does not say, and doors into the instruments. The source comes first, because every other finding stands on it:
+
+1. **A thin sky is a gap in the archive, not silence.** 1784–1786 have 5, 2 and 2 surviving newspapers.
+2. **About one passage in five has a misreading that changes a fact.** This comes from the 200-story audit, with a range from the reviewers' own calls to the strict rule.
+3. **The Declaration reached 14 newspapers in 21 days.** Every printing is shown as a dot.
+4. **The embargo came back with every crisis.** These are the waves.
+5. **Fever came back each late summer; fire kept no season.**
+6. **The year is the only cycle this archive keeps.** This is the scan of every cycle from 6 to 400 days.
+7. **Every four years, from 1800.** These are election stories by year: a pattern to read, not a tested cycle.
+
+**The rest of the page:** open questions (false news has no denominator; who copied whom; a printed share is not attention; why things come back), and links to the checks and the earlier reports.
+
+**Where the numbers come from:** the build computes them each time (`pipeline/findings_parts.py`). It uses the sky's stars, the year index, the Declaration's printings, the audit's summary and the cycle-length check's output (`check_cycle_lengths.py` writes `cycle_lengths.json`). None is typed by hand.
+
+**Charts:** inline SVG with a tooltip on every mark and the numbers in a table under each chart. Gold marks what a finding is about and slate the rest, as on the telescope's timeline.
+
 ## The website
 
 The views are joined into one site with six pages and a shared header, plus an exhibition page:

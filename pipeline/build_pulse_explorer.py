@@ -557,6 +557,18 @@ fill_text=lambda s:(s.replace('__N_STORIES__',f'{N_STARS:,}').replace('__N_MATCH
                      .replace('__N_PRINTINGS__',f"{sum(f['appearances'] for f in families):,}").replace('__RELEASE__',VER).replace('__REPO__',REPO))
 (OUT/'method.html').write_text(fill(fill_text((ROOT/'method.html').read_text(encoding='utf8')),'method',VER,N_STARS),encoding='utf8')
 (OUT/'notes.html').write_text(fill(fill_text((ROOT/'notes.html').read_text(encoding='utf8')),'notes',VER,N_STARS),encoding='utf8')
+# Findings: what the archive shows, tested (work/findings_parts.py). Drawn from the sky's stars, the year index, the
+# Declaration's printings and the checks' outputs: the matched audit and the cycle-length check (run work/check_cycle_lengths.py
+# after a new release; without its output the page leaves that finding out and says so here).
+import findings_parts
+decl_story=next(s for s in stories if s['id']=='group:declaration-of-independence')
+cycles_file=ROOT.parent/'outputs/story_discovery_all/cycle_lengths.json'
+if not cycles_file.exists(): print('findings: no cycle_lengths.json (run work/check_cycle_lengths.py); finding 6 is left out')
+findings_html=findings_parts.render(years=[(y['year'],y['papers'],y['pages']) for y in years_index],stars=stars,
+    decl_printings=[(paper_name[observations[m]['node']],observations[m]['date']) for m in decl_story['members']],
+    audit=json.loads((ROOT.parent/'outputs/matched_audit/summary.json').read_text(encoding='utf8')),
+    cycles=json.loads(cycles_file.read_text(encoding='utf8')) if cycles_file.exists() else None,repo=REPO)
+(OUT/'findings.html').write_text(fill(fill_text((ROOT/'findings.html').read_text(encoding='utf8').replace('__FINDINGS__',findings_html)),'findings',VER,N_STARS),encoding='utf8')
 def copy_with_assets(src,dest):
     """Copy a report and the local files it links to (images, data), keeping their relative paths.
     The site is English only, so links to Chinese quick-read files are dropped from the copy."""
@@ -571,10 +583,11 @@ shutil.rmtree(OUT/'notes',ignore_errors=True)   # notes/ is generated: start cle
 copy_with_assets(ROOT.parent/'outputs/attention_pilot_report.html',OUT/'notes/attention')
 copy_with_assets(ROOT.parent/'outputs/reading_evidence_2026-11-03/reading_notebook.html',OUT/'notes/reading')
 for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__RELEASE__','__REPO__','__HOME_DATA__','__FEATURED_PULSE__']
-                 for page in ['index.html','method.html','notes.html'] if m in (OUT/page).read_text(encoding='utf8')]:
+                 for page in ['index.html','method.html','notes.html','findings.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
+assert '__FINDINGS__' not in (OUT/'findings.html').read_text(encoding='utf8')
 
-pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','site.css','glass.js','radio.js']}
+pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','exhibit.html','method.html','notes.html','findings.html','site.css','glass.js','radio.js']}
 # The radio's recorded voices (work/audio_render.py writes audio/ next to the pages; this build leaves it alone). Report
 # how many reviewed passages have a recording; a passage without one is read by the browser's voice on the Radio page, and introduced by the announcer elsewhere.
 audio_summary=None

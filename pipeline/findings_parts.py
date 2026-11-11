@@ -1,0 +1,280 @@
+"""The Findings page (findings.html): what the archive shows, tested.
+
+Each finding has its claim in plain words, one chart drawn from the data at build time, how sure it is, what it does
+not say, and doors into the instruments that show it. The numbers come from the build's own data (the sky's stars,
+the year index) and from the checks' outputs (outputs/matched_audit/summary.json, outputs/story_discovery_all/
+cycle_lengths.json), never typed by hand, so they stay right when the data changes.
+
+Charts are inline SVG: thin bars with rounded data ends and 2-pixel gaps, recessive axes, a tooltip (<title>) on every
+mark, and the numbers in a table under each chart. Colours: gold for what a finding is about, slate for the rest, as on
+the telescope's timeline. The pair is a highlight, not a set of categories (the validator's colour-blind separation,
+dE 37, and contrast, 3:1 or more, pass; slate is meant to read as grey)."""
+import datetime, html, math, re, statistics
+from urllib.parse import quote
+
+GOLD, SLATE, SOFT, INK, MUTED, GRID, SURFACE = '#ffd27a', '#56698f', '#8b98b5', '#e8edf7', '#8b98b5', '#1a2338', '#0b1222'
+EPOCH = datetime.date(1770, 1, 1)
+YEARS = list(range(1770, 1811))
+MONTHS = 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split()
+esc = html.escape
+
+
+def search(stars, query):
+    """The telescope's search rule: commas separate alternatives, words of one alternative must all appear, at the start
+    of a word, and "quotes" keep a phrase. Returns the matching stars."""
+    groups = []
+    for part in re.split(r'\s*,\s*', query.lower()):
+        terms = [a or b for a, b in re.findall(r'"([^"]+)"|(\S+)', part)]
+        groups.append([re.compile(r'(^|[^a-z])' + re.escape(t).replace(r'\ ', r'[\s-]+')) for t in terms])
+    return [s for s in stars if any(all(rx.search(s['text']) for rx in g) for g in groups)]
+
+
+def poisson_tail(k, lam):
+    if lam <= 0: return 0.0
+    term, cdf = math.exp(-lam), 0.0
+    for j in range(k): cdf += term; term *= lam / (j + 1)
+    return max(0.0, 1 - cdf)
+
+
+def runs_of(years):
+    out = []
+    for y in years:
+        if out and y == out[-1][1] + 1: out[-1][1] = y
+        else: out.append([y, y])
+    return out
+
+
+def run_text(runs):
+    return '; '.join(str(a) if a == b else f'{a}–{b}' for a, b in runs)
+
+
+# ---- marks ----
+def bar(x, base, w, h, fill, tip, outline=False):
+    if h <= 0: return ''
+    r = min(2, w / 2, h)
+    path = (f'M{x:.1f},{base:.1f}V{base - h + r:.1f}Q{x:.1f},{base - h:.1f} {x + r:.1f},{base - h:.1f}'
+            f'H{x + w - r:.1f}Q{x + w:.1f},{base - h:.1f} {x + w:.1f},{base - h + r:.1f}V{base:.1f}Z')
+    style = f'fill="none" stroke="{fill}" stroke-width="1" stroke-dasharray="2 2"' if outline else f'fill="{fill}"'
+    return f'<path d="{path}" {style}><title>{esc(tip)}</title></path>'
+
+
+def bars(values, cats, colour, tip, ymax, unit='', W=900, H=170, tick_every=5, ref=None, notes=(), thin=(), label=str, title=''):
+    """A bar chart: one bar per category, a recessive grid, every bar with its tooltip. notes: (category, value, text,
+    on_top) direct labels for a few bars; on_top puts the text at the top with a thin leader down to the bar."""
+    L, R, T, B = 44, 8, 22, 24
+    pw, ph = W - L - R, H - T - B; slot = pw / len(values); base = T + ph
+    out = [f'<svg viewBox="0 0 {W} {H}" class="chart" role="img" aria-label="{esc(title)}">']
+    for k in range(5):
+        v = ymax * k / 4; y = base - ph * k / 4
+        out.append(f'<line x1="{L}" x2="{W - R}" y1="{y:.1f}" y2="{y:.1f}" stroke="{GRID}"/>'
+                   f'<text x="{L - 6}" y="{y + 4:.1f}" text-anchor="end" fill="{MUTED}" font-size="11">{v:g}{unit}</text>')
+    for j, (c, v) in enumerate(zip(cats, values)):
+        x = L + j * slot + 1
+        if c in thin: out.append(bar(x, base, slot - 2, max(ph * .08, 2), MUTED, f'{label(c)}: too little archive to judge', outline=True))
+        else: out.append(bar(x, base, slot - 2, ph * min(v, ymax) / ymax, colour(c), tip(c, v)))
+        if j % tick_every == 0:
+            out.append(f'<text x="{x + (slot - 2) / 2:.1f}" y="{H - 6}" text-anchor="middle" fill="{MUTED}" font-size="11">{label(c)}</text>')
+    if ref is not None:
+        y = base - ph * ref / ymax
+        out.append(f'<line x1="{L}" x2="{W - R}" y1="{y:.1f}" y2="{y:.1f}" stroke="{MUTED}" stroke-dasharray="4 3"/>')
+    for c, v, text, *top in notes:
+        j = cats.index(c); x = L + j * slot + slot / 2; y = base - ph * min(v, ymax) / ymax - 6
+        if top and top[0]:
+            out.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{T + 4:.1f}" y2="{y + 2:.1f}" stroke="{MUTED}"/>'); y = T - 2
+        half = len(text) * 3.1
+        anchor, tx = ('end', x + slot / 2) if x + half > W - R else ('start', x - slot / 2) if x - half < L else ('middle', x)
+        out.append(f'<text x="{tx:.1f}" y="{max(T - 6, y):.1f}" text-anchor="{anchor}" fill="{INK}" font-size="11">{esc(text)}</text>')
+    out.append('</svg>')
+    return ''.join(out)
+
+
+def table(rows, head):
+    return ('<details class="numbers"><summary>The numbers</summary><div class="tbl"><table><tr>' + ''.join(f'<th>{h}</th>' for h in head) + '</tr>'
+            + ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '</tr>' for r in rows) + '</table></div></details>')
+
+
+def finding(n, kind, title, claim, body, sure, not_say, doors, numbers=''):
+    links = ''.join(f'<a href="{esc(h)}">{esc(t)}</a>' for t, h in doors)
+    return (f'<section class="finding" id="f{n}"><div class="n">{n} · {esc(kind)}</div><h2>{title}</h2><p class="claim">{claim}</p>{body}'
+            f'<div class="facts"><div><b>How sure</b>{sure}</div><div><b>What it does not say</b>{not_say}</div></div>'
+            f'<div class="doors">{links}</div>{numbers}</section>')
+
+
+def key(*items):
+    return '<p class="cap">' + ''.join(f'<span class="key"><i style="background:{c}"></i>{esc(t)}</span>' for c, t in items) + '</p>'
+
+
+# ---- the findings ----
+def render(*, years, stars, decl_printings, audit, cycles, repo):
+    """years: [(year, newspapers, pages)]; stars: the sky's stars (year, first, long, papers, text); decl_printings:
+    [(newspaper, 'YYYY-MM-DD')] for the Declaration; audit: the matched audit's summary; cycles: the cycle-length check
+    (or None); repo: the public repository's URL."""
+    arch = {y: (p, pg) for y, p, pg in years}
+    keep = [s for s in stars if not s['long']]
+    per_year = {y: 0 for y in YEARS}
+    for s in keep: per_year[s['year']] += 1
+    typical = statistics.median(per_year.values())
+    judged = [y for y in YEARS if per_year[y] >= typical / 5]
+    thin = [y for y in YEARS if y not in judged]
+    out = []
+
+    # 1 · the source: what survives
+    t0, t1 = thin[0], thin[-1]
+    c1a = bars([arch[y][0] for y in YEARS], YEARS, lambda y: GOLD if y in thin else SLATE,
+               lambda y, v: f'{y}: {v} newspapers survive ({arch[y][1]:,} pages)', 20, H=150, title='Newspapers that survive, each year',
+               notes=[(thin[len(thin) // 2], arch[thin[len(thin) // 2]][0], ' and '.join(str(y) for y in thin if arch[y][0] == min(arch[t][0] for t in thin)) + f': {min(arch[t][0] for t in thin)} newspapers each', True)])
+    c1b = bars([per_year[y] for y in YEARS], YEARS, lambda y: GOLD if y in thin else SLATE,
+               lambda y, v: f'{y}: {v:,} stories in the sky first printed', 3000, H=150, title='Stories in the sky, each year')
+    after = [arch[y][0] for y in range(1800, 1811)]
+    out.append(finding(1, 'The source', 'A thin sky is a gap in the archive, not silence',
+        f'Only {", ".join(f"{arch[y][0]} newspapers survive for {y}" for y in thin[:1])}'
+        + (f' and {min(arch[y][0] for y in thin[1:])} for each of {" and ".join(str(y) for y in thin[1:])}' if len(thin) > 1 else '')
+        + f', against {arch[t1 + 1][0]} in {t1 + 1} and {min(after)} to {max(after)} a year after 1800, and the stories in the sky nearly vanish with them. The low years show what was kept, not how much was printed.',
+        f'<div class="cap"><b>Newspapers that survive, each year</b></div>{c1a}<div class="cap"><b>Stories in the sky, by year of first printing</b> (each row its own scale)</div>{c1b}'
+        + key((GOLD, f'{t0}–{t1}: less than a fifth of a typical year\'s stories'), (SLATE, 'other years')),
+        f'Counts from the dataset itself: {sum(arch[y][1] for y in YEARS):,} pages of 110 newspapers. A fact about the source, not a test.',
+        'Nothing about what those papers printed, only how much of them survives. A full year is full because more papers survive, not because more happened.',
+        [(f'Follow {t0 - 2}–{t1 + 2} in Pulses', f'pulses.html?years={t0 - 2}-{t1 + 2}'), ('See the thin sky', f'telescope.html?year={t1 + 2}&lookback=10')],
+        table([(y, arch[y][0], f'{arch[y][1]:,}', f'{per_year[y]:,}') for y in YEARS], ['Year', 'Newspapers', 'Pages', 'Stories'])))
+
+    # 2 · the source: how far the machine's reading can be trusted
+    tr, raw = audit['transcription'], audit['raw_reviewer_counts']['transcription']
+    located = tr['faithful']['count'] + tr['minor_errors']['count'] + tr['major_problem']['count']
+    own, strict = raw['major_problem'], tr['major_problem']['count']
+    rows = [('Reviewers’ own calls', raw['faithful'], raw['minor_errors'], own), ('One strict rule for all', tr['faithful']['count'], tr['minor_errors']['count'], strict)]
+    W, L, rh = 900, 170, 30; svg = [f'<svg viewBox="0 0 {W} {len(rows) * (rh + 14) + 8}" class="chart" role="img" aria-label="Misreadings in the audit">']
+    for k, (name, f_, m_, x_) in enumerate(rows):
+        y = 6 + k * (rh + 14); svg.append(f'<text x="{L - 10}" y="{y + rh / 2 + 4}" text-anchor="end" fill="{INK}" font-size="12">{esc(name)}</text>'); x = L
+        for cnt, col, what in ((f_, SLATE, 'faithful'), (m_, SOFT, 'minor errors'), (x_, GOLD, 'a fact-changing misreading')):
+            w = (W - L - 8) * cnt / located
+            svg.append(f'<rect x="{x:.1f}" y="{y}" width="{max(0, w - 2):.1f}" height="{rh}" rx="2" fill="{col}"><title>{esc(name)}: {cnt} of {located} passages, {what} ({100 * cnt / located:.0f}%)</title></rect>')
+            if w > 60: svg.append(f'<text x="{x + 8:.1f}" y="{y + rh / 2 + 4}" fill="#050711" font-size="12" font-weight="600">{100 * cnt / located:.0f}%</text>')
+            x += w
+    svg.append('</svg>')
+    out.append(finding(2, 'The source', 'About one passage in five has a misreading that changes a fact',
+        f'The archive’s machine transcriptions are good enough to find stories, not to quote them. In a random sample of {audit["audited"]} matched stories, {own} of the {located} passages found on their scans ({100 * own / located:.0f}%) had a misreading that changes a fact by the reviewers’ own calls, and {strict} ({100 * strict / located:.0f}%) under one strict rule for all. In 1776 the machine read “slaves” in 8 of the 9 printings of the resolution opening the ports, where the papers printed “ſtaves”.',
+        f'<div class="cap"><b>{located} passages checked against their scans</b></div>{"".join(svg)}'
+        + key((SLATE, 'faithful'), (SOFT, 'minor errors'), (GOLD, 'a misreading that changes a fact: a number, a date, a name or a word with another meaning')),
+        f'A random sample (seed {audit["meta"]["seed"]}) of {audit["meta"]["population"]:,} matched stories, read against the scans by eight reviewers under one written rule, with a blind second reader for 30 of them. All {audit["on_page"]["yes"]["count"]} passages found were on their pages. The range runs from the reviewers’ own calls to the strict rule.',
+        'Which passages are wrong: it is a rate over a sample, not a mark on each passage. The automatic check that every printing gets (is the passage in both transcriptions of its page?) does not predict these errors, so check the scan before quoting.',
+        [('Read the ports resolution, with its scans', 'pulses.html?year=1776&focus=' + quote('group:congress-opens-ports')), ('How the stories were checked', 'method.html#checks')],
+        table([(name, f'{f_} ({100 * f_ / located:.0f}%)', f'{m_} ({100 * m_ / located:.0f}%)', f'{x_} ({100 * x_ / located:.0f}%)') for name, f_, m_, x_ in rows], ['', 'Faithful', 'Minor errors', 'Fact-changing'])))
+
+    # 3 · how a story travels: the Declaration, printing by printing
+    pr = sorted((datetime.date.fromisoformat(dt), name) for name, dt in decl_printings)
+    first_of = {}
+    for dt, name in pr: first_of.setdefault(name, dt)
+    papers = sorted(first_of, key=lambda n: (first_of[n], n))
+    d0, d1 = pr[0][0], pr[-1][0]; span = (d1 - d0).days
+    W, L, R, T, rh = 900, 300, 16, 12, 19; H = T + rh * len(papers) + 28; pw = W - L - R
+    short = lambda s: s if len(s) <= 40 else s[:38].rstrip() + '…'   # a long title keeps its full name in the tooltip
+    xd = lambda dt: L + pw * ((dt - d0).days + .5) / (span + 1)
+    svg = [f'<svg viewBox="0 0 {W} {H}" class="chart" role="img" aria-label="The Declaration of Independence, printing by printing">']
+    for k in range(0, span + 1, 5):
+        x = xd(d0 + datetime.timedelta(days=k))
+        svg.append(f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{T - 4}" y2="{H - 22}" stroke="{GRID}"/><text x="{x:.1f}" y="{H - 8}" text-anchor="middle" fill="{MUTED}" font-size="11">{(d0 + datetime.timedelta(days=k)).day} {(d0 + datetime.timedelta(days=k)).strftime("%b")}</text>')
+    for k, name in enumerate(papers):
+        y = T + rh * k + rh / 2
+        svg.append(f'<text x="{L - 10}" y="{y + 4:.1f}" text-anchor="end" fill="{INK}" font-size="12">{esc(short(name))}<title>{esc(name)}</title></text>')
+        for dt, nm in pr:
+            if nm == name: svg.append(f'<circle cx="{xd(dt):.1f}" cy="{y:.1f}" r="4.5" fill="{GOLD}" stroke="{SURFACE}" stroke-width="2"><title>{esc(name)}, {dt.day} {dt.strftime("%B %Y")}</title></circle>')
+    svg.append('</svg>')
+    out.append(finding(3, 'A story travels', f'The Declaration reached {len(papers)} newspapers in {span + 1} days',
+        f'Adopted on 4 July 1776, the Declaration of Independence was first printed in this archive on {d0.day} {d0.strftime("%B")} and by {d1.day} {d1.strftime("%B")} had appeared in {len(papers)} of its newspapers, every printing read against its scan.',
+        f'<div class="cap"><b>Each dot is one printing</b>, by newspaper, in the order the papers first printed it</div>{"".join(svg)}',
+        'A reviewed story: each of its printings was found, read and checked against the page scan by hand.',
+        'Who copied whom. A paper may have taken the text from any earlier paper, a handbill or a letter; the dots show when each printed it, not the road it travelled.',
+        [('Watch it pulse from paper to paper', 'pulses.html?year=1776&focus=' + quote('group:declaration-of-independence')), ('See it in the sky', 'telescope.html?story=' + quote('group:declaration-of-independence'))]))
+
+    # 4 · coming back: the embargo's waves (the telescope's wave rule)
+    emb_y = {y: 0 for y in YEARS}
+    for s in search(keep, 'embargo'): emb_y[s['year']] += 1
+    share = {y: emb_y[y] / per_year[y] if per_year[y] else 0 for y in YEARS}
+    usual = min(statistics.median([share[y] for y in judged if emb_y[y]]), sum(emb_y[y] for y in judged) / sum(per_year[y] for y in judged))
+    waves = [y for y in judged if emb_y[y] >= 3 and share[y] >= 2 * usual and poisson_tail(emb_y[y], usual * per_year[y]) < .05]
+    wr = runs_of(waves)
+    top = max(share.values()) * 100; ymax = math.ceil(top / 2) * 2
+    last = wr[-1]
+    c4 = bars([100 * share[y] for y in YEARS], YEARS, lambda y: GOLD if y in waves else SLATE,
+              lambda y, v: f'{y}: {emb_y[y]} of {per_year[y]:,} stories mention “embargo” ({v:.1f}%)' + (' · a wave year' if y in waves else ''), ymax, '%', H=200,
+              notes=[(1794, 100 * share[1794], '1794: the American embargo'), (last[0], 100 * share[last[0]], f'{last[0]}–{str(last[1])[2:]}: the Embargo Act')], thin=set(thin),
+              title='Share of the year’s stories that mention embargo')
+    out.append(finding(4, 'Coming back', 'The embargo came back with every crisis',
+        f'Stories mentioning an embargo rose in {len(wr)} waves: {run_text(wr)}. Two are American, the embargo of 1794 and the Embargo Act of 1807–1809, whose year {last[0]} alone holds {emb_y[last[0]]} stories; between them come three European crises.',
+        f'<div class="cap"><b>Share of the year’s stories that mention “embargo”</b> · gold: wave years · dashed outline: too little archive to judge</div>{c4}'
+        '<p class="cap">The three small waves between are European: 1796, Spain’s embargoes on British and Dutch ships; 1798, French embargoes on American ships feared; 1801, Russia and Britain embargo each other’s ships.</p>',
+        'A wave year has 3 or more such stories, twice the word’s usual share and P &lt; .05. The same rule finds the war with Tripoli (1801–1805) exactly, both American embargoes, the Algiers crisis and the great fever years; fire, the control, stays flat but for one borderline year.',
+        'It follows the word, not one policy: 1796, 1798 and 1801 are Spanish, French, Russian and British embargoes. It counts reprinted stories, not events.',
+        [('Trace it in the sky', 'telescope.html?q=embargo&lookback=all'), (f'Follow {last[0]} in Pulses', f'pulses.html?year={last[0]}')],
+        table([(y, emb_y[y], f'{per_year[y]:,}', f'{100 * share[y]:.2f}%', 'wave' if y in waves else 'too little archive' if y in thin else '') for y in YEARS if emb_y[y] or y in thin],
+              ['Year', 'Stories mentioning it', 'All stories', 'Share', ''])))
+
+    # 5 · seasons: fever against fire
+    def by_month(found):
+        m = [0] * 12; C = S = 0.0
+        for s in found:
+            dt = EPOCH + datetime.timedelta(days=s['first']); m[dt.month - 1] += 1
+            doy = (dt - datetime.date(dt.year, 1, 1)).days / (366 if dt.year % 4 == 0 and (dt.year % 100 or dt.year % 400 == 0) else 365)
+            C += math.cos(2 * math.pi * doy); S += math.sin(2 * math.pi * doy)
+        n = len(found); Rn = math.hypot(C, S)
+        return m, n, Rn / n, math.exp(math.sqrt(1 + 4 * n + 4 * (n * n - Rn * Rn)) - (1 + 2 * n))
+    FEVER, FIRE = 'yellow fever, malignant fever, prevailing fever', '"fire broke out", conflagration, "was consumed by fire", "destroyed by fire"'
+    fever, fire = by_month(search(keep, FEVER)), by_month(search(keep, FIRE))
+    def month_chart(res, hot, title):
+        m, n, *_ = res
+        return bars([100 * v / n for v in m], list(range(12)), lambda k: GOLD if k in hot else SLATE, lambda k, v: f'{MONTHS[k]}: {m[k]} of {n} stories ({v:.0f}%)',
+                    40, '%', W=440, H=170, tick_every=1, ref=100 / 12, label=lambda k: MONTHS[k][0], title=title)
+    jas = 100 * sum(fever[0][6:9]) / fever[1]
+    p_text = 'P &lt; .001' if fever[3] < .001 else f'P {fever[3]:.3f}'
+    out.append(finding(5, 'Seasons', 'Fever came back each late summer; fire kept no season',
+        f'{jas:.0f}% of fever stories were first printed in July to September. Fires, which were reported all year, are the control: they keep to no month.',
+        f'<div class="pair"><div><div class="cap"><b>Yellow, malignant or prevailing fever</b> · {fever[1]} stories · R {fever[2]:.2f}</div>{month_chart(fever, {6, 7, 8}, "Fever stories by month")}</div>'
+        f'<div><div class="cap"><b>Fire broke out, conflagration…</b> · {fire[1]} stories · R {fire[2]:.2f}</div>{month_chart(fire, set(), "Fire stories by month")}</div></div>'
+        '<p class="cap">Share of each kind’s stories first printed in each month · dashed line: no season (8.3% a month)</p>',
+        f'Circular statistics on the day of first printing: fever R {fever[2]:.2f} (Rayleigh {p_text}), fire R {fire[2]:.2f}. The archive’s surviving pages are spread evenly over the year (R 0.007), so the season is not made by which months survive.',
+        'When stories were first printed in this archive, not when epidemics began; and only these three phrases, so a report that says “the sickness” is missed.',
+        [('Compare them by season in the sky', 'telescope.html?q=' + quote(f'{FEVER} vs {FIRE}') + '&view=orbit&lookback=all')]))
+
+    # 6 · the year is the only cycle (from the cycle-length check)
+    if cycles:
+        ks = cycles['kinds']; W, L, R, T, rh = 900, 170, 16, 16, 22; H = T + rh * len(ks) + 30; pw = W - L - R
+        lo, hi = math.log(6), math.log(400); xp = lambda d: L + pw * (math.log(d) - lo) / (hi - lo)
+        at_year = lambda k: abs(k['best_days'] - 365.24) / 365.24 < .05
+        svg = [f'<svg viewBox="0 0 {W} {H}" class="chart" role="img" aria-label="Strongest cycle of each kind of story">']
+        for d, t in ((7, 'a week'), (30.44, 'a month'), (91.3, 'a quarter'), (182.6, 'half a year'), (365.24, 'a year')):
+            svg.append(f'<line x1="{xp(d):.1f}" x2="{xp(d):.1f}" y1="{T - 6}" y2="{H - 24}" stroke="{GRID if d != 365.24 else MUTED}"/>'
+                       f'<text x="{xp(d):.1f}" y="{H - 8}" text-anchor="middle" fill="{MUTED}" font-size="11">{t}</text>')
+        for k, kd in enumerate(ks):
+            y = T + rh * k + rh / 2; col = GOLD if at_year(kd) else SLATE
+            svg.append(f'<text x="{L - 10}" y="{y + 4:.1f}" text-anchor="end" fill="{INK}" font-size="12">{esc(kd["kind"])}</text>'
+                       f'<circle cx="{xp(kd["best_days"]):.1f}" cy="{y:.1f}" r="5" fill="{col}" stroke="{SURFACE}" stroke-width="2"><title>{esc(kd["kind"])}: {kd["stories"]} stories; strongest period {kd["best_days"]:g} days (P {kd["p_best"]:.3f}); a week, P {kd["p_at"]["week"]:.2f}</title></circle>')
+        svg.append('</svg>')
+        yearly = [kd for kd in ks if at_year(kd)]; others = [kd for kd in ks if not at_year(kd)]
+        out.append(finding(6, 'Seasons', 'The year is the only cycle this archive keeps',
+            f'Scanning every cycle from 6 to 400 days, {len(yearly)} of the {len(ks)} kinds of story tested have their strongest cycle at one year, and none has a weekly or monthly rhythm of its own. A month or half a year shows only as an echo of a sharp yearly date, such as the Fourth of July.',
+            f'<div class="cap"><b>The strongest cycle of each kind</b>, on a scale from 6 to 400 days · gold: at one year</div>{"".join(svg)}',
+            f'Each kind is compared with the archive’s own stories within each year, which removes the newspapers’ printing days, and against {cycles["draws"]} random draws, with the scan of many cycles paid for. The others peak elsewhere: '
+            + '; '.join(f'{esc(kd["kind"].lower())} at {kd["best_days"]:g} days (P {kd["p_best"]:.2f})' for kd in others) + '; none convincingly once ten kinds are tested together.',
+            'Why things come back at a season, and nothing about cycles longer than a year, such as elections every four years (below).',
+            [('Independence Day by season, in the sky', 'telescope.html?q=' + quote('anniversary of independence, fourth of july, 4th of july') + '&view=orbit&lookback=all')],
+            table([(esc(kd['kind']), kd['stories'], f'{kd["best_days"]:g} days', f'{kd["p_best"]:.3f}', f'{kd["p_at"]["week"]:.2f}') for kd in ks], ['Kind', 'Stories', 'Strongest cycle', 'P', 'A week, P'])))
+
+    # 7 · every four years, from 1800
+    ELECT = 'election, electors'
+    el_y = {y: 0 for y in YEARS}
+    for s in search(keep, ELECT): el_y[s['year']] += 1
+    span_y = list(range(1789, 1811)); terms = [1792, 1796, 1800, 1804, 1808]
+    esh = {y: 100 * el_y[y] / per_year[y] for y in span_y}
+    near = [esh[y] for y in span_y if y not in terms]
+    c7 = bars([esh[y] for y in span_y], span_y, lambda y: GOLD if y in terms else SLATE,
+              lambda y, v: f'{y}: {el_y[y]} of {per_year[y]:,} stories mention an election ({v:.1f}%)' + (' · a presidential election' if y in terms else ''),
+              math.ceil(max(esh.values())), '%', H=170, tick_every=1, label=lambda y: f"'{str(y)[2:]}", title='Share of stories that mention an election')
+    late = [esh[y] for y in (1800, 1804, 1808)]
+    out.append(finding(7, 'Coming back', 'Every four years, from 1800',
+        f'Stories about elections peak in the presidential years 1800, 1804 and 1808 ({min(late):.1f}–{max(late):.1f}% of the year’s stories); before 1800 the rhythm is weak ({esh[1792]:.1f}% in 1792, {esh[1796]:.1f}% in 1796)' + (f', and 1802 is high too ({esh[1802]:.1f}%).' if esh[1802] >= .8 * min(late) else '.'),
+        f'<div class="cap"><b>Share of the year’s stories that mention an election</b> · gold: presidential election years</div>{c7}',
+        f'Shares of all stories each year; the other years from 1789 run from {min(near):.1f}% to {max(near):.1f}%. Five election years make a short series, so this is a pattern to read, not a tested cycle.',
+        'Which elections: state and congressional elections fill the other years, and the words cannot tell them apart.',
+        [('Trace elections in the sky', 'telescope.html?q=' + quote(ELECT) + '&lookback=all')],
+        table([(y, el_y[y], f'{per_year[y]:,}', f'{esh[y]:.1f}%', 'presidential' if y in terms else '') for y in span_y], ['Year', 'Election stories', 'All stories', 'Share', ''])))
+    return '\n'.join(out)

@@ -48,6 +48,7 @@ def spectrum(counts, per_year):
         if n: m = year_of_day == y; e[m] = n * base[m] / yb[y]
     return np.abs(np.fft.rfft(counts - e, n=NFFT)) ** 2
 
+results = []
 for name, pat in KINDS.items():
     rx = re.compile(pat)
     hit = [i for i in idx if rx.search(TEXT[i])]
@@ -73,3 +74,8 @@ for name, pat in KINDS.items():
     print(f"{name:20} n={n:5}  best {NFFT / kbest:7.1f} d (p {p_best:.3f})  periods past the scan bar: "
           + (', '.join(f'{q:.1f}' for q in peaks) or 'none')
           + '  | single-period p: ' + ' '.join(f"{k} {v:.3f}" for k, v in pts.items()))
+    results.append({'kind': name, 'stories': n, 'best_days': round(NFFT / kbest, 1), 'p_best': round(p_best, 3),
+                    'peaks_days': [round(q, 1) for q in peaks], 'p_at': {k: round(v, 3) for k, v in pts.items()}})
+# For the Findings page (work/findings_parts.py): written next to the notes of the check.
+json.dump({'check': 'cycle lengths from 6 to 400 days, against the archive within each year', 'draws': 300, 'seed': 20261111,
+           'smallest_p': round(1 / 301, 3), 'kinds': results}, open('outputs/story_discovery_all/cycle_lengths.json', 'w', encoding='utf-8'), indent=1)

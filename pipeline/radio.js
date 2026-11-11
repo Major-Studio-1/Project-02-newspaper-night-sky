@@ -80,6 +80,10 @@ function loadVoices() {
 }
 const listeners = {voices: [], caption: [], state: [], live: []};
 if (synth) { loadVoices(); if (synth.addEventListener) synth.addEventListener('voiceschanged', loadVoices); else synth.onvoiceschanged = loadVoices; }
+// Leaving or reloading the page ends any reading, so the browser never waits on a voice that has stalled.
+if (synth) addEventListener('pagehide', () => { try { synth.cancel(); } catch {} });
+// A network voice (Chrome's Google voices) stops a long line after about 15 seconds: its lines are kept shorter.
+const lineMax = () => voice && voice.localService === false ? 150 : 220;
 
 let session = 0, speaking = false, unlocked = false, current = null;   // current: the utterance being read, held so its end event arrives
 function speakOne(text, rate) {
@@ -88,12 +92,17 @@ function speakOne(text, rate) {
     const u = new SpeechSynthesisUtterance(text);
     if (voice) { u.voice = voice; u.lang = voice.lang; } else u.lang = 'en-US';
     u.rate = rate; u.pitch = 1; u.volume = volume;
-    let done = false; current = u;
-    const finish = ok => { if (done) return; done = true; clearTimeout(watch); if (current === u) current = null; resolve(ok); };
+    let done = false, started = false; current = u;
+    const reading = () => Math.max(1200, text.split(' ').length * 330 / rate);
+    const finish = ok => { if (done) return; done = true; clearTimeout(watch); clearTimeout(stall); if (current === u) current = null; resolve(ok); };
     // Stopped on purpose: at once. Not allowed yet (no touch so far) or failed: the words stay up for their reading time.
+    u.onstart = () => { started = true; };
     u.onend = () => finish(true);
-    u.onerror = e => ['interrupted', 'canceled'].includes(e.error) ? finish(false) : setTimeout(() => finish(true), Math.max(1200, text.split(' ').length * 330 / rate));
+    u.onerror = e => ['interrupted', 'canceled'].includes(e.error) ? finish(false) : setTimeout(() => finish(true), reading());
     const watch = setTimeout(() => finish(true), 2000 + 1.6 * text.length / (14 * rate) * 1000);   // some browsers never report the end
+    // A voice that never starts (a network voice that has stalled, as Chrome's Google voices can): after 5 seconds the
+    // line is let go and the queue cleared, and the words stay up for their reading time, instead of a long silence.
+    const stall = setTimeout(() => { if (started || done) return; done = true; clearTimeout(watch); try { synth.cancel(); } catch {} if (current === u) current = null; setTimeout(() => resolve(true), reading()); }, 5000);
     synth.speak(u);
   });
 }
@@ -411,7 +420,7 @@ async function sayAloud(item, {greet = false, previous = null, rate = 1, mode = 
   startBed();
   const name = town(item.place), sc = scheme(name), head = intro(item, greet, previous);
   const body = mode === 'intro' ? '' : mode === 'title' ? clean(item.title) : clean(item.text || item.title);
-  const lines = body ? chunks(body) : [];
+  const lines = body ? chunks(body, lineMax()) : [];
   const show = index => listeners.caption.forEach(f => f({item, intro: head.lines.join(' '), lines, index}));
   speaking = true; listeners.state.forEach(f => f('speaking'));
   try {
@@ -443,7 +452,7 @@ async function sayAloud(item, {greet = false, previous = null, rate = 1, mode = 
 // One spoken line of the radio's own, such as where else a story was printed.
 async function sayLine(text, {rate = 1, head = ''} = {}) {
   const my = ++session, busy = synth && (synth.speaking || synth.pending); if (synth) synth.cancel();
-  const live = () => my === session, lines = chunks(clean(text));
+  const live = () => my === session, lines = chunks(clean(text), lineMax());
   if (busy) await wait(60);
   startBed(); speaking = true; listeners.state.forEach(f => f('speaking'));
   try {
