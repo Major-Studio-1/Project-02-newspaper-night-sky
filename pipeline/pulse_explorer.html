@@ -129,7 +129,7 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 __SITE_HEADER__
 <header class="toolbar"><div class="toolbar-inner">
 <div class="transport" role="group" aria-label="Playback"><button id="play" class="toggle play has-ico" type="button" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Play</span></button><span class="seg steps"><button id="previous" type="button" aria-label="Previous printing" title="Previous printing">←</button><button id="next" type="button" aria-label="Next printing" title="Next printing">→</button></span>
-<span class="ctl"><span class="label" id="speed-label">Per second</span><span class="seg slide" data-roving id="speed" role="group" aria-labelledby="speed-label"><button type="button" data-days="7" title="One week of printing per second">1 wk</button><button type="button" data-days="14" title="Two weeks of printing per second">2 wk</button><button type="button" data-days="30" title="One month of printing per second">1 mo</button><button type="button" data-days="61" title="Two months of printing per second">2 mo</button><button type="button" data-days="122" title="Four months of printing per second">4 mo</button><button type="button" data-days="365" title="One year of printing per second">1 yr</button></span></span>
+<span class="ctl"><span class="label" id="speed-label">Speed</span><span class="seg slide" data-roving id="speed" role="group" aria-labelledby="speed-label"><button type="button" data-pace="0">Slow</button><button type="button" data-pace="1">Normal</button><button type="button" data-pace="2">Fast</button></span></span>
 <button id="tour" class="toggle has-ico" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">__ICON_tour__Tour</button><button id="watch" class="watch-btn" type="button" title="Watch: hide every control and let the stories play by themselves, full screen. Esc brings the controls back.">__ICON_fit__<span class="lbl">Watch</span></button></div>
 <div class="year-pick" role="group" aria-labelledby="years-label"><span class="label" id="years-label">Years</span><b id="years-now" class="years-now mono"></b>
 <div class="years-wrap"><div id="years" class="years" title="Each bar: the newspapers that survive that year in this archive (gold dot: stories checked by hand). Tap a year, or drag across several"></div><div id="years-axis" class="years-axis" aria-hidden="true"></div></div>
@@ -187,13 +187,17 @@ const roleColor = e => !e ? AUTO_COLOR : e.roles.includes('matched_text') ? AUTO
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 const ROLE_LEGEND = $('legend').innerHTML;
 const SVGNS = 'http://www.w3.org/2000/svg', ECHO = .9, STORE = 'newspaper-pulses-v7', OLD_STORE = 'newspaper-pulses-v6';
-const SPEEDS = [7, 14, 30, 61, 122, 365];  // days of printing per second: a week, two weeks, a month, two and four months, a year
+// Speed: three paces whose meaning follows the chosen years, so that Normal plays them in about half a minute. One year:
+// a week, two weeks or a month of printing per second; all forty-one years: four months, a year or two years. ?speed=7
+// sets an exact number of days per second (the exhibition), until the visitor chooses a pace or other years.
+const LADDER = [7, 14, 30, 61, 122, 365, 730];   // days of printing per second
+const LADDER_NAMES = {7: 'one week', 14: 'two weeks', 30: 'one month', 61: 'two months', 122: 'four months', 365: 'one year', 730: 'two years'};
 const MB = n => (n / 1e6).toFixed(1), EPOCH_MS = Date.UTC(1770, 0, 1);
 const isoDay = d => new Date(EPOCH_MS + d * MS).toISOString().slice(0, 10), dayNum = iso => Math.round((dateValue(iso) - EPOCH_MS) / MS);
 const lowerBound = (arr, x) => { let lo = 0, hi = arr.length; while (lo < hi) { const m = (lo + hi) >> 1; if (arr[m] < x) lo = m + 1; else hi = m; } return lo; };
 let Y = null, mode = 'group', INDEX = null, indexLoading = null, loadToken = 0;
 let events = [], nodeEvents = new Map(), storyEvents = new Map(), group, start = 0, end = 0, maxDay = 0, day = 0, selected = 0;
-let speed = 14, playing = false, lastFrame = 0, raf = 0, lastInteger = -1, nodes = [], nodeById = new Map(), skyLayer = null;
+let speed = 14, pace = 1, exactSpeed = 0, playing = false, lastFrame = 0, raf = 0, lastInteger = -1, nodes = [], nodeById = new Map(), skyLayer = null;
 let minPapers = {reviewed: 1, matched: 3};  // overview filter: fewer, larger stories are easier to follow
 let focus = null, hover = null, focusByNode = new Map();  // the story shown as a constellation (pinned, or under the mouse)
 // What the visitor follows: topics (lanes of the topic model, none chosen: all), words to find in the titles, the shelf's
@@ -652,7 +656,7 @@ function renderLegend() {
   }
 }
 
-function save() { if (Y && !WATCH) try { localStorage.setItem(STORE, JSON.stringify({from: Y.from, to: Y.to, group: group?.id, day, selected, speed, minPapers, tour, topicLanes: [...topicsOn], open: openFamily, sort: shelfSort})); } catch {} }
+function save() { if (Y && !WATCH) try { localStorage.setItem(STORE, JSON.stringify({from: Y.from, to: Y.to, group: group?.id, day, selected, pace, minPapers, tour, topicLanes: [...topicsOn], open: openFamily, sort: shelfSort})); } catch {} }
 
 // How far a passage was checked, in words. Matched printings carry the automatic transcription check (data release
 // v0.6.0 on): whether the passage is also in the page's other machine transcription. That shows the passage is on the
@@ -883,7 +887,7 @@ async function loadRange(from, to, wanted) {
   const bases = (BOOT.reviewed || []).filter(r => r.year >= from && r.year <= to);   // the reviewed years in view
   let earlyPick = null;
   if (!INDEX && bases.length) {   // the reviewed stories are in the page itself: show them while the index of all years loads
-    Y = buildState(from, to, bases, null); buildSky(); buildChips(); group = null; buildShelf();
+    Y = buildState(from, to, bases, null); syncSpeed(); buildSky(); buildChips(); group = null; buildShelf();
     wanted = twinFor(wanted);
     changeGroup(wanted && (reviewedYearOf(wanted) || Y.groupById.has(wanted)) ? wanted : 'all:' + Y.reviewedYears[0]); earlyPick = group?.id;
   }
@@ -897,7 +901,7 @@ async function loadRange(from, to, wanted) {
   }
   if (extra) $('notice').textContent = '';
   else notice('The matched stories could not be loaded, so only the reviewed stories are shown. Check your connection and try again.', 'Matched stories and other years need the page served over HTTP; showing the reviewed stories only.');
-  Y = buildState(from, to, bases, extra); setYearsUI(from, to);
+  Y = buildState(from, to, bases, extra); syncSpeed(); setYearsUI(from, to);
   document.title = 'Newspaper pulses · ' + Y.label;
   $('to-telescope').href = skyUrl(); $('to-telescope').textContent = `See ${from === to ? 'this year' : 'these years'} in the sky ↗`;
   buildSky(); buildChips(); shelfLimit = 24; group = null; buildShelf();
@@ -977,6 +981,7 @@ yearsEl.addEventListener('keydown', e => {
 });
 function pickYears(from, to) {
   if (Y && from === Y.from && to === Y.to) { setYearsUI(from, to); return; }
+  exactSpeed = 0;   // the paces follow the new years
   // A chosen story, or the matched overview, stays chosen when the new years still hold it; a reviewed year's overview
   // does not carry over, so a stretch of years opens on its own stories.
   loadRange(from, to, group && !isReviewedOverview(group.id) ? group.id : undefined).then(save);
@@ -1197,12 +1202,22 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') clearFocus()
 $('previous').addEventListener('click', () => { const i = Math.max(0, selected - 1); seek(events[i].day, i); });
 $('next').addEventListener('click', () => { const i = Math.min(events.length - 1, selected + 1); seek(events[i].day, i); });
 $('day').addEventListener('input', e => seek(Number(e.target.value)));
-function setSpeed(days) {   // the nearest of the six speeds
-  speed = SPEEDS.reduce((a, b) => Math.abs(Math.log(b / days)) < Math.abs(Math.log(a / days)) ? b : a);
-  for (const b of $('speed').querySelectorAll('button')) b.setAttribute('aria-pressed', String(Number(b.dataset.days) === speed));
+const nearest = (list, v) => list.reduce((a, b, i) => Math.abs(Math.log(b / v)) < Math.abs(Math.log(list[a] / v)) ? i : a, 0);
+function paces() {   // [slow, normal, fast] in days of printing per second, for the chosen years
+  const k = nearest(LADDER, (Y ? Y.to - Y.from + 1 : 1) * 365.25 / 30), m = Math.max(1, Math.min(LADDER.length - 2, k));
+  return LADDER.slice(m - 1, m + 2);
+}
+function syncSpeed() {
+  const p = paces(), on = exactSpeed ? nearest(p, exactSpeed) : pace;
+  speed = exactSpeed || p[pace];
+  $('speed').querySelectorAll('button').forEach((b, i) => {
+    b.setAttribute('aria-pressed', String(i === on));
+    b.title = exactSpeed && i === on ? `${LADDER_NAMES[exactSpeed] || exactSpeed + ' days'} of printing per second, as the link asks`
+      : `${b.textContent}: ${LADDER_NAMES[p[i]]} of printing per second`;
+  });
   Glass.sync();
 }
-$('speed').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { setSpeed(Number(b.dataset.days)); save(); } });
+$('speed').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { pace = Number(b.dataset.pace); exactSpeed = 0; syncSpeed(); save(); } });
 $('focus-story').addEventListener('click', e => { changeGroup(e.currentTarget.dataset.group); save(); });
 $('mc-more').addEventListener('click', () => { $('passage').open = true; });
 for (const id of ['passage', 'scan-detail']) $(id).addEventListener('toggle', () => { if ($(id).open && playing) { pause(); save(); } });
@@ -1211,7 +1226,8 @@ document.addEventListener('visibilitychange', () => { if (document.hidden && pla
 let saved; try { saved = JSON.parse(localStorage.getItem(STORE)); } catch {}
 if (!saved) try { const old = JSON.parse(localStorage.getItem(OLD_STORE)); if (old && old.year) saved = {from: old.year, to: old.year, group: old.group, day: old.day, selected: old.selected, minPapers: old.minPapers, speed: old.speed}; } catch {}
 Glass.init();
-setSpeed(saved && Number.isFinite(saved.speed) ? saved.speed : 14);
+if ([0, 1, 2].includes(saved?.pace)) pace = saved.pace;
+syncSpeed();
 for (const k of ['reviewed', 'matched']) if ([1, 2, 3, 4, 6].includes(saved?.minPapers?.[k])) minPapers[k] = saved.minPapers[k];
 if (saved && Array.isArray(saved.topicLanes)) topicsOn = new Set(saved.topicLanes.filter(i => Number.isInteger(i) && i >= 0 && i < (BOOT.topics || []).length));
 if (saved && Number.isInteger(saved.open) && famLanes[saved.open]) openFamily = saved.open;
@@ -1257,7 +1273,7 @@ document.addEventListener('keydown', e => { if (WATCH && e.key === 'Escape') set
 document.addEventListener('fullscreenchange', () => { if (WATCH && !document.fullscreenElement) setWatch(false); });
 document.addEventListener('pointermove', watchWake, {passive: true});
 if (['1', 'on'].includes(params.get('watch')) && !exhibit) setWatch(true, false);
-if (Number(params.get('speed')) > 0) setSpeed(Number(params.get('speed')));   // ?speed=7: days of printing per second
+if (Number(params.get('speed')) > 0) { exactSpeed = Number(params.get('speed')); syncSpeed(); }   // ?speed=7: days of printing per second
 let radioKept = null; try { radioKept = sessionStorage.getItem('nns-radio'); } catch {}
 if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !== 'off')) {
   radioOn = true; syncRadio();

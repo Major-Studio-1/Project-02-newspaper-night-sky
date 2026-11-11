@@ -1,0 +1,179 @@
+{
+ "made": "2026-11-11",
+ "script": "work/archive_errata.py",
+ "archive": {
+  "dataset": "RevolutionCrossroads/loc_chronicling_america_1770-1810",
+  "pages": 77793,
+  "issues": 19445
+ },
+ "pages": {
+  "issues": 133,
+  "pages": 260,
+  "newspapers": 39,
+  "years": [
+   1771,
+   1809
+  ],
+  "by_kind": {
+   "shifted": 121,
+   "duplicate": 10,
+   "other_page": 2
+  },
+  "by_mechanism": {
+   "one scan page without RevX; later pages filed 1 early": 120,
+   "RevX page repeats another page": 10,
+   "irregular": 1,
+   "2 scan pages without RevX; later pages filed 2 early": 2
+  },
+  "pages_without_revx": 1494,
+  "all_pages": 77793,
+  "matched_printings_on_a_wrong_page": 532,
+  "release": "0.8.1"
+ },
+ "dates": {
+  "issues": 108,
+  "kentucky": {
+   "lccn": "sn84038147",
+   "newspaper": "Kentucky gazette and general advertiser",
+   "issues": 106,
+   "pages": 439,
+   "by_year": {
+    "1806 -> 1804": 7,
+    "1807 -> 1805": 1,
+    "1808 -> 1806": 98
+   },
+   "by_basis": {
+    "masthead": 91,
+    "two-year rule": 13,
+    "scan": 2
+   }
+  },
+  "gus_1793": 2,
+  "release": "0.10.2"
+ },
+ "second_scan": {
+  "issues": 1,
+  "pages": 2
+ },
+ "transcription": {
+  "years": [
+   1776,
+   1793,
+   1807,
+   1808
+  ],
+  "checked": 991,
+  "changes_what_was_printed": 111,
+  "leaves_out_text": 28,
+  "by_year": {
+   "1776": {
+    "checked": 332,
+    "changes_what_was_printed": 49,
+    "by_transcription": {
+     "RevX": 49
+    }
+   },
+   "1793": {
+    "checked": 111,
+    "changes_what_was_printed": 7,
+    "by_transcription": {
+     "RevX": 7
+    }
+   },
+   "1807": {
+    "checked": 250,
+    "changes_what_was_printed": 29,
+    "by_transcription": {
+     "RevX": 28,
+     "CA": 1
+    }
+   },
+   "1808": {
+    "checked": 298,
+    "changes_what_was_printed": 26,
+    "by_transcription": {
+     "RevX": 26
+    }
+   }
+  },
+  "audit": {
+   "stories": 200,
+   "located": 187,
+   "own_calls": 35,
+   "strict_rule": 64
+  }
+ },
+ "examples": {
+  "staves": {
+   "printings": [
+    "S76-031",
+    "S76-032",
+    "S76-033",
+    "S76-035",
+    "S76-036",
+    "S76-040",
+    "S76-042",
+    "S76-045"
+   ],
+   "of": 9,
+   "printing": "S76-031",
+   "newspaper": "Dunlap's Pennsylvania packet , The general advertiser",
+   "name": "Dunlap's Pennsylvania Packet",
+   "date": "1776-04-08",
+   "day": "8 April 1776",
+   "transcription": "RevX"
+  },
+  "war_inevitable": {
+   "printing": "S07-110",
+   "newspaper": "The national intelligencer and Washington advertiser.",
+   "name": "National Intelligencer",
+   "date": "1807-07-10",
+   "day": "10 July 1807",
+   "transcription": "RevX"
+  },
+  "junot": {
+   "printing": "S08-065",
+   "newspaper": "Alexandria daily advertiser",
+   "name": "Alexandria Daily Advertiser",
+   "date": "1808-03-03",
+   "day": "3 March 1808",
+   "transcription": "RevX"
+  },
+  "murat": {
+   "printing": "S08-202",
+   "newspaper": "Virginia Argus",
+   "name": "Virginia Argus",
+   "date": "1808-08-02",
+   "day": "2 August 1808",
+   "transcription": "RevX"
+  },
+  "leaves_out": {
+   "printing": "S76-004",
+   "newspaper": "The Pennsylvania gazette",
+   "name": "Pennsylvania Gazette",
+   "date": "1776-01-10",
+   "day": "10 January 1776",
+   "transcription": "RevX"
+  },
+  "staes": {
+   "printing": "S07-102",
+   "newspaper": "The enquirer",
+   "name": "Enquirer",
+   "date": "1807-07-07",
+   "day": "7 July 1807",
+   "transcription": "RevX"
+  },
+  "andersecht": {
+   "printing": "S93-003",
+   "newspaper": "National gazette.",
+   "name": "National Gazette",
+   "date": "1793-01-12",
+   "day": "12 January 1793",
+   "transcription": "RevX"
+  }
+ },
+ "files": {
+  "filing": "filing.csv",
+  "transcription": "transcription.csv"
+ }
+}

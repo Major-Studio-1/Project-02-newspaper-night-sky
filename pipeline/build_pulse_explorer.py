@@ -492,40 +492,13 @@ radio=(ROOT/'radio.html').read_text(encoding='utf8').replace('__RADIO_DATA__',js
 assert '__RADIO_DATA__' not in radio
 (OUT/'radio.html').write_text(fill(radio,'radio',VER,N_STARS),encoding='utf8')
 
-# Home: featured stories, the archive in numbers, and a small sample of stars for the hero sky.
+# Stories the exhibition opens (Home is written below, once the findings, the notebook and the storylines are ready).
 by_id={s['id']:s for s in stars}
-when=lambda s:datetime.date.fromordinal(EPOCH+s['first']).strftime('%B %Y')
 peace=by_id['group:peace-and-plenty-boarding']
 decl=by_id['group:declaration-of-independence']   # reviewed in data release v0.7.0
 day_text=lambda d:datetime.date.fromordinal(EPOCH+d).strftime('%d %B %Y').lstrip('0')
-assert day_text(decl['first'])=='6 July 1776', 'The Declaration card says its first printing came two days after it was adopted'
+assert day_text(decl['first'])=='6 July 1776', 'The exhibition says the Declaration was first printed two days after it was adopted'
 pulse_link=lambda s:f"pulses.html?year={s['year']}&focus={quote(s['id'] if s['kind'] else 'auto:'+s['id'])}"
-sky_link=lambda s:f"telescope.html?story={quote(s['id'])}"
-search_link=lambda q:f"telescope.html?view=orbit&q={quote(q)}"
-featured=[
-  {'title':'A privateer boards the Peace and Plenty','meta':f"{when(peace)} · {peace['papers']} newspapers · {peace['prints']} printings",'reviewed':True,
-   'text':"Captain Dunbar's account of a French privateer boarding his brig, printed in three papers and retold in a fourth. Every printing was checked against its scan.",
-   'links':[['Follow the story',pulse_link(peace)],['See it in the sky',sky_link(peace)]]},
-  {'title':'The Declaration of Independence','meta':f"{when(decl)} · {decl['papers']} newspapers · {decl['prints']} printings",'reviewed':True,
-   'text':f"First printed in this archive on {day_text(decl['first'])}, two days after Congress adopted it, and in {decl['papers']} papers by {day_text(decl['last'])[:-5]}. Every printing was checked against its scan.",
-   'links':[['Follow the story',pulse_link(decl)],['See it in the sky',sky_link(decl)]]},
-  {'title':'Fever comes back in summer','meta':'41 years · a search','reviewed':False,
-   'text':'Reports of yellow and malignant fever cluster in July to September in most years. The Orbit view shows the season.',
-   'links':[['See the rhythm',search_link('yellow fever, malignant fever, prevailing fever')]]},
-  {'title':'Independence Day, every July','meta':'41 years · a search','reviewed':False,
-   'text':'Accounts of the Fourth of July come back each summer, in most years of the archive. The Orbit view shows the season.',
-   'links':[['See the rhythm',search_link('anniversary of independence, fourth of july, 4th of july')]]}]
-numbers=[[f"{manifest['counts']['eligible_pages']:,}",'pages read'],[str(manifest['counts']['newspapers']),'newspaper series'],['41','years'],
-         [f"{len(families):,}",'matched stories'],[str(len(stories)),'reviewed stories ('+', '.join(map(str,sorted(reviewed_data)))+')'],[f"{sum(f['appearances'] for f in families):,}",'printings found']]
-sample=sorted((s for s in stars if not s['long']),key=lambda s:(-s['papers'],-s['prints'],s['first']))[:4500]
-sample.sort(key=lambda s:s['first'])
-palette=['rgba(170,182,207,A)','rgba(57,135,229,A)','rgba(217,89,38,A)','rgba(25,158,112,A)']
-home_data={'featured':featured,'numbers':numbers,'towns':tele_boot['towns'],'palette':palette,
-           'sky':{'day':[s['first'] for s in sample],'lat':[s['flat'] for s in sample],'lon':[s['flon'] for s in sample],'papers':[s['papers'] for s in sample],
-                  'color':[tele_cats[s['cat']]['slot']+1 if s['kind'] else 0 for s in sample]}}
-home=(ROOT/'home.html').read_text(encoding='utf8').replace('__HOME_DATA__',json.dumps(home_data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
-home=home.replace('__N_STORIES__',f'{N_STARS:,}').replace('__FEATURED_PULSE__',pulse_link(peace))
-(OUT/'index.html').write_text(fill(home,'home',VER,N_STARS),encoding='utf8')
 
 # Exhibition: a self-running loop of scenes, each a page in its exhibition mode (?exhibit=1), for a large screen.
 # The scenes follow docs/site-plan.md (phase 2); each links to the same view on the web for the QR code.
@@ -574,7 +547,14 @@ findings_html=findings_parts.render(years=[(y['year'],y['papers'],y['pages']) fo
     decl_printings=[(paper_name[o['node']],o['date'],towns[o['node']]['place'],towns[o['node']]['lat'],towns[o['node']]['lon']) for o in (observations[m] for m in decl_story['members'])],
     audit=json.loads((ROOT.parent/'outputs/matched_audit/summary.json').read_text(encoding='utf8')),
     cycles=json.loads(cycles_file.read_text(encoding='utf8')) if cycles_file.exists() else None,repo=REPO)
-(OUT/'findings.html').write_text(fill(fill_text((ROOT/'findings.html').read_text(encoding='utf8').replace('__FINDINGS__',findings_html)),'findings',VER,N_STARS),encoding='utf8')
+# What we found wrong in the archive itself (work/archive_errata.py, which reads this build's data.json: after a new
+# reviewed year, build, run it, and build again). Without its summary the page leaves the section out and says so here.
+errata_file=ROOT.parent/'outputs/archive_errata/summary.json'
+errata=json.loads(errata_file.read_text(encoding='utf8')) if errata_file.exists() else None
+if not errata: print('findings: no archive_errata/summary.json (run work/archive_errata.py); the archive section is left out')
+findings_page=(ROOT/'findings.html').read_text(encoding='utf8').replace('__FINDINGS__',findings_html).replace('__ARCHIVE__',findings_parts.archive(errata,REPO) if errata else '')
+if not errata: findings_page=findings_page.replace('<li><a href="#archive">What we found wrong in the archive</a></li>','')
+(OUT/'findings.html').write_text(fill(fill_text(findings_page),'findings',VER,N_STARS),encoding='utf8')
 # Notebook: how the project was made, from the ledger work/notebook.json (work/notebook_parts.py checks every entry first).
 import notebook_parts
 notebook=json.loads((ROOT/'notebook.json').read_text(encoding='utf8'))
@@ -585,6 +565,24 @@ print(f'notebook: {n_notebook} entries')
 from PIL import Image
 stories_html=stories_parts.render(storylines,lambda src:Image.open(OUT/src).size)
 (OUT/'stories.html').write_text(fill(fill_text((ROOT/'stories.html').read_text(encoding='utf8').replace('__STORIES__',stories_html)),'stories',VER,N_STARS),encoding='utf8')
+# Home (work/home_parts.py): the question, three facts about the source, the findings as ready views, a storyline and the
+# notebook; and a sample of stars for the hero sky, drawn by the page itself.
+import home_parts
+per_year_stories,thin_years=findings_parts.year_counts(stars)
+home_html=home_parts.render(years=[(y['year'],y['papers'],y['pages']) for y in years_index],thin=thin_years,newspapers=manifest['counts']['newspapers'],
+    pages=manifest['counts']['eligible_pages'],matched=len(families),reviewed=len(stories),reviewed_years=sorted(reviewed_data),
+    audit=json.loads((ROOT.parent/'outputs/matched_audit/summary.json').read_text(encoding='utf8')),findings=findings_parts.SUMMARY,
+    storyline=storylines[0] if storylines else None,notebook_entries=n_notebook)
+assert len([f for f in findings_parts.SUMMARY if f[0]>2])>=4, 'Home offers the findings as ready views'
+sample=sorted((s for s in stars if not s['long']),key=lambda s:(-s['papers'],-s['prints'],s['first']))[:4500]
+sample.sort(key=lambda s:s['first'])
+palette=['rgba(170,182,207,A)','rgba(57,135,229,A)','rgba(217,89,38,A)','rgba(25,158,112,A)']
+home_data={'towns':tele_boot['towns'],'palette':palette,
+           'sky':{'day':[s['first'] for s in sample],'lat':[s['flat'] for s in sample],'lon':[s['flon'] for s in sample],'papers':[s['papers'] for s in sample],
+                  'color':[tele_cats[s['cat']]['slot']+1 if s['kind'] else 0 for s in sample]}}
+home=(ROOT/'home.html').read_text(encoding='utf8').replace('__HOME_DATA__',json.dumps(home_data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/'))
+home=home.replace('__HOME__',home_html).replace('__N_STORIES__',f'{N_STARS:,}')
+(OUT/'index.html').write_text(fill(home,'home',VER,N_STARS),encoding='utf8')
 def copy_with_assets(src,dest):
     """Copy a report and the local files it links to (images, data), keeping their relative paths.
     The site is English only, so links to Chinese quick-read files are dropped from the copy."""
@@ -598,7 +596,7 @@ def copy_with_assets(src,dest):
 shutil.rmtree(OUT/'notes',ignore_errors=True)   # notes/ is generated: start clean, so no stale file lingers
 copy_with_assets(ROOT.parent/'outputs/attention_pilot_report.html',OUT/'notes/attention')
 copy_with_assets(ROOT.parent/'outputs/reading_evidence_2026-11-03/reading_notebook.html',OUT/'notes/reading')
-for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__RELEASE__','__REPO__','__HOME_DATA__','__FEATURED_PULSE__']
+for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__RELEASE__','__REPO__','__HOME_DATA__','__HOME__','__ARCHIVE__']
                  for page in ['index.html','method.html','notes.html','findings.html','notebook.html','stories.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
 assert '__FINDINGS__' not in (OUT/'findings.html').read_text(encoding='utf8') and '__NOTEBOOK__' not in (OUT/'notebook.html').read_text(encoding='utf8')

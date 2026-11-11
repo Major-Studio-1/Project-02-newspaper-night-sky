@@ -133,8 +133,8 @@ SCRIPTS = ['audit_dataset.py', 'discover_topics.py', 'recheck_full_corpus.py',
            'year_search_pages.py', 'story_items.py', 'story_phrase_search.py',
            'reuse_all.py', 'reuse_families_all.py', 'reuse_titles_all.py', 'story_topics_all.py', 'check_cycles_topics.py', 'check_cycle_lengths.py', 'check_waves.py',
            'transcription_check.py', 'audit_matched.py',
-           'build_pulse_explorer.py', 'site_parts.py', 'site.css', 'glass.js', 'radio.js', 'home.html', 'telescope.html', 'pulse_explorer.html', 'radio.html', 'exhibit.html', 'method.html', 'notes.html', 'findings.html', 'findings_parts.py', 'notebook.html', 'notebook_parts.py', 'notebook.json', 'stories.html', 'stories_parts.py', 'stories.json',
-           'export_public_repo.py', 'audio_render.py', 'audio_manifest.json']
+           'build_pulse_explorer.py', 'site_parts.py', 'site.css', 'glass.js', 'radio.js', 'home.html', 'telescope.html', 'pulse_explorer.html', 'radio.html', 'exhibit.html', 'method.html', 'notes.html', 'findings.html', 'findings_parts.py', 'home_parts.py', 'notebook.html', 'notebook_parts.py', 'notebook.json', 'stories.html', 'stories_parts.py', 'stories.json',
+           'export_public_repo.py', 'audio_render.py', 'audio_manifest.json', 'archive_errata.py']
 ARCHIVE = ['build.py', 'migrate_v0_2_0.py', 'apply_ledger.py', 'apply_corrections.py', 'add_reuse_layer.py', 'add_reuse_titles.py',
            'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'add_reviewed_topics.py', 'refile_revx_pages.py', 'redate_issues.py', 'set_current.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
 for name in SCRIPTS:
@@ -142,7 +142,8 @@ for name in SCRIPTS:
 for name in ARCHIVE:
     copy(WORK / 'archive_data' / name, f'pipeline/archive_data/{name}')
 # The checks behind the correction releases v0.8.1 and v0.10.2 live with their findings in outputs/; only the scripts go here.
-for rel in ['revx_page_shift_check/check_page_shift.py', 'kentucky_gazette_dates/check_dates.py', 'kentucky_gazette_dates/rematch.py']:
+for rel in ['revx_page_shift_check/check_page_shift.py', 'kentucky_gazette_dates/check_dates.py', 'kentucky_gazette_dates/rematch.py',
+            'story_discovery_1793/check_mastheads_1793.py', 'story_discovery_1793/check_duplicate_pages_1793.py']:
     copy(PROJECT / 'outputs' / rel, f'pipeline/{rel}')
 # Only files committed in the working repository: a ledger still being written (another session's work in progress,
 # for example) stays out of the public repository until it is committed.
@@ -159,6 +160,7 @@ process = process.replace('`work/archive_data/', '`pipeline/archive_data/').repl
 process = replace(process, '(`outputs/data_foundation/`)', '([`data/`](../data))', 'process.md')
 process = replace(process, 'see `outputs/story_discovery_all/cycles_check.md`', 'see [the seasons check](seasons-check.md)', 'process.md')
 process = replace(process, '`outputs/story_discovery_all/waves_check.md`', '[the waves check](waves-check.md)', 'process.md')
+process = replace(process, '`outputs/archive_errata/filing.csv`', '[`filing.csv`](archive-errata/filing.csv)', 'process.md')
 head, found, _ = process.partition('## Where to find things')
 assert found, 'process.md: the "Where to find things" section is missing'
 process = head + f'''## Where to find things
@@ -173,6 +175,7 @@ process = head + f'''## Where to find things
 | Matched stories, all years | `pipeline/reuse_all.py`, `pipeline/reuse_families_all.py`, `pipeline/reuse_titles_all.py`, `pipeline/story_topics_all.py`; added to the release by `pipeline/archive_data/add_reuse_layer.py`, `add_reuse_titles.py` and `add_story_topics.py` |
 | Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
 | Cycle lengths and waves | `pipeline/check_cycle_lengths.py` (every period from 6 to 400 days; in [seasons-check.md](seasons-check.md)) and `pipeline/check_waves.py` (how a word comes back, against known history; [waves-check.md](waves-check.md)) |
+| Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
 | Data release | [`data/`](../data) (v{VERSION}) |
@@ -192,6 +195,13 @@ waves = (PROJECT / 'outputs/story_discovery_all/waves_check.md').read_text(encod
 waves = replace(waves, '(`cycles_check.md`, "Other cycle lengths")', '([the seasons check](seasons-check.md), "Other cycle lengths")', 'waves-check.md')
 assert not re.findall(r'`(?:work|outputs)/[^`]*`', waves), 'waves-check.md: working paths left'
 write('docs/waves-check.md', waves)
+
+# What we found wrong in the archive itself (work/archive_errata.py): the two tables, their counts and their README.
+for name in ['filing.csv', 'transcription.csv', 'summary.json']:
+    copy(PROJECT / 'outputs/archive_errata' / name, f'docs/archive-errata/{name}')
+errata = (PROJECT / 'outputs/archive_errata/README.md').read_text(encoding='utf8').replace('`work/', '`pipeline/').replace('`outputs/', '`pipeline/')   # the checks' scripts are copied to pipeline/ above
+assert not re.findall(r'`(?:work|outputs)/[^`]*`', errata), 'archive-errata/README.md: working paths left'
+write('docs/archive-errata/README.md', errata)
 
 plan = (PROJECT / 'docs/site-plan.md').read_text(encoding='utf8').replace('`work/', '`pipeline/')
 write('docs/site-plan.md', plan)

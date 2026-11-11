@@ -28,7 +28,13 @@ h2.part{font-size:15px;font-weight:500;color:var(--muted);letter-spacing:.06em;t
 .open{display:grid;grid-template-columns:1fr 1fr;gap:10px}.open div{background:var(--panel);border:1px solid #1d2740;border-radius:12px;padding:12px 14px;font-size:14.5px;color:#c6d0e4}.open b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
 .list{display:grid;gap:10px}.item{display:block;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
 .item:hover{border-color:#8ccfff88}.item h3{font-size:16px;font-weight:500;margin:0 0 3px}.item p{margin:0;color:#b9c4da;font-size:14px}
-@media(max-width:760px){main{padding:24px 16px 0}.pair,.facts,.open{grid-template-columns:1fr}.finding{padding:16px 14px 12px}}
+.errata{scroll-margin-top:80px}.lede-s{color:#c6d0e4;font-size:15px;max-width:76ch;margin:0 0 12px}
+.ecards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:4px 0 14px}
+.ecards article{background:var(--panel);border:1px solid #1d2740;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column}
+.ecards h3{font-size:16px;font-weight:600;margin:0 0 4px}.ecards p{margin:0 0 10px;font-size:14.5px;color:#c6d0e4}
+.ecards dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin:auto 0 0;font-size:13px;color:#b9c4da}.ecards dt{color:var(--muted);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}.ecards dd{margin:0}
+.ecards .csv{align-self:flex-start;margin-top:10px;font-size:13px;border:1px solid #ffffff2a;border-radius:999px;padding:4px 12px;text-decoration:none;min-height:28px}.ecards .csv:hover{border-color:#8ccfff88}
+@media(max-width:760px){main{padding:24px 16px 0}.pair,.facts,.open,.ecards{grid-template-columns:1fr}.finding{padding:16px 14px 12px}}
 </style>
 </head>
 <body>
@@ -39,8 +45,10 @@ __SITE_HEADER__
 <p class="lede">The first two are about the source itself, what survives and how far its transcriptions can be trusted, because every other finding stands on them. The numbers are computed from data release v__RELEASE__ each time the site is built. Point at a bar or a dot to read its numbers.</p>
 <ul class="toc">
 <li><a href="#f1">1 · Gaps, not silence</a></li><li><a href="#f2">2 · Misreadings</a></li><li><a href="#f3">3 · The Declaration travels</a></li>
-<li><a href="#f4">4 · The embargo comes back</a></li><li><a href="#f5">5 · Fever's season</a></li><li><a href="#f6">6 · The only cycle</a></li><li><a href="#f7">7 · Every four years</a></li></ul>
+<li><a href="#f4">4 · The embargo comes back</a></li><li><a href="#f5">5 · Fever's season</a></li><li><a href="#f6">6 · The only cycle</a></li><li><a href="#f7">7 · Every four years</a></li>
+<li><a href="#archive">What we found wrong in the archive</a></li></ul>
 __FINDINGS__
+__ARCHIVE__
 <h2 class="part">Open questions</h2>
 <div class="open">
 <div><b>How much was false news?</b>A correction can be counted; a false report cannot be known as false without a record of the true one. Without that denominator no rate can be given.</div>

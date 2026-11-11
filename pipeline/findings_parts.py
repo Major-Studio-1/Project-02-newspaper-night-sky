@@ -93,7 +93,21 @@ def table(rows, head):
             + ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '</tr>' for r in rows) + '</table></div></details>')
 
 
+SUMMARY = []   # (n, kind, title, first door's label, its link) for each finding of the last render(), for Home
+
+
+def year_counts(stars):
+    """Stories in the sky per year of first printing (long-running stories left out), and the years with too little
+    archive to judge: under a fifth of a typical year's stories."""
+    per_year = {y: 0 for y in YEARS}
+    for s in stars:
+        if not s['long']: per_year[s['year']] += 1
+    typical = statistics.median(per_year.values())
+    return per_year, [y for y in YEARS if per_year[y] < typical / 5]
+
+
 def finding(n, kind, title, claim, body, sure, not_say, doors, numbers=''):
+    SUMMARY.append((n, kind, title, *doors[0]))
     links = ''.join(f'<a href="{esc(h)}">{esc(t)}</a>' for t, h in doors)
     return (f'<section class="finding" id="f{n}"><div class="n">{n} · {esc(kind)}</div><h2>{title}</h2><p class="claim">{claim}</p>{body}'
             f'<div class="facts"><div><b>How sure</b>{sure}</div><div><b>What it does not say</b>{not_say}</div></div>'
@@ -111,12 +125,9 @@ def render(*, years, stars, decl_printings, audit, cycles, repo):
     (or None); repo: the public repository's URL."""
     arch = {y: (p, pg) for y, p, pg in years}
     keep = [s for s in stars if not s['long']]
-    per_year = {y: 0 for y in YEARS}
-    for s in keep: per_year[s['year']] += 1
-    typical = statistics.median(per_year.values())
-    judged = [y for y in YEARS if per_year[y] >= typical / 5]
-    thin = [y for y in YEARS if y not in judged]
-    out = []
+    per_year, thin = year_counts(stars)
+    judged = [y for y in YEARS if y not in thin]
+    out = []; SUMMARY.clear()
 
     # 1 · the source: what survives
     t0, t1 = thin[0], thin[-1]
@@ -308,3 +319,70 @@ def render(*, years, stars, decl_printings, audit, cycles, repo):
         [('Trace elections in the sky', 'telescope.html?q=' + quote(ELECT) + '&lookback=all')],
         table([(y, el_y[y], f'{per_year[y]:,}', f'{esh[y]:.1f}%', 'presidential' if y in terms else '') for y in span_y], ['Year', 'Election stories', 'All stories', 'Share', ''])))
     return '\n'.join(out)
+
+
+def archive(e, repo):
+    """What reading found wrong in the archive itself, for the people who keep it: the counts and examples of
+    outputs/archive_errata/summary.json (work/archive_errata.py), every case in the two tables in the public repository."""
+    p, d, t, x = e['pages'], e['dates'], e['transcription'], e['examples']
+    a, k, base = t['audit'], d['kentucky'], f'{repo}/blob/main/docs/archive-errata/'
+    pct = lambda n, of: f'{100 * n / of:.0f}%'
+    years = t['years']; yt = ', '.join(map(str, years[:-1])) + f' and {years[-1]}'
+    n_filing = p['issues'] + d['issues'] + e['second_scan']['issues']
+    rep = p['by_kind'].get('duplicate', 0)
+    items = [
+        ('Transcriptions filed under the wrong page',
+         f'In {p["issues"]} issues of {p["newspapers"]} newspapers, {p["years"][0]} to {p["years"][1]}, the machine transcription (RevX) of a page '
+         f'is filed under another page of its issue. Mostly one scan page has no transcription and the later pages’ text sits one page early; '
+         f'in {rep} issues a page’s text is filed twice. In all, {p["pages_without_revx"]:,} of the archive’s {p["all_pages"]:,} pages have no RevX transcription.',
+         'Each page’s RevX text compared with the Library of Congress OCR of every page of its issue.',
+         f'Moved to the true pages in data release v{p["release"]}: {p["matched_printings_on_a_wrong_page"]} printings of the matched stories.',
+         ('filing.csv', f'{p["issues"]} issues')),
+        ('Issues filed under the wrong date',
+         f'{k["issues"]} issues of the Kentucky Gazette and General Advertiser filed under 1806 to 1808 were printed two years earlier: '
+         f'the {k["by_year"].get("1808 -> 1806", 0)} filed under 1808 are of 1806. Two issues of the Gazette of the United States are filed away from their '
+         'mastheads: 4 April 1793 for 4 May, and 23 July for 13 July.',
+         f'Reading the masthead of every front page: {k["by_basis"]["masthead"]} by their dates, {k["by_basis"]["two-year rule"]} by the paper’s '
+         f'publication days, {k["by_basis"]["scan"]} on the scans.',
+         f'The Kentucky Gazette is dated as printed in data release v{d["release"]}; the two issues of 1793 are not corrected.',
+         ('filing.csv', f'{d["issues"]} issues')),
+        ('A second scan filed under another day',
+         'Pages 3 and 4 filed under the American Herald of Liberty of 2 July 1793 are a second scan of the pages of 9 July: '
+         'page 3 prints the heading ‘EXETER, TUESDAY, JULY 9, 1793’.',
+         'Datelines later than the issue a page is filed under.',
+         'Not corrected; no reviewed printing stands on it.',
+         ('filing.csv', '1 issue')),
+        ('Transcriptions that change what was printed',
+         f'Of {t["checked"]} printings read against their scans in {yt}, {t["changes_what_was_printed"]} ({pct(t["changes_what_was_printed"], t["checked"])}) '
+         f'carry a misreading or a gap that changes what the text says; in a random sample of the matched stories, '
+         f'{pct(a["own_calls"], a["located"])} to {pct(a["strict_rule"], a["located"])} of passages (finding 2). The machine read ‘slaves’ for ‘ſtaves’ in '
+         f'{len(x["staves"]["printings"])} of the {x["staves"]["of"]} printings of the resolution opening the ports (1776), ‘NECESSARY INFORMATION!!’ '
+         'for ‘WAR INEVITABLE!!!’ (1807), and ‘Juan’ for Junot and ‘MANUEL’ for Murat (1808).',
+         'Each printing read against its scan, under one written rule.',
+         'The reviewed passages keep the machine’s text, and their notes name each error. The matched stories carry an automatic check only.',
+         ('transcription.csv', f'{t["changes_what_was_printed"]} printings, with the reviewers’ notes')),
+        ('Printed text left out',
+         f'{t["leaves_out_text"]} of those {t["changes_what_was_printed"]} leave printed text out, often behind a bare ‘...’. In the King’s speech of '
+         f'October 1775, as the {x["leaves_out"]["name"]} printed it on {x["leaves_out"]["day"]}, the transcription stops at ‘the true constitution of the '
+         'colonies...’, where the print goes on ‘and to their subordinate relation to Great-Britain, now openly avow their revolt, hostility and rebellion’.',
+         'The same reading against the scans.',
+         'Marked in the table.',
+         ('transcription.csv', f'{t["leaves_out_text"]} printings')),
+        ('Printers’ slips silently corrected',
+         f'The transcription tidies what the printer set wrong: ‘U. STAES’ in the {x["staes"]["name"]} of {x["staes"]["day"]} becomes ‘U. STATES’, '
+         'and ‘Andersecht’, as the papers printed it in 1793, ‘Anderlecht’. A tidied text reads well, but it cannot show a misprint, '
+         'or tell one printing from another by its slips.',
+         'Noticed while reading; not counted.',
+         'Listed among the minor errors in the reviewers’ notes.',
+         None)]
+    cards = ''.join(
+        f'<article><h3>{esc(title)}</h3><p>{esc(text)}</p><dl><dt>Found by</dt><dd>{esc(found)}</dd><dt>Here</dt><dd>{esc(here)}</dd></dl>'
+        + (f'<a class="csv" href="{esc(base + lst[0])}">{esc(lst[0])} · {esc(lst[1])}</a>' if lst else '') + '</article>'
+        for title, text, found, here, lst in items)
+    return (f'<section class="errata" id="archive" aria-labelledby="archive-title"><h2 class="part" id="archive-title">What we found wrong in the archive</h2>'
+            '<p class="lede-s">Reading the papers against their scans turned up errors in the archive itself, in where pages and issues are filed and in what '
+            'the machine transcriptions say. They are set out here for the people who keep the archive, with every case in a table that can be checked '
+            f'on its scan.</p><div class="ecards">{cards}</div>'
+            f'<p class="lede-s">The tables: <a href="{esc(base)}filing.csv">filing.csv</a> ({n_filing} issues) and '
+            f'<a href="{esc(base)}transcription.csv">transcription.csv</a> ({t["changes_what_was_printed"]} printings), described in '
+            f'<a href="{esc(base)}README.md">their README</a>.</p></section>')

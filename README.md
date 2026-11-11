@@ -32,7 +32,7 @@ The project answers with **observed facts, not big claims**: *newspaper X printe
 - **Reprinting was how news travelled.** The archive holds 48,270 stories printed in two or more of its papers (164,698 printings in all). About two thirds of them were printed in exactly two. In 1776, 14 of the archive's 16 papers of that year printed the Declaration of Independence between 6 and 26 July.
 - **Some news returns with the seasons.** Independence Day stories cluster in summer: 81% fall in July–September, in 25 of the 30 years that have them. The President's annual speech comes in November–January, fever in late summer, ice in winter, and Congress while it sits. Fires show no rhythm. The surviving pages are spread evenly over the year, so these rhythms do not come from gaps in the archive. ([the check](docs/seasons-check.md))
 - **The archive has a shape.** Only two newspaper series survive for 1785–86, against 10 to 17 a year after 1800. Before 1800 the papers are mostly from New England and the Middle States; from 1802 about half are from Virginia, Washington, Kentucky and South Carolina. The site keeps these gaps visible.
-- **Machine transcriptions need checking.** For 1776, 1793, 1797, 1807 and 1808, 98 stories were read closely and every printing was checked against its scan. In one, the transcription reads "distressed" where the paper printed "dismasted". Every paper printed Congress's resolutions of 6 April 1776 with "ſtaves" (staves), and the transcription reads "slaves" in eight of the nine. Another transcription leaves out a 350-word statement that is plainly on the page.
+- **Machine transcriptions need checking.** For 1776, 1793, 1797, 1807 and 1808, 98 stories were read closely and every printing was checked against its scan. In one, the transcription reads "distressed" where the paper printed "dismasted". Every paper printed Congress's resolutions of 6 April 1776 with "ſtaves" (staves), and the transcription reads "slaves" in eight of the nine. Another transcription leaves out a 350-word statement that is plainly on the page. Every error found in the archive itself, in where pages and issues are filed and in what the transcriptions say, is listed for the archive's keepers in [docs/archive-errata](docs/archive-errata/README.md).
 
 ## How it was made
 
@@ -61,7 +61,7 @@ The reading and scan checks were done with AI assistants. An independent human s
 | [`site/`](site) | The website, ready to serve: six pages and an exhibition loop, with the data they load. The first telescope is kept as `telescope-v1.html`. |
 | [`data/`](data) | The current data release (v0.10.2): tables, the matched-story data, the schema and the validation |
 | [`pipeline/`](pipeline) | The code, in the order it runs: audit, topics, finding stories, data releases, the site |
-| [`docs/`](docs) | The full process, the seasons check, and the site plan |
+| [`docs/`](docs) | The full process, the seasons and waves checks, the errors found in the archive, and the site plan |
 | [`process/`](process) | How the three original proposals and their sketches became this site |
 
 **Run the site locally** (any Python 3):

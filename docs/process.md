@@ -259,7 +259,7 @@ The pulse view is a direct translation of the admitted group records:
   - *Years:* a strip of 41 slots, 1770–1810, drawn like the telescope's timeline. Each slot has a bar for how many newspapers survive that year, and a gold dot marks each reviewed year, 1776, 1793, 1797, 1807 and 1808. The chosen years sit in the same pale blue bracket as the telescope's look-back. Tap a year, drag across several, or choose All. A view of many years opens on all its matched stories (a reviewed year on its own opens on its reviewed stories) and puts every newspaper of those years on the map, with smaller markers.
   - *Story shelf:* the stories of the chosen years as cards above the map: the overviews (one for each reviewed year in view, and one for the matched stories), the reviewed stories under their year, then the matched stories (most widely printed first, or earliest first), and the long-running ones. Each card gives the reach, the dates and a row of dots for when it was printed.
   - *Topics and words:* topic chips hold the seven families of the project's topic model. A family chip chooses the whole family and opens its topics, all 24 in all, as a second row to choose one by one; a family with only some topics chosen shows a half light. A find box narrows the stories by the words of their titles. Topics and words narrow the shelf and the map's overview together, so choosing "War" plays every war story of the chosen years.
-  - *Speed:* one week to one year of printing per second, as a sliding glass control.
+  - *Speed:* Slow, Normal or Fast, as a sliding glass control (six steps until 12 November 2026). Their meaning follows the chosen years, so Normal plays them in about half a minute: for one year, a week, two weeks or a month of printing per second; for all forty-one years, four months, a year or two years. The button's title gives the exact value, and a link can still ask for an exact speed (`speed=7`, used by the exhibition).
   - *Tour:* the page plays on its own, the current view and then the next card on the shelf. Any click, tap or key holds it for 20 seconds; an open passage or scan holds it while it is read.
   - *Data:* one slim index of all years (`years/index.json`, 8.8 MB, 2.3 MB compressed) holds the newspapers, stories, printings and surviving pages; a passage loads from its year file when it is opened. The reviewed stories of 1776, 1793, 1797, 1807 and 1808 show at once, before the index arrives.
 - **The archive coverage display shows which dates have pages at all.** A dark newspaper can mean the paper printed nothing on the story, or that its issues for those dates did not survive.
@@ -409,10 +409,20 @@ The second of them, storylines assembled from what the papers printed, has a pag
 
 **The ledger:** the storylines live in `pipeline/stories.json`, written by hand. The build (`pipeline/stories_parts.py`) checks each one against the data release and the scan verdicts before rendering it. The pieces must be the sub-stories of the named parents. Each opening shown must come from a printing located on its scan with a faithful transcription. Every phrase in quotation marks must appear in a printing, in the group's reviewed description or in the scan check's notes on that printing. Dates and counts in the paragraphs are filled from the data, and each door must open a reviewed story. Pulses and the telescope link every story a storyline tells ("Read the storyline").
 
+### Home: one question (12 November 2026)
+
+Home follows the order in which a visitor comes to understand the site, without becoming a form. Below the stars it asks one thing, "What do you want to see?", and each of its six answers opens the instrument and the arrangement that show it: where a story started (the telescope's Place view), what it was about (Topic), when in the year (Orbit), how it spread (Pulses), how many over time (the telescope from the side) and what a day sounded like (Radio). Everything else is chosen later, on the instrument, when it changes what is seen.
+
+Before any pattern come three facts about the source, shown as facts: what the archive is (110 newspapers, 77,749 pages), how much of it survives each year (a small bar chart; two papers for 1785 and 1786), and the two kinds of evidence (found by machine, or read against the scans by hand), with how often the machine's reading changes a fact. Then the findings about what came back and how a story travelled, each with a door into the view that shows it; the Chesapeake storyline; and the notebook. The page is written by `pipeline/home_parts.py` from the build's own numbers and the Findings page's titles and doors.
+
+### What we found wrong in the archive (12 November 2026)
+
+Reading the papers against their scans turned up errors in the archive itself, which the people who built the dataset may want to correct at the source. `pipeline/archive_errata.py` gathers them from the checks' evidence and the reviewed years' scan verdicts into two tables, [`filing.csv`](archive-errata/filing.csv) (242 issues: 133 with transcriptions filed under the wrong page, 108 filed under the wrong date, 1 second scan filed under another day) and `transcription.csv` (111 reviewed printings whose transcription changes what was printed, 28 of them by leaving printed text out), with a README. The Findings page sets them out in plain words (`findings.html#archive`), and the public repository carries the tables in `docs/archive-errata/`.
+
 ## The website
 
 The views are joined into one site with nine pages and a shared header, plus an exhibition page:
-- **Home** (`index.html`): a short introduction, a slow time tunnel of stars, and four ways in.
+- **Home** (`index.html`): a slow time tunnel of stars, then one question, "What do you want to see?", three facts about the source, the findings as ready views, a storyline and the notebook (above).
 - **Telescope** (`telescope.html`): every story as a star.
 - **Pulses** (`pulses.html`): one story or one year, paper by paper.
 - **Radio** (`radio.html`): the newspapers read aloud, day by day (below).
@@ -528,6 +538,7 @@ How it works:
 | Matched stories, all years | `pipeline/reuse_all.py`, `pipeline/reuse_families_all.py`, `pipeline/reuse_titles_all.py`, `pipeline/story_topics_all.py`; added to the release by `pipeline/archive_data/add_reuse_layer.py`, `add_reuse_titles.py` and `add_story_topics.py` |
 | Seasons check | `pipeline/check_cycles_topics.py`, with results in [seasons-check.md](seasons-check.md) |
 | Cycle lengths and waves | `pipeline/check_cycle_lengths.py` (every period from 6 to 400 days; in [seasons-check.md](seasons-check.md)) and `pipeline/check_waves.py` (how a word comes back, against known history; [waves-check.md](waves-check.md)) |
+| Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
 | Data release | [`data/`](../data) (v0.10.2) |
