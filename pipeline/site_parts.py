@@ -99,7 +99,7 @@ def footer(release):
             f'<p class="foot-note">Source: Smithsonian Revolution Crossroads, drawn from the Library of Congress <i>Chronicling America</i> newspapers '
             f'(Hugging Face dataset <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision). '
             f'Reviewed stories were read and checked against the page scans; matched stories were found automatically by shared wording and are not checked. '
-            f'Data foundation v{html.escape(release)}.</p></div></footer>')
+            f'Data foundation v{html.escape(release)}. Made with AI assistance (OpenAI Codex, Anthropic Claude).</p></div></footer>')
 
 
 def fill(page_html, active, release, stories):
