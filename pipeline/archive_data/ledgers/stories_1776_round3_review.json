@@ -1,0 +1,203 @@
+{
+ "findings": {
+  "S76-334": [
+   "Scan matches the excerpt; RevX only capitalises 'superintendent' and 'southern', which the print has in lower case."
+  ],
+  "S76-335": [
+   "Scan matches the excerpt, except that the print spells 'Superintendant' and RevX gives 'Superintendent', a minor spelling change. The right edge of the crop cuts the last letters of some lines."
+  ],
+  "S76-336": [
+   "Scan matches the excerpt, except that the print spells 'superintendant' and RevX gives 'superintendent', a minor spelling change."
+  ],
+  "S76-337": [
+   "Scan matches the excerpt, except that the print has 'superintendant' and RevX gives 'Superintendent', a minor spelling change."
+  ],
+  "S76-338": [
+   "Scan matches the excerpt, except that the print spells 'Superintendant' and RevX gives 'Superintendent', a minor spelling change."
+  ],
+  "S76-339": [
+   "Scan matches the excerpt. The print reads 'with the white people', so 'white' is printed in this paper; the excerpt ends just before that word."
+  ],
+  "S76-340": [
+   "Scan matches the excerpt, including the spelling 'Superintendant' and the one word 'Sometime'. The print has 'by Mr. Thomas, and inclosed', so nothing is left out in the print."
+  ],
+  "S76-341": [
+   "Scan matches the excerpt. The print reads 'SAVANNA river' and 'and say, if the Over-hills' without 'that': printed differences from the other papers, not transcription errors."
+  ],
+  "S76-342": [
+   "Scan matches the excerpt. The heading follows the end of another item; no Charles-Town dateline shows directly above it in the crop."
+  ],
+  "S76-343": [
+   "Scan matches the excerpt. The letter is printed under the dateline 'CHARLES-TOWN, (South Carolina,) May 31.'"
+  ],
+  "S76-344": [
+   "Scan matches the excerpt, which ends at 'white people,'. The letter is printed under the dateline 'CHARLESTOWN, (South Carolina.) May 31.'"
+  ],
+  "S76-345": [
+   "Scan reads 'Savanah River' in the heading, a printed spelling; RevX 'Savannah' silently corrects it, a minor transcription difference. The rest matches the excerpt, and the letter is printed under the dateline 'CHARLES-TOWN, (South Carolina,) May 31.'"
+  ],
+  "S76-346": [
+   "Scan matches the excerpt. The print reads 'with the white people', so 'white' is printed in this paper; the excerpt ends just before that word."
+  ],
+  "S76-347": [
+   "Scan matches the excerpt. The print reads 'are down and well disposed' without 'seem': a printed difference from the other papers, not a transcription error."
+  ],
+  "S76-348": [
+   "Scan matches the excerpt. The print reads 'Wattaga, Noluchuckey'."
+  ],
+  "S76-349": [
+   "The words shown match the print, except that the print has 'enclosed' where RevX has 'inclosed'. RevX stops with '...' after 'lately made of them', but the print goes on with the letter ('on the river Wattaga, Noluchuckey, &c. We are since informed…')."
+  ],
+  "S76-350": [
+   "Scan matches the excerpt. The print reads 'Wataga, Nolachuky'."
+  ],
+  "S76-351": [
+   "Scan reads 'Wattaga, Noluchuckey'; RevX 'Watauga, Nolichuckey' changes the printed spelling of the two river names to the modern one, a minor transcription difference. The rest matches the excerpt."
+  ]
+ },
+ "crops": {
+  "S76-334": [
+   "S76-334.jpg"
+  ],
+  "S76-335": [
+   "S76-335.jpg"
+  ],
+  "S76-336": [
+   "S76-336.jpg"
+  ],
+  "S76-337": [
+   "S76-337.jpg"
+  ],
+  "S76-338": [
+   "S76-338.jpg"
+  ],
+  "S76-339": [
+   "S76-339.jpg"
+  ],
+  "S76-340": [
+   "S76-340.jpg"
+  ],
+  "S76-341": [
+   "S76-341.jpg"
+  ],
+  "S76-342": [
+   "S76-342.jpg"
+  ],
+  "S76-343": [
+   "S76-343.jpg"
+  ],
+  "S76-344": [
+   "S76-344.jpg"
+  ],
+  "S76-345": [
+   "S76-345.jpg"
+  ],
+  "S76-346": [
+   "S76-346.jpg"
+  ],
+  "S76-347": [
+   "S76-347.jpg"
+  ],
+  "S76-348": [
+   "S76-348.jpg"
+  ],
+  "S76-349": [
+   "S76-349.jpg"
+  ],
+  "S76-350": [
+   "S76-350.jpg"
+  ],
+  "S76-351": [
+   "S76-351.jpg"
+  ]
+ },
+ "boxes": {
+  "S76-334": [
+   [
+    26,
+    1745,
+    510,
+    2039
+   ]
+  ],
+  "S76-337": [
+   [
+    1600,
+    4690,
+    2760,
+    5080
+   ]
+  ],
+  "S76-339": [
+   [
+    3652,
+    4240,
+    4717,
+    4900
+   ]
+  ],
+  "S76-341": [
+   [
+    594,
+    815,
+    1151,
+    990
+   ]
+  ],
+  "S76-343": [
+   [
+    2775,
+    296,
+    3988,
+    730
+   ]
+  ]
+ },
+ "notes": {
+  "S76-341": "Prints 'SAVANNA river', 'and say, if the Over-hills' without 'that', and 'Captains Colbert and Gist'.",
+  "S76-343": "Printed under 'CHARLES-TOWN, (South Carolina,) May 31.'",
+  "S76-344": "Printed under 'CHARLESTOWN, (South Carolina.) May 31.'",
+  "S76-345": "Printed under 'CHARLES-TOWN, (South Carolina,) May 31.', and headed 'Savanah River'.",
+  "S76-347": "Prints 'are down and well disposed', without 'seem'.",
+  "S76-348": "Printed again among papers sent from Augusta, Georgia, to the Governor of Georgia (a covering letter of 3 July 1776 with two sworn depositions), where it is called 'a copy of an intercepted letter from Henry Stuart, to the frontier inhabitants of North-Carolina and Virginia'. The papers begin on page 2. Prints 'a talk' and 'which is reported you lately made of them', where the June and July printings have 'the talk' and 'it was reported you had lately made of them'; the rivers are printed 'Wattaga, Noluchuckey'.",
+  "S76-349": "Printed again among papers sent from Augusta, Georgia, to the Governor of Georgia (a covering letter of 3 July 1776 with two sworn depositions), where it is called 'a copy of an intercepted letter from Henry Stuart, to the frontier inhabitants of North-Carolina and Virginia'. The RevX transcription shortens the letter with '...' after 'lately made of them'; the paper printed it in full ('on the river Wattaga, Noluchuckey, &c. We are since informed…'). Prints 'a talk' and 'which is reported you lately made of them'.",
+  "S76-350": "Printed again among papers sent from Augusta, Georgia, to the Governor of Georgia (a covering letter of 3 July 1776 with two sworn depositions), where it is called 'a copy of an intercepted letter from Henry Stuart, to the frontier inhabitants of North-Carolina and Virginia'. This paper printed the letter for the second time. The rivers are printed 'Wataga, Nolachuky'; prints 'a talk' and 'which is reported you lately made of them'.",
+  "S76-351": "Printed again among papers sent from Augusta, Georgia, to the Governor of Georgia (a covering letter of 3 July 1776 with two sworn depositions), where it is called 'a copy of an intercepted letter from Henry Stuart, to the frontier inhabitants of North-Carolina and Virginia'. The papers begin on page 1. This paper printed the letter for the second time. The rivers are printed 'Wattaga, Noluchuckey' (RevX 'Watauga, Nolichuckey'); prints 'a talk' and 'which is reported you lately made of them'."
+ },
+ "dispositions": {
+  "method": "Round three of 1776. On 11 November 2026 the owner set the rule 'every story alike': a reviewed story is described by what kind of text it is and whose account, in the papers' own words, never as what happened; sensitive subjects get no special treatment. Items that earlier rounds held back for framing are therefore counted by the year's own rule, exactly like any other item: what reaches it is admitted, what does not stays out. As before, an excerpt ends before the names of private people where it can, and stories that turn on private people stay out. Rounds one and two left out the reports of Cherokee and Creek plans, each counted by the item finder in 8 papers. Both were read again with phrase searches over all 2,319 pages of 1776 in both transcriptions (phrase_patterns_round3.json, phrase_hits_round3.json), every hit was read, the papers in print in their weeks without a hit were searched with loose keywords (no missed printing), and every printing was checked against its page scan by AI reviewers (scan_batches/batch_16.json and batch_17.json, SCAN_PROTOCOL.md, scan_points_round3.json).",
+  "selection_rule": "As in rounds one and two: a story needs one printed item found in 7 or more newspapers, counted item by item. Round one listed both items among its candidates in 7 or 8 papers; round two admitted every other listed candidate that reached 7. Both reach 8, so both are admitted, as two single stories.",
+  "items_admitted": {
+   "stuart-letter-to-frontier-inhabitants": [
+    "I76-0037",
+    "I76-0282"
+   ],
+   "savannah-river-letter-13-may-1776": [
+    "I76-0074"
+   ]
+  },
+  "counted_item_by_item": {
+   "Henry Stuart's letter": "Printed in two settings: from Virginia in June and July under the heading 'Copy of a letter addressed to the frontier inhabitants…' (VGB 7 June, NYP 20 June, PL 29 June, PP and NYG 1 July, FJ 13 July: 6 papers), and from 31 August among papers sent from Augusta, Georgia, to the Governor of Georgia, as 'an intercepted letter', after two sworn depositions (PEP 31 August, PG 4 September, PL 7 September, NYG 9 September). The letter is the same item in both, so they count together: 8 papers, 10 printings. The NYP continued its printing of 20 June in the issue of 27 June (page 3), counted once.",
+   "The Savannah River letter": "One item in 8 papers (NYP 4 July to FJ 27 July), printed from Charleston (31 May) in four of them."
+  },
+  "not_admitted": {
+   "Other reports of the southern frontier in 7 papers (not held back for framing)": "Letters from Fincastle of late July, an express on the relief of the Watauga fort, and a September paragraph of letters from the south on the war against the lower towns each reach 7 papers by the item finder. Round one read them among the 101 documents in 7 or more papers and did not choose them, like other 7- and 8-paper items; it did not record them as held back for framing. They can be read in a later round with the other items round one did not choose.",
+   "Still out by earlier decisions": "The committees' notices under the bills resolution (they publish the names of private people; the owner's decision of 9 November 2026) and the parody of the Howes' September declaration (4 papers)."
+  }
+ },
+ "verdict_summary": {
+  "yes": 18
+ },
+ "transcription_summary": {
+  "faithful": 11,
+  "minor_errors": 6,
+  "major_problem": 1
+ },
+ "crop_methods": {
+  "manual_box": 5,
+  "pdf_text_layer": 13
+ },
+ "rechecked": [
+  "S76-344"
+ ]
+}

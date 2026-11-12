@@ -114,6 +114,7 @@ filing.append({'problem': 'Second scan filed under another date', 'lccn': 'sn840
 # 4 · Transcriptions that change what was printed: every reviewed printing the scan check found with a fact-changing
 # problem (a misreading, or printed text left out), in the four reviewed years with structured verdicts.
 data = json.loads((SITE / 'data.json').read_text(encoding='utf8'))
+YEARS = tuple(y for y in YEARS if y in {r['year'] for r in data['reviewed']})   # a review still under way has verdicts but no stories yet
 obs, names = {}, {}
 for y in data['reviewed']:
     for p in y['newspapers']: names[p['lccn']] = p['title']

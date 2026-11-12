@@ -76,7 +76,7 @@ Nobody told the model what topics to look for.
 
   These are flagged and not presented as reliable.
 
-Each topic was then labelled by reading its top words and example passages. This was AI-assisted, in Codex. The labels sorted the 24 topics into seven provisional categories, for example *politics and public institutions* and *war, diplomacy and shipping*. Some topics turned out to be formats rather than subjects, such as name lists or letter extracts, and they are marked as such.
+Each topic was then labelled by reading its top words and example passages. This was AI-assisted, in Codex. The labels sorted the 24 topics into seven provisional categories, for example *politics and public institutions* and *war, diplomacy and shipping*. Some topics turned out to be formats rather than subjects, such as name lists or letter extracts, and they are marked as such. The names the site shows were revised later, against the matched stories (Track 3, "Topics").
 
 **5. Score every page.** The frozen model was applied, without refitting, to all 77,749 usable pages: 1,063,079 passages in total. Re-scoring the whole collection instead of the sample changed the peak year for 12 of the 24 topics. That is a good reminder that the sample-based curves were only a first look.
 
@@ -178,6 +178,12 @@ A check of every issue of the *Kentucky Gazette and General Advertiser* found 10
 - **Matched stories:** the pages were matched again in the windows of their printed dates, by the same rules. Their 95 old matches gave way to 4,506 new ones; 27 printings left and 884 joined, 390 of them in 151 new stories. In all there are 48,270 matched stories and 164,698 printings. No reviewed story changed.
 - **On the site,** a printing's date is the date it printed; its scan link still uses the filed one.
 
+### A sixth reviewed year: 1806, and the stories once held back (data releases v0.11.0 to v0.11.4)
+
+1806 was reviewed by the method of 1807 and 1808 (every single item in 9 or more papers, items in 7–8 papers chosen to cover the months and the kinds of news): 33 stories, 66 groups and 464 printings in 12 papers, all found on their scans, from the news of Austerlitz and the Treaty of Pressburg to Miranda's expedition, the *Leander* affair, the return of Lewis and Clark and Burr's enterprise (release v0.11.0, 1,793 checks). Stories that turn on private persons were left out for the owner to decide, as before.
+
+Four rounds then read the stories earlier rounds had held back for framing, by each year's own rule and described like every other story (what kind of text it is, whose account, in the papers' words): 12 stories and 96 printings in 1776, 1793, 1807 and 1808 (releases v0.11.1 to v0.11.4, 1,894 checks). Among them are letters about the Creek and Cherokee towns, the War Office report on the treaty talks north of the Ohio, the German Creek letter, news from Cap Français and from Haiti, and Robert MacDonald's funeral at Norfolk. What did not reach a year's rule stayed out by the rule, not for its subject. Their categories say what kind of affair a story is, not whose affairs: 1793's first category became "War and diplomacy", 1807's "War in Europe and Haiti" and 1808's "War and conflict".
+
 ### Connections between stories
 
 Connections were found the same way: search, read, then record. Passages in which two topic groups are both strong, for example shipping and European politics, were read. Fifteen connections that the newspapers state themselves were recorded, such as a decree that cites American newspapers. Each connection is recorded with its type (citation, challenge, claimed cause and so on) and the passage that supports it. Four counterexamples were kept as well, where items merely sat next to each other on a page. A connection a newspaper *asserts* is recorded as an assertion. It does not prove that one thing caused the other. Plainer links are recorded too. For example, a Greenock letter and Boyd's Bantry report were printed side by side in the same three issues, after arriving on the same ship. That is recorded as `printed_alongside` and nothing more.
@@ -212,6 +218,8 @@ Later releases change these counts: from v0.6.0 each printing counts once per pa
 - Headings above the item are not used, because they were often section names or the signature of the item before.
 
 **Topics (data release v0.5.2).** The frozen 24-topic model from Track 1 scores the excerpt of every printing, and each story takes its strongest topic. Printings of the same story share their story's topic 89% of the time across all stories with two or more printings, and 76% in a sample of stories with three or more; chance would be about 7%. The telescope's Topic view uses these topics.
+
+The site names each topic for what the stories in it mostly are. A check of 810 matched stories, read without knowing their topics (12 November 2026, `docs/notes/2026-11-12-topic-labels-review.md`), found that the first names fitted about half of the stories in their wedges. Those names had been given from whole pages, where advertisements are common, while reprinted stories are mostly news, so names of kinds of notice fitted few of them. The names were changed to those that fitted best in the same kind of test, for example *Courts and lawsuits* for *Court orders* and *Notices seeking people* for *Escape and capture notices*. Two wedges whose stories share only place names or personal names are called *Mixed*. Two topics that hold the same estate and debt notices share one wedge, so the ring has 23 wedges. The data release keeps the model's 24 topics and its first labels.
 
 **Long-running matches.** Overlapping matches can chain a serial document or a long debate into one family that runs for months, for example Erskine's instructions in 1809–10 (330 pages in 12 newspapers). A family that spans more than 120 days or more than 40 pages is flagged `long_running`. The pulse page lists these separately and leaves them out of the year overview.
 
@@ -256,12 +264,12 @@ The pulse view is a direct translation of the admitted group records:
   - *Constellations:* hovering over or tapping a star pauses on its story. The story's papers light up with their printing dates and are joined by faint lines; everything else dims. The lines join nearest neighbours on the map, not printings in date order, and appear all at once, so they group the printings without suggesting a route. The caption says so.
   - *Filter:* "Show stories printed in at least N newspapers". The matched overview defaults to 3, which removes the two-paper matches (68% of all matched stories).
 - **Choosing what to follow (9 November 2026).** Nothing is hidden in menus; the page offers what there is.
-  - *Years:* a strip of 41 slots, 1770–1810, drawn like the telescope's timeline. Each slot has a bar for how many newspapers survive that year, and a gold dot marks each reviewed year, 1776, 1793, 1797, 1807 and 1808. The chosen years sit in the same pale blue bracket as the telescope's look-back. Tap a year, drag across several, or choose All. A view of many years opens on all its matched stories (a reviewed year on its own opens on its reviewed stories) and puts every newspaper of those years on the map, with smaller markers.
+  - *Years:* a strip of 41 slots, 1770–1810, drawn like the telescope's timeline. Each slot has a bar for how many newspapers survive that year, and a gold dot marks each reviewed year, 1776, 1793, 1797, 1806, 1807 and 1808. The chosen years sit in the same pale blue bracket as the telescope's look-back. Tap a year, drag across several, or choose All. A view of many years opens on all its matched stories (a reviewed year on its own opens on its reviewed stories) and puts every newspaper of those years on the map, with smaller markers.
   - *Story shelf:* the stories of the chosen years as cards above the map: the overviews (one for each reviewed year in view, and one for the matched stories), the reviewed stories under their year, then the matched stories (most widely printed first, or earliest first), and the long-running ones. Each card gives the reach, the dates and a row of dots for when it was printed.
-  - *Topics and words:* topic chips hold the seven families of the project's topic model. A family chip chooses the whole family and opens its topics, all 24 in all, as a second row to choose one by one; a family with only some topics chosen shows a half light. A find box narrows the stories by the words of their titles. Topics and words narrow the shelf and the map's overview together, so choosing "War" plays every war story of the chosen years.
+  - *Topics and words:* topic chips hold the seven families of the project's topic model. A family chip chooses the whole family and opens its topics, 23 in all, as a second row to choose one by one; a family with only some topics chosen shows a half light. A find box narrows the stories by the words of their titles. Topics and words narrow the shelf and the map's overview together, so choosing "War" plays every war story of the chosen years.
   - *Speed:* Slow, Normal or Fast, as a sliding glass control (six steps until 12 November 2026). Their meaning follows the chosen years, so Normal plays them in about half a minute: for one year, a week, two weeks or a month of printing per second; for all forty-one years, four months, a year or two years. The button's title gives the exact value, and a link can still ask for an exact speed (`speed=7`, used by the exhibition).
   - *Tour:* the page plays on its own, the current view and then the next card on the shelf. Any click, tap or key holds it for 20 seconds; an open passage or scan holds it while it is read.
-  - *Data:* one slim index of all years (`years/index.json`, 8.8 MB, 2.3 MB compressed) holds the newspapers, stories, printings and surviving pages; a passage loads from its year file when it is opened. The reviewed stories of 1776, 1793, 1797, 1807 and 1808 show at once, before the index arrives.
+  - *Data:* one slim index of all years (`years/index.json`, 8.8 MB, 2.3 MB compressed) holds the newspapers, stories, printings and surviving pages; a passage loads from its year file when it is opened. The reviewed stories of 1776, 1793, 1797, 1806, 1807 and 1808 show at once, before the index arrives.
 - **The archive coverage display shows which dates have pages at all.** A dark newspaper can mean the paper printed nothing on the story, or that its issues for those dates did not survive.
   - Under each newspaper: whether the archive has a page from it on the current date.
   - A coverage strip above the date slider: for each week (each day in short views), how many of the newspapers on the map have surviving pages. A low or missing bar is a gap in the archive, not silence.
@@ -285,7 +293,7 @@ The pulse view is a direct translation of the admitted group records:
 - **Drift:** lets time pass slowly. New stories arrive at the front and older ones recede into the distance.
 - **Three views of the same tunnel of time**, with the stars gliding between them:
   - **Place:** the town where each story was first printed in this archive, on a face-on map.
-  - **Topic:** a ring of the project's 24 topics, named by hand and grouped into the seven families of the first study, with a gap between families. A star sits on its topic's middle line when the story is about that topic alone, and leans toward its next topic when it mixes topics. Stories in more papers sit toward the rim. Printings of the same story agree on the topic 89% of the time.
+  - **Topic:** a ring of the project's topics (23 wedges; two of the model's 24 topics share one), each named for what its stories mostly are and grouped into seven families, with a gap between families. A star sits on its topic's middle line when the story is about that topic alone, and leans toward its next topic when it mixes topics. Stories in more papers sit toward the rim. Printings of the same story agree on the topic 89% of the time. The hover card gives the topic's name with its three most typical words. For a topic whose name fits mainly the 1770s (notices seeking people, horse notices, estate and debt notices), it adds one line saying so.
     - The families are not used for colour. A spot check of matched stories in three or more papers found that only 2 or 3 of 14 "notices" were notices and 4 of 14 "other" were poems or essays; the rest were news. Advertisements were rarely reprinted across papers, and the model goes by vocabulary, so fire and bridge reports land among the property notices.
   - **Orbit:** a ring of the calendar. Because time also runs into the distance, each year becomes one turn of a spiral, so stories that return at the same season line up as streaks. A check found strong yearly rhythms for Independence Day, Thanksgiving, the President's annual speech, ice, fever and Congress, and none for fires; see [the seasons check](seasons-check.md).
 - **Angle:** Front looks straight back through time; Side shows the time axis from an angle.
@@ -307,7 +315,7 @@ The pulse view is a direct translation of the admitted group records:
 Version 1 (below) is kept as `telescope-v1.html`.
 
 
-`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2).
+`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4).
 
 - **Left to right:** the date of first printing.
 - **Up and down:** the average latitude of the towns whose papers printed the story, north at the top. A small fixed scatter, up to 0.12°, keeps stories printed by the same papers from stacking into a line.
@@ -525,7 +533,7 @@ How it works:
 
 - **Not exhaustive:** the searches find candidates, and they cannot guarantee every printing. Badly damaged transcriptions can hide a match.
 - **Not independent:** all reading and scan checks so far were done by AI assistants (Codex, then Claude Code). A second human reader is still needed.
-- **Fragile topics:** topic labels and the number 24 are provisional, and three topics are unstable.
+- **Fragile topics:** topic labels and the number 24 are provisional, and three topics are unstable. On reprinted stories, a topic's name fits about half of the stories in its wedge.
 - **Not public opinion:** newspaper coverage in a surviving archive is not the same as public opinion, and changes in coverage are not proof of cause or of resolution.
 
 ## Where to find things
@@ -543,5 +551,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.10.2) |
+| Data release | [`data/`](../data) (v0.11.4) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

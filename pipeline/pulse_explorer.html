@@ -328,6 +328,7 @@ const inTopics = list => topicsOn.size ? list.filter(g => topicsOn.has(g.topic))
 const inFind = list => findRx.length ? list.filter(g => { const t = g.label.toLowerCase().replace(/ſ/g, 's'); return findRx.every(rx => rx.test(t)); }) : list;
 const narrowed = list => inFind(inTopics(list));
 const famLanes = (BOOT.families || []).map((_, i) => (BOOT.topics || []).flatMap((t, j) => t.family === i ? [j] : []));
+const LANES_KEY = (BOOT.topics || []).map(t => t.label).join('|');   // saved topic lanes count only while the topics are the same
 function following() {   // the topics and words chosen, in a few words
   const parts = [];
   if (topicsOn.size) {
@@ -540,9 +541,8 @@ function card({id, tag, dot, title, meta, days, colour, cls}) {
   return b;
 }
 function matchedDays(g) { const P = INDEX.printings, St = INDEX.stories; return Array.from({length: g.printings}, (_, k) => P.d[St.off[g.s] + k]); }
-function matchedCard(g) {
-  const t = BOOT.topics[g.topic];
-  return card({id: g.id, tag: g.long_running ? 'Long-running · not checked' : (t ? t.label : 'Matched') + ' · not checked', title: g.label,
+function matchedCard(g) {   // no topic word on a single story: a topic's name fits about half of its stories (topics stay as chips)
+  return card({id: g.id, tag: g.long_running ? 'Long-running · not checked' : 'Matched · not checked', title: g.label,
     meta: `${g.newspapers} papers · ${g.printings} printings · ${monthSpan(g.firstDay, g.lastDay)}`, days: matchedDays(g)});
 }
 function buildShelf() {
@@ -613,11 +613,11 @@ function buildChips() {
       if (on === ls.length) { ls.forEach(j => topicsOn.delete(j)); if (openFamily === i) openFamily = -1; }   // all chosen: let go of the family
       else { ls.forEach(j => topicsOn.add(j)); openFamily = i; }                                              // choose the whole family and open it
       topicsChanged();
-    }, `${f.name}: ${ls.map(j => lanes[j].label).join(', ')}`);
+    }, `${f.short}: ${ls.map(j => lanes[j].label).join(', ')}`);
   });
   if (openFamily >= 0 && famLanes[openFamily].some(j => topicsOn.has(j))) {
     sub.hidden = false;
-    for (const j of famLanes[openFamily]) if (counts[j] || topicsOn.has(j)) chip(sub, lanes[j].label, counts[j], topicsOn.has(j), () => { topicsOn.has(j) ? topicsOn.delete(j) : topicsOn.add(j); topicsChanged(); }, lanes[j].label + ' · a topic of ' + BOOT.families[openFamily].name);
+    for (const j of famLanes[openFamily]) if (counts[j] || topicsOn.has(j)) chip(sub, lanes[j].label, counts[j], topicsOn.has(j), () => { topicsOn.has(j) ? topicsOn.delete(j) : topicsOn.add(j); topicsChanged(); }, lanes[j].label + ' · a topic of ' + BOOT.families[openFamily].short);
   } else sub.hidden = true;
 }
 function topicsChanged() {   // the shelf and the map follow the chosen topics and words at once
@@ -657,7 +657,7 @@ function renderLegend() {
   }
 }
 
-function save() { if (Y && !WATCH) try { localStorage.setItem(STORE, JSON.stringify({from: Y.from, to: Y.to, group: group?.id, day, selected, pace, minPapers, tour, topicLanes: [...topicsOn], open: openFamily, sort: shelfSort})); } catch {} }
+function save() { if (Y && !WATCH) try { localStorage.setItem(STORE, JSON.stringify({from: Y.from, to: Y.to, group: group?.id, day, selected, pace, minPapers, tour, topicLanes: [...topicsOn], lanes: LANES_KEY, open: openFamily, sort: shelfSort})); } catch {} }
 
 // How far a passage was checked, in words. Matched printings carry the automatic transcription check (data release
 // v0.6.0 on): whether the passage is also in the page's other machine transcription. That shows the passage is on the
@@ -1240,7 +1240,7 @@ Glass.init();
 if ([0, 1, 2].includes(saved?.pace)) pace = saved.pace;
 syncSpeed();
 for (const k of ['reviewed', 'matched']) if ([1, 2, 3, 4, 6].includes(saved?.minPapers?.[k])) minPapers[k] = saved.minPapers[k];
-if (saved && Array.isArray(saved.topicLanes)) topicsOn = new Set(saved.topicLanes.filter(i => Number.isInteger(i) && i >= 0 && i < (BOOT.topics || []).length));
+if (saved && Array.isArray(saved.topicLanes) && saved.lanes === LANES_KEY) topicsOn = new Set(saved.topicLanes.filter(i => Number.isInteger(i) && i >= 0 && i < (BOOT.topics || []).length));
 if (saved && Number.isInteger(saved.open) && famLanes[saved.open]) openFamily = saved.open;
 if (saved && ['reach', 'date'].includes(saved.sort)) shelfSort = saved.sort;
 syncSort();

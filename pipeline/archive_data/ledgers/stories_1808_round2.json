@@ -1,0 +1,702 @@
+{
+  "ledger_id": "ledger:stories-1808-round2",
+  "ledger_version": 1,
+  "base_release": "0.11.3",
+  "target_release": "0.11.4",
+  "recorded_date": "2026-11-12",
+  "namespace": "expansion-1808",
+  "evidence_dir": "outputs/story_discovery_1808/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Round two of 1808, under the rule 'every story alike' (11 November 2026): the items that round one held back for framing, counted item by item at the year's rule of 7 newspapers with phrase searches on all 4,466 pages filed under 1808 in both transcriptions, reading of every hit, loose keyword searches of the papers in print without a hit, and scan checks of each admitted passage",
+  "supporting_files": {
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1808/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1808/phrase_patterns_round2.json": "retrieval_patterns",
+    "outputs/story_discovery_1808/phrase_hits_round2.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1808.py": "ledger_code",
+    "work/archive_data/ledgers/make_stories_1808_round2.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1808_round2_review.json": "scan_review",
+    "outputs/story_discovery_1808/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1808/scan_points_round2.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S08-299",
+      "page_key": "sn84024012|1808-06-06|1|3",
+      "excerpt_start": "IMPORTANT! Extract of a letter from",
+      "excerpt_end": "20 persons and took some horses, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sevier-letter-marble-springs-1808"
+      ],
+      "summary": "Staunton, 27 May 1808: a letter of Governor Sevier passes on a report from General Jackson that 440 Creeks and 12 whites have taken a position near the mouth of Duck river.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads '440 Creeks and 12 whites' under the heading 'IMPORTANT!'."
+      ],
+      "crops": [
+        "S08-299.jpg"
+      ],
+      "family": [
+        "R1808-0040",
+        "R1808-0113",
+        "R1808-0150",
+        "R1808-0693",
+        "R1808-1639"
+      ]
+    },
+    {
+      "id": "S08-300",
+      "page_key": "sn84024710|1808-06-07|1|2",
+      "excerpt_start": "STAUNTON, May 27. IMPORTANT! Extract of",
+      "excerpt_end": "20 persons and took some horses, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sevier-letter-marble-springs-1808"
+      ],
+      "summary": "The Virginia Argus prints Governor Sevier's letter.",
+      "note": "Printed from the Staunton (Virginia) Eagle.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads '440 Creeks and 12 whites' under 'STAUNTON, May 27.' and 'IMPORTANT!'."
+      ],
+      "crops": [
+        "S08-300.jpg"
+      ],
+      "family": [
+        "R1808-0040",
+        "R1808-0150",
+        "R1808-0276",
+        "R1808-0277",
+        "R1808-0458",
+        "R1808-1617",
+        "R1808-1648",
+        "R1808-1653"
+      ]
+    },
+    {
+      "id": "S08-301",
+      "page_key": "sn84024736|1808-06-10|1|2",
+      "excerpt_start": "IMPORTANT. Extract of a letter from",
+      "excerpt_end": "20 persons and took some horses, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sevier-letter-marble-springs-1808"
+      ],
+      "summary": "The Enquirer prints Governor Sevier's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except the heading, which the print gives as 'IMPORTANT!' with an exclamation mark; RevX 'IMPORTANT.' is a minor transcription error. The print reads '440 Creeks and 12 whites'."
+      ],
+      "crops": [
+        "S08-301.jpg"
+      ],
+      "family": [
+        "R1808-0040",
+        "R1808-0041",
+        "R1808-0458",
+        "R1808-1635",
+        "R1808-1663"
+      ]
+    },
+    {
+      "id": "S08-302",
+      "page_key": "sn85059525|1808-06-10|1|2",
+      "excerpt_start": "Extract of a letter from Gov.",
+      "excerpt_end": "twenty persons and took some horses, &c.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sevier-letter-marble-springs-1808"
+      ],
+      "summary": "The Berkeley and Jefferson Intelligencer prints Governor Sevier's letter.",
+      "note": "Prints 'to his friend in Staunton' and 'twenty persons'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'to his friend in Staunton', '440 Creeks and 12 whites' and 'twenty persons'."
+      ],
+      "crops": [
+        "S08-302.jpg"
+      ],
+      "family": [
+        "R1808-0040",
+        "R1808-0113",
+        "R1808-0150",
+        "R1808-0209",
+        "R1808-0256",
+        "R1808-0276",
+        "R1808-0277",
+        "R1808-0364",
+        "R1808-0699",
+        "R1808-0702",
+        "R1808-1653"
+      ]
+    },
+    {
+      "id": "S08-303",
+      "page_key": "sn83016082|1808-06-20|1|2",
+      "excerpt_start": "STAUNTON, (VIR.) MAY 27. Extract of",
+      "excerpt_end": "20 persons, and took some horses, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sevier-letter-marble-springs-1808"
+      ],
+      "summary": "The Portland Gazette prints Governor Sevier's letter.",
+      "note": "Printed from the Staunton (Virginia) Eagle. Dates the letter 'May 14.' without the year; prints 'the Duck river'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads '440 Creeks and 12 whites' under 'STAUNTON, (VIR.) MAY 27.', with no 'IMPORTANT' heading and no year in the letter's date."
+      ],
+      "crops": [
+        "S08-303.jpg"
+      ],
+      "family": [
+        "R1808-0040",
+        "R1808-0707",
+        "R1808-0715",
+        "R1808-1698",
+        "R1808-1715"
+      ]
+    },
+    {
+      "id": "S08-304",
+      "page_key": "sn83025588|1808-06-21|1|3",
+      "excerpt_start": "IMPORTANT! Extract of a letter from",
+      "excerpt_end": "20 persons and took some horses, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sevier-letter-marble-springs-1808"
+      ],
+      "summary": "The New Hampshire Gazette prints Governor Sevier's letter.",
+      "note": "Under the paper's own heading 'The Allies of Britain COMMENCING HOSTILITIES!', credited to the Staunton Eagle. Prints '140 Creeks' where the other printings of the letter have 440.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads '140 Creeks' where the other printings have 440: a printed difference, not a transcription error. The figures are old-style numerals, and the first is the same shape as the 1 of '12' and '14'."
+      ],
+      "crops": [
+        "S08-304.jpg"
+      ],
+      "family": [
+        "R1808-0040",
+        "R1808-0114",
+        "R1808-0714",
+        "R1808-0724",
+        "R1808-1724"
+      ]
+    },
+    {
+      "id": "S08-305",
+      "page_key": "sn83016082|1808-08-15|1|2",
+      "excerpt_start": "BURLINGTON, AUGUST 5. Melancholy Event —We",
+      "excerpt_end": "have been some time employed in smuggling.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "burlington-revenue-cutter-1808"
+      ],
+      "summary": "Burlington, Vermont, 5 August 1808: a revenue cutter's crew, sent after a smuggling boat, is fired on from the shore of Onion river.",
+      "note": "Earliest printing found. Prints 'sargeant'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print spells 'sargeant'; RevX 'sergeant' is a silent correction."
+      ],
+      "crops": [
+        "S08-305.jpg"
+      ],
+      "family": [
+        "R1808-0015",
+        "R1808-1683"
+      ]
+    },
+    {
+      "id": "S08-306",
+      "page_key": "sn83025588|1808-08-16|1|2",
+      "excerpt_start": "BURLINGTON (Vermont) AUGUST 5. We have",
+      "excerpt_end": "have been some time employed in smuggling.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "burlington-revenue-cutter-1808"
+      ],
+      "summary": "The New Hampshire Gazette prints the Burlington report.",
+      "note": "No 'Melancholy Event' heading.",
+      "scan_findings": [
+        "Scan reads 'a large batteau'; RevX 'boat' is a transcription error that replaces the printed word with another of similar sense, so this printing does not differ from the others here. The rest matches, and the print has no 'Melancholy Event' heading."
+      ],
+      "crops": [
+        "S08-306.jpg"
+      ],
+      "family": [
+        "R1808-0015",
+        "R1808-0017",
+        "R1808-0048",
+        "R1808-0118",
+        "R1808-0132",
+        "R1808-1850"
+      ]
+    },
+    {
+      "id": "S08-307",
+      "page_key": "sn85025815|1808-08-17|1|3",
+      "excerpt_start": "BURLINGTON, (Ver.) August 5. Melancholy event.",
+      "excerpt_end": "have been some time employed in smuggling.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "burlington-revenue-cutter-1808"
+      ],
+      "summary": "The Norfolk Gazette and Publick Ledger prints the Burlington report.",
+      "note": "Prints 'a melancholy event' without 'very', 'serjeant' and 'well known here'.",
+      "scan_findings": [
+        "Scan reads 'batteau'; RevX 'bateeu' is a minor transcription error. The print has 'a melancholy event' without 'very', 'serjeant' and 'well known here'; these are printed differences."
+      ],
+      "crops": [
+        "S08-307.jpg"
+      ],
+      "family": [
+        "R1808-0015",
+        "R1808-0392",
+        "R1808-0780",
+        "R1808-0781",
+        "R1808-1936",
+        "R1808-1937"
+      ]
+    },
+    {
+      "id": "S08-308",
+      "page_key": "sn84024013|1808-08-18|1|3",
+      "excerpt_start": "BURLINGTON, (Ver.) August 5. Melancholy Event.",
+      "excerpt_end": "called the Black Snake, owned by persons",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "burlington-revenue-cutter-1808"
+      ],
+      "summary": "The Alexandria Daily Gazette prints the Burlington report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The left edge of the column is dark and tilted, but every word of the excerpt can be read."
+      ],
+      "crops": [
+        "S08-308.jpg"
+      ],
+      "family": [
+        "R1808-0015",
+        "R1808-0784",
+        "R1808-1944"
+      ],
+      "scan_boxes": [
+        [
+          50,
+          350,
+          615,
+          730
+        ]
+      ]
+    },
+    {
+      "id": "S08-309",
+      "page_key": "sn83045242|1808-08-19|1|2",
+      "excerpt_start": "Burlington, (Ver.) Aug. 15. Melancholy Event.—We",
+      "excerpt_end": "have been some time employed in smuggling.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "burlington-revenue-cutter-1808"
+      ],
+      "summary": "The National Intelligencer prints the Burlington report.",
+      "note": "Dated 'Aug. 15.' where the others have August 5.",
+      "scan_findings": [
+        "Scan reads 'Aug. 15.' where the other printings have August 5: a printed error, not a transcription error (the figures are heavy but read as 15 on an enlarged copy). Scan reads 'batteau'; RevX 'bateeu' is a minor transcription error."
+      ],
+      "crops": [
+        "S08-309.jpg"
+      ],
+      "family": [
+        "R1808-0015",
+        "R1808-0776",
+        "R1808-0785",
+        "R1808-1949"
+      ]
+    },
+    {
+      "id": "S08-310",
+      "page_key": "sn84024710|1808-08-23|1|2",
+      "excerpt_start": "BURLINGTON, (Ver.) August 5. We have",
+      "excerpt_end": "there to have been employed in smuggling.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "burlington-revenue-cutter-1808"
+      ],
+      "summary": "The Virginia Argus prints the Burlington report.",
+      "note": "No 'Melancholy Event' heading; prints 'to have been employed', without 'some time'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the item runs from the foot of one column to the head of the next. The print has no 'Melancholy Event' heading and reads 'to have been employed', without 'some time'."
+      ],
+      "crops": [
+        "S08-310-1.jpg",
+        "S08-310-2.jpg"
+      ],
+      "family": [
+        "R1808-0015",
+        "R1808-0787",
+        "R1808-1949",
+        "R1808-1950",
+        "R1808-1951",
+        "R1808-1952",
+        "R1808-1976",
+        "R1808-1977"
+      ]
+    },
+    {
+      "id": "S08-311",
+      "page_key": "sn84024736|1808-08-26|1|1",
+      "excerpt_start": "BURLINGTON, Aug. 5. Melancholy Event. We",
+      "excerpt_end": "have been some time employed in smuggling.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "burlington-revenue-cutter-1808"
+      ],
+      "summary": "The Enquirer prints the Burlington report.",
+      "note": "Under the state heading 'VERMONT.'; prints 'Wenesday'.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance. The print reads 'Wenesday' and 'serjeant'; RevX 'Wednesday' and 'sergeant' are silent corrections. The dateline stands beside the state heading 'VERMONT.'."
+      ],
+      "crops": [
+        "S08-311.jpg"
+      ],
+      "family": [
+        "R1808-0015",
+        "R1808-0132",
+        "R1808-0393",
+        "R1808-0395",
+        "R1808-0788",
+        "R1808-0791",
+        "R1808-1960",
+        "R1808-1989"
+      ]
+    },
+    {
+      "id": "S08-312",
+      "page_key": "sn83045242|1808-09-21|1|2",
+      "excerpt_start": "Extract of a letter from Gov.",
+      "excerpt_end": "about twenty persons and took some horses.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "sevier-letter-marble-springs-1808"
+      ],
+      "summary": "The National Intelligencer prints Governor Sevier's letter.",
+      "note": "Printed in September, more than three months after the other papers. Under 'STAUNTON.'; the print itself lacks 'from general Jackson' and reads 'had taken' and 'had killed about twenty persons'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself lacks 'from general Jackson' and reads 'had taken' and 'killed about twenty persons'; these are printed differences. The heading is 'STAUNTON.'; in the italic line the print seems to read 'Tennesse'."
+      ],
+      "crops": [
+        "S08-312.jpg"
+      ],
+      "family": [
+        "R1808-0040",
+        "R1808-0260",
+        "R1808-0461",
+        "R1808-0821",
+        "R1808-0822",
+        "R1808-2098",
+        "R1808-2099",
+        "R1808-2103"
+      ]
+    },
+    {
+      "id": "S08-313",
+      "page_key": "sn83016082|1808-10-10|1|3",
+      "excerpt_start": "A LETTER from Gov. SEVIER, of",
+      "excerpt_end": "militia were out to defend the frontier.",
+      "roles": [
+        "condensed_report"
+      ],
+      "groups": [
+        "sevier-letter-marble-springs-1808"
+      ],
+      "summary": "The Portland Gazette prints Governor Sevier's letter.",
+      "note": "A one-sentence summary under 'Domestic Intelligence'; this paper printed the letter itself on 20 June. Prints '140 Creek Indains' (a misprint for Indians), as the New Hampshire Gazette prints 140.",
+      "scan_findings": [
+        "Scan matches the excerpt. The summary prints '140 Creek Indains, with 12 whites': the figure 140 is as printed, and 'Indains' is a printer's misprint that RevX silently corrects."
+      ],
+      "crops": [
+        "S08-313.jpg"
+      ],
+      "family": [
+        "R1808-0021",
+        "R1808-2184"
+      ]
+    },
+    {
+      "id": "S08-314",
+      "page_key": "sn85025815|1808-10-31|1|3",
+      "excerpt_start": "No. I. General JAMES WILKINSON, the",
+      "excerpt_end": "W. conceives, that injuries of such uncommon",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilkinson-harper-correspondence-1808"
+      ],
+      "summary": "Baltimore, 26 October 1808: General Wilkinson's note to Captain Robert Goodloe Harper demands satisfaction; Harper refuses to meet him.",
+      "note": "Earliest printing found. Credited to the Baltimore North American: 'We are authorized to publish the following correspondence'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The note stands as 'No. I.' under the introduction 'We are authorized to publish the following correspondence'."
+      ],
+      "crops": [
+        "S08-314.jpg"
+      ],
+      "family": [
+        "R1808-0058",
+        "R1808-0418",
+        "R1808-0419",
+        "R1808-2266"
+      ]
+    },
+    {
+      "id": "S08-315",
+      "page_key": "sn84024013|1808-11-01|1|3",
+      "excerpt_start": "General JAMES WILKINSON, the commander in",
+      "excerpt_end": "him an incontestible claim to commensurate reparation.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilkinson-harper-correspondence-1808"
+      ],
+      "summary": "The Alexandria Daily Gazette prints the Wilkinson-Harper notes.",
+      "note": "Under an introduction from the Federal Gazette. Prints 'his military fortune and fame', without the second 'his'.",
+      "scan_findings": [
+        "Scan reads 'wiles and fictions', 'Gen. W. conceives' and 'to extenuate them' on a creased page whose left edge is cut; RevX 'wits', 'concludes' and 'excusate' are transcription errors, not printed differences. The paper prints 'his military fortune and fame' without the second 'his'."
+      ],
+      "crops": [
+        "S08-315.jpg"
+      ],
+      "family": [
+        "R1808-0058",
+        "R1808-0420",
+        "R1808-2281",
+        "R1808-2282",
+        "R1808-2286"
+      ],
+      "scan_boxes": [
+        [
+          0,
+          2770,
+          565,
+          3600
+        ]
+      ]
+    },
+    {
+      "id": "S08-316",
+      "page_key": "sn84024736|1808-11-01|1|2",
+      "excerpt_start": "BALTIMORE Oct. 28. Gen. JAS. WILKINSON,",
+      "excerpt_end": "fame: Gen. W. conceives that injuries of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilkinson-harper-correspondence-1808"
+      ],
+      "summary": "The Enquirer prints the Wilkinson-Harper notes.",
+      "note": "Prints 'by wiles and factions', where the others have 'fictions'.",
+      "scan_findings": [
+        "Scan matches the excerpt. Scan reads 'wiles and factions' where the other printings have 'fictions': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S08-316.jpg"
+      ],
+      "family": [
+        "R1808-0058",
+        "R1808-0062",
+        "R1808-0138",
+        "R1808-0419"
+      ]
+    },
+    {
+      "id": "S08-317",
+      "page_key": "sn83045242|1808-11-04|1|3",
+      "excerpt_start": "Baltimore, October 28. Gen. James Wilkinson,",
+      "excerpt_end": "fame: Gen. W. conceives that injuries of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilkinson-harper-correspondence-1808"
+      ],
+      "summary": "The National Intelligencer prints the Wilkinson-Harper notes.",
+      "note": "No introduction by the paper; just after the excerpt it prints 'give him', where the others have 'gives'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The note follows the dateline 'Baltimore, October 28.' with no introduction by the paper."
+      ],
+      "crops": [
+        "S08-317.jpg"
+      ],
+      "family": [
+        "R1808-0058",
+        "R1808-0439",
+        "R1808-0454"
+      ],
+      "scan_boxes": [
+        [
+          857,
+          3773,
+          1575,
+          4442
+        ]
+      ]
+    },
+    {
+      "id": "S08-318",
+      "page_key": "sn84024710|1808-11-04|1|2",
+      "excerpt_start": "General James Wilkinson, the commander in",
+      "excerpt_end": "him an incontestible claim to commensurate reparation.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilkinson-harper-correspondence-1808"
+      ],
+      "summary": "The Virginia Argus prints the Wilkinson-Harper notes.",
+      "note": "Under the paper's own heading 'MODERN CHIVALRY'. Prints 'endeavoring to destroy his fortune and his fame', without 'military', and the misprint 'inocntestible'.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the misprint 'inocntestible', which RevX silently corrects to 'incontestible'. The paper prints 'endeavoring to destroy his fortune and his fame', without 'military': a printed difference."
+      ],
+      "crops": [
+        "S08-318.jpg"
+      ],
+      "family": [
+        "R1808-0058",
+        "R1808-0062",
+        "R1808-0420",
+        "R1808-0421",
+        "R1808-0872"
+      ]
+    },
+    {
+      "id": "S08-319",
+      "page_key": "sn83016082|1808-11-07|1|2",
+      "excerpt_start": "No. I. General James Wilkinson, the",
+      "excerpt_end": "conceives, that injuries of such uncommon atrocity,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilkinson-harper-correspondence-1808"
+      ],
+      "summary": "The Portland Gazette prints the Wilkinson-Harper notes.",
+      "note": "Under the paper's own heading '\"HECTOR\" AGAIN.' Prints 'Capt. Goodloe Harper', without Robert, and 'military fortunes'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'Capt. Goodloe Harper' without 'Robert' and 'his military fortunes' in the plural: printed differences."
+      ],
+      "crops": [
+        "S08-319.jpg"
+      ],
+      "family": [
+        "R1808-0058",
+        "R1808-0225",
+        "R1808-0867",
+        "R1808-0869",
+        "R1808-2243",
+        "R1808-2292",
+        "R1808-2305"
+      ]
+    },
+    {
+      "id": "S08-320",
+      "page_key": "sn85059525|1808-11-11|1|2",
+      "excerpt_start": "General JAMES WILKINSON, the commander in",
+      "excerpt_end": "him an incontestible claim to commensurate reparation.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilkinson-harper-correspondence-1808"
+      ],
+      "summary": "The Berkeley and Jefferson Intelligencer prints the Wilkinson-Harper notes.",
+      "note": "Under an introduction from the Federal Gazette. Prints 'Volunteer Atillery' and 'his military fortune and fame', without the second 'his'.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the misprint 'Atillery', which RevX silently corrects to 'Artillery', and 'endeavoured', which RevX gives as 'endeavored'. The paper prints 'his military fortune and fame' without the second 'his', as the Alexandria Daily Gazette does."
+      ],
+      "crops": [
+        "S08-320.jpg"
+      ],
+      "family": [
+        "R1808-0025",
+        "R1808-0058",
+        "R1808-0226",
+        "R1808-0865",
+        "R1808-2273",
+        "R1808-2284",
+        "R1808-2308"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "sevier-letter-marble-springs-1808",
+      "kind": "message_group",
+      "label": "Governor Sevier's letter from Marble Springs, May 1808",
+      "definition": "Printings of an extract of a letter of Governor Sevier of Tennessee to a friend at Staunton, Virginia, dated Marble Springs, 14 May 1808, first printed in the Staunton Eagle: an express from General Jackson had reported that '440 Creeks and 12 whites' had taken a position on the south bank of the Tennessee near the mouth of Duck river and had killed about twenty persons; 'If this be true we shall have warm work this summer'. The Eagle adds that two companies of West Tennessee militia were on duty on the frontier. A report at second hand, which the governor passes on with a condition.",
+      "admission_rule": "Reviewed 1808 printings, checked against the scan (round two: stories once held back for framing, at the year's 7-paper rule)."
+    },
+    {
+      "id": "burlington-revenue-cutter-1808",
+      "kind": "message_group",
+      "label": "'Melancholy Event': Burlington, Vermont, August 1808",
+      "definition": "Printings of a Burlington (Vermont) paragraph of 5 August 1808, headed 'Melancholy Event': a revenue cutter with a lieutenant, a sergeant and twelve privates, sent by the collector of the customs after a large boat 'well known to have been some time employed in smuggling', took her on Onion river; men on the bank then fired on the cutter's crew, and two of the crew and a man of the town were killed. The report says that eight persons were taken and put in gaol, that a jury of inquest found 'wilful murder', and that 'all opinion' should be suspended until the facts were known. A local report.",
+      "admission_rule": "Reviewed 1808 printings, checked against the scan (round two: stories once held back for framing, at the year's 7-paper rule)."
+    },
+    {
+      "id": "wilkinson-harper-correspondence-1808",
+      "kind": "message_group",
+      "label": "General Wilkinson's challenge to Robert Goodloe Harper, October 1808",
+      "definition": "Printings of notes exchanged at Baltimore on 26 and 27 October 1808, as published there: General James Wilkinson's note to Captain Robert Goodloe Harper, commanding a company of volunteer artillery, charging that Harper had 'secretly assailed the General's honour' and demanding 'the only admissible atonement'; Harper's refusal, which says that his advice to Mr. Clark to lay before Congress documents on Wilkinson's 'connection with the Spanish government' gave no ground for a challenge; and Wilkinson's reply. Each man's own words. The papers print them under their own introductions or headings, such as 'MODERN CHIVALRY' and '\"HECTOR\" AGAIN.'",
+      "admission_rule": "Reviewed 1808 printings, checked against the scan (round two: stories once held back for framing, at the year's 7-paper rule)."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "Round two of 1808. On 11 November 2026 the owner set the rule 'every story alike': a reviewed story is described by what kind of text it is and whose account, in the papers' own words, never as what happened; sensitive subjects get no special treatment. Items that earlier rounds held back for framing are therefore counted by the year's own rule, exactly like any other item: what reaches it is admitted, what does not stays out. As before, an excerpt ends before the names of private people where it can, and stories that turn on private people stay out. The three items round one left out for framing were read again with phrase searches over all 4,466 pages filed under 1808 in both transcriptions (phrase_patterns_round2.json, phrase_hits_round2.json), every hit was read, the papers in print without a hit were searched with loose keywords (no missed printing), and every printing was checked against its page scan by AI reviewers (scan_batches/batch_13.json and batch_14.json, SCAN_PROTOCOL.md, scan_points_round2.json).",
+    "selection_rule": "As in round one: a story needs one printed item found in 7 or more newspapers, counted item by item. All three reach 7 and are admitted as new top-level stories; the parent story of round one on the charges against General Wilkinson names its children in its definition and stays as released.",
+    "items_admitted": {
+      "sevier-letter-marble-springs-1808": [
+        "I08-0086"
+      ],
+      "burlington-revenue-cutter-1808": [
+        "I08-0094"
+      ],
+      "wilkinson-harper-correspondence-1808": [
+        "I08-0108"
+      ]
+    },
+    "counted_item_by_item": {
+      "Governor Sevier's letter": "7 papers (ADA 6 June, VA 7 June, EN and BJ 10 June, PGz 20 June, NHG 21 June, NI 21 September), 8 printings with the PGz's one-sentence summary of 10 October. Round one's phrases found 5: the NHG prints '140 Creeks' (the others 440), and the NI printed the letter three months later. Brigade orders printed with it in some papers ('FURTHER CONFIRMATION') are another item.",
+      "The Burlington report": "7 papers (PGz 15 August, NHG 16 August, NG 17 August, ADG 18 August, NI 19 August, VA 23 August, EN 26 August). Later items on the same affair (a Burlington letter in NI, VA and EN in September; reports of the examination and the trial) are other items, each in 3 papers or fewer.",
+      "The Wilkinson-Harper notes": "7 papers (NG 31 October, ADG and EN 1 November, NI and VA 4 November, PGz 7 November, BJ 11 November), each under the paper's own introduction or none."
+    },
+    "not_admitted": {}
+  }
+}

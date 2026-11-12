@@ -50,7 +50,7 @@ REVIEWED={
   # under Britain and Europe. Each category lists its stories in the order of their first printing.
   1776:{'categories':[
           ('war','War and the armies',['quebec-siege-1776','boston-evacuation-letter','barry-takes-edward','sloop-liberty-gunpowder','hopkins-nassau-letter',
-                                       'campbell-captured-letter','hudson-warships-1776','washington-patterson-interview','eighty-eight-battalions',
+                                       'stuart-letter-to-frontier-inhabitants','savannah-river-letter-13-may-1776','campbell-captured-letter','hudson-warships-1776','washington-patterson-interview','eighty-eight-battalions',
                                        'congress-intelligence-october-1776','gates-carleton-retreat']),
           ('britain','Britain and Europe',['king-speech-october-1775','wilkes-speech-commons','penn-before-the-lords','prohibitory-bill-commons',
                                            'dublin-paper-naval-force','ethan-allen-cork','london-address-to-king-1776','king-speech-may-1776','howe-declarations-1776']),
@@ -79,10 +79,10 @@ REVIEWED={
   # The third reviewed year (release v0.8.0, page shifts corrected in v0.8.1): 14 stories. The user agreed the proposed
   # categories on 2026-11-10 ("可以，上线 1807"); the Chesapeake affair is with the ships, as a top-level story takes one category.
   1807:{'categories':[
-          ('war','War in Europe',['lubeck-stormed','harford-jones-russian-army','bennigsen-pultusk-account','bulletin-66','bulletin-78','armistice-france-russia']),
+          ('war','War in Europe and Haiti',['lubeck-stormed','hayti-news-baltimore-february-1807','harford-jones-russian-army','bennigsen-pultusk-account','bulletin-66','bulletin-78','armistice-france-russia']),
           ('ships','Britain, France and American ships',['monroe-pinkney-treaty-letter','driver-at-charleston','chesapeake-affair-1807','douglas-and-the-mayor-of-norfolk',
-                                                         'antwerp-letter-capture-order','britain-answer-peace-or-war']),
-          ('government','American public life and government',['burr-conspiracy-1807','special-session-1807'])],
+                                                         'macdonald-funeral-norfolk-1807','national-intelligencer-on-the-seamen-1807','antwerp-letter-capture-order','britain-answer-peace-or-war']),
+          ('government','American public life and government',['wilkinson-speech-new-orleans-1806','burr-conspiracy-1807','special-session-1807'])],
         'children':{'burr-conspiracy-1807':['burr-conspiracy-message','burr-in-arms-new-orleans','marshall-commitment-opinion','burr-treason-verdict','marshall-october-opinion'],
                     'driver-at-charleston':['kalteisen-letter-driver','driver-answer-charleston'],
                     'chesapeake-affair-1807':['chesapeake-attack-account','july-2-proclamation','berkeley-order','chesapeake-court-of-inquiry','house-report-chesapeake'],
@@ -92,11 +92,11 @@ REVIEWED={
   # The fourth reviewed year (release v0.9.0): 20 stories. Categories as proposed by the review; the owner agreed on
   # 2026-11-10 ("Follow your recommendations on the data review. And then publish all").
   1808:{'categories':[
-          ('war','War in Spain and Portugal',['latest-from-portugal-dec-1807','alicante-letters-1808','charles-iv-appoints-murat','order-in-council-4-july',
+          ('war','War and conflict',['latest-from-portugal-dec-1807','alicante-letters-1808','charles-iv-appoints-murat','sevier-letter-marble-springs-1808','order-in-council-4-july',
                                               'arcturus-news-from-spain','reding-dispatch-baylen','conventions-in-portugal']),
           ('ships','Britain, France and American ships',['decrees-on-neutral-trade','algiers-1808','papers-before-congress-march-1808','canning-on-america-24-june']),
           ('government','The embargo and American government',['embargo-laws','wilkinson-accused','president-message-25-feb-military-force','embargo-in-force-spring-1808',
-                                              'adams-resigns-senate','jefferson-answers-new-hampshire','jefferson-answer-embargo-petitions','message-8-november',
+                                              'adams-resigns-senate','jefferson-answers-new-hampshire','jefferson-answer-embargo-petitions','burlington-revenue-cutter-1808','wilkinson-harper-correspondence-1808','message-8-november',
                                               'foreign-relations-report-22-november'])],
         'children':{'embargo-laws':['embargo-act-22-dec-1807','embargo-supplementary-act-9-jan','embargo-additional-act-12-march','embargo-suspension-act-22-april','embargo-act-25-april'],
                     'wilkinson-accused':['wilkinson-randolph-letters','clark-statement-on-wilkinson','president-message-20-jan-wilkinson','wilkinson-court-of-inquiry'],
@@ -111,14 +111,40 @@ REVIEWED={
   # The fifth reviewed year (releases v0.10.0 and v0.10.1): 12 stories. The owner agreed a 6-paper threshold for 1793 (fewer
   # papers survive) and the proposed categories on 2026-11-10 ("Follow your recommendations on the data review").
   1793:{'categories':[
-          ('war','The war in Europe',['emigrant-armies-disbanded','dumouriez-letter-brussels','powers-at-war-with-france-list','dumouriez-defection-1793',
-                                      'tournai-bulletin-3-may','death-of-general-dampierre','convention-president-declaration-plot','cadiz-letter-24-june',
-                                      'madeira-report-battle-near-lisle']),
+          ('war','War and diplomacy',['emigrant-armies-disbanded','dumouriez-letter-brussels','powers-at-war-with-france-list','dumouriez-defection-1793',
+                                      'tournai-bulletin-3-may','death-of-general-dampierre','convention-president-declaration-plot','news-from-cap-francais-1793','cadiz-letter-24-june',
+                                      'madeira-report-battle-near-lisle','german-creek-letter-1793','war-office-treaty-commissioners-1793']),
           ('ships','Ships and the sea',['sea-serpent-captain-crabtree','treasury-circular-rules-on-neutrality']),
           ('public','American public life',['genet-appeal-to-the-people-1793'])],
         'children':{'dumouriez-defection-1793':['clairfayt-letter-tournay','sun-rumour-dumouriez-left-army','dumouriez-address-french-nation','cobourg-proclamation-5-april'],
-                    'genet-appeal-to-the-people-1793':['jay-king-statement-on-genet','genet-letter-to-the-president-13-august','jefferson-answer-to-genet-16-august']},
-        'expect':(12,1751)}}
+                    'genet-appeal-to-the-people-1793':['jay-king-statement-on-genet','genet-letter-to-the-president-13-august','jefferson-answer-to-genet-16-august'],
+                    'news-from-cap-francais-1793':['fanning-account-cap-francais','brig-mary-passengers-cap-francais']},
+        'expect':(12,1751)},
+  # The sixth reviewed year (release v0.11.0): 33 stories, the categories as the review proposed them.
+  1806:{'categories':[
+          ('war','War and foreign news',['vienna-opens-its-gates','lisbon-and-st-ubes-report','austerlitz-in-the-papers-1806','speech-opening-parliament-21-january',
+                                         'treaty-of-pressburg','bremen-letter-austrian-officers','napoleon-speech-legislative-body-1806','st-domingo-report-may-1806',
+                                         'linois-taken-1806','dodge-report-cape-francois','swedish-bulletin-lauenburg','louis-napoleon-king-of-holland',
+                                         'francis-ii-gives-up-the-imperial-crown','buenos-ayres-captured-1806','hague-17-october-war-france-prussia']),
+          ('ships','Britain, France and American ships',['antigua-letter-american-vessels','trade-with-st-domingo-1806','riley-journal-rochefort-squadron',
+                                         'british-seizures-papers-1806','british-goods-resolutions-1806','tunisian-cruiser-message-april-1806','leander-affair-1806',
+                                         'fox-note-blockade-may-1806']),
+          ('government','American public life and government',['hamet-caramalli-1806','yrujo-and-the-government-1806','miranda-expedition-1806',
+                                         'house-secret-journal-spain-1806','heath-declines-lieutenant-governor','detroit-letter-1-june-1806',
+                                         'spanish-troops-near-the-sabine-1806','lewis-and-clark-return-1806','burr-enterprise-1806','annual-message-2-december-1806'])],
+        'children':{'hamet-caramalli-1806':['message-13-january-hamet-caramalli','eaton-hamet-convention','hamet-letter-to-the-president','senate-report-hamet-caramalli'],
+                    'trade-with-st-domingo-1806':['message-french-complaints-st-domingo','act-suspending-trade-with-st-domingo'],
+                    'british-seizures-papers-1806':['message-17-january-1806','monroe-to-mulgrave-1805','madison-report-new-principles'],
+                    'yrujo-and-the-government-1806':['yrujo-circular-to-the-foreign-ministers','madison-yrujo-letters-january-1806'],
+                    'british-goods-resolutions-1806':['gregg-resolution-29-january','randolph-speech-5-march','national-intelligencer-on-the-vote-of-17-march',
+                                                      'non-importation-act-18-april','message-3-december-1806'],
+                    'austerlitz-in-the-papers-1806':['london-bulletin-17-december-1805','berthier-letter-to-massena','thirtieth-bulletin-grand-army','napoleon-proclamation-after-austerlitz'],
+                    'miranda-expedition-1806':['serious-questions-to-mr-madison','leander-letter-from-jacmel','miranda-proclamation-28-june','miranda-defeat-report'],
+                    'leander-affair-1806':['new-york-meeting-resolutions-leander','proclamation-against-the-leander'],
+                    'spanish-troops-near-the-sabine-1806':['hostile-appearance-letter-2-august','freeman-party-turned-back','wilkinson-letter-red-river'],
+                    'lewis-and-clark-return-1806':['lewis-arrival-announced','clark-letter-to-his-brother'],
+                    'burr-enterprise-1806':['kentucky-affidavit-against-burr','proclamation-27-november-1806']},
+        'expect':(12,4381)}}
 CATEGORY_COLORS=['#3987e5','#d95926','#199e70']   # dataviz slots 1-3, validated all-pairs on #050711
 short_names={'sn82014782':'Kentucky Gazette','sn83025525':'The Mirror','sn83025527':'Republican Gazetteer','sn83025588':'New Hampshire Gazette','sn83025881':'Gazette of the United States','sn84023150':'The Eagle','sn84024710':'Virginia Argus','sn84038410':'Patowmac Guardian'}
 # Map layout: each series is placed at its town of publication (from the catalogue's places_json).
@@ -337,32 +363,57 @@ for f in families:
                   'papers':f['newspapers'],'prints':f['appearances'],'lat':round(sum(towns[l]['lat'] for l in ls)/len(ls),3),'long':int(bool(f['long_running'])),
                   'title':title if len(title)<=110 else title[:108].rstrip()+' …'})
 # Story topics (release v0.5.2 on): the frozen 24-topic model applied to every printing; lanes in display order.
-topic_rows,topic_list={},[]
+topic_rows,topic_list,topic_meta={},[],{'topics':[]}
 if (release/'derived/story_topics.parquet').exists():
-    topic_rows={r['story_id']:r for r in pq.read_table(verified_file('derived/story_topics.parquet',release),columns=['story_id','top_topic','top_share','second_topic']).to_pylist()}
+    topic_rows={r['story_id']:r for r in pq.read_table(verified_file('derived/story_topics.parquet',release),columns=['story_id','top_topic','top_share','second_topic','weights_json']).to_pylist()}
     with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro',uri=True) as db2:
         topic_meta=json.loads(db2.execute("SELECT value_json FROM metadata WHERE key='story_topics'").fetchone()[0])
     topic_list=sorted(topic_meta['topics'],key=lambda x:x['display_order'])
-# The Topic view groups the 24 topics into the seven reviewed (provisional) families of the first study, with plain names.
+# The Topic view groups the topics into the seven families of the first study. The site's names for topics and families say what
+# the stories in each wedge mostly are: they were checked against 810 matched stories read blind, and renamed where a tested name
+# fitted better (topic labels review, 12 Nov 2026: docs/notes/2026-11-12-topic-labels-review.md). Reprinted stories are mostly news,
+# so names of kinds of notice fitted few of them. The release's long labels and the study's family names are not shown.
 # The families are not used for colour: a spot check (8 Nov 2026) found that among matched stories the model's notice and
 # "other" families mostly hold news (fires, bridges, courts), because advertisements were rarely reprinted across papers.
-# Each family: (name in the study, short name, name for phones).
+# Each family: (name in the study, the key in the release's topic labels; the site's name; name for phones).
 FAMILIES=[('Politics and public institutions','Politics','Politics'),('War, diplomacy and shipping','War, diplomacy and shipping','War and ships'),
           ('Commerce, property and everyday transactions','Commerce and property','Commerce'),('Law, debt and taxation','Law, debt and taxes','Law and debt'),
-          ('Coercion and escape','Escape and capture','Escape'),('Literature and reflection','Poetry and reflection','Poetry'),
-          ('Formats and unresolved clusters','Formats and mixed','Mixed')]
-SHORT={'T01':'Political argument','T02':'Laws and statutes','T03':'Shipping and ports','T04':'Cloth and dry goods','T05':'Stray horses',
-       'T06':'Federal government','T07':'Land for sale','T08':'Court orders','T09':'Battles and armies','T10':'Estates and debts',
-       'T11':'France and Europe','T12':'Legislatures','T13':'Places, mixed','T14':'Poetry and reflection','T15':'Lotteries and money',
-       'T16':'Escape and capture notices','T17':'Food and drink for sale','T18':'Name lists','T19':'Letter extracts','T20':'Crown and Parliament',
-       'T21':'Britain and America','T22':'Shops and premises','T23':'Land-tax sales','T24':'Insolvent estates'}
+          ('Coercion and escape','People sought','People sought'),('Literature and reflection','Poems, anecdotes and reflections','Poems'),
+          ('Formats and unresolved clusters','Letters and mixed','Mixed')]
+SHORT={'T01':'Political argument','T02':'Laws and courts','T03':'Ships and the sea','T04':'Cloth and dry goods','T05':'Horses and other animals',
+       'T06':'Federal government','T07':'Land for sale','T08':'Courts and lawsuits','T09':'Battles and armies','T10':'Estates and debts',
+       'T11':'France and Europe','T12':'Legislatures','T13':'Mixed: place names','T14':'Poems, anecdotes and reflections','T15':'Money and public finance',
+       'T16':'Notices seeking people','T17':'Goods and cargoes','T18':'Mixed: personal names','T19':'Letters','T20':'Rulers, parliaments and officials',
+       'T21':'Foreign relations and trade','T22':'Shops, local notices and news','T23':'Taxes, proprietors and public sales'}
+# A topic shown in another topic's wedge: T24 (insolvent estates) holds the same estate and debt notices as T10, so its stories take
+# T10's wedge, with the two topics' shares added together. The release keeps both topics.
+FOLD={'T24':'T10'}
+# One plain line for each topic whose name fits mainly one period (the review's samples, by decade), shown on the telescope's hover card.
+PERIOD={'T05':'Most horse notices here are from the 1770s; later stories in this wedge are mostly other news.',
+        'T10':'Most estate and debt notices here are from the 1770s; later stories in this wedge are mostly other news.',
+        'T16':'Most notices here are from the 1770s; after 1780 most stories in this wedge are other news that describes people or things.'}
 topic_labels=json.loads(verified_file('sources/work__topic_labels.json',release).read_text(encoding='utf8'))
 topic_rel={json.loads(l)['id'].split(':')[-1]:json.loads(l) for l in verified_file('tables/topics.jsonl',release).read_text(encoding='utf8').splitlines() if l.strip()}
 fam_index={f[0]:i for i,f in enumerate(FAMILIES)}
 tid=lambda x:x['id'].split(':')[-1]
-assert topic_list and all(tid(x) in SHORT and topic_labels[tid(x)]['category'] in fam_index for x in topic_list), 'every topic needs a short name and a family'
-topic_list.sort(key=lambda x:(fam_index[topic_labels[tid(x)]['category']],x['display_order']))   # by family, then by shared vocabulary
-lane_of={x['id']:i for i,x in enumerate(topic_list)}
+assert topic_list and all((tid(x) in SHORT)!=(tid(x) in FOLD) and topic_labels[tid(x)]['category'] in fam_index for x in topic_list), \
+    "every topic needs a site name and a family, or is shown in another topic's wedge"
+assert all(t in SHORT for t in FOLD.values()) and set(SHORT)|set(FOLD)=={tid(x) for x in topic_list} and set(PERIOD)<=set(SHORT), \
+    'every site name belongs to a topic of the model; folded topics go to shown ones; period lines are for shown topics'
+topic_index={tid(x):k for k,x in enumerate(topic_meta['topics'])}   # a topic's place in each story's weights (the model's order)
+topic_list=sorted((x for x in topic_list if tid(x) in SHORT),key=lambda x:(fam_index[topic_labels[tid(x)]['category']],x['display_order']))   # by family, then by shared vocabulary
+lane_t={tid(x):i for i,x in enumerate(topic_list)}
+lane_t.update({a:lane_t[b] for a,b in FOLD.items()})
+lane_of={x['id']:lane_t[tid(x)] for x in topic_meta['topics']}
+shared_lanes={lane_t[b] for b in FOLD.values()}   # wedges that hold more than one topic
+def topic_place(r):
+    """A story's wedge, its share of the topic mix in that wedge, and the next wedge (the strongest other one)."""
+    lane=lane_of[r['top_topic']]
+    if lane not in shared_lanes: return lane,r['top_share'],lane_of.get(r['second_topic'],lane)
+    w=json.loads(r['weights_json']);by_lane=collections.defaultdict(float)
+    for t,k in topic_index.items(): by_lane[lane_t[t]]+=w[k]
+    nxt=max((l for l in by_lane if l!=lane),key=lambda l:(by_lane[l],-l))
+    return lane,by_lane[lane],(nxt if by_lane[nxt]>0 else lane)
 # Search text: the title plus the opening words of the first printing (lower case), loaded by the page only when searching.
 first_excerpt={fid:min(apps,key=lambda a:a['seq'])['excerpt'] for fid,apps in apps_by.items()}
 for s in stories:
@@ -375,14 +426,16 @@ for s in stars:
     ft=first_town[s['id']]; s['flat']=ft['lat']; s['flon']=ft['lon']; s['reg']=region_of(ft['place']); town_count[ft['place']]+=1
 for s in stars:
     r=topic_rows.get(s['id'])
-    s['topic']=lane_of[r['top_topic']] if r else -1; s['tconf']=round(r['top_share'],2) if r else 0
-    s['topic2']=lane_of.get(r['second_topic'],s['topic']) if r else -1   # the second-strongest topic: which way a mixed story leans
+    lane,share,nxt=topic_place(r) if r else (-1,0,-1)
+    s['topic']=lane; s['tconf']=round(share,2)
+    s['topic2']=nxt   # the second-strongest wedge: which way a mixed story leans
     s['text']=re.sub(r'\s+',' ',(s['title']+' '+(first_excerpt.get(s['id']) or '')).replace('ſ','s')).lower().strip()
 stars.sort(key=lambda s:(s['first'],-s['papers'],s['id']))
 tele={'epoch':'1770-01-01','count':len(stars),**{k:[s[k] for s in stars] for k in ['id','year','kind','cat','first','last','papers','prints','lat','long','title','topic','topic2','tconf','flat','flon','reg']},
-      'topics':[{'id':x['id'],'label':SHORT[tid(x)],'name':topic_labels[tid(x)]['label'],'family':fam_index[topic_labels[tid(x)]['category']],
-                 'provisional':topic_rel[tid(x)]['restart_agreement']<0.6,'terms':' · '.join(x['terms'][:3])} for x in topic_list],
-      'families':[{'name':f,'short':s,'tiny':t} for f,s,t in FAMILIES]}
+      'topics':[{'id':x['id'],'label':SHORT[tid(x)],'family':fam_index[topic_labels[tid(x)]['category']],
+                 'provisional':topic_rel[tid(x)]['restart_agreement']<0.6,'terms':' · '.join(x['terms'][:3]),
+                 **({'period':PERIOD[tid(x)]} if tid(x) in PERIOD else {})} for x in topic_list],
+      'families':[{'short':s,'tiny':t} for f,s,t in FAMILIES]}
 (OUT/'telescope.json').write_text(json.dumps(tele,ensure_ascii=False,separators=(',',':')),encoding='utf8')
 (OUT/'telescope-text.json').write_text(json.dumps({'count':len(stars),'text':[s['text'] for s in stars]},ensure_ascii=False,separators=(',',':')),encoding='utf8')
 tele_stamp=hashlib.sha256((OUT/'telescope.json').read_bytes()+(OUT/'telescope-text.json').read_bytes()).hexdigest()[:12]
@@ -479,7 +532,7 @@ year_stamp=hashlib.sha256(b''.join(hashlib.sha256((years_dir/f'{y}.json').read_b
 boot={'release_version':VER,'reviewed':reviewed_list,'years':years_index,'year_stamp':year_stamp,'trace':trace_stamp,'twins':twins,'storylines':storyline_links,'index_bytes':(years_dir/'index.json').stat().st_size,
       # Topics for the story shelf's chips: each topic's plain name and family (as in the telescope).
       'topics':[{'label':SHORT[tid(x)],'family':fam_index[topic_labels[tid(x)]['category']]} for x in topic_list],
-      'families':[{'name':f,'short':s,'tiny':t} for f,s,t in FAMILIES]}
+      'families':[{'short':s,'tiny':t} for f,s,t in FAMILIES]}
 payload=json.dumps(boot,ensure_ascii=False).replace('</','<\\/')
 html=(ROOT/'pulse_explorer.html').read_text(encoding='utf8').replace('__PULSE_DATA__',payload)
 assert '__PULSE_DATA__' not in html
@@ -518,7 +571,7 @@ exhibit_scenes=[
    'text':'Independence Day in amber, fever in blue. Time of year runs around the ring, and each turn of the spiral is a year; the coloured lines show the months. The Fourth of July comes back every summer, and fever reports cluster in late summer.',
    'url':f"telescope.html?exhibit=1&view=orbit&lookback=all&colour=search&drift=off&q={quote(july_q+' vs '+fever_q)}",'link':f"telescope.html?view=orbit&lookback=all&q={quote(july_q+' vs '+fever_q)}"},
   {'title':'What the papers talked about','seconds':55,
-   'text':"The same stars arranged by topic and seen from the side: each wedge is one of the 24 topics of the project's topic model, and time runs from the front to the back.",
+   'text':"The same stars arranged by topic and seen from the side: each wedge is one topic of the project's topic model, and time runs from the front to the back.",
    'url':'telescope.html?exhibit=1&view=topic&angle=side&lookback=10&year=1800&drift=on','link':'telescope.html?view=topic&angle=side&lookback=10&year=1800'},
   {'title':'What is missing','seconds':45,
    'text':'Only two newspaper series survive for 1785–86, against 11 to 17 a year after 1800. A thin sky is a gap in the surviving archive, not silence in the towns.',

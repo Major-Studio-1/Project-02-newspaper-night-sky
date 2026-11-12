@@ -1,0 +1,218 @@
+{
+ "findings": {
+  "S08-299": [
+   "Scan matches the excerpt. The print reads '440 Creeks and 12 whites' under the heading 'IMPORTANT!'."
+  ],
+  "S08-300": [
+   "Scan matches the excerpt. The print reads '440 Creeks and 12 whites' under 'STAUNTON, May 27.' and 'IMPORTANT!'."
+  ],
+  "S08-301": [
+   "Scan matches the excerpt except the heading, which the print gives as 'IMPORTANT!' with an exclamation mark; RevX 'IMPORTANT.' is a minor transcription error. The print reads '440 Creeks and 12 whites'."
+  ],
+  "S08-302": [
+   "Scan matches the excerpt. The print reads 'to his friend in Staunton', '440 Creeks and 12 whites' and 'twenty persons'."
+  ],
+  "S08-303": [
+   "Scan matches the excerpt. The print reads '440 Creeks and 12 whites' under 'STAUNTON, (VIR.) MAY 27.', with no 'IMPORTANT' heading and no year in the letter's date."
+  ],
+  "S08-304": [
+   "Scan matches the excerpt. The print reads '140 Creeks' where the other printings have 440: a printed difference, not a transcription error. The figures are old-style numerals, and the first is the same shape as the 1 of '12' and '14'."
+  ],
+  "S08-305": [
+   "Scan matches the excerpt. The print spells 'sargeant'; RevX 'sergeant' is a silent correction."
+  ],
+  "S08-306": [
+   "Scan reads 'a large batteau'; RevX 'boat' is a transcription error that replaces the printed word with another of similar sense, so this printing does not differ from the others here. The rest matches, and the print has no 'Melancholy Event' heading."
+  ],
+  "S08-307": [
+   "Scan reads 'batteau'; RevX 'bateeu' is a minor transcription error. The print has 'a melancholy event' without 'very', 'serjeant' and 'well known here'; these are printed differences."
+  ],
+  "S08-308": [
+   "Scan matches the excerpt. The left edge of the column is dark and tilted, but every word of the excerpt can be read."
+  ],
+  "S08-309": [
+   "Scan reads 'Aug. 15.' where the other printings have August 5: a printed error, not a transcription error (the figures are heavy but read as 15 on an enlarged copy). Scan reads 'batteau'; RevX 'bateeu' is a minor transcription error."
+  ],
+  "S08-310": [
+   "Scan matches the excerpt; the item runs from the foot of one column to the head of the next. The print has no 'Melancholy Event' heading and reads 'to have been employed', without 'some time'."
+  ],
+  "S08-311": [
+   "Scan matches the excerpt in substance. The print reads 'Wenesday' and 'serjeant'; RevX 'Wednesday' and 'sergeant' are silent corrections. The dateline stands beside the state heading 'VERMONT.'."
+  ],
+  "S08-312": [
+   "Scan matches the excerpt. The print itself lacks 'from general Jackson' and reads 'had taken' and 'killed about twenty persons'; these are printed differences. The heading is 'STAUNTON.'; in the italic line the print seems to read 'Tennesse'."
+  ],
+  "S08-313": [
+   "Scan matches the excerpt. The summary prints '140 Creek Indains, with 12 whites': the figure 140 is as printed, and 'Indains' is a printer's misprint that RevX silently corrects."
+  ],
+  "S08-314": [
+   "Scan matches the excerpt. The note stands as 'No. I.' under the introduction 'We are authorized to publish the following correspondence'."
+  ],
+  "S08-315": [
+   "Scan reads 'wiles and fictions', 'Gen. W. conceives' and 'to extenuate them' on a creased page whose left edge is cut; RevX 'wits', 'concludes' and 'excusate' are transcription errors, not printed differences. The paper prints 'his military fortune and fame' without the second 'his'."
+  ],
+  "S08-316": [
+   "Scan matches the excerpt. Scan reads 'wiles and factions' where the other printings have 'fictions': a printed difference, not a transcription error."
+  ],
+  "S08-317": [
+   "Scan matches the excerpt. The note follows the dateline 'Baltimore, October 28.' with no introduction by the paper."
+  ],
+  "S08-318": [
+   "Scan matches the excerpt apart from the misprint 'inocntestible', which RevX silently corrects to 'incontestible'. The paper prints 'endeavoring to destroy his fortune and his fame', without 'military': a printed difference."
+  ],
+  "S08-319": [
+   "Scan matches the excerpt. The paper prints 'Capt. Goodloe Harper' without 'Robert' and 'his military fortunes' in the plural: printed differences."
+  ],
+  "S08-320": [
+   "Scan matches the excerpt apart from the misprint 'Atillery', which RevX silently corrects to 'Artillery', and 'endeavoured', which RevX gives as 'endeavored'. The paper prints 'his military fortune and fame' without the second 'his', as the Alexandria Daily Gazette does."
+  ]
+ },
+ "crops": {
+  "S08-299": [
+   "S08-299.jpg"
+  ],
+  "S08-300": [
+   "S08-300.jpg"
+  ],
+  "S08-301": [
+   "S08-301.jpg"
+  ],
+  "S08-302": [
+   "S08-302.jpg"
+  ],
+  "S08-303": [
+   "S08-303.jpg"
+  ],
+  "S08-304": [
+   "S08-304.jpg"
+  ],
+  "S08-305": [
+   "S08-305.jpg"
+  ],
+  "S08-306": [
+   "S08-306.jpg"
+  ],
+  "S08-307": [
+   "S08-307.jpg"
+  ],
+  "S08-308": [
+   "S08-308.jpg"
+  ],
+  "S08-309": [
+   "S08-309.jpg"
+  ],
+  "S08-310": [
+   "S08-310-1.jpg",
+   "S08-310-2.jpg"
+  ],
+  "S08-311": [
+   "S08-311.jpg"
+  ],
+  "S08-312": [
+   "S08-312.jpg"
+  ],
+  "S08-313": [
+   "S08-313.jpg"
+  ],
+  "S08-314": [
+   "S08-314.jpg"
+  ],
+  "S08-315": [
+   "S08-315.jpg"
+  ],
+  "S08-316": [
+   "S08-316.jpg"
+  ],
+  "S08-317": [
+   "S08-317.jpg"
+  ],
+  "S08-318": [
+   "S08-318.jpg"
+  ],
+  "S08-319": [
+   "S08-319.jpg"
+  ],
+  "S08-320": [
+   "S08-320.jpg"
+  ]
+ },
+ "boxes": {
+  "S08-308": [
+   [
+    50,
+    350,
+    615,
+    730
+   ]
+  ],
+  "S08-315": [
+   [
+    0,
+    2770,
+    565,
+    3600
+   ]
+  ],
+  "S08-317": [
+   [
+    857,
+    3773,
+    1575,
+    4442
+   ]
+  ]
+ },
+ "notes": {
+  "S08-302": "Prints 'to his friend in Staunton' and 'twenty persons'.",
+  "S08-303": "Printed from the Staunton (Virginia) Eagle. Dates the letter 'May 14.' without the year; prints 'the Duck river'.",
+  "S08-304": "Under the paper's own heading 'The Allies of Britain COMMENCING HOSTILITIES!', credited to the Staunton Eagle. Prints '140 Creeks' where the other printings of the letter have 440.",
+  "S08-305": "Prints 'sargeant'.",
+  "S08-306": "No 'Melancholy Event' heading.",
+  "S08-307": "Prints 'a melancholy event' without 'very', 'serjeant' and 'well known here'.",
+  "S08-309": "Dated 'Aug. 15.' where the others have August 5.",
+  "S08-310": "No 'Melancholy Event' heading; prints 'to have been employed', without 'some time'.",
+  "S08-311": "Under the state heading 'VERMONT.'; prints 'Wenesday'.",
+  "S08-312": "Printed in September, more than three months after the other papers. Under 'STAUNTON.'; the print itself lacks 'from general Jackson' and reads 'had taken' and 'had killed about twenty persons'.",
+  "S08-313": "A one-sentence summary under 'Domestic Intelligence'; this paper printed the letter itself on 20 June. Prints '140 Creek Indains' (a misprint for Indians), as the New Hampshire Gazette prints 140.",
+  "S08-315": "Under an introduction from the Federal Gazette. Prints 'his military fortune and fame', without the second 'his'.",
+  "S08-316": "Prints 'by wiles and factions', where the others have 'fictions'.",
+  "S08-317": "No introduction by the paper; just after the excerpt it prints 'give him', where the others have 'gives'.",
+  "S08-318": "Under the paper's own heading 'MODERN CHIVALRY'. Prints 'endeavoring to destroy his fortune and his fame', without 'military', and the misprint 'inocntestible'.",
+  "S08-319": "Under the paper's own heading '\"HECTOR\" AGAIN.' Prints 'Capt. Goodloe Harper', without Robert, and 'military fortunes'.",
+  "S08-320": "Under an introduction from the Federal Gazette. Prints 'Volunteer Atillery' and 'his military fortune and fame', without the second 'his'."
+ },
+ "dispositions": {
+  "method": "Round two of 1808. On 11 November 2026 the owner set the rule 'every story alike': a reviewed story is described by what kind of text it is and whose account, in the papers' own words, never as what happened; sensitive subjects get no special treatment. Items that earlier rounds held back for framing are therefore counted by the year's own rule, exactly like any other item: what reaches it is admitted, what does not stays out. As before, an excerpt ends before the names of private people where it can, and stories that turn on private people stay out. The three items round one left out for framing were read again with phrase searches over all 4,466 pages filed under 1808 in both transcriptions (phrase_patterns_round2.json, phrase_hits_round2.json), every hit was read, the papers in print without a hit were searched with loose keywords (no missed printing), and every printing was checked against its page scan by AI reviewers (scan_batches/batch_13.json and batch_14.json, SCAN_PROTOCOL.md, scan_points_round2.json).",
+  "selection_rule": "As in round one: a story needs one printed item found in 7 or more newspapers, counted item by item. All three reach 7 and are admitted as new top-level stories; the parent story of round one on the charges against General Wilkinson names its children in its definition and stays as released.",
+  "items_admitted": {
+   "sevier-letter-marble-springs-1808": [
+    "I08-0086"
+   ],
+   "burlington-revenue-cutter-1808": [
+    "I08-0094"
+   ],
+   "wilkinson-harper-correspondence-1808": [
+    "I08-0108"
+   ]
+  },
+  "counted_item_by_item": {
+   "Governor Sevier's letter": "7 papers (ADA 6 June, VA 7 June, EN and BJ 10 June, PGz 20 June, NHG 21 June, NI 21 September), 8 printings with the PGz's one-sentence summary of 10 October. Round one's phrases found 5: the NHG prints '140 Creeks' (the others 440), and the NI printed the letter three months later. Brigade orders printed with it in some papers ('FURTHER CONFIRMATION') are another item.",
+   "The Burlington report": "7 papers (PGz 15 August, NHG 16 August, NG 17 August, ADG 18 August, NI 19 August, VA 23 August, EN 26 August). Later items on the same affair (a Burlington letter in NI, VA and EN in September; reports of the examination and the trial) are other items, each in 3 papers or fewer.",
+   "The Wilkinson-Harper notes": "7 papers (NG 31 October, ADG and EN 1 November, NI and VA 4 November, PGz 7 November, BJ 11 November), each under the paper's own introduction or none."
+  },
+  "not_admitted": {}
+ },
+ "verdict_summary": {
+  "yes": 22
+ },
+ "transcription_summary": {
+  "faithful": 11,
+  "minor_errors": 10,
+  "major_problem": 1
+ },
+ "crop_methods": {
+  "pdf_text_layer": 19,
+  "manual_box": 3
+ },
+ "rechecked": []
+}

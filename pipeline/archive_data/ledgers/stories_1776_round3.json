@@ -1,0 +1,573 @@
+{
+  "ledger_id": "ledger:stories-1776-round3",
+  "ledger_version": 1,
+  "base_release": "0.11.0",
+  "target_release": "0.11.1",
+  "recorded_date": "2026-11-12",
+  "namespace": "expansion-1776",
+  "evidence_dir": "outputs/story_discovery_1776/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Round three of 1776, under the rule 'every story alike' (11 November 2026): the reports of Cherokee and Creek plans that rounds one and two held back for framing, counted item by item at the year's rule of 7 newspapers with phrase searches on all 2,319 pages in both transcriptions, reading of every hit, loose keyword searches of the papers in print without a hit, and scan checks of each admitted passage",
+  "supporting_files": {
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1776/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1776/phrase_patterns_round3.json": "retrieval_patterns",
+    "outputs/story_discovery_1776/phrase_hits_round3.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1776_round2.py": "ledger_code",
+    "work/archive_data/ledgers/make_stories_1776_round3.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1776_round3_review.json": "scan_review",
+    "outputs/story_discovery_1776/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1776/scan_points_round3.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S76-334",
+      "page_key": "sn84024742|1776-06-07|1|3",
+      "excerpt_start": "Copy of a letter addressed to",
+      "excerpt_end": "you a letter by mr. Thomas, and",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "A letter signed by Henry Stuart, British deputy superintendent of Indian affairs, delivered on 18 May 1776, invites the frontier settlers to join the King's forces when they reach the Cherokee nation.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX only capitalises 'superintendent' and 'southern', which the print has in lower case."
+      ],
+      "crops": [
+        "S76-334.jpg"
+      ],
+      "family": [
+        "R1776-0024",
+        "R1776-0567"
+      ],
+      "scan_boxes": [
+        [
+          26,
+          1745,
+          510,
+          2039
+        ]
+      ]
+    },
+    {
+      "id": "S76-335",
+      "page_key": "sn83030135|1776-06-20|1|4",
+      "excerpt_start": "Copy of a letter addressed to",
+      "excerpt_end": "a letter by Mr. Thomas, and inclosed",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "The New-York Packet prints Henry Stuart's letter.",
+      "note": "The letter runs to the foot of page 4 and is continued in the next issue (27 June, page 3).",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells 'Superintendant' and RevX gives 'Superintendent', a minor spelling change. The right edge of the crop cuts the last letters of some lines."
+      ],
+      "crops": [
+        "S76-335.jpg"
+      ],
+      "family": [
+        "R1776-0002",
+        "R1776-0024",
+        "R1776-0210",
+        "R1776-0362"
+      ]
+    },
+    {
+      "id": "S76-336",
+      "page_key": "sn83025898|1776-06-29|1|2",
+      "excerpt_start": "Copy of a letter addressed to",
+      "excerpt_end": "you a letter by Mr. Thomas, and",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "The Pennsylvania Ledger prints Henry Stuart's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells 'superintendant' and RevX gives 'superintendent', a minor spelling change."
+      ],
+      "crops": [
+        "S76-336.jpg"
+      ],
+      "family": [
+        "R1776-0002",
+        "R1776-0024",
+        "R1776-0140"
+      ]
+    },
+    {
+      "id": "S76-337",
+      "page_key": "sn83021126|1776-07-01|1|6",
+      "excerpt_start": "Copy of a letter addressed to",
+      "excerpt_end": "you a letter by Mr. Thomas, and",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints Henry Stuart's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print has 'superintendant' and RevX gives 'Superintendent', a minor spelling change."
+      ],
+      "crops": [
+        "S76-337.jpg"
+      ],
+      "family": [
+        "R1776-0002",
+        "R1776-0024",
+        "R1776-1073"
+      ],
+      "scan_boxes": [
+        [
+          1600,
+          4690,
+          2760,
+          5080
+        ]
+      ]
+    },
+    {
+      "id": "S76-338",
+      "page_key": "sn83030493|1776-07-01|1|1",
+      "excerpt_start": "Copy of a Letter addressed to",
+      "excerpt_end": "you a Letter by Mr. Thomas, and",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "The New-York Gazette prints Henry Stuart's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells 'Superintendant' and RevX gives 'Superintendent', a minor spelling change."
+      ],
+      "crops": [
+        "S76-338.jpg"
+      ],
+      "family": [
+        "R1776-0002",
+        "R1776-0024",
+        "R1776-1071"
+      ]
+    },
+    {
+      "id": "S76-339",
+      "page_key": "sn83030135|1776-07-04|1|4",
+      "excerpt_start": "Extract of a letter from Savannah",
+      "excerpt_end": "the Over-hills are for mischief with the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "savannah-river-letter-13-may-1776"
+      ],
+      "summary": "A letter from Savannah River (13 May 1776) reports that the Creek chiefs who were expected have come down and seem well disposed, and what letters from the Cherokee towns say.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'with the white people', so 'white' is printed in this paper; the excerpt ends just before that word."
+      ],
+      "crops": [
+        "S76-339.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0019",
+        "R1776-0162",
+        "R1776-0212",
+        "R1776-0476",
+        "R1776-0481",
+        "R1776-1081"
+      ],
+      "scan_boxes": [
+        [
+          3652,
+          4240,
+          4717,
+          4900
+        ]
+      ]
+    },
+    {
+      "id": "S76-340",
+      "page_key": "sn83025583|1776-07-13|1|2",
+      "excerpt_start": "WILLIAMSBURG, (Virginia) June 15. Copy of",
+      "excerpt_end": "myself wrote you a letter by Mr.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "The Freeman's Journal prints Henry Stuart's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the spelling 'Superintendant' and the one word 'Sometime'. The print has 'by Mr. Thomas, and inclosed', so nothing is left out in the print."
+      ],
+      "crops": [
+        "S76-340.jpg"
+      ],
+      "family": [
+        "R1776-0002",
+        "R1776-0024",
+        "R1776-0060",
+        "R1776-0188",
+        "R1776-0256"
+      ]
+    },
+    {
+      "id": "S76-341",
+      "page_key": "sn84024739|1776-07-13|1|1",
+      "excerpt_start": "Extract of a letter from SAVANNA",
+      "excerpt_end": "are for mischief with the white people,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "savannah-river-letter-13-may-1776"
+      ],
+      "summary": "Dixon and Hunter's Virginia Gazette prints the Savannah River letter.",
+      "note": "Prints 'SAVANNA river', 'and say, if the Over-hills' without 'that', and 'Captains Colbert and Gist'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'SAVANNA river' and 'and say, if the Over-hills' without 'that': printed differences from the other papers, not transcription errors."
+      ],
+      "crops": [
+        "S76-341.jpg"
+      ],
+      "family": [
+        "R1776-0019",
+        "R1776-0161",
+        "R1776-0474",
+        "R1776-1018"
+      ],
+      "scan_boxes": [
+        [
+          594,
+          815,
+          1151,
+          990
+        ]
+      ]
+    },
+    {
+      "id": "S76-342",
+      "page_key": "sn84026371|1776-07-17|1|2",
+      "excerpt_start": "Extract of a letter from Savannah",
+      "excerpt_end": "Over-hills are for mischief with the white",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "savannah-river-letter-13-may-1776"
+      ],
+      "summary": "The Pennsylvania Gazette prints the Savannah River letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading follows the end of another item; no Charles-Town dateline shows directly above it in the crop."
+      ],
+      "crops": [
+        "S76-342.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0019",
+        "R1776-0329"
+      ]
+    },
+    {
+      "id": "S76-343",
+      "page_key": "sn85047530|1776-07-17|1|2",
+      "excerpt_start": "Extract of a letter from Savannah",
+      "excerpt_end": "are for mischief with the white people,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "savannah-river-letter-13-may-1776"
+      ],
+      "summary": "The Pennsylvania Journal prints the Savannah River letter.",
+      "note": "Printed under 'CHARLES-TOWN, (South Carolina,) May 31.'",
+      "scan_findings": [
+        "Scan matches the excerpt. The letter is printed under the dateline 'CHARLES-TOWN, (South Carolina,) May 31.'"
+      ],
+      "crops": [
+        "S76-343.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0019",
+        "R1776-0162"
+      ],
+      "scan_boxes": [
+        [
+          2775,
+          296,
+          3988,
+          730
+        ]
+      ]
+    },
+    {
+      "id": "S76-344",
+      "page_key": "sn83025898|1776-07-20|1|2",
+      "excerpt_start": "Extract of a letter from Savannah",
+      "excerpt_end": "are for mischief with the white people,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "savannah-river-letter-13-may-1776"
+      ],
+      "summary": "The Pennsylvania Ledger prints the Savannah River letter.",
+      "note": "Printed under 'CHARLESTOWN, (South Carolina.) May 31.'",
+      "scan_findings": [
+        "Scan matches the excerpt, which ends at 'white people,'. The letter is printed under the dateline 'CHARLESTOWN, (South Carolina.) May 31.'"
+      ],
+      "crops": [
+        "S76-344.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0005",
+        "R1776-0019",
+        "R1776-0115",
+        "R1776-0138",
+        "R1776-0302",
+        "R1776-1106",
+        "R1776-1110"
+      ]
+    },
+    {
+      "id": "S76-345",
+      "page_key": "sn83021126|1776-07-22|1|4",
+      "excerpt_start": "Extract of a letter from Savannah",
+      "excerpt_end": "they will have no hand in it.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "savannah-river-letter-13-may-1776"
+      ],
+      "summary": "Dunlap's Pennsylvania Packet prints the Savannah River letter.",
+      "note": "Printed under 'CHARLES-TOWN, (South Carolina,) May 31.', and headed 'Savanah River'.",
+      "scan_findings": [
+        "Scan reads 'Savanah River' in the heading, a printed spelling; RevX 'Savannah' silently corrects it, a minor transcription difference. The rest matches the excerpt, and the letter is printed under the dateline 'CHARLES-TOWN, (South Carolina,) May 31.'"
+      ],
+      "crops": [
+        "S76-345.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0019",
+        "R1776-0319",
+        "R1776-0322",
+        "R1776-0344",
+        "R1776-0484",
+        "R1776-0486",
+        "R1776-1099"
+      ]
+    },
+    {
+      "id": "S76-346",
+      "page_key": "sn83020482|1776-07-25|1|3",
+      "excerpt_start": "Extract of a letter from Savannah",
+      "excerpt_end": "the Over-hills are for mischief with the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "savannah-river-letter-13-may-1776"
+      ],
+      "summary": "The New-England Chronicle prints the Savannah River letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'with the white people', so 'white' is printed in this paper; the excerpt ends just before that word."
+      ],
+      "crops": [
+        "S76-346.jpg"
+      ],
+      "family": [
+        "R1776-0001",
+        "R1776-0019",
+        "R1776-0127",
+        "R1776-0558",
+        "R1776-1116"
+      ]
+    },
+    {
+      "id": "S76-347",
+      "page_key": "sn83025583|1776-07-27|1|2",
+      "excerpt_start": "Extract of a letter from Savannah",
+      "excerpt_end": "over-hills are for mischief with the white",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "savannah-river-letter-13-may-1776"
+      ],
+      "summary": "The Freeman's Journal prints the Savannah River letter.",
+      "note": "Prints 'are down and well disposed', without 'seem'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'are down and well disposed' without 'seem': a printed difference from the other papers, not a transcription error."
+      ],
+      "crops": [
+        "S76-347.jpg"
+      ],
+      "family": [
+        "R1776-0019"
+      ]
+    },
+    {
+      "id": "S76-348",
+      "page_key": "sn83025894|1776-08-31|1|3",
+      "excerpt_start": "\"Gentlemen, \"Some time ago Mr. Cameron",
+      "excerpt_end": "apprehensions of the Indians doing mischief immediately;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "The Pennsylvania Evening Post prints Henry Stuart's letter.",
+      "note": "Printed again among papers sent from Augusta, Georgia, to the Governor of Georgia (a covering letter of 3 July 1776 with two sworn depositions), where it is called 'a copy of an intercepted letter from Henry Stuart, to the frontier inhabitants of North-Carolina and Virginia'. The papers begin on page 2. Prints 'a talk' and 'which is reported you lately made of them', where the June and July printings have 'the talk' and 'it was reported you had lately made of them'; the rivers are printed 'Wattaga, Noluchuckey'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'Wattaga, Noluchuckey'."
+      ],
+      "crops": [
+        "S76-348.jpg"
+      ],
+      "family": [
+        "R1776-0024",
+        "R1776-0194",
+        "R1776-1172"
+      ]
+    },
+    {
+      "id": "S76-349",
+      "page_key": "sn84026371|1776-09-04|1|3",
+      "excerpt_start": "Gentlemen, Some time ago Mr. Cameron",
+      "excerpt_end": "is reported you lately made of them...",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "The Pennsylvania Gazette prints Henry Stuart's letter.",
+      "note": "Printed again among papers sent from Augusta, Georgia, to the Governor of Georgia (a covering letter of 3 July 1776 with two sworn depositions), where it is called 'a copy of an intercepted letter from Henry Stuart, to the frontier inhabitants of North-Carolina and Virginia'. The RevX transcription shortens the letter with '...' after 'lately made of them'; the paper printed it in full ('on the river Wattaga, Noluchuckey, &c. We are since informed…'). Prints 'a talk' and 'which is reported you lately made of them'.",
+      "scan_findings": [
+        "The words shown match the print, except that the print has 'enclosed' where RevX has 'inclosed'. RevX stops with '...' after 'lately made of them', but the print goes on with the letter ('on the river Wattaga, Noluchuckey, &c. We are since informed…')."
+      ],
+      "crops": [
+        "S76-349.jpg"
+      ],
+      "family": [
+        "R1776-0024",
+        "R1776-0365",
+        "R1776-0498"
+      ]
+    },
+    {
+      "id": "S76-350",
+      "page_key": "sn83025898|1776-09-07|1|2",
+      "excerpt_start": "Gentlemen, Some time ago Mr. Cameron",
+      "excerpt_end": "apprehensions of the Indians doing mischief immediately;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "The Pennsylvania Ledger prints Henry Stuart's letter.",
+      "note": "Printed again among papers sent from Augusta, Georgia, to the Governor of Georgia (a covering letter of 3 July 1776 with two sworn depositions), where it is called 'a copy of an intercepted letter from Henry Stuart, to the frontier inhabitants of North-Carolina and Virginia'. This paper printed the letter for the second time. The rivers are printed 'Wataga, Nolachuky'; prints 'a talk' and 'which is reported you lately made of them'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'Wataga, Nolachuky'."
+      ],
+      "crops": [
+        "S76-350.jpg"
+      ],
+      "family": [
+        "R1776-0024",
+        "R1776-0238"
+      ]
+    },
+    {
+      "id": "S76-351",
+      "page_key": "sn83030493|1776-09-09|1|2",
+      "excerpt_start": "Gentlemen, \"Some time ago Mr Cameron",
+      "excerpt_end": "apprehensions of the Indians doing mischief immediately;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "stuart-letter-to-frontier-inhabitants"
+      ],
+      "summary": "The New-York Gazette prints Henry Stuart's letter.",
+      "note": "Printed again among papers sent from Augusta, Georgia, to the Governor of Georgia (a covering letter of 3 July 1776 with two sworn depositions), where it is called 'a copy of an intercepted letter from Henry Stuart, to the frontier inhabitants of North-Carolina and Virginia'. The papers begin on page 1. This paper printed the letter for the second time. The rivers are printed 'Wattaga, Noluchuckey' (RevX 'Watauga, Nolichuckey'); prints 'a talk' and 'which is reported you lately made of them'.",
+      "scan_findings": [
+        "Scan reads 'Wattaga, Noluchuckey'; RevX 'Watauga, Nolichuckey' changes the printed spelling of the two river names to the modern one, a minor transcription difference. The rest matches the excerpt."
+      ],
+      "crops": [
+        "S76-351.jpg"
+      ],
+      "family": [
+        "R1776-0024",
+        "R1776-0033",
+        "R1776-0041",
+        "R1776-0132",
+        "R1776-0739"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "stuart-letter-to-frontier-inhabitants",
+      "kind": "message_group",
+      "label": "Henry Stuart's letter to the frontier inhabitants, May 1776",
+      "definition": "Printings of a letter to the settlers on the Watauga and Nolachucky rivers, signed 'Henry Stuart, Deputy Superintendent', for the British superintendent of Indian affairs in the southern district, with a sworn statement that a stranger delivered it on 18 May 1776. The letter invites those 'willing to join his Majesty's forces, as soon as they arrive at the Cherokee nation' to sign a paper of allegiance, and says that the King will land an army in West Florida and march it through the Creek nation to the Chickasaws, 'where 500 warriors from each nation are to join them', and on by the Cherokees, 'who have also promised their assistance'. The papers printed it in June and July as a letter delivered to the frontier inhabitants, and from late August among papers sent from Augusta, Georgia, as 'an intercepted letter'. One side's letter, as printed.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan (round three: stories once held back for framing, at the year's 7-paper rule)."
+    },
+    {
+      "id": "savannah-river-letter-13-may-1776",
+      "kind": "message_group",
+      "label": "A letter from Savannah River, 13 May 1776: the Creek chiefs and the Cherokee towns",
+      "definition": "Printings of an extract of a letter from Savannah River dated 13 May 1776, printed from Charleston (31 May): the writer reports that the Creek chiefs who were expected 'are down, and seem well disposed', and that letters from the Cherokees say the middle and lower towns will have no hand in it 'if the Over-hills are for mischief with the white people'; Henry Stewart and Captains Colbert and Gist (printed with the long s, 'Giſt', which the transcriptions read as 'Gift') are in the Over-hills with ammunition brought up the Mississippi, and were attacked on the way by 'the northward Indians'. One writer's report.",
+      "admission_rule": "Reviewed 1776 printings, checked against the scan (round three: stories once held back for framing, at the year's 7-paper rule)."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "Round three of 1776. On 11 November 2026 the owner set the rule 'every story alike': a reviewed story is described by what kind of text it is and whose account, in the papers' own words, never as what happened; sensitive subjects get no special treatment. Items that earlier rounds held back for framing are therefore counted by the year's own rule, exactly like any other item: what reaches it is admitted, what does not stays out. As before, an excerpt ends before the names of private people where it can, and stories that turn on private people stay out. Rounds one and two left out the reports of Cherokee and Creek plans, each counted by the item finder in 8 papers. Both were read again with phrase searches over all 2,319 pages of 1776 in both transcriptions (phrase_patterns_round3.json, phrase_hits_round3.json), every hit was read, the papers in print in their weeks without a hit were searched with loose keywords (no missed printing), and every printing was checked against its page scan by AI reviewers (scan_batches/batch_16.json and batch_17.json, SCAN_PROTOCOL.md, scan_points_round3.json).",
+    "selection_rule": "As in rounds one and two: a story needs one printed item found in 7 or more newspapers, counted item by item. Round one listed both items among its candidates in 7 or 8 papers; round two admitted every other listed candidate that reached 7. Both reach 8, so both are admitted, as two single stories.",
+    "items_admitted": {
+      "stuart-letter-to-frontier-inhabitants": [
+        "I76-0037",
+        "I76-0282"
+      ],
+      "savannah-river-letter-13-may-1776": [
+        "I76-0074"
+      ]
+    },
+    "counted_item_by_item": {
+      "Henry Stuart's letter": "Printed in two settings: from Virginia in June and July under the heading 'Copy of a letter addressed to the frontier inhabitants…' (VGB 7 June, NYP 20 June, PL 29 June, PP and NYG 1 July, FJ 13 July: 6 papers), and from 31 August among papers sent from Augusta, Georgia, to the Governor of Georgia, as 'an intercepted letter', after two sworn depositions (PEP 31 August, PG 4 September, PL 7 September, NYG 9 September). The letter is the same item in both, so they count together: 8 papers, 10 printings. The NYP continued its printing of 20 June in the issue of 27 June (page 3), counted once.",
+      "The Savannah River letter": "One item in 8 papers (NYP 4 July to FJ 27 July), printed from Charleston (31 May) in four of them."
+    },
+    "not_admitted": {
+      "Other reports of the southern frontier in 7 papers (not held back for framing)": "Letters from Fincastle of late July, an express on the relief of the Watauga fort, and a September paragraph of letters from the south on the war against the lower towns each reach 7 papers by the item finder. Round one read them among the 101 documents in 7 or more papers and did not choose them, like other 7- and 8-paper items; it did not record them as held back for framing. They can be read in a later round with the other items round one did not choose.",
+      "Still out by earlier decisions": "The committees' notices under the bills resolution (they publish the names of private people; the owner's decision of 9 November 2026) and the parody of the Howes' September declaration (4 papers)."
+    }
+  }
+}

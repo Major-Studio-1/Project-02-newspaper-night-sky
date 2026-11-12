@@ -41,6 +41,8 @@ body.page-telescope .site-inner{max-width:none}
 .skykey{position:absolute;left:10px;bottom:9px;z-index:3;max-width:min(42%,440px);display:flex;flex-direction:column;align-items:flex-start;gap:6px;font-size:11.5px;color:var(--muted)}
 .skykey.open{max-width:calc(100% - 70px)}
 .skykey .key{position:static;max-width:none;pointer-events:auto}.skykey.open .key{display:none}
+/* On a short screen the Topic ring's names reach the sky's corners, so the key there waits behind its button. */
+@media(max-height:719px){.viewport[data-layout="topic"] .skykey:not(.open) .key{display:none}}
 .skykey .legend{max-height:min(46vh,420px);overflow:auto;padding:8px 10px;background:#050711e6;border:1px solid #ffffff1f;border-radius:8px;flex-direction:column;align-items:flex-start;gap:5px;font-size:12px}
 .key-more{font:inherit;font-size:11.5px;color:var(--ink);background:#0b1222cc;border:1px solid #2a3550;border-radius:999px;padding:3px 12px;min-height:24px;cursor:pointer;backdrop-filter:blur(8px)}
 .key-more[aria-expanded="true"]{border-color:#8ccfff88}
@@ -295,7 +297,7 @@ const mapXY = (lat, lon) => [(lon - lonC) * COS / MAPHALF, (lat - latC) / MAPHAL
 const townBusy = new Map(towns.map(t => [t.lat + ',' + t.lon, t.stories])), busiest = Math.max(...towns.map(t => t.stories));
 const place = new Float32Array(N * 2), topic = new Float32Array(N * 2), orbit = new Float32Array(N * 2), doy = new Float32Array(N), month = new Uint8Array(N);
 const ringR = i => .3 + .6 * Math.min(1, Math.sqrt(Math.max(0, D.papers[i] - 2) / 12)) + (hash(i, 91.7) - .5) * .06;   // more papers, further out
-// Topic: the 24 topics in equal wedges around the ring, in their seven families, with a gap between families.
+// Topic: the topics in equal wedges around the ring (23: two of the model's 24 share a wedge), in their seven families, with a gap between families.
 // A star sits under its topic's name the more purely its story is about that topic (its share of the story's topic
 // weight, top_share); a story that mixes topics leans toward the edge of the wedge facing its second topic.
 const FAMS = D.families || [], GAP = .6, WEDGE = TAU / (L + GAP * Math.max(1, FAMS.length));
@@ -1149,19 +1151,21 @@ function starInfo(best) {
   const where = document.createElement('div'); where.className = 'kind';
   const town = townAt.get(D.flat[best] + ',' + D.flon[best]), region = REGIONS[D.reg ? D.reg[best] : -1];
   where.textContent = town ? `First printed in this archive in ${town}${region ? ' · ' + region.label : ''}` : '';
-  // What it is about, as the topic model sees it: the main topic and its share of the story's topic mix, and the next topic.
-  const about = document.createElement('div'); about.className = 'kind';
+  // What it is about, as the topic model sees it: the main topic (the site's name and the model's top words), its share of the
+  // story's topic mix and the next topic; for a topic whose name fits mainly one period, one plain line on its stories.
+  const about = document.createElement('div'), period = document.createElement('div'); about.className = period.className = 'kind';
   if (D.topic[best] >= 0) {
     const T = D.topics[D.topic[best]], k2 = D.topic2[best], T2 = k2 >= 0 && k2 !== D.topic[best] ? D.topics[k2] : null, sp = famSpan[T.family];
-    about.textContent = `Topic: ${T.name} (${Math.round(D.tconf[best] * 100)}% of its topic mix${T2 ? '; next, ' + T2.label : ''})`
+    about.textContent = `Topic: ${T.label}${T.terms ? ` (${T.terms})` : ''} · ${Math.round(D.tconf[best] * 100)}% of its topic mix${T2 ? '; next, ' + T2.label : ''}`
       + (sp && sp[2].length > 1 ? ` · ${FAMS[T.family].short}` : '') + (T.provisional ? ' · a provisional topic' : '');
+    period.textContent = T.period || '';
   }
   const mentions = document.createElement('div'); mentions.className = 'kind';   // which searches it matches, by colour and words
   if (searching() && hitMask[best]) {
     mentions.append('Mentions ');
     SLOTS.forEach((s, j) => { if (hitMask[best] & (1 << j)) mentions.append(...slotDots(1 << j), `“${shortLabel(s.label)}” `); });
   }
-  return [strong, k, n, ...[mentions, where, about].filter(x => x.textContent)];
+  return [strong, k, n, ...[mentions, where, about, period].filter(x => x.textContent)];
 }
 function showTip(best) {
   const tip = $('tip');
@@ -1189,7 +1193,7 @@ $('later').addEventListener('click', () => travel(state.span * .25));
 // ---- Controls (one-tap buttons) ----
 const HOW = {
   place: '<b>Place.</b> Each star sits at the town where the story was first printed in this archive, on a map seen face-on (north up). Busier towns form larger clouds, each star drawn fainter so they stay apart.',
-  topic: '<b>Topic.</b> Around the ring is what each story is about. Each wedge is one of the 24 topics of the project\'s topic model, a computer grouping of words that tend to appear together, named by hand and grouped into seven families, with a gap between families. A star sits in the wedge of its main topic: on the wedge\'s middle line if the story is about that topic alone, and toward the edge facing its next topic if it mixes topics. The model goes by vocabulary, not by what an item is, so a report of a fire can land among the shop notices. Names with a question mark are provisional: re-running the model does not keep those topics stable. Stories printed in more newspapers sit toward the rim.',
+  topic: '<b>Topic.</b> Around the ring are the topics of the project\'s topic model, a computer grouping of words that tend to appear together. Each wedge is named for what its stories mostly are, and the wedges are grouped into seven families, with a gap between families. A star sits in the wedge of its main topic: on the wedge\'s middle line if the story is about that topic alone, and toward the edge facing its next topic if it mixes topics. The model goes by vocabulary, not by what an item is: a check of 810 reprinted stories found that a wedge\'s name fits about half of its stories, and two wedges whose stories share only place names or personal names are called Mixed. Names with a question mark are provisional: re-running the model does not keep those topics stable. Stories printed in more newspapers sit toward the rim.',
   orbit: '<b>Orbit.</b> Around the ring is the time of year, with the months marked. Because time also runs into the distance, each year is one turn of a spiral; the faint line is that track of time. Stories that come back at the same season line up as streaks running into the distance. Stories printed in more newspapers sit further out.'};
 const COLOUR_HOW = {
   region: '<b>Colour: Region.</b> Where each story was first printed in this archive: New England, the Middle States, or the South and West.',
@@ -1212,6 +1216,7 @@ function syncButtons() {
     if (k === 'long') b.setAttribute('aria-disabled', String(!state.show.matched));   // long-running stories are all found automatically
   }
   for (const b of $('layout').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout));
+  $('viewport').dataset.layout = state.layout;   // the sky's styles can follow the arrangement (the key on short screens, below)
   $('layout-label').textContent = {place: 'Where each story was first printed', topic: 'What each story is about', orbit: 'When in the year it was printed'}[state.layout] || '';
   for (const b of $('angle').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.angle === state.angle));
   const mode = colourMode();
@@ -1651,14 +1656,16 @@ function buildLegend() {   // one colour meaning at a time, the same in the lege
   $('key').hidden = false; keepEm();
 }
 // The key on the sky with colour Off says only what is in view: the reviewed years inside the look-back (two at most by
-// name, one on a phone; more fold into one line with the three colours) and the matched stories. "Key" opens the full list.
+// name, one on a phone or a short laptop screen, where it would cover the Topic ring's names; more fold into one line with
+// the three colours) and the matched stories. "Key" opens the full list.
 var keyReady = false;   // var: updateStatus may run before this point, while the key is not built yet
 let offSig = '';
 const reviewedYearsInView = () => { const from = state.now - state.span; return [...new Set(BOOT.categories.map(c => c.year))].filter(y => y && (Date.UTC(y, 11, 31) - EPOCH) / MS >= from && (Date.UTC(y, 0, 1) - EPOCH) / MS <= state.now).sort(); };
+const keyByName = () => innerWidth < 640 || innerHeight < 720 ? 1 : 2;
 function offKey() {
-  const years = state.show.reviewed ? reviewedYearsInView() : [], out = [];
-  offSig = years.join(',') + '|' + (+state.show.matched) + (+state.show.long);
-  if (years.length && years.length <= (innerWidth < 640 ? 1 : 2)) for (const y of years) out.push(...BOOT.categories.filter(c => c.year === y).map(c => swatch(`${y} · ${c.label}`, c.color, '', 'k')));
+  const years = state.show.reviewed ? reviewedYearsInView() : [], out = [], n = keyByName();
+  offSig = years.join(',') + '|' + (+state.show.matched) + (+state.show.long) + '|' + n;
+  if (years.length && years.length <= n) for (const y of years) out.push(...BOOT.categories.filter(c => c.year === y).map(c => swatch(`${y} · ${c.label}`, c.color, '', 'k')));
   else if (years.length) {
     const s = document.createElement('span');
     for (const c of new Set(BOOT.categories.map(c => c.color))) { const d = document.createElement('i'); d.className = 'k'; d.style.background = c; d.style.boxShadow = '0 0 6px ' + c; s.append(d); }
@@ -1671,7 +1678,7 @@ function offKey() {
 function syncOffKey() {   // called as "now" moves: rebuilt only when the years in view change
   if (!keyReady || colourMode() !== 'off') return;
   const years = state.show.reviewed ? reviewedYearsInView() : [];
-  if (years.join(',') + '|' + (+state.show.matched) + (+state.show.long) !== offSig) $('key').replaceChildren(...offKey());
+  if (years.join(',') + '|' + (+state.show.matched) + (+state.show.long) + '|' + keyByName() !== offSig) $('key').replaceChildren(...offKey());
 }
 $('key-more').addEventListener('click', () => {
   const open = $('legend').hidden; $('legend').hidden = !open; $('skykey').classList.toggle('open', open);

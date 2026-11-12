@@ -7,7 +7,7 @@ can be checked on its scan and corrected at the source. The archive holds 77,793
 19,445 issues and editions; each page has the Library of Congress's own OCR (called CA here) and
 an AI transcription made for the Smithsonian's Revolution Crossroads (RevX).
 
-Made by `pipeline/archive_errata.py` from the project's checks, 2026-11-11.
+Made by `pipeline/archive_errata.py` from the project's checks, 2026-11-12.
 
 ## `filing.csv`: 242 issues filed in the wrong place
 
@@ -35,10 +35,10 @@ pages, where only some are concerned), what is wrong, how it was found, and what
 - **A second scan filed under another date.** Found by looking for datelines later than the issue a page is filed under
   (1793; `pipeline/story_discovery_1793/check_duplicate_pages_1793.py`).
 
-## `transcription.csv`: 111 printings whose transcription changes what was printed
+## `transcription.csv`: 173 printings whose transcription changes what was printed
 
-Every printing of the reviewed stories of 1776, 1793, 1807 and 1808 was read against its scan:
-991 printings, of which 111 (11%) carry a misreading
+Every printing of the reviewed stories of 1776, 1793, 1806, 1807 and 1808 was read against its scan:
+1551 printings, of which 173 (11%) carry a misreading
 that changes a fact (a number, a date, a name, or a word with another meaning) or leave printed text out. One row per
 printing: the newspaper, the date and page, which transcription the passage was taken from (RevX, or CA where RevX is
 missing or misfiled), whether printed text is left out, and the reviewers' notes, mostly in the form
@@ -46,14 +46,15 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 
 | Year | Printings read | Changes what was printed |
 |---|---|---|
-| 1776 | 332 | 49 |
-| 1793 | 111 | 7 |
-| 1807 | 250 | 29 |
-| 1808 | 298 | 26 |
+| 1776 | 350 | 50 |
+| 1793 | 135 | 9 |
+| 1806 | 464 | 51 |
+| 1807 | 282 | 36 |
+| 1808 | 320 | 27 |
 
 Examples: "ſtaves" read as "slaves" in 8 of the 9 printings of the resolution of
 Congress opening the ports (1776); "WAR INEVITABLE!!!" read as "NECESSARY INFORMATION!!" (1807); "Junot" read as "Juan" and
-"(MURAT.)" as "(MANUEL.)" (1808). 28 of the 111 leave printed text out, often
+"(MURAT.)" as "(MANUEL.)" (1808). 33 of the 173 leave printed text out, often
 behind a bare "...".
 
 The matched stories (found automatically, all years) were not read one by one. A random sample of 200 of

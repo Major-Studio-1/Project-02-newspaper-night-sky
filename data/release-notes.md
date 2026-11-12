@@ -2,6 +2,22 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.11.0 (2026-11-12)
+
+v0.11.0 is v0.10.2 plus **the reviewed stories of 1806**, the sixth reviewed year, from `ledgers/stories_1806.json` applied with `apply_ledger.py --keep-current`, **with their topic rows**. Nothing else changes. `CURRENT.json` is not moved; the site needs categories for the new stories first.
+
+- **33 stories, 66 groups, 464 printings in 12 newspapers** (`obs:expansion-1806:S06-001` to `S06-464`, namespace `expansion-1806`, run `run:stories-1806`).
+  - 22 are single stories. 11 are parent stories with 33 sub-stories: Hamet Caramalli (4 groups), the trade with St. Domingo (2), the papers on British seizures (3), Yrujo and the government (2), the resolutions on British goods (5), Austerlitz in the papers (4), General Miranda's expedition (4), the *Leander* affair (2), Spanish troops near the Sabine (3), the return of Lewis and Clark (2) and Colonel Burr's enterprise (2).
+  - 25 groups are in 9 or more papers, and every group reaches 7. The selection rule, the items not admitted and the stories left for the owner's decision (those that turn on private persons) are in the ledger's `dispositions_summary` and in `outputs/story_discovery_1806/README.md`.
+  - The first year reviewed under "every story alike": the reports from St. Domingo and the Detroit letter on the Indian councils were chosen by the same rule as any other story and are described by the kind of text and whose account it is.
+- **Pages by printed date:** the 98 *Kentucky Gazette* issues filed under 1808 are taken as the 1806 issues they are (`work/year_search_pages.py --printed-dates`, a new option; without it the script works as before). Their page keys keep the filed date.
+- **How they were found:** as for 1808 (`work/story_items.py --long-running`), with year 1806 (`items.json`) and with year 1805 over the 1806 pages (`items_from_1805.json`).
+- **Scan check of every printing:** all 464 are on their pages (23 only partly shown). 45 crops were cut again from the text layer by other rules and 22 boxes were placed by hand; the boxes of these 67 are in the ledger (`scan_boxes`). Transcriptions, judged on the excerpt: 267 faithful, 148 with minor errors and 49 with errors that change a fact. Six grades were harmonised (`stories_1806_review.json`, `manual.harmonised`).
+- **Misfiled RevX pages:** one printing stands on a scan page whose RevX slot holds another page's text (`derived/revx_page_map.parquet`); its excerpt comes from the CA transcription of the scan page. 13 excerpts in all come from the CA transcription.
+- **A data fault found here, not corrected:** pages 3 and 4 of two *National Intelligencer* issues of 1806 are filed in each other's places (`outputs/story_discovery_1806/README.md`, "Data issues"). No reviewed printing uses them.
+- **Topic rows:** the 66 new groups are scored under `run:story-topics-stories-1806`; the 181 reviewed rows already there are reproduced exactly.
+- **Checks:** 1,793 pass (1,263 before, plus one for each of the 530 new crops).
+
 ## Changes in v0.10.2 (2026-11-10)
 
 v0.10.2 is v0.10.1 with **the Kentucky Gazette issues filed two years late dated by their mastheads**, and their pages matched again in the windows of their printed dates. It was made by `redate_issues.py --keep-current` from `outputs/kentucky_gazette_dates/`, at the owner's word. `CURRENT.json` is not moved. Nothing reviewed changes.
@@ -487,6 +503,15 @@ python outputs/kentucky_gazette_dates/check_dates.py                     # the p
 python outputs/kentucky_gazette_dates/rematch.py                         # their pages matched in the windows of their printed dates (about ten minutes)
 python work/archive_data/redate_issues.py 0.10.1 0.10.2 --keep-current   # v0.10.2
 python work/archive_data/validate.py outputs/data_foundation/v0.10.2
+python work/year_search_pages.py 1806 outputs/story_discovery_1806/search_pages.json --printed-dates   # pages by printed date (v0.10.2's issue dates)
+python work/story_items.py 1806 outputs/story_discovery_1806/search_pages.json outputs/story_discovery_1806/items.json --long-running
+python work/story_items.py 1805 outputs/story_discovery_1806/search_pages.json outputs/story_discovery_1806/items_from_1805.json --long-running   # 1805 families on the 1806 pages
+python work/story_phrase_search.py outputs/story_discovery_1806/search_pages.json outputs/story_discovery_1806/phrase_patterns.json outputs/story_discovery_1806/phrase_hits.json
+python work/archive_data/ledgers/make_stories_1806.py && python work/scan_ledger.py work/archive_data/ledgers/stories_1806.json
+# ... reviewers write outputs/story_discovery_1806/scan_verdicts/ (batches, then rechecks with boxes placed by hand, harmonised grades); findings and boxes go into ledgers/stories_1806_review.json
+python work/archive_data/ledgers/make_stories_1806.py
+python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1806.json --keep-current   # v0.11.0, with its topic rows
+python work/archive_data/validate.py outputs/data_foundation/v0.11.0
 ```
 
 For the next release, write a new ledger (base = current version, target = next) and run `apply_ledger.py` on it. Before that, run `work/scan_ledger.py <ledger>` to make the scan crops; on pages with an unusable text layer, add `scan_boxes` by hand. Since v0.7.2, `apply_ledger.py` also gives the ledger's new groups their topic rows (a run of their own), because every reviewed group must have one. Add `--keep-current` to leave `CURRENT.json` where it is, so the site stays on the previous release until `set_current.py` switches it.

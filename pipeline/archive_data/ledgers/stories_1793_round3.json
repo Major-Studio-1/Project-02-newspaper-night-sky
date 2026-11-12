@@ -1,0 +1,812 @@
+{
+  "ledger_id": "ledger:stories-1793-round3",
+  "ledger_version": 1,
+  "base_release": "0.11.1",
+  "target_release": "0.11.2",
+  "recorded_date": "2026-11-12",
+  "namespace": "expansion-1793",
+  "evidence_dir": "outputs/story_discovery_1793/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Round three of 1793, under the rule 'every story alike' (11 November 2026): the items that rounds one and two held back for framing, counted item by item at the year's rule of 6 newspapers with phrase searches on all 1,751 pages in both transcriptions, reading of every hit, loose keyword searches of the papers in print without a hit, and scan checks of each admitted passage",
+  "supporting_files": {
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1793/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1793/phrase_patterns_round3.json": "retrieval_patterns",
+    "outputs/story_discovery_1793/phrase_hits_round3.json": "retrieval_candidates",
+    "outputs/story_discovery_1793/masthead_dates.csv": "date_check",
+    "work/archive_data/ledgers/make_stories_1793.py": "ledger_code",
+    "work/archive_data/ledgers/make_stories_1793_round3.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1793_round3_review.json": "scan_review",
+    "outputs/story_discovery_1793/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1793/scan_points_round3.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S93-112",
+      "page_key": "sn83025887|1793-07-10|1|3",
+      "excerpt_start": "Capt. Fanning of the brig Union,",
+      "excerpt_end": "place, and sent him on board ship;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "fanning-account-cap-francais"
+      ],
+      "summary": "Captain Fanning of the brig Union, 14 days from Cap Français, gives an account at New York of the commissioners' arrival at the Cape on 18 June 1793 and of the killing and burning that followed.",
+      "note": "Earliest printing found. Introduced as 'copied from a New-York paper of last Monday'. Prints 'Santhonax' and 'Galbean'.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'Santhonax' and 'Galbean' are printed so: printed spellings, not transcription errors."
+      ],
+      "crops": [
+        "S93-112.jpg"
+      ],
+      "family": [
+        "R1793-0010",
+        "R1793-0031",
+        "R1793-0320",
+        "R1793-1009"
+      ]
+    },
+    {
+      "id": "S93-113",
+      "page_key": "sn83025588|1793-07-16|1|3",
+      "excerpt_start": "Capt. FANNING of the brig Union,",
+      "excerpt_end": "place, and sent him on board ship.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "fanning-account-cap-francais"
+      ],
+      "summary": "The New Hampshire Gazette prints Captain Fanning's account.",
+      "note": "Under 'BOSTON, July 15. HORRID NEWS!' Prints 'GALBEAU' and 'the unhappy island of St. Domingo'.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'GALBEAU' is printed so, under 'BOSTON, July 15.' and 'HORRID NEWS!'."
+      ],
+      "crops": [
+        "S93-113.jpg"
+      ],
+      "family": [
+        "R1793-0010",
+        "R1793-0133",
+        "R1793-0134"
+      ]
+    },
+    {
+      "id": "S93-114",
+      "page_key": "sn84023134|1793-07-16|1|3",
+      "excerpt_start": "Capt. Fanning, of the brig Union,",
+      "excerpt_end": "Commander of the troops at that place.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "fanning-account-cap-francais"
+      ],
+      "summary": "The American Herald of Liberty prints Captain Fanning's account.",
+      "note": "Under 'BOSTON JULY 13. HORRID NEWS!' Prints 'St. Dominigo', 'Governour', and the governor's name as 'Galbau' or 'Galban' in worn type.",
+      "scan_findings": [
+        "Scan reads 'St. Dominigo', 'of that place' and 'Governour'; RevX 'St. Dominico', 'at that place' and 'Governor' are minor transcription errors. The dateline is printed 'BOSTON JULY 13.', and the governor's name 'Galbau' or 'Galban' in worn type."
+      ],
+      "crops": [
+        "S93-114.jpg"
+      ],
+      "family": [
+        "R1793-0010",
+        "R1793-0317",
+        "R1793-0323",
+        "R1793-0897",
+        "R1793-0949",
+        "R1793-0996",
+        "R1793-0999",
+        "R1793-1005"
+      ]
+    },
+    {
+      "id": "S93-115",
+      "page_key": "sn83025523|1793-07-22|1|2",
+      "excerpt_start": "BOSTON, July 15.—Captain FANNING of the",
+      "excerpt_end": "Days from Capefrancois, gives the following melan-",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "fanning-account-cap-francais"
+      ],
+      "summary": "The Mirrour prints Captain Fanning's account.",
+      "note": "Under 'HORRID NEWS! BOSTON, July 15.' The account begins at the foot of page 2 and continues on page 3.",
+      "scan_findings": [
+        "Scan matches the excerpt. The part on page 2 ends at 'gives the following melan-', under 'HORRID NEWS!' and 'BOSTON, July 15.'; the commissioners and the governor are not on this page."
+      ],
+      "crops": [
+        "S93-115.jpg"
+      ],
+      "family": [
+        "R1793-0014",
+        "R1793-0031",
+        "R1793-0325",
+        "R1793-1029"
+      ]
+    },
+    {
+      "id": "S93-116",
+      "page_key": "sn84038410|1793-07-22|1|2",
+      "excerpt_start": "Captain John Fanning of the brig",
+      "excerpt_end": "place, and sent him on board ship;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "fanning-account-cap-francais"
+      ],
+      "summary": "The Patowmac Guardian prints Captain Fanning's account.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The crop is small but every word of the excerpt can be read."
+      ],
+      "crops": [
+        "S93-116.jpg"
+      ],
+      "family": [
+        "R1793-0010",
+        "R1793-0043",
+        "R1793-0044",
+        "R1793-0135",
+        "R1793-1030",
+        "R1793-1032"
+      ]
+    },
+    {
+      "id": "S93-117",
+      "page_key": "sn83030483|1793-07-23|1|3",
+      "excerpt_start": "NEW-YORK, July 9. Captain John Fanning",
+      "excerpt_end": "place, and sent him on board ship;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "fanning-account-cap-francais"
+      ],
+      "summary": "The Gazette of the United States prints Captain Fanning's account.",
+      "note": "Under the dateline 'NEW-YORK, July 9.' This issue is filed under 23 July 1793; its masthead reads Saturday, July 13, 1793 (Whole No. 439), and the paper appeared on Wednesdays and Saturdays. Just after the excerpt it prints 'on the 18th' where NGz and PG print 'on the 19th', the second date in the account.",
+      "scan_findings": [
+        "Scan matches the excerpt. Just after it this paper prints 'on the 18th a number of mulattoes' where the National Gazette and the Patowmac Guardian print 'on the 19th': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S93-117.jpg"
+      ],
+      "family": [
+        "R1793-0010",
+        "R1793-1010",
+        "R1793-1031",
+        "R1793-1037",
+        "R1793-1041",
+        "R1793-1045"
+      ]
+    },
+    {
+      "id": "S93-118",
+      "page_key": "sn83030483|1793-07-27|1|3",
+      "excerpt_start": "Philadelphia, July 27. On Sunday the",
+      "excerpt_end": "the town were burnt—that upwards of 20,000",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "brig-mary-passengers-cap-francais"
+      ],
+      "summary": "New York: the passengers of the brig Mary, from Cap Français on 9 July 1793, say that from six to nine hundred people lost their lives on 20 June, not ten thousand.",
+      "note": "Earliest printing found. Prints no earlier figure ('instead of … as we heard'), and the misprint 'ther lives'.",
+      "scan_findings": [
+        "Scan matches the excerpt; this printing has no '(instead of ...)' parenthesis. The print has 'ther lives', which RevX gives as 'their': a printer's slip silently corrected."
+      ],
+      "crops": [
+        "S93-118.jpg"
+      ],
+      "family": [
+        "R1793-0018",
+        "R1793-0138",
+        "R1793-1059"
+      ]
+    },
+    {
+      "id": "S93-119",
+      "page_key": "sn83025887|1793-07-31|1|3",
+      "excerpt_start": "The brig Mary, Capt. Langden, is",
+      "excerpt_end": "than two thirds of the town was",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "brig-mary-passengers-cap-francais"
+      ],
+      "summary": "The National Gazette prints the brig Mary's report.",
+      "note": "Prints 'Capt. Langden' and 'which she left'.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'Langden' and 'which she left' are printed so: printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S93-119.jpg"
+      ],
+      "family": [
+        "R1793-0018",
+        "R1793-0139",
+        "R1793-1076",
+        "R1793-1078"
+      ]
+    },
+    {
+      "id": "S93-120",
+      "page_key": "sn84038410|1793-08-05|1|2",
+      "excerpt_start": "On Sunday the brig Mary, capt.",
+      "excerpt_end": "two thirds of the town was burnt;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "brig-mary-passengers-cap-francais"
+      ],
+      "summary": "The Patowmac Guardian prints the brig Mary's report.",
+      "note": "Prints '(instead of two thousand, as we heard)', where NGz, NHG, AHL and CI have ten thousand.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads '(instead of two thousand, as we heard)' where the other printings have ten thousand: a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S93-120.jpg"
+      ],
+      "family": [
+        "R1793-0014",
+        "R1793-0018",
+        "R1793-0025",
+        "R1793-0098",
+        "R1793-0100",
+        "R1793-1054",
+        "R1793-1059",
+        "R1793-1087"
+      ]
+    },
+    {
+      "id": "S93-121",
+      "page_key": "sn83025588|1793-08-06|1|3",
+      "excerpt_start": "New-York, July 20. On Sunday the",
+      "excerpt_end": "20th—that not more than two thirds of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "brig-mary-passengers-cap-francais"
+      ],
+      "summary": "The New Hampshire Gazette prints the brig Mary's report.",
+      "note": "Dated 'New-York, July 20.'",
+      "scan_findings": [
+        "Scan matches the excerpt. The dateline is printed 'New-York, July 20.'"
+      ],
+      "crops": [
+        "S93-121.jpg"
+      ],
+      "family": [
+        "R1793-0018",
+        "R1793-0137",
+        "R1793-0140",
+        "R1793-0331",
+        "R1793-0333",
+        "R1793-0337",
+        "R1793-1049",
+        "R1793-1093",
+        "R1793-1095"
+      ]
+    },
+    {
+      "id": "S93-122",
+      "page_key": "sn84023134|1793-08-06|1|2",
+      "excerpt_start": "The brig Mary, Capt. Langdon, arrived",
+      "excerpt_end": "two thirds of the town was burnt—that",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "brig-mary-passengers-cap-francais"
+      ],
+      "summary": "The American Herald of Liberty prints the brig Mary's report.",
+      "note": "Just after the excerpt it prints 'upwards of two thousand' under arms, where GUS, NGz, PG and NHG have 20,000.",
+      "scan_findings": [
+        "Scan matches the excerpt. Just after it the print reads 'upwards of two thousand mulattoes and blacks' where the other printings have 20,000: a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S93-122.jpg"
+      ],
+      "family": [
+        "R1793-0018",
+        "R1793-0137",
+        "R1793-1061",
+        "R1793-1067",
+        "R1793-1074",
+        "R1793-1080",
+        "R1793-1096",
+        "R1793-1099"
+      ]
+    },
+    {
+      "id": "S93-123",
+      "page_key": "sn84023313|1793-08-14|1|3",
+      "excerpt_start": "On Sunday the brig Mary, Captain",
+      "excerpt_end": "only of the town was burnt—that upwards",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "news-from-cap-francais-1793",
+        "brig-mary-passengers-cap-francais"
+      ],
+      "summary": "The Columbian Informer prints the brig Mary's report.",
+      "note": "Prints '(instead of 10,000 as we heard)', 'about two thirds only of the town', and 'upwards of 20,000 mulattoes are under arms there' without 'and blacks' and 'now'.",
+      "scan_findings": [
+        "Scan matches the excerpt; a blot covers part of 'heard)' and '20th', which can still be made out. Just after the excerpt the print reads 'upwards of 20,000 mulattoes are under arms there', without 'and blacks': a printed difference."
+      ],
+      "crops": [
+        "S93-123.jpg"
+      ],
+      "family": [
+        "R1793-0004",
+        "R1793-0018",
+        "R1793-0144",
+        "R1793-0330",
+        "R1793-0341",
+        "R1793-1119"
+      ]
+    },
+    {
+      "id": "S93-124",
+      "page_key": "sn83025887|1793-09-04|1|3",
+      "excerpt_start": "By an Express arrived Yesterday at",
+      "excerpt_end": "boundary between them and the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "war-office-treaty-commissioners-1793"
+      ],
+      "summary": "Philadelphia, September 1793: an express to the War Office reports that the commissioners could not meet the nations assembled at the rapids of the Miami, who insisted on the Ohio as the boundary.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-124.jpg"
+      ],
+      "family": [
+        "R1793-0021",
+        "R1793-0359"
+      ]
+    },
+    {
+      "id": "S93-125",
+      "page_key": "sn83030483|1793-09-07|1|3",
+      "excerpt_start": "An express arrived Tuesday at the",
+      "excerpt_end": "boundary between them and the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "war-office-treaty-commissioners-1793"
+      ],
+      "summary": "The Gazette of the United States prints the War Office paragraph.",
+      "note": "Opens 'An express arrived Tuesday', the first sentence set in italics as a heading.",
+      "scan_findings": [
+        "Scan matches the excerpt. The first sentence is set in italics as a heading, and it reads 'arrived Tuesday'."
+      ],
+      "crops": [
+        "S93-125.jpg"
+      ],
+      "family": [
+        "R1793-0021",
+        "R1793-0363",
+        "R1793-0553",
+        "R1793-1179",
+        "R1793-1191",
+        "R1793-1192"
+      ],
+      "scan_boxes": [
+        [
+          1560,
+          1845,
+          2230,
+          2205
+        ]
+      ]
+    },
+    {
+      "id": "S93-126",
+      "page_key": "sn83025887|1793-09-11|1|3",
+      "excerpt_start": "Extract of a letter from the",
+      "excerpt_end": "men wounded.—The inhabitants on the frontiers are",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "german-creek-letter-1793"
+      ],
+      "summary": "A letter from German Creek, Territory South of the Ohio (16 August 1793), reports an expedition of 180 men under Colonel Daugherty across the Tennessee to the valley towns.",
+      "note": "Earliest printing found. Headed only 'Extract of a letter from the Territory South of the Ohio, Aug. 16.', without the Winchester dateline; prints 'Tenessee'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the item runs from the foot of one column to the head of the next. The print spells 'Tenessee', which RevX gives as 'Tennessee'."
+      ],
+      "crops": [
+        "S93-126-1.jpg",
+        "S93-126-2.jpg"
+      ],
+      "family": [
+        "R1793-0154",
+        "R1793-0370",
+        "R1793-0371",
+        "R1793-0550",
+        "R1793-1204",
+        "R1793-1209"
+      ]
+    },
+    {
+      "id": "S93-127",
+      "page_key": "sn83030483|1793-09-11|1|3",
+      "excerpt_start": "WINCHESTER, Sept. 2. Extract of a",
+      "excerpt_end": "and destroyed a vast quantity of vegetables.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "german-creek-letter-1793"
+      ],
+      "summary": "The Gazette of the United States prints the German Creek letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S93-127.jpg"
+      ],
+      "family": [
+        "R1793-0154",
+        "R1793-0188",
+        "R1793-1208",
+        "R1793-1209",
+        "R1793-1210",
+        "R1793-1211"
+      ]
+    },
+    {
+      "id": "S93-128",
+      "page_key": "sn84038410|1793-09-16|1|3",
+      "excerpt_start": "GEORGETOWN, September 7. Extract of a",
+      "excerpt_end": "By request of the governor of Pennsylvania,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "german-creek-letter-1793"
+      ],
+      "summary": "The Patowmac Guardian prints the German Creek letter.",
+      "note": "Printed under 'GEORGETOWN, September 7.' as a letter 'from Germain Creek'. The column breaks after 'killed nine fellows and', and the head of the next column is cut off at the edge of the scan, so whether this paper printed 'two squaws, took and brought in seven prisoners' cannot be read; its transcription lacks the words.",
+      "scan_findings": [
+        "Scan reads 'Germain Creek'; RevX 'Germantown Creek' is a transcription error. The words 'two squaws, took and brought in seven prisoners' are not readable on the scan: the column breaks after 'killed nine fellows and', and the top line of the next column is cut off at the edge of the scan, so the print may have them."
+      ],
+      "crops": [
+        "S93-128-1.jpg",
+        "S93-128-2.jpg"
+      ],
+      "family": [
+        "R1793-0021",
+        "R1793-0149",
+        "R1793-0351",
+        "R1793-0359",
+        "R1793-0363",
+        "R1793-0370",
+        "R1793-1192"
+      ]
+    },
+    {
+      "id": "S93-129",
+      "page_key": "sn84038410|1793-09-16|1|3",
+      "excerpt_start": "On the 3d inst. an express",
+      "excerpt_end": "boundary between them and the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "war-office-treaty-commissioners-1793"
+      ],
+      "summary": "The Patowmac Guardian prints the War Office paragraph.",
+      "note": "Opens 'On the 3d inst. an express arrived at the War-Office, Philadelphia, … the purport of which was'.",
+      "scan_findings": [
+        "Scan matches the excerpt, with this paper's own opening, 'On the 3d inst. an express arrived at the War-Office, Philadelphia, ... the purport of which was'."
+      ],
+      "crops": [
+        "S93-129.jpg"
+      ],
+      "family": [
+        "R1793-0021",
+        "R1793-0149",
+        "R1793-0351",
+        "R1793-0359",
+        "R1793-0363",
+        "R1793-0370",
+        "R1793-1192"
+      ]
+    },
+    {
+      "id": "S93-130",
+      "page_key": "sn83025588|1793-09-17|1|2",
+      "excerpt_start": "An Express arrived yesterday at the",
+      "excerpt_end": "boundary between them and the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "war-office-treaty-commissioners-1793"
+      ],
+      "summary": "The New Hampshire Gazette prints the War Office paragraph.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The first sentence is set in italics as a heading."
+      ],
+      "crops": [
+        "S93-130.jpg"
+      ],
+      "family": [
+        "R1793-0021",
+        "R1793-0057",
+        "R1793-0148",
+        "R1793-0149",
+        "R1793-0150",
+        "R1793-0360",
+        "R1793-1157",
+        "R1793-1158",
+        "R1793-1190"
+      ]
+    },
+    {
+      "id": "S93-131",
+      "page_key": "sn84023134|1793-09-17|1|3",
+      "excerpt_start": "An express arrived yesterday at the",
+      "excerpt_end": "boundary between them and the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "war-office-treaty-commissioners-1793"
+      ],
+      "summary": "The American Herald of Liberty prints the War Office paragraph.",
+      "note": "Runs from the foot of one column to the head of the next; prints the misprint 'deputaton'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the item runs from the foot of one column to the head of the next. The print has 'deputaton', a printer's slip that RevX corrects to 'deputation'."
+      ],
+      "crops": [
+        "S93-131-1.jpg",
+        "S93-131-2.jpg"
+      ],
+      "family": [
+        "R1793-0021",
+        "R1793-0146",
+        "R1793-0150",
+        "R1793-0364",
+        "R1793-0368",
+        "R1793-1191",
+        "R1793-1199",
+        "R1793-1223"
+      ],
+      "scan_boxes": [
+        [
+          1416,
+          6946,
+          2530,
+          7242
+        ],
+        [
+          2495,
+          233,
+          3590,
+          629
+        ]
+      ]
+    },
+    {
+      "id": "S93-132",
+      "page_key": "sn83025588|1793-09-24|1|2",
+      "excerpt_start": "WINCHESTER, Sept. 2. Extract of a",
+      "excerpt_end": "villages, and destroyed vast quantities of vegetables.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "german-creek-letter-1793"
+      ],
+      "summary": "The New Hampshire Gazette prints the German Creek letter.",
+      "note": "Prints 'vast quantities of vegetables'.",
+      "scan_findings": [
+        "Scan matches the excerpt. Scan reads 'Daugherty'; RevX 'Daugberty' is a minor transcription error. This paper prints 'vast quantities' where others have 'a vast quantity'."
+      ],
+      "crops": [
+        "S93-132.jpg"
+      ],
+      "family": [
+        "R1793-0154",
+        "R1793-0371",
+        "R1793-1180",
+        "R1793-1215",
+        "R1793-1216",
+        "R1793-1223",
+        "R1793-1237",
+        "R1793-1238"
+      ]
+    },
+    {
+      "id": "S93-133",
+      "page_key": "sn84023134|1793-09-24|1|2",
+      "excerpt_start": "WINCHESTER, SEPT. 2. Extract of a",
+      "excerpt_end": "villages, and destroyed vast quantities of vegetables.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "german-creek-letter-1793"
+      ],
+      "summary": "The American Herald of Liberty prints the German Creek letter.",
+      "note": "Printed under 'VIRGINIA.'; gives the numbers as figures (9, 2, 7, 20 and 5) and prints 'vast quantities'.",
+      "scan_findings": [
+        "Scan reads 'a correspondent of veracity' and 'dated German-Creek' in worn italic type; RevX 'extraterritorial' and 'at ed' are transcription errors. The numbers are printed as figures (9, 2, 7, 20), as the transcription has them."
+      ],
+      "crops": [
+        "S93-133.jpg"
+      ],
+      "family": [
+        "R1793-0154",
+        "R1793-0188",
+        "R1793-0371",
+        "R1793-0377",
+        "R1793-1220",
+        "R1793-1233",
+        "R1793-1236"
+      ]
+    },
+    {
+      "id": "S93-134",
+      "page_key": "sn84023313|1793-09-25|1|3",
+      "excerpt_start": "An Express arrived yesterday at the",
+      "excerpt_end": "boundary between them and the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "war-office-treaty-commissioners-1793"
+      ],
+      "summary": "The Columbian Informer prints the War Office paragraph.",
+      "note": "Under the dateline 'PHILADELPHIA, Sept. 4.' and the paper's own heading 'INDIAN WAR INEVITABLE!' Prints 'who were settled at the Rapids', where the others have 'assembled', and what appears to be 'War-Officer'.",
+      "scan_findings": [
+        "Scan matches the excerpt, under 'PHILADELPHIA, Sept. 4.' and the heading 'INDIAN WAR INEVITABLE!'. This paper prints 'who were settled at the Rapids' where the others have 'assembled', and appears to print 'War-Officer' where RevX gives 'War-Office'."
+      ],
+      "crops": [
+        "S93-134.jpg"
+      ],
+      "family": [
+        "R1793-0021",
+        "R1793-0155",
+        "R1793-1185",
+        "R1793-1231",
+        "R1793-1236"
+      ]
+    },
+    {
+      "id": "S93-135",
+      "page_key": "sn84023313|1793-10-02|1|3",
+      "excerpt_start": "From WINCHESTER, Sept. 2. Extract of",
+      "excerpt_end": "and destroyed a vast quantity of vegetables.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "german-creek-letter-1793"
+      ],
+      "summary": "The Columbian Informer prints the German Creek letter.",
+      "note": "Under the paper's own heading 'INDIAN NEWS.' Ends the sentence on the wounded with two exclamation marks.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the heading 'INDIAN NEWS.' and 'From WINCHESTER, Sept. 2.'"
+      ],
+      "crops": [
+        "S93-135.jpg"
+      ],
+      "family": [
+        "R1793-0381",
+        "R1793-1237",
+        "R1793-1262"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "news-from-cap-francais-1793",
+      "kind": "context_group",
+      "label": "News from Cap Français, June 1793",
+      "definition": "Two accounts of events at Cap Français, in the French colony of Saint-Domingue, from 18 to 23 June 1793, as American papers printed them in July and August from arrivals at New York: Captain Fanning's account, and the report of the passengers of the brig Mary, who put the dead at six to nine hundred, 'instead of 10 thousand as we heard', as most papers print it. Contains those two groups; the wider coverage is not included. Each is an account at second hand.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round three: stories once held back for framing, at the 6-paper threshold for 1793)."
+    },
+    {
+      "id": "fanning-account-cap-francais",
+      "kind": "message_group",
+      "label": "Captain Fanning's account of Cap Français",
+      "definition": "Printings of the account given at New York by Captain John Fanning of the brig Union, 14 days from Cap Français (New York, 9 July 1793): on 18 June the civil commissioners Sonthonax and Polverel arrived at the Cape and suspended the governor, Galbaud; by his account they then encouraged 'a number of mulattoes' to come into town, who armed the enslaved people of the town 'to assist in destroying all the whites'; between 8 and 10 thousand people were killed from 20 June; and the town was plundered and burnt, with not more than 50 houses standing when he sailed on the 23rd with a fleet of 250 sail. One ship captain's account. Three papers print it under the heading 'HORRID NEWS!'.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round three: stories once held back for framing, at the 6-paper threshold for 1793)."
+    },
+    {
+      "id": "brig-mary-passengers-cap-francais",
+      "kind": "message_group",
+      "label": "The brig Mary's passengers on Cap Français",
+      "definition": "Printings of a New York report of late July 1793 on the brig Mary, Captain Langdon, from Cap Français, which she left on 9 July: her forty passengers said that from six to nine hundred people lost their lives 'in the affair of the 20th' (most papers add 'instead of 10 thousand as we heard'; the Patowmac Guardian prints 'two thousand'), that not more than two thirds of the town was burnt, that 'upwards of 20,000 mulattoes and blacks are now under arms there', that 'the negroes never came in from the country on the late occasion', and that the Spaniards had taken a town and were on the march. The passengers' account, at second hand.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round three: stories once held back for framing, at the 6-paper threshold for 1793)."
+    },
+    {
+      "id": "war-office-treaty-commissioners-1793",
+      "kind": "message_group",
+      "label": "The War Office on the treaty commissioners, September 1793",
+      "definition": "Printings of a Philadelphia paragraph of early September 1793: by an express to the War Office from the commissioners for treating with the Indian nations north of the Ohio, they 'were not able even to effect a meeting' with the nations assembled at the rapids of the Miami river; the nations' deputation 'insisted upon the Ohio as the boundary between them and the United States', and, 'as so extensive a concession was inadmissible', the commissioners left on 17 August. It names the Wyandots, Delawares, Shawanese and Miamis as 'determined for war', says that a considerable part of them were for peace, and that the Six Nations, with Captain Brandt (Brant) and his Mohawks, urged peace. The United States government's account, as the papers printed it.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round three: stories once held back for framing, at the 6-paper threshold for 1793)."
+    },
+    {
+      "id": "german-creek-letter-1793",
+      "kind": "message_group",
+      "label": "A letter from German Creek, 16 August 1793: an expedition across the Tennessee",
+      "definition": "Printings of an extract of a letter dated German Creek, Territory South of the Ohio, 16 August 1793, written to the editor of a Winchester paper (2 September) and printed from it: the writer reports that on 4 August Colonel Daugherty of Jefferson county crossed the Tennessee with 180 men to 'the valley Indian towns', where by his account they killed nine men and two women, took seven prisoners, burnt twenty towns and villages and destroyed crops, with five of their own men wounded. He adds that the frontier inhabitants are 'in close forts', and argues for a large company raised 'under the sanction of government' to give the towns, in his words, 'a severe flogging, in order to bring them to a sense of their duty, and teach them to pay some respect to treaties'. One writer's account.",
+      "admission_rule": "Reviewed 1793 printings, checked against the scan (round three: stories once held back for framing, at the 6-paper threshold for 1793)."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "news-from-cap-francais-1793",
+      "child": "fanning-account-cap-francais"
+    },
+    {
+      "parent": "news-from-cap-francais-1793",
+      "child": "brig-mary-passengers-cap-francais"
+    }
+  ],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "Round three of 1793. On 11 November 2026 the owner set the rule 'every story alike': a reviewed story is described by what kind of text it is and whose account, in the papers' own words, never as what happened; sensitive subjects get no special treatment. Items that earlier rounds held back for framing are therefore counted by the year's own rule, exactly like any other item: what reaches it is admitted, what does not stays out. As before, an excerpt ends before the names of private people where it can, and stories that turn on private people stay out. The items rounds one and two left out for framing were read again with phrase searches over all 1,751 pages of 1793 in both transcriptions (phrase_patterns_round3.json, phrase_hits_round3.json), every hit was read, the papers in print without a hit were searched with loose keywords (no missed printing), and every admitted printing was checked against its page scan by AI reviewers (scan_batches/batch_09.json and batch_10.json, SCAN_PROTOCOL.md, scan_points_round3.json).",
+    "selection_rule": "For 1793 a story needs one printed item found in 6 or more newspapers, counted item by item, the two titles of a renamed paper once (the owner's decision of 10 November 2026). Where several items belong to one affair, each is its own group under a parent story; a sub-story may have fewer papers than the threshold when its parent reaches it. As for the 4-paper documents of Dumouriez's defection in round one, items in 4 papers are not admitted as sub-stories.",
+    "items_admitted": {
+      "war-office-treaty-commissioners-1793": [
+        "I93-0031"
+      ],
+      "german-creek-letter-1793": [
+        "I93-0032"
+      ],
+      "fanning-account-cap-francais": [
+        "I93-0075"
+      ],
+      "brig-mary-passengers-cap-francais": [
+        "I93-0025"
+      ]
+    },
+    "counted_item_by_item": {
+      "The War Office paragraph": "6 papers (NGz 4 September, GUS 7 September, PG 16 September, NHG and AHL 17 September, CI 25 September). Two other items on the commissioners are in 3 papers each and not part of the group: their letter from the mouth of Detroit river (GUS, PG, AHL twice) and a paragraph on the nations' answer of 2 August (NGz, PG, CI).",
+      "The German Creek letter": "6 papers (NGz and GUS 11 September, PG 16 September, NHG and AHL 24 September, CI 2 October); PG prints it from a Georgetown paper of 7 September.",
+      "Cap Français": "Captain Fanning's account (New York, 9 July; NGz 10 July, NHG and AHL 16 July, MIR and PG 22 July, GUS on the issue filed under 23 July, which is of 13 July: 6 papers) and the brig Mary's passengers' report (GUS 27 July, NGz 31 July, PG 5 August, NHG and AHL 6 August, CI 14 August: 6 papers) are two items about the same days; each reaches the threshold and each is its own group under the parent 'News from Cap Français, June 1793'."
+    },
+    "not_admitted": {
+      "The civil commissioners' proclamation of 21 June": "4 papers (NGz and GUS 27 July, NHG and AHL 13 August; NGz quotes it again in a commentary of 21 August): below the threshold, and not a sub-story, as for the 4-paper documents of Dumouriez's defection.",
+      "The letter of Polverel and Sonthonax to Genêt": "4 papers (GUS 29 May, NGz 1 June, AHL 18 June, MIR 24 June): below the threshold.",
+      "The Fugitive Slave Act": "'An act respecting fugitives from justice, and persons escaping from the service of their masters': its text is in 2 papers (MIR 11 March, GUS 17 April); its title is also in the lists of the session's acts (NGz 6 March, GUS 9 March, KG 13 April), which are a different item. Below the threshold.",
+      "Private people (5 papers each)": "The prosecutions of the seamen Singleterry and Henfield, and a killing near Middletown, New Jersey: below the threshold, and stories that turn on private people stay out."
+    }
+  }
+}
