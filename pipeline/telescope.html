@@ -101,6 +101,7 @@ body.exhibit .key-more{display:none}body.exhibit .skykey{font-size:clamp(12px,.9
 .card-close:hover{color:var(--ink);background:#ffffff14}
 body.exhibit .star-card{display:none}
 @media(max-width:560px){.star-card{width:calc(100% - 16px)}}
+.view .first-hint{top:auto;bottom:15%}   /* below the middle of the sky, clear of "Now" */
 .message{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;color:var(--muted);z-index:2}.message[hidden]{display:none}
 /* Colour key inside the view, shown while a colour is on (the full legend is in the deck). */
 .key{position:absolute;left:10px;bottom:9px;z-index:2;display:flex;flex-wrap:wrap;gap:4px 12px;max-width:min(36%,420px);padding:5px 9px;font-size:11.5px;color:var(--muted);background:#050711b8;border-radius:7px;pointer-events:none}
@@ -193,7 +194,7 @@ __SITE_HEADER__
 <div class="stage">
 <div class="viewport" id="viewport">
 <div id="view" class="view" tabindex="0" role="application" aria-roledescription="star map" aria-label="Story telescope. Up and down arrows travel through time; left and right turn the view; plus and minus zoom; 0 resets the view. The list of the brightest stories in view is further down the page.">
-<canvas id="gl"></canvas><canvas id="axes"></canvas><div id="tip" class="tip" hidden></div><div id="message" class="message" hidden></div>
+<canvas id="gl"></canvas><canvas id="axes"></canvas><div id="tip" class="tip" hidden></div><div id="message" class="message" hidden></div><div id="first-hint" class="first-hint" role="note" hidden><b>How to use the telescope</b><ol><li>Drag to turn the sky; the wheel zooms.</li><li>Slide the timeline below to travel in time: the farther a star, the earlier its story.</li><li>Click a star to open its card.</li></ol><small>Shown once. Any touch or key hides it.</small></div>
 <div id="loading" class="loading indeterminate" role="status" aria-live="polite"><div class="loading-box"><p id="loading-text">Opening the telescope…</p><div class="loading-bar" aria-hidden="true"><i id="loading-fill"></i></div><p id="loading-sub"></p></div></div>
 </div>
 <div class="cam hud" role="group" aria-label="Camera and tools"><button type="button" id="select-area" class="tool" aria-pressed="false" title="Drag across the sky to hear the stories in an area (Alt-drag works too)">__ICON_select__<span class="sr-only">Select an area to hear</span></button><span id="angle" class="angle-pair" role="group" aria-label="Viewing angle"><button type="button" class="angle" data-angle="front" title="Front: look straight back through time">__ICON_front__<span class="sr-only">Front</span></button><button type="button" class="angle" data-angle="side" title="Side: see the time axis from the side">__ICON_side__<span class="sr-only">Side</span></button></span><button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button><button type="button" id="reset-view" title="Back to the whole picture">__ICON_fit__<span class="sr-only">Reset view</span></button></div>
@@ -1685,7 +1686,18 @@ buildLegend(); keyReady = true;
 new ResizeObserver(() => { const dpr = devicePixelRatio || 1; tl.width = tl.clientWidth * dpr; tl.height = tl.clientHeight * dpr; tctx.setTransform(dpr, 0, 0, dpr, 0, 0); drawTimeline(); }).observe(tl);
 caption(); setLayout(state.layout); mixNow.splice(0, 3, ...mixTarget);
 syncButtons(); resize(); requestAnimationFrame(frame);
-$('loading').classList.add('done'); setTimeout(() => { $('loading').hidden = true; }, 500);   // the stars are in place
+$('loading').classList.add('done'); setTimeout(() => { $('loading').hidden = true; firstHint('nns-hint-telescope'); }, 500);   // the stars are in place
+// A first visit's hint (the site plan's promise): three lines over the instrument, once per browser, gone at the first
+// touch, key or wheel; never in an exhibition or Watch (body.exhibit hides it). Without storage it shows on each visit.
+function firstHint(key) {
+  const el = $('first-hint'); let seen = false;
+  try { seen = !!localStorage.getItem(key); } catch {}
+  if (seen || document.body.classList.contains('exhibit')) return;
+  el.hidden = false;
+  const done = () => { el.hidden = true; try { localStorage.setItem(key, '1'); } catch {} for (const t of ['pointerdown', 'keydown', 'wheel']) document.removeEventListener(t, done, true); };
+  for (const t of ['pointerdown', 'keydown', 'wheel']) document.addEventListener(t, done, {capture: true, passive: true});
+}
+
 if (params.get('q')) runSearch(params.get('q'), true);   // colour as the link says (bySearch was set from it)
 if (storyIndex >= 0 && !bigScreen()) choose(storyIndex, true);   // the linked story, chosen: its card is open (no sound before a touch)
 </script>

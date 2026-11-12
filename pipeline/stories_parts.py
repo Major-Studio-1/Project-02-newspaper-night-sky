@@ -3,8 +3,8 @@
 A storyline puts the printed pieces of one affair in the order the papers printed them. The ledger is written by hand;
 this module checks it against the reviewed data of the site build (from the current release) and the scan verdicts
 (outputs/story_discovery_YEAR/scan_verdicts/), then renders the page. The checks:
-  - each piece is a reviewed group of the storyline's year, and the pieces are exactly the sub-stories of its parents;
-    every piece is told in one act;
+  - each piece is a reviewed group of the storyline's year, and the pieces are exactly the sub-stories of its parents
+    ('parents') and its single stories ('stories', stories with no parent, told whole); every piece is told in one act;
   - each piece's quoted printing is one of its printings, located on its scan, with a transcription the scan check found
     faithful, and every crop shown is one of that printing's evidence crops;
   - every phrase in single curly quotes is printed text, or the scan check's record of it: in a 'says' line, an act's
@@ -119,8 +119,11 @@ def check(ledger, reviewed, children, root):
             phrases_in(p['says'], sources, f'{k} says')
             by[k] = {**p, 'prints': prints, 'label': g['label'], 'sources': sources,
                      'papers': len({o['node'] for o in prints})}
-        kids = {'group:' + c for par in s['parents'] for c in children[y].get(par.split(':', 1)[1], [])}
-        assert kids == {p['group'] for p in by.values()}, f'{sid}: the pieces must be the sub-stories of {", ".join(s["parents"])}'
+        singles = s.get('stories', [])
+        for st in singles:
+            assert st.split(':', 1)[1] not in children[y], f'{sid}: {st} has sub-stories; name it under parents'
+        kids = {'group:' + c for par in s['parents'] for c in children[y].get(par.split(':', 1)[1], [])} | set(singles)
+        assert kids == {p['group'] for p in by.values()}, f'{sid}: the pieces must be the sub-stories of its parents and its single stories'
         told = [k for a in s['acts'] for k in a['pieces']]
         assert sorted(told) == sorted(by), f'{sid}: every piece is told in one act ({"".join(told)})'
 
@@ -172,14 +175,15 @@ def check(ledger, reviewed, children, root):
 
 def links(lines):
     """Group id -> [href, storyline] for 'Read the storyline': a piece goes to its card, a parent to the act that tells
-    all of it (or to the storyline, when its pieces are spread over several acts)."""
+    all of it (or to the storyline, when its pieces are spread over several acts). A story told whole goes to its card."""
     out = {}
     for s in lines:
         sid = s['id']
         for k, p in s['by'].items():
             out[p['group']] = [f'stories.html#{sid}-{k}', s['short']]
         for par, kids in s['kids_of'].items():
-            act = next((a for a in s['acts'] if {p['group'] for p in a['ps']} == kids), None)
+            act = (next((a for a in s['acts'] if {p['group'] for p in a['ps']} == kids), None)
+                   or next((a for a in s['acts'] if kids <= {p['group'] for p in a['ps']}), None))
             out[par] = [f'stories.html#{sid}-act-{act["num"]}' if act else f'stories.html#{sid}', s['short']]
     return out
 
@@ -207,6 +211,8 @@ def _printed_by(s, p):
 
 
 def _setting(s, p):
+    if not p['set']:
+        return ''
     rows = []
     for oid, text in p['set']:
         o = s['obs'][oid]
@@ -220,7 +226,7 @@ def _piece(s, p, sizes):
     name = s['papers'][o['node']]['name']
     second = _figure(s, p['second']['printing'], p['second']['crop'], sizes, p['second']['note']) if p.get('second') else ''
     return (f'<article class="piece" id="{s["id"]}-{p["key"]}" aria-label="{esc(p["label"])}"><div class="meta"><span class="kind">{esc(p["kind"])}</span>'
-            f'<span class="when">{p.get("dated", "Dated")} {day(p["signed"])}</span><span class="who">{esc(p["who"])}</span></div>'
+            f'<span class="when">{p.get("dated", "Dated")} {day(p["signed"], D(p["signed"]).year != s["year"])}</span><span class="who">{esc(p["who"])}</span></div>'
             f'<p class="says">{p["says"]}</p>'
             f'<div class="evidence"><blockquote>{esc(o["excerpt"].strip())}<cite>The opening as printed in the <i>{esc(name)}</i>, {day(o["date"])}. '
             f'The transcription matches the scan.</cite></blockquote>{_figure(s, p["quote"], p.get("crop") or p["quote"], sizes)}{second}</div>'
@@ -273,7 +279,7 @@ def _chart(s):
 
 
 def _table(s):
-    rows = ''.join(f'<tr><th scope="row"><a href="#{s["id"]}-{p["key"]}">{esc(p["row"])}</a></th><td>{p.get("dated", "Dated")} {day(p["signed"])}</td>'
+    rows = ''.join(f'<tr><th scope="row"><a href="#{s["id"]}-{p["key"]}">{esc(p["row"])}</a></th><td>{p.get("dated", "Dated")} {day(p["signed"], D(p["signed"]).year != s["year"])}</td>'
                    f'<td>{day(p["prints"][0]["date"])}</td><td>{day(p["prints"][-1]["date"])}</td><td>{p["papers"]}</td><td>{len(p["prints"])}</td></tr>'
                    for p in sorted(s['by'].values(), key=lambda p: (p['prints'][0]['date'], p['key'])))
     return (f'<details class="numbers"><summary>The pieces as a table</summary><div class="tw"><table><thead><tr><th scope="col">Piece</th><th scope="col">Written or signed</th>'

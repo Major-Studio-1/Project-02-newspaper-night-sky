@@ -84,6 +84,24 @@ def copy(src, rel):
     shutil.copyfile(src, path)
 
 
+def copy_committed(src, rel):
+    """Copy a pipeline file as it is committed in the working repository, so a script another session is still changing
+    stays out of the public repository until it is committed (as the ledgers do below)."""
+    import subprocess
+    src = Path(src)
+    data = subprocess.run(['git', 'show', f'HEAD:./{src.name}'], cwd=src.parent, capture_output=True, check=True).stdout
+    work = src.read_bytes()
+    CRLF, LF = bytes([13, 10]), bytes([10])
+    lf = lambda b: b.replace(CRLF, LF)
+    if lf(work) == lf(data):
+        data = work   # unchanged since the commit: keep the file's own line endings, as earlier exports did
+    elif CRLF in work:
+        data = lf(data).replace(LF, CRLF)
+    path = TARGET / rel
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(data)
+
+
 def replace(text, old, new, where):
     """Replace a passage that must be there, so a changed source fails loudly instead of slipping through."""
     assert old in text, f'{where}: expected text not found: {old[:60]}'
@@ -138,13 +156,13 @@ SCRIPTS = ['audit_dataset.py', 'discover_topics.py', 'recheck_full_corpus.py',
 ARCHIVE = ['build.py', 'migrate_v0_2_0.py', 'apply_ledger.py', 'apply_corrections.py', 'add_reuse_layer.py', 'add_reuse_titles.py',
            'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'add_reviewed_topics.py', 'refile_revx_pages.py', 'redate_issues.py', 'set_current.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
 for name in SCRIPTS:
-    copy(WORK / name, f'pipeline/{name}')
+    copy_committed(WORK / name, f'pipeline/{name}')
 for name in ARCHIVE:
-    copy(WORK / 'archive_data' / name, f'pipeline/archive_data/{name}')
+    copy_committed(WORK / 'archive_data' / name, f'pipeline/archive_data/{name}')
 # The checks behind the correction releases v0.8.1 and v0.10.2 live with their findings in outputs/; only the scripts go here.
 for rel in ['revx_page_shift_check/check_page_shift.py', 'kentucky_gazette_dates/check_dates.py', 'kentucky_gazette_dates/rematch.py',
             'story_discovery_1793/check_mastheads_1793.py', 'story_discovery_1793/check_duplicate_pages_1793.py']:
-    copy(PROJECT / 'outputs' / rel, f'pipeline/{rel}')
+    copy_committed(PROJECT / 'outputs' / rel, f'pipeline/{rel}')
 # Only files committed in the working repository: a ledger still being written (another session's work in progress,
 # for example) stays out of the public repository until it is committed.
 import subprocess  # noqa: E402

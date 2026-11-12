@@ -37,6 +37,7 @@ __SITE_HEAD__
 .timebar-track .strip-wrap{margin:0}.timebar-track #strip{height:24px}.timebar-track #day{margin:0;display:block}.timebar .ticks{font-size:11.5px;gap:10px}
 .strip-tip{bottom:auto;top:calc(100% + 4px)}
 .pagehead{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin:0 0 10px}.pagehead h1{font-size:22px}#notice{margin:0 0 8px}
+#first-hint{position:fixed;top:auto;bottom:24px}   /* the map can start below the fold: the hint sits at the foot of the screen */
 .sky-wrap{position:relative}.sky-top{position:absolute;left:0;right:0;top:0;z-index:5;pointer-events:none}.sky-top>*{pointer-events:auto}
 .sky-top .filter-row{margin:0 0 6px}.sky-top .constellation-note{margin:0;background:#0d1526e8}
 .story-acts,.story-trace{margin-top:8px}
@@ -148,7 +149,7 @@ __SITE_HEADER__
 <div id="shelf" class="shelf-rail" role="list"></div></section>
 <div class="layout"><section aria-label="Publication pulses">
 <div class="sky-wrap"><div class="sky-top" id="sky-top"><div id="filter-row" class="filter-row" hidden><span id="min-label">Show stories in</span><span id="min-papers" class="seg slide" data-roving role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers.</span><span class="filter-hint">Papers that printed the same story glow together.</span></div><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
-<div id="sky" class="sky" aria-label="Newspaper nodes placed roughly by town of publication, north at the top. Light marks observed publications, with no transmission edges."></div></div>
+<div id="first-hint" class="first-hint" role="note" hidden><b>How to use Pulses</b><ol><li>Each newspaper lights up on the day it prints the story; Play and Pause are at the top.</li><li>Pick a story from the cards above the map.</li><li>Click a newspaper to read what it printed.</li></ol><small>Shown once. Any touch or key hides it.</small></div><div id="sky" class="sky" aria-label="Newspaper nodes placed roughly by town of publication, north at the top. Light marks observed publications, with no transmission edges."></div></div>
 <p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
 <div id="mini-card" class="mini-card" aria-live="polite"><p class="mc-title" id="mc-title"></p><p class="mc-role" id="mc-role"></p><p class="mc-text" id="mc-text"></p><a href="#selected-evidence" id="mc-more">Read the passage and see the scan ↓</a></div>
 <p class="map-note">Newspapers sit roughly where they were printed: north at the top, east to the right. Papers are nudged apart so names stay readable, so distances are not to scale.</p>
@@ -880,6 +881,16 @@ function changeGroup(id) {
 // ---- Years: one year, several or all of them ----
 const skyUrl = () => { const n = Y.to - Y.from + 1, look = n <= 1 ? 1 : n <= 5 ? 5 : n <= 10 ? 10 : 'all'; return `telescope.html?year=${Y.to}&lookback=${look}`; };
 // A link to a matched story that is the twin of a reviewed one opens the reviewed story, when its year is in view.
+// A first visit's hint (the site plan's promise): three lines over the instrument, once per browser, gone at the first
+// touch, key or wheel; never in an exhibition or Watch (body.exhibit hides it). Without storage it shows on each visit.
+function firstHint(key) {
+  const el = $('first-hint'); let seen = false;
+  try { seen = !!localStorage.getItem(key); } catch {}
+  if (seen || document.body.classList.contains('exhibit')) return;
+  el.hidden = false;
+  const done = () => { el.hidden = true; try { localStorage.setItem(key, '1'); } catch {} for (const t of ['pointerdown', 'keydown', 'wheel']) document.removeEventListener(t, done, true); };
+  for (const t of ['pointerdown', 'keydown', 'wheel']) document.addEventListener(t, done, {capture: true, passive: true});
+}
 const twinFor = w => { const t = w && String(w).startsWith('auto:') && (BOOT.twins || {})[String(w).slice(5)]; return t && Y && Y.groupById.has(t) ? t : w; };
 async function loadRange(from, to, wanted) {
   from = Math.max(1770, Math.min(1810, from)); to = Math.max(from, Math.min(1810, to));
@@ -1292,6 +1303,7 @@ if (!first) first = saved && saved.from >= 1770 && saved.to <= 1810 && saved.fro
 tourHold = performance.now() + (fromUrl && params.get('focus') && !exhibit ? TOUR_WAIT : 2500);   // a story opened by a link is read first (an exhibition plays it)
 setYearsUI(first[0], first[1]);
 loadRange(first[0], first[1], fromUrl ? params.get('focus') : saved?.group).then(() => {
+  firstHint('nns-hint-pulses');
   if (!fromUrl && saved && Y && saved.from === Y.from && saved.to === Y.to && saved.group === group?.id && Number.isFinite(saved.day) && events.length) {
     day = Math.min(maxDay, Math.max(0, saved.day)); selected = Math.max(0, Math.min(events.length - 1, Number.isInteger(saved.selected) ? saved.selected : 0)); source(selected); draw();
   }
