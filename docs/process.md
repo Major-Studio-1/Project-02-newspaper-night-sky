@@ -427,6 +427,10 @@ Before any pattern come three facts about the source, shown as facts: what the a
 
 Reading the papers against their scans turned up errors in the archive itself, which the people who built the dataset may want to correct at the source. `pipeline/archive_errata.py` gathers them from the checks' evidence and the reviewed years' scan verdicts into two tables, [`filing.csv`](archive-errata/filing.csv) (242 issues: 133 with transcriptions filed under the wrong page, 108 filed under the wrong date, 1 second scan filed under another day) and `transcription.csv` (111 reviewed printings whose transcription changes what was printed, 28 of them by leaving printed text out), with a README. The Findings page sets them out in plain words (`findings.html#archive`), and the public repository carries the tables in `docs/archive-errata/`.
 
+### An appendix of what was handled differently (13 November 2026)
+
+At the owner's word, everything handled differently from the reviewed stories is shown, not only recorded: How it works ends with an appendix (`method.html#appendix`), written from `pipeline/appendix.json` by `pipeline/appendix_parts.py`. It has three parts: stories printed in several papers but not shown as reviewed stories because they turn on private persons (the 1776 committee notices, two 1793 reports, three 1806 stories); two 1797 candidates once held back for framing and not read yet; and the four reviewed stories whose excerpts stop short of a private person's name. Each item says what kind of text it is and why it was handled differently, in plain words that do not repeat private persons' names, and lists its printings with links to their page scans. The build checks every printing against the release (its page exists and is printed in the item's year) and every excerpt note against its reviewed group.
+
 ## The website
 
 The views are joined into one site with nine pages and a shared header, plus an exhibition page:

@@ -587,7 +587,19 @@ assert '__EXHIBIT_DATA__' not in exhibit
 # How it works and Research notes.
 fill_text=lambda s:(s.replace('__N_STORIES__',f'{N_STARS:,}').replace('__N_MATCHED__',f'{len(families):,}')
                      .replace('__N_PRINTINGS__',f"{sum(f['appearances'] for f in families):,}").replace('__RELEASE__',VER).replace('__REPO__',REPO))
-(OUT/'method.html').write_text(fill(fill_text((ROOT/'method.html').read_text(encoding='utf8')),'method',VER,N_STARS),encoding='utf8')
+# How it works ends with an appendix of what was handled differently (work/appendix.json, work/appendix_parts.py): each
+# printing is checked against the release and shown by its printed date, with a link to its page scan.
+import appendix_parts
+appendix=json.loads((ROOT/'appendix.json').read_text(encoding='utf8'))
+with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro',uri=True) as db5:
+    _one=lambda sql,args:(lambda r:r[0] if r else None)(db5.execute(sql,args).fetchone())
+    page_date=lambda key:_one('SELECT i.publication_date FROM pages p JOIN issues i ON i.id=p.issue_id WHERE p.id=?',('page:'+key.replace('|',':'),))
+    n_appendix=appendix_parts.check(appendix,page_date,lambda g:_one('SELECT label FROM groups WHERE id=?',('group:'+g,)),
+                                    lambda g,y:_one('SELECT COUNT(*) FROM group_publications WHERE group_id=? AND publication_date LIKE ?',('group:'+g,f'{y}%')))
+    appendix_html=appendix_parts.render(appendix,page_date,{p['lccn']:p['name'] for p in idx_papers},f'https://huggingface.co/datasets/{DATASET}/resolve/{REV}/media/')
+method_page=fill_text((ROOT/'method.html').read_text(encoding='utf8')).replace('__APPENDIX__',appendix_html)
+assert '__APPENDIX__' not in method_page and n_appendix==12, ('appendix', n_appendix)
+(OUT/'method.html').write_text(fill(method_page,'method',VER,N_STARS),encoding='utf8')
 (OUT/'notes.html').write_text(fill(fill_text((ROOT/'notes.html').read_text(encoding='utf8')),'notes',VER,N_STARS),encoding='utf8')
 # Findings: what the archive shows, tested (work/findings_parts.py). Drawn from the sky's stars, the year index, the
 # Declaration's printings and the checks' outputs: the matched audit and the cycle-length check (run work/check_cycle_lengths.py

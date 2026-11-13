@@ -1,0 +1,45 @@
+{
+ "about": "The appendix of How it works (work/appendix_parts.py): everything handled differently from the reviewed stories, so that nothing is left out without a word. Our own words here do not repeat the names of private persons; each printing links to its page scan. Printings are page keys (lccn|filed date|edition|page); the build checks each against the release and shows its printed date.",
+ "private": [
+  {"year": 1776, "title": "Notices of the committees of inspection under the bills resolution",
+   "what": "Separate notices of Philadelphia's committees of inspection, dated 5 and 20 February, 26 March and 9 April, and one from Gloucester County. Each quotes Congress's resolution of 11 January on refusing the Continental bills of credit, then publishes the names of people the committee found to have refused them.",
+   "why": "They publish the names of private persons as people found to have refused the bills. Left out of the reviewed stories by the maker's decision of 9 November 2026.",
+   "printings": ["sn85047530|1776-02-07|1|3", "sn83025898|1776-02-10|1|3", "sn83021126|1776-02-12|1|4", "sn84026371|1776-02-14|1|4", "sn83021126|1776-02-26|1|2", "sn84026371|1776-02-28|1|4", "sn85047530|1776-02-28|1|3", "sn83025894|1776-03-28|1|1", "sn83021126|1776-04-01|1|4", "sn84026371|1776-04-03|1|3", "sn85047530|1776-04-03|1|1", "sn83025898|1776-04-06|1|4", "sn84026371|1776-04-17|1|3", "sn83025894|1776-04-18|1|4", "sn83025898|1776-04-20|1|3", "sn83021126|1776-04-22|1|3", "sn84026371|1776-04-24|1|3", "sn85047530|1776-04-24|1|3"]},
+  {"year": 1793, "title": "A young man shot near Middletown, New Jersey",
+   "what": "A report that a young man from New York, playing a joke at night at the house where the young woman he was courting lived, was shot dead by the householder, who took him for a thief ('The following unfortunate event took place a few days ago').",
+   "why": "Five papers, below 1793's rule of six, and it turns on private persons.",
+   "printings": ["sn83025887|1793-01-26|1|3", "sn84038410|1793-02-11|1|3", "sn83025587|1793-02-13|1|2", "sn83025523|1793-02-18|1|2", "sn82014782|1793-04-06|1|3"]},
+  {"year": 1793, "title": "Prosecutions of two American seamen who served on a French privateer",
+   "what": "A report that, on instructions from the Executive, the federal attorney for Pennsylvania had begun prosecutions against two citizens 'charged with violating their duty as citizens of the United States' by serving on a French privateer.",
+   "why": "Five papers, below 1793's rule of six, and it turns on private persons.",
+   "printings": ["sn83025887|1793-06-05|1|4", "sn83030483|1793-06-05|1|3", "sn84023134|1793-06-18|1|3", "sn83025523|1793-07-01|1|3", "sn82014782|1793-07-13|1|2"]},
+  {"year": 1806, "title": "The arrests in the affair of General Miranda's expedition",
+   "what": "A New York report that a merchant and the surveyor of the port, 'and others, were arrested by order of government and taken before the District Judge' over the expedition fitted out in New York.",
+   "why": "It turns on private persons named in a charge. Left out of the reviewed stories by the maker's decision of 13 November 2026.",
+   "printings": ["sn84024012|1806-03-07|1|3", "sn85025815|1806-03-10|1|3", "sn84024710|1806-03-14|1|2", "sn84024736|1806-03-14|1|2", "sn83016082|1806-03-17|1|2", "sn85059525|1806-03-21|1|3", "sn84038147|1808-03-22|1|3"]},
+  {"year": 1806, "title": "The funeral procession after the Leander's shot",
+   "what": "The order of the public funeral procession in New York for the man killed by a shot from the British ship Leander off Sandy Hook, as the city's Common Council announced it.",
+   "why": "Its subject is a private person. Left out of the reviewed stories by the maker's decision of 13 November 2026; the reviewed story of the Leander affair holds the President's proclamation and the New York meeting's resolutions.",
+   "printings": ["sn83045242|1806-05-02|1|2", "sn84024012|1806-05-02|1|3", "sn83021527|1806-05-03|1|2", "sn83016082|1806-05-05|1|2", "sn85025815|1806-05-05|1|3", "sn84024736|1806-05-06|1|3", "sn83021188|1806-05-08|1|2", "sn84024710|1806-05-09|1|2"]},
+  {"year": 1806, "title": "Letters about a son taken prisoner with General Miranda's men",
+   "what": "The Spanish minister's letter of 28 June to an American officer, saying that the officer's son appeared on the list of Americans taken prisoner from General Miranda's schooners, printed with the replies.",
+   "why": "Its subject is a private person, the son. Left out of the reviewed stories by the maker's decision of 13 November 2026.",
+   "printings": ["sn83021527|1806-07-19|1|2", "sn83016082|1806-07-21|1|2", "sn83045242|1806-07-21|1|1", "sn85025815|1806-07-21|1|2", "sn85025609|1806-07-31|1|3", "sn84038147|1808-08-05|1|2"]}
+ ],
+ "held": [
+  {"year": 1797, "title": "A letter reporting a planned uprising",
+   "what": "A letter dated September reporting that about thirty people held in slavery, who had been captured and sold there, planned to burn the town; one of them revealed it, and the men named as its leaders were condemned. The letter is the slaveholders' account.",
+   "why": "Set aside 'for framing' in the 1797 review, before the rule 'every story alike'. It waits to be read like any other story.",
+   "printings": ["sn83025881|1797-11-20|1|3", "sn83025588|1797-12-06|1|2", "sn83025525|1797-12-12|1|2", "sn84023150|1797-12-25|1|3"]},
+  {"year": 1797, "title": "A death on Beaver Creek",
+   "what": "A frontier report that a man travelling with two Native men was found dead on Beaver Creek, and that the two men were held in the town's jail.",
+   "why": "Set aside 'for framing' in the 1797 review, before the rule 'every story alike'. It waits to be read like any other story.",
+   "printings": ["sn83025881|1797-09-29|1|3", "sn82014782|1797-10-07|1|2", "sn84023150|1797-10-23|1|2"]}
+ ],
+ "excerpts": [
+  {"year": 1806, "group": "new-york-meeting-resolutions-leander", "label": "Resolutions of a New York meeting after the Leander shot", "note": "The excerpts end before the name of the man killed."},
+  {"year": 1806, "group": "proclamation-against-the-leander", "label": "The President's proclamation of 3 May against the Leander, Cambrian and Driver", "note": "The excerpts end before the name of the man killed."},
+  {"year": 1807, "group": "wilkinson-speech-new-orleans-1806", "label": "General Wilkinson's speech in the court at New Orleans", "note": "The excerpts begin after the papers' sentence that names the man held."},
+  {"year": 1808, "group": "burlington-revenue-cutter-1808", "label": "'Melancholy Event': Burlington, Vermont, August 1808", "note": "The excerpts end before the names of the dead."}
+ ]
+}
