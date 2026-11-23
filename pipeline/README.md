@@ -23,11 +23,12 @@ This folder holds the code that turns the archive into the data release and the 
 | `reuse_1797.py` | Text reuse in 1797. It compares five-word fingerprints, then aligns the texts word by word: at least 80 words, at least 70% similar, at most 120 days apart. |
 | `reuse_families_1797.py` | Groups the 1797 matches into candidate story families, which were then read. |
 | `story_phrase_search_1797.py` | Phrase searches over all 1797 pages, to find printings the matcher missed. |
-| `year_search_pages.py` | For any year (used for 1776, 1793, 1807 and 1808): writes the year's pages with both transcriptions, for the two scripts below. |
+| `year_search_pages.py` | For any year (used for 1776, 1793, 1805, 1806, 1807, 1808 and 1809): writes the year's pages with both transcriptions, for the two scripts below. |
 | `story_items.py` | Splits the year's matched stories into single printed items, since many join neighbouring items, and finds every page that prints each one. |
 | `story_phrase_search.py` | Phrase searches over the year's pages, in both transcriptions, to confirm the printings of the chosen items. |
 | `scan_ledger.py` | Downloads the pinned scan of every passage in a ledger and crops the passage for checking. |
-| `archive_data/ledgers/` | The review decisions. Each candidate is recorded as admitted, excluded or kept as a lead, with a reason and the scan findings. `make_stories_1776.py` (and the scripts for 1793, 1807 and 1808 beside it) writes a year's ledger from the chosen stories and the review findings. |
+| `archive_data/ledgers/` | The review decisions. Each candidate is recorded as admitted, excluded or kept as a lead, with a reason and the scan findings. `make_stories_1776.py` (and the scripts for 1793, 1805, 1806, 1807, 1808 and 1809 beside it) writes a year's ledger from the chosen stories and the review findings. |
+| `not_admitted.py`, `not_admitted.json` | The items the reviews read and did not admit, every year, each with its reason ([the list](../docs/not-admitted/README.md)). The script checks that every item a ledger records as not admitted is listed or accounted for, so nothing drops out of view. |
 
 ## 3 · Matched stories, all years
 

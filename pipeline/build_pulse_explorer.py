@@ -144,7 +144,64 @@ REVIEWED={
                     'spanish-troops-near-the-sabine-1806':['hostile-appearance-letter-2-august','freeman-party-turned-back','wilkinson-letter-red-river'],
                     'lewis-and-clark-return-1806':['lewis-arrival-announced','clark-letter-to-his-brother'],
                     'burr-enterprise-1806':['kentucky-affidavit-against-burr','proclamation-27-november-1806']},
-        'expect':(12,4381)}}
+        'expect':(12,4381)},
+  # The seventh reviewed year (release v0.11.5): 20 stories, the categories as the review proposed them. The Creek
+  # paragraph is green, as the government paper's report of a treaty made at Washington; the St. Thomas report is blue.
+  1805:{'categories':[
+          ('war','War and foreign news',['napoleon-peace-letter-and-british-answer-1805','haytian-army-before-santo-domingo-1805','folger-report-toulon-fleet-off-cadiz-1805',
+                                         'calder-dispatch-23-july-1805','paris-article-on-the-austrian-armaments-31-august-1805','napoleon-speech-to-the-senate-september-1805',
+                                         'collingwood-dispatch-on-trafalgar-22-october-1805']),
+          ('ships','Tripoli, Algiers and American ships',['tripoli-squadron-letters-1805','cowdery-letter-from-tripoli-1805','madison-answer-to-the-charleston-insurers-10-july-1805',
+                                         'peace-with-tripoli-news-1805','british-orders-on-american-vessels-with-colonial-produce-1805','algiers-insurrection-and-change-of-dey-1805',
+                                         'spanish-order-on-american-vessels-at-algeziras-5-september-1805']),
+          ('government','American public life and government',['chase-impeachment-trial-1805','jefferson-second-inaugural-address-1805','strong-speech-to-massachusetts-legislature-june-1805',
+                                         'lewis-and-clark-news-from-fort-mandan-1805','creek-treaty-washington-paragraph-1805','president-message-3-december-1805'])],
+        'children':{'tripoli-squadron-letters-1805':['obrien-letter-on-tripoli-5-september-1804','preble-letter-18-september-1804'],
+                    'chase-impeachment-trial-1805':['chase-address-to-the-senate-2-january-1805','house-replication-to-chase-answer-1805','chase-answer-and-pleas-4-february-1805',
+                                                    'chase-acquittal-declared-1-march-1805'],
+                    'napoleon-peace-letter-and-british-answer-1805':['napoleon-letter-to-the-king-of-england-1805','mulgrave-answer-to-napoleon-letter-1805'],
+                    'lewis-and-clark-news-from-fort-mandan-1805':['kentucky-account-of-the-party-of-discovery-1805','lewis-letter-to-the-president-7-april-1805'],
+                    'peace-with-tripoli-news-1805':['salem-register-report-by-the-belleisle-1805','rodgers-letter-on-the-peace-with-tripoli-8-june-1805',
+                                                    'hull-letter-on-the-attack-on-derne-28-april-1805','barron-letter-to-eaton-22-march-1805'],
+                    'british-orders-on-american-vessels-with-colonial-produce-1805':['london-paragraph-order-to-detain-american-vessels-1805','privy-council-minute-3-august-1805'],
+                    'algiers-insurrection-and-change-of-dey-1805':['shillaber-report-from-algiers-1805','mountford-letter-from-algiers-9-september-1805']},
+        'expect':(14,3811)},
+  # The eighth reviewed year (release v0.11.6): 36 stories, the categories as the review proposed them. The Toulon report
+  # is orange (news of ships), the Spanish envoy Onis green (like Yrujo in 1806) and the message of 17 January orange
+  # (mostly Canning's and Pinkney's letters).
+  1809:{'categories':[
+          ('war','War and foreign news',['havana-letter-news-from-spain-january-1809','cadiz-report-battle-near-valladolid','french-bulletin-on-corunna-thirtieth-bulletin',
+                                         'french-account-of-saragossa-from-the-moniteur','british-expedition-to-macao-admiral-drury','austria-goes-to-war-april-1809',
+                                         'first-austrian-bulletin-sacile-17-april','aspern-essling-two-bulletins-1809','buenos-ayres-liniers-1809','french-twenty-fifth-bulletin-wagram',
+                                         'castlereagh-note-on-talavera','scheldt-expedition-chatham-dispatches','treaty-of-vienna-14-october-1809']),
+          ('ships','Britain, France and American ships',['message-17-january-1809-canning-pinkney-letters','arrangement-with-british-minister-april-1809',
+                                         'france-lifts-embargo-on-american-vessels-1809','order-in-council-26-april-1809-and-papers','erskine-arrangement-disavowed-1809',
+                                         'new-york-report-capture-of-the-toulon-fleet','proclamation-of-9-august-and-treasury-circular','russian-decree-on-neutral-vessels-1809',
+                                         'jackson-dismissed-november-1809','champagny-to-armstrong-altenburg-22-august','documents-with-the-message-of-29-november']),
+          ('government','American public life and government',['embargo-and-non-intercourse-laws-1809','massachusetts-senate-report-on-enforcing-act',
+                                         'madison-inaugural-address-4-march-1809','john-adams-letter-against-division-of-the-union','war-department-circular-militia-29-april-1809',
+                                         'president-message-23-may-1809','new-orleans-account-camp-terre-aux-boeufs','spanish-envoy-onis-1809','nashville-clarion-death-of-governor-lewis',
+                                         'presidents-message-29-november-1809','senate-resolution-on-jacksons-letters','treasury-report-7-december-1809'])],
+        'children':{'austria-goes-to-war-april-1809':['emperor-francis-proclamation-april-1809','austrian-address-to-the-german-nation-1809'],
+                    'aspern-essling-two-bulletins-1809':['french-tenth-bulletin-ebersdorf-23-may','austrian-bulletin-breitenlee-23-may'],
+                    'buenos-ayres-liniers-1809':['london-report-liniers-defeated-at-buenos-ayres','rio-janeiro-letter-new-viceroy-at-buenos-ayres'],
+                    'scheldt-expedition-chatham-dispatches':['chatham-dispatch-surrender-of-flushing','chatham-dispatch-29-august-operations-closed'],
+                    'arrangement-with-british-minister-april-1809':['national-intelligencer-on-erskine-arrangement-19-april','erskine-smith-correspondence-17-19-april-1809',
+                                                                    'proclamation-19-april-1809','secretary-of-state-answer-to-fitzsimons-april-1809'],
+                    'france-lifts-embargo-on-american-vessels-1809':['imperial-decree-25-february-1809','armstrong-letter-23-february-1809'],
+                    'order-in-council-26-april-1809-and-papers':['british-order-in-council-26-april-1809','board-of-trade-explanation-of-order-26-april',
+                                                                 'message-june-1809-pinkney-canning-papers','erskine-note-june-1809-on-order-26-april'],
+                    'erskine-arrangement-disavowed-1809':['canning-in-the-commons-on-erskines-agreement','order-in-council-24-may-1809','canning-instructions-to-erskine-23-january',
+                                                          'intelligencer-on-erskines-explanation-16-august'],
+                    'proclamation-of-9-august-and-treasury-circular':['presidents-proclamation-9-august-1809','treasury-circular-9-august-1809'],
+                    'jackson-dismissed-november-1809':['intelligencer-statement-13-november-on-jackson','intelligencer-article-15-november-negotiation-suspended',
+                                                       'jacksons-circular-13-november-1809'],
+                    'documents-with-the-message-of-29-november':['documents-erskines-explanations-july-august','documents-smith-and-jackson-october-november',
+                                                                 'documents-smith-to-pinkney-23-november','documents-armstrong-and-champagny'],
+                    'embargo-and-non-intercourse-laws-1809':['enforcing-act-9-january-1809','non-intercourse-act-1-march-1809','treasury-circular-3-march-1809',
+                                                             'non-intercourse-amending-act-28-june-1809'],
+                    'spanish-envoy-onis-1809':['new-york-report-onis-arrives-in-the-cornelia','new-york-report-onis-not-received']},
+        'expect':(13,4172)}}
 CATEGORY_COLORS=['#3987e5','#d95926','#199e70']   # dataviz slots 1-3, validated all-pairs on #050711
 short_names={'sn82014782':'Kentucky Gazette','sn83025525':'The Mirror','sn83025527':'Republican Gazetteer','sn83025588':'New Hampshire Gazette','sn83025881':'Gazette of the United States','sn84023150':'The Eagle','sn84024710':'Virginia Argus','sn84038410':'Patowmac Guardian'}
 # Map layout: each series is placed at its town of publication (from the catalogue's places_json).
@@ -337,14 +394,15 @@ dnum=lambda s:datetime.date.fromisoformat(s).toordinal()-EPOCH
 page_owner=collections.defaultdict(set)
 for fid,apps in apps_by.items():
     for a in apps: page_owner[(a['lccn'],a['publication_date'],int(a['page_id'].split(':')[4]))].add(fid)
-twins={};paired=[]
+twins={};paired=[];twin_of=collections.Counter()
 for s in stories:
     obs_s=[observations[m] for m in s['members']]
     c=collections.Counter(f for o in obs_s for f in page_owner.get((o['node'],o['date'],int(o['page'])),()))
     if c:
         fid,k=min(c.items(),key=lambda x:(-x[1],x[0]))   # ties go to the first id, so every build pairs the same way
-        if k*2>=len(obs_s): paired.append(s['id']); twins.setdefault(fid,s['id'])   # two reviewed stories can share one automatic story
-print(f'twins: {len(paired)} of {len(stories)} reviewed stories have one; {len(twins)} matched stories are twins')
+        if k*2>=len(obs_s): paired.append(s['id']); twins.setdefault(fid,s['id']); twin_of[fid]+=1   # two reviewed stories can share one automatic story
+print(f'twins: {len(paired)} of {len(stories)} reviewed stories have one; {len(twins)} matched stories are twins, '
+      f'{sum(n>1 for n in twin_of.values())} of them the twin of more than one ({max(twin_of.values(),default=0)} at most)')
 assert len(paired)>=80, f'only {len(paired)} reviewed stories found their matched twin'
 stars=[]
 # Reviewed stars carry their year's category: one list over all reviewed years, each category in its year's colour slot.
@@ -586,7 +644,13 @@ assert '__EXHIBIT_DATA__' not in exhibit
 
 # How it works and Research notes.
 fill_text=lambda s:(s.replace('__N_STORIES__',f'{N_STARS:,}').replace('__N_MATCHED__',f'{len(families):,}')
-                     .replace('__N_PRINTINGS__',f"{sum(f['appearances'] for f in families):,}").replace('__RELEASE__',VER).replace('__REPO__',REPO))
+                     .replace('__N_PRINTINGS__',f"{sum(f['appearances'] for f in families):,}").replace('__RELEASE__',VER).replace('__REPO__',REPO)
+                     # the twins sentence on How it works: reviewed stories, how many have an automatic twin, how many matched
+                     # stories are the twin of more than one, and how many stars the sky would hold without drawing twins once
+                     .replace('__N_REVIEWED__',f'{len(stories):,}').replace('__N_TWINNED__',f'{len(paired):,}')
+                     .replace('__N_TWINS_SHARED__',f'{sum(n>1 for n in twin_of.values()):,}').replace('__N_ALL_STARS__',f'{len(families)+len(stories):,}')
+                     # the items the reviews read and did not admit (work/not_admitted.py), one row each
+                     .replace('__N_NOT_ADMITTED__',f"{len((ROOT.parent/'outputs/not_admitted/not_admitted.csv').read_text(encoding='utf8').splitlines())-1:,}"))
 # How it works ends with an appendix of what was handled differently (work/appendix.json, work/appendix_parts.py): each
 # printing is checked against the release and shown by its printed date, with a link to its page scan.
 import appendix_parts
@@ -661,7 +725,7 @@ def copy_with_assets(src,dest):
 shutil.rmtree(OUT/'notes',ignore_errors=True)   # notes/ is generated: start clean, so no stale file lingers
 copy_with_assets(ROOT.parent/'outputs/attention_pilot_report.html',OUT/'notes/attention')
 copy_with_assets(ROOT.parent/'outputs/reading_evidence_2026-11-03/reading_notebook.html',OUT/'notes/reading')
-for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__RELEASE__','__REPO__','__HOME_DATA__','__HOME__','__ARCHIVE__']
+for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__N_REVIEWED__','__N_TWINNED__','__N_TWINS_SHARED__','__N_ALL_STARS__','__N_NOT_ADMITTED__','__RELEASE__','__REPO__','__HOME_DATA__','__HOME__','__ARCHIVE__']
                  for page in ['index.html','method.html','notes.html','findings.html','notebook.html','stories.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
 assert '__FINDINGS__' not in (OUT/'findings.html').read_text(encoding='utf8') and '__NOTEBOOK__' not in (OUT/'notebook.html').read_text(encoding='utf8')

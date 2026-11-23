@@ -1,5 +1,5 @@
 {
- "made": "2026-11-12",
+ "made": "2026-11-22",
  "script": "work/archive_errata.py",
  "archive": {
   "dataset": "RevolutionCrossroads/loc_chronicling_america_1770-1810",
@@ -59,13 +59,15 @@
   "years": [
    1776,
    1793,
+   1805,
    1806,
    1807,
-   1808
+   1808,
+   1809
   ],
-  "checked": 1551,
-  "changes_what_was_printed": 173,
-  "leaves_out_text": 33,
+  "checked": 2289,
+  "changes_what_was_printed": 259,
+  "leaves_out_text": 54,
   "by_year": {
    "1776": {
     "checked": 350,
@@ -79,6 +81,13 @@
     "changes_what_was_printed": 9,
     "by_transcription": {
      "RevX": 9
+    }
+   },
+   "1805": {
+    "checked": 243,
+    "changes_what_was_printed": 26,
+    "by_transcription": {
+     "RevX": 26
     }
    },
    "1806": {
@@ -102,6 +111,14 @@
     "changes_what_was_printed": 27,
     "by_transcription": {
      "RevX": 27
+    }
+   },
+   "1809": {
+    "checked": 495,
+    "changes_what_was_printed": 60,
+    "by_transcription": {
+     "RevX": 57,
+     "CA": 3
     }
    }
   },

@@ -152,7 +152,7 @@ SCRIPTS = ['audit_dataset.py', 'discover_topics.py', 'recheck_full_corpus.py',
            'reuse_all.py', 'reuse_families_all.py', 'reuse_titles_all.py', 'story_topics_all.py', 'check_cycles_topics.py', 'check_cycle_lengths.py', 'check_waves.py',
            'transcription_check.py', 'audit_matched.py',
            'build_pulse_explorer.py', 'site_parts.py', 'site.css', 'glass.js', 'radio.js', 'home.html', 'telescope.html', 'pulse_explorer.html', 'radio.html', 'exhibit.html', 'method.html', 'notes.html', 'findings.html', 'findings_parts.py', 'home_parts.py', 'notebook.html', 'notebook_parts.py', 'notebook.json', 'stories.html', 'stories_parts.py', 'stories.json', 'appendix_parts.py', 'appendix.json',
-           'export_public_repo.py', 'audio_render.py', 'audio_manifest.json', 'archive_errata.py']
+           'export_public_repo.py', 'audio_render.py', 'audio_manifest.json', 'archive_errata.py', 'not_admitted.py', 'not_admitted.json']
 ARCHIVE = ['build.py', 'migrate_v0_2_0.py', 'apply_ledger.py', 'apply_corrections.py', 'add_reuse_layer.py', 'add_reuse_titles.py',
            'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'add_reviewed_topics.py', 'refile_revx_pages.py', 'redate_issues.py', 'set_current.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
 for name in SCRIPTS:
@@ -220,6 +220,12 @@ for name in ['filing.csv', 'transcription.csv', 'summary.json']:
 errata = (PROJECT / 'outputs/archive_errata/README.md').read_text(encoding='utf8').replace('`work/', '`pipeline/').replace('`outputs/', '`pipeline/')   # the checks' scripts are copied to pipeline/ above
 assert not re.findall(r'`(?:work|outputs)/[^`]*`', errata), 'archive-errata/README.md: working paths left'
 write('docs/archive-errata/README.md', errata)
+
+# What the reviews read and did not admit, year by year (work/not_admitted.py): the list and the same list as a table.
+copy(PROJECT / 'outputs/not_admitted/not_admitted.csv', 'docs/not-admitted/not_admitted.csv')
+not_admitted = (PROJECT / 'outputs/not_admitted/README.md').read_text(encoding='utf8').replace('`work/', '`pipeline/')
+assert not re.findall(r'`(?:work|outputs)/[^`]*`', not_admitted), 'not-admitted/README.md: working paths left'
+write('docs/not-admitted/README.md', not_admitted)
 
 plan = (PROJECT / 'docs/site-plan.md').read_text(encoding='utf8').replace('`work/', '`pipeline/')
 write('docs/site-plan.md', plan)

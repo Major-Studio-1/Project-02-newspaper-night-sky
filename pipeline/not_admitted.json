@@ -1,0 +1,2907 @@
+{
+ "about": "Every item read in the story reviews and not admitted, with its reason; curated by hand from the ledgers' dispositions_summary (not_admitted, for_the_owner, for_user_decision) and the years' READMEs. work/not_admitted.py checks it against every ledger and writes outputs/not_admitted/.",
+ "source_format": {
+  "ledger": "stories_YEAR[_roundN].json#section/key, a key of dispositions_summary in work/archive_data/ledgers/",
+  "readme": "story_discovery_YEAR/README.md#heading/phrase, a phrase under that heading of outputs/story_discovery_YEAR/README.md"
+ },
+ "kinds": [
+  "below the rule",
+  "not chosen: month and kind covered",
+  "digest, list or proceedings",
+  "private persons",
+  "other"
+ ],
+ "statuses": [
+  "admitted later",
+  "counting decision about admitted stories",
+  "note on admitted stories",
+  "duplicate of <source>"
+ ],
+ "entries": [
+  {
+   "year": 1776,
+   "item": "A digest of London and Halifax news, printed in pieces (matched family R1776-0003)",
+   "papers": 13,
+   "kind": "digest, list or proceedings",
+   "reason": "Several unrelated paragraphs, not one printed item.",
+   "source": "stories_1776.json#not_admitted/London and Halifax news digest (R1776-0003, 13 papers)"
+  },
+  {
+   "year": 1776,
+   "item": "Parliament's address in answer to the King's speech of October 1775",
+   "papers": 4,
+   "kind": "other",
+   "reason": "A different document that repeats the speech's words, so it is not a printing of the speech.",
+   "source": "stories_1776.json#not_admitted/VGa 1776-02-03 p2, PG 02-07 p2, NYP 02-08 p1, PP 02-12 p4"
+  },
+  {
+   "year": 1776,
+   "item": "Other reports from before Quebec on the batteries at Point Levy",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Different reports, not the letter written in the camp on 6 April that the story holds.",
+   "source": "stories_1776.json#not_admitted/PJ 1776-05-01 p2, PEP 05-02 p3, PL 05-04 p2, NEC 05-16 p3"
+  },
+  {
+   "year": 1776,
+   "item": "The inventory of stores taken at New Providence, printed apart from Hopkins's letter",
+   "papers": 2,
+   "kind": "other",
+   "reason": "A separate document from Hopkins's letter, in 2 papers.",
+   "source": "stories_1776.json#not_admitted/PEP 1776-04-18 p2, NEC 04-25 p1"
+  },
+  {
+   "year": 1776,
+   "item": "Purdie's Virginia Gazette, 17 May: the London paragraphs from the Dublin paper, without its report of the naval force",
+   "papers": 1,
+   "kind": "other",
+   "reason": "It does not print the report that the story holds.",
+   "source": "stories_1776.json#not_admitted/VGb 1776-05-17 p2"
+  },
+  {
+   "year": 1776,
+   "item": "The Freeman's Journal, 8 June, page 2: a paraphrase of Congress's resolution of 15 May inside another item",
+   "papers": 1,
+   "kind": "other",
+   "reason": "The same issue prints the full text on page 4, and that printing is counted.",
+   "source": "stories_1776.json#not_admitted/FJ 1776-06-08 p2"
+  },
+  {
+   "year": 1776,
+   "item": "The New-York Gazette, 8 July: a report of Congress's vote for independence",
+   "papers": 1,
+   "kind": "other",
+   "reason": "A different item, not a printing of the Virginia Convention's resolutions.",
+   "source": "stories_1776.json#not_admitted/NYG 1776-07-08 p3"
+  },
+  {
+   "year": 1776,
+   "item": "Commentary quoting the preamble of Pennsylvania's new instructions (Dunlap's Pennsylvania Packet, 24 June; Pennsylvania Gazette, 26 June)",
+   "papers": 2,
+   "kind": "other",
+   "reason": "Commentary that quotes the instructions, not a printing of them.",
+   "source": "stories_1776.json#not_admitted/PP 1776-06-24 p2, PG 06-26 p1"
+  },
+  {
+   "year": 1776,
+   "item": "Another colony's instructions to its deputies (Pennsylvania Journal, 19 June; Dixon and Hunter's Virginia Gazette, 13 July)",
+   "papers": 2,
+   "kind": "other",
+   "reason": "A different document that shares a phrase with Pennsylvania's instructions.",
+   "source": "stories_1776.json#not_admitted/PJ 1776-06-19 p3, VGa 07-13 p5"
+  },
+  {
+   "year": 1776,
+   "item": "The New-England Chronicle, 8 August: a notice that the account of Washington's meeting with Colonel Patterson had been published in the New-York papers",
+   "papers": 1,
+   "kind": "other",
+   "reason": "A notice, not the account, which the same paper printed on 15 August.",
+   "source": "stories_1776.json#not_admitted/NEC 1776-08-08 p3"
+  },
+  {
+   "year": 1776,
+   "item": "Congress's resolutions of 23 March on privateering",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "An earlier document that shares wording with the resolution of 24 July, in 6 papers.",
+   "source": "stories_1776.json#not_admitted/Congress's privateering resolutions of 23 March (PEP 03-26, PG 03-27, NYP 04-04, VGa 04-13, VGb 04-19, NEC 05-02)"
+  },
+  {
+   "year": 1776,
+   "item": "A London paragraph on deserters from the Cork regiments",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "A one-sentence paragraph in 5 papers: the finder's 8 came from neighbouring paragraphs, and the New-York Gazette of 5 February prints a different report.",
+   "source": "stories_1776_round2.json#not_admitted/Deserters from the Cork regiments (PG 01-31, PL 02-03, PP 02-05, VGb 02-16, VGa 02-17)"
+  },
+  {
+   "year": 1776,
+   "item": "Notices of the Philadelphia and Gloucester County committees of inspection that quote Congress's resolution on the bills of credit and publish the names of people the committees said had refused the bills",
+   "papers": "18 printings in 5 papers",
+   "kind": "private persons",
+   "reason": "Separate documents that publish the names of private persons, left out by the owner's decision of 9 November 2026.",
+   "source": "stories_1776_round2.json#not_admitted/Committee of inspection notices under the bills-of-credit resolution (PJ 02-07 to PJ 04-24; 18 printings in 5 Philadelphia papers)"
+  },
+  {
+   "year": 1776,
+   "item": "A London report of the Prohibitory bill's second reading, 1 December 1775",
+   "papers": 3,
+   "kind": "below the rule",
+   "reason": "A different report, on a different clause, in 3 papers.",
+   "source": "stories_1776_round2.json#not_admitted/Another London report on the Prohibitory bill (NYP 03-07, VGb 03-15, VGa 03-16)"
+  },
+  {
+   "year": 1776,
+   "item": "The notice of the Synod of New-York and Philadelphia moving its meeting because of Congress's fast",
+   "papers": 3,
+   "kind": "other",
+   "reason": "A different document from Congress's resolution on the fast.",
+   "source": "stories_1776_round2.json#not_admitted/The Synod's notice on the fast (NYG 04-22, PJ 04-24, PG 05-01 and repeats; 3 papers)"
+  },
+  {
+   "year": 1776,
+   "item": "Notices of other fast days in August 1776 (Massachusetts, 1 August; the Synod, 8 August)",
+   "papers": null,
+   "kind": "other",
+   "reason": "Other fast days, not Congress's of 17 May.",
+   "source": "stories_1776_round2.json#not_admitted/Fasts of August 1776 (Massachusetts, 1 August; the Synod, 8 August)"
+  },
+  {
+   "year": 1776,
+   "item": "Advertisements of the sale of the sloop Edward",
+   "papers": 3,
+   "kind": "other",
+   "reason": "Advertisements, not Barry's letter.",
+   "source": "stories_1776_round2.json#not_admitted/The sale of the sloop Edward (PEP 04-30, PG 05-01, PJ 05-01)"
+  },
+  {
+   "year": 1776,
+   "item": "A Philadelphia letter of 11 April on the capture of the Edward",
+   "papers": 1,
+   "kind": "below the rule",
+   "reason": "A different report of the same capture, in 1 paper.",
+   "source": "stories_1776_round2.json#not_admitted/A Philadelphia letter of 11 April on the Edward (NEC 04-25 p3)"
+  },
+  {
+   "year": 1776,
+   "item": "The Howes' joint declaration of 14 July",
+   "papers": 1,
+   "kind": "below the rule",
+   "reason": "Printed in the New-York Gazette only, and its text is that of Lord Howe's June declaration, which the story holds.",
+   "source": "stories_1776_round2.json#not_admitted/The Howes' joint declaration of 14 July (NYG 09-30 and 10-07)"
+  },
+  {
+   "year": 1776,
+   "item": "A satirical rewriting of the Howes' September declaration, with 'the King's Commissioners for deluding the good people of America'",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "Commentary, not the declaration, in 4 papers.",
+   "source": "stories_1776_round2.json#not_admitted/A parody of the September declaration (PG 10-02, VGa 10-25, VGb 10-25, FJ 10-29)"
+  },
+  {
+   "year": 1776,
+   "item": "The Howes' proclamation of 30 November",
+   "papers": 1,
+   "kind": "below the rule",
+   "reason": "One paper in this collection, the Freeman's Journal.",
+   "source": "stories_1776_round2.json#not_admitted/The Howes' proclamation of 30 November (FJ 12-24)"
+  },
+  {
+   "year": 1776,
+   "item": "The London notice of the Howes' commission, with the letters patent of 3 May",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "A different document from the declarations, in 6 papers.",
+   "source": "stories_1776_round2.json#not_admitted/The London notice of the Howes' commission (PJ 07-31, PEP 08-01, PP 08-05, NEC 08-08, FJ 08-10, VGb 08-16)"
+  },
+  {
+   "year": 1776,
+   "item": "Letters from Fincastle of late July",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Read in round one among the items in 7 or more papers and not chosen, like other 7- and 8-paper items.",
+   "source": "stories_1776_round3.json#not_admitted/Other reports of the southern frontier in 7 papers (not held back for framing)"
+  },
+  {
+   "year": 1776,
+   "item": "An express on the relief of the Watauga fort",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Read in round one among the items in 7 or more papers and not chosen, like other 7- and 8-paper items.",
+   "source": "stories_1776_round3.json#not_admitted/Other reports of the southern frontier in 7 papers (not held back for framing)"
+  },
+  {
+   "year": 1776,
+   "item": "A September paragraph of letters from the south on the war against the lower towns",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Read in round one among the items in 7 or more papers and not chosen, like other 7- and 8-paper items.",
+   "source": "stories_1776_round3.json#not_admitted/Other reports of the southern frontier in 7 papers (not held back for framing)"
+  },
+  {
+   "year": 1776,
+   "item": "Other documents in 7 or 8 papers that round one read and did not choose, not recorded one by one",
+   "papers": "7 or 8 each",
+   "kind": "not chosen: month and kind covered",
+   "reason": "Round one read 101 documents in 7 or more papers and listed only some of those it did not choose; they can be read again in a later round.",
+   "source": "story_discovery_1776/README.md#Candidates for a later round/with the other 7- and 8-paper items round one did not choose"
+  },
+  {
+   "year": 1793,
+   "item": "A Lisbon letter of 8 February with 'a certainty of the execution of the King of France'",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "One of six different accounts of the King's sentence and death, none in more than 5 of the 6 papers then in print.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The Convention's decree on the King's sentence, with the votes",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "One of six different accounts of the King's sentence and death, none in more than 5 of the 6 papers then in print.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "'The last requests of Louis'",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "One of six different accounts of the King's sentence and death, none in more than 5 of the 6 papers then in print.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Two accounts of the execution of Louis XVI",
+   "papers": "4 each",
+   "kind": "below the rule",
+   "reason": "Two of six different accounts of the King's sentence and death, none in more than 5 of the 6 papers then in print.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The will of Louis XVI",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "One of six different accounts of the King's sentence and death, none in more than 5 of the 6 papers then in print.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "France's decree of war on Britain and Holland, 1 February",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6; the Kentucky Gazette does not print it.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The French Republic's letter to the United States, 'Amidst the storms which buffet our infant liberty'",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Mr. Giles's resolutions on the Secretary of the Treasury",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers as moved and as the House journal, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The report of Washington's second inauguration, with the oath",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers; his short address is found only in the Gazette of the United States.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The President's proclamation of neutrality, 22 April",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "Its text is in 4 papers; the Mirrour gives only a summary.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The merchants' address thanking the President for the proclamation of neutrality",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, below the year's rule of 6.",
+   "source": "story_discovery_1793/README.md#Not admitted/The merchants' address thanking the President"
+  },
+  {
+   "year": 1793,
+   "item": "Reports of Genêt's arrival and reception: the addresses to him and his answers",
+   "papers": "2 to 4 each",
+   "kind": "below the rule",
+   "reason": "No item about his arrival and reception is in more than 4 papers.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Reports of the yellow fever in Philadelphia: the College of Physicians' advice, the committee's orphan house and many local letters",
+   "papers": "3 or 4",
+   "kind": "below the rule",
+   "reason": "No shared item is in more than 4 papers: each surviving paper told it in its own letters and paragraphs, and both Philadelphia papers stopped.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Reports from Toulon, from November, in many different texts",
+   "papers": "4 or fewer",
+   "kind": "below the rule",
+   "reason": "No item is in more than 4 papers.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Reports that Marie Antoinette's trial was expected",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, below the year's rule of 6; no page of 1793 in the collection reports her execution.",
+   "source": "story_discovery_1793/README.md#Not admitted/Marie Antoinette's execution"
+  },
+  {
+   "year": 1793,
+   "item": "The President's address of 3 December and his message of 5 December",
+   "papers": "4 each",
+   "kind": "below the rule",
+   "reason": "Each is in 4 papers, every paper then in print, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The consul Edward Church's circular from Lisbon: 'Nine Algerine Corsairs are now cruising'",
+   "papers": 3,
+   "kind": "below the rule",
+   "reason": "In 3 papers at the end of December, when only 4 papers have pages.",
+   "source": "stories_1793.json#not_admitted/The 1793 news that no single item carries to 7 papers"
+  },
+  {
+   "year": 1793,
+   "item": "News from Ostend by the ship Fortitude",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Jefferson's letter to the Philadelphia merchants on spoliations",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A Paris report of Marat's funeral",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The Convention's decree arresting foreigners, a paragraph of a news digest",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The Prince of Saxe-Cobourg's proclamation of 9 April",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A Philadelphia report that a party of militia was put on board the prize ship William",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A report that Pitt wished to resign",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A Charleston letter reporting that the body of Henry Laurens was burnt after his death",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A report that Rome had surrendered",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A Charleston report of a house of rendezvous opened for entering seamen for the French service",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The Commune of Paris's call 'To arms'",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A London report of Sir James Murray landing at Dover",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "An official account of the sortie from Cassel",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A letter from Mons of 1 May",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The revocation of the exequatur of the French vice-consul Duplaine",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Genêt's answer on the revocation of Duplaine's exequatur",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Dumouriez's letter from Louvain",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "Dumouriez's declaration at Frankfort",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, below the year's rule of 6.",
+   "source": "stories_1793.json#not_admitted/Below 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A Rome paragraph of 29 September 1792",
+   "papers": 6,
+   "kind": "not chosen: month and kind covered",
+   "reason": "A single paragraph of a news digest, in a month already covered.",
+   "source": "stories_1793_round2.json#not_admitted/Not recommended at 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A Paris paragraph on the city 'in sullen tranquillity'",
+   "papers": 6,
+   "kind": "not chosen: month and kind covered",
+   "reason": "A single paragraph of a news digest, in a month already covered.",
+   "source": "stories_1793_round2.json#not_admitted/Not recommended at 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "A ship captain's report that Dumouriez 'had got possession of Amsterdam'",
+   "papers": "4 + 2 in two wordings",
+   "kind": "below the rule",
+   "reason": "Printed in two different wordings, so no single item reaches 6 papers.",
+   "source": "stories_1793_round2.json#not_admitted/Not recommended at 6 papers"
+  },
+  {
+   "year": 1793,
+   "item": "The French civil commissioners' proclamation of 21 June, giving liberty to 'the negro warriors, who will fight for the republic'",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, below the year's rule of 6, and not a sub-story, as for the 4-paper documents of Dumouriez's defection.",
+   "source": "stories_1793_round3.json#not_admitted/The civil commissioners' proclamation of 21 June"
+  },
+  {
+   "year": 1793,
+   "item": "The letter of the commissioners Polverel and Sonthonax to Genêt",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, below the year's rule of 6.",
+   "source": "stories_1793_round3.json#not_admitted/The letter of Polverel and Sonthonax to Genêt"
+  },
+  {
+   "year": 1793,
+   "item": "'An act respecting fugitives from justice, and persons escaping from the service of their masters', 12 February",
+   "papers": 2,
+   "kind": "below the rule",
+   "reason": "Its text is in 2 papers; its title in the lists of the session's acts is a different item.",
+   "source": "stories_1793_round3.json#not_admitted/The Fugitive Slave Act"
+  },
+  {
+   "year": 1793,
+   "item": "Reports of the prosecutions of two seamen for serving on a French privateer",
+   "papers": 5,
+   "kind": "private persons",
+   "reason": "In 5 papers, below the year's rule of 6, and it turns on private persons.",
+   "source": "stories_1793_round3.json#not_admitted/Private people (5 papers each)"
+  },
+  {
+   "year": 1793,
+   "item": "A report of a killing near Middletown, New Jersey",
+   "papers": 5,
+   "kind": "private persons",
+   "reason": "In 5 papers, below the year's rule of 6, and it turns on private persons.",
+   "source": "stories_1793_round3.json#not_admitted/Private people (5 papers each)"
+  },
+  {
+   "year": 1797,
+   "item": "The Gazette of the United States, 5 and 12 June: pages that quote phrases of President Adams's speech to the special session",
+   "papers": "1 (2 pages)",
+   "kind": "other",
+   "reason": "They quote the speech but do not print it; the House's answer on the page of 5 June was admitted in round two.",
+   "source": "stories_1797.json#not_admitted/F97-005 Gazette of the United States 5 and 12 June"
+  },
+  {
+   "year": 1797,
+   "item": "Other accounts from Tenerife, with texts different from the Norfolk report",
+   "papers": "3 (6 pages)",
+   "kind": "other",
+   "reason": "Different texts, not printings of the report the story holds.",
+   "source": "stories_1797.json#not_admitted/Tenerife: GUS 30 Aug, GUS 5 Sep, NH 12 Sep, NH 1 Nov, GUS 14 Nov, KY 25 Nov"
+  },
+  {
+   "year": 1797,
+   "item": "Other pages naming Admiral Duncan and Admiral De Winter: first reports, the notice of Duncan's peerage and other items",
+   "papers": null,
+   "kind": "other",
+   "reason": "Not printings of Duncan's dispatches, which the story holds.",
+   "source": "stories_1797.json#not_admitted/Camperdown: other 'Admiral Duncan' and 'De Winter' pages"
+  },
+  {
+   "year": 1797,
+   "item": "Other pages on Senator Blount's affair from July: a committee report, the Senate's vote to expel him, documents and debate",
+   "papers": "3, and later pages",
+   "kind": "other",
+   "reason": "Items on the wider affair, not printings of Blount's letter.",
+   "source": "stories_1797.json#not_admitted/Blount: GUS 7 and 10 July, NH 18 July p1, KY 29 July p3 and later pages"
+  },
+  {
+   "year": 1797,
+   "item": "Other pages of the New Hampshire Gazette naming the master of the brig Brothers: ship arrivals and advertisements",
+   "papers": 1,
+   "kind": "other",
+   "reason": "Ship arrivals and advertisements, not his report.",
+   "source": "stories_1797.json#not_admitted/Kennard: other NH pages"
+  },
+  {
+   "year": 1797,
+   "item": "The Gazette of the United States, 7 June, page 2, found with the answers to the President's speech",
+   "papers": 1,
+   "kind": "other",
+   "reason": "The answer's text is not on this page.",
+   "source": "stories_1797_round2.json#not_admitted/GUS 1797-06-07 p2 (F97-025)"
+  },
+  {
+   "year": 1797,
+   "item": "The Gazette of the United States, 25 October, page 3: a list of ship arrivals naming the sloop Cleopatra",
+   "papers": 1,
+   "kind": "other",
+   "reason": "A ship list, not the Charleston report of American vessels carried into Havana.",
+   "source": "stories_1797_round2.json#not_admitted/GUS 1797-10-25 p3"
+  },
+  {
+   "year": 1797,
+   "item": "Other pages on General Kościuszko, and New York reports on a physician taken into custody in the Blount affair",
+   "papers": null,
+   "kind": "other",
+   "reason": "Different items about the same people.",
+   "source": "stories_1797_round2.json#not_admitted/other Kosciuszko and Romayne pages"
+  },
+  {
+   "year": 1797,
+   "item": "A Vienna letter on the peace talks between Austria and France (the Marquis de Gallo's conferences, Mantua, the Cisalpine Republic)",
+   "papers": 5,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-002",
+   "families": [
+    "F97-002"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "The Secretary of State's reply to the French minister Adet's complaints, printed in instalments over many issues",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Held for later: a document printed in parts over about 30 pages needs handling by instalment.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-003",
+   "families": [
+    "F97-003"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "Letters between the Spanish minister Yrujo and the Secretary of State on the boundary posts",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Held for later as a set of several letters.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-004",
+   "families": [
+    "F97-004"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "The French Directory's proclamation to the French nation after 18 Fructidor",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-006",
+   "families": [
+    "F97-006"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "News from the Isle of France and India: French frigates and privateers cruising",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-008",
+   "families": [
+    "F97-008"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "A printer's notice of the editions of the Bible from his press",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-009",
+   "families": [
+    "F97-009"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "The French Directory's message to the Councils on a deficit",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-012",
+   "families": [
+    "F97-012"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "Reports of French troops moving to Brest, with doubts about the talks at Lille",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-015",
+   "families": [
+    "F97-015"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "A Paris comment on the negotiations with the English government",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-016",
+   "families": [
+    "F97-016"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "Reports that Hoche was named generalissimo of the armies of the Rhine, with letters from Milan",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-017",
+   "families": [
+    "F97-017"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "Reports on the negotiations at Lille and the Portuguese envoy",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-018",
+   "families": [
+    "F97-018"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "A letter from Providence, dated September: its writer's account of a 'conspiracy' among 'French negroes' who had been 'captured and sold here'",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Not shortlisted on 6 November, when it was set aside for careful framing; the rule 'every story alike' later dropped that reason, and 1797 has not been read again.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-019",
+   "families": [
+    "F97-019"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "News from Brest and Algiers, January to March",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-020",
+   "families": [
+    "F97-020"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "Reports from Hamburg papers on the sieges of Kehl and Huningen",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-021",
+   "families": [
+    "F97-021"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "The Archduke Charles's dispatch on General Moreau's retreat across the Rhine",
+   "papers": 4,
+   "kind": "other",
+   "reason": "Read as a candidate family on 6 November and not shortlisted.",
+   "source": "story_discovery_1797/README.md#The 23 families that reach 4–5 newspapers/F97-023",
+   "families": [
+    "F97-023"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "A report of the examination of a man charged with fitting out a vessel to cruise against a nation at peace with the United States",
+   "papers": 3,
+   "kind": "other",
+   "reason": "Noted on 6 November as a smaller shipping story and not recommended.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/(055)",
+   "families": [
+    "F97-055"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "A ship captain's report of his schooner's capture by a French privateer",
+   "papers": 3,
+   "kind": "other",
+   "reason": "Noted on 6 November as a smaller shipping story and not recommended.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/(067)",
+   "families": [
+    "F97-067"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "A report on an American vessel carried into Portsmouth with arms on board",
+   "papers": 3,
+   "kind": "other",
+   "reason": "Noted on 6 November as a smaller shipping story and not recommended.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/(070)",
+   "families": [
+    "F97-070"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "A shipmaster's report that the cargo of the schooner Jane was taken at Cape François",
+   "papers": 3,
+   "kind": "other",
+   "reason": "Noted on 6 November as a smaller shipping story and not recommended.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/(071)",
+   "families": [
+    "F97-071"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "Letters and a statement of James Monroe on his recall, with the Secretary of State's letters",
+   "papers": "3 each",
+   "kind": "other",
+   "reason": "Noted on 6 November as a set of documents and not recommended.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/the Monroe controversy (029, 036)",
+   "families": [
+    "F97-029",
+    "F97-036"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "Papers on the Spanish boundary and a suspected expedition from the lakes: the President's message, a Spanish proclamation at New Orleans and the Secretary of State's note",
+   "papers": "3 each",
+   "kind": "other",
+   "reason": "Noted on 6 November as a set of documents and not recommended.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/(047, 051, 054)",
+   "families": [
+    "F97-047",
+    "F97-051",
+    "F97-054"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "An Albany paper's report at second hand that British troops and Indians headed by Colonel Brant had marched towards the Mississippi",
+   "papers": 3,
+   "kind": "other",
+   "reason": "Noted on 6 November as a frontier report and not recommended.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/Brant (116)",
+   "families": [
+    "F97-116"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "A frontier paragraph reporting a killing on Beaver Creek",
+   "papers": 3,
+   "kind": "other",
+   "reason": "Noted on 6 November and set aside for careful framing, a reason the rule 'every story alike' later dropped.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/(115)",
+   "families": [
+    "F97-115"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "An obituary of a Portsmouth physician",
+   "papers": 2,
+   "kind": "other",
+   "reason": "Only 2 papers are confirmed; the third match is a neighbouring item.",
+   "source": "story_discovery_1797/README.md#Noted but not recommended now/(077)",
+   "families": [
+    "F97-077"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "48 other candidate families of 3 papers on European and other foreign news and foreign documents: F97-027, F97-028, F97-034, F97-037, F97-038, F97-040, F97-041, F97-045, F97-046, F97-049, F97-050, F97-057, F97-058, F97-059, F97-061, F97-062, F97-063, F97-064, F97-069, F97-072, F97-073, F97-075, F97-076, F97-078, F97-079, F97-080, F97-083, F97-084, F97-085, F97-087, F97-089, F97-090, F97-094, F97-099, F97-101, F97-102, F97-103, F97-104, F97-105, F97-107, F97-108, F97-110, F97-111, F97-112, F97-114, F97-118, F97-121, F97-122",
+   "papers": "3 each",
+   "kind": "other",
+   "reason": "Read from their representative excerpts on 6 November and not recommended.",
+   "source": "story_discovery_1797/README.md#The 99 families that reach 3 newspapers (read 6 November 2026)/European and other foreign news, foreign documents",
+   "families": [
+    "F97-027",
+    "F97-028",
+    "F97-034",
+    "F97-037",
+    "F97-038",
+    "F97-040",
+    "F97-041",
+    "F97-045",
+    "F97-046",
+    "F97-049",
+    "F97-050",
+    "F97-057",
+    "F97-058",
+    "F97-059",
+    "F97-061",
+    "F97-062",
+    "F97-063",
+    "F97-064",
+    "F97-069",
+    "F97-072",
+    "F97-073",
+    "F97-075",
+    "F97-076",
+    "F97-078",
+    "F97-079",
+    "F97-080",
+    "F97-083",
+    "F97-084",
+    "F97-085",
+    "F97-087",
+    "F97-089",
+    "F97-090",
+    "F97-094",
+    "F97-099",
+    "F97-101",
+    "F97-102",
+    "F97-103",
+    "F97-104",
+    "F97-105",
+    "F97-107",
+    "F97-108",
+    "F97-110",
+    "F97-111",
+    "F97-112",
+    "F97-114",
+    "F97-118",
+    "F97-121",
+    "F97-122"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "6 other candidate families of 3 papers on US government and politics: F97-031, F97-048, F97-082, F97-086, F97-100, F97-113",
+   "papers": "3 each",
+   "kind": "other",
+   "reason": "Read from their representative excerpts on 6 November and not recommended.",
+   "source": "story_discovery_1797/README.md#The 99 families that reach 3 newspapers (read 6 November 2026)/US government and politics",
+   "families": [
+    "F97-031",
+    "F97-048",
+    "F97-082",
+    "F97-086",
+    "F97-100",
+    "F97-113"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "6 other candidate families of 3 papers on ships, privateers, seizures and French decrees: F97-024, F97-026, F97-042, F97-056, F97-091, F97-098",
+   "papers": "3 each",
+   "kind": "other",
+   "reason": "Read from their representative excerpts on 6 November and not recommended.",
+   "source": "story_discovery_1797/README.md#The 99 families that reach 3 newspapers (read 6 November 2026)/Ships, privateers, seizures, French decrees",
+   "families": [
+    "F97-024",
+    "F97-026",
+    "F97-042",
+    "F97-056",
+    "F97-091",
+    "F97-098"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "4 other candidate families of 3 papers on the frontier, Native nations, Spain and Louisiana: F97-035, F97-081, F97-109, F97-117",
+   "papers": "3 each",
+   "kind": "other",
+   "reason": "Read from their representative excerpts on 6 November and not recommended.",
+   "source": "story_discovery_1797/README.md#The 99 families that reach 3 newspapers (read 6 November 2026)/Frontier, Native nations, Spain and Louisiana",
+   "families": [
+    "F97-035",
+    "F97-081",
+    "F97-109",
+    "F97-117"
+   ]
+  },
+  {
+   "year": 1797,
+   "item": "5 other candidate families of 3 papers on local news, people, disasters, essays and verse: F97-043, F97-044, F97-053, F97-096, F97-106",
+   "papers": "3 each",
+   "kind": "other",
+   "reason": "Read from their representative excerpts on 6 November and not recommended.",
+   "source": "story_discovery_1797/README.md#The 99 families that reach 3 newspapers (read 6 November 2026)/Local news, people, disasters, essays, verse",
+   "families": [
+    "F97-043",
+    "F97-044",
+    "F97-053",
+    "F97-096",
+    "F97-106"
+   ]
+  },
+  {
+   "year": 1805,
+   "item": "London reports that Sir George Rumbold was seized at Hamburg (January)",
+   "papers": "4 + 2 + 1 in three forms",
+   "kind": "below the rule",
+   "reason": "Not one printed item in 7 papers: the London paragraph is in 4, a summary in other words in 2 and a condensed paragraph in 1.",
+   "source": "stories_1805.json#not_admitted/Rumbold seized at Hamburg (January)"
+  },
+  {
+   "year": 1805,
+   "item": "A letter from an officer of the frigate President, Syracuse, 28 September 1804",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "January was covered by O'Brien's letter and Chase's speech, and the Barbary states were already the year's largest subject.",
+   "source": "stories_1805.json#not_admitted/Letter from an officer of the President, Syracuse, 28 September 1804 (7, January)"
+  },
+  {
+   "year": 1805,
+   "item": "A London paragraph of 17 April, 'An opinion of the French Plan'",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "A London paper's forecast, in a month and kind covered by the Boston report that the Toulon fleet was out.",
+   "source": "stories_1805.json#not_admitted/London, 17 April: 'An opinion of the French Plan' (7, June)"
+  },
+  {
+   "year": 1805,
+   "item": "A Canandaigua report that Detroit was destroyed by fire",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "July was covered by the news from Lewis and Clark's party.",
+   "source": "stories_1805.json#not_admitted/Canandaigua report that Detroit was destroyed by fire (7, July)"
+  },
+  {
+   "year": 1805,
+   "item": "A Boston report that the city of Tripoli was taken",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "The Barbary states were already the year's largest subject, and September had the Salem report and the official letters.",
+   "source": "stories_1805.json#not_admitted/Boston report that the city of Tripoli was taken (7) and the Norfolk report of the frigate President's arrival (7), September"
+  },
+  {
+   "year": 1805,
+   "item": "A Norfolk report of the frigate President's arrival",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "The Barbary states were already the year's largest subject, and September had the Salem report and the official letters.",
+   "source": "stories_1805.json#not_admitted/Boston report that the city of Tripoli was taken (7) and the Norfolk report of the frigate President's arrival (7), September"
+  },
+  {
+   "year": 1805,
+   "item": "Two merchants' letters quoting the Privy Council's order (October)",
+   "papers": "3 each, 5 in all",
+   "kind": "below the rule",
+   "reason": "Two different letters, not one printed item; the consuls' notices of the order are admitted.",
+   "source": "stories_1805.json#not_admitted/Two merchants' letters quoting the Privy Council's order (5, October)"
+  },
+  {
+   "year": 1805,
+   "item": "A Bordeaux paper's article from Algiers",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "The Barbary states were already the year's largest subject; the Algiers story keeps the first report and the chargé d'affaires's letter.",
+   "source": "stories_1805.json#not_admitted/A Bordeaux paper's article from Algiers (7, September-October)"
+  },
+  {
+   "year": 1805,
+   "item": "Napoleon's words to the Austrian generals at Ulm",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "December was covered by Collingwood's dispatch.",
+   "source": "stories_1805.json#not_admitted/Napoleon's words to the Austrian generals at Ulm (7, December)"
+  },
+  {
+   "year": 1805,
+   "item": "Governor Claiborne's letter of 24 October",
+   "papers": "6 as a summary, 4 in full",
+   "kind": "below the rule",
+   "reason": "No single printed form is in 7 papers.",
+   "source": "stories_1805.json#not_admitted/Governor Claiborne's letter of 24 October (December)"
+  },
+  {
+   "year": 1805,
+   "item": "Acts of Congress printed 'by authority'",
+   "papers": "3 to 6 each",
+   "kind": "below the rule",
+   "reason": "Counted by its own title and enacting clause, each act of the session is in 3 to 6 papers; the finder had joined them into chains.",
+   "source": "stories_1805.json#not_admitted/Acts of Congress printed by authority"
+  },
+  {
+   "year": 1805,
+   "item": "Mr. Randolph's motion to amend the Constitution, making judges removable on address",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers, in two forms.",
+   "source": "stories_1805.json#not_admitted/Randolph's motion to amend the Constitution (judges removable on address)"
+  },
+  {
+   "year": 1805,
+   "item": "Mr. Elliot's Letter IX to his constituents, on representation",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers; the Enquirer only quotes one sentence.",
+   "source": "stories_1805.json#not_admitted/Mr. Elliot to his constituents, Letter IX (on representation)"
+  },
+  {
+   "year": 1805,
+   "item": "A Tortola letter of 16 May with the British instruction of 24 June 1803",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers.",
+   "source": "stories_1805.json#not_admitted/The Tortola letter of 16 May with the British instruction of 24 June 1803"
+  },
+  {
+   "year": 1805,
+   "item": "A passenger's report, by the brig Lovely Lass, of a French decree for the exiles of St. Domingo (May)",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers in May; the seventh is a reprint inside another paragraph in October.",
+   "source": "stories_1805.json#not_admitted/A passenger of the brig Lovely Lass on a French decree for the exiles of St. Domingo (May)"
+  },
+  {
+   "year": 1805,
+   "item": "News digests: the news by the ship Palmyra (May), the London digests of June, and the Vienna, Milan, Munich and Salzburg paragraphs printed in pieces in October and November",
+   "papers": null,
+   "kind": "digest, list or proceedings",
+   "reason": "Digests of unrelated paragraphs, not single items.",
+   "source": "stories_1805.json#not_admitted/News digests"
+  },
+  {
+   "year": 1805,
+   "item": "Reports of an expected war with Morocco",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "Reports of the Tunisian ambassador's arrival",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "General Eaton's letters from Egypt",
+   "papers": "5 by the opening",
+   "kind": "below the rule",
+   "reason": "In 5 papers counted by their opening.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "A London report of a 'plan of general pacification'",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "A rumour, in months and kinds already covered.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "Napoleon's letter to Paris on Wertingen",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "A Boston paragraph on seamen's protections",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "Reports of an earthquake at Naples",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "Reports of a plague at Oujein",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "A ship captain's report from Rochelle",
+   "papers": "6 by phrase search",
+   "kind": "below the rule",
+   "reason": "In 6 papers by phrase search.",
+   "source": "stories_1805.json#not_admitted/Other candidates in 7 or 8 papers"
+  },
+  {
+   "year": 1805,
+   "item": "A captain's account of the loss of the ship Jupiter",
+   "papers": 7,
+   "kind": "private persons",
+   "reason": "It reaches the rule but turns on private persons; on 13 November 2026 the owner decided it stays out.",
+   "source": "stories_1805.json#for_the_owner/The loss of the ship Jupiter (7 papers, April-May)"
+  },
+  {
+   "year": 1805,
+   "item": "A New York report of a man convicted of carrying a challenge to a duel (January)",
+   "papers": 6,
+   "kind": "private persons",
+   "reason": "In 6 papers, below the rule, and it turns on private persons.",
+   "source": "stories_1805.json#for_the_owner/Stories that turn on private persons in 6 papers"
+  },
+  {
+   "year": 1805,
+   "item": "A Natchez report of brothers seized at Pinckneyville by armed Spaniards",
+   "papers": 6,
+   "kind": "private persons",
+   "reason": "In 6 papers, below the rule, and it turns on private persons.",
+   "source": "stories_1805.json#for_the_owner/Stories that turn on private persons in 6 papers"
+  },
+  {
+   "year": 1805,
+   "item": "Reports of a murder trial in New York",
+   "papers": 6,
+   "kind": "private persons",
+   "reason": "In 6 papers, below the rule, and it turns on private persons.",
+   "source": "stories_1805.json#for_the_owner/Stories that turn on private persons in 6 papers"
+  },
+  {
+   "year": 1805,
+   "item": "A report of a fatal duel at Alexandria",
+   "papers": 6,
+   "kind": "private persons",
+   "reason": "In 6 papers, below the rule, and it turns on private persons.",
+   "source": "stories_1805.json#for_the_owner/Stories that turn on private persons in 6 papers"
+  },
+  {
+   "year": 1805,
+   "item": "Reports of the robbery of the bank office at Baltimore",
+   "papers": 6,
+   "kind": "private persons",
+   "reason": "In 6 papers, below the rule, and it turns on private persons.",
+   "source": "stories_1805.json#for_the_owner/Stories that turn on private persons in 6 papers"
+  },
+  {
+   "year": 1805,
+   "item": "The Cuban Intendant's trade regulations",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "No Caribbean item of July to December reaches 7 papers.",
+   "source": "story_discovery_1805/README.md#Not admitted/The Caribbean in July to December"
+  },
+  {
+   "year": 1805,
+   "item": "The Bahamas assembly's representation on provisions",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "No Caribbean item of July to December reaches 7 papers.",
+   "source": "story_discovery_1805/README.md#Not admitted/The Caribbean in July to December"
+  },
+  {
+   "year": 1805,
+   "item": "Reports of the British at Cape Nicholas Mole",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "No Caribbean item of July to December reaches 7 papers.",
+   "source": "story_discovery_1805/README.md#Not admitted/The Caribbean in July to December"
+  },
+  {
+   "year": 1805,
+   "item": "Reports of two captures off Cuba",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "No Caribbean item of July to December reaches 7 papers.",
+   "source": "story_discovery_1805/README.md#Not admitted/The Caribbean in July to December"
+  },
+  {
+   "year": 1806,
+   "item": "A New York report that two men 'were arrested by order of government' in the Miranda affair",
+   "papers": "7 by phrase search",
+   "kind": "private persons",
+   "reason": "It turns on private persons; on 13 November 2026 the owner decided it stays out.",
+   "source": "stories_1806.json#not_admitted/Stories that turn on private persons"
+  },
+  {
+   "year": 1806,
+   "item": "The order of a public funeral procession in New York for the man the papers say was killed by a shot from the Leander",
+   "papers": "8 by phrase search",
+   "kind": "private persons",
+   "reason": "It turns on private persons; on 13 November 2026 the owner decided it stays out.",
+   "source": "stories_1806.json#not_admitted/Stories that turn on private persons"
+  },
+  {
+   "year": 1806,
+   "item": "Letters between a New York officer and the Spanish minister, the Marquis de Casa Yrujo, about the officer's son, one of Miranda's men taken prisoner",
+   "papers": "6 by phrase search (7 by one reader)",
+   "kind": "private persons",
+   "reason": "It turns on private persons; on 13 November 2026 the owner decided it stays out.",
+   "source": "stories_1806.json#not_admitted/Stories that turn on private persons"
+  },
+  {
+   "year": 1806,
+   "item": "Reports of the trial of the two New York men in the Miranda affair",
+   "papers": "fewer than 7",
+   "kind": "private persons",
+   "reason": "Below 7 papers, and it turns on private persons.",
+   "source": "story_discovery_1806/README.md#For you to decide/Smaller items of the same kind"
+  },
+  {
+   "year": 1806,
+   "item": "Reports of an indictment in Boston for a killing",
+   "papers": "fewer than 7",
+   "kind": "private persons",
+   "reason": "Below 7 papers, and it turns on private persons.",
+   "source": "story_discovery_1806/README.md#For you to decide/Smaller items of the same kind"
+  },
+  {
+   "year": 1806,
+   "item": "Reports of killings within a family in Maine",
+   "papers": "fewer than 7",
+   "kind": "private persons",
+   "reason": "Below 7 papers, and it turns on private persons.",
+   "source": "story_discovery_1806/README.md#For you to decide/Smaller items of the same kind"
+  },
+  {
+   "year": 1806,
+   "item": "A 'melancholy article' from Doylestown",
+   "papers": "fewer than 7",
+   "kind": "private persons",
+   "reason": "Below 7 papers, and it turns on private persons.",
+   "source": "story_discovery_1806/README.md#For you to decide/Smaller items of the same kind"
+  },
+  {
+   "year": 1806,
+   "item": "A letter with the list of prisoners taken in Miranda's schooners (July)",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because the Miranda story already stands for the affair.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "A Jamaica report that Miranda had landed near Coro (September)",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because the Miranda story already stands for the affair.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "Miranda's proclamation at Coro (October and November)",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "His proclamation of 28 June stands for his own words in the Miranda story.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "The memorial of the Corporation of New York to the President on the Leander",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because the Leander story already stands for the affair.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "A Natchez paragraph that the Spanish army stayed at Bayou Pierre",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because the Sabine story already stands for the affair.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "General Eaton's statement on Burr, as a Boston paper gave it",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because the Burr story already stands for the affair.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "An unsigned communication in the Enquirer on the secret proceedings (August and September)",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "A commentary in 6 papers; the House's secret journal stands for the affair.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "The National Intelligencer's paragraph on the nomination of Monroe and Pinkney (April)",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because its month and kind of news were already represented.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "George III's declaration on Hanover against Prussia (June)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because its month and kind of news were already represented.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "General Stuart's dispatch on the battle of Maida (October and November)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because its months and kind of news were already represented.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "A ship captain's news that Russia refused d'Oubril's treaty (November)",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Set aside because its month and kind of news were already represented.",
+   "source": "stories_1806.json#not_admitted/Set aside as repeats of an affair or month already represented"
+  },
+  {
+   "year": 1806,
+   "item": "Lists and chains of acts: the weekly 'Acts passed at the first session of the Ninth Congress' and laws printed 'by authority'",
+   "papers": "up to 133 printings",
+   "kind": "digest, list or proceedings",
+   "reason": "The finder's items join lists and laws that share titles and the enacting formula; not one item.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The act regulating the currency of foreign coins",
+   "papers": "7 by its enacting text",
+   "kind": "not chosen: month and kind covered",
+   "reason": "Printed from May, in a month and kind already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The Cumberland road act",
+   "papers": "8 by its title, mostly in lists of acts",
+   "kind": "below the rule",
+   "reason": "Counted by its own text it is below the selection; most of its 8 are lists of acts.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The act for Indian treaties",
+   "papers": "by title only",
+   "kind": "below the rule",
+   "reason": "Found by its title only.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The South Carolina and Tennessee acts",
+   "papers": "by title only",
+   "kind": "below the rule",
+   "reason": "Found by their titles only.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The articles of war",
+   "papers": null,
+   "kind": "below the rule",
+   "reason": "Below the selection, counted by its own text.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The post roads act",
+   "papers": null,
+   "kind": "below the rule",
+   "reason": "Below the selection, counted by its own text.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The December act suspending the act of 18 April",
+   "papers": "6, mostly as a bill in debate",
+   "kind": "below the rule",
+   "reason": "In 6 papers, mostly as a bill in debate.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The Treasury's annual report of December 1805",
+   "papers": "4 in 1806",
+   "kind": "below the rule",
+   "reason": "In 4 papers in 1806; 3 printed it in December 1805.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The President's annual message of December 1805",
+   "papers": null,
+   "kind": "other",
+   "reason": "Its only hits in 1806 are Yrujo's note, which quotes it.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Mr. Nicholson's resolution as offered on 10 February",
+   "papers": 7,
+   "kind": "other",
+   "reason": "Its text is printed in the National Intelligencer's paragraph on the vote, which is admitted.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Strachan's dispatch on taking four French ships (January)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "War news in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The convention between Murat and Kutusow (February)",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "War news in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A ship captain's report of 'the battle of the three emperors'",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "War news in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A New York summary: 'It will appear incredible that a mighty empire should be overthrown in six weeks'",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Commentary, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Reports of the explosion at Malta",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "War news in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The Medina paragraph",
+   "papers": null,
+   "kind": "digest, list or proceedings",
+   "reason": "A paragraph of a news digest.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The French bulletins on Jena and the other paragraphs of their run",
+   "papers": "4 to 7 each",
+   "kind": "not chosen: month and kind covered",
+   "reason": "War news in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Two differently worded reports of Fox's death",
+   "papers": "6 each",
+   "kind": "below the rule",
+   "reason": "Two different reports, each in 6 papers.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Mr. Wright's bill 'for the protection and indemnification of American seamen'",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "A bill that did not pass, in a month and kind already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Mr. Gallatin's letter of 15 April, inside the day's proceedings",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Not chosen: its month and kind of news were already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The House resolution on the memorial of the two New York men tried in the Miranda affair",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Not chosen: its month and kind of news were already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The National Intelligencer's paragraph on the close of the session",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Not chosen: its month and kind of news were already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The proposed amendment to the Constitution (December)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Not chosen: its month and kind of news were already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A report of the British minister Erskine's reception by the President",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Not chosen: its month and kind of news were already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A letter on boats building at Marietta",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Not chosen: its month and kind of news were already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Governor Strong's speech and the answer",
+   "papers": "6 to 7",
+   "kind": "not chosen: month and kind covered",
+   "reason": "Not chosen: its month and kind of news were already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A Lloyd's insurance paragraph on Miranda's expedition",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Miranda's letter to his brother",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "An account of Miranda's expedition from Aruba",
+   "papers": "6 to 7",
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Major Claiborne's letter, among the Sabine and Florida news",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "The official information of 8 October, among the Sabine and Florida news",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A report that Mobile was opened",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A Havana rumour that the Floridas were ceded to France",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Reports of Mungo Park's death",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A New Orleans letter on the church",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Other reports, in months and kinds already covered.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "Fox's and Howick's blockade notices",
+   "papers": "7 in all",
+   "kind": "below the rule",
+   "reason": "Several different notices, so no single item reaches 7 papers.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1806,
+   "item": "A Detroit letter of 4 June headed 'NO INDIAN WAR'",
+   "papers": "fewer than 7",
+   "kind": "below the rule",
+   "reason": "Found in the gap search, in fewer papers.",
+   "source": "stories_1806.json#not_admitted/Below the selection"
+  },
+  {
+   "year": 1807,
+   "item": "The List of Acts passed during the second session of the Ninth Congress",
+   "papers": 10,
+   "kind": "digest, list or proceedings",
+   "reason": "An index of the session's unrelated laws, treated like a digest.",
+   "source": "stories_1807.json#not_admitted/The List of Acts passed during the second session of the Ninth Congress (10 papers)"
+  },
+  {
+   "year": 1807,
+   "item": "The act repealing the salt duties",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "In 5 papers by its enacting text.",
+   "source": "stories_1807.json#not_admitted/Other laws printed by authority"
+  },
+  {
+   "year": 1807,
+   "item": "The act on Virginia military warrants",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "In 7 papers by its enacting text, one of them a weekly legal notice in the Virginia Argus; not chosen.",
+   "source": "stories_1807.json#not_admitted/Other laws printed by authority"
+  },
+  {
+   "year": 1807,
+   "item": "The act suspending the non-importation act",
+   "papers": 1,
+   "kind": "below the rule",
+   "reason": "In 1 paper by its enacting text.",
+   "source": "stories_1807.json#not_admitted/Other laws printed by authority"
+  },
+  {
+   "year": 1807,
+   "item": "The President's proclamation suspending the non-importation act further (March)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Not chosen: its month and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Other laws printed by authority"
+  },
+  {
+   "year": 1807,
+   "item": "News digests: runs of London and continental paragraphs printed in pieces, such as the London news by the Manchester packet and the Hamburg and Berlin paragraphs of January",
+   "papers": null,
+   "kind": "digest, list or proceedings",
+   "reason": "Digests of unrelated paragraphs; single paragraphs from them that reach 9 papers are admitted.",
+   "source": "stories_1807.json#not_admitted/News digests"
+  },
+  {
+   "year": 1807,
+   "item": "The President's messages of 26 and 28 January on the Burr affair",
+   "papers": "1 and 4 by their openings",
+   "kind": "below the rule",
+   "reason": "Each is in fewer than 7 papers counted by its opening.",
+   "source": "stories_1807.json#not_admitted/Other Burr items"
+  },
+  {
+   "year": 1807,
+   "item": "Mr. Mead's letter on the Burr affair",
+   "papers": 3,
+   "kind": "below the rule",
+   "reason": "In 3 papers.",
+   "source": "story_discovery_1807/README.md#Not admitted/Mead's letter (3)"
+  },
+  {
+   "year": 1807,
+   "item": "Reports that Burr was bailed at Natchez",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers.",
+   "source": "stories_1807.json#not_admitted/Other Burr items"
+  },
+  {
+   "year": 1807,
+   "item": "A Richmond report of Burr's examination that ends 'he should not commit Col. Burr' (April)",
+   "papers": 2,
+   "kind": "below the rule",
+   "reason": "A different item from Marshall's opinion, in 2 papers.",
+   "source": "stories_1807.json#not_admitted/Other Burr items"
+  },
+  {
+   "year": 1807,
+   "item": "A New Hampshire Gazette commentary of 6 October quoting the verdict",
+   "papers": 1,
+   "kind": "other",
+   "reason": "A commentary that quotes the verdict, not a printing of it.",
+   "source": "stories_1807.json#not_admitted/Other Burr items"
+  },
+  {
+   "year": 1807,
+   "item": "The President's message of 19 February printed without Monroe and Pinkney's letter, and later articles that quote it",
+   "papers": null,
+   "kind": "other",
+   "reason": "It is counted under the letter where the letter is printed, and not otherwise.",
+   "source": "stories_1807.json#not_admitted/The President's message of 19 February without the letter"
+  },
+  {
+   "year": 1807,
+   "item": "A Norfolk report of the opening days of the court of inquiry",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "A different item from the court's opinion, in 5 papers.",
+   "source": "stories_1807.json#not_admitted/The court of inquiry's opening days (5 papers)"
+  },
+  {
+   "year": 1807,
+   "item": "The House committee's second report on aggressions (24 November)",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Candidates in 7 or 8 papers not chosen in this round"
+  },
+  {
+   "year": 1807,
+   "item": "The President's proclamation pardoning army deserters (19 October)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Candidates in 7 or 8 papers not chosen in this round"
+  },
+  {
+   "year": 1807,
+   "item": "The War Department's circular to the governors on volunteer companies (3 August)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Candidates in 7 or 8 papers not chosen in this round"
+  },
+  {
+   "year": 1807,
+   "item": "The resolutions of the Norfolk and Portsmouth meeting of 24 June",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Candidates in 7 or 8 papers not chosen in this round"
+  },
+  {
+   "year": 1807,
+   "item": "A London report in the Courier of 14 April of peace between England, Russia and Turkey",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Candidates in 7 or 8 papers not chosen in this round"
+  },
+  {
+   "year": 1807,
+   "item": "The articles of the peace of Tilsit",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Candidates in 7 or 8 papers not chosen in this round"
+  },
+  {
+   "year": 1807,
+   "item": "The National Intelligencer's report that Britain disclaims searching ships of war (28 September)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Candidates in 7 or 8 papers not chosen in this round"
+  },
+  {
+   "year": 1807,
+   "item": "Bennigsen's dispatch of 10 February",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1807.json#not_admitted/Candidates in 7 or 8 papers not chosen in this round"
+  },
+  {
+   "year": 1807,
+   "item": "The President's message of 18 December on the embargo",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers by 31 December.",
+   "source": "stories_1807.json#not_admitted/The Embargo"
+  },
+  {
+   "year": 1807,
+   "item": "The Embargo Act of 22 December",
+   "papers": "5 by 31 December",
+   "kind": "below the rule",
+   "reason": "In 5 papers by 31 December; its January printings are in the reviewed story of 1808.",
+   "source": "stories_1807.json#not_admitted/The Embargo"
+  },
+  {
+   "year": 1807,
+   "item": "The constitution of the Republic of Hayti, printed in full by the Alexandria Daily Advertiser (7 and 10 February)",
+   "papers": 1,
+   "kind": "below the rule",
+   "reason": "A different item from the Hayti report, in 1 paper.",
+   "source": "stories_1807.json#for_user_decision/News from the Republic of Hayti (Baltimore, 3 February; 9 papers)"
+  },
+  {
+   "year": 1807,
+   "item": "Fourth of July toasts naming seamen of the Chesapeake",
+   "papers": 2,
+   "kind": "below the rule",
+   "reason": "Other items, in 2 papers.",
+   "source": "stories_1807.json#for_user_decision/Robert MacDonald's death and funeral (Norfolk, 29 June; 7 papers)"
+  },
+  {
+   "year": 1807,
+   "item": "'An act to prohibit the importation of slaves', 2 March 1807, printed in full 'by authority'",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "Its text is in 5 papers, below the rule like the other laws printed by authority in fewer than 7; its title in the list of acts and in debate reports are other items.",
+   "source": "stories_1807_round2.json#not_admitted/The act to prohibit the importation of slaves"
+  },
+  {
+   "year": 1807,
+   "item": "The act continuing the suspension of trade with parts of St. Domingo",
+   "papers": "3 or 4",
+   "kind": "below the rule",
+   "reason": "Its text is in 3 or 4 papers, below the rule.",
+   "source": "stories_1807_round2.json#not_admitted/The act continuing the suspension of trade with parts of St. Domingo"
+  },
+  {
+   "year": 1808,
+   "item": "The militia detachment act of 30 March",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers by its own text; the finder's 9 includes the list of acts.",
+   "source": "stories_1808.json#not_admitted/Laws and resolutions below 7 papers by their own text"
+  },
+  {
+   "year": 1808,
+   "item": "The act arming the militia",
+   "papers": "fewer than 7",
+   "kind": "below the rule",
+   "reason": "Below 7 papers by its own text.",
+   "source": "stories_1808.json#not_admitted/Laws and resolutions below 7 papers by their own text"
+  },
+  {
+   "year": 1808,
+   "item": "The act raising an additional military force",
+   "papers": "fewer than 7",
+   "kind": "below the rule",
+   "reason": "Below 7 papers by its own text.",
+   "source": "stories_1808.json#not_admitted/Laws and resolutions below 7 papers by their own text"
+  },
+  {
+   "year": 1808,
+   "item": "The House resolution on when the embargo could be removed (January)",
+   "papers": "7 by the finder",
+   "kind": "below the rule",
+   "reason": "Below 7 papers by its own text.",
+   "source": "stories_1808.json#not_admitted/Laws and resolutions below 7 papers by their own text"
+  },
+  {
+   "year": 1808,
+   "item": "G. W. Campbell's resolution, which repeats the suspension act's words in debate reports",
+   "papers": null,
+   "kind": "below the rule",
+   "reason": "Below 7 papers by its own text.",
+   "source": "stories_1808.json#not_admitted/Laws and resolutions below 7 papers by their own text"
+  },
+  {
+   "year": 1808,
+   "item": "The Supplemental Journal of the House: the secret proceedings of 26 February and 30 March",
+   "papers": "9 only with a November reprint and both Alexandria titles",
+   "kind": "digest, list or proceedings",
+   "reason": "Procedural entries printed in parts.",
+   "source": "stories_1808.json#not_admitted/The Supplemental Journal of the House (secret proceedings of 26 February and 30 March)"
+  },
+  {
+   "year": 1808,
+   "item": "Timothy Pickering's letter to Governor Sullivan (February)",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers; the New Hampshire Gazette prints only an answer that quotes it.",
+   "source": "stories_1808.json#not_admitted/Timothy Pickering's letter to Governor Sullivan (February)"
+  },
+  {
+   "year": 1808,
+   "item": "Canning's notice of the blockade of Copenhagen and Zealand",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "Not one item: the Foreign Office notice of 4 May is in 6 papers.",
+   "source": "stories_1808.json#not_admitted/Canning's notice of the blockade of Copenhagen and Zealand"
+  },
+  {
+   "year": 1808,
+   "item": "The Armstrong papers on the Berlin decree",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers in spring.",
+   "source": "stories_1808.json#not_admitted/The Armstrong papers on the Berlin decree"
+  },
+  {
+   "year": 1808,
+   "item": "Article 12 of the French convention, quoted inside different editorials",
+   "papers": null,
+   "kind": "other",
+   "reason": "A treaty article quoted in editorials, not one printed item.",
+   "source": "stories_1808.json#not_admitted/Article 12 of the French convention"
+  },
+  {
+   "year": 1808,
+   "item": "News digests and mixed reports: the London paragraphs of 23 February on papers laid before the Commons, the outline of Parliament's proceedings in May, the Madrid paragraph on the Duke of Berg (August), the London paragraph on Joseph Bonaparte at Madrid (October) and the news by the ship Camilla from Cadiz (October)",
+   "papers": null,
+   "kind": "digest, list or proceedings",
+   "reason": "Digest paragraphs and mixed reports, not single items; the Camilla news came in two New York wordings and several letters.",
+   "source": "stories_1808.json#not_admitted/News digests and mixed reports"
+  },
+  {
+   "year": 1808,
+   "item": "Lord Collingwood's letter and the 'Note 1' from Cadiz",
+   "papers": "6 each",
+   "kind": "below the rule",
+   "reason": "Two items, in 6 papers each.",
+   "source": "stories_1808.json#not_admitted/News digests and mixed reports"
+  },
+  {
+   "year": 1808,
+   "item": "The resolutions of the committee on foreign relations and the debates on them (November and December)",
+   "papers": "up to 27 printings",
+   "kind": "digest, list or proceedings",
+   "reason": "Daily proceedings in which the resolutions recur, treated like a digest.",
+   "source": "stories_1808.json#not_admitted/The resolutions of the committee on foreign relations and the debates on them"
+  },
+  {
+   "year": 1808,
+   "item": "Other documents sent with the President's message of 8 November: Madison to Armstrong of 22 May and 8 February, the letters to Pinkney, and Armstrong's letters of February and April",
+   "papers": "5 to 7 each",
+   "kind": "not chosen: month and kind covered",
+   "reason": "Three documents, one British, one French and one American, already stand for the set.",
+   "source": "stories_1808.json#not_admitted/Other documents sent with the message of 8 November"
+  },
+  {
+   "year": 1808,
+   "item": "The President's message of 4 February with Clark's papers",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "The President's message of 2 February sending the Orders in Council",
+   "papers": "4 by its text",
+   "kind": "below the rule",
+   "reason": "In 4 papers by its text.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "The Navy Department's letter on seamen (February)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "Lord Grenville's speech in the Lords on the Orders in Council, 5 May",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "The Liverpool 'Political Review' on Rose's return",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "A forecast, in a month and kind already covered.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "Jefferson's answer to the Democratic Ward of Philadelphia",
+   "papers": "about 5 in full",
+   "kind": "below the rule",
+   "reason": "In about 5 papers in full.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "A table of how the states choose their electors",
+   "papers": "5 by phrase search",
+   "kind": "below the rule",
+   "reason": "In 5 papers by phrase search.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "Mr. Randolph's resolution for an inquiry into General Wilkinson",
+   "papers": "4 by its text",
+   "kind": "below the rule",
+   "reason": "In 4 papers by its text.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "Gallatin's letter to the Senate committee on enforcing the embargo (December)",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "The Treasury's certificate on the two millions (September)",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "Joseph Bonaparte's proclamation (August)",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "Champagny's report of 1 September",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers.",
+   "source": "stories_1808.json#not_admitted/Candidates in 6 or 7 papers not chosen"
+  },
+  {
+   "year": 1808,
+   "item": "The day-by-day debates of November and December on the embargo, among them those on Giles's enforcement bill",
+   "papers": "many printings",
+   "kind": "digest, list or proceedings",
+   "reason": "Proceedings rather than single items.",
+   "source": "story_discovery_1808/README.md#Candidates for a later round/The embargo debates of November and December"
+  },
+  {
+   "year": 1809,
+   "item": "The appropriation, relief, land and military acts of the two sessions",
+   "papers": "5 or 6 each",
+   "kind": "below the rule",
+   "reason": "Counted by its own first section, no act reaches 7 papers; the finder had chained the acts together.",
+   "source": "stories_1809.json#not_admitted/The appropriation, relief, land and military acts of the two sessions (5 or 6 papers each)"
+  },
+  {
+   "year": 1809,
+   "item": "The British order in council of 21 December 1808, as a separate item",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers by its own words; in June it is printed inside the Senate papers, which are admitted.",
+   "source": "stories_1809.json#not_admitted/The order in council of 21 December 1808 as a separate item (6)"
+  },
+  {
+   "year": 1809,
+   "item": "The Treasury report of December 1808",
+   "papers": "2 in 1809",
+   "kind": "below the rule",
+   "reason": "Two papers printed it in 1809; the finder had chained it to the year's other reports.",
+   "source": "stories_1809.json#not_admitted/The Treasury report of December 1808 (2 papers in 1809)"
+  },
+  {
+   "year": 1809,
+   "item": "The Treasury report of June 1809",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers by its own words; the report of December 1809 is admitted.",
+   "source": "stories_1809.json#not_admitted/The Treasury report of June 1809 (6)"
+  },
+  {
+   "year": 1809,
+   "item": "A Boston report of a ship captain's news from Lisbon",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/Captain Sawyer's report from Portugal (6)"
+  },
+  {
+   "year": 1809,
+   "item": "A report of an interview with the bearer of Mr. Pinkney's dispatches",
+   "papers": 5,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/An interview with Mr. Purviance (5)"
+  },
+  {
+   "year": 1809,
+   "item": "Reports of Lord Cochrane's fire ships in Basque Roads",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/Lord Cochrane's fire ships in Basque Roads (6)"
+  },
+  {
+   "year": 1809,
+   "item": "The British dispatches on Corunna and Sir John Moore's death",
+   "papers": "6 each",
+   "kind": "below the rule",
+   "reason": "Each is below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/The British dispatches on Corunna and Sir John Moore's death (6 each)"
+  },
+  {
+   "year": 1809,
+   "item": "The King's speech delivered by the Lords Commissioners to both Houses of Parliament",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/The King's speech and the Erfurt papers (6 each)"
+  },
+  {
+   "year": 1809,
+   "item": "The papers on the overtures from Erfurt, laid before Parliament",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/The King's speech and the Erfurt papers (6 each)"
+  },
+  {
+   "year": 1809,
+   "item": "Pinkney's letter to Canning of October 1808",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/Pinkney's letter to Canning of October 1808 (6)"
+  },
+  {
+   "year": 1809,
+   "item": "The Archduke Charles's statement on his resignation",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/The Archduke Charles's resignation (6)"
+  },
+  {
+   "year": 1809,
+   "item": "A summary of the bill on commercial intercourse",
+   "papers": 3,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words.",
+   "source": "stories_1809.json#not_admitted/The summary of the bill on commercial intercourse (3)"
+  },
+  {
+   "year": 1809,
+   "item": "A letter from the city of Santo Domingo: 'We still remain besieged by the Spaniards'",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "Below 7 papers counted by its own words, with no parent story to stand under.",
+   "source": "stories_1809.json#not_admitted/The letter from Santo Domingo, 'We still remain besieged by the Spaniards' (6)"
+  },
+  {
+   "year": 1809,
+   "item": "The National Intelligencer on the dispatches brought by the Union (20 March)",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/The Intelligencer on the dispatches by the Union (20 March, 7)"
+  },
+  {
+   "year": 1809,
+   "item": "The French bulletins from Ebersdorf of 28 May to 2 June",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/The French bulletins from Ebersdorf of 28 May to 2 June (8)"
+  },
+  {
+   "year": 1809,
+   "item": "The Austrian bulletin of the battle of Raab",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/The Austrian bulletin of the battle of Raab (7)"
+  },
+  {
+   "year": 1809,
+   "item": "General Venegas's dispatch on Almonacid",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/General Venegas's dispatch on Almonacid (7)"
+  },
+  {
+   "year": 1809,
+   "item": "The Archduke Charles's order of the day after Wagram",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/The Archduke Charles's order of the day after Wagram (7)"
+  },
+  {
+   "year": 1809,
+   "item": "The Emperor Francis's general order",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/The Emperor Francis's general order (7)"
+  },
+  {
+   "year": 1809,
+   "item": "A British colonel's letter from Badajoz",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/A British colonel's letter from Badajoz (7)"
+  },
+  {
+   "year": 1809,
+   "item": "Mr. Troup's resolutions in the House",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/Troup's resolutions in the House (8)"
+  },
+  {
+   "year": 1809,
+   "item": "The Senate's proceedings of 1 December",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/The Senate's proceedings of 1 December (7)"
+  },
+  {
+   "year": 1809,
+   "item": "The President's message of 16 December with extracts of Pinkney's letters",
+   "papers": 7,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Its months and kind of news were already covered by the admitted stories.",
+   "source": "stories_1809.json#not_admitted/The President's message of 16 December with extracts of Pinkney's letters (7)"
+  },
+  {
+   "year": 1809,
+   "item": "The list of appointments made by the new President and the Senate",
+   "papers": 7,
+   "kind": "digest, list or proceedings",
+   "reason": "A list of names, left out in the scan check; it can be added after a scan check of its printings.",
+   "source": "stories_1809.json#not_admitted/The list of appointments (7)"
+  },
+  {
+   "year": 1809,
+   "item": "A decree of the King of Holland",
+   "papers": 8,
+   "kind": "not chosen: month and kind covered",
+   "reason": "Left out in the check because May was covered by six other stories; it can be added after a scan check of its printings.",
+   "source": "stories_1809.json#not_admitted/The Dutch decree (8)"
+  },
+  {
+   "year": 1809,
+   "item": "Runs of London and Hamburg paragraphs",
+   "papers": null,
+   "kind": "digest, list or proceedings",
+   "reason": "Digests of unrelated paragraphs.",
+   "source": "stories_1809.json#not_admitted/Runs of London and Hamburg paragraphs"
+  },
+  {
+   "year": 1809,
+   "item": "Ship-news digests: the brig Favorite, the Fair American, the Paragon, the Golden Age and the Salem Register's French papers",
+   "papers": null,
+   "kind": "digest, list or proceedings",
+   "reason": "Digests of unrelated paragraphs.",
+   "source": "stories_1809.json#not_admitted/Ship-news digests (the brig Favorite, the Fair American, the Paragon, the Golden Age, the Salem Register's French papers)"
+  },
+  {
+   "year": 1809,
+   "item": "Debates, day-by-day proceedings and lists",
+   "papers": null,
+   "kind": "digest, list or proceedings",
+   "reason": "Not single printed items: proceedings and lists made of many unrelated parts.",
+   "source": "stories_1809.json#not_admitted/Debates, day-by-day proceedings and lists"
+  },
+  {
+   "year": 1809,
+   "item": "A mate's letter on a swordfish striking the schooner Sarah (14 to 29 November)",
+   "papers": 7,
+   "kind": "private persons",
+   "reason": "It reaches the rule but turns on private persons; on 13 November 2026 the owner decided it stays out.",
+   "source": "stories_1809.json#for_the_owner/A letter on a swordfish striking the schooner Sarah (7 papers, 14 to 29 November)"
+  },
+  {
+   "year": 1809,
+   "item": "The War Department's notice for ration proposals, printed weekly from July",
+   "papers": 6,
+   "kind": "below the rule",
+   "reason": "In 6 papers; no standing notice of 1809 reaches 9.",
+   "source": "story_discovery_1809/README.md#For you to decide/the War Department's notice for ration proposals"
+  },
+  {
+   "year": 1809,
+   "item": "The Senate's bill of the act of 28 June, printed a week before the act",
+   "papers": 4,
+   "kind": "below the rule",
+   "reason": "In 4 papers, and its later sections differ from the act, so it is not counted with it.",
+   "source": "story_discovery_1809/README.md#For you to decide/the Senate's bill, printed in four papers a week earlier"
+  }
+ ],
+ "accounted": [
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "Wilkes's speech in the Commons",
+   "where": [
+    "stories_1776_round2.json#wilkes-speech-commons"
+   ],
+   "note": "Admitted in round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "Governor Penn examined in the Lords",
+   "where": [
+    "stories_1776_round2.json#penn-before-the-lords"
+   ],
+   "note": "Admitted in round two as a parent story with two groups."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "The debate on the restraining (Prohibitory) bill",
+   "where": [
+    "stories_1776_round2.json#prohibitory-bill-commons"
+   ],
+   "note": "Admitted in round two as a parent story with two groups."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "duplicate of stories_1776_round2.json#not_admitted/Deserters from the Cork regiments (PG 01-31, PL 02-03, PP 02-05, VGb 02-16, VGa 02-17)",
+   "item": "Deserters from the Cork regiments",
+   "note": "Counted again in round two and not admitted; listed from round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "Congress on refusing Continental bills",
+   "where": [
+    "stories_1776_round2.json#congress-bills-of-credit"
+   ],
+   "note": "Round two found Congress's resolution of 11 January, admitted, and separate committee notices that quote it."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "duplicate of stories_1776_round2.json#not_admitted/Committee of inspection notices under the bills-of-credit resolution (PJ 02-07 to PJ 04-24; 18 printings in 5 Philadelphia papers)",
+   "item": "The committee notices that quote the bills resolution",
+   "note": "What round one took for a notice repeated for weeks; listed from round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "Congress's fast day of 17 May",
+   "where": [
+    "stories_1776_round2.json#congress-fast-day-1776"
+   ],
+   "note": "Admitted in round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "Barry's capture of the Edward",
+   "where": [
+    "stories_1776_round2.json#barry-takes-edward"
+   ],
+   "note": "Admitted in round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "The sloop Liberty's gunpowder",
+   "where": [
+    "stories_1776_round2.json#sloop-liberty-gunpowder"
+   ],
+   "note": "Admitted in round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "The Howe brothers' declarations",
+   "where": [
+    "stories_1776_round2.json#howe-declarations-1776"
+   ],
+   "note": "Admitted in round two as a parent story with two groups; the other Howe documents are listed from round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "Gates's letter on Carleton's retreat",
+   "where": [
+    "stories_1776_round2.json#gates-carleton-retreat"
+   ],
+   "note": "Admitted in round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776.json#not_admitted/Candidates in 7 or 8 papers, not admitted in this round",
+   "status": "admitted later",
+   "item": "Reports of Cherokee and Creek plans",
+   "where": [
+    "stories_1776_round3.json#stuart-letter-to-frontier-inhabitants",
+    "stories_1776_round3.json#savannah-river-letter-13-may-1776"
+   ],
+   "note": "Read in round three under the rule 'every story alike' and admitted as two stories."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776_round2.json#not_admitted/Reports of Cherokee and Creek plans (8 papers each)",
+   "status": "admitted later",
+   "item": "Reports of Cherokee and Creek plans",
+   "where": [
+    "stories_1776_round3.json#stuart-letter-to-frontier-inhabitants",
+    "stories_1776_round3.json#savannah-river-letter-13-may-1776"
+   ],
+   "note": "Admitted in round three as two stories."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776_round3.json#not_admitted/Still out by earlier decisions",
+   "status": "duplicate of stories_1776_round2.json#not_admitted/Committee of inspection notices under the bills-of-credit resolution (PJ 02-07 to PJ 04-24; 18 printings in 5 Philadelphia papers)",
+   "item": "The committees' notices under the bills resolution",
+   "note": "Listed from round two."
+  },
+  {
+   "year": 1776,
+   "source": "stories_1776_round3.json#not_admitted/Still out by earlier decisions",
+   "status": "duplicate of stories_1776_round2.json#not_admitted/A parody of the September declaration (PG 10-02, VGa 10-25, VGb 10-25, FJ 10-29)",
+   "item": "The parody of the Howes' September declaration",
+   "note": "Listed from round two."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Candidates in 6 papers",
+   "status": "admitted later",
+   "item": "The list of the powers at war with France",
+   "where": [
+    "stories_1793_round2.json#powers-at-war-with-france-list"
+   ],
+   "note": "Admitted in round two at the 6-paper rule."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Candidates in 6 papers",
+   "status": "admitted later",
+   "item": "The London Gazette bulletin from Tournai of 3 May",
+   "where": [
+    "stories_1793_round2.json#tournai-bulletin-3-may"
+   ],
+   "note": "Admitted in round two at the 6-paper rule."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Candidates in 6 papers",
+   "status": "admitted later",
+   "item": "Hamilton's circular to the collectors, with the President's rules on neutrality",
+   "where": [
+    "stories_1793_round2.json#treasury-circular-rules-on-neutrality"
+   ],
+   "note": "Admitted in round two at the 6-paper rule."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Candidates in 6 papers",
+   "status": "admitted later",
+   "item": "The President of the National Convention's declaration of a plot",
+   "where": [
+    "stories_1793_round2.json#convention-president-declaration-plot"
+   ],
+   "note": "Admitted in round two at the 6-paper rule."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Candidates in 6 papers",
+   "status": "admitted later",
+   "item": "The Cadiz letter of 24 June",
+   "where": [
+    "stories_1793_round2.json#cadiz-letter-24-june"
+   ],
+   "note": "Admitted in round two at the 6-paper rule."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Candidates in 6 papers",
+   "status": "admitted later",
+   "item": "The commissioners' letter on General Dampierre's death",
+   "where": [
+    "stories_1793_round2.json#death-of-general-dampierre"
+   ],
+   "note": "Admitted in round two at the 6-paper rule."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Candidates in 6 papers",
+   "status": "admitted later",
+   "item": "The War Office paragraph on the treaty commissioners",
+   "where": [
+    "stories_1793_round3.json#war-office-treaty-commissioners-1793"
+   ],
+   "note": "Admitted in round three under the rule 'every story alike'."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Candidates in 6 papers",
+   "status": "duplicate of stories_1793_round2.json#not_admitted/Not recommended at 6 papers",
+   "item": "The Rome and Paris digest paragraphs and the Amsterdam rumour",
+   "note": "Not admitted in round two; listed from there."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Left out for framing",
+   "status": "admitted later",
+   "item": "The German Creek letter",
+   "where": [
+    "stories_1793_round3.json#german-creek-letter-1793"
+   ],
+   "note": "Admitted in round three under the rule 'every story alike'."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Left out for framing",
+   "status": "admitted later",
+   "item": "A ship captain's account of the burning of Cap Français",
+   "where": [
+    "stories_1793_round3.json#fanning-account-cap-francais"
+   ],
+   "note": "Admitted in round three under the rule 'every story alike'."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Left out for framing",
+   "status": "admitted later",
+   "item": "The brig Mary's report of the dead at Cap Français",
+   "where": [
+    "stories_1793_round3.json#brig-mary-passengers-cap-francais"
+   ],
+   "note": "Admitted in round three under the rule 'every story alike'."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Left out for framing",
+   "status": "duplicate of stories_1793_round3.json#not_admitted/The civil commissioners' proclamation of 21 June",
+   "item": "The civil commissioners' proclamation of 21 June",
+   "note": "Counted in round three and not admitted; listed from there."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Left out for framing",
+   "status": "duplicate of stories_1793_round3.json#not_admitted/The Fugitive Slave Act",
+   "item": "The Fugitive Slave Act",
+   "note": "Counted in round three and not admitted; listed from there."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Left out for framing",
+   "status": "duplicate of stories_1793_round3.json#not_admitted/The letter of Polverel and Sonthonax to Genêt",
+   "item": "The letter of Polverel and Sonthonax to Genêt",
+   "note": "Counted in round three and not admitted; listed from there."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793.json#not_admitted/Left out for framing",
+   "status": "duplicate of stories_1793_round3.json#not_admitted/Private people (5 papers each)",
+   "item": "Two prosecutions of seamen, and a killing near Middletown",
+   "note": "Counted in round three and not admitted; listed from there."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793_round2.json#not_admitted/Left out for framing (6 papers)",
+   "status": "admitted later",
+   "item": "The War Office paragraph on the treaty commissioners",
+   "where": [
+    "stories_1793_round3.json#war-office-treaty-commissioners-1793"
+   ],
+   "note": "Admitted in round three under the rule 'every story alike'."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793_round2.json#not_admitted/Left out for framing (6 papers)",
+   "status": "admitted later",
+   "item": "The German Creek letter",
+   "where": [
+    "stories_1793_round3.json#german-creek-letter-1793"
+   ],
+   "note": "Admitted in round three under the rule 'every story alike'."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793_round2.json#not_admitted/Left out for framing (6 papers)",
+   "status": "admitted later",
+   "item": "A ship captain's account of the burning of Cap Français",
+   "where": [
+    "stories_1793_round3.json#fanning-account-cap-francais"
+   ],
+   "note": "Admitted in round three under the rule 'every story alike'."
+  },
+  {
+   "year": 1793,
+   "source": "stories_1793_round2.json#not_admitted/Left out for framing (6 papers)",
+   "status": "admitted later",
+   "item": "The brig Mary's report of the dead at Cap Français",
+   "where": [
+    "stories_1793_round3.json#brig-mary-passengers-cap-francais"
+   ],
+   "note": "Admitted in round three under the rule 'every story alike'."
+  },
+  {
+   "year": 1807,
+   "source": "stories_1807.json#for_user_decision/The act to prohibit the importation of slaves (2 March 1807)",
+   "status": "duplicate of stories_1807_round2.json#not_admitted/The act to prohibit the importation of slaves",
+   "item": "The act to prohibit the importation of slaves",
+   "note": "Counted in round two and not admitted; listed from there."
+  },
+  {
+   "year": 1807,
+   "source": "stories_1807.json#for_user_decision/News from the Republic of Hayti (Baltimore, 3 February; 9 papers)",
+   "status": "admitted later",
+   "item": "The Baltimore report of news from Hayti",
+   "where": [
+    "stories_1807_round2.json#hayti-news-baltimore-february-1807"
+   ],
+   "note": "Admitted in round two (9 papers); the constitution that one paper printed is listed as an item."
+  },
+  {
+   "year": 1807,
+   "source": "stories_1807.json#for_user_decision/News from the Republic of Hayti (Baltimore, 3 February; 9 papers)",
+   "status": "duplicate of stories_1807_round2.json#not_admitted/The act continuing the suspension of trade with parts of St. Domingo",
+   "item": "The act on trade with parts of St. Domingo, named in this record",
+   "note": "Counted in round two and not admitted; listed from there."
+  },
+  {
+   "year": 1807,
+   "source": "stories_1807.json#for_user_decision/Robert MacDonald's death and funeral (Norfolk, 29 June; 7 papers)",
+   "status": "admitted later",
+   "item": "A Norfolk report of a seaman's funeral",
+   "where": [
+    "stories_1807_round2.json#macdonald-funeral-norfolk-1807"
+   ],
+   "note": "Admitted in round two and kept by the owner on 12 November 2026; the Fourth of July toasts are listed as an item."
+  },
+  {
+   "year": 1807,
+   "source": "stories_1807.json#for_user_decision/The National Intelligencer on the seamen demanded by the Leopard (29 July; 8 papers)",
+   "status": "admitted later",
+   "item": "The National Intelligencer on the seamen the Leopard sought",
+   "where": [
+    "stories_1807_round2.json#national-intelligencer-on-the-seamen-1807"
+   ],
+   "note": "Admitted in round two."
+  },
+  {
+   "year": 1807,
+   "source": "stories_1807.json#for_user_decision/General Wilkinson's speech in the court at New Orleans (7 papers)",
+   "status": "admitted later",
+   "item": "General Wilkinson's speech in the court at New Orleans",
+   "where": [
+    "stories_1807_round2.json#wilkinson-speech-new-orleans-1806"
+   ],
+   "note": "Admitted in round two (8 papers)."
+  },
+  {
+   "year": 1807,
+   "source": "stories_1807.json#for_user_decision/Names in admitted stories, outside the excerpts",
+   "status": "note on admitted stories",
+   "item": "Names in admitted stories, outside the excerpts",
+   "note": "Not an item: the excerpts of admitted stories end before the names of people arrested on suspicion, of the seamen and of a man killed by a shot from the Leander."
+  },
+  {
+   "year": 1808,
+   "source": "stories_1808.json#for_user_decision/The Embargo Act's December 1807 printings",
+   "status": "counting decision about admitted stories",
+   "item": "The Embargo Act's December 1807 printings",
+   "where": [
+    "stories_1808.json#embargo-act-22-dec-1807"
+   ],
+   "note": "A reviewed year's group holds only that year's printings, so the 1808 group holds the act's January printings; the December printings are listed under 1807."
+  },
+  {
+   "year": 1808,
+   "source": "stories_1808.json#for_user_decision/Sub-stories below 7 papers",
+   "status": "counting decision about admitted stories",
+   "item": "Sub-stories below 7 papers under parents that reach 7",
+   "where": [
+    "stories_1808.json#embargo-act-22-dec-1807",
+    "stories_1808.json#embargo-supplementary-act-9-jan",
+    "stories_1808.json#embargo-additional-act-12-march",
+    "stories_1808.json#embargo-act-25-april",
+    "stories_1808.json#orders-in-council-11-nov-1807",
+    "stories_1808.json#cintra-convention",
+    "stories_1808.json#canning-to-pinkney-23-september"
+   ],
+   "note": "Admitted as sub-stories by the rule agreed for 1776 round two."
+  },
+  {
+   "year": 1808,
+   "source": "stories_1808.json#for_user_decision/Two parents grouped by subject",
+   "status": "counting decision about admitted stories",
+   "item": "Two parent stories grouped by subject",
+   "where": [
+    "stories_1808.json#decrees-on-neutral-trade",
+    "stories_1808.json#embargo-in-force-spring-1808"
+   ],
+   "note": "Separate documents grouped under one parent each by subject."
+  },
+  {
+   "year": 1808,
+   "source": "stories_1808.json#for_user_decision/Two printed forms counted together",
+   "status": "counting decision about admitted stories",
+   "item": "Two printed forms counted together",
+   "where": [
+    "stories_1808.json#canning-on-america-24-june",
+    "stories_1808.json#jefferson-answer-embargo-petitions"
+   ],
+   "note": "Canning's speech (report and extract) and the President's answer to the petitions (to Boston and to Portland) are each counted as one item."
+  },
+  {
+   "year": 1808,
+   "source": "stories_1808.json#for_user_decision/The 'Melancholy Event' near Burlington, Vermont (August; 7 papers)",
+   "status": "admitted later",
+   "item": "A Boston report headed 'Melancholy Event', from near Burlington, Vermont",
+   "where": [
+    "stories_1808_round2.json#burlington-revenue-cutter-1808"
+   ],
+   "note": "Admitted in round two (7 papers); its excerpts end before the names."
+  },
+  {
+   "year": 1808,
+   "source": "stories_1808.json#for_user_decision/General Wilkinson's letters to Robert Goodloe Harper (October-November; 7 papers)",
+   "status": "admitted later",
+   "item": "General Wilkinson's letters to Robert Goodloe Harper",
+   "where": [
+    "stories_1808_round2.json#wilkinson-harper-correspondence-1808"
+   ],
+   "note": "Admitted in round two (7 papers)."
+  },
+  {
+   "year": 1808,
+   "source": "stories_1808.json#for_user_decision/Governor Sevier's letter on the Creeks (May)",
+   "status": "admitted later",
+   "item": "Governor Sevier's letter on the Creeks",
+   "where": [
+    "stories_1808_round2.json#sevier-letter-marble-springs-1808"
+   ],
+   "note": "Admitted in round two (7 papers, 8 printings)."
+  },
+  {
+   "year": 1808,
+   "source": "stories_1808.json#for_user_decision/Allegations in the Wilkinson story",
+   "status": "note on admitted stories",
+   "item": "Allegations in the Wilkinson story",
+   "where": [
+    "stories_1808.json#clark-statement-on-wilkinson",
+    "stories_1808.json#wilkinson-randolph-letters"
+   ],
+   "note": "Not an item left out: Clark's statement and the Wilkinson-Randolph letters were admitted in round one with the claims labelled."
+  }
+ ]
+}
