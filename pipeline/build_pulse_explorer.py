@@ -9,11 +9,11 @@ import time
 # fails with EINVAL or EACCES. Writes are tried again a few times instead of failing the whole build.
 def _again(write):
     def go(self, *a, **k):
-        for attempt in range(6):
+        for attempt in range(20):   # up to 10 seconds: a preview server or a page check elsewhere can hold a file that long
             try:
                 return write(self, *a, **k)
             except OSError as e:
-                if attempt == 5 or e.errno not in (13, 22):
+                if attempt == 19 or e.errno not in (13, 22):
                     raise
                 time.sleep(.5)
     return go
@@ -29,11 +29,11 @@ def copy_if_changed(src, dst):
     src, dst = Path(src), Path(dst)
     if dst.exists() and dst.stat().st_size == src.stat().st_size and dst.read_bytes() == src.read_bytes():
         return
-    for attempt in range(5):
+    for attempt in range(20):
         try:
             shutil.copyfile(src, dst); return
         except OSError:
-            if attempt == 4: raise
+            if attempt == 19: raise
             time.sleep(.5)
 
 ROOT=Path(__file__).resolve().parent
@@ -66,10 +66,14 @@ REVIEWED={
         'expect':(16,2319)},
   1797:{'categories':[
           ('war','War, revolution and foreign news',['boyd-bantry-coverage','tenerife-defeat-report','camperdown-dispatches','algerine-sicilian-battle',
-                                                     'hermione-mutiny','barney-escapes-blockade','sonthonax-departure','quito-earthquake']),
+                                                     'hermione-mutiny','barney-escapes-blockade','sonthonax-departure','quito-earthquake',
+                                                     # round three (release v0.11.8, 23 November 2026): read again by the one rule at 4 papers
+                                                     'truguet-letter-6-november-1796-ireland','bournonville-letter-3-brumaire-neuwied','crauford-letter-27-october-1796-moreau-retreats',
+                                                     'berthier-letter-milan-28-november-1796','delarue-report-march-of-the-troops-august-1797','vienna-report-26-july-1797-peace-talks',
+                                                     'nassau-letter-26-september-1797']),
           ('ships','Ships, privateers and wrecks',['peace-cayenne-context','peace-and-plenty-boarding','brothers-privateer-boarding','two-sisters-wreck','havana-french-captures']),
           ('public','American public life',['adams-senate-farewell','special-session-1797','blount-affair','brown-house-fire','congress-opening-nov-1797',
-                                            'kosciuszko-land-warrant','jefferson-madison-letter','nh-governor-address-1797'])],
+                                            'kosciuszko-land-warrant','jefferson-madison-letter','nh-governor-address-1797','wilmington-report-12-october-1797-spanish-posts'])],
         'children':{'boyd-bantry-coverage':['boyd-core-report','fleet-return-account'],'peace-cayenne-context':['peace-seizure-report','cayenne-decree-commentary'],
                     'peace-and-plenty-boarding':['peace-and-plenty-report'],'hermione-mutiny':['hermione-particulars'],
                     'special-session-1797':['adams-special-session-speech','special-session-proclamation','special-session-house-answer'],
@@ -556,7 +560,7 @@ shutil.copyfile(ROOT/'radio.js',OUT/'radio.js')   # the radio's voice and sounds
 # The offline bundle: the two libraries the pages once loaded from jsdelivr are kept with the site, so it runs without the
 # internet (an exhibition machine): three.js r160 for the Telescope and qrcode-generator 1.4.4 for the exhibition's codes.
 (OUT/'lib').mkdir(exist_ok=True)
-for f in sorted((ROOT/'lib').glob('*.js')): shutil.copyfile(f,OUT/'lib'/f.name)
+for f in sorted((ROOT/'lib').glob('*.js')): copy_if_changed(f,OUT/'lib'/f.name)
 tele_html=(ROOT/'telescope.html').read_text(encoding='utf8').replace('__TELESCOPE_BOOT__',json.dumps(tele_boot,ensure_ascii=False).replace('</','<\\/'))
 assert '__TELESCOPE_BOOT__' not in tele_html
 (OUT/'telescope.html').write_text(fill(tele_html,'telescope',VER,N_STARS),encoding='utf8')

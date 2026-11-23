@@ -22,9 +22,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'outputs' / 'archive_errata'
 SITE = ROOT / 'outputs' / 'newspaper_pulses_space'
-# The reviewed years whose scan checks left structured verdicts (1797's review left notes only). After a new reviewed
-# year: rebuild the site (this script reads its data.json), run this script, and build again for the Findings page.
-YEARS = tuple(sorted(int(p.parent.name.rsplit('_', 1)[1]) for p in ROOT.glob('outputs/story_discovery_[0-9]*/scan_verdicts')))
+# The reviewed years whose scan checks left structured verdicts, in the year's folder or in a later round's subfolder
+# (1797's first two readings left notes only; its third reading, in round3/, left verdicts). After a new reviewed year:
+# rebuild the site (this script reads its data.json), run this script, and build again for the Findings page.
+YEARS = tuple(sorted({int(p.parent.name.rsplit('_', 1)[1]) for p in ROOT.glob('outputs/story_discovery_[0-9]*/scan_verdicts')}
+                     | {int(p.parent.parent.name.rsplit('_', 1)[1]) for p in ROOT.glob('outputs/story_discovery_[0-9]*/*/scan_verdicts')}))
 
 
 def read_csv(path):
@@ -35,7 +37,8 @@ def verdicts(year):
     """A reviewed year's scan verdicts: batches, hand boxes, then rechecks (sorted by name). A later file's fields win; a
     recheck that gives only a new grade and finding keeps the errors listed before it."""
     v = {}
-    for f in sorted(glob.glob(str(ROOT / f'outputs/story_discovery_{year}/scan_verdicts/*.json'))):
+    for f in sorted(glob.glob(str(ROOT / f'outputs/story_discovery_{year}/scan_verdicts/*.json'))
+                    + glob.glob(str(ROOT / f'outputs/story_discovery_{year}/*/scan_verdicts/*.json'))):
         d = json.loads(Path(f).read_text(encoding='utf8'))
         for r in (d if isinstance(d, list) else d.get('verdicts', d.get('items', []))):
             if isinstance(r, dict) and 'id' in r: v[r['id']] = {**v.get(r['id'], {}), **r}
@@ -204,6 +207,11 @@ for name, rows in (('filing.csv', filing), ('transcription.csv', trans)):
 
 problems = Counter(r['problem'] for r in filing)
 t, k, x = summary['transcription'], summary['dates']['kentucky'], summary['examples']
+# A year whose structured verdicts cover only a later round (1797: its third reading) says so.
+n_printings = {r['year']: len(r['observations']) for r in data['reviewed']}
+PARTIAL = ''.join(f' For {y} the count is the {b["checked"]} printings of its later reading; its other {n_printings[y] - b["checked"]} were '
+                  'checked against their scans before verdicts were recorded in this form.'
+                  for y, b in by_year.items() if b['checked'] < .9 * n_printings[y])
 pct = lambda a, b: f'{100 * a / b:.0f}%'
 (OUT / 'README.md').write_text(f'''# Errors found in the archive
 
@@ -245,7 +253,7 @@ pages, where only some are concerned), what is wrong, how it was found, and what
 
 Every printing of the reviewed stories of {", ".join(map(str, YEARS[:-1]))} and {YEARS[-1]} was read against its scan:
 {t["checked"]} printings, of which {t["changes_what_was_printed"]} ({pct(t["changes_what_was_printed"], t["checked"])}) carry a misreading
-that changes a fact (a number, a date, a name, or a word with another meaning) or leave printed text out. One row per
+that changes a fact (a number, a date, a name, or a word with another meaning) or leave printed text out.{PARTIAL} One row per
 printing: the newspaper, the date and page, which transcription the passage was taken from (RevX, or CA where RevX is
 missing or misfiled), whether printed text is left out, and the reviewers' notes, mostly in the form
 `scan '…' / transcription '…'`. A printing's notes may also list smaller errors beside the one that changes a fact.

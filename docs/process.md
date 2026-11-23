@@ -203,9 +203,17 @@ Four rounds then read the stories earlier rounds had held back for framing, by e
 - **Decisions:** on 13 November 2026 the owner kept every point the two reviews left open as built.
 - **Not admitted:** each year's ledger lists what was read and not admitted, with its reason (`not_admitted`: 16 entries for 1805 and 28 for 1809), and the stories that turn on private persons (`for_the_owner`: 2 entries for 1805, 1 for 1809).
 
+### 1797 read again by the one rule (data release v0.11.8, 23 November 2026)
+
+1797 was the first year read, on 6 November, before the admission rule existed: its 21 stories reach 2 to 5 papers, and items in 7 or more papers were never sought. Read again by the rule, no single item of 1797 reaches 7 papers, or even 6: the collection holds 8 series that year, and only 3 of them cover the whole year. The owner adopted a threshold of 4 papers for 1797 (as 1793 uses 6), and kept the 21 stories of the first reading, the 13 below the threshold as a recorded exception.
+
+- **8 new stories, 33 printings,** every one checked against its scan (10 faithful, 20 with minor misreadings, 3 with fact-changing ones), from Truguet's letter to the Directory passing on news from Brest about Ireland and Berthier's letter from Milan to a Vienna report on the peace talks and a Wilmington report on orders to deliver up the Spanish posts (release v0.11.8, 2,726 checks). 1797 now has 29 stories and 140 printings.
+- **One printing the earlier reading missed** (Adams's reply to the House in the *New Hampshire Gazette* of 13 December, on a page whose RevX text is filed elsewhere) is checked but waits for a correction release, because it joins an existing story whose topic row must change with it.
+- **Every rule and exception of every year** is now kept in one register, `docs/rules-and-exceptions.md`, with its situation and reasons.
+
 ### What the reviews read and did not admit (22 November 2026)
 
-By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items, each with the number of papers, its kind and its reason.
+By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8), each with the number of papers, its kind and its reason.
 
 - **Kinds:** below the rule (118), not chosen because its months and kind of news were already covered (80), digests, lists and proceedings (14), private persons (17) and other (54, most of them 1797's).
 - **Complete by check:** the script stops unless every key of `not_admitted`, `for_the_owner` and `for_user_decision` in every ledger (128 keys in 15 ledgers) is listed or accounted for: 32 items a later round admitted, 11 repeats, 4 counting decisions and 2 notes on admitted stories. It also checks that each of the 122 families of 1797 that were read is admitted or listed.
@@ -344,7 +352,7 @@ The pulse view is a direct translation of the admitted group records:
 Version 1 (below) is kept as `telescope-v1.html`.
 
 
-`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4, and 199 since v0.11.6).
+`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4, 199 since v0.11.6 and 207 since v0.11.8).
 
 - **Left to right:** the date of first printing.
 - **Up and down:** the average latitude of the towns whose papers printed the story, north at the top. A small fixed scatter, up to 0.12°, keeps stories printed by the same papers from stacking into a line.
@@ -587,5 +595,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.11.7) |
+| Data release | [`data/`](../data) (v0.11.8) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

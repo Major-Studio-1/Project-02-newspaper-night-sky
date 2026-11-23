@@ -58,9 +58,12 @@ RULES = {
     1793: ("A story needs one printed item in 6 or more papers, because few papers of 1793 survive; "
            "items in 6 are chosen as items in 7 or 8 are in other years."),
     1797: ("Read on 6 November 2026, before the one rule: candidate families of 3 to 5 papers were read and "
-           "some were chosen, and its stories reach 2 to 5 papers; it has not yet been read by the one rule. "
-           "Its list holds the pages set aside while counting its stories, and the candidate families read "
-           "and not chosen."),
+           "some were chosen, and its stories reach 2 to 5 papers. Read again by the one rule on 22 November 2026 "
+           "(round three): no item of 1797 reaches 7 papers, or 6, so 1797 uses a threshold of 4 papers, adopted "
+           "on 23 November 2026 because fewer papers survive; the stories of the first reading that do not "
+           "reach it stay reviewed, an exception kept that day. Its list holds the pages set aside while counting the "
+           "stories of the first two rounds, the candidate families read on 6 November and not chosen, and the "
+           "items round three read and did not admit."),
 }
 STATUS_PHRASES = {
     ADMITTED_LATER: 'items that a later round admitted',
@@ -313,8 +316,9 @@ def write_readme(entries, accounted):
         '',
         '- The candidates came from the automatic families, so most of these items stay in the sky as matched '
         'stars; only the reviewed label is withheld.',
-        '- 1797 was read on 6 November 2026, before the one rule existed, so its stories reach 2 to 5 papers '
-        'and its list is of a different kind (see 1797 below).',
+        '- 1797 was read on 6 November 2026, before the one rule existed, so its stories reach 2 to 5 papers; '
+        'it was read again by the one rule on 22 November, at a threshold of 4 papers adopted on 23 November '
+        'because fewer papers survive (see 1797 below).',
         '- Since 11 November 2026 every item is counted by the same rule whatever its subject. Items once held '
         'back for framing were read again by that rule; those that reach it are admitted, and the others are '
         'listed here with the rest.',

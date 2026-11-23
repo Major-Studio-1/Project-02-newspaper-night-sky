@@ -66,14 +66,15 @@
   "years": [
    1776,
    1793,
+   1797,
    1805,
    1806,
    1807,
    1808,
    1809
   ],
-  "checked": 2289,
-  "changes_what_was_printed": 259,
+  "checked": 2322,
+  "changes_what_was_printed": 262,
   "leaves_out_text": 54,
   "by_year": {
    "1776": {
@@ -88,6 +89,13 @@
     "changes_what_was_printed": 9,
     "by_transcription": {
      "RevX": 9
+    }
+   },
+   "1797": {
+    "checked": 33,
+    "changes_what_was_printed": 3,
+    "by_transcription": {
+     "RevX": 3
     }
    },
    "1805": {

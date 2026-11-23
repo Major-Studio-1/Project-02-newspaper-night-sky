@@ -1,0 +1,1119 @@
+{
+  "ledger_id": "ledger:stories-1797-round3",
+  "ledger_version": 1,
+  "base_release": "0.11.7",
+  "target_release": "0.11.8",
+  "recorded_date": "2026-11-22",
+  "namespace": "expansion-1797",
+  "evidence_dir": "outputs/story_discovery_1797/round3/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1797, and of 1796 where they reach the 1797 pages (long-running ones included), phrase searches on all 1,587 pages of 1797 in both transcriptions, reading of every hit, and scan checks of each admitted passage, at the 4-paper threshold proposed for 1797",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1797/round3/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1797/round3/items_from_1796.json": "retrieval_candidates",
+    "outputs/story_discovery_1797/round3/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1797/round3/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1797_round3.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1797_round3_review.json": "scan_review",
+    "outputs/story_discovery_1797/round3/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1797/round3/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S97-001",
+      "page_key": "sn83025881|1797-01-09|1|3",
+      "excerpt_start": "General Bournonville to the Executive Directory.",
+      "excerpt_end": "the bridge and the Isle of Neuweid;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "bournonville-letter-3-brumaire-neuwied"
+      ],
+      "summary": "General Bournonville's letter to the Directory from Mulheim, 3 Brumaire, on the attack at the bridgehead of Neuwied.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt (the print spells 'Neuweid'). Truguet's letter just above it is signed 'TRUGUET.'"
+      ],
+      "crops": [
+        "S97-001.jpg"
+      ],
+      "family": [
+        "R1797-0016",
+        "R1797-0158",
+        "R1797-0159"
+      ]
+    },
+    {
+      "id": "S97-002",
+      "page_key": "sn83025881|1797-01-09|1|3",
+      "excerpt_start": "November 6. Citizen Directois, I hasten",
+      "excerpt_end": "privateers, and which lately failed from Liverpool.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "truguet-letter-6-november-1796-ireland"
+      ],
+      "summary": "Truguet's letter to the Directory of 6 November 1796: letters from Brest announce 'a general revolution' in Ireland.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except that RevX reads the long s of 'ſailed' as 'failed', a different word; 'Directois' for 'Directors' is minor."
+      ],
+      "crops": [
+        "S97-002.jpg"
+      ],
+      "family": [
+        "R1797-0016",
+        "R1797-0158",
+        "R1797-0159"
+      ]
+    },
+    {
+      "id": "S97-003",
+      "page_key": "sn83025881|1797-01-14|1|3",
+      "excerpt_start": "The following is the last of",
+      "excerpt_end": "army retreated across the Rhine at Huningen.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "crauford-letter-27-october-1796-moreau-retreats"
+      ],
+      "summary": "A letter from the Archduke Charles's headquarters, 27 October 1796, from the London Gazette: Moreau's army has retreated across the Rhine.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except two spellings RevX normalised: the print has 'accross' and 'Hunningen'; minor transcription differences."
+      ],
+      "crops": [
+        "S97-003.jpg"
+      ],
+      "family": [
+        "R1797-0017",
+        "R1797-0171"
+      ]
+    },
+    {
+      "id": "S97-004",
+      "page_key": "sn84038410|1797-01-19|1|2",
+      "excerpt_start": "General Bournonville to the Executive Directory.",
+      "excerpt_end": "the bridge and the isle of Neuwied;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "bournonville-letter-3-brumaire-neuwied"
+      ],
+      "summary": "The Patowmac Guardian prints General Bournonville's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'Vendémiaire' for the printed 'Vendermaire' is a minor difference. The scan is low-resolution but legible."
+      ],
+      "crops": [
+        "S97-004.jpg"
+      ],
+      "family": [
+        "R1797-0015",
+        "R1797-0016",
+        "R1797-0035",
+        "R1797-0159",
+        "R1797-0161",
+        "R1797-0162",
+        "R1797-0179",
+        "R1797-0180"
+      ]
+    },
+    {
+      "id": "S97-005",
+      "page_key": "sn84038410|1797-01-19|1|2",
+      "excerpt_start": "November 6. Citizen Director, I hasten",
+      "excerpt_end": "privateers, and which lately failed from Liverpool.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "truguet-letter-6-november-1796-ireland"
+      ],
+      "summary": "The Patowmac Guardian prints Truguet's letter.",
+      "note": "Prints 'a general revolution has taken place', without 'just'.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'Breiz' (print 'Brest') and 'Director' (print 'Directors') are minor. This printing has no 'just' before 'taken place'. Whether the print has 'ſailed' or 'failed' (RevX 'failed') cannot be seen on this low-resolution scan."
+      ],
+      "crops": [
+        "S97-005.jpg"
+      ],
+      "family": [
+        "R1797-0015",
+        "R1797-0016",
+        "R1797-0035",
+        "R1797-0159",
+        "R1797-0161",
+        "R1797-0162",
+        "R1797-0179",
+        "R1797-0180"
+      ]
+    },
+    {
+      "id": "S97-006",
+      "page_key": "sn83025527|1797-01-24|1|3",
+      "excerpt_start": "BOURNONVILLE to the Ex. Directory. Mulheim,",
+      "excerpt_end": "the bridge and the isle of Neupied;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "bournonville-letter-3-brumaire-neuwied"
+      ],
+      "summary": "Russel & Davis' Republican Gazetteer prints General Bournonville's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'Neupied' (print 'Neuwied', one letter worn) and 'Vendémiaire' (print 'Vendemaire') are minor transcription errors."
+      ],
+      "crops": [
+        "S97-006.jpg"
+      ],
+      "family": [
+        "R1796-0031",
+        "R1797-0015",
+        "R1797-0016",
+        "R1797-0041",
+        "R1797-0158",
+        "R1797-0172",
+        "R1797-0179"
+      ]
+    },
+    {
+      "id": "S97-007",
+      "page_key": "sn83025527|1797-01-24|1|3",
+      "excerpt_start": "Citizens Directors. I hasten to communicate",
+      "excerpt_end": "privateers, and which lately sailed from Liverpool.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "truguet-letter-6-november-1796-ireland"
+      ],
+      "summary": "Russel & Davis' Republican Gazetteer prints Truguet's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'announces' for the printed 'announce' is minor. Just after the excerpt RevX reads 'Their captain, state, that the insurrection' where the print has 'Their captains state, that the Irish'."
+      ],
+      "crops": [
+        "S97-007.jpg"
+      ],
+      "family": [
+        "R1796-0031",
+        "R1797-0015",
+        "R1797-0016",
+        "R1797-0041",
+        "R1797-0158",
+        "R1797-0172",
+        "R1797-0179"
+      ]
+    },
+    {
+      "id": "S97-008",
+      "page_key": "sn84038410|1797-01-26|1|2",
+      "excerpt_start": "The following is the last of",
+      "excerpt_end": "army retreated across the Rhine at Huningen.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "crauford-letter-27-october-1796-moreau-retreats"
+      ],
+      "summary": "The Patowmac Guardian prints the letter from the Archduke Charles's headquarters.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The scan is low-resolution but legible."
+      ],
+      "crops": [
+        "S97-008.jpg"
+      ],
+      "family": [
+        "R1797-0017",
+        "R1797-0035",
+        "R1797-0043",
+        "R1797-0174",
+        "R1797-0175",
+        "R1797-0176",
+        "R1797-0177",
+        "R1797-0182"
+      ]
+    },
+    {
+      "id": "S97-009",
+      "page_key": "sn83025588|1797-01-28|1|2",
+      "excerpt_start": "Head-Quarters of his Royal Highness the",
+      "excerpt_end": "army retreated across the Rhine at Huningen.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "crauford-letter-27-october-1796-moreau-retreats"
+      ],
+      "summary": "The New Hampshire Gazette prints the letter from the Archduke Charles's headquarters.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'Macepath' (print 'Macppath') and 'Huningen' (print 'Hunningen') are minor transcription differences."
+      ],
+      "crops": [
+        "S97-009.jpg"
+      ],
+      "family": [
+        "R1797-0017",
+        "R1797-0043",
+        "R1797-0047",
+        "R1797-0190",
+        "R1797-0191",
+        "R1797-0192",
+        "R1797-0193"
+      ]
+    },
+    {
+      "id": "S97-010",
+      "page_key": "sn83025881|1797-02-13|1|3",
+      "excerpt_start": "ARMY OF ITALY. Letter from general",
+      "excerpt_end": "his advanced posts as far as Calliano.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "berthier-letter-milan-28-november-1796"
+      ],
+      "summary": "General Berthier's letter from Milan of 28 November 1796 reports the army of Italy's attack after Arcola.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads '8 Frimaire' and 'Castlenovo', as the other printings do; RevX '8 Brumaire' and 'Calliano' are fact-changing transcription errors, and 'staff major' for 'etat major' is minor. The item runs from the foot of one column to the top of the next (two crops)."
+      ],
+      "crops": [
+        "S97-010-1.jpg",
+        "S97-010-2.jpg"
+      ],
+      "family": [
+        "R1797-0020",
+        "R1797-0055",
+        "R1797-0213"
+      ]
+    },
+    {
+      "id": "S97-011",
+      "page_key": "sn83025588|1797-02-25|1|2",
+      "excerpt_start": "Army of Italy. Letter from Gen.",
+      "excerpt_end": "his advanced post as far as Castelnuovo.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "berthier-letter-milan-28-november-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints General Berthier's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance; RevX changes 'etat major' to 'staff major', 'Alvinzy' to 'Alvinzi' and the printed 'Castelnoovo' to 'Castelnuovo', all minor."
+      ],
+      "crops": [
+        "S97-011.jpg"
+      ],
+      "family": [
+        "R1796-0006",
+        "R1797-0020",
+        "R1797-0233"
+      ]
+    },
+    {
+      "id": "S97-012",
+      "page_key": "sn83025527|1797-02-28|1|3",
+      "excerpt_start": "Letter from Gen. Berthier, chief of",
+      "excerpt_end": "his advanced posts as far as Castlenovo.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "berthier-letter-milan-28-november-1796"
+      ],
+      "summary": "Russel & Davis' Republican Gazetteer prints General Berthier's letter.",
+      "note": "The Republican Gazetteer introduces it: 'The French continue victorious in Italy—See this Letter'.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'staff major' (print 'etat major') and 'Barrague, D. Hilher' (print 'Barraque, D. Hillier') are minor transcription errors."
+      ],
+      "crops": [
+        "S97-012.jpg"
+      ],
+      "family": [
+        "R1797-0020",
+        "R1797-0036",
+        "R1797-0055"
+      ]
+    },
+    {
+      "id": "S97-013",
+      "page_key": "sn82014782|1797-03-08|1|2",
+      "excerpt_start": "General Bournonville to the Executive Directory.",
+      "excerpt_end": "the bridge and the Isle of Newwied;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "bournonville-letter-3-brumaire-neuwied"
+      ],
+      "summary": "The Kentucky Gazette prints General Bournonville's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'Newwied' for the printed 'Neuwied' is minor. The crop was placed by hand on a low-resolution scan; it is legible."
+      ],
+      "crops": [
+        "S97-013.jpg"
+      ],
+      "family": [
+        "R1796-0849",
+        "R1797-0016",
+        "R1797-0017",
+        "R1797-0183"
+      ],
+      "scan_boxes": [
+        [
+          1195,
+          335,
+          1570,
+          585
+        ]
+      ]
+    },
+    {
+      "id": "S97-014",
+      "page_key": "sn82014782|1797-03-08|1|2",
+      "excerpt_start": "The following is the last of",
+      "excerpt_end": "army retreated across the Rhine at Huningen.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "crauford-letter-27-october-1796-moreau-retreats"
+      ],
+      "summary": "The Kentucky Gazette prints the letter from the Archduke Charles's headquarters.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'Macpath' for the printed 'Macppath' is a minor transcription error. The crop was placed by hand on a low-resolution scan; it is legible."
+      ],
+      "crops": [
+        "S97-014.jpg"
+      ],
+      "family": [
+        "R1796-0849",
+        "R1797-0016",
+        "R1797-0017",
+        "R1797-0183"
+      ],
+      "scan_boxes": [
+        [
+          1195,
+          1880,
+          1570,
+          2125
+        ]
+      ]
+    },
+    {
+      "id": "S97-015",
+      "page_key": "sn82014782|1797-03-08|1|2",
+      "excerpt_start": "November 6. Citizens Directors. I hasten",
+      "excerpt_end": "privateers, and which lately failed from Liverpool.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "truguet-letter-6-november-1796-ireland"
+      ],
+      "summary": "The Kentucky Gazette prints Truguet's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Whether the print has 'ſailed' or 'failed' (RevX 'failed') cannot be seen on this low-resolution scan; the crop was placed by hand."
+      ],
+      "crops": [
+        "S97-015.jpg"
+      ],
+      "family": [
+        "R1796-0849",
+        "R1797-0016",
+        "R1797-0017",
+        "R1797-0183"
+      ],
+      "scan_boxes": [
+        [
+          855,
+          2200,
+          1220,
+          2575
+        ]
+      ]
+    },
+    {
+      "id": "S97-016",
+      "page_key": "sn82014782|1797-03-15|1|2",
+      "excerpt_start": "FRANCE. ARMY OF ITALY. Letter from",
+      "excerpt_end": "his advanced posts as far as Castlenovo.\"",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "berthier-letter-milan-28-november-1796"
+      ],
+      "summary": "The Kentucky Gazette prints General Berthier's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The crop was placed by hand on a low-resolution scan; it is legible."
+      ],
+      "crops": [
+        "S97-016.jpg"
+      ],
+      "family": [
+        "R1797-0018",
+        "R1797-0020",
+        "R1797-0213"
+      ],
+      "scan_boxes": [
+        [
+          170,
+          195,
+          570,
+          545
+        ]
+      ]
+    },
+    {
+      "id": "S97-017",
+      "page_key": "sn83025881|1797-09-20|1|3",
+      "excerpt_start": "SITTING OF AUGUST 4. Delarue. -",
+      "excerpt_end": "this force directed its march towards Paris.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "delarue-report-march-of-the-troops-august-1797"
+      ],
+      "summary": "Delarue's report to the Council of Five Hundred, 4 August 1797: 26 to 27,000 men detached from the army of the Sambre and Meuse marched towards Paris.",
+      "note": "Earliest printing found. Prints 'instead of 6000, as was said by Gen. Hoche', where the other papers print 9000 and 'as was stated'.",
+      "scan_findings": [
+        "Scan matches the excerpt. This printing reads '6000' and 'as was said' where the other three have 9000 and 'as was stated': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S97-017.jpg"
+      ],
+      "family": [
+        "R1797-0022",
+        "R1797-0093",
+        "R1797-0094",
+        "R1797-0462",
+        "R1797-0463",
+        "R1797-0464",
+        "R1797-0465",
+        "R1797-0466"
+      ]
+    },
+    {
+      "id": "S97-018",
+      "page_key": "sn83025588|1797-09-26|1|3",
+      "excerpt_start": "PARIS, July 24. Sitting of August",
+      "excerpt_end": "this force directed its march towards Paris.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "delarue-report-march-of-the-troops-august-1797"
+      ],
+      "summary": "The New Hampshire Gazette prints Delarue's report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has 'that I have procured' where the others have 'we'."
+      ],
+      "crops": [
+        "S97-018.jpg"
+      ],
+      "family": [
+        "R1797-0022",
+        "R1797-0094",
+        "R1797-0486"
+      ]
+    },
+    {
+      "id": "S97-019",
+      "page_key": "sn83025881|1797-10-04|1|2",
+      "excerpt_start": "VIENNA, July 26. On the 24th",
+      "excerpt_end": "with great difficulties in their further progress.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "vienna-report-26-july-1797-peace-talks"
+      ],
+      "summary": "A report from Vienna of 26 July 1797, in the longer form: the Marquis de Gallo's conferences, and difficulties in the peace talks in Italy.",
+      "note": "Earliest printing found. The longer form of the report.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'negotiations' for the printed 'negociations' is minor. This is the longer form of the report."
+      ],
+      "crops": [
+        "S97-019.jpg"
+      ],
+      "family": [
+        "R1797-0003"
+      ]
+    },
+    {
+      "id": "S97-020",
+      "page_key": "sn83025525|1797-10-10|1|1",
+      "excerpt_start": "COUNCIL OF FIVE HUNDRED, AUGUST 3.",
+      "excerpt_end": "this force directed its march towards Paris.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "delarue-report-march-of-the-troops-august-1797"
+      ],
+      "summary": "The Mirror prints Delarue's report.",
+      "note": "Dates the sitting 3 August and prints the name 'DELARNE'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The Mirror dates the sitting 'AUGUST 3' and prints the name 'DELARNE'."
+      ],
+      "crops": [
+        "S97-020.jpg"
+      ],
+      "family": [
+        "R1797-0022",
+        "R1797-0473",
+        "R1797-0474",
+        "R1797-0493"
+      ]
+    },
+    {
+      "id": "S97-021",
+      "page_key": "sn83025588|1797-10-10|1|2",
+      "excerpt_start": "Viexwna, July 26. THE Marquis 1",
+      "excerpt_end": "ftipu lited to be given to Aultria.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "vienna-report-26-july-1797-peace-talks"
+      ],
+      "summary": "The New Hampshire Gazette prints the Vienna report.",
+      "note": "The short form. This page has no RevX transcription, so the excerpt comes from the older CA transcription.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance; the CA text is garbled throughout ('Viexwna', '1 Gavrvro', 'Udma'), but no garble reads as another fact. The print has 'DI GALLO' and 'Udina'."
+      ],
+      "crops": [
+        "S97-021.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1797-0003",
+        "R1797-0023",
+        "R1797-0504"
+      ]
+    },
+    {
+      "id": "S97-022",
+      "page_key": "sn82014782|1797-10-14|1|2",
+      "excerpt_start": "Sitting of August 4. Delarue.—\"I come",
+      "excerpt_end": "this force directed its march towards Paris.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "delarue-report-march-of-the-troops-august-1797"
+      ],
+      "summary": "The Kentucky Gazette prints Delarue's report.",
+      "note": "Prints the name 'Delarne'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print has 'Delarne', which RevX gives as 'Delarue' (minor). The crop was placed by hand on a low-resolution scan; it is legible."
+      ],
+      "crops": [
+        "S97-022.jpg"
+      ],
+      "family": [
+        "R1797-0022",
+        "R1797-0095",
+        "R1797-0465",
+        "R1797-0467",
+        "R1797-0486"
+      ],
+      "scan_boxes": [
+        [
+          870,
+          150,
+          1270,
+          445
+        ]
+      ]
+    },
+    {
+      "id": "S97-023",
+      "page_key": "sn84023150|1797-10-23|1|2",
+      "excerpt_start": "VIENNA, JULY 26. THE Marquis de",
+      "excerpt_end": "first stipulated to be given to Austria.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "vienna-report-26-july-1797-peace-talks"
+      ],
+      "summary": "The Eagle prints the Vienna report.",
+      "note": "The short form. Prints the place as 'Uding'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print has 'Uding' and 'negociations', which RevX gives as 'Udine' and 'negotiations' (minor)."
+      ],
+      "crops": [
+        "S97-023.jpg"
+      ],
+      "family": [
+        "R1797-0002",
+        "R1797-0003",
+        "R1797-0024",
+        "R1797-0095",
+        "R1797-0096",
+        "R1797-0460",
+        "R1797-0497"
+      ]
+    },
+    {
+      "id": "S97-024",
+      "page_key": "sn83025525|1797-10-24|1|1",
+      "excerpt_start": "VIENNA, JULY 26. The Marquis DE",
+      "excerpt_end": "first stipulated to be given to Austria.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "vienna-report-26-july-1797-peace-talks"
+      ],
+      "summary": "The Mirror prints the Vienna report.",
+      "note": "The short form.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S97-024.jpg"
+      ],
+      "family": [
+        "R1797-0003",
+        "R1797-0024",
+        "R1797-0105"
+      ]
+    },
+    {
+      "id": "S97-025",
+      "page_key": "sn83025881|1797-10-27|1|3",
+      "excerpt_start": "WILMINGTON, (N. C.) October 12. A",
+      "excerpt_end": "Carondelet to a gentleman in office there,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilmington-report-12-october-1797-spanish-posts"
+      ],
+      "summary": "A Wilmington report of 12 October 1797: a traveller from Pensacola saw the Spanish governor's letter ordering the posts on the Mississippi delivered up.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'via the Havannah', as the other printings do; RevX 'Savannah' is a fact-changing transcription error (a different place)."
+      ],
+      "crops": [
+        "S97-025.jpg"
+      ],
+      "family": [
+        "R1797-0010",
+        "R1797-0113",
+        "R1797-0543"
+      ]
+    },
+    {
+      "id": "S97-026",
+      "page_key": "sn82014782|1797-10-28|1|2",
+      "excerpt_start": "VIENNA, July 26. On the 24th",
+      "excerpt_end": "with great difficulties in their further progress.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "vienna-report-26-july-1797-peace-talks"
+      ],
+      "summary": "The Kentucky Gazette prints the Vienna report.",
+      "note": "The longer form of the report.",
+      "scan_findings": [
+        "Scan matches the excerpt. This is the longer form of the report; the crop was placed by hand on a low-resolution scan."
+      ],
+      "crops": [
+        "S97-026.jpg"
+      ],
+      "family": [
+        "R1797-0003",
+        "R1797-0105",
+        "R1797-0499"
+      ],
+      "scan_boxes": [
+        [
+          165,
+          125,
+          590,
+          495
+        ]
+      ]
+    },
+    {
+      "id": "S97-027",
+      "page_key": "sn82014782|1797-11-15|1|3",
+      "excerpt_start": "A gentleman who arrived in town",
+      "excerpt_end": "Carondelet to a gentleman in office there,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilmington-report-12-october-1797-spanish-posts"
+      ],
+      "summary": "The Kentucky Gazette prints the Wilmington report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'Havana' for the printed 'Havanna' is minor. The crop was placed by hand on a low-resolution scan."
+      ],
+      "crops": [
+        "S97-027.jpg"
+      ],
+      "family": [
+        "R1797-0010"
+      ],
+      "scan_boxes": [
+        [
+          160,
+          1460,
+          575,
+          1705
+        ]
+      ]
+    },
+    {
+      "id": "S97-028",
+      "page_key": "sn83025588|1797-11-15|1|2",
+      "excerpt_start": "WiLmingrony (N. C.) O&. 12. A",
+      "excerpt_end": "to ~ a gentleman in office there,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilmington-report-12-october-1797-spanish-posts"
+      ],
+      "summary": "The New Hampshire Gazette prints the Wilmington report.",
+      "note": "RevX gives this report three times on the page; the CA transcription has it once, so the excerpt comes from the CA text.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance; the CA text is garbled ('WiLmingrony', 'zoth' for 20th, 'Barop'), but no garble reads as another fact. The page prints the report once; the three copies are RevX's."
+      ],
+      "crops": [
+        "S97-028.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1797-0010"
+      ]
+    },
+    {
+      "id": "S97-029",
+      "page_key": "sn83025881|1797-11-20|1|3",
+      "excerpt_start": "COLUMBIA, (S. C.) Nov. 3. Extract",
+      "excerpt_end": "make a general massacre of the whites.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "nassau-letter-26-september-1797"
+      ],
+      "summary": "A letter from Nassau of 26 September 1797, printed at Columbia: the writer's account of a 'plot' and of the executions that followed.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print has 'had ran away', which RevX gives as 'had run away' (minor)."
+      ],
+      "crops": [
+        "S97-029.jpg"
+      ],
+      "family": [
+        "R1797-0004",
+        "R1797-0571"
+      ]
+    },
+    {
+      "id": "S97-030",
+      "page_key": "sn83025525|1797-11-21|1|2",
+      "excerpt_start": "WILMINGTON, OCT. 12. A gentleman who",
+      "excerpt_end": "CARONDELET to a gentleman in office there,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilmington-report-12-october-1797-spanish-posts"
+      ],
+      "summary": "The Mirror prints the Wilmington report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S97-030.jpg"
+      ],
+      "family": [
+        "R1797-0010",
+        "R1797-0011"
+      ]
+    },
+    {
+      "id": "S97-031",
+      "page_key": "sn83025588|1797-12-06|1|2",
+      "excerpt_start": "COLUMBIA, (S. C.) Nov. 3. A",
+      "excerpt_end": "make a general massacre of the whites.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "nassau-letter-26-september-1797"
+      ],
+      "summary": "The New Hampshire Gazette prints the Nassau letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX 'lays' for 'ſays' and 'run' for the printed 'ran' are minor."
+      ],
+      "crops": [
+        "S97-031.jpg"
+      ],
+      "family": [
+        "R1797-0004",
+        "R1797-0007",
+        "R1797-0594",
+        "R1797-0625",
+        "R1797-0626"
+      ]
+    },
+    {
+      "id": "S97-032",
+      "page_key": "sn83025525|1797-12-12|1|2",
+      "excerpt_start": "COLUMBIA, NOV. 3. A LETTER from",
+      "excerpt_end": "make a general massacre of the whites.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "nassau-letter-26-september-1797"
+      ],
+      "summary": "The Mirror prints the Nassau letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print has 'had ran away', which RevX gives as 'had run away' (minor)."
+      ],
+      "crops": [
+        "S97-032.jpg"
+      ],
+      "family": [
+        "R1797-0004",
+        "R1797-0007",
+        "R1797-0124",
+        "R1797-0635"
+      ]
+    },
+    {
+      "id": "S97-033",
+      "page_key": "sn84023150|1797-12-25|1|3",
+      "excerpt_start": "COLUMBIA, NOV. 3. A letter from",
+      "excerpt_end": "make a general massacre of the whites.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "nassau-letter-26-september-1797"
+      ],
+      "summary": "The Eagle prints the Nassau letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print has 'had ran away', which RevX gives as 'had run away' (minor). The crop's right edge touches the line ends."
+      ],
+      "crops": [
+        "S97-033.jpg"
+      ],
+      "family": [
+        "R1797-0004",
+        "R1797-0121",
+        "R1797-0124",
+        "R1797-0622",
+        "R1797-0623",
+        "R1797-0631"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "crauford-letter-27-october-1796-moreau-retreats",
+      "kind": "document_group",
+      "label": "From the Archduke Charles's headquarters, 27 October 1796: Moreau's army retreats across the Rhine",
+      "definition": "Printings of a letter dated at the headquarters of the Archduke Charles of Austria, 27 October 1796, which the London Gazette of 13 November published with others from Captain Anstruther and R. Crauford: 'My Lord, I have the honour to inform your Lordship, that in the course of the last night Gen. Moreau's army retreated across the Rhine at Huningen' (the Patowmac Guardian's words); it is signed Robert Crauford. Three papers print it after a London paragraph of 14 November that introduces it as 'the last of the letters alluded to'; the New Hampshire Gazette prints the letter alone, from New York. The writer's report from the Austrian headquarters, as the London Gazette published it.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "truguet-letter-6-november-1796-ireland",
+      "kind": "document_group",
+      "label": "Truguet to the Directory, 6 November 1796: letters from Brest 'announce that a general revolution has just taken place in Ireland'",
+      "definition": "Printings of a letter to the French Executive Directory dated 6 November 1796 and signed Truguet: 'I hasten to communicate to the Executive Directory the reception of letters from Brest, of the 3d instant (November) brought by an extraordinary courier, which announce that a general revolution has just taken place in Ireland.' It gives the report of the captains of two ships brought in from Liverpool by French privateers, that the Irish had taken 30,000 stand of arms in Dublin and defeated 10,000 English troops. Printed from the Paris papers, in the same column of French news as General Bournonville's letter (a group of its own). A report at second hand: the writer passes on what letters from Brest and two ship captains said.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "bournonville-letter-3-brumaire-neuwied",
+      "kind": "document_group",
+      "label": "General Bournonville to the Directory, Mulheim, 3 Brumaire: the attack on the bridgehead at Neuwied",
+      "definition": "Printings of General Bournonville's letter to the French Executive Directory from Mulheim, dated 3 Brumaire (two papers add 'Oct. 28'): 'I had the honor to give you an account yesterday of the attack of the army made by the enemy in the night between the 29th and 30th Vendemiaire ... upon the head of the bridge and the isle of Neuwied'; he writes that the enemy meant to make the garrison prisoners of war, and that 'This affair cost the enemy more than four thousand men'. Printed from the Paris papers, in the same column as Truguet's letter of 6 November (a group of its own). A commander's own report.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "berthier-letter-milan-28-november-1796",
+      "kind": "document_group",
+      "label": "General Berthier's letter from Milan, 28 November 1796: the army of Italy after Arcola",
+      "definition": "Printings of a letter from General Berthier, chief of the staff of the army of Italy, to General Baraguey d'Hilliers (each paper spells the name differently), dated at Milan, 8 Frimaire, 28 November 1796: 'I informed you, general, by the last bulletin which I sent you, that, after having beaten the troops commanded by general Alvinzy in person, at Arcola, the commander in chief made his dispositions to attack the column commanded by general Davidovich'; it reports that the enemy was driven from the heights of Rivoli with 1,100 prisoners taken. A staff officer's own report for the French side.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "delarue-report-march-of-the-troops-august-1797",
+      "kind": "document_group",
+      "label": "Delarue's report to the Council of Five Hundred on the march of the troops, August 1797",
+      "definition": "Printings of the report made in the French Council of Five Hundred (sitting of 4 August 1797; 3 August in the Mirror) by Delarue ('Delarne' in the Mirror and the Kentucky Gazette) for its committee of inspectors, 'on the march of the troops': 'It results from the information we have procured, 1. That from 26 to 27,000 men have been detached from the army of the Sambre and Meuse, instead of 9000, as was stated by Gen. Hoche. 2. That this force directed its march towards Paris' (the Gazette of the United States prints 6000, 'as was said'). It goes on to say that the soldiers had been 'misled and seduced' against the Legislative Body and that troops kept marching on Paris 'by order of Gen. Hoche'. A committee's report and charges in the legislature, as the Paris papers gave them.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "vienna-report-26-july-1797-peace-talks",
+      "kind": "message_group",
+      "label": "Vienna, 26 July 1797: the peace talks in Italy 'meet with great difficulties'",
+      "definition": "Printings of a report from Vienna dated 26 July 1797, printed from the London papers in two forms. Three papers print a short form: 'The Marquis DE GALLO, has this moment arrived here from Udina. The negotiations for peace in Italy, meet with great difficulties. The French require that Mantua shall be united with the Cisalpine Republic' (the Mirror's words). The Gazette of the United States and the Kentucky Gazette print a longer form that opens with the Marquis de Gallo's conferences with the Emperor and Baron Thugut, and adds that 'neither the marquis nor the persons about the court had very pleasant countenances'. Both forms then give the same account of the French demand for Mantua, the Emperor's indemnification in Istria and Dalmatia, and 'our fears that hostilities may again commence'. A correspondent's report, at second hand through the London papers.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "wilmington-report-12-october-1797-spanish-posts",
+      "kind": "message_group",
+      "label": "Wilmington, 12 October 1797: a traveller from Pensacola reports orders to deliver up the Spanish posts",
+      "definition": "Printings of a report from Wilmington, North Carolina, of 12 October 1797: 'A gentleman who arrived in town on Sunday last from New-Providence, via the Havannah, has favored the Printer with the following information—on the authenticity of which he places the greatest confidence': on 20 August, the day he left Pensacola, he saw an official letter from the Baron de Carondelet saying that orders had come from his court 'to put into full execution, the treaty between Spain and the United States of America', and that the commandants of the forts on the Mississippi were to deliver up the posts; Governor Gayoso had been appointed governor-general of the Floridas and Louisiana. A traveller's report at second hand.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    },
+    {
+      "id": "nassau-letter-26-september-1797",
+      "kind": "message_group",
+      "label": "A letter from Nassau, New Providence, 26 September 1797: the writer's account of a 'plot'",
+      "definition": "Printings of a letter from a gentleman at Nassau, New Providence, dated 26 September 1797, as a Columbia (South Carolina) paper printed it on 3 November: 'We have lately very providentially escaped a most hellish plot.—A parcel of French negroes who had been captured and sold here, and who had ran away from their owners, entered into a conspiracy (about thirty in number) to burn the town and make a general massacre of the whites.' By his account one of them told his master a few hours before, five were taken and condemned and three executed. One correspondent's account, written from the side of those who held the accused; the accused are heard only through it, and it names no one.",
+      "admission_rule": "Reviewed 1797 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1797 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 240 items printed somewhere; by the finder's count 3 reach 5 papers, 29 reach 4, 140 reach 3). The same script was run with year 1796 over the 1797 pages (items_from_1796.json: 49 items, 13 in 4 papers, all parts of one publication of January). Every item in 4 or more papers was read, the items in 2 or 3 papers were checked automatically for a further paper by a wider text match, and the counts were checked item by item with phrase searches over all 1,587 pages of 1797 in both transcriptions (phrase_patterns.json, phrase_hits.json); every hit was read. AI review on the session's own model; not an independent human review.",
+    "selection_rule": "Adopted for 1797 on 23 November 2026, on the review's recommendation, which the owner asked it to follow: a story needs one single printed item in 4 or more papers, because only 8 series survive for 1797 (three all year, 2 to 6 in print in any three weeks), so no item reaches 7 papers, or 6; 1793 uses 6 for the same reason. Every single item in 5 papers was admitted, except digests; items in 4 papers were chosen to cover the months and the kinds of news: every document, letter or report in 4 papers was chosen, and single paragraphs of London, Paris and Hamburg news columns, verse, an anecdote and a printer's notice were not. Items are counted by their own words; a printing counts where its opening survives; two printed forms of one report are counted together, as 1809 counted two translations of one bulletin. A sub-story could have fewer papers under a parent that reaches the threshold; this round has none. The 21 stories of rounds one and two stay as they are; this round adds groups beside them.",
+    "items_admitted": {
+      "crauford-letter-27-october-1796-moreau-retreats": [
+        "I97-0011"
+      ],
+      "truguet-letter-6-november-1796-ireland": [
+        "I97-0008"
+      ],
+      "bournonville-letter-3-brumaire-neuwied": [
+        "I97-0009"
+      ],
+      "berthier-letter-milan-28-november-1796": [
+        "I97-0015"
+      ],
+      "delarue-report-march-of-the-troops-august-1797": [
+        "I97-0021"
+      ],
+      "vienna-report-26-july-1797-peace-talks": [
+        "I97-0001"
+      ],
+      "wilmington-report-12-october-1797-spanish-posts": [
+        "I97-0028"
+      ],
+      "nassau-letter-26-september-1797": [
+        "I97-0031"
+      ]
+    },
+    "families_admitted": [
+      "F97-002",
+      "F97-019",
+      "F97-020",
+      "F97-023"
+    ],
+    "deferred_addition": {
+      "S97-034": "The New Hampshire Gazette, 13 December 1797, page 2: Adams's reply of 29 November to the House, a printing of the round-two group congress-opening-nov-1797 that round two missed. Checked against its scan on 23 November 2026 (outputs/story_discovery_1797/round3/deferred/). Not in this ledger: adding a printing to an existing group changes its topic row, which apply_ledger.py's topic step must reproduce exactly; it goes in with a correction release that also updates that row."
+    },
+    "counted_item_by_item": {
+      "Paper counts": "Counted item by item, two single items of 1797 reach 5 papers: the Tenerife report (a story of round one) and the Vienna report of 26 July (in two printed forms, 3 + 2 papers). Twenty-five reach 4: the eight stories admitted here; seven stories of rounds one and two (Adams's farewell address, the paragraph on Andrew Brown's death, Blount's letter, the Algerine battle, the brig Brothers, the Hermione 'Particulars' and Duncan's Camperdown dispatch); and ten items read and not admitted (below). Everything else read is in 3 papers or fewer.",
+      "Joins made by the finder": "The finder joins items that were printed together in one run of news. The run of Paris news of early November 1796 that four papers printed (Gazette of the United States 9 January, Patowmac Guardian 19 January, Republican Gazetteer 24 January, Kentucky Gazette 8 March) holds Truguet's letter, Bournonville's letter and the Paris paragraph on the Dey of Algiers, each in those 4 papers, and other paragraphs in 1 to 3. The London news of late August 1797 joins the Brussels paragraph on the definitive treaty and the paragraph on dispatches from Scotland, each in 4 papers. Each was counted by its own words.",
+      "Openings that do not survive": "The President's message of 19 January 1797 with the Secretary of State's letter to Mr. Pinckney was printed in instalments. Its opening survives in 3 papers (Gazette of the United States, New Hampshire Gazette, Patowmac Guardian); the Virginia Argus of 14 February and the Republican Gazetteer of 28 February hold only its continuation, their earlier issues being lost. By the rule other years used (a printing counts where its opening survives; 1809 dropped such a page), it is in 3 papers.",
+      "Pages that only quote an item": "Not counted: the Gazette of the United States of 5 June, which quotes Adams's speech of 16 May; the Secretary of State's letter to the Spanish minister of 8 August, which quotes the 'western letter' on the Spanish posts; a New Hampshire Gazette digest of 22 November that rewords the Hague paragraph of 19 September.",
+      "A printing missed by round two": "Adams's reply of 29 November 1797 to the House of Representatives is also on page 2 of the New Hampshire Gazette of 13 December; that issue's RevX transcriptions are filed one page off, so round two's phrase searches missed it. With it the reply is in 4 papers. Decided 23 November 2026 to add it; deferred to a correction release (see deferred_addition)."
+    },
+    "stories_of_rounds_one_and_two": {
+      "reach the 1797 threshold (4 papers by one item)": "Eight: the Tenerife report (5), Duncan's Camperdown dispatches (4), the Algerine-Sicilian battle (4), the Hermione 'Particulars' (4), the brig Brothers (4), Adams's farewell address (4), Blount's letter (4), and the paragraph on Andrew Brown's death (4). A ninth, Adams's reply to the House of November 1797, reaches 4 once the deferred printing is added.",
+      "kept below the threshold": "Thirteen as admitted (twelve once the deferred printing is added), kept as reviewed stories though no item of theirs reaches 4 papers: the opening of Congress of November 1797 (3 per item until then), Boyd / Bantry coverage (3), Barney escapes the blockade (3), Sonthonax leaves Saint-Domingue (3), Quito earthquake (3), Peace / Cayenne context (2), Peace and Plenty boarding (3), Two Sisters wreck (two texts, 1 paper each), French captures at Havana (3), Special session of Congress (3 per item, 5 papers across its parts), Kosciuszko's land warrant (3), Jefferson's letter to Madison (3), New Hampshire governor's address (3). Decided 23 November 2026 (the owner asked the review to follow its recommendations): kept, because they were read and checked against their scans before the rule, the Boyd story is the pilot that the release's consumer view and checks are built on, and treating them as not admitted would need a correction release and changes to the site for no gain in accuracy. Recorded as an exception for the full audit (docs/rules-and-exceptions.md)."
+    },
+    "not_admitted": {
+      "The President's message of 19 January 1797 and the Secretary of State's letter to Mr. Pinckney (3 papers by opening)": "Below the proposed rule counted by surviving openings; two more papers hold only its continuation (see for_user_decision).",
+      "A London paragraph of 6 November 1796: instructions sent to Lord Malmesbury by the messenger Wiffen (3)": "Below the proposed rule counted by its own words.",
+      "Lord Malmesbury's note answering the Directory's two questions (3)": "Below the proposed rule counted by its own words.",
+      "A Paris official note of October 1796: the negotiations with Lord Malmesbury suspended (3)": "Below the proposed rule counted by its own words.",
+      "A Paris paragraph: the negotiations with the English government take a more favorable turn (3)": "Below the proposed rule counted by its own words.",
+      "A Basle paragraph of 30 November 1796: the Austrians damaged the bridge of Huningue (3)": "Below the proposed rule counted by its own words.",
+      "A Paris paragraph of 16 October 1796: the Directory, uncertain whether a peace with England can be brought about, tells the Council of Five Hundred to prepare to continue the war (3)": "Below the proposed rule counted by its own words.",
+      "Two paragraphs of the January run of Paris news: a Genoa letter on Bastia (2), preparations for an invasion of England (1)": "Below the proposed rule counted by their own words.",
+      "The Secretary of State's additional report on the Spanish posts, July 1797 (3)": "Below the proposed rule counted by its own words; the papers that print it go on with its documents.",
+      "The Spanish minister's letter of 11 July 1797 to the Secretary of State (2)": "Below the proposed rule counted by its own words.",
+      "The Secretary of State's answer of 8 August 1797 to the Spanish minister (2, and a continuation in a third)": "Below the proposed rule counted by its own words.",
+      "The 'western letter' on the Spanish posts on the Mississippi (2)": "Below the proposed rule; three later pages only quote it.",
+      "The stamp act of July 1797 (3) and the act of December postponing its duties (2)": "Below the proposed rule counted by their own first sections.",
+      "The French Directory's message to the Councils on a deficit, August 1797 (2)": "Below the proposed rule counted by its own words.",
+      "The French Directory's proclamation to the French nation after 18 Fructidor (3)": "Below the proposed rule counted by its own words.",
+      "A Paris paragraph of 17 September 1797: an insurgent army of the South (3)": "Below the proposed rule counted by its own words.",
+      "A Hague paragraph of 19 September 1797: the Dutch Convention's address to the French (3)": "Below the proposed rule; a fourth paper rewords it in a digest.",
+      "A Charleston report of a captain's news from the Isle of France, October 1797 (3)": "Below the proposed rule counted by its own words.",
+      "A Vienna paragraph of 6 August 1797 on General Clarke's secretary (2)": "Below the proposed rule; a third paper prints a different wording.",
+      "Mr. Harper's six resolutions in the House, November 1797 (2)": "Below the proposed rule; proceedings of the House.",
+      "The treaty with Tripoli, as proclaimed in June 1797 (1)": "Below the proposed rule: one paper in this collection prints it.",
+      "A paragraph on the choice of a third commissioner under the treaty with Spain, May 1797 (2)": "Below the proposed rule counted by its own words.",
+      "A London paragraph of 18 October 1797 on 'the loss of the Dutch ship the Delft, of 56 guns, in the Downs' (1)": "Below the proposed rule: one paper prints it; two others list the ship in the Dutch line of battle, a different item.",
+      "A Baltimore digest of Hamburg papers to 18 November 1796 (4)": "A digest of unrelated paragraphs ('the most prominent articles').",
+      "A Paris paragraph of 2 November 1796: the Dey of Algiers maintains the independence of his ports (4)": "A single paragraph of a Paris news column; January is covered by three documents of the same run and column.",
+      "A London paragraph of 16 August 1797: a dispatch from Paris on the treaty between France and Portugal, and dispatches from Lord Malmesbury (4)": "A single paragraph of a London news column; October is covered by five stories.",
+      "A Paris paragraph of 13 August 1797 on the treaty between France and Portugal (4)": "A single paragraph of a Paris news column; October is covered by five stories.",
+      "A Paris paragraph of 12 August 1797: troops of the army of the Sambre and Meuse going to Brest, with doubts about the talks at Lille (2)": "Below the proposed rule counted by its own words; the family read on 6 November (F97-015, 4 papers) joined it to the paragraph on the treaty with Portugal.",
+      "A London paragraph: Brussels papers insist that the definitive treaty between the Emperor and the French is signed (4)": "A single paragraph of a London news column; October and November are covered.",
+      "A London paragraph on dispatches from Scotland about Mr. Dundas's plan for extending the militia (4)": "A single paragraph of a London news column; October and November are covered.",
+      "A Paris paragraph of 23 September 1797: General Hoche named generalissimo of the two armies of the Rhine (4)": "A single paragraph of a Paris news column; November is covered.",
+      "The other items the item finder lists in 3 papers or fewer: 208 in items.json (140 of them in 3) and 36 in items_from_1796.json (21 in 3)": "Below the proposed rule by the finder's count; checked automatically for a fourth paper, and not read one by one unless listed here. They stay in the sky as matched stars."
+    },
+    "for_user_decision": {
+      "The Secretary of State's letter to Mr. Pinckney of January 1797: 3 papers by opening, 5 with two papers that hold only its continuation": "Not admitted by the rule other years used (a printing counts where its opening survives). If continuation pages count, it reaches the proposed rule, and the story would show its printings in 5 papers. Decided 23 November 2026 (the owner asked the review to follow its recommendations): not admitted; a printing counts where its opening survives, as in 1809.",
+      "Three items in 4 papers that are not news: a song ('Was I right or was I not?'), a comic anecdote of a Connecticut parson, and a Worcester printer's notice of his Bibles": "Items in 4 papers are chosen to cover the months and the kinds of news, so these were not chosen; any of them can be added after a scan check of its printings. Decided 23 November 2026 (the owner asked the review to follow its recommendations): not chosen; listed with the items read and not admitted.",
+      "The Vienna report of 26 July 1797 in two printed forms (3 + 2 papers)": "Counted together as one item, as 1809 counted two translations of one bulletin, so it is admitted in 5 papers; counted apart, neither form reaches 4. Decided 23 November 2026 (the owner asked the review to follow its recommendations): counted together, so admitted in 5 papers."
+    },
+    "for_the_owner": {
+      "A Winchester paragraph of September 1797 on a witness in the Blount affair being taken to Philadelphia (4 papers)": "It reaches the proposed rule, but it turns on one man, the interpreter to whom Senator Blount's letter was addressed, a minor public employee; it would also add a second story on the Blount affair beside the one of round one, which stays as it is. Not admitted without the owner's decision. Decided 23 November 2026 (the owner asked the review to follow its recommendations): not admitted; described without his name."
+    },
+    "decisions": {
+      "date": "2026-11-23",
+      "by": "The owner asked the review to follow its own recommendations on every point and to record each exception with its situation and rationale.",
+      "register": "docs/rules-and-exceptions.md",
+      "points": {
+        "1 threshold": "Adopted: 4 papers for 1797 (as 1793 uses 6), because only 3 papers survive all year and 2 to 6 are in print in any three weeks.",
+        "2 stories of 6 November": "Kept: the 13 below the threshold (12 once the deferred printing is in) stay reviewed, recorded as an exception; 8 reach it.",
+        "3 Vienna report in two forms": "Counted together (5 papers), as 1809 counted two translations of one bulletin.",
+        "4 the letter to Mr. Pinckney": "Not admitted: its opening survives in 3 papers; continuation pages do not count, as in 1809.",
+        "5 items that are not news": "Not chosen: a song, an anecdote, a printer's notice; listed as read and not admitted.",
+        "6 a paragraph on one man": "Not admitted: it turns on one man and would add a second Blount story; described without his name.",
+        "7 single news-column paragraphs": "Not chosen, as 1793 and 1809 did; their months are covered.",
+        "8 the printing round two missed": "Decided to add; deferred to a correction release, because a ledger cannot change an existing group's topic row (add_reviewed_topics.py reproduces existing rows exactly). Checked and cropped: outputs/story_discovery_1797/round3/deferred/.",
+        "9 the not-admitted list": "Round three's entries go into work/not_admitted.json when the ledger is applied (reapply_not_admitted.py), so the published list and the site change together."
+      }
+    }
+  }
+}

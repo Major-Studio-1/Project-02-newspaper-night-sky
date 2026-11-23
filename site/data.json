@@ -1,5 +1,5 @@
 {
-  "release_version": "0.11.7",
+  "release_version": "0.11.8",
   "reviewed": [
     {
       "year": 1776,
@@ -23983,6 +23983,250 @@
           "child": false
         },
         {
+          "id": "group:truguet-letter-6-november-1796-ireland",
+          "kind": "document_group",
+          "label": "Truguet to the Directory, 6 November 1796: letters from Brest 'announce that a general revolution has just taken place in Ireland'",
+          "definition": "Printings of a letter to the French Executive Directory dated 6 November 1796 and signed Truguet: 'I hasten to communicate to the Executive Directory the reception of letters from Brest, of the 3d instant (November) brought by an extraordinary courier, which announce that a general revolution has just taken place in Ireland.' It gives the report of the captains of two ships brought in from Liverpool by French privateers, that the Irish had taken 30,000 stand of arms in Dublin and defeated 10,000 English troops. Printed from the Paris papers, in the same column of French news as General Bournonville's letter (a group of its own). A report at second hand: the writer passes on what letters from Brest and two ship captains said.",
+          "members": [
+            {
+              "id": "obs:expansion-1797:S97-002",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-005",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-007",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-015",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1797-war",
+          "child": false
+        },
+        {
+          "id": "group:bournonville-letter-3-brumaire-neuwied",
+          "kind": "document_group",
+          "label": "General Bournonville to the Directory, Mulheim, 3 Brumaire: the attack on the bridgehead at Neuwied",
+          "definition": "Printings of General Bournonville's letter to the French Executive Directory from Mulheim, dated 3 Brumaire (two papers add 'Oct. 28'): 'I had the honor to give you an account yesterday of the attack of the army made by the enemy in the night between the 29th and 30th Vendemiaire ... upon the head of the bridge and the isle of Neuwied'; he writes that the enemy meant to make the garrison prisoners of war, and that 'This affair cost the enemy more than four thousand men'. Printed from the Paris papers, in the same column as Truguet's letter of 6 November (a group of its own). A commander's own report.",
+          "members": [
+            {
+              "id": "obs:expansion-1797:S97-001",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-004",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-006",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-013",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1797-war",
+          "child": false
+        },
+        {
+          "id": "group:crauford-letter-27-october-1796-moreau-retreats",
+          "kind": "document_group",
+          "label": "From the Archduke Charles's headquarters, 27 October 1796: Moreau's army retreats across the Rhine",
+          "definition": "Printings of a letter dated at the headquarters of the Archduke Charles of Austria, 27 October 1796, which the London Gazette of 13 November published with others from Captain Anstruther and R. Crauford: 'My Lord, I have the honour to inform your Lordship, that in the course of the last night Gen. Moreau's army retreated across the Rhine at Huningen' (the Patowmac Guardian's words); it is signed Robert Crauford. Three papers print it after a London paragraph of 14 November that introduces it as 'the last of the letters alluded to'; the New Hampshire Gazette prints the letter alone, from New York. The writer's report from the Austrian headquarters, as the London Gazette published it.",
+          "members": [
+            {
+              "id": "obs:expansion-1797:S97-003",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-008",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-009",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-014",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1797-war",
+          "child": false
+        },
+        {
+          "id": "group:berthier-letter-milan-28-november-1796",
+          "kind": "document_group",
+          "label": "General Berthier's letter from Milan, 28 November 1796: the army of Italy after Arcola",
+          "definition": "Printings of a letter from General Berthier, chief of the staff of the army of Italy, to General Baraguey d'Hilliers (each paper spells the name differently), dated at Milan, 8 Frimaire, 28 November 1796: 'I informed you, general, by the last bulletin which I sent you, that, after having beaten the troops commanded by general Alvinzy in person, at Arcola, the commander in chief made his dispositions to attack the column commanded by general Davidovich'; it reports that the enemy was driven from the heights of Rivoli with 1,100 prisoners taken. A staff officer's own report for the French side.",
+          "members": [
+            {
+              "id": "obs:expansion-1797:S97-010",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-011",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-012",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-016",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1797-war",
+          "child": false
+        },
+        {
+          "id": "group:delarue-report-march-of-the-troops-august-1797",
+          "kind": "document_group",
+          "label": "Delarue's report to the Council of Five Hundred on the march of the troops, August 1797",
+          "definition": "Printings of the report made in the French Council of Five Hundred (sitting of 4 August 1797; 3 August in the Mirror) by Delarue ('Delarne' in the Mirror and the Kentucky Gazette) for its committee of inspectors, 'on the march of the troops': 'It results from the information we have procured, 1. That from 26 to 27,000 men have been detached from the army of the Sambre and Meuse, instead of 9000, as was stated by Gen. Hoche. 2. That this force directed its march towards Paris' (the Gazette of the United States prints 6000, 'as was said'). It goes on to say that the soldiers had been 'misled and seduced' against the Legislative Body and that troops kept marching on Paris 'by order of Gen. Hoche'. A committee's report and charges in the legislature, as the Paris papers gave them.",
+          "members": [
+            {
+              "id": "obs:expansion-1797:S97-017",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-018",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-020",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-022",
+              "roles": [
+                "published_document"
+              ]
+            }
+          ],
+          "category": "1797-war",
+          "child": false
+        },
+        {
+          "id": "group:vienna-report-26-july-1797-peace-talks",
+          "kind": "message_group",
+          "label": "Vienna, 26 July 1797: the peace talks in Italy 'meet with great difficulties'",
+          "definition": "Printings of a report from Vienna dated 26 July 1797, printed from the London papers in two forms. Three papers print a short form: 'The Marquis DE GALLO, has this moment arrived here from Udina. The negotiations for peace in Italy, meet with great difficulties. The French require that Mantua shall be united with the Cisalpine Republic' (the Mirror's words). The Gazette of the United States and the Kentucky Gazette print a longer form that opens with the Marquis de Gallo's conferences with the Emperor and Baron Thugut, and adds that 'neither the marquis nor the persons about the court had very pleasant countenances'. Both forms then give the same account of the French demand for Mantua, the Emperor's indemnification in Istria and Dalmatia, and 'our fears that hostilities may again commence'. A correspondent's report, at second hand through the London papers.",
+          "members": [
+            {
+              "id": "obs:expansion-1797:S97-019",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-021",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-023",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-024",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-026",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1797-war",
+          "child": false
+        },
+        {
+          "id": "group:nassau-letter-26-september-1797",
+          "kind": "message_group",
+          "label": "A letter from Nassau, New Providence, 26 September 1797: the writer's account of a 'plot'",
+          "definition": "Printings of a letter from a gentleman at Nassau, New Providence, dated 26 September 1797, as a Columbia (South Carolina) paper printed it on 3 November: 'We have lately very providentially escaped a most hellish plot.—A parcel of French negroes who had been captured and sold here, and who had ran away from their owners, entered into a conspiracy (about thirty in number) to burn the town and make a general massacre of the whites.' By his account one of them told his master a few hours before, five were taken and condemned and three executed. One correspondent's account, written from the side of those who held the accused; the accused are heard only through it, and it names no one.",
+          "members": [
+            {
+              "id": "obs:expansion-1797:S97-029",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-031",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-032",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-033",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1797-war",
+          "child": false
+        },
+        {
           "id": "group:peace-cayenne-context",
           "kind": "context_group",
           "label": "Peace / Cayenne context",
@@ -24793,6 +25037,40 @@
           ],
           "category": "1797-public",
           "child": false
+        },
+        {
+          "id": "group:wilmington-report-12-october-1797-spanish-posts",
+          "kind": "message_group",
+          "label": "Wilmington, 12 October 1797: a traveller from Pensacola reports orders to deliver up the Spanish posts",
+          "definition": "Printings of a report from Wilmington, North Carolina, of 12 October 1797: 'A gentleman who arrived in town on Sunday last from New-Providence, via the Havannah, has favored the Printer with the following information—on the authenticity of which he places the greatest confidence': on 20 August, the day he left Pensacola, he saw an official letter from the Baron de Carondelet saying that orders had come from his court 'to put into full execution, the treaty between Spain and the United States of America', and that the commandants of the forts on the Mississippi were to deliver up the posts; Governor Gayoso had been appointed governor-general of the Floridas and Louisiana. A traveller's report at second hand.",
+          "members": [
+            {
+              "id": "obs:expansion-1797:S97-025",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-027",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-028",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1797:S97-030",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1797-public",
+          "child": false
         }
       ],
       "categories": [
@@ -24807,7 +25085,14 @@
             "group:hermione-mutiny",
             "group:barney-escapes-blockade",
             "group:sonthonax-departure",
-            "group:quito-earthquake"
+            "group:quito-earthquake",
+            "group:truguet-letter-6-november-1796-ireland",
+            "group:bournonville-letter-3-brumaire-neuwied",
+            "group:crauford-letter-27-october-1796-moreau-retreats",
+            "group:berthier-letter-milan-28-november-1796",
+            "group:delarue-report-march-of-the-troops-august-1797",
+            "group:vienna-report-26-july-1797-peace-talks",
+            "group:nassau-letter-26-september-1797"
           ]
         },
         {
@@ -24832,11 +25117,45 @@
             "group:congress-opening-nov-1797",
             "group:kosciuszko-land-warrant",
             "group:jefferson-madison-letter",
-            "group:nh-governor-address-1797"
+            "group:nh-governor-address-1797",
+            "group:wilmington-report-12-october-1797-spanish-posts"
           ]
         }
       ],
       "stories": [
+        {
+          "id": "group:truguet-letter-6-november-1796-ireland",
+          "label": "Truguet to the Directory, 6 November 1796: letters from Brest 'announce that a general revolution has just taken place in Ireland'",
+          "category": "1797-war",
+          "members": [
+            "obs:expansion-1797:S97-002",
+            "obs:expansion-1797:S97-005",
+            "obs:expansion-1797:S97-007",
+            "obs:expansion-1797:S97-015"
+          ]
+        },
+        {
+          "id": "group:bournonville-letter-3-brumaire-neuwied",
+          "label": "General Bournonville to the Directory, Mulheim, 3 Brumaire: the attack on the bridgehead at Neuwied",
+          "category": "1797-war",
+          "members": [
+            "obs:expansion-1797:S97-001",
+            "obs:expansion-1797:S97-004",
+            "obs:expansion-1797:S97-006",
+            "obs:expansion-1797:S97-013"
+          ]
+        },
+        {
+          "id": "group:crauford-letter-27-october-1796-moreau-retreats",
+          "label": "From the Archduke Charles's headquarters, 27 October 1796: Moreau's army retreats across the Rhine",
+          "category": "1797-war",
+          "members": [
+            "obs:expansion-1797:S97-003",
+            "obs:expansion-1797:S97-008",
+            "obs:expansion-1797:S97-009",
+            "obs:expansion-1797:S97-014"
+          ]
+        },
         {
           "id": "group:jefferson-madison-letter",
           "label": "Jefferson's letter to Madison",
@@ -24859,6 +25178,17 @@
             "obs:expansion-1797:E40",
             "obs:expansion-1797:E41",
             "obs:expansion-1797:E42"
+          ]
+        },
+        {
+          "id": "group:berthier-letter-milan-28-november-1796",
+          "label": "General Berthier's letter from Milan, 28 November 1796: the army of Italy after Arcola",
+          "category": "1797-war",
+          "members": [
+            "obs:expansion-1797:S97-010",
+            "obs:expansion-1797:S97-011",
+            "obs:expansion-1797:S97-012",
+            "obs:expansion-1797:S97-016"
           ]
         },
         {
@@ -24963,6 +25293,17 @@
           ]
         },
         {
+          "id": "group:delarue-report-march-of-the-troops-august-1797",
+          "label": "Delarue's report to the Council of Five Hundred on the march of the troops, August 1797",
+          "category": "1797-war",
+          "members": [
+            "obs:expansion-1797:S97-017",
+            "obs:expansion-1797:S97-018",
+            "obs:expansion-1797:S97-020",
+            "obs:expansion-1797:S97-022"
+          ]
+        },
+        {
           "id": "group:sonthonax-departure",
           "label": "Sonthonax leaves Saint-Domingue",
           "category": "1797-war",
@@ -24971,6 +25312,18 @@
             "obs:expansion-1797:E83",
             "obs:expansion-1797:E85",
             "obs:expansion-1797:E84"
+          ]
+        },
+        {
+          "id": "group:vienna-report-26-july-1797-peace-talks",
+          "label": "Vienna, 26 July 1797: the peace talks in Italy 'meet with great difficulties'",
+          "category": "1797-war",
+          "members": [
+            "obs:expansion-1797:S97-019",
+            "obs:expansion-1797:S97-021",
+            "obs:expansion-1797:S97-023",
+            "obs:expansion-1797:S97-024",
+            "obs:expansion-1797:S97-026"
           ]
         },
         {
@@ -25029,6 +25382,17 @@
           ]
         },
         {
+          "id": "group:wilmington-report-12-october-1797-spanish-posts",
+          "label": "Wilmington, 12 October 1797: a traveller from Pensacola reports orders to deliver up the Spanish posts",
+          "category": "1797-public",
+          "members": [
+            "obs:expansion-1797:S97-025",
+            "obs:expansion-1797:S97-027",
+            "obs:expansion-1797:S97-028",
+            "obs:expansion-1797:S97-030"
+          ]
+        },
+        {
           "id": "group:hermione-mutiny",
           "label": "Hermione mutiny",
           "category": "1797-war",
@@ -25040,6 +25404,17 @@
             "obs:expansion-1797:E66",
             "obs:expansion-1797:E67",
             "obs:expansion-1797:E68"
+          ]
+        },
+        {
+          "id": "group:nassau-letter-26-september-1797",
+          "label": "A letter from Nassau, New Providence, 26 September 1797: the writer's account of a 'plot'",
+          "category": "1797-war",
+          "members": [
+            "obs:expansion-1797:S97-029",
+            "obs:expansion-1797:S97-031",
+            "obs:expansion-1797:S97-032",
+            "obs:expansion-1797:S97-033"
           ]
         },
         {
@@ -25687,6 +26062,500 @@
           "transcription": "RevX",
           "summary": "The Kentucky Gazette prints the same account.",
           "note": "Same account."
+        },
+        {
+          "id": "obs:expansion-1797:S97-002",
+          "legacy_id": "S97-002",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1797-01-09:1:3",
+          "issue_id": "issue:sn83025881:1797-01-09:1",
+          "date": "1797-01-09",
+          "page": 3,
+          "excerpt": "November 6. Citizen Directois, I hasten to communicate to the executive direc-tory the reception of letters from Brest, of the 3d instant (November) brought by an extraor-dinary courier, which announce that a general re-volution has just taken place in Ireland. This inter-esting news came by two ships brought into the road the same evening by our privateers, and which lately failed from Liverpool.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-01-09_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-002.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Truguet's letter to the Directory of 6 November 1796: letters from Brest announce 'a general revolution' in Ireland.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1797:S97-005",
+          "legacy_id": "S97-005",
+          "node": "sn84038410",
+          "page_id": "page:sn84038410:1797-01-19:1:2",
+          "issue_id": "issue:sn84038410:1797-01-19:1",
+          "date": "1797-01-19",
+          "page": 2,
+          "excerpt": "November 6. Citizen Director, I hasten to communicate to the Executive Directory, the reception of letters from Breiz, of the 3d instant (November) brought by an extraordinary Courier, which announce that a general revolution has taken place in Ireland. This interesting news came by two ships brought into the road the same evening by our privateers, and which lately failed from Liverpool.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84038410/1797-01-19_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-005.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Patowmac Guardian prints Truguet's letter.",
+          "note": "Prints 'a general revolution has taken place', without 'just'."
+        },
+        {
+          "id": "obs:expansion-1797:S97-007",
+          "legacy_id": "S97-007",
+          "node": "sn83025527",
+          "page_id": "page:sn83025527:1797-01-24:1:3",
+          "issue_id": "issue:sn83025527:1797-01-24:1",
+          "date": "1797-01-24",
+          "page": 3,
+          "excerpt": "Citizens Directors. I hasten to communicate to the Executive Directory, the reception of letters from Brest, of the 3d instant (Nov.) brought by an extraordinary courier, which announces that a general revolution has just taken place in Ireland. This interesting news came by two ships brought into the road the same evening by our privateers, and which lately sailed from Liverpool.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025527/1797-01-24_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-007.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Russel & Davis' Republican Gazetteer prints Truguet's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-015",
+          "legacy_id": "S97-015",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1797-03-08:1:2",
+          "issue_id": "issue:sn82014782:1797-03-08:1",
+          "date": "1797-03-08",
+          "page": 2,
+          "excerpt": "November 6. Citizens Directors. I hasten to communicate to the Executive Directory the reception of letters from Brest, of the 3d instant (November) brought by an extraordinary courier, which announce that a general revolution has just taken place in Ireland. This interesting news came by two ships brought into the road the same evening by our privateers, and which lately failed from Liverpool.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-03-08_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-015.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints Truguet's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-001",
+          "legacy_id": "S97-001",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1797-01-09:1:3",
+          "issue_id": "issue:sn83025881:1797-01-09:1",
+          "date": "1797-01-09",
+          "page": 3,
+          "excerpt": "General Bournonville to the Executive Directory. MULHEIM, 3d Brumaire, Oct. 28. I had the honor to give you an account yester-day of the attack of the army made by the enemy in the night between the 29th and 30th Vende-maire, (21st and 22d Oct.) upon the head of the bridge and the Isle of Neuweid;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-01-09_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-001.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "General Bournonville's letter to the Directory from Mulheim, 3 Brumaire, on the attack at the bridgehead of Neuwied.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1797:S97-004",
+          "legacy_id": "S97-004",
+          "node": "sn84038410",
+          "page_id": "page:sn84038410:1797-01-19:1:2",
+          "issue_id": "issue:sn84038410:1797-01-19:1",
+          "date": "1797-01-19",
+          "page": 2,
+          "excerpt": "General Bournonville to the Executive Directory. Mulheim, 3d Brumaire. I had the honor to give you an account yesterday of the attack of the army, made by the enemy, in the night between the 29th and 30th Vendémiaire, upon the head of the bridge and the isle of Neuwied;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84038410/1797-01-19_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-004.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Patowmac Guardian prints General Bournonville's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-006",
+          "legacy_id": "S97-006",
+          "node": "sn83025527",
+          "page_id": "page:sn83025527:1797-01-24:1:3",
+          "issue_id": "issue:sn83025527:1797-01-24:1",
+          "date": "1797-01-24",
+          "page": 3,
+          "excerpt": "BOURNONVILLE to the Ex. Directory. Mulheim, 3d Brumaire, Oct. 28. I had the honor to give you an account yesterday of the attack of the army made by the enemy in the night between the 29th and 30th Vendémiaire, (21st and 22d Oct.) upon the head of the bridge and the isle of Neupied;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025527/1797-01-24_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-006.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Russel & Davis' Republican Gazetteer prints General Bournonville's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-013",
+          "legacy_id": "S97-013",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1797-03-08:1:2",
+          "issue_id": "issue:sn82014782:1797-03-08:1",
+          "date": "1797-03-08",
+          "page": 2,
+          "excerpt": "General Bournonville to the Executive Directory. Mulheim, 3d Brumaire. I had the honor to give you an account yesterday of the attack of the army, made by the enemy in the night between the 29th and 30th Vendemaire, upon the head of the bridge and the Isle of Newwied;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-03-08_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-013.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints General Bournonville's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-003",
+          "legacy_id": "S97-003",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1797-01-14:1:3",
+          "issue_id": "issue:sn83025881:1797-01-14:1",
+          "date": "1797-01-14",
+          "page": 3,
+          "excerpt": "The following is the last of the letters alluded to: Head Quarters of his royal highness the archduke Charles of Austria, Mappach, October 27, 1796. My Lord, I have the honor to inform your lordship, that in the course of last night, general Moreau's army retreated across the Rhine at Huningen.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-01-14_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-003.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A letter from the Archduke Charles's headquarters, 27 October 1796, from the London Gazette: Moreau's army has retreated across the Rhine.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1797:S97-008",
+          "legacy_id": "S97-008",
+          "node": "sn84038410",
+          "page_id": "page:sn84038410:1797-01-26:1:2",
+          "issue_id": "issue:sn84038410:1797-01-26:1",
+          "date": "1797-01-26",
+          "page": 2,
+          "excerpt": "The following is the last of the letters alluded to: Head Quarters of his Royal Highness the Archduke Charles of Austria, Macppath, Oct. 27; '96. My Lord, I have the honour to inform your Lordship, that in the course of the last night Gen. Moreau's army retreated across the Rhine at Huningen.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84038410/1797-01-26_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-008.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Patowmac Guardian prints the letter from the Archduke Charles's headquarters.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-009",
+          "legacy_id": "S97-009",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1797-01-28:1:2",
+          "issue_id": "issue:sn83025588:1797-01-28:1",
+          "date": "1797-01-28",
+          "page": 2,
+          "excerpt": "Head-Quarters of his Royal Highness the Archduke Charles of Austria, Macepath, Oct. 27, 1796. MY LORD, I have the honor to inform your Lordship, that in the course of the last night Gen. Moreau's army retreated across the Rhine at Huningen.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-01-28_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-009.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints the letter from the Archduke Charles's headquarters.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-014",
+          "legacy_id": "S97-014",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1797-03-08:1:2",
+          "issue_id": "issue:sn82014782:1797-03-08:1",
+          "date": "1797-03-08",
+          "page": 2,
+          "excerpt": "The following is the last of the letters alluded to: Head quarters of his Royal highness the Archduke Charles of Austria, Macpath, Oct 27, 1796. MY LORD, I have the honor to inform your Lordship, that in the course of last night, gen. Moreau's army retreated across the Rhine at Huningen.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-03-08_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-014.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints the letter from the Archduke Charles's headquarters.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-010",
+          "legacy_id": "S97-010",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1797-02-13:1:3",
+          "issue_id": "issue:sn83025881:1797-02-13:1",
+          "date": "1797-02-13",
+          "page": 3,
+          "excerpt": "ARMY OF ITALY. Letter from general Berthier, chief of the staff major of Italy, to general Barraquay D. Hiller. \"Head quarters at Milan, 8 Brumaire, November 28, 5th year. \"I informed you, general, by the last bulletin which I sent you, that, after having beaten the troops commanded by general Alvinzy in person, at Arcola, the commander in chief made his dispositions to attack the column commanded by general Davidovich, who had brought his advanced posts as far as Calliano.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-02-13_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-010-1.jpg",
+            "assets/story_discovery_1797__round3__evidence__S97-010-2.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "General Berthier's letter from Milan of 28 November 1796 reports the army of Italy's attack after Arcola.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1797:S97-011",
+          "legacy_id": "S97-011",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1797-02-25:1:2",
+          "issue_id": "issue:sn83025588:1797-02-25:1",
+          "date": "1797-02-25",
+          "page": 2,
+          "excerpt": "Army of Italy. Letter from Gen. Berthier, chief of the staff major of Italy, to Gen. Barroquey, D. Hillier. Head quarters at Milan, 8 Frimaire, Nov. 28, 5th year. I informed you, general, by the last bulletin which I sent you; that, after having beaten the troops commanded by general Alvinzi in person, at Arcola, the commander in chief made his dispositions to attack the column commanded by General Davidovich, who had brought his advanced post as far as Castelnuovo.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-02-25_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-011.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints General Berthier's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-012",
+          "legacy_id": "S97-012",
+          "node": "sn83025527",
+          "page_id": "page:sn83025527:1797-02-28:1:3",
+          "issue_id": "issue:sn83025527:1797-02-28:1",
+          "date": "1797-02-28",
+          "page": 3,
+          "excerpt": "Letter from Gen. Berthier, chief of the staff major of Italy, to Gen. Barrague, D. Hilher. Head quarters at Milan, 8 Frimaire, Nov. 28, 5th year. \"I informed you, General, by the last bulletin which I sent you, that after having beaten the troops commanded by Gen. Alvinzy in person, at Arcola, the commander in chief made his dispositions to attack the column commanded by Gen. Davidovich, who had brought his advanced posts as far as Castlenovo.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025527/1797-02-28_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-012.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Russel & Davis' Republican Gazetteer prints General Berthier's letter.",
+          "note": "The Republican Gazetteer introduces it: 'The French continue victorious in Italy—See this Letter'."
+        },
+        {
+          "id": "obs:expansion-1797:S97-016",
+          "legacy_id": "S97-016",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1797-03-15:1:2",
+          "issue_id": "issue:sn82014782:1797-03-15:1",
+          "date": "1797-03-15",
+          "page": 2,
+          "excerpt": "FRANCE. ARMY OF ITALY. Letter from Gen. Berthier, chief of the Etat Major of Italy, to General Barraquey D. Hillier. \"Head quarters at Milan, 8th Frimaire, Nov. 28, 5th year.\" \"I informed you, general, by the last bulletin which I sent you, that, after having beaten the troops commanded by general Alvinzy in person, Arcole the commander in chief, made his dispositions to attack the column commanded by general Davidovich, who had brought his advanced posts as far as Castlenovo.\"",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-03-15_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-016.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints General Berthier's letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-017",
+          "legacy_id": "S97-017",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1797-09-20:1:3",
+          "issue_id": "issue:sn83025881:1797-09-20:1",
+          "date": "1797-09-20",
+          "page": 3,
+          "excerpt": "SITTING OF AUGUST 4. Delarue. - \"I come in the name of your committee of inspectors, to make the report which you required on the march of the troops.\" \"It results from the information we have procured, 1. That from 26 to 27,000 men have been detached from the army of the Sambre and Meuse, instead of 6000, as was said by Gen. Hoche. 2. That this force directed its march towards Paris.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-09-20_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-017.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Delarue's report to the Council of Five Hundred, 4 August 1797: 26 to 27,000 men detached from the army of the Sambre and Meuse marched towards Paris.",
+          "note": "Earliest printing found. Prints 'instead of 6000, as was said by Gen. Hoche', where the other papers print 9000 and 'as was stated'."
+        },
+        {
+          "id": "obs:expansion-1797:S97-018",
+          "legacy_id": "S97-018",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1797-09-26:1:3",
+          "issue_id": "issue:sn83025588:1797-09-26:1",
+          "date": "1797-09-26",
+          "page": 3,
+          "excerpt": "PARIS, July 24. Sitting of August 4. Delarue—\"I come in the name of your committee of inspectors, to make the report which you required on the march of the troops.\" \"It results from the information that I have procured.\" 1. That from 26 to 27,000 men have been detached from the army of the Sambre and Meuse, instead of 9000 as was stated by Gen. Hoche. 2. That this force directed its march towards Paris.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-09-26_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-018.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints Delarue's report.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-020",
+          "legacy_id": "S97-020",
+          "node": "sn83025525",
+          "page_id": "page:sn83025525:1797-10-10:1:1",
+          "issue_id": "issue:sn83025525:1797-10-10:1",
+          "date": "1797-10-10",
+          "page": 1,
+          "excerpt": "COUNCIL OF FIVE HUNDRED, AUGUST 3. DELARNE.—\"I come in the name of your committee of inspectors, to make the report which you required on the march of the troops.\" \"It results, from the information that we have procured, 1. That from 26 to 27,000 men have been detached from the army of Sambre and Meuse, instead of 9000, as was stated by Gen. Hoche. 2. That this force directed its march towards Paris.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025525/1797-10-10_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-020.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Mirror prints Delarue's report.",
+          "note": "Dates the sitting 3 August and prints the name 'DELARNE'."
+        },
+        {
+          "id": "obs:expansion-1797:S97-022",
+          "legacy_id": "S97-022",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1797-10-14:1:2",
+          "issue_id": "issue:sn82014782:1797-10-14:1",
+          "date": "1797-10-14",
+          "page": 2,
+          "excerpt": "Sitting of August 4. Delarue.—\"I come in the name of your committee of inspectors, to make the report which you required on the march of the troops.\" \"It results, from the information that we have procured, 1. That from 26 to 27,000 men have been detached from the army of the Sambre and Meuse, instead of 9000, as was stated by Gen. Hoche. 2. That this force directed its march towards Paris.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-10-14_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-022.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints Delarue's report.",
+          "note": "Prints the name 'Delarne'."
+        },
+        {
+          "id": "obs:expansion-1797:S97-019",
+          "legacy_id": "S97-019",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1797-10-04:1:2",
+          "issue_id": "issue:sn83025881:1797-10-04:1",
+          "date": "1797-10-04",
+          "page": 2,
+          "excerpt": "VIENNA, July 26. On the 24th instant, about nine in the morning, the marquis de Gallo arrived here, and immediately after repaired to Engendorf where he had a long conference with the emperor. On his return to this city, he went to the minister of state, baron Thugut, with whom he had another long conference. It was remarked that neither the marquis nor the persons about the court had very pleasant countenances. The negotiations for peace in Italy meet with great difficulties in their further progress.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-10-04_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-019.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A report from Vienna of 26 July 1797, in the longer form: the Marquis de Gallo's conferences, and difficulties in the peace talks in Italy.",
+          "note": "Earliest printing found. The longer form of the report."
+        },
+        {
+          "id": "obs:expansion-1797:S97-021",
+          "legacy_id": "S97-021",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1797-10-10:1:2",
+          "issue_id": "issue:sn83025588:1797-10-10:1",
+          "date": "1797-10-10",
+          "page": 2,
+          "excerpt": "Viexwna, July 26. THE Marquis 1 Gavrvro, has this moment arrived here from Udma. - The negociations for peace in Italy, meet with great difficulties. he French require that Mantua &be united with the Cifalpine Republic, though it was at firft ftipu lited to be given to Aultria.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-10-10_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-021.jpg"
+          ],
+          "transcription": "CA",
+          "summary": "The New Hampshire Gazette prints the Vienna report.",
+          "note": "The short form. This page has no RevX transcription, so the excerpt comes from the older CA transcription."
+        },
+        {
+          "id": "obs:expansion-1797:S97-023",
+          "legacy_id": "S97-023",
+          "node": "sn84023150",
+          "page_id": "page:sn84023150:1797-10-23:1:2",
+          "issue_id": "issue:sn84023150:1797-10-23:1",
+          "date": "1797-10-23",
+          "page": 2,
+          "excerpt": "VIENNA, JULY 26. THE Marquis de Gallo, has this moment arrived here from Udine. The negotiations for peace in Italy, meet with great difficulties. The French require that Mantua shall be united with the Cisalpine Republic, though it was at first stipulated to be given to Austria.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84023150/1797-10-23_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-023.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Eagle prints the Vienna report.",
+          "note": "The short form. Prints the place as 'Uding'."
+        },
+        {
+          "id": "obs:expansion-1797:S97-024",
+          "legacy_id": "S97-024",
+          "node": "sn83025525",
+          "page_id": "page:sn83025525:1797-10-24:1:1",
+          "issue_id": "issue:sn83025525:1797-10-24:1",
+          "date": "1797-10-24",
+          "page": 1,
+          "excerpt": "VIENNA, JULY 26. The Marquis DE GALLO, has this moment arrived here from Udina. The negotiations for peace in Italy, meet with great difficulties. The French require that Mantua shall be united with the Cisalpine Republic, tho' it was at first stipulated to be given to Austria.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025525/1797-10-24_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-024.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Mirror prints the Vienna report.",
+          "note": "The short form."
+        },
+        {
+          "id": "obs:expansion-1797:S97-026",
+          "legacy_id": "S97-026",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1797-10-28:1:2",
+          "issue_id": "issue:sn82014782:1797-10-28:1",
+          "date": "1797-10-28",
+          "page": 2,
+          "excerpt": "VIENNA, July 26. On the 24th inst. about nine in the morning the Marquis de Gallo arrived here, and immediately after repaired to Fingenlorf, where he had a long conference with the Emperor. On his return to this city, he went to the minister of state, Baron Thugut, with whom he had a long conference. It was remarked that neither the marquis nor the persons about the court had very pleasant countenances. The negotiations for peace in Italy meet with great difficulties in their further progress.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-10-28_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-026.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints the Vienna report.",
+          "note": "The longer form of the report."
+        },
+        {
+          "id": "obs:expansion-1797:S97-029",
+          "legacy_id": "S97-029",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1797-11-20:1:3",
+          "issue_id": "issue:sn83025881:1797-11-20:1",
+          "date": "1797-11-20",
+          "page": 3,
+          "excerpt": "COLUMBIA, (S. C.) Nov. 3. Extract of a letter from a gentleman at Nassau, New-Providence, to his friend at Wilmington, N. C. dated Sept. 26. We have lately very providentially escaped a most hellish plot—A parcel of French negroes who have been captured and sold here, and who had run away from their owners, entered into a conspiracy (about thirty in number) to burn the town and make a general massacre of the whites.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-11-20_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-029.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A letter from Nassau of 26 September 1797, printed at Columbia: the writer's account of a 'plot' and of the executions that followed.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1797:S97-031",
+          "legacy_id": "S97-031",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1797-12-06:1:2",
+          "issue_id": "issue:sn83025588:1797-12-06:1",
+          "date": "1797-12-06",
+          "page": 2,
+          "excerpt": "COLUMBIA, (S. C.) Nov. 3. A letter from a Gentleman at Nassau, New-Providence, dated Sept. 26, 1797, lays, \"We have lately very providentially escaped a most hellish plot.—A parcel of French negroes who had been captured and sold here, and who had run away from their owners, entered into a conspiracy (about thirty in number) to burn the town and make a general massacre of the whites.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-12-06_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-031.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints the Nassau letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-032",
+          "legacy_id": "S97-032",
+          "node": "sn83025525",
+          "page_id": "page:sn83025525:1797-12-12:1:2",
+          "issue_id": "issue:sn83025525:1797-12-12:1",
+          "date": "1797-12-12",
+          "page": 2,
+          "excerpt": "COLUMBIA, NOV. 3. A LETTER from a Gentleman at Nassau, N. Providence, dated September 26, 1797, says, \"We have lately very providentially escaped a most hellish plot.—A parcel of French Negroes who had been captured and sold here, and who had run away from their owners entered into a conspiracy (about thirty in number) to burn the town and make a general massacre of the whites.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025525/1797-12-12_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-032.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Mirror prints the Nassau letter.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-033",
+          "legacy_id": "S97-033",
+          "node": "sn84023150",
+          "page_id": "page:sn84023150:1797-12-25:1:3",
+          "issue_id": "issue:sn84023150:1797-12-25:1",
+          "date": "1797-12-25",
+          "page": 3,
+          "excerpt": "COLUMBIA, NOV. 3. A letter from a Gentleman at Nassau, N. Providence, dated September, 26, '97, says, \"We have lately very providentially escaped a most hellish plot.—A parcel of French Negroes who had been captured and sold here, and who had run away from their owners entered into a conspiracy (about thirty in number) to burn the town and make a general massacre of the whites.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84023150/1797-12-25_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-033.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Eagle prints the Nassau letter.",
+          "note": "Same item as the other printings."
         },
         {
           "id": "obs:chain-20261030:H012",
@@ -26919,6 +27788,74 @@
           "transcription": "RevX",
           "summary": "The Gazette of the United States in Philadelphia prints the New Hampshire governor's address.",
           "note": "The only printing outside New Hampshire."
+        },
+        {
+          "id": "obs:expansion-1797:S97-025",
+          "legacy_id": "S97-025",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1797-10-27:1:3",
+          "issue_id": "issue:sn83025881:1797-10-27:1",
+          "date": "1797-10-27",
+          "page": 3,
+          "excerpt": "WILMINGTON, (N. C.) October 12. A gentleman who arrived in town on Sunday last from New-Providence, via the Savannah, has favored the Printer with the following information—on the authenticity of which he places the greatest confidence. That on the 20th of August, the day he left Pensacola, he saw an official letter from Baron de Carondelet to a gentleman in office there,",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1797-10-27_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-025.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A Wilmington report of 12 October 1797: a traveller from Pensacola saw the Spanish governor's letter ordering the posts on the Mississippi delivered up.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1797:S97-027",
+          "legacy_id": "S97-027",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1797-11-15:1:3",
+          "issue_id": "issue:sn82014782:1797-11-15:1",
+          "date": "1797-11-15",
+          "page": 3,
+          "excerpt": "A gentleman who arrived in town on Sunday last from New Providence, via the Havana, has favored the printer with the following information; on the authenticity of which he places the greatest confidence. That on the 20th of August, the day he left Pensacola, he saw an official letter from the Baron de Carondelet to a gentleman in office there,",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1797-11-15_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-027.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints the Wilmington report.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1797:S97-028",
+          "legacy_id": "S97-028",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1797-11-15:1:2",
+          "issue_id": "issue:sn83025588:1797-11-15:1",
+          "date": "1797-11-15",
+          "page": 2,
+          "excerpt": "WiLmingrony (N. C.) O&. 12. A gentleman who arrived in town on-Sunday last from New-Providence, via the Havannah, has favored the ' Printer with the following informa ~ tion—on the .authenticity of Which t ‘he places'the greatest confidence : ~ That on the zoth August, the day “he left Pensacola, he saw an official “letter from Barop de Carondelet to ~ a gentleman in office there,",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1797-11-15_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-028.jpg"
+          ],
+          "transcription": "CA",
+          "summary": "The New Hampshire Gazette prints the Wilmington report.",
+          "note": "RevX gives this report three times on the page; the CA transcription has it once, so the excerpt comes from the CA text."
+        },
+        {
+          "id": "obs:expansion-1797:S97-030",
+          "legacy_id": "S97-030",
+          "node": "sn83025525",
+          "page_id": "page:sn83025525:1797-11-21:1:2",
+          "issue_id": "issue:sn83025525:1797-11-21:1",
+          "date": "1797-11-21",
+          "page": 2,
+          "excerpt": "WILMINGTON, OCT. 12. A gentleman who arrived in town on Sunday last from New-Providence, via the Havannah, has favoured the printer with the following information—on the authenticity of which he places the greatest confidence. That on the 20th of August, the day he left Pensacola, he saw an official letter from Baron de CARONDELET to a gentleman in office there,",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025525/1797-11-21_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1797__round3__evidence__S97-030.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Mirror prints the Wilmington report.",
+          "note": "Same item as the other printings."
         }
       ]
     },
