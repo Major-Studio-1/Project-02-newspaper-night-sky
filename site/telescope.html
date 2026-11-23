@@ -278,8 +278,10 @@ const STORIES = (BOOT.stories || 0).toLocaleString('en-US'), DATA_BYTES = BOOT.b
 loading('Opening the telescope…', null, 'Loading the 3D library');
 
 let THREE;
-try { THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js'); }
-catch { fail('The telescope could not load its drawing library from the internet (cdn.jsdelivr.net). Check your connection and try again.'); throw new Error('three.js unavailable'); }
+// three.js r160 is kept with the site (lib/, the offline bundle), so the telescope draws without the internet; the
+// public copy on jsdelivr is the fallback for a copy of the site made without lib/.
+try { THREE = await import('./lib/three.module.js').catch(() => import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js')); }
+catch { fail('The telescope could not load its drawing library. Reload the page to try again.'); throw new Error('three.js unavailable'); }
 let D;
 loading(`Loading ${STORIES} stories…`, DATA_BYTES ? 0 : null, DATA_BYTES ? `0.0 of ${MB(DATA_BYTES)} MB` : '');
 try { D = await fetchJSON('telescope.json?v=' + BOOT.stamp, DATA_BYTES, (f, got) => loading(`Loading ${STORIES} stories…`, f, `${MB(got)} of ${MB(DATA_BYTES)} MB`)); }

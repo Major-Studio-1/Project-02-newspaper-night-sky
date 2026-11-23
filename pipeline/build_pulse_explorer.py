@@ -553,6 +553,10 @@ VER=manifest['version']; N_STARS=len(stars)
 shutil.copyfile(ROOT/'site.css',OUT/'site.css')
 shutil.copyfile(ROOT/'glass.js',OUT/'glass.js')   # the glass controls shared by the Telescope and Pulses pages
 shutil.copyfile(ROOT/'radio.js',OUT/'radio.js')   # the radio's voice and sounds, made in the browser (Radio page, Pulses, Telescope)
+# The offline bundle: the two libraries the pages once loaded from jsdelivr are kept with the site, so it runs without the
+# internet (an exhibition machine): three.js r160 for the Telescope and qrcode-generator 1.4.4 for the exhibition's codes.
+(OUT/'lib').mkdir(exist_ok=True)
+for f in sorted((ROOT/'lib').glob('*.js')): shutil.copyfile(f,OUT/'lib'/f.name)
 tele_html=(ROOT/'telescope.html').read_text(encoding='utf8').replace('__TELESCOPE_BOOT__',json.dumps(tele_boot,ensure_ascii=False).replace('</','<\\/'))
 assert '__TELESCOPE_BOOT__' not in tele_html
 (OUT/'telescope.html').write_text(fill(tele_html,'telescope',VER,N_STARS),encoding='utf8')

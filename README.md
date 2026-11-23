@@ -64,6 +64,8 @@ The reading and scan checks were done with AI assistants. An independent human s
 | [`docs/`](docs) | The full process, the seasons and waves checks, the errors found in the archive, the items the reviews read and did not admit, and the site plan |
 | [`process/`](process) | How the three original proposals and their sketches became this site |
 
+The radio's recorded voices are published from a repository of their own, [Project-02-newspaper-night-sky-audio](https://github.com/Major-Studio-1/Project-02-newspaper-night-sky-audio), so this site stays under GitHub Pages' size limit of 1 GB.
+
 **Run the site locally** (any Python 3):
 
 ```bash

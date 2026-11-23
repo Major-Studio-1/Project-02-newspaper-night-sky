@@ -570,11 +570,20 @@ async function livePlay(key, text, {pan = 0, level = .5, label = '', words = '',
 // passage, 2 a title of a widely printed story), plus aliases (a reviewed story -> its first printing). Each clip is a
 // whole MP3 inside its pack, so a byte range of the pack plays alone. If the server ignores ranges, the whole pack is
 // fetched once and cut here.
-let clipIndex = null, clipLoading = null;
+// The recordings are published from their own site (repository Project-02-newspaper-night-sky-audio), so the main site
+// stays under GitHub Pages' 1 GB limit. A copy of the site that carries audio/ beside its pages (an offline exhibition, a
+// local preview) plays its own first.
+const AUDIO_BASES = [new URL('audio/', document.baseURI).href, 'https://major-studio-1.github.io/Project-02-newspaper-night-sky-audio/'];
+let clipIndex = null, clipLoading = null, audioBase = AUDIO_BASES[0];
 const clipCache = new Map(), wholePacks = new Map();
 function loadClips() {
   if (clipIndex) return Promise.resolve(clipIndex);
-  return clipLoading = clipLoading || fetch(new URL('audio/index.json', document.baseURI)).then(r => r.ok ? r.json() : null).catch(() => null).then(j => (clipIndex = j));
+  return clipLoading = clipLoading || (async () => {
+    for (const base of AUDIO_BASES) {
+      try { const r = await fetch(base + 'index.json'); if (r.ok) { const j = await r.json(); audioBase = base; return (clipIndex = j); } } catch {}
+    }
+    return (clipIndex = null);
+  })();
 }
 const clipId = id => clipIndex && clipIndex.alias && clipIndex.alias[id] || id;
 const hasClip = id => !!(clipIndex && clipIndex.clips[clipId(id)]);
@@ -582,7 +591,7 @@ async function clipBuffer(id) {
   const c = audio(); await loadClips(); id = clipId(id);
   const e = c && clipIndex && clipIndex.clips[id]; if (!e) return null;
   if (clipCache.has(id)) { const b = clipCache.get(id); clipCache.delete(id); clipCache.set(id, b); return b; }
-  const url = new URL('audio/' + clipIndex.packs[e[0]], document.baseURI).href;
+  const url = audioBase + clipIndex.packs[e[0]];
   let bytes = null;
   try {
     if (wholePacks.has(url)) bytes = (await wholePacks.get(url)).slice(e[1], e[2]);

@@ -124,8 +124,9 @@ for src in sorted(p for p in PUBLIC.rglob('*') if p.is_file()):
     else:
         copy(src, rel)
 
-# 2 · The site, exactly as built.
-shutil.copytree(SITE, TARGET / 'site')
+# 2 · The site, exactly as built, without its recordings: the radio voices are published from their own repository
+#     (section 8), so this site stays under GitHub Pages' 1 GB limit.
+shutil.copytree(SITE, TARGET / 'site', ignore=lambda d, names: ['audio'] if Path(d) == SITE else [])
 
 # 3 · The data release, without research.sqlite, assets/ and sources/ (listed in the manifest).
 #     The three largest tables are gzipped with a fixed timestamp, so an unchanged table gives an unchanged file.
@@ -276,3 +277,23 @@ print(json.dumps({'target': str(TARGET), 'release': VERSION, 'files': len(files)
                   'broken_links': broken, 'files_over_50_mb': too_big, 'personal_paths': leaks}, indent=2, ensure_ascii=False))
 if broken or too_big or leaks:
     sys.exit('Export checks failed')
+
+# 8 · The radio voices, to their own repository (Project-02-newspaper-night-sky-audio, a clone beside this one): its README,
+#     its Pages workflow and the site's audio/ folder exactly as built (work/audio_render.py pack). The radio reads them from
+#     that repository's Pages site; a copy of the site with audio/ beside its pages plays its own.
+AUDIO_TARGET = TARGET.parent / 'Project-02-newspaper-night-sky-audio'
+if (AUDIO_TARGET / '.git').is_dir():
+    for child in AUDIO_TARGET.iterdir():
+        if child.name != '.git':
+            if child.is_dir(): shutil.rmtree(child)
+            else: child.unlink()
+    shutil.copytree(WORK / 'public_audio', AUDIO_TARGET, dirs_exist_ok=True)
+    shutil.copytree(SITE / 'audio', AUDIO_TARGET / 'audio')
+    afiles = [p for p in AUDIO_TARGET.rglob('*') if p.is_file() and '.git' not in p.relative_to(AUDIO_TARGET).parts]
+    abig = [p.relative_to(AUDIO_TARGET).as_posix() for p in afiles if p.stat().st_size > 50e6]
+    print(json.dumps({'audio_target': str(AUDIO_TARGET), 'files': len(afiles), 'mb': round(sum(p.stat().st_size for p in afiles) / 1e6, 1),
+                      'files_over_50_mb': abig}, ensure_ascii=False))
+    if abig:
+        sys.exit('Audio export checks failed')
+else:
+    print(f'No clone at {AUDIO_TARGET}: the radio voices were not exported')
