@@ -2,6 +2,22 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.11.11 to v0.11.13 (2026-11-23)
+
+Two ledger releases, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/` with topic rows for the new groups, and a correction release. `CURRENT.json` points to v0.11.13. Each year's README in `outputs/story_discovery_YEAR/` gives the selection, the scan check and the points the owner decided (every point kept as built, 23 November); the rules and exceptions are in `docs/rules-and-exceptions.md`.
+
+- **v0.11.11 · 1802** (`stories_1802.json`): 14 stories, 19 groups and 132 printings in 11 papers, by the standard rule. 3,385 checks: 3,059 observations, 470 groups.
+- **v0.11.12 · 1803** (`stories_1803.json`, made on v0.11.11 with `--base 0.11.11 --target 0.11.12`): 23 stories, 32 groups and 238 printings in 12 papers, by the standard rule. 3,657 checks: 3,297 observations, 502 groups.
+- **v0.11.13 · the *National Intelligencer* of 1802** (`correct_filing_1802.py`; evidence in `outputs/filing_corrections_1802/`): seven issues filed under the wrong dates take the dates they print, and the four pages filed under 24 November 1802, a second scan of the issue of 24 December, leave the analysis (77,743 eligible pages). The 26 pages whose date changes are matched again at their printed dates, after their 231 stored matches are reproduced exactly: 266 matches removed and 230 added; 59 printings of the matched stories removed and 50 added, each found again on the same story and page; no story dropped or added (48,270), 13 retitled. One reviewed printing, `S02-090` (the French Senate's address to the First Consul), takes the printed date of its issue, 1 October 1802; no reviewed row changes.
+
+## Changes in v0.11.8 to v0.11.10 (2026-11-23)
+
+Three ledger releases, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/`, with topic rows for the new groups; no earlier row changes. `CURRENT.json` points to v0.11.10. Each year's README in `outputs/story_discovery_YEAR/` gives the selection, the scan check and the points the owner decided; the rules and exceptions are in `docs/rules-and-exceptions.md`.
+
+- **v0.11.8 · 1797 read again by the one rule:** 8 stories and 33 printings added; the year's threshold is 4 papers (Y-1797). 2,726 checks.
+- **v0.11.9 · 1800** (`stories_1800.json`): 16 stories, 27 groups and 182 printings in 11 papers, by the standard rule. 2,917 checks.
+- **v0.11.10 · 1804** (`stories_1804.json`, made on v0.11.9 with `--base 0.11.9 --target 0.11.10`): 20 stories, 44 groups and 296 printings in 11 papers, by the standard rule. 3,248 checks: 2,927 observations, 451 groups, 4,497 memberships, 207 hierarchy rows, 77,747 eligible pages.
+
 ## Changes in v0.11.7 (2026-11-22)
 
 v0.11.7 is v0.11.6 with **four filing faults of the archive corrected**. These faults were found by the reviews of 1793 and 1806 and by v0.8.1, and left for a correction release after the talk of 17 November. It was made by `correct_filing.py --keep-current` from `outputs/filing_corrections/` (corrections, evidence, the rematch and the census scores; its README explains them). **`CURRENT.json` is not moved.** No reviewed row changes.

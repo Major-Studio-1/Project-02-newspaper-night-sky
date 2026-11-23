@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "release_version": "0.11.10",
+  "release_version": "0.11.13",
   "reviewed_years": [
     {
       "year": 1776,
@@ -32,6 +32,22 @@
       "passages": 182,
       "group_views": 27,
       "stories": 16,
+      "categories": 3
+    },
+    {
+      "year": 1802,
+      "newspapers": 14,
+      "passages": 132,
+      "group_views": 19,
+      "stories": 14,
+      "categories": 3
+    },
+    {
+      "year": 1803,
+      "newspapers": 17,
+      "passages": 238,
+      "group_views": 32,
+      "stories": 23,
       "categories": 3
     },
     {
@@ -83,19 +99,19 @@
       "categories": 3
     }
   ],
-  "curated_passages": 2907,
-  "group_views": 450,
-  "stories_in_overview": 243,
-  "overview_categories": 30,
+  "curated_passages": 3277,
+  "group_views": 501,
+  "stories_in_overview": 280,
+  "overview_categories": 36,
   "years": 41,
   "matched_families": 48270,
-  "reviewed_twins": 199,
-  "sky_stars": 48314,
-  "trace_words": 3104,
-  "trace_stories": 45949,
+  "reviewed_twins": 230,
+  "sky_stars": 48320,
+  "trace_words": 3108,
+  "trace_stories": 45963,
   "year_files_mb": 106.1,
   "year_index_mb": 8.9,
-  "telescope_stars": 48314,
+  "telescope_stars": 48320,
   "telescope_mb": 7.7,
   "telescope_text_mb": 24.4,
   "story_topic_lanes": 23,
@@ -111,7 +127,7 @@
     "Every matched printing carries its transcription check, one printing per page",
     "Every storyline quotes printed text: each opening is from a printing the scan check found faithful, and every quoted phrase is in a printing, its group or its scan verdict"
   ],
-  "matched_printings": 164686,
+  "matched_printings": 164677,
   "storylines": [
     {
       "id": "chesapeake-1807",
@@ -129,25 +145,25 @@
     }
   ],
   "recorded_voices": {
-    "clips": 9844,
-    "packs": 247,
-    "mb": 365.3,
-    "reviewed_passages_recorded": 2429,
-    "reviewed_passages": 2907,
-    "titles_recorded": 6885,
+    "clips": 10292,
+    "packs": 283,
+    "mb": 410.1,
+    "reviewed_passages_recorded": 2907,
+    "reviewed_passages": 3277,
+    "titles_recorded": 6855,
     "announcer_clips": 265
   },
   "pages_sha256": {
-    "index.html": "e38e83e172ee1cb83d938f42a550324fb5b376c3f7ba5cbb98f2f746e3d0e978",
-    "telescope.html": "a9e06a430a3888c59a38efe47cbe831879a94ebb360289d6f1e06d8be3571c11",
-    "pulses.html": "d75206d9266897454faa1a86be7c5cbbc14abf2289a5f090a85e83e019cf6565",
-    "radio.html": "d65746c17e3ee049ac739dc3892f75d45b1d9b8ccee4638c133343f270444140",
-    "stories.html": "75c3f9db5693138e4471ecbf5c759c5025de8376a83cdd3b643e0c8f9ca69833",
-    "exhibit.html": "9c3be922cefde38461445960639393302b84c2e960e7cd178bacbcd85b14f6d8",
-    "method.html": "7807543e3900031fb52f589815dd89e41b796d47595f7115d2a797b7fba8932e",
-    "notes.html": "6a5ec3adfe192f0055e7bc562cba07c7d955faaacf9d9da1cdad87c994ae9583",
-    "findings.html": "5341d131a4f71b6216592673f6de27a6cc511fb6212d816d52a6addd64a2369a",
-    "notebook.html": "3dbd788392496b7282bf0b7af1f184805d58171c991e166cd6188f68ee31d7dc",
+    "index.html": "c0f25245ba770db9540206afa250529032e76de07d2930e8e96b6efdcf8a8de4",
+    "telescope.html": "9240752e892392b698de835daa140cc8b5352e6d3d10e9c4fb014c3f0403a1b6",
+    "pulses.html": "3d9abd10d646d171c5bad90595669e680b33510d367580ccc813e139e05e5957",
+    "radio.html": "20dbfe635c4658301f3658e4666d4a55ec199bdd8ff7c02e9093309b71f4af1b",
+    "stories.html": "58969f77c192d8555be989fb6c28d19c441f009d492c649fb796f4ab0e0e6d29",
+    "exhibit.html": "76417b37f006de0646c79f2615507a6ba663434a4f302cedbdfd55fa66f18b75",
+    "method.html": "b5349fcc174b9bb99be4017bdd06db49190f797676c7e3c7c25943712a128c58",
+    "notes.html": "d670e5c2ec2c5e9aa691d9dff8f7487be9e9dc13ffabe757bf953122fa53c4c3",
+    "findings.html": "e55635162d4c9fea809197703d5d14c4b80103b2f3e5b853364762ab44a9e966",
+    "notebook.html": "0c520a3185cf223952217f60571ed7b7a726ee2aa9aca2bfd616d067298b8031",
     "site.css": "84e4c8dcd1c833a681d179d5e85b3a80d64400d6528a7e1ea2236d95e1af9542",
     "glass.js": "3f5e0166e810e50b8f540c127efb31f3efd826c12e1a36681a06c2d1a73df235",
     "radio.js": "e61144d2b5a1f6e39c5cb114ddbbea6118e4aaee3ff51e3a79094d39d1bd8791"

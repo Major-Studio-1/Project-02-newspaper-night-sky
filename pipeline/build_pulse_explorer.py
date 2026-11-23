@@ -229,7 +229,24 @@ REVIEWED={
                     'death-of-general-hamilton-1804':['bishop-moore-letter-on-general-hamilton', 'gouverneur-morris-funeral-oration-over-general-hamilton', 'hamilton-burr-correspondence-published-july-1804', 'general-hamilton-will-july-1804', 'general-hamilton-statement-on-the-expected-interview', 'coroners-jury-verdict-on-general-hamilton-august-1804'],
                     'west-florida-rising-august-1804':['natchez-letter-of-7-august-armed-men-near-bayou-sara', 'natchez-report-of-14-august-a-party-marches-on-baton-rouge'],
                     'spanish-minister-yrujo-and-w-jackson-1804':['w-jackson-statement-in-the-political-register-september-1804', 'yrujo-letter-to-the-secretary-of-state-october-1804']},
-        'expect':(14,3472)}}
+        'expect':(14,3472)},
+  # The eleventh reviewed year (release v0.11.11): 14 stories by the standard rule, the categories as the review proposed them.
+  1802:{'categories':[
+          ('foreign','Europe and St. Domingo',['baltimore-report-of-the-death-of-toussaint-january-1802', 'french-army-arrives-at-st-domingo-february-1802', 'treaty-of-madrid-21-march-1801-printed-1802', 'definitive-treaty-of-amiens-1802', 'leclerc-proclamation-on-the-arrest-of-toussaint-june-1802', 'french-senate-proclaims-bonaparte-consul-for-life-august-1802']),
+          ('ships','Ships, trade and the Barbary states',['havana-circular-ports-of-cuba-closed-december-1801', 'new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802', 'washington-report-letters-from-algiers-of-7-july-1802', 'madrid-letter-convention-with-spain-on-claims-august-1802']),
+          ('government','American public life and government',['breckenridge-speech-on-repealing-the-judiciary-act-january-1802', 'act-fixing-the-military-peace-establishment-1802', 'paine-returns-to-america-1802', 'new-york-report-fire-of-2-november-1802'])],
+        'children':{'french-army-arrives-at-st-domingo-february-1802':['consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801', 'baltimore-report-conflagration-of-the-cape-march-1802'],
+                    'paine-returns-to-america-1802':['jefferson-letter-to-paine-published-august-1802', 'paine-letter-the-first-to-the-citizens-november-1802', 'paine-letter-the-second-to-the-citizens-november-1802']},
+        'expect':(14, 2968)},
+  # The twelfth reviewed year (release v0.11.12): 23 stories by the standard rule, the categories as the review proposed them.
+  1803:{'categories':[
+          ('war','War and foreign news',['despard-speech-on-the-scaffold-21-february-1803', 'gascoigne-letter-war-expected-march-1803', 'french-note-to-the-british-ambassador-13-may-1803', 'convention-of-suhlingen-for-hanover-june-1803', 'king-message-on-the-batavian-republic-1803', 'london-report-american-claims-paid-july-1803', 'dublin-letter-of-24-july-1803-on-the-rising', 'havre-letters-on-the-invasion-flotilla-august-1803', 'president-message-on-morocco-november-1803', 'calamity-at-madeira-9-october-1803']),
+          ('west','Louisiana, Spain and the West',['deposit-at-new-orleans-before-congress-1802-1803', 'spanish-and-french-ministers-on-the-deposit-1803', 'laussat-proclamation-to-the-louisianians-1803', 'louisiana-expedition-suspended-rotterdam-april-1803', 'monroe-received-at-paris-april-1803', 'national-intelligencer-on-the-treaty-of-cession-july-1803', 'fifteen-millions-the-price-of-louisiana-1803', 'treaty-and-conventions-for-the-cession-of-louisiana-1803']),
+          ('government','American public life and government',['samuel-adams-and-thomas-paine-letters-1802-1803', 'proclamation-convening-congress-16-july-1803', 'president-message-17-october-1803', 'treasury-report-25-october-1803', 'gold-ore-found-in-cabarrus-county-december-1803'])],
+        'children':{'deposit-at-new-orleans-before-congress-1802-1803':['president-message-22-december-1802-on-the-deposit-at-new-orleans', 'house-resolution-7-january-1803-on-the-mississippi', 'senate-resolutions-for-80000-militia-february-1803'],
+                    'spanish-and-french-ministers-on-the-deposit-1803':['yrujo-letter-to-the-secretary-of-state-10-march-1803', 'pichon-letter-to-the-governor-of-louisiana-11-march-1803', 'yrujo-letter-on-the-deposit-restored-19-april-1803'],
+                    'treaty-and-conventions-for-the-cession-of-louisiana-1803':['louisiana-treaty-of-cession-30-april-1803', 'convention-for-sixty-million-francs-30-april-1803', 'convention-on-debts-due-to-american-citizens-30-april-1803']},
+        'expect':(17, 3250)}}
 CATEGORY_COLORS=['#3987e5','#d95926','#199e70']   # dataviz slots 1-3, validated all-pairs on #050711
 short_names={'sn82014782':'Kentucky Gazette','sn83025525':'The Mirror','sn83025527':'Republican Gazetteer','sn83025588':'New Hampshire Gazette','sn83025881':'Gazette of the United States','sn84023150':'The Eagle','sn84024710':'Virginia Argus','sn84038410':'Patowmac Guardian'}
 # Map layout: each series is placed at its town of publication (from the catalogue's places_json).

@@ -9,7 +9,7 @@ an AI transcription made for the Smithsonian's Revolution Crossroads (RevX).
 
 Made by `pipeline/archive_errata.py` from the project's checks, 2026-11-23.
 
-## `filing.csv`: 244 issues filed in the wrong place
+## `filing.csv`: 252 issues filed in the wrong place
 
 One row per issue: the newspaper's LCCN and catalogue title, the date and edition the issue is filed under (and the
 pages, where only some are concerned), what is wrong, how it was found, and what this project did about it.
@@ -17,10 +17,10 @@ pages, where only some are concerned), what is wrong, how it was found, and what
 | Problem | Issues |
 |---|---|
 | RevX transcriptions filed under the wrong page | 123 |
-| Issue filed under the wrong date | 108 |
+| Issue filed under the wrong date | 115 |
 | RevX transcription repeated under another page | 10 |
+| Second scan filed under another date | 2 |
 | Pages filed in another issue | 2 |
-| Second scan filed under another date | 1 |
 
 - **Transcriptions filed under the wrong page.** Each page's RevX text was compared with the Library's OCR of every page
   of its issue, by the share of 4-word phrases they have in common; a page whose RevX text matches another page far
@@ -32,17 +32,20 @@ pages, where only some are concerned), what is wrong, how it was found, and what
   91 by their masthead dates, 13 where no masthead could be read by the
   paper's publication days, 2 on the scans. The check: `pipeline/kentucky_gazette_dates/check_dates.py`.
   Reading every front page of 1793 found two issues of the *Gazette of the United-States* filed away from their mastheads,
-  both confirmed on the scans (`pipeline/story_discovery_1793/check_mastheads_1793.py`).
-- **A second scan filed under another date.** Found by looking for datelines later than the issue a page is filed under
-  (1793; `pipeline/story_discovery_1793/check_duplicate_pages_1793.py`).
+  both confirmed on the scans (`pipeline/story_discovery_1793/check_mastheads_1793.py`). The review of 1802 found seven
+  issues of the *National Intelligencer* filed away from their mastheads, read on the scans
+  (`pipeline/filing_corrections_1802/check_ni_1802.py`).
+- **Second scans filed under another date.** Found by looking for datelines later than the issue a page is filed under
+  (1793; `pipeline/story_discovery_1793/check_duplicate_pages_1793.py`), and by the masthead of an issue filed under
+  24 November 1802 that prints 24 December (1802; `pipeline/filing_corrections_1802/check_ni_1802.py`).
 - **Pages filed in another issue.** Pages 3 and 4 of the *National Intelligencer* of 9 July and 8 September 1806 are filed
   in each other's issues: found by their datelines and by comparing each page with its neighbours (1806;
   `pipeline/story_discovery_1806/check_duplicate_pages_1806.py`, `pipeline/story_discovery_1806/check_page_neighbours_1806.py`).
 
-## `transcription.csv`: 336 printings whose transcription changes what was printed
+## `transcription.csv`: 389 printings whose transcription changes what was printed
 
-Every printing of the reviewed stories of 1776, 1793, 1797, 1800, 1804, 1805, 1806, 1807, 1808 and 1809 was read against its scan:
-2800 printings, of which 336 (12%) carry a misreading
+Every printing of the reviewed stories of 1776, 1793, 1797, 1800, 1802, 1803, 1804, 1805, 1806, 1807, 1808 and 1809 was read against its scan:
+3170 printings, of which 389 (12%) carry a misreading
 that changes a fact (a number, a date, a name, or a word with another meaning) or leave printed text out. For 1797 the count is the 33 printings of its later reading; its other 107 were checked against their scans before verdicts were recorded in this form. One row per
 printing: the newspaper, the date and page, which transcription the passage was taken from (RevX, or CA where RevX is
 missing or misfiled), whether printed text is left out, and the reviewers' notes, mostly in the form
@@ -54,6 +57,8 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 | 1793 | 135 | 9 |
 | 1797 | 33 | 3 |
 | 1800 | 182 | 25 |
+| 1802 | 132 | 23 |
+| 1803 | 238 | 30 |
 | 1804 | 296 | 49 |
 | 1805 | 243 | 26 |
 | 1806 | 464 | 51 |
@@ -63,7 +68,7 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 
 Examples: "ſtaves" read as "slaves" in 8 of the 9 printings of the resolution of
 Congress opening the ports (1776); "WAR INEVITABLE!!!" read as "NECESSARY INFORMATION!!" (1807); "Junot" read as "Juan" and
-"(MURAT.)" as "(MANUEL.)" (1808). 75 of the 336 leave printed text out, often
+"(MURAT.)" as "(MANUEL.)" (1808). 93 of the 389 leave printed text out, often
 behind a bare "...".
 
 The matched stories (found automatically, all years) were not read one by one. A random sample of 200 of

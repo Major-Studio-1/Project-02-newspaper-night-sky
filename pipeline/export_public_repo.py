@@ -155,7 +155,7 @@ SCRIPTS = ['audit_dataset.py', 'discover_topics.py', 'recheck_full_corpus.py',
            'build_pulse_explorer.py', 'site_parts.py', 'site.css', 'glass.js', 'radio.js', 'home.html', 'telescope.html', 'pulse_explorer.html', 'radio.html', 'exhibit.html', 'method.html', 'notes.html', 'findings.html', 'findings_parts.py', 'home_parts.py', 'notebook.html', 'notebook_parts.py', 'notebook.json', 'stories.html', 'stories_parts.py', 'stories.json', 'appendix_parts.py', 'appendix.json',
            'export_public_repo.py', 'audio_render.py', 'audio_manifest.json', 'archive_errata.py', 'not_admitted.py', 'not_admitted.json']
 ARCHIVE = ['build.py', 'migrate_v0_2_0.py', 'apply_ledger.py', 'apply_corrections.py', 'add_reuse_layer.py', 'add_reuse_titles.py',
-           'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'add_reviewed_topics.py', 'refile_revx_pages.py', 'redate_issues.py', 'correct_filing.py', 'set_current.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
+           'add_story_topics.py', 'merge_printings.py', 'add_checks_layer.py', 'add_reviewed_topics.py', 'refile_revx_pages.py', 'redate_issues.py', 'correct_filing.py', 'correct_filing_1802.py', 'set_current.py', 'validate.py', 'consumer.py', 'check_consumers.py', 'README.md']
 for name in SCRIPTS:
     copy_committed(WORK / name, f'pipeline/{name}')
 for name in ARCHIVE:
@@ -164,7 +164,8 @@ for name in ARCHIVE:
 for rel in ['revx_page_shift_check/check_page_shift.py', 'kentucky_gazette_dates/check_dates.py', 'kentucky_gazette_dates/rematch.py',
             'story_discovery_1793/check_mastheads_1793.py', 'story_discovery_1793/check_duplicate_pages_1793.py',
             'story_discovery_1806/check_duplicate_pages_1806.py', 'story_discovery_1806/check_page_neighbours_1806.py',
-            'filing_corrections/match_moved_pages.py', 'filing_corrections/census_rescore.py']:
+            'filing_corrections/match_moved_pages.py', 'filing_corrections/census_rescore.py',
+            'filing_corrections_1802/check_ni_1802.py', 'filing_corrections_1802/match_moved_pages.py']:
     copy_committed(PROJECT / 'outputs' / rel, f'pipeline/{rel}')
 # Only files committed in the working repository: a ledger still being written (another session's work in progress,
 # for example) stays out of the public repository until it is committed.

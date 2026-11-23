@@ -2,6 +2,14 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.11.11 to v0.11.13 (2026-11-23)
+
+Two ledger releases, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/` with topic rows for the new groups, and a correction release. `CURRENT.json` points to v0.11.13. Each year's README in `outputs/story_discovery_YEAR/` gives the selection, the scan check and the points the owner decided (every point kept as built, 23 November); the rules and exceptions are in `docs/rules-and-exceptions.md`.
+
+- **v0.11.11 · 1802** (`stories_1802.json`): 14 stories, 19 groups and 132 printings in 11 papers, by the standard rule. 3,385 checks: 3,059 observations, 470 groups.
+- **v0.11.12 · 1803** (`stories_1803.json`, made on v0.11.11 with `--base 0.11.11 --target 0.11.12`): 23 stories, 32 groups and 238 printings in 12 papers, by the standard rule. 3,657 checks: 3,297 observations, 502 groups.
+- **v0.11.13 · the *National Intelligencer* of 1802** (`correct_filing_1802.py`; evidence in `outputs/filing_corrections_1802/`): seven issues filed under the wrong dates take the dates they print, and the four pages filed under 24 November 1802, a second scan of the issue of 24 December, leave the analysis (77,743 eligible pages). The 26 pages whose date changes are matched again at their printed dates, after their 231 stored matches are reproduced exactly: 266 matches removed and 230 added; 59 printings of the matched stories removed and 50 added, each found again on the same story and page; no story dropped or added (48,270), 13 retitled. One reviewed printing, `S02-090` (the French Senate's address to the First Consul), takes the printed date of its issue, 1 October 1802; no reviewed row changes.
+
 ## Changes in v0.11.8 to v0.11.10 (2026-11-23)
 
 Three ledger releases, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/`, with topic rows for the new groups; no earlier row changes. `CURRENT.json` points to v0.11.10. Each year's README in `outputs/story_discovery_YEAR/` gives the selection, the scan check and the points the owner decided; the rules and exceptions are in `docs/rules-and-exceptions.md`.

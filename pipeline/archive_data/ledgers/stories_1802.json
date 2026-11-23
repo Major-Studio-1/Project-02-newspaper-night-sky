@@ -1,0 +1,3790 @@
+{
+  "ledger_id": "ledger:stories-1802",
+  "ledger_version": 1,
+  "base_release": "0.11.10",
+  "target_release": "0.11.11",
+  "recorded_date": "2026-11-23",
+  "namespace": "expansion-1802",
+  "evidence_dir": "outputs/story_discovery_1802/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1802, and of 1801 where they reach the 1802 pages (long-running ones included), phrase searches on all 2,968 pages of 1802 in both transcriptions, reading of every hit, and scan checks of each admitted passage, by the one admission rule (9 or more papers admitted, 7 or 8 chosen to cover the months and the kinds of news)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1802/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1802/items_from_1801.json": "retrieval_candidates",
+    "outputs/story_discovery_1802/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1802/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1802.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1802_review.json": "scan_review",
+    "outputs/story_discovery_1802/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1802/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S02-001",
+      "page_key": "sn83045242|1802-01-11|1|3",
+      "excerpt_start": "JUDICIARY ESTABLISHMENT. Mr. BRECKENRIDGE. It will",
+      "excerpt_end": "it, can and ought to be abolished.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "breckenridge-speech-on-repealing-the-judiciary-act-january-1802"
+      ],
+      "summary": "Mr. Breckenridge opens the Senate's debate of 8 January 1802 on repealing the judiciary act of 1801.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print names the senator 'Breckenridge'."
+      ],
+      "crops": [
+        "S02-001.jpg"
+      ],
+      "family": [
+        "R1802-0009",
+        "R1802-0339"
+      ]
+    },
+    {
+      "id": "S02-002",
+      "page_key": "sn84024011|1802-01-13|1|2",
+      "excerpt_start": "JUDICIARY ESTABLISHMENT. Mr. Breckenridge.—It will be",
+      "excerpt_end": "it, can and ought to be abolished.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "breckenridge-speech-on-repealing-the-judiciary-act-january-1802"
+      ],
+      "summary": "The Alexandria Advertiser prints Mr. Breckenridge's speech.",
+      "note": "The Alexandria Advertiser prints 'was so as its passage', a slip for 'at'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print names the senator 'Breckenridge'. It reads 'was so as its passage', the printer's slip for 'at': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S02-002.jpg"
+      ],
+      "family": [
+        "R1802-0009",
+        "R1802-0305"
+      ]
+    },
+    {
+      "id": "S02-003",
+      "page_key": "sn84024011|1802-01-19|1|3",
+      "excerpt_start": "AMERICAN CONSULATE. Havanna, December 25, 1801.",
+      "excerpt_end": "the merchants and traders of your district.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "havana-circular-ports-of-cuba-closed-december-1801"
+      ],
+      "summary": "The American consul at Havana reports that Cuba's ports are closed to American and all other foreign vessels from 25 December 1801.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'December 25, 1801' and 'into its ports'; an ink blot covers the first letter of 'ports'."
+      ],
+      "crops": [
+        "S02-003.jpg"
+      ],
+      "family": [
+        "R1802-0157",
+        "R1802-0160",
+        "R1802-0785"
+      ],
+      "scan_boxes": [
+        [
+          1260,
+          1730,
+          1830,
+          2270
+        ]
+      ]
+    },
+    {
+      "id": "S02-004",
+      "page_key": "sn83045242|1802-01-20|1|3",
+      "excerpt_start": "AMERICAN CONSULATE. Havanna, December 23, 1802.",
+      "excerpt_end": "the merchants and traders of your district.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "havana-circular-ports-of-cuba-closed-december-1801"
+      ],
+      "summary": "The National Intelligencer prints the consul's circular from Havana.",
+      "note": "The National Intelligencer prints the circular's date as 'December 25, 1802', a misprint for 1801.",
+      "scan_findings": [
+        "Scan reads 'Havanna, December 25, 1802': RevX '23' for the day is a transcription error that changes the date, and the year 1802 is the paper's own misprint for 1801, a printed difference. The rest matches."
+      ],
+      "crops": [
+        "S02-004.jpg"
+      ],
+      "family": [
+        "R1802-0155",
+        "R1802-0158",
+        "R1802-0160",
+        "R1802-0799",
+        "R1802-0800",
+        "R1802-0801"
+      ]
+    },
+    {
+      "id": "S02-005",
+      "page_key": "sn83025588|1802-01-26|1|2",
+      "excerpt_start": "JUDICIARY ESTABLISHMENT Mr. Brackenridee. It will",
+      "excerpt_end": "can and ought to be abol ished.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "breckenridge-speech-on-repealing-the-judiciary-act-january-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints Mr. Breckenridge's speech.",
+      "note": "This page has no RevX transcription, so the excerpt comes from the older CA transcription, which is garbled in places.",
+      "scan_findings": [
+        "The heading 'JUDICIARY ESTABLISHMENT' and the speech's opening are on the crop, and the print names the senator 'Brackenridge'. The CA text is garbled in places ('Brackenridee', 'a 0 | troduced', '4hall') but changes no fact."
+      ],
+      "crops": [
+        "S02-005.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1802-0009",
+        "R1802-0154",
+        "R1802-0337",
+        "R1802-0774"
+      ]
+    },
+    {
+      "id": "S02-006",
+      "page_key": "sn83025588|1802-01-26|1|3",
+      "excerpt_start": "American Consulate, Havana, Dec. 25, 1801.",
+      "excerpt_end": "the merchants and traders of your district.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "havana-circular-ports-of-cuba-closed-december-1801"
+      ],
+      "summary": "The New Hampshire Gazette prints the consul's circular from Havana.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the date 'Dec. 25, 1801' and 'into any of its ports'. An ink blot covers a letter of the place name ('Hava?na'), so its spelling cannot be checked."
+      ],
+      "crops": [
+        "S02-006.jpg"
+      ],
+      "family": [
+        "R1802-0160",
+        "R1802-0161",
+        "R1802-0306",
+        "R1802-0344",
+        "R1802-0807",
+        "R1802-0808"
+      ]
+    },
+    {
+      "id": "S02-007",
+      "page_key": "sn84024011|1802-01-26|1|3",
+      "excerpt_start": "IMPORTANT. A gentleman belonging to a",
+      "excerpt_end": "further on the subject; but from the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-of-the-death-of-toussaint-january-1802"
+      ],
+      "summary": "Baltimore, 23 January 1802: a merchant's letter from Alexandria says Toussaint has been killed; the paper adds that the report was not generally credited.",
+      "note": "Earliest printing found. The Alexandria Advertiser prints the paragraph 'From the Baltimore Fed. Gaz. of Saturday last' under the heading 'IMPORTANT'.",
+      "scan_findings": [
+        "Scan reads 'Toussaint' in worn italic with long s; RevX 'Tenjain' is a transcription error that changes the name. The rest of the excerpt, over both crops, matches."
+      ],
+      "crops": [
+        "S02-007-1.jpg",
+        "S02-007-2.jpg"
+      ],
+      "family": [
+        "R1802-0031",
+        "R1802-0343",
+        "R1802-0797"
+      ]
+    },
+    {
+      "id": "S02-008",
+      "page_key": "sn82014782|1802-01-29|1|2",
+      "excerpt_start": "JUDICIARY ESTABLISHMENT. Mr. Breckenridge. It will",
+      "excerpt_end": "it, can and ought to be abolished.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "breckenridge-speech-on-repealing-the-judiciary-act-january-1802"
+      ],
+      "summary": "The Kentucky Gazette prints Mr. Breckenridge's speech.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the print reads 'to shew', which RevX gives as 'show': a minor spelling change. The print names the senator 'Breckenridge'."
+      ],
+      "crops": [
+        "S02-008.jpg"
+      ],
+      "family": [
+        "R1801-0005",
+        "R1802-0009"
+      ]
+    },
+    {
+      "id": "S02-009",
+      "page_key": "sn83021188|1802-01-30|1|1",
+      "excerpt_start": "MR. BRECKENRIDGE. It will be expected",
+      "excerpt_end": "it, can and ought to be abolished.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "breckenridge-speech-on-repealing-the-judiciary-act-january-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints Mr. Breckenridge's speech.",
+      "note": "The Rhode-Island Republican heads the speech 'DEBATE On Mr. Breckenridge's motion to repeal the Act passed last Session, for a new organization of the Judiciary System'.",
+      "scan_findings": [
+        "Scan matches the excerpt except at 'That the law is unnecessary', where a blotted 'i' set close to 'law' was read as 'laws': a minor transcription error. The print names the senator 'Breckenridge'."
+      ],
+      "crops": [
+        "S02-009.jpg"
+      ],
+      "family": [
+        "R1802-0009"
+      ]
+    },
+    {
+      "id": "S02-010",
+      "page_key": "sn83021188|1802-01-30|1|3",
+      "excerpt_start": "(CIRCULAR) AMERICAN CONSULATE. HAVANA, Dec. 25,",
+      "excerpt_end": "of merchants and traders of your district.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "havana-circular-ports-of-cuba-closed-december-1801"
+      ],
+      "summary": "The Rhode-Island Republican prints the consul's circular from Havana.",
+      "note": "The Rhode-Island Republican prints 'all foreign vessels' without 'other'.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the date 'Dec. 25, 1801' and 'into any of its ports'. The print itself leaves out 'other' ('all foreign vessels') and 'the' before 'merchants': printed differences."
+      ],
+      "crops": [
+        "S02-010.jpg"
+      ],
+      "family": [
+        "R1802-0155",
+        "R1802-0157",
+        "R1802-0347",
+        "R1802-0793"
+      ]
+    },
+    {
+      "id": "S02-011",
+      "page_key": "sn83025545|1802-01-30|1|1",
+      "excerpt_start": "JUDICIARY ESTABLISHMENT. MR. BRACKENRIDGE. It will",
+      "excerpt_end": "it, can and ought to be abolished.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "breckenridge-speech-on-repealing-the-judiciary-act-january-1802"
+      ],
+      "summary": "The United States Oracle prints Mr. Breckenridge's speech.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print names the senator 'Brackenridge'."
+      ],
+      "crops": [
+        "S02-011.jpg"
+      ],
+      "family": [
+        "R1802-0009"
+      ]
+    },
+    {
+      "id": "S02-012",
+      "page_key": "sn83025545|1802-01-30|1|2",
+      "excerpt_start": "CIRCULAR. American Consulate, Havana, Dec. 25,",
+      "excerpt_end": "its parts, is prohibited from this date.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "havana-circular-ports-of-cuba-closed-december-1801"
+      ],
+      "summary": "The United States Oracle prints the consul's circular from Havana.",
+      "note": "RevX leaves out the printed lines between 'prohibited from this date' and the paper's postscript (the request for publicity, the consul's signature and the address to the collector at New York); the excerpt ends before the gap. The Oracle prints 'into any of its parts' (for 'ports'); its copy is addressed to the Collector of the Customs at New York.",
+      "scan_findings": [
+        "Scan reads 'Dec. 25, 1801'; RevX '1809' is a transcription error that changes the year. The paper prints 'into any of its parts', its own slip for 'ports'. After the excerpt RevX leaves out the printed request for publicity, the consul's signature and the address to the collector at New York before the paper's postscript."
+      ],
+      "crops": [
+        "S02-012.jpg"
+      ],
+      "family": [
+        "R1802-0009",
+        "R1802-0347"
+      ]
+    },
+    {
+      "id": "S02-013",
+      "page_key": "sn83016063|1802-02-01|1|1",
+      "excerpt_start": "JUDICIARY ESTABLISHMENT. MR. BRACKENRIDGE. It will",
+      "excerpt_end": "it, can and ought to be abolished.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "breckenridge-speech-on-repealing-the-judiciary-act-january-1802"
+      ],
+      "summary": "Jenks's Portland Gazette prints Mr. Breckenridge's speech.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print names the senator 'Brackenridge'."
+      ],
+      "crops": [
+        "S02-013.jpg"
+      ],
+      "family": [
+        "R1802-0009",
+        "R1802-0081"
+      ]
+    },
+    {
+      "id": "S02-014",
+      "page_key": "sn84023379|1802-02-02|1|1",
+      "excerpt_start": "JUDICIARY ESTABLISHMENT. Mr. Brackenridge. It will",
+      "excerpt_end": "it, can and ought to be abolished.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "breckenridge-speech-on-repealing-the-judiciary-act-january-1802"
+      ],
+      "summary": "The Republican Ledger prints Mr. Breckenridge's speech.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print names the senator 'Brackenridge'."
+      ],
+      "crops": [
+        "S02-014.jpg"
+      ],
+      "family": [
+        "R1802-0009",
+        "R1802-0261",
+        "R1802-0664",
+        "R1802-0667"
+      ]
+    },
+    {
+      "id": "S02-015",
+      "page_key": "sn84023379|1802-02-02|1|3",
+      "excerpt_start": "American Consulate, Havanna. Dec. 25th, 1801.",
+      "excerpt_end": "the merchants and traders of your district.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "havana-circular-ports-of-cuba-closed-december-1801"
+      ],
+      "summary": "The Republican Ledger prints the consul's circular from Havana.",
+      "note": "The Republican Ledger prints 'to give publicity' without 'immediate'.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'Dec. 25th, 1801' and 'into any of its ports'. The print itself leaves out 'immediate' and misprints 'governmens': printed differences."
+      ],
+      "crops": [
+        "S02-015.jpg"
+      ],
+      "family": [
+        "R1802-0308",
+        "R1802-0339",
+        "R1802-0832",
+        "R1802-0835"
+      ]
+    },
+    {
+      "id": "S02-016",
+      "page_key": "sn83021188|1802-02-06|1|3",
+      "excerpt_start": "IMPORTANT! A gentleman belonging to a",
+      "excerpt_end": "nothing further on the subject; but from",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-of-the-death-of-toussaint-january-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints the Baltimore report on Toussaint.",
+      "note": "The Rhode-Island Republican prints 'the 2d inst.' and 'He had been caught' where the others have the 21st and 'has been caught'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself reads 'the 2d inst.' and 'He had been caught' where the other printings have '21st' and 'has': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S02-016.jpg"
+      ],
+      "family": [
+        "R1802-0031",
+        "R1802-0043",
+        "R1802-0052",
+        "R1802-0346",
+        "R1802-0348",
+        "R1802-0804",
+        "R1802-0847"
+      ]
+    },
+    {
+      "id": "S02-017",
+      "page_key": "sn83025545|1802-02-06|1|2",
+      "excerpt_start": "DEATH OF TOUSSAINT. A gentleman belonging",
+      "excerpt_end": "caught by the blacks and burnt alive.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-of-the-death-of-toussaint-january-1802"
+      ],
+      "summary": "The United States Oracle prints the Baltimore report on Toussaint.",
+      "note": "RevX leaves out about 60 printed words after the letter's words (where the report came from, and that it was current at Norfolk); the excerpt ends before the gap. The Oracle dates the paragraph 'JAN. 23.' without a place and spells the name 'Touissaint'.",
+      "scan_findings": [
+        "Scan matches the excerpt, which ends with the letter's words; the paper spells the name 'Touissaint', which RevX corrects. After the excerpt RevX leaves out about 60 printed words (where the report came from, and that it was current at Norfolk)."
+      ],
+      "crops": [
+        "S02-017.jpg"
+      ],
+      "family": [
+        "R1801-0001",
+        "R1802-0348"
+      ]
+    },
+    {
+      "id": "S02-018",
+      "page_key": "sn83016063|1802-02-08|1|2",
+      "excerpt_start": "BALTIMORE, JAN. 25. DEATH OF TOUSSAINT.",
+      "excerpt_end": "letter mentions nothing further on the subject;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-of-the-death-of-toussaint-january-1802"
+      ],
+      "summary": "Jenks's Portland Gazette prints the Baltimore report on Toussaint.",
+      "note": "Jenks's Portland Gazette dates the paragraph 'BALTIMORE, JAN. 25.' as far as the worn figure can be read, where the others have the 23rd.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the heading spells 'TOUISSAINT', which RevX corrects. The dateline's last figure is worn but looks like a 5 ('JAN. 25.'), as RevX has it, where the other printings have 23."
+      ],
+      "crops": [
+        "S02-018.jpg"
+      ],
+      "family": [
+        "R1801-0001",
+        "R1802-0031",
+        "R1802-0043",
+        "R1802-0849"
+      ]
+    },
+    {
+      "id": "S02-019",
+      "page_key": "sn83025588|1802-02-09|1|3",
+      "excerpt_start": "BALTIMORE, JAN. 23. DEATH OF TOUSSAINT.",
+      "excerpt_end": "letter mentions nothing further on the subject;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-of-the-death-of-toussaint-january-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints the Baltimore report on Toussaint.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells the name 'Touissaint' in the heading and the text, which RevX corrects to 'Toussaint'."
+      ],
+      "crops": [
+        "S02-019.jpg"
+      ],
+      "family": [
+        "R1801-0134",
+        "R1802-0031",
+        "R1802-0052",
+        "R1802-0849",
+        "R1802-0855",
+        "R1802-0857"
+      ]
+    },
+    {
+      "id": "S02-020",
+      "page_key": "sn84023379|1802-02-09|1|2",
+      "excerpt_start": "BALTIMORE, JAN. 23. A gentleman belonging",
+      "excerpt_end": "nothing further on the subject: but from",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-of-the-death-of-toussaint-january-1802"
+      ],
+      "summary": "The Republican Ledger prints the Baltimore report on Toussaint.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the print reads 'merchantile house', given by RevX as 'merchant house': a minor error that keeps the sense."
+      ],
+      "crops": [
+        "S02-020.jpg"
+      ],
+      "family": [
+        "R1801-0001",
+        "R1802-0031",
+        "R1802-0043",
+        "R1802-0162",
+        "R1802-0802"
+      ]
+    },
+    {
+      "id": "S02-021",
+      "page_key": "sn82014782|1802-02-12|1|2",
+      "excerpt_start": "AMERICAN CONSULATE. Havanna, December 25, 1801.",
+      "excerpt_end": "the merchants and traders of your district.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "havana-circular-ports-of-cuba-closed-december-1801"
+      ],
+      "summary": "The Kentucky Gazette prints the consul's circular from Havana.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the date 'December 25, 1801' and 'into its ports'."
+      ],
+      "crops": [
+        "S02-021.jpg"
+      ],
+      "family": [
+        "R1802-0052",
+        "R1802-0155",
+        "R1802-0347"
+      ]
+    },
+    {
+      "id": "S02-022",
+      "page_key": "sn82014782|1802-02-12|1|3",
+      "excerpt_start": "BALTIMORE, January 23. IMPORTANT! A gentleman",
+      "excerpt_end": "caught by the blacks, and burnt alive.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-of-the-death-of-toussaint-january-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the Baltimore report on Toussaint.",
+      "note": "The Kentucky Gazette prints the report only to the end of the letter's words, and goes on with another paragraph. The Kentucky Gazette dates the partner's letter 'the twenty-first inst.'",
+      "scan_findings": [
+        "The first crop shows the whole excerpt and it matches; the second crop shows an unrelated advertisement. The print gives the letter's date as 'the twenty-first inst.'"
+      ],
+      "crops": [
+        "S02-022-1.jpg",
+        "S02-022-2.jpg"
+      ],
+      "family": [
+        "R1801-0016",
+        "R1802-0031",
+        "R1802-0345"
+      ]
+    },
+    {
+      "id": "S02-023",
+      "page_key": "sn83045242|1802-03-08|1|3",
+      "excerpt_start": "BALTIMORE, MARCH 3. CONFLAGRATION OF THE",
+      "excerpt_end": "bloodshed which have and will take place.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "baltimore-report-conflagration-of-the-cape-march-1802"
+      ],
+      "summary": "Baltimore, March 1802: the captain of the schooner Nelly, from Cape François, reports the burning of the Cape.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt (second crop); the first crop is a stray fragment of another column."
+      ],
+      "crops": [
+        "S02-023-1.jpg",
+        "S02-023-2.jpg"
+      ],
+      "family": [
+        "R1802-0008",
+        "R1802-0028",
+        "R1802-0311",
+        "R1802-0312",
+        "R1802-0373"
+      ]
+    },
+    {
+      "id": "S02-024",
+      "page_key": "sn83045242|1802-03-10|1|3",
+      "excerpt_start": "The Consuls of the Republic to",
+      "excerpt_end": "But an entire change has taken place:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801"
+      ],
+      "summary": "The Consuls of the French Republic's proclamation to the inhabitants of St. Domingo, published by General Leclerc in February 1802.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, in the wording 'you are all Frenchmen, you are all free and equal'."
+      ],
+      "crops": [
+        "S02-024.jpg"
+      ],
+      "family": [
+        "R1802-0008",
+        "R1802-0014",
+        "R1802-0376",
+        "R1802-0959"
+      ],
+      "scan_boxes": [
+        [
+          880,
+          4280,
+          1535,
+          4900
+        ]
+      ]
+    },
+    {
+      "id": "S02-025",
+      "page_key": "sn84024011|1802-03-11|1|3",
+      "excerpt_start": "The Consuls of the Republic to",
+      "excerpt_end": "But an entire change has taken place.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801"
+      ],
+      "summary": "The Alexandria Advertiser prints the Consuls' proclamation to St. Domingo.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper heads it 'PROCLAMATION.' with no Paris dateline, right after Leclerc's own proclamation."
+      ],
+      "crops": [
+        "S02-025.jpg"
+      ],
+      "family": [
+        "R1802-0014",
+        "R1802-0961"
+      ]
+    },
+    {
+      "id": "S02-026",
+      "page_key": "sn83021188|1802-03-13|1|3",
+      "excerpt_start": "BALTIMORE, March 3. Conflagration of the",
+      "excerpt_end": "bloodshed which have and will take place.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "baltimore-report-conflagration-of-the-cape-march-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints the Baltimore report of the burning of the Cape.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-026.jpg"
+      ],
+      "family": [
+        "R1802-0021",
+        "R1802-0028"
+      ]
+    },
+    {
+      "id": "S02-027",
+      "page_key": "sn84024678|1802-03-13|1|2",
+      "excerpt_start": "CONFLAGRATION OF THE CAPE. Arrived last",
+      "excerpt_end": "bloodshed which have and will take place.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "baltimore-report-conflagration-of-the-cape-march-1802"
+      ],
+      "summary": "The Recorder prints the Baltimore report of the burning of the Cape.",
+      "note": "The Recorder prints the report 'From the BALTIMORE FEDERAL GAZETTE of March 3'.",
+      "scan_findings": [
+        "Scan reads 'schooner Nelly'; RevX 'Neely' changes the vessel's name. The rest matches."
+      ],
+      "crops": [
+        "S02-027.jpg"
+      ],
+      "family": [
+        "R1802-0028",
+        "R1802-0895"
+      ]
+    },
+    {
+      "id": "S02-028",
+      "page_key": "sn83025588|1802-03-16|1|2",
+      "excerpt_start": "BALTIMORE, March 4. Conflagration of the",
+      "excerpt_end": "bloodshed which have and will take place.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "baltimore-report-conflagration-of-the-cape-march-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints the Baltimore report of the burning of the Cape.",
+      "note": "The New Hampshire Gazette dates the report 'BALTIMORE, March 4.'; the National Intelligencer and the Rhode-Island Republican have March 3.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-028.jpg"
+      ],
+      "family": [
+        "R1802-0025",
+        "R1802-0028",
+        "R1802-0086",
+        "R1802-0166",
+        "R1802-0966"
+      ]
+    },
+    {
+      "id": "S02-029",
+      "page_key": "sn84023379|1802-03-16|1|3",
+      "excerpt_start": "Conflagration of the Cape. Arrived last",
+      "excerpt_end": "bloodshed which have and will take place.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "baltimore-report-conflagration-of-the-cape-march-1802"
+      ],
+      "summary": "The Republican Ledger prints the Baltimore report of the burning of the Cape.",
+      "note": "The Republican Ledger prints the dateline 'BALTIMORE, MARCH 4.' above the heading, and 'on account of American property' without 'the'.",
+      "scan_findings": [
+        "Scan reads 'schr. Nelly'; RevX 'sloop' changes the kind of vessel. The paper also prints the dateline 'BALTIMORE, MARCH 4.' above the heading, which the transcription lacks."
+      ],
+      "crops": [
+        "S02-029.jpg"
+      ],
+      "family": [
+        "R1802-0028",
+        "R1802-0264",
+        "R1802-0374",
+        "R1802-0381",
+        "R1802-0978"
+      ]
+    },
+    {
+      "id": "S02-030",
+      "page_key": "sn83025545|1802-03-20|1|2",
+      "excerpt_start": "The Consuls of the Republic, to",
+      "excerpt_end": "and foreign wars. But all is changed",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801"
+      ],
+      "summary": "The United States Oracle prints the Consuls' proclamation to St. Domingo.",
+      "note": "The other translation ('ye are all Frenchmen').",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-030.jpg"
+      ],
+      "family": [
+        "R1802-0014",
+        "R1802-0025",
+        "R1802-0310",
+        "R1802-0980"
+      ]
+    },
+    {
+      "id": "S02-031",
+      "page_key": "sn83025545|1802-03-20|1|4",
+      "excerpt_start": "Conflagration & Massacre. Burning of Cape",
+      "excerpt_end": "bloodshed which have and will take place.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "baltimore-report-conflagration-of-the-cape-march-1802"
+      ],
+      "summary": "The United States Oracle prints the Baltimore report of the burning of the Cape.",
+      "note": "The Oracle heads the report 'DREADFUL Conflagration & Massacre. Burning of Cape Francois.' RevX runs from its first sentence into an advertisement; the excerpt ends before it. The Oracle prints the dateline 'BALTIMORE, MARCH 4.' between its heading and the report.",
+      "scan_findings": [
+        "The words of the excerpt match the scan, but the transcription leaves out the dateline 'BALTIMORE, MARCH 4.' printed between the heading and the text. The excerpt also starts after 'DREADFUL', the heading's first word."
+      ],
+      "crops": [
+        "S02-031.jpg"
+      ],
+      "family": [
+        "R1802-0264"
+      ]
+    },
+    {
+      "id": "S02-032",
+      "page_key": "sn84024678|1802-03-20|1|2",
+      "excerpt_start": "The Consuls of the Republic, to",
+      "excerpt_end": "But an entire change has taken place;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801"
+      ],
+      "summary": "The Recorder prints the Consuls' proclamation to St. Domingo.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the scan is soft but readable."
+      ],
+      "crops": [
+        "S02-032.jpg"
+      ],
+      "family": [
+        "R1802-0014",
+        "R1802-0088",
+        "R1802-0897",
+        "R1802-0898"
+      ]
+    },
+    {
+      "id": "S02-033",
+      "page_key": "sn83016063|1802-03-22|1|2",
+      "excerpt_start": "BALTIMORE, MARCH 4. Arrived last evening,",
+      "excerpt_end": "bloodshed which have and will take place.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "baltimore-report-conflagration-of-the-cape-march-1802"
+      ],
+      "summary": "Jenks's Portland Gazette prints the Baltimore report of the burning of the Cape.",
+      "note": "Jenks's Portland Gazette dates the report 'BALTIMORE, MARCH 4.'",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper misprints 'acconnt', which RevX silently corrects."
+      ],
+      "crops": [
+        "S02-033.jpg"
+      ],
+      "family": [
+        "R1802-0014",
+        "R1802-0028",
+        "R1802-0169",
+        "R1802-0943",
+        "R1802-0974",
+        "R1802-0988"
+      ]
+    },
+    {
+      "id": "S02-034",
+      "page_key": "sn83016063|1802-03-22|1|2",
+      "excerpt_start": "The Consuls of the Republic, to",
+      "excerpt_end": "and foreign wars. But all is changed.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801"
+      ],
+      "summary": "Jenks's Portland Gazette prints the Consuls' proclamation to St. Domingo.",
+      "note": "The other translation ('ye are all Frenchmen'). Jenks's Portland Gazette prints 'ye are all FREE and are all equal'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'ye are all FREE and are all equal', a small printed difference from the Oracle and the New Hampshire Gazette ('and all equal')."
+      ],
+      "crops": [
+        "S02-034.jpg"
+      ],
+      "family": [
+        "R1802-0014",
+        "R1802-0028",
+        "R1802-0169",
+        "R1802-0943",
+        "R1802-0974",
+        "R1802-0988"
+      ]
+    },
+    {
+      "id": "S02-035",
+      "page_key": "sn83045242|1802-03-22|1|2",
+      "excerpt_start": "AN ACT Fixing the military peace",
+      "excerpt_end": "be composed of one regiment of artillery",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-fixing-the-military-peace-establishment-1802"
+      ],
+      "summary": "The act of 16 March 1802 fixing the military peace establishment: one regiment of artillerists and two of infantry from 1 June.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except that it reads 'artillerists' where RevX has 'artillery', a change that keeps the sense."
+      ],
+      "crops": [
+        "S02-035.jpg"
+      ],
+      "family": [
+        "R1802-0008"
+      ]
+    },
+    {
+      "id": "S02-036",
+      "page_key": "sn83025588|1802-03-23|1|1",
+      "excerpt_start": "The Consuls of the Republic, to",
+      "excerpt_end": "by civil and foreign wars. But all",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801"
+      ],
+      "summary": "The New Hampshire Gazette prints the Consuls' proclamation to St. Domingo.",
+      "note": "The other translation ('ye are all Frenchmen').",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-036.jpg"
+      ],
+      "family": [
+        "R1802-0014",
+        "R1802-0021",
+        "R1802-0264",
+        "R1802-0663",
+        "R1802-0962"
+      ]
+    },
+    {
+      "id": "S02-037",
+      "page_key": "sn83045242|1802-03-24|1|2",
+      "excerpt_start": "TREATY. Signed at Madrid, 21st March,",
+      "excerpt_end": "the following articles, and have named as",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-madrid-21-march-1801-printed-1802"
+      ],
+      "summary": "The treaty of Madrid of 21 March 1801, printed from a Paris paper as proof that Spain has ceded Louisiana to France.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, with '21st March, 1801' and 'Lucien Bonaparte', under the dateline 'MADRID, 16th December, 1801.' RevX modernises the printed 'Dutchy' to 'Duchy', a minor spelling error."
+      ],
+      "crops": [
+        "S02-037.jpg"
+      ],
+      "family": [
+        "R1802-0032",
+        "R1802-0995"
+      ],
+      "scan_boxes": [
+        [
+          2950,
+          660,
+          3832,
+          1130
+        ]
+      ]
+    },
+    {
+      "id": "S02-038",
+      "page_key": "sn82014782|1802-03-26|1|3",
+      "excerpt_start": "The Consuls of the Republic to",
+      "excerpt_end": "But an entire change has taken place:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-army-arrives-at-st-domingo-february-1802",
+        "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801"
+      ],
+      "summary": "The Kentucky Gazette prints the Consuls' proclamation to St. Domingo.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt where the page is whole, in the 'you are all Frenchmen' wording; the page's right edge is torn. RevX drops the word that begins 'y' before 'color' (a minor error), and the word after 'you all' is lost in the tear, so RevX's 'have' cannot be checked."
+      ],
+      "crops": [
+        "S02-038.jpg"
+      ],
+      "family": [
+        "R1802-0014",
+        "R1802-0171"
+      ],
+      "scan_boxes": [
+        [
+          1270,
+          1290,
+          1710,
+          1770
+        ]
+      ]
+    },
+    {
+      "id": "S02-039",
+      "page_key": "sn84024011|1802-03-26|1|3",
+      "excerpt_start": "Madrid, December 16, 1801. Signed at",
+      "excerpt_end": "have agreed to the following articles, and",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-madrid-21-march-1801-printed-1802"
+      ],
+      "summary": "The Alexandria Advertiser prints the treaty of Madrid.",
+      "note": "The Alexandria Advertiser dates the signing 'at Madrid 31st March, 1801'.",
+      "scan_findings": [
+        "Scan reads '31st March, 1801' where the other printings have 21st: a printed difference, not a transcription error. RevX leaves out the printed heading 'TREATY,' between the dateline and 'Signed at Madrid'; the rest matches the excerpt."
+      ],
+      "crops": [
+        "S02-039.jpg"
+      ],
+      "family": [
+        "R1802-0032",
+        "R1802-0999"
+      ],
+      "scan_boxes": [
+        [
+          770,
+          2430,
+          1325,
+          2890
+        ]
+      ]
+    },
+    {
+      "id": "S02-040",
+      "page_key": "sn84024710|1802-04-02|1|1",
+      "excerpt_start": "AN ACT Fixing the Military Peace",
+      "excerpt_end": "be composed of one regiment of artillery",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-fixing-the-military-peace-establishment-1802"
+      ],
+      "summary": "The Virginia Argus prints the act fixing the military peace establishment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that it reads 'artillerists' where RevX has 'artillery', a change that keeps the sense."
+      ],
+      "crops": [
+        "S02-040.jpg"
+      ],
+      "family": [
+        "R1802-0008"
+      ]
+    },
+    {
+      "id": "S02-041",
+      "page_key": "sn82014782|1802-04-09|1|1",
+      "excerpt_start": "AN ACT Fixing the military peace",
+      "excerpt_end": "be composed of one regiment of artillery",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-fixing-the-military-peace-establishment-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the act fixing the military peace establishment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except its last word: the print reads 'one regiment of artillerists', which RevX gives as 'artillery' (same sense, a minor error). So 'artillery' in a transcription need not be a printed difference."
+      ],
+      "crops": [
+        "S02-041.jpg"
+      ],
+      "family": [
+        "R1802-0008",
+        "R1802-0818",
+        "R1802-0820"
+      ],
+      "scan_boxes": [
+        [
+          890,
+          1570,
+          1310,
+          1910
+        ]
+      ]
+    },
+    {
+      "id": "S02-042",
+      "page_key": "sn82014782|1802-04-09|1|3",
+      "excerpt_start": "TREATY, Signed at Madrid, 21st March,",
+      "excerpt_end": "the following articles, and have named as",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-madrid-21-march-1801-printed-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the treaty of Madrid.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells 'Dutchy' where RevX has 'Duchy', a minor spelling change."
+      ],
+      "crops": [
+        "S02-042.jpg"
+      ],
+      "family": [
+        "R1802-0032",
+        "R1802-0090",
+        "R1802-0177",
+        "R1802-0389",
+        "R1802-1035"
+      ]
+    },
+    {
+      "id": "S02-043",
+      "page_key": "sn83021188|1802-04-10|1|1",
+      "excerpt_start": "AN ACT Fixing the Military peace",
+      "excerpt_end": "be composed of one regiment of artillery",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-fixing-the-military-peace-establishment-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints the act fixing the military peace establishment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that it reads 'artillerists' where RevX has 'artillery', a change that keeps the sense."
+      ],
+      "crops": [
+        "S02-043.jpg"
+      ],
+      "family": [
+        "R1802-0008"
+      ]
+    },
+    {
+      "id": "S02-044",
+      "page_key": "sn83025545|1802-04-10|1|2",
+      "excerpt_start": "TREATY. Signed at Madrid, 21st March,",
+      "excerpt_end": "the following articles, and have named as",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-madrid-21-march-1801-printed-1802"
+      ],
+      "summary": "The United States Oracle prints the treaty of Madrid.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-044.jpg"
+      ],
+      "family": [
+        "R1802-0032",
+        "R1802-0391",
+        "R1802-1047",
+        "R1802-1056"
+      ]
+    },
+    {
+      "id": "S02-045",
+      "page_key": "sn84023379|1802-04-13|1|2",
+      "excerpt_start": "TREATY. Signed at Madrid, 21st March,",
+      "excerpt_end": "an equivalent for the Duchy of Parma...",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-madrid-21-march-1801-printed-1802"
+      ],
+      "summary": "The Republican Ledger prints the treaty of Madrid.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, which ends where RevX breaks off with '...'; the print goes on with the whole treaty ('have agreed to the following articles...'), which RevX leaves out. The print spells 'Dutchy', which RevX gives as 'Duchy' (minor)."
+      ],
+      "crops": [
+        "S02-045.jpg"
+      ],
+      "family": [
+        "R1802-0032",
+        "R1802-0177",
+        "R1802-1024",
+        "R1802-1067"
+      ]
+    },
+    {
+      "id": "S02-046",
+      "page_key": "sn83016063|1802-04-19|1|1",
+      "excerpt_start": "Treaty. Signed at Madrid, 26th March,",
+      "excerpt_end": "the following articles, and have named as",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-madrid-21-march-1801-printed-1802"
+      ],
+      "summary": "Jenks's Portland Gazette prints the treaty of Madrid.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The day of signing is smudged and its digits cannot be read, but its ending looks like 'st', not 'th', so the scan does not support RevX's '26th March'. The print reads 'Lucian'; the rest matches, apart from 'Dutchy' for RevX 'Duchy'."
+      ],
+      "crops": [
+        "S02-046.jpg"
+      ],
+      "family": [
+        "R1802-0032",
+        "R1802-0183",
+        "R1802-0991",
+        "R1802-1057",
+        "R1802-1068",
+        "R1802-1077"
+      ]
+    },
+    {
+      "id": "S02-047",
+      "page_key": "sn83025588|1802-04-20|1|1",
+      "excerpt_start": "TREATY, Signed at Madrid, 21st March,",
+      "excerpt_end": "the following articles, and have named as",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-madrid-21-march-1801-printed-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints the treaty of Madrid.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells 'Dutchy' where RevX has 'Duchy', a minor spelling change."
+      ],
+      "crops": [
+        "S02-047.jpg"
+      ],
+      "family": [
+        "R1802-0032",
+        "R1802-0372",
+        "R1802-1059"
+      ]
+    },
+    {
+      "id": "S02-048",
+      "page_key": "sn84023379|1802-04-27|1|1",
+      "excerpt_start": "AN ACT Fixing the Military Peace",
+      "excerpt_end": "be composed of one regiment of artilleryists",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-fixing-the-military-peace-establishment-1802"
+      ],
+      "summary": "The Republican Ledger prints the act fixing the military peace establishment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that it reads 'artillerists' where RevX has 'artilleryists', a minor garble."
+      ],
+      "crops": [
+        "S02-048.jpg"
+      ],
+      "family": [
+        "R1802-0008"
+      ]
+    },
+    {
+      "id": "S02-049",
+      "page_key": "sn83025588|1802-05-11|1|1",
+      "excerpt_start": "AN ACT Fixing the military peace",
+      "excerpt_end": "be composed of one regiment of artillery",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-fixing-the-military-peace-establishment-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints the act fixing the military peace establishment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'artilerists', a misprint, where RevX has 'artillery'; RevX also silently corrects the misprints 'aud' and 'compesed'. Otherwise the scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-049.jpg"
+      ],
+      "family": [
+        "R1802-0008",
+        "R1802-0268"
+      ]
+    },
+    {
+      "id": "S02-050",
+      "page_key": "sn83045242|1802-05-19|1|3",
+      "excerpt_start": "Definitive Treaty of Peace between the",
+      "excerpt_end": "the King of the United Kingdom, &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "definitive-treaty-of-amiens-1802"
+      ],
+      "summary": "The definitive treaty of peace between France, Spain, the Batavian Republic and Great Britain, signed at Amiens on 27 March 1802.",
+      "note": "Earliest printing found. The National Intelligencer's heading prints 'the King of the United Kingdoms' (plural); its first sentence has 'Kingdom'.",
+      "scan_findings": [
+        "Scan matches the excerpt: the heading does print 'United Kingdoms', while the opening sentence has 'United Kingdom'. The first crop shows the item; the other two show its continuation."
+      ],
+      "crops": [
+        "S02-050-1.jpg",
+        "S02-050-2.jpg",
+        "S02-050-3.jpg"
+      ],
+      "family": [
+        "R1802-0013"
+      ]
+    },
+    {
+      "id": "S02-051",
+      "page_key": "sn84024011|1802-05-20|1|2",
+      "excerpt_start": "Definitive Treaty of Peace between the",
+      "excerpt_end": "the King of the United Kingdom, &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "definitive-treaty-of-amiens-1802"
+      ],
+      "summary": "The Alexandria Advertiser prints the definitive treaty of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt: the heading prints 'United Kingdoms' and the opening sentence 'United Kingdom'. The item is credited 'PALLADIUM.' above the heading."
+      ],
+      "crops": [
+        "S02-051.jpg"
+      ],
+      "family": [
+        "R1802-0013",
+        "R1802-1049",
+        "R1802-1053"
+      ],
+      "scan_boxes": [
+        [
+          1880,
+          940,
+          2370,
+          1335
+        ]
+      ]
+    },
+    {
+      "id": "S02-052",
+      "page_key": "sn83025545|1802-05-22|1|1",
+      "excerpt_start": "Definitive Treaty of Peace, between the",
+      "excerpt_end": "the King of the United Kingdom, &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "definitive-treaty-of-amiens-1802"
+      ],
+      "summary": "The United States Oracle prints the definitive treaty of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-052.jpg"
+      ],
+      "family": [
+        "R1802-0013",
+        "R1802-1060",
+        "R1802-1061"
+      ]
+    },
+    {
+      "id": "S02-053",
+      "page_key": "sn83016063|1802-05-24|1|1",
+      "excerpt_start": "DEFINITIVE TREATY OF PEACE Between the",
+      "excerpt_end": "the King of the United Kingdom &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "definitive-treaty-of-amiens-1802"
+      ],
+      "summary": "Jenks's Portland Gazette prints the definitive treaty of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-053.jpg"
+      ],
+      "family": [
+        "R1802-0013",
+        "R1802-0143"
+      ]
+    },
+    {
+      "id": "S02-054",
+      "page_key": "sn83025588|1802-05-25|1|2",
+      "excerpt_start": "DEFINITIVE TREATY, OF PEACE, Between the",
+      "excerpt_end": "the King of the United Kingdom, &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "definitive-treaty-of-amiens-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints the definitive treaty of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-054.jpg"
+      ],
+      "family": [
+        "R1802-0008",
+        "R1802-0013",
+        "R1802-0191"
+      ]
+    },
+    {
+      "id": "S02-055",
+      "page_key": "sn84023379|1802-05-25|1|2",
+      "excerpt_start": "DEFINITIVE TREATY OF PEACE Between the",
+      "excerpt_end": "the King of the United Kingdom, &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "definitive-treaty-of-amiens-1802"
+      ],
+      "summary": "The Republican Ledger prints the definitive treaty of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print has the misprint 'Freuch nation', which RevX silently corrects to 'French'."
+      ],
+      "crops": [
+        "S02-055.jpg"
+      ],
+      "family": [
+        "R1802-0001",
+        "R1802-0013"
+      ]
+    },
+    {
+      "id": "S02-056",
+      "page_key": "sn83021188|1802-05-29|1|1",
+      "excerpt_start": "DEFINITIVE TREATY OF PEACE, between the",
+      "excerpt_end": "the King of the United Kingdom, &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "definitive-treaty-of-amiens-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints the definitive treaty of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the heading 'IMPORTANT STATE PAPER.'; the treaty's heading prints 'the King of the United Kingdom' (singular)."
+      ],
+      "crops": [
+        "S02-056.jpg"
+      ],
+      "family": [
+        "R1802-0013"
+      ],
+      "scan_boxes": [
+        [
+          1030,
+          1220,
+          1860,
+          1730
+        ]
+      ]
+    },
+    {
+      "id": "S02-057",
+      "page_key": "sn83025545|1802-05-29|1|1",
+      "excerpt_start": "An ACT fixing the Military Peace",
+      "excerpt_end": "be composed of one regiment of artillerists",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-fixing-the-military-peace-establishment-1802"
+      ],
+      "summary": "The United States Oracle prints the act fixing the military peace establishment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX sets the italic enacting clause in capitals, which changes no words."
+      ],
+      "crops": [
+        "S02-057.jpg"
+      ],
+      "family": [
+        "R1802-0001",
+        "R1802-0008"
+      ]
+    },
+    {
+      "id": "S02-058",
+      "page_key": "sn82014782|1802-06-04|1|3",
+      "excerpt_start": "Definitive Treaty of Peace, between the",
+      "excerpt_end": "the King of the United Kingdom, &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "definitive-treaty-of-amiens-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the definitive treaty of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; an ink smudge crosses the heading but the words can be read."
+      ],
+      "crops": [
+        "S02-058.jpg"
+      ],
+      "family": [
+        "R1802-0013",
+        "R1802-0037"
+      ]
+    },
+    {
+      "id": "S02-059",
+      "page_key": "sn84024011|1802-06-23|1|3",
+      "excerpt_start": "ARMY OF ST. DOMINGO. The general",
+      "excerpt_end": "since the amnesty, shall be extensively published.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "General Leclerc's proclamation of 8 June 1802 at the Cape: Toussaint has been arrested.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-059.jpg"
+      ],
+      "family": [
+        "R1802-0011",
+        "R1802-1220"
+      ]
+    },
+    {
+      "id": "S02-060",
+      "page_key": "sn83045242|1802-06-25|1|3",
+      "excerpt_start": "ARMY OF ST. DOMINGO. The general",
+      "excerpt_end": "since the amnesty, shall be extensively published.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "The National Intelligencer prints General Leclerc's proclamation on Toussaint's arrest.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt (its last line is half cut by the crop's lower edge but legible). The line above the item reads 'LIBERTY.' and 'EQUALITY.', which NI's RevX gives as 'EXTRACT. EQUITY.' outside the excerpt."
+      ],
+      "crops": [
+        "S02-060.jpg"
+      ],
+      "family": [
+        "R1802-0011",
+        "R1802-0446",
+        "R1802-0448"
+      ],
+      "scan_boxes": [
+        [
+          2780,
+          1040,
+          3480,
+          1560
+        ]
+      ]
+    },
+    {
+      "id": "S02-061",
+      "page_key": "sn83025588|1802-06-29|1|3",
+      "excerpt_start": "ARMY OF ST. DOMINGO. The General",
+      "excerpt_end": "since the amnesty, will soon be published;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints General Leclerc's proclamation on Toussaint's arrest.",
+      "note": "The other translation ('Gen. Toussaint did not wish to enjoy the amnesty').",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-061.jpg"
+      ],
+      "family": [
+        "R1802-0011",
+        "R1802-0036",
+        "R1802-0451",
+        "R1802-0452",
+        "R1802-1233",
+        "R1802-1234",
+        "R1802-1253"
+      ]
+    },
+    {
+      "id": "S02-062",
+      "page_key": "sn83021188|1802-07-03|1|3",
+      "excerpt_start": "ARMY OF ST. DOMINGO. The General",
+      "excerpt_end": "since the amnesty, will soon be published;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints General Leclerc's proclamation on Toussaint's arrest.",
+      "note": "The other translation ('Gen. Toussaint did not wish to enjoy the amnesty').",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-062.jpg"
+      ],
+      "family": [
+        "R1802-0011",
+        "R1802-0041",
+        "R1802-1256"
+      ]
+    },
+    {
+      "id": "S02-063",
+      "page_key": "sn83025545|1802-07-03|1|2",
+      "excerpt_start": "ARMY OF ST. DOMINGO. The GENERAL",
+      "excerpt_end": "since the amnesty, shall be extensively published.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "The United States Oracle prints General Leclerc's proclamation on Toussaint's arrest.",
+      "note": "The Oracle spells the name 'Touissaint'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells the name 'Touissaint', which RevX silently corrects to 'Toussaint': the same name, a minor difference."
+      ],
+      "crops": [
+        "S02-063.jpg"
+      ],
+      "family": [
+        "R1802-0011",
+        "R1802-0055",
+        "R1802-0077",
+        "R1802-1048",
+        "R1802-1249"
+      ]
+    },
+    {
+      "id": "S02-064",
+      "page_key": "sn83016063|1802-07-05|1|2",
+      "excerpt_start": "ARMY OF ST. DOMINGO. The General",
+      "excerpt_end": "since the amnesty, shall be extensively published.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "Jenks's Portland Gazette prints General Leclerc's proclamation on Toussaint's arrest.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-064.jpg"
+      ],
+      "family": [
+        "R1802-0011",
+        "R1802-0036",
+        "R1802-0055",
+        "R1802-1244",
+        "R1802-1258",
+        "R1802-1262"
+      ]
+    },
+    {
+      "id": "S02-065",
+      "page_key": "sn84023379|1802-07-06|1|3",
+      "excerpt_start": "ARMY OF ST. DOMINGO. The general",
+      "excerpt_end": "since the amnesty, shall be extensively published.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "The Republican Ledger prints General Leclerc's proclamation on Toussaint's arrest.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-065.jpg"
+      ],
+      "family": [
+        "R1802-0011",
+        "R1802-0036",
+        "R1802-0041",
+        "R1802-0198",
+        "R1802-1272"
+      ]
+    },
+    {
+      "id": "S02-066",
+      "page_key": "sn82014782|1802-07-09|1|2",
+      "excerpt_start": "ARMY OF ST. DOMINGO. The General",
+      "excerpt_end": "since the amnesty, shall be extensively published.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "The Kentucky Gazette prints General Leclerc's proclamation on Toussaint's arrest.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-066.jpg"
+      ],
+      "family": [
+        "R1802-0011",
+        "R1802-0035",
+        "R1802-0054",
+        "R1802-0320",
+        "R1802-0468",
+        "R1802-1279"
+      ]
+    },
+    {
+      "id": "S02-067",
+      "page_key": "sn84022876|1802-07-13|1|4",
+      "excerpt_start": "ARMY OF S. DOMINGO. The General",
+      "excerpt_end": "since the amnesty, will soon be published;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802"
+      ],
+      "summary": "The Republican Gazette prints General Leclerc's proclamation on Toussaint's arrest.",
+      "note": "The other translation ('Gen. Toussaint did not wish to enjoy the amnesty'). The American Republican Gazette prints 'which was granted to him' and 'the proofs to his treacherous behaviour'.",
+      "scan_findings": [
+        "Scan matches the excerpt's wording, including this paper's own 'which was granted' and 'proofs to his'; RevX's 'S. DOMINGO' and 'Touffaint' are minor misreadings of 'St. DOMINGO' and a long-s 'Touſſaint'."
+      ],
+      "crops": [
+        "S02-067.jpg"
+      ],
+      "family": [
+        "R1801-0016",
+        "R1802-0011",
+        "R1802-0036",
+        "R1802-1294"
+      ]
+    },
+    {
+      "id": "S02-068",
+      "page_key": "sn83045242|1802-07-23|1|3",
+      "excerpt_start": "From Capt. Dawson we have received",
+      "excerpt_end": "of their crews was about 700 men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802"
+      ],
+      "summary": "New York, July 1802: a captain from Gibraltar reports that two Algerine cruisers, one of them the frigate the United States gave the Dey, have taken a Portuguese frigate off Malaga.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt: '32 guns' and 'a xebec'."
+      ],
+      "crops": [
+        "S02-068.jpg"
+      ],
+      "family": [
+        "R1802-0018",
+        "R1802-0207",
+        "R1802-1323"
+      ]
+    },
+    {
+      "id": "S02-069",
+      "page_key": "sn83025545|1802-07-24|1|1",
+      "excerpt_start": "From Capt. Dawson we have received",
+      "excerpt_end": "of their crews was about 700 men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802"
+      ],
+      "summary": "The United States Oracle prints the report of the Algerine cruisers and the Portuguese frigate.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance: '32 guns' and 'a xebec'. RevX spells the printed 'cruizers' as 'cruisers' and silently corrects the misprint 'accouut'; both are minor."
+      ],
+      "crops": [
+        "S02-069.jpg"
+      ],
+      "family": [
+        "R1802-0018",
+        "R1802-0324",
+        "R1802-1289"
+      ]
+    },
+    {
+      "id": "S02-070",
+      "page_key": "sn83016063|1802-07-26|1|2",
+      "excerpt_start": "From Captain Dawson we have received",
+      "excerpt_end": "of their crews was about 700 men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802"
+      ],
+      "summary": "Jenks's Portland Gazette prints the report of the Algerine cruisers and the Portuguese frigate.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads '32 guns' and 'a xebec' (split 'xe-bec' over two lines). RevX 'keeb' is a garble rather than another word, so it is graded minor, but it loses the kind of vessel."
+      ],
+      "crops": [
+        "S02-070.jpg"
+      ],
+      "family": [
+        "R1802-0018",
+        "R1802-0483",
+        "R1802-0486",
+        "R1802-1306",
+        "R1802-1328"
+      ]
+    },
+    {
+      "id": "S02-071",
+      "page_key": "sn83025588|1802-07-27|1|2",
+      "excerpt_start": "From Capt. DAWSON, we have received",
+      "excerpt_end": "of their crews was about 700 men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints the report of the Algerine cruisers and the Portuguese frigate.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'a zebec' and, as far as the worn figure allows, '32 guns', not 35. RevX '35' is then a transcription error that changes the number, and the ledger note that this paper prints 35 does not hold."
+      ],
+      "crops": [
+        "S02-071.jpg"
+      ],
+      "family": [
+        "R1802-0018",
+        "R1802-0037",
+        "R1802-0077",
+        "R1802-0099",
+        "R1802-0471",
+        "R1802-0487",
+        "R1802-0489"
+      ]
+    },
+    {
+      "id": "S02-072",
+      "page_key": "sn84023379|1802-07-27|1|2",
+      "excerpt_start": "From Capt. Dawson we have received",
+      "excerpt_end": "of their crews was about 700 men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802"
+      ],
+      "summary": "The Republican Ledger prints the report of the Algerine cruisers and the Portuguese frigate.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance: '32 guns' and 'a xebec'. RevX spells the printed 'cruizers' as 'cruisers' and silently corrects two turned letters ('au', 'aud'); all minor."
+      ],
+      "crops": [
+        "S02-072.jpg"
+      ],
+      "family": [
+        "R1802-0018",
+        "R1802-0099",
+        "R1802-0202",
+        "R1802-0322",
+        "R1802-0471",
+        "R1802-0473",
+        "R1802-0485",
+        "R1802-0487"
+      ]
+    },
+    {
+      "id": "S02-073",
+      "page_key": "sn84024678|1802-07-28|1|3",
+      "excerpt_start": "From captain Dawson we have received",
+      "excerpt_end": "government to the Dey) and a zebec;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802"
+      ],
+      "summary": "The Recorder prints the report of the Algerine cruisers and the Portuguese frigate.",
+      "note": "RevX runs a note from another column ('NOTE. * There is an error in printing some of these figures') into this paragraph; the excerpt ends before it. The Recorder prints 'wherein the former was victorious' and 'a zebeck'.",
+      "scan_findings": [
+        "Scan reads 'the former was victorious', '32 guns' and 'a zebeck'; RevX 'zebec' drops the printed final k, a minor spelling error."
+      ],
+      "crops": [
+        "S02-073.jpg"
+      ],
+      "family": [
+        "R1802-0018",
+        "R1802-0143",
+        "R1802-1242",
+        "R1802-1297",
+        "R1802-1341"
+      ]
+    },
+    {
+      "id": "S02-074",
+      "page_key": "sn84024710|1802-07-31|1|2",
+      "excerpt_start": "The Captain of an American vessel",
+      "excerpt_end": "of their crews was about 700 men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802"
+      ],
+      "summary": "The Virginia Argus prints the report of the Algerine cruisers and the Portuguese frigate.",
+      "note": "The Virginia Argus prints a Philadelphia form of the report, dated July 20, which opens in other words ('The Captain of an American vessel arrived at New-York from Gibraltar, has given an account of the engagement') and goes on in the same words as the others; counted with them as a printed form of the report.",
+      "scan_findings": [
+        "Scan matches the excerpt: the Philadelphia form dated July 20 opens in its own words and goes on 'The force of the Algerines was a frigate of 32 guns ... and a zebec'. A fold in the paper hides a few letters but no words."
+      ],
+      "crops": [
+        "S02-074.jpg"
+      ],
+      "family": [
+        "R1802-0018",
+        "R1802-0022",
+        "R1802-0148",
+        "R1802-0206",
+        "R1802-0208",
+        "R1802-0458",
+        "R1802-0468",
+        "R1802-0501",
+        "R1802-1330"
+      ]
+    },
+    {
+      "id": "S02-075",
+      "page_key": "sn84022876|1802-08-03|1|3",
+      "excerpt_start": "From Capt. Dawson we have received",
+      "excerpt_end": "of their crews was about 700 men.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802"
+      ],
+      "summary": "The Republican Gazette prints the report of the Algerine cruisers and the Portuguese frigate.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance: '32 guns' and 'a xebec'; RevX spells the printed 'cruizers' as 'cruisers', a minor difference."
+      ],
+      "crops": [
+        "S02-075.jpg"
+      ],
+      "family": [
+        "R1802-0018",
+        "R1802-0100",
+        "R1802-0103",
+        "R1802-0489",
+        "R1802-0500",
+        "R1802-1339"
+      ]
+    },
+    {
+      "id": "S02-076",
+      "page_key": "sn84024011|1802-08-13|1|2",
+      "excerpt_start": "You expressed a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "The President's letter to Thomas Paine offering him a passage in a national ship, published in August 1802 from a London paper.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. Just after it the paper prints 'IN THESE IT WILL BE YOUR GLORY TO HAVE STEA-[DILY]...' in capitals, an emphasis of its own."
+      ],
+      "crops": [
+        "S02-076.jpg"
+      ],
+      "family": [
+        "R1802-0016"
+      ]
+    },
+    {
+      "id": "S02-077",
+      "page_key": "sn83016063|1802-08-16|1|2",
+      "excerpt_start": "You expressed a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "Jenks's Portland Gazette prints the President's letter to Thomas Paine.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-077.jpg"
+      ],
+      "family": [
+        "R1802-0016",
+        "R1802-0514",
+        "R1802-0515",
+        "R1802-1409",
+        "R1802-1417"
+      ]
+    },
+    {
+      "id": "S02-078",
+      "page_key": "sn83045242|1802-08-16|1|3",
+      "excerpt_start": "You express a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "The National Intelligencer prints the President's letter to Thomas Paine.",
+      "note": "The National Intelligencer prints 'You express a wish' where most papers have 'expressed'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'You express a wish'."
+      ],
+      "crops": [
+        "S02-078.jpg"
+      ],
+      "family": [
+        "R1802-0016",
+        "R1802-0510",
+        "R1802-0511",
+        "R1802-0516",
+        "R1802-1394",
+        "R1802-1405",
+        "R1802-1412",
+        "R1802-1416"
+      ]
+    },
+    {
+      "id": "S02-079",
+      "page_key": "sn83025545|1802-08-21|1|1",
+      "excerpt_start": "You expressed a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "The United States Oracle prints the President's letter to Thomas Paine.",
+      "note": "The Oracle prints the letter after an introduction of its own that attacks it.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-079.jpg"
+      ],
+      "family": [
+        "R1802-0016",
+        "R1802-0738",
+        "R1802-1439"
+      ]
+    },
+    {
+      "id": "S02-080",
+      "page_key": "sn90062293|1802-08-24|1|3",
+      "excerpt_start": "You expressed a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "The American Republican Gazette prints the President's letter to Thomas Paine.",
+      "note": "The American Republican Gazette prints 'to receive and accommodated you back'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper itself prints 'accommodated' (split 'accom-modated'): a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S02-080.jpg"
+      ],
+      "family": [
+        "R1802-0016",
+        "R1802-0107",
+        "R1802-1366",
+        "R1802-1449"
+      ]
+    },
+    {
+      "id": "S02-081",
+      "page_key": "sn84023379|1802-08-31|1|3",
+      "excerpt_start": "You express a with in your",
+      "excerpt_end": "to sentiments worthy of former times ;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "The Republican Ledger prints the President's letter to Thomas Paine.",
+      "note": "RevX abridges this paragraph with '...' and gives only the letter's first words; the older CA transcription has the whole letter, so the excerpt comes from the CA text, which is garbled in places. The Republican Ledger prints 'You express a wish' where most papers have 'expressed'.",
+      "scan_findings": [
+        "Scan reads 'You express a wish' and goes on past the excerpt, so RevX's '...' is its own shortening. The CA text is garbled by long-s misreadings; its 'with' for 'wish' loses the verb and is counted as changing the sense, as in the transcriptions of the French Senate's address ('prefect' for present and 'Abort' for short are further misreadings)."
+      ],
+      "crops": [
+        "S02-081.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1802-0035",
+        "R1802-0280",
+        "R1802-0289",
+        "R1802-0540",
+        "R1802-0740"
+      ]
+    },
+    {
+      "id": "S02-082",
+      "page_key": "sn82014782|1802-09-03|1|3",
+      "excerpt_start": "You expressed a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the President's letter to Thomas Paine.",
+      "note": "The Kentucky Gazette prints 'to receive and to accomodate you back'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the paper's own 'and to accommodate'; the print appears to spell it 'accomodate', which RevX silently corrects (minor). The scan is blurred but readable."
+      ],
+      "crops": [
+        "S02-082.jpg"
+      ],
+      "family": [
+        "R1802-0016",
+        "R1802-0060",
+        "R1802-0529"
+      ]
+    },
+    {
+      "id": "S02-083",
+      "page_key": "sn84024678|1802-09-15|1|3",
+      "excerpt_start": "You express a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "The Recorder prints the President's letter to Thomas Paine.",
+      "note": "The Recorder prints 'You express a wish' where most papers have 'expressed'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'You express a wish'; one faint line ('who will present you this letter') is still legible."
+      ],
+      "crops": [
+        "S02-083.jpg"
+      ],
+      "family": [
+        "R1802-0016",
+        "R1802-1529"
+      ]
+    },
+    {
+      "id": "S02-084",
+      "page_key": "sn83025588|1802-09-28|1|2",
+      "excerpt_start": "PARIS, AUG. 4, 1802. AT the",
+      "excerpt_end": "in your hands. In thus conferring it",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-senate-proclaims-bonaparte-consul-for-life-august-1802"
+      ],
+      "summary": "Paris, August 1802: the president of the French Senate addresses Bonaparte on his election as First Consul for life.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'wiſh that the Firſt Magiſtracy' with a long s; RevX 'with' is a transcription error that loses the verb. The rest matches."
+      ],
+      "crops": [
+        "S02-084.jpg"
+      ],
+      "family": [
+        "R1802-0010",
+        "R1802-0012",
+        "R1802-0112",
+        "R1802-0563"
+      ]
+    },
+    {
+      "id": "S02-085",
+      "page_key": "sn84023379|1802-09-28|1|2",
+      "excerpt_start": "PARIS, AUG. 4, 1802. AT the",
+      "excerpt_end": "in your hands. In thus conferring it",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-senate-proclaims-bonaparte-consul-for-life-august-1802"
+      ],
+      "summary": "The Republican Ledger prints the French Senate's address to the First Consul for life.",
+      "note": "The Republican Ledger prints 'irrevocably fixed in your hands' where the others with this translation have 'placed'.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-085.jpg"
+      ],
+      "family": [
+        "R1802-0012",
+        "R1802-0301",
+        "R1802-0559"
+      ]
+    },
+    {
+      "id": "S02-086",
+      "page_key": "sn84024011|1802-09-30|1|2",
+      "excerpt_start": "The audience of the diplomatic corps,",
+      "excerpt_end": "state should remain fixed in your person.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-senate-proclaims-bonaparte-consul-for-life-august-1802"
+      ],
+      "summary": "The Alexandria Advertiser prints the French Senate's address to the First Consul for life.",
+      "note": "The other translation, from the New York Mercantile Advertiser.",
+      "scan_findings": [
+        "Scan shows the other translation and reads 'wiſh that' with a long s; RevX 'with' is a transcription error that loses the verb. The rest matches."
+      ],
+      "crops": [
+        "S02-086.jpg"
+      ],
+      "family": [
+        "R1802-0001",
+        "R1802-0012",
+        "R1802-1182",
+        "R1802-1594"
+      ]
+    },
+    {
+      "id": "S02-087",
+      "page_key": "sn83025545|1802-10-02|1|1",
+      "excerpt_start": "PARIS, AUG. 4, 1802. AT the",
+      "excerpt_end": "in your hands. In thus conferring it",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-senate-proclaims-bonaparte-consul-for-life-august-1802"
+      ],
+      "summary": "The United States Oracle prints the French Senate's address to the First Consul for life.",
+      "note": "The Oracle prints the name 'Barthelem,' without its last letter.",
+      "scan_findings": [
+        "Scan reads 'wiſh that' with a long s; RevX 'with' is a transcription error that loses the verb. The print has 'Barthelem,' (a misprint), which RevX silently corrects to 'Barthélemy'."
+      ],
+      "crops": [
+        "S02-087.jpg"
+      ],
+      "family": [
+        "R1802-0012",
+        "R1802-1452",
+        "R1802-1453",
+        "R1802-1454"
+      ]
+    },
+    {
+      "id": "S02-088",
+      "page_key": "sn83016072|1802-10-04|1|2",
+      "excerpt_start": "At the Levee yefterday, Citizen Bar",
+      "excerpt_end": "in your hands. In thus conferring it",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-senate-proclaims-bonaparte-consul-for-life-august-1802"
+      ],
+      "summary": "Jenks' Portland Gazette prints the French Senate's address to the First Consul for life.",
+      "note": "RevX abridges the address with '...'; the older CA transcription has it whole, so the excerpt comes from the CA text, which is garbled in places. Jenks' Portland Gazette prints 'rendered them' without 'to'.",
+      "scan_findings": [
+        "The CA text is garbled in places ('PrcfiJent', 'Firjl Ccnfai', 'w fh th t') but changes no fact. The print gives the address unabridged as far as the crop runs, and reads 'rendered them' without 'to': a printed difference."
+      ],
+      "crops": [
+        "S02-088.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1802-0012",
+        "R1802-1577"
+      ]
+    },
+    {
+      "id": "S02-089",
+      "page_key": "sn90062293|1802-10-05|1|2",
+      "excerpt_start": "PARIS, Aug. 4. AT the levee",
+      "excerpt_end": "your hands. In thus conferring it upon",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-senate-proclaims-bonaparte-consul-for-life-august-1802"
+      ],
+      "summary": "The American Republican Gazette prints the French Senate's address to the First Consul for life.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, in the 'At the levee yesterday' translation with 'wish' and 'irrevocably fixed'. RevX drops 'it' from 'In thus conferring it upon you', a minor error."
+      ],
+      "crops": [
+        "S02-089.jpg"
+      ],
+      "family": [
+        "R1802-0012"
+      ],
+      "scan_boxes": [
+        [
+          1330,
+          3880,
+          2320,
+          4720
+        ]
+      ]
+    },
+    {
+      "id": "S02-090",
+      "page_key": "sn83045242|1802-10-10|1|3",
+      "excerpt_start": "In pursuance of the latter resolution,",
+      "excerpt_end": "gratitude for the immense services you have",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-senate-proclaims-bonaparte-consul-for-life-august-1802"
+      ],
+      "summary": "The National Intelligencer prints the French Senate's address to the First Consul for life.",
+      "note": "The other translation. This issue of the National Intelligencer is filed under 10 October 1802; its first page is dated Friday, October 1st, 1802.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-090.jpg"
+      ],
+      "family": [
+        "R1802-0012",
+        "R1802-0302",
+        "R1802-0567",
+        "R1802-1595",
+        "R1802-1598"
+      ]
+    },
+    {
+      "id": "S02-091",
+      "page_key": "sn84024011|1802-10-12|1|2",
+      "excerpt_start": "You expressed a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "The Alexandria Advertiser prints the President's letter to Thomas Paine.",
+      "note": "Printed again, whole, inside an essay headed 'TOM PAINE, Invited to this country by his Right Worthy and affectionate Friend, T. JEFFERSON. No. II.', 'as we find it published in the London papers'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the letter's opening and the excerpt are on the crop, just below the essay's words about the London papers."
+      ],
+      "crops": [
+        "S02-091.jpg"
+      ],
+      "family": [
+        "R1802-0016",
+        "R1802-0079"
+      ]
+    },
+    {
+      "id": "S02-092",
+      "page_key": "sn83045242|1802-10-13|1|3",
+      "excerpt_start": "We understand that letters have been",
+      "excerpt_end": "a quantity of spars and other articles.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "washington-report-letters-from-algiers-of-7-july-1802"
+      ],
+      "summary": "Washington, 13 October 1802: letters from Algiers report that the Dey demanded the United States frigate George Washington, and that a Tripolitan corsair brought in the American brig Franklin.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'ſent' (sent), as in the other printings; RevX 'lent' is a transcription error that changes the sense. The rest matches the excerpt."
+      ],
+      "crops": [
+        "S02-092.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-1624",
+        "R1802-1639",
+        "R1802-1641"
+      ]
+    },
+    {
+      "id": "S02-093",
+      "page_key": "sn84024011|1802-10-14|1|3",
+      "excerpt_start": "We understand that letters have been",
+      "excerpt_end": "a quantity of spars and other articles.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "washington-report-letters-from-algiers-of-7-july-1802"
+      ],
+      "summary": "The Alexandria Advertiser prints the Washington report of letters from Algiers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-093.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-0576",
+        "R1802-0577"
+      ]
+    },
+    {
+      "id": "S02-094",
+      "page_key": "sn84024011|1802-10-18|1|3",
+      "excerpt_start": "SIR, On the 11th inst. the",
+      "excerpt_end": "the existing treaty or law of nations.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-letter-convention-with-spain-on-claims-august-1802"
+      ],
+      "summary": "Madrid, August 1802: a letter reports that the United States and Spain have signed a convention for a board to settle claims for losses in the late war.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading at the top edge of the crop dates the letter 15th August 1802."
+      ],
+      "crops": [
+        "S02-094.jpg"
+      ],
+      "family": [
+        "R1802-1653"
+      ]
+    },
+    {
+      "id": "S02-095",
+      "page_key": "sn82014782|1802-10-19|1|2",
+      "excerpt_start": "In pursuance of the latter resolution,",
+      "excerpt_end": "state should remain fixed in your person.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-senate-proclaims-bonaparte-consul-for-life-august-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the French Senate's address to the First Consul for life.",
+      "note": "The other translation. The Kentucky Gazette prints 'giving audience' where the National Intelligencer has 'giving an audience'.",
+      "scan_findings": [
+        "Scan reads 'wiſh that' with a long s on a coarse scan; RevX 'with' is a transcription error that loses the verb. The rest matches."
+      ],
+      "crops": [
+        "S02-095.jpg"
+      ],
+      "family": [
+        "R1802-0012",
+        "R1802-1596"
+      ]
+    },
+    {
+      "id": "S02-096",
+      "page_key": "sn83045242|1802-10-20|1|3",
+      "excerpt_start": "Sir, On the 11th instant the",
+      "excerpt_end": "existing treaty or the law of nations.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-letter-convention-with-spain-on-claims-august-1802"
+      ],
+      "summary": "The National Intelligencer prints the Madrid letter on the convention with Spain.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'the 11th instant', the letter dated 'Madrid, 15th August, 1802' and 'the law of nations'."
+      ],
+      "crops": [
+        "S02-096.jpg"
+      ],
+      "family": [
+        "R1802-0239",
+        "R1802-1663"
+      ],
+      "scan_boxes": [
+        [
+          1170,
+          240,
+          2030,
+          990
+        ]
+      ]
+    },
+    {
+      "id": "S02-097",
+      "page_key": "sn83025545|1802-10-23|1|2",
+      "excerpt_start": "\"On the 11th instant the Plenipotentiaries",
+      "excerpt_end": "existing treaty, or the laws of nations.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-letter-convention-with-spain-on-claims-august-1802"
+      ],
+      "summary": "The United States Oracle prints the Madrid letter on the convention with Spain.",
+      "note": "The Oracle prints 'contrary to the existing treaty, or the laws of nations'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'the laws of nations'."
+      ],
+      "crops": [
+        "S02-097.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-0117",
+        "R1802-0576",
+        "R1802-1677"
+      ]
+    },
+    {
+      "id": "S02-098",
+      "page_key": "sn83025545|1802-10-23|1|2",
+      "excerpt_start": "WASHINGTON, OCT. 13. WE understand that",
+      "excerpt_end": "a quantity of spars and other articles.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "washington-report-letters-from-algiers-of-7-july-1802"
+      ],
+      "summary": "The United States Oracle prints the Washington report of letters from Algiers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-098.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-0117",
+        "R1802-0576",
+        "R1802-1677"
+      ]
+    },
+    {
+      "id": "S02-099",
+      "page_key": "sn83016072|1802-10-25|1|3",
+      "excerpt_start": "On the 11th inst. the Plenipotentiaries",
+      "excerpt_end": "existing treaty, or the laws, of nations.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-letter-convention-with-spain-on-claims-august-1802"
+      ],
+      "summary": "Jenks' Portland Gazette prints the Madrid letter on the convention with Spain.",
+      "note": "Jenks' Portland Gazette prints 'contrary to the existing treaty, or the laws, of nations'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'or the laws, of nations' with its comma."
+      ],
+      "crops": [
+        "S02-099.jpg"
+      ],
+      "family": [
+        "R1802-0240",
+        "R1802-0581",
+        "R1802-0585",
+        "R1802-1658",
+        "R1802-1677"
+      ]
+    },
+    {
+      "id": "S02-100",
+      "page_key": "sn82014782|1802-10-26|1|3",
+      "excerpt_start": "WASHINGTON CITY, October 13. We understand",
+      "excerpt_end": "a quantity of spars and other articles.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "washington-report-letters-from-algiers-of-7-july-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the Washington report of letters from Algiers.",
+      "note": "The Kentucky Gazette prints 'the United States frigate George Washington' without 'the' before the ship's name.",
+      "scan_findings": [
+        "Scan matches the excerpt. The Kentucky Gazette prints 'frigate George Washington' without 'the': a printed difference."
+      ],
+      "crops": [
+        "S02-100.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-0114",
+        "R1802-0236",
+        "R1802-0237",
+        "R1802-0241",
+        "R1802-1610",
+        "R1802-1620"
+      ]
+    },
+    {
+      "id": "S02-101",
+      "page_key": "sn83025588|1802-10-26|1|3",
+      "excerpt_start": "WASHINGTON, OCT. 13. WE understand that",
+      "excerpt_end": "a quantity of arms and other articles.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "washington-report-letters-from-algiers-of-7-july-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints the Washington report of letters from Algiers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'the United States frigate the George Washington' and 'spars', like the other printings; RevX 'to deliver' and 'arms' are transcription errors that change the sense."
+      ],
+      "crops": [
+        "S02-101.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-0117",
+        "R1802-0285",
+        "R1802-0577",
+        "R1802-0581",
+        "R1802-0699",
+        "R1802-1686"
+      ]
+    },
+    {
+      "id": "S02-102",
+      "page_key": "sn84023379|1802-10-26|1|2",
+      "excerpt_start": "WASHINGTON, OCT. 13, 1802. We understand",
+      "excerpt_end": "a quantity of spars and other articles.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "washington-report-letters-from-algiers-of-7-july-1802"
+      ],
+      "summary": "The Republican Ledger prints the Washington report of letters from Algiers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'has demanded of the American Consul', like the other printings; RevX 'has despatched' is a transcription error that changes the sense. RevX also silently corrects the printed misprints 'couutry' and 'Agiers'."
+      ],
+      "crops": [
+        "S02-102.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-0035",
+        "R1802-0117",
+        "R1802-0240",
+        "R1802-0569",
+        "R1802-0588",
+        "R1802-1683"
+      ]
+    },
+    {
+      "id": "S02-103",
+      "page_key": "sn83021188|1802-10-30|1|2",
+      "excerpt_start": "WASHINGTON-CITY, Oct. 13. We understand that",
+      "excerpt_end": "a quantity of spars and other articles.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "washington-report-letters-from-algiers-of-7-july-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints the Washington report of letters from Algiers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-103.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-0327",
+        "R1802-1633"
+      ]
+    },
+    {
+      "id": "S02-104",
+      "page_key": "sn83021188|1802-10-30|1|3",
+      "excerpt_start": "SIR,—On the 11th inst. the Plenipotentiaries",
+      "excerpt_end": "the late war, contrary to the existing",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-letter-convention-with-spain-on-claims-august-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints the Madrid letter on the convention with Spain.",
+      "note": "The Rhode-Island Republican prints 'individuals of either nations' and 'or to the law of nations'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print has 'either nations', which RevX silently corrects to 'nation'. After the excerpt the print reads 'or to the law of nations', a wording of its own."
+      ],
+      "crops": [
+        "S02-104.jpg"
+      ],
+      "family": [
+        "R1802-0239"
+      ]
+    },
+    {
+      "id": "S02-105",
+      "page_key": "sn82014782|1802-11-02|1|3",
+      "excerpt_start": "SIR, On the 11th instant, the",
+      "excerpt_end": "the existing treaty or law of nations.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-letter-convention-with-spain-on-claims-august-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the Madrid letter on the convention with Spain.",
+      "note": "The Kentucky Gazette dates the letter '5th August'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading just above the crop dates the letter '5th August, 1802' where the other printings have the 15th: a printed difference."
+      ],
+      "crops": [
+        "S02-105.jpg"
+      ],
+      "family": [
+        "R1802-0066",
+        "R1802-0238",
+        "R1802-0239",
+        "R1802-0640",
+        "R1802-0644"
+      ]
+    },
+    {
+      "id": "S02-106",
+      "page_key": "sn90062293|1802-11-02|1|3",
+      "excerpt_start": "Washington, Oct. 13. WE understand that",
+      "excerpt_end": "a quantity of spars and other articles.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "washington-report-letters-from-algiers-of-7-july-1802"
+      ],
+      "summary": "The American Republican Gazette prints the Washington report of letters from Algiers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-106.jpg"
+      ],
+      "family": [
+        "R1802-0019",
+        "R1802-0117",
+        "R1802-0133",
+        "R1802-1619",
+        "R1802-1683",
+        "R1802-1708"
+      ]
+    },
+    {
+      "id": "S02-107",
+      "page_key": "sn84024011|1802-11-08|1|2",
+      "excerpt_start": "November 3. One of the most",
+      "excerpt_end": "through Bridge-street into Stone-street with uncontrollable fury;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-fire-of-2-november-1802"
+      ],
+      "summary": "New York, 3 November 1802: a fire in a stable near Whitehall destroys about fifty buildings.",
+      "note": "Earliest printing found. The other form ('One of the most alarming Fires that has ever happened in this city, within our recollection'), under the date 'November 3.' without a place; the name 'LA CROSSE' printed above it is the signature of the item before.",
+      "scan_findings": [
+        "Scan matches the excerpt, which now begins at the date 'November 3.' centred above the report (the name 'LA CROSSE' printed above it is the signature of the item before), but for the spelling 'incontroulable'. The worn 'Whitehall' looks like RevX's 'Whitchall'; not counted."
+      ],
+      "crops": [
+        "S02-107.jpg"
+      ],
+      "family": [
+        "R1802-0603",
+        "R1802-1688",
+        "R1802-1729"
+      ]
+    },
+    {
+      "id": "S02-108",
+      "page_key": "sn83025588|1802-11-09|1|3",
+      "excerpt_start": "Last evening one of the most",
+      "excerpt_end": "than one hour and a half, the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-fire-of-2-november-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints the New York report of the fire.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for the spelling 'uncontrolable'. The print has 'Bride-street' where the fire began and 'Bridge street' for its path."
+      ],
+      "crops": [
+        "S02-108.jpg"
+      ],
+      "family": [
+        "R1802-0285",
+        "R1802-0605",
+        "R1802-1737"
+      ]
+    },
+    {
+      "id": "S02-109",
+      "page_key": "sn84023379|1802-11-09|1|3",
+      "excerpt_start": "Last evening one of the most",
+      "excerpt_end": "less than one hour and a half,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-fire-of-2-november-1802"
+      ],
+      "summary": "The Republican Ledger prints the New York report of the fire.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for the spelling 'uncontrolable'. The print has 'Bride-street' where the fire began and 'Bridge-street' for its path."
+      ],
+      "crops": [
+        "S02-109.jpg"
+      ],
+      "family": [
+        "R1802-0127",
+        "R1802-0285",
+        "R1802-0600",
+        "R1802-0601",
+        "R1802-0605"
+      ]
+    },
+    {
+      "id": "S02-110",
+      "page_key": "sn90062293|1802-11-09|1|2",
+      "excerpt_start": "SIR—On the 11th inst. the plenipotentiaries",
+      "excerpt_end": "existing treaty or the law of nations.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-letter-convention-with-spain-on-claims-august-1802"
+      ],
+      "summary": "The American Republican Gazette prints the Madrid letter on the convention with Spain.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the letter is dated 'Madrid, 15th Aug. 1802.'"
+      ],
+      "crops": [
+        "S02-110.jpg"
+      ],
+      "family": [
+        "R1802-0239",
+        "R1802-0593"
+      ]
+    },
+    {
+      "id": "S02-111",
+      "page_key": "sn83021188|1802-11-13|1|3",
+      "excerpt_start": "Last evening one of the most",
+      "excerpt_end": "with uncontrollable fury; and in less than",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-fire-of-2-november-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints the New York report of the fire.",
+      "note": "The Rhode-Island Republican prints 'Bridge Street' and the singular 'Broad street'.",
+      "scan_findings": [
+        "Scan matches the excerpt but for the spelling 'uncontrolable'. The print has 'Bridge-street' in both places and the singular 'Broad street'."
+      ],
+      "crops": [
+        "S02-111.jpg"
+      ],
+      "family": [
+        "R1802-0120",
+        "R1802-0244",
+        "R1802-0605",
+        "R1802-0606",
+        "R1802-0611",
+        "R1802-1701",
+        "R1802-1748"
+      ]
+    },
+    {
+      "id": "S02-112",
+      "page_key": "sn83025545|1802-11-13|1|3",
+      "excerpt_start": "Last evening one of 1 the",
+      "excerpt_end": "Stone-Greet, with uncontroulable fa ir ry ;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-fire-of-2-november-1802"
+      ],
+      "summary": "The United States Oracle prints the New York report of the fire.",
+      "note": "RevX abridges this report with '...'; the older CA transcription has it, so the excerpt comes from the CA text, which is garbled in places.",
+      "scan_findings": [
+        "The CA text is garbled throughout; its 'liable' for 'stable' loses where the fire began and is counted as fact-changing, while 'frefli', 'Stone-Greet' and 'fa ir ry' are recognisable garbles. The print reads 'Bride-street' and 'uncontroulable', as the CA text has."
+      ],
+      "crops": [
+        "S02-112.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1802-0582",
+        "R1802-0641"
+      ]
+    },
+    {
+      "id": "S02-113",
+      "page_key": "sn83045242|1802-11-15|1|3",
+      "excerpt_start": "THOMAS PAINE, TO THE CITIZENS OF",
+      "excerpt_end": "spring of 1787 it was my intention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "Thomas Paine's first letter 'To the Citizens of the United States', published in the National Intelligencer on 15 November 1802.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'in whoſe dangers' with a long s; RevX 'whole' is a transcription error that changes the word. The rest matches, including 'ſailed'."
+      ],
+      "crops": [
+        "S02-113.jpg"
+      ],
+      "family": [
+        "R1802-0006"
+      ]
+    },
+    {
+      "id": "S02-114",
+      "page_key": "sn90062293|1802-11-16|1|3",
+      "excerpt_start": "Newyork, Nov. 3. Last evening one",
+      "excerpt_end": "and in less than one hour and",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-fire-of-2-november-1802"
+      ],
+      "summary": "The American Republican Gazette prints the New York report of the fire.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for the spelling 'uncontrolable'; the print has 'Bridge-street' in both places."
+      ],
+      "crops": [
+        "S02-114.jpg"
+      ],
+      "family": [
+        "R1802-0331",
+        "R1802-1737",
+        "R1802-1765"
+      ]
+    },
+    {
+      "id": "S02-115",
+      "page_key": "sn83045242|1802-11-22|1|2",
+      "excerpt_start": "THOMAS PAINE, TO THE CITIZENS OF",
+      "excerpt_end": "old must be regenerated, it regenerated at",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-second-to-the-citizens-november-1802"
+      ],
+      "summary": "Thomas Paine's second letter 'To the Citizens of the United States', published in the National Intelligencer on 22 November 1802.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the print reads 'if regenerated at all', where RevX has 'it': a transcription error that loses the condition."
+      ],
+      "crops": [
+        "S02-115.jpg"
+      ],
+      "family": [
+        "R1802-0007"
+      ],
+      "scan_boxes": [
+        [
+          3245,
+          460,
+          4170,
+          1190
+        ]
+      ]
+    },
+    {
+      "id": "S02-116",
+      "page_key": "sn82014782|1802-11-23|1|3",
+      "excerpt_start": "NEW-YORK, November 3. One of the",
+      "excerpt_end": "through Bride-street into Stone-street with uncontrollable fury;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-fire-of-2-november-1802"
+      ],
+      "summary": "The Kentucky Gazette prints the New York report of the fire.",
+      "note": "The other form ('One of the most alarming FIRES that ever happened in this city, within our recollection'). The Kentucky Gazette prints 'Bride-street' also for the street the flames passed through, where the others have 'Bridge-street'.",
+      "scan_findings": [
+        "Scan matches the excerpt but for the spelling 'uncontroulable'. The print has 'Bride-street' in both places, including the path into Stone-street, where the other printings have 'Bridge'."
+      ],
+      "crops": [
+        "S02-116.jpg"
+      ],
+      "family": [
+        "R1802-0246",
+        "R1802-0597",
+        "R1802-0603"
+      ]
+    },
+    {
+      "id": "S02-117",
+      "page_key": "sn83021188|1802-11-27|1|3",
+      "excerpt_start": "THOMAS PAINE, To the Citizens of",
+      "excerpt_end": "Spring of 1787, it was my intention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints Paine's first letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'whose' twice. RevX's 'When I failed' stands where the sense is 'sailed', but at this resolution a long s cannot be told from an f, so it is not counted (C-14)."
+      ],
+      "crops": [
+        "S02-117.jpg"
+      ],
+      "family": [
+        "R1802-0006",
+        "R1802-0121",
+        "R1802-0623"
+      ],
+      "scan_boxes": [
+        [
+          120,
+          310,
+          1060,
+          760
+        ]
+      ]
+    },
+    {
+      "id": "S02-118",
+      "page_key": "sn83025545|1802-11-27|1|2",
+      "excerpt_start": "THOMAS PAIN, To the Citizens of",
+      "excerpt_end": "spring of 1787, it was my intention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "The United States Oracle prints Paine's first letter to the citizens.",
+      "note": "The Oracle heads the letter 'THOMAS PAIN'.",
+      "scan_findings": [
+        "The print itself reads 'THOMAS PAIN,': a printed difference, not a transcription error. RevX reads the long s of 'ſailed' as 'failed', a different word; the rest matches."
+      ],
+      "crops": [
+        "S02-118.jpg"
+      ],
+      "family": [
+        "R1802-0006",
+        "R1802-0067",
+        "R1802-0249",
+        "R1802-0250",
+        "R1802-1772",
+        "R1802-1794"
+      ]
+    },
+    {
+      "id": "S02-119",
+      "page_key": "sn83016072|1802-11-29|1|2",
+      "excerpt_start": "THOMAS PAINE, To the Citizens of",
+      "excerpt_end": "spring of 1787 it was my intention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "Jenks' Portland Gazette prints Paine's first letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-119.jpg"
+      ],
+      "family": [
+        "R1802-0006",
+        "R1802-0122",
+        "R1802-0594",
+        "R1802-1669",
+        "R1802-1715",
+        "R1802-1733",
+        "R1802-1762"
+      ]
+    },
+    {
+      "id": "S02-120",
+      "page_key": "sn83025588|1802-11-30|1|2",
+      "excerpt_start": "THOMAS PAINE, To the Citizens of",
+      "excerpt_end": "spring of 1787, it was my intention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints Paine's first letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'whoſe' twice and 'ſailed', all with a long s; RevX 'whole' (twice) and 'failed' are transcription errors that change the words. The rest matches."
+      ],
+      "crops": [
+        "S02-120.jpg"
+      ],
+      "family": [
+        "R1802-0006",
+        "R1802-0067",
+        "R1802-0249",
+        "R1802-0250",
+        "R1802-0609",
+        "R1802-1678",
+        "R1802-1791"
+      ]
+    },
+    {
+      "id": "S02-121",
+      "page_key": "sn84023379|1802-11-30|1|2",
+      "excerpt_start": "Thomas Paine, To the Citizens of",
+      "excerpt_end": "spring of 1787, it was my intention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "The Republican Ledger prints Paine's first letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. A line across the print runs through 'When I ſailed', so its long s cannot be told from an f; RevX 'failed' is not counted."
+      ],
+      "crops": [
+        "S02-121.jpg"
+      ],
+      "family": [
+        "R1802-0006",
+        "R1802-1801",
+        "R1802-1802",
+        "R1802-1803",
+        "R1802-1805"
+      ]
+    },
+    {
+      "id": "S02-122",
+      "page_key": "sn84024011|1802-12-01|1|2",
+      "excerpt_start": "THOMAS PAINE. To the citizens of",
+      "excerpt_end": "spring of 1787, it was MY intention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "The Alexandria Advertiser prints Paine's first letter to the citizens.",
+      "note": "The Alexandria Advertiser heads the letter 'LETTER THE FIRTS.', a misprint, and sets 'I' in italics and 'MY' in capitals throughout.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the heading prints 'LETTER THE FIRTS.', a misprint RevX silently corrects to 'FIRST'. The paper sets 'I' in italics and 'MY' in capitals throughout."
+      ],
+      "crops": [
+        "S02-122.jpg"
+      ],
+      "family": [
+        "R1802-0006",
+        "R1802-0007"
+      ]
+    },
+    {
+      "id": "S02-123",
+      "page_key": "sn84024011|1802-12-01|1|2",
+      "excerpt_start": "LETTER THE SECOND. AS the affairs",
+      "excerpt_end": "shall not take up the time of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-second-to-the-citizens-november-1802"
+      ],
+      "summary": "The Alexandria Advertiser prints Paine's second letter to the citizens.",
+      "note": "The Alexandria Advertiser prints the second letter directly after the first, in one column.",
+      "scan_findings": [
+        "Scan matches the excerpt. The heading is 'LETTER THE SECOND.' alone, and the paper sets 'I' in italics and 'ME' in capitals."
+      ],
+      "crops": [
+        "S02-123.jpg"
+      ],
+      "family": [
+        "R1802-0006",
+        "R1802-0007"
+      ]
+    },
+    {
+      "id": "S02-124",
+      "page_key": "sn83021188|1802-12-04|1|3",
+      "excerpt_start": "THOMAS PAINE, To the Citizens of",
+      "excerpt_end": "old must be regenerated, if regenerated at",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-second-to-the-citizens-november-1802"
+      ],
+      "summary": "The Rhode-Island Republican prints Paine's second letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-124.jpg"
+      ],
+      "family": [
+        "R1802-0007",
+        "R1802-1804"
+      ]
+    },
+    {
+      "id": "S02-125",
+      "page_key": "sn83016072|1802-12-06|1|2",
+      "excerpt_start": "You expressed a wish in your",
+      "excerpt_end": "returned to sentiments worthy of former times;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "jefferson-letter-to-paine-published-august-1802"
+      ],
+      "summary": "Jenks' Portland Gazette prints the President's letter to Thomas Paine.",
+      "note": "Printed again, whole, under the heading 'From Jefferson to Paine', among letters of the President that the paper prints against him.",
+      "scan_findings": [
+        "Scan matches the excerpt; the letter's opening and the excerpt are on the crop under the heading 'From Jefferson to Paine'. Several letters are worn but every word is legible."
+      ],
+      "crops": [
+        "S02-125.jpg"
+      ],
+      "family": [
+        "R1802-0016",
+        "R1802-0108",
+        "R1802-0114",
+        "R1802-0617"
+      ]
+    },
+    {
+      "id": "S02-126",
+      "page_key": "sn83025588|1802-12-07|1|2",
+      "excerpt_start": "THOMAS PAINE, To the Citizens of",
+      "excerpt_end": "old must be regenerated, if regenerated at",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-second-to-the-citizens-november-1802"
+      ],
+      "summary": "The New Hampshire Gazette prints Paine's second letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-126.jpg"
+      ],
+      "family": [
+        "R1802-0007",
+        "R1802-1754",
+        "R1802-1780",
+        "R1802-1826"
+      ]
+    },
+    {
+      "id": "S02-127",
+      "page_key": "sn84023379|1802-12-07|1|2",
+      "excerpt_start": "Thomas Paine, To the Citizens of",
+      "excerpt_end": "old must be regenerated, if regenerated at",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-second-to-the-citizens-november-1802"
+      ],
+      "summary": "The Republican Ledger prints Paine's second letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-127.jpg"
+      ],
+      "family": [
+        "R1802-0007",
+        "R1802-0332",
+        "R1802-0623"
+      ]
+    },
+    {
+      "id": "S02-128",
+      "page_key": "sn90062293|1802-12-07|1|1",
+      "excerpt_start": "BETTER THE FIRST. A FTER an",
+      "excerpt_end": "next year,,nd ^itCT hc ,^ °f,y ^;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "The American Republican Gazette prints Paine's first letter to the citizens.",
+      "note": "RevX leaves out the letter's opening (from its heading to 'the scaffold') and runs on from the editor's introduction; the older CA transcription has the opening, so the excerpt comes from the CA text, which is garbled. The American Republican Gazette prints 'almost 15 years' in figures where the others have 'fifteen'.",
+      "scan_findings": [
+        "Scan has the heading 'LETTER THE FIRST.' and the opening, and prints '15 years' in figures where the other printings have 'fifteen': a printed difference. The CA text is garbled throughout: it reads '15' as 'y 41' and drops 'tributed my part'."
+      ],
+      "crops": [
+        "S02-128.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1802-0006",
+        "R1802-1641"
+      ]
+    },
+    {
+      "id": "S02-129",
+      "page_key": "sn82014782|1802-12-14|1|2",
+      "excerpt_start": "THOMAS PAINE, To the Citizens of",
+      "excerpt_end": "spring of 1787, it was my intention",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-first-to-the-citizens-november-1802"
+      ],
+      "summary": "The Kentucky Gazette prints Paine's first letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except 'in which dangers': the print has a word beginning 'who', too worn and small to tell 'whoſe' from 'whole', so RevX 'which' is a minor error that keeps the sense. The scan is too coarse to tell the long s of 'ſailed' from an f, so 'failed' is not counted."
+      ],
+      "crops": [
+        "S02-129.jpg"
+      ],
+      "family": [
+        "R1802-0006"
+      ]
+    },
+    {
+      "id": "S02-130",
+      "page_key": "sn90062293|1802-12-16|1|1",
+      "excerpt_start": "THOMAS PAINE, To the CITIZENS of",
+      "excerpt_end": "old must be regenerated, if regenerated at",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-second-to-the-citizens-november-1802"
+      ],
+      "summary": "The American Republican Gazette prints Paine's second letter to the citizens.",
+      "note": "The American Republican Gazette prints 'thro'' for 'through'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the paper's 'thro''."
+      ],
+      "crops": [
+        "S02-130.jpg"
+      ],
+      "family": [
+        "R1802-0007",
+        "R1802-0609",
+        "R1802-0626",
+        "R1802-1769"
+      ]
+    },
+    {
+      "id": "S02-131",
+      "page_key": "sn83025545|1802-12-18|1|1",
+      "excerpt_start": "THOMAS PAINE, To the Citizens of",
+      "excerpt_end": "old must be regenerated, if regenerated at",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-second-to-the-citizens-november-1802"
+      ],
+      "summary": "The United States Oracle prints Paine's second letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S02-131.jpg"
+      ],
+      "family": [
+        "R1802-0007",
+        "R1802-0275",
+        "R1802-0700",
+        "R1802-1676",
+        "R1802-1858"
+      ]
+    },
+    {
+      "id": "S02-132",
+      "page_key": "sn82014782|1802-12-21|1|2",
+      "excerpt_start": "THOMAS PAINE, To the Citizens of",
+      "excerpt_end": "old must be regenerated, if regenerated at",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "paine-returns-to-america-1802",
+        "paine-letter-the-second-to-the-citizens-november-1802"
+      ],
+      "summary": "The Kentucky Gazette prints Paine's second letter to the citizens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the crop is small but legible."
+      ],
+      "crops": [
+        "S02-132.jpg"
+      ],
+      "family": [
+        "R1802-0007",
+        "R1802-0070",
+        "R1802-1740",
+        "R1802-1741"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "breckenridge-speech-on-repealing-the-judiciary-act-january-1802",
+      "kind": "document_group",
+      "label": "Mr. Breckenridge's speech in the Senate, 8 January 1802, on his motion to repeal the judiciary act of 1801",
+      "definition": "Printings of the speech with which Mr. Breckenridge, senator from Kentucky, opened the Senate's debate of 8 January 1802 on his resolution to repeal the act of the last session 'for a new organization of the Judiciary System' (the act of 13 February 1801, which had created sixteen circuit judges): 'It will be expected of me, I presume, Sir, as I introduced the resolution now under consideration, to assign my reasons for wishing a repeal of this law. This I shall do; and shall endeavour to shew, 1. That the law is unnecessary and improper, and was so at its passage'. Most papers print it under the heading 'Judiciary Establishment', from the National Intelligencer's report of the Senate's debates. A senator's own argument, as the papers reported the debate.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "havana-circular-ports-of-cuba-closed-december-1801",
+      "kind": "document_group",
+      "label": "The American consul at Havana's circular of 25 December 1801: the ports of Cuba closed to American and all foreign vessels",
+      "definition": "Printings of a circular dated 'American Consulate, Havanna, December 25, 1801' and signed by the consul of the United States there: 'By an order of the government of this island, published this day, the admission of American, and all other foreign vessels into its ports, is prohibited from this date. You will be pleased, Sir, to give immediate publicity to this information, for the government of the merchants and traders of your district.' The papers print copies sent to the collectors of different ports (Baltimore, Philadelphia, New York); the Oracle's adds a postscript of 31 December. The American consul's own notice of a Spanish colonial order.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "baltimore-report-of-the-death-of-toussaint-january-1802",
+      "kind": "message_group",
+      "label": "Baltimore, January 1802: a letter from Alexandria reports that Toussaint 'is no more'",
+      "definition": "Printings of a paragraph from the Baltimore Federal Gazette of 23 January 1802, headed 'Death of Toussaint' or 'Important' in several papers: 'A gentleman belonging to a respectable mercantile house of Alexandria, now in this town, received a letter from his partner last night, dated the 21st inst. which says, \"I am sorry to inform you Toussaint is no more. He has been caught by the blacks and burnt alive.\"' The Baltimore paper adds that the same report was current at Norfolk, 'tho' not generally credited', and gives its own guesses at how it happened. A report at third hand of a rumour; the papers of the following months print Toussaint as alive (his arrest in June is the story of Leclerc's proclamation, below).",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "french-army-arrives-at-st-domingo-february-1802",
+      "kind": "context_group",
+      "label": "The French army arrives at St. Domingo, February 1802: the Consuls' proclamation and a report of the burning of the Cape",
+      "definition": "Two items of March 1802 on the French expedition under General Leclerc, which reached St. Domingo (Saint-Domingue, now Haiti) early in February: the proclamation of the Consuls of the French Republic to the inhabitants of the island, which Leclerc published on landing, and a Baltimore report, from a ship's captain, of the burning of Cape François. Contains those two groups.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801",
+      "kind": "document_group",
+      "label": "The Consuls of the French Republic to the inhabitants of St. Domingo, 8 November 1801: 'Whatever may be your origin and your colour, you are all Frenchmen'",
+      "definition": "Printings of the proclamation of the Consuls of the Republic dated Paris, 17 Brumaire, year 10 (8 November 1801), which General Leclerc published at St. Domingo in February 1802: 'Inhabitants of St. Domingo, Whatever may be your origin and your colour, you are all Frenchmen, you are all free and all equal before God and the Republic. France, like St. Domingo, has been a prey to factions'; it announces the Captain General sent with the army and warns those who would not rally to him. The papers print it in two translations: four that begin 'Inhabitants of St. Domingo, Whatever may be your origin, and your colour, you are all Frenchmen' and go on 'But an entire change has taken place', and three that read 'ye are all Frenchmen, ye are all free' and 'But all is changed'; counted together as one item in two printed forms. Several papers print it after Leclerc's own short proclamation, which is not counted here (5 papers). The French government's own proclamation, as the papers translated it.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "baltimore-report-conflagration-of-the-cape-march-1802",
+      "kind": "message_group",
+      "label": "Baltimore, March 1802: 'Conflagration of the Cape', from the captain of the schooner Nelly",
+      "definition": "Printings of a report from Baltimore, dated 3 March 1802 in some papers and 4 March in others, headed 'Conflagration of the Cape' in most: 'Arrived last evening, capt. Rogers of the Schooner Nelly, from Cape-Francois, which he left on the 14th February. The news by capt. R. is most distressing; both on account of the American property which has been destroyed at the Cape, and the scenes of horror and bloodshed which have and will take place.' It goes on, in the Baltimore paper's words, with the arrival of the French fleet off the Cape on 3 February, the negotiations, the firing of the town on the night of the 4th and the killings that followed. A ship captain's report at second hand, in the Baltimore paper's words.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "act-fixing-the-military-peace-establishment-1802",
+      "kind": "document_group",
+      "label": "The act of 16 March 1802 fixing the military peace establishment of the United States",
+      "definition": "Printings, among the laws of the first session of the Seventh Congress, of 'An Act Fixing the military peace establishment of the United States': 'That the military peace establishment of the United States, from and after the first of June next, shall be composed of one regiment of artillerists and two regiments of infantry, with such officers, military agents, and engineers, as are hereinafter mentioned'. Among its sections, the President is empowered to organise a corps of engineers, which 'shall be stationed at West Point in the State of New-York, and shall constitute a military academy'. Congress's own act, printed 'By Authority'.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "treaty-of-madrid-21-march-1801-printed-1802",
+      "kind": "document_group",
+      "label": "The treaty signed at Madrid on 21 March 1801 by Lucien Bonaparte and the Prince of Peace, printed in 1802 as proof that 'Spain has ceded Louisiana to the French'",
+      "definition": "Printings of a treaty 'Signed at Madrid, 21st March, 1801, by the Prince of Peace and Lucien Bonaparte' (the dates vary from paper to paper), from the Paris Journal des Débats of January 1802: 'The First Consul of the French republic and his Catholic Majesty, desirous of permanently determining the states which the son of the Infant of Parma shall receive, as an equivalent for the Duchy of Parma, have agreed to the following articles'; the Grand Duchy of Tuscany is given to the Prince of Parma, who will be acknowledged King of Tuscany. The National Intelligencer's headnote, which most papers repeat, says that the document 'establishes the fact, that Spain has ceded Louisiana to the French'. The two governments' treaty, as a Paris paper gave it, with the American paper's headnote.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "definitive-treaty-of-amiens-1802",
+      "kind": "document_group",
+      "label": "The definitive treaty of peace signed at Amiens, 27 March 1802",
+      "definition": "Printings of the text of the 'Definitive Treaty of Peace, between the French Republic, the King of Spain, and the Batavian Republic, on the one part, and His Majesty the King of the United Kingdom of Great-Britain and Ireland on the other', signed at Amiens on 27 March 1802 and brought to America in May from London and Havre papers: 'The First Consul of the French Republic, in the name of the French Nation, and His Majesty the King of the United Kingdom of Great-Britain and Ireland, being equally animated with a desire to put an end to the calamities of war'. Among its articles, Spain cedes the island of Trinidad and the Batavian Republic its possessions in Ceylon to Great Britain, and Malta is to be restored to the Knights of St. John. The powers' own treaty, as the papers printed it.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802",
+      "kind": "document_group",
+      "label": "General Leclerc to the citizens of St. Domingo, June 1802: 'I have thought proper to cause him to be arrested'",
+      "definition": "Printings of the proclamation of the French general in chief at St. Domingo, dated at the Cape, 20 Prairial, year 10 (8 June 1802), and signed by Leclerc, in two translations. Six papers print the one that begins 'General Toussaint not being contented with enjoying the amnesty which had been granted him, attempted again to kindle the flames of civil war. I have thought proper to cause him to be arrested'; three print another: 'Gen. Toussaint did not wish to enjoy the amnesty which had been granted to him; he has continued to conspire; he was just going to rekindle a civil war. I thought it necessary to have him arrested'. Both promise that the proofs will be published and that the measure should not alarm those who have laid down their arms. Counted together as one item in two printed forms. The French commander's own proclamation, as the papers translated it.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "new-york-report-algerine-cruisers-take-a-portuguese-frigate-1802",
+      "kind": "message_group",
+      "label": "New York, July 1802: from Captain Dawson, 'an engagement between two Algerine cruisers and a Portuguese man of war off Malaga'",
+      "definition": "Printings of a report from the New York Gazette of 16 July 1802, from the captain of a schooner arrived in 38 days from Gibraltar: 'From Capt. Dawson we have received an account of an engagement between two Algerine cruisers and a Portuguese man of war off Malaga, wherein the former were victorious. The force of the Algerines was a frigate of 32 guns (the same which was presented by the American government to the Dey) and a xebec'; the Portuguese frigate struck after an action of three hours and was carried into Algiers. The Virginia Argus prints a Philadelphia form of the report that opens in other words ('The Captain of an American vessel arrived at New-York from Gibraltar, has given an account of the engagement') and goes on in the same words; counted with the others as a printed form. A ship captain's report at second hand.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "paine-returns-to-america-1802",
+      "kind": "context_group",
+      "label": "Thomas Paine returns to America, 1802: the President's letter to him, and his letters 'To the Citizens of the United States'",
+      "definition": "Three documents on the return of Thomas Paine, author of 'Common Sense' and 'The Rights of Man', who had lived in Europe since 1787 and landed at Baltimore at the end of October 1802: the President's letter of 1801 offering him a passage in a national ship, published in August 1802 from a London paper, and the first two of Paine's letters 'To the Citizens of the United States', which the National Intelligencer published in November. Contains those three groups.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "jefferson-letter-to-paine-published-august-1802",
+      "kind": "document_group",
+      "label": "'You expressed a wish in your letter to return to America by a national ship': the President's letter to Thomas Paine, published August 1802",
+      "definition": "Printings of a letter from Thomas Jefferson, President of the United States, to Thomas Paine, which a New York paper took from a London paper in August 1802 ('about which so much has been said'): 'You expressed a wish in your letter to return to America by a national ship; Mr. Dawson, who brings over the treaty, and who will present you this letter, is charged with orders to the Captain of the Maryland to receive and accommodate you back, if you can be ready to depart at such a short warning'; it ends with the wish that Paine 'may long live to continue your useful labours, and to reap their reward in the thankfulness of nations'. Papers of both parties printed it, some with hostile introductions; two printed it again in essays and columns of the President's letters. The President's own letter, as the papers printed it.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "paine-letter-the-first-to-the-citizens-november-1802",
+      "kind": "document_group",
+      "label": "Thomas Paine, 'To the Citizens of the United States', Letter the First: 'After an absence of almost fifteen years, I am again returned'",
+      "definition": "Printings of the first of Thomas Paine's letters 'To the Citizens of the United States', first published in the National Intelligencer of 15 November 1802: 'After an absence of almost fifteen years, I am again returned to the country in whose dangers I bore my share, and to whose greatness I contributed my part. When I sailed for Europe in the spring of 1787 it was my intention to return to America the next year'. He quotes a letter of his own of about 1789 on the principles of the revolution 'expiring on the soil that produced them', and closes by declaring 'the line of conduct I shall pursue'. Papers of both parties printed it, some with introductions for or against him. Paine's own public letter, a political argument.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "paine-letter-the-second-to-the-citizens-november-1802",
+      "kind": "document_group",
+      "label": "Thomas Paine, 'To the Citizens of the United States', Letter the Second: on the ex-president John Adams and the Federalists",
+      "definition": "Printings of the second of Thomas Paine's letters 'To the Citizens of the United States', first published in the National Intelligencer of 22 November 1802: 'As the affairs of the country to which I am returned are of more importance to the world, and to me, than of that I have lately left (for it is through the new world the old must be regenerated, if regenerated at all) I shall not take up the subject of the French revolution'. It turns on 'the ex-president John Adams', whom it accuses, in Paine's words, of having projects 'to overturn the liberties of America, and the representative system of government'. Paine's own public letter: a political argument with allegations against a named public man.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "french-senate-proclaims-bonaparte-consul-for-life-august-1802",
+      "kind": "document_group",
+      "label": "Paris, August 1802: the president of the Conservative Senate addresses Bonaparte, proclaimed First Consul for life, and the First Consul replies",
+      "definition": "Printings of the account from the Paris papers of 3 and 4 August 1802, in two translations, of the Conservative Senate's audience with the First Consul: its president, Barthélemy, 'addressed Bonaparte in a speech of which the following are extracts: \"Citizen First Consul, The French, grateful for the immense services you have rendered to them, wish that the First Magistracy of the State should be irrevocably placed in your hands\"' ('A new career commences for the First Consul'), read the Senate's decree that, as the papers print it, 3,568,885 of 3,577,259 citizens had voted for Napoleon Bonaparte as Consul for life, and the First Consul replied. Five papers print the translation that begins 'At the Levee yesterday'; three print another ('The French people, as a mark of gratitude'), which the Alexandria Advertiser takes from the New York Mercantile Advertiser. Counted together as one item in two printed forms. The French Senate's and the First Consul's own words, as the papers translated them.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "washington-report-letters-from-algiers-of-7-july-1802",
+      "kind": "message_group",
+      "label": "Washington, 13 October 1802: 'letters have been received in this country from Algiers, as late as the 7th of July'",
+      "definition": "Printings of a paragraph from Washington of 13 October 1802: 'We understand that letters have been received in this country from Algiers, as late as the 7th of July, which furnish the following information: The Dey of Algiers has demanded of the American Consul to direct the United States frigate the George Washington, to be brought to Algiers, for the purpose of being sent by the Dey to Constantinople'; the Dey later turned to the consuls of nearer nations; a Tripolitan corsair brought the American brig Franklin into Algiers as a prize; Spain bought off a threatened war. A report at second hand, from letters the paragraph does not name.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "madrid-letter-convention-with-spain-on-claims-august-1802",
+      "kind": "message_group",
+      "label": "Madrid, August 1802: 'the plenipotentiaries of the United States and Spain signed a convention' for a board of commissioners on losses",
+      "definition": "Printings of a short letter from Madrid dated in August 1802 (15 August in most papers), which some papers call a circular of the American consul general at Madrid and others a letter 'from an official character at the Spanish court': 'On the 11th instant the plenipotentiaries of the United States and Spain signed a convention for the appointment of commissioners who are to form a board, and sit at Madrid, for the indemnification of those who have sustained losses, damages, or injuries in consequence of the excesses of individuals of either nation, during the late war, contrary to the existing treaty or the law of nations. The convention to have no force or effect, until it be ratified by the contracting parties.' An official's letter, as the papers printed it.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    },
+    {
+      "id": "new-york-report-fire-of-2-november-1802",
+      "kind": "message_group",
+      "label": "New York, 3 November 1802: 'one of the most alarming Fires that has ever happened in this city'",
+      "definition": "Printings of a New York report of 3 November 1802, in two forms: 'One of the most alarming Fires that has ever happened in this city, within our recollection, broke out last evening, between 8 & 9 o'clock, in a stable in Bridge-street, between Whitehall & Broad-streets' (two papers), or 'Last evening one of the most alarming Fires that has ever happened in this city, broke out in a stable in Bride-street, between Whitehall and Broad-streets' (five papers; the street is printed 'Bride-street' in some papers and 'Bridge-street' in others); in less than an hour and a half about fifty buildings, mostly dwelling houses, were burnt, pulled down or gutted. The report goes on to name some of the sufferers; the excerpts end before their names. Counted together as one report in two printed forms. A New York paper's report.",
+      "admission_rule": "Reviewed 1802 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "french-army-arrives-at-st-domingo-february-1802",
+      "child": "consuls-proclamation-to-the-inhabitants-of-st-domingo-november-1801"
+    },
+    {
+      "parent": "french-army-arrives-at-st-domingo-february-1802",
+      "child": "baltimore-report-conflagration-of-the-cape-march-1802"
+    },
+    {
+      "parent": "paine-returns-to-america-1802",
+      "child": "jefferson-letter-to-paine-published-august-1802"
+    },
+    {
+      "parent": "paine-returns-to-america-1802",
+      "child": "paine-letter-the-first-to-the-citizens-november-1802"
+    },
+    {
+      "parent": "paine-returns-to-america-1802",
+      "child": "paine-letter-the-second-to-the-citizens-november-1802"
+    }
+  ],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1802 that reach 3 or more papers, long-running ones included (story_items.py --long-running), were split into single printed items (items.json: 1,378 items printed somewhere; 85 in 7 or more papers by the finder's count, 16 in 9 or more). Because the Treasury report, the proclamations of December 1801 and the acts of the session sit in families that began in 1801, the same script was also run with year 1801 over the 1802 pages (items_from_1801.json: 171 items, 19 in 7 or more). The finder's counts are those of chains (it joins items printed together, and acts that share the enacting formula), so every item in 6 or more papers was read in this session (Claude, the session's own model; no second reader) and counted by its own words, and every item in 5 or more was checked by machine for further papers: about 220 words of its text were compared with every page of the year in both transcriptions, and every page that shared many of its word sequences was read. Each act of the session was counted by its own title followed by its enacting clause. Each chosen item and each candidate set aside was counted with phrase searches on all 2,968 pages of 1802 in both transcriptions (story_phrase_search.py, phrase_patterns.json, phrase_hits.json); every hit was read.",
+    "selection_rule": "As for 1776, 1800, 1804, 1805, 1807, 1808 and 1809: every single item printed in 9 or more newspapers was admitted, except digests; items in 7 or 8 papers were chosen to cover the months from January to December and the main kinds of news (Europe and St. Domingo; ships, trade and the Barbary states; American public life and government). Where several items of one affair reach the band in the same weeks, the most widely printed was chosen and the others were not, unless they are separate public acts (X-1800-01); the Barbary items were trimmed as in 1804 and 1805. Every story alike (the owner's rule of 11 November 2026): no item was left out for its subject. Where several documents belong to one affair, each is its own group under a parent story. A group count is a target, not a quota.",
+    "paper_counting": "Papers, not catalogue numbers, are counted (C-04): Jenks's Portland Gazette (sn83016063 to 20 September, sn83016072 from 27 September: Number 230 and 231 of Volume V), the Recorder of Richmond (sn84024678 to 27 October, sn84024679 from 3 November: the same printers, Pace and Callender) and E. Russell's paper at Concord, New Hampshire (sn84022876, the Republican Gazette, to 3 August; sn90062293, the American Republican Gazette, from 10 August) are one paper each. The 14 catalogue series of 1802 are 11 papers.",
+    "admitted_9_or_more": [
+      "paine-letter-the-first-to-the-citizens-november-1802 (9)",
+      "leclerc-proclamation-on-the-arrest-of-toussaint-june-1802 (9, two translations counted together: 6 and 3)"
+    ],
+    "counted_item_by_item": {
+      "Laws printed by authority": "The item finder chains the acts of the first session of the Seventh Congress through their enacting formula and the list of acts (items of up to 9 papers and 96 printings). Counted by its own title followed by its enacting clause, no act reaches 9 papers and three reach 7: the act fixing the military peace establishment (admitted), the act for the apportionment of Representatives and the act establishing a uniform rule of naturalization (not chosen). Five papers printed nearly every law (the National Intelligencer, Kentucky Gazette, New Hampshire Gazette, Rhode-Island Republican and Republican Ledger); the Oracle, the Portland Gazette, the Alexandria Advertiser and the Virginia Argus printed some. Pages that mention an act in the proceedings, or recite it in another act, are not counted.",
+      "Thomas Paine's letters to the citizens": "The finder makes items of single paragraphs of Paine's letters (up to 10 papers). Each letter is counted by its opening (C-06): the first letter is in 9 papers (the American Republican Gazette's printing of 7 December has its opening in print and in the CA text; RevX leaves it out), the second in 8, the third in 6 and the fourth in 6. Pages that quote passages in commentary are not counted (C-07): the Recorder's comments of 1 and 8 December, and the Alexandria Advertiser's reprint of them; the Kentucky Gazette's quotation of the first letter's last paragraph on 30 November; the Recorder's 'Extract from Paine's second letter' of 15 December; the Portland Gazette's quotations of the second and third letters. The passage on a 'female literary correspondent' that the first letter quotes also stands in Paine's letter to George Washington of 1796, which the Alexandria Advertiser reprinted in November; it is not counted with the first letter.",
+      "The President's letter to Thomas Paine": "Counted by its opening: 8 papers. A page that prints the letter whole counts, even inside an essay or among other letters, and the Alexandria Advertiser (12 October) and the Portland Gazette (6 December) printed it a second time (C-08); pages that quote part of it do not count (C-07): the Rhode-Island Republican's essay 'Seventy-Five, No. VI' of 25 September quotes only its first sentence, and the Alexandria Advertiser (16 October) and the Oracle (20 November) quote it from its second sentence.",
+      "The committee's report on the public monies": "The report of the House committee appointed 'to enquire and report whether monies drawn from the Treasury have been faithfully applied' (April 1802) is chained by the finder into items of 9 papers. By its opening it is in 6 papers (National Intelligencer, Alexandria Advertiser, Republican Ledger, Kentucky Gazette, Republican Gazette, Oracle); the Recorder and the Rhode-Island Republican printed extracts from its later parts, which are not counted (C-06); the Virginia Argus and the National Intelligencer's 'History of the last session' summarise it (C-07).",
+      "The Treasury report of December 1801": "The Secretary of the Treasury's report of 18 December 1801 on the finances was printed in parts in January 1802; the finder makes items of its paragraphs. By its opening it is in 7 papers on 1802 pages (the National Intelligencer printed it in December 1801). Later pages that quote its figures (the National Intelligencer and the Virginia Argus in August and September) are not counted. The page of the National Intelligencer filed under 29 November that opens with the same formula is the issue of 29 December 1802 and prints the next year's report.",
+      "Printed forms counted together": "One item in two wordings or translations counts as one (C-02): the Consuls' proclamation to the inhabitants of St. Domingo (4 and 3 papers: 'you are all Frenchmen ... But an entire change has taken place', and 'ye are all Frenchmen, ye are all free ... But all is changed'), General Leclerc's proclamation of 8 June (6 and 3), the French Senate's address to the First Consul for life (5 and 3), the New York report of the fire of 2 November (5 and 2), and the New York report of the Algerine cruisers (7, and the Virginia Argus's Philadelphia form, which opens in other words and goes on in the same).",
+      "Items printed together": "Where one paper printed several documents in one column, each is counted by its own words: the Consuls' proclamation to the inhabitants of St. Domingo (7) and General Leclerc's own short proclamation that precedes it in several papers (5); the French Senate's address (8) and the First Consul's reply printed with it; the President's letter to Paine and letters of his to Callender printed in the same column of the Portland Gazette.",
+      "Lists of the yeas and nays": "Lists of members' names in the votes of the House (the finder joins several votes of February to August into one item of 7 papers) are parts of the proceedings, not items.",
+      "Standing notices and advertisements": "The Postmaster General's proposals for carrying the mails (6 papers, 54 printings in successive issues) and a commission of bankruptcy against a trader (a legal notice, 6 papers by the finder's count) are advertisements; neither reaches 7 papers."
+    },
+    "not_admitted": {
+      "The Secretary of the Treasury's report of 18 December 1801 on the finances (7 papers on 1802 pages, January)": "In 7 papers; not chosen: January's American public life is covered by Mr. Breckenridge's speech, and the report runs in parts over several issues.",
+      "The act for the apportionment of Representatives according to the second enumeration (7 papers, January–March)": "In 7 papers; not chosen: one act of the session is chosen (the act fixing the military peace establishment), and January and February are covered.",
+      "The act establishing a uniform rule of naturalization (7 papers, April–June)": "In 7 papers; not chosen: one act of the session is chosen, and April to June are covered by the treaty of Madrid, the definitive treaty and the act fixing the military peace establishment.",
+      "London, 27 May 1802: 'A most extraordinary report has been brought from Calais', that the life of Bonaparte had been attempted again (7 papers, July)": "In 7 papers; not chosen: a report the London paper itself calls extraordinary; July is covered, and European news is covered by the definitive treaty and the French Senate's address.",
+      "Bordeaux, 6 June 1802: 'Bonaparte is momentarily expected to visit this city', with his election as Consul for life (7 papers, July–August)": "In 7 papers; not chosen: the same affair as the French Senate's address to the First Consul for life (8 papers, admitted).",
+      "A London paper of 9 May 1802: 'The Dey of Tripoli lately purchased a 32 gun frigate at Smyrna' (7 papers, July–August)": "In 7 papers; not chosen: the Barbary items are trimmed (two stories admitted), as in 1804 and 1805.",
+      "'Republican Finance; or a new way to pay off old debts': the Wilmington Mirror's statement of the public debt (7 papers, August–September)": "In 7 papers; not chosen: a party argument built on a Treasury statement; August and September are covered, and the year's American public life already has four stories.",
+      "'It appears by accounts from the Mediterranean, that a rebellion lately broke out in the Empire of Morocco' (7 papers, August–September)": "In 7 papers; not chosen: the Barbary items are trimmed.",
+      "'On Saturday last the New York was put in commission': the frigate to join the Mediterranean squadron (7 papers, August–September)": "In 7 papers; not chosen: the Barbary items are trimmed.",
+      "Dispatches from Mr. Simpson, consul to Morocco, dated at Gibraltar 16 July 1802 (7 papers, September)": "In 7 papers; not chosen: the Barbary items are trimmed.",
+      "Thomas Paine's third letter to the citizens of the United States (6 papers, December)": "Below 7 papers counted by its opening. The National Intelligencer's printing would stand in its issue of 29 November, which is not in the collection (the pages filed under 29 November are the issue of 29 December).",
+      "Thomas Paine's fourth letter to the citizens of the United States (6 papers, December)": "Below 7 papers counted by its opening.",
+      "The report of the House committee on whether monies drawn from the Treasury have been faithfully applied (6 papers by its opening, May–June; extracts in 2 more)": "Below 7 papers counted by its opening (C-06); two papers printed extracts from its later parts.",
+      "The President's proclamation of the convention with France, 21 December 1801 (5 papers on 1802 pages, January)": "Below 7 papers on 1802 pages; most papers printed it in December 1801.",
+      "The President's proclamation of the treaty with the Chickasaw nation (2 papers on 1802 pages)": "Below 7 papers on 1802 pages.",
+      "A passage of a speech in the House on the judiciary bill: 'If you pass the bill upon your table the judges have a constitutional right to declare it void' (7 papers, mostly quoted in commentary)": "Quoted in commentary in most of the papers that carry it (C-07); the speech itself is printed in fewer than 7.",
+      "The act repealing the judiciary act of 1801, and the other acts of the session (6 papers or fewer each by their own titles)": "Below 7 papers each by their own titles.",
+      "The President's message of 27 April 1802 on the commissioners under the sixth article of the treaty with Great Britain (5 papers)": "Below 7 papers; two later summaries quote it.",
+      "Mr. Lear's letter from Cape François of 12 February 1802, 'Official' (6 papers, March)": "Below 7 papers; the Baltimore report of the burning of the Cape (7) and the Consuls' proclamation (7) are admitted.",
+      "General Leclerc's own proclamation on landing at St. Domingo, 'Inhabitants of St. Domingo! Read the Proclamation of the First Consul' (5 papers, March)": "Below 7 papers counted by its own words; the Consuls' proclamation printed with it (7) is admitted.",
+      "The London hand bill of 29 March 1802, 'Downing Street. Mr. Moore ... arrived this morning ... with the Definitive Treaty of Peace' (6 papers in two wordings, May–June)": "Below 7 papers; the definitive treaty itself (8) is admitted.",
+      "Reports from Cape François in August 1802: Captain Westcott's (6 papers), the schooner Determined Rover's (5), General Leclerc's additional export duty (6)": "Below 7 papers each.",
+      "A letter from an officer of the frigate Constellation off Algiers, 24 May 1802 (6 papers, September–October)": "Below 7 papers.",
+      "The viceroy of Buenos Ayres's decree on foreign vessels (5 papers, September)": "Below 7 papers.",
+      "Other foreign items of 6 papers or fewer: Havana advices on the export of specie (5), the passenger Hudson from Cadiz on the war (6), Pashwan Oglou the Turkish rebel (4), a New Orleans letter on a courier from Spain (6), Bruix at the tribune of the Legislative Body (4), London on 10 April on the peace (5), the Amiens negotiations of March (4), insurrection at Guadeloupe (6 or fewer), a regiment at Dominica (4)": "Below 7 papers each.",
+      "A North Carolina report, June 1802: 'The following accounts of risings among the Negroes in the state of North-Carolina' (6 papers or fewer)": "Below 7 papers.",
+      "A half skull bone of great size found in Logan county, Kentucky (6 papers)": "Below 7 papers.",
+      "A shooting accident in New Jersey in June 1802 (6 papers in two forms; private persons)": "Below 7 papers; it turns on private persons and is described without names (R-04).",
+      "The Postmaster General's proposals for carrying the mails (6 papers, in successive issues)": "Below 7 papers; an advertisement.",
+      "A commission of bankruptcy against a trader of Massachusetts (a legal notice, 6 papers by the finder's count; private person)": "Below 7 papers; an advertisement naming a private person, described without his name (R-04).",
+      "Lists of the yeas and nays in the House on the judiciary bill and other votes (the finder joins several votes into one item of 7 papers)": "Parts of the House's proceedings, not items: lists of names from different votes.",
+      "Speeches in the Senate on repealing the judiciary act: Mr. Morris (6 papers), Mr. Tracy (6), Mr. Mason (5 by its opening; a sixth paper printed its end)": "Below 7 papers each, counted by their openings; Mr. Breckenridge's speech that opened the debate (8 papers) is admitted.",
+      "Mr. Wolcott's address to the people of the United States on the committee's report (4 papers, much of it advertisements for the pamphlet)": "Below 7 papers.",
+      "The report of the committee of ways and means on repealing the internal taxes (4 or 5 papers, March–April)": "Below 7 papers."
+    },
+    "for_the_owner": {},
+    "for_user_decision": {
+      "Thomas Paine's first letter admitted with a printing whose opening only the CA text keeps (9 papers)": "As built, the first letter is in 9 papers because the American Republican Gazette of 7 December has its opening in print (RevX leaves it out); without that page it is in 8 and would still be chosen as a sub-story under the Paine parent.",
+      "General Leclerc's proclamation of June 1802 counted across two translations (9 papers)": "As built, admitted by the rule's first part with its two translations counted together (6 + 3, C-02), as 1800 counted the convention with France; counted apart, the longer translation is in 6 papers.",
+      "The President's letter to Paine counted with whole reprints inside essays (8 papers, 10 printings)": "As built, a page that prints the letter whole counts, even inside an essay or a column of other letters (two papers printed it twice); pages that quote part of it do not. The paper count, 8, is the same either way.",
+      "Paine's letters admitted in his own words": "As built, the first two letters are shown with excerpts of their openings and described as Paine's political argument; the second makes allegations against John Adams by name, labelled as allegations in the description.",
+      "St. Domingo in four groups": "As built, St. Domingo has four groups in three stories (the report of Toussaint's death in January, the Consuls' proclamation and the burning of the Cape in March, Leclerc's proclamation on Toussaint's arrest in June), each described by whose account it is in the papers' words; the report of January is a rumour, as the Baltimore paper itself says. The Consuls' proclamation reaches 7 papers with its two translations counted together (4 + 3); it stands under its parent either way (C-01).",
+      "The Barbary items trimmed": "As built, two Barbary stories (the Algerine cruisers' capture of a Portuguese frigate, the letters from Algiers of 7 July); four items in 7 papers are not chosen (the Dey of Tripoli's frigate, the Morocco rebellion, the frigate New York, Mr. Simpson's dispatches).",
+      "Misdated issues of the National Intelligencer": "Several issues of the National Intelligencer of 1802 are filed under other dates (see the README, 'Data issues'). One admitted printing stands on one of them: the French Senate's address in the issue filed under 10 October, a Sunday, whose page 1 prints a date in early October. As built, its printed date is the filed one until a correction release dates the issue as printed.",
+      "Two grading calls": "As built, 'with' for the printed 'wiſh' is graded fact-changing in RevX and CA texts alike (the French Senate's address in four papers, the President's letter in the Republican Ledger's CA text), and 'liable' for 'stable' in the Oracle's CA text of the New York fire is graded fact-changing with medium confidence. Gaps that RevX leaves just after an excerpt (three printings) are listed as data issues and not counted in the excerpt's grade, as 1800 did. The site's counts of what we found wrong in the archive follow these grades."
+    }
+  }
+}

@@ -341,17 +341,21 @@ def archive(e, repo):
         ('Issues filed under the wrong date',
          f'{k["issues"]} issues of the Kentucky Gazette and General Advertiser filed under 1806 to 1808 were printed two years earlier: '
          f'the {k["by_year"].get("1808 -> 1806", 0)} filed under 1808 are of 1806. Two issues of the Gazette of the United States are filed away from their '
-         'mastheads: 4 April 1793 for 4 May, and 23 July for 13 July.',
+         'mastheads: 4 April 1793 for 4 May, and 23 July for 13 July. '
+         f'{d["ni_1802"]} issues of the National Intelligencer of 1802 are filed away from theirs, among them 10 October for 1 October.',
          f'Reading the masthead of every front page: {k["by_basis"]["masthead"]} by their dates, {k["by_basis"]["two-year rule"]} by the paper’s '
          f'publication days, {k["by_basis"]["scan"]} on the scans.',
-         f'The Kentucky Gazette is dated as printed in data release v{d["release"]}, the two issues of 1793 in v{d["gus_release"]}.',
+         f'The Kentucky Gazette is dated as printed in data release v{d["release"]}, the two issues of 1793 in v{d["gus_release"]}, '
+         f'those of 1802 in v{d["ni_release"]}.',
          ('filing.csv', f'{d["issues"]} issues')),
         ('Pages filed under another issue',
          'Pages 3 and 4 filed under the American Herald of Liberty of 2 July 1793 are a second scan of the pages of 9 July: '
          'page 3 prints the heading ‘EXETER, TUESDAY, JULY 9, 1793’. Pages 3 and 4 of the National Intelligencer of 9 July and '
-         '8 September 1806 are filed in each other’s issues.',
+         '8 September 1806 are filed in each other’s issues. The four pages filed under the National Intelligencer of '
+         '24 November 1802 are a second scan of the issue of 24 December.',
          'Datelines later than the issue a page is filed under, and each page compared with its neighbours.',
-         f'Corrected in data release v{e["second_scan"]["release"]}: the second scan is left out of the analysis, and the 1806 pages are filed under their own issues.',
+         f'Corrected in data releases v{" and v".join(e["second_scan"]["releases"])}: the second scans are left out of the analysis, '
+         'and the 1806 pages are filed under their own issues.',
          ('filing.csv', f'{e["second_scan"]["issues"] + e.get("swapped_pages", {}).get("issues", 0)} issues')),
         ('Transcriptions that change what was printed',
          f'Of {t["checked"]} printings read against their scans in {yt}, {t["changes_what_was_printed"]} ({pct(t["changes_what_was_printed"], t["checked"])}) '

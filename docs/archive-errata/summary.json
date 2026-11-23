@@ -31,7 +31,9 @@
   "release": "0.8.1"
  },
  "dates": {
-  "issues": 108,
+  "issues": 115,
+  "ni_1802": 7,
+  "ni_release": "0.11.13",
   "kentucky": {
    "lccn": "sn84038147",
    "newspaper": "Kentucky gazette and general advertiser",
@@ -53,9 +55,13 @@
   "gus_release": "0.11.7"
  },
  "second_scan": {
-  "issues": 1,
-  "pages": 2,
-  "release": "0.11.7"
+  "issues": 2,
+  "pages": 6,
+  "release": "0.11.7",
+  "releases": [
+   "0.11.7",
+   "0.11.13"
+  ]
  },
  "swapped_pages": {
   "issues": 2,
@@ -68,6 +74,8 @@
    1793,
    1797,
    1800,
+   1802,
+   1803,
    1804,
    1805,
    1806,
@@ -75,9 +83,9 @@
    1808,
    1809
   ],
-  "checked": 2800,
-  "changes_what_was_printed": 336,
-  "leaves_out_text": 75,
+  "checked": 3170,
+  "changes_what_was_printed": 389,
+  "leaves_out_text": 93,
   "by_year": {
    "1776": {
     "checked": 350,
@@ -105,6 +113,22 @@
     "changes_what_was_printed": 25,
     "by_transcription": {
      "RevX": 24,
+     "CA": 1
+    }
+   },
+   "1802": {
+    "checked": 132,
+    "changes_what_was_printed": 23,
+    "by_transcription": {
+     "RevX": 20,
+     "CA": 3
+    }
+   },
+   "1803": {
+    "checked": 238,
+    "changes_what_was_printed": 30,
+    "by_transcription": {
+     "RevX": 29,
      "CA": 1
     }
    },

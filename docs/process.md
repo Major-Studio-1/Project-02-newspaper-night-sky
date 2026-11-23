@@ -184,7 +184,7 @@ Four faults of the archive, found by the reviews of 1793 and 1806 and by release
 
 - **Two *Gazette of the United-States* issues of 1793** filed under the wrong dates (4 April is Saturday 4 May; 23 July is Saturday 13 July) are dated as printed. Their pages were matched again in the windows of their printed dates, and every printing on them was found again, in the same story on the same page.
 - **Pages 3 and 4 of the *National Intelligencer* of 9 July and 8 September 1806**, filed in each other's issues, are filed under the issues they belong to.
-- **The second scan** filed under the *American Herald of Liberty* of 2 July 1793 (pages 3 and 4 of 9 July) is left out of the analysis, so the project uses 77,747 pages rather than 77,749. The scans stay in the archive's list of pages.
+- **The second scan** filed under the *American Herald of Liberty* of 2 July 1793 (pages 3 and 4 of 9 July) is left out of the analysis, so the project used 77,747 pages rather than 77,749 (77,743 since v0.11.13 left out a second scan of 1802). The scans stay in the archive's list of pages.
 - **The topic census rows** of the 260 pages whose RevX text is filed under another page now score each page from the text that transcribes it: 117 take the scores of their misfiled text, and 143 that no RevX text transcribes are scored from their own CA text with the frozen model. The yearly topic shares move by at most 0.11 percentage points.
 - **What changes:** the 48,270 matched stories stay, none dropped, split or new; their printings go from 164,698 to 164,686. No reviewed row changes; one reviewed printing, Captain Fanning's account of 1793, takes its issue's printed date, 13 July, the date its note records. On the site some matched stars of 1793 and 1806 start on other days, a few titles change, and the archive errata and Findings say what was corrected.
 
@@ -220,9 +220,19 @@ Four rounds then read the stories earlier rounds had held back for framing, by e
 - **Decisions:** on 23 November 2026 the owner kept every point the two reviews left open as built: in 1800 the seaman claimed under the 27th article of the treaty with Great Britain is not named, and in 1804 the reports of the armed march on Baton Rouge name its leader as the papers do.
 - **Not admitted:** 57 items for 1800 and 27 for 1804 joined the list (388 in all). In neither year does an item in 7 or more papers turn on private persons.
 
+### Two more reviewed years: 1802 and 1803 (data releases v0.11.11 and v0.11.12, 23 November 2026)
+
+1802 and 1803 were reviewed by the same rule (every single item in 9 or more papers, items in 7–8 papers chosen to cover the months and the kinds of news); neither year needed a lower threshold. Every printing was checked against its scan.
+
+- **1802:** 14 stories, 19 groups and 132 printings in 11 papers, from Mr. Breckenridge's speech on repealing the judiciary act and the Havana circular closing the ports of Cuba to the definitive treaty of Amiens, General Leclerc's proclamation on the arrest of Toussaint, Thomas Paine's letters on his return to America and the New York fire of November (release v0.11.11, 3,385 checks). Transcriptions: 70 faithful, 39 with minor misreadings, 23 with fact-changing ones.
+- **1803:** 23 stories, 32 groups and 238 printings in 12 papers, from the President's message on the right of deposit at New Orleans and Colonel Despard's speech on the scaffold to the treaty and conventions for the cession of Louisiana, a letter from Dublin on the rising and a Raleigh report of gold ore in Cabarrus County (release v0.11.12, 3,657 checks). Transcriptions: 124 faithful, 84 with minor misreadings, 30 with fact-changing ones. The review also swept every page of the year for short items that 7 or more papers share word for word, and found four of its stories that way; the earlier years were not swept.
+- **Decisions:** on 23 November 2026 the owner kept every point the two reviews left open as built: in 1803 two items that turn on private persons stay out, listed without names, and the bearer of the dispatches with the treaty keeps the name the *National Intelligencer* gives him, as shipmasters named as sources of news are kept.
+- **Not admitted:** 34 items for 1802 and 55 for 1803 joined the list (477 in all).
+- **A correction release, v0.11.13** (`pipeline/archive_data/correct_filing_1802.py`, 3,657 checks): the 1802 review found eight issues of the *National Intelligencer* filed under dates their first pages do not print. Seven are dated as printed (filed 21 August is Monday 2 August, 10 October is Friday 1 October, 6 November is Monday 6 December, and so on), and their pages were matched again in the windows of their printed dates: 50 of the 51 printings on them were found again, in the same story on the same page. The four pages filed under 24 November are a second scan of the issue of 24 December and leave the analysis, so the project uses 77,743 pages. The 48,270 matched stories stay; their printings go from 164,686 to 164,677. One reviewed printing, the French Senate's address to the First Consul, takes its issue's printed date, 1 October.
+
 ### What the reviews read and did not admit (22 November 2026)
 
-By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8) and 388 since 1800 and 1804 were reviewed (v0.11.10), each with the number of papers, its kind and its reason.
+By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8) 388 since 1800 and 1804 were reviewed (v0.11.10) and 477 since 1802 and 1803 (v0.11.12), each with the number of papers, its kind and its reason.
 
 - **Kinds:** below the rule (118), not chosen because its months and kind of news were already covered (80), digests, lists and proceedings (14), private persons (17) and other (54, most of them 1797's).
 - **Complete by check:** the script stops unless every key of `not_admitted`, `for_the_owner` and `for_user_decision` in every ledger (128 keys in 15 ledgers) is listed or accounted for: 32 items a later round admitted, 11 repeats, 4 counting decisions and 2 notes on admitted stories. It also checks that each of the 122 families of 1797 that were read is admitted or listed.
@@ -361,7 +371,7 @@ The pulse view is a direct translation of the admitted group records:
 Version 1 (below) is kept as `telescope-v1.html`.
 
 
-`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4, 199 since v0.11.6, 207 since v0.11.8 and 243 since v0.11.10).
+`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4, 199 since v0.11.6, 207 since v0.11.8, 243 since v0.11.10 and 280 since v0.11.12).
 
 - **Left to right:** the date of first printing.
 - **Up and down:** the average latitude of the towns whose papers printed the story, north at the top. A small fixed scatter, up to 0.12°, keeps stories printed by the same papers from stacking into a line.
@@ -467,7 +477,7 @@ The second of them, storylines assembled from what the papers printed, has a pag
 
 Home follows the order in which a visitor comes to understand the site, without becoming a form. Below the stars it asks one thing, "What do you want to see?", and each of its six answers opens the instrument and the arrangement that show it: where a story started (the telescope's Place view), what it was about (Topic), when in the year (Orbit), how it spread (Pulses), how many over time (the telescope from the side) and what a day sounded like (Radio). Everything else is chosen later, on the instrument, when it changes what is seen.
 
-Before any pattern come three facts about the source, shown as facts: what the archive is (110 newspapers, 77,747 usable pages since release v0.11.7), how much of it survives each year (a small bar chart; two papers for 1785 and 1786), and the two kinds of evidence (found by machine, or read against the scans by hand), with how often the machine's reading changes a fact. Then the findings about what came back and how a story travelled, each with a door into the view that shows it; the Chesapeake storyline; and the notebook. The page is written by `pipeline/home_parts.py` from the build's own numbers and the Findings page's titles and doors.
+Before any pattern come three facts about the source, shown as facts: what the archive is (110 newspapers, 77,743 usable pages since release v0.11.13), how much of it survives each year (a small bar chart; two papers for 1785 and 1786), and the two kinds of evidence (found by machine, or read against the scans by hand), with how often the machine's reading changes a fact. Then the findings about what came back and how a story travelled, each with a door into the view that shows it; the Chesapeake storyline; and the notebook. The page is written by `pipeline/home_parts.py` from the build's own numbers and the Findings page's titles and doors.
 
 ### What we found wrong in the archive (12 November 2026)
 
@@ -604,5 +614,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.11.10) |
+| Data release | [`data/`](../data) (v0.11.13) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

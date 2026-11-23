@@ -10,7 +10,8 @@ reviewed years, and writes outputs/archive_errata/:
   summary.json       the counts and the examples the Findings page shows (work/findings_parts.py)
 
 Inputs: outputs/revx_page_shift_check/ (shifted_issues.csv, summary.json, impact.json), outputs/kentucky_gazette_dates/
-issues.csv, outputs/story_discovery_1793/ (masthead_dates.csv, page_date_flags.csv), the scan verdicts of the reviewed
+issues.csv, outputs/story_discovery_1793/ (masthead_dates.csv, page_date_flags.csv), outputs/filing_corrections/ and
+outputs/filing_corrections_1802/ (corrections.json), the scan verdicts of the reviewed
 years (outputs/story_discovery_YEAR/scan_verdicts/, later files win), the site's data.json (newspapers, dates and pages of
 the reviewed printings) and the matched audit's summary. Run from the project root with Python 3.12:
     python work/archive_errata.py
@@ -116,7 +117,7 @@ filing.append({'problem': 'Second scan filed under another date', 'lccn': 'sn840
                'page': '3-4', 'what_is_wrong': 'Pages 3 and 4 filed under 2 July 1793 are a second scan of pages 3 and 4 of the issue of 9 July 1793.',
                'how_it_was_found': (f'Page 3 prints "BOSTON, JULY 3" and the heading "EXETER, TUESDAY, JULY 9, 1793", and its text shares '
                                     f'{float(ahl["share4"]):.0%} of its 4-word phrases with the page filed under 9 July (different images of the same printed page).'),
-               'in_this_project': ('Left out of the analysis in data release v0.11.7, so the project uses 77,747 pages rather than 77,749; '
+               'in_this_project': ('Left out of the analysis in data release v0.11.7 (77,749 pages in use became 77,747); '
                                    "the scans stay in the archive's list of pages.")})
 
 # 3b · Pages filed in each other's issues (National Intelligencer, 1806), found by the 1806 dateline and neighbour checks and
@@ -133,6 +134,29 @@ for filed_issue, cs in sorted(swapped.items()):
                    'what_is_wrong': f'Pages filed under {filed} belong to the issue of {cs[0]["printed_issue"].split(":")[2]}.',
                    'how_it_was_found': ' '.join(c['evidence'] for c in cs),
                    'in_this_project': 'Filed under the issue they belong to in data release v0.11.7 (page ids keep the filed issue).'})
+
+# 3c · The National Intelligencer of 1802: seven issues filed under the wrong dates and the four pages of a second scan,
+# found by the review of 1802 and corrected by data release v0.11.13 (outputs/filing_corrections_1802/corrections.json).
+ni = json.loads((ROOT / 'outputs/filing_corrections_1802/corrections.json').read_text(encoding='utf8'))
+NI_DONE = {'issue:sn83045242:1802-10-10:1': (" One reviewed printing stands on it, the French Senate's address to the First Consul "
+                                            '(S02-090), which now carries 1 October, the date its note records.')}
+for c in ni['issue_dates']:
+    lccn, filed, edition = c['issue_id'].split(':')[1:4]
+    filing.append({'problem': 'Issue filed under the wrong date', 'lccn': lccn, 'newspaper': c['newspaper'], 'filed_date': filed, 'edition': edition,
+                   'page': '', 'what_is_wrong': f'Filed under {filed}; printed {c["printed_date"]}.', 'how_it_was_found': c['evidence'],
+                   'in_this_project': 'Dated as printed in data release v0.11.13 (its ids keep the filed date).' + NI_DONE.get(c['issue_id'], '')})
+ni_second = sorted(ni['second_scans'], key=lambda c: c['page_id'])
+lccn, filed, edition = ni_second[0]['page_id'].split(':')[1:4]
+of_issue = ni_second[0]['scan_of'].split(':')[2]
+assert all(c['scan_of'].split(':')[2] == of_issue for c in ni_second)
+filing.append({'problem': 'Second scan filed under another date', 'lccn': lccn, 'newspaper': ni_second[0]['newspaper'], 'filed_date': filed,
+               'edition': edition, 'page': '-'.join(c['page_id'].split(':')[-1] for c in ni_second),
+               'what_is_wrong': f'The pages filed under {filed} are a second scan of the issue of {of_issue}.',
+               'how_it_was_found': ('The masthead of the first page reads "FRIDAY, DECEMBER 24th, 1802". The CA text of each page is the CA text '
+                                    'of the same page of the issue filed under 24 December word for word, and the RevX texts share 92% to 100% '
+                                    'of their 4-word phrases (other pages of the two issues 1% or less).'),
+               'in_this_project': ('Left out of the analysis in data release v0.11.13 (77,747 pages in use became 77,743); '
+                                   "the scans stay in the archive's list of pages.")})
 
 # 4 · Transcriptions that change what was printed: every reviewed printing the scan check found with a fact-changing
 # problem (a misreading, or printed text left out), in the four reviewed years with structured verdicts.
@@ -176,10 +200,10 @@ summary = {
     'made': datetime.date.today().isoformat(), 'script': 'work/archive_errata.py',
     'archive': {'dataset': 'RevolutionCrossroads/loc_chronicling_america_1770-1810', 'pages': shift_sum['pages'], 'issues': shift_sum['issues']},
     'pages': pages_block,
-    'dates': {'issues': len(kg) + len(GUS), 'kentucky': {'lccn': 'sn84038147', 'newspaper': kg_title, 'issues': len(kg),
+    'dates': {'issues': len(kg) + len(GUS) + len(ni['issue_dates']), 'ni_1802': len(ni['issue_dates']), 'ni_release': '0.11.13', 'kentucky': {'lccn': 'sn84038147', 'newspaper': kg_title, 'issues': len(kg),
               'pages': sum(int(r['pages']) for r in kg), 'by_year': dict(kg_years), 'by_basis': dict(Counter(r['basis'] for r in kg))},
               'gus_1793': len(GUS), 'release': '0.10.2', 'gus_release': '0.11.7'},
-    'second_scan': {'issues': 1, 'pages': 2, 'release': '0.11.7'},
+    'second_scan': {'issues': 2, 'pages': 2 + len(ni_second), 'release': '0.11.7', 'releases': ['0.11.7', '0.11.13']},
     'swapped_pages': {'issues': len(swapped), 'pages': sum(len(v) for v in swapped.values()), 'release': '0.11.7'},
     'transcription': {'years': list(YEARS), 'checked': sum(b['checked'] for b in by_year.values()),
                       'changes_what_was_printed': len(trans), 'leaves_out_text': sum(1 for r in trans if r['leaves_out_text']),
@@ -242,9 +266,12 @@ pages, where only some are concerned), what is wrong, how it was found, and what
   {k["by_basis"]["masthead"]} by their masthead dates, {k["by_basis"]["two-year rule"]} where no masthead could be read by the
   paper's publication days, {k["by_basis"]["scan"]} on the scans. The check: `outputs/kentucky_gazette_dates/check_dates.py`.
   Reading every front page of 1793 found two issues of the *Gazette of the United-States* filed away from their mastheads,
-  both confirmed on the scans (`outputs/story_discovery_1793/check_mastheads_1793.py`).
-- **A second scan filed under another date.** Found by looking for datelines later than the issue a page is filed under
-  (1793; `outputs/story_discovery_1793/check_duplicate_pages_1793.py`).
+  both confirmed on the scans (`outputs/story_discovery_1793/check_mastheads_1793.py`). The review of 1802 found seven
+  issues of the *National Intelligencer* filed away from their mastheads, read on the scans
+  (`outputs/filing_corrections_1802/check_ni_1802.py`).
+- **Second scans filed under another date.** Found by looking for datelines later than the issue a page is filed under
+  (1793; `outputs/story_discovery_1793/check_duplicate_pages_1793.py`), and by the masthead of an issue filed under
+  24 November 1802 that prints 24 December (1802; `outputs/filing_corrections_1802/check_ni_1802.py`).
 - **Pages filed in another issue.** Pages 3 and 4 of the *National Intelligencer* of 9 July and 8 September 1806 are filed
   in each other's issues: found by their datelines and by comparing each page with its neighbours (1806;
   `outputs/story_discovery_1806/check_duplicate_pages_1806.py`, `outputs/story_discovery_1806/check_page_neighbours_1806.py`).
