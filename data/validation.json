@@ -12,7 +12,7 @@
     "relations": 25,
     "topics": 24,
     "date_assertions": 16,
-    "eligible_pages": 77749
+    "eligible_pages": 77747
   },
   "normalized_segment_locator_statuses": {
     "unique_normalized_match": 2421
@@ -2705,6 +2705,10 @@
     "The date correction and its new matches are recorded as automatic with no review",
     "Current annotations and date roles carry no untranslated Chinese",
     "Every table correction keeps its old value and reason",
+    "Every page filed in another issue keeps its filed issue in its id and names the issue it belongs to, of the same newspaper and edition",
+    "Second scans are left out of the analysis: no census row, matched printing or match",
+    "Every census row scores the text that transcribes its page: its own, or a RevX text filed under another page",
+    "The filing corrections are recorded as automatic with no review",
     "All supplied example queries execute"
   ],
   "limitations": [

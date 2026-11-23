@@ -7,9 +7,9 @@ can be checked on its scan and corrected at the source. The archive holds 77,793
 19,445 issues and editions; each page has the Library of Congress's own OCR (called CA here) and
 an AI transcription made for the Smithsonian's Revolution Crossroads (RevX).
 
-Made by `pipeline/archive_errata.py` from the project's checks, 2026-11-22.
+Made by `pipeline/archive_errata.py` from the project's checks, 2026-11-23.
 
-## `filing.csv`: 242 issues filed in the wrong place
+## `filing.csv`: 244 issues filed in the wrong place
 
 One row per issue: the newspaper's LCCN and catalogue title, the date and edition the issue is filed under (and the
 pages, where only some are concerned), what is wrong, how it was found, and what this project did about it.
@@ -19,6 +19,7 @@ pages, where only some are concerned), what is wrong, how it was found, and what
 | RevX transcriptions filed under the wrong page | 123 |
 | Issue filed under the wrong date | 108 |
 | RevX transcription repeated under another page | 10 |
+| Pages filed in another issue | 2 |
 | Second scan filed under another date | 1 |
 
 - **Transcriptions filed under the wrong page.** Each page's RevX text was compared with the Library's OCR of every page
@@ -34,6 +35,9 @@ pages, where only some are concerned), what is wrong, how it was found, and what
   both confirmed on the scans (`pipeline/story_discovery_1793/check_mastheads_1793.py`).
 - **A second scan filed under another date.** Found by looking for datelines later than the issue a page is filed under
   (1793; `pipeline/story_discovery_1793/check_duplicate_pages_1793.py`).
+- **Pages filed in another issue.** Pages 3 and 4 of the *National Intelligencer* of 9 July and 8 September 1806 are filed
+  in each other's issues: found by their datelines and by comparing each page with its neighbours (1806;
+  `pipeline/story_discovery_1806/check_duplicate_pages_1806.py`, `pipeline/story_discovery_1806/check_page_neighbours_1806.py`).
 
 ## `transcription.csv`: 259 printings whose transcription changes what was printed
 
@@ -75,7 +79,9 @@ them was read against the scans: 35 of the 187 passages found
 - Release v0.8.1 of the project's data moved the matched stories' printings to the pages their text is on
   (532 printings).
 - Release v0.10.2 dates the *Kentucky Gazette and General Advertiser* as printed; its issue, page and scan ids keep the filed dates.
-- The two 1793 issues and the second scan are not corrected; no reviewed printing stands on them.
+- Release v0.11.7 dates the two 1793 issues as printed, files the 1806 pages under the issues they belong to, and leaves the
+  second scan out of the analysis (77,747 usable pages rather than 77,749). One reviewed printing stands on a corrected
+  page: Captain Fanning's account of 1793, which takes its issue's printed date, 13 July.
 - The reviewed passages keep the transcription as it is, and their notes name each error.
 
 `summary.json` holds the counts and the examples the site's Findings page shows.

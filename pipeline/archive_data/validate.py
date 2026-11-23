@@ -25,7 +25,11 @@ def validate(release):
     counts={t:db.execute('SELECT COUNT(*) FROM '+t).fetchone()[0] for t in ['newspapers','issues','pages','observations','groups','memberships','group_hierarchy','claims','relations','topics','date_assertions']}
     counts['eligible_pages']=db.execute('SELECT SUM(eligible) FROM page_assessments').fetchone()[0]
     check('Full source inventory reconciles',counts['pages']==77793 and counts['issues']==19445 and counts['newspapers']==110)
-    check('Eligibility remains analysis-specific',counts['eligible_pages']==77749)
+    # v0.11.7 on: a page found to be a second scan of another page is left out by a recorded table correction.
+    log_row=db.execute("SELECT value_json FROM metadata WHERE key='table_corrections'").fetchone()
+    table_log=json.loads(log_row[0]) if log_row else []
+    left_out=sum(c['from']-c['to'] for c in table_log if c['table']=='page_assessments' and c['column']=='eligible')
+    check('Eligibility remains analysis-specific',counts['eligible_pages']==77749-left_out)
     check('Reviewed selections, claims and links match the declared counts',all(counts[k]==expected[k] for k in ['observations','claims','relations']))
     check('Only reviewed selections populate the explicitly typed groups',all(counts[k]==expected[k] for k in ['groups','memberships','group_hierarchy']))
     check('Every group has at least one admitted selection',db.execute("SELECT COUNT(*) FROM groups g WHERE NOT EXISTS(SELECT 1 FROM group_publications p WHERE p.group_id=g.id)").fetchone()[0]==0)
@@ -92,7 +96,7 @@ def validate(release):
     import pyarrow.parquet as pq
     import numpy as np
     scores=pq.read_table(release/'derived/page_topic_census.parquet')
-    check('Every topic vector joins to an eligible source page',len(scores)==77749 and set(scores['page_id'].to_pylist())=={r[0] for r in db.execute('SELECT v.page_id FROM page_versions v JOIN page_assessments a ON a.page_version_id=v.id WHERE a.eligible=1')})
+    check('Every topic vector joins to an eligible source page',len(scores)==counts['eligible_pages'] and set(scores['page_id'].to_pylist())=={r[0] for r in db.execute('SELECT v.page_id FROM page_versions v JOIN page_assessments a ON a.page_version_id=v.id WHERE a.eligible=1')})
     matrix=np.column_stack([scores[f'T{i:02}'].to_numpy() for i in range(1,25)])
     check('Topic allocations are finite and nonnegative',bool(np.isfinite(matrix).all() and (matrix>=0).all()))
     check('Topic allocations plus unassigned mass recover page word totals',bool(np.allclose(matrix.sum(axis=1)+scores['unassigned_words'].to_numpy(),scores['words'].to_numpy(),rtol=1e-7,atol=1e-5)))
@@ -217,7 +221,31 @@ def validate(release):
         texts = [r[0] for r in db.execute('SELECT value_json FROM current_annotations')] + [r[0] for r in db.execute('SELECT date_role FROM date_assertions')]
         check('Current annotations and date roles carry no untranslated Chinese', not any(han.search(t) for t in texts))
         log = json.loads(db.execute("SELECT value_json FROM metadata WHERE key='table_corrections'").fetchone()[0])
-        check('Every table correction keeps its old value and reason', all(c['from'] and c['to'] and c['reason'] for c in log))
+        check('Every table correction keeps its old value and reason', all(c.get('from') is not None and c.get('to') is not None and c['from'] != c['to'] and c['reason'] for c in log))
+    # Filing corrections (v0.11.7 on): a page filed in another issue names the issue it belongs to; a second scan is left
+    # out of the analysis; the topic census scores each page from the text that transcribes it.
+    if db.execute("SELECT 1 FROM metadata WHERE key='filing_corrections'").fetchone():
+        page_issue_now = dict(db.execute('SELECT id, issue_id FROM pages').fetchall())
+        paper = {r[0]: (r[1], r[2]) for r in db.execute('SELECT id, newspaper_id, edition FROM issues')}
+        moves = [c for c in table_log if c['table'] == 'pages']
+        check('Every page filed in another issue keeps its filed issue in its id and names the issue it belongs to, of the same newspaper and edition',
+              bool(moves) and all(c['column'] == 'issue_id' and 'issue:'+c['id'].split(':', 1)[1].rsplit(':', 1)[0] == c['from'] and page_issue_now[c['id']] == c['to']
+                                  and paper[c['from']] == paper[c['to']] for c in moves))
+        seconds = {c['id'].split('@')[0] for c in table_log if c['table'] == 'page_assessments' and c['column'] == 'eligible'}
+        used = set(scores['page_id'].to_pylist())
+        if (release/'derived/reuse_family_appearances.parquet').exists():
+            for p in pq.read_table(release/'derived/reuse_family_appearances.parquet', columns=['page_id', 'text_page_id']).to_pylist():
+                used |= {p['page_id'], p['text_page_id']}
+            for m in pq.read_table(release/'derived/reuse_matches.parquet', columns=['a_page_id', 'b_page_id', 'a_text_page_id', 'b_text_page_id']).to_pylist():
+                used |= set(m.values())
+        check('Second scans are left out of the analysis: no census row, matched printing or match', bool(seconds) and not seconds & used)
+        if 'text_page_id' in scores.column_names:
+            to = {m['page_id']: m['revx_text_of'] for m in pq.read_table(release/'derived/revx_page_map.parquet', columns=['page_id', 'revx_text_of']).to_pylist()}
+            rows = zip(scores['page_id'].to_pylist(), scores['text_page_id'].to_pylist(), scores['source'].to_pylist())
+            check('Every census row scores the text that transcribes its page: its own, or a RevX text filed under another page',
+                  all((t == p and not (p in to and s == 'RevX')) or (t != p and to.get(t) == p and s == 'RevX') for p, t, s in rows))
+        check('The filing corrections are recorded as automatic with no review',
+              all(run_kind(r) == ('automated', 0) for r in json.loads(db.execute("SELECT value_json FROM metadata WHERE key='filing_corrections'").fetchone()[0])['run_ids']))
     for line in (release/'examples.sql').read_text().split('-- QUERY\n')[1:]:
         db.execute(line.strip()).fetchall()
     check('All supplied example queries execute',True)

@@ -94,12 +94,16 @@ kg_years = Counter(f'{r["filed_date"][:4]} -> {r["printed_date"][:4]}' for r in 
 # ...and two issues of the Gazette of the United States in 1793, read on their mastheads and confirmed on the scans.
 mast = {r['key']: r for r in read_csv(ROOT / 'outputs/story_discovery_1793/masthead_dates.csv')}
 GUS = [('sn83030483|1793-04-04|1|1', '1793-05-04', 'Whole No. 419'), ('sn83030483|1793-07-23|1|1', '1793-07-13', 'No. 439')]
+# Data release v0.11.7 dates them as printed (work/archive_data/correct_filing.py, outputs/filing_corrections/).
+GUS_DONE = {'sn83030483|1793-04-04|1|1': 'Dated as printed in data release v0.11.7 (its ids keep the filed date); no reviewed printing stands on it.',
+            'sn83030483|1793-07-23|1|1': ('Dated as printed in data release v0.11.7 (its ids keep the filed date). One reviewed printing stands on it, '
+                                          "Captain Fanning's account (S93-117), which now carries 13 July, the date its note records.")}
 for key, printed, number in GUS:
     m = mast[key]; assert m['masthead_date'] == printed, key
     filing.append({'problem': 'Issue filed under the wrong date', 'lccn': 'sn83030483', 'newspaper': m['paper'], 'filed_date': m['filed_date'], 'edition': '1',
                    'page': '', 'what_is_wrong': f'Filed under {m["filed_date"]}; printed {printed}.',
                    'how_it_was_found': f'The masthead reads "{m["masthead"]}" ({number}); confirmed on the scan. The paper appeared on Wednesdays and Saturdays.',
-                   'in_this_project': 'Not corrected; no reviewed printing stands on it.'})
+                   'in_this_project': GUS_DONE[key]})
 
 # 3 · A second scan filed under another date (American Herald of Liberty, 1793), found by datelines later than the issue.
 flags = {r['page']: r for r in read_csv(ROOT / 'outputs/story_discovery_1793/page_date_flags.csv')}
@@ -109,7 +113,23 @@ filing.append({'problem': 'Second scan filed under another date', 'lccn': 'sn840
                'page': '3-4', 'what_is_wrong': 'Pages 3 and 4 filed under 2 July 1793 are a second scan of pages 3 and 4 of the issue of 9 July 1793.',
                'how_it_was_found': (f'Page 3 prints "BOSTON, JULY 3" and the heading "EXETER, TUESDAY, JULY 9, 1793", and its text shares '
                                     f'{float(ahl["share4"]):.0%} of its 4-word phrases with the page filed under 9 July (different images of the same printed page).'),
-               'in_this_project': 'Not corrected; no reviewed printing stands on it.'})
+               'in_this_project': ('Left out of the analysis in data release v0.11.7, so the project uses 77,747 pages rather than 77,749; '
+                                   "the scans stay in the archive's list of pages.")})
+
+# 3b · Pages filed in each other's issues (National Intelligencer, 1806), found by the 1806 dateline and neighbour checks and
+# filed under the issues they belong to by data release v0.11.7 (outputs/filing_corrections/corrections.json).
+corr = json.loads((ROOT / 'outputs/filing_corrections/corrections.json').read_text(encoding='utf8'))
+swapped = {}
+for c in corr['page_issues']:
+    swapped.setdefault(c['filed_issue'], []).append(c)
+for filed_issue, cs in sorted(swapped.items()):
+    cs = sorted(cs, key=lambda c: c['page_id']); lccn, filed, edition = filed_issue.split(':')[1:4]
+    assert len({c['printed_issue'] for c in cs}) == 1, filed_issue
+    filing.append({'problem': 'Pages filed in another issue', 'lccn': lccn, 'newspaper': cs[0]['newspaper'], 'filed_date': filed, 'edition': edition,
+                   'page': '-'.join(c['page_id'].split(':')[-1] for c in cs),
+                   'what_is_wrong': f'Pages filed under {filed} belong to the issue of {cs[0]["printed_issue"].split(":")[2]}.',
+                   'how_it_was_found': ' '.join(c['evidence'] for c in cs),
+                   'in_this_project': 'Filed under the issue they belong to in data release v0.11.7 (page ids keep the filed issue).'})
 
 # 4 · Transcriptions that change what was printed: every reviewed printing the scan check found with a fact-changing
 # problem (a misreading, or printed text left out), in the four reviewed years with structured verdicts.
@@ -155,8 +175,9 @@ summary = {
     'pages': pages_block,
     'dates': {'issues': len(kg) + len(GUS), 'kentucky': {'lccn': 'sn84038147', 'newspaper': kg_title, 'issues': len(kg),
               'pages': sum(int(r['pages']) for r in kg), 'by_year': dict(kg_years), 'by_basis': dict(Counter(r['basis'] for r in kg))},
-              'gus_1793': len(GUS), 'release': '0.10.2'},
-    'second_scan': {'issues': 1, 'pages': 2},
+              'gus_1793': len(GUS), 'release': '0.10.2', 'gus_release': '0.11.7'},
+    'second_scan': {'issues': 1, 'pages': 2, 'release': '0.11.7'},
+    'swapped_pages': {'issues': len(swapped), 'pages': sum(len(v) for v in swapped.values()), 'release': '0.11.7'},
     'transcription': {'years': list(YEARS), 'checked': sum(b['checked'] for b in by_year.values()),
                       'changes_what_was_printed': len(trans), 'leaves_out_text': sum(1 for r in trans if r['leaves_out_text']),
                       'by_year': by_year,
@@ -216,6 +237,9 @@ pages, where only some are concerned), what is wrong, how it was found, and what
   both confirmed on the scans (`outputs/story_discovery_1793/check_mastheads_1793.py`).
 - **A second scan filed under another date.** Found by looking for datelines later than the issue a page is filed under
   (1793; `outputs/story_discovery_1793/check_duplicate_pages_1793.py`).
+- **Pages filed in another issue.** Pages 3 and 4 of the *National Intelligencer* of 9 July and 8 September 1806 are filed
+  in each other's issues: found by their datelines and by comparing each page with its neighbours (1806;
+  `outputs/story_discovery_1806/check_duplicate_pages_1806.py`, `outputs/story_discovery_1806/check_page_neighbours_1806.py`).
 
 ## `transcription.csv`: {t["changes_what_was_printed"]} printings whose transcription changes what was printed
 
@@ -250,11 +274,13 @@ them was read against the scans: {t["audit"]["own_calls"]} of the {t["audit"]["l
 - Release v0.8.1 of the project's data moved the matched stories' printings to the pages their text is on
   ({pages_block["matched_printings_on_a_wrong_page"]} printings).
 - Release v0.10.2 dates the *{KG_NAME}* as printed; its issue, page and scan ids keep the filed dates.
-- The two 1793 issues and the second scan are not corrected; no reviewed printing stands on them.
+- Release v0.11.7 dates the two 1793 issues as printed, files the 1806 pages under the issues they belong to, and leaves the
+  second scan out of the analysis (77,747 usable pages rather than 77,749). One reviewed printing stands on a corrected
+  page: Captain Fanning's account of 1793, which takes its issue's printed date, 13 July.
 - The reviewed passages keep the transcription as it is, and their notes name each error.
 
 `summary.json` holds the counts and the examples the site's Findings page shows.
 ''', encoding='utf8')
-print(json.dumps({k: summary[k] for k in ('pages', 'dates', 'second_scan')}, indent=1))
+print(json.dumps({k: summary[k] for k in ('pages', 'dates', 'second_scan', 'swapped_pages')}, indent=1))
 print('transcription:', {k: v for k, v in summary['transcription'].items() if k != 'by_year'}, {y: (b['checked'], b['changes_what_was_printed']) for y, b in by_year.items()})
 print('rows:', len(filing), 'filing,', len(trans), 'transcription')

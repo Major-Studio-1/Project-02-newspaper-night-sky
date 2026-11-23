@@ -328,7 +328,7 @@ def archive(e, repo):
     a, k, base = t['audit'], d['kentucky'], f'{repo}/blob/main/docs/archive-errata/'
     pct = lambda n, of: f'{100 * n / of:.0f}%'
     years = t['years']; yt = ', '.join(map(str, years[:-1])) + f' and {years[-1]}'
-    n_filing = p['issues'] + d['issues'] + e['second_scan']['issues']
+    n_filing = p['issues'] + d['issues'] + e['second_scan']['issues'] + e.get('swapped_pages', {}).get('issues', 0)
     rep = p['by_kind'].get('duplicate', 0)
     items = [
         ('Transcriptions filed under the wrong page',
@@ -344,14 +344,15 @@ def archive(e, repo):
          'mastheads: 4 April 1793 for 4 May, and 23 July for 13 July.',
          f'Reading the masthead of every front page: {k["by_basis"]["masthead"]} by their dates, {k["by_basis"]["two-year rule"]} by the paper’s '
          f'publication days, {k["by_basis"]["scan"]} on the scans.',
-         f'The Kentucky Gazette is dated as printed in data release v{d["release"]}; the two issues of 1793 are not corrected.',
+         f'The Kentucky Gazette is dated as printed in data release v{d["release"]}, the two issues of 1793 in v{d["gus_release"]}.',
          ('filing.csv', f'{d["issues"]} issues')),
-        ('A second scan filed under another day',
+        ('Pages filed under another issue',
          'Pages 3 and 4 filed under the American Herald of Liberty of 2 July 1793 are a second scan of the pages of 9 July: '
-         'page 3 prints the heading ‘EXETER, TUESDAY, JULY 9, 1793’.',
-         'Datelines later than the issue a page is filed under.',
-         'Not corrected; no reviewed printing stands on it.',
-         ('filing.csv', '1 issue')),
+         'page 3 prints the heading ‘EXETER, TUESDAY, JULY 9, 1793’. Pages 3 and 4 of the National Intelligencer of 9 July and '
+         '8 September 1806 are filed in each other’s issues.',
+         'Datelines later than the issue a page is filed under, and each page compared with its neighbours.',
+         f'Corrected in data release v{e["second_scan"]["release"]}: the second scan is left out of the analysis, and the 1806 pages are filed under their own issues.',
+         ('filing.csv', f'{e["second_scan"]["issues"] + e.get("swapped_pages", {}).get("issues", 0)} issues')),
         ('Transcriptions that change what was printed',
          f'Of {t["checked"]} printings read against their scans in {yt}, {t["changes_what_was_printed"]} ({pct(t["changes_what_was_printed"], t["checked"])}) '
          f'carry a misreading or a gap that changes what the text says; in a random sample of the matched stories, '

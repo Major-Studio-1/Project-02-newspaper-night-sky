@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "release_version": "0.11.6",
+  "release_version": "0.11.7",
   "reviewed_years": [
     {
       "year": 1776,
@@ -75,8 +75,8 @@
   "matched_families": 48270,
   "reviewed_twins": 162,
   "sky_stars": 48307,
-  "trace_words": 3104,
-  "trace_stories": 45946,
+  "trace_words": 3105,
+  "trace_stories": 45947,
   "year_files_mb": 106.1,
   "year_index_mb": 8.9,
   "telescope_stars": 48307,
@@ -95,7 +95,7 @@
     "Every matched printing carries its transcription check, one printing per page",
     "Every storyline quotes printed text: each opening is from a printing the scan check found faithful, and every quoted phrase is in a printing, its group or its scan verdict"
   ],
-  "matched_printings": 164698,
+  "matched_printings": 164686,
   "storylines": [
     {
       "id": "chesapeake-1807",
@@ -113,25 +113,25 @@
     }
   ],
   "recorded_voices": {
-    "clips": 8660,
-    "packs": 138,
-    "mb": 229.4,
-    "reviewed_passages_recorded": 1099,
+    "clips": 9811,
+    "packs": 239,
+    "mb": 361.6,
+    "reviewed_passages_recorded": 2396,
     "reviewed_passages": 2396,
-    "titles_recorded": 7031,
+    "titles_recorded": 6885,
     "announcer_clips": 265
   },
   "pages_sha256": {
-    "index.html": "b6a6601f0fc0d63faefbaec5ca5b6da371afbc0b952287ed8e22d2d37f935564",
-    "telescope.html": "ab0c528622a11a0c9fcd546a72ffc50680a98687ae3550d2a836e361e120513d",
-    "pulses.html": "4e87a8885b1567acb71ca3f59486dd414dd78bce717e274524dc08e963b3e4c5",
-    "radio.html": "87bb490ce0fc1edc606dbb39c228a84d07b9e52988b5c08f866da0f4c4edfda6",
-    "stories.html": "11158d2a2a23d72b9c4babf06de0b7294f0fd1c7d54eccc2dc41d6c52fd26882",
+    "index.html": "a02e807d252bd803f7b4650fdb18620f6e554c3fbdbea15c405f2c26e9b2591a",
+    "telescope.html": "03a24e37732ddff150056680216bf2cda5a96dbf1163fd8057779d17ad9f476c",
+    "pulses.html": "e8dd1722724951fb81bc45e4e207ca0316514a10a9fb9c3fdb98fc3f276595af",
+    "radio.html": "ee2f47a559b7269ef2f48803b878a62cdad0d45c3d4dae191bd94c1790bc0051",
+    "stories.html": "b74222b5bf28472c4af7e474f2aa531314f80f74e05f11195ee626be2c1f26ae",
     "exhibit.html": "3396aabe57a591f195863dea57527146e203b0e6c24bb6aeb71cea68b3d3c122",
-    "method.html": "0d32d6e21ac606607c2aea6363ab60550f4e8a81e7b49e3f95e014e75cdce3e1",
-    "notes.html": "8730ae4257cce5654ecf4d7f143dfd8faba13b612c71ac0cd38c55cb97d6967b",
-    "findings.html": "c0360113c115c56d9fd28d6ccffdf6cc2c8fb18d0a86ec8d3b315e457db3bb4a",
-    "notebook.html": "5a0a9a114c77e2278127a09d7416b99d4c314803a2bb50453e049ffcc107ceb8",
+    "method.html": "d8bbd2d10250102ec928a5b318ca16358057d8eb98febce7c4dcc16dfb858b16",
+    "notes.html": "e6ad3401ccc02de2e68464fa69333bb9e2b7ce87e6761ed2d0ff74dd0e0ad362",
+    "findings.html": "98e826ac99f43b5aa76c210a41b1d225b42c8dd2ba07d4fc38d9778606daea47",
+    "notebook.html": "e43b7e493b7b3a4fa48b7234d460e87f522e2752ea8bbd5be676baddba756188",
     "site.css": "84e4c8dcd1c833a681d179d5e85b3a80d64400d6528a7e1ea2236d95e1af9542",
     "glass.js": "a08cefb1f3fa663e59f8027354420ca9c89bbb52f24e44571a829611fec6605a",
     "radio.js": "9614693ce65e4da4ed2d378962a08717529f7f005965a26a563b82f8d46354df"

@@ -1,5 +1,5 @@
 {
- "made": "2026-11-22",
+ "made": "2026-11-23",
  "script": "work/archive_errata.py",
  "archive": {
   "dataset": "RevolutionCrossroads/loc_chronicling_america_1770-1810",
@@ -49,11 +49,18 @@
    }
   },
   "gus_1793": 2,
-  "release": "0.10.2"
+  "release": "0.10.2",
+  "gus_release": "0.11.7"
  },
  "second_scan": {
   "issues": 1,
-  "pages": 2
+  "pages": 2,
+  "release": "0.11.7"
+ },
+ "swapped_pages": {
+  "issues": 2,
+  "pages": 4,
+  "release": "0.11.7"
  },
  "transcription": {
   "years": [

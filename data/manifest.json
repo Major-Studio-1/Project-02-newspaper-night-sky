@@ -1,10 +1,10 @@
 {
-  "version": "0.11.6",
+  "version": "0.11.7",
   "status": "released",
-  "created_date": "2026-11-12",
-  "previous_release": "0.11.5",
+  "created_date": "2026-11-22",
+  "previous_release": "0.11.6",
   "dataset_revision": "0b97906ad32e269376872934820357fc333151d8",
-  "build_command": "python work/archive_data/apply_ledger.py work/archive_data/ledgers/stories_1809.json --keep-current",
+  "build_command": "python work/archive_data/correct_filing.py 0.11.6 0.11.7 --keep-current",
   "counts": {
     "newspapers": 110,
     "issues": 19445,
@@ -17,7 +17,7 @@
     "relations": 25,
     "topics": 24,
     "date_assertions": 16,
-    "eligible_pages": 77749
+    "eligible_pages": 77747
   },
   "files": [
     {
@@ -13122,28 +13122,28 @@
     },
     {
       "path": "derived/page_topic_census.parquet",
-      "bytes": 15932611,
-      "sha256": "8da09de851253d2c5b76e6aee96018ffe44477a21c6620bc9f425e259250c7d6"
+      "bytes": 16124349,
+      "sha256": "8614172c30965732a65329521aec37691e8132ec3929556a87638d13e84a19a4"
     },
     {
       "path": "derived/reuse_families.parquet",
-      "bytes": 3520890,
-      "sha256": "838cadbb44e12f57922521235d165a83c038308d2f73c2c270491c8c37753868"
+      "bytes": 3520720,
+      "sha256": "313dc8b393eea7b931855a062dec11efe125037a5882e854dfa328edf17af026"
     },
     {
       "path": "derived/reuse_family_appearances.parquet",
-      "bytes": 19183330,
-      "sha256": "0fa3bdccbb325c965c4f196fa6d6b868f5fc3dbbe98d659aed6bf98a25dcac21"
+      "bytes": 19182355,
+      "sha256": "613a729a8926833bce16dd03e2cd513be976f58c1d76fb9ca9defb545c59529d"
     },
     {
       "path": "derived/reuse_family_titles.parquet",
-      "bytes": 1923336,
-      "sha256": "3f377dcc8436f1ed755f24f5ff346141582f204a129eef37cd66bc4704c3c070"
+      "bytes": 1923424,
+      "sha256": "ac13c713adcc4a9f2be53d6480412f5cc80726db38642985f8b219bf6bbd8144"
     },
     {
       "path": "derived/reuse_matches.parquet",
-      "bytes": 8651559,
-      "sha256": "c0491dfdf8fb7583ddff8fbc8e72bbbd03f07b2fa9996d721f0ec4fb0a73fb83"
+      "bytes": 8648698,
+      "sha256": "5d41f11666f997a9abc1cee1f7b0dc722dcf9882f9fb5fa9a270d1517321f78b"
     },
     {
       "path": "derived/revx_page_map.parquet",
@@ -13152,13 +13152,13 @@
     },
     {
       "path": "derived/story_topics.parquet",
-      "bytes": 2111550,
-      "sha256": "e61a6765251b062f6248ce7b8eba2f788edefa0118aa0b03de99800eb0f181db"
+      "bytes": 2111595,
+      "sha256": "72e68a930e61357d431d9c09378850332fcd72ac6fabf1f31ab5455b6422563f"
     },
     {
       "path": "derived/transcription_checks.parquet",
-      "bytes": 1840910,
-      "sha256": "21077f92c9a50454e21af6c9a5fe713a7209d5179537c79a1a05ee36c26e1f0e"
+      "bytes": 1840912,
+      "sha256": "19b5c4bd1c3b9a1d59a578bf632dbf11d9482eaae24735ffc930cd48ba6d2246"
     },
     {
       "path": "examples.sql",
@@ -13167,13 +13167,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 63015,
-      "sha256": "ef56fc7ef4f08cbca67645cab548803aafd926864050617a0125028bebbef86a"
+      "bytes": 69836,
+      "sha256": "45d5fa3bd11130d5ad62f1a66ccaf4ec549147470b3e1b11485c693362085d8f"
     },
     {
       "path": "research.sqlite",
-      "bytes": 120901632,
-      "sha256": "f5f542efcbc377396f76b5361f98b63e7d02abf394b553b0bc5d897395b137da"
+      "bytes": 120967168,
+      "sha256": "69ace15a8d59537b3ae11cdd75b5de20354fae8e52b6ab7446834d0c9891874d"
     },
     {
       "path": "schemas/schema.sql",
@@ -13709,6 +13709,91 @@
       "path": "sources/v0.11.6__work__archive_data__ledgers__stories_1809_review.json",
       "bytes": 108570,
       "sha256": "f93f1c6101ced58035ddda4ebbc25b750279c55f01049cc1a9cf2464a732d949"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__census_rescore.py",
+      "bytes": 10326,
+      "sha256": "3b8a08d3db9e0281bb5a5a1e4fb1b2bf3db8ed1e302d7e9abd850dd71759d0bb"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__census_rows.json",
+      "bytes": 209618,
+      "sha256": "0682c914047e8113b7e000032336dff3366cd3edba99ac368ffd073139d888ec"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__census_summary.json",
+      "bytes": 25593,
+      "sha256": "173486c0b19e81e47b66690dad51ea7998a06780b8abf6f6315cb047285a754f"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__corrections.json",
+      "bytes": 5447,
+      "sha256": "6ab2fb8ce9fd142ed1aa5a69fc1812de223012bf6ecc882e2f1ec7489ba46e6a"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__match_moved_pages.py",
+      "bytes": 9425,
+      "sha256": "3ebf5f886223ba4c31d5328e97c4c487a0a7b0d5ca1b01fdbf3164ac8f4ff464"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__matches_filed.json",
+      "bytes": 175736,
+      "sha256": "e52d16279f4f5e8c49edf8799921aca07b3159409c456f50892ccd519e2b5c89"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__matches_printed.json",
+      "bytes": 177014,
+      "sha256": "c263026d2101cfee91d4e381403172ca11968de8f8d059a3200e79f42b2fcfec"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__README.md",
+      "bytes": 5031,
+      "sha256": "b3caa7ef051ecfc53d7b321911eafa4ad9d1781cb59f50adc21fe8ac35c60b15"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__filing_corrections__rematch_summary.json",
+      "bytes": 3752,
+      "sha256": "f4045ecd86c5e0a7e8df964ab4f33864148e0cd15c202fa6f13ffe3ce5b4c713"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__story_discovery_1793__README.md",
+      "bytes": 48206,
+      "sha256": "9a04e725a4af3fba5aebca631254d2d59e4baf74da1a2a50d5af23167365c3f3"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__story_discovery_1806__check_duplicate_pages_1806.py",
+      "bytes": 3790,
+      "sha256": "5f49a3f4935076ad3a3fee8824da3b43e6c8f06d24231a9c97fa6d228556c758"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__story_discovery_1806__check_page_neighbours_1806.py",
+      "bytes": 3291,
+      "sha256": "fd3e5a8a8130749b557118b26a5a7d28fdb8851f0bcfb93bcbd6ad7d327e9641"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__story_discovery_1806__page_date_flags.csv",
+      "bytes": 5446,
+      "sha256": "d50ff460bdc764731864513aa726789a88a3efbf7962f1d2ef56fbe5f0aed575"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__story_discovery_1806__page_neighbour_flags.csv",
+      "bytes": 1385,
+      "sha256": "3c72ae9b30eb45802fc50968f5998df8aa1771bb7e530b7dc5ca8b2ff29b3cab"
+    },
+    {
+      "path": "sources/v0.11.7__outputs__story_discovery_1806__README.md",
+      "bytes": 42790,
+      "sha256": "bab873642bb9de4c6e1fe6d7ca86bdda229e7f8d344cdcc64ed6045f41b558bb"
+    },
+    {
+      "path": "sources/v0.11.7__work__archive_data__correct_filing.py",
+      "bytes": 58345,
+      "sha256": "e01b5853e19625baf0a4c5852da19fab80c2c3f7ab5716bd834f73d5a7e10e0a"
+    },
+    {
+      "path": "sources/v0.11.7__work__archive_data__validate.py",
+      "bytes": 26810,
+      "sha256": "a5a80763efab20d53072683aacfc0c35289623985bebdaa6f65bddc74410e971"
     },
     {
       "path": "sources/v0.2.0__outputs__pilot_expansion_2026-11-05__evidence__crop_manifest.json",
@@ -14428,7 +14513,7 @@
     {
       "path": "tables/issues.jsonl",
       "bytes": 2275065,
-      "sha256": "e1a675b53cba1601ee33f4f305c2a6a2cd9da7a85c8b3100ccab20b52e0bd340"
+      "sha256": "adb8f51dc0eb07b4cd703f0016314befe54a3227a763f5c91b620af21e5def07"
     },
     {
       "path": "tables/memberships.jsonl",
@@ -14437,8 +14522,8 @@
     },
     {
       "path": "tables/metadata.jsonl",
-      "bytes": 177868,
-      "sha256": "aa04143abbe25aa18c60bdd944e6bf98b3ba1a3564e32696b567d249be709107"
+      "bytes": 189714,
+      "sha256": "1ab3d9ac0dab716acfe6c87b980633accaa200be3860d36a8e7931addb90002b"
     },
     {
       "path": "tables/newspapers.jsonl",
@@ -14458,7 +14543,7 @@
     {
       "path": "tables/page_assessments.jsonl",
       "bytes": 28690104,
-      "sha256": "77c03d8fbab021eac327fca6e4f5d6d69e5f51357eaec30b735add9a98edbd5d"
+      "sha256": "ef1ecc6a0eeaa69413bc96492a4c63e2e3074cafccec4c81161e689f370aaf0f"
     },
     {
       "path": "tables/page_versions.jsonl",
@@ -14468,7 +14553,7 @@
     {
       "path": "tables/pages.jsonl",
       "bytes": 43912102,
-      "sha256": "db919770b733ee2ee5be2ec4573aa21159c74e807d5ff398159159d263aaf108"
+      "sha256": "3fd96b182682ab2828b772e4dd2c3cc735df42f1322da4f33cb26e11b10fac18"
     },
     {
       "path": "tables/relation_evidence.jsonl",
@@ -14482,13 +14567,13 @@
     },
     {
       "path": "tables/runs.jsonl",
-      "bytes": 40909,
-      "sha256": "c27f615f1edfbe22c1f2e89414b18f489d3e563700cb4d80907c5935ac626ef1"
+      "bytes": 44124,
+      "sha256": "1e62d1acf1bbce799107e25cf0966e8814906b34fbd9cc14a130b4c34f2c6201"
     },
     {
       "path": "tables/sources.jsonl",
-      "bytes": 70940,
-      "sha256": "02c60ec4a135f201d570a857c8d484aa33e58905aefd1f0dc9a6ecce6cdf303e"
+      "bytes": 75718,
+      "sha256": "f6200166679d80f3036e2672b2b3b834c805df478b2c9ee446d9f6f62810addd"
     },
     {
       "path": "tables/topics.jsonl",
@@ -14497,19 +14582,19 @@
     },
     {
       "path": "validation.json",
-      "bytes": 201419,
-      "sha256": "5454de8e5c640de3a0dcd4bf93c076142a2c05b768b307d525cf2f5979826c2c"
+      "bytes": 201843,
+      "sha256": "ea20c01ab2017aa6a4698d115b101e7b287a4901cb28c2a1c5478b179fcd2733"
     },
     {
       "path": "views/pulse_boyd.json",
       "bytes": 9872,
-      "sha256": "9e990951bd4d282a44086cc8a651a37388f93de5fd15c57d33faed09959c8fe0"
+      "sha256": "a06909333b0dead83f7d7e5e3abd1e243f825b775a78469a2a1a70a50fa22366"
     }
   ],
   "raw_archive_included": false,
   "raw_archive_location": "../../../work/data/",
   "historical_findings_added": false,
-  "observed_publications_added": 495,
+  "observed_publications_added": 0,
   "story_topics": {
     "run_id": "run:story-topics-stories-1809",
     "added": 73,
@@ -14517,6 +14602,19 @@
     "stories": {
       "matched": 48270,
       "reviewed": 372
+    }
+  },
+  "filing_corrections": {
+    "issues_redated": 2,
+    "pages_moved_to_another_issue": 4,
+    "second_scan_pages": 2,
+    "matches_removed": 163,
+    "matches_added": 135,
+    "printings": 164686,
+    "stories": 48270,
+    "census_rows_rescored": {
+      "moved": 117,
+      "scored_from_ca": 143
     }
   }
 }

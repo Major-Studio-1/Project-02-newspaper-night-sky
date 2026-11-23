@@ -178,6 +178,16 @@ A check of every issue of the *Kentucky Gazette and General Advertiser* found 10
 - **Matched stories:** the pages were matched again in the windows of their printed dates, by the same rules. Their 95 old matches gave way to 4,506 new ones; 27 printings left and 884 joined, 390 of them in 151 new stories. In all there are 48,270 matched stories and 164,698 printings. No reviewed story changed.
 - **On the site,** a printing's date is the date it printed; its scan link still uses the filed one.
 
+### A correction release: v0.11.7 (23 November 2026)
+
+Four faults of the archive, found by the reviews of 1793 and 1806 and by release v0.8.1, were left for a correction release after the talk of 17 November and corrected on 23 November (`pipeline/archive_data/correct_filing.py`; release v0.11.7, 2,692 checks):
+
+- **Two *Gazette of the United-States* issues of 1793** filed under the wrong dates (4 April is Saturday 4 May; 23 July is Saturday 13 July) are dated as printed. Their pages were matched again in the windows of their printed dates, and every printing on them was found again, in the same story on the same page.
+- **Pages 3 and 4 of the *National Intelligencer* of 9 July and 8 September 1806**, filed in each other's issues, are filed under the issues they belong to.
+- **The second scan** filed under the *American Herald of Liberty* of 2 July 1793 (pages 3 and 4 of 9 July) is left out of the analysis, so the project uses 77,747 pages rather than 77,749. The scans stay in the archive's list of pages.
+- **The topic census rows** of the 260 pages whose RevX text is filed under another page now score each page from the text that transcribes it: 117 take the scores of their misfiled text, and 143 that no RevX text transcribes are scored from their own CA text with the frozen model. The yearly topic shares move by at most 0.11 percentage points.
+- **What changes:** the 48,270 matched stories stay, none dropped, split or new; their printings go from 164,698 to 164,686. No reviewed row changes; one reviewed printing, Captain Fanning's account of 1793, takes its issue's printed date, 13 July, the date its note records. On the site some matched stars of 1793 and 1806 start on other days, a few titles change, and the archive errata and Findings say what was corrected.
+
 ### A sixth reviewed year: 1806, and the stories once held back (data releases v0.11.0 to v0.11.4)
 
 1806 was reviewed by the method of 1807 and 1808 (every single item in 9 or more papers, items in 7–8 papers chosen to cover the months and the kinds of news): 33 stories, 66 groups and 464 printings in 12 papers, all found on their scans, from the news of Austerlitz and the Treaty of Pressburg to Miranda's expedition, the *Leander* affair, the return of Lewis and Clark and Burr's enterprise (release v0.11.0, 1,793 checks). Stories that turn on private persons were left out for the owner to decide, as before.
@@ -440,7 +450,7 @@ The second of them, storylines assembled from what the papers printed, has a pag
 
 Home follows the order in which a visitor comes to understand the site, without becoming a form. Below the stars it asks one thing, "What do you want to see?", and each of its six answers opens the instrument and the arrangement that show it: where a story started (the telescope's Place view), what it was about (Topic), when in the year (Orbit), how it spread (Pulses), how many over time (the telescope from the side) and what a day sounded like (Radio). Everything else is chosen later, on the instrument, when it changes what is seen.
 
-Before any pattern come three facts about the source, shown as facts: what the archive is (110 newspapers, 77,749 pages), how much of it survives each year (a small bar chart; two papers for 1785 and 1786), and the two kinds of evidence (found by machine, or read against the scans by hand), with how often the machine's reading changes a fact. Then the findings about what came back and how a story travelled, each with a door into the view that shows it; the Chesapeake storyline; and the notebook. The page is written by `pipeline/home_parts.py` from the build's own numbers and the Findings page's titles and doors.
+Before any pattern come three facts about the source, shown as facts: what the archive is (110 newspapers, 77,747 usable pages since release v0.11.7), how much of it survives each year (a small bar chart; two papers for 1785 and 1786), and the two kinds of evidence (found by machine, or read against the scans by hand), with how often the machine's reading changes a fact. Then the findings about what came back and how a story travelled, each with a door into the view that shows it; the Chesapeake storyline; and the notebook. The page is written by `pipeline/home_parts.py` from the build's own numbers and the Findings page's titles and doors.
 
 ### What we found wrong in the archive (12 November 2026)
 
@@ -574,5 +584,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.11.6) |
+| Data release | [`data/`](../data) (v0.11.7) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

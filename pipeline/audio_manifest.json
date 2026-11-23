@@ -7504,6 +7504,14 @@
 "text": "Captain Fanning of the brig Union, arrived yesterday in 14 days from Cape Francois, gives the following melancholy particulars respecting the fate of that unhappy island.— \"On the 18th of June, the civil commissioners, Messrs. Santhonax and Polverel, arrived at the Cape from Port-au-Prince,—they immediately suspended Mons. Galbean, the governor and commander of the troops at that place, and sent him on board ship;"
 },
 {
+"id": "p:obs:expansion-1793:S93-117",
+"tier": 1,
+"pack": "r/1793-news-from-cap-francais-1793",
+"voice": "am_puck",
+"speed": 0.95,
+"text": "New-york, July 9. Captain John Fanning of the brig Union, arrived on Sunday in 14 days from Cape-Francois, gives us the following melancholy particulars respecting the fate of that unhappy Island. On the 18th June the civil commissioners, Messrs. Sonthonax and Polverel, arrived at the Cape from Port-au-Prince; they immediately suspended M. Galbaud, the Governor and Commander of the troops at that place, and sent him on board ship;"
+},
+{
 "id": "p:obs:expansion-1793:S93-113",
 "tier": 1,
 "pack": "r/1793-news-from-cap-francais-1793",
@@ -7534,14 +7542,6 @@
 "voice": "af_sarah",
 "speed": 0.95,
 "text": "Captain John Fanning of the brig Union , arrived on Sunday in 14 days from Cape Francois, gives us the following melancholy particulars respecting the fate of that unhappy island. \"On the 18th June the civil commissioners, Messrs. Sonthonax and Polverel arrived at the Cape from Port-au-Prince; they immediately suspended M. Galbaud, the Governor and Commander of the troops at that place, and sent him on board ship;"
-},
-{
-"id": "p:obs:expansion-1793:S93-117",
-"tier": 1,
-"pack": "r/1793-news-from-cap-francais-1793",
-"voice": "am_puck",
-"speed": 0.95,
-"text": "New-york, July 9. Captain John Fanning of the brig Union, arrived on Sunday in 14 days from Cape-Francois, gives us the following melancholy particulars respecting the fate of that unhappy Island. On the 18th June the civil commissioners, Messrs. Sonthonax and Polverel, arrived at the Cape from Port-au-Prince; they immediately suspended M. Galbaud, the Governor and Commander of the troops at that place, and sent him on board ship;"
 },
 {
 "id": "p:obs:expansion-1793:S93-118",
@@ -24272,20 +24272,20 @@
 "text": "Extract of a letter from a gentleman on board the Leander, dated Jacmel, March"
 },
 {
-"id": "t:R1806-0031",
-"tier": 2,
-"pack": "t/1806",
-"voice": "af_sarah",
-"speed": 1.0,
-"text": "London · before the House of Lords, to be passed. On Tuesday both House will be"
-},
-{
 "id": "t:R1806-0039",
 "tier": 2,
 "pack": "t/1806",
 "voice": "af_nicole",
 "speed": 1.0,
 "text": "The prefect of Venice, has ordered ten sail of the line, 6 of which"
+},
+{
+"id": "t:R1806-0031",
+"tier": 2,
+"pack": "t/1806",
+"voice": "bf_emma",
+"speed": 1.0,
+"text": "London · After our paper was prepared for press yesterday evening, the schooner Father"
 },
 {
 "id": "t:R1806-0050",
@@ -38472,20 +38472,20 @@
 "text": "this day received letters from Brussels, dated the 3d instant, in the"
 },
 {
-"id": "t:R1793-0043",
-"tier": 2,
-"pack": "t/1793",
-"voice": "am_fenrir",
-"speed": 1.0,
-"text": "Boston · Captain Ochs, in the ship Fortune, arrived here yesterday, in 51 days from Ostend."
-},
-{
 "id": "t:R1793-0025",
 "tier": 2,
 "pack": "t/1793",
 "voice": "bf_emma",
 "speed": 1.0,
 "text": "The unusual inclemency of the season has hitherto prevented us from acting with"
+},
+{
+"id": "t:R1793-0043",
+"tier": 2,
+"pack": "t/1793",
+"voice": "bf_emma",
+"speed": 1.0,
+"text": "Boston · Captain Oakes, in the ship Favorite , arrived here yesterday, in 51"
 },
 {
 "id": "t:R1793-0031",
@@ -56096,30 +56096,6 @@
 "text": "And be it further enacted, That the cavalry and artillery be subject to"
 },
 {
-"id": "t:R1793-0064",
-"tier": 2,
-"pack": "t/1793",
-"voice": "af_nicole",
-"speed": 1.0,
-"text": "BY The President of the United States of America. A Proclamation. Whereas it appears,"
-},
-{
-"id": "t:R1793-0071",
-"tier": 2,
-"pack": "t/1793",
-"voice": "af_bella",
-"speed": 1.0,
-"text": "There shall be in each department, an administrative council of 18 members, with"
-},
-{
-"id": "t:R1793-0117",
-"tier": 2,
-"pack": "t/1793",
-"voice": "bm_fable",
-"speed": 1.0,
-"text": "We are assured that the sitting of last night was very interesting to the"
-},
-{
 "id": "t:R1793-0065",
 "tier": 2,
 "pack": "t/1793",
@@ -56176,6 +56152,22 @@
 "text": "The Envoy of the court of Berlin insists, that, to spare the effusion of"
 },
 {
+"id": "t:R1793-0064",
+"tier": 2,
+"pack": "t/1793",
+"voice": "am_fenrir",
+"speed": 1.0,
+"text": "By the President of the United States of America. A Proclamation. Whereas it appears"
+},
+{
+"id": "t:R1793-0071",
+"tier": 2,
+"pack": "t/1793",
+"voice": "bm_fable",
+"speed": 1.0,
+"text": "The object of all union of men in Society, being the maintaining of natural"
+},
+{
 "id": "t:R1793-0072",
 "tier": 2,
 "pack": "t/1793",
@@ -56190,6 +56182,14 @@
 "voice": "bm_fable",
 "speed": 1.0,
 "text": "When the lord Jefferies, before he was a judge, was pleading at the bar"
+},
+{
+"id": "t:R1793-0117",
+"tier": 2,
+"pack": "t/1793",
+"voice": "af_sarah",
+"speed": 1.0,
+"text": "Seven posts, which had been intercepted by the French, arrived the day before yesterday"
 },
 {
 "id": "t:R1793-0086",
@@ -68056,22 +68056,6 @@
 "text": "Philadelphia · Extract of a letter from a Gentleman in St. Louis, to his friend in"
 },
 {
-"id": "t:R1806-0512",
-"tier": 2,
-"pack": "t/1806",
-"voice": "af_sarah",
-"speed": 1.0,
-"text": "September 1. Yesterday morning the French frigate Cybelle, mentioned in our last"
-},
-{
-"id": "t:R1806-0644",
-"tier": 2,
-"pack": "t/1806",
-"voice": "af_bella",
-"speed": 1.0,
-"text": "London · The funds yesterday, after various fluctuations, left off at the same prices at which"
-},
-{
 "id": "t:R1806-0513",
 "tier": 2,
 "pack": "t/1806",
@@ -68536,12 +68520,28 @@
 "text": "Loss of the ship Rose-in-Bloom.—It is with much regret we have to state the"
 },
 {
+"id": "t:R1806-0512",
+"tier": 2,
+"pack": "t/1806",
+"voice": "bf_emma",
+"speed": 1.0,
+"text": "Yesterday morning, the French frigate Cybèle, mentioned in our last, came up into the"
+},
+{
 "id": "t:R1806-0551",
 "tier": 2,
 "pack": "t/1806",
 "voice": "am_puck",
 "speed": 1.0,
 "text": "The following narrative is from captain Phelan. On Sunday morning last, about 9 o'clock,"
+},
+{
+"id": "t:R1806-0644",
+"tier": 2,
+"pack": "t/1806",
+"voice": "af_bella",
+"speed": 1.0,
+"text": "London · The following intelligence respecting the reported pacific negotiation between this country and Fra"
 },
 {
 "id": "t:R1806-0552",

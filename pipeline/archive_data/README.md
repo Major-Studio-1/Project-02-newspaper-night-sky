@@ -2,6 +2,47 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.11.7 (2026-11-22)
+
+v0.11.7 is v0.11.6 with **four filing faults of the archive corrected**. These faults were found by the reviews of 1793 and 1806 and by v0.8.1, and left for a correction release after the talk of 17 November. It was made by `correct_filing.py --keep-current` from `outputs/filing_corrections/` (corrections, evidence, the rematch and the census scores; its README explains them). **`CURRENT.json` is not moved.** No reviewed row changes.
+
+- **Ids keep the filed date and issue.** Issue and page ids are the keys of the source rows and scan files, so they do not change. `issues.publication_date` is the printed date, as since v0.10.2, and `pages.issue_id` now names the issue a page belongs to. Every change to `issues`, `pages` and `page_assessments` is in `table_corrections` with its old value and evidence. The new metadata key `filing_corrections` sums them up, and `issue_date_corrections` points to it.
+- **1. Two issues dated as printed** (`run:filing-corrections-v1`). The *Gazette of the United-States* filed under Thursday 4 April 1793 is the issue of Saturday 4 May (Whole No. 419). The one filed under Tuesday 23 July is that of Saturday 13 July (No. 439). The paper appeared on Wednesdays and Saturdays, and both mastheads were read on their scans.
+- **2. Four pages filed under their own issues.** Pages 3 and 4 of the *National Intelligencer* of Wednesday 9 July and of Monday 8 September 1806 are filed in each other's issues.
+  - The pages filed under 9 July print datelines of 29 August to 4 September, and share 89% of page 4's wording with 5 September.
+  - Those filed under 8 September print notices dated up to 9 July, and share 66% of page 4's wording with 14 July.
+  - Both issues still have four pages, so no count of pages by date or year changes.
+- **3. A second scan left out.** Pages 3 and 4 filed under the *American Herald of Liberty* of 2 July 1793 are another image of pages 3 and 4 of 9 July, which the archive also holds: 96% and 92% of their word 4-grams are shared, against under 1% for pages 1 and 2.
+  - Their `page_assessments.eligible` is now 0. The length screen already leaves out exact duplicates; this one is filed under another date.
+  - **Eligible pages: 77,749 → 77,747.** The scans stay in the inventory (77,793 pages), and the issue of 2 July survives in pages 1 and 2.
+- **4. Matched stories** (`run:filing-corrections-rematch-v1`). `outputs/filing_corrections/match_moved_pages.py` matches the 12 pages of 1 and 2 again by the matcher's rules, in the windows of their printed dates, with the second scans out. With the pages as filed, it first reproduces all 134 matches v0.11.6 holds for them, field by field.
+  - **Matches:** 163 removed (134 of the 12 pages, 29 of the second scans) and 135 added (117 main). In all, 380,447 → 380,419.
+  - **Printings:** 56 leave (44 on the 12 pages, 12 on the second scans). The new matches find every one of the 44 again at its printed date, in the same story on the same page, with the same spans and excerpts: 47 passages join 43 stories as 44 printings, with new `seq` numbers and printed dates. In all, 164,698 → 164,686.
+  - **Stories:** 48,270, none dropped, split or new. 55 lost a printing and 43 gained one. All 12 stories with a printing on the second scans also print the 9 July page, so none loses its *Herald* printing.
+  - **Rules:** as in v0.10.2, with one change. A story found with one newspaper is dropped, and a printing that no longer matches its story leaves it, only after the new passages have joined. These pages move by days or weeks, so a story found again keeps its id and its other printings.
+  - **Labels and titles** are remade only where the first printing is now on another page (21 stories). Keywords of the 55 stories are recounted from the main matches the release holds between their printings.
+  - **Derived rows:** the 44 new printings have transcription checks (35 confirmed, 3 partly, 6 other unreadable). The 55 stories that changed have topic rows, scored together (`run:story-topics-filing-corrections`; 5 printings added in v0.10.2 are represented by their stored excerpts).
+- **5. Topic census** (`derived/page_topic_census.parquet`).
+  - Date, year and month of the 12 pages follow their issues; the 4 moved pages also name their new issue in `issue`. The 2 second-scan rows go: 77,747 rows.
+  - **The 260 rows of misfiled RevX pages** now score the text of their own page, by the census rule applied to the page each text transcribes (`outputs/filing_corrections/census_rescore.py`):
+    - 117 take the census scores of the RevX text filed under another page that transcribes them; `model_run_id` stays `run:topic-census-frozen24`, which computed them.
+    - 143 that no RevX text transcribes are scored from their CA text with the census code and the frozen model (`run:topic-census-revx-text-v1`).
+    - **Safeguard:** the script first ran the census code again on all 104 census batches that hold one of these pages, and reproduced all 13,306 stored rows in them exactly.
+    - These rows held 739,283 words of another page's text; they now hold 790,906 words of their own.
+  - **New column `text_page_id`:** the page whose transcription the row scores. It equals `page_id` except in the 117 rows, and `source` names the transcription. `revx_page_map.not_changed` no longer lists the census.
+  - **Not changed:** the 140 other pages a misfiled text transcribes, which already score their own page (125 from their own CA text, 15 from their own RevX text, which another page repeats).
+- **One reviewed printing stands on a corrected page:** S93-117, Captain Fanning's account in the *Gazette of the United-States*, on the issue filed under 23 July. Its row does not change. Its date, which the issue gives, becomes 13 July 1793, the date its note records; until now the filed date was shown, as `outputs/story_discovery_1793/README.md` says. The script stops if any other reviewed printing or audited printing stands on these pages.
+- **Checks:** `validate.py` now does the following.
+  - It takes the eligible count from 77,749 less the pages left out by a table correction, and requires one census row per eligible page.
+  - It accepts a table correction to 0.
+  - For releases with `filing_corrections`, it adds four checks:
+    - every moved page keeps its filed issue in its id and names an issue of the same paper and edition;
+    - no census row, printing or match uses a second scan;
+    - every census row scores the text that transcribes its page;
+    - the four runs are automatic.
+
+  Earlier releases give the same checks as before.
+
 ## Changes in v0.11.0 (2026-11-12)
 
 v0.11.0 is v0.10.2 plus **the reviewed stories of 1806**, the sixth reviewed year, from `ledgers/stories_1806.json` applied with `apply_ledger.py --keep-current`, **with their topic rows**. Nothing else changes. `CURRENT.json` is not moved; the site needs categories for the new stories first.
@@ -348,11 +389,11 @@ Earlier counts below describe v0.1.0. Current counts are in `validation.json` an
 
 ## What is included
 
-- An inventory of all 77,793 source pages, 19,445 issue/edition combinations, and 110 newspaper series. The existing analysis policy marks 77,749 pages eligible; eligibility is stored separately from the inventory.
+- An inventory of all 77,793 source pages, 19,445 issue/edition combinations, and 110 newspaper series. The existing analysis policy marks 77,749 pages eligible (77,747 from v0.11.7, which leaves out a second scan); eligibility is stored separately from the inventory.
 - 24 existing curated passage selections: nine from the message-family study and fifteen from the relation study. Some selections overlap on the same page. They are not 24 distinct articles or historical events.
 - Seven typed groups and four organizational parent–child links. The broader Boyd/Bantry and Peace/Cayenne collections retain their more specific message/document groups.
 - Fifteen claim records and 22 relation records: fifteen printed relation assertions, six existing text/context comparisons, and one explicit newspaper-to-document citation. These are heterogeneous evidence records, not 22 established historical causal connections.
-- The 24 provisional topic definitions and page-level allocations for all 77,749 eligible pages, with stable page IDs and a model-run ID.
+- The 24 provisional topic definitions and page-level allocations for every eligible page, with stable page IDs and a model-run ID.
 - Source snapshots, scanned passage crops, input hashes, an append-only annotation history, and an executable validation report.
 
 ## Files and reuse
@@ -361,7 +402,7 @@ Earlier counts below describe v0.1.0. Current counts are in `validation.json` an
 |---|---|
 | `research.sqlite` | Canonical joined tables, foreign keys, constraints, and useful views. Standard SQLite; no server required. |
 | `tables/*.jsonl` | One record per line for other analysis and visualization tools. Fields ending in `_json` in SQLite become native JSON objects/arrays without that suffix. |
-| `derived/page_topic_census.parquet` | Existing topic allocations plus `page_id` and `model_run_id`. T01–T24 contain allocated wordlike-token amounts, not probabilities of historical truth. |
+| `derived/page_topic_census.parquet` | Existing topic allocations plus `page_id` and `model_run_id`, and from v0.11.7 `text_page_id` (the page whose transcription a row scores; see "Changes in v0.11.7"). T01–T24 contain allocated wordlike-token amounts, not probabilities of historical truth. |
 | `views/pulse_boyd.json` | A consumer projection for the existing four-observation pulse demo. Contains no node positions, colors, brightness, or inferred propagation edges. |
 | `assets/` | Copied scan crops with hashes and links to their evidence selections. |
 | `sources/` | Snapshots of the previous ledgers, review results, relevant metadata and analysis code. Their wording is preserved, including older Chinese notes. |

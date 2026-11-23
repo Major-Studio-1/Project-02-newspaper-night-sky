@@ -647,6 +647,7 @@ fill_text=lambda s:(s.replace('__N_STORIES__',f'{N_STARS:,}').replace('__N_MATCH
                      .replace('__N_PRINTINGS__',f"{sum(f['appearances'] for f in families):,}").replace('__RELEASE__',VER).replace('__REPO__',REPO)
                      # the twins sentence on How it works: reviewed stories, how many have an automatic twin, how many matched
                      # stories are the twin of more than one, and how many stars the sky would hold without drawing twins once
+                     .replace('__N_ELIGIBLE__',f"{manifest['counts']['eligible_pages']:,}")   # the release's usable pages
                      .replace('__N_REVIEWED__',f'{len(stories):,}').replace('__N_TWINNED__',f'{len(paired):,}')
                      .replace('__N_TWINS_SHARED__',f'{sum(n>1 for n in twin_of.values()):,}').replace('__N_ALL_STARS__',f'{len(families)+len(stories):,}')
                      # the items the reviews read and did not admit (work/not_admitted.py), one row each
@@ -725,7 +726,7 @@ def copy_with_assets(src,dest):
 shutil.rmtree(OUT/'notes',ignore_errors=True)   # notes/ is generated: start clean, so no stale file lingers
 copy_with_assets(ROOT.parent/'outputs/attention_pilot_report.html',OUT/'notes/attention')
 copy_with_assets(ROOT.parent/'outputs/reading_evidence_2026-11-03/reading_notebook.html',OUT/'notes/reading')
-for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__N_REVIEWED__','__N_TWINNED__','__N_TWINS_SHARED__','__N_ALL_STARS__','__N_NOT_ADMITTED__','__RELEASE__','__REPO__','__HOME_DATA__','__HOME__','__ARCHIVE__']
+for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','__N_REVIEWED__','__N_TWINNED__','__N_TWINS_SHARED__','__N_ALL_STARS__','__N_NOT_ADMITTED__','__N_ELIGIBLE__','__RELEASE__','__REPO__','__HOME_DATA__','__HOME__','__ARCHIVE__']
                  for page in ['index.html','method.html','notes.html','findings.html','notebook.html','stories.html'] if m in (OUT/page).read_text(encoding='utf8')]:
     raise AssertionError('Unfilled placeholder '+leftover)
 assert '__FINDINGS__' not in (OUT/'findings.html').read_text(encoding='utf8') and '__NOTEBOOK__' not in (OUT/'notebook.html').read_text(encoding='utf8')
