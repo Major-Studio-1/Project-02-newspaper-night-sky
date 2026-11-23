@@ -205,7 +205,31 @@ REVIEWED={
                     'embargo-and-non-intercourse-laws-1809':['enforcing-act-9-january-1809','non-intercourse-act-1-march-1809','treasury-circular-3-march-1809',
                                                              'non-intercourse-amending-act-28-june-1809'],
                     'spanish-envoy-onis-1809':['new-york-report-onis-arrives-in-the-cornelia','new-york-report-onis-not-received']},
-        'expect':(13,4172)}}
+        'expect':(13,4172)},
+  # The ninth reviewed year (release v0.11.9): 16 stories by the standard rule, the categories as the review proposed them.
+  1800:{'categories':[
+          ('war','War and foreign news',['convention-of-alkmaar-october-1799', 'bonaparte-letter-to-the-king-and-grenville-answer', 'siege-and-evacuation-of-genoa-1800', 'ratisbon-report-vienna-answer-to-first-consul', 'constantinople-letter-28-july-1800-kleber-murdered', 'london-report-floods-in-china-1800', 'convention-prolonging-the-armistice-in-germany-1800', 'king-george-speech-11-november-1800']),
+          ('ships','Ships, trade and the peace with France',['spanish-order-against-trade-with-gibraltar-1800', 'paris-6-august-1800-conferences-with-american-envoys', 'whitworth-convention-with-denmark-1800', 'salem-report-ship-brutus-from-algiers-december-1800', 'convention-between-france-and-the-united-states-1800']),
+          ('government','American public life and government',['congress-honours-washington-1799-1800', 'congress-and-the-27th-article-february-1800', 'congress-meets-in-washington-november-1800'])],
+        'children':{'congress-honours-washington-1799-1800':['joint-resolutions-23-december-1799-on-washington', 'president-message-8-january-1800-mrs-washington-letter'],
+                    'congress-and-the-27th-article-february-1800':['livingston-resolutions-3-february-1800', 'president-message-7-february-1800-papers-on-the-27th-article'],
+                    'siege-and-evacuation-of-genoa-1800':['melas-summons-to-massena-genoa', 'massena-report-evacuation-of-genoa-7-june-1800'],
+                    'congress-meets-in-washington-november-1800':['president-speech-22-november-1800', 'senate-address-25-november-1800', 'president-reply-to-the-senate-november-1800', 'house-address-november-1800', 'president-reply-to-the-house-november-1800']},
+        'expect':(14, 2575)},
+  # The tenth reviewed year (release v0.11.10): 20 stories by the standard rule, the categories as the review proposed them.
+  1804:{'categories':[
+          ('war','War and foreign news',['haitian-proclamation-of-independence-29-november-1803', 'frigate-philadelphia-lost-and-burned-1804', 'preble-letter-from-malta-17-january-1804', 'general-moreau-in-the-papers-1804', 'new-york-report-massacre-at-cape-francois-june-1804', 'london-report-pitt-returns-to-office-may-1804', 'preble-letter-off-tripoli-14-june-1804']),
+          ('west','Louisiana, Spain and the West',['louisiana-taken-into-possession-december-1803', 'osage-chiefs-visit-the-president-1804', 'west-florida-rising-august-1804', 'spanish-minister-yrujo-and-w-jackson-1804', 'ursuline-nuns-memorial-and-the-presidents-answer-1804', 'house-motion-on-drawbacks-at-new-orleans-12-november-1804', 'documents-on-spain-and-louisiana-sent-to-congress-november-1804']),
+          ('government','American public life and government',['norfolk-report-of-the-fire-of-22-february-1804', 'impeachment-of-judge-chase-1804', 'death-of-general-hamilton-1804', 'wythe-court-house-letter-the-clinch-mountain-sunk', 'notice-that-the-amendment-on-electing-the-president-is-ratified-1804', 'presidents-message-8-november-1804'])],
+        'children':{'louisiana-taken-into-possession-december-1803':['wilkinson-orders-before-new-orleans-17-december-1803', 'claiborne-proclamation-at-new-orleans-20-december-1803'],
+                    'frigate-philadelphia-lost-and-burned-1804':['bainbridge-letter-with-the-presidents-message-march-1804', 'preble-letter-to-the-consul-at-gibraltar-on-the-philadelphia', 'decatur-letter-to-preble-17-february-1804', 'decatur-made-captain-official-notice-may-1804'],
+                    'impeachment-of-judge-chase-1804':['chase-articles-reported-26-march-1804', 'chase-memorial-on-the-impeachment-april-1804', 'chase-articles-reported-30-november-1804'],
+                    'general-moreau-in-the-papers-1804':['letter-attributed-to-moreau-nouvelles-a-la-main-march-1804', 'nouvelles-a-la-main-no-3-letters-of-madame-bonaparte-and-madame-moreau', 'moniteur-announces-moreau-banished-to-america'],
+                    'osage-chiefs-visit-the-president-1804':['lexington-report-osage-chiefs-on-their-way-to-washington', 'presidents-address-to-the-osage-chiefs-1804'],
+                    'death-of-general-hamilton-1804':['bishop-moore-letter-on-general-hamilton', 'gouverneur-morris-funeral-oration-over-general-hamilton', 'hamilton-burr-correspondence-published-july-1804', 'general-hamilton-will-july-1804', 'general-hamilton-statement-on-the-expected-interview', 'coroners-jury-verdict-on-general-hamilton-august-1804'],
+                    'west-florida-rising-august-1804':['natchez-letter-of-7-august-armed-men-near-bayou-sara', 'natchez-report-of-14-august-a-party-marches-on-baton-rouge'],
+                    'spanish-minister-yrujo-and-w-jackson-1804':['w-jackson-statement-in-the-political-register-september-1804', 'yrujo-letter-to-the-secretary-of-state-october-1804']},
+        'expect':(14,3472)}}
 CATEGORY_COLORS=['#3987e5','#d95926','#199e70']   # dataviz slots 1-3, validated all-pairs on #050711
 short_names={'sn82014782':'Kentucky Gazette','sn83025525':'The Mirror','sn83025527':'Republican Gazetteer','sn83025588':'New Hampshire Gazette','sn83025881':'Gazette of the United States','sn84023150':'The Eagle','sn84024710':'Virginia Argus','sn84038410':'Patowmac Guardian'}
 # Map layout: each series is placed at its town of publication (from the catalogue's places_json).

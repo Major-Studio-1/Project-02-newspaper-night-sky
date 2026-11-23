@@ -1,0 +1,2161 @@
+{
+ "findings": {
+  "S04-001": [
+   "Scan reads 'Clervaux' and 'and is so forever'; RevX 'Clerveaux' and 'and is for ever' (dropping 'so') are minor transcription errors. The rest matches."
+  ],
+  "S04-002": [
+   "Scan reads 'CLER-VEAUX', the name broken over two lines; RevX 'CLEK. VEAUX' is a minor transcription error. The rest matches, including 'and is so forever'."
+  ],
+  "S04-003": [
+   "Scan reads 'In the name' and, in worn type, 'CLERVEAUX'; RevX 'to the name' and 'CLEBEAUX' are minor transcription errors. The print has the singular 'our right', as the Oracle Post does."
+  ],
+  "S04-004": [
+   "Scan matches the excerpt except that it prints 'Governer of the Mississipi Territory', which RevX silently corrects. The second crop shows the whole excerpt."
+  ],
+  "S04-005": [
+   "Scan matches the excerpt; the heading reads 'Extract from the orders of General Wilkinson' and the parole 'Columbia'."
+  ],
+  "S04-006": [
+   "Scan matches the excerpt. The print has the singular 'our right', as Jenks' Portland Gazette does."
+  ],
+  "S04-007": [
+   "Scan matches the excerpt."
+  ],
+  "S04-008": [
+   "Scan matches the excerpt."
+  ],
+  "S04-009": [
+   "Scan matches the excerpt."
+  ],
+  "S04-010": [
+   "Scan reads 'OF' and 'Clervaux'; RevX 'or' and 'Clerveaux' are minor transcription errors. The rest matches."
+  ],
+  "S04-011": [
+   "Scan matches the excerpt. The print has the dateline 'December 21.' above the heading; the excerpt starts below it."
+  ],
+  "S04-012": [
+   "Scan matches the excerpt, with the dateline 'NATCHEZ, Dec. 18, 1803.' above the heading."
+  ],
+  "S04-013": [
+   "Scan matches the excerpt."
+  ],
+  "S04-014": [
+   "Scan reads 'Parole, Columbia.'; RevX 'Paris, Columbia.' turns the parole into a place name, a fact-changing transcription error. The print has the singular 'order' in its heading."
+  ],
+  "S04-015": [
+   "Scan matches the excerpt, including the dateline 'New-Orleans, Dec. 20.' and 'W. C. Claiborne'. The print's own wording differs from the other printings ('power', 'government', 'the colony of Louisiana')."
+  ],
+  "S04-016": [
+   "The two crops together match the excerpt: the print gives the title, an editor's bracketed summary and the closing paragraph. RevX repeats the syllable 'ry' at the column break, a minor transcription error."
+  ],
+  "S04-017": [
+   "Scan matches the excerpt."
+  ],
+  "S04-018": [
+   "Scan matches the excerpt except two printer's slips, 'C. O.' for C. C. and 'exerising', which RevX silently corrects."
+  ],
+  "S04-019": [
+   "Scan matches the excerpt and prints no parole. The print misspells 'opperation', which RevX silently corrects."
+  ],
+  "S04-020": [
+   "Scan reads 'Governor General and Intendant'; RevX 'Lieutenant' is a fact-changing transcription error, and the excerpt leaves out the editor's bracketed note that the print has before 'I HAVE'. The print shortens the proclamation as Jenks' Portland Gazette does."
+  ],
+  "S04-021": [
+   "Scan reads 'Extract from the orders' (partly under an ink blot) and prints 'Parole, Columbia.'; RevX 'Extra from the Letters' and the dropped parole line are fact-changing transcription errors. The story note that the Oracle Post heads it 'the Letters' rests on the transcription, not the print."
+  ],
+  "S04-022": [
+   "Scan matches the excerpt, except that the print reads 'and is so for ever': RevX drops 'so' at a line end, a minor transcription error, so KG does not differ from the other printings here."
+  ],
+  "S04-023": [
+   "Scan matches the excerpt; it reads 'February 25' and 'eleven o'clock'."
+  ],
+  "S04-024": [
+   "Scan matches the excerpt; it reads 'February 25' and '11 o'clock'."
+  ],
+  "S04-025": [
+   "Scan matches the excerpt; it reads 'February 25' and 'eleven o'clock'."
+  ],
+  "S04-026": [
+   "Scan reads 'February 29' where the other printings have February 25: a printed difference, not a transcription error. The print also has the misprint 'abought', which RevX silently corrects to 'about'."
+  ],
+  "S04-027": [
+   "Scan matches the excerpt; it reads 'FEB. 25' and '11 o'clock' under the heading 'Particulars of the late Destructive Fire at Norfolk'. The crop shows only the opening, so the shorter form cannot be confirmed from it."
+  ],
+  "S04-028": [
+   "Scan matches the excerpt; it reads 'FEB. 25' and '11 o'clock' and has the shorter form ('a fire broke out in the ware-house')."
+  ],
+  "S04-029": [
+   "Scan matches the excerpt; it reads 'February 25' and 'eleven o'clock'."
+  ],
+  "S04-030": [
+   "Scan matches the excerpt and reads 'had fallen'; above it stands the paper's line 'Yesterday the following message from the President was delivered to the two Houses of Congress by Mr. Harvie'."
+  ],
+  "S04-031": [
+   "Crop shows the report's heading and the start of the articles; the CA text of the heading is garbled ('S A MULL CHASE', 'SiTPasMK') but no garble reads as another name or fact."
+  ],
+  "S04-032": [
+   "Scan matches the excerpt and reads 'had fallen'; the crop begins at the end of the paper's introduction ('Houses of Congress by Mr. Harvie')."
+  ],
+  "S04-033": [
+   "Scan matches the excerpt; the three crops run from the heading through the preamble to Article I on the trial of John Fries."
+  ],
+  "S04-034": [
+   "Scan matches the excerpt and reads 'had fallen'; its 'and his men' (other printings 'and men') is a printed difference."
+  ],
+  "S04-035": [
+   "Scan matches the excerpt. It dates the sending 'on Saturday the 24th ult.', where most printings have 'on Saturday last'."
+  ],
+  "S04-036": [
+   "Crops 1 and 4 show the message (crops 2 and 3 show other items, a sale notice and a list of names); the faint print matches the excerpt and reads 'have fallen'. One line may read 'on the the coast' (a doubled 'the'), but the print is too faint to be sure."
+  ],
+  "S04-037": [
+   "Scan reads 'intending to adjourn', as RevX has it: a printed difference. It reads 'pre-ferring articles' like the other papers; RevX 'presenting' is a transcription error, close in sense (minor)."
+  ],
+  "S04-038": [
+   "Scan matches the excerpt, including the line '26th March, 1804. Read, and ordered to lie on the table.'"
+  ],
+  "S04-039": [
+   "Scan matches the excerpt; it reads 'had fallen'."
+  ],
+  "S04-040": [
+   "The crop shows the message under 'Yesterday the following Message from the President', reading 'had fallen'. The CA text is garbled throughout and leaves out the heading 'MESSAGE.' and the address 'To the Senate and House of Representatives of the United States.'"
+  ],
+  "S04-041": [
+   "Scan matches the excerpt; it reads 'had fallen'."
+  ],
+  "S04-042": [
+   "Scan reads 'had fallen' and 'Tripolitans'; RevX 'Tripolitan' is a minor transcription error."
+  ],
+  "S04-043": [
+   "Scan reads 'in-closed memorial'; RevX 'enclosed' is a minor spelling error. Otherwise it matches, dating the sending 'on Saturday the 24th ult.' as ADA does."
+  ],
+  "S04-044": [
+   "Scan matches the excerpt; the heading's misprint 'commitee' is silently corrected by RevX: a printed difference, not a fact-changing error."
+  ],
+  "S04-045": [
+   "Scan matches the excerpt, under the line 'From the Baltimore Federal Gazette.'"
+  ],
+  "S04-046": [
+   "Scan matches the excerpt except that the print has 'voted gainst me' with no 'a' visible; RevX 'against' supplies it (minor). BJ prints 'enclosed' where most papers have 'inclosed'."
+  ],
+  "S04-047": [
+   "Scan matches the excerpt; the type is worn but every word can be read."
+  ],
+  "S04-048": [
+   "Scan matches the excerpt."
+  ],
+  "S04-049": [
+   "Scan matches the excerpt, which runs from the foot of one column ('Gentlemen, As soon as there appeared ...') to the top of the next ('... ascertained to exist.'); the print has 'on Saturday last'."
+  ],
+  "S04-050": [
+   "Scan matches the excerpt."
+  ],
+  "S04-051": [
+   "Scan matches the excerpt, under 'WASHINGTON CITY, MONDAY, MAY 7, 1804.' Crop 1 shows only '1804.'"
+  ],
+  "S04-052": [
+   "The scan loses the first letters of each line at the page edge, and what shows contradicts RevX: '...ght of Tripoli' and '...ght bound to Bengaza' where RevX has 'a vessel of Tripoli' and 'in company bound', fact-changing errors; RevX 'cannot avoid' is also wrong ('...ld not'). Date 'Jan. 17th' and '23d ult.' match the others."
+  ],
+  "S04-053": [
+   "Scan reads 'Ventose An. XII No. II' (numeral blotted) and 'what this moment excites so much interest'; RevX 'No. 100', 'what it contains' and the missing 'contains what follows' are fact-changing transcription errors."
+  ],
+  "S04-054": [
+   "Scan matches the excerpt (it spells 'Harbor')."
+  ],
+  "S04-055": [
+   "Scan reads 'January 7th' where the other printings have 17th: a printed difference, not a transcription error. Scan reads 'the 23d ult.' and 'in sight of Tripoli'; RevX 'the 2d ult.' is a fact-changing transcription error, and 'in light' a misreading of the long s."
+  ],
+  "S04-056": [
+   "Scan matches the excerpt, with 'Ventose An XII No. II'. The heading prints 'Buonaparte' and the text 'Foriegners'; RevX gives both in standard spelling (minor)."
+  ],
+  "S04-057": [
+   "Scan reads 'Commodore Preble'; RevX 'Commander' is a transcription error that changes his title, not a printed difference. RevX also modernizes 'Bengaza' to 'Benghazi' (minor); date and day match the others."
+  ],
+  "S04-058": [
+   "Scan confirms the heading 'MOREAU's LETTER TO BONAPARTE' and reads 'No. II' and 'all over Paris'. The CA text is garbled throughout; it leaves out 'Paris' and reads the Roman 'II' as '11', both fact-changing."
+  ],
+  "S04-059": [
+   "Scan matches the excerpt; it reads 'Calver' and 'Feb. 7, 1804'."
+  ],
+  "S04-060": [
+   "Scan reads 'Commodore Preble', 'Jan. 17, 1804' and 'the 23rd ult.'; RevX 'Commander' changes his title, a fact-changing transcription error, and 'Benghazi' for the print's 'Bengaza' is minor."
+  ],
+  "S04-061": [
+   "Scan reads 'what this moment excites' and 'No. II' in small capitals; RevX 'this man exerts' and '11' are fact-changing transcription errors. The rest matches."
+  ],
+  "S04-062": [
+   "Scan reads 'The coast of Tripoli' and 'the 23d ult' under ink blots and worn type; RevX 'The capture of Tripoli' and '23d inst' are fact-changing transcription errors. The print has 'which left the port' where BJ and KG have 'that port'."
+  ],
+  "S04-063": [
+   "Scan reads 'in sight of Tripoli' with a long s; RevX 'in flight' is a fact-changing transcription error. The print's misprint 'Secetary' is silently corrected by RevX, and just past the excerpt the print reads 'which left that in the night', without 'port'."
+  ],
+  "S04-064": [
+   "Scan matches the excerpt: 'January 17th, 1804', 'the 23d ult.' and 'Commodore Preble', under the dateline 'WASHINGTON CITY, May 9'."
+  ],
+  "S04-065": [
+   "Scan reads 'the 1st inst.' and matches the excerpt, except that RevX 'arrived the company' for the print's worn 'arrived there in company' is a minor transcription error."
+  ],
+  "S04-066": [
+   "Scan reads 'Ventose An. XII. No. II'; RevX 'Vieuxse' is a garble, and '11' for the Roman 'II' changes the issue number. The rest matches where legible."
+  ],
+  "S04-067": [
+   "Scan reads 'Calvert' and has the full paragraph where the excerpt shortens with '...'. The dateline is printed 'Philadelhhia', a misprint that RevX silently corrects."
+  ],
+  "S04-068": [
+   "Scan matches the excerpt; it reads 'Calver' and 'Feb. 7, 1804'."
+  ],
+  "S04-069": [
+   "The crop shows the Philadelphia paragraph with 'Calvert' and 'Feb. 7, 1804'. The CA text is garbled ('thip', 'lait', 'Com l;zodou') but no garble changes a fact; the excerpt starts at 'May 16', after the printed place name 'PHILADELPHIA'."
+  ],
+  "S04-070": [
+   "Scan matches the excerpt."
+  ],
+  "S04-071": [
+   "Scan matches the excerpt. The paper itself prints '19th Ventose, an. 12, No. 11. of Paris': a printed difference, not a transcription error."
+  ],
+  "S04-072": [
+   "Scan matches the excerpt with 'Calvert' and 'February 7, 1804', except that it prints the ship's name 'Mariah', which RevX silently corrects to 'Maria': a printed difference."
+  ],
+  "S04-073": [
+   "Scan matches the excerpt, including 'your orders of the 1st inst.'"
+  ],
+  "S04-074": [
+   "Scan matches the excerpt: the Boston paragraph of 21 May, with 'Calvert' and 'Feb. 7, 1804'."
+  ],
+  "S04-075": [
+   "Scan reads 'By the politeness of Capt. Calvert'; RevX 'polite letters' is a fact-changing transcription error. The print spells the commodore 'Preb-ble' and dates the letter 'FEB 7.' without a year."
+  ],
+  "S04-076": [
+   "Scan matches the excerpt: the Boston paragraph of 25 May, with 'CALVERT' and 'Feb. 7, 1804'. The letter's heading is misprinted 'faigate', which RevX silently corrects to 'frigate'."
+  ],
+  "S04-077": [
+   "Scan matches the excerpt and reads 'the 1st inst.'"
+  ],
+  "S04-078": [
+   "Scan matches the excerpt."
+  ],
+  "S04-079": [
+   "EN prints the full notice, ending 'and will without delay be transmitted to Commodore Preble, to be presented to him.'; RevX stops at 'issued.' and leaves out the clause: a fact-changing transcription error, not a printed difference."
+  ],
+  "S04-080": [
+   "Scan reads 'your orders of the 1st inst.', as the other printings do; RevX '18th inst.' is a fact-changing transcription error, not a printed difference. The rest of the opening matches."
+  ],
+  "S04-081": [
+   "Scan matches the excerpt, including 'Captain of the Navy'; the notice is credited '[Nat. Int.]'."
+  ],
+  "S04-082": [
+   "Scan matches the excerpt, including 'your orders of the 1st inst.'"
+  ],
+  "S04-083": [
+   "Scan matches the excerpt; it dates the notice 'WASHINGTON, MAY 28.' where the other printings have May 25: a printed difference, not a transcription error."
+  ],
+  "S04-084": [
+   "Scan matches the excerpt, including 'orders of the 1st inst.' and OP's shorter wording 'the late frigate Philadelphia'; RevX leaves out the salutation 'SIR,', a minor error."
+  ],
+  "S04-085": [
+   "Scan matches the excerpt."
+  ],
+  "S04-086": [
+   "The crop (cut again by hand as one column) shows the item under 'Letter from MOREAU to BONAPARTE.' and matches the excerpt, except that RevX reads the Roman 'No. II' as '11', which changes the issue number. The print spells 'Foriegners', as the Oracle Post does."
+  ],
+  "S04-087": [
+   "Scan matches the excerpt; it reads 'Calver' and 'Feb. 7, 1804'."
+  ],
+  "S04-088": [
+   "Scan confirms 'WASHINGTON-CITY, May 25.' and goes on past 'Philadelphia' with the commission sentence where RevX stops with '...': RevX leaves out printed text. 'Deatur' for 'Decatur' is a minor error."
+  ],
+  "S04-089": [
+   "Scan matches the excerpt except 'Gen. D. Dessalines', where the print has only 'Gen. Dessalines' (split 'Des-salines'): a minor transcription error. Just past the excerpt the scan reads 'till the 24th of May' where the other printings have 14th: a printed difference, not a transcription error."
+  ],
+  "S04-090": [
+   "Scan confirms the heading 'On board the Ketch Intrepid at Sea, February 17th, 1804' and 'orders of the 1st inst.'; the CA text is garbled in the heading ('JCetck iMrrftid', 'I7M') but no garble reads as another name or date."
+  ],
+  "S04-091": [
+   "Scan reads 'Capt. Sandford'; RevX 'Sanford' is a minor transcription error. The rest matches the excerpt."
+  ],
+  "S04-092": [
+   "Scan reads 'till the 14th of May'; RevX '19th of May' is a fact-changing transcription error. The print does spell the captain 'Sanford': a printed difference, correctly transcribed."
+  ],
+  "S04-093": [
+   "Scan matches the excerpt, except that the print doubles 'and' ('massacre and and pillage') and spells 'Dessaline's'; RevX silently corrects both, minor transcription differences."
+  ],
+  "S04-094": [
+   "Scan matches the excerpt, including 'captain of the Navy'; the print is blurred and a stain covers part of 'issued, and' and 'transmitted', which remain readable."
+  ],
+  "S04-095": [
+   "Scan reads 'LEXINGTON, JUNE 12' and 'Oſage' (RevX 'Olage' is a minor misreading of the long s). RevX goes straight from 'President of the United States' to 'M. Chouteau', leaving out the print's paragraph 'It is said the object of their visit is to enter into a treaty ... having fallen sick': a fact-changing omission."
+  ],
+  "S04-096": [
+   "Scan matches the excerpt."
+  ],
+  "S04-097": [
+   "Scan reads 'commenced on the 10th of April', so RevX '10th' is faithful: a printed difference from the 19th in the other printings. The rest matches the excerpt apart from the spelling 'Dessaline's'."
+  ],
+  "S04-098": [
+   "Scan matches the excerpt; it prints 'captain Stanford' under the dateline 'ALEXANDRIA, June 11.'. The print's misprint 'cofirmation' and spelling 'Dessaline's' are silently corrected by RevX, minor transcription differences."
+  ],
+  "S04-099": [
+   "Scan matches the excerpt."
+  ],
+  "S04-100": [
+   "Scan matches the excerpt except 'Olage', a misreading of 'Osage' printed with a long s (minor). The print's dateline 'June 14' is a printed difference, correctly transcribed."
+  ],
+  "S04-101": [
+   "Scan matches the excerpt apart from the spelling 'Dessaline's'. The heading reads 'OF CAPE-FRANCOIS', not 'AT CAPE FRANCOIS': a printed difference, correctly transcribed."
+  ],
+  "S04-102": [
+   "Scan matches the excerpt."
+  ],
+  "S04-103": [
+   "Scan matches the excerpt: three lines at the foot of page 2 under the head 'From the Kentucky Gazette of June 12.'. The continuation on page 3 is not shown."
+  ],
+  "S04-104": [
+   "Scan matches the excerpt. The print's dateline 'June 14' is a printed difference, correctly transcribed."
+  ],
+  "S04-105": [
+   "Scan matches the excerpt except 'Olage', a misreading of 'Osage' printed with a long s (minor). The excerpt starts at 'On Saturday'; the dateline above it shows 'June' and a '2' with a faint mark before it, so 'June 2' cannot be confirmed."
+  ],
+  "S04-106": [
+   "Scan matches the excerpt where it can be read. An ink blot covers the end of the line after 'Mr. Addingto', so the words before 'signed the seals' (the excerpt has 'Addington resigned') cannot be checked."
+  ],
+  "S04-107": [
+   "Scan reads 'oppulence' and 'can inspire'; RevX silently gives 'opulence' and 'can aspire', minor transcription differences that hide two printed differences. Otherwise the scan matches."
+  ],
+  "S04-108": [
+   "Scan confirms this paper's own wording 'have at length been gratified', 'now placed' and 'eloquence'. RevX drops 'This event took place on Thursday morning, about 11 o'clock when Mr.' (the line 'day morning, about 11 o'clock when Mr.' is crossed by a dark streak in the scan but legible): a fact-changing omission."
+  ],
+  "S04-109": [
+   "A fold runs down the column and hides a letter or two in each line; RevX restores those letters elsewhere but gives 'the use of Religion' where the start of the word is lost in the fold, so 'use' is not shown to be a printed difference. The rest of the excerpt matches."
+  ],
+  "S04-110": [
+   "Scan reads 'can inspire', as in the New Hampshire Gazette; RevX silently gives 'can aspire', a minor transcription difference that hides a printed difference. Otherwise the scan matches."
+  ],
+  "S04-111": [
+   "Scan matches the excerpt."
+  ],
+  "S04-112": [
+   "Scan matches the excerpt except the printed spelling 'superiour', which RevX gives as 'superior' (minor)."
+  ],
+  "S04-113": [
+   "Scan reads 'Mr. C LEMAN,' with the O of Coleman missing in print, and the misprint 'malancholy'; RevX adds a full stop ('C. LEMAN') and silently corrects to 'melancholy', both minor. Otherwise the scan matches."
+  ],
+  "S04-114": [
+   "Scan matches the excerpt, including 'eloquence'."
+  ],
+  "S04-115": [
+   "Scan matches the excerpt."
+  ],
+  "S04-116": [
+   "Scan matches the excerpt, with the heading 'Change of Ministry in England.' under the dateline; RevX 'eve it' for the broken word 'event' is a minor garble."
+  ],
+  "S04-117": [
+   "Scan matches the excerpt (small print, but legible)."
+  ],
+  "S04-118": [
+   "Scan matches the excerpt; RevX splits 'against' ('a gainst') where the word is broken at a line end, a minor slip."
+  ],
+  "S04-119": [
+   "Scan matches the excerpt. The paper prints 'MR. COLEMAN,' on the same line as the dateline, at its left, which is why the transcription puts it first."
+  ],
+  "S04-120": [
+   "Scan matches the excerpt, under the heading 'General Hamilton's Will.'"
+  ],
+  "S04-121": [
+   "Scan reads 'I must try to suppress my own', as RevX has it: a printed difference from the others' 'repress', not a transcription error. The print spells 'commisseration'; RevX's 'commiseration' is a minor difference."
+  ],
+  "S04-122": [
+   "Scan matches the excerpt: the item begins 'The following is the correspondence...', then No. 1, New-York, June 18, 1804."
+  ],
+  "S04-123": [
+   "Scan matches the excerpt: a New-York, July 17 dateline, then 'The following is the Correspondence...' with 'the evening before the Duel'."
+  ],
+  "S04-124": [
+   "Scan confirms the opening words. The CA text is garbled (noise from the page edge, 'ALEXANDERS I HAMLL IGN', 'melancholy fate' lost, 'a' dropped before 'narrative'), but no garble reads as another word or name."
+  ],
+  "S04-125": [
+   "Scan prints the sentence 'I was certainly desirous of avoiding this interview, for the most cogent reasons.', which RevX drops: a fact-changing transcription error. The print also has the misprint 'reilgious', which RevX silently corrects; the rest matches."
+  ],
+  "S04-126": [
+   "Scan matches the excerpt and confirms that this printing has no 'terminating the life of Alexander Hamilton'; a line later it names 'General Hamilton' where the others say 'his'."
+  ],
+  "S04-127": [
+   "Scan matches the excerpt, except that the print has 'duelling' (split 'duel-ling'); RevX 'dueling' is a minor transcription error."
+  ],
+  "S04-128": [
+   "Scan matches the excerpt."
+  ],
+  "S04-129": [
+   "Scan matches the excerpt. The National Intelligencer numbers it 'No. 13.' where most papers print No. 12: a printed difference, not a transcription error."
+  ],
+  "S04-130": [
+   "Scan reads 'Counsellor at law' with a double l, like the other papers; RevX 'Counselor' is a minor transcription error. The rest matches."
+  ],
+  "S04-131": [
+   "Scan matches the excerpt, except that the print spells 'commisseration'; RevX's 'commiseration' is a minor difference."
+  ],
+  "S04-132": [
+   "Scan matches the excerpt."
+  ],
+  "S04-133": [
+   "Scan matches the excerpt. The print itself leaves out 'or were intimately connected with it': a printed difference, not a transcription error."
+  ],
+  "S04-134": [
+   "Scan matches the excerpt, except that the print has 'duelling' (split 'du-elling', worn); RevX 'dueling' is a minor transcription error."
+  ],
+  "S04-135": [
+   "Scan matches the excerpt."
+  ],
+  "S04-136": [
+   "Scan reads 'or were ultimately connected with it', as RevX has it: a printed difference from the others' 'intimately', not a transcription error."
+  ],
+  "S04-137": [
+   "The item starts at the foot of one column and runs on at the head of the next; the two crops together match the excerpt."
+  ],
+  "S04-138": [
+   "Scan matches the excerpt."
+  ],
+  "S04-139": [
+   "Scan matches the excerpt, including '& yet'."
+  ],
+  "S04-140": [
+   "RevX drops about 100 words of the address, from 'demands that the circumstances' to 'all mistake or misrepresentation', and jumps to 'The following is the correspondence'; the rest of the excerpt matches the scan."
+  ],
+  "S04-141": [
+   "Scan matches the excerpt."
+  ],
+  "S04-142": [
+   "Scan matches the excerpt."
+  ],
+  "S04-143": [
+   "Scan matches the excerpt, except that the print spells 'commisseration'; RevX's 'commiseration' is a minor difference."
+  ],
+  "S04-144": [
+   "Scan matches the excerpt."
+  ],
+  "S04-145": [
+   "Scan matches the excerpt. The crop begins at 'The public mind', so it does not show what stands above the letter."
+  ],
+  "S04-146": [
+   "Scan matches the excerpt through worn and smudged type, except that the print appears to read 'demand that' (as in the Oracle Post) where RevX has 'demands'."
+  ],
+  "S04-147": [
+   "Scan prints the sentence 'I was certainly desirous of avoiding this interview, for the most cogent reasons.', which RevX drops: a fact-changing transcription error. 'make remarks' and 'much pain' are printed as transcribed; RevX silently corrects the misprint 'interveiw'."
+  ],
+  "S04-148": [
+   "Scan matches the excerpt; the paper prints no 'Mr. Coleman' line between the dateline and the letter."
+  ],
+  "S04-149": [
+   "Scan matches the excerpt."
+  ],
+  "S04-150": [
+   "Scan matches the excerpt."
+  ],
+  "S04-151": [
+   "RevX drops about 75 words of the address, from 'When they shall be truly and fairly disclosed' to 'all mistake or misrepresentation', and jumps to 'The following is the correspondence'; the rest of the excerpt matches the scan."
+  ],
+  "S04-152": [
+   "Scan matches the excerpt. Just past it the print has 'you will here only', a printer's slip for 'hear'."
+  ],
+  "S04-153": [
+   "Scan matches the excerpt."
+  ],
+  "S04-154": [
+   "Scan matches the excerpt, including the singular 'reason'. The print has the misprint 'coduct', which RevX silently corrects."
+  ],
+  "S04-155": [
+   "Scan matches the short excerpt, except that the print spells 'commisseration'; RevX's 'commiseration' is a minor difference."
+  ],
+  "S04-156": [
+   "Scan matches the excerpt, including 'Amen!'."
+  ],
+  "S04-157": [
+   "Scan matches the excerpt, including 'bro't'; it reads 'since the 13th ult.' and 'a verdict of MURDER by AARON BURR'."
+  ],
+  "S04-158": [
+   "Scan matches the excerpt; the verdict reads 'was guilty of the MURDER of ALEXANDER HAMILTON'."
+  ],
+  "S04-159": [
+   "Scan matches the excerpt; it reads 'since the 13th ult.' and 'a verdict of MURDER by AARON BURR'."
+  ],
+  "S04-160": [
+   "Scan matches the excerpt; the verdict reads 'is guilty of the murder of ALEXANDER HAMILTON'."
+  ],
+  "S04-161": [
+   "Scan reads 'since the 13th ult.', like the other printings; RevX '18th' is a fact-changing transcription error. The rest matches the excerpt."
+  ],
+  "S04-162": [
+   "Scan matches the excerpt."
+  ],
+  "S04-163": [
+   "Scan matches the excerpt; it reads 'since the 13th ult.' and is credited 'Newyork Gaz Aug. 3.'"
+  ],
+  "S04-164": [
+   "Scan matches the excerpt; it reads 'since the 13th ult.' and 'on Thursday evening', and has no 'We have not yet seen the official paper' sentence."
+  ],
+  "S04-165": [
+   "Scan matches the excerpt and reads 'is guilty'. The print opens with the date 'AUGUST 4.', which the excerpt does not include."
+  ],
+  "S04-166": [
+   "Scan matches the excerpt; RevX silently corrects the print's misprint 'emmotions' and its spelling 'commisseration', minor transcription differences. The heading names the speaker 'Governeur Morris esq.'"
+  ],
+  "S04-167": [
+   "Scan matches the excerpt; the verdict reads 'was guilty of the MURDER of ALEXANDER HAMILTON'."
+  ],
+  "S04-168": [
+   "Scan matches the excerpt and reads 'is guilty'. The print appears to have the misprint 'Coronet's', which RevX silently corrects to 'Coroner's'."
+  ],
+  "S04-169": [
+   "Scan reads 'Ventose, an. 10, No. 3. or Paris, March, 20, 1804': 'an. 10' and 'No. 3' are printed differences, but RevX '1802' is a fact-changing transcription error. RevX also corrects the printed 'mais' to 'main'."
+  ],
+  "S04-170": [
+   "Scan matches the excerpt, including the printed misspelling 'ARON BURR'; the verdict reads 'was guilty'."
+  ],
+  "S04-171": [
+   "Scan matches the excerpt, except that RevX leaves out 'an' in 'Ventose an XII' (minor)."
+  ],
+  "S04-172": [
+   "Scan matches the excerpt; RevX 'Le' for the worn 'Les' is minor."
+  ],
+  "S04-173": [
+   "Scan matches the excerpt and reads 'Ventose an XII. No. III ... March 20, 1804'; RevX silently corrects the heading's misprint 'beteen' and the spelling 'authentick', minor transcription differences."
+  ],
+  "S04-174": [
+   "Scan matches the excerpt."
+  ],
+  "S04-175": [
+   "Scan matches the excerpt."
+  ],
+  "S04-176": [
+   "Scan matches the excerpt; the verdict reads 'was guilty of the MURDER of Alexander Hamilton'. The print's 'pronounced' has a wrong letter, which RevX silently corrects."
+  ],
+  "S04-177": [
+   "Scan matches the excerpt."
+  ],
+  "S04-178": [
+   "Scan reads 'a young beauty of 22'; RevX '23' is a fact-changing transcription error. The crop confirms that BJ goes straight from the heading to the introduction of the letters."
+  ],
+  "S04-179": [
+   "Scan matches the excerpt. The paper prints 'Pergignan' for Perpignan: a printed difference, kept by RevX."
+  ],
+  "S04-180": [
+   "Scan reads 'followed by his consort'; RevX 'confessor' is a fact-changing transcription error. 'to sail from Spain' is what the paper printed."
+  ],
+  "S04-181": [
+   "The small, blurred figures read 'July 30', '12 days' and '50 feet', as in the other printings (checked figure by figure on an enlarged copy); RevX's 'July 29', '13 days' and '30 feet' are fact-changing transcription errors. The rest matches the excerpt."
+  ],
+  "S04-182": [
+   "Scan matches the excerpt except 'to what part', which RevX reads as 'to that part' (minor: no fact changes)."
+  ],
+  "S04-183": [
+   "Scan reads 'MOREAU' and 'his cosort', a misprint of consort; RevX 'MORRIS' and 'escort' are fact-changing transcription errors. The paper prints 'Perpigan' and 'to America'."
+  ],
+  "S04-184": [
+   "Scan matches the excerpt."
+  ],
+  "S04-185": [
+   "Scan matches the excerpt; it gives the days in words, 'twelve'."
+  ],
+  "S04-186": [
+   "Scan matches the excerpt, including the gap in 'Mor au'; RevX 'Monitor' for 'Moniteur' and its silent correction of the printed 'governmene' are minor."
+  ],
+  "S04-187": [
+   "Scan matches the excerpt."
+  ],
+  "S04-188": [
+   "Scan matches the excerpt, including the printed 'Wyeth' and 'for ten days'."
+  ],
+  "S04-189": [
+   "Scan matches the excerpt and reads 'they sounded a French horn'; RevX 'unfurled' for the printed 'unfurl'd' is a minor spelling change."
+  ],
+  "S04-190": [
+   "Scan reads 'for ten days' where most long-form printings have 12: a printed difference, not a transcription error. Otherwise the scan matches the excerpt; RevX normalizes the printed 'Kentuckey'."
+  ],
+  "S04-191": [
+   "Scan reads 'they sounded a French horn'; RevX 'they fired a volley from their muskets' replaces the printed words and is a fact-changing transcription error. The print doubles 'a' ('a a flag') at a line break, which RevX silently corrects."
+  ],
+  "S04-192": [
+   "Scan matches the excerpt of the shorter form, with no date, 'for ten days' and '50 feet'. The paper prints the place as 'Whythe Court House'; RevX 'Whyte' is a minor transcription error."
+  ],
+  "S04-193": [
+   "Both crops show the item; the scan matches the excerpt."
+  ],
+  "S04-194": [
+   "Scan matches the excerpt except 'Moniteur', which RevX gives as 'Monitor' (minor)."
+  ],
+  "S04-195": [
+   "The first crop shows the report (faint; the heading's date is hidden by a blot) and it matches the excerpt, with 'about thirty men'; RevX 'Bayou' for the printed 'Bayau' is minor. The second crop shows a neighbouring column ('It is said, that ... Admiral of France')."
+  ],
+  "S04-196": [
+   "Scan matches the excerpt, with 'about 30 men'. The print has 'arrived her yesterday' and 'Bayau-Sarah', which RevX gives as 'here' and 'Bayou' (minor)."
+  ],
+  "S04-197": [
+   "The print gives the letter in full: the crop shows it running on to 'I met not far from the line, 21 armed men;—on passing', where RevX stops at 'Bayou Sara...' and leaves the rest out. The opening lines match."
+  ],
+  "S04-198": [
+   "Scan matches the excerpt and reads 'they sounded a French horn'; RevX 'with in' for 'within', split at a line end, is a minor error."
+  ],
+  "S04-199": [
+   "Scan matches the excerpt, including 'they sounded a French horn'."
+  ],
+  "S04-200": [
+   "Scan reads 'they sounded a French horn'; RevX 'fired' is a fact-changing transcription error. RevX also drops 'I' before 'met' (minor)."
+  ],
+  "S04-201": [
+   "Scan matches the excerpt and reads 'they sounded a French horn'; RevX 'unfurled' for the printed 'unfurl'd' is a minor spelling change."
+  ],
+  "S04-202": [
+   "Scan matches the excerpt; the print has 'July 30', 'for 12 days' and, just past the excerpt, '50 feet'."
+  ],
+  "S04-203": [
+   "Scan matches the excerpt, with 'about 30 men'."
+  ],
+  "S04-204": [
+   "Scan matches the excerpt, with 'about 30 men'; RevX 'Bayou' and 'demarcation' for the printed 'Bayau' and 'demarkation' are minor spelling changes."
+  ],
+  "S04-205": [
+   "The crop of scan page 3 shows the report; the CA text is garbled throughout, but no garble changes a fact. The print itself reads 'Nathan Kember' where the other printings have Kemper (a printed difference), and 'about 30 men'."
+  ],
+  "S04-206": [
+   "The second crop shows the whole opening and matches the excerpt ('Sept. 20th', 'September 6th', 'deposition'); RevX 'indispensable' for the printed 'indispensible' is a minor spelling change. The first crop shows the heading and first lines."
+  ],
+  "S04-207": [
+   "Scan matches the excerpt, with 'about 30 men'; RevX silently corrects the printed 'gentlemen' and gives 'Bayou' for 'Bayau' (minor). After the excerpt the print reads 'against Baton Rouge', without 'the fort of'."
+  ],
+  "S04-208": [
+   "Scan matches the excerpt, including 'about 30 men'. The paper itself prints 'Bayan Sarah' for Bayou Sarah: a printed difference, not a transcription error."
+  ],
+  "S04-209": [
+   "Scan matches the excerpt ('Sept. 20th', 'Sept. 6th', 'deposition'); RevX 'indispensable' for the printed 'indispensible' is a minor spelling change."
+  ],
+  "S04-210": [
+   "Scan matches the excerpt, with 'about 30 men'; RevX 'BayouSarah' loses the hyphen (minor)."
+  ],
+  "S04-211": [
+   "Scan matches the excerpt ('Sept. 20th', 'September 6th', 'deposition'); RevX 'indispensable' for the printed 'indispensible' is a minor spelling change."
+  ],
+  "S04-212": [
+   "Scan reads 'Sept. 20th' and 'September 6th'; RevX '29th' and '26th' are fact-changing transcription errors, not printed differences. RevX also gives 'following' for the printed 'subjoined' (same sense, minor)."
+  ],
+  "S04-213": [
+   "Scan matches the excerpt ('Sept. 20th', 'September 6th', 'deposition', 'publick'). The print has the misprint 'indispensalble', which RevX silently corrects."
+  ],
+  "S04-214": [
+   "Scan reads 'Sept. 20.' under the signature; RevX 'Sept. 25.' is a fact-changing transcription error. The print itself reads 'the disposition and letters': a printed difference, not a transcription error."
+  ],
+  "S04-215": [
+   "Scan matches the excerpt; the act is cited as 'the 26th March last'."
+  ],
+  "S04-216": [
+   "Scan matches the excerpt ('Sept. 20th', 'September 6th'); the print itself reads 'the disposition and letters', a printed difference. RevX 'indispensable' for the printed 'indispensible' is a minor spelling change."
+  ],
+  "S04-217": [
+   "Scan matches the excerpt."
+  ],
+  "S04-218": [
+   "Scan matches the excerpt; the act is cited as 'the 26th March last'."
+  ],
+  "S04-219": [
+   "Scan reads 'for these 18 days past', as in the other printings; RevX 'for the last 12 days past' is a fact-changing transcription error. The rest matches, and the name is printed 'Yrujo'."
+  ],
+  "S04-220": [
+   "Scan matches the excerpt; the crop shows the whole notice, given on 'the twenty fifth day of September, 1804' and signed James Madison."
+  ],
+  "S04-221": [
+   "Scan matches the excerpt; the act is cited as 'the 26th March last'."
+  ],
+  "S04-222": [
+   "Scan matches the excerpt; the act is cited as 'the 26th March last'."
+  ],
+  "S04-223": [
+   "Scan matches the excerpt; the three crops show the notice's opening, its end and the printers' request, with 'the 26th March last'."
+  ],
+  "S04-224": [
+   "Scan reads 'shewn'; RevX modernises it to 'shown', a minor transcription difference. The rest matches the excerpt."
+  ],
+  "S04-225": [
+   "Scan matches the excerpt, with 'Yrujo' and 'for these 18 days past'."
+  ],
+  "S04-226": [
+   "Scan matches the excerpt; the act is cited as 'the 26th March last'."
+  ],
+  "S04-227": [
+   "Scan reads 'shewn'; RevX modernises it to 'shown', a minor transcription difference. The rest matches the excerpt."
+  ],
+  "S04-228": [
+   "Scan matches the excerpt; the crop shows the whole notice, with 'the 26th March last'."
+  ],
+  "S04-229": [
+   "Scan matches the excerpt; the act is cited as 'the 26th March last'."
+  ],
+  "S04-230": [
+   "Scan reads 'shewn'; RevX modernises it to 'shown', a minor transcription difference. The rest matches the excerpt."
+  ],
+  "S04-231": [
+   "Scan matches the excerpt; the act is cited as 'the 26th March last'."
+  ],
+  "S04-232": [
+   "Scan matches the excerpt, with 'for these 18 days past' and 'Yrujo'. This printing adds 'having' before 'travelled', a printed difference."
+  ],
+  "S04-233": [
+   "Scan matches the excerpt apart from spelling: the print has 'shewn' and 'Warriours', which RevX gives as 'shown' and 'Warriors' (minor)."
+  ],
+  "S04-234": [
+   "Scan matches the excerpt; the act is cited as 'the 26th March last'."
+  ],
+  "S04-235": [
+   "Scan reads 'Marquis de Casa Trujo', a printer's misprint for Yrujo; RevX 'Trujillo' turns it into a different name, a fact-changing transcription error. The rest matches, including 'these 18 days past'."
+  ],
+  "S04-236": [
+   "Scan matches the excerpt from 'JAMES MADISON'; the word before the name ('By' in the other printings) is hidden under a blot on the scan, and RevX leaves it out. The act is cited as 'the 26th March last'."
+  ],
+  "S04-237": [
+   "Scan matches the excerpt; this paper prints 'PUBLICK NOTICE' and 'the 26th of March last'."
+  ],
+  "S04-238": [
+   "The first crop shows the notice's opening and matches the excerpt, with 'the 26th of March last'. The second crop shows another item and the third a later fragment of the notice."
+  ],
+  "S04-239": [
+   "Scan matches the excerpt apart from spelling: the print has 'shewn' (RevX 'shown'), and its worn heading appears to read 'Wariors', which RevX gives as 'Warriors' (minor)."
+  ],
+  "S04-240": [
+   "Scan reads 'the 26th March last'; RevX '25th' is a fact-changing transcription error. The rest of the excerpt matches."
+  ],
+  "S04-241": [
+   "The second crop shows the whole excerpt and it matches, except the paper's name: the print reads 'Meniteur', which RevX gives as 'Menteur' (one letter dropped, a minor transcription error)."
+  ],
+  "S04-242": [
+   "Both crops show the notice's opening beside other columns; it matches the excerpt, with 'the 26th of March last'."
+  ],
+  "S04-243": [
+   "Scan reads 'Bashaw' (printed with a long s); RevX 'Bashiaw' is a minor transcription error. The rest matches."
+  ],
+  "S04-244": [
+   "Scan matches the excerpt apart from 'shewn' (RevX 'shown', minor). The print itself leaves out 'me' ('it has given to receive you') and, just past the excerpt, the words 'seen that your confidence was justly placed, that you have': printed differences, not transcription errors."
+  ],
+  "S04-245": [
+   "Scan matches the excerpt, with 'these 18 days past' and 'Yrujo', except that RevX reads 'is published' as 'in published', a minor transcription error."
+  ],
+  "S04-246": [
+   "The second crop shows the item: the scan reads 'Marquis de Casa Trujo', a printer's misprint for Yrujo, which RevX turns into 'Trujillo', a fact-changing transcription error; the rest matches. The first crop is a tiny fragment."
+  ],
+  "S04-247": [
+   "The third crop shows the notice's opening and matches the excerpt, with 'the 26th of March last'. The first shows the heading, the fifth a later fragment, the second other items and the fourth a blank column rule."
+  ],
+  "S04-248": [
+   "Scan reads 'if the Bashaw should desire it'; RevX 'the Barbary' is a fact-changing transcription error. The rest matches, though the second figure of '14th June' is worn and cannot be confirmed from the scan."
+  ],
+  "S04-249": [
+   "Scan matches the excerpt except the paper's name: the print reads 'Moniteur', which RevX gives as 'Monitor' (a minor transcription error), so VA does not differ from the other printings here."
+  ],
+  "S04-250": [
+   "Scan matches the excerpt; the heading names 'the MONITEUR'."
+  ],
+  "S04-251": [
+   "Scan matches the excerpt; the heading names 'the MONITEUR'."
+  ],
+  "S04-252": [
+   "Scan matches the excerpt. The paper prints 'these 18 days past' without 'for', a printed difference."
+  ],
+  "S04-253": [
+   "Scan matches the excerpt except the paper's name: the print reads 'the Louisiana Moniteur', which RevX gives as 'Louisiana Monitor' (a minor transcription error)."
+  ],
+  "S04-254": [
+   "Scan matches the excerpt."
+  ],
+  "S04-255": [
+   "Scan matches the excerpt and reads 'Bashaw'. The print spells the first mention 'Mr. Obrien', which RevX silently gives as 'O'Brien': a printed difference and a minor transcription difference."
+  ],
+  "S04-256": [
+   "Scan reads 'if the Bashaw should desire it'; RevX 'the Barbary' is a fact-changing transcription error. The rest matches the excerpt."
+  ],
+  "S04-257": [
+   "Scan matches the excerpt and reads 'Bashaw'."
+  ],
+  "S04-258": [
+   "Scan matches the excerpt except 'we take the liberty', which RevX reads as 'to take' (a minor transcription error). The memorial follows a rule after an unrelated item, with no letter to the editor."
+  ],
+  "S04-259": [
+   "Scan reads 'Received the 8th November' (the 8 is slightly worn); RevX '3th' is a fact-changing transcription error, not a printed difference. The rest of the opening matches, including 'the Pardo, 10th February, 1804'."
+  ],
+  "S04-260": [
+   "Scan reads 'authorised'; RevX modernises it to 'authorized', a minor transcription difference. The rest matches the excerpt."
+  ],
+  "S04-261": [
+   "Scan matches the excerpt; an ink blot partly covers 'House' and 'United' in the address line, but both can be read."
+  ],
+  "S04-262": [
+   "Scan matches the excerpt."
+  ],
+  "S04-263": [
+   "Scan matches the excerpt."
+  ],
+  "S04-264": [
+   "Scan matches the excerpt; 'Bashaw' is partly damaged in the print but legible."
+  ],
+  "S04-265": [
+   "Scan matches the excerpt. (The crop was cut again by hand without a narrow strip of the column edge.)"
+  ],
+  "S04-266": [
+   "Scan matches the excerpt, with 'the 8th November' and 'the Pardo, 10th February'; RevX 'Pinkney' for the printed 'Pinckney' is a minor transcription error."
+  ],
+  "S04-267": [
+   "Scan matches the excerpt. The crop is small and the print is damaged at 'many foreign', but every legible word agrees."
+  ],
+  "S04-268": [
+   "Scan matches the excerpt. The dateline appears to read 'NOV. 9' where the others have Nov. 2: a printed difference, not a transcription error, though the small figure is worn."
+  ],
+  "S04-269": [
+   "Scan reads 'the 8th of November' and 'the Padro, 10th Feb. 1804': 'Padro' is the paper's misprint for Pardo, which RevX keeps, but RevX '16th' is a transcription error (worn type, read on close zoom). The print also has 'Catholick' and no 'that' in 'At the same time the minister'."
+  ],
+  "S04-270": [
+   "The print itself omits 'merchants of the' and reads 'has been felt' (others 'had been'), so RevX is faithful there: printed differences, not transcription errors. RevX only modernises 'Atlantick' to 'Atlantic' (minor)."
+  ],
+  "S04-271": [
+   "Scan matches the excerpt, under the heading 'TO THE SENATE AND House of Representatives OF THE UNITED STATES.'"
+  ],
+  "S04-272": [
+   "Scan matches the excerpt. NHG opens, after a rule, with its own one-sentence introduction in place of the letter to the editor."
+  ],
+  "S04-273": [
+   "Scan matches the excerpt, with 'NOV. 2.' and 'Bashaw'; RevX 'Extrait' for 'Extract' is a minor transcription error."
+  ],
+  "S04-274": [
+   "Scan matches the excerpt and reads 'bashaw'."
+  ],
+  "S04-275": [
+   "Scan matches the excerpt; the heading names 'the MONITEUR'."
+  ],
+  "S04-276": [
+   "Scan matches the excerpt, with 'the 8th November' and 'the Pardo, 10th February, 1804'."
+  ],
+  "S04-277": [
+   "Scan matches the excerpt, with 'the 8th November' and 'the Pardo, 10th February'."
+  ],
+  "S04-278": [
+   "Scan reads 'drawbacks on a reshipment' (divided 'reship-ment'); RevX 'shipment' drops the re-export that the motion is about, a fact-changing transcription error. The rest matches the excerpt."
+  ],
+  "S04-279": [
+   "Scan matches the excerpt, including 'happiness & prosperity'."
+  ],
+  "S04-280": [
+   "Scan matches the excerpt, including 'fellow citizens who' without a comma."
+  ],
+  "S04-281": [
+   "Scan matches the excerpt."
+  ],
+  "S04-282": [
+   "Scan matches the excerpt. NHG puts 'No. I.' on its own line under the heading 'DOCUMENTS Accompanying a message ... to Congress.' and goes straight to the translation, with no receipt date and no Cevallos heading."
+  ],
+  "S04-283": [
+   "Scan matches the excerpt apart from spelling: RevX gives the print's 'authorised' as 'authorized' and silently corrects its misprint 'New-Orleaes' to 'New Orleans' (minor)."
+  ],
+  "S04-284": [
+   "The crop is faint; every legible word matches the excerpt, though a few letters are blurred."
+  ],
+  "S04-285": [
+   "Scan matches the excerpt, with 'the 8th November' and 'the Pardo, 10th February, 1804'."
+  ],
+  "S04-286": [
+   "Scan matches the excerpt. The resolution stands at the head of page 3 with blank margin above it, so nothing of Mr. Griswold's remarks is printed above it on this page."
+  ],
+  "S04-287": [
+   "Scan reads 'Received the 8th November': the worn 8 looks like a 6 at small size, but a close zoom shows both loops, so RevX '6th' is a transcription error, not a printed difference. 'The Pardo, 10th February, 1804' and the rest match."
+  ],
+  "S04-288": [
+   "Scan reads 'drawbacks on a reshipment'; RevX 'shipment' drops the re-export that the motion is about, a fact-changing transcription error. RevX also gives 'authorised' as 'authorized' and silently corrects the misprint 'New-Orlans'; the print alone has 'inconveniences'."
+  ],
+  "S04-289": [
+   "Scan matches the excerpt, including the print's spellings 'Atlantick' and 'authorized'."
+  ],
+  "S04-290": [
+   "Scan matches the excerpt. The paper prints 'DOCUMENTS' without 'No. I', and gives neither the date received nor the heading of Cevallos's letter before 'TRANSLATION.'"
+  ],
+  "S04-291": [
+   "Scan matches the excerpt, under 'FRIDAY, NOVEMBER 30.'"
+  ],
+  "S04-292": [
+   "Scan matches the excerpt, under 'Friday, Nov. 30.'"
+  ],
+  "S04-293": [
+   "Scan reads 'to present and report articles', as RevX has it, where the other printings have 'to prepare': a printed difference, not a transcription error. The rest matches."
+  ],
+  "S04-294": [
+   "Scan matches the excerpt, under the heading 'IMPEACHMENT OF JUDGE CHASE.'"
+  ],
+  "S04-295": [
+   "Scan matches the excerpt, which begins at REPORT. The print has no words naming Samuel Chase after 'the people of the United States' (JPG and NG have them), as RevX shows: a printed difference."
+  ],
+  "S04-296": [
+   "Scan reads 'one of the associate judges', as RevX has it, where the others have 'justices': a printed difference, not a transcription error. The rest matches."
+  ]
+ },
+ "crops": {
+  "S04-001": [
+   "S04-001.jpg"
+  ],
+  "S04-002": [
+   "S04-002.jpg"
+  ],
+  "S04-003": [
+   "S04-003.jpg"
+  ],
+  "S04-004": [
+   "S04-004-1.jpg",
+   "S04-004-2.jpg",
+   "S04-004-3.jpg",
+   "S04-004-4.jpg"
+  ],
+  "S04-005": [
+   "S04-005.jpg"
+  ],
+  "S04-006": [
+   "S04-006.jpg"
+  ],
+  "S04-007": [
+   "S04-007.jpg"
+  ],
+  "S04-008": [
+   "S04-008.jpg"
+  ],
+  "S04-009": [
+   "S04-009.jpg"
+  ],
+  "S04-010": [
+   "S04-010.jpg"
+  ],
+  "S04-011": [
+   "S04-011.jpg"
+  ],
+  "S04-012": [
+   "S04-012.jpg"
+  ],
+  "S04-013": [
+   "S04-013.jpg"
+  ],
+  "S04-014": [
+   "S04-014.jpg"
+  ],
+  "S04-015": [
+   "S04-015.jpg"
+  ],
+  "S04-016": [
+   "S04-016-1.jpg",
+   "S04-016-2.jpg"
+  ],
+  "S04-017": [
+   "S04-017.jpg"
+  ],
+  "S04-018": [
+   "S04-018.jpg"
+  ],
+  "S04-019": [
+   "S04-019.jpg"
+  ],
+  "S04-020": [
+   "S04-020.jpg"
+  ],
+  "S04-021": [
+   "S04-021.jpg"
+  ],
+  "S04-022": [
+   "S04-022.jpg"
+  ],
+  "S04-023": [
+   "S04-023.jpg"
+  ],
+  "S04-024": [
+   "S04-024.jpg"
+  ],
+  "S04-025": [
+   "S04-025.jpg"
+  ],
+  "S04-026": [
+   "S04-026.jpg"
+  ],
+  "S04-027": [
+   "S04-027.jpg"
+  ],
+  "S04-028": [
+   "S04-028.jpg"
+  ],
+  "S04-029": [
+   "S04-029.jpg"
+  ],
+  "S04-030": [
+   "S04-030.jpg"
+  ],
+  "S04-031": [
+   "S04-031.jpg"
+  ],
+  "S04-032": [
+   "S04-032.jpg"
+  ],
+  "S04-033": [
+   "S04-033-1.jpg",
+   "S04-033-2.jpg",
+   "S04-033-3.jpg"
+  ],
+  "S04-034": [
+   "S04-034.jpg"
+  ],
+  "S04-035": [
+   "S04-035.jpg"
+  ],
+  "S04-036": [
+   "S04-036-1.jpg",
+   "S04-036-2.jpg",
+   "S04-036-3.jpg",
+   "S04-036-4.jpg"
+  ],
+  "S04-037": [
+   "S04-037-1.jpg",
+   "S04-037-2.jpg",
+   "S04-037-3.jpg"
+  ],
+  "S04-038": [
+   "S04-038.jpg"
+  ],
+  "S04-039": [
+   "S04-039.jpg"
+  ],
+  "S04-040": [
+   "S04-040.jpg"
+  ],
+  "S04-041": [
+   "S04-041.jpg"
+  ],
+  "S04-042": [
+   "S04-042.jpg"
+  ],
+  "S04-043": [
+   "S04-043.jpg"
+  ],
+  "S04-044": [
+   "S04-044.jpg"
+  ],
+  "S04-045": [
+   "S04-045.jpg"
+  ],
+  "S04-046": [
+   "S04-046.jpg"
+  ],
+  "S04-047": [
+   "S04-047.jpg"
+  ],
+  "S04-048": [
+   "S04-048.jpg"
+  ],
+  "S04-049": [
+   "S04-049-1.jpg",
+   "S04-049-2.jpg"
+  ],
+  "S04-050": [
+   "S04-050.jpg"
+  ],
+  "S04-051": [
+   "S04-051-1.jpg",
+   "S04-051-2.jpg"
+  ],
+  "S04-052": [
+   "S04-052.jpg"
+  ],
+  "S04-053": [
+   "S04-053.jpg"
+  ],
+  "S04-054": [
+   "S04-054.jpg"
+  ],
+  "S04-055": [
+   "S04-055.jpg"
+  ],
+  "S04-056": [
+   "S04-056.jpg"
+  ],
+  "S04-057": [
+   "S04-057.jpg"
+  ],
+  "S04-058": [
+   "S04-058.jpg"
+  ],
+  "S04-059": [
+   "S04-059.jpg"
+  ],
+  "S04-060": [
+   "S04-060.jpg"
+  ],
+  "S04-061": [
+   "S04-061.jpg"
+  ],
+  "S04-062": [
+   "S04-062.jpg"
+  ],
+  "S04-063": [
+   "S04-063.jpg"
+  ],
+  "S04-064": [
+   "S04-064.jpg"
+  ],
+  "S04-065": [
+   "S04-065.jpg"
+  ],
+  "S04-066": [
+   "S04-066.jpg"
+  ],
+  "S04-067": [
+   "S04-067.jpg"
+  ],
+  "S04-068": [
+   "S04-068.jpg"
+  ],
+  "S04-069": [
+   "S04-069.jpg"
+  ],
+  "S04-070": [
+   "S04-070.jpg"
+  ],
+  "S04-071": [
+   "S04-071.jpg"
+  ],
+  "S04-072": [
+   "S04-072.jpg"
+  ],
+  "S04-073": [
+   "S04-073.jpg"
+  ],
+  "S04-074": [
+   "S04-074.jpg"
+  ],
+  "S04-075": [
+   "S04-075.jpg"
+  ],
+  "S04-076": [
+   "S04-076.jpg"
+  ],
+  "S04-077": [
+   "S04-077.jpg"
+  ],
+  "S04-078": [
+   "S04-078.jpg"
+  ],
+  "S04-079": [
+   "S04-079.jpg"
+  ],
+  "S04-080": [
+   "S04-080.jpg"
+  ],
+  "S04-081": [
+   "S04-081.jpg"
+  ],
+  "S04-082": [
+   "S04-082.jpg"
+  ],
+  "S04-083": [
+   "S04-083.jpg"
+  ],
+  "S04-084": [
+   "S04-084.jpg"
+  ],
+  "S04-085": [
+   "S04-085.jpg"
+  ],
+  "S04-086": [
+   "S04-086.jpg"
+  ],
+  "S04-087": [
+   "S04-087.jpg"
+  ],
+  "S04-088": [
+   "S04-088.jpg"
+  ],
+  "S04-089": [
+   "S04-089.jpg"
+  ],
+  "S04-090": [
+   "S04-090.jpg"
+  ],
+  "S04-091": [
+   "S04-091.jpg"
+  ],
+  "S04-092": [
+   "S04-092.jpg"
+  ],
+  "S04-093": [
+   "S04-093.jpg"
+  ],
+  "S04-094": [
+   "S04-094.jpg"
+  ],
+  "S04-095": [
+   "S04-095.jpg"
+  ],
+  "S04-096": [
+   "S04-096.jpg"
+  ],
+  "S04-097": [
+   "S04-097.jpg"
+  ],
+  "S04-098": [
+   "S04-098.jpg"
+  ],
+  "S04-099": [
+   "S04-099.jpg"
+  ],
+  "S04-100": [
+   "S04-100.jpg"
+  ],
+  "S04-101": [
+   "S04-101.jpg"
+  ],
+  "S04-102": [
+   "S04-102.jpg"
+  ],
+  "S04-103": [
+   "S04-103.jpg"
+  ],
+  "S04-104": [
+   "S04-104.jpg"
+  ],
+  "S04-105": [
+   "S04-105.jpg"
+  ],
+  "S04-106": [
+   "S04-106.jpg"
+  ],
+  "S04-107": [
+   "S04-107.jpg"
+  ],
+  "S04-108": [
+   "S04-108-1.jpg",
+   "S04-108-2.jpg",
+   "S04-108-3.jpg"
+  ],
+  "S04-109": [
+   "S04-109.jpg"
+  ],
+  "S04-110": [
+   "S04-110.jpg"
+  ],
+  "S04-111": [
+   "S04-111.jpg"
+  ],
+  "S04-112": [
+   "S04-112.jpg"
+  ],
+  "S04-113": [
+   "S04-113-1.jpg",
+   "S04-113-2.jpg"
+  ],
+  "S04-114": [
+   "S04-114.jpg"
+  ],
+  "S04-115": [
+   "S04-115.jpg"
+  ],
+  "S04-116": [
+   "S04-116.jpg"
+  ],
+  "S04-117": [
+   "S04-117.jpg"
+  ],
+  "S04-118": [
+   "S04-118.jpg"
+  ],
+  "S04-119": [
+   "S04-119.jpg"
+  ],
+  "S04-120": [
+   "S04-120.jpg"
+  ],
+  "S04-121": [
+   "S04-121.jpg"
+  ],
+  "S04-122": [
+   "S04-122-1.jpg",
+   "S04-122-2.jpg"
+  ],
+  "S04-123": [
+   "S04-123.jpg"
+  ],
+  "S04-124": [
+   "S04-124.jpg"
+  ],
+  "S04-125": [
+   "S04-125.jpg"
+  ],
+  "S04-126": [
+   "S04-126.jpg"
+  ],
+  "S04-127": [
+   "S04-127.jpg"
+  ],
+  "S04-128": [
+   "S04-128.jpg"
+  ],
+  "S04-129": [
+   "S04-129.jpg"
+  ],
+  "S04-130": [
+   "S04-130.jpg"
+  ],
+  "S04-131": [
+   "S04-131.jpg"
+  ],
+  "S04-132": [
+   "S04-132.jpg"
+  ],
+  "S04-133": [
+   "S04-133.jpg"
+  ],
+  "S04-134": [
+   "S04-134.jpg"
+  ],
+  "S04-135": [
+   "S04-135.jpg"
+  ],
+  "S04-136": [
+   "S04-136.jpg"
+  ],
+  "S04-137": [
+   "S04-137-1.jpg",
+   "S04-137-2.jpg"
+  ],
+  "S04-138": [
+   "S04-138.jpg"
+  ],
+  "S04-139": [
+   "S04-139.jpg"
+  ],
+  "S04-140": [
+   "S04-140.jpg"
+  ],
+  "S04-141": [
+   "S04-141.jpg"
+  ],
+  "S04-142": [
+   "S04-142.jpg"
+  ],
+  "S04-143": [
+   "S04-143.jpg"
+  ],
+  "S04-144": [
+   "S04-144.jpg"
+  ],
+  "S04-145": [
+   "S04-145.jpg"
+  ],
+  "S04-146": [
+   "S04-146.jpg"
+  ],
+  "S04-147": [
+   "S04-147.jpg"
+  ],
+  "S04-148": [
+   "S04-148.jpg"
+  ],
+  "S04-149": [
+   "S04-149.jpg"
+  ],
+  "S04-150": [
+   "S04-150.jpg"
+  ],
+  "S04-151": [
+   "S04-151.jpg"
+  ],
+  "S04-152": [
+   "S04-152.jpg"
+  ],
+  "S04-153": [
+   "S04-153.jpg"
+  ],
+  "S04-154": [
+   "S04-154-1.jpg",
+   "S04-154-2.jpg"
+  ],
+  "S04-155": [
+   "S04-155.jpg"
+  ],
+  "S04-156": [
+   "S04-156.jpg"
+  ],
+  "S04-157": [
+   "S04-157.jpg"
+  ],
+  "S04-158": [
+   "S04-158.jpg"
+  ],
+  "S04-159": [
+   "S04-159.jpg"
+  ],
+  "S04-160": [
+   "S04-160.jpg"
+  ],
+  "S04-161": [
+   "S04-161.jpg"
+  ],
+  "S04-162": [
+   "S04-162.jpg"
+  ],
+  "S04-163": [
+   "S04-163.jpg"
+  ],
+  "S04-164": [
+   "S04-164.jpg"
+  ],
+  "S04-165": [
+   "S04-165.jpg"
+  ],
+  "S04-166": [
+   "S04-166.jpg"
+  ],
+  "S04-167": [
+   "S04-167.jpg"
+  ],
+  "S04-168": [
+   "S04-168.jpg"
+  ],
+  "S04-169": [
+   "S04-169.jpg"
+  ],
+  "S04-170": [
+   "S04-170.jpg"
+  ],
+  "S04-171": [
+   "S04-171.jpg"
+  ],
+  "S04-172": [
+   "S04-172.jpg"
+  ],
+  "S04-173": [
+   "S04-173.jpg"
+  ],
+  "S04-174": [
+   "S04-174.jpg"
+  ],
+  "S04-175": [
+   "S04-175.jpg"
+  ],
+  "S04-176": [
+   "S04-176.jpg"
+  ],
+  "S04-177": [
+   "S04-177.jpg"
+  ],
+  "S04-178": [
+   "S04-178.jpg"
+  ],
+  "S04-179": [
+   "S04-179.jpg"
+  ],
+  "S04-180": [
+   "S04-180-1.jpg",
+   "S04-180-2.jpg"
+  ],
+  "S04-181": [
+   "S04-181.jpg"
+  ],
+  "S04-182": [
+   "S04-182.jpg"
+  ],
+  "S04-183": [
+   "S04-183.jpg"
+  ],
+  "S04-184": [
+   "S04-184.jpg"
+  ],
+  "S04-185": [
+   "S04-185.jpg"
+  ],
+  "S04-186": [
+   "S04-186.jpg"
+  ],
+  "S04-187": [
+   "S04-187.jpg"
+  ],
+  "S04-188": [
+   "S04-188.jpg"
+  ],
+  "S04-189": [
+   "S04-189.jpg"
+  ],
+  "S04-190": [
+   "S04-190.jpg"
+  ],
+  "S04-191": [
+   "S04-191.jpg"
+  ],
+  "S04-192": [
+   "S04-192.jpg"
+  ],
+  "S04-193": [
+   "S04-193-1.jpg",
+   "S04-193-2.jpg"
+  ],
+  "S04-194": [
+   "S04-194.jpg"
+  ],
+  "S04-195": [
+   "S04-195-1.jpg",
+   "S04-195-2.jpg"
+  ],
+  "S04-196": [
+   "S04-196.jpg"
+  ],
+  "S04-197": [
+   "S04-197.jpg"
+  ],
+  "S04-198": [
+   "S04-198.jpg"
+  ],
+  "S04-199": [
+   "S04-199.jpg"
+  ],
+  "S04-200": [
+   "S04-200.jpg"
+  ],
+  "S04-201": [
+   "S04-201.jpg"
+  ],
+  "S04-202": [
+   "S04-202.jpg"
+  ],
+  "S04-203": [
+   "S04-203.jpg"
+  ],
+  "S04-204": [
+   "S04-204.jpg"
+  ],
+  "S04-205": [
+   "S04-205.jpg"
+  ],
+  "S04-206": [
+   "S04-206-1.jpg",
+   "S04-206-2.jpg"
+  ],
+  "S04-207": [
+   "S04-207.jpg"
+  ],
+  "S04-208": [
+   "S04-208.jpg"
+  ],
+  "S04-209": [
+   "S04-209.jpg"
+  ],
+  "S04-210": [
+   "S04-210.jpg"
+  ],
+  "S04-211": [
+   "S04-211.jpg"
+  ],
+  "S04-212": [
+   "S04-212.jpg"
+  ],
+  "S04-213": [
+   "S04-213.jpg"
+  ],
+  "S04-214": [
+   "S04-214.jpg"
+  ],
+  "S04-215": [
+   "S04-215.jpg"
+  ],
+  "S04-216": [
+   "S04-216.jpg"
+  ],
+  "S04-217": [
+   "S04-217.jpg"
+  ],
+  "S04-218": [
+   "S04-218.jpg"
+  ],
+  "S04-219": [
+   "S04-219.jpg"
+  ],
+  "S04-220": [
+   "S04-220.jpg"
+  ],
+  "S04-221": [
+   "S04-221.jpg"
+  ],
+  "S04-222": [
+   "S04-222.jpg"
+  ],
+  "S04-223": [
+   "S04-223-1.jpg",
+   "S04-223-2.jpg",
+   "S04-223-3.jpg"
+  ],
+  "S04-224": [
+   "S04-224.jpg"
+  ],
+  "S04-225": [
+   "S04-225.jpg"
+  ],
+  "S04-226": [
+   "S04-226.jpg"
+  ],
+  "S04-227": [
+   "S04-227.jpg"
+  ],
+  "S04-228": [
+   "S04-228.jpg"
+  ],
+  "S04-229": [
+   "S04-229.jpg"
+  ],
+  "S04-230": [
+   "S04-230.jpg"
+  ],
+  "S04-231": [
+   "S04-231.jpg"
+  ],
+  "S04-232": [
+   "S04-232.jpg"
+  ],
+  "S04-233": [
+   "S04-233.jpg"
+  ],
+  "S04-234": [
+   "S04-234.jpg"
+  ],
+  "S04-235": [
+   "S04-235.jpg"
+  ],
+  "S04-236": [
+   "S04-236.jpg"
+  ],
+  "S04-237": [
+   "S04-237.jpg"
+  ],
+  "S04-238": [
+   "S04-238-1.jpg",
+   "S04-238-2.jpg",
+   "S04-238-3.jpg"
+  ],
+  "S04-239": [
+   "S04-239.jpg"
+  ],
+  "S04-240": [
+   "S04-240.jpg"
+  ],
+  "S04-241": [
+   "S04-241-1.jpg",
+   "S04-241-2.jpg"
+  ],
+  "S04-242": [
+   "S04-242-1.jpg",
+   "S04-242-2.jpg"
+  ],
+  "S04-243": [
+   "S04-243.jpg"
+  ],
+  "S04-244": [
+   "S04-244.jpg"
+  ],
+  "S04-245": [
+   "S04-245.jpg"
+  ],
+  "S04-246": [
+   "S04-246-1.jpg",
+   "S04-246-2.jpg"
+  ],
+  "S04-247": [
+   "S04-247-1.jpg",
+   "S04-247-2.jpg",
+   "S04-247-3.jpg",
+   "S04-247-4.jpg",
+   "S04-247-5.jpg"
+  ],
+  "S04-248": [
+   "S04-248.jpg"
+  ],
+  "S04-249": [
+   "S04-249.jpg"
+  ],
+  "S04-250": [
+   "S04-250.jpg"
+  ],
+  "S04-251": [
+   "S04-251.jpg"
+  ],
+  "S04-252": [
+   "S04-252.jpg"
+  ],
+  "S04-253": [
+   "S04-253.jpg"
+  ],
+  "S04-254": [
+   "S04-254.jpg"
+  ],
+  "S04-255": [
+   "S04-255.jpg"
+  ],
+  "S04-256": [
+   "S04-256.jpg"
+  ],
+  "S04-257": [
+   "S04-257.jpg"
+  ],
+  "S04-258": [
+   "S04-258.jpg"
+  ],
+  "S04-259": [
+   "S04-259-1.jpg",
+   "S04-259-2.jpg"
+  ],
+  "S04-260": [
+   "S04-260.jpg"
+  ],
+  "S04-261": [
+   "S04-261.jpg"
+  ],
+  "S04-262": [
+   "S04-262.jpg"
+  ],
+  "S04-263": [
+   "S04-263.jpg"
+  ],
+  "S04-264": [
+   "S04-264.jpg"
+  ],
+  "S04-265": [
+   "S04-265.jpg"
+  ],
+  "S04-266": [
+   "S04-266.jpg"
+  ],
+  "S04-267": [
+   "S04-267.jpg"
+  ],
+  "S04-268": [
+   "S04-268.jpg"
+  ],
+  "S04-269": [
+   "S04-269.jpg"
+  ],
+  "S04-270": [
+   "S04-270.jpg"
+  ],
+  "S04-271": [
+   "S04-271.jpg"
+  ],
+  "S04-272": [
+   "S04-272.jpg"
+  ],
+  "S04-273": [
+   "S04-273.jpg"
+  ],
+  "S04-274": [
+   "S04-274.jpg"
+  ],
+  "S04-275": [
+   "S04-275.jpg"
+  ],
+  "S04-276": [
+   "S04-276.jpg"
+  ],
+  "S04-277": [
+   "S04-277.jpg"
+  ],
+  "S04-278": [
+   "S04-278.jpg"
+  ],
+  "S04-279": [
+   "S04-279.jpg"
+  ],
+  "S04-280": [
+   "S04-280.jpg"
+  ],
+  "S04-281": [
+   "S04-281.jpg"
+  ],
+  "S04-282": [
+   "S04-282.jpg"
+  ],
+  "S04-283": [
+   "S04-283.jpg"
+  ],
+  "S04-284": [
+   "S04-284.jpg"
+  ],
+  "S04-285": [
+   "S04-285.jpg"
+  ],
+  "S04-286": [
+   "S04-286.jpg"
+  ],
+  "S04-287": [
+   "S04-287.jpg"
+  ],
+  "S04-288": [
+   "S04-288.jpg"
+  ],
+  "S04-289": [
+   "S04-289.jpg"
+  ],
+  "S04-290": [
+   "S04-290.jpg"
+  ],
+  "S04-291": [
+   "S04-291.jpg"
+  ],
+  "S04-292": [
+   "S04-292.jpg"
+  ],
+  "S04-293": [
+   "S04-293.jpg"
+  ],
+  "S04-294": [
+   "S04-294.jpg"
+  ],
+  "S04-295": [
+   "S04-295.jpg"
+  ],
+  "S04-296": [
+   "S04-296.jpg"
+  ]
+ },
+ "boxes": {
+  "S04-005": [
+   [
+    2840,
+    2640,
+    3540,
+    3110
+   ]
+  ],
+  "S04-022": [
+   [
+    505,
+    2625,
+    890,
+    2905
+   ]
+  ],
+  "S04-030": [
+   [
+    903,
+    4624,
+    1619,
+    5339
+   ]
+  ],
+  "S04-032": [
+   [
+    770,
+    610,
+    1160,
+    835
+   ]
+  ],
+  "S04-044": [
+   [
+    1169,
+    4712,
+    2028,
+    5477
+   ]
+  ],
+  "S04-048": [
+   [
+    3451,
+    1103,
+    4501,
+    1788
+   ]
+  ],
+  "S04-049": [
+   [
+    880,
+    2765,
+    1227,
+    3000
+   ],
+   [
+    1200,
+    115,
+    1540,
+    215
+   ]
+  ],
+  "S04-055": [
+   [
+    1280,
+    1535,
+    1640,
+    1755
+   ]
+  ],
+  "S04-060": [
+   [
+    550,
+    1018,
+    937,
+    1326
+   ]
+  ],
+  "S04-062": [
+   [
+    80,
+    1060,
+    620,
+    1375
+   ]
+  ],
+  "S04-064": [
+   [
+    1180,
+    1960,
+    1550,
+    2135
+   ]
+  ],
+  "S04-065": [
+   [
+    670,
+    785,
+    1350,
+    1330
+   ]
+  ],
+  "S04-077": [
+   [
+    780,
+    2413,
+    1150,
+    2699
+   ]
+  ],
+  "S04-086": [
+   [
+    513,
+    1252,
+    864,
+    1550
+   ]
+  ],
+  "S04-095": [
+   [
+    160,
+    345,
+    545,
+    945
+   ]
+  ],
+  "S04-166": [
+   [
+    1160,
+    2060,
+    1515,
+    2420
+   ]
+  ],
+  "S04-173": [
+   [
+    50,
+    2465,
+    505,
+    2715
+   ]
+  ],
+  "S04-192": [
+   [
+    1140,
+    475,
+    1680,
+    675
+   ]
+  ],
+  "S04-202": [
+   [
+    855,
+    745,
+    1205,
+    975
+   ]
+  ],
+  "S04-208": [
+   [
+    1250,
+    5090,
+    2370,
+    5535
+   ]
+  ],
+  "S04-225": [
+   [
+    60,
+    60,
+    485,
+    288
+   ]
+  ],
+  "S04-243": [
+   [
+    690,
+    370,
+    1385,
+    960
+   ]
+  ],
+  "S04-261": [
+   [
+    800,
+    25,
+    1185,
+    230
+   ]
+  ],
+  "S04-265": [
+   [
+    1205,
+    3167,
+    1795,
+    3459
+   ]
+  ],
+  "S04-266": [
+   [
+    680,
+    140,
+    1290,
+    705
+   ]
+  ],
+  "S04-273": [
+   [
+    3590,
+    1430,
+    4620,
+    1830
+   ]
+  ],
+  "S04-277": [
+   [
+    110,
+    800,
+    505,
+    1048
+   ]
+  ],
+  "S04-290": [
+   [
+    185,
+    700,
+    540,
+    955
+   ]
+  ]
+ },
+ "notes": {
+  "S04-026": "Dated 'NORFOLK, February 29.' as printed; the other papers date the report February 25.",
+  "S04-055": "Dated 'January 7th, 1804' as printed; the other papers print the 17th.",
+  "S04-071": "Prints the newsletter's date and number in figures, '19th Ventose, an. 12, No. 11.', where the others print 'Ventose An. XII. No. II'.",
+  "S04-075": "Prints the letter's date 'FEB 7.' without the year.",
+  "S04-083": "Dated 'WASHINGTON, MAY 28.' as printed; the National Intelligencer, the Virginia Argus and the Rhode-Island Republican date the notice May 25.",
+  "S04-097": "Prints 'the 10th of April', where the other papers print the 19th.",
+  "S04-098": "Prints the captain's name 'Stanford' and leaves out 'in 16 days from Cape Francois'.",
+  "S04-100": "Dated 'LEXINGTON, June 14.' as printed; the Kentucky Gazette and most others date the report June 12.",
+  "S04-103": "Printed under the head 'From the Kentucky Gazette of June 12.'; its first lines are at the foot of page 2 and it goes on on page 3, so the excerpt stops at the end of page 2.",
+  "S04-104": "Dated 'LEXINGTON, June 14.' as printed; the Kentucky Gazette and most others date the report June 12.",
+  "S04-121": "Prints 'I must try to suppress my own', where the other papers print 'repress'.",
+  "S04-126": "Prints the address without the words 'terminating the life of Alexander Hamilton'.",
+  "S04-129": "Numbered 'No. 13.' as printed (worn type); the other papers number the statement No. 12 (Jenks' Portland Gazette 'No. XII.').",
+  "S04-133": "Prints the address without the words 'or were intimately connected with it'.",
+  "S04-136": "Prints 'or were ultimately connected with it', where the others print 'intimately'.",
+  "S04-160": "Prints 'is guilty', where the other papers that quote the verdict in full print 'was guilty'.",
+  "S04-165": "Prints 'is guilty', where the other papers that quote the verdict in full print 'was guilty'.",
+  "S04-168": "Prints 'is guilty', where the other papers that quote the verdict in full print 'was guilty'.",
+  "S04-169": "Prints the newsletter's date as 'Ventose, an. 10, No. 3.', where the others print 'Ventose An. XII. No. III'.",
+  "S04-190": "Prints 'for ten days', where most papers that give the letter's date print 12 days.",
+  "S04-205": "The RevX transcriptions of this issue are filed one page off from the scans, so the excerpt comes from the older CA transcription of this scan page. Prints the leader's name 'Kember'; the other papers print Kemper.",
+  "S04-214": "Prints 'the disposition and letters', where most papers print 'deposition'.",
+  "S04-216": "Prints 'the disposition and letters', where most papers print 'deposition'.",
+  "S04-235": "Misprints the minister's name 'Trujo' (for Yrujo).",
+  "S04-244": "Prints 'the satisfaction it has given to receive you', without 'me'.",
+  "S04-246": "Misprints the minister's name 'Trujo' (for Yrujo).",
+  "S04-269": "Prints 'the Padro' (for the Pardo).",
+  "S04-270": "Prints 'felt by some of the Atlantick ports', without 'merchants of the'."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1804 that reach 3 or more papers, long-running ones included (story_items.py --long-running), were split into single printed items (items.json: 1,691 items printed somewhere, 129 in 7 or more papers by the finder's count, 47 in 9 or more). Because the amendment on electing the President, the Louisiana treaty and the acts of the session sit in families that began in 1803, the same script was also run with year 1803 over the 1804 pages (items_from_1803.json: 183 items, 12 in 7 or more). Every item in 7 or more papers was read in this session (Claude, the session's own model; no second reader). Each chosen item and each candidate set aside was counted item by item with phrase searches on all 3,472 pages of 1804 in both transcriptions (story_phrase_search.py, phrase_patterns.json, phrase_hits.json); every hit was read. Four printings stand on pages whose transcriptions are too garbled for the phrases and were found by reading.",
+  "selection_rule": "As for 1776, 1805, 1807, 1808 and 1809: every single item printed in 9 or more newspapers was admitted, except digests of unrelated paragraphs (a single paragraph of the House's daily proceedings is counted as an item, as 1806, 1809 and 1800 did); items in 7 or 8 papers were chosen to cover the months from January to December and the main kinds of news. Every story alike (the owner's rule of 11 November 2026): no item was left out for its subject. Stories are counted item by item; where several documents belong to one affair, each is its own group under a parent story, and where one publication holds several documents, each document is counted by its own words. A sub-story may have fewer than 7 papers when its parent reaches 7 (two here: the two reports of the articles against Judge Chase, 6 papers each). A group count is a target, not a quota.",
+  "admitted_9_or_more": [
+   "preble-letter-from-malta-17-january-1804 (9)",
+   "preble-letter-to-the-consul-at-gibraltar-on-the-philadelphia (9, with a Philadelphia or a Boston introduction)",
+   "bishop-moore-letter-on-general-hamilton (9)",
+   "gouverneur-morris-funeral-oration-over-general-hamilton (9)",
+   "hamilton-burr-correspondence-published-july-1804 (9)",
+   "general-hamilton-statement-on-the-expected-interview (9)",
+   "coroners-jury-verdict-on-general-hamilton-august-1804 (10, the verdict's three printed forms counted together; the quoted verdict alone is in 6)",
+   "preble-letter-off-tripoli-14-june-1804 (9)",
+   "house-motion-on-drawbacks-at-new-orleans-12-november-1804 (9, a paragraph of the House's proceedings)",
+   "presidents-message-8-november-1804 (9)",
+   "documents-on-spain-and-louisiana-sent-to-congress-november-1804 (9, counted by Document No. I)"
+  ],
+  "counted_item_by_item": {
+   "Laws printed by authority": "The item finder chains the acts of the first session of the Eighth Congress through their enacting formula and the list of acts (items of 7 to 9 papers and up to 94 printings). Counted by its own text, no act reaches 7 papers: the act erecting Louisiana into two territories, the act for duties on imports and tonnage in the ceded territories, the act supplementary on the election of a President and Vice-President, and the act to protect commerce and seamen against the Barbary powers are in 5 or 6 papers each. The list of the session's acts is a list.",
+   "The articles of impeachment against Judge Chase": "The finder joins the committee's report of 26 March 1804 and its report of 30 November 1804 into items of 9 and 10 papers. They are two reports, the second made on a new reference and adopted by the House, so each is its own group under the Chase parent, as 1809 kept a Senate bill apart from the act: 6 papers each (the National Intelligencer and the Virginia Argus printed both; together they reach 10 papers).",
+   "The papers on General Hamilton's death": "The finder joins the documents published after the duel into families of 9 and 10 papers. Counted item by item: the correspondence 9, Hamilton's statement 9, his will 8, Bishop Moore's letter 9, Gouverneur Morris's oration 9; a New York letter of 12 July ('General Hamilton still lives') 5, the order of the funeral procession 5, the Port Folio's obituary 2 (outputs/hamilton_burr_check/README.md checked these on the scans for the talk of 17 November).",
+   "The coroner's jury's verdict": "The papers report it in three forms: the verdict quoted ('That Aaron Burr, Esq. Vice President of the United States, was guilty of the murder of Alexander Hamilton'; NI, VA, OP, EN, RIR, BJ), a shorter New York Gazette paragraph ('brought in a verdict of MURDER by AARON BURR'; ADA, BJ, EN, JPG, NHG) and the Norfolk Gazette's own words. Counted together as the verdict, as 1805 counted the accounts of Chase's acquittal and 1807 the Burr verdict: 10 papers, 13 printings (the Berkeley and Jefferson Intelligencer printed two accounts, the Enquirer three). The quoted verdict alone is in 6 papers.",
+   "General Moreau": "The finder joins the Moreau items of the year. Counted by their own words: the letter attributed to him by Les Nouvelles à la Main (No. II) 7, the same newsletter's No. III 7, the London paragraph on his banishment 8, and his letter to the First Consul of 17 Ventose, printed during his trial, 5 (in two translations).",
+   "The documents with the message of November": "Counted by Document No. I, the extract of Cevallos's letter to Pinckney: 9 papers. Three papers (EN, JPG, KG) also printed the National Intelligencer's paragraph listing the documents ('the message of the president was accompanied by various documents, among which were'), a summary in other words, which is not counted.",
+   "The House's daily proceedings": "From November 1804 most papers reprinted the House's daily proceedings in the same words, so the finder makes items of 7 to 11 papers out of single paragraphs of those reports (motions, votes, memorials referred). Each paragraph is counted by its own words as an item, as 1806 counted Mr. Gregg's resolution, 1809 Mr. Giles's and 1800 Mr. Livingston's; the day's proceedings as a whole are a digest. One paragraph reaches 9 papers and is admitted: Mr. Griswold's motion of 12 November for an inquiry into drawbacks of duties at New Orleans (the committee's report on it, in 3 more papers, only quotes it). The others are in 8 or fewer: the motion to present a sword to Captain Decatur (8 as moved; the resolution as passed, printed by authority, in 3), the House's vote on it (8), the committee's return from the President on it (8), Mr. Randolph's question on the articles against Judge Chase (7), a memorial of 237 American citizens in Louisiana (7).",
+   "Standing notices printed in successive issues": "The Secretary of State's notice that the amendment has been ratified ran in successive issues of several papers (the National Intelligencer four times, the Virginia Argus, the Rhode-Island Republican and the Kentucky Gazette three times each, the Enquirer twice); each printing counts, as 1807 counted the proclamation calling Congress: 17 printings in 7 papers."
+  },
+  "not_admitted": {
+   "Dessalines's proclamation of April 1804, 'Liberty or Death', to the inhabitants of Hayti (4 papers, June)": "Below 7 papers counted by its own words (NI, JPG, VA, BJ). The New York report of June on Cape François, in 8 papers, is admitted.",
+   "A New York letter of 12 July: 'General Hamilton still lives' (5 papers)": "Below 7 papers counted by its own words (ADA, NG, NI, VA, EN); the matched story that carries it (10 papers) joins other items. Checked on the scans in outputs/hamilton_burr_check.",
+   "The order of procession for General Hamilton's funeral (5 papers)": "Below 7 papers counted by its own words.",
+   "The Port Folio's obituary of General Hamilton (2 papers)": "Below 7 papers counted by its own words.",
+   "General Moreau's letter to the First Consul of 17 Ventose, printed during his trial (5 papers, in two translations)": "Below 7 papers counted by its own words; the other Moreau items of the year are admitted.",
+   "The memorial and remonstrance of inhabitants of Louisiana to Congress (5 papers, September), and the Aurora's reply 'To the French inhabitants of Louisiana' (4)": "Each below 7 papers counted by its own words; the reply is a different text that quotes the memorial's opening.",
+   "The National Intelligencer's address 'Americans! The event, for which we have all looked with so much solicitude, is at length realised' (3 papers, January)": "Below 7 papers counted by its own words; January's documents of the taking of Louisiana are admitted.",
+   "The ratification of the convention with Spain of 11 August 1802 (5 papers, January and February)": "Below 7 papers counted by its own words.",
+   "Congress's resolution proposing the amendment on electing the President (5 papers in 1804)": "Below 7 papers in 1804 counted by its own words; most papers printed it in December 1803. The Secretary of State's notice that it was ratified is admitted.",
+   "The acts of the first session of the Eighth Congress (5 or 6 papers each by their own text)": "None reaches 7 papers counted by its own text (see counted_item_by_item); the list of the session's acts is a list.",
+   "Commodore Preble's letter from Syracuse of 19 March 1804 (5 papers)": "Below 7 papers counted by its own words.",
+   "A letter from Havana of the commander of the marines sent to New Orleans (5 papers)": "Below 7 papers counted by its own words.",
+   "Mr. Pickering's motion in the Senate to amend the Constitution (5 papers, December)": "Below 7 papers counted by its own words.",
+   "A paragraph on the British government and Captain Bradley of the Leander (6 papers, December)": "Below 7 papers counted by its own words.",
+   "News from Leghorn by the Dolphin (6 papers, November–December)": "Below 7 papers counted by its own words.",
+   "A London paragraph on the King's health and the fire at Bayonne (6 papers, July–August)": "Below 7 papers counted by its own words, and part of a run of London paragraphs.",
+   "A Paris letter: Bonaparte to set out for the coast (5 papers)": "Below 7 papers counted by its own words.",
+   "A report that the Toulon fleet was out (3 papers by its own words, June)": "Below 7 papers; the finder's family of 9 papers joins other items.",
+   "The French Senate's decree making Bonaparte Emperor (3 papers)": "Below 7 papers counted by its own words; the papers printed the change in many different paragraphs.",
+   "The surrender of Surinam (3 or 4 papers)": "Below 7 papers counted by its own words.",
+   "Governor Strong's speech to the Massachusetts legislature (7 papers, June)": "Month and kind covered: June has the New York report on Cape François and the Osage chiefs, and American public life is the year's largest kind (1805 admitted the same governor's speech).",
+   "A Washington paragraph: Mr. Livingston has resigned, General Armstrong is appointed his successor (7 papers, June)": "A paragraph of several Washington items; June is covered.",
+   "The Department of State's notice to claimants under the 7th article of the treaty with Great Britain (8 papers, May–June)": "A government notice; May is covered by four items on Tripoli and the letter attributed to Moreau.",
+   "Commodore Barron's arrival at Gibraltar and Captain Rodgers's letter of 30 August on the Emperor of Morocco (6 and 8 papers, October–November)": "Not chosen: the war with Tripoli and the Barbary powers is already the year's second largest subject (three stories, six groups), as 1805 trimmed its Barbary items; October and November are covered.",
+   "A remedy for consumption (8 papers, November–December)": "Not chosen: a remedy, not news; the chosen band covers kinds of news.",
+   "Paragraphs of the House's daily proceedings in 7 or 8 papers: the motion on a sword for Captain Decatur (8 as moved, 3 as passed), the House's vote on it (8), the committee's return from the President (8), Mr. Randolph's question on the Chase articles (7), a memorial of 237 American citizens in Louisiana (7)": "Counted as items (see counted_item_by_item) and not chosen: November and December are covered, and the frigate Philadelphia already has four groups; the paragraph in 9 papers, Mr. Griswold's motion, is admitted."
+  },
+  "for_the_owner": {},
+  "for_user_decision": {
+   "The coroner's jury's verdict counted across its three printed forms (10 papers)": "Counted together as 1805 and 1807 did; the quoted verdict alone is in 6 papers and would stand as a sub-story either way. The excerpts end before the names of the two seconds the verdict calls accessaries.",
+   "The rising in West Florida admitted as public affairs": "An armed party under a named leader marched on a Spanish fort and posted a declaration; the 1805 review listed the same men's seizure in 1805 under private persons. The reports are admitted here as public affairs, with the leader's name as the papers print it.",
+   "The two reports of the articles against Judge Chase as two groups (6 papers each)": "Counted together they would be one item in 10 papers; as two reports they stand as two sub-stories under the Chase parent.",
+   "A motion printed only in the House's daily proceedings admitted (9 papers)": "Each paragraph of the reprinted proceedings is counted by its own words, as 1806, 1809 and 1800 counted members' resolutions, so Mr. Griswold's motion on drawbacks at New Orleans is admitted by the rule; treating the proceedings as digests instead would leave it out.",
+   "The Barbary items trimmed": "Captain Rodgers's letter from Gibraltar (8 papers) is not chosen because Tripoli already has three stories; it can be added after a scan check.",
+   "The letter from Wythe Court-House on the Clinch Mountain (8 papers)": "Admitted as a report at second hand of a natural event, as 1793 kept the sea serpent; it can be left out.",
+   "Names left out of excerpts": "The excerpts end before the names of the executors in Hamilton's will, of the two seconds the coroner's verdict calls accessaries, and of the owner of the warehouse where the Norfolk fire began; the names stay on the scans."
+  }
+ },
+ "verdict_summary": {
+  "yes": 296,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 156,
+  "minor_errors": 91,
+  "major_problem": 49,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 268,
+  "manual_box": 23,
+  "pdf_text_layer_window": 3,
+  "pdf_text_layer_sequence": 2
+ }
+}

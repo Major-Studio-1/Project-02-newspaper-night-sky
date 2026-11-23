@@ -211,9 +211,18 @@ Four rounds then read the stories earlier rounds had held back for framing, by e
 - **One printing the earlier reading missed** (Adams's reply to the House in the *New Hampshire Gazette* of 13 December, on a page whose RevX text is filed elsewhere) is checked but waits for a correction release, because it joins an existing story whose topic row must change with it.
 - **Every rule and exception of every year** is now kept in one register, `docs/rules-and-exceptions.md`, with its situation and reasons.
 
+### Two more reviewed years: 1800 and 1804 (data releases v0.11.9 and v0.11.10, 23 November 2026)
+
+1800 and 1804 were reviewed by the same rule as 1805–1809 (every single item in 9 or more papers, items in 7–8 papers chosen to cover the months and the kinds of news); neither year needed a lower threshold. Every printing was checked against its scan. In both years a single paragraph of the House's daily proceedings, which most papers reprinted word for word, counts as an item by its own words; the day's proceedings as a whole stay a digest.
+
+- **1800:** 16 stories, 27 groups and 182 printings in 11 papers, from the honours Congress paid to Washington and Bonaparte's letter to the King of Great Britain to the siege of Genoa, the first session of Congress in the city of Washington and the convention between France and the United States (release v0.11.9, 2,917 checks). Transcriptions: 118 faithful, 39 with minor misreadings, 25 with fact-changing ones.
+- **1804:** 20 stories, 44 groups and 296 printings in 11 papers, from the proclamation of the chiefs of St. Domingo and the taking of Louisiana to the frigate *Philadelphia*, the impeachment of Judge Chase, the papers on General Hamilton's death after his duel with Colonel Burr and the President's message of November (release v0.11.10, 3,248 checks). Transcriptions: 156 faithful, 91 with minor misreadings, 49 with fact-changing ones. The talk of 17 November showed Hamilton's death through matched stories; they are now checked item by item.
+- **Decisions:** on 23 November 2026 the owner kept every point the two reviews left open as built: in 1800 the seaman claimed under the 27th article of the treaty with Great Britain is not named, and in 1804 the reports of the armed march on Baton Rouge name its leader as the papers do.
+- **Not admitted:** 57 items for 1800 and 27 for 1804 joined the list (388 in all). In neither year does an item in 7 or more papers turn on private persons.
+
 ### What the reviews read and did not admit (22 November 2026)
 
-By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8), each with the number of papers, its kind and its reason.
+By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8) and 388 since 1800 and 1804 were reviewed (v0.11.10), each with the number of papers, its kind and its reason.
 
 - **Kinds:** below the rule (118), not chosen because its months and kind of news were already covered (80), digests, lists and proceedings (14), private persons (17) and other (54, most of them 1797's).
 - **Complete by check:** the script stops unless every key of `not_admitted`, `for_the_owner` and `for_user_decision` in every ledger (128 keys in 15 ledgers) is listed or accounted for: 32 items a later round admitted, 11 repeats, 4 counting decisions and 2 notes on admitted stories. It also checks that each of the 122 families of 1797 that were read is admitted or listed.
@@ -352,7 +361,7 @@ The pulse view is a direct translation of the admitted group records:
 Version 1 (below) is kept as `telescope-v1.html`.
 
 
-`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4, 199 since v0.11.6 and 207 since v0.11.8).
+`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4, 199 since v0.11.6, 207 since v0.11.8 and 243 since v0.11.10).
 
 - **Left to right:** the date of first printing.
 - **Up and down:** the average latitude of the towns whose papers printed the story, north at the top. A small fixed scatter, up to 0.12°, keeps stories printed by the same papers from stacking into a line.
@@ -595,5 +604,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.11.8) |
+| Data release | [`data/`](../data) (v0.11.10) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

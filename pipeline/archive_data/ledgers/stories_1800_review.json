@@ -1,0 +1,1500 @@
+{
+ "findings": {
+  "S00-001": [
+   "Scan matches the excerpt. Crop 2 shows the next resolution, 'And be it further resolved', at the head of the next column."
+  ],
+  "S00-002": [
+   "Scan matches the excerpt up to 'City of Washington'. The paper prints the whole resolution, so the '...' is RevX dropping printed text, not the paper abridging."
+  ],
+  "S00-003": [
+   "Scan matches the excerpt. The paper misprints 'WASHINTON', which RevX silently corrects."
+  ],
+  "S00-004": [
+   "Scan matches the excerpt."
+  ],
+  "S00-005": [
+   "Scan matches the excerpt except that RevX leaves out 'of America', partly lost in a damaged spot, and corrects the misprint 'errected'. The Ledger prints 'at the capit[...] of the City Washington'; the end of 'capit...' cannot be read."
+  ],
+  "S00-006": [
+   "The second crop shows the whole opening and it matches the excerpt. The first crop shows only a line of the next column ('...the allied army')."
+  ],
+  "S00-007": [
+   "Scan matches the excerpt."
+  ],
+  "S00-008": [
+   "Scan matches the excerpt except the French officer's name: the print shows '...ol-lant' with its first letters under a dark fold, so RevX 'Molant' is a transcription error that changes the name. The fold also hides a few letters at other line ends; what shows matches."
+  ],
+  "S00-009": [
+   "Scan reads 'their respective out posts'; RevX 'old posts' is a transcription error that changes the sense. The rest of the excerpt matches."
+  ],
+  "S00-010": [
+   "Scan matches the excerpt."
+  ],
+  "S00-011": [
+   "Crop re-cut from the text layer by an exact word sequence; it shows the President's message under its heading, and the scan matches the excerpt."
+  ],
+  "S00-012": [
+   "Scan matches the excerpt in substance; RevX leaves out 'Art,' before article 1 and spells the printed 'Demarkation' as 'Demarcation'."
+  ],
+  "S00-013": [
+   "Scan reads 'I transmit ed', the word 'transmitted' with one letter missing; RevX 'I transmit' changes the tense. The rest matches the excerpt."
+  ],
+  "S00-014": [
+   "Scan matches the excerpt."
+  ],
+  "S00-015": [
+   "Scan matches the excerpt; RevX only modernises the printed 'demarkation' to 'demarcation'."
+  ],
+  "S00-016": [
+   "Scan matches the excerpt."
+  ],
+  "S00-017": [
+   "Scan matches the excerpt."
+  ],
+  "S00-018": [
+   "Scan matches the excerpt. The Ledger prints 'these resolutions' where the other printings have 'those': a printed difference, not a transcription error."
+  ],
+  "S00-019": [
+   "Scan matches the excerpt. The paper prints 'and the family' where the other printings have 'and that the family'."
+  ],
+  "S00-020": [
+   "Scan matches the excerpt (right-hand column of the crop), with 'provisions' in the plural."
+  ],
+  "S00-021": [
+   "Scan matches the excerpt, except that the paper appears to print 'charcter', which RevX corrects to 'character'."
+  ],
+  "S00-022": [
+   "Crop placed by hand. The scan matches the excerpt; the paper prints 'conveying' where the others have 'conveyed', a printed difference."
+  ],
+  "S00-023": [
+   "Scan matches the excerpt."
+  ],
+  "S00-024": [
+   "Scan matches the excerpt; the print is faint but readable."
+  ],
+  "S00-025": [
+   "The print has the first resolution where RevX leaves it out; the CA text has small garbles ('Refolded', 'Jaw', 'effedb') that change no fact. The print itself reads 'the 27th article of amity', without 'the treaty of': a printed difference, not a transcription error."
+  ],
+  "S00-026": [
+   "Scan matches the excerpt."
+  ],
+  "S00-027": [
+   "Scan matches the excerpt; it reads 'In consequence of', 'conveyed' and 'the fourth of this month, I directed'."
+  ],
+  "S00-028": [
+   "Scan matches the excerpt."
+  ],
+  "S00-029": [
+   "Scan matches the excerpt. The print opens 'On Monday last Mr. Livingston' and reads 'on the table of the House of Representatives', wording the other printings do not have."
+  ],
+  "S00-030": [
+   "The Oracle prints the message in the same words as the other papers, with '4th' for 'fourth'; RevX's 'I have, in pursuance of the Resolution of the House, of the 4th inst. directed' is a transcription error that rewrites the sentence, so the point is not confirmed. The print also has the full text after 'papers intended'."
+  ],
+  "S00-031": [
+   "Scan matches the excerpt and confirms the Portland Gazette's own wording: 'IN conformity to', 'together with the report' and 'of its members', where the other papers print 'In consequence of', 'his report' and 'of the members'."
+  ],
+  "S00-032": [
+   "Scan matches the excerpt; NH prints '4th' where most papers print 'fourth'."
+  ],
+  "S00-033": [
+   "Scan matches the excerpt."
+  ],
+  "S00-034": [
+   "Scan matches the excerpt, with 'provisions' in the plural; the print has the misprint 'United Sates', which RevX silently corrects to 'States'."
+  ],
+  "S00-035": [
+   "Scan matches the excerpt; the print is small but legible."
+  ],
+  "S00-036": [
+   "Scan matches the excerpt. The Gazette prints 'General' and leaves out the sentence 'This step, in itself, announces the importance of its object.', going straight to 'Accept, my lord': a printed difference, not a transcription error."
+  ],
+  "S00-037": [
+   "Scan matches the excerpt; PJ prints 'General' in full and has the sentence ending 'its object.'"
+  ],
+  "S00-038": [
+   "Scan matches the excerpt. The Oracle prints 'deliver it into your own hands' without 'directly', and 'the assurances': printed differences, not transcription errors."
+  ],
+  "S00-039": [
+   "Scan matches the excerpt; it reads 'I DISPATCH' with a plain capital I, and 'Gen.'."
+  ],
+  "S00-040": [
+   "Scan matches the excerpt. The first letter of 'I DISPATCH' is printed as what looks like the figure 1, so RevX's '1' follows the print: a printed misprint, not a transcription error."
+  ],
+  "S00-041": [
+   "Scan matches the excerpt, except that the second 'Consul' is printed 'Couſul' with a turned letter, which RevX silently corrects: a printed misprint that does not change the sense."
+  ],
+  "S00-042": [
+   "Scan matches the excerpt; the scan is small and faint but legible."
+  ],
+  "S00-043": [
+   "Scan shows the order under the heading 'BLOCKADE OF GIBRALTAR.', introduced as a translation published at Cadiz on the 28th (not the 18th) of February. The CA text is garbled throughout but changes no fact."
+  ],
+  "S00-044": [
+   "Scan matches the excerpt."
+  ],
+  "S00-045": [
+   "Scan matches the excerpt, except that the print has the misprint 'possile', which RevX silently corrects to 'possible'."
+  ],
+  "S00-046": [
+   "Scan matches the excerpt. The print itself reads 'the injury' and 'the garrisons', and has the misprint 'sudjects', which RevX silently corrects."
+  ],
+  "S00-047": [
+   "Scan matches the excerpt; the CA text has small garbles that change no fact. The page prints the order once."
+  ],
+  "S00-048": [
+   "Scan matches the excerpt. The print heads the order 'BLOCKADE OF CADIZ.', after an introduction dating it at Cadiz on the 28th of February."
+  ],
+  "S00-049": [
+   "Scan matches the excerpt apart from the misprint 'rusulting', which RevX silently corrects. The print does have a heading, 'BLOCKADE OF GIBRALTER.'"
+  ],
+  "S00-050": [
+   "Scan matches the excerpt, including 'Gen. Souchet'. The print has a heading and dateline but no introductory sentence."
+  ],
+  "S00-051": [
+   "Scan matches the excerpt, which opens with the sentence 'General Melas, on summoning Massena...'."
+  ],
+  "S00-052": [
+   "Scan matches the excerpt. The print has a heading and dateline but no introductory sentence."
+  ],
+  "S00-053": [
+   "Scan matches the excerpt. The print itself reads 'give away' where the others have 'give way'; heading and dateline, no introductory sentence."
+  ],
+  "S00-054": [
+   "Scan reads 'Massena' (with long s); RevX 'Malena' is a transcription error that changes the name. The rest matches."
+  ],
+  "S00-055": [
+   "Scan matches the excerpt."
+  ],
+  "S00-056": [
+   "Scan matches the excerpt. The print itself reads 'you were forced' where the others have 'you was'."
+  ],
+  "S00-057": [
+   "Scan matches the excerpt, which now ends with 'shut up there.' (the batch verdict judged a longer excerpt). Just after it, RevX leaves out the rest of the letter, about 30 lines to the signature 'MASSENA', and runs on into the next item, 'Operations in ITALY'; the print has the whole letter."
+  ],
+  "S00-058": [
+   "Scan matches the excerpt. Above it the print has 'From Gen. MASSENA to Gen. BONAPARTE.' and 'MY GENERAL, Genoa, June 7.', which the excerpt does not include."
+  ],
+  "S00-059": [
+   "Scan reads 'preserved' and 'obstinate'; RevX 'preferred' and 'oblige' are transcription errors that change the words, and RevX leaves out the dateline 'Genoa June 7'. The print heads the letter 'From Gen. MASSENA to Gen. BUONAPARTE.'"
+  ],
+  "S00-060": [
+   "Scan matches the excerpt. NH spells 'Bonaparte' and prints 'My General, Genoa, June 7.' under the heading 'From Gen. Massena, to Gen. Bonaparte.'"
+  ],
+  "S00-061": [
+   "Scan matches the excerpt. Above it the print has 'From Gen. Massena to Gen. Buonaparte. Genoa, June 7. MY GENERAL,', which the excerpt does not include."
+  ],
+  "S00-062": [
+   "Scan matches the excerpt; the heading begins 'From Gen.' before 'MASSENA'. PJ alone spells 'honour'."
+  ],
+  "S00-063": [
+   "Scan matches the excerpt; the print has the other translation, 'Fortune not having crowned your bravery'."
+  ],
+  "S00-064": [
+   "Scan matches the excerpt; the heading begins 'From gen.' before 'Massena'."
+  ],
+  "S00-065": [
+   "Crop placed by hand. The scan matches the excerpt: the first resolution, through 'his military and political life.'"
+  ],
+  "S00-066": [
+   "Scan matches the excerpt; the dateline reads 'RATISBON, July 15.'"
+  ],
+  "S00-067": [
+   "Scan reads 'RATISBON, JULY 10.' where the other printings have July 15: a printed difference, not a transcription error. The CA text is garbled in places; 'allured' for 'assured' and 'exigence' for 'existence' are real words that change the sense."
+  ],
+  "S00-068": [
+   "Scan reads 'and durable it cannot be'; RevX 'and if it cannot be' drops a word and changes the sense. The print itself leaves out 'proposals' ('the First Consul's for peace') and spells 'Heriditary': printed differences, not transcription errors."
+  ],
+  "S00-069": [
+   "Scan matches the excerpt; the dateline reads 'RATISBON, JULY 15.' The print is faint but legible."
+  ],
+  "S00-070": [
+   "Scan matches the excerpt; the dateline reads 'RATISBON, JULY 15.'"
+  ],
+  "S00-071": [
+   "Scan matches the excerpt; the dateline reads 'RATISBON, JULY 15.'"
+  ],
+  "S00-072": [
+   "Scan reads 'United States are at present suspended'; RevX drops 'are', a small transcription error. The rest matches."
+  ],
+  "S00-073": [
+   "Scan matches the excerpt except two printer's spellings that RevX normalises: 'Thermider' for Thermidor and 'limitted'. Just past the excerpt the print reads 'granted the English' without 'to'."
+  ],
+  "S00-074": [
+   "Scan matches the excerpt; this paper prints 'U. States'."
+  ],
+  "S00-075": [
+   "Crop placed by hand. The scan matches the excerpt; the misprints 'existance' and 'Heriditary' are silently corrected in RevX."
+  ],
+  "S00-076": [
+   "Scan matches the excerpt."
+  ],
+  "S00-077": [
+   "Scan matches the excerpt. This paper goes from 'for some time.' straight to 'The United States and England, by the 25th article', with no 'It appears that' sentence at this point: a printed difference, not a transcription error."
+  ],
+  "S00-078": [
+   "Scan confirms the item. The CA text is garbled throughout ('at urgent' for 'at present', 'veiled' for 'vested') but changes no name, number or date; the print itself has no 'for some time' after 'resumed', a printed difference."
+  ],
+  "S00-079": [
+   "Crop placed by hand. The paper prints the whole first resolution; RevX shortens it with '...' after 'the city of Washington', leaving out the rest of the resolution, as on the Oracle of 4 January."
+  ],
+  "S00-080": [
+   "Scan matches the excerpt."
+  ],
+  "S00-081": [
+   "Scan matches the excerpt, including KY's own wording 'should be general' and 'dangerous, to existence of Italy': printed differences, not transcription errors."
+  ],
+  "S00-082": [
+   "Scan reads 'Janissary' (one letter faint); RevX 'Jamilla' is a transcription error that changes the word saying who stabbed Kleber. The rest matches."
+  ],
+  "S00-083": [
+   "Scan matches the excerpt apart from small slips: 'ſwoln' given as 'swollen', and 'totally', split at a line end, given as 'to tally'. The print goes on with 'Such of the inhabitants', so the missing 'Such' is only where the excerpt ends."
+  ],
+  "S00-084": [
+   "Scan matches the excerpt; RevX only sets the italic heading in capitals."
+  ],
+  "S00-085": [
+   "Scan reads 'Hoambo', as in the other papers; RevX 'Hoamho' is a one-letter slip. The rest matches the excerpt ('ſwoln' given as 'swollen')."
+  ],
+  "S00-086": [
+   "Scan reads 'Hoam-bo' (Hoambo, split across two lines), as in the other papers; RevX 'Hoang' puts a different name in its place. The rest matches the excerpt."
+  ],
+  "S00-087": [
+   "Scan matches the excerpt."
+  ],
+  "S00-088": [
+   "Scan matches the excerpt apart from small misreadings: the print's damaged 'Kleber' (it shows 'K' ber') became 'W. ber', and 'Extract' became 'Extra'. The paper prints 'It is reported a Janissary' without 'that' and, just past the excerpt, 'Gaze' for Gaza: printed differences."
+  ],
+  "S00-089": [
+   "Scan reads 'Hoambo'; RevX 'Hoamo' drops a letter. Just past the excerpt the Ledger prints 'this dreadful visitation' where the other papers have 'awful': a printed difference."
+  ],
+  "S00-090": [
+   "Scan matches the excerpt, under the heading 'INUNDATION IN CHINA.'; the only slip is 'ſwoln' given as 'swollen'."
+  ],
+  "S00-091": [
+   "Scan reads 'Count Bern-dorff', the Gazette's own misspelling of Bernstorff; RevX 'Bernadotte' is a transcription error that changes the name. The rest matches the excerpt."
+  ],
+  "S00-092": [
+   "Scan matches the excerpt and confirms this paper's own wording: headed 'FRENCH AFFAIRS IN EGYPT. CONSTANTINOPLE, July 28.', it opens 'Fresh intelligence has reached us from Egypt.' with no letter heading."
+  ],
+  "S00-093": [
+   "Scan confirms the plural 'diſpatches' and 'adorn them'. It reads 'Hoam-bo' (Hoambo), as in the other papers; RevX 'Hoang-ho' gives a different name, and 'swelled' for 'ſwoln' is a small slip."
+  ],
+  "S00-094": [
+   "Scan matches the excerpt; this paper prints 'dated July 28' and 'in command' without 'his'."
+  ],
+  "S00-095": [
+   "Scan matches the excerpt."
+  ],
+  "S00-096": [
+   "Scan matches the excerpt. The paper heads the item 'PHILADELPHIA, October 1.' and prints 'advantages to the public' where the others have 'the Republic': a printed difference, not a transcription error."
+  ],
+  "S00-097": [
+   "Scan matches the excerpt."
+  ],
+  "S00-098": [
+   "Scan matches the excerpt, printed under the heading 'England and Denmark.'"
+  ],
+  "S00-099": [
+   "The excerpt now comes from the CA text, because RevX turns the misprint 'Cunot' (for Count) into an offensive word. The CA text keeps the print's misprints ('Cunot Bernſterff', 'writen', 'to to') and has only small garbles; it changes no fact."
+  ],
+  "S00-100": [
+   "Scan matches the excerpt, including 'Copenhagen, August 30.' with the month in full and no year."
+  ],
+  "S00-101": [
+   "Scan matches the excerpt, including the printed lower-case 'general Menou'."
+  ],
+  "S00-102": [
+   "Scan matches the excerpt; the only slip is 'ſwoln' given as 'swollen'."
+  ],
+  "S00-103": [
+   "Scan reads 'the 9th ult.' where the other printings have the 29th: a printed difference, not a transcription error. The rest matches the excerpt."
+  ],
+  "S00-104": [
+   "Crop placed by hand. The scan matches the excerpt except the name 'Lehrback', which RevX reads 'Lehiback' (minor); the heading's misprint 'Conveneion' is silently corrected. The Gazette prints the longer form, with 'Royal, and Apostolic' and 'Field Marshal'."
+  ],
+  "S00-105": [
+   "Scan matches the excerpt. The print reads 'The Court de Lehrbach', a misprint for 'Count' that RevX reproduces; it has 'for a Prolongation', 'General' and no 'Royal, and Apostolic'."
+  ],
+  "S00-106": [
+   "Scan matches the excerpt; this paper abbreviates 'Gen' and 'gen.' as transcribed. The name Menou is faint in both places (it looks like 'Menu' and 'Menau'), read here as Menou."
+  ],
+  "S00-107": [
+   "Scan confirms the Kentucky Gazette's shorter opening, 'Recent accounts from Canton, state that', under 'INUNDATION IN CHINA.'; the rest matches the excerpt ('ſwoln' given as 'swollen')."
+  ],
+  "S00-108": [
+   "The Kentucky Gazette prints the name as 'Barſtorff', a printed difference; RevX 'Barthorff' misreads one letter of it. The rest matches the excerpt."
+  ],
+  "S00-109": [
+   "Scan matches the excerpt except the name: the print reads 'Lehrbach'; RevX 'Lehbach' drops a letter but it is the same name."
+  ],
+  "S00-110": [
+   "Crop placed by hand. The scan matches the excerpt; the National Intelligencer prints the longer form, with 'Royal, and Apostolic' and 'Field Marshal'."
+  ],
+  "S00-111": [
+   "Crop re-cut by hand to take in the opening. The scan matches the excerpt up to its last words, where the print reads 'the French army of the Rhine, Victor' and RevX 'at the Rhine, M.', changing the officer's name; that line is partly crossed by a stroke on the scan."
+  ],
+  "S00-112": [
+   "Scan matches the excerpt except the name: the print reads 'Lehrbach'; RevX 'Lehbach' drops a letter but it is the same name. The heading's 'of Germany' (others 'in Germany') is a printed difference."
+  ],
+  "S00-113": [
+   "Crop placed by hand. The scan matches the excerpt: the salutation and the speech's first paragraph."
+  ],
+  "S00-114": [
+   "Crop extended down by hand. The first sentence matches; for the second, RevX gives a different sentence ('While we congratulate ourselves on the convention of the Legislature at the permanent seat of government') where the print reads, as the other papers do, 'We meet you, Sir, and the other branch of the National Legislature, in the City'."
+  ],
+  "S00-115": [
+   "Crop placed by hand. The scan matches the excerpt."
+  ],
+  "S00-116": [
+   "Scan matches the excerpt."
+  ],
+  "S00-117": [
+   "Scan matches the excerpt, except that the print abbreviates 'the U. States', as ALX does, and RevX expands it to 'United States' (minor). Like ALX, the print reads 'accept of my'."
+  ],
+  "S00-118": [
+   "Scan matches the excerpt and reads 'Government' where most printings have 'Governors': a printed difference, not a transcription error. The print misspells 'apropriate', which RevX silently corrects."
+  ],
+  "S00-119": [
+   "Scan matches the excerpt; the print has 'two houses' in lower case where RevX capitalises 'Houses', which changes nothing."
+  ],
+  "S00-120": [
+   "Scan matches the excerpt."
+  ],
+  "S00-121": [
+   "Crop placed by hand. The scan matches the excerpt: the salutation and the speech's first paragraph."
+  ],
+  "S00-122": [
+   "Scan matches the excerpt, including 'understand & believe'."
+  ],
+  "S00-123": [
+   "Scan matches the excerpt, salutation included, under the heading 'SPEECH;'."
+  ],
+  "S00-124": [
+   "Scan matches the excerpt. The print reads 'For the prolongation', 'The count Lehrbach' without 'de', and 'general'."
+  ],
+  "S00-125": [
+   "Scan matches the excerpt; the speech follows the Washington report of Saturday, Nov. 22."
+  ],
+  "S00-126": [
+   "Scan matches the excerpt. The print has no 'Gentlemen of the Senate ...' salutation: the speech starts at 'IMMEDIATELY' under the heading 'SPEECH.', a printed difference."
+  ],
+  "S00-127": [
+   "Scan matches the excerpt."
+  ],
+  "S00-128": [
+   "Scan matches the excerpt. The print has the misprint 'directious', which RevX silently corrects to 'directions'."
+  ],
+  "S00-129": [
+   "Scan matches the excerpt, with 'Governors'."
+  ],
+  "S00-130": [
+   "Scan matches the excerpt."
+  ],
+  "S00-131": [
+   "Scan matches the excerpt."
+  ],
+  "S00-132": [
+   "Scan matches the excerpt and reads 'government and people' where most printings have 'Governors': a printed difference, not a transcription error."
+  ],
+  "S00-133": [
+   "Scan matches the excerpt. The print itself leaves out 'that' ('truth, the hearts'): a printed difference, not a transcription error."
+  ],
+  "S00-134": [
+   "Scan matches the excerpt, including 'the U. States' and 'accept of my'. The print misspells 'exellent', which RevX silently corrects."
+  ],
+  "S00-135": [
+   "Scan matches the excerpt."
+  ],
+  "S00-136": [
+   "Scan matches the excerpt."
+  ],
+  "S00-137": [
+   "The print has the full address, but the transcription goes straight from 'present session.' to 'Nor can we on this occasion', leaving out the whole paragraph on the seat of government in the District of Columbia. The rest of the excerpt matches the scan."
+  ],
+  "S00-138": [
+   "Scan matches the excerpt, under the heading 'THE PRESIDENT'S REPLY.'"
+  ],
+  "S00-139": [
+   "Scan has the full text: after 'acknowledgements.' it reads 'With you I ardently hope...' through '...models for imitation.' (four sentences, about 130 words, including the passage on the death of 'that hero and sage'). RevX drops them and runs on to 'I thank you', so the 'I thank' reading is a transcription error, not a printed difference."
+  ],
+  "S00-140": [
+   "The scan prints the sentence saying the Dey of Algiers by force compelled Capt. Bainbridge and threatened war and slavery in case of refusal; RevX leaves that sentence out and reads 'ſailed' as 'failed'. The rest matches."
+  ],
+  "S00-141": [
+   "Scan matches the excerpt, with 'Governors &'."
+  ],
+  "S00-142": [
+   "Scan matches the excerpt. The print does have the salutation 'Gentlemen of the Senate, and Gentlemen of the House of Representatives:' before 'Immediately'; the excerpt starts after it."
+  ],
+  "S00-143": [
+   "Scan matches the excerpt. Kentucky prints 'the seat of the national government', with an extra 'the': a printed difference, not a transcription error."
+  ],
+  "S00-144": [
+   "Crop extended up by hand to take in the salutation; the scan matches the excerpt."
+  ],
+  "S00-145": [
+   "Crop re-cut from the text layer and extended down by hand; the scan matches the excerpt through 'that permanence'."
+  ],
+  "S00-146": [
+   "Scan matches the excerpt, with 'Governors'; the salutation 'SIR' is clipped at the top edge of the crop."
+  ],
+  "S00-147": [
+   "Scan reads 'COMPLETED, by the habits of a long life', so RevX follows the print: the Portland Gazette misprinted 'Compelled'. A printed difference, not a transcription error; the rest matches."
+  ],
+  "S00-148": [
+   "Scan reads '50 from Algiers' where the other printings have 40: a printed difference, transcribed faithfully. RevX reads 'ſailed' as 'failed' (the long s is faint on this coarse scan) and 'Seignior' as 'Seigneur'."
+  ],
+  "S00-149": [
+   "Scan matches the excerpt."
+  ],
+  "S00-150": [
+   "The two crops together show the whole excerpt, and it matches the scan."
+  ],
+  "S00-151": [
+   "Scan matches the excerpt."
+  ],
+  "S00-152": [
+   "Scan matches the excerpt: the New Hampshire Gazette's own Salem account of 12 December, worded as transcribed. RevX only modernises one 'Gibralter' to 'Gibraltar'."
+  ],
+  "S00-153": [
+   "Scan matches the excerpt, with 'Governors'. The print reads 'the other branches' where the other printings have 'branch': a printed difference, not a transcription error."
+  ],
+  "S00-154": [
+   "Scan matches the excerpt. RevX's 'feat of national government' follows the print, whose letter looks like an f rather than a long s; at this resolution that is not certain, so it is not counted as an error."
+  ],
+  "S00-155": [
+   "Scan matches the excerpt."
+  ],
+  "S00-156": [
+   "Scan matches the excerpt."
+  ],
+  "S00-157": [
+   "Scan matches the excerpt except that RevX reads 'ſailed' as 'failed'."
+  ],
+  "S00-158": [
+   "Crop placed by hand. The CA text is garbled but changes no fact; the Providence Journal prints 'legislative authority' where the other papers have 'legitimate authority', a printed difference."
+  ],
+  "S00-159": [
+   "Scan matches the excerpt. The heading above it reads 'Late from Algiers, and Gibralter.'"
+  ],
+  "S00-160": [
+   "Scan reads 'ſailed for Conſtantinople'; RevX 'dated' changes the sense. Scan also reads 'Seignior' where RevX has 'Seignor'; the rest matches."
+  ],
+  "S00-161": [
+   "Scan matches the excerpt, including the paper's own 'and ſenſe' and 'dearer my Heart'."
+  ],
+  "S00-162": [
+   "Crop placed by hand to take in the opening. The scan matches the excerpt except the printed spelling 'negociate', which RevX modernises."
+  ],
+  "S00-163": [
+   "Scan matches the excerpt."
+  ],
+  "S00-164": [
+   "Scan matches the excerpt. NI prints its own wording of the first form ('The Premier Consul ... in the name of the people of France ... equally desirous to terminate'): a printed difference, not a transcription error; Art. I is not in the crop."
+  ],
+  "S00-165": [
+   "Scan matches the excerpt except that RevX reads 'the differences' where the print has 'these differences', a slip that does not change the sense."
+  ],
+  "S00-166": [
+   "Scan matches the excerpt; the paper prints 'dearer My Heart' where most printings have 'nearer'."
+  ],
+  "S00-167": [
+   "Scan matches the excerpt except that RevX modernises the printed 'negociate' to 'negotiate'. The print's 'the Plenipotentiaries' and 'full power' differ from the other printings' 'their' and 'full powers': printed differences, not transcription errors."
+  ],
+  "S00-168": [
+   "Scan matches the excerpt. The salutation 'My Lords, and Gentlemen,' is printed above it, and the paper prints 'all Meaſures' without 'ſuch'."
+  ],
+  "S00-169": [
+   "Scan matches the excerpt; the print is smudged by a double impression but every word can be read. It confirms the second form: 'the constituted authorities', 'the two sister Republics' and 'a sincere and universal Peace'."
+  ],
+  "S00-170": [
+   "Scan matches the excerpt except that RevX modernises the printed 'negociate' to 'negotiate'."
+  ],
+  "S00-171": [
+   "Scan matches the excerpt except that RevX reads 'ſailed' as 'failed' and 'Seignior' as 'Seigneur'."
+  ],
+  "S00-172": [
+   "Two crops cover the excerpt; it matches except that RevX reads 'ſailed' as 'failed'. The paper rewrites the opening as 'On Tueſday the 9th inſtant arrived at Salem'."
+  ],
+  "S00-173": [
+   "The first crop matches the excerpt, with 'price' in the singular as printed. The second crop shows only a scrap of another line."
+  ],
+  "S00-174": [
+   "Scan matches the excerpt. It confirms the second form, as in ALX: 'the constituted authorities', 'the two sister Republics' and 'a sincere and universal Peace'."
+  ],
+  "S00-175": [
+   "Scan matches the excerpt. Just past it, Kentucky prints 'efficient powers' where the other printings have 'power': a printed difference."
+  ],
+  "S00-176": [
+   "Scan matches the excerpt; the crop is small but legible."
+  ],
+  "S00-177": [
+   "Scan matches the excerpt and reads 'government and people' where most printings have 'Governors': a printed difference, not a transcription error."
+  ],
+  "S00-178": [
+   "Crop placed by hand to take in the opening. The scan matches the excerpt."
+  ],
+  "S00-179": [
+   "Scan matches the excerpt."
+  ],
+  "S00-180": [
+   "Scan matches the excerpt, including the paper's own 'and ſenſe', 'than I otherwiſe intended' and 'care &'."
+  ],
+  "S00-181": [
+   "Scan reads 'SALEM, December 11', like the others; RevX 'December 17' changes the date. 'On Thurſday' is printed (the others have Tuesday): a printed difference, not a transcription error; RevX also reads 'ſailed' as 'failed'."
+  ],
+  "S00-182": [
+   "Scan matches the excerpt."
+  ]
+ },
+ "crops": {
+  "S00-001": [
+   "S00-001-1.jpg",
+   "S00-001-2.jpg"
+  ],
+  "S00-002": [
+   "S00-002.jpg"
+  ],
+  "S00-003": [
+   "S00-003.jpg"
+  ],
+  "S00-004": [
+   "S00-004-1.jpg",
+   "S00-004-2.jpg"
+  ],
+  "S00-005": [
+   "S00-005-1.jpg",
+   "S00-005-2.jpg"
+  ],
+  "S00-006": [
+   "S00-006-1.jpg",
+   "S00-006-2.jpg"
+  ],
+  "S00-007": [
+   "S00-007.jpg"
+  ],
+  "S00-008": [
+   "S00-008.jpg"
+  ],
+  "S00-009": [
+   "S00-009.jpg"
+  ],
+  "S00-010": [
+   "S00-010.jpg"
+  ],
+  "S00-011": [
+   "S00-011.jpg"
+  ],
+  "S00-012": [
+   "S00-012.jpg"
+  ],
+  "S00-013": [
+   "S00-013.jpg"
+  ],
+  "S00-014": [
+   "S00-014.jpg"
+  ],
+  "S00-015": [
+   "S00-015.jpg"
+  ],
+  "S00-016": [
+   "S00-016.jpg"
+  ],
+  "S00-017": [
+   "S00-017.jpg"
+  ],
+  "S00-018": [
+   "S00-018.jpg"
+  ],
+  "S00-019": [
+   "S00-019.jpg"
+  ],
+  "S00-020": [
+   "S00-020.jpg"
+  ],
+  "S00-021": [
+   "S00-021.jpg"
+  ],
+  "S00-022": [
+   "S00-022.jpg"
+  ],
+  "S00-023": [
+   "S00-023.jpg"
+  ],
+  "S00-024": [
+   "S00-024.jpg"
+  ],
+  "S00-025": [
+   "S00-025.jpg"
+  ],
+  "S00-026": [
+   "S00-026.jpg"
+  ],
+  "S00-027": [
+   "S00-027.jpg"
+  ],
+  "S00-028": [
+   "S00-028.jpg"
+  ],
+  "S00-029": [
+   "S00-029.jpg"
+  ],
+  "S00-030": [
+   "S00-030.jpg"
+  ],
+  "S00-031": [
+   "S00-031.jpg"
+  ],
+  "S00-032": [
+   "S00-032.jpg"
+  ],
+  "S00-033": [
+   "S00-033.jpg"
+  ],
+  "S00-034": [
+   "S00-034.jpg"
+  ],
+  "S00-035": [
+   "S00-035.jpg"
+  ],
+  "S00-036": [
+   "S00-036.jpg"
+  ],
+  "S00-037": [
+   "S00-037.jpg"
+  ],
+  "S00-038": [
+   "S00-038.jpg"
+  ],
+  "S00-039": [
+   "S00-039.jpg"
+  ],
+  "S00-040": [
+   "S00-040.jpg"
+  ],
+  "S00-041": [
+   "S00-041.jpg"
+  ],
+  "S00-042": [
+   "S00-042.jpg"
+  ],
+  "S00-043": [
+   "S00-043.jpg"
+  ],
+  "S00-044": [
+   "S00-044.jpg"
+  ],
+  "S00-045": [
+   "S00-045.jpg"
+  ],
+  "S00-046": [
+   "S00-046.jpg"
+  ],
+  "S00-047": [
+   "S00-047.jpg"
+  ],
+  "S00-048": [
+   "S00-048.jpg"
+  ],
+  "S00-049": [
+   "S00-049.jpg"
+  ],
+  "S00-050": [
+   "S00-050.jpg"
+  ],
+  "S00-051": [
+   "S00-051.jpg"
+  ],
+  "S00-052": [
+   "S00-052.jpg"
+  ],
+  "S00-053": [
+   "S00-053.jpg"
+  ],
+  "S00-054": [
+   "S00-054.jpg"
+  ],
+  "S00-055": [
+   "S00-055.jpg"
+  ],
+  "S00-056": [
+   "S00-056.jpg"
+  ],
+  "S00-057": [
+   "S00-057.jpg"
+  ],
+  "S00-058": [
+   "S00-058.jpg"
+  ],
+  "S00-059": [
+   "S00-059.jpg"
+  ],
+  "S00-060": [
+   "S00-060.jpg"
+  ],
+  "S00-061": [
+   "S00-061.jpg"
+  ],
+  "S00-062": [
+   "S00-062.jpg"
+  ],
+  "S00-063": [
+   "S00-063.jpg"
+  ],
+  "S00-064": [
+   "S00-064.jpg"
+  ],
+  "S00-065": [
+   "S00-065.jpg"
+  ],
+  "S00-066": [
+   "S00-066.jpg"
+  ],
+  "S00-067": [
+   "S00-067.jpg"
+  ],
+  "S00-068": [
+   "S00-068.jpg"
+  ],
+  "S00-069": [
+   "S00-069.jpg"
+  ],
+  "S00-070": [
+   "S00-070.jpg"
+  ],
+  "S00-071": [
+   "S00-071.jpg"
+  ],
+  "S00-072": [
+   "S00-072.jpg"
+  ],
+  "S00-073": [
+   "S00-073.jpg"
+  ],
+  "S00-074": [
+   "S00-074.jpg"
+  ],
+  "S00-075": [
+   "S00-075.jpg"
+  ],
+  "S00-076": [
+   "S00-076.jpg"
+  ],
+  "S00-077": [
+   "S00-077.jpg"
+  ],
+  "S00-078": [
+   "S00-078.jpg"
+  ],
+  "S00-079": [
+   "S00-079.jpg"
+  ],
+  "S00-080": [
+   "S00-080.jpg"
+  ],
+  "S00-081": [
+   "S00-081.jpg"
+  ],
+  "S00-082": [
+   "S00-082.jpg"
+  ],
+  "S00-083": [
+   "S00-083.jpg"
+  ],
+  "S00-084": [
+   "S00-084.jpg"
+  ],
+  "S00-085": [
+   "S00-085.jpg"
+  ],
+  "S00-086": [
+   "S00-086.jpg"
+  ],
+  "S00-087": [
+   "S00-087.jpg"
+  ],
+  "S00-088": [
+   "S00-088.jpg"
+  ],
+  "S00-089": [
+   "S00-089.jpg"
+  ],
+  "S00-090": [
+   "S00-090.jpg"
+  ],
+  "S00-091": [
+   "S00-091.jpg"
+  ],
+  "S00-092": [
+   "S00-092.jpg"
+  ],
+  "S00-093": [
+   "S00-093.jpg"
+  ],
+  "S00-094": [
+   "S00-094.jpg"
+  ],
+  "S00-095": [
+   "S00-095.jpg"
+  ],
+  "S00-096": [
+   "S00-096.jpg"
+  ],
+  "S00-097": [
+   "S00-097.jpg"
+  ],
+  "S00-098": [
+   "S00-098.jpg"
+  ],
+  "S00-099": [
+   "S00-099.jpg"
+  ],
+  "S00-100": [
+   "S00-100.jpg"
+  ],
+  "S00-101": [
+   "S00-101.jpg"
+  ],
+  "S00-102": [
+   "S00-102.jpg"
+  ],
+  "S00-103": [
+   "S00-103-1.jpg",
+   "S00-103-2.jpg"
+  ],
+  "S00-104": [
+   "S00-104.jpg"
+  ],
+  "S00-105": [
+   "S00-105.jpg"
+  ],
+  "S00-106": [
+   "S00-106.jpg"
+  ],
+  "S00-107": [
+   "S00-107.jpg"
+  ],
+  "S00-108": [
+   "S00-108.jpg"
+  ],
+  "S00-109": [
+   "S00-109.jpg"
+  ],
+  "S00-110": [
+   "S00-110.jpg"
+  ],
+  "S00-111": [
+   "S00-111.jpg"
+  ],
+  "S00-112": [
+   "S00-112.jpg"
+  ],
+  "S00-113": [
+   "S00-113.jpg"
+  ],
+  "S00-114": [
+   "S00-114.jpg"
+  ],
+  "S00-115": [
+   "S00-115.jpg"
+  ],
+  "S00-116": [
+   "S00-116.jpg"
+  ],
+  "S00-117": [
+   "S00-117.jpg"
+  ],
+  "S00-118": [
+   "S00-118.jpg"
+  ],
+  "S00-119": [
+   "S00-119.jpg"
+  ],
+  "S00-120": [
+   "S00-120.jpg"
+  ],
+  "S00-121": [
+   "S00-121.jpg"
+  ],
+  "S00-122": [
+   "S00-122.jpg"
+  ],
+  "S00-123": [
+   "S00-123.jpg"
+  ],
+  "S00-124": [
+   "S00-124.jpg"
+  ],
+  "S00-125": [
+   "S00-125.jpg"
+  ],
+  "S00-126": [
+   "S00-126-1.jpg",
+   "S00-126-2.jpg"
+  ],
+  "S00-127": [
+   "S00-127.jpg"
+  ],
+  "S00-128": [
+   "S00-128.jpg"
+  ],
+  "S00-129": [
+   "S00-129.jpg"
+  ],
+  "S00-130": [
+   "S00-130.jpg"
+  ],
+  "S00-131": [
+   "S00-131.jpg"
+  ],
+  "S00-132": [
+   "S00-132.jpg"
+  ],
+  "S00-133": [
+   "S00-133.jpg"
+  ],
+  "S00-134": [
+   "S00-134.jpg"
+  ],
+  "S00-135": [
+   "S00-135.jpg"
+  ],
+  "S00-136": [
+   "S00-136.jpg"
+  ],
+  "S00-137": [
+   "S00-137.jpg"
+  ],
+  "S00-138": [
+   "S00-138.jpg"
+  ],
+  "S00-139": [
+   "S00-139.jpg"
+  ],
+  "S00-140": [
+   "S00-140.jpg"
+  ],
+  "S00-141": [
+   "S00-141.jpg"
+  ],
+  "S00-142": [
+   "S00-142.jpg"
+  ],
+  "S00-143": [
+   "S00-143.jpg"
+  ],
+  "S00-144": [
+   "S00-144.jpg"
+  ],
+  "S00-145": [
+   "S00-145.jpg"
+  ],
+  "S00-146": [
+   "S00-146.jpg"
+  ],
+  "S00-147": [
+   "S00-147.jpg"
+  ],
+  "S00-148": [
+   "S00-148.jpg"
+  ],
+  "S00-149": [
+   "S00-149.jpg"
+  ],
+  "S00-150": [
+   "S00-150-1.jpg",
+   "S00-150-2.jpg"
+  ],
+  "S00-151": [
+   "S00-151.jpg"
+  ],
+  "S00-152": [
+   "S00-152.jpg"
+  ],
+  "S00-153": [
+   "S00-153.jpg"
+  ],
+  "S00-154": [
+   "S00-154.jpg"
+  ],
+  "S00-155": [
+   "S00-155.jpg"
+  ],
+  "S00-156": [
+   "S00-156.jpg"
+  ],
+  "S00-157": [
+   "S00-157.jpg"
+  ],
+  "S00-158": [
+   "S00-158.jpg"
+  ],
+  "S00-159": [
+   "S00-159.jpg"
+  ],
+  "S00-160": [
+   "S00-160.jpg"
+  ],
+  "S00-161": [
+   "S00-161.jpg"
+  ],
+  "S00-162": [
+   "S00-162.jpg"
+  ],
+  "S00-163": [
+   "S00-163.jpg"
+  ],
+  "S00-164": [
+   "S00-164.jpg"
+  ],
+  "S00-165": [
+   "S00-165.jpg"
+  ],
+  "S00-166": [
+   "S00-166.jpg"
+  ],
+  "S00-167": [
+   "S00-167.jpg"
+  ],
+  "S00-168": [
+   "S00-168.jpg"
+  ],
+  "S00-169": [
+   "S00-169.jpg"
+  ],
+  "S00-170": [
+   "S00-170.jpg"
+  ],
+  "S00-171": [
+   "S00-171.jpg"
+  ],
+  "S00-172": [
+   "S00-172-1.jpg",
+   "S00-172-2.jpg"
+  ],
+  "S00-173": [
+   "S00-173-1.jpg",
+   "S00-173-2.jpg"
+  ],
+  "S00-174": [
+   "S00-174.jpg"
+  ],
+  "S00-175": [
+   "S00-175.jpg"
+  ],
+  "S00-176": [
+   "S00-176.jpg"
+  ],
+  "S00-177": [
+   "S00-177.jpg"
+  ],
+  "S00-178": [
+   "S00-178.jpg"
+  ],
+  "S00-179": [
+   "S00-179.jpg"
+  ],
+  "S00-180": [
+   "S00-180.jpg"
+  ],
+  "S00-181": [
+   "S00-181.jpg"
+  ],
+  "S00-182": [
+   "S00-182.jpg"
+  ]
+ },
+ "boxes": {
+  "S00-011": [
+   [
+    2910,
+    345,
+    3786,
+    1116
+   ]
+  ],
+  "S00-020": [
+   [
+    3150,
+    3042,
+    3963,
+    3395
+   ]
+  ],
+  "S00-022": [
+   [
+    1625,
+    5125,
+    2405,
+    5630
+   ]
+  ],
+  "S00-026": [
+   [
+    150,
+    1815,
+    643,
+    2010
+   ]
+  ],
+  "S00-065": [
+   [
+    1265,
+    1268,
+    1830,
+    1560
+   ]
+  ],
+  "S00-075": [
+   [
+    975,
+    365,
+    1360,
+    640
+   ]
+  ],
+  "S00-079": [
+   [
+    225,
+    3870,
+    1145,
+    4300
+   ]
+  ],
+  "S00-099": [
+   [
+    691,
+    2186,
+    1667,
+    2758
+   ]
+  ],
+  "S00-104": [
+   [
+    2440,
+    820,
+    3160,
+    1240
+   ]
+  ],
+  "S00-110": [
+   [
+    865,
+    2500,
+    1545,
+    2895
+   ]
+  ],
+  "S00-111": [
+   [
+    403,
+    3424,
+    1246,
+    4050
+   ]
+  ],
+  "S00-113": [
+   [
+    115,
+    1290,
+    770,
+    1800
+   ]
+  ],
+  "S00-114": [
+   [
+    178,
+    631,
+    897,
+    1160
+   ]
+  ],
+  "S00-115": [
+   [
+    950,
+    3770,
+    1625,
+    4190
+   ]
+  ],
+  "S00-121": [
+   [
+    770,
+    355,
+    1325,
+    675
+   ]
+  ],
+  "S00-134": [
+   [
+    165,
+    2745,
+    836,
+    3196
+   ]
+  ],
+  "S00-144": [
+   [
+    1813,
+    700,
+    2434,
+    1090
+   ]
+  ],
+  "S00-145": [
+   [
+    1223,
+    2521,
+    1832,
+    2850
+   ]
+  ],
+  "S00-147": [
+   [
+    146,
+    266,
+    750,
+    597
+   ]
+  ],
+  "S00-158": [
+   [
+    770,
+    2800,
+    1315,
+    3160
+   ]
+  ],
+  "S00-162": [
+   [
+    240,
+    2440,
+    1140,
+    3440
+   ]
+  ],
+  "S00-169": [
+   [
+    230,
+    975,
+    930,
+    1525
+   ]
+  ],
+  "S00-178": [
+   [
+    80,
+    540,
+    720,
+    925
+   ]
+  ]
+ },
+ "notes": {
+  "S00-067": "The Oracle dates the paragraph 'RATISBON, JULY 10.' where the other papers have July 15. RevX lacks this paragraph, so the excerpt comes from the older CA transcription.",
+  "S00-091": "The Gazette of the United States prints the Danish minister's name 'Berndorff' (the others Bernstorff).",
+  "S00-147": "The Portland Gazette misprints the reply's first word 'COMPLETED' where the other papers have 'Compelled'.",
+  "S00-148": "The Portland Gazette prints '50 from Algiers' where the other papers have 40.",
+  "S00-158": "The Providence Journal prints 'the source of all legislative authority' where the other papers have 'legitimate authority'. RevX lacks the opening of this item, so the excerpt comes from the older CA transcription.",
+  "S00-181": "The Virginia Argus prints 'On Thursday arrived at this port' where the other papers have Tuesday."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1800 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 1,473 items printed somewhere; by the finder's count, the Gazette of the United States's two catalogue numbers taken as one paper, 7 reach 9 papers, 14 reach 8, 33 reach 7 and 88 reach 6). The same script was run with year 1799 over the 1800 pages (items_from_1799.json: 49 items, one in 7 papers and one in 6). Every item in 6 or more papers was read on its pages or checked for a seventh paper by machine (about 220 words of its text compared with every page of the year), and every item that might reach 7 was counted again by its own words with phrase searches over all 2,575 pages in both transcriptions, reading every hit.",
+  "selection_rule": "The one admission rule (R-01), as for 1776, 1805, 1806, 1807, 1808 and 1809: every single printed item in 9 or more newspapers is admitted, except digests; items in 7 or 8 papers are chosen to cover the months and the kinds of news; items are counted one by one; a sub-story may have fewer papers when its parent reaches 7. No year-specific threshold: items of 1800 reach 7, 8 and 9 papers. In 1800, 6 to 10 papers are in print in any three weeks (7 for most of the year), so from February to July an item in 7 papers was printed by every paper that survives for its weeks; no item first printed in May or June reaches 7. Where several items of one affair reach the band in the same weeks, the most widely printed is chosen and the others are listed as not chosen, unless they are separate public acts (the President's speech and each house's address and his replies). Nothing is held back for its subject.",
+  "paper_counting": "The Gazette of the United States has two catalogue numbers in 1800 (sn83025881 to 7 May, sn84026272 from 1 July): one paper, counted once (C-04). The Ulster County Gazette of 4 January 1800 has seven scanned pages: pages 5 to 7 are a second copy of pages 1, 2 and 4 (C-05); no admitted printing stands on that issue.",
+  "items_admitted": {
+   "joint-resolutions-23-december-1799-on-washington": [
+    "I00-0033",
+    "I00-0032 (part)"
+   ],
+   "president-message-8-january-1800-mrs-washington-letter": [
+    "I00-0035"
+   ],
+   "convention-of-alkmaar-october-1799": [
+    "I00-0010",
+    "I00-0011"
+   ],
+   "livingston-resolutions-3-february-1800": [
+    "I00-0040"
+   ],
+   "president-message-7-february-1800-papers-on-the-27th-article": [
+    "I00-0048",
+    "I00-0108",
+    "I99-0011 (the papers sent with it)"
+   ],
+   "bonaparte-letter-to-the-king-and-grenville-answer": [
+    "found by phrase search; the finder's items I00-0055 and I00-0056 are the second part"
+   ],
+   "spanish-order-against-trade-with-gibraltar-1800": [
+    "I00-0115"
+   ],
+   "melas-summons-to-massena-genoa": [
+    "I00-0057"
+   ],
+   "massena-report-evacuation-of-genoa-7-june-1800": [
+    "I00-0059",
+    "I00-0094",
+    "I00-0120"
+   ],
+   "ratisbon-report-vienna-answer-to-first-consul": [
+    "I00-0043"
+   ],
+   "paris-6-august-1800-conferences-with-american-envoys": [
+    "I00-0128",
+    "I00-0129",
+    "I00-0130",
+    "I00-0131"
+   ],
+   "constantinople-letter-28-july-1800-kleber-murdered": [
+    "I00-0013",
+    "I00-0014"
+   ],
+   "london-report-floods-in-china-1800": [
+    "I00-0012"
+   ],
+   "whitworth-convention-with-denmark-1800": [
+    "I00-0015"
+   ],
+   "convention-prolonging-the-armistice-in-germany-1800": [
+    "I00-0061",
+    "I00-0062"
+   ],
+   "president-speech-22-november-1800": [
+    "I00-0016",
+    "I00-0017",
+    "I00-0018",
+    "I00-0019"
+   ],
+   "senate-address-25-november-1800": [
+    "I00-0002",
+    "I00-0003",
+    "I00-0001 (part)"
+   ],
+   "president-reply-to-the-senate-november-1800": [
+    "I00-0004"
+   ],
+   "house-address-november-1800": [
+    "I00-0006",
+    "I00-0007",
+    "I00-0001 (part)"
+   ],
+   "president-reply-to-the-house-november-1800": [
+    "I00-0005"
+   ],
+   "salem-report-ship-brutus-from-algiers-december-1800": [
+    "I00-0020",
+    "I00-0021",
+    "I00-0064"
+   ],
+   "king-george-speech-11-november-1800": [
+    "I00-0022",
+    "I00-0023",
+    "I00-0292"
+   ],
+   "convention-between-france-and-the-united-states-1800": [
+    "I00-0147",
+    "I00-0148",
+    "I00-0149",
+    "I00-0285",
+    "I00-0287",
+    "I00-0288",
+    "I00-0289",
+    "I00-0290",
+    "I00-0291",
+    "I00-0096 (part)"
+   ]
+  },
+  "counted_item_by_item": {
+   "Paper counts": "Counted item by item, five items of 1800 reach 9 papers: the Senate's address of 25 November, the President's reply to it, the House's address and the President's reply to it, and the Salem report of the ship Brutus (9 with the New Hampshire Gazette's other account of the same arrival, 8 in one wording). Eight reach 8: the convention for the evacuation of Holland, the letter from Constantinople on Kleber, the report of floods in China, Lord Whitworth's convention with Denmark, the President's speech of 22 November, the King's speech of 11 November, the convention with France (two translations) and the Mortefontaine entertainment (two forms). Twenty-two reach 7. Every other item is in 6 papers or fewer by its own words.",
+   "Joins made by the finder": "The finder chains the acts of the first session of the Sixth Congress through their enacting formula, signatures and titles (items of up to 91 printings), the Washington resolutions with the proclamations that recite them, and the paragraphs of one run of London news (Kleber, Canton, the Brest fleet, Munich). Each text was counted by its own words: no act reaches 7 papers (six papers printed the laws of the session; the Portland Gazette printed few federal acts); the President's proclamation on mourning is in 6 papers, the joint resolutions it recites in 7.",
+   "Pages that only quote or summarise an item": "Not counted: the Republican Ledger of 29 January, which summarises the Consuls' proclamation of 12 November 1799 ('In one of the Paris Journals it is asserted that the Constitution of the third year has perished'); the New Hampshire Gazette of 30 December, which summarises the navy pension report; the National Intelligencer of 31 December, whose debate on the mausoleum bill quotes the monument resolution; the proclamation of 6 January, which recites the resolution for 22 February.",
+   "Printed again": "A paper that printed an item again counts each printing (C-08): the joint resolutions of 23 December 1799 were printed again among the laws and resolutions of the session by the Gazette of the United States (22 July), the Providence Journal (10 September), the Oracle (11 October) and the Kentucky Gazette (13 October); the Kentucky Gazette printed the Ratisbon report on 6 and 13 October.",
+   "Printed forms counted together": "One item printed in different wordings counts as one (C-02): the convention with France in two translations (6 + 2 papers); Melas's letter in two translations; the King's speech with two introductions; the Salem report of the Brutus, where the New Hampshire Gazette prints another Salem account of the arrival in other words and goes on with the same paragraphs; the Mortefontaine report in two translations (not chosen). Two different reports of one event are not counted together when they share no text: the frigate Boston's arrival with the French corvette Berceau is in 6 papers in one report, and a seventh paper prints a different one.",
+   "Paragraphs of the proceedings": "Mr. Livingston's resolutions of 3 February 1800 reached the papers inside their reports of the House's proceedings; each such paragraph is counted as an item by its own words, as 1806 counted Mr. Gregg's resolution, 1809 Mr. Giles's and the 1804 review the paragraphs of the daily proceedings (X-1804-04); the day's proceedings as a whole stay a digest. The House's resolutions on Mr. Randolph's letter (7) and the paragraph on the House's first sitting in Washington (7) are counted the same way and not chosen."
+  },
+  "not_admitted": {
+   "The Duke of York's dispatch of 20 October 1799, published with the convention for the evacuation of Holland (7)": "In 7 papers; not chosen: the convention it encloses (8 papers, admitted) is the same publication, and January's foreign news is covered.",
+   "London, 24 October 1799: 'No further advices from the Duke of York' on the evacuation of Holland (7)": "In 7 papers; not chosen: the same affair and month are covered by the convention for the evacuation of Holland.",
+   "The House of Representatives' resolutions on Mr. Randolph's letter to the President, January 1800 (7)": "In 7 papers (with the committee's report in 2 and summaries in others); not chosen: American public life in January and February is covered by the honours to Washington and the papers on the 27th article.",
+   "The second part of the correspondence on Bonaparte's offer of peace: Talleyrand's letter of 14 January and Lord Grenville's answer of 20 January 1800 (7)": "In 7 papers; not chosen: the first part (7 papers) is admitted, and the affair and its months are covered.",
+   "The French constitution of the year 8, 'an official copy' (7)": "In 7 papers; not chosen: the foreign news of March and April is covered by the correspondence on Bonaparte's offer of peace.",
+   "Salem, July 1800: the brig Essex from Barcelona, by Gibraltar, with news of the war in Italy (7)": "In 7 papers; not chosen: July's war news is covered by Melas's summons to Massena.",
+   "Vienna, August 1800: thirty battalions under the Archduke Charles collecting on the Inn (7)": "In 7 papers, in two wordings; not chosen: August's war news is covered by Massena's report on Genoa.",
+   "London, September 1800: 'the Northern powers have come to a determination to resist our maritime superiority' (7)": "In 7 papers; not chosen: September is covered by the Ratisbon report and the Paris paragraph on the American envoys, and the dispute with Denmark by Lord Whitworth's convention in October.",
+   "London, September 1800: 'increased exertions to prepare the Brest fleet for sea' (7)": "In 7 papers; not chosen: October's news is covered by the letter on Kleber, the report from Canton and Lord Whitworth's convention.",
+   "Washington, 17 November 1800: 'forty-four members assembled in the Capitol', the House's first sitting in the new city (7)": "In 7 papers; not chosen: the opening of the session is covered by the President's speech and the two houses' addresses.",
+   "Paris, October 1800: Joseph Bonaparte's entertainment for the American envoys at Mortefontaine (8, two forms)": "In 8 papers counting its two translations; not chosen: the convention with France is covered in December by its text.",
+   "The report of the commissioners of the navy pension fund, December 1800 (7)": "In 7 papers; not chosen: American public life in December is covered by the two houses' addresses and the President's replies.",
+   "The President's proclamation of December 1799 recommending mourning for Washington (6)": "Below the rule, counted by its own words (in 1800; the Gazette of the United States printed it in December 1799).",
+   "The President's proclamation of 6 January 1800 for a day of mourning on 22 February (5)": "Below the rule, counted by its own words; the resolution it recites is in 4 papers as such, and in 3 more within reports of the proceedings.",
+   "The Senate's letter of condolence to the President on Washington's death and his answer, 23 December 1799 (6)": "Below the rule, counted by its own words (in 1800).",
+   "Georgetown, 20 December 1799: the account of Washington's funeral at Mount Vernon (6)": "Below the rule, counted by its own words (in 1800).",
+   "Mr. Marshall's speech in the House on Washington's death, 19 December 1799 (4)": "Below the rule in 1800, counted by its own words.",
+   "The general orders for funeral honours to Washington at the army's stations (4)": "Below the rule, counted by its own words.",
+   "A letter from Alexandria of 4 January 1800 on Washington's will (5)": "Below the rule, counted by its own words.",
+   "A letter from Georgetown on Washington's legacies to individuals (5)": "Below the rule, counted by its own words.",
+   "Field Marshal Suwarow's order to the Russian generals (6)": "Below the rule, counted by its own words.",
+   "The Emperor of Russia's declaration to the members of the Germanic Empire (5)": "Below the rule, counted by its own words.",
+   "The Consuls' proclamation to the French, 12 November 1799: 'The constitution of the third year has perished' (6)": "Below the rule, counted by its own words; a seventh paper prints only a summary of it.",
+   "Three addresses of the French coup of November 1799: General Hedouville's proclamation at Angers (5), an address recalling the Ligurian Mountains (6), and Bonaparte's speech to the Council of Ancients (6)": "Below the rule, each counted by its own words.",
+   "The new French constitution read to the legislative commissions, 8 December 1799 (5)": "Below the rule, counted by its own words.",
+   "Bonaparte, First Consul, to the French soldiers (6)": "Below the rule, counted by its own words.",
+   "The Archduke refuses an armistice on the Rhine (5)": "Below the rule, counted by its own words.",
+   "Mr. Livingston's resolutions of 20 February 1800 on the President's conduct in the delivery of a seaman to the British (6)": "Below the rule, counted by its own words. It could stand as a sub-story under the admitted papers on the 27th article (C-01); it was not added, and its first sentence names the seaman.",
+   "The schooner Experiment attacked by barges off Gonaives, January 1800 (6)": "Below the rule, counted by its own words.",
+   "Captain Sever's letter on the frigate Congress dismasted at sea, January 1800 (6)": "Below the rule, counted by its own words.",
+   "The official account of the frigate Constellation's action with a French ship, February 1800 (3)": "Below the rule, counted by its own words.",
+   "The acts of the first session of the Sixth Congress (6 or fewer each)": "Below the rule, each act counted by its own text; the finder chains them through their common words. The act of 20 February 1800 suspending enlistments for the additional army is in 4 papers by its own text.",
+   "Mr. Nicholas's proposed amendments to the Constitution on choosing electors, November 1800 (5)": "Below the rule, counted by its own words.",
+   "Philadelphia, 4 April 1800: Captain Barry in the frigate United States arrives with dispatches from the envoys to France (5)": "Below the rule, counted by its own words.",
+   "A Halifax paper on letters from France found on board the Fly (6)": "Below the rule, counted by its own words.",
+   "A declaration that the Aurora's publications on Colonel Pickering's accounts are unfounded (6)": "Below the rule, counted by its own words.",
+   "Lord Keith's dispatch on the Guillaume Tell taken off Malta (6)": "Below the rule, counted by its own words.",
+   "General Moreau's reports of June 1800 from Memmingen and Gunzburg (6 each)": "Below the rule, each counted by its own words.",
+   "Reports of the battle of Marengo and its armistice, June 1800 (6 or fewer each)": "Below the rule, each counted by its own words: the sick and stores at Pavia (6), the Vienna Court Gazette's account (4), the Imperial army's losses (3 by its opening), the terms of the armistice (2), the letter to General Desaix's mother (1).",
+   "A cartel from Dunkirk confirms the armistice in Germany (6)": "Below the rule, counted by its own words.",
+   "The renewal of hostilities 'even more calamitous than had been before represented' (6)": "Below the rule, counted by its own words.",
+   "A Danish frigate's convoy: 'is now boarded by a Danish officer' (6)": "Below the rule, counted by its own words.",
+   "The French take the arsenal of Munich (5)": "Below the rule, counted by its own words (a paragraph of the same London run as the letter on Kleber).",
+   "Count Cobenzel's conference with the Russian minister (5)": "Below the rule, counted by its own words.",
+   "The First Consul's message at the Festival of the Republic, and a maritime truce, November 1800 (6)": "Below the rule, counted by its own words.",
+   "Paris report that the convention between France and the United States was signed (6, two forms)": "Below the rule, counted by its own words with its two forms.",
+   "The fourth article of the convention with France, from the Paris papers (5, two forms)": "Below the rule as an item of its own; the papers that printed the whole convention later are counted there.",
+   "The frigate Boston brings in the French corvette Berceau, November 1800 (6)": "Below the rule: 6 papers print one report; a seventh, the Portland Gazette, prints a different report of the arrival, which shares no text with it.",
+   "The Governor of Massachusetts on resistance to surveyors in Hancock county (6)": "Below the rule, counted by its own words.",
+   "The Treasury's letter of 22 November 1800 to the House of Representatives (6)": "Below the rule, counted by its own words.",
+   "The Trinidad Gazette of 18 October: Governor Picton's proclamation (6, two forms)": "Below the rule, counted by its own words with its two forms.",
+   "The House's debate on the bill for a mausoleum to Washington, December 1800 (6)": "Below the rule, counted by its own words.",
+   "Reports of a conspiracy against Bonaparte, October 1800 (6)": "Below the rule, counted by its own words.",
+   "The President's proclamation of the treaty with Prussia (5)": "Below the rule, counted by its own words.",
+   "A Treasury notice of 21 June 1800 inviting proposals for a loan to the United States (6)": "Below the rule: a notice printed weekly as an advertisement, in 6 papers by its own words.",
+   "The War Department's notices for proposals to supply rations (4)": "Below the rule: standing notices printed weekly as advertisements.",
+   "Other items of 6 papers or fewer by the finder's count": "Checked by machine for a seventh paper (deep count and phrase searches) and not read one by one: 87 items of items.json and 2 of items_from_1799.json in 6 papers by the finder's count, and the items in 5 or fewer, besides those listed here."
+  },
+  "for_user_decision": {
+   "The papers of February 1800 on a seaman delivered to the British name him": "As built, the two admitted documents are shown with excerpts that end before his name and descriptions that do not give it (C-12); Mr. Livingston's resolutions of 20 February, whose first sentence names him, are below the rule (6) and not admitted.",
+   "The Salem report of the ship Brutus counted with the New Hampshire Gazette's other account": "As built, 9 papers: the New Hampshire Gazette prints another Salem account of the arrival in other words and goes on with the same paragraphs (C-02); in one wording the report is in 8. It is admitted either way.",
+   "The joint resolutions of 23 December 1799 reach 7 papers only with a printing among the laws of the session": "As built, admitted with 10 printings in 7 papers: six papers printed them in January 1800, and the Gazette of the United States (which printed them in December 1799) printed them again on 22 July among the laws and resolutions of the session (C-08).",
+   "The convention with France counted across two translations": "As built, 8 papers (6 in one translation, 2 in another), counted together as printed forms (C-02); counted apart, the larger form is in 6.",
+   "Twelve items in 7 or 8 papers not chosen": "As built, they are listed with the items read and not admitted (their months and kinds of news are covered); any of them can be added after a scan check of its printings.",
+   "Two paragraphs of one run of London news admitted as single items": "As built, the letter from Constantinople on Kleber and the report of floods in China (8 papers each) are admitted as single items (C-09), as 1806 admitted such paragraphs; the other paragraphs of the run (the Brest fleet 7, Munich 5) are not."
+  }
+ },
+ "verdict_summary": {
+  "yes": 182,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 118,
+  "minor_errors": 39,
+  "major_problem": 25,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 159,
+  "pdf_text_layer_sequence": 1,
+  "manual_box": 20,
+  "pdf_text_layer_window": 2
+ }
+}
