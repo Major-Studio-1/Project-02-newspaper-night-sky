@@ -63,6 +63,13 @@ __SITE_HEADER__
 __STORIES__
 <p class="end">More threads will follow as they are read. Each piece can be followed from paper to paper in <a href="pulses.html">Pulses</a>; what the archive shows as a whole is on <a href="findings.html">Findings</a>; how a thread is checked is in <a href="method.html#stories">How it works</a>.</p>
 </main>
+<button type="button" id="to-top" class="to-top glass" title="Back to the top">__ICON_up__<span>Top</span></button>
+<script>(() => {   // back to the top: shown once the page is scrolled more than a screen down
+  const b = document.getElementById('to-top'), still = matchMedia('(prefers-reduced-motion: reduce)');
+  const sync = () => b.classList.toggle('on', scrollY > innerHeight * 1.2);
+  addEventListener('scroll', sync, {passive: true}); sync();
+  b.addEventListener('click', () => { scrollTo({top: 0, behavior: still.matches ? 'auto' : 'smooth'}); const h = document.querySelector('main h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } });
+})();</script>
 __SITE_FOOTER__
 </body>
 </html>

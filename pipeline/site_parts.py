@@ -56,6 +56,7 @@ ICONS = {
     'telescope': '<path d="M3 13.6 15 8l1.6 3.5-12 5.6zM15 8l3.9-1.8 1.6 3.5-3.9 1.8M10.6 15.3 7.5 21M11.7 14.8l2.8 6.2"/>',
     'pulse': '<path d="M3 12h4l2.2-5.5 3.6 11 2.4-7.5 1.6 2H21"/>',
     'book': '<path d="M4 5.5c3-1.2 5.6-.9 8 .9 2.4-1.8 5-2.1 8-.9v13c-3-1.2-5.6-.9-8 .9-2.4-1.8-5-2.1-8-.9zM12 6.4v13"/>',
+    'up': '<path d="M12 19V5M6 11l6-6 6 6"/>',   # back to the top of a long page
 }
 SPRITE = ('<svg class="ico-sprite" width="0" height="0" aria-hidden="true" focusable="false">'
           + ''.join(f'<symbol id="i-{k}" viewBox="0 0 24 24">{v}</symbol>' for k, v in ICONS.items()) + '</svg>')

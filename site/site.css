@@ -175,3 +175,7 @@ body.exhibit .first-hint{display:none!important}
   .rc-step,.rc-step.wide{position:fixed;left:0;right:0;bottom:0;top:auto;width:auto;max-height:72dvh;border-radius:16px 16px 0 0;padding:12px 16px 18px;box-shadow:0 -12px 40px #000d}
 }
 @media(prefers-reduced-motion:reduce){.rc-glow{animation:none;outline:2px solid #ffd27a;outline-offset:2px}.rc-part{transition:none}}
+/* Back to the top (24 November 2026): a long page (Threads) shows it once scrolled more than a screen down. */
+.to-top{position:fixed;right:16px;bottom:16px;z-index:20;display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 15px;border-radius:999px;color:#edf2ff;font:inherit;font-size:14px;cursor:pointer;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .2s,transform .2s}
+.to-top.on{opacity:1;transform:none;pointer-events:auto}.to-top .ico{width:16px;height:16px}
+@media(prefers-reduced-motion:reduce){.to-top{transition:none}}@media print{.to-top{display:none}}
