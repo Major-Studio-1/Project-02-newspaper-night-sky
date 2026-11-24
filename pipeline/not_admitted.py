@@ -75,12 +75,14 @@ RULE_THIN = ("Read by the thin-year rule (register Y-THIN, chosen by the owner o
              "their counts, made by machine on their openings and not checked on the scans.")
 THIN_OWN = {
     1770: "With four papers, an item reaches the bar only when all four print it.",
+    1771: "Four papers survive only in some weeks, so an item reaches the bar only when all four print it in those weeks.",
     1772: "Four papers survive in most weeks, so an item reaches the bar only when all four print it.",
+    1773: "Four papers survive in most weeks, so an item printed by all four is admitted.",
     1782: "From September only the four year-round papers survive, so the items all four printed are admitted.",
     1789: "With four papers, an item reaches the bar only when all four print it, and all such items are admitted.",
     1790: "Items printed by every paper of their weeks are admitted; the two other eligible items are chosen.",
 }
-for _year in (1770, 1772, 1774, 1775, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1787, 1788, 1789, 1790):
+for _year in (1770, 1771, 1772, 1773, 1774, 1775, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1787, 1788, 1789, 1790, 1791, 1792, 1794):
     RULES[_year] = RULE_THIN + (' ' + THIN_OWN[_year] if _year in THIN_OWN else '')
 STATUS_PHRASES = {
     ADMITTED_LATER: 'items that a later round admitted',

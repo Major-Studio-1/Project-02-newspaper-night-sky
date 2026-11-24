@@ -263,6 +263,10 @@ let THREE;
 // public copy on jsdelivr is the fallback for a copy of the site made without lib/.
 try { THREE = await import('./lib/three.module.js').catch(() => import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js')); }
 catch { fail('The telescope could not load its drawing library. Reload the page to try again.'); throw new Error('three.js unavailable'); }
+// The star shaders write their colours straight to the screen, so three.js must keep the palette as written (sRGB). With
+// its colour management on (the default since r152), new THREE.Color('#aab6cf') held the linear value, and the plain
+// stars showed as a dull grey-blue (#66789e) instead of the validated #aab6cf; the subject colours were darkened alike.
+THREE.ColorManagement.enabled = false;
 let D;
 loading(`Loading ${STORIES} stories…`, DATA_BYTES ? 0 : null, DATA_BYTES ? `0.0 of ${MB(DATA_BYTES)} MB` : '');
 try { D = await fetchJSON('telescope.json?v=' + BOOT.stamp, DATA_BYTES, (f, got) => loading(`Loading ${STORIES} stories…`, f, `${MB(got)} of ${MB(DATA_BYTES)} MB`)); }
@@ -361,6 +365,7 @@ state.q = (params.get('q') || '').trim();   // searched at the end, once the sta
 // settings in this browser, and ?size=150 sets it from the address. The stops are roughly equal steps to the eye.
 const SIZES = [50, 60, 70, 80, 90, 100, 125, 150, 175, 200, 250, 300];
 const STAR_BASE = 1.1;   // what 100% draws: a tenth larger than before 23 November 2026, at the owner's word
+const NEAR = 1.5;        // how much larger than on the "now" frame a star nearer the camera may be drawn (see the shader)
 const nearSize = v => SIZES.reduce((a, b) => Math.abs(Math.log(b / v)) < Math.abs(Math.log(a / v)) ? b : a);
 const urlSize = Number(params.get('size'));
 state.size = urlSize > 0 ? nearSize(urlSize) : state.size > 0 ? nearSize(state.size) : 100;
@@ -440,26 +445,32 @@ const VERTEX = `
       float isHit = step(0.5, aHit), hot = uSearch * isHit, cold = uSearch * (1.0 - isHit);
       float inGroup = uEmBit > 0.5 ? step(0.5, mod(floor(aHit / uEmBit), 2.0)) : uEmReg > 0.5 ? 1.0 - step(0.5, abs(aReg + 1.0 - uEmReg)) : 0.0;
       float lift = uEm * inGroup, sink = uEm * (1.0 - inGroup);
-      gl_PointSize = shown * fade > 0.0 ? aSize * uScale * uPR * (uRef / -mv.z) * (1.0 + 0.25 * hot) * (1.0 + 0.15 * lift) : 0.0;
+      // Nearer stars are drawn larger, but at most NEAR times their size on the "now" frame: zoomed into the sky, the
+      // camera passes among the stars, and the ones just before it swelled into large dull balls.
+      gl_PointSize = shown * fade > 0.0 ? aSize * uScale * uPR * min(uRef / -mv.z, ${NEAR.toFixed(2)}) * (1.0 + 0.25 * hot) * (1.0 + 0.15 * lift) : 0.0;
       vec3 base = mix(mix(aColor, aRegC, uRegW), uNeutral, cold * (0.5 + 0.5 * uByS));
       vec3 hc = abs(aHit - 1.0) < 0.5 ? uC1 : abs(aHit - 2.0) < 0.5 ? uC2 : abs(aHit - 4.0) < 0.5 ? uC3 : uC4;
       vHot = hot * uByS; vMatch = max(hot, lift); vColor = mix(base, hc, vHot); vDim = (1.0 - cold * mix(0.55, 0.4, uByS)) * (1.0 - 0.5 * sink);
       vAlpha = shown * fade * (0.62 + 0.38 * clamp((papers - 2.0) / 9.0, 0.0, 1.0));
       vCrowd = mix(1.0, mix(uDenseP, aCrowd, uMix.x), 1.0 - max(hot, lift));   // plain light thinned where stars crowd; matches keep theirs
     }`;
+// A star: a small bright core and a soft halo (24 November 2026). The old profile, a disc half the sprite wide plus a
+// glow, read as a dull ball, the more so as its light was squared (see the additive layer).
 const STAR = `float r = length(gl_PointCoord - 0.5) * 2.0; if (r > 1.0) discard;
-      float core = smoothstep(0.5, 0.0, r), glow = exp(-r * r * 4.0) * 0.7, a = (core + glow) * vAlpha;`;
+      float core = exp(-r * r * 30.0), glow = exp(-r * r * 7.0) * 0.32, a = (core + glow) * vAlpha;`;
 // Two layers of the same stars. Plain colours glow additively, as in a night sky. Region colours and search colours are
 // laid over each other instead (nearer, newer stars on top), so overlapping colours never add up to a false one: crowded
 // regions would turn yellow, and crowded amber, blue and magenta would turn white, the colour for a story that mentions
 // more than one search. Switching cross-fades the layers. While colour shows the searches, the matches sit in the laid-
-// over layer and it is drawn last, so nothing covers them. A laid-over star fades toward its edge more steeply than a
-// glowing one (the pow below; steeper still for bright colours such as gold and white), so a star looks the same size
-// in every colour mode: measured on screen, within about a twentieth of its plain width, where the old linear fade made
-// region stars about 1.3 times and compared matches over 2 times as wide.
+// over layer and it is drawn last, so nothing covers them. A laid-over star fades toward its edge a little more steeply
+// than a glowing one (the pow below; steeper still for bright colours such as gold and white), so a star looks the same
+// size in every colour mode (compared on screen with the new star on 24 November 2026; a linear fade once made region
+// stars about 1.3 times and compared matches over 2 times as wide).
 const tintNow = () => uniforms.uRegW.value;
+// The glowing layer writes its colour already scaled by the star's light (a), so it is blended as premultiplied (one, one):
+// three.js's plain additive blending (source alpha, one) scaled it by a again, which crushed every glow into a dim disc.
 const material = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: 1 - tintNow()}}, transparent: true, depthTest: false, depthWrite: false,
-  blending: THREE.AdditiveBlending, vertexShader: VERTEX,
+  blending: THREE.AdditiveBlending, premultipliedAlpha: true, vertexShader: VERTEX,
   fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot, vMatch, vDim, vCrowd; uniform float uWeight;
     void main() { ${STAR} gl_FragColor = vec4(vColor * a * uWeight * (1.0 - vHot) * vDim * vCrowd, a); }`});
 const materialOver = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: {value: tintNow()}}, transparent: true, depthTest: false, depthWrite: false,
@@ -467,7 +478,7 @@ const materialOver = new THREE.ShaderMaterial({uniforms: {...uniforms, uWeight: 
   fragmentShader: `varying vec3 vColor; varying float vAlpha, vHot, vMatch, vDim, vCrowd; uniform float uWeight, uDense;
     void main() { ${STAR}
       // Regions: translucent, more so in crowded views (search matches are not thinned); search colours: nearly opaque.
-      float p = mix(1.6, 1.6 + 0.55 * dot(vColor, vec3(0.2126, 0.7152, 0.0722)), vHot);
+      float p = mix(1.2, 1.2 + 0.4 * dot(vColor, vec3(0.2126, 0.7152, 0.0722)), vHot);
       float o = pow(min(1.0, a), p) * mix(0.7 * mix(uDense, 1.0, vMatch) * uWeight, 0.92, vHot) * vDim;
       vec3 c = mix(vColor, vec3(1.0), core * core * 0.35);           // a whiter centre: a star's sparkle, which shifts no hue
       gl_FragColor = vec4(c * o, o); }`});
@@ -560,7 +571,14 @@ function timeTicks() {
   }
   return out;
 }
-const line = (pts, color, width = 1) => { actx.strokeStyle = color; actx.lineWidth = width; actx.beginPath(); pts.forEach(([x, y], k) => k ? actx.lineTo(x, y) : actx.moveTo(x, y)); actx.stroke(); actx.lineWidth = 1; };
+// A point behind the camera (zoomed into the sky past it) projects mirrored: lines break there, and labels there are skipped.
+const ahead = p => p[2] > .05;
+const line = (pts, color, width = 1) => {
+  actx.strokeStyle = color; actx.lineWidth = width; actx.beginPath(); let pen = false;
+  for (const p of pts) { if (!ahead(p)) { pen = false; continue; } pen ? actx.lineTo(p[0], p[1]) : actx.moveTo(p[0], p[1]); pen = true; }
+  actx.stroke(); actx.lineWidth = 1;
+};
+const persp = w => Math.min(uniforms.uRef.value / w, NEAR);   // as the shader sizes a star at depth w
 const circle = (r, z, n = 72) => { const pts = []; for (let k = 0; k <= n; k++) { const t = k / n * TAU; pts.push(project(r * Math.sin(t), r * Math.cos(t), z)); } return pts; };
 const rect = (h, z) => [[-h, -h], [h, -h], [h, h], [-h, h], [-h, -h]].map(([x, y]) => project(x, y, z));
 let hover = -1, sel = -1;   // the star under the pointer; the chosen star (its card is open)
@@ -575,7 +593,7 @@ function drawAxes() {
     if (sq > .02) line(rect(c * .98, z), `rgba(58,71,102,${sq})`);
     if (ring > .02) line(circle(c * .93, z, 48), `rgba(58,71,102,${ring})`);
     const corner = project(-c * .98 * sq + -c * .66 * ring, c * .98 * sq + c * .66 * ring, z);
-    actx.fillStyle = '#8b98b5'; actx.textAlign = 'left'; actx.fillText(t.label, corner[0] + 4, corner[1] - 8);
+    if (ahead(corner)) { actx.fillStyle = '#8b98b5'; actx.textAlign = 'left'; actx.fillText(t.label, corner[0] + 4, corner[1] - 8); }
   }
   actx.globalAlpha = 1;
   // The "now" frame at the front (in Topic, the ring is drawn in family arcs below).
@@ -588,17 +606,17 @@ function drawAxes() {
   if (sq > .02) {   // towns, on the "now" frame
     actx.globalAlpha = sq; const placed = [];
     for (const t of [...towns].sort((a, b) => b.stories - a.stories)) {
-      const [mx, my] = mapXY(t.lat, t.lon), p = project(mx * c, my * c, 0);
+      const [mx, my] = mapXY(t.lat, t.lon), p = project(mx * c, my * c, 0); if (!ahead(p)) continue;
       actx.fillStyle = '#6f7d99'; actx.beginPath(); actx.arc(p[0], p[1], 1.6, 0, TAU); actx.fill();
       if (placed.some(q => Math.abs(q[0] - p[0]) < 70 && Math.abs(q[1] - p[1]) < 13)) continue;
       placed.push(p); actx.fillStyle = '#8b98b5'; fitText(t.name, p[0] + 5, p[1], 'left');
     }
   }
-  if (mixNow[1] > .02) drawTopicRing(c);
+  if (mixNow[1] > .02 && ahead(project(0, 0, 0))) drawTopicRing(c);
   if (mixNow[2] > .02) {   // months around the "now" ring, and the track of time (one turn per year) receding
     actx.globalAlpha = mixNow[2];
     for (let m = 0; m < 12; m++) {
-      const t = (m + .5) / 12 * TAU, p = project(c * 1.0 * Math.sin(t), c * 1.0 * Math.cos(t), 0);
+      const t = (m + .5) / 12 * TAU, p = project(c * 1.0 * Math.sin(t), c * 1.0 * Math.cos(t), 0); if (!ahead(p)) continue;
       actx.fillStyle = '#a2afc8'; fitText(MONTHS[m], p[0], p[1], 'center');
     }
     const turns = state.span / YEAR;
@@ -614,16 +632,16 @@ function drawAxes() {
   }
   actx.globalAlpha = 1; actx.textAlign = 'left';
   if (hover >= 0) {
-    const [x, y, z] = world(hover), p = project(x, y, z), r = Math.max(7, size[hover] * uniforms.uScale.value * uniforms.uRef.value / p[2] / 2 + 5);
+    const [x, y, z] = world(hover), p = project(x, y, z), r = Math.max(7, size[hover] * uniforms.uScale.value * persp(p[2]) / 2 + 5);
     actx.strokeStyle = '#edf2ff'; actx.lineWidth = 1.2; actx.beginPath(); actx.arc(p[0], p[1], r, 0, TAU); actx.stroke(); actx.lineWidth = 1;
   }
   for (const i of speakingStars) {   // the stars on air
     if (fade(state.now - D.first[i]) < .05) continue;
-    const [x, y, z] = world(i), p = project(x, y, z), r = Math.max(9, size[i] * uniforms.uScale.value * uniforms.uRef.value / p[2] / 2 + 8);
+    const [x, y, z] = world(i), p = project(x, y, z), r = Math.max(9, size[i] * uniforms.uScale.value * persp(p[2]) / 2 + 8);
     actx.strokeStyle = '#ffd27a'; actx.lineWidth = 1.5; actx.beginPath(); actx.arc(p[0], p[1], r, 0, TAU); actx.stroke(); actx.lineWidth = 1;
   }
   if (sel >= 0 && fade(state.now - D.first[sel]) >= .05) {   // the chosen star: a double ring
-    const [x, y, z] = world(sel), p = project(x, y, z), r = Math.max(8, size[sel] * uniforms.uScale.value * uniforms.uRef.value / p[2] / 2 + 6);
+    const [x, y, z] = world(sel), p = project(x, y, z), r = Math.max(8, size[sel] * uniforms.uScale.value * persp(p[2]) / 2 + 6);
     actx.strokeStyle = '#edf2ff'; actx.lineWidth = 1.8; actx.beginPath(); actx.arc(p[0], p[1], r, 0, TAU); actx.stroke();
     actx.globalAlpha = .45; actx.lineWidth = 1; actx.beginPath(); actx.arc(p[0], p[1], r + 4, 0, TAU); actx.stroke(); actx.globalAlpha = 1;
   }

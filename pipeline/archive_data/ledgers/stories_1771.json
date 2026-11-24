@@ -1,0 +1,205 @@
+{
+  "ledger_id": "ledger:stories-1771",
+  "ledger_version": 1,
+  "base_release": "0.11.30",
+  "target_release": "0.11.31",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1771",
+  "evidence_dir": "outputs/story_discovery_1771/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1771, and of 1770 where they reach the 1771 pages (long-running ones included), every item in 3 or more papers counted again by the first 40 words of its opening against every page, papers that comparison missed looked for again by their words and their names, and read, a sweep of word-for-word passages shared by 4 or more papers for items the families miss, phrase searches on all 546 pages of 1771 in both transcriptions for every admitted item and every item one paper short of the bar, and scan checks of each admitted passage, by the thin-year rule (Y-THIN as amended on 23 November 2026: an item printed by more than half of the newspapers that survive for its weeks, and by at least 4, is eligible; items printed by every surviving paper are admitted, the others chosen to cover the months and the kinds of news; single paragraphs from runs of news counted by their own words, C-09)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1771/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1771/items_from_1770.json": "retrieval_candidates",
+    "outputs/story_discovery_1771/counted_items.json": "retrieval_candidates",
+    "outputs/story_discovery_1771/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1771/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1771.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1771_review.json": "scan_review",
+    "outputs/story_discovery_1771/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1771/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S71-001",
+      "page_key": "sn83021193|1771-05-09|1|2",
+      "excerpt_start": "°f r ' Wtlirii lettKjo Sir",
+      "excerpt_end": "this day in ihe House of Commons.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-letter-to-the-speaker-march-1771"
+      ],
+      "summary": "London, March 1771: Mr. Wilkes's letter to the Speaker on an order to attend the House of Commons.",
+      "note": "Earliest printing found, with Purdie and Dixon's and Rind's Virginia Gazettes of the same day. RevX has no transcription of this page, so the excerpt comes from the older CA transcription, which runs the heading's first word 'Copy' into the line before. Prints the letter under the heading 'Copy of Mr. Wilkes's letter to Sir Fletcher Norton.', and 'no notice is taken of me', as the New-Hampshire Gazette does, where the Virginia papers print 'was taken' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt in substance; the CA text is garbled throughout (heading, date line), but no word or figure becomes another. A crease crosses a letter of 'letter', 'March' and 'order'; the words are clear, and MS's heading has the same words as NHG's."
+      ],
+      "crops": [
+        "S71-001.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1771-0002",
+        "R1771-0183",
+        "R1771-0184"
+      ]
+    },
+    {
+      "id": "S71-002",
+      "page_key": "sn84024739|1771-05-09|1|2",
+      "excerpt_start": "March 22. Mr. Wilkes, on Tuesday,",
+      "excerpt_end": "this Day in the House of Commons.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-letter-to-the-speaker-march-1771"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints Mr. Wilkes's letter to Sir Fletcher Norton.",
+      "note": "Prints the letter after the London paragraph of 22 March, with its date line 'LONDON, March 20, 1771.', which the transcription leaves out (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt word for word, except that the transcription leaves out the letter's date line 'LONDON, March 20, 1771.', which VG1 prints beside 'SIR,' as the other papers do. VG1 prints 'no Notice was taken', as VG2 does."
+      ],
+      "crops": [
+        "S71-002.jpg"
+      ],
+      "family": [
+        "R1771-0002",
+        "R1771-0022",
+        "R1771-0023",
+        "R1771-0175",
+        "R1771-0176",
+        "R1771-0177",
+        "R1771-0178"
+      ]
+    },
+    {
+      "id": "S71-003",
+      "page_key": "sn84024741|1771-05-09|1|3",
+      "excerpt_start": "March 22. Mr. Wilkes, on Tuesday,",
+      "excerpt_end": "this day in the House of Commons.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-letter-to-the-speaker-march-1771"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints Mr. Wilkes's letter to Sir Fletcher Norton.",
+      "note": "Prints the letter after the London paragraph of 22 March, as Purdie and Dixon's paper does (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt, date line included. VG2 prints 'no notice was taken', as VG1 does."
+      ],
+      "crops": [
+        "S71-003.jpg"
+      ],
+      "family": [
+        "R1771-0002",
+        "R1771-0061",
+        "R1771-0175",
+        "R1771-0176",
+        "R1771-0177",
+        "R1771-0182"
+      ],
+      "scan_boxes": [
+        [
+          490,
+          795,
+          955,
+          955
+        ]
+      ]
+    },
+    {
+      "id": "S71-004",
+      "page_key": "sn83025582|1771-05-24|1|2",
+      "excerpt_start": "Copy of Mr. Wilkes's Letter to",
+      "excerpt_end": "this day in the House of commons.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "wilkes-letter-to-the-speaker-march-1771"
+      ],
+      "summary": "The New-Hampshire Gazette prints Mr. Wilkes's letter to Sir Fletcher Norton.",
+      "note": "Prints the letter under the heading 'Copy of Mr. Wilkes's Letter to Sir Fletcher Norton.', after a counsel's opinion of 14 March, and 'no notice is taken of me', as the Massachusetts Spy does (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt. NHG heads the letter 'Copy of Mr. Wilkes's Letter to Sir Fletcher Norton.' and prints 'no notice is taken', as MS does."
+      ],
+      "crops": [
+        "S71-004.jpg"
+      ],
+      "family": [
+        "R1771-0002",
+        "R1771-0023",
+        "R1771-0024",
+        "R1771-0026",
+        "R1771-0190"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "wilkes-letter-to-the-speaker-march-1771",
+      "kind": "message_group",
+      "label": "London, 20 March 1771: Mr. Wilkes's letter to Sir Fletcher Norton: 'I this morning received an order commanding my attendance this day in the House of Commons ... In the name of the freeholders of Middlesex, I again demand my seat in Parliament'",
+      "definition": "Printings of a letter of John Wilkes to Sir Fletcher Norton, the Speaker of the House of Commons, dated London, 20 March 1771: 'I this morning received an order commanding my attendance this day in the House of Commons. I observe that no notice was taken of me in your order as a member of the House, and that I am not required to attend in my place ... In the name of the freeholders of Middlesex, I again demand my seat in Parliament ...'. Both Virginia Gazettes print it after a London paragraph of 22 March ('Mr. Wilkes, on Tuesday, having been served with an order to attend the House of Commons on Wednesday, wrote the following letter to Sir Fletcher Norton'); the Massachusetts Spy and the New-Hampshire Gazette print it under a heading of their own. A letter in its writer's words, as the papers reprinted it.",
+      "admission_rule": "Reviewed 1771 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1771 that reach 3 or more papers, and those of 1770 over the 1771 pages, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 71 items printed somewhere, 1 reaching 4 papers by the finder's counts; items_from_1770.json: 2). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1771 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (45 texts). For every text one paper short of the bar, the missing paper was looked for again on its pages, by the text's words (the best page within its weeks) and by its names (the pages holding three or more of its proper names), and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09): 15 clusters, each read. Every admitted item, and every item read one paper short of the bar outside the 45 texts, was then counted by phrase searches of its own words over all 546 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+    "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news; digests are not admitted. Single paragraphs from runs of news are counted by their own words (C-09). In 1771 four papers survive only in January, from late April to May and in parts of June and July, when the Massachusetts Spy and Rind's Virginia Gazette both have issues: 1 item is printed by all four papers and admitted.",
+    "paper_counting": "1771 has 4 catalogue series, which are 4 papers: the Massachusetts Spy (Boston; 25 issues, none from 2 February to 8 May or from 1 November to 18 December; a 26th filed under 1771 is the issue of 27 December 1770), the New-Hampshire Gazette and Historical Chronicle (Portsmouth; 50 issues, from 18 January), and two Virginia Gazettes, both printed at Williamsburg by different printers, Alexander Purdie and John Dixon (sn84024739; 48 issues) and William Rind (sn84024741; 12 issues, the last of 18 July). Papers in print in any three weeks: 4 in January, from late April to May and in parts of June and July; 3 or 2 in the rest of the year.",
+    "counted_item_by_item": {
+      "Paper counts": "The admitted item was counted by phrase searches of its own words, every hit read; its papers are in the README's table of stories. The texts read and below the bar are listed in not_admitted with their counts.",
+      "A page without a RevX transcription": "The Massachusetts Spy of 9 May prints Mr. Wilkes's letter to Sir Fletcher Norton on a page that has no RevX transcription; the comparison by the opening missed it, and the look for the missing paper found it in the page's CA text, so the letter is in 4 of 4 and admitted; its excerpt there comes from the CA text.",
+      "A letter and a paragraph on it": "Three papers print an extract of a private letter from Constantinople ('The north east parts of Europe are at present both delighted and terrified ...'); the Massachusetts Spy prints, earlier and under another London date, a two-sentence paragraph of its own on what the letter says ('A LETTER from Constantinople says, That the Grand Seignor has at last taken the field in person ...'). As built, the paragraph recites part of the letter and is not counted as a printing of it (C-07), so the letter is in 3 of 4; counted as another printed form (C-02) it would be in 4 of 4 and admitted (for_user_decision).",
+      "A notice quoted in other papers' words": "The Commissary's notice to the clergy of Virginia of a convention on an American episcopate is printed whole by the two Virginia Gazettes; the Massachusetts Spy and the New-Hampshire Gazette print a paragraph of their own that quotes its passage on the episcopate, which is not a printing of the notice (C-06, C-07), so the notice is in 2 of 4.",
+      "Paragraphs in runs of news": "London news of the printers' case and the City's quarrel with the House of Commons (March to May 1771) reached the papers in runs of paragraphs and documents, each counted by its own opening (C-09): Mr. Wilkes's letter to the Speaker is printed by all four papers; the Guildhall Rota Book, the counsel's opinion, the case put to counsel, the Lord Mayor's habeas corpus and Lord Chatham's speech and motion are each in 3 of 4.",
+      "Shared phrases that are not one item": "Of the 15 clusters the sweep found in 4 papers, 6 are passages of Mr. Wilkes's letter, 1 is the Constantinople letter with the Spy's paragraph, 1 is the episcopate notice, and 7 are set phrases shared by different texts: the opening of addresses to governors ('May it please your Excellency, WE his Majesty's'), governors' titles, 'one of his Majesty's Justices of the Peace', an advertisers' formula, 'one of His Majesty's Principal Secretaries of State', 'at the Secretary of State's Office, in Cleveland Row' and 'the Lord Mayor and Mr. Alderman Oliver to the'. Two of the paragraphs under those phrases, a London report of the King of Spain's order for restoring Port Egmont and one that the City would meet on Tower-hill when Parliament was prorogued, were counted by their own words: each is in 3 of 4."
+    },
+    "for_user_decision": {
+      "The letter from Constantinople and the Spy's paragraph on it": "As built: the Massachusetts Spy's two-sentence paragraph on what a letter from Constantinople says (under London, 3 November 1770) recites part of the letter and is not counted as a printing of it (C-07), so the extract of the letter is in 3 of the 4 papers of its weeks and below the bar. If the owner counts the paragraph as another printed form of the letter (C-02, as the Hamburg letter printed in other words in 1772), the letter is in 4 of 4 and is admitted by the rule's first part, after a scan check of its printings: 1771 would have 2 stories.",
+      "The floor of four papers where three survive": "As built: four papers survive only in January, from late April to May and in parts of June and July; in the rest of the year two or three survive, so nothing printed only then reaches the bar of 4, as in 1770, 1772, 1789 and 1790. 1771 has one story, printed in May."
+    },
+    "chosen": {},
+    "not_admitted": {
+      "London, October 1770: an extract of a private letter from Constantinople ('The north east parts of Europe are at present both delighted and terrified by a species of magnificence ... The Grand Signior has at last taken the field in person') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy prints, under 'LONDON, November 3.', a two-sentence paragraph of its own on what the letter says ('A LETTER from Constantinople says, That the Grand Seignor has at last taken the field in person, sets out with the stile of The Master of the World. He is the only Turkish Emperor who has headed his own armies since the time of Solyman the Magnificent'), which recites part of the letter and is not counted as a printing of it (C-07); counted as another printed form of the letter (C-02), the letter would be in 4 of 4 and admitted, a call left to the owner.",
+      "London, June 1771: 'We are assured, that upon the day the Parliament is prorogued, the whole city of London will meet upon Tower-hill ... to attend the Lord Mayor and Mr. Alderman Oliver to the Mansion House' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; Rind's Virginia Gazette's last surviving issue of 1771 (18 July) does not print it.",
+      "London, 23 February 1771: 'Thursday afternoon a messenger arrived at the Secretary of State's office in Cleveland court, from Madrid, with a copy of the King of Spain's formal order for restoring Port Egmont' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues of its weeks (9 and 16 May) do not print it.",
+      "Williamsburg, May 1771: the Commissary's notice to the clergy of Virginia of a convention at the College of William and Mary, on 'the expediency of an application to proper authority for an American episcopate' (2)": "Read and below the bar: in 2 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy (30 May) and the New-Hampshire Gazette (7 June) print a paragraph of their own that quotes the notice's passage on the episcopate ('The Commissary at Virginia, in an advertisement to the Clergy there, notifying them of a convention ... says, ...'), which does not count as a printing of the notice (C-06, C-07); the notice is printed whole by the two Virginia Gazettes.",
+      "New Bern, 7 December 1770: the Governor of North Carolina's speech opening the session of the General Assembly ('NOTHING can be more seasonable, or more grateful to me, than my meeting you at this Time, in so full Assembly') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+      "New Bern, December 1770: the North Carolina Assembly's address to the Governor ('Your approaching departure from your government is a circumstance truly detrimental to the interests of this province') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+      "New Bern, December 1770: 'That very elegant and noble structure the PALACE, which has been erected here by this province, for the residence of his Excellency the Governor ... being now very near compleatly finished' (its opening celebrated) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+      "Newport, 7 January 1771: a shipmaster's report from Montego Bay of a sloop turned pirate, and of an armed vessel sent after it (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+      "London, winter 1770-71: an extract of a private letter of the British Ambassador at Constantinople on the Grand Signior and a report that he had been deposed (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "London, 15 March 1771: extracts from the Guildhall Rota Book, on the publisher of the Middlesex Journal brought before Mr. Alderman Wilkes (the printers' case) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+      "London, March 1771: a counsel's opinion for the publisher of the Middlesex Journal on the House of Commons' summons ('Upon the whole, I do advise ... to pay no attention or obedience') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "From the London Magazine, 1771: the case put to counsel, beginning with the House of Commons' order of 21 February 1771 that the publisher of the Middlesex Journal attend the House (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+      "London, 1771: 'It is said, that on Tuesday the 14th instant, the French and Spanish Ambassadors waited on the Earl of Rochford' (to ask when Port Egmont would be evacuated) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "An account of Lord Chief Justice Holt in 1704 and a message from the Speaker of the House of Commons ('Go back to your chair, Mr. Speaker, within these five minutes') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+      "London, 5 April 1771: the Lord Mayor brought before the Lord Chief Justice on a writ of habeas corpus, and recommitted (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "London, spring 1771: 'the Substance of what was spoken by Lord Chatham on Tuesday last' in the House of Lords on the state of the country (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+      "London, 4 May 1771: 'the following motion was made on Wednesday last by the Earl of Chatham in the Upper House' (an address to the King on the Middlesex election and the conflict between the House of Commons and the City) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Other items of 3 papers or fewer (by count)": "The other items the finder lists, compared by machine on the first 40 words of their openings with every page of 1771: 18 are printed by every paper that survives for their weeks but where only three papers survive (in the weeks when the Massachusetts Spy or Rind's Virginia Gazette has no surviving issue), which the bar's floor of 4 leaves out; the others reach 2 papers or fewer. None reaches the bar, and a later printing by a fourth paper was looked for (latecheck.py). Not read one by one."
+    },
+    "for_the_owner": {},
+    "counts": {
+      "eligible_items": 1,
+      "admitted_by_the_first_part": 1,
+      "chosen_items": 0,
+      "not_chosen_listed": 0,
+      "digests": 0,
+      "read_below_the_bar": 17
+    }
+  }
+}

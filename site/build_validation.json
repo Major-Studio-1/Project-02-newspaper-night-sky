@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "release_version": "0.11.30",
+  "release_version": "0.11.35",
   "reviewed_years": [
     {
       "year": 1770,
@@ -11,11 +11,27 @@
       "categories": 2
     },
     {
+      "year": 1771,
+      "newspapers": 4,
+      "passages": 4,
+      "group_views": 1,
+      "stories": 1,
+      "categories": 1
+    },
+    {
       "year": 1772,
       "newspapers": 6,
       "passages": 52,
       "group_views": 14,
       "stories": 11,
+      "categories": 3
+    },
+    {
+      "year": 1773,
+      "newspapers": 6,
+      "passages": 208,
+      "group_views": 49,
+      "stories": 49,
       "categories": 3
     },
     {
@@ -131,11 +147,35 @@
       "categories": 3
     },
     {
+      "year": 1791,
+      "newspapers": 6,
+      "passages": 98,
+      "group_views": 25,
+      "stories": 18,
+      "categories": 3
+    },
+    {
+      "year": 1792,
+      "newspapers": 8,
+      "passages": 146,
+      "group_views": 29,
+      "stories": 29,
+      "categories": 3
+    },
+    {
       "year": 1793,
       "newspapers": 12,
       "passages": 135,
       "group_views": 24,
       "stories": 15,
+      "categories": 3
+    },
+    {
+      "year": 1794,
+      "newspapers": 9,
+      "passages": 194,
+      "group_views": 37,
+      "stories": 34,
       "categories": 3
     },
     {
@@ -235,19 +275,19 @@
       "categories": 3
     }
   ],
-  "curated_passages": 5284,
-  "group_views": 922,
-  "stories_in_overview": 588,
-  "overview_categories": 85,
+  "curated_passages": 5934,
+  "group_views": 1063,
+  "stories_in_overview": 719,
+  "overview_categories": 98,
   "years": 41,
   "matched_families": 48270,
-  "reviewed_twins": 511,
-  "sky_stars": 48347,
-  "trace_words": 3102,
-  "trace_stories": 45993,
+  "reviewed_twins": 615,
+  "sky_stars": 48374,
+  "trace_words": 3106,
+  "trace_stories": 46021,
   "year_files_mb": 106.1,
   "year_index_mb": 8.9,
-  "telescope_stars": 48347,
+  "telescope_stars": 48374,
   "telescope_mb": 7.8,
   "telescope_text_mb": 24.4,
   "story_topic_lanes": 23,
@@ -295,25 +335,25 @@
     }
   ],
   "recorded_voices": {
-    "clips": 12435,
-    "packs": 628,
-    "mb": 631.4,
-    "reviewed_passages_recorded": 5284,
-    "reviewed_passages": 5284,
-    "titles_recorded": 6621,
+    "clips": 13020,
+    "packs": 759,
+    "mb": 680.7,
+    "reviewed_passages_recorded": 5934,
+    "reviewed_passages": 5934,
+    "titles_recorded": 6556,
     "announcer_clips": 265
   },
   "pages_sha256": {
-    "index.html": "53505a0fa5a6845aae58ce9f219b8f598a4a6205932396499132b82134773ee9",
-    "telescope.html": "6f876b13a6f919838f95a1ccfd7aa53d6129d685b8735dbde87ff109d2a28fe9",
-    "pulses.html": "f73741a9097b1d305bfe68a1ab8b5f7177598dcd2dfcd85ec7febff0118c85ed",
-    "radio.html": "4507d92a0509624402551aee1f4c866563e921bad16d966d4009dbe922a5f8e2",
-    "stories.html": "653e10c7727b7e7c79b21c902f572a92dd2243170bb7ec107daed6c74ccfe762",
-    "exhibit.html": "30ec0f447be36cd87b0835ffc822d83dbbb3ffd39b0fb27455d0d6c8f183f1c8",
-    "method.html": "2d8948766df3ac822fb023c3ae666703f7b64e4feab979f0da3ef6dab4c4d3ab",
-    "notes.html": "07f571128d627353008d3e56b26638b981bd5e67fe5ef1d25b118423c7b26a3c",
-    "findings.html": "0eda31f8d4424625cacf87d2f3335f095da851ec9943f1d58507b8a7f900ca30",
-    "notebook.html": "743ca1fd681c4b0abca250bf871f11ce9617bc8ff234c635b6c0f0d1c9a97e5c",
+    "index.html": "21c3268dd1e5d4ddb97c6243cbdbed2b985c5b6655918db062610f708391329c",
+    "telescope.html": "88ddfe2d183b8eb35515af49685a68adbeb4fea8c3893864f46c2f753d6484c3",
+    "pulses.html": "6a12246708945ee503fb6a86803a325a93186719d4e0b7056da993ea1c290c5f",
+    "radio.html": "9ad976394ae754228ede4b640c77393422cdd48e24f0491727d5c2cd0d14725b",
+    "stories.html": "95c55ccc477b9f7b961b1e5967e1088e0adf8d9657a7734c238c8e7896d6c685",
+    "exhibit.html": "8674cc2cb7ff678f2416e82b561a39d633c665568afa04b7dc39621ee0666fe7",
+    "method.html": "1e745711c4ade119625eafde97d7401914218d7ffe9e26ac0d96e17aaf12b305",
+    "notes.html": "9b44d44d2fae59db4e8ec2b98a387133bf510454c4fe74370c348efb3bf0bc28",
+    "findings.html": "a6e1ee054eedaf8672f3e4a95ba0c5062c33c9ba6e71c63213fc0fc84663eafb",
+    "notebook.html": "72a82f7b2527cbafbd7295e009c84b75d72aeaeb89c7255af74d9049ed0505ba",
     "site.css": "a0f51851b8960ceeeaa92ca39594855623b08f19453bcc6d151387c2ee2a97cc",
     "glass.js": "b5c672fe664886b79ca0fb561a2c9017a1d4c13e72de5e04921a50f1f42c2b4d",
     "radio.js": "e61144d2b5a1f6e39c5cb114ddbbea6118e4aaee3ff51e3a79094d39d1bd8791",

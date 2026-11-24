@@ -1,0 +1,2976 @@
+{
+  "ledger_id": "ledger:stories-1791",
+  "ledger_version": 1,
+  "base_release": "0.11.32",
+  "target_release": "0.11.33",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1791",
+  "evidence_dir": "outputs/story_discovery_1791/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1791, and of 1790 where they reach the 1791 pages (long-running ones included), every item in 3 or more papers compared by machine with every page and counted again by its opening, a sweep of word-for-word passages shared by 4 or more papers for short items the families miss, phrase searches on all 1,242 pages of 1791 in both transcriptions, reading of every hit, and scan checks of each admitted passage, by the thin-year rule (Y-THIN, as amended on 23 November 2026: an item printed by more than half of the papers that survive for its weeks, and by at least 4, is eligible; the items printed by every paper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1791/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1791/items_from_1790.json": "retrieval_candidates",
+    "outputs/story_discovery_1791/count_1791.json": "retrieval_candidates",
+    "outputs/story_discovery_1791/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1791/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1791.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1791_review.json": "scan_review",
+    "outputs/story_discovery_1791/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1791/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S91-001",
+      "page_key": "sn83025587|1791-01-22|1|3",
+      "excerpt_start": "P O R T S M",
+      "excerpt_end": "one battle with the Rajah , Tippo",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "calcutta-paper-on-tippoo-saib-and-the-rajah-of-travancore-january-1791"
+      ],
+      "summary": "A Calcutta paper brought to Salem gives accounts of Tippoo Saib's operations against the Rajah of Travancore.",
+      "note": "Earliest printing found. Prints the paragraph under its own dateline, 'Portsmouth, Jan. 22', without the Boston dateline.",
+      "scan_findings": [
+        "Crop extended by hand (24 November); it shows the dateline, the heading and the whole excerpt, which match the scan except the transcription's 'TIPOO SAI B' for the printed 'TIPPO SAIB', a minor slip."
+      ],
+      "crops": [
+        "S91-001.jpg"
+      ],
+      "family": [
+        "R1791-0102",
+        "R1791-0272",
+        "R1791-0296",
+        "R1791-0306"
+      ],
+      "scan_boxes": [
+        [
+          791,
+          3010,
+          1480,
+          3520
+        ]
+      ]
+    },
+    {
+      "id": "S91-002",
+      "page_key": "sn84023133|1791-01-22|1|3",
+      "excerpt_start": "BOSTON, JAN. 15. TIPPO SAIB. By",
+      "excerpt_end": "of Travencore. In one battle with the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "calcutta-paper-on-tippoo-saib-and-the-rajah-of-travancore-january-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the Boston paragraph on Tippoo Saib.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-002.jpg"
+      ],
+      "family": [
+        "R1791-0102",
+        "R1791-0296",
+        "R1791-0303",
+        "R1791-0308"
+      ]
+    },
+    {
+      "id": "S91-003",
+      "page_key": "sn83030483|1791-01-29|1|4",
+      "excerpt_start": "BOSTON, Jan. 15. TIPO SAIB. By",
+      "excerpt_end": "Hyder Ali, against the Rajah of Travancore.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "calcutta-paper-on-tippoo-saib-and-the-rajah-of-travancore-january-1791"
+      ],
+      "summary": "The Gazette of the United States prints the Boston paragraph on Tippoo Saib.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The print does not stop after the first sentence: it goes on 'In one battle with the Rajah, Tippo is said to have been defeated, with the loss of', where the crop ends, so the transcription drops the rest of the paragraph. Otherwise the scan matches, with minor slips ('TIPO' for 'TIPPO', 'Travancore' for 'Travencore')."
+      ],
+      "crops": [
+        "S91-003.jpg"
+      ]
+    },
+    {
+      "id": "S91-004",
+      "page_key": "sn84038410|1791-02-08|1|3",
+      "excerpt_start": "B O S T O N,",
+      "excerpt_end": "against the Rajah of Travancore. In one",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "calcutta-paper-on-tippoo-saib-and-the-rajah-of-travancore-january-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the Boston paragraph on Tippoo Saib.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints no 'Tippo Saib' heading and spells the names 'Tippoo' and 'Travancore'."
+      ],
+      "crops": [
+        "S91-004.jpg"
+      ],
+      "family": [
+        "R1791-0039",
+        "R1791-0102",
+        "R1791-0321",
+        "R1791-0322",
+        "R1791-0339"
+      ]
+    },
+    {
+      "id": "S91-005",
+      "page_key": "sn83030483|1791-02-09|1|3",
+      "excerpt_start": "An ACT declaring the consent of",
+      "excerpt_end": "district of Kentucky into an independent State,\"",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-declaring-the-consent-of-congress-to-the-state-of-kentucky-february-1791"
+      ],
+      "summary": "Congress consents that a new State be formed from the district of Kentucky and admitted into the Union.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, which starts below the session heading, except that the print has 'entituled' and the misprint 'jurisdicton', which the transcription modernises and corrects; neither changes the sense."
+      ],
+      "crops": [
+        "S91-005.jpg"
+      ],
+      "family": [
+        "R1791-0028",
+        "R1791-0341",
+        "R1791-0342",
+        "R1791-0343",
+        "R1791-0344"
+      ]
+    },
+    {
+      "id": "S91-006",
+      "page_key": "sn83030483|1791-02-19|1|3",
+      "excerpt_start": "Message from the President—read in the",
+      "excerpt_end": "were disposed to enter into arrangements, by",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-message-of-14-february-1791-on-commerce-with-great-britain"
+      ],
+      "summary": "The President tells Congress that informal conferences with the British ministers show no disposition 'to enter into any arrangements merely commercial'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt across the two crops: it prints 'on Monday last' and 'they were disposed'. The print has the misprint 'importaut', which the transcription silently corrects."
+      ],
+      "crops": [
+        "S91-006-1.jpg",
+        "S91-006-2.jpg"
+      ],
+      "family": [
+        "R1791-0042",
+        "R1791-0111",
+        "R1791-0365"
+      ]
+    },
+    {
+      "id": "S91-007",
+      "page_key": "sn84038410|1791-02-22|1|2",
+      "excerpt_start": "An ACT declaring the consent of",
+      "excerpt_end": "district of Kentucky into an independent State,”",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-declaring-the-consent-of-congress-to-the-state-of-kentucky-february-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the act concerning Kentucky.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, which starts below the session heading; the transcription only drops the large initial W of 'WHEREAS'."
+      ],
+      "crops": [
+        "S91-007.jpg"
+      ],
+      "family": [
+        "R1791-0028",
+        "R1791-0323",
+        "R1791-0326",
+        "R1791-0347",
+        "R1791-0348"
+      ]
+    },
+    {
+      "id": "S91-008",
+      "page_key": "sn83025587|1791-02-26|1|1",
+      "excerpt_start": "An ACT declaring the consent of",
+      "excerpt_end": "district of Kentucky into an independent State,\"",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-declaring-the-consent-of-congress-to-the-state-of-kentucky-february-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the act concerning Kentucky.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, which starts below the session heading."
+      ],
+      "crops": [
+        "S91-008.jpg"
+      ],
+      "family": [
+        "R1791-0002",
+        "R1791-0028"
+      ]
+    },
+    {
+      "id": "S91-009",
+      "page_key": "sn83030483|1791-02-26|1|4",
+      "excerpt_start": "AN ACT for the admission of",
+      "excerpt_end": "enacted and declared, That, on the Fourth",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-for-the-admission-of-the-state-of-vermont-february-1791"
+      ],
+      "summary": "Congress admits the State of Vermont into the Union from 4 March 1791.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'into this Union'."
+      ],
+      "crops": [
+        "S91-009.jpg"
+      ],
+      "family": [
+        "R1791-0002"
+      ]
+    },
+    {
+      "id": "S91-010",
+      "page_key": "sn84038410|1791-03-08|1|3",
+      "excerpt_start": "Message from the President—read in the",
+      "excerpt_end": "whether they were disposed to enter into",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-message-of-14-february-1791-on-commerce-with-great-britain"
+      ],
+      "summary": "The Patowmac Guardian prints the President's message of 14 February.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt: it prints 'on Monday the 14th inst.' and 'they were disposed'."
+      ],
+      "crops": [
+        "S91-010.jpg"
+      ],
+      "family": [
+        "R1791-0042",
+        "R1791-0105",
+        "R1791-0350",
+        "R1791-0358",
+        "R1791-0361",
+        "R1791-0369"
+      ],
+      "scan_boxes": [
+        [
+          1214,
+          487,
+          1790,
+          807
+        ]
+      ]
+    },
+    {
+      "id": "S91-011",
+      "page_key": "sn83025587|1791-03-12|1|2",
+      "excerpt_start": "United States, Feb. 14, 1791. Gentlemen",
+      "excerpt_end": "two nations on principles of reciprocal advantage.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-message-of-14-february-1791-on-commerce-with-great-britain"
+      ],
+      "summary": "The New-Hampshire Gazette prints the President's message of 14 February.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, which starts at the message's date line; it prints 'they were disposed'."
+      ],
+      "crops": [
+        "S91-011.jpg"
+      ],
+      "family": [
+        "R1791-0042",
+        "R1791-0108",
+        "R1791-0359",
+        "R1791-0391",
+        "R1791-0392"
+      ]
+    },
+    {
+      "id": "S91-012",
+      "page_key": "sn82014782|1791-03-19|2|2",
+      "excerpt_start": "An ACT declaring the Consent of",
+      "excerpt_end": "district of Kentucky into an independent State,\"",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-declaring-the-consent-of-congress-to-the-state-of-kentucky-february-1791"
+      ],
+      "summary": "The Kentucky Gazette prints the act concerning Kentucky.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop extended by hand (24 November) to the act's own column; it shows the whole excerpt, to the end of the 'WHEREAS' clause, which matches the scan."
+      ],
+      "crops": [
+        "S91-012.jpg"
+      ],
+      "family": [
+        "R1790-0556",
+        "R1791-0002",
+        "R1791-0028"
+      ],
+      "scan_boxes": [
+        [
+          173,
+          420,
+          625,
+          820
+        ]
+      ]
+    },
+    {
+      "id": "S91-013",
+      "page_key": "sn82014782|1791-03-19|2|2",
+      "excerpt_start": "An ACT for the admission of",
+      "excerpt_end": "enacted and declared, That on the fourth",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-for-the-admission-of-the-state-of-vermont-february-1791"
+      ],
+      "summary": "The Kentucky Gazette prints the act admitting Vermont.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop 1 shows the Vermont act's heading and opening in column 2, beside the act on Kentucky (crops 3 and 4 show its continuation); the scan matches the excerpt and prints 'into this Union'. Crops 2 and 5 show neighbouring matter."
+      ],
+      "crops": [
+        "S91-013-1.jpg",
+        "S91-013-2.jpg",
+        "S91-013-3.jpg",
+        "S91-013-4.jpg",
+        "S91-013-5.jpg"
+      ],
+      "family": [
+        "R1790-0556",
+        "R1791-0002",
+        "R1791-0028"
+      ]
+    },
+    {
+      "id": "S91-014",
+      "page_key": "sn83025587|1791-03-19|1|1",
+      "excerpt_start": "An ACT for the admission of",
+      "excerpt_end": "and declared, That on the fourth day",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-for-the-admission-of-the-state-of-vermont-february-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the act admitting Vermont.",
+      "note": "Prints 'into the Union' (the Gazette of the United States and the Kentucky Gazette: 'into this Union') and the misprint 'in Congress assembly'.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints 'into the UNION'. The print reads 'in Congress assembly', a misprint that the transcription silently corrects to 'assembled'."
+      ],
+      "crops": [
+        "S91-014.jpg"
+      ],
+      "family": [
+        "R1791-0002",
+        "R1791-0111",
+        "R1791-0401"
+      ]
+    },
+    {
+      "id": "S91-015",
+      "page_key": "sn84023133|1791-03-19|1|2",
+      "excerpt_start": "United States, Feb. 14, 1791. Gentlemen",
+      "excerpt_end": "two nations on principles of reciprocal advantage.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-message-of-14-february-1791-on-commerce-with-great-britain"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the President's message of 14 February.",
+      "note": "Prints 'whether they are disposed' where the other printings have 'were'.",
+      "scan_findings": [
+        "Scan matches the excerpt. It prints 'whether they are disposed' where the other printings have 'were': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S91-015.jpg"
+      ],
+      "family": [
+        "R1791-0042",
+        "R1791-0391",
+        "R1791-0401"
+      ]
+    },
+    {
+      "id": "S91-016",
+      "page_key": "sn84023133|1791-03-26|1|4",
+      "excerpt_start": "An ACT for the admission of",
+      "excerpt_end": "enacted and declared, That on the fourth",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-for-the-admission-of-the-state-of-vermont-february-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the act admitting Vermont.",
+      "note": "Prints 'into the Union' (the Gazette of the United States and the Kentucky Gazette: 'into this Union').",
+      "scan_findings": [
+        "Scan matches the excerpt and prints 'into the UNION'; the transcription drops a letter of 'Congress' twice, a minor error."
+      ],
+      "crops": [
+        "S91-016.jpg"
+      ],
+      "family": [
+        "R1791-0002",
+        "R1791-0402"
+      ]
+    },
+    {
+      "id": "S91-017",
+      "page_key": "sn83030483|1791-03-30|1|4",
+      "excerpt_start": "AN ACT for raising and adding",
+      "excerpt_end": "and twelve non-commissioned officers, privates and musicians.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-raising-and-adding-another-regiment-march-1791"
+      ],
+      "summary": "Congress raises an additional regiment of infantry and makes further provision for the protection of the frontiers.",
+      "note": "Earliest printing found. Prints 'farther Provision' where the others print 'further'.",
+      "scan_findings": [
+        "Scan matches the excerpt. It prints 'farther Provision', where the other printings have 'further': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S91-017.jpg"
+      ],
+      "family": [
+        "R1791-0017"
+      ]
+    },
+    {
+      "id": "S91-018",
+      "page_key": "sn84038410|1791-04-12|1|1",
+      "excerpt_start": "An ACT for raising and adding",
+      "excerpt_end": "and twelve non-commissioned officers, privates and musicians.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-raising-and-adding-another-regiment-march-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the act raising another regiment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The locator's crop showed the end of another act; the crop was placed by hand (24 November). It shows the whole excerpt, which matches the scan."
+      ],
+      "crops": [
+        "S91-018.jpg"
+      ],
+      "family": [
+        "R1791-0017",
+        "R1791-0073"
+      ],
+      "scan_boxes": [
+        [
+          660,
+          560,
+          1225,
+          875
+        ]
+      ]
+    },
+    {
+      "id": "S91-019",
+      "page_key": "sn82014782|1791-04-16|2|2",
+      "excerpt_start": "An ACT declaring the consent of",
+      "excerpt_end": "district of Kentucky into an independent State,\"",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+        "act-declaring-the-consent-of-congress-to-the-state-of-kentucky-february-1791"
+      ],
+      "summary": "The Kentucky Gazette prints the act concerning Kentucky.",
+      "note": "Printed again, among the papers of the Kentucky convention.",
+      "scan_findings": [
+        "Crop 3 shows the act itself, below the session heading, and matches the excerpt. Crop 1 shows the Secretary of State's certificate that recites the act's title, crop 2 a blank margin and crop 4 another item."
+      ],
+      "crops": [
+        "S91-019-1.jpg",
+        "S91-019-2.jpg",
+        "S91-019-3.jpg",
+        "S91-019-4.jpg"
+      ],
+      "family": [
+        "R1791-0015",
+        "R1791-0028"
+      ]
+    },
+    {
+      "id": "S91-020",
+      "page_key": "sn84023133|1791-04-16|1|1",
+      "excerpt_start": "An ACT for raising and adding",
+      "excerpt_end": "and twelve non-commissioned officers, privates and musicians.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-raising-and-adding-another-regiment-march-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the act raising another regiment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-020.jpg"
+      ],
+      "family": [
+        "R1791-0017"
+      ]
+    },
+    {
+      "id": "S91-021",
+      "page_key": "sn83030483|1791-04-30|1|2",
+      "excerpt_start": "ALEXANDRIA, April 21. On Friday the",
+      "excerpt_end": "the first Corner-Stone of the Federal District.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-the-first-corner-stone-of-the-federal-district-april-1791"
+      ],
+      "summary": "The commissioners Daniel Carroll and David Stewart arrive at Alexandria to superintend the fixing of the first corner-stone of the Federal District.",
+      "note": "Earliest printing found. Prints 'to superintend to fixing' where the Patowmac Guardian and the Kentucky Gazette print 'the fixing'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself reads 'to superintend to fixing', where the Patowmac Guardian and the Kentucky Gazette print 'the fixing'."
+      ],
+      "crops": [
+        "S91-021.jpg"
+      ],
+      "family": [
+        "R1791-0031"
+      ]
+    },
+    {
+      "id": "S91-022",
+      "page_key": "sn84038410|1791-05-03|1|3",
+      "excerpt_start": "ALEXANDRIA, April 21. On Friday, the",
+      "excerpt_end": "the first CORNER-STONE of the Federal District.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-the-first-corner-stone-of-the-federal-district-april-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the Alexandria paragraph on the first corner-stone.",
+      "note": "Goes on 'By neglect, or accident, the inhabitants were not apprized of their coming', which the Gazette of the United States and the New-Hampshire Gazette do not print.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'the fixing' under 'ALEXANDRIA, April 21'."
+      ],
+      "crops": [
+        "S91-022.jpg"
+      ],
+      "family": [
+        "R1791-0031",
+        "R1791-0463"
+      ]
+    },
+    {
+      "id": "S91-023",
+      "page_key": "sn83025587|1791-05-12|1|2",
+      "excerpt_start": "ALEXANDRIA, April 2. On Friday the",
+      "excerpt_end": "firft corner-Stone of the Fed eral District.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-the-first-corner-stone-of-the-federal-district-april-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Alexandria paragraph on the first corner-stone.",
+      "note": "RevX lacks the opening of this item, so the excerpt comes from the older CA transcription. The print reads 'to snperintend to fixing', a misprint, and 'to fixing' as in the Gazette of the United States.",
+      "scan_findings": [
+        "Scan reads 'April 21'; the CA transcription's 'April 2' drops a digit and changes the date. Otherwise the slightly garbled CA text matches; the print itself has the misprint 'snperintend' and reads 'to fixing', as the Gazette of the United States does."
+      ],
+      "crops": [
+        "S91-023.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1791-0031",
+        "R1791-0129",
+        "R1791-0131",
+        "R1791-0132",
+        "R1791-0139",
+        "R1791-0490"
+      ]
+    },
+    {
+      "id": "S91-024",
+      "page_key": "sn83025587|1791-06-02|1|1",
+      "excerpt_start": "An ACT for raising and adding",
+      "excerpt_end": "and twelve non-commissioned officers, privates and musicians.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-raising-and-adding-another-regiment-march-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the act raising another regiment.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-024.jpg"
+      ],
+      "family": [
+        "R1791-0002",
+        "R1791-0017",
+        "R1791-0145",
+        "R1791-0519"
+      ]
+    },
+    {
+      "id": "S91-025",
+      "page_key": "sn83030483|1791-06-04|1|3",
+      "excerpt_start": "A letter from Paris, of March",
+      "excerpt_end": "a duty of twelve livres per quintal.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-paris-of-10-march-1791-on-the-importation-of-oil"
+      ],
+      "summary": "A letter from Paris reports that the National Assembly prohibits the importation of oil from any country but the United States.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints the report of what the letter contains."
+      ],
+      "crops": [
+        "S91-025.jpg"
+      ],
+      "family": [
+        "R1791-0149"
+      ]
+    },
+    {
+      "id": "S91-026",
+      "page_key": "sn83025587|1791-06-16|1|2",
+      "excerpt_start": "PHILADELPHIA, June 3. Important and authentick",
+      "excerpt_end": "United States of America, shall be prohibited.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-paris-of-10-march-1791-on-the-importation-of-oil"
+      ],
+      "summary": "The New-Hampshire Gazette prints the letter from Paris on the importation of oil.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints the extract of the letter."
+      ],
+      "crops": [
+        "S91-026.jpg"
+      ],
+      "family": [
+        "R1791-0032",
+        "R1791-0534",
+        "R1791-0539",
+        "R1791-0542"
+      ]
+    },
+    {
+      "id": "S91-027",
+      "page_key": "sn84023133|1791-06-17|1|2",
+      "excerpt_start": "JUNE 4. Important and authentick FRENCH",
+      "excerpt_end": "United States of America, shall be prohibited.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-paris-of-10-march-1791-on-the-importation-of-oil"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the letter from Paris on the importation of oil.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for 'Extra' where the print reads 'Extract', a minor error. It prints the extract of the letter under 'JUNE 4.' and 'Important and authentick FRENCH NEWS.'"
+      ],
+      "crops": [
+        "S91-027.jpg"
+      ],
+      "family": [
+        "R1791-0032",
+        "R1791-0145",
+        "R1791-0147",
+        "R1791-0539"
+      ]
+    },
+    {
+      "id": "S91-028",
+      "page_key": "sn82014782|1791-06-18|2|2",
+      "excerpt_start": "A L E X A N",
+      "excerpt_end": "first CORNER STONE of the Federal District.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-the-first-corner-stone-of-the-federal-district-april-1791"
+      ],
+      "summary": "The Kentucky Gazette prints the Alexandria paragraph on the first corner-stone.",
+      "note": "Goes on 'By neglect, or accident, the inhabitants were not apprized of their coming', which the Gazette of the United States and the New-Hampshire Gazette do not print.",
+      "scan_findings": [
+        "Crop 4 shows the item, which matches the excerpt and prints 'the fixing'; crops 1 to 3 show neighbouring items. The scan is low-resolution but legible."
+      ],
+      "crops": [
+        "S91-028-1.jpg",
+        "S91-028-2.jpg",
+        "S91-028-3.jpg",
+        "S91-028-4.jpg"
+      ],
+      "family": [
+        "R1791-0031",
+        "R1791-0127",
+        "R1791-0130"
+      ]
+    },
+    {
+      "id": "S91-029",
+      "page_key": "sn84038410|1791-06-20|1|3",
+      "excerpt_start": "P H I L A D",
+      "excerpt_end": "a duty of twelve livres per quintal.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-paris-of-10-march-1791-on-the-importation-of-oil"
+      ],
+      "summary": "The Patowmac Guardian prints the letter from Paris on the importation of oil.",
+      "note": "Reports the letter without the words 'published in the General Advertiser of yesterday'.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints the report of what the letter contains, without the Gazette of the United States' words 'published in the General Advertiser of yesterday'."
+      ],
+      "crops": [
+        "S91-029.jpg"
+      ],
+      "family": [
+        "R1791-0014",
+        "R1791-0153",
+        "R1791-0531",
+        "R1791-0548"
+      ]
+    },
+    {
+      "id": "S91-030",
+      "page_key": "sn82014782|1791-06-25|2|2",
+      "excerpt_start": "LEXINGTON, June 25. We are authorized",
+      "excerpt_end": "march on the 24th and pushed forward",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-scotts-account-of-the-expedition-against-the-wabash-towns-june-1791"
+      ],
+      "summary": "Lexington, 25 June 1791: a 'detail of Facts' on the operations of General Scott's expedition against the towns on the Wabash.",
+      "note": "Earliest printing found. The Lexington 'detail of Facts' of 25 June, which gives General Scott's account in the third person; counted with his letter (C-02).",
+      "scan_findings": [
+        "Crop placed by hand (24 November) on the top of the column; it shows the dateline 'LEXINGTON, June 25.' and the whole excerpt, which match the scan."
+      ],
+      "crops": [
+        "S91-030.jpg"
+      ],
+      "family": [
+        "R1791-0018"
+      ],
+      "scan_boxes": [
+        [
+          95,
+          210,
+          515,
+          670
+        ]
+      ]
+    },
+    {
+      "id": "S91-031",
+      "page_key": "sn83030483|1791-07-16|1|3",
+      "excerpt_start": "The English papers also give an",
+      "excerpt_end": "4000 men invested by the patriotic troops.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-english-papers-on-the-battle-near-carpentras-july-1791"
+      ],
+      "summary": "The English papers report a battle near Carpentras between 10,000 patriots and about 7,000 counter-revolutionists.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-031.jpg"
+      ],
+      "family": [
+        "R1791-0019",
+        "R1791-0048"
+      ]
+    },
+    {
+      "id": "S91-032",
+      "page_key": "sn84038410|1791-07-25|1|2",
+      "excerpt_start": "NEW-YORK, July 9. The English papers",
+      "excerpt_end": "4,000 men invested by the patriotic troops.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-english-papers-on-the-battle-near-carpentras-july-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the paragraph on the battle near Carpentras.",
+      "note": "Prints 'a capitulation was proposed to the besieged' where the others print 'by the besieged'.",
+      "scan_findings": [
+        "Scan matches the excerpt but for the commas the transcription adds to '7000' and '4000', a minor difference. After the excerpt the print reads 'a capitulation was proposed to the besieged', where other printings have 'by the besieged': a printed difference that changes the sense."
+      ],
+      "crops": [
+        "S91-032.jpg"
+      ],
+      "family": [
+        "R1791-0048",
+        "R1791-0170",
+        "R1791-0576",
+        "R1791-0586"
+      ]
+    },
+    {
+      "id": "S91-033",
+      "page_key": "sn83025587|1791-07-28|1|2",
+      "excerpt_start": "The English papers give an account",
+      "excerpt_end": "4000 men invested by the patriotic troops.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-english-papers-on-the-battle-near-carpentras-july-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the battle near Carpentras.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-033.jpg"
+      ],
+      "family": [
+        "R1791-0019",
+        "R1791-0169",
+        "R1791-0599",
+        "R1791-0608"
+      ]
+    },
+    {
+      "id": "S91-034",
+      "page_key": "sn83030483|1791-07-30|1|1",
+      "excerpt_start": "PHILADELPHIA, July 30. GENERAL SCOTT. Extract",
+      "excerpt_end": "directing my route to Ouiattanan, in the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-scotts-account-of-the-expedition-against-the-wabash-towns-june-1791"
+      ],
+      "summary": "The Gazette of the United States prints General Scott's account of his expedition.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt: General Scott's letter under the heading 'GENERAL SCOTT.', addressed 'to the Secretary for the Department of War, dated Lexington'."
+      ],
+      "crops": [
+        "S91-034.jpg"
+      ],
+      "family": [
+        "R1791-0018",
+        "R1791-0171"
+      ],
+      "scan_boxes": [
+        [
+          213,
+          703,
+          2935,
+          1560
+        ]
+      ]
+    },
+    {
+      "id": "S91-035",
+      "page_key": "sn83030483|1791-07-30|1|3",
+      "excerpt_start": "Philadelphia, July 30. A correspondent informs,",
+      "excerpt_end": "by a recapitulatory speech from the Commissioner.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-the-treaty-held-by-timothy-pickering-with-the-six-nations-july-1791"
+      ],
+      "summary": "A correspondent reports that the treaty held by Timothy Pickering with the Six Nations at Newtown Point was concluded on 18 July 'to the satisfaction of all parties'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'Esq.' under the dateline 'Philadelphia, July 30.'"
+      ],
+      "crops": [
+        "S91-035.jpg"
+      ],
+      "family": [
+        "R1791-0071",
+        "R1791-0088",
+        "R1791-0611",
+        "R1791-0612",
+        "R1791-0613",
+        "R1791-0614"
+      ]
+    },
+    {
+      "id": "S91-036",
+      "page_key": "sn84038410|1791-08-01|1|3",
+      "excerpt_start": "LEXINGTON, June 25. We are authorized",
+      "excerpt_end": "the 24th, and pushed forward with the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-scotts-account-of-the-expedition-against-the-wabash-towns-june-1791"
+      ],
+      "summary": "The Patowmac Guardian prints General Scott's account of his expedition.",
+      "note": "The Lexington 'detail of facts', from the Kentucky Gazette; counted with General Scott's letter (C-02).",
+      "scan_findings": [
+        "Scan matches the excerpt: the Lexington 'detail of facts' with 'Brigadier-General SCOTT'. The source line above the dateline is rightly left out of the excerpt."
+      ],
+      "crops": [
+        "S91-036.jpg"
+      ],
+      "family": [
+        "R1791-0018",
+        "R1791-0172",
+        "R1791-0590",
+        "R1791-0597",
+        "R1791-0598"
+      ]
+    },
+    {
+      "id": "S91-037",
+      "page_key": "sn83025587|1791-08-04|1|2",
+      "excerpt_start": "JUNE 3. Accounts were received yesterday",
+      "excerpt_end": "thousand persons have died in a day.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-plague-rages-in-turkey-june-1791"
+      ],
+      "summary": "London: accounts received by way of France say that the plague rages in the part of Turkey nearest the Mediterranean, a thousand dying in a day in a small district.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the dateline 'June 3', but for two small misreadings: it prints 'insomuch' and 'havock' where the transcription has 'inasmuch' and 'havoc'. It reads 'nearest to the Mediterranean'."
+      ],
+      "crops": [
+        "S91-037.jpg"
+      ],
+      "family": [
+        "R1791-0020",
+        "R1791-0618"
+      ]
+    },
+    {
+      "id": "S91-038",
+      "page_key": "sn84023133|1791-08-05|1|3",
+      "excerpt_start": "LONDON JUNE 3. ACCOUNTS were received",
+      "excerpt_end": "thousand persons have died in a day.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-plague-rages-in-turkey-june-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the London paragraph on the plague in Turkey.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the dateline 'London June 3', but for two small misreadings: it prints 'insomuch' (transcription 'in much') and 'havock' (transcription 'havoc'). It reads 'nearest'."
+      ],
+      "crops": [
+        "S91-038.jpg"
+      ],
+      "family": [
+        "R1791-0020",
+        "R1791-0048",
+        "R1791-0620",
+        "R1791-0622"
+      ]
+    },
+    {
+      "id": "S91-039",
+      "page_key": "sn84023133|1791-08-05|1|3",
+      "excerpt_start": "The English papers also give an",
+      "excerpt_end": "a capitulation was proposed by the besieged.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-english-papers-on-the-battle-near-carpentras-july-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the paragraph on the battle near Carpentras.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-039.jpg"
+      ],
+      "family": [
+        "R1791-0020",
+        "R1791-0048",
+        "R1791-0620",
+        "R1791-0622"
+      ]
+    },
+    {
+      "id": "S91-040",
+      "page_key": "sn84038410|1791-08-08|1|2",
+      "excerpt_start": "A correspondent informs us, that the",
+      "excerpt_end": "by a recapitulary speech from the Commissioner.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-the-treaty-held-by-timothy-pickering-with-the-six-nations-july-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the correspondent's account of the treaty at Newtown Point.",
+      "note": "Prints 'Esquire' and 'a recapitulary speech'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself reads 'Esquire' and 'recapitulary', where other printings have 'Esq.' and 'recapitulatory'."
+      ],
+      "crops": [
+        "S91-040.jpg"
+      ],
+      "family": [
+        "R1791-0088",
+        "R1791-0603",
+        "R1791-0613",
+        "R1791-0614",
+        "R1791-0625"
+      ]
+    },
+    {
+      "id": "S91-041",
+      "page_key": "sn83030483|1791-08-10|1|2",
+      "excerpt_start": "JUNE 3. Accounts were received yesterday",
+      "excerpt_end": "thousand persons have died in a day.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-plague-rages-in-turkey-june-1791"
+      ],
+      "summary": "The Gazette of the United States prints the London paragraph on the plague in Turkey.",
+      "note": "Prints 'next to the Mediterranean' where the others print 'nearest'.",
+      "scan_findings": [
+        "Scan matches the excerpt. It reads 'next to the Mediterranean' where the other printings have 'nearest': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S91-041.jpg"
+      ],
+      "family": [
+        "R1791-0020",
+        "R1791-0628"
+      ]
+    },
+    {
+      "id": "S91-042",
+      "page_key": "sn83025587|1791-08-11|1|2",
+      "excerpt_start": "JULY 30. A correspondent informs that",
+      "excerpt_end": "by a recapitulatory speech from the Commissioner.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-the-treaty-held-by-timothy-pickering-with-the-six-nations-july-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the correspondent's account of the treaty at Newtown Point.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'Esq.' under the dateline 'JULY 30.'"
+      ],
+      "crops": [
+        "S91-042.jpg"
+      ],
+      "family": [
+        "R1791-0019",
+        "R1791-0088",
+        "R1791-0172",
+        "R1791-0602",
+        "R1791-0630"
+      ]
+    },
+    {
+      "id": "S91-043",
+      "page_key": "sn84023133|1791-08-12|1|1",
+      "excerpt_start": "PHILADELPHIA, JULY 27. Extra of a",
+      "excerpt_end": "I found myself greatly deficient in both.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-scotts-account-of-the-expedition-against-the-wabash-towns-june-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints General Scott's account of his expedition.",
+      "note": "Dated 'Philadelphia, July 27', with the bearer arrived 'yesterday afternoon' (the Gazette of the United States: 'July 30', 'on Tuesday last').",
+      "scan_findings": [
+        "Crop shows the letter's opening on page 1 and matches the excerpt, except the minor slips 'Extra' for 'Extract' and 'Ouattanan' for 'Ouiattanan'. The paper's Philadelphia dateline is July 27 and it says the bearer arrived 'yesterday afternoon', where GUS has July 30 and 'on Tuesday last'."
+      ],
+      "crops": [
+        "S91-043.jpg"
+      ],
+      "family": [
+        "R1791-0018",
+        "R1791-0632"
+      ]
+    },
+    {
+      "id": "S91-044",
+      "page_key": "sn84023133|1791-08-12|1|2",
+      "excerpt_start": "NEW-YORK, JULY 30. A correspondent informs",
+      "excerpt_end": "by a recapitulatory Speech from the Commissioners.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-the-treaty-held-by-timothy-pickering-with-the-six-nations-july-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the correspondent's account of the treaty at Newtown Point.",
+      "note": "Prints 'Newton-Point' and 'from the Commissioners'.",
+      "scan_findings": [
+        "Scan matches the excerpt but for 'Susquehannah', which the transcription gives as 'Susquehanna', a minor error. The print itself reads 'NEW-YORK, JULY 30', 'Newton-Point' and 'Commissioners', where other printings have Philadelphia, 'Newtown-Point' and 'Commissioner'."
+      ],
+      "crops": [
+        "S91-044.jpg"
+      ],
+      "family": [
+        "R1791-0018",
+        "R1791-0171"
+      ]
+    },
+    {
+      "id": "S91-045",
+      "page_key": "sn83025587|1791-08-18|1|2",
+      "excerpt_start": "Accounts were received yesterday at the",
+      "excerpt_end": "thousand persons have died in a day.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-plague-rages-in-turkey-june-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the London paragraph on the plague in Turkey.",
+      "note": "Printed again.",
+      "scan_findings": [
+        "Scan matches the excerpt but for one small misreading: it prints 'insomuch' where the transcription has 'inasmuch'. It reads 'nearest', with no dateline directly above."
+      ],
+      "crops": [
+        "S91-045.jpg"
+      ],
+      "family": [
+        "R1791-0020",
+        "R1791-0615",
+        "R1791-0626"
+      ]
+    },
+    {
+      "id": "S91-046",
+      "page_key": "sn84038410|1791-08-22|1|2",
+      "excerpt_start": "Accounts were received, yesterday, at the",
+      "excerpt_end": "thousand persons have died in a day.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-plague-rages-in-turkey-june-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the London paragraph on the plague in Turkey.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for one small misreading: it prints 'insomuch' where the transcription has 'inasmuch'. It reads 'nearest'."
+      ],
+      "crops": [
+        "S91-046.jpg"
+      ],
+      "family": [
+        "R1791-0020",
+        "R1791-0173",
+        "R1791-0617",
+        "R1791-0622",
+        "R1791-0635",
+        "R1791-0642"
+      ]
+    },
+    {
+      "id": "S91-047",
+      "page_key": "sn83030483|1791-08-31|1|1",
+      "excerpt_start": "I am the Postmaster of Sainte",
+      "excerpt_end": "thought I recognized the Queen; and perceiving",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "m-drouet-recital-before-the-national-assembly-on-stopping-the-king-june-1791"
+      ],
+      "summary": "M. Drouet, postmaster of Sainte Menehould, gives the National Assembly his account of how the King was recognized and stopped.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt but for the place name, printed 'Saiute Menehoud' and transcribed 'Sainte Menehould'. The line above reads 'M. Drouet', so RevX's 'M. Duquet' there is a misreading outside the excerpt."
+      ],
+      "crops": [
+        "S91-047.jpg"
+      ],
+      "family": [
+        "R1791-0022",
+        "R1791-0659",
+        "R1791-0663"
+      ]
+    },
+    {
+      "id": "S91-048",
+      "page_key": "sn83025587|1791-09-01|1|1",
+      "excerpt_start": "I am the Post-master of Sainte",
+      "excerpt_end": "I thought I recognized the Queen; and",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "m-drouet-recital-before-the-national-assembly-on-stopping-the-king-june-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints M. Drouet's recital.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that it prints 'formely' (a printer's misprint), which the transcription silently corrects to 'formerly'. It reads '21st'."
+      ],
+      "crops": [
+        "S91-048.jpg"
+      ],
+      "family": [
+        "R1791-0022"
+      ]
+    },
+    {
+      "id": "S91-049",
+      "page_key": "sn84023133|1791-09-02|1|3",
+      "excerpt_start": "MR. PRESIDENT, \"I am the Postmaster",
+      "excerpt_end": "house. I thought I recognized the Queen;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "m-drouet-recital-before-the-national-assembly-on-stopping-the-king-june-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints M. Drouet's recital.",
+      "note": "Opens with the address 'Mr. President,' and prints 'bated' for 'baited'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the address 'Mr. President' and 'bated' for 'baited', both as printed. It reads '21st'."
+      ],
+      "crops": [
+        "S91-049.jpg"
+      ],
+      "family": [
+        "R1791-0022"
+      ]
+    },
+    {
+      "id": "S91-050",
+      "page_key": "sn83030483|1791-09-17|1|1",
+      "excerpt_start": "The Insurgents of Birmingham had made",
+      "excerpt_end": "the fire with the Rights of Man",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-insurgents-of-birmingham-had-made-a-gridiron-july-1791"
+      ],
+      "summary": "An English report says that the insurgents of Birmingham brought 'a gridiron of immense size' to Dr. Priestley's house.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Crop extended by hand (24 November); it shows the whole paragraph, to 'the Rights of Man', which matches the scan."
+      ],
+      "crops": [
+        "S91-050.jpg"
+      ],
+      "family": [
+        "R1791-0090",
+        "R1791-0698",
+        "R1791-0699",
+        "R1791-0700",
+        "R1791-0702",
+        "R1791-0703"
+      ],
+      "scan_boxes": [
+        [
+          2054,
+          3625,
+          2983,
+          3880
+        ]
+      ]
+    },
+    {
+      "id": "S91-051",
+      "page_key": "sn83030483|1791-09-17|1|3",
+      "excerpt_start": "Extract of a letter from Danville,",
+      "excerpt_end": "killed and taken 42 of the enemy.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "danville-letter-an-express-from-general-wilkinson-august-1791"
+      ],
+      "summary": "A letter from Danville reports an express from General Wilkinson: a large town on the Wabash and a Kickapoo town destroyed.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "The locator's crop showed other items; the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan."
+      ],
+      "crops": [
+        "S91-051.jpg"
+      ],
+      "family": [
+        "R1791-0231",
+        "R1791-0696",
+        "R1791-0697"
+      ],
+      "scan_boxes": [
+        [
+          2010,
+          1785,
+          3095,
+          2020
+        ]
+      ]
+    },
+    {
+      "id": "S91-052",
+      "page_key": "sn83025587|1791-09-22|1|3",
+      "excerpt_start": "The insurgents of Birmingham had made",
+      "excerpt_end": "the fire with the RIGHTS OF MAN.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-insurgents-of-birmingham-had-made-a-gridiron-july-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the Birmingham gridiron.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paragraph follows a dash at the end of an account of the riot."
+      ],
+      "crops": [
+        "S91-052.jpg"
+      ],
+      "family": [
+        "R1791-0053",
+        "R1791-0707",
+        "R1791-0712",
+        "R1791-0713",
+        "R1791-0716",
+        "R1791-0717"
+      ]
+    },
+    {
+      "id": "S91-053",
+      "page_key": "sn84038410|1791-09-26|1|2",
+      "excerpt_start": "The insurgents of Birmingham had made",
+      "excerpt_end": "the fire with the rights of man.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-insurgents-of-birmingham-had-made-a-gridiron-july-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the paragraph on the Birmingham gridiron.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-053.jpg"
+      ],
+      "family": [
+        "R1791-0182",
+        "R1791-0682",
+        "R1791-0702",
+        "R1791-0703",
+        "R1791-0710",
+        "R1791-0729"
+      ]
+    },
+    {
+      "id": "S91-054",
+      "page_key": "sn84038410|1791-09-26|1|3",
+      "excerpt_start": "PHILADELPHIA, Sept. 17. Extract of a",
+      "excerpt_end": "killed and taken 24 of the enemy.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "danville-letter-an-express-from-general-wilkinson-august-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the Danville letter on General Wilkinson's express.",
+      "note": "Prints 'killed and taken 24' where the other printings have 42.",
+      "scan_findings": [
+        "Scan matches the excerpt. It reads 'killed and taken 24' where the other printings have 42: a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S91-054.jpg"
+      ],
+      "family": [
+        "R1791-0183",
+        "R1791-0185",
+        "R1791-0701",
+        "R1791-0727",
+        "R1791-0730",
+        "R1791-0731"
+      ]
+    },
+    {
+      "id": "S91-055",
+      "page_key": "sn83025587|1791-09-29|1|2",
+      "excerpt_start": "PHILADELPHIA, July 19. Extract of a",
+      "excerpt_end": "killed and taken 42 of the enemy.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "danville-letter-an-express-from-general-wilkinson-august-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Danville letter on General Wilkinson's express.",
+      "note": "Prints the dateline 'Philadelphia, July 19' above a letter dated 22 August.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the dateline 'Philadelphia, July 19', which the paper itself prints above a letter of August 22. The first digit of the house count is faint; enlarged again by the reviewing session (24 November) it is a 3 with a curved head, so the transcription's '50' changes the number (the other printings have 30)."
+      ],
+      "crops": [
+        "S91-055.jpg"
+      ],
+      "family": [
+        "R1791-0694",
+        "R1791-0735"
+      ]
+    },
+    {
+      "id": "S91-056",
+      "page_key": "sn84023133|1791-09-30|1|3",
+      "excerpt_start": "The insurgents of Birmingham had made",
+      "excerpt_end": "the fire with the RIGHTS OF MAN.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-insurgents-of-birmingham-had-made-a-gridiron-july-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the paragraph on the Birmingham gridiron.",
+      "note": "Prints 'Bermingham'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells 'Bermingham', which the transcription silently gives as 'Birmingham': a printed spelling difference, not a different place."
+      ],
+      "crops": [
+        "S91-056.jpg"
+      ],
+      "family": [
+        "R1791-0689",
+        "R1791-0717"
+      ]
+    },
+    {
+      "id": "S91-057",
+      "page_key": "sn83030483|1791-10-03|1|1",
+      "excerpt_start": "Prince John, the African Prince, is",
+      "excerpt_end": "for the abolition of the Slave Trade.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-prince-john-the-african-prince-arrives-from-sierra-leone-september-1791"
+      ],
+      "summary": "London: Prince John, an African prince, arrives from Sierra Leone, his business 'chiefly to be respecting the Slave Trade'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. No dateline stands directly above the paragraph (the crop shows the end of the item before it), and it ends 'the abolition of the Slave Trade'."
+      ],
+      "crops": [
+        "S91-057.jpg"
+      ],
+      "family": [
+        "R1791-0193",
+        "R1791-0739"
+      ]
+    },
+    {
+      "id": "S91-058",
+      "page_key": "sn83030483|1791-10-05|1|3",
+      "excerpt_start": "By the Schooner Hardy, Capt. Green,",
+      "excerpt_end": "3000 of the insurgents have been killed.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "by-the-schooner-hardy-from-cape-francois-the-insurrection-october-1791"
+      ],
+      "summary": "Intelligence by the schooner Hardy from Cape-Francois on the insurrection in Saint-Domingue.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, in the Philadelphia form: 'arrived here on Saturday last'."
+      ],
+      "crops": [
+        "S91-058.jpg"
+      ],
+      "family": [
+        "R1791-0006",
+        "R1791-0742",
+        "R1791-0743"
+      ]
+    },
+    {
+      "id": "S91-059",
+      "page_key": "sn84023133|1791-10-07|1|1",
+      "excerpt_start": "Extract of a letter from Danville,",
+      "excerpt_end": "killed and taken 42 of the enemy.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "danville-letter-an-express-from-general-wilkinson-august-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the Danville letter on General Wilkinson's express.",
+      "note": "Prints 'situated at the forks of the Wabash' (the others 'on the Wabash') and leaves out 'via Richmond'.",
+      "scan_findings": [
+        "Scan matches the excerpt. It reads 'situated at the forks of the Wabash' where the other printings have 'on the Wabash': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S91-059.jpg"
+      ],
+      "family": [
+        "R1791-0090",
+        "R1791-0744"
+      ]
+    },
+    {
+      "id": "S91-060",
+      "page_key": "sn83025587|1791-10-13|1|3",
+      "excerpt_start": "Further particulars of the insurrection in",
+      "excerpt_end": "white inhabitants had been able to effect:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "by-the-schooner-hardy-from-cape-francois-the-insurrection-october-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the report by the schooner Hardy.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the heading 'Further particulars of the insurrection in the West-Indies' and the New York form: 'arrived at Philadelphia on Saturday morning'."
+      ],
+      "crops": [
+        "S91-060.jpg"
+      ],
+      "family": [
+        "R1791-0006",
+        "R1791-0195"
+      ]
+    },
+    {
+      "id": "S91-061",
+      "page_key": "sn84023133|1791-10-14|1|3",
+      "excerpt_start": "Further particulars of the Insurrection in",
+      "excerpt_end": "white, inhabitants had been able to effect:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "by-the-schooner-hardy-from-cape-francois-the-insurrection-october-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the report by the schooner Hardy.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading and New York form included, except one word: it prints 'sailed' with a long s, which the transcription turns into 'failed'."
+      ],
+      "crops": [
+        "S91-061.jpg"
+      ],
+      "family": [
+        "R1791-0006",
+        "R1791-0248",
+        "R1791-0249",
+        "R1791-0748"
+      ]
+    },
+    {
+      "id": "S91-062",
+      "page_key": "sn82014782|1791-10-15|2|3",
+      "excerpt_start": "PHILADELPHIA, July 16. THE English papers",
+      "excerpt_end": "a capitulation was proposed by the besieged.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-english-papers-on-the-battle-near-carpentras-july-1791"
+      ],
+      "summary": "The Kentucky Gazette prints the paragraph on the battle near Carpentras.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The low-resolution scan matches the excerpt but for two minor points: it appears to print 'Carpentras' where the transcription has 'Carpenteras', and it prints 'compleatly', which the transcription modernises to 'completely'."
+      ],
+      "crops": [
+        "S91-062.jpg"
+      ],
+      "family": [
+        "R1791-0048",
+        "R1791-0170",
+        "R1791-0587"
+      ]
+    },
+    {
+      "id": "S91-063",
+      "page_key": "sn84038410|1791-10-17|1|2",
+      "excerpt_start": "By the Schooner Hardy, Capt. Green,",
+      "excerpt_end": "3000 of the insurgents have been killed;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "by-the-schooner-hardy-from-cape-francois-the-insurrection-october-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the report by the schooner Hardy.",
+      "note": "Prints 'arrived here on Saturday morning', between the Philadelphia form ('on Saturday last') and the New York form ('at Philadelphia on Saturday morning').",
+      "scan_findings": [
+        "Scan matches the excerpt; 'failed' is not counted, as the long s cannot be told from an f at this resolution. The paper prints 'arrived here on Saturday morning', mixing the Philadelphia and New York forms."
+      ],
+      "crops": [
+        "S91-063.jpg"
+      ],
+      "family": [
+        "R1791-0006",
+        "R1791-0186",
+        "R1791-0721",
+        "R1791-0742",
+        "R1791-0743"
+      ]
+    },
+    {
+      "id": "S91-064",
+      "page_key": "sn83030483|1791-10-26|1|3",
+      "excerpt_start": "S P E E C H",
+      "excerpt_end": "common country, and by a persuasion equally",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "presidents-speech-to-both-houses-25-october-1791"
+      ],
+      "summary": "The President opens the session with a speech on 'the prosperous situation of our common country'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included. Just past the excerpt the paper prints 'under the guidance of a spirit', as the National Gazette does."
+      ],
+      "crops": [
+        "S91-064.jpg"
+      ],
+      "family": [
+        "R1791-0003",
+        "R1791-0199"
+      ],
+      "scan_boxes": [
+        [
+          158,
+          307,
+          1076,
+          1106
+        ]
+      ]
+    },
+    {
+      "id": "S91-065",
+      "page_key": "sn83030483|1791-10-29|1|3",
+      "excerpt_start": "SIR, IN receiving your address at",
+      "excerpt_end": "flows, we behold with an animating pleasure,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "answer-of-the-house-of-representatives-october-1791"
+      ],
+      "summary": "The House of Representatives answers the President's speech.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt: 'the present session' and 'flattering prospects'."
+      ],
+      "crops": [
+        "S91-065.jpg"
+      ],
+      "family": [
+        "R1791-0004",
+        "R1791-0201",
+        "R1791-0202"
+      ]
+    },
+    {
+      "id": "S91-066",
+      "page_key": "sn83025887|1791-10-31|1|1",
+      "excerpt_start": "Fellow-citizens of the Senate, and of",
+      "excerpt_end": "under the guidance of a spirit, no",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "presidents-speech-to-both-houses-25-october-1791"
+      ],
+      "summary": "The National Gazette prints the President's speech of 25 October.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints 'a spirit', as the Gazette of the United States does."
+      ],
+      "crops": [
+        "S91-066.jpg"
+      ],
+      "family": [
+        "R1791-0003",
+        "R1791-0784"
+      ]
+    },
+    {
+      "id": "S91-067",
+      "page_key": "sn83025887|1791-10-31|1|2",
+      "excerpt_start": "To GEORGE WASHINGTON, President of the",
+      "excerpt_end": "to the true source from which it",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "answer-of-the-house-of-representatives-october-1791"
+      ],
+      "summary": "The National Gazette prints the House's answer.",
+      "note": "Prints 'an ample share in the feeling' where the others print 'feelings'.",
+      "scan_findings": [
+        "The locator's crop showed the President's reply; the crop was placed by hand (24 November) on the next column. It shows the whole excerpt, which matches the scan but for the salutation 'SIR', which the transcription leaves out, and its 'feelings' for the printed 'feeling'."
+      ],
+      "crops": [
+        "S91-067.jpg"
+      ],
+      "family": [
+        "R1791-0003",
+        "R1791-0004",
+        "R1791-0782"
+      ],
+      "scan_boxes": [
+        [
+          2630,
+          355,
+          3345,
+          905
+        ]
+      ]
+    },
+    {
+      "id": "S91-068",
+      "page_key": "sn83030483|1791-11-02|1|2",
+      "excerpt_start": "To the PRESIDENT of the UNITED",
+      "excerpt_end": "the restoration of public and private confidence",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "address-of-the-senate-to-the-president-october-1791"
+      ],
+      "summary": "The Senate answers the President's speech.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt: 'with the highest satisfaction' and 'or failed'."
+      ],
+      "crops": [
+        "S91-068.jpg"
+      ],
+      "family": [
+        "R1791-0058",
+        "R1791-0774",
+        "R1791-0790"
+      ]
+    },
+    {
+      "id": "S91-069",
+      "page_key": "sn83025887|1791-11-03|1|3",
+      "excerpt_start": "SIR, THE Senate of the United",
+      "excerpt_end": "are conspicuous and important, and the pleasure",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "address-of-the-senate-to-the-president-october-1791"
+      ],
+      "summary": "The National Gazette prints the Senate's address.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'nor failed' where the other printings have 'or failed': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S91-069.jpg"
+      ],
+      "family": [
+        "R1791-0058",
+        "R1791-0205"
+      ]
+    },
+    {
+      "id": "S91-070",
+      "page_key": "sn82014782|1791-11-05|2|2",
+      "excerpt_start": "I am the Postmaster of Saint",
+      "excerpt_end": "house—I thought I recognized the queen; and",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "m-drouet-recital-before-the-national-assembly-on-stopping-the-king-june-1791"
+      ],
+      "summary": "The Kentucky Gazette prints M. Drouet's recital.",
+      "note": "Prints 'the twenty first of June' in words, and 'Saint Menehoud'.",
+      "scan_findings": [
+        "Crop extended by hand (24 November) to the end of the column; it shows the whole excerpt, to 'the queen; and', which matches the scan but for 'Menehoud', which the transcription spells 'Menehould'. The paper prints 'twenty first' in words."
+      ],
+      "crops": [
+        "S91-070.jpg"
+      ],
+      "family": [
+        "R1791-0021",
+        "R1791-0022"
+      ],
+      "scan_boxes": [
+        [
+          1007,
+          2435,
+          1419,
+          2815
+        ]
+      ]
+    },
+    {
+      "id": "S91-071",
+      "page_key": "sn84038410|1791-11-07|1|2",
+      "excerpt_start": "Fellow Citizens of the Senate and",
+      "excerpt_end": "the stability and increase of national prosperity.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "presidents-speech-to-both-houses-25-october-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the President's speech of 25 October.",
+      "note": "Prints 'under the guidance of the spirit' where the Philadelphia papers print 'a spirit'.",
+      "scan_findings": [
+        "Scan matches the excerpt. Above the salutation the crop shows the display line 'S P E E C H:', which ends the report's sentence ('addressed both Houses in the following SPEECH:'); the excerpt starts at the salutation."
+      ],
+      "crops": [
+        "S91-071.jpg"
+      ],
+      "family": [
+        "R1791-0003"
+      ]
+    },
+    {
+      "id": "S91-072",
+      "page_key": "sn83025587|1791-11-10|1|1",
+      "excerpt_start": "Fellow-Citizens of the Senate and of",
+      "excerpt_end": "under the guidance of the spirit, no",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "presidents-speech-to-both-houses-25-october-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the President's speech of 25 October.",
+      "note": "Prints 'under the guidance of the spirit' where the Philadelphia papers print 'a spirit'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints 'the spirit' where the Philadelphia papers have 'a spirit'."
+      ],
+      "crops": [
+        "S91-072.jpg"
+      ],
+      "family": [
+        "R1791-0003"
+      ]
+    },
+    {
+      "id": "S91-073",
+      "page_key": "sn82014782|1791-11-12|2|3",
+      "excerpt_start": "Copy of a Circular letter from",
+      "excerpt_end": "have been wounded; gallant men are now",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-scotts-circular-letter-to-the-county-lieutenants-november-1791"
+      ],
+      "summary": "General Scott writes to the county lieutenants of Kentucky that 'the army have been defeated'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Crop placed by hand (24 November) on the circular's column, without the neighbouring item; it shows the heading and the whole excerpt. The scan reads 'many, many brave wounded gallant men', as the other printings; the transcription's 'many, many have been wounded; gallant men' loses the word 'brave' and rewords the sentence."
+      ],
+      "crops": [
+        "S91-073.jpg"
+      ],
+      "family": [
+        "R1791-0007",
+        "R1791-0071",
+        "R1791-0658"
+      ],
+      "scan_boxes": [
+        [
+          840,
+          630,
+          1270,
+          935
+        ]
+      ]
+    },
+    {
+      "id": "S91-074",
+      "page_key": "sn84023133|1791-11-12|1|2",
+      "excerpt_start": "Fellow-Citizens of the Senate and of",
+      "excerpt_end": "under the guidance of the spirit, no",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "presidents-speech-to-both-houses-25-october-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the President's speech of 25 October.",
+      "note": "Prints 'under the guidance of the spirit' where the Philadelphia papers print 'a spirit'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints 'the spirit' where the Philadelphia papers have 'a spirit'."
+      ],
+      "crops": [
+        "S91-074.jpg"
+      ],
+      "family": [
+        "R1791-0003"
+      ]
+    },
+    {
+      "id": "S91-075",
+      "page_key": "sn84038410|1791-11-14|1|1",
+      "excerpt_start": "To GEORGE WASHINGTON, President of the",
+      "excerpt_end": "happiness to the true source from which",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "answer-of-the-house-of-representatives-october-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the House's answer.",
+      "note": "Prints 'at the opening of the last session' where the others print 'present session'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'at the opening of the last session' where the other printings have 'present session': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S91-075.jpg"
+      ],
+      "family": [
+        "R1791-0004"
+      ],
+      "scan_boxes": [
+        [
+          1260,
+          458,
+          1823,
+          757
+        ]
+      ]
+    },
+    {
+      "id": "S91-076",
+      "page_key": "sn83025587|1791-11-16|1|1",
+      "excerpt_start": "SIR, IN receiving your address at",
+      "excerpt_end": "flows, we behold with animating pleasure, the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "answer-of-the-house-of-representatives-october-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the House's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the printed 'with animating pleasure' (no 'an', unlike the Gazette of the United States)."
+      ],
+      "crops": [
+        "S91-076.jpg"
+      ],
+      "family": [
+        "R1791-0004"
+      ]
+    },
+    {
+      "id": "S91-077",
+      "page_key": "sn83025587|1791-11-16|1|2",
+      "excerpt_start": "To the President of the United",
+      "excerpt_end": "and private confidence, are conspicuous and important;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "address-of-the-senate-to-the-president-october-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Senate's address.",
+      "note": "Prints 'with much satisfaction' where the Philadelphia papers print 'with the highest satisfaction'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'with much satisfaction' where the Philadelphia papers have 'with the highest satisfaction': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S91-077.jpg"
+      ],
+      "family": [
+        "R1791-0058",
+        "R1791-0207"
+      ]
+    },
+    {
+      "id": "S91-078",
+      "page_key": "sn83025887|1791-11-17|1|3",
+      "excerpt_start": "Letter from the King to the",
+      "excerpt_end": "owe to the Nation and to myself.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-king-of-france-to-the-national-assembly-accepting-the-constitution-september-1791"
+      ],
+      "summary": "The King of France writes to the National Assembly that he accepts the constitution.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included; it prints the translation 'presented to me. I do accept it, and will cause it to be executed'."
+      ],
+      "crops": [
+        "S91-078.jpg"
+      ],
+      "family": [
+        "R1791-0011",
+        "R1791-0840",
+        "R1791-0842",
+        "R1791-0843"
+      ]
+    },
+    {
+      "id": "S91-079",
+      "page_key": "sn83025587|1791-11-23|1|2",
+      "excerpt_start": "\"GENTLEMEN, \"I have attentively examined the",
+      "excerpt_end": "it to myself, to disclose my motives.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-king-of-france-to-the-national-assembly-accepting-the-constitution-september-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the King of France's letter accepting the constitution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints the translation 'presented for my acceptance. I accept it, and I shall cause it to be executed'."
+      ],
+      "crops": [
+        "S91-079.jpg"
+      ],
+      "family": [
+        "R1791-0209",
+        "R1791-0800",
+        "R1791-0854"
+      ]
+    },
+    {
+      "id": "S91-080",
+      "page_key": "sn82014782|1791-11-26|2|3",
+      "excerpt_start": "NEW YORK, October 5. By the",
+      "excerpt_end": "white inhabitants had been able to effect:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "by-the-schooner-hardy-from-cape-francois-the-insurrection-october-1791"
+      ],
+      "summary": "The Kentucky Gazette prints the report by the schooner Hardy.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The third crop shows the item; the first two show other items on the page. It prints 'the 12th ult.' and 'fire arms', so the transcription's '12 inst.' (which changes the date) and 'five arms' are misreadings."
+      ],
+      "crops": [
+        "S91-080-1.jpg",
+        "S91-080-2.jpg",
+        "S91-080-3.jpg"
+      ],
+      "family": [
+        "R1791-0006",
+        "R1791-0071",
+        "R1791-0191",
+        "R1791-0751"
+      ]
+    },
+    {
+      "id": "S91-081",
+      "page_key": "sn83030483|1791-11-26|1|1",
+      "excerpt_start": "Copy of a letter from the",
+      "excerpt_end": "the motives that have induced this acceptance.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-king-of-france-to-the-national-assembly-accepting-the-constitution-september-1791"
+      ],
+      "summary": "The Gazette of the United States prints the King of France's letter accepting the constitution.",
+      "note": "Another translation ('I have examined with attention the Constitution which you presented me for acceptance'), counted with the others (C-02).",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included; it prints the third translation ('examined with attention ... shall see it executed')."
+      ],
+      "crops": [
+        "S91-081.jpg"
+      ],
+      "family": [
+        "R1791-0093",
+        "R1791-0856"
+      ]
+    },
+    {
+      "id": "S91-082",
+      "page_key": "sn84023133|1791-12-03|1|1",
+      "excerpt_start": "\"GENTLEMEN, \"I have attentively examined the",
+      "excerpt_end": "it to myself, to disclose my motives.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-king-of-france-to-the-national-assembly-accepting-the-constitution-september-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the King of France's letter accepting the constitution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'executed—This' with a dash where the New-Hampshire Gazette has a full stop."
+      ],
+      "crops": [
+        "S91-082.jpg"
+      ],
+      "family": [
+        "R1791-0854"
+      ]
+    },
+    {
+      "id": "S91-083",
+      "page_key": "sn84023133|1791-12-03|1|4",
+      "excerpt_start": "The SENATE's Answer. THE Senate of",
+      "excerpt_end": "confidence, are conspicuous and important; and the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "address-of-the-senate-to-the-president-october-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the Senate's address.",
+      "note": "Prints 'with much satisfaction' where the Philadelphia papers print 'with the highest satisfaction'.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription leaves out the salutation 'SIR' printed under the heading; the crop shows the Senate's answer, not the House's on the same page. The paper prints 'with much satisfaction', as the New-Hampshire Gazette does."
+      ],
+      "crops": [
+        "S91-083.jpg"
+      ],
+      "family": [
+        "R1791-0004",
+        "R1791-0058",
+        "R1791-0204"
+      ]
+    },
+    {
+      "id": "S91-084",
+      "page_key": "sn84023133|1791-12-03|1|4",
+      "excerpt_start": "ANSWER OF THE HOUSE OF REPRESENTATIVES,",
+      "excerpt_end": "happiness to the true source from which",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+        "answer-of-the-house-of-representatives-october-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints the House's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the crop shows the House's answer under its own heading, not the Senate's answer on the same page."
+      ],
+      "crops": [
+        "S91-084.jpg"
+      ],
+      "family": [
+        "R1791-0004",
+        "R1791-0058",
+        "R1791-0204"
+      ]
+    },
+    {
+      "id": "S91-085",
+      "page_key": "sn83025887|1791-12-05|1|1",
+      "excerpt_start": "Prince John, the African Prince, is",
+      "excerpt_end": "for the abolition of the slave trade.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-prince-john-the-african-prince-arrives-from-sierra-leone-september-1791"
+      ],
+      "summary": "The National Gazette prints the London paragraph on Prince John.",
+      "note": "Ends at 'the abolition of the slave trade', without the passage on his visits that the Gazette of the United States, the New-Hampshire Gazette and the Patowmac Guardian go on to.",
+      "scan_findings": [
+        "Crop extended by hand (24 November); it shows the whole paragraph, which matches the scan and ends at 'the abolition of the slave trade.'"
+      ],
+      "crops": [
+        "S91-085.jpg"
+      ],
+      "family": [
+        "R1791-0882"
+      ],
+      "scan_boxes": [
+        [
+          1841,
+          2530,
+          2560,
+          2860
+        ]
+      ]
+    },
+    {
+      "id": "S91-086",
+      "page_key": "sn84038410|1791-12-06|1|1",
+      "excerpt_start": "Letter from the KING to the",
+      "excerpt_end": "owe to the Nation and to myself.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-king-of-france-to-the-national-assembly-accepting-the-constitution-september-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the King of France's letter accepting the constitution.",
+      "note": "Prints 'might at other time have been sufficient' where the National Gazette prints 'at another time'.",
+      "scan_findings": [
+        "The locator's crops showed the end of the letter; the crop was placed by hand (24 November) on the top of the first column. It shows the dateline, the source line, the heading and the whole excerpt, which match the scan."
+      ],
+      "crops": [
+        "S91-086.jpg"
+      ],
+      "family": [
+        "R1791-0011",
+        "R1791-0064",
+        "R1791-0093"
+      ],
+      "scan_boxes": [
+        [
+          110,
+          425,
+          690,
+          745
+        ]
+      ]
+    },
+    {
+      "id": "S91-087",
+      "page_key": "sn84038410|1791-12-06|1|3",
+      "excerpt_start": "Copy of a circular Letter from",
+      "excerpt_end": "gallant men are now left on the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-scotts-circular-letter-to-the-county-lieutenants-november-1791"
+      ],
+      "summary": "The Patowmac Guardian prints General Scott's circular letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Above the heading, the paper's source line ends in large type 'Melancholy News.', which the excerpt does not take in."
+      ],
+      "crops": [
+        "S91-087.jpg"
+      ],
+      "family": [
+        "R1791-0007",
+        "R1791-0833",
+        "R1791-0834",
+        "R1791-0841",
+        "R1791-0845",
+        "R1791-0872"
+      ],
+      "scan_boxes": [
+        [
+          1246,
+          313,
+          1807,
+          716
+        ]
+      ]
+    },
+    {
+      "id": "S91-088",
+      "page_key": "sn83030483|1791-12-10|1|3",
+      "excerpt_start": "Copy of a circular letter from",
+      "excerpt_end": "provision but the flesh of the pack-horses.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-scotts-circular-letter-to-the-county-lieutenants-november-1791"
+      ],
+      "summary": "The Gazette of the United States prints General Scott's circular letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the heading prints 'Kentuckey', which the transcription spells 'Kentucky' (minor). The crop also shows the dateline 'RICHMOND, December 2.' and a source line above the heading, which the excerpt does not take in."
+      ],
+      "crops": [
+        "S91-088.jpg"
+      ],
+      "family": [
+        "R1791-0007",
+        "R1791-0893",
+        "R1791-0896",
+        "R1791-0897"
+      ]
+    },
+    {
+      "id": "S91-089",
+      "page_key": "sn83025887|1791-12-12|1|3",
+      "excerpt_start": "Copy of a Circular Letter from",
+      "excerpt_end": "any provision, but the flesh of pack-horses.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-scotts-circular-letter-to-the-county-lieutenants-november-1791"
+      ],
+      "summary": "The National Gazette prints General Scott's circular letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-089.jpg"
+      ],
+      "family": [
+        "R1791-0007",
+        "R1791-0899",
+        "R1791-0900"
+      ],
+      "scan_boxes": [
+        [
+          1178,
+          1948,
+          1882,
+          2871
+        ]
+      ]
+    },
+    {
+      "id": "S91-090",
+      "page_key": "sn83025587|1791-12-14|1|2",
+      "excerpt_start": "EXETER, SEPT. 19. Prince John, the",
+      "excerpt_end": "wish for the abolition of that trade.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-prince-john-the-african-prince-arrives-from-sierra-leone-september-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints the London paragraph on Prince John.",
+      "note": "Prints the dateline 'Exeter, Sept. 19' (the Patowmac Guardian: 'London, September 19') and ends 'the abolition of that trade'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints the dateline 'EXETER, SEPT. 19.' and ends 'the abolition of that trade': printed differences from the other printings, not transcription errors."
+      ],
+      "crops": [
+        "S91-090.jpg"
+      ],
+      "family": [
+        "R1791-0036",
+        "R1791-0065",
+        "R1791-0193",
+        "R1791-0906"
+      ]
+    },
+    {
+      "id": "S91-091",
+      "page_key": "sn83030483|1791-12-14|1|2",
+      "excerpt_start": "Fort-Washington, Nov. 9, 1791. SIR, YESTERDAY",
+      "excerpt_end": "worsted, except the first regiment—that had been",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-st-clairs-letter-to-the-secretary-of-war-9-november-1791"
+      ],
+      "summary": "General St. Clair reports to the Secretary of War 'as warm and unfortunate an action as almost any that has been fought'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-091.jpg"
+      ],
+      "family": [
+        "R1791-0001"
+      ]
+    },
+    {
+      "id": "S91-092",
+      "page_key": "sn83025887|1791-12-15|1|2",
+      "excerpt_start": "Fort Washington, Nov. 9, 1791. SIR,",
+      "excerpt_end": "and worsted, except the first regiment—that had",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-st-clairs-letter-to-the-secretary-of-war-9-november-1791"
+      ],
+      "summary": "The National Gazette prints General St. Clair's letter of 9 November.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S91-092.jpg"
+      ],
+      "family": [
+        "R1791-0001"
+      ]
+    },
+    {
+      "id": "S91-093",
+      "page_key": "sn82014782|1791-12-17|2|3",
+      "excerpt_start": "Letter from the King to the",
+      "excerpt_end": "owe to the nation and to myself.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-king-of-france-to-the-national-assembly-accepting-the-constitution-september-1791"
+      ],
+      "summary": "The Kentucky Gazette prints the King of France's letter accepting the constitution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included; it prints the same translation as the National Gazette."
+      ],
+      "crops": [
+        "S91-093.jpg"
+      ],
+      "family": [
+        "R1791-0011"
+      ]
+    },
+    {
+      "id": "S91-094",
+      "page_key": "sn84038410|1791-12-20|1|1",
+      "excerpt_start": "L O N D O N,",
+      "excerpt_end": "wish for the abolition of the Slave-Trade.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-prince-john-the-african-prince-arrives-from-sierra-leone-september-1791"
+      ],
+      "summary": "The Patowmac Guardian prints the London paragraph on Prince John.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the dateline 'LONDON, September 19.' and the printed spelling 'Sierre-Leona'."
+      ],
+      "crops": [
+        "S91-094.jpg"
+      ],
+      "family": [
+        "R1791-0036",
+        "R1791-0193",
+        "R1791-0882"
+      ]
+    },
+    {
+      "id": "S91-095",
+      "page_key": "sn83025587|1791-12-21|1|2",
+      "excerpt_start": "Copy of a letter from Major-General",
+      "excerpt_end": "unfortunate an action as almost any that",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-st-clairs-letter-to-the-secretary-of-war-9-november-1791"
+      ],
+      "summary": "The New-Hampshire Gazette prints General St. Clair's letter of 9 November.",
+      "note": "Prints 'as warm, and as unfortunate an action' where the Gazette of the United States and the National Gazette print 'as warm and unfortunate'.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included; 'as warm, and as unfortunate' is the paper's own wording, not a transcription error."
+      ],
+      "crops": [
+        "S91-095.jpg"
+      ],
+      "family": [
+        "R1791-0001"
+      ]
+    },
+    {
+      "id": "S91-096",
+      "page_key": "sn84023133|1791-12-24|1|3",
+      "excerpt_start": "Copy of a Circular Letter from",
+      "excerpt_end": "brave wounded, gallant men are now left",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-scotts-circular-letter-to-the-county-lieutenants-november-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints General Scott's circular letter.",
+      "note": "Prints 'Port Jefferson' for Fort Jefferson, a misprint.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance. It prints 'Port Jefferson' for Fort Jefferson, a misprint the transcription keeps, and the misspellings 'garison' and 'gallent', which the transcription silently corrects (minor)."
+      ],
+      "crops": [
+        "S91-096.jpg"
+      ],
+      "family": [
+        "R1791-0007",
+        "R1791-0917"
+      ]
+    },
+    {
+      "id": "S91-097",
+      "page_key": "sn84038410|1791-12-27|1|2",
+      "excerpt_start": "Fort-Washington, November 9, 1791. SIR, YESTERDAY",
+      "excerpt_end": "worsted except the first regiment, that had",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-st-clairs-letter-to-the-secretary-of-war-9-november-1791"
+      ],
+      "summary": "The Patowmac Guardian prints General St. Clair's letter of 9 November.",
+      "note": "Prints 'as warm and as unfortunate an action' where the Gazette of the United States and the National Gazette print 'as warm and unfortunate'.",
+      "scan_findings": [
+        "Scan matches the excerpt. Above a rule, the crop shows the end of a heading ('...Secretary of War.') that the excerpt does not take in."
+      ],
+      "crops": [
+        "S91-097.jpg"
+      ],
+      "family": [
+        "R1791-0001"
+      ],
+      "scan_boxes": [
+        [
+          668,
+          1208,
+          1232,
+          1517
+        ]
+      ]
+    },
+    {
+      "id": "S91-098",
+      "page_key": "sn84023133|1791-12-31|1|2",
+      "excerpt_start": "General St. Clair's Letter, to Major-General",
+      "excerpt_end": "almost any that has been fought, in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-st-clairs-defeat-november-1791",
+        "general-st-clairs-letter-to-the-secretary-of-war-9-november-1791"
+      ],
+      "summary": "The New Hampshire Gazetteer prints General St. Clair's letter of 9 November.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included."
+      ],
+      "crops": [
+        "S91-098.jpg"
+      ],
+      "family": [
+        "R1791-0001",
+        "R1791-0214"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "calcutta-paper-on-tippoo-saib-and-the-rajah-of-travancore-january-1791",
+      "kind": "message_group",
+      "label": "Boston, January 1791: 'By an arrival at Salem, from India, a Calcutta paper has been received', with accounts of Tippoo Saib's operations against the Rajah of Travancore",
+      "definition": "Printings of a Boston paragraph of 15 January 1791, headed 'Tippo Saib' in three of the papers: 'By an arrival at Salem, from India, a Calcutta paper has been received, which gives accounts of the operations of that inveterate enemy of the English, Tipoo Saib, the successor of the famous Hyder Ali, against the Rajah of Travencore. In one battle with the Rajah, Tippo is said to have been defeated, with the loss of 1300 men—and in a second, he is said to have assaulted the Rajah lines with incredible ferocity and bravery, and after a long contest, obtained a victory.' A Boston paper's report from a Calcutta paper.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+      "kind": "context_group",
+      "label": "The acts of Congress of February 1791 on the admission of Kentucky and Vermont into the Union",
+      "definition": "Two acts of the third session of the first Congress, as the papers printed them from February to April 1791: the act declaring the consent of Congress that a new State be formed within the jurisdiction of Virginia and admitted into the Union by the name of the State of Kentucky, and the act for the admission of the State of Vermont into the Union. Contains those two groups.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "act-declaring-the-consent-of-congress-to-the-state-of-kentucky-february-1791",
+      "kind": "document_group",
+      "label": "An Act declaring the consent of Congress that a new State be formed within the jurisdiction of the Commonwealth of Virginia, and admitted into the Union by the name of the State of Kentucky",
+      "definition": "Printings of the act: 'An Act declaring the consent of Congress, that a new State be formed within the jurisdiction of the Commonwealth of Virginia, and admitted into this Union, by the name of the State of Kentucky. Whereas the legislature of the Commonwealth of Virginia, by an act entitled, \"An act concerning the erection of the district of Kentucky into an independent State,\" passed the eighteenth day of December, one thousand seven hundred and eighty-nine, have consented, that the district of Kentucky, within the jurisdiction of the said Commonwealth, and according to its actual boundaries at the time of passing the act aforesaid, should be formed into a new State'. The Kentucky Gazette prints it twice, the second time among the papers of the Kentucky convention (C-08); the New-Hampshire Gazette's list of the session's acts of 16 June, which names it, is not counted (C-07). The act itself, as the papers print it.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "act-for-the-admission-of-the-state-of-vermont-february-1791",
+      "kind": "document_group",
+      "label": "An Act for the admission of the State of Vermont into this Union",
+      "definition": "Printings of the act: 'An Act for the admission of the State of Vermont into this Union. The State of Vermont having petitioned the Congress to be admitted a Member of the United States—Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, and it is hereby enacted and declared, That, on the Fourth day of March, one thousand seven hundred and ninety-one, the said State, by the name and style of \"The State of Vermont,\" shall be received and admitted into the Union, as a new and entire Member of the United States of America.' The Patowmac Guardian prints only the House's proceedings on the bill, and the New-Hampshire Gazette's list of the session's acts of 16 June names it; neither is counted (C-07). The act itself, as the papers print it.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "presidents-message-of-14-february-1791-on-commerce-with-great-britain",
+      "kind": "document_group",
+      "label": "The President's message to Congress of 14 February 1791: 'Soon after I was called to the administration of the government, I found it important to come to an understanding with the court of London'",
+      "definition": "Printings of the President's message to the Senate and the House of Representatives of 14 February 1791: 'Soon after I was called to the administration of the government, I found it important to come to an understanding with the court of London, on several points interesting to the United States, and particularly to know whether they were disposed to enter into arrangements, by mutual consent, which might fix the commerce between the two nations on principles of reciprocal advantage. For this purpose I authorized informal conferences with their ministers; and from these I do not infer any disposition on their part, to enter into any arrangements merely commercial.' The President's own message.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "act-for-raising-and-adding-another-regiment-march-1791",
+      "kind": "document_group",
+      "label": "An Act for raising and adding another regiment to the military establishment of the United States, and for making further provision for the protection of the frontiers",
+      "definition": "Printings of the act: 'An Act for raising and adding another Regiment to the Military Establishment of the United States, and for making farther Provision for the Protection of the Frontiers. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, That there shall be raised an additional regiment of infantry, which, exclusive of the commissioned officers, shall consist of nine hundred and twelve non-commissioned officers, privates and musicians.' The New-Hampshire Gazette's list of the session's acts of 16 June, which names it, is not counted (C-07). The act itself, as the papers print it.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "alexandria-the-first-corner-stone-of-the-federal-district-april-1791",
+      "kind": "message_group",
+      "label": "Alexandria, April 1791: the commissioners Daniel Carroll and David Stewart arrive to superintend the fixing of the first corner-stone of the Federal District",
+      "definition": "Printings of an Alexandria paragraph of 21 April 1791: 'On Friday the 15th inst. the Hon. Daniel Carroll, and Dr. David Stewart, arrived in this town, to superintend the fixing of the first Corner-Stone of the Federal District.' The paragraph goes on to the procession of the Mayor and Commonality and the members of the town's lodges to Jones's Point. An Alexandria paper's report.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "letter-from-paris-of-10-march-1791-on-the-importation-of-oil",
+      "kind": "message_group",
+      "label": "A letter from Paris of 10 March 1791: the National Assembly decrees that 'the importation of oil from any country, but the United States of America, shall be prohibited'",
+      "definition": "Printings of a letter from Paris of 10 March 1791 on the duties the National Assembly decreed on foreign importations: 'The importation of oil from any country, but the United States of America, shall be prohibited. The oil imported from the United States of America, in French or American vessels, shall pay a duty of twelve livres per quintal.' The New-Hampshire Gazette and the New Hampshire Gazetteer print an extract of the letter ('Our Assembly has at last decreed the duties which are to be paid upon foreign importations'); the Gazette of the United States and the Patowmac Guardian report what it contains ('A letter from Paris, of March 10, ... contains the following information'), counted with it (C-02). A correspondent's report of a decree.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "general-scotts-account-of-the-expedition-against-the-wabash-towns-june-1791",
+      "kind": "document_group",
+      "label": "General Scott's account of the expedition against the towns on the Wabash, May and June 1791: his letter to the Secretary of War, and the Lexington 'detail of facts'",
+      "definition": "Printings of Brigadier General Charles Scott's account of the expedition against the towns on the Wabash in May and June 1791, in two forms counted together (C-02): his letter to the Secretary for the Department of War, dated Lexington, 20 June 1791 ('In prosecution of the enterprise, I marched four miles from the banks of the Ohio on the 23d of May, and on the 24th I resumed my march, and pushed forward with the utmost industry'), and the Lexington paper's 'detail of Facts, relative to the operations of the Expedition under Brig. Gen. Scott, against the Savages of the Wabash' of 25 June, which gives the same account in the third person ('The Army marched four miles from the bank of the Ohio on the 23d of last month'). The commander's own account, and a Lexington paper's version of it.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "the-english-papers-on-the-battle-near-carpentras-july-1791",
+      "kind": "message_group",
+      "label": "'The English papers give an account of the first pitched battle to which the French revolution has given rise': a battle near Carpentras",
+      "definition": "Printings of a paragraph of July 1791: 'The English papers give an account of the first pitched battle to which the French revolution has given rise; it was fought near Carpentras, between 10,000 patriots and about 7000 counter-revolutionists. The latter were completely routed, and Carpentras, in which was a garrison of 4000 men invested by the patriotic troops. On the 21st of April a capitulation was proposed by the besieged.' A report at second hand from the English papers.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "a-correspondent-on-the-treaty-held-by-timothy-pickering-with-the-six-nations-july-1791",
+      "kind": "message_group",
+      "label": "'A correspondent informs, that the treaty, lately held under commission from the President of the United States, by Timothy Pickering': the treaty with the Six Nations at Newtown Point, July 1791",
+      "definition": "Printings of a paragraph of 30 July 1791: 'A correspondent informs, that the treaty, lately held under commission from the President of the United States, by Timothy Pickering, Esq. of Wilkesbarre, with those Indian tribes commonly called the Six Nations, at Newtown-Point, on the north-west branch of the Susquehanna, in the state of New-York, was concluded on the 18th inst. to the satisfaction of all parties, by a recapitulatory speech from the Commissioner. The principal object of this treaty was, to confirm the peace that has subsisted between us, ever since the treaty of Fort Stanwix, in 1784, and prevent the Five Nations from joining the Western Indians, now at war.' A correspondent's account.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "london-the-plague-rages-in-turkey-june-1791",
+      "kind": "message_group",
+      "label": "London, 3 June 1791: 'Accounts were received yesterday at the Secretary of State's office, by way of France, that the plague rages with dreadful havoc in that part of Turkey nearest to the Mediterranean'",
+      "definition": "Printings of a London paragraph of 3 June 1791: 'Accounts were received yesterday at the Secretary of State's office, by way of France, that the plague rages with dreadful havoc in that part of Turkey nearest to the Mediterranean, inasmuch, that in a small district a thousand persons have died in a day.' The New-Hampshire Gazette prints it twice (C-08). A London report of accounts received by way of France.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "m-drouet-recital-before-the-national-assembly-on-stopping-the-king-june-1791",
+      "kind": "document_group",
+      "label": "M. Drouet's recital before the National Assembly of France: 'I am the Postmaster of Sainte Menehould', on how the King was stopped in June 1791",
+      "definition": "Printings of the recital that M. Drouet, one of the two citizens who stopped the King, gave before the National Assembly: 'I am the Postmaster of Sainte Menehould, formerly a dragoon in the regiment of Conde. My comrade, William, was formerly a dragoon of the Queen's regiment. On the 21st of June, at half past seven o'clock in the evening, two carriages and eleven horses baited at my house—I thought I recognized the Queen; and perceiving a man at the back part of the carriage, on the left, I was struck with the resemblance of his countenance to the King's effigy on an assignat of 50 livres.' M. Drouet's own account, as the papers print it.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "the-insurgents-of-birmingham-had-made-a-gridiron-july-1791",
+      "kind": "message_group",
+      "label": "'The Insurgents of Birmingham had made a gridiron of immense size': a paragraph of the English news on the riots at Birmingham, July 1791",
+      "definition": "Printings of a paragraph of the English news of July 1791: 'The Insurgents of Birmingham had made a gridiron of immense size, which they brought to Dr. Priestley's house, where they said they meant to broil an Anti-constitutional Philosopher by the blaze of his own writings, and light the fire with the Rights of Man.' The Gazette of the United States and the Patowmac Guardian print it among the London reports of the riots, the New-Hampshire Gazette at the end of an account of the riot. An English paper's report.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "danville-letter-an-express-from-general-wilkinson-august-1791",
+      "kind": "message_group",
+      "label": "Danville, Kentucky, 22 August 1791: an extract of a letter, 'An express from Gen. Wilkinson has this moment reached this place, informing of his success'",
+      "definition": "Printings of an extract of a letter from Danville, Kentucky, dated 22 August 1791, sent by way of Richmond: 'An express from Gen. Wilkinson has this moment reached this place, informing of his success. He has destroyed a large Indian town situated on the Wabash; also a Kickapoo town, containing about 30 houses, and killed and taken 42 of the enemy. His loss, 2 men killed and one wounded.' A letter writer's report of General Wilkinson's express.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "by-the-schooner-hardy-from-cape-francois-the-insurrection-october-1791",
+      "kind": "message_group",
+      "label": "By the schooner Hardy from Cape-Francois, October 1791: intelligence of the insurrection in Saint-Domingue",
+      "definition": "Printings of a paragraph of early October 1791, in a Philadelphia form ('arrived here on Saturday last') and a New York form of 5 October ('arrived at Philadelphia on Saturday morning'): 'By the Schooner Hardy, Capt. Green, which sailed from Cape-Francois the 12th ult. and arrived here on Saturday last, we have received intelligence, that the mulattoes and free blacks have got fire-arms, &c. out of the King's store at the Cape, and done more execution against the black insurgents than the white inhabitants had been able to effect: above 3000 of the insurgents have been killed.' A report of the intelligence a ship brought.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "london-prince-john-the-african-prince-arrives-from-sierra-leone-september-1791",
+      "kind": "message_group",
+      "label": "London, September 1791: 'Prince John, the African Prince, is arrived here from Sierra Leona. His business to this country appears chiefly to be respecting the Slave Trade'",
+      "definition": "Printings of a London paragraph of 19 September 1791: 'Prince John, the African Prince, is arrived here from Sierra Leona. His business to this country appears chiefly to be respecting the Slave Trade. He has met with a very cordial reception in this city, and particularly among the gentlemen who wish for the abolition of the Slave Trade.' The paragraph goes on to his visits and his conversation. A London paper's report.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+      "kind": "context_group",
+      "label": "The opening of the session of Congress, October 1791: the President's speech and the answers of the two Houses",
+      "definition": "Three public papers of the opening of the first session of the second Congress, as the papers printed them from October to December 1791: the President's speech to both Houses of 25 October, the answer of the House of Representatives, which the Speaker delivered to the President at his house on 28 October, and the address of the Senate, which the Vice-President and the Senate presented on 31 October. Contains those three groups.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "presidents-speech-to-both-houses-25-october-1791",
+      "kind": "document_group",
+      "label": "The President's speech to both Houses of Congress, 25 October 1791: 'I meet you, upon the present occasion, with the feelings which are naturally inspired by a strong impression of the prosperous situation of our common country'",
+      "definition": "Printings of the President's speech to the Senate and the House of Representatives at the opening of the session, 25 October 1791: 'Fellow Citizens of the Senate, and of the House of Representatives, I meet you, upon the present occasion, with the feelings which are naturally inspired by a strong impression of the prosperous situation of our common country, and by a persuasion equally strong that the labors of the session, which has just commenced, will, under the guidance of a spirit no less prudent than patriotic, issue in measures, conducive to the stability and increase of national prosperity.' The President's own speech.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "answer-of-the-house-of-representatives-october-1791",
+      "kind": "document_group",
+      "label": "The answer of the House of Representatives to the President's speech, October 1791: 'In receiving your address at the opening of the present session, the House of Representatives have taken an ample share in the feelings inspired by the actual prosperity, and flattering prospects of our country'",
+      "definition": "Printings of the address of the House of Representatives in answer to the President's speech, which the Speaker delivered to the President at his house on 28 October 1791: 'In receiving your address at the opening of the present session, the House of Representatives have taken an ample share in the feelings inspired by the actual prosperity, and flattering prospects of our country: And whilst, with becoming gratitude to heaven, we ascribe this happiness to the true source from which it flows, we behold with an animating pleasure'. The House's own address.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "address-of-the-senate-to-the-president-october-1791",
+      "kind": "document_group",
+      "label": "The address of the Senate to the President in answer to his speech, October 1791: 'The Senate of the United States have received with the highest satisfaction, the assurances of public prosperity contained in your speech'",
+      "definition": "Printings of the Senate's address in answer to the President's speech, which the Vice-President and the Senate presented to the President on 31 October 1791: 'The Senate of the United States have received with the highest satisfaction, the assurances of public prosperity contained in your speech to both houses: the multiplied blessings of Providence have not escaped our notice, or failed to excite our gratitude.' The Senate's own address.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "letter-of-the-king-of-france-to-the-national-assembly-accepting-the-constitution-september-1791",
+      "kind": "document_group",
+      "label": "The King of France's letter to the National Assembly accepting the constitution, September 1791: 'I have attentively examined the Constitutional Act which you have presented to me. I do accept it'",
+      "definition": "Printings of the letter of the King of France to the National Assembly accepting the constitution, from the Paris papers of September 1791, in three translations counted as one item (C-02): 'Gentlemen, I have attentively examined the Constitutional Act which you have presented to me. I do accept it, and will cause it to be executed. This simple declaration might at another time have been sufficient: but now I am bound to make my motives known; it is a duty which I owe to the Nation and to myself' (the National Gazette, from a Paris paper of 14 September, and the Patowmac Guardian and the Kentucky Gazette); 'I have attentively examined the Constitutional Act, which you have presented for my acceptance. I accept it, and I shall cause it to be executed' (the New-Hampshire Gazette and the New Hampshire Gazetteer); 'I have examined with attention the Constitution which you presented me for acceptance. I accept it, and shall see it executed' (the Gazette of the United States). The King's own letter, in translation.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "general-st-clairs-defeat-november-1791",
+      "kind": "context_group",
+      "label": "The defeat of the army under General St. Clair, November 1791: General Scott's circular from Lexington and General St. Clair's report, as the papers printed them",
+      "definition": "Two public papers on the defeat of the army under General St. Clair, as the papers printed them in November and December 1791: Brigadier General Scott's circular letter to the county lieutenants of Kentucky, dated Lexington, 11 November, and General St. Clair's letter to the Secretary of War, dated Fort Washington, 9 November, which the President sent to Congress in December. Contains those two groups.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "general-scotts-circular-letter-to-the-county-lieutenants-november-1791",
+      "kind": "document_group",
+      "label": "Lexington, 11 November 1791: General Scott's circular letter to the county lieutenants of Kentucky, 'We have now received certain intelligence that the army have been defeated'",
+      "definition": "Printings of a circular letter of Brigadier General Scott to the county lieutenants in Kentucky, dated Lexington, 11 November 1791, first printed in the Kentucky Gazette: 'We have now received certain intelligence that the army have been defeated. The loss is very great. The Garrison at Fort Jefferson is intercepted and many, many have been wounded; gallant men are now left on the road, unable to travel, and without any provision but the flesh of the pack horses. This case requires immediate exertions.' He appoints a rendezvous for the 15th. The general's own circular.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    },
+    {
+      "id": "general-st-clairs-letter-to-the-secretary-of-war-9-november-1791",
+      "kind": "document_group",
+      "label": "Fort Washington, 9 November 1791: General St. Clair's letter to the Secretary of War, 'Yesterday afternoon the remains of the army under my command got back to this place'",
+      "definition": "Printings of the letter of Major General St. Clair to the Secretary of War, dated Fort Washington, 9 November 1791, which the President sent to Congress with a message in December: 'Yesterday afternoon the remains of the army under my command got back to this place, and I have now the painful task to give you an account of as warm and unfortunate an action as almost any that has been fought, in which every corps was engaged and worsted, except the first regiment—that had been detached upon a service I had the honor to inform you of in my last dispatch, and had not joined me.' The commander's own report.",
+      "admission_rule": "Reviewed 1791 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+      "child": "act-declaring-the-consent-of-congress-to-the-state-of-kentucky-february-1791"
+    },
+    {
+      "parent": "the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791",
+      "child": "act-for-the-admission-of-the-state-of-vermont-february-1791"
+    },
+    {
+      "parent": "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+      "child": "presidents-speech-to-both-houses-25-october-1791"
+    },
+    {
+      "parent": "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+      "child": "answer-of-the-house-of-representatives-october-1791"
+    },
+    {
+      "parent": "the-presidents-speech-and-the-answers-of-the-two-houses-october-1791",
+      "child": "address-of-the-senate-to-the-president-october-1791"
+    },
+    {
+      "parent": "general-st-clairs-defeat-november-1791",
+      "child": "general-scotts-circular-letter-to-the-county-lieutenants-november-1791"
+    },
+    {
+      "parent": "general-st-clairs-defeat-november-1791",
+      "child": "general-st-clairs-letter-to-the-secretary-of-war-9-november-1791"
+    }
+  ],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1791 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json), and again with the families of 1790 over the 1791 pages (items_from_1790.json). Every item in 3 or more papers was compared by machine with every page and counted again by its opening; a sweep of seven-word sequences shared by 4 or more papers found the runs no finder item covers, and they were read. Counted item by item (80 entries, the daily proceedings of Congress left out as digests), 67 items meet the bar (count_1791.md); where an item's family or run also holds other texts (the acts of Congress share their formulas), its papers were counted by its own words. The admitted and chosen items were counted again by their own words over all 1,242 pages in both transcriptions, and read on every page.",
+    "selection_rule": "The thin-year rule (Y-THIN, as amended on 23 November 2026, the owner's choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; as in R-01, the eligible items printed by every newspaper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35); one affair's items as in X-1800-01; digests are not admitted; sub-stories (C-01), private persons (R-04) and the list of items read and not admitted (R-03) as in every year. In 1791 4 to 6 papers survive for an item's weeks, so the bar is 4 for every item.",
+    "paper_counting": "1791 has 6 catalogue series, which are 6 papers: the Gazette of the United States (107 issues), the New-Hampshire Gazette (53), the New Hampshire Gazetteer (49) and the Patowmac Guardian (49) through the year; the Kentucky Gazette (41), with no issue from 23 July to 8 October; and the National Gazette (18) from 31 October. No 1791 issue has a corrected date; the release's map lists 3 misfiled RevX pages of 1791 (the New-Hampshire Gazette of 12 February and 1 September), none of them a page of this ledger.",
+    "items_admitted": {
+      "calcutta-paper-on-tippoo-saib-and-the-rajah-of-travancore-january-1791": "count entry 12 (I91-0042); searches of its own words; chosen to cover the months and the kinds of news.",
+      "act-declaring-the-consent-of-congress-to-the-state-of-kentucky-february-1791": "count entry 16 (I91-0027); searches of its own words; chosen to cover the months and the kinds of news.",
+      "act-for-the-admission-of-the-state-of-vermont-february-1791": "count entry 15 (I91-0005); searches of its own words; chosen to cover the months and the kinds of news.",
+      "presidents-message-of-14-february-1791-on-commerce-with-great-britain": "count entry 17 (I91-0045); searches of its own words; chosen to cover the months and the kinds of news.",
+      "act-for-raising-and-adding-another-regiment-march-1791": "count entry 4 (I91-0003, R168, R169); searches of its own words; chosen to cover the months and the kinds of news.",
+      "alexandria-the-first-corner-stone-of-the-federal-district-april-1791": "count entry 22 (I91-0051, I91-0052); searches of its own words; chosen to cover the months and the kinds of news.",
+      "letter-from-paris-of-10-march-1791-on-the-importation-of-oil": "count entry 30 (R197); searches of its own words; chosen to cover the months and the kinds of news.",
+      "general-scotts-account-of-the-expedition-against-the-wabash-towns-june-1791": "count entry 36 (I91-0061, I91-0062); searches of its own words; chosen to cover the months and the kinds of news.",
+      "the-english-papers-on-the-battle-near-carpentras-july-1791": "count entry 41 (I91-0006); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "a-correspondent-on-the-treaty-held-by-timothy-pickering-with-the-six-nations-july-1791": "count entry 45 (I91-0068); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "london-the-plague-rages-in-turkey-june-1791": "count entry 46 (I91-0034); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "m-drouet-recital-before-the-national-assembly-on-stopping-the-king-june-1791": "count entry 50 (I91-0071, I91-0072); searches of its own words; chosen to cover the months and the kinds of news.",
+      "the-insurgents-of-birmingham-had-made-a-gridiron-july-1791": "count entry 52 (R238, R237); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "danville-letter-an-express-from-general-wilkinson-august-1791": "count entry 53 (R240, I91-0077); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "by-the-schooner-hardy-from-cape-francois-the-insurrection-october-1791": "count entry 61 (I91-0007, I91-0008, I91-0080); searches of its own words; chosen to cover the months and the kinds of news.",
+      "london-prince-john-the-african-prince-arrives-from-sierra-leone-september-1791": "count entry 62 (I91-0035); searches of its own words; chosen to cover the months and the kinds of news.",
+      "presidents-speech-to-both-houses-25-october-1791": "count entry 67 (I91-0009, I91-0010, I91-0011, I91-0012); searches of its own words; chosen to cover the months and the kinds of news.",
+      "answer-of-the-house-of-representatives-october-1791": "count entry 69 (I91-0014); searches of its own words; chosen to cover the months and the kinds of news.",
+      "address-of-the-senate-to-the-president-october-1791": "count entry 70 (I91-0082, I91-0279, I91-0145); searches of its own words; chosen to cover the months and the kinds of news.",
+      "letter-of-the-king-of-france-to-the-national-assembly-accepting-the-constitution-september-1791": "count entry 77 (I91-0016, I91-0290); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "general-scotts-circular-letter-to-the-county-lieutenants-november-1791": "count entry 75 (I91-0015, I91-0094); searches of its own words; chosen to cover the months and the kinds of news.",
+      "general-st-clairs-letter-to-the-secretary-of-war-9-november-1791": "count entry 80 (I91-0017, I91-0018, I91-0019, I91-0020 and more); searches of its own words; chosen to cover the months and the kinds of news."
+    },
+    "counted_item_by_item": {
+      "Paper counts": "Of 67 items eligible by the count, 6 are printed by every paper that survives for their weeks, counted by their own words, and are admitted: the battle near Carpentras (5 of 5), the treaty at Newtown Point, the plague in Turkey, the Birmingham paragraph and the Danville letter on General Wilkinson's express (4 of 4, in the weeks when no Kentucky Gazette survives), and the King of France's letter accepting the constitution (6 of 6, in three translations). 16 are chosen; the others are listed as not chosen, except four items on private persons, listed for the owner.",
+      "The acts of Congress by their own words": "The automatic families join the acts of the session by their formulas ('Be it enacted by the Senate and House of Representatives'); counted by each act's opening, the acts on Kentucky, on Vermont and on another regiment are in 4 papers each, and the excise act, the Bank's supplementary act and the act fixing the next meeting of Congress in 3 (below the bar); pages that only recite an act's title, such as the New-Hampshire Gazette's list of the session's acts of 16 June, are not counted (C-07).",
+      "Printed forms counted together": "General Scott's letter to the Secretary of War and the Lexington 'detail of facts' that gives it in the third person; the letter from Paris on the importation of oil as an extract and as a report of it; the King of France's letter in three translations; the paragraph on the schooner Hardy in a Philadelphia and a New York form (C-02).",
+      "The window of the Danville letter": "The Danville letter is printed from 17 September to 7 October; the Kentucky Gazette's next issue after 23 July is of 8 October, the day after the letter's three weeks (Y-THIN counts the first printing's day and the 20 days after it). So 4 papers survive for its weeks, and the letter, printed by all 4, is admitted."
+    },
+    "not_admitted": {
+      "An Act fixing the time of the next annual meeting of Congress (3)": "In 3 papers of the 5 that survive for its weeks (own words: the act's opening (the families join the acts by their formulas)); the bar is 4. Below the bar.",
+      "An Act supplementary to the act to incorporate the subscribers to the Bank of the United States (3)": "In 3 papers of the 5 that survive for its weeks (own words: the act's opening); the bar is 4. Below the bar.",
+      "An Act repealing, after the last day of June next, the duties on distilled spirits imported, and laying others in their stead (the excise) (3)": "In 3 papers of the 5 that survive for its weeks (own words: the act's opening (the Gazette of the United States 16 March, the Patowmac Guardian 29 March, the New-Hampshire Gazette 16 April, each continued in later issues); other pages recite its title (C-07)); the bar is 4. Below the bar.",
+      "An Act to continue in force for a limited time the act for the temporary establishment of the Post-Office (2)": "In 2 papers of the 5 that survive for its weeks (own words: the act's opening); the bar is 4. Below the bar.",
+      "An Act giving effect to the judicial act within the State of Rhode Island (and supplemental acts) (3)": "In 3 papers of the 6 that survive for its weeks (own words: the act's opening); the bar is 4. Below the bar.",
+      "An Act making an appropriation for the purpose therein mentioned (3)": "In 3 papers of the 5 that survive for its weeks (own words: the act's opening); the bar is 4. Below the bar.",
+      "An Act giving effect to the laws of the United States within the State of Vermont (3)": "In 3 papers of the 5 that survive for its weeks (own words: the act's opening); the bar is 4. Below the bar.",
+      "The report of the commissioners for the reduction of the debt of the United States (2)": "In 2 papers of the 5 that survive for its weeks (own words: the report of January (the Gazette of the United States and the New-Hampshire Gazette print the commissioners' report of November, another text)); the bar is 4. Below the bar.",
+      "'A principal cause of the low state of Agriculture is the want of capital': on the plan of the National Bank (4)": "In 4 papers (January) of the 5 that survive for its weeks, an essay or verse; not chosen: January is covered by the Boston paragraph on Tippoo Saib, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Extract of a letter from Lieut. Ebenezer Frothingham, of the 1st U.S. Regiment: the disposition of the Indians, from Mr. Robins come from Sandusky (4)": "In 4 papers (January) of the 5 that survive for its weeks, a letter or report; not chosen: January is covered by the Boston paragraph on Tippoo Saib, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The President's proclamation with the commissioners' survey: the district for the permanent seat of the government (3)": "In 3 papers of the 5 that survive for its weeks (own words: the proclamation's opening); the bar is 4. Below the bar.",
+      "Extract of a letter from London: Mr. Elliot, late resident at the Court of Sweden, named Ambassador to the United States (4)": "In 4 papers (February) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the acts on Kentucky and on Vermont and the President's message of 14 February, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "On the birth-day of the President of the United States: 'Oft has the Poet's venal song' (4)": "In 4 papers (February) of the 5 that survive for its weeks, an essay or verse; not chosen: February is covered by the acts on Kentucky and on Vermont and the President's message of 14 February, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Philadelphia: the English papers give an account of a most tremendous thunder storm over London on 23 December (4)": "In 4 papers (March) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the act raising another regiment, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "From the Connecticut Courant, the Prompter: 'Come, we'll take the t'other sip' (4)": "In 4 papers (April) of the 5 that survive for its weeks, an essay or verse; not chosen: April is covered by the Alexandria paragraph on the first corner-stone of the Federal District, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "On the contradictory accounts of the situation of affairs in France (4)": "In 4 papers (April) of the 5 that survive for its weeks, an essay or verse; not chosen: April is covered by the Alexandria paragraph on the first corner-stone of the Federal District, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Preparations for the reception of the President of the United States in the south: a ball on the night of his arrival (4)": "In 4 papers (April) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Alexandria paragraph on the first corner-stone of the Federal District, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The warriors of the Creek, Choctaw, Chickasaw and Cherokee nations estimated at nearly 15,000 (4)": "In 4 papers (May), a single paragraph of a news column; not chosen: May is covered by the Alexandria paragraph on the first corner-stone and the act raising another regiment, both printed into June; and in two of its papers (the Gazette of the United States, the Patowmac Guardian) the passage stands inside a longer Philadelphia paragraph on the southern nations, whose opening the New-Hampshire papers do not print (C-06). A single paragraph of a news column (C-09).",
+      "Georgetown: a merchant ship, the Termagant, lying in the Potomac, takes fire and blows up (4)": "In 4 papers (May) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Alexandria paragraph on the first corner-stone and the act raising another regiment, both printed into June, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Pittsburgh: Mr. Stewart Wilkins, come up the Ohio from the Kenhawa, brings intelligence of the Indians (4)": "In 4 papers (May) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Alexandria paragraph on the first corner-stone and the act raising another regiment, both printed into June, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The census returns: the free white males, females, other free persons and slaves of the states (4)": "In 4 papers (May) of the 6 that survive for its weeks, a document; not chosen: May is covered by the Alexandria paragraph on the first corner-stone and the act raising another regiment, both printed into June, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "'When a man is going down hill, every one gives him a kick' (4)": "In 4 papers (June) of the 5 that survive for its weeks, an essay or verse; not chosen: June is covered by the letter from Paris on the importation of oil and General Scott's account of his expedition, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "A hail storm in Montgomery County, Pennsylvania, on the 24th ult. (4)": "In 4 papers (June) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the letter from Paris on the importation of oil and General Scott's account of his expedition, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "From the Hampshire Chronicle: to the Prompter (4)": "In 4 papers (June) of the 5 that survive for its weeks, an essay or verse; not chosen: June is covered by the letter from Paris on the importation of oil and General Scott's account of his expedition, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "The President arrives at Augusta, in Georgia; spies report Indians (4)": "In 4 papers (June) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the letter from Paris on the importation of oil and General Scott's account of his expedition, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Prisoners 'owe their liberty to the generosity of the British commanding officer at Detroit' (4)": "In 4 papers (June) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the letter from Paris on the importation of oil and General Scott's account of his expedition, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "A gentleman who bought lots in the Federal City is said to plan to bring four thousand workmen from Europe (4)": "In 4 papers (June) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the letter from Paris on the importation of oil and General Scott's account of his expedition, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "'Make not more haste than good speed' (4)": "In 4 papers (July) of the 5 that survive for its weeks, an essay or verse; not chosen: July is covered by the English papers' account of the battle near Carpentras and the correspondent's account of the treaty at Newtown Point, both admitted, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Extract of a letter from Pittsburgh, 7 July 1791: General Scott's party has returned (4)": "In 4 papers (July) of the 5 that survive for its weeks, a letter or report; not chosen: one affair's items (X-1800-01): General Scott's expedition: his own account (chosen) is in the ledger.",
+      "The Cherokee boundary: 'Beginning at the top of Carrolle Mountain' (4)": "In 4 papers (July to December) by its words: the Kentucky Gazette prints the boundary in July; the Gazette of the United States, the National Gazette and the New Hampshire Gazetteer print it as an article of the treaty of Holston, which by its own words (the President's proclamation of the treaty) is in 3 papers, below the bar; not chosen: July is covered by the English papers' account of the battle near Carpentras and the correspondent's account of the treaty at Newtown Point, both admitted, and December by General St. Clair's letter of 9 November.",
+      "The treaty of Holston between the United States and the Cherokee nation (3)": "In 3 papers of the 6 that survive for its weeks (own words: the President's proclamation of the treaty); the bar is 4. Below the bar.",
+      "Extract of a letter from Venice: a discovery at Udine (4)": "In 4 papers (July) of the 5 that survive for its weeks, a letter or report; not chosen: July is covered by the English papers' account of the battle near Carpentras and the correspondent's account of the treaty at Newtown Point, both admitted, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The conclusion of the King of France's declaration: 'The attachment of Frenchmen to their monarch' (4)": "In 4 papers (August) of the 6 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the King's flight: M. Drouet's recital (chosen) is in the ledger.",
+      "London, 5 July: Louis XVI intended to escape to Mentz (3)": "In 3 papers of the 5 that survive for its weeks; the bar is 4. Below the bar.",
+      "A decree of the National Assembly of France of 4 June, from the Courier de l'Europe (4)": "In 4 papers (August) of the 5 that survive for its weeks, a document; not chosen: August is covered by the London paragraph on the plague in Turkey (admitted) and M. Drouet's recital, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "A letter from the officers in M. de Bouillé's army to their comrades in France (4)": "In 4 papers (September) of the 5 that survive for its weeks, a document; not chosen: September is covered by the Birmingham paragraph and the Danville letter on General Wilkinson's express, both admitted, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The Senate of Pennsylvania votes 20,000l. for the Federal Building Bill (4)": "In 4 papers (September) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: September is covered by the Birmingham paragraph and the Danville letter on General Wilkinson's express, both admitted, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Boston: late advices from France: 'the most perfect tranquility' (4)": "In 4 papers (September) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: September is covered by the Birmingham paragraph and the Danville letter on General Wilkinson's express, both admitted, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Accounts from the West India islands: 'the most gloomy spectacle' (4)": "In 4 papers (September) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the insurrection in Saint-Domingue: the report by the schooner Hardy (chosen) is in the ledger.",
+      "The schooner Peggy from St. Marks, Hispaniola: the distressed situation of the island (4)": "In 4 papers (September) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the insurrection in Saint-Domingue: the report by the schooner Hardy (chosen) is in the ledger.",
+      "Extract of a letter from a French gentleman at New London to his friend in Providence, 14 September 1791 (4)": "In 4 papers (September) of the 6 that survive for its weeks, a letter or report; not chosen: one affair's items (X-1800-01): the insurrection in Saint-Domingue: the report by the schooner Hardy (chosen) is in the ledger.",
+      "France: an attack by the Prince de Condé expected on the frontiers (4)": "In 4 papers (October) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: October is covered by the report by the schooner Hardy, the London paragraph on Prince John, and the President's speech and the answers of the two Houses, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "American final settlements sold in London (4)": "In 4 papers (October) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: October is covered by the report by the schooner Hardy, the London paragraph on Prince John, and the President's speech and the answers of the two Houses, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The officers' address to Josiah Harmar, Brigadier General (4)": "In 4 papers (October) of the 6 that survive for its weeks, a document; not chosen: October is covered by the report by the schooner Hardy, the London paragraph on Prince John, and the President's speech and the answers of the two Houses, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The declaration of the Emperor with the courts of Berlin, London, Madrid, Turin, Naples and Petersburg relative to France (4)": "In 4 papers (October) of the 6 that survive for its weeks, a document; not chosen: October is covered by the report by the schooner Hardy, the London paragraph on Prince John, and the President's speech and the answers of the two Houses, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Extract of a letter to a respectable house in Philadelphia (1)": "In 1 paper of the 6 that survive for its weeks (only the heading 'Extract of a letter to a respectable house in Philadelphia' is shared: four papers print different letters under it); the bar is 4. Below the bar.",
+      "The French constitution presented to the King for his acceptance (5)": "In 5 papers (October) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the French constitution: the King's letter accepting it (admitted) is in the ledger.",
+      "The public sale of lots in the Federal City (4)": "In 4 papers (November) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: November is covered by the King of France's letter accepting the constitution (admitted) and General Scott's circular letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Hudson: the sheriff of Columbia County and two men at a sale of property (3)": "In 3 papers of the 6 that survive for its weeks; the bar is 4. Below the bar.",
+      "Boston: 'GOOD NEWS!—IF TRUE' (4)": "In 4 papers (November) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: November is covered by the King of France's letter accepting the constitution (admitted) and General Scott's circular letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The Treasury's estimates of the expenditure for 1792 (4)": "In 4 papers (November) of the 6 that survive for its weeks, a document; not chosen: November is covered by the King of France's letter accepting the constitution (admitted) and General Scott's circular letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The petition of James Jackson to the House, contesting the election in Georgia (4)": "In 4 papers (November) of the 6 that survive for its weeks, a document; not chosen: November is covered by the King of France's letter accepting the constitution (admitted) and General Scott's circular letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The French ports closed to American ships laden with tobacco, except those coming directly from America (4)": "In 4 papers (November) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: November is covered by the King of France's letter accepting the constitution (admitted) and General Scott's circular letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London: on the King of France's speech; a war with Morocco; the new constitution (4)": "In 4 papers (November) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the French constitution: the King's letter accepting it (admitted) is in the ledger.",
+      "Other items of 3 papers or fewer (by count)": "The other items the finder lists, and the passages the sweep found in fewer than 4 papers, were compared by machine with every page and counted again by their openings; none reaches 4 papers. They were not read one by one."
+    },
+    "for_the_owner": {
+      "Portsmouth, May 1791: a child of about two years old falls from a third-story window (4)": "In 4 papers (May and June) of the 5 that survive for its weeks; an accident in a private family, named in the paragraph (R-04): listed for the owner, without names; not admitted.",
+      "Pittsburgh, May 1791: a party of Indians near Clarksburg takes two people prisoners; at a farm house a settler's wife strikes one of the party (4)": "In 4 papers (May and June) of the 5 that survive for its weeks; it turns on a settler family on the frontier, private persons (R-04): listed for the owner; not admitted.",
+      "Pittsburgh, July 1791: a man returns by way of Detroit from captivity among the Indians and relates what he saw (4)": "In 4 papers (July to November) of the 6 that survive for its weeks; it turns on a private person named as its subject (R-04): listed for the owner, without names; not admitted.",
+      "New Bern, August 1791: an account of a man's death in Onslow County after a quarrel over an election to the state Senate (4)": "In 4 papers (September and October) of the 5 that survive for its weeks; it turns on private persons named in it (R-04): listed for the owner, without names; not admitted."
+    },
+    "for_user_decision": {
+      "The choice for 1791": "As built (X-1791-01): 6 groups admitted by the rule's first part and 16 chosen, 18 stories and 98 printings; the other eligible items are listed as not chosen.",
+      "The acts of Congress by their own words": "As built (X-1791-02): each act counted by its own opening; the excise act is below the bar (3 papers).",
+      "Printed forms counted together": "As built (X-1791-03): General Scott's account, the letter from Paris, the King of France's letter and the Hardy paragraph, each with its other forms (C-02); counted apart, none of the first three would reach the bar.",
+      "Separate public papers of one affair": "As built (X-1791-04): the President's speech and both Houses' answers; the acts on Kentucky and on Vermont; General Scott's circular and General St. Clair's report on the defeat of the army (X-1800-01).",
+      "The window's edge": "As built (X-1791-05): the Danville letter's weeks end the day before the Kentucky Gazette's next issue; 4 papers survive and the letter is admitted.",
+      "A passage inside a longer paragraph": "As built (X-1791-06): the estimate of the southern nations' warriors, printed alone by two papers and inside a longer paragraph by two, is not chosen.",
+      "Four items on private persons": "Listed for the owner without names (X-1791-07).",
+      "A sweep for short items at 4 papers": "The sweep of seven-word sequences shared by 4 or more papers was run for 1791 (X-1791-08).",
+      "Grading calls on the transcriptions": "The scan check graded the transcriptions by the protocol (C-14), as for 1774, 1775 and 1783. Calls the owner may revisit: (1) a long s read as f that makes another word is fact-changing ('failed' for 'sailed', S91-061), and not counted on the low-resolution scans of the Patowmac Guardian and the Kentucky Gazette (S91-063); (2) where RevX leaves out the rest of an item and the print goes on, the words are counted as dropped, fact-changing (S91-003: RevX goes from the first sentence of the Gazette of the United States' paragraph on Tippoo Saib straight to the next item); (3) a word lost in a misreading is fact-changing: 'many, many brave wounded' read 'many, many have been wounded;' (S91-073), as 'strong' in 1783 (S83-001); (4) the salutation 'Sir', which RevX leaves out between a heading and the text (S91-067, S91-083), is graded minor, a small word that changes no fact; (5) a faint digit read on enlargement: the New-Hampshire Gazette's '30 houses', which RevX reads '50' (S91-055, medium confidence)."
+    }
+  }
+}
