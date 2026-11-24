@@ -1144,39 +1144,113 @@ async function setSound(v) {
 // days before, which ring with it. Faint stripes mark the Sundays, when nobody printed. No row lines and no grid, and no
 // colour but the stories and now. When the view is wide, a paper's touching dots join into one grey run. It draws the
 // passage in view at the day it is given, and it draws while the music is off too: nothing sounds and nothing loads.
-let pictured = false;
+let pictured = false, lastNames = null;   // lastNames: the rows' names as last written, for silent checks
 const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const TOWN_FONT = '11.5px system-ui,sans-serif';
 const TONE = {reviewed: '255,210,122', matched: '140,207,255'}, SHADE = {past: ['#6a7693', '#4a5470'], later: ['#424c66', '#323a52']};   // [first issue of the week, the others]
 const LEVEL_WORDS = ['at rest', 'calm', 'building', 'tense', 'at its height'];
 const EVERY = {week: 'a chord a week', 'two weeks': 'a chord every two weeks', month: 'a chord a month', 'two months': 'a chord every two months', season: 'a chord a season'};
 function makePicture(cv) {
   pictured = true;
   const g = cv.getContext('2d'), size = {W: 0, H: 0};
-  let rowsKey = '', rows = [], rowOf = new Map(), labels = null, labelsKey = '', ra = null, rb = null;
+  let rowsKey = '', rows = [], rowOf = new Map(), labels = null, labelsKey = '', gutW = 92, ra = null, rb = null;
   // The canvas's size is read only when it changes: reading it in every frame, just after the words under the picture
   // have changed, would make the browser lay out the whole page each frame.
   new ResizeObserver(([e]) => { size.W = e.contentRect.width; size.H = e.contentRect.height; }).observe(cv);
-  const rowsFor = (y0, y1) => {   // the newspapers with a surviving issue in the years in view (and the story's papers), north at the top
-    const set = new Set();
-    for (let d = M.dayOf(y0); d < M.dayOf(y1 + 1); d++) { const l = A.byDay.get(d); if (l) l.forEach(p => set.add(p)); }
-    if (V.story) for (const [, p] of V.byStory.get(V.storyId) || []) set.add(p);
-    return [...set].sort((a, b) => A.papers[b].lat - A.papers[a].lat || a - b);
+  const rowsFor = (y0, y1) => {   // the newspapers with a surviving issue in the years in view (and the story's papers), north at the top; in one town, the earliest first
+    const first = new Map();
+    for (let d = M.dayOf(y0); d < M.dayOf(y1 + 1); d++) { const l = A.byDay.get(d); if (l) l.forEach(p => { if (!first.has(p)) first.set(p, d); }); }
+    if (V.story) for (const [, p] of V.byStory.get(V.storyId) || []) if (!first.has(p)) first.set(p, Infinity);
+    return [...first.keys()].sort((a, b) => A.papers[b].lat - A.papers[a].lat || first.get(a) - first.get(b) || a - b);
   };
+  // The rows' names. Each row is a newspaper, named by its town, and on a wide picture by the paper's name too. Rows of
+  // one town (two papers of a town, or one paper under two titles, which the archive files as two series) are told
+  // apart on every screen (the owner, 24 November 2026: "Philadelphia" twice looked like a mistake):
+  // - where one title follows another, by the months of its surviving issues (Jan–Jun, Jul–Nov), with the name after
+  //   them on a wide picture;
+  // - where the papers ran side by side, by the paper's name, less the words it starts with in common with the town's
+  //   other papers (…Evening Post); names that still read alike, cut to fit, fall back on the months when those titles
+  //   follow one another, or else on the catalogue number, as the site shows it for papers of the same name.
+  // On a phone the names' column widens as far as these need, within bounds. A tag is [what tells the row apart, the
+  // name after it].
+  function nameRows(c, narrow, y0, y1) {
+    const font = narrow ? '10.5px system-ui,sans-serif' : TOWN_FONT, max = narrow ? 124 : 178, tags = new Map();
+    const width = (s, f) => { c.font = f; return c.measureText(s).width; };
+    const fit = (s, room, tail = false) => {   // cut to the room, at the end (or, for a number, at the start)
+      if (!s || room <= 0) return '';
+      if (width(s, font) <= room) return s;
+      let t = s; while (t.length > 1 && width(tail ? '…' + t : t + '…', font) > room) t = tail ? t.slice(1) : t.slice(0, -1);
+      return tail ? '…' + t : t.trimEnd() + '…';
+    };
+    const plain = s => s.toLowerCase().replace(/[^a-z]/g, ''), alike = (s, t) => { const a = plain(s), b = plain(t); return a.startsWith(b) || b.startsWith(a); };
+    const span = new Map();   // each paper's first and last surviving issue in the years in view
+    for (let d = M.dayOf(y0); d < M.dayOf(y1 + 1); d++) { const l = A.byDay.get(d); if (l) for (const p of l) { const s = span.get(p); if (s) s[1] = d; else span.set(p, [d, d]); } }
+    const follow = ps => { const o = ps.filter(p => span.has(p)).sort((a, b) => span.get(a)[0] - span.get(b)[0]); return o.length === ps.length && o.every((p, k) => !k || span.get(o[k - 1])[1] < span.get(p)[0]); };
+    const months = (ps, room) => {   // Jan–Jun, Jul–Nov; with the year when the titles cross one
+      const ys = new Set(ps.flatMap(p => span.get(p).map(d => M.dayDate(d).getUTCFullYear())));
+      const mon = d => { const x = M.dayDate(d); return SHORT_MONTHS[x.getUTCMonth()] + (ys.size > 1 ? ' ' + x.getUTCFullYear() : ''); };
+      return ps.map(p => { const a = mon(span.get(p)[0]), b = mon(span.get(p)[1]), m = fit(a === b ? a : `${a}–${b}`, room);
+        const name = A.papers[p].name || '', n = narrow ? '' : fit(name, room - width(m + ' ', font));   // the name too, if enough of it shows
+        return [m, n && (n === name || n.replace(/…$/, '').length >= 10) ? n : '']; });
+    };
+    const towns = new Map(); for (const p of rows) { const t = A.papers[p].town; if (!towns.has(t)) towns.set(t, []); towns.get(t).push(p); }
+    for (const [town, ps] of towns) {
+      const room = max - 12 - width(town + ' ', TOWN_FONT);
+      if (ps.length === 1) { if (!narrow && A.papers[ps[0]].name) tags.set(ps[0], ['', fit(A.papers[ps[0]].name, room)]); continue; }
+      if (follow(ps)) { months(ps, room).forEach((t, k) => tags.set(ps[k], t)); continue; }
+      const words = p => [...String(A.papers[p].name || '').matchAll(/[^\s-]+/g)].map(m => ({w: m[0].replace(/[^\w'&]/g, ''), at: m.index}));   // "New-York" is "New York"
+      const own = p => {   // the name, less the words it starts with in common with another paper of the town, if a name is left
+        const s = String(A.papers[p].name || ''), a = words(p); let k = 0;
+        for (const q of ps) if (q !== p) { const b = words(q); let j = 0; while (j < a.length && j < b.length && a[j].w === b[j].w) j++; k = Math.max(k, j); }
+        const rest = k < a.length ? s.slice(a[k].at) : '';
+        return k && /^[A-Z]/.test(rest) ? '…' + rest : s;
+      };
+      const t = new Map(ps.map(p => [p, fit(own(p), room)]));
+      const left = new Set(ps);   // the names that read alike go together, and each such group is told apart another way
+      for (const p of ps) {
+        if (!left.has(p)) continue;
+        const group = [...left].filter(q => alike(t.get(p), t.get(q))); group.forEach(q => left.delete(q));
+        if (group.length === 1) { tags.set(p, [t.get(p), '']); continue; }
+        if (follow(group)) months(group, room).forEach((m, k) => tags.set(group[k], m));
+        else group.forEach(q => tags.set(q, [fit(A.papers[q].lccn || '', room, narrow), '']));
+      }
+    }
+    let need = 0;
+    for (const p of rows) { const [m, n] = tags.get(p) || ['', ''], s = [m, n].filter(Boolean).join(' '); need = Math.max(need, 12 + width(A.papers[p].town, TOWN_FONT) + (s ? width(' ', TOWN_FONT) + width(s, font) : 0)); }
+    return {tags, font, gut: narrow ? Math.max(92, Math.min(max, Math.ceil(need))) : 178};
+  }
   function draw(now) {
     if (!archive() || !V || V.pending) return;
     if (!size.W) { size.W = cv.clientWidth; size.H = cv.clientHeight; }
     const dpr = Math.min(2, window.devicePixelRatio || 1), W = size.W, H = size.H; if (!W || !H) return;
     if (cv.width !== Math.round(W * dpr) || cv.height !== Math.round(H * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
     g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
-    const sp = S.speed, nowD = Math.floor(now), range = [V.from, V.to + 1];
+    const sp = S.speed, nowD = Math.floor(now), range = [V.from, V.to + 1], narrow = W < 600;
     // About eighteen seconds of music in view (ten on a phone): two and a half months at a week in two seconds.
-    const gut = W < 600 ? 92 : 178, top = 22, bot = 8, span = Math.min(3653, Math.max(W < 600 ? 35 : 63, Math.round(sp * (W < 600 ? 10 : 18))));
-    const x0 = gut, x1 = W - 8, pxd = (x1 - x0) / span, left = now - span * .3, X = d => x0 + (d - left) * pxd;
-    const d0 = Math.max(range[0], Math.floor(left)), d1 = Math.min(range[1], Math.ceil(left + span) + 1);
+    const top = 22, bot = 8, span = Math.min(3653, Math.max(narrow ? 35 : 63, Math.round(sp * (narrow ? 10 : 18)))), left = now - span * .3;
     const ya = M.dayDate(Math.max(0, left)).getUTCFullYear(), yb = M.dayDate(Math.min(END - 1, left + span)).getUTCFullYear();
     const key = `${ya}:${yb}:${V.from}:${V.to}:${V.story}:${V.storyId}:${V.n}`;
     if (key !== rowsKey) { rowsKey = key; rows = rowsFor(ya, yb); rowOf = new Map(rows.map((p, i) => [p, i])); }
     const rh = Math.min(20, (H - top - bot) / Math.max(1, rows.length)), Y = i => top + rh * (i + .5);
+    // the rows' names, written once into a small picture whenever the rows change, then copied (text is the costliest
+    // thing a canvas draws); rows too thin to name are left unnamed
+    const lk = `${rowsKey}:${W}:${H}:${dpr}`;
+    if (labelsKey !== lk) {
+      labelsKey = lk; labels = labels || document.createElement('canvas');
+      const lg = labels.getContext('2d'), nm = rh >= 9 ? nameRows(lg, narrow, ya, yb) : {tags: new Map(), font: TOWN_FONT, gut: narrow ? 92 : 178};
+      gutW = nm.gut; labels.width = Math.max(1, Math.round(gutW * dpr)); labels.height = Math.max(1, Math.round(H * dpr));
+      lg.setTransform(dpr, 0, 0, dpr, 0, 0); lg.clearRect(0, 0, gutW, H); lg.textBaseline = 'middle';
+      if (rh >= 9) rows.forEach((p, i) => {   // the town; what tells it from the town's other rows, a little brighter; the paper's name
+        const y = Y(i), town = A.papers[p].town, [mark, name] = nm.tags.get(p) || ['', ''];
+        lg.font = TOWN_FONT; lg.fillStyle = '#c9d3e8'; lg.fillText(town, 6, y);
+        let x = 6 + lg.measureText(town + ' ').width; lg.font = nm.font;
+        if (mark) { lg.fillStyle = '#8b98b5'; lg.fillText(mark, x, y); x += lg.measureText(mark + ' ').width; }
+        if (name) { lg.fillStyle = '#66728d'; lg.fillText(name, x, y); }
+      });
+      lastNames = {named: rh >= 9, gut: gutW, rows: rows.map(p => [A.papers[p].town, ...(nm.tags.get(p) || [])].filter(Boolean).join(' '))};
+    }
+    const gut = gutW, x0 = gut, x1 = W - 8, pxd = (x1 - x0) / span, X = d => x0 + (d - left) * pxd;
+    const d0 = Math.max(range[0], Math.floor(left)), d1 = Math.min(range[1], Math.ceil(left + span) + 1);
     // Sundays, faintly; months (or years, when the view is wide) by a small tick and their name
     if (pxd >= 4) { g.beginPath(); for (let d = Math.floor(left); d < left + span + 1; d++) if ((d + 1) % 7 === 0) g.rect(X(d) - pxd / 2, top - 4, pxd, H - top); g.fillStyle = '#0b1122'; g.fill(); }   // day 6 of each week is a Sunday
     g.font = '11px system-ui,sans-serif'; g.textBaseline = 'alphabetic';
@@ -1184,21 +1258,7 @@ function makePicture(cv) {
       const s0 = M.dayDate(Math.max(0, left)); let y = s0.getUTCFullYear(), m = s0.getUTCMonth();
       for (;;) { const d = M.dayOf(y, m + 1, 1), x = X(d); if (d > left + span) break; if (d >= left) { g.fillStyle = '#2b3a5e'; g.fillRect(Math.round(x - pxd / 2), 4, 1, 13); g.fillStyle = '#8b98b5'; g.fillText(`${SHORT_MONTHS[m]} ${y}`, x - pxd / 2 + 4, 14); } if (++m === 12) { m = 0; y++; } }
     } else for (let y = ya; y <= yb + 1; y++) { const d = M.dayOf(y), x = X(d); if (d < left || d > left + span) continue; g.fillStyle = '#2b3a5e'; g.fillRect(Math.round(x), 4, 1, 13); g.fillStyle = '#8b98b5'; g.fillText(String(y), x + 4, 14); }
-    // the towns' names, written once into a small picture whenever the rows change, then copied (text is the costliest
-    // thing a canvas draws); rows too thin to name are left unnamed
-    const lk = `${rowsKey}:${W}:${H}:${dpr}`;
-    if (labelsKey !== lk) {
-      labelsKey = lk; labels = labels || document.createElement('canvas');
-      labels.width = Math.max(1, Math.round(gut * dpr)); labels.height = Math.max(1, Math.round(H * dpr));
-      const lg = labels.getContext('2d'); lg.setTransform(dpr, 0, 0, dpr, 0, 0); lg.clearRect(0, 0, gut, H);
-      lg.font = '11.5px system-ui,sans-serif'; lg.textBaseline = 'middle';
-      if (rh >= 9) rows.forEach((p, i) => {
-        const y = Y(i), pp = A.papers[p], town = pp.town;
-        lg.fillStyle = '#c9d3e8'; lg.fillText(town, 6, y);
-        if (W >= 600 && pp.name) { lg.fillStyle = '#66728d'; const tw = lg.measureText(town + ' ').width; let nm = pp.name; while (nm.length > 3 && lg.measureText(nm).width > gut - 12 - tw) nm = nm.slice(0, -2); lg.fillText(nm === pp.name ? nm : nm + '…', 6 + tw, y); }
-      });
-    }
-    g.drawImage(labels, 0, 0, gut, H);
+    g.drawImage(labels, 0, 0, gut, H);   // the rows' names
     // the issues: one path per shade (printed or still to come; first of the week or not), so a busy view is four fills
     const wide = pxd < 2;
     for (const [a, b, shades] of [[d0, Math.min(d1, nowD + 1), SHADE.past], [Math.max(d0, nowD + 1), d1, SHADE.later]]) {
@@ -1263,7 +1323,8 @@ function makePicture(cv) {
   function words(d) {   // the day under the picture: who printed, what the strings hold, the story on the keyboard
     if (!archive() || !V || V.pending) return {date: '', what: ''};
     const dt = M.dayDate(d), l = A.byDay.get(d) || [], act = activeAround(d).length, ks = keysOn(d);
-    const printing = l.length ? `printing: ${l.slice(0, 4).map(p => A.papers[p].town).join(', ')}${l.length > 4 ? ` and ${l.length - 4} more` : ''}`
+    const towns = []; for (const p of l) { const t = A.papers[p].town, o = towns.find(x => x.t === t); if (o) o.n++; else towns.push({t, n: 1}); }   // a town once, with its count
+    const printing = l.length ? `printing: ${towns.slice(0, 4).map(o => o.n > 1 ? `${o.t} (${o.n})` : o.t).join(', ')}${towns.length > 4 ? ` and ${towns.length - 4} more` : ''}`
       : dt.getUTCDay() === 0 ? 'Sunday: no paper prints' : 'no surviving issue this day';
     const c = adagio() ? chordFor(d) : null, b = c && c.bar;
     const str = `strings: ${act} paper${act === 1 ? '' : 's'} around now${b ? (EVERY[b.unit] ? ` (${c.ch.name}: ${LEVEL_WORDS[c.level]}; ${EVERY[b.unit]})` : '') : S.speed >= 56 ? '' : ` (${M.seasonOf(d)} chord)`}`;
@@ -1301,7 +1362,7 @@ window.Music = {
   get on() { return S.on; }, get sound() { return S.sound; },
   // for silent checks only
   _check: {
-    set test(v) { S.test = !!v; }, get days() { return days; }, render,
+    set test(v) { S.test = !!v; }, get days() { return days; }, render, get names() { return lastNames; },
     counts() { const c = {}; for (const [k] of (E && E.log) || []) c[k] = (c[k] || 0) + 1; return c; },
     get log() { return E && E.log; }, get playing() { return !!(P && P.playing); }, get ready() { return ready; },
     get preloaded() { return !!(E && E.adagio && E.adagio.bank && E.adagio.windBank); },   // the piano and the winds, loaded

@@ -16,7 +16,8 @@ REPO = 'https://github.com/Major-Studio-1/Project-02-newspaper-night-sky'
 PAGES = 'https://newspapers.icare.love/'
 # The course repository keeps the proposal as submitted on 1 November 2026, at this commit.
 PROPOSAL = 'https://github.com/Major-Studio-1/Project-02-newspapers/tree/85ba363414d55edd68c96fef4b9ee944b99acef1'
-MENU = [('telescope', 'telescope.html', 'Telescope'), ('pulses', 'pulses.html', 'Pulses'), ('radio', 'radio.html', 'Listen'), ('stories', 'stories.html', 'Stories'), ('findings', 'findings.html', 'Findings'), ('notebook', 'notebook.html', 'Notebook'), ('method', 'method.html', 'How it works')]
+# Stories first (the owner, 24 November 2026): a visitor's way in is one affair read in its printings; the instruments follow.
+MENU = [('stories', 'stories.html', 'Stories'), ('telescope', 'telescope.html', 'Telescope'), ('pulses', 'pulses.html', 'Pulses'), ('radio', 'radio.html', 'Listen'), ('findings', 'findings.html', 'Findings'), ('notebook', 'notebook.html', 'Notebook'), ('method', 'method.html', 'How it works')]
 # A night sky: one bright four-pointed star and a small companion.
 MARK = ('<svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">'
         '<path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/>'
@@ -68,8 +69,10 @@ def head():
     return f'<link rel="stylesheet" href="site.css"><link rel="icon" href="{ICON}">'
 
 
-# The pages where the radio reads aloud. Its switch sits in the same place on each: the top right of the header.
-RADIO_PAGES = ('telescope', 'pulses', 'radio')
+# The pages where the radio reads aloud over an instrument. Its switch sits in the same place on each: the top right of
+# the header. Listen (radio.html) is the radio's own page, with its own power button under its Radio tab, so its header
+# carries no switch: two "Radio" buttons on one page did different things (the owner, 24 November 2026).
+RADIO_PAGES = ('telescope', 'pulses')
 RADIO_SWITCH = ('<button type="button" id="radio" class="toggle radio-switch has-ico" aria-pressed="false" '
                 'title="Hear the newspapers: turned on, the radio plays on its own; point at a star or a newspaper, pick one, or select an area to choose what you hear">' + icon('radio') + 'Radio</button>')
 # Music from the data (work/music.js) plays on Pulses, driven by its playhead. Its switch stands just left of the radio's,
@@ -96,7 +99,7 @@ def header(active, stories):
 
 
 def footer(release):
-    links = [('index.html', 'Home'), ('telescope.html', 'Telescope'), ('pulses.html', 'Pulses'), ('radio.html', 'Listen'), ('stories.html', 'Stories'), ('findings.html', 'Findings'),
+    links = [('index.html', 'Home'), ('stories.html', 'Stories'), ('telescope.html', 'Telescope'), ('pulses.html', 'Pulses'), ('radio.html', 'Listen'), ('findings.html', 'Findings'),
              ('notebook.html', 'Notebook'), ('method.html', 'How it works'), ('notes.html', 'Research notes'), ('exhibit.html', 'Exhibition mode'), (f'{REPO}/tree/main/data', 'Data release'), (REPO, 'Code')]
     nav = ''.join(f'<a href="{html.escape(h)}">{t}</a>' for h, t in links)
     return (f'<footer class="site-footer"><div class="site-inner">'
