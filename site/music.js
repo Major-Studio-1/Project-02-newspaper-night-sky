@@ -714,7 +714,7 @@ function archive() {
   const papers = INDEX.papers.map((p, i) => {
     const lat = Number.isFinite(p.lat) ? p.lat : 39.95, lon = Number.isFinite(p.lon) ? p.lon : -75.16;
     return {i, lccn: p.lccn, lat, lon, st: M.step(lat), fm: M.freq(lat), fk: M.freq(lat), fs: M.freq(lat, -1), pan: M.pan(lon),
-      town: p.town || String(p.place || '').split(',')[0], name: p.name || ''};   // the town and the paper: the picture's names
+      town: p.town || String(p.place || '').split(',')[0], name: p.name || '', title: p.title || ''};   // the town, the paper and its catalogue title: the picture's names
   });
   const byDay = new Map(), pages = new Map(), C = INDEX.coverage;
   for (let k = 0; k < C.d.length; k++) {
@@ -1165,16 +1165,15 @@ function makePicture(cv) {
   };
   // The rows' names. Each row is a newspaper, named by its town, and on a wide picture by the paper's name too. Rows of
   // one town (two papers of a town, or one paper under two titles, which the archive files as two series) are told
-  // apart on every screen (the owner, 24 November 2026: "Philadelphia" twice looked like a mistake):
-  // - where one title follows another, by the months of its surviving issues (Jan–Jun, Jul–Nov), with the name after
-  //   them on a wide picture;
-  // - where the papers ran side by side, by the paper's name, less the words it starts with in common with the town's
-  //   other papers (…Evening Post); names that still read alike, cut to fit, fall back on the months when those titles
-  //   follow one another, or else on the catalogue number, as the site shows it for papers of the same name.
+  // apart on every screen by their own titles (the owner, 24 November 2026: "Philadelphia" twice looked like a mistake;
+  // months, tried first, were confusing beside a time axis): each by its name, less the words it starts with in common
+  // with the town's other papers and a joining "and" (…Daily Evening Advertiser beside Gazette of the United States);
+  // names that still read alike, cut to fit, by their titles in the catalogue in the same way, and only where even those
+  // are the same (Williamsburg's Virginia Gazettes) by the catalogue number, as the site shows it for papers of one name.
   // On a phone the names' column widens as far as these need, within bounds. A tag is [what tells the row apart, the
-  // name after it].
-  function nameRows(c, narrow, y0, y1) {
-    const font = narrow ? '10.5px system-ui,sans-serif' : TOWN_FONT, max = narrow ? 124 : 178, tags = new Map();
+  // paper's name after it].
+  function nameRows(c, narrow) {
+    const font = narrow ? '10px system-ui,sans-serif' : TOWN_FONT, max = narrow ? 136 : 178, tags = new Map();
     const width = (s, f) => { c.font = f; return c.measureText(s).width; };
     const fit = (s, room, tail = false) => {   // cut to the room, at the end (or, for a number, at the start)
       if (!s || room <= 0) return '';
@@ -1182,38 +1181,30 @@ function makePicture(cv) {
       let t = s; while (t.length > 1 && width(tail ? '…' + t : t + '…', font) > room) t = tail ? t.slice(1) : t.slice(0, -1);
       return tail ? '…' + t : t.trimEnd() + '…';
     };
-    const plain = s => s.toLowerCase().replace(/[^a-z]/g, ''), alike = (s, t) => { const a = plain(s), b = plain(t); return a.startsWith(b) || b.startsWith(a); };
-    const span = new Map();   // each paper's first and last surviving issue in the years in view
-    for (let d = M.dayOf(y0); d < M.dayOf(y1 + 1); d++) { const l = A.byDay.get(d); if (l) for (const p of l) { const s = span.get(p); if (s) s[1] = d; else span.set(p, [d, d]); } }
-    const follow = ps => { const o = ps.filter(p => span.has(p)).sort((a, b) => span.get(a)[0] - span.get(b)[0]); return o.length === ps.length && o.every((p, k) => !k || span.get(o[k - 1])[1] < span.get(p)[0]); };
-    const months = (ps, room) => {   // Jan–Jun, Jul–Nov; with the year when the titles cross one
-      const ys = new Set(ps.flatMap(p => span.get(p).map(d => M.dayDate(d).getUTCFullYear())));
-      const mon = d => { const x = M.dayDate(d); return SHORT_MONTHS[x.getUTCMonth()] + (ys.size > 1 ? ' ' + x.getUTCFullYear() : ''); };
-      return ps.map(p => { const a = mon(span.get(p)[0]), b = mon(span.get(p)[1]), m = fit(a === b ? a : `${a}–${b}`, room);
-        const name = A.papers[p].name || '', n = narrow ? '' : fit(name, room - width(m + ' ', font));   // the name too, if enough of it shows
-        return [m, n && (n === name || n.replace(/…$/, '').length >= 10) ? n : '']; });
+    const plain = s => s.toLowerCase().replace(/[^a-z0-9]/g, ''), alike = (s, t) => { const a = plain(s), b = plain(t); return a.startsWith(b) || b.startsWith(a); };
+    const SMALL = new Set(['of', 'the', 'and', 'or', 'a', 'an', 'in', 'for', 'to']);
+    const nice = s => s.replace(/\.$/, '').replace(/[A-Za-z][\w']*/g, (w, i) => i && SMALL.has(w.toLowerCase()) ? w.toLowerCase() : w[0].toUpperCase() + w.slice(1));   // a catalogue title, cased as a name
+    const text = (p, key) => { const s = String(A.papers[p][key] || '').trim().replace(/^the\s+/i, ''); return key === 'title' ? nice(s) : s; };
+    const words = s => [...s.matchAll(/[^\s-]+/g)].map(m => ({w: m[0].toLowerCase().replace(/[^a-z0-9']/g, ''), at: m.index}));   // "New-York" is "New York"
+    const own = (p, ps, key) => {   // the name (or title), less the words it starts with in common with another of the town's, if any are left
+      const s = text(p, key), a = words(s); let k = 0;
+      for (const q of ps) if (q !== p) { const b = words(text(q, key)); let j = 0; while (j < a.length && j < b.length && a[j].w === b[j].w) j++; k = Math.max(k, j); }
+      if (!k || k >= a.length) return s;
+      while (k < a.length && (!a[k].w || a[k].w === 'and' || a[k].w === 'or')) k++;   // not starting with "and", "&" or "or"
+      return k < a.length ? '…' + s.slice(a[k].at) : s;
     };
+    const groups = (ps, t) => { const left = new Set(ps), out = []; for (const p of ps) { if (!left.has(p)) continue; const g = [...left].filter(q => alike(t.get(p), t.get(q))); g.forEach(q => left.delete(q)); out.push(g); } return out; };
     const towns = new Map(); for (const p of rows) { const t = A.papers[p].town; if (!towns.has(t)) towns.set(t, []); towns.get(t).push(p); }
     for (const [town, ps] of towns) {
       const room = max - 12 - width(town + ' ', TOWN_FONT);
       if (ps.length === 1) { if (!narrow && A.papers[ps[0]].name) tags.set(ps[0], ['', fit(A.papers[ps[0]].name, room)]); continue; }
-      if (follow(ps)) { months(ps, room).forEach((t, k) => tags.set(ps[k], t)); continue; }
-      const words = p => [...String(A.papers[p].name || '').matchAll(/[^\s-]+/g)].map(m => ({w: m[0].replace(/[^\w'&]/g, ''), at: m.index}));   // "New-York" is "New York"
-      const own = p => {   // the name, less the words it starts with in common with another paper of the town, if a name is left
-        const s = String(A.papers[p].name || ''), a = words(p); let k = 0;
-        for (const q of ps) if (q !== p) { const b = words(q); let j = 0; while (j < a.length && j < b.length && a[j].w === b[j].w) j++; k = Math.max(k, j); }
-        const rest = k < a.length ? s.slice(a[k].at) : '';
-        return k && /^[A-Z]/.test(rest) ? '…' + rest : s;
-      };
-      const t = new Map(ps.map(p => [p, fit(own(p), room)]));
-      const left = new Set(ps);   // the names that read alike go together, and each such group is told apart another way
-      for (const p of ps) {
-        if (!left.has(p)) continue;
-        const group = [...left].filter(q => alike(t.get(p), t.get(q))); group.forEach(q => left.delete(q));
-        if (group.length === 1) { tags.set(p, [t.get(p), '']); continue; }
-        if (follow(group)) months(group, room).forEach((m, k) => tags.set(group[k], m));
-        else group.forEach(q => tags.set(q, [fit(A.papers[q].lccn || '', room, narrow), '']));
+      const t = new Map(ps.map(p => [p, fit(own(p, ps, 'name'), room)]));
+      for (const g of groups(ps, t)) {   // names that read alike: their catalogue titles, then their catalogue numbers
+        if (g.length < 2) continue;
+        g.forEach(q => t.set(q, fit(own(q, g, 'title'), room)));
+        for (const g2 of groups(g, t)) if (g2.length > 1) g2.forEach(q => t.set(q, fit(A.papers[q].lccn || '', room, narrow)));
       }
+      ps.forEach(p => tags.set(p, [t.get(p), '']));
     }
     let need = 0;
     for (const p of rows) { const [m, n] = tags.get(p) || ['', ''], s = [m, n].filter(Boolean).join(' '); need = Math.max(need, 12 + width(A.papers[p].town, TOWN_FONT) + (s ? width(' ', TOWN_FONT) + width(s, font) : 0)); }
@@ -1237,7 +1228,7 @@ function makePicture(cv) {
     const lk = `${rowsKey}:${W}:${H}:${dpr}`;
     if (labelsKey !== lk) {
       labelsKey = lk; labels = labels || document.createElement('canvas');
-      const lg = labels.getContext('2d'), nm = rh >= 9 ? nameRows(lg, narrow, ya, yb) : {tags: new Map(), font: TOWN_FONT, gut: narrow ? 92 : 178};
+      const lg = labels.getContext('2d'), nm = rh >= 9 ? nameRows(lg, narrow) : {tags: new Map(), font: TOWN_FONT, gut: narrow ? 92 : 178};
       gutW = nm.gut; labels.width = Math.max(1, Math.round(gutW * dpr)); labels.height = Math.max(1, Math.round(H * dpr));
       lg.setTransform(dpr, 0, 0, dpr, 0, 0); lg.clearRect(0, 0, gutW, H); lg.textBaseline = 'middle';
       if (rh >= 9) rows.forEach((p, i) => {   // the town; what tells it from the town's other rows, a little brighter; the paper's name

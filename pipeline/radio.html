@@ -409,7 +409,7 @@ function mSay(msg) { const [a, b, c] = $('m-what').children; a.textContent = msg
 function musicYear(data) {   // the year's newspapers, surviving issues and stories, in the shapes music.js and the shelf read
   if (data.music) return data.music;
   const {raw, rev} = data, y = data.year;
-  const papers = raw.newspapers.map(p => ({lccn: p.lccn, lat: p.lat, lon: p.lon, town: Radio.town(p.place) || String(p.place || '').split(',')[0], name: Radio.paperName(p.name)}));
+  const papers = raw.newspapers.map(p => ({lccn: p.lccn, lat: p.lat, lon: p.lon, town: Radio.town(p.place) || String(p.place || '').split(',')[0], name: Radio.paperName(p.name), title: p.title || ''}));
   const at = new Map(papers.map((p, i) => [p.lccn, i])), coverage = {d: [], p: [], pages: []};
   for (const c of raw.coverage) {
     const i = at.get(String(c.newspaper_id).replace('paper:', '')); if (i === undefined) continue;
