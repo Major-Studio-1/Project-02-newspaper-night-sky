@@ -30,6 +30,7 @@ ICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0
 # sprite in the header; a template writes __ICON_name__ and fill() puts in <svg class="ico"><use href="#i-name"/></svg>.
 ICONS = {
     'radio': '<rect x="3" y="8.5" width="18" height="11.5" rx="2.5"/><circle cx="9" cy="14.25" r="3"/><path d="M15 12.5h3M15 16h3M7 8.5 16.5 4"/>',
+    'music': '<path d="M9 18V6.5L19 4v11.5"/><circle cx="6.6" cy="18" r="2.4"/><circle cx="16.6" cy="15.5" r="2.4"/>',   # two notes on a beam
     'place': '<path d="M12 21s-6.5-6-6.5-10.8a6.5 6.5 0 0 1 13 0C18.5 15 12 21 12 21z"/><circle cx="12" cy="10.2" r="2.3"/>',
     'topic': '<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5V12h8.5M12 12l-6 6"/>',
     'orbit': '<circle cx="12" cy="12" r="2.6"/><path d="M18.93 8A8 8 0 0 1 8 18.93M5.07 16A8 8 0 0 1 16 5.07"/>'
@@ -71,6 +72,11 @@ def head():
 RADIO_PAGES = ('telescope', 'pulses', 'radio')
 RADIO_SWITCH = ('<button type="button" id="radio" class="toggle radio-switch has-ico" aria-pressed="false" '
                 'title="Hear the newspapers: turned on, the radio plays on its own; point at a star or a newspaper, pick one, or select an area to choose what you hear">' + icon('radio') + 'Radio</button>')
+# Music from the data (work/music.js) plays on Pulses, driven by its playhead. Its switch stands just left of the radio's,
+# so the radio's stays in the same place on every page.
+MUSIC_PAGES = ('pulses',)
+MUSIC_SWITCH = ('<button type="button" id="music" class="toggle radio-switch music-switch has-ico" aria-pressed="false" '
+                'title="Music from the data: every note is a surviving issue or a printing. Turned on, it plays whenever Pulses plays">' + icon('music') + 'Music</button>')
 
 
 def header(active, stories):
@@ -81,7 +87,7 @@ def header(active, stories):
             f'<nav class="site-nav" aria-label="Main">{links}</nav>'
             f'<form class="site-search" action="telescope.html" role="search">{icon("search")}<label class="sr-only" for="site-q">Search every story</label>'
             f'<input id="site-q" name="q" type="search" placeholder="Search {stories:,} stories" autocomplete="off" spellcheck="false"></form>'
-            + (RADIO_SWITCH if active in RADIO_PAGES else '') +
+            + (MUSIC_SWITCH if active in MUSIC_PAGES else '') + (RADIO_SWITCH if active in RADIO_PAGES else '') +
             f'<button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header">{icon("menu")}Menu</button>'
             f'</div></header>'
             "<script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');"

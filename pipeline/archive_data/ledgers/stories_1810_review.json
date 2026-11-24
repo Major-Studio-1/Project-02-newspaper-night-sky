@@ -1,0 +1,1747 @@
+{
+ "findings": {
+  "S10-001": [
+   "Scan matches the excerpt. The print has 'a detachment', not 'the'."
+  ],
+  "S10-002": [
+   "Scan reads 'the attachment of one hundred thousand men' where the other printings have 'detachment': a printed difference, not a transcription error. Otherwise the scan matches the excerpt; an ink blot covers part of 'March'."
+  ],
+  "S10-003": [
+   "Scan matches the excerpt, except that the print has 'such as as that act contemplates': the printer's doubled 'as' is a printed difference, which the transcription silently drops."
+  ],
+  "S10-004": [
+   "Scan matches the excerpt, under the heading 'PRESIDENT's MESSAGE.'; the print has '100,000 men' in figures."
+  ],
+  "S10-005": [
+   "Scan matches the excerpt."
+  ],
+  "S10-006": [
+   "Scan matches the excerpt; the heading above it is cut off at the top of the crop."
+  ],
+  "S10-007": [
+   "Scan reads 'Its early revival' in worn type; the transcription's 'His' is a different word that changes whose revival is meant. Otherwise the scan matches the excerpt."
+  ],
+  "S10-008": [
+   "Scan matches the excerpt."
+  ],
+  "S10-009": [
+   "Scan matches the excerpt."
+  ],
+  "S10-010": [
+   "Scan matches the excerpt; a broken letter in 'arrangement' is worn type, not a misprint."
+  ],
+  "S10-011": [
+   "Scan reads 'comprising atonement for the attack upon the frigate Chesapeake'; the transcription 'a tonnage' changes the sense. Otherwise the scan matches the excerpt."
+  ],
+  "S10-012": [
+   "Scan matches the excerpt."
+  ],
+  "S10-013": [
+   "Scan matches the excerpt, after 'Mr. Leib submitted the following resolutions for consideration:'; the right of the lines is blotted, and the column ends at the foot of the page at 'the British gov-'. The words that tell this resolution from Leib's second one, which opens the same way, are not on this page; it stands first, as the Erskine resolution does in POR 03-19."
+  ],
+  "S10-014": [
+   "Scan matches the excerpt, under the headings 'IN SENATE, MARCH 8, 1810.' and 'War Resolutions.'"
+  ],
+  "S10-015": [
+   "Scan matches the excerpt."
+  ],
+  "S10-016": [
+   "Scan matches the excerpt; a vertical crease hides a few letters, but every word can be read."
+  ],
+  "S10-017": [
+   "Scan matches the excerpt; the second crop shows its last lines."
+  ],
+  "S10-018": [
+   "Scan matches the excerpt, except that the print spells 'Emperour', which the transcription gives as 'Emperor'."
+  ],
+  "S10-019": [
+   "Scan reads 'M. Armstrong' where the other printings have 'Mr.': a printed difference, which the transcription keeps. Otherwise the scan matches the excerpt, except the spelling 'Emperour'."
+  ],
+  "S10-020": [
+   "Scan reads 'Berlin and Milan', with a faint 'l'; the transcription 'Mian' is off by a letter and still reads as the same name. Otherwise the scan matches the excerpt."
+  ],
+  "S10-021": [
+   "Scan matches the excerpt, except that the print has the misprint 'Berlin aad Milan', which the transcription silently corrects to 'and'."
+  ],
+  "S10-022": [
+   "Scan matches the excerpt; only the spelling 'authorised' is modernised in the transcription."
+  ],
+  "S10-023": [
+   "Scan matches the excerpt."
+  ],
+  "S10-024": [
+   "Scan matches the excerpt: the title has 'G. Britain', and the act stands without a heading under the issue's date line."
+  ],
+  "S10-025": [
+   "Scan matches the excerpt."
+  ],
+  "S10-026": [
+   "Scan matches the excerpt."
+  ],
+  "S10-027": [
+   "The print has the act's title and enacting clause as in the other printings. The CA text is garbled throughout, but no word becomes a different one."
+  ],
+  "S10-028": [
+   "Scan matches the excerpt, under 'Laws of the Union. [BY AUTHORITY.]'; the title has 'Great Britain' in full."
+  ],
+  "S10-029": [
+   "Scan matches the title and enacting clause under the heading 'NEW LAW.', but the transcription breaks off with '...' after 'the United States' while the print goes on ('but every British and French armed vessel is hereby interdicted...'): words dropped. The print has 'armed vessels', plural, where the transcription and other printings have 'vessel'."
+  ],
+  "S10-030": [
+   "Scan matches the excerpt, which spaces the enacting clause letter by letter; the print's misprint 'intercouse' in the title is silently corrected in the transcription."
+  ],
+  "S10-031": [
+   "Scan matches the excerpt."
+  ],
+  "S10-032": [
+   "Scan matches the excerpt. Just past it the paper prints 'your letter referred' where the other printings checked have 'refers': a printed difference."
+  ],
+  "S10-033": [
+   "Scan matches the excerpt."
+  ],
+  "S10-034": [
+   "Scan matches the excerpt. The paper prints 'the Secretary of State, and the United States' where ALX, CON, NHG and RIA print 'of the United States': a printed difference."
+  ],
+  "S10-035": [
+   "Scan matches the excerpt except 'your' for 'you'. In the date of Mr. Pinkney's letter the figure after '2' is worn and cannot be read as '1' or 'd' on this scan, so the transcription's '21 January' is neither confirmed nor counted as an error."
+  ],
+  "S10-036": [
+   "Scan matches the excerpt except that the print spells 'recal'. The paper prints 'the Secretary of State and the U. S.' where ALX, CON, NHG and RIA print 'of': a printed difference."
+  ],
+  "S10-037": [
+   "Scan matches the excerpt."
+  ],
+  "S10-038": [
+   "Scan matches the excerpt. In the date of Mr. Pinkney's letter the figure after '2' looks like '1' but may be a worn 'd', so the transcription's '21 January' is neither confirmed nor counted as an error."
+  ],
+  "S10-039": [
+   "Scan matches the excerpt; the paper heads the letter 'Lord Wellesly to Mr. Pinkney.' and prints 'the 2d of January'. The second crop repeats the lines that follow."
+  ],
+  "S10-040": [
+   "Scan matches the excerpt except 'of' for the blotted 'as' and the misprint 'degre', which the transcription corrects. The paper prints 'thereon to my Constituents', and just past the excerpt 'the laws of our fellow subjects' where RIA and VA print 'the laws of our forefathers': printed differences."
+  ],
+  "S10-041": [
+   "Scan matches the excerpt, under '(COPY.)' and the date line 'Great Cumberland Place, 2d Jan. 1810.'; the print spells 'recal', which the transcription modernises. Its 'between the secretary of state and the United States, and Mr. Jackson' is the paper's own wording: a printed difference, not a transcription error."
+  ],
+  "S10-042": [
+   "Scan matches the excerpt."
+  ],
+  "S10-043": [
+   "Scan matches the excerpt. The paper prints 'thereon to my Constituents', as RIR does, where RIA, ENQ and VA print 'before my constituents': a printed difference."
+  ],
+  "S10-044": [
+   "The letter stands in the third column after the paper's own paragraph, much of its opening under a dark stain; read on contrast-stretched enlargements, the print dates Mr. Pinkney's letter '2d of January', so the transcription's 'the 11th' appears to be a transcription error that changes the date. The rest of the excerpt matches the scan."
+  ],
+  "S10-045": [
+   "Scan matches the excerpt. The address opens at the foot of the first column, under the heading 'SIR FRANCIS BURDETT.', and goes on at the top of the second; the print has 'to lay my sentiments thereon before my constituents'."
+  ],
+  "S10-046": [
+   "Scan matches the excerpt."
+  ],
+  "S10-047": [
+   "Scan matches the excerpt except that the print spells 'recal'. The paper prints 'the Secretary of State and the United States' where ALX, CON, NHG and RIA print 'of', and dates the letter '2d Jan. 1810.': printed differences."
+  ],
+  "S10-048": [
+   "Where print and excerpt overlap they match, but the transcription passes from 'laid before the King.' straight to 'might obstruct', leaving out the six printed lines at the foot of the column ('The several conferences ... to avoid any discussion which'): words dropped."
+  ],
+  "S10-049": [
+   "Scan matches the excerpt; the paper prints the date as 'January 2d, 1810.'"
+  ],
+  "S10-050": [
+   "Scan matches the excerpt."
+  ],
+  "S10-051": [
+   "Scan matches the excerpt, except that the paper misprints 'Januray', which the transcription silently corrects to 'January'. The paper abbreviates 'the 24th Jan.'"
+  ],
+  "S10-052": [
+   "Scan matches the excerpt, except that the print has the misprint 'him te give', which the transcription corrects, and spells 'authorises'."
+  ],
+  "S10-053": [
+   "Scan matches the excerpt."
+  ],
+  "S10-054": [
+   "Scan matches the excerpt."
+  ],
+  "S10-055": [
+   "Scan matches the excerpt except that the print spells 'recal'."
+  ],
+  "S10-056": [
+   "Scan matches the excerpt."
+  ],
+  "S10-057": [
+   "Scan matches the excerpt, under the headings 'BURDETT's LETTER. Denying the Power of the House of Commons to imprison the People of England.' This paper prints 'my sentiments thereon before my constituents'."
+  ],
+  "S10-058": [
+   "Scan reads 'fostered and protected'; the transcription repeats 'protected' in place of 'fostered', which loses a word but not the sense. Otherwise the scan matches the excerpt, under the heading 'Declaration of Independence.'"
+  ],
+  "S10-059": [
+   "Scan matches the excerpt."
+  ],
+  "S10-060": [
+   "Scan matches the excerpt."
+  ],
+  "S10-061": [
+   "Scan matches the excerpt; the extract follows Mr. Pinkney's letter of 23 March in the second column. The paper prints 'for St. Cloud, whence he will remain till Easter' without the words 'goes to Compiegne, where he': a printed difference, not a transcription error."
+  ],
+  "S10-062": [
+   "Faint scan, read on an enlarged copy: it reads 'fostered and protected' and 'from imbecility and weakness'. The transcription's 'depopulated' and 'infancy' are transcription errors that change the sense, not printed differences."
+  ],
+  "S10-063": [
+   "Scan matches the excerpt."
+  ],
+  "S10-064": [
+   "Scan prints the heading and the opening sentence ('It has pleased Almighty God ... sovereignty') just above 'These provinces'; the transcription leaves them out (words dropped). Scan reads 'imbecility' where the transcription has 'infirmity': a transcription error, not a printed difference."
+  ],
+  "S10-065": [
+   "Scan matches the excerpt. This paper prints 'the period of infancy' without 'their', and 'natural rights'."
+  ],
+  "S10-066": [
+   "Scan matches the excerpt (read on an enlarged copy, as the crop cuts the start of each line)."
+  ],
+  "S10-067": [
+   "Scan matches the excerpt; the paper prints 'Compeigne'."
+  ],
+  "S10-068": [
+   "Scan prints the whole 'These provinces' paragraph and 'But Spain, deprived of her king by the unparalleled perfidy of the emperor'; the transcription drops the paragraph and turns 'perfidy' into 'wisdom', which reverses the sense."
+  ],
+  "S10-069": [
+   "Scan matches the excerpt."
+  ],
+  "S10-070": [
+   "Scan matches the excerpt (read on an enlarged copy), except that the print spells 'Compeigne' and the transcription modernises it to 'Compiègne'."
+  ],
+  "S10-071": [
+   "Scan matches the excerpt."
+  ],
+  "S10-072": [
+   "The print goes on after 'till Easter' with his propositions, the ship for his return, the minister's advice and the treaty with Holland; the transcription drops all of it and runs straight to the French article 'Toutes les marchandises'. The print spells 'Compeigne'."
+  ],
+  "S10-073": [
+   "Scan matches the excerpt."
+  ],
+  "S10-074": [
+   "Scan matches the excerpt."
+  ],
+  "S10-075": [
+   "Scan matches the excerpt, except that the print spells 'Emperour' and 'Compeigne', which the transcription silently gives as 'Emperor' and 'Compiegne'."
+  ],
+  "S10-076": [
+   "Scan matches the excerpt, including this paper's 'This letter has given occasion for a letter', a printed difference."
+  ],
+  "S10-077": [
+   "Scan matches the excerpt; the paper prints 'Emperour' and 'Compeigne'."
+  ],
+  "S10-078": [
+   "Scan matches the excerpt. This paper names General Armstrong and Mr. Smith in the heading and leaves out the sentence about the letter marked No. 2: printed differences."
+  ],
+  "S10-079": [
+   "Scan matches the excerpt; the paper prints 'Compiegne'. The heading's first line is faint but legible on an enlarged copy."
+  ],
+  "S10-080": [
+   "Scan matches the excerpt."
+  ],
+  "S10-081": [
+   "Scan matches the excerpt; the print spells 'Compeigne'."
+  ],
+  "S10-082": [
+   "Scan matches the excerpt. The paper does not reprint the letter to the Duke of Cadore here; a note says it was published in its last issue."
+  ],
+  "S10-083": [
+   "Scan matches the excerpt."
+  ],
+  "S10-084": [
+   "Scan matches the excerpt."
+  ],
+  "S10-085": [
+   "Scan matches the excerpt; this paper prints 'the first of March' in words."
+  ],
+  "S10-086": [
+   "Scan matches the excerpt, except that the print spells 'Compeigne', which the transcription gives as 'Compiegne'."
+  ],
+  "S10-087": [
+   "Scan matches the excerpt but for one spelling: the print has 'merchandize'."
+  ],
+  "S10-088": [
+   "Scan matches the excerpt, including this paper's 'together with cargoes'."
+  ],
+  "S10-089": [
+   "Scan matches the excerpt."
+  ],
+  "S10-090": [
+   "Scan reads 'December, 1808' (the last digit sits at the curled edge of the page and was read on an enlargement); the transcription '1806' changes the year. The print lacks the 'and' before 'without' that the other papers have: a printed difference."
+  ],
+  "S10-091": [
+   "Scan matches the excerpt but for one spelling: the print has 'merchandize'."
+  ],
+  "S10-092": [
+   "Scan matches the excerpt. The print has the misprint 'Freuch flag', which the transcription silently corrects, and spells 'merchandize'."
+  ],
+  "S10-093": [
+   "Scan matches the excerpt."
+  ],
+  "S10-094": [
+   "Scan matches the excerpt."
+  ],
+  "S10-095": [
+   "Scan matches the excerpt but for 'I his', a garble of 'This' printed with a worn T."
+  ],
+  "S10-096": [
+   "Scan matches the excerpt. The crop's left edge clips the first letter or two of some lines, but every word can be read."
+  ],
+  "S10-097": [
+   "Scan matches the excerpt; the crop is small, and the place name was confirmed on an enlargement."
+  ],
+  "S10-098": [
+   "Scan reads 'Stirrup Ray', as most papers print it (checked on an enlargement); the transcription's 'Sturup Key' garbles 'Stirrup' and puts 'Key', the form the Rhode-Island Republican prints, for the printed 'Ray': a minor transcription difference. The rest matches."
+  ],
+  "S10-099": [
+   "Scan matches the excerpt."
+  ],
+  "S10-100": [
+   "Scan reads 'Stirrup Ray', as most papers print it (checked on an enlargement); the transcription puts 'Key', the form the Rhode-Island Republican prints, for the printed 'Ray': a minor transcription difference. The rest matches."
+  ],
+  "S10-101": [
+   "Scan matches the excerpt."
+  ],
+  "S10-102": [
+   "Scan matches the excerpt. It prints 'December 4, 1808' where the other papers have '4th December, 1808': the same date in another form, a printed difference."
+  ],
+  "S10-103": [
+   "Scan matches the excerpt, including 'laying' where the other papers print 'lying': a printed difference."
+  ],
+  "S10-104": [
+   "Scan reads 'BOSTON, July 20.' where most papers print 'July 28': a printed difference, not a transcription error. On this heavily inked print (read on enlargements) the transcription reads 'of the name of' for 'but in the name of' and garbles the port's name. Restated by the session after the excerpts of this story were cut to end at the brig's name, before the names of the masters (C-12)."
+  ],
+  "S10-105": [
+   "Scan matches the excerpt, which stops at 'Stirrup'. The print goes on 'Key near the Bahama Bank' where most papers print 'Stirrup Ray': a printed difference."
+  ],
+  "S10-106": [
+   "The print gives the captain's name in italics, and the transcription turns it into the word 'Final', which changes the name. The print has 'for sale' where the other papers print 'and sale': a printed difference."
+  ],
+  "S10-107": [
+   "Scan matches the excerpt, except the port, printed 'Algesiras', which the transcription cuts to 'Algeir'. The excerpt starts after the run-in heading 'Very late from Spain.--'."
+  ],
+  "S10-108": [
+   "Scan matches the excerpt. The print opens 'On the 24 inst. (June)' just before the excerpt's first words, and reads 'Stirrup Bay' where most papers print 'Ray': a printed difference."
+  ],
+  "S10-109": [
+   "Scan matches the excerpt, except that the print spells the brig 'Enter-prize'. It is dated 'BOSTON, JULY 31.' and reads 'On Friday evening' where most papers have 'July 28' and 'Last evening': printed differences."
+  ],
+  "S10-110": [
+   "Scan matches the excerpt, except that the print spells the brig 'Enterprize' (checked on an enlargement). The print has no '(Spain.)' after the port: a printed difference."
+  ],
+  "S10-111": [
+   "Scan matches the excerpt; the print uses the long s throughout."
+  ],
+  "S10-112": [
+   "Scan matches the excerpt, except that the transcription modernises the printed 'Algeziras' and 'Enterprize' (checked on an enlargement)."
+  ],
+  "S10-113": [
+   "Scan matches the excerpt, except that the transcription modernises the printed 'Algeziras' to 'Algeciras'."
+  ],
+  "S10-114": [
+   "Scan matches the excerpt."
+  ],
+  "S10-115": [
+   "Scan matches the excerpt from its heading 'PARIS, August 9.', but the print goes on 'which you had transmitted to me. His Majesty could have wished...' where the transcription breaks off with '...': words dropped. The print spells 'Emperour'."
+  ],
+  "S10-116": [
+   "Scan matches the excerpt."
+  ],
+  "S10-117": [
+   "Scan matches the excerpt, except that the print spells 'Emperour'. The letter is set line for line as in the issue of 25 September."
+  ],
+  "S10-118": [
+   "Scan matches the excerpt. Scan reads 'the 1st May' where the other printings have 'the 1st of May': a printed difference, not a transcription error."
+  ],
+  "S10-119": [
+   "Scan matches the excerpt. The print has the misprint 'beed' for 'been', which the transcription silently corrects."
+  ],
+  "S10-120": [
+   "Scan matches the excerpt."
+  ],
+  "S10-121": [
+   "Scan matches the excerpt. Scan reads 'had always been' where the other printings have 'had been always': a printed difference, not a transcription error."
+  ],
+  "S10-122": [
+   "Scan prints the letter's dateline 'PARIS AUG 5, 1810' between the heading and 'SIR'; the transcription leaves this line out. The rest matches."
+  ],
+  "S10-123": [
+   "Scan matches the excerpt."
+  ],
+  "S10-124": [
+   "Scan prints the sentence 'His Majesty could have wished that this Act ... had been always officially notified to him.', which the transcription leaves out; that is why its excerpt runs on to 'her honour'. Scan reads 'the act of Congress to the 1st of May' where the other printings have 'of': a printed difference, not a transcription error."
+  ],
+  "S10-125": [
+   "Scan matches the excerpt. Scan reads 'I transmit a copy of it' where most printings have 'I hasten to transmit': a printed difference, not a transcription error."
+  ],
+  "S10-126": [
+   "Scan matches the excerpt. The crop shows the Natchez note only; the Pinkneyville letter begins below it."
+  ],
+  "S10-127": [
+   "Scan prints 'I hasten to transmit a copy of it...', Mr. Pinkney's signature, 'Hon. Robt. Smith' and '(COPY.)' after 'decrees.'; the transcription leaves all of this out, and breaks off with '...' at 'the 6th instant' where the print goes on."
+  ],
+  "S10-128": [
+   "Scan matches the excerpt."
+  ],
+  "S10-129": [
+   "Scan reads 'I hasten to transmit a copy of it' (the h is blotted); the transcription's 'I enclose to transmit' is a misreading, not a printed difference. The transcription also leaves out the addressee line 'Hon. Robt. Smith, &c.'"
+  ],
+  "S10-130": [
+   "Scan matches the excerpt. The paper prints only the first sentence of the Natchez note and goes straight into the Pinkneyville letter."
+  ],
+  "S10-131": [
+   "Scan matches the excerpt, except that the transcription leaves out the label '(COPY.)' before Mr. Pinkney's letter."
+  ],
+  "S10-132": [
+   "Scan matches the excerpt; a blot covers the first letters of 'late' in the first line."
+  ],
+  "S10-133": [
+   "Scan matches the excerpt."
+  ],
+  "S10-134": [
+   "Scan matches the excerpt. Scan reads 'I transmit a copy of it' where most printings have 'I hasten to transmit': a printed difference, not a transcription error."
+  ],
+  "S10-135": [
+   "The crop shows the whole note and the letter's opening. The transcription drops two sentences of the note (70 words, from 'We are informed that a few days since' to 'the result is here related') and jumps from 'Patriots.]' to the letter."
+  ],
+  "S10-136": [
+   "Scan matches the excerpt, but the transcription breaks off with '...' after 'entered the fort of Baton Rouge' while the print goes on ('Young Grand Pre, who commanded...'): words dropped."
+  ],
+  "S10-137": [
+   "Scan matches the excerpt."
+  ],
+  "S10-138": [
+   "Scan matches the excerpt. The letter is dated 'Sept. 26, 1810' where RIA, POR and NOR have the 25th: a printed difference, not a transcription error."
+  ],
+  "S10-139": [
+   "Scan matches the excerpt, except that the transcription leaves out the label '(COPY.)' before Mr. Pinkney's letter."
+  ],
+  "S10-140": [
+   "Scan matches the excerpt. The print itself leaves out a passage: after 'the established principles of the government' it goes on 'which had heretofore protected us', where the other printings first have 'we had voluntarily adopted certain regulations...': a printed difference, not a transcription error."
+  ],
+  "S10-141": [
+   "Scan matches the excerpt; a pen stroke crosses the first lines, but the words are legible."
+  ],
+  "S10-142": [
+   "Scan matches the excerpt."
+  ],
+  "S10-143": [
+   "Scan matches the excerpt."
+  ],
+  "S10-144": [
+   "Scan matches the excerpt."
+  ],
+  "S10-145": [
+   "Scan matches the excerpt, under 'BY THE PRESIDENT OF THE U. STATES, A PROCLAMATION.' The print has 'before the third of March next', without 'day': the paper's wording, not a transcription error."
+  ],
+  "S10-146": [
+   "Scan matches the excerpt."
+  ],
+  "S10-147": [
+   "Scan matches the excerpt."
+  ],
+  "S10-148": [
+   "Scan matches the excerpt; the paper prints 'the third day of March next' in full."
+  ],
+  "S10-149": [
+   "Scan matches the excerpt. It prints 'the act of May last' where the other printings have 'May 1st last': a printed difference, not a transcription error."
+  ],
+  "S10-150": [
+   "Scan matches the excerpt."
+  ],
+  "S10-151": [
+   "Scan matches the excerpt; the print goes on 'next, so revoke or modify' after 'March'."
+  ],
+  "S10-152": [
+   "Scan matches the excerpt."
+  ],
+  "S10-153": [
+   "Scan matches the excerpt; the paper prints 'the 1st day of May'."
+  ],
+  "S10-154": [
+   "Scan matches the excerpt, which ends with the column at 'this day in'. Whether 'relation to France.' follows cannot be checked from the crop."
+  ],
+  "S10-155": [
+   "Scan matches the excerpt."
+  ],
+  "S10-156": [
+   "Scan matches the excerpt."
+  ],
+  "S10-157": [
+   "Scan matches the excerpt."
+  ],
+  "S10-158": [
+   "Scan matches the excerpt."
+  ],
+  "S10-159": [
+   "Scan matches the excerpt; the '(CIRCULAR)' heading is cut at the top of the crop."
+  ],
+  "S10-160": [
+   "Scan matches the excerpt: the paper abridges the opening ('[Here the title of the Act, and the section are recited.]') and prints the rest. The first crop shows only the end of the heading."
+  ],
+  "S10-161": [
+   "Scan matches the excerpt; 'the first of May' without 'day' is the paper's own wording."
+  ],
+  "S10-162": [
+   "Scan matches the excerpt. The date line above it is printed 'Nov. 2, 1810.'"
+  ],
+  "S10-163": [
+   "Scan matches the excerpt."
+  ],
+  "S10-164": [
+   "Scan matches the excerpt, which is set with the long s."
+  ],
+  "S10-165": [
+   "Scan matches the excerpt; the paper prints 'the 3d of March'."
+  ],
+  "S10-166": [
+   "Scan matches the excerpt. It prints 'November 2' and 'the Act of the 1st of May last', wording that differs from the other printings: printed differences, not transcription errors."
+  ],
+  "S10-167": [
+   "Scan matches the excerpt."
+  ],
+  "S10-168": [
+   "Scan matches the excerpt."
+  ],
+  "S10-169": [
+   "Scan prints 'the Bay of Tunis', as transcribed, where the other printings have 'Bey': a printed difference. The year is printed '18 0' with a figure missing, which the transcription restores as 1810."
+  ],
+  "S10-170": [
+   "Scan matches the excerpt, including the print's doubled 'carried in into Tunis'."
+  ],
+  "S10-171": [
+   "Scan reads 'imbrued' where the other printings have 'imbued': a printed difference, not a transcription error. The transcription modernises the print's 'classick' to 'classic', a minor difference."
+  ],
+  "S10-172": [
+   "Scan matches the excerpt. Just after it the print reads 'being at Malta', where other printings have 'in Malta': a printed difference."
+  ],
+  "S10-173": [
+   "Scan matches the excerpt, under 'BAD NEWS FROM TUNIS.'; ink blots cover parts of a few words at the left of the lines ('where', 'Bey'), but what shows agrees."
+  ],
+  "S10-174": [
+   "Scan matches the excerpt except that it prints 'embued', which the transcription normalises to 'imbued' (minor). The print's 'my family and neighbors', without the second 'my', is a printed difference."
+  ],
+  "S10-175": [
+   "Scan matches the excerpt as far as the dark, blotted scan can be read."
+  ],
+  "S10-176": [
+   "Scan matches the excerpt except that it prints 'a minister of the Bey's', where the transcription drops the 's: a minor error."
+  ],
+  "S10-177": [
+   "Scan matches the excerpt."
+  ],
+  "S10-178": [
+   "Scan matches the excerpt. The heading above it reads 'TO THE CITIZENS OF ROME.', where other printings have 'To the Roman Citizens': a printed difference."
+  ],
+  "S10-179": [
+   "Scan matches the excerpt."
+  ],
+  "S10-180": [
+   "Scan matches the excerpt, under 'FROM WASHINGTON CITY, Nov. 27.'; a pen stroke and an ink blot cross the opening lines but leave the words readable."
+  ],
+  "S10-181": [
+   "Scan matches the excerpt."
+  ],
+  "S10-182": [
+   "Scan matches the excerpt, including the print's 'a love of arts' without 'the'."
+  ],
+  "S10-183": [
+   "Scan matches the excerpt and confirms 'much reason to fear' and 'his friend in Washington City' as printed. The print doubles 'our' across a line break; the transcription silently drops the repeat."
+  ],
+  "S10-184": [
+   "The print reads 'tasting' and 'assailed', set with the long s, like the other printings; the transcription's 'talking' and 'afflicted' are misreadings that change the words. The word after 'a mind' is blotted and cannot be read."
+  ],
+  "S10-185": [
+   "Scan matches the excerpt."
+  ],
+  "S10-186": [
+   "Scan matches the excerpt."
+  ],
+  "S10-187": [
+   "Scan matches the excerpt except the spelling 'Governour', given as 'Governor' in the transcription. The misprint 'we loss no time' is in the print itself."
+  ],
+  "S10-188": [
+   "Scan matches the excerpt, under the heading 'From the National Intelligencer.'"
+  ],
+  "S10-189": [
+   "Scan matches the excerpt."
+  ],
+  "S10-190": [
+   "Scan matches the excerpt. The second crop shows unrelated words."
+  ],
+  "S10-191": [
+   "Scan matches the excerpt except that the transcription drops 'on' before 'the 30th of April 1803'. Damage to the paper hides the word before 'pursuance' and part of 'Paris'."
+  ],
+  "S10-192": [
+   "Scan matches the excerpt."
+  ],
+  "S10-193": [
+   "Scan matches the excerpt, which runs from the foot of one column to the head of the next. The print itself lacks 'have' ('this territory professed'), a printed difference; the transcription drops 'the' before 'government' at a line end that runs into the fold."
+  ],
+  "S10-194": [
+   "Scan matches the excerpt: the print has 'intercourse between the U. States', so the transcription adds nothing. Just past the excerpt it prints 'having invited' where ALX and VA have 'have invited'."
+  ],
+  "S10-195": [
+   "Scan matches the excerpt, which begins at the quoted letter."
+  ],
+  "S10-196": [
+   "Scan matches the excerpt and confirms 'the Floridas' and the paper's shorter introduction as printed."
+  ],
+  "S10-197": [
+   "Scan matches the excerpt."
+  ],
+  "S10-198": [
+   "Scan matches the excerpt. The print has the misprint 'dleivered', which the transcription silently corrects."
+  ],
+  "S10-199": [
+   "Scan matches the excerpt: the print has 'commercial intercourse', so the transcription adds nothing."
+  ],
+  "S10-200": [
+   "Scan matches the excerpt, except that the paper misprints 'aud' for 'and' in the salutation, which RevX silently corrects."
+  ],
+  "S10-201": [
+   "Scan matches the excerpt, including the credit 'Nat. Intel.' after the date. 'bearing' looks like 'beating' in the print (a misprint or a broken r); not counted."
+  ],
+  "S10-202": [
+   "Scan matches the excerpt; 'as it is well known' is the paper's own wording."
+  ],
+  "S10-203": [
+   "Scan matches the excerpt except the heading, which the paper misprints 'A DECLARLTION.' and the transcription silently corrects. The crop shows the declaration's opening."
+  ],
+  "S10-204": [
+   "The opening matches, but the transcription breaks off with '...' after 'Perdido' while the print goes on: words dropped."
+  ],
+  "S10-205": [
+   "Scan matches the excerpt except 'remaining' for the printed 'remained'; the transcription then breaks off with '...' after 'property and lives' while the print goes on ('Without making any unnecessary innovation...'): words dropped."
+  ],
+  "S10-206": [
+   "Scan matches the excerpt."
+  ],
+  "S10-207": [
+   "Scan matches the excerpt, but the transcription breaks off with '...' after 'preserving this territory' while the print goes on ('and shewing our attachment to the government which had heretofore...'): words dropped."
+  ],
+  "S10-208": [
+   "Scan matches the excerpt across the two crops; 'eastward of the Mississippi' and 'of a treaty' are the paper's own wording."
+  ],
+  "S10-209": [
+   "Scan matches the excerpt, under 'From the National Intelligencer Extra. WASHINGTON CITY, Dec. 5.'"
+  ],
+  "S10-210": [
+   "Scan matches the excerpt."
+  ],
+  "S10-211": [
+   "Scan matches the excerpt, with '$10,348,000' and 'amounted' for 1808; RevX gives the printed 'merchandize' as 'merchandise'."
+  ],
+  "S10-212": [
+   "Scan matches the excerpt, with '$10,348,000' and 'amounted' for 1808; the heading is printed 'EVENUE.' with no R visible, as transcribed. RevX gives the printed 'merchandize' as 'merchandise'."
+  ],
+  "S10-213": [
+   "Scan matches the excerpt, with '$10,348,000' and 'amounted' for 1808; RevX gives the printed 'merchandize' as 'merchandise'."
+  ],
+  "S10-214": [
+   "Scan reads '$10,343,000', as the transcription does, where most printings have $10,348,000: a printed difference in this paper, not a transcription error. The print also has 'amounting to', and 'merchandize', which the transcription spells 'merchandise'."
+  ],
+  "S10-215": [
+   "Scan matches the excerpt across the two crops, with '$10,348,000' and 'amounted' for 1808."
+  ],
+  "S10-216": [
+   "Scan matches the excerpt, which like the print has no 'and extending to the river Perdido': the paper itself leaves out the territory's eastern limit, a printed difference, not a transcription error. The print spells 'Missisippi'; the transcription normalises it."
+  ],
+  "S10-217": [
+   "Scan matches the excerpt as far as it goes, but the transcription breaks off with '...' after 'the United States' while the print goes on ('which you have sent to me. His majesty could have wished...'): words dropped. Checked by the session on a hand-placed crop."
+  ],
+  "S10-218": [
+   "Scan shows the heading, the decree's preamble ('Napoleon, &c. &c. &c. considering that the government of the U. S. ...') and then 'ART 1st. All vessels navigating under the flag of the U. States'; the transcription leaves out the whole preamble between the heading and 'ART 1st' and breaks off with '...' where the print goes on: words dropped. Checked by the session on a hand-placed crop."
+  ],
+  "S10-219": [
+   "Scan matches the excerpt. Checked by the session on a hand-placed crop."
+  ],
+  "S10-220": [
+   "Scan matches the excerpt. Checked by the session on a hand-placed crop."
+  ],
+  "S10-221": [
+   "Scan matches the excerpt, with '$10,348,000' and 'amounted' for 1808; the paper misprints 'supplementatary', which RevX silently corrects, and RevX gives 'merchandize' as 'merchandise'."
+  ],
+  "S10-222": [
+   "Scan matches the excerpt, with 'Dols. 10,348,000' and 'amounted' for 1808; RevX gives the printed 'merchandize' as 'merchandise'. Just past the excerpt the print doubles 'the' ('from the the same sources')."
+  ]
+ },
+ "crops": {
+  "S10-001": [
+   "S10-001.jpg"
+  ],
+  "S10-002": [
+   "S10-002.jpg"
+  ],
+  "S10-003": [
+   "S10-003.jpg"
+  ],
+  "S10-004": [
+   "S10-004.jpg"
+  ],
+  "S10-005": [
+   "S10-005.jpg"
+  ],
+  "S10-006": [
+   "S10-006.jpg"
+  ],
+  "S10-007": [
+   "S10-007.jpg"
+  ],
+  "S10-008": [
+   "S10-008.jpg"
+  ],
+  "S10-009": [
+   "S10-009.jpg"
+  ],
+  "S10-010": [
+   "S10-010.jpg"
+  ],
+  "S10-011": [
+   "S10-011.jpg"
+  ],
+  "S10-012": [
+   "S10-012.jpg"
+  ],
+  "S10-013": [
+   "S10-013.jpg"
+  ],
+  "S10-014": [
+   "S10-014.jpg"
+  ],
+  "S10-015": [
+   "S10-015.jpg"
+  ],
+  "S10-016": [
+   "S10-016.jpg"
+  ],
+  "S10-017": [
+   "S10-017-1.jpg",
+   "S10-017-2.jpg"
+  ],
+  "S10-018": [
+   "S10-018.jpg"
+  ],
+  "S10-019": [
+   "S10-019.jpg"
+  ],
+  "S10-020": [
+   "S10-020.jpg"
+  ],
+  "S10-021": [
+   "S10-021.jpg"
+  ],
+  "S10-022": [
+   "S10-022.jpg"
+  ],
+  "S10-023": [
+   "S10-023.jpg"
+  ],
+  "S10-024": [
+   "S10-024.jpg"
+  ],
+  "S10-025": [
+   "S10-025.jpg"
+  ],
+  "S10-026": [
+   "S10-026.jpg"
+  ],
+  "S10-027": [
+   "S10-027.jpg"
+  ],
+  "S10-028": [
+   "S10-028.jpg"
+  ],
+  "S10-029": [
+   "S10-029.jpg"
+  ],
+  "S10-030": [
+   "S10-030.jpg"
+  ],
+  "S10-031": [
+   "S10-031.jpg"
+  ],
+  "S10-032": [
+   "S10-032.jpg"
+  ],
+  "S10-033": [
+   "S10-033.jpg"
+  ],
+  "S10-034": [
+   "S10-034.jpg"
+  ],
+  "S10-035": [
+   "S10-035.jpg"
+  ],
+  "S10-036": [
+   "S10-036.jpg"
+  ],
+  "S10-037": [
+   "S10-037.jpg"
+  ],
+  "S10-038": [
+   "S10-038.jpg"
+  ],
+  "S10-039": [
+   "S10-039-1.jpg",
+   "S10-039-2.jpg"
+  ],
+  "S10-040": [
+   "S10-040.jpg"
+  ],
+  "S10-041": [
+   "S10-041.jpg"
+  ],
+  "S10-042": [
+   "S10-042.jpg"
+  ],
+  "S10-043": [
+   "S10-043.jpg"
+  ],
+  "S10-044": [
+   "S10-044.jpg"
+  ],
+  "S10-045": [
+   "S10-045-1.jpg",
+   "S10-045-2.jpg"
+  ],
+  "S10-046": [
+   "S10-046.jpg"
+  ],
+  "S10-047": [
+   "S10-047.jpg"
+  ],
+  "S10-048": [
+   "S10-048-1.jpg",
+   "S10-048-2.jpg"
+  ],
+  "S10-049": [
+   "S10-049.jpg"
+  ],
+  "S10-050": [
+   "S10-050.jpg"
+  ],
+  "S10-051": [
+   "S10-051.jpg"
+  ],
+  "S10-052": [
+   "S10-052.jpg"
+  ],
+  "S10-053": [
+   "S10-053.jpg"
+  ],
+  "S10-054": [
+   "S10-054.jpg"
+  ],
+  "S10-055": [
+   "S10-055.jpg"
+  ],
+  "S10-056": [
+   "S10-056.jpg"
+  ],
+  "S10-057": [
+   "S10-057.jpg"
+  ],
+  "S10-058": [
+   "S10-058-1.jpg",
+   "S10-058-2.jpg"
+  ],
+  "S10-059": [
+   "S10-059.jpg"
+  ],
+  "S10-060": [
+   "S10-060.jpg"
+  ],
+  "S10-061": [
+   "S10-061.jpg"
+  ],
+  "S10-062": [
+   "S10-062.jpg"
+  ],
+  "S10-063": [
+   "S10-063.jpg"
+  ],
+  "S10-064": [
+   "S10-064.jpg"
+  ],
+  "S10-065": [
+   "S10-065.jpg"
+  ],
+  "S10-066": [
+   "S10-066.jpg"
+  ],
+  "S10-067": [
+   "S10-067.jpg"
+  ],
+  "S10-068": [
+   "S10-068.jpg"
+  ],
+  "S10-069": [
+   "S10-069.jpg"
+  ],
+  "S10-070": [
+   "S10-070.jpg"
+  ],
+  "S10-071": [
+   "S10-071.jpg"
+  ],
+  "S10-072": [
+   "S10-072.jpg"
+  ],
+  "S10-073": [
+   "S10-073.jpg"
+  ],
+  "S10-074": [
+   "S10-074.jpg"
+  ],
+  "S10-075": [
+   "S10-075.jpg"
+  ],
+  "S10-076": [
+   "S10-076.jpg"
+  ],
+  "S10-077": [
+   "S10-077.jpg"
+  ],
+  "S10-078": [
+   "S10-078.jpg"
+  ],
+  "S10-079": [
+   "S10-079.jpg"
+  ],
+  "S10-080": [
+   "S10-080.jpg"
+  ],
+  "S10-081": [
+   "S10-081.jpg"
+  ],
+  "S10-082": [
+   "S10-082.jpg"
+  ],
+  "S10-083": [
+   "S10-083.jpg"
+  ],
+  "S10-084": [
+   "S10-084.jpg"
+  ],
+  "S10-085": [
+   "S10-085.jpg"
+  ],
+  "S10-086": [
+   "S10-086.jpg"
+  ],
+  "S10-087": [
+   "S10-087.jpg"
+  ],
+  "S10-088": [
+   "S10-088.jpg"
+  ],
+  "S10-089": [
+   "S10-089.jpg"
+  ],
+  "S10-090": [
+   "S10-090.jpg"
+  ],
+  "S10-091": [
+   "S10-091.jpg"
+  ],
+  "S10-092": [
+   "S10-092.jpg"
+  ],
+  "S10-093": [
+   "S10-093.jpg"
+  ],
+  "S10-094": [
+   "S10-094.jpg"
+  ],
+  "S10-095": [
+   "S10-095.jpg"
+  ],
+  "S10-096": [
+   "S10-096.jpg"
+  ],
+  "S10-097": [
+   "S10-097.jpg"
+  ],
+  "S10-098": [
+   "S10-098.jpg"
+  ],
+  "S10-099": [
+   "S10-099.jpg"
+  ],
+  "S10-100": [
+   "S10-100.jpg"
+  ],
+  "S10-101": [
+   "S10-101.jpg"
+  ],
+  "S10-102": [
+   "S10-102.jpg"
+  ],
+  "S10-103": [
+   "S10-103.jpg"
+  ],
+  "S10-104": [
+   "S10-104.jpg"
+  ],
+  "S10-105": [
+   "S10-105.jpg"
+  ],
+  "S10-106": [
+   "S10-106.jpg"
+  ],
+  "S10-107": [
+   "S10-107.jpg"
+  ],
+  "S10-108": [
+   "S10-108.jpg"
+  ],
+  "S10-109": [
+   "S10-109.jpg"
+  ],
+  "S10-110": [
+   "S10-110.jpg"
+  ],
+  "S10-111": [
+   "S10-111.jpg"
+  ],
+  "S10-112": [
+   "S10-112.jpg"
+  ],
+  "S10-113": [
+   "S10-113.jpg"
+  ],
+  "S10-114": [
+   "S10-114.jpg"
+  ],
+  "S10-115": [
+   "S10-115.jpg"
+  ],
+  "S10-116": [
+   "S10-116.jpg"
+  ],
+  "S10-117": [
+   "S10-117.jpg"
+  ],
+  "S10-118": [
+   "S10-118.jpg"
+  ],
+  "S10-119": [
+   "S10-119.jpg"
+  ],
+  "S10-120": [
+   "S10-120.jpg"
+  ],
+  "S10-121": [
+   "S10-121.jpg"
+  ],
+  "S10-122": [
+   "S10-122.jpg"
+  ],
+  "S10-123": [
+   "S10-123.jpg"
+  ],
+  "S10-124": [
+   "S10-124.jpg"
+  ],
+  "S10-125": [
+   "S10-125.jpg"
+  ],
+  "S10-126": [
+   "S10-126.jpg"
+  ],
+  "S10-127": [
+   "S10-127.jpg"
+  ],
+  "S10-128": [
+   "S10-128.jpg"
+  ],
+  "S10-129": [
+   "S10-129.jpg"
+  ],
+  "S10-130": [
+   "S10-130.jpg"
+  ],
+  "S10-131": [
+   "S10-131.jpg"
+  ],
+  "S10-132": [
+   "S10-132.jpg"
+  ],
+  "S10-133": [
+   "S10-133.jpg"
+  ],
+  "S10-134": [
+   "S10-134.jpg"
+  ],
+  "S10-135": [
+   "S10-135.jpg"
+  ],
+  "S10-136": [
+   "S10-136.jpg"
+  ],
+  "S10-137": [
+   "S10-137.jpg"
+  ],
+  "S10-138": [
+   "S10-138.jpg"
+  ],
+  "S10-139": [
+   "S10-139.jpg"
+  ],
+  "S10-140": [
+   "S10-140.jpg"
+  ],
+  "S10-141": [
+   "S10-141.jpg"
+  ],
+  "S10-142": [
+   "S10-142.jpg"
+  ],
+  "S10-143": [
+   "S10-143.jpg"
+  ],
+  "S10-144": [
+   "S10-144.jpg"
+  ],
+  "S10-145": [
+   "S10-145.jpg"
+  ],
+  "S10-146": [
+   "S10-146.jpg"
+  ],
+  "S10-147": [
+   "S10-147.jpg"
+  ],
+  "S10-148": [
+   "S10-148.jpg"
+  ],
+  "S10-149": [
+   "S10-149.jpg"
+  ],
+  "S10-150": [
+   "S10-150.jpg"
+  ],
+  "S10-151": [
+   "S10-151.jpg"
+  ],
+  "S10-152": [
+   "S10-152.jpg"
+  ],
+  "S10-153": [
+   "S10-153.jpg"
+  ],
+  "S10-154": [
+   "S10-154.jpg"
+  ],
+  "S10-155": [
+   "S10-155.jpg"
+  ],
+  "S10-156": [
+   "S10-156.jpg"
+  ],
+  "S10-157": [
+   "S10-157.jpg"
+  ],
+  "S10-158": [
+   "S10-158.jpg"
+  ],
+  "S10-159": [
+   "S10-159.jpg"
+  ],
+  "S10-160": [
+   "S10-160-1.jpg",
+   "S10-160-2.jpg"
+  ],
+  "S10-161": [
+   "S10-161.jpg"
+  ],
+  "S10-162": [
+   "S10-162.jpg"
+  ],
+  "S10-163": [
+   "S10-163.jpg"
+  ],
+  "S10-164": [
+   "S10-164.jpg"
+  ],
+  "S10-165": [
+   "S10-165.jpg"
+  ],
+  "S10-166": [
+   "S10-166.jpg"
+  ],
+  "S10-167": [
+   "S10-167.jpg"
+  ],
+  "S10-168": [
+   "S10-168.jpg"
+  ],
+  "S10-169": [
+   "S10-169.jpg"
+  ],
+  "S10-170": [
+   "S10-170.jpg"
+  ],
+  "S10-171": [
+   "S10-171.jpg"
+  ],
+  "S10-172": [
+   "S10-172.jpg"
+  ],
+  "S10-173": [
+   "S10-173.jpg"
+  ],
+  "S10-174": [
+   "S10-174.jpg"
+  ],
+  "S10-175": [
+   "S10-175.jpg"
+  ],
+  "S10-176": [
+   "S10-176.jpg"
+  ],
+  "S10-177": [
+   "S10-177.jpg"
+  ],
+  "S10-178": [
+   "S10-178.jpg"
+  ],
+  "S10-179": [
+   "S10-179.jpg"
+  ],
+  "S10-180": [
+   "S10-180.jpg"
+  ],
+  "S10-181": [
+   "S10-181.jpg"
+  ],
+  "S10-182": [
+   "S10-182.jpg"
+  ],
+  "S10-183": [
+   "S10-183.jpg"
+  ],
+  "S10-184": [
+   "S10-184-1.jpg",
+   "S10-184-2.jpg"
+  ],
+  "S10-185": [
+   "S10-185.jpg"
+  ],
+  "S10-186": [
+   "S10-186.jpg"
+  ],
+  "S10-187": [
+   "S10-187.jpg"
+  ],
+  "S10-188": [
+   "S10-188.jpg"
+  ],
+  "S10-189": [
+   "S10-189.jpg"
+  ],
+  "S10-190": [
+   "S10-190-1.jpg",
+   "S10-190-2.jpg"
+  ],
+  "S10-191": [
+   "S10-191.jpg"
+  ],
+  "S10-192": [
+   "S10-192.jpg"
+  ],
+  "S10-193": [
+   "S10-193-1.jpg",
+   "S10-193-2.jpg"
+  ],
+  "S10-194": [
+   "S10-194.jpg"
+  ],
+  "S10-195": [
+   "S10-195.jpg"
+  ],
+  "S10-196": [
+   "S10-196.jpg"
+  ],
+  "S10-197": [
+   "S10-197.jpg"
+  ],
+  "S10-198": [
+   "S10-198.jpg"
+  ],
+  "S10-199": [
+   "S10-199.jpg"
+  ],
+  "S10-200": [
+   "S10-200.jpg"
+  ],
+  "S10-201": [
+   "S10-201.jpg"
+  ],
+  "S10-202": [
+   "S10-202.jpg"
+  ],
+  "S10-203": [
+   "S10-203.jpg"
+  ],
+  "S10-204": [
+   "S10-204.jpg"
+  ],
+  "S10-205": [
+   "S10-205.jpg"
+  ],
+  "S10-206": [
+   "S10-206.jpg"
+  ],
+  "S10-207": [
+   "S10-207.jpg"
+  ],
+  "S10-208": [
+   "S10-208-1.jpg",
+   "S10-208-2.jpg"
+  ],
+  "S10-209": [
+   "S10-209.jpg"
+  ],
+  "S10-210": [
+   "S10-210.jpg"
+  ],
+  "S10-211": [
+   "S10-211.jpg"
+  ],
+  "S10-212": [
+   "S10-212.jpg"
+  ],
+  "S10-213": [
+   "S10-213.jpg"
+  ],
+  "S10-214": [
+   "S10-214.jpg"
+  ],
+  "S10-215": [
+   "S10-215-1.jpg",
+   "S10-215-2.jpg"
+  ],
+  "S10-216": [
+   "S10-216.jpg"
+  ],
+  "S10-217": [
+   "S10-217.jpg"
+  ],
+  "S10-218": [
+   "S10-218.jpg"
+  ],
+  "S10-219": [
+   "S10-219.jpg"
+  ],
+  "S10-220": [
+   "S10-220.jpg"
+  ],
+  "S10-221": [
+   "S10-221-1.jpg",
+   "S10-221-2.jpg"
+  ],
+  "S10-222": [
+   "S10-222.jpg"
+  ]
+ },
+ "boxes": {
+  "S10-004": [
+   [
+    2140,
+    959,
+    3189,
+    1755
+   ]
+  ],
+  "S10-007": [
+   [
+    3636,
+    319,
+    4482,
+    883
+   ]
+  ],
+  "S10-013": [
+   [
+    1490,
+    2800,
+    2019,
+    2965
+   ]
+  ],
+  "S10-014": [
+   [
+    655,
+    1688,
+    1210,
+    2170
+   ]
+  ],
+  "S10-024": [
+   [
+    160,
+    670,
+    720,
+    1230
+   ]
+  ],
+  "S10-028": [
+   [
+    101,
+    340,
+    480,
+    663
+   ]
+  ],
+  "S10-029": [
+   [
+    2330,
+    270,
+    2900,
+    900
+   ]
+  ],
+  "S10-041": [
+   [
+    136,
+    928,
+    587,
+    1180
+   ]
+  ],
+  "S10-044": [
+   [
+    1535,
+    3475,
+    2195,
+    3950
+   ]
+  ],
+  "S10-045": [
+   [
+    205,
+    3325,
+    730,
+    3620
+   ],
+   [
+    736,
+    300,
+    1248,
+    597
+   ]
+  ],
+  "S10-057": [
+   [
+    325,
+    1662,
+    1154,
+    2424
+   ]
+  ],
+  "S10-058": [
+   [
+    1240,
+    3470,
+    1770,
+    3625
+   ],
+   [
+    1760,
+    190,
+    2270,
+    560
+   ]
+  ],
+  "S10-061": [
+   [
+    542,
+    1392,
+    1050,
+    1700
+   ]
+  ],
+  "S10-067": [
+   [
+    1061,
+    2236,
+    1510,
+    2416
+   ]
+  ],
+  "S10-075": [
+   [
+    789,
+    3415,
+    1474,
+    3837
+   ]
+  ],
+  "S10-077": [
+   [
+    2263,
+    6399,
+    3315,
+    6899
+   ]
+  ],
+  "S10-079": [
+   [
+    1221,
+    265,
+    1788,
+    504
+   ]
+  ],
+  "S10-086": [
+   [
+    3656,
+    1633,
+    4523,
+    2249
+   ]
+  ],
+  "S10-115": [
+   [
+    207,
+    680,
+    893,
+    1025
+   ]
+  ],
+  "S10-116": [
+   [
+    692,
+    3260,
+    1269,
+    3618
+   ]
+  ],
+  "S10-145": [
+   [
+    1180,
+    1120,
+    1790,
+    1700
+   ]
+  ],
+  "S10-173": [
+   [
+    180,
+    2260,
+    640,
+    2640
+   ]
+  ],
+  "S10-180": [
+   [
+    1130,
+    300,
+    1540,
+    820
+   ]
+  ],
+  "S10-188": [
+   [
+    1393,
+    2870,
+    2465,
+    3505
+   ]
+  ],
+  "S10-209": [
+   [
+    240,
+    558,
+    800,
+    1320
+   ]
+  ],
+  "S10-214": [
+   [
+    734,
+    240,
+    1347,
+    709
+   ]
+  ],
+  "S10-217": [
+   [
+    1620,
+    740,
+    2119,
+    1010
+   ]
+  ],
+  "S10-218": [
+   [
+    1225,
+    2180,
+    1700,
+    2800
+   ]
+  ],
+  "S10-219": [
+   [
+    1040,
+    470,
+    1640,
+    800
+   ]
+  ],
+  "S10-220": [
+   [
+    580,
+    2540,
+    1060,
+    2900
+   ]
+  ]
+ },
+ "notes": {
+  "S10-002": "Same item as the other printings. The print reads 'the attachment of one hundred thousand men', a misprint for 'detachment'.",
+  "S10-104": "The print dates the Boston report 'July 20', where most papers print 'July 28'.",
+  "S10-138": "Same item as the other printings. The print dates the letter from Pinkneyville 'Sept. 26, 1810', where the other papers that show it print the 25th.",
+  "S10-140": "The print leaves out a passage of the declaration after 'the principles of the government' ('we had voluntarily adopted certain regulations ... and shewing our attachment to the government'), which the other printings have.",
+  "S10-214": "Same item as the other printings. The print reads '$10,343,000' for the revenue of 1808, where the other printings read '$10,348,000'.",
+  "S10-216": "Same item as the other printings. The print leaves out 'and extending to the river Perdido', the territory's eastern limit, which the other printings have."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1810 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 1,858 items printed somewhere; by the finder's count 2 reach 11 papers, 3 reach 10, 16 reach 9, 21 reach 8 and 42 reach 7). The same script was run with year 1809 over the 1810 pages (items_from_1809.json: 279 items printed in 1810, 1 in 11 papers, 5 in 9, 11 in 8 and 13 in 7). Every item in 7 or more papers was read, and every item in 5 or 6 papers that a comparison of about 220 words of its text with every page put in more papers was checked. A sweep of the year for passages shared word for word (seven-word sequences) by 7 or more papers found short items that the reuse families had not joined, and those were counted too. Every item that might reach 7 was counted again by its own words, in both transcriptions, by phrase searches over all 3,933 pages of 1810 and by comparing about 100 words of its opening with every page, reading the hits.",
+  "selection_rule": "The one admission rule (R-01), as for 1776, 1800, 1802, 1803, 1804, 1805, 1806, 1807, 1808 and 1809: every single printed item in 9 or more newspapers is admitted, except digests; items in 7 or 8 papers are chosen to cover the months and the kinds of news; items are counted one by one; a sub-story may have fewer papers when its parent reaches 7. No year-specific threshold: items of 1810 reach 7, 8, 9 and 10 papers. 9 or 10 papers are in print in any three weeks of the year (11 only in the weeks of the Martinsburgh Gazette's four issues), so an item in 9 papers was printed by every paper, or all but one, that survives for its weeks. Where several items of one affair reach the band in the same weeks, the most widely printed is chosen and the others are listed as not chosen, unless they are separate public acts (X-1800-01). Nothing is held back for its subject. 1810 is the collection's last year: only printings dated 1810 are counted.",
+  "paper_counting": "1810 has 11 catalogue series, which are 11 papers; no paper appears under two catalogue numbers. The Delaware Gazette runs to 6 June, the Constitutionalist of Exeter from 21 May, and the Martinsburgh Gazette has four issues (27 July to 30 November). No 1810 issue has a corrected date, and the release's map of misfiled RevX pages lists none for 1810.",
+  "items_admitted": {
+   "president-message-on-the-militia-3-january-1810": "I09-0021, I09-0022 (1809 families, printed in 1810)",
+   "leib-resolutions-on-the-erskine-arrangement-march-1810": "I10-0055",
+   "cadore-note-to-armstrong-14-february-1810": "I10-0090, I10-0102, I10-0187, I10-0244 (three translations)",
+   "act-concerning-commercial-intercourse-1-may-1810": "I10-0049, I10-0051, I10-0188 (the finder also chains the bill and the proclamation of 2 November)",
+   "pinkney-note-to-wellesley-2-january-1810": "I09-0016, I09-0017, I09-0020, I09-0023, I09-0024, I09-0025, I09-0026",
+   "wellesley-answer-to-pinkney-14-march-1810": "I09-0003, I09-0004, I09-0005, I09-0006",
+   "burdett-address-to-the-people-of-england-1810": "I09-0027, I09-0028, I09-0029",
+   "caracas-address-of-the-supreme-junta-1810": "I10-0028, I10-0029, I10-0059, I10-0060, I10-0273",
+   "armstrong-despatch-of-10-march-1810-with-letter-to-cadore": "I10-0010, I10-0013, I10-0014, I10-0015, I10-0016",
+   "armstrong-letter-of-7-april-1810": "the sweep of passages shared by 7 or more papers (the finder joins it to the despatches of the same publication)",
+   "rambouillet-decree-23-march-1810": "I10-0033, I10-0034",
+   "vixen-fired-on-by-the-moselle-june-1810": "I10-0017, I10-0035, I10-0036",
+   "gallatin-statement-on-erskine-despatch-1810": "I10-0069, I10-0070, I10-0071",
+   "brig-two-marias-seized-at-malaga-1810": "I10-0072",
+   "cadore-letter-to-armstrong-5-august-1810": "I10-0008, I10-0009, I10-0045",
+   "pinkney-letter-with-wellesley-answer-on-the-decrees-1810": "I10-0018",
+   "baton-rouge-fort-taken-natchez-report-september-1810": "I10-0037, I10-0170",
+   "west-florida-declaration-26-september-1810": "I10-0053",
+   "letter-from-washington-mississippi-territory-30-october-1810": "I10-0019",
+   "president-proclamation-on-west-florida-27-october-1810": "I10-0006 (chained with the proclamation of 2 November by their closing formula), I10-0176",
+   "president-proclamation-2-november-1810": "I10-0004, I10-0005",
+   "treasury-circular-2-november-1810": "the sweep of passages shared by 7 or more papers",
+   "tunis-bey-and-american-consul-malta-august-1810": "I10-0038",
+   "lucien-bonaparte-address-to-the-roman-citizens-1810": "I10-0039",
+   "president-annual-message-5-december-1810": "I10-0011, I10-0012, I10-0020, I10-0021",
+   "treasury-report-december-1810": "I10-0024, I10-0040, I10-0041, I10-0042, I10-0082, I10-0083, I10-0084, I09-0030 (1809's report, same opening)"
+  },
+  "counted_item_by_item": {
+   "Paper counts": "Counted item by item, eleven items of 1810 reach 9 or 10 papers and are admitted by the rule's first part: the President's proclamation of 2 November (10), the Treasury's circular of the same day (9), the President's message of 5 December (9), the Duke of Cadore's letter of 5 August (9), Mr. Pinkney's letter sending Lord Wellesley's answer on the decrees (9), Lord Wellesley's answer of 14 March on Mr. Jackson (9), General Armstrong's letter of 10 March with his letter to the Duke of Cadore (9) and his letter of 7 April (9), the letter from on board the Vixen (9), the Natchez report from Baton Rouge (9) and the letter from Washington, Mississippi Territory, of 30 October (9). 47 items reach 7 or 8 papers: 13 are chosen (Mr. Pinkney's letter of 2 January as a sub-story beside Lord Wellesley's answer), 33 are not chosen, and the National Intelligencer's paragraph on the Vixen is counted with the letter it introduces. Two sub-stories under West Florida are in 6 papers (C-01).",
+   "Joins made by the finder": "The finder chains the bills and acts on commercial intercourse, the President's proclamations and the Treasury's circular through their shared wording (the fourth section of the act of 1 May is quoted in the proclamation of 2 November and in the circular), the acts of the session through their enacting formula, the reports of the House's proceedings, and the documents of each publication of diplomatic correspondence. Each text was counted by its own words; only the act of 1 May reaches 7 papers by its own title among the acts of the session.",
+   "Letters printed together": "A letter and the enclosures printed with it are one item, counted by the letter's opening (C-03): Mr. Pinkney's letter of September with his note of 25 August and Lord Wellesley's answer; General Armstrong's letter of 10 March with his letter of that day to the Duke of Cadore. A publication of separate letters is counted letter by letter (R-01): of the despatches received by the John Adams, two letters reach 9 papers and fifteen are in 7 or 8; of the correspondence on Mr. Jackson's recall, Lord Wellesley's answer reaches 9 and Mr. Pinkney's two letters 8 each (X-1810-01).",
+   "A letter counted across the reports that print it": "The letter from on board the Vixen is printed after the National Intelligencer's paragraph in eight papers and with remarks of its own in the Rhode-Island Republican: counted by the letter, 9 papers (X-1803-02); the paragraph alone is in 8 (X-1810-02).",
+   "Printed forms counted together": "The French minister's note to General Armstrong of 14 February in three translations (4, 5 and 3 printings; 8 papers, C-02); the decree of Rambouillet as its own text or within a paragraph from the Bulletin des Lois (8 papers).",
+   "Printed again counts again": "The French minister's note of 14 February printed again in the government's translation in late May (ALX, VA, ENQ); the Duke of Cadore's letter of 5 August printed twice in the Rhode-Island American; the decree of Rambouillet and the Duke of Cadore's letter printed again in December, with the documents sent to Congress with the President's message (Enquirer, Norfolk Gazette); the declaration of West Florida printed again in December with other papers of the convention (C-08).",
+   "Pages that only quote, summarise or recite an item": "Not counted (C-07): the Delaware Gazette's summary of the committee of ways and means' letter on loans; comments on the King's speech that quote its passage on America (ALX, ENQ, April); the Portland Gazette's extract of the Treasury's report of December, which leaves out its opening (C-06); the Enquirer's and the Virginia Argus's paraphrases of the President's message of 3 January in February.",
+   "Bills and acts": "The act of 1 May 1810 is counted where it is printed under its own title (7 papers); Macon's bill no. 2, printed in April as reported and as ordered to a third reading, is not counted with it (X-1803-10).",
+   "This year's printings": "1810 is the collection's last year: the President's message of 5 December and the Treasury's report of December are counted by their printings of December 1810; later printings are not in the collection. Items of 1809 printed again in 1810 are counted by their 1810 printings (C-11): the Secretary of State's letters to Mr. Jackson of November 1809 are in 4 papers in 1810.",
+   "The resolution on General Wilkinson": "The House's resolution of March 1810 for a committee to inquire into General Wilkinson's conduct (6 papers) and the same resolution offered again in December by another member (5) are two items, counted apart; neither reaches 7."
+  },
+  "not_admitted": {
+   "Holland, early 1810: 'apprehensions of an incorporation with France no longer existed' (7)": "In 7 papers, March and April, as a paragraph of runs of news from Europe; not chosen: March is represented by Mr. Leib's resolutions, and the news from Holland is a single sentence in different runs.",
+   "The speech of the Lords Commissioners at the opening of Parliament, 23 January 1810, with its passage on America (7)": "In 7 papers, April (two more papers quote its passage on America in comments, not counted); not chosen: April is represented by the French minister's note to General Armstrong, the other government's words in the same weeks.",
+   "Macon's bill no. 2 in April 1810, as reported and as ordered to a third reading (8)": "In 8 papers in its stages; not chosen: a bill is not counted with the act of 1 May that it became (X-1803-10), and the act is admitted.",
+   "A list of the vessels 'wrecked, burnt, &c.', furnished by Captain Folger (7)": "In 7 papers, April, with a report of vessels fired on from the shore and their crews imprisoned; not chosen: April and the kind are covered.",
+   "Mr. Pinkney's letter to the Secretary of State of 21 March 1810, extract (8)": "In 8 papers, May; not chosen: the same publication as Mr. Pinkney's letter of 2 January and Lord Wellesley's answer, both admitted.",
+   "The President's message of 1 May 1810, with the Secretary of State's report on the communications with France and Great Britain on the blockades and General Armstrong's letter of 25 January (7)": "In 7 papers, May; not chosen: May is represented by the act of 1 May and the correspondence on Mr. Jackson's recall.",
+   "The House of Commons' vote to commit Sir Francis Burdett to the Tower (7)": "In 7 papers, May; not chosen: the affair is represented by Sir Francis Burdett's address, in 7 papers in the same weeks.",
+   "A report from Cadiz: 'Fourteen British ships of the line were in Cadiz Bay' (7)": "In 7 papers, May, in reports that share this sentence; not chosen: the war in Spain is a single paragraph in different runs, and May is covered.",
+   "The answer of the King of Naples' government to the American consul, 'His Majesty cannot contemplate without pain the little consonance' (8)": "In 8 papers, May and June; not chosen: the seizures of American vessels by France and her allies are represented by General Armstrong's letters and the decree of Rambouillet.",
+   "The National Intelligencer's paragraph on the arrival of the John Adams at Annapolis (7)": "In 7 papers, June; not chosen: the despatches she brought are admitted.",
+   "Mr. Pinkney's letter of 19 February 1810 and his correspondence with Lord Wellesley on the British blockades, February to April (7)": "In 7 papers, June, counted by its first letter; not chosen: the same publication as General Armstrong's letters, two of which are admitted (X-1810-01).",
+   "General Armstrong to the Duke of Cadore, 21 February 1810 (8)": "In 8 papers, June; not chosen: the same publication (X-1810-01).",
+   "General Armstrong to the Secretary of State, 18 February 1810 (8)": "In 8 papers, June; not chosen: the same publication (X-1810-01).",
+   "General Armstrong to the Secretary of State, 4 April 1810 (8)": "In 8 papers, June and July; not chosen: the same publication (X-1810-01).",
+   "Mr. Pinkney to General Armstrong, 23 March 1810 (8)": "In 8 papers, June and July; not chosen: the same publication (X-1810-01).",
+   "The King of Naples' decree of March 1810 on American vessels (7)": "In 7 papers, June and July, printed with General Armstrong's letters; not chosen: the same publication (X-1810-01).",
+   "General Armstrong to the Secretary of State, 16 April 1810, with the Dutch decree sequestering American merchandise (8)": "In 8 papers, June and July; not chosen: the same publication (X-1810-01).",
+   "General Armstrong to the Duke of Cadore, 20 March 1810, on the interest due to the holders of the American debt in Holland (8)": "In 8 papers, June and July; not chosen: the same publication (X-1810-01).",
+   "General Armstrong to the Duke of Cadore, 21 March 1810, on the ship Hero (8)": "In 8 papers, June and July; not chosen: the same publication (X-1810-01).",
+   "A Natchez report of 18 June: French families driven from West Florida encamped on the American side of the Mississippi (7)": "In 7 papers, July; not chosen: July is represented by the decree of Rambouillet, the Vixen and Mr. Gallatin's statement, and West Florida by the stories of the autumn.",
+   "The notice that the sloop of war Hornet will sail from New York and carry letters for Europe (8)": "In 8 papers, July; not chosen: a notice, and July is covered.",
+   "London, June 1810: the death of the Crown Prince of Sweden (7)": "In 7 papers, August; not chosen: August is represented by the Boston report from Algeziras, and the paragraph is one of a run of London news.",
+   "Letters from Dunkirk: a report that Bonaparte's first measure on his return to Paris would be to declare war against the United States (7)": "In 7 papers, August; not chosen: a rumour in the same run of London news, and the French measures are represented by the decree of Rambouillet and the Duke of Cadore's letter.",
+   "A report that the British government had communicated the form of a new treaty to the American cabinet, which had been rejected (7)": "In 7 papers, August; not chosen: a report in a run of news, and August is covered.",
+   "The French decree of 5 July 1810 on licences for American vessels (7)": "In 7 papers, September; not chosen: the same affair and weeks as the Duke of Cadore's letter of 5 August, admitted.",
+   "The Emperor's decree of Trianon, 5 August 1810, on duties (7)": "In 7 papers, September and October; not chosen: the same affair and weeks as the Duke of Cadore's letter.",
+   "A London paragraph of 20 August: 'If Bonaparte revoke his Decrees, our Orders consequent upon those Decrees will be revoked also' (7)": "In 7 papers, September and October; not chosen: the British answer is represented by Lord Wellesley's answer to Mr. Pinkney, admitted.",
+   "An account of the fire at the Austrian ambassador's ball in Paris (7)": "In 7 papers, September, in accounts that share a sentence; not chosen: September is covered, and the accounts differ.",
+   "A paragraph from Holstein: 'A total exclusion of the Americans is daily apprehended' (7)": "In 7 papers, September, within runs of news; not chosen: September is covered.",
+   "A letter from Bayonne of 29 September: 'If we may confide in the reports of ten days past' (7)": "In 7 papers, November; not chosen: the French decrees are represented by the President's proclamation of 2 November and the Duke of Cadore's letter.",
+   "A London report of confusion at the Exchange (7)": "In 7 papers, November; not chosen: November is covered.",
+   "The Federal Republican's paragraph that, by an American gentleman's account, Lord Wellesley spoke of proposals by France 'for partitioning your country' (8)": "In 8 papers, November and December; a report at second hand of an allegation, printed with differing comments; not chosen: November is covered by the President's proclamation, the Treasury's circular, Tunis and Lucien Bonaparte.",
+   "Boston: the Constellation from Lisbon, with the American consul there, reports an embargo at Lisbon on 8 October (8)": "In 8 papers, November and December; not chosen: November and December are covered, and the war in Portugal is in many reports.",
+   "The joint resolution of January 1810 on the expressions in Mr. Jackson's letter of 23 October 1809 (5)": "Below the rule: 5 papers by its own words.",
+   "Resolutions in the House of January 1810 on employing the public armed vessels to convoy American merchant vessels (5)": "Below the rule: 5 papers in their several forms.",
+   "The President's message of 17 February 1810 with the reports of the Secretaries of State and of the Treasury on the propositions made to the belligerents (4)": "Below the rule.",
+   "The Secretary of State's report of March 1810 on the correspondence of Mr. Pinkney (6)": "Below the rule.",
+   "Mr. Bradley's bill for the preservation of peace in the ports and waters of the United States (5)": "Below the rule.",
+   "The committee of ways and means' letter of 8 January 1810 and the Secretary of the Treasury's report on loans (6)": "Below the rule: 6 papers; the Delaware Gazette prints a summary, not counted (C-07).",
+   "The House's resolution of March 1810 for an inquiry into General Wilkinson's conduct (6)": "Below the rule; the same resolution offered again in December is in 5 papers, counted apart.",
+   "The amendment to the Constitution on titles of nobility, as passed by Congress (5)": "Below the rule; 4 papers printed it in February as the Senate's resolution.",
+   "The act providing for the third census (6 or fewer)": "Below the rule by its own title.",
+   "The Secretary of the Treasury's instruction to the collectors of May 1810 (5)": "Below the rule.",
+   "The National Intelligencer of 28 May: 'The information recently received from France, is of such a complexion as to give increased interest to the arrival of the John Adams' (5)": "Below the rule.",
+   "A report that American cargoes in French ports were released from sequestration (5)": "Below the rule.",
+   "General Armstrong's letter of 17 February 1810 sending the French note (6)": "Below the rule.",
+   "The Order in Council of 2 May 1810 on vessels clearing from ports under the control of France (6)": "Below the rule.",
+   "The Foreign Office's notice of 20 May 1810 to the ministers of neutral powers (5)": "Below the rule.",
+   "Mr. Erskine's despatches to Mr. Canning of 15 February and 16 March 1809, as laid before Parliament (6 and 5)": "Below the rule; Mr. Gallatin's statement on his despatch of 4 December 1808 is admitted.",
+   "The Danish decree shutting the ports of Tonningen and Husum against the Americans (6)": "Below the rule.",
+   "A report of an insurrection at Stockholm (6)": "Below the rule.",
+   "Letters received by the Caroline from London (5)": "Below the rule.",
+   "Lord Wellington's letters to Don Miguel Pereira Forjaz, September and October 1810 (6 each)": "Below the rule.",
+   "Massena at Coimbra (4)": "Below the rule.",
+   "The National Intelligencer's remarks on the despatches of the John Adams (6)": "Below the rule.",
+   "The Secretary of State's letters to Mr. Jackson of November 1809, printed again in January 1810 (4)": "Below the rule in 1810 (C-11); the 1809 review admitted the December documents of 1809.",
+   "Other items of 6 papers or fewer (by count)": "The other items the finder lists in 6 papers or fewer were checked by machine for a seventh paper and not read one by one."
+  },
+  "for_the_owner": {},
+  "for_user_decision": {
+   "Letters printed together: enclosures with their letter, separate letters one by one": "As built (X-1810-01): a letter and the enclosures printed with it are one item, counted by the letter's opening (C-03); the separate letters of one publication are counted one by one (R-01). Of the despatches received by the John Adams, General Armstrong's letter of 10 March (with his letter to the Duke of Cadore) and his letter of 7 April reach 9 papers and are admitted; fifteen other letters and decrees of the publication are in 7 or 8 papers and not chosen. 1809 counted its December documents by the publication's parts instead (X-1809-01); counted that way, the French part of the despatches would be one group in 8 papers.",
+   "The letter from on board the Vixen counted by the letter": "As built (X-1810-02), 9 papers: eight papers print it after the National Intelligencer's paragraph on the affair, and the Rhode-Island Republican with remarks of its own; counted by the paragraph, 8 (X-1803-02).",
+   "The French minister's note of 14 February counted across three translations": "As built (X-1810-03), 8 papers and 12 printings: two translations in April and the government's translation in late May, counted together (C-02, C-08).",
+   "The act of 1 May counted by its own title": "As built (X-1810-04), 7 papers, the Enquirer's printing by its CA text, where RevX lacks the act; Macon's bill no. 2, printed in April before it passed, is not counted with it (X-1803-10).",
+   "Two West Florida documents in 6 papers as sub-stories": "As built (X-1810-05): the declaration of the convention of West Florida (6 papers) and the President's proclamation of 27 October (6) stand under the West Florida story, whose Natchez report and letter of 30 October reach 9 (C-01).",
+   "Mr. Leib's resolutions chosen for March": "As built (X-1810-06): a senator's resolutions submitted for consideration (7 papers), labelled as a policy argument; no other item first printed in March reaches 7. Without them March has no story.",
+   "Lord Wellesley's answer counted in a paper that prints it with its own remarks": "As built (X-1810-07): the Delaware Gazette prints the letter whole, after satirical remarks of its own; a whole printing inside commentary counts (X-1802-04).",
+   "Men named in the West Florida reports": "As built (X-1810-08): the Natchez report names the leader of the party that entered the fort of Baton Rouge and the Spanish officers there; an armed rising against a foreign government's post is a public affair (X-1804-02).",
+   "February without a story": "As built (X-1810-09): no item first printed in February 1810 reaches 7 papers by its own words; the month's widely printed texts are bills and proceedings that do not.",
+   "Grading calls on the transcriptions": "As built (X-1810-11): graded fact-changing are RevX's '...' where the print goes on, a letter's dateline left out, an addressee line left out with a word misread, and a master's name read as a common word; graded minor are the label '(COPY.)' left out, 'Stirrup Key' for the printed misprint 'Stirrup Ray', 'Mian' for a faint 'Milan', a garble on a heavily inked print and letter-spaced transcription. '21 January' in two printings of Lord Wellesley's answer, where the figure is too worn to read, is not counted.",
+   "A sweep for short items": "As built (X-1810-10): the sweep of word-for-word passages shared by 7 or more papers (X-1803-09) was run for 1810; it found the Treasury's circular of 2 November and General Armstrong's letter of 7 April, both admitted, and several items listed as not chosen."
+  }
+ },
+ "verdict_summary": {
+  "yes": 222,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 144,
+  "minor_errors": 54,
+  "major_problem": 24,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 192,
+  "pdf_text_layer_window": 2,
+  "manual_box": 23,
+  "pdf_text_layer_anchor": 5
+ }
+}

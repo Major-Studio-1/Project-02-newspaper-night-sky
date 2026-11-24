@@ -53,8 +53,10 @@ h1{font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-.02em;margin
 .touch{position:fixed;left:50%;bottom:3vh;transform:translateX(-50%);z-index:60;display:none;padding:10px 20px;border-radius:99px;border:1px solid #ffd27a88;
   background:#0b1222f2;color:var(--ink);font:500 clamp(15px,1.3vw,28px)/1.3 system-ui,sans-serif;cursor:pointer;box-shadow:0 0 30px #ffd27a33}
 .touch.show{display:block}
+/* The station (Voices or Music) and the music's sound: one-step choices (glass.js), as on Pulses. */
+.knobs .seg.slide{display:flex;width:100%}.knobs .seg.slide button{flex:1}
 /* Exhibition: no header or notes, larger type, the cursor hidden when still. */
-body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .notes,body.exhibit .lede,body.exhibit .knobs .vol,body.exhibit .voice{display:none}
+body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .notes,body.exhibit .lede,body.exhibit .knobs .vol,body.exhibit .voice,body.exhibit .station-row{display:none}
 body.exhibit .radio{max-width:none;padding:3vh 4vw}
 body.exhibit h1{font-size:2.4vw}
 body.exhibit .dial-window{height:18vh}body.exhibit .scale .lbl{font-size:1.25vw}
@@ -71,10 +73,10 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 </style>
 </head>
 <body class="page-radio">
-<svg class="ico-sprite" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="i-radio" viewBox="0 0 24 24"><rect x="3" y="8.5" width="18" height="11.5" rx="2.5"/><circle cx="9" cy="14.25" r="3"/><path d="M15 12.5h3M15 16h3M7 8.5 16.5 4"/></symbol><symbol id="i-place" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-10.8a6.5 6.5 0 0 1 13 0C18.5 15 12 21 12 21z"/><circle cx="12" cy="10.2" r="2.3"/></symbol><symbol id="i-topic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5V12h8.5M12 12l-6 6"/></symbol><symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.6"/><path d="M18.93 8A8 8 0 0 1 8 18.93M5.07 16A8 8 0 0 1 16 5.07"/><circle cx="17.66" cy="6.34" r="1.7" fill="currentColor" stroke="none"/><circle cx="6.34" cy="17.66" r="1.7" fill="currentColor" stroke="none"/></symbol><symbol id="i-drift" viewBox="0 0 24 24"><path d="M6.5 3.5h11M6.5 20.5h11M8 3.5c0 4.6 4 5.3 4 8.5s-4 3.9-4 8.5M16 3.5c0 4.6-4 5.3-4 8.5s4 3.9 4 8.5"/></symbol><symbol id="i-select" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="14" height="11" rx="1.5" stroke-dasharray="2.5 2.3"/><path d="M13.5 12.5l7 2.8-3 1.2-1.2 3z"/></symbol><symbol id="i-front" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/><path d="M3.5 3.5l5 5M20.5 3.5l-5 5M3.5 20.5l5-5M20.5 20.5l-5-5"/></symbol><symbol id="i-side" viewBox="0 0 24 24"><path d="M3.5 4.5 20.5 10M3.5 19.5 20.5 14M3.5 4.5v15M10 6.6v10.8M15.5 8.4v7.2"/></symbol><symbol id="i-fit" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><circle cx="12" cy="12" r="1.6"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5.5v13M15 5.5v13"/></symbol><symbol id="i-tour" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"/></symbol><symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3.5v8"/><path d="M7.05 6.6a7 7 0 1 0 9.9 0"/></symbol><symbol id="i-skip" viewBox="0 0 24 24"><path d="M6 5.5l9 6.5-9 6.5zM18.5 5.5v13"/></symbol><symbol id="i-voice" viewBox="0 0 24 24"><path d="M4 10.5v3M8 7.5v9M12 4.5v15M16 8v8M20 10.5v3"/></symbol><symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-panel" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M9.5 4.5v15M5.8 8.5h1.6M5.8 11.5h1.6"/></symbol><symbol id="i-telescope" viewBox="0 0 24 24"><path d="M3 13.6 15 8l1.6 3.5-12 5.6zM15 8l3.9-1.8 1.6 3.5-3.9 1.8M10.6 15.3 7.5 21M11.7 14.8l2.8 6.2"/></symbol><symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2.2-5.5 3.6 11 2.4-7.5 1.6 2H21"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5c3-1.2 5.6-.9 8 .9 2.4-1.8 5-2.1 8-.9v13c-3-1.2-5.6-.9-8 .9-2.4-1.8-5-2.1-8-.9zM12 6.4v13"/></symbol></svg><a class="skip-link" href="#content">Skip to content</a><header class="site-header" id="site-header"><div class="site-inner"><a class="brand" href="index.html" aria-label="Newspaper Night Sky, home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/><circle cx="19" cy="19" r="1.7" fill="currentColor" fill-opacity=".6"/></svg><span>Newspaper Night Sky</span></a><nav class="site-nav" aria-label="Main"><a href="telescope.html">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html" aria-current="page">Radio</a><a href="stories.html">Stories</a><a href="findings.html">Findings</a><a href="notebook.html">Notebook</a><a href="method.html">How it works</a></nav><form class="site-search" action="telescope.html" role="search"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-search"/></svg><label class="sr-only" for="site-q">Search every story</label><input id="site-q" name="q" type="search" placeholder="Search 48,320 stories" autocomplete="off" spellcheck="false"></form><button type="button" id="radio" class="toggle radio-switch has-ico" aria-pressed="false" title="Hear the newspapers: turned on, the radio plays on its own; point at a star or a newspaper, pick one, or select an area to choose what you hear"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-radio"/></svg>Radio</button><button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>Menu</button></div></header><script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script><div id="content" tabindex="-1"></div>
+<svg class="ico-sprite" width="0" height="0" aria-hidden="true" focusable="false"><symbol id="i-radio" viewBox="0 0 24 24"><rect x="3" y="8.5" width="18" height="11.5" rx="2.5"/><circle cx="9" cy="14.25" r="3"/><path d="M15 12.5h3M15 16h3M7 8.5 16.5 4"/></symbol><symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V6.5L19 4v11.5"/><circle cx="6.6" cy="18" r="2.4"/><circle cx="16.6" cy="15.5" r="2.4"/></symbol><symbol id="i-place" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-10.8a6.5 6.5 0 0 1 13 0C18.5 15 12 21 12 21z"/><circle cx="12" cy="10.2" r="2.3"/></symbol><symbol id="i-topic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5V12h8.5M12 12l-6 6"/></symbol><symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.6"/><path d="M18.93 8A8 8 0 0 1 8 18.93M5.07 16A8 8 0 0 1 16 5.07"/><circle cx="17.66" cy="6.34" r="1.7" fill="currentColor" stroke="none"/><circle cx="6.34" cy="17.66" r="1.7" fill="currentColor" stroke="none"/></symbol><symbol id="i-drift" viewBox="0 0 24 24"><path d="M6.5 3.5h11M6.5 20.5h11M8 3.5c0 4.6 4 5.3 4 8.5s-4 3.9-4 8.5M16 3.5c0 4.6-4 5.3-4 8.5s4 3.9 4 8.5"/></symbol><symbol id="i-select" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="14" height="11" rx="1.5" stroke-dasharray="2.5 2.3"/><path d="M13.5 12.5l7 2.8-3 1.2-1.2 3z"/></symbol><symbol id="i-front" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="1.5"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/><path d="M3.5 3.5l5 5M20.5 3.5l-5 5M3.5 20.5l5-5M20.5 20.5l-5-5"/></symbol><symbol id="i-side" viewBox="0 0 24 24"><path d="M3.5 4.5 20.5 10M3.5 19.5 20.5 14M3.5 4.5v15M10 6.6v10.8M15.5 8.4v7.2"/></symbol><symbol id="i-fit" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/><circle cx="12" cy="12" r="1.6"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5.5v13M15 5.5v13"/></symbol><symbol id="i-tour" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"/></symbol><symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3.5v8"/><path d="M7.05 6.6a7 7 0 1 0 9.9 0"/></symbol><symbol id="i-skip" viewBox="0 0 24 24"><path d="M6 5.5l9 6.5-9 6.5zM18.5 5.5v13"/></symbol><symbol id="i-voice" viewBox="0 0 24 24"><path d="M4 10.5v3M8 7.5v9M12 4.5v15M16 8v8M20 10.5v3"/></symbol><symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-panel" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M9.5 4.5v15M5.8 8.5h1.6M5.8 11.5h1.6"/></symbol><symbol id="i-telescope" viewBox="0 0 24 24"><path d="M3 13.6 15 8l1.6 3.5-12 5.6zM15 8l3.9-1.8 1.6 3.5-3.9 1.8M10.6 15.3 7.5 21M11.7 14.8l2.8 6.2"/></symbol><symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l2.2-5.5 3.6 11 2.4-7.5 1.6 2H21"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5c3-1.2 5.6-.9 8 .9 2.4-1.8 5-2.1 8-.9v13c-3-1.2-5.6-.9-8 .9-2.4-1.8-5-2.1-8-.9zM12 6.4v13"/></symbol></svg><a class="skip-link" href="#content">Skip to content</a><header class="site-header" id="site-header"><div class="site-inner"><a class="brand" href="index.html" aria-label="Newspaper Night Sky, home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2l1.7 6.3L18 10l-6.3 1.7L10 18l-1.7-6.3L2 10l6.3-1.7z" fill="currentColor"/><circle cx="19" cy="19" r="1.7" fill="currentColor" fill-opacity=".6"/></svg><span>Newspaper Night Sky</span></a><nav class="site-nav" aria-label="Main"><a href="telescope.html">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html" aria-current="page">Radio</a><a href="stories.html">Stories</a><a href="findings.html">Findings</a><a href="notebook.html">Notebook</a><a href="method.html">How it works</a></nav><form class="site-search" action="telescope.html" role="search"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-search"/></svg><label class="sr-only" for="site-q">Search every story</label><input id="site-q" name="q" type="search" placeholder="Search 48,326 stories" autocomplete="off" spellcheck="false"></form><button type="button" id="radio" class="toggle radio-switch has-ico" aria-pressed="false" title="Hear the newspapers: turned on, the radio plays on its own; point at a star or a newspaper, pick one, or select an area to choose what you hear"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-radio"/></svg>Radio</button><button type="button" class="site-menu" aria-expanded="false" aria-controls="site-header"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg>Menu</button></div></header><script>(()=>{const h=document.getElementById('site-header'),b=h.querySelector('.site-menu');b.addEventListener('click',()=>{const o=h.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();</script><div id="content" tabindex="-1"></div>
 <main class="radio">
 <h1>Radio</h1>
-<p class="lede">Tune to a year between 1770 and 1810 and listen to what its newspapers printed, one morning after another. The radio starts on today's date in the year on the dial. Recorded voices read the passages aloud (your browser's own voice reads any passage without a recording); nothing is sent anywhere.</p>
+<p class="lede">Tune to a year between 1770 and 1810 and listen to what its newspapers printed, one morning after another. The radio starts on today's date in the year on the dial. Recorded voices read the passages aloud (your browser's own voice reads any passage without a recording); nothing is sent anywhere. Choose <b>Music</b> to hear the year as music instead, with no words.</p>
 <section class="set" aria-label="The radio">
   <div class="dial-window">
     <div class="scale" id="scale" aria-hidden="true"><div class="needle" id="needle"></div></div>
@@ -85,6 +87,8 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
     <button id="power" class="power" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-power"/></svg><span class="lbl">Turn on</span></button>
     <div class="now"><p class="now-date" id="now-date"></p><p class="now-where" id="now-where"></p></div>
     <div class="knobs">
+    <div class="row station-row"><span class="seg slide" data-roving id="station" role="group" aria-label="Station"><button type="button" data-station="voices" title="Voices: the newspapers read aloud">Voices</button><button type="button" data-station="music" title="Music: the same year as music, with no words">Music</button></span></div>
+    <div class="row station-row" id="sound-row" hidden><span class="seg slide" data-roving id="sound" role="group" aria-label="Sound of the music"><button type="button" data-sound="wood" title="Wood: wooden bars for the surviving issues, plucked strings for the passages">Wood</button><button type="button" data-sound="piano" title="Piano: a recorded grand piano over soft strings">Piano</button><button type="button" data-sound="concerto" title="Concerto: the piano with a flute and a clarinet">Concerto</button></span></div>
       <div class="row"><button id="skip" class="knob" type="button" disabled title="Skip to the next passage"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-skip"/></svg>Next</button></div>
       <label class="vol"><span><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-volume"/></svg>Volume</span><input id="volume" class="glass-range" type="range" min="0" max="1" step="0.05"></label>
       <button id="voice" class="voice knob" type="button" title="Try another of your browser's voices"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-voice"/></svg><span class="lbl">Voice</span></button>
@@ -100,18 +104,20 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 <section class="notes" aria-labelledby="notes-title">
   <h2 id="notes-title">What you hear</h2>
   <ul>
-    <li><b>The words</b> are passages the newspapers printed on that date, as the archive transcribed them: one passage from each paper that day. Reviewed passages (1776, 1793, 1797, 1800, 1802, 1803, 1804, 1805, 1806, 1807, 1808 and 1809) come first; they were checked against the page scans, and their notes record misreadings, but the words read aloud are still the machine transcription (in 1776 you hear “slaves” where the papers printed “staves”). Matched passages were found automatically and not checked.</li>
+    <li><b>The words</b> are passages the newspapers printed on that date, as the archive transcribed them: one passage from each paper that day. Reviewed passages (1776, 1793, 1797, 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809 and 1810) come first; they were checked against the page scans, and their notes record misreadings, but the words read aloud are still the machine transcription (in 1776 you hear “slaves” where the papers printed “staves”). Matched passages were found automatically and not checked.</li>
     <li><b>The order:</b> each day starts with a greeting to the town of the first paper. Then the radio moves to the next day with surviving pages. Days with no surviving page are skipped, which is a gap in the archive, not silence in the town.</li>
     <li><b>The voices</b> were recorded once, when the site was built, with Kokoro, an open speech model: two announcers who take turns, and nine readers, each newspaper keeping one. They are modern and synthetic, not voices of the time. A passage without a recording is read by your browser's own voice, which differs between browsers and devices (Edge offers natural voices; Voice tries another).</li>
     <li><b>The sounds</b> are made in your browser for atmosphere: the hiss of the set, church bells, a ship's bell in harbour towns, horses on busy streets, birds in the country and a drum under war news. They are not recordings of the time. New York's police siren is a deliberate anachronism.</li>
+    <li><b>The music:</b> choose <b>Music</b> instead of Voices and the radio plays the same year with no words, as music: Wood, Piano or Concerto, the music of <a href="pulses.html">Pulses</a>. Each note is a surviving issue or a passage the voices would read; a week of printing passes in two seconds, and the set shows the date and the stories printed most widely that week. <a href="method.html#music">How the music works, and whose recordings it plays</a>.</li>
   </ul>
 </section>
 </main>
 <div class="touch" id="touch" role="button" tabindex="0">Touch for sound</div>
-<footer class="site-footer"><div class="site-inner"><div class="foot-brand"><b>Newspaper Night Sky</b><span>American newspapers, 1770–1810, seen through one surviving archive.</span></div><nav aria-label="More"><a href="index.html">Home</a><a href="telescope.html">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html">Radio</a><a href="stories.html">Stories</a><a href="findings.html">Findings</a><a href="notebook.html">Notebook</a><a href="method.html">How it works</a><a href="notes.html">Research notes</a><a href="exhibit.html">Exhibition mode</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky/tree/main/data">Data release</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky">Code</a></nav><p class="foot-note">Source: Smithsonian Revolution Crossroads, drawn from the Library of Congress <i>Chronicling America</i> newspapers (Hugging Face dataset <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision). Reviewed stories were read and checked against the page scans; matched stories were found automatically by shared wording and are not checked. Data foundation v0.11.13. Made with AI assistance (OpenAI Codex, Anthropic Claude).</p></div></footer>
-<script type="application/json" id="radio-data">{"release_version":"0.11.13","year_stamp":"aac0b7af6637","years":[{"year":1770,"papers":4,"pages":448,"matched":293,"reviewed":0},{"year":1771,"papers":4,"pages":546,"matched":349,"reviewed":0},{"year":1772,"papers":6,"pages":675,"matched":514,"reviewed":0},{"year":1773,"papers":6,"pages":846,"matched":751,"reviewed":0},{"year":1774,"papers":8,"pages":1205,"matched":929,"reviewed":0},{"year":1775,"papers":7,"pages":1286,"matched":1025,"reviewed":0},{"year":1776,"papers":16,"pages":2319,"matched":1324,"reviewed":33},{"year":1777,"papers":11,"pages":1320,"matched":750,"reviewed":0},{"year":1778,"papers":11,"pages":970,"matched":495,"reviewed":0},{"year":1779,"papers":9,"pages":1660,"matched":848,"reviewed":0},{"year":1780,"papers":7,"pages":1406,"matched":728,"reviewed":0},{"year":1781,"papers":7,"pages":1623,"matched":936,"reviewed":0},{"year":1782,"papers":8,"pages":1509,"matched":832,"reviewed":0},{"year":1783,"papers":9,"pages":1100,"matched":484,"reviewed":0},{"year":1784,"papers":5,"pages":644,"matched":176,"reviewed":0},{"year":1785,"papers":2,"pages":380,"matched":130,"reviewed":0},{"year":1786,"papers":2,"pages":356,"matched":112,"reviewed":0},{"year":1787,"papers":10,"pages":1297,"matched":809,"reviewed":0},{"year":1788,"papers":7,"pages":2379,"matched":976,"reviewed":0},{"year":1789,"papers":5,"pages":742,"matched":404,"reviewed":0},{"year":1790,"papers":5,"pages":950,"matched":616,"reviewed":0},{"year":1791,"papers":6,"pages":1242,"matched":946,"reviewed":0},{"year":1792,"papers":8,"pages":1629,"matched":1288,"reviewed":0},{"year":1793,"papers":12,"pages":1751,"matched":1422,"reviewed":15},{"year":1794,"papers":9,"pages":2119,"matched":1610,"reviewed":0},{"year":1795,"papers":11,"pages":1668,"matched":989,"reviewed":0},{"year":1796,"papers":7,"pages":1552,"matched":864,"reviewed":0},{"year":1797,"papers":8,"pages":1587,"matched":668,"reviewed":29},{"year":1798,"papers":8,"pages":1656,"matched":750,"reviewed":0},{"year":1799,"papers":10,"pages":1772,"matched":973,"reviewed":0},{"year":1800,"papers":14,"pages":2575,"matched":1874,"reviewed":16},{"year":1801,"papers":14,"pages":2372,"matched":1693,"reviewed":0},{"year":1802,"papers":14,"pages":2968,"matched":1887,"reviewed":14},{"year":1803,"papers":17,"pages":3250,"matched":1982,"reviewed":23},{"year":1804,"papers":14,"pages":3472,"matched":2317,"reviewed":20},{"year":1805,"papers":14,"pages":3811,"matched":2704,"reviewed":20},{"year":1806,"papers":12,"pages":4381,"matched":2818,"reviewed":33},{"year":1807,"papers":11,"pages":4162,"matched":2480,"reviewed":18},{"year":1808,"papers":10,"pages":4060,"matched":2530,"reviewed":23},{"year":1809,"papers":13,"pages":4172,"matched":2508,"reviewed":36},{"year":1810,"papers":11,"pages":3933,"matched":2486,"reviewed":0}],"reviewed_years":[1776,1793,1797,1800,1802,1803,1804,1805,1806,1807,1808,1809]}</script>
+<footer class="site-footer"><div class="site-inner"><div class="foot-brand"><b>Newspaper Night Sky</b><span>American newspapers, 1770–1810, seen through one surviving archive.</span></div><nav aria-label="More"><a href="index.html">Home</a><a href="telescope.html">Telescope</a><a href="pulses.html">Pulses</a><a href="radio.html">Radio</a><a href="stories.html">Stories</a><a href="findings.html">Findings</a><a href="notebook.html">Notebook</a><a href="method.html">How it works</a><a href="notes.html">Research notes</a><a href="exhibit.html">Exhibition mode</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky/tree/main/data">Data release</a><a href="https://github.com/Major-Studio-1/Project-02-newspaper-night-sky">Code</a></nav><p class="foot-note">Source: Smithsonian Revolution Crossroads, drawn from the Library of Congress <i>Chronicling America</i> newspapers (Hugging Face dataset <code>RevolutionCrossroads/loc_chronicling_america_1770-1810</code>, pinned revision). Reviewed stories were read and checked against the page scans; matched stories were found automatically by shared wording and are not checked. Data foundation v0.11.15. Made with AI assistance (OpenAI Codex, Anthropic Claude).</p></div></footer>
+<script type="application/json" id="radio-data">{"release_version":"0.11.15","year_stamp":"aac0b7af6637","years":[{"year":1770,"papers":4,"pages":448,"matched":293,"reviewed":0},{"year":1771,"papers":4,"pages":546,"matched":349,"reviewed":0},{"year":1772,"papers":6,"pages":675,"matched":514,"reviewed":0},{"year":1773,"papers":6,"pages":846,"matched":751,"reviewed":0},{"year":1774,"papers":8,"pages":1205,"matched":929,"reviewed":0},{"year":1775,"papers":7,"pages":1286,"matched":1025,"reviewed":0},{"year":1776,"papers":16,"pages":2319,"matched":1324,"reviewed":33},{"year":1777,"papers":11,"pages":1320,"matched":750,"reviewed":0},{"year":1778,"papers":11,"pages":970,"matched":495,"reviewed":0},{"year":1779,"papers":9,"pages":1660,"matched":848,"reviewed":0},{"year":1780,"papers":7,"pages":1406,"matched":728,"reviewed":0},{"year":1781,"papers":7,"pages":1623,"matched":936,"reviewed":0},{"year":1782,"papers":8,"pages":1509,"matched":832,"reviewed":0},{"year":1783,"papers":9,"pages":1100,"matched":484,"reviewed":0},{"year":1784,"papers":5,"pages":644,"matched":176,"reviewed":0},{"year":1785,"papers":2,"pages":380,"matched":130,"reviewed":0},{"year":1786,"papers":2,"pages":356,"matched":112,"reviewed":0},{"year":1787,"papers":10,"pages":1297,"matched":809,"reviewed":0},{"year":1788,"papers":7,"pages":2379,"matched":976,"reviewed":0},{"year":1789,"papers":5,"pages":742,"matched":404,"reviewed":0},{"year":1790,"papers":5,"pages":950,"matched":616,"reviewed":0},{"year":1791,"papers":6,"pages":1242,"matched":946,"reviewed":0},{"year":1792,"papers":8,"pages":1629,"matched":1288,"reviewed":0},{"year":1793,"papers":12,"pages":1751,"matched":1422,"reviewed":15},{"year":1794,"papers":9,"pages":2119,"matched":1610,"reviewed":0},{"year":1795,"papers":11,"pages":1668,"matched":989,"reviewed":0},{"year":1796,"papers":7,"pages":1552,"matched":864,"reviewed":0},{"year":1797,"papers":8,"pages":1587,"matched":668,"reviewed":29},{"year":1798,"papers":8,"pages":1656,"matched":750,"reviewed":0},{"year":1799,"papers":10,"pages":1772,"matched":973,"reviewed":0},{"year":1800,"papers":14,"pages":2575,"matched":1874,"reviewed":16},{"year":1801,"papers":14,"pages":2372,"matched":1693,"reviewed":15},{"year":1802,"papers":14,"pages":2968,"matched":1887,"reviewed":14},{"year":1803,"papers":17,"pages":3250,"matched":1982,"reviewed":23},{"year":1804,"papers":14,"pages":3472,"matched":2317,"reviewed":20},{"year":1805,"papers":14,"pages":3811,"matched":2704,"reviewed":20},{"year":1806,"papers":12,"pages":4381,"matched":2818,"reviewed":33},{"year":1807,"papers":11,"pages":4162,"matched":2480,"reviewed":18},{"year":1808,"papers":10,"pages":4060,"matched":2530,"reviewed":23},{"year":1809,"papers":13,"pages":4172,"matched":2508,"reviewed":36},{"year":1810,"papers":11,"pages":3933,"matched":2486,"reviewed":20}],"reviewed_years":[1776,1793,1797,1800,1801,1802,1803,1804,1805,1806,1807,1808,1809,1810]}</script>
 <script src="glass.js"></script>
 <script src="radio.js"></script>
+<script src="music.js"></script>
 <script>
 (() => {
 'use strict';
@@ -133,6 +139,8 @@ let md = (() => {
   const t = new Date(); return [t.getMonth() + 1, t.getDate()];
 })();
 let on = false, runToken = 0, cursor = null, qi = 0, previous = null, current = null, first = true, skipping = false;
+// The station: Voices (the newspapers read aloud) or Music (the same year as music, with no words; music.js).
+let station = (params.get('station') || saved.station) === 'music' && window.Music ? 'music' : 'voices';
 const cache = new Map(); let reviewedAll = null;
 
 // ---- The year's printings, day by day: one passage from each paper that printed on a date ----
@@ -148,7 +156,7 @@ function loadYear(y) {
       for (const g of raw.groups) for (const m of g.members) storyOf.set(m.id ?? m, g);
       for (const o of raw.observations) {
         const g = storyOf.get(o.id), p = papers.get(o.node); if (!g || !p) continue;
-        add({id: o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: g.label, text: o.excerpt, tier: 'matched', check: o.ck, reach: g.newspapers,
+        add({id: o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: g.label, text: o.excerpt, tier: 'matched', check: o.ck, reach: g.newspapers, sid: g.id,
           pulse: `pulses.html?year=${y}&focus=${encodeURIComponent(g.id)}`, sky: `telescope.html?story=${encodeURIComponent(g.id.replace(/^auto:/, ''))}`});
       }
       if (rev) {
@@ -157,7 +165,7 @@ function loadYear(y) {
         for (const s of rev.stories) { const ids = s.members.map(m => m.id ?? m); ids.forEach(id => top.set(id, s)); reach.set(s.id, new Set(ids.map(id => node.get(id))).size); }
         for (const o of rev.observations) {
           const s = top.get(o.id), p = rp.get(o.node); if (!s || !p) continue;
-          add({id: o.id, clip: 'p:' + o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: s.label, text: o.excerpt, tier: 'reviewed', check: 'c', reach: reach.get(s.id) || 1,
+          add({id: o.id, clip: 'p:' + o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: s.label, text: o.excerpt, tier: 'reviewed', check: 'c', reach: reach.get(s.id) || 1, sid: s.id,
             war: /war|armies/i.test(cat.get(s.category) || ''), pulse: `pulses.html?year=${y}&focus=${encodeURIComponent(s.id)}`, sky: `telescope.html?story=${encodeURIComponent(s.id)}`});
         }
       }
@@ -165,7 +173,7 @@ function loadYear(y) {
         const best = new Map(); for (const it of list) { const b = best.get(it.lccn); if (!b || rank(it) > rank(b)) best.set(it.lccn, it); }
         byDate.set(d, [...best.values()].sort((a, b) => rank(b) - rank(a)).slice(0, 6));
       }
-      return {year: y, byDate, dates: [...byDate.keys()].sort()};
+      return {year: y, byDate, dates: [...byDate.keys()].sort(), newspapers: raw.newspapers, coverage: raw.coverage};   // the last two for the music
     })();
     cache.set(y, p); p.catch(() => cache.delete(y));
   }
@@ -201,18 +209,104 @@ async function run() {
   }
 }
 function setOn(value) {
-  on = value; $('power').setAttribute('aria-pressed', String(on)); $('power').querySelector('.lbl').textContent = on ? 'Turn off' : 'Turn on'; $('skip').disabled = !on;
+  on = value; $('power').setAttribute('aria-pressed', String(on)); $('power').querySelector('.lbl').textContent = on ? 'Turn off' : 'Turn on'; $('skip').disabled = !on || station === 'music';
   $('radio').setAttribute('aria-pressed', String(on)); try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { first = true; previous = null; Radio.welcome(); hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
-  else { runToken++; Radio.stop(true); idle(); }
+  if (on && station === 'music') { hint(''); startMusic(); }
+  else if (on) { first = true; previous = null; Radio.welcome(); hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
+  else { runToken++; Radio.stop(true); stopMusic(true); idle(); }
 }
 function tune(y) {
   const was = year; year = clampYear(y); syncDial(); save();
+  if (station === 'music') { if (on && year !== was) startMusic(); return; }   // the music moves to the year on the dial, from the same date
   if (year === was && cursor) return;
   cursor = null; qi = 0; previous = null;
   if (on) { first = false; Radio.stop(); runToken++; Radio.cue('scratch'); setTimeout(() => Radio.cue('tune'), 180); setTimeout(() => { if (on) run(); }, 650); }   // a new station: the record stops, the dial turns
   else idle();
 }
+
+// ---- The music station: the same year and the same newspapers, heard as music with no words (music.js, the music of
+// Pulses: Wood, Piano or Concerto). The year's surviving issues are its presses, and the passages the voices would read
+// are its printings. A week of printing passes in two seconds, the music's own pace; the date on the set moves on with
+// it, and at the end of the year the next one follows, as with the voices. Nothing speaks over it, so it plays about as
+// loud as the voices would (the owner, 23 November 2026), not under them as on Pulses.
+const PACE = 3.5, MUSIC_GAIN = 4, EPOCH = Date.UTC(1770, 0, 1);
+const dayOf = iso => Math.round((Date.parse(iso + 'T00:00:00Z') - EPOCH) / 864e5), isoOf = d => new Date(EPOCH + d * 864e5).toISOString().slice(0, 10);
+const musicLevel = () => MUSIC_GAIN * Number($('volume').value) / .8;   // the volume knob moves the music as it moves the voices
+let tape = null;   // the music's playhead: {token, data, from, to, day, last, shown, week, timer}
+function forMusic(data) {   // the year's newspapers and surviving issues in the shape music.js reads (as Pulses' index), and its passages
+  if (data.music) return data.music;
+  const papers = data.newspapers.map(p => ({lccn: p.lccn, lat: p.lat, lon: p.lon})), at = new Map(papers.map((p, i) => [p.lccn, i]));
+  const coverage = {d: [], p: [], pages: []};
+  for (const c of data.coverage) {
+    const i = at.get(String(c.newspaper_id).replace('paper:', '')); if (i === undefined) continue;
+    coverage.d.push(dayOf(c.publication_date)); coverage.p.push(i); coverage.pages.push(c.observed_pages || 4);
+  }
+  const printings = [];
+  for (const [date, items] of data.byDate) for (const it of items) printings.push({d: dayOf(date), p: it.lccn, s: it.sid, rev: it.tier === 'reviewed'});
+  return data.music = {index: {papers, coverage}, printings};
+}
+async function startMusic() {
+  if (!window.Music) { hint('The music could not be loaded.'); setOn(false); return; }
+  const token = ++runToken; stopMusic(false); Radio.stop(true);
+  let data;
+  try { data = await loadYear(year); } catch { hint('Could not load ' + year + '. Check the connection and turn the radio on again.'); setOn(false); return; }
+  if (token !== runToken || !on || station !== 'music') return;
+  const from = dayOf(year + '-01-01'), to = dayOf(year + '-12-31'), m = forMusic(data);
+  Music.setLevel(musicLevel()); Music.data(m.index);
+  if (!Music.on) Music.setOn(true).then(syncStation, syncStation);
+  Music.view({from, to, story: false, printings: m.printings});
+  tape = {token, data, from, to, day: Math.min(to, Math.max(from, dayOf(target()))), last: performance.now(), shown: null, week: null, next: false};
+  tape.timer = setInterval(roll, 100); roll();
+}
+function roll() {   // the playhead moves on, on a timer, so it keeps going in a background tab while the music sounds
+  const t = tape; if (!t || !on || t.token !== runToken) return;
+  const now = performance.now(); t.day = Math.min(t.to + 1, t.day + Math.min(2, (now - t.last) / 1000) * PACE); t.last = now;
+  Music.follow({day: t.day, speed: PACE, playing: true});
+  const d = Math.min(t.to, Math.floor(t.day));
+  if (d !== t.shown) { t.shown = d; showMusic(t, d); }
+  if (!t.next && t.day > t.to - 40) { t.next = true; loadYear(year >= 1810 ? 1770 : year + 1).catch(() => {}); }   // the next year, ready in time
+  if (t.day >= t.to + 1) { year = year >= 1810 ? 1770 : year + 1; md = [1, 1]; syncDial(); save(); startMusic(); }
+}
+function stopMusic(off) {
+  if (tape) { clearInterval(tape.timer); tape = null; }
+  if (window.Music && Music.on) { Music.follow({day: 0, speed: PACE, playing: false}); if (off) Music.setOn(false); }
+}
+function showMusic(t, d) {   // the date as it passes, and each week the stories that week's papers printed most widely
+  const iso = isoOf(d); md = [Number(iso.slice(5, 7)), Number(iso.slice(8, 10))];
+  $('now-date').textContent = Radio.writtenDate(iso);
+  const week = Math.floor((d - t.from) / 7); if (week === t.week) return; t.week = week;
+  const w0 = t.from + week * 7, seen = new Set(), stories = [], papers = new Set();
+  for (let x = w0; x < w0 + 7; x++) for (const it of t.data.byDate.get(isoOf(x)) || []) { papers.add(it.lccn); if (!seen.has(it.sid)) { seen.add(it.sid); stories.push(it); } }
+  stories.sort((a, b) => (b.tier === 'reviewed') - (a.tier === 'reviewed') || b.reach - a.reach);
+  $('now-where').textContent = papers.size ? `${papers.size} newspaper${papers.size === 1 ? '' : 's'} printed passages this week` : 'No passage survives from this week';
+  $('cap-intro').textContent = 'Music · ' + ({wood: 'Wood', piano: 'Piano', concerto: 'Concerto'}[Music.sound] || '') + ' · a week in two seconds';
+  const box = $('cap-text'); box.replaceChildren();
+  for (const it of stories.slice(0, 3)) { const s = document.createElement('span'); s.className = 'now'; s.textContent = it.title.length > 110 ? it.title.slice(0, 108) + '…' : it.title; box.append(s, document.createElement('br')); }
+  if (!stories.length) box.textContent = 'The music goes on with the surviving issues: a gap in the archive, not silence in the towns.';
+  const meta = $('cap-meta'); meta.replaceChildren();
+  if (stories[0] && !exhibit) for (const [label, href] of [['Follow this story ↗', stories[0].pulse], ['See it in the sky ↗', stories[0].sky]]) { const a = document.createElement('a'); a.href = href; a.textContent = label; meta.append(a); }
+}
+function setStation(s) {
+  if (s === station || (s === 'music' && !window.Music)) return;
+  station = s; save(); syncStation();
+  if (!on) { idle(); return; }
+  runToken++; Radio.stop(true); stopMusic(s !== 'music'); $('skip').disabled = s === 'music';
+  if (s === 'music') startMusic(); else { first = true; previous = null; cursor = null; qi = 0; Radio.welcome(); run(); }
+}
+function syncStation() {
+  for (const b of $('station').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.station === station));
+  $('sound-row').hidden = station !== 'music';
+  for (const b of $('sound').querySelectorAll('button')) b.setAttribute('aria-pressed', String(!!window.Music && b.dataset.sound === Music.sound));
+  $('voice').disabled = station === 'music' || !Radio.voice;
+  Glass.sync();
+}
+$('station').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { Radio.unlock(); setStation(b.dataset.station); } });
+$('sound').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || !window.Music) return;
+  try { localStorage.setItem('nns-music-sound', b.dataset.sound); } catch {}
+  Music.setSound(b.dataset.sound).then(syncStation, syncStation); syncStation();
+  if (tape) tape.week = null;   // the caption names the sound
+});
 
 // ---- What the set shows ----
 function show(it) {
@@ -230,7 +324,7 @@ function idle() {
   $('now-date').textContent = `${d} ${MONTHS[m - 1]} ${year}`;
   const y = YEARS.get(year);
   $('now-where').textContent = y ? `${y.papers} newspaper${y.papers === 1 ? '' : 's'} survive from ${year}${y.reviewed ? ` · ${y.reviewed} reviewed stories` : ''}` : '';
-  if (!on) { $('cap-intro').textContent = ''; $('cap-text').textContent = 'Turn the radio on to hear the first paper printed on or after this date.'; $('cap-meta').replaceChildren(); }
+  if (!on) { $('cap-intro').textContent = ''; $('cap-text').textContent = station === 'music' ? `Turn the radio on to hear ${year} as music from this date: each note a surviving issue or a passage.` : 'Turn the radio on to hear the first paper printed on or after this date.'; $('cap-meta').replaceChildren(); }
 }
 Radio.onCaption(({intro, lines, index}) => {
   $('cap-intro').textContent = intro;
@@ -257,11 +351,11 @@ function syncDial() {
   const y = YEARS.get(year); $('dial').setAttribute('aria-valuetext', `${year}${y ? `, ${y.papers} newspapers survive` : ''}`);
   if (!on) idle();
 }
-function save() { try { localStorage.setItem(STORE, JSON.stringify({year})); } catch {} }
+function save() { try { localStorage.setItem(STORE, JSON.stringify({year, station})); } catch {} }
 let lastStep = year;
 $('dial').addEventListener('input', () => {
   const y = clampYear(Number($('dial').value)); $('needle').style.left = ((y - 1770) / 40 * 100) + '%';
-  if (on && y !== lastStep) Radio.cue('tune'); lastStep = y;
+  if (on && station === 'voices' && y !== lastStep) Radio.cue('tune'); lastStep = y;
   if (!on) { year = y; idle(); }
 });
 $('dial').addEventListener('change', () => tune(Number($('dial').value)));
@@ -269,9 +363,9 @@ $('power').addEventListener('click', () => { Radio.unlock(); setOn(!on); });
 $('radio').addEventListener('click', () => { Radio.unlock(); setOn(!on); });   // the header's switch, the same on every page that reads aloud
 $('skip').addEventListener('click', () => { if (!on) return; skipping = true; Radio.stop(); });
 $('volume').value = String(Radio.volume);
-$('volume').addEventListener('input', () => Radio.setVolume(Number($('volume').value)));
+$('volume').addEventListener('input', () => { Radio.setVolume(Number($('volume').value)); if (window.Music) Music.setLevel(musicLevel()); });
 function syncVoice() {
-  const v = Radio.voice; $('voice').disabled = !v;
+  const v = Radio.voice; $('voice').disabled = !v || station === 'music';
   $('voice').querySelector('.lbl').textContent = v ? 'Voice: ' + v.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*[-–(].*$/, '') : 'No voice in this browser';
   $('voice').title = v ? v.name + ' · tap for another voice' : '';
 }
@@ -296,6 +390,11 @@ if (exhibit) {
     else if (e.key.toLowerCase() === 'f') document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.();
   });
 }
+if (window.Music) {   // the music's sound: from the address, or the one last chosen in this browser (shared with Pulses); Wood at first
+  let k = null; try { k = localStorage.getItem('nns-music-sound'); } catch {}
+  const s = params.get('sound'); Music.setSound(Music.SOUNDS.includes(s) ? s : Music.SOUNDS.includes(k) ? k : 'wood');
+}
+Glass.init(); syncStation();
 buildScale(); syncDial(); idle(); loadYear(year).catch(() => {});
 let kept = null; try { kept = sessionStorage.getItem('nns-radio'); } catch {}
 if (['1', 'on'].includes(params.get('on')) || exhibit || (kept === 'on' && params.get('on') !== '0')) {   // sound needs a touch first, unless the browser already allows it

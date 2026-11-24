@@ -246,7 +246,28 @@ REVIEWED={
         'children':{'deposit-at-new-orleans-before-congress-1802-1803':['president-message-22-december-1802-on-the-deposit-at-new-orleans', 'house-resolution-7-january-1803-on-the-mississippi', 'senate-resolutions-for-80000-militia-february-1803'],
                     'spanish-and-french-ministers-on-the-deposit-1803':['yrujo-letter-to-the-secretary-of-state-10-march-1803', 'pichon-letter-to-the-governor-of-louisiana-11-march-1803', 'yrujo-letter-on-the-deposit-restored-19-april-1803'],
                     'treaty-and-conventions-for-the-cession-of-louisiana-1803':['louisiana-treaty-of-cession-30-april-1803', 'convention-for-sixty-million-francs-30-april-1803', 'convention-on-debts-due-to-american-citizens-30-april-1803']},
-        'expect':(17, 3250)}}
+        'expect':(17, 3250)},
+  # The thirteenth reviewed year (release v0.11.14): 20 stories by the standard rule, the categories as the review proposed them.
+  1810:{'categories':[
+          ('war','War and foreign news',['burdett-address-to-the-people-of-england-1810', 'caracas-address-of-the-supreme-junta-1810', 'west-florida-september-december-1810', 'tunis-bey-and-american-consul-malta-august-1810', 'lucien-bonaparte-address-to-the-roman-citizens-1810']),
+          ('ships','Britain, France and American ships',['leib-resolutions-on-the-erskine-arrangement-march-1810', 'cadore-note-to-armstrong-14-february-1810', 'act-concerning-commercial-intercourse-1-may-1810', 'correspondence-on-jacksons-recall-published-may-1810', 'despatches-received-by-the-john-adams-june-1810', 'rambouillet-decree-23-march-1810', 'vixen-fired-on-by-the-moselle-june-1810', 'brig-two-marias-seized-at-malaga-1810', 'cadore-letter-to-armstrong-5-august-1810', 'pinkney-letter-with-wellesley-answer-on-the-decrees-1810', 'president-proclamation-of-2-november-1810-and-treasury-circular']),
+          ('government','American public life and government',['president-message-on-the-militia-3-january-1810', 'gallatin-statement-on-erskine-despatch-1810', 'president-annual-message-5-december-1810', 'treasury-report-december-1810'])],
+        'children':{'correspondence-on-jacksons-recall-published-may-1810':['pinkney-note-to-wellesley-2-january-1810', 'wellesley-answer-to-pinkney-14-march-1810'],
+                    'despatches-received-by-the-john-adams-june-1810':['armstrong-despatch-of-10-march-1810-with-letter-to-cadore', 'armstrong-letter-of-7-april-1810'],
+                    'west-florida-september-december-1810':['baton-rouge-fort-taken-natchez-report-september-1810', 'west-florida-declaration-26-september-1810', 'letter-from-washington-mississippi-territory-30-october-1810', 'president-proclamation-on-west-florida-27-october-1810'],
+                    'president-proclamation-of-2-november-1810-and-treasury-circular':['president-proclamation-2-november-1810', 'treasury-circular-2-november-1810']},
+        'expect':(11, 3933)},
+  # The fourteenth reviewed year (release v0.11.15): 15 stories by the standard rule, the categories as the review proposed them;
+  # two sub-stories in 6 papers give the other side of two admitted documents, at the owner's word (X-1801-08).
+  1801:{'categories':[
+          ('war','War and peace in Europe',['augereau-notice-ending-the-armistice-november-1800', 'moreau-report-of-hohenlinden-december-1800', 'nelson-letter-on-the-battle-of-copenhagen-april-1801', 'london-account-second-attack-on-boulogne-august-1801', 'london-surrender-of-cairo-confirmed-august-1801', 'preliminary-articles-of-peace-britain-and-france-october-1801']),
+          ('sea','Ships, the navy and Tripoli',['bashaw-of-tripoli-war-on-the-united-states-1801', 'baxter-journal-from-cadiz-august-1801', 'court-martial-on-captain-little-september-1801']),
+          ('government','American public life and government',['jefferson-letter-of-4-september-1800', 'jefferson-elected-and-inaugurated-february-march-1801', 'new-haven-remonstrance-and-the-president-reply-july-1801', 'treaty-with-the-cherokees-at-south-west-point-1801', 'census-of-1800-total-population-september-1801', 'john-appleton-brings-the-ratified-convention-october-1801'])],
+        'children':{'jefferson-elected-and-inaugurated-february-march-1801':['house-committee-notifies-jefferson-february-1801', 'jefferson-farewell-to-the-senate-28-february-1801', 'jefferson-inaugural-address-4-march-1801'],
+                    'bashaw-of-tripoli-war-on-the-united-states-1801':['cathcart-circular-of-3-january-1801', 'cathcart-circular-of-15-may-1801-war-declared', 'dale-letter-enterprize-takes-a-tripoline-cruiser-august-1801', 'president-letter-to-lieutenant-sterett-1-december-1801'],
+                    'new-haven-remonstrance-and-the-president-reply-july-1801':['new-haven-merchants-remonstrance-1801', 'president-reply-to-the-new-haven-remonstrance-july-1801'],
+                    'treaty-with-the-cherokees-at-south-west-point-1801':['nashville-general-wilkinson-and-the-cherokee-treaty-august-1801', 'knoxville-report-cherokee-treaty-broken-up-september-1801']},
+        'expect':(14, 2372)}}
 CATEGORY_COLORS=['#3987e5','#d95926','#199e70']   # dataviz slots 1-3, validated all-pairs on #050711
 short_names={'sn82014782':'Kentucky Gazette','sn83025525':'The Mirror','sn83025527':'Republican Gazetteer','sn83025588':'New Hampshire Gazette','sn83025881':'Gazette of the United States','sn84023150':'The Eagle','sn84024710':'Virginia Argus','sn84038410':'Patowmac Guardian'}
 # Map layout: each series is placed at its town of publication (from the catalogue's places_json).
@@ -598,6 +619,7 @@ VER=manifest['version']; N_STARS=len(stars)
 shutil.copyfile(ROOT/'site.css',OUT/'site.css')
 shutil.copyfile(ROOT/'glass.js',OUT/'glass.js')   # the glass controls shared by the Telescope and Pulses pages
 shutil.copyfile(ROOT/'radio.js',OUT/'radio.js')   # the radio's voice and sounds, made in the browser (Radio page, Pulses, Telescope)
+shutil.copyfile(ROOT/'music.js',OUT/'music.js')   # music from the data, made in the browser (Pulses); its recordings are in audio/music/, which the build leaves alone
 # The offline bundle: the two libraries the pages once loaded from jsdelivr are kept with the site, so it runs without the
 # internet (an exhibition machine): three.js r160 for the Telescope and qrcode-generator 1.4.4 for the exhibition's codes.
 (OUT/'lib').mkdir(exist_ok=True)
@@ -781,7 +803,7 @@ for leftover in [m for m in ['__N_STORIES__','__N_MATCHED__','__N_PRINTINGS__','
 assert '__FINDINGS__' not in (OUT/'findings.html').read_text(encoding='utf8') and '__NOTEBOOK__' not in (OUT/'notebook.html').read_text(encoding='utf8')
 assert '__STORIES__' not in (OUT/'stories.html').read_text(encoding='utf8')
 
-pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','stories.html','exhibit.html','method.html','notes.html','findings.html','notebook.html','site.css','glass.js','radio.js']}
+pages={name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in ['index.html','telescope.html','pulses.html','radio.html','stories.html','exhibit.html','method.html','notes.html','findings.html','notebook.html','site.css','glass.js','radio.js','music.js']}
 # The radio's recorded voices (work/audio_render.py writes audio/ next to the pages; this build leaves it alone). Report
 # how many reviewed passages have a recording; a passage without one is read by the browser's voice on the Radio page, and introduced by the announcer elsewhere.
 audio_summary=None

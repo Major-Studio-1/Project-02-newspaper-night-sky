@@ -36,14 +36,26 @@ __SITE_HEAD__
 .timebar-date{display:flex;flex-direction:column;line-height:1.25}#current-date{font-size:18px;font-weight:500}
 .timebar-track .strip-wrap{margin:0}.timebar-track #strip{height:24px}.timebar-track #day{margin:0;display:block}.timebar .ticks{font-size:11.5px;gap:10px}
 .strip-tip{bottom:auto;top:calc(100% + 4px)}
-.pagehead{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin:0 0 10px}.pagehead h1{font-size:22px}#notice{margin:0 0 8px}
+#notice{margin:0 0 8px}
+/* The receipt line (site.css, glass.js): the last row of the bar at the top, so it stays in view; on a phone it is the
+   first thing on the page instead, so the bar stays short. In Watch its words are the caption beside the date. */
+#receipt.in-toolbar{order:4;flex:1 1 100%;margin:2px -24px -12px;padding:6px 24px 7px;border-top:1px solid #1a2338;border-bottom:0;background:#070b17}
+@media(max-width:1050px){#receipt.in-toolbar{margin:2px -16px -10px;padding:6px 16px 7px}}
+.shell>#receipt{margin:-6px 0 14px;border:1px solid #1a2338;border-radius:10px}
+body.exhibit #receipt{display:none!important}
+.timebar .rc.rc-caption{align-self:center;background:none;padding:0;-webkit-backdrop-filter:none;backdrop-filter:none;font-size:clamp(15px,1.25vw,28px)}
+body.watching .timebar .rc-cap{display:flex}   /* Watch only: the exhibition's captions are in the band beside its scenes */
+/* In the steps: the story shelf with its "printed in" row, the map's note and the colours (the legend, again). */
+.rc-body .filter-row{margin:0 0 10px;font-size:12.5px}.rc-body .shelf{margin:0}
+.rc-body .shelf-head h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.rc-body .legend{margin:0}.rc-body .act-link{margin-top:2px}
 #first-hint{position:fixed;top:auto;bottom:24px}   /* the map can start below the fold: the hint sits at the foot of the screen */
 .sky-wrap{position:relative}.sky-top{position:absolute;left:0;right:0;top:0;z-index:5;pointer-events:none}.sky-top>*{pointer-events:auto}
-.sky-top .filter-row{margin:0 0 6px}.sky-top .constellation-note{margin:0;background:#0d1526e8}
+.sky-top .constellation-note{margin:0;background:#0d1526e8}
 .story-acts,.story-trace{margin-top:8px}
 .mini-card{display:none}.page-notes{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
 @media(max-width:720px){.timebar{grid-template-columns:1fr;gap:4px;order:3}.timebar .ticks{display:none}.timebar-date{flex-direction:row;align-items:baseline;gap:10px}#current-date{font-size:15px}
-  .timebar-track #strip{height:16px}.timebar .ticks #day-coverage{display:none}.pagehead h1{font-size:19px}
+  .timebar-track #strip{height:16px}.timebar .ticks #day-coverage{display:none}
   .mini-card{display:block;position:sticky;bottom:8px;z-index:20;margin:10px 0 4px;padding:10px 12px;background:#0d1526f2;border:1px solid var(--line);border-radius:10px;font-size:13px;box-shadow:0 -6px 24px #0009}
   .mini-card p{margin:0}.mc-title{font-weight:600}.mc-role{color:var(--amber);font-size:12px;margin:2px 0 4px!important}
   .mc-text{font-family:Georgia,serif;color:#c6d0e4;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}#mc-more{display:inline-block;margin-top:6px}}
@@ -100,7 +112,7 @@ __SITE_HEAD__
   .find{flex:1 1 150px;max-width:none;margin-left:0}#shelf-sort button{padding:5px 8px}}   /* Find and the order share one line */
 @media(max-width:720px){
   .sky-wrap{display:flex;flex-direction:column}.sky-top{display:contents}
-  .sky-top .filter-row{order:0;margin:0 0 4px}.filter-hint{display:none}.sky{order:1;margin:0}
+  .sky{order:1;margin:0}
   .sky-top .constellation-note{order:2;height:auto;min-height:38px;margin:4px 0 0}.constellation-note span{-webkit-line-clamp:3}
   .sky .node{width:46px;height:46px}.sky .paper-name{min-height:0;line-height:1.25;padding:2px 4px}
   .sky .node-last,.sky .node-coverage{min-height:14px;line-height:14px}   /* fixed, so markers keep their size as the text fills in */
@@ -116,11 +128,11 @@ __SITE_HEAD__
 .sky .paper.on-air .paper-name{color:#ffd27a}.sky .paper.on-air .node{filter:drop-shadow(0 0 8px #ffd27a99)}
 .sky .paper.voiced .paper-name{color:#f1dfb6}.on-air-chorus{display:block;margin-top:6px;color:var(--muted);font:12.5px/1.4 system-ui,sans-serif}.on-air-chorus:empty{display:none}
 /* Exhibition (?exhibit=1): the map, the date and what is being read, large; no menus or lists; the cursor hides when still. */
-body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .transport,body.exhibit .year-pick,body.exhibit .timebar-track,body.exhibit .shelf,body.exhibit .evidence,
-body.exhibit .context,body.exhibit .page-notes,body.exhibit .strip-note,body.exhibit #filter-row,body.exhibit #notice,body.exhibit #to-telescope,body.exhibit .mini-card,body.exhibit .map-note,body.exhibit .pagehead,body.exhibit .sky-top{display:none!important}
+body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .transport,body.exhibit .year-pick,body.exhibit .timebar-track,body.exhibit .evidence,
+body.exhibit .context,body.exhibit .page-notes,body.exhibit .strip-note,body.exhibit #notice,body.exhibit .mini-card,body.exhibit .map-note,body.exhibit .sky-top{display:none!important}
 body.exhibit .layout{display:block}body.exhibit .shell{max-width:none;padding:2vh 3vw}body.exhibit .toolbar-inner{max-width:none;padding:1.4vh 3vw}
-body.exhibit #current-date{font-size:clamp(20px,2.6vw,56px)}body.exhibit #count{font-size:clamp(12px,1vw,22px)}
-body.exhibit .pagehead h1{font-size:clamp(20px,2vw,44px)}body.exhibit #scope{font-size:clamp(13px,1.1vw,24px)}
+body.exhibit #current-date{font-size:clamp(20px,2.6vw,56px);white-space:nowrap}body.exhibit #count{font-size:clamp(12px,1vw,22px)}
+body.exhibit .timebar{grid-template-columns:max-content minmax(0,1fr);column-gap:3vw}   /* the large date on one line, the caption beside it */
 body.exhibit .sky .paper-name{font-size:15px}body.exhibit .legend{font-size:clamp(12px,.9vw,20px)}
 body.exhibit .on-air-text{font-size:clamp(18px,1.9vw,42px)}body.exhibit .on-air-head{font-size:clamp(11px,.9vw,20px)}body.exhibit .constellation-note{font-size:clamp(13px,1.1vw,24px)}
 body.exhibit.still,body.exhibit.still *{cursor:none!important}
@@ -131,25 +143,22 @@ __SITE_HEADER__
 <header class="toolbar"><div class="toolbar-inner">
 <div class="transport" role="group" aria-label="Playback"><button id="play" class="toggle play has-ico" type="button" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Play</span></button><span class="seg steps"><button id="previous" type="button" aria-label="Previous printing" title="Previous printing">←</button><button id="next" type="button" aria-label="Next printing" title="Next printing">→</button></span>
 <span class="ctl"><span class="label" id="speed-label">Speed</span><span class="seg slide" data-roving id="speed" role="group" aria-labelledby="speed-label"><button type="button" data-pace="0">Slow</button><button type="button" data-pace="1">Normal</button><button type="button" data-pace="2">Fast</button></span></span>
+<span class="ctl" id="sound-ctl" hidden><span class="label" id="sound-label">Sound</span><span class="seg slide" data-roving id="sound" role="group" aria-labelledby="sound-label"><button type="button" data-sound="wood" title="Wood: wooden bars for the surviving issues, plucked strings for the printings">Wood</button><button type="button" data-sound="piano" title="Piano: a recorded grand piano over soft strings">Piano</button><button type="button" data-sound="concerto" title="Concerto: the piano with a flute and a clarinet">Concerto</button></span></span>
 <button id="tour" class="toggle has-ico" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">__ICON_tour__Tour</button><button id="watch" class="watch-btn" type="button" title="Watch: hide every control and let the stories play by themselves, full screen. Esc brings the controls back.">__ICON_fit__<span class="lbl">Watch</span></button></div>
 <div class="year-pick" role="group" aria-labelledby="years-label"><span class="label" id="years-label">Years</span><b id="years-now" class="years-now mono"></b>
 <div class="years-wrap"><div id="years" class="years" title="Each bar: the newspapers that survive that year in this archive (gold dot: stories checked by hand). Tap a year, or drag across several"></div><div id="years-axis" class="years-axis" aria-hidden="true"></div></div>
 <button id="years-all" class="toggle" type="button" aria-pressed="false" title="All years, 1770–1810">All</button></div>
 <div class="timebar"><div class="timebar-date"><span id="current-date" class="mono"></span><span id="count" class="small mono muted"></span></div>
 <div class="timebar-track"><div class="strip-wrap"><canvas id="strip" aria-hidden="true"></canvas><div id="strip-tip" class="strip-tip" hidden></div></div>
-<input id="day" class="glass-range" type="range" min="0" max="34" value="0" step="0.05" aria-label="Publication date"><div class="ticks"><span id="first-date"></span><span id="day-coverage" class="muted"></span><span id="last-date"></span></div></div></div>
+<input id="day" class="glass-range" type="range" min="0" max="34" value="0" step="0.05" aria-label="Publication date"><div class="ticks"><span id="first-date"></span><span id="day-coverage" class="muted"></span><span id="last-date"></span></div></div>
+<div id="receipt-cap" class="rc-cap"></div></div>
+<div id="receipt"></div>
 </div></header>
 <main class="shell">
-<div class="pagehead"><h1>Newspaper pulses</h1><span id="scope" class="small muted"></span><a id="to-telescope" class="small" href="telescope.html">See this year in the sky ↗</a></div><p id="notice"></p>
-<section class="shelf" aria-labelledby="shelf-title"><div class="shelf-head"><h2 id="shelf-title">Stories</h2><span id="shelf-count" class="small muted"></span>
-<label class="find"><span class="sr-only">Find stories by their words</span><input id="shelf-find" type="search" placeholder="Find a story in these years…" autocomplete="off" spellcheck="false"></label>
-<span class="seg slide" data-roving id="shelf-sort" role="group" aria-label="Order of the stories"><button type="button" data-sort="reach" title="Printed in the most newspapers first">Most printed</button><button type="button" data-sort="date" title="The earliest first">Earliest</button></span></div>
-<div id="topic-chips" class="toggles topic-chips" role="group" aria-label="Topic families"></div>
-<div id="topic-sub" class="toggles topic-chips sub" role="group" aria-label="Topics in the chosen family" hidden></div>
-<div id="shelf" class="shelf-rail" role="list"></div></section>
+<h1 class="sr-only">Newspaper pulses</h1><p id="notice"></p>
 <div class="layout"><section aria-label="Publication pulses">
-<div class="sky-wrap"><div class="sky-top" id="sky-top"><div id="filter-row" class="filter-row" hidden><span id="min-label">Show stories in</span><span id="min-papers" class="seg slide" data-roving role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers.</span><span class="filter-hint">Papers that printed the same story glow together.</span></div><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
-<div id="first-hint" class="first-hint" role="note" hidden><b>How to use Pulses</b><ol><li>Each newspaper lights up on the day it prints the story; Play and Pause are at the top.</li><li>Pick a story from the cards above the map.</li><li>Click a newspaper to read what it printed.</li></ol><small>Shown once. Any touch or key hides it.</small></div><div id="sky" class="sky" aria-label="Newspaper nodes placed roughly by town of publication, north at the top. Light marks observed publications, with no transmission edges."></div></div>
+<div class="sky-wrap"><div class="sky-top" id="sky-top"><p id="constellation-note" class="constellation-note idle"><span id="constellation-text"></span><button id="constellation-clear" type="button">Clear</button></p></div>
+<div id="first-hint" class="first-hint" role="note" hidden><b>How to use Pulses</b><ol><li>Each newspaper lights up on the day it prints; Play and Pause are at the top.</li><li>Tap the underlined words above the map to change what is shown, or to pick one story.</li><li>Click a newspaper to read what it printed.</li></ol><small>Shown once. Any touch or key hides it.</small></div><div id="sky" class="sky" aria-label="Newspaper nodes placed roughly by town of publication, north at the top. Light marks observed publications, with no transmission edges."></div></div>
 <p id="on-air" class="on-air" hidden><span class="on-air-head" id="on-air-head">Radio</span><span class="on-air-text" id="on-air-text"></span><span class="on-air-chorus" id="on-air-chorus"></span></p>
 <div id="mini-card" class="mini-card" aria-live="polite"><p class="mc-title" id="mc-title"></p><p class="mc-role" id="mc-role"></p><p class="mc-text" id="mc-text"></p><a href="#selected-evidence" id="mc-more">Read the passage and see the scan ↓</a></div>
 <p class="map-note">Newspapers sit roughly where they were printed: north at the top, east to the right. Papers are nudged apart so names stay readable, so distances are not to scale.</p>
@@ -162,12 +171,38 @@ __SITE_HEADER__
 </aside></div>
 <p class="page-notes">Each pulse marks one printed passage on its publication date. Reviewed stories were read and checked against the scans; matched stories were found automatically by shared wording and are not checked. In a single story, colours describe textual roles; in a reviewed year's overview, colours identify that year's story categories. Glow is an animation effect: papers that printed the same story within 40 days glow again together. Constellation lines appear only when you pick a story; they group its printings by nearness on the map and never show who copied whom. Nodes are placed roughly by town of publication, not to scale. <a href="method.html#pulses">More on what a pulse shows</a>. Each matched printing says whether its passage is in both machine transcriptions of its page; an audit of 200 matched stories found that about 1 passage in 5, up to 1 in 3, has a misreading that changes a fact, so check the scan before quoting. <a href="method.html#checks">How the matched stories were checked</a>. <span id="release"></span></p>
 <div id="announcement" class="sr-only" aria-live="polite"></div>
+<!-- The receipt's steps: each waits here until its part of the line opens it, in place, and comes back when it closes. -->
+<div class="rc-steps" hidden>
+<div class="rc-body" id="step-evidence">
+<div class="row"><span class="seg slide" data-roving id="evidence" role="group" aria-label="Which evidence"><button type="button" data-ev="checked" title="The stories read and checked against the page scans by hand, played together">Checked by hand</button><button type="button" data-ev="found" title="The stories found by shared wording, not checked, played together">Found by shared wording</button></span></div>
+<ul class="tiers"><li><span class="rc-dots" aria-hidden="true"><i style="background:#3987e5"></i><i style="background:#d95926"></i><i style="background:#199e70"></i></span><span><b>Checked by hand:</b> <span id="tier-checked"></span></span></li>
+<li><span class="rc-dot" aria-hidden="true" style="background:#aab6cf"></span><span><b>Found by shared wording, not checked:</b> <span id="tier-found"></span></span></li></ul>
+</div>
+<div class="rc-body" id="step-stories">
+<div id="filter-row" class="filter-row" hidden><span id="min-label">Printed in at least</span><span id="min-papers" class="seg slide" data-roving role="group" aria-labelledby="min-label"><button type="button" data-k="1" title="any number of newspapers">Any</button><button type="button" data-k="2" title="at least 2 newspapers">2+</button><button type="button" data-k="3" title="at least 3 newspapers">3+</button><button type="button" data-k="4" title="at least 4 newspapers">4+</button><button type="button" data-k="6" title="at least 6 newspapers">6+</button></span><span>newspapers. Papers that printed the same story glow together.</span></div>
+<section class="shelf" aria-labelledby="shelf-title"><div class="shelf-head"><h2 id="shelf-title">Stories</h2><span id="shelf-count" class="small muted"></span>
+<label class="find"><span class="sr-only">Find stories by their words</span><input id="shelf-find" type="search" placeholder="Find a story in these years…" autocomplete="off" spellcheck="false"></label>
+<span class="seg slide" data-roving id="shelf-sort" role="group" aria-label="Order of the stories"><button type="button" data-sort="reach" title="Printed in the most newspapers first">Most printed</button><button type="button" data-sort="date" title="The earliest first">Earliest</button></span></div>
+<div id="topic-chips" class="toggles topic-chips" role="group" aria-label="Topic families"></div>
+<div id="topic-sub" class="toggles topic-chips sub" role="group" aria-label="Topics in the chosen family" hidden></div>
+<div id="shelf" class="shelf-rail" role="list"></div></section>
+</div>
+<div class="rc-body" id="step-arrange">
+<p class="note" style="margin-top:0">Each newspaper sits roughly where it was printed, north at the top and east to the right, nudged apart so the names stay readable; it lights up on the day it prints. No line says who copied whom.</p>
+<div class="row"><a class="act-link" id="to-telescope" href="telescope.html">__ICON_telescope__<span id="to-telescope-text">See these years in the sky</span></a></div>
+</div>
+<div class="rc-body" id="step-colour">
+<div id="legend-step" class="legend"></div>
+<p class="note" id="colour-note"></p>
+</div>
+</div>
 </main>
 __SITE_FOOTER__
 <button type="button" id="watch-exit" class="watch-exit" hidden>✕ Exit watch</button>
 <script type="application/json" id="pulse-data">__PULSE_DATA__</script>
 <script src="glass.js"></script>
 <script src="radio.js"></script>
+<script src="music.js"></script>
 <script>
 (() => {
 'use strict';
@@ -226,6 +261,7 @@ async function loadIndex() {
       text = new TextDecoder().decode(buf);
     } else text = await res.text();
     const I = JSON.parse(text); I.byFid = new Map(I.stories.id.map((id, s) => [id, s]));
+    if (window.Music) Music.data(I);   // the music reads the newspapers and their surviving issues from it (only once on)
     return INDEX = I;
   })();
   try { return await indexLoading; } catch (e) { indexLoading = null; throw e; }
@@ -329,15 +365,29 @@ const inFind = list => findRx.length ? list.filter(g => { const t = g.label.toLo
 const narrowed = list => inFind(inTopics(list));
 const famLanes = (BOOT.families || []).map((_, i) => (BOOT.topics || []).flatMap((t, j) => t.family === i ? [j] : []));
 const LANES_KEY = (BOOT.topics || []).map(t => t.label).join('|');   // saved topic lanes count only while the topics are the same
+function topicsChosen() {   // the chosen topics: whole families by the family's name, the rest one by one
+  const families = famLanes.flatMap((ls, i) => ls.length && ls.every(j => topicsOn.has(j)) ? [i] : []), inWhole = new Set(families.flatMap(i => famLanes[i]));
+  return {families, lanes: [...topicsOn].filter(j => !inWhole.has(j))};
+}
+const topicNames = () => { const {families, lanes} = topicsChosen(); return [...families.map(i => BOOT.families[i].short), ...lanes.map(j => BOOT.topics[j].label)]; };
 function following() {   // the topics and words chosen, in a few words
   const parts = [];
-  if (topicsOn.size) {
-    const whole = famLanes.flatMap((ls, i) => ls.length && ls.every(j => topicsOn.has(j)) ? [i] : []), inWhole = new Set(whole.flatMap(i => famLanes[i]));
-    const names = [...whole.map(i => BOOT.families[i].short), ...[...topicsOn].filter(j => !inWhole.has(j)).map(j => BOOT.topics[j].label)];
-    parts.push(names.length <= 3 ? names.join(', ') : `${names.length} topics`);
-  }
+  if (topicsOn.size) { const names = topicNames(); parts.push(names.length <= 3 ? names.join(', ') : `${names.length} topics`); }
   if (findRx.length) parts.push(`“${findText}”`);
   return parts.join(' · ');
+}
+// Words to find in the titles (each at the start of a word), and the topics as the link writes them (topics=politics,…).
+const findWords = t => t.toLowerCase().replace(/ſ/g, 's').split(/\s+/).filter(Boolean).map(w => new RegExp('(^|[^a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const topicsParam = () => { if (!topicsOn.size) return ''; const {families, lanes} = topicsChosen(); return [...families.map(i => slug(BOOT.families[i].short)), ...lanes.map(j => slug(BOOT.topics[j].label))].join(','); };
+function readTopics(text) {
+  const out = new Set();
+  for (const s of String(text || '').split(',').map(slug).filter(Boolean)) {
+    const f = (BOOT.families || []).findIndex(x => slug(x.short) === s);
+    if (f >= 0) famLanes[f].forEach(j => out.add(j));
+    else { const j = (BOOT.topics || []).findIndex(t => slug(t.label) === s); if (j >= 0) out.add(j); }
+  }
+  return out;
 }
 
 // The reviewed overview an id names: 'all:1776' for one year; a bare 'all' (older links and saved views) means the latest
@@ -629,8 +679,7 @@ let findTimer = 0;
 $('shelf-find').addEventListener('input', e => {
   clearTimeout(findTimer);
   findTimer = setTimeout(() => {
-    findText = e.target.value.trim();
-    findRx = findText.toLowerCase().replace(/ſ/g, 's').split(/\s+/).filter(Boolean).map(w => new RegExp('(^|[^a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+    findText = e.target.value.trim(); findRx = findWords(findText);
     if (Y) topicsChanged();
   }, 300);
 });
@@ -640,20 +689,23 @@ $('shelf-sort').addEventListener('click', e => {
 });
 function syncSort() { for (const b of $('shelf-sort').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.sort === shelfSort)); Glass.sync(); }
 
-function renderLegend() {
-  const L = $('legend'); L.classList.toggle('overview', mode === 'reviewed');
-  if (mode !== 'reviewed') { L.innerHTML = ROLE_LEGEND; return; }
-  L.replaceChildren();
-  for (const c of Y.categories.filter(c => c.year === group.year)) {
-    const row = document.createElement('div'); row.className = 'legend-row';
-    const head = document.createElement('span'); head.className = 'legend-cat';
-    const d = document.createElement('i'); d.className = 'dot'; d.style.background = c.color;
-    head.append(d, document.createTextNode(c.label)); row.append(head);
-    for (const s of Y.stories.filter(s => s.category === c.id)) {
-      const b = document.createElement('button'); b.type = 'button'; b.title = 'Focus this story'; b.textContent = s.label + ' (' + s.members.length + ')';
-      b.addEventListener('click', () => { changeGroup(s.id); save(); }); row.append(b);
+function renderLegend() {   // under the map, and again in the receipt's colour step (there the categories alone, so it stays short)
+  for (const L of [$('legend'), $('legend-step')]) {
+    L.classList.toggle('overview', mode === 'reviewed');
+    if (mode !== 'reviewed') { L.innerHTML = ROLE_LEGEND; continue; }
+    L.replaceChildren();
+    for (const c of Y.categories.filter(c => c.year === group.year)) {
+      const row = document.createElement('div'); row.className = 'legend-row';
+      const head = document.createElement('span'); head.className = 'legend-cat';
+      const d = document.createElement('i'); d.className = 'dot'; d.style.background = c.color;
+      head.append(d, document.createTextNode(c.label)); row.append(head);
+      if (L.id === 'legend-step') { L.append(row); continue; }
+      for (const s of Y.stories.filter(s => s.category === c.id)) {
+        const b = document.createElement('button'); b.type = 'button'; b.title = 'Focus this story'; b.textContent = s.label + ' (' + s.members.length + ')';
+        b.addEventListener('click', () => { changeGroup(s.id); save(); }); row.append(b);
+      }
+      L.append(row);
     }
-    L.append(row);
   }
 }
 
@@ -782,12 +834,12 @@ function draw() {
   }
 }
 
-function pause() { const was = playing; playing = false; cancelAnimationFrame(raf); lastFrame = 0; if (Y) { draw(); if (was && events[selected]) source(selected); } }   // stopped: the passage can load
+function pause() { const was = playing; playing = false; cancelAnimationFrame(raf); lastFrame = 0; musicFollow(); if (Y) { draw(); if (was && events[selected]) source(selected); } }   // stopped: the passage can load
 function play() {
   if (!events.length) return;
   if (day >= maxDay) { day = 0; source(0); nodes.forEach(n => { n.age = Infinity; n.echo = Infinity; }); }
   focus = hover = null; renderConstellation();
-  events.filter(e => e.day === day).forEach(burst); playing = true; lastFrame = 0; draw(); save(); raf = requestAnimationFrame(tick);
+  events.filter(e => e.day === day).forEach(burst); playing = true; lastFrame = 0; draw(); save(); musicFollow(); raf = requestAnimationFrame(tick);
   if (day < 1 && document.body.classList.contains('exhibit')) setTimeout(exhibitRead, 400);
 }
 function seek(value, index = null) {
@@ -806,7 +858,7 @@ function tick(now) {
   let last = -1; const fresh = countUpTo(previous);
   for (let i = fresh; i < events.length && events[i].day <= day + 1e-7; i++) { burst(events[i]); last = i; }   // the printings since the last frame
   if (last >= 0) source(last);
-  draw();
+  draw(); musicFollow();
   if (day >= maxDay && nodes.every(n => n.age >= .6)) {
     pause(); save(); $('announcement').textContent = 'Playback complete. ' + events.length + ' passages.';
     tourHold = Math.max(tourHold, performance.now() + 3500);   // on a tour, the last frame stays a moment before the next story
@@ -816,7 +868,7 @@ function tick(now) {
 }
 
 function changeGroup(id) {
-  playing = false; cancelAnimationFrame(raf);
+  playing = false; cancelAnimationFrame(raf); musicFollow();
   if (radioOn) { Radio.live.stopAll({scratch: false}); pinnedPapers.clear(); hoverPaper = null; }   // another view: its voices stop
   const g = Y.groupById.get(id), ry = reviewedYearOf(id);
   if (ry) { mode = 'reviewed'; group = overview('reviewed', ry); }
@@ -876,10 +928,19 @@ function changeGroup(id) {
   }
   renderLegend(); events.filter(e => e.day === 0).forEach(burst); source(0); buildStrip(); renderConstellation(); draw();
   $('announcement').textContent = 'Selected ' + (group ? group.label : 'no story');
+  musicView();
+  syncReceipt();
 }
 
 // ---- Years: one year, several or all of them ----
-const skyUrl = () => { const n = Y.to - Y.from + 1, look = n <= 1 ? 1 : n <= 5 ? 5 : n <= 10 ? 10 : 'all'; return `telescope.html?year=${Y.to}&lookback=${look}`; };
+// The same years in the sky, in the words both instruments share (years=, evidence=, min=, q=).
+const yearsParam = () => Y.from === Y.to ? String(Y.from) : Y.from === 1770 && Y.to === 1810 ? 'all' : `${Y.from}-${Y.to}`;
+const skyUrl = () => {
+  const u = new URLSearchParams(); u.set('years', yearsParam());
+  if (mode === 'reviewed') u.set('evidence', 'checked');
+  else if (mode === 'matched') { if (minPapers.matched > 1) u.set('min', String(minPapers.matched)); if (findText) u.set('q', findText); }
+  return 'telescope.html?' + u;
+};
 // A link to a matched story that is the twin of a reviewed one opens the reviewed story, when its year is in view.
 // A first visit's hint (the site plan's promise): three lines over the instrument, once per browser, gone at the first
 // touch, key or wheel; never in an exhibition or Watch (body.exhibit hides it). Without storage it shows on each visit.
@@ -914,9 +975,7 @@ async function loadRange(from, to, wanted) {
   else notice('The matched stories could not be loaded, so only the reviewed stories are shown. Check your connection and try again.', 'Matched stories and other years need the page served over HTTP; showing the reviewed stories only.');
   Y = buildState(from, to, bases, extra); syncSpeed(); setYearsUI(from, to);
   document.title = 'Newspaper pulses · ' + Y.label;
-  $('to-telescope').href = skyUrl(); $('to-telescope').textContent = `See ${from === to ? 'this year' : 'these years'} in the sky ↗`;
   buildSky(); buildChips(); shelfLimit = 24; group = null; buildShelf();
-  $('scope').textContent = `${Y.label === 'all years' ? 'In all years' : 'In ' + Y.label}: ${plural(Y.newspapers.length, 'newspaper')}${Y.stories.length ? ` · ${Y.stories.length} reviewed stories` : ''} · ${Y.autoGroups.length.toLocaleString('en-US')} matched ${Y.autoGroups.length === 1 ? 'story' : 'stories'}`;
   const ok = wanted && (reviewedYearOf(wanted) || (wanted === 'auto-all' && Y.hasMatched) || Y.groupById.has(wanted));
   // A reviewed year on its own opens on its reviewed overview; a stretch of years opens on all its matched stories.
   const reviewedFirst = Y.hasReviewed ? 'all:' + Y.reviewedYears[0] : 'auto-all';
@@ -1201,6 +1260,42 @@ $('sky').addEventListener('pointerup', e => {
 });
 $('radio').addEventListener('click', () => setRadio(!radioOn));
 
+// ---- Music (music.js): what the map shows, heard as it plays, in one of three sounds (Wood, Piano, Concerto). Pulses'
+// playhead drives it: the passage in view (one story, or an overview of the chosen years) at the page's own pace. Off
+// means off: no sound, no audio context and no recordings loaded until the switch is turned on. The radio may speak over
+// it: the music's loudest second is at least 9.3 dB under the voices.
+// The sound of a first visit is Wood: it needs no recordings, so it starts at once, while music.js loads the piano and
+// the winds in the background (the owner, 23 November 2026).
+const MUSIC_SOUNDS = ['wood', 'piano', 'concerto'], MUSIC_FIRST = 'wood';
+function musicFollow() { if (window.Music && Music.on) Music.follow({day: (start - EPOCH_MS) / MS + day, speed, playing}); }
+function musicView() {   // the printings in view, in days since 1 January 1770; a reviewed printing was checked on the scan
+  if (!window.Music || !Music.on || !Y || !events.length) return;
+  const d0 = Math.round((start - EPOCH_MS) / MS);
+  Music.view({from: d0, to: d0 + Math.round(maxDay), story: mode === 'group',
+    printings: events.map(e => ({d: d0 + Math.round(e.day), p: e.node, s: storyKey(e), rev: !e.roles.includes('matched_text')}))});
+  musicFollow();
+}
+function syncMusic() {   // the switch, and the Sound group beside the pace while the music is on
+  const on = !!(window.Music && Music.on);
+  $('music').setAttribute('aria-pressed', String(on)); $('sound-ctl').hidden = !on;
+  for (const b of $('sound').querySelectorAll('button')) b.setAttribute('aria-pressed', String(on && b.dataset.sound === Music.sound));
+  Glass.sync();
+}
+function setMusic(on) {
+  if (!window.Music) return;
+  try { sessionStorage.setItem('nns-music', on ? 'on' : 'off'); } catch {}
+  Music.setOn(on).then(syncMusic, syncMusic); syncMusic(); tourHold = performance.now() + 600;
+  syncSpeed();   // one year takes the music's paces while it is on, and its own again when it is off
+  if (on) musicView();
+}
+function setSound(v) {   // without its recordings (no connection, no copy beside the page) the music plays Wood, and says so
+  if (!window.Music || !MUSIC_SOUNDS.includes(v)) return;
+  try { localStorage.setItem('nns-music-sound', v); } catch {}
+  Music.setSound(v).then(syncMusic, syncMusic); syncMusic();
+}
+$('music').addEventListener('click', () => setMusic(!(window.Music && Music.on)));
+$('sound').addEventListener('click', e => { const b = e.target.closest('button'); if (b) setSound(b.dataset.sound); });
+
 $('release').textContent = 'Data foundation v' + BOOT.release_version + '.';
 $('play').addEventListener('click', () => { if (playing) { pause(); save(); } else play(); });
 $('min-papers').addEventListener('click', e => {
@@ -1214,7 +1309,14 @@ $('previous').addEventListener('click', () => { const i = Math.max(0, selected -
 $('next').addEventListener('click', () => { const i = Math.min(events.length - 1, selected + 1); seek(events[i].day, i); });
 $('day').addEventListener('input', e => seek(Number(e.target.value)));
 const nearest = (list, v) => list.reduce((a, b, i) => Math.abs(Math.log(b / v)) < Math.abs(Math.log(list[a] / v)) ? i : a, 0);
+// With the music on, one year (and so any story in it) plays at the paces the music was made and heard at: a week of
+// printing in four seconds, in two, or in one (the owner, 23 November 2026, preferring a story at a week in two seconds
+// to Pulses' Normal). Several years keep their own paces.
+const LISTEN = [1.75, 3.5, 7];
+const paceWords = v => LADDER_NAMES[v] ? LADDER_NAMES[v] + ' of printing per second'
+  : {1.75: 'a week of printing in four seconds', 3.5: 'a week of printing in two seconds'}[v] || v + ' days of printing per second';
 function paces() {   // [slow, normal, fast] in days of printing per second, for the chosen years
+  if ((Y ? Y.to - Y.from + 1 : 1) === 1 && window.Music && Music.on) return LISTEN;
   const k = nearest(LADDER, (Y ? Y.to - Y.from + 1 : 1) * 365.25 / 30), m = Math.max(1, Math.min(LADDER.length - 2, k));
   return LADDER.slice(m - 1, m + 2);
 }
@@ -1223,10 +1325,10 @@ function syncSpeed() {
   speed = exactSpeed || p[pace];
   $('speed').querySelectorAll('button').forEach((b, i) => {
     b.setAttribute('aria-pressed', String(i === on));
-    b.title = exactSpeed && i === on ? `${LADDER_NAMES[exactSpeed] || exactSpeed + ' days'} of printing per second, as the link asks`
-      : `${b.textContent}: ${LADDER_NAMES[p[i]]} of printing per second`;
+    b.title = exactSpeed && i === on ? `${paceWords(exactSpeed)}, as the link asks` : `${b.textContent}: ${paceWords(p[i])}`;
   });
   Glass.sync();
+  musicFollow();   // the music takes a new pace at once
 }
 $('speed').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { pace = Number(b.dataset.pace); exactSpeed = 0; syncSpeed(); save(); } });
 $('focus-story').addEventListener('click', e => { changeGroup(e.currentTarget.dataset.group); save(); });
@@ -1267,7 +1369,7 @@ function setWatch(on, full = true) {
   if (on === WATCH) return;
   WATCH = on; document.body.classList.toggle('exhibit', on || exhibit); document.body.classList.toggle('watching', on); $('watch-exit').hidden = !on;
   if (on) {
-    watchKeep = {tour}; tour = !reduced.matches; syncTour(); tourHold = 0;
+    watchKeep = {tour}; tour = !reduced.matches; syncTour(); tourHold = 0; Receipt.close();
     if (full) document.documentElement.requestFullscreen?.().catch(() => {});
     if (!playing && events.length) play();
     watchWake();
@@ -1276,7 +1378,7 @@ function setWatch(on, full = true) {
     clearTimeout(watchStill); document.body.classList.remove('still');
     if (document.fullscreenElement) document.exitFullscreen?.().catch(() => {});
   }
-  window.dispatchEvent(new Event('resize'));
+  window.dispatchEvent(new Event('resize')); syncReceipt();
 }
 $('watch').addEventListener('click', () => setWatch(true));
 $('watch-exit').addEventListener('click', () => setWatch(false));
@@ -1292,6 +1394,123 @@ if (params.get('radio') === 'on' || (radioKept === 'on' && params.get('radio') !
   for (const t of ['pointerdown', 'keydown']) document.addEventListener(t, start, {capture: true, once: true});
   if (Radio.unlock()) { Radio.live.preload(); autoNow = 'short'; }   // a page reached by a click on this site may already be allowed to play
 }
+// ?music=on turns the music on (sound starts at the first touch, click or key; an unattended screen needs the browser's
+// autoplay allowed, as for the radio) and ?sound=wood|piano|concerto picks its sound. Like the radio, it stays on in this
+// tab as you move between pages; the sound last chosen is remembered in this browser.
+if (window.Music) {
+  let kept = null, keptSound = null; try { kept = sessionStorage.getItem('nns-music'); keptSound = localStorage.getItem('nns-music-sound'); } catch {}
+  const s = params.get('sound');
+  Music.setSound(MUSIC_SOUNDS.includes(s) ? s : MUSIC_SOUNDS.includes(keptSound) ? keptSound : MUSIC_FIRST);
+  if (params.get('music') === 'on' || (kept === 'on' && params.get('music') !== 'off')) setMusic(true); else syncMusic();
+}
+
+// ---- The receipt line (Receipt, in glass.js; since 23 November 2026, at the owner's word of 11 November): what the map
+// shows, in plain words: the evidence, the years, which stories, how the newspapers are placed and what the colours mean.
+// Each part opens its own step in place: "which stories" holds the story shelf, the topics and the "printed in" row, which
+// used to stand above the map; the years part lights the year strip, already in place. The line is also the link to this
+// view, kept in the address bar (not in Watch or an exhibition, which start from their own address); in Watch its words
+// are the caption beside the date. ----
+const count = n => n.toLocaleString('en-US');
+const STEPS = {evidence: {title: 'Which evidence', node: $('step-evidence')}, years: {glow: '.year-pick', focus: '#years button[tabindex="0"]'},
+  stories: {title: 'Which stories', node: $('step-stories'), wide: true}, arrange: {title: 'How they are placed', node: $('step-arrange')}, colour: {title: 'What the colours mean', node: $('step-colour')}};
+const evidenceOf = () => !group ? '' : mode === 'group' ? (group.id.startsWith('auto:') ? 'found' : 'checked') : mode === 'reviewed' ? 'checked' : 'found';
+// The evidence part names the tier with its number of stories (one story: the tier alone); the numbers say they are
+// stories without the word twice on the line (the owner, 23 November 2026).
+function receiptCfg(caption) {
+  const one = mode === 'group' && !!group, ev = evidenceOf(), tier = ev === 'checked' ? 'checked by hand' : 'found by shared wording, not checked';
+  let evidence = '…', stories = '…', colour = '…';
+  if (Y && !group) { evidence = 'No stories'; stories = 'none in these years'; colour = 'no colours'; }
+  else if (group) {
+    evidence = one ? tier[0].toUpperCase() + tier.slice(1) : `${count(group.count)} ${tier}`;
+    if (one) stories = 'one story: ' + short(group.label, 64);
+    else {
+      const bits = [];
+      if (mode === 'reviewed' && Y.reviewedYears.length > 1) bits.push('those of ' + group.year);
+      if (mode === 'matched' && topicsOn.size) { const names = topicNames(); bits.push('about ' + (names.length <= 2 ? names.join(' and ') : names.length + ' topics')); }
+      if (mode === 'matched' && findText) bits.push(`mentioning ‘${findText}’`);
+      if (group.k > 1) bits.push(`in ${group.k}+ newspapers`);
+      stories = bits.length ? bits.join(', ') : 'all together';
+    }
+    colour = one ? (ev === 'checked' ? 'colour by kind of text' : 'one pale colour') : mode === 'reviewed' ? 'one colour per category' : 'one pale colour';
+  }
+  return {lead: 'Showing', caption, link: linkFor(), parts: [
+    {key: 'evidence', text: evidence, step: STEPS.evidence, title: 'Which evidence: checked by hand against the page scans, or found by shared wording and not checked'},
+    {key: 'years', text: Y ? Y.label : '…', step: STEPS.years, title: 'Which years: tap a year on the strip above, or drag across several'},
+    {key: 'stories', text: stories, step: STEPS.stories, title: 'Which stories: pick one to follow, or narrow them by reach, topic or words'},
+    {key: 'arrange', text: 'on the map, as printed', step: STEPS.arrange, title: 'How the newspapers are placed'},
+    {key: 'colour', text: colour, step: STEPS.colour, title: 'What the colours mean'}]};
+}
+// The link to exactly this view, in the words the telescope shares: evidence, years, min, topics, q, and story= for one
+// story (focus=all:1806 for the overview of a reviewed year other than the latest in view); speed, tour, radio and
+// music (with its sound) when they differ from a first visit's.
+function linkFor() {
+  if (!Y || !group) return 'pulses.html' + location.search;
+  const u = new URLSearchParams(); u.set('evidence', evidenceOf()); u.set('years', yearsParam());
+  if (mode === 'group') u.set('story', group.id);
+  else {
+    if (mode === 'reviewed' && group.year !== Y.reviewedYears.at(-1)) u.set('focus', group.id);
+    const k = minPapers[mode] || 1; u.set('min', k > 1 ? String(k) : 'any');
+  }
+  const t = topicsParam(); if (t) u.set('topics', t); if (findText) u.set('q', findText);
+  if (exactSpeed) u.set('speed', String(exactSpeed)); if (!tour && !reduced.matches) u.set('tour', 'off'); if (radioOn) u.set('radio', 'on'); if (window.Music && Music.on) { u.set('music', 'on'); u.set('sound', Music.sound); }
+  return 'pulses.html?' + u.toString().replace(/%2C/g, ',').replace(/%3A/g, ':');
+}
+const REVIEWED_YEARS = (() => {   // the reviewed years in runs, from the data: "1776, 1793, 1797, 1800 and 1802–1809"
+  const runs = []; for (const y of (BOOT.reviewed || []).map(r => r.year).sort((a, b) => a - b)) { const r = runs.at(-1); if (r && y === r[1] + 1) r[1] = y; else runs.push([y, y]); }
+  const t = runs.map(([a, b]) => a === b ? String(a) : `${a}–${b}`); return t.length > 1 ? t.slice(0, -1).join(', ') + ' and ' + t.at(-1) : t[0] || '';
+})();
+const COLOUR_NOTE = {
+  reviewed: 'One colour for each category of the year’s stories checked by hand. A newspaper keeps the colour for 40 days after it prints one, then fades.',
+  matched: 'One pale colour: these stories were found by shared wording and are not checked against the scans.',
+  checked: 'In one story checked by hand, the colours say what kind of text each printing is: a report, a challenge or commentary, a later account, or a document.'};
+var receiptReady = false;   // var: changeGroup may run before the line is built
+let lastLink = '';
+function syncReceipt() {
+  if (!receiptReady) return;
+  const cfg = receiptCfg(false); Receipt.update($('receipt'), cfg); Receipt.update($('receipt-cap'), cfg);
+  if (!Y) return;
+  const where = Y.label === 'all years' ? 'in all years' : 'in ' + Y.label, ev = evidenceOf();
+  $('tier-checked').textContent = Y.stories.length ? `${count(Y.stories.length)} stories ${Y.label === 'all years' ? 'in all years' : 'of ' + Y.label}, read and checked printing by printing against the page scans.`
+    : `none ${where}. The years checked by hand so far: ${REVIEWED_YEARS}.`;
+  $('tier-found').textContent = !INDEX ? 'the stories of all years are still loading.'   // shown at once once the index has come
+    : `${count(Y.shortGroups.length)} stories that start ${where}, found by the computer where newspapers print the same passage`
+      + (Y.longCount ? `, and ${count(Y.longCount)} long-running texts at the end of the shelf.` : '.');
+  for (const b of $('evidence').querySelectorAll('button')) {
+    b.setAttribute('aria-pressed', String(b.dataset.ev === ev));
+    b.setAttribute('aria-disabled', String(b.dataset.ev === 'checked' ? !Y.hasReviewed : !Y.hasMatched));
+  }
+  Glass.sync();
+  $('colour-note').textContent = mode === 'reviewed' ? COLOUR_NOTE.reviewed : ev === 'checked' ? COLOUR_NOTE.checked : COLOUR_NOTE.matched;
+  $('to-telescope').href = $('sky-link').getAttribute('href'); $('to-telescope-text').textContent = $('sky-link-text').textContent;
+  if (!exhibit && !WATCH && group && cfg.link !== lastLink) { lastLink = cfg.link; try { history.replaceState(null, '', cfg.link); } catch {} }
+}
+$('evidence').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || !Y || b.getAttribute('aria-disabled') === 'true') return;
+  if (b.dataset.ev === 'checked' && mode !== 'reviewed') changeGroup('all:' + Y.reviewedYears.at(-1));
+  else if (b.dataset.ev === 'found' && mode !== 'matched') changeGroup('auto-all');
+  else syncReceipt();   // already shown: the thumb settles back
+  save();
+});
+for (const id of ['tour', 'radio', 'music', 'sound']) $(id).addEventListener('click', () => setTimeout(syncReceipt));   // all are in the link
+Receipt.mount($('receipt'), receiptCfg(false)); Receipt.mount($('receipt-cap'), receiptCfg(true)); receiptReady = true;
+// The line is the last row of the bar at the top; on a phone it is the first thing on the page, so the bar stays short.
+const phone = matchMedia('(max-width: 720px)');
+function placeReceipt() {
+  const host = $('receipt'), home = phone.matches ? document.querySelector('main.shell') : document.querySelector('.toolbar-inner');
+  host.classList.toggle('in-toolbar', !phone.matches); if (host.parentNode === home) return;
+  Receipt.close(); if (phone.matches) home.querySelector('h1').after(host); else home.append(host);
+}
+phone.addEventListener('change', placeReceipt); placeReceipt();
+// The receipt's words in the address (shared with the telescope): ?evidence=checked|found &years= &min=any|2|3|4|6
+// &topics=politics,… &q=embargo, and &story= for one story (?focus= in older links). When the address names the view,
+// the topics, words and reach come from it alone, so a link opens the same view in any browser.
+const evWanted = params.get('evidence'), storyWanted = params.get('story') || params.get('focus') || '';
+if (['years', 'year', 'evidence', 'story', 'focus'].some(k => params.has(k))) {
+  const mk = params.get('min') === 'any' ? 1 : Number(params.get('min')), k = mk > 0 ? [1, 2, 3, 4, 6].reduce((a, b) => Math.abs(b - mk) < Math.abs(a - mk) ? b : a) : 0;
+  minPapers = {reviewed: evWanted === 'checked' && k ? k : 1, matched: evWanted !== 'checked' && k ? k : 3};
+  topicsOn = readTopics(params.get('topics')); const fams = famLanes.flatMap((ls, i) => ls.some(j => topicsOn.has(j)) ? [i] : []); openFamily = fams.length === 1 ? fams[0] : -1;
+  findText = (params.get('q') || '').trim(); findRx = findWords(findText); $('shelf-find').value = findText;
+}
 syncTour();
 const yp = (params.get('years') || params.get('year') || '').trim(), ym = yp.match(/^(\d{4})(?:\s*[-–]\s*(\d{4}))?$/);
 let first = null;
@@ -1300,10 +1519,23 @@ else if (ym) { const a = Number(ym[1]), b = Number(ym[2] || ym[1]); if (a >= 177
 const fromUrl = !!first;
 const opening = (BOOT.reviewed || []).at(-1)?.year || 1797;   // a first visit opens on the latest reviewed year
 if (!first) first = saved && saved.from >= 1770 && saved.to <= 1810 && saved.from <= saved.to ? [saved.from, saved.to] : [opening, opening];
-tourHold = performance.now() + (fromUrl && params.get('focus') && !exhibit ? TOUR_WAIT : 2500);   // a story opened by a link is read first (an exhibition plays it)
+tourHold = performance.now() + (storyWanted && !exhibit ? TOUR_WAIT : 2500);   // a story opened by a link is read first (an exhibition plays it)
 setYearsUI(first[0], first[1]);
-loadRange(first[0], first[1], fromUrl ? params.get('focus') : saved?.group).then(() => {
-  firstHint('nns-hint-pulses');
+const wantedView = storyWanted || (evWanted === 'checked' ? 'all' : evWanted === 'found' ? 'auto-all' : '') || (fromUrl ? null : saved?.group);
+// A first visit: the stories step peeks open for a few seconds and folds back into its part, so the shelf of stories that
+// once stood above the map can be found there (the owner's worry, 23 November 2026); reaching into it keeps it open.
+// Once per browser; never in an exhibition or Watch, nor when a link names a story. The first visit's hint follows.
+function peekStories() {
+  let seen = false; try { seen = !!localStorage.getItem('nns-peek-pulses'); } catch {}
+  if (seen || document.body.classList.contains('exhibit') || storyWanted || !group) { firstHint('nns-hint-pulses'); return; }
+  try { localStorage.setItem('nns-peek-pulses', '1'); } catch {}
+  setTimeout(() => {
+    if (document.body.classList.contains('exhibit')) return;
+    Receipt.peek($('receipt'), 'stories', {ms: 6500, done: () => firstHint('nns-hint-pulses')});
+  }, 1500);
+}
+loadRange(first[0], first[1], wantedView).then(() => {
+  peekStories();
   if (!fromUrl && saved && Y && saved.from === Y.from && saved.to === Y.to && saved.group === group?.id && Number.isFinite(saved.day) && events.length) {
     day = Math.min(maxDay, Math.max(0, saved.day)); selected = Math.max(0, Math.min(events.length - 1, Number.isInteger(saved.selected) ? saved.selected : 0)); source(selected); draw();
   }

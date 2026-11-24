@@ -13,9 +13,8 @@
 .site-search .ico{position:absolute;left:10px;top:50%;margin-top:-8px;color:#6f7d99;pointer-events:none}.site-search input{padding-left:32px}
 .site-menu{display:none;margin-left:auto;font:inherit;font-size:13px;color:#edf2ff;background:none;border:1px solid #28334c;border-radius:7px;padding:6px 12px;cursor:pointer}
 .site-header a:focus-visible,.site-header input:focus-visible,.site-header button:focus-visible,.site-footer a:focus-visible{outline:2px solid #8ccfff;outline-offset:2px}
-body.page-telescope .site-search{display:none}
 /* The radio switch: the same place on every page that reads aloud, the top right of the header. */
-.radio-switch{flex:none;font-size:13px;padding:5px 13px 5px 11px}body.page-telescope .radio-switch{margin-left:auto}
+.radio-switch{flex:none;font-size:13px;padding:5px 13px 5px 11px}
 .site-footer{border-top:1px solid #1c2640;margin-top:48px;color:#a2afc8;font-size:12.5px;background:#050711}
 .site-footer .site-inner{flex-direction:column;align-items:flex-start;gap:10px;padding-top:22px;padding-bottom:34px}
 .foot-brand{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}.foot-brand b{color:#edf2ff;font-weight:600}
@@ -50,6 +49,7 @@ body.page-telescope .site-search{display:none}
 .toggle[aria-pressed="true"]{color:var(--ink,#edf2ff);background:linear-gradient(180deg,#ffffff2e,#ffffff0d 55%,#ffffff17);border-color:#ffffff4a;
   box-shadow:inset 0 1px 1px #ffffff52,inset 0 -1px 2px #00000040,0 2px 12px #8ccfff1f}
 .toggle[aria-pressed="true"]::before{background:#eef8ff;box-shadow:0 0 0 1px #eef8ff,0 0 7px 1px #8ccfffb3}
+.toggle[aria-disabled="true"]{opacity:.45;cursor:default}
 /* Sliders: a recessed glass track and a glass knob 16px wide (the Pulses coverage strip lines up with its centre). */
 .glass-range{-webkit-appearance:none;appearance:none;background:none;height:24px;margin:0;cursor:pointer}
 .glass-range::-webkit-slider-runnable-track{height:6px;border-radius:999px;background:linear-gradient(180deg,#0000005c,#ffffff0d);box-shadow:inset 0 0 0 1px #ffffff1f}
@@ -78,12 +78,12 @@ body.page-telescope .site-search{display:none}
   .site-inner{padding:0 12px;gap:10px;flex-wrap:wrap;min-height:48px}
   .site-menu{display:inline-flex;align-items:center;gap:6px}
   .site-nav,.site-search{display:none}
-  .radio-switch{margin-left:auto}.radio-switch~.site-menu{margin-left:0}
+  .radio-switch{margin-left:auto}.radio-switch~.site-menu{margin-left:0}.music-switch+.radio-switch{margin-left:0}
   .site-header.open .site-nav{display:flex;flex-direction:column;flex-basis:100%;order:3;padding-bottom:4px}
   .site-header.open .site-nav a{padding:10px 4px}
   .site-header.open .site-search{display:block;flex-basis:100%;order:4;margin:0 0 12px}
-  body.page-telescope .site-header.open .site-search{display:none}
 }
+@media(max-width:480px){.music-switch,.music-switch+.radio-switch{font-size:0;gap:0;padding:6px 9px}.music-switch .ico,.music-switch+.radio-switch .ico{margin:0}}
 /* Light line icons (the sprite is in the header): drawn in the text colour. On an on/off button the icon is its light:
    pale when off, lit and glowing when on. A button can carry two icons, .when-off and .when-on (Play and Pause). */
 [hidden]{display:none!important}
@@ -122,3 +122,56 @@ body.still .watch-exit{opacity:0;pointer-events:none}body.watching .tip,body.wat
 body.exhibit .first-hint{display:none!important}
 @media(prefers-reduced-motion:no-preference){.first-hint:not([hidden]){animation:hint-in .5s ease-out}}
 @keyframes hint-in{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
+/* The receipt line (Telescope and Pulses; behaviour in glass.js): one line of plain words over the instrument that says
+   what is shown. Its parts are buttons with a dotted underline; each opens its own step in place, a glass card under the
+   part, built from the glass controls above. The steps' contents wait in a hidden .rc-steps box until they are opened. */
+.rc{position:relative;z-index:25;display:flex;align-items:center;gap:12px;padding:7px 12px 7px 14px;background:#070b17;border-bottom:1px solid #1a2338;
+  font-size:14px;line-height:1.45;color:var(--ink,#edf2ff)}
+.rc-line{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;row-gap:3px}
+.rc-lead{flex:none;margin-right:8px;font:600 10.5px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.11em;text-transform:uppercase;color:#7d8aa6}
+.rc-part{font:inherit;color:inherit;background:none;border:0;border-radius:7px;padding:1px 5px;margin:0;min-height:0;cursor:pointer;text-align:left;
+  text-decoration:underline dotted #8ccfff8c;text-decoration-thickness:1px;text-underline-offset:4px;transition:background .2s,box-shadow .2s}
+.rc-part:hover{background:#ffffff12}
+.rc-part:focus-visible{outline:2px solid #8ccfff;outline-offset:1px}
+.rc-part[aria-expanded="true"]{text-decoration-color:transparent;background:linear-gradient(180deg,#ffffff2e,#ffffff0d 55%,#ffffff17);box-shadow:inset 0 0 0 1px #ffffff4a,0 2px 12px #8ccfff1f}
+.rc-item{display:inline-flex;align-items:baseline;min-width:0;max-width:100%}
+.rc-sep{flex:none;color:#56627d;padding:0 3px}
+.rc-acts{flex:none;display:flex;align-items:center;gap:6px}
+.rc-link{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:12.5px;color:var(--ink,#edf2ff);padding:4px 12px 4px 10px;min-height:28px;border-radius:999px;
+  border:1px solid #ffffff24;background:linear-gradient(180deg,#ffffff0e,#ffffff05);cursor:pointer;white-space:nowrap}
+.rc-link:hover{border-color:#8ccfff88;background:#ffffff12}.rc-link .ico{width:15px;height:15px}
+.rc-steps{display:none!important}
+/* A step, open in place: a glass card under its part. One is open at a time; ✕, Esc or the part itself closes it. */
+.rc-step{position:absolute;top:calc(100% + 6px);left:12px;z-index:30;width:min(440px,calc(100% - 24px));max-height:calc(100dvh - 140px);overflow:auto;padding:11px 14px 13px;
+  font-size:13px;line-height:1.45;color:var(--ink,#edf2ff);text-align:left;background:#0b1222f7;border:1px solid #ffffff2e;border-radius:13px;
+  box-shadow:0 14px 40px #000c,inset 0 1px 0 #ffffff12;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);scrollbar-width:thin;scrollbar-color:#28334c transparent}
+.rc-step.wide{right:12px;width:auto}
+.rc-step-head{display:flex;align-items:baseline;gap:8px;margin-bottom:9px}
+.rc-step-h{flex:1;font:600 11px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#ffd27a}
+.rc-x{flex:none;width:24px;height:24px;min-height:0;padding:0;display:grid;place-items:center;border:0;border-radius:50%;background:none;color:var(--muted,#a2afc8);font-size:12px;cursor:pointer}
+.rc-x:hover{color:var(--ink,#edf2ff);background:#ffffff14}
+.rc-body .row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:9px}.rc-body>.row:first-child{margin-top:0}.rc-body .row.block{display:block}
+.rc-body .lab{font-size:12px;color:var(--muted,#a2afc8)}
+.rc-body .note{margin:9px 0 0;font-size:12px;color:var(--muted,#a2afc8);line-height:1.5;max-width:none}.rc-body .note b{color:var(--ink,#edf2ff);font-weight:600}
+.rc-body .tiers{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px;font-size:12.5px;color:var(--muted,#a2afc8)}.rc-body .tiers b{color:var(--ink,#edf2ff);font-weight:600}
+.rc-body .tiers li{display:grid;grid-template-columns:30px 1fr;align-items:baseline}
+.rc-dots{display:inline-flex;gap:2px}.rc-dots i,.rc-dot{display:inline-block;width:7px;height:7px;border-radius:50%}
+.rc-body .more-link{font-size:12.5px;color:#8ccfff}
+/* Years: the time control is already in place (the timeline, the year strip), so its part makes it glow instead. */
+.rc-glow{animation:rc-glow 1.6s ease-out 1}
+@keyframes rc-glow{0%{box-shadow:0 0 0 2px #ffd27aee,0 0 22px #ffd27a88}100%{box-shadow:0 0 0 2px #ffd27a00,0 0 22px #ffd27a00}}
+/* A first visit: the step peeks open, then folds back into its part (Receipt.peek). */
+.rc-step.rc-fold{transform:scale(.04);opacity:0;pointer-events:none;transition:transform .45s cubic-bezier(.55,0,.75,.2),opacity .45s ease-in}
+/* The caption (Watch): the same words, larger, with nothing to press. */
+.rc-cap{display:none}
+.rc.rc-caption{background:#050711b8;border:0;border-radius:10px;padding:.35em .9em;font-size:clamp(14px,1vw,24px);color:#d5ddef;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);pointer-events:none}
+.rc.rc-caption .rc-part{text-decoration:none;padding:0 .15em;cursor:default}.rc.rc-caption .rc-lead{font-size:.62em}
+/* Phones: the line wraps; a step opens as a sheet from the foot of the screen, in reach of a thumb. */
+@media(max-width:640px){
+  .rc{font-size:13.5px;padding:7px 10px 8px;gap:8px;align-items:flex-start}.rc-lead{display:none}
+  .rc-sep{display:none}.rc-line{column-gap:10px;row-gap:5px}   /* the underlines part the words; a dot would hang at a line's end */
+  .rc-link .lbl{display:none}.rc-link{padding:4px 8px;min-height:30px}
+  .rc-step,.rc-step.wide{position:fixed;left:0;right:0;bottom:0;top:auto;width:auto;max-height:72dvh;border-radius:16px 16px 0 0;padding:12px 16px 18px;box-shadow:0 -12px 40px #000d}
+}
+@media(prefers-reduced-motion:reduce){.rc-glow{animation:none;outline:2px solid #ffd27a;outline-offset:2px}.rc-part{transition:none}}

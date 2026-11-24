@@ -74,6 +74,7 @@
    1793,
    1797,
    1800,
+   1801,
    1802,
    1803,
    1804,
@@ -81,11 +82,12 @@
    1806,
    1807,
    1808,
-   1809
+   1809,
+   1810
   ],
-  "checked": 3170,
-  "changes_what_was_printed": 389,
-  "leaves_out_text": 93,
+  "checked": 3552,
+  "changes_what_was_printed": 438,
+  "leaves_out_text": 111,
   "by_year": {
    "1776": {
     "checked": 350,
@@ -114,6 +116,13 @@
     "by_transcription": {
      "RevX": 24,
      "CA": 1
+    }
+   },
+   "1801": {
+    "checked": 160,
+    "changes_what_was_printed": 25,
+    "by_transcription": {
+     "RevX": 25
     }
    },
    "1802": {
@@ -176,6 +185,13 @@
     "by_transcription": {
      "RevX": 57,
      "CA": 3
+    }
+   },
+   "1810": {
+    "checked": 222,
+    "changes_what_was_printed": 24,
+    "by_transcription": {
+     "RevX": 24
     }
    }
   },
