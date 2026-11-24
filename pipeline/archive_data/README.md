@@ -2,6 +2,16 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.11.40 (2026-11-24)
+
+A correction release (`correct_filing_thin.py`, after the rematch `outputs/errata_1784_1786/release/match_moved_pages.py`; evidence in `outputs/errata_1784_1786/`): the filing problems the reviews of the thin years and the errata check of 1784-1786 found, with the owner's decisions of 24 November 2026. 7,045 checks (one new: every issue a filing correction adds holds exactly the pages a recorded correction moved there).
+
+- **169 issues dated as printed or issued** (ids keep the filed date): seven misfiled issues (the *Massachusetts Spy* of 27 December 1770 and 16 June 1774, the *Freeman's Journal* of 31 March 1778, the Newport sheet of 5 July 1779, the *New-Jersey Gazette* of 13 March 1786, the *Gazette of the United States* of 5 December 1792, the *Monitor* of 18 November 1801), and 162 issues dated by a range of days and filed under its first day, now dated by its last, the day of issue: the *Connecticut Courant*'s 20 of 1773-74 and 142 of the *Royal Gazette* of Charleston, 1781-82.
+- **16 pages filed with the issue they belong to:** four Vermont papers into the *New-Hampshire Gazette*'s issue of 12 January 1782, and twelve pages into four **new issues** the collection did not hold (the Supplement to the *New Hampshire Gazette* of 24 February 1778, the *Virginia Gazette*'s handbill of 4 May 1778, the Supplement to the *Independent Journal* of 22 September 1787, the *New-York Packet* of 5 October 1787), recorded in metadata `issues_added`: 19,449 issues, of which 19,445 are source issues. `validate.py` reconciles the inventory with them.
+- **347 pages of second scans and second copies leave the analysis** (eligible 77,743 → 77,396): 44 pages of 12 issues filed under another date or title, and the 303 pages of 110 issues filed as edition 2 that copy edition 1 page for page.
+- **The matched layer:** the 620 dated pages with text matched again at their printed dates, after their 1,992 stored matches are reproduced exactly: 380,383 → 378,852 matches; 164,677 → 164,217 printings (every printing on the dated pages found again); 48,270 → 48,251 stories (20 dropped, made only by second scans or copies; one new; 70 retitled). One audit sample (n 173) takes its page's new date.
+- **Reviewed:** no reviewed row changes. 36 reviewed printings take their issues' new dates (none changes year); none stands on a second scan.
+
 ## Changes in v0.11.39 (2026-11-24)
 
 One ledger release, the last thin year, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/` with topic rows for the new groups, made again in year order with its real base and target. `CURRENT.json` points to v0.11.39. In 1799 the rule's first part admits 36 items, kept as the rule reads (X-1799-01, as X-1773-01).

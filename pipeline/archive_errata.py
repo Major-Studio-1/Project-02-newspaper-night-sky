@@ -13,7 +13,8 @@ Inputs: outputs/revx_page_shift_check/ (shifted_issues.csv, summary.json, impact
 issues.csv, outputs/story_discovery_1793/ (masthead_dates.csv, page_date_flags.csv), outputs/filing_corrections/ and
 outputs/filing_corrections_1802/ (corrections.json), the scan verdicts of the reviewed
 years (outputs/story_discovery_YEAR/scan_verdicts/, later files win), the site's data.json (newspapers, dates and pages of
-the reviewed printings) and the matched audit's summary. Run from the project root with Python 3.12:
+the reviewed printings), the matched audit's summary, and outputs/errata_1784_1786/ (filing_part_b.csv: the filing problems
+not corrected yet; sample.json and scan_verdicts/: the sample of 1784-1786; range_dates.csv: the range-dated runs). Run from the project root with Python 3.12:
     python work/archive_errata.py
 """
 import csv, datetime, glob, json, re
@@ -158,6 +159,29 @@ filing.append({'problem': 'Second scan filed under another date', 'lccn': lccn, 
                'in_this_project': ('Left out of the analysis in data release v0.11.13 (77,747 pages in use became 77,743); '
                                    "the scans stay in the archive's list of pages.")})
 
+# 3d · Filing problems found by the reviews of the years with few surviving papers (23-24 November 2026), the 1801 review's
+# misdated Monitor and the errata check of 1784-1786: outputs/errata_1784_1786/filing_part_b.csv, in this file's columns
+# (made by outputs/errata_1784_1786/make_part_b.py). Data release v0.11.40 corrects most of them
+# (work/archive_data/correct_filing_thin.py); its 'correction' column says which wait.
+THIN = ROOT/'outputs/errata_1784_1786'
+THIN_RELEASE = '0.11.40'
+FIELDS = ['problem', 'lccn', 'newspaper', 'filed_date', 'edition', 'page', 'what_is_wrong', 'how_it_was_found', 'in_this_project']
+thin = read_csv(THIN/'filing_part_b.csv') if (THIN/'filing_part_b.csv').exists() else []
+filing += [{k: r[k] for k in FIELDS} for r in thin]
+PLURAL = {'Second copy filed as another edition': ('second copies of an issue filed as another edition', 'second copy of an issue filed as another edition'),
+          'Second scan filed under another date': ('second scans filed under another date', 'second scan filed under another date'),
+          'Second scan filed under another title': ('second scans filed under another title', 'second scan filed under another title'),
+          'Issue filed under the wrong date': ('issues filed under the wrong date', 'issue filed under the wrong date'),
+          'Issue filed under the first day of its range': ('issues filed under the first day of the range of days their mastheads print',
+                                                           'issue filed under the first day of the range of days its masthead prints'),
+          'Pages filed in another issue': ('issues holding pages of another issue or sheet', 'issue holding pages of another issue or sheet'),
+          'RevX transcriptions filed under the wrong page': ('issues whose RevX transcriptions are filed under the wrong page',
+                                                             'issue whose RevX transcriptions are filed under the wrong page')}
+waiting = [r for r in thin if r.get('correction') == 'not_in_this_release']
+thin_block = {'issues': len(thin), 'by_problem': dict(Counter(r['problem'] for r in thin)), 'corrected_in': THIN_RELEASE,
+              'corrected': len(thin) - len(waiting), 'not_corrected': len(waiting),
+              'years': sorted({int(r['filed_date'][:4]) for r in thin}), 'source': 'outputs/errata_1784_1786/README.md'}
+
 # 4 · Transcriptions that change what was printed: every reviewed printing the scan check found with a fact-changing
 # problem (a misreading, or printed text left out), in the four reviewed years with structured verdicts.
 data = json.loads((SITE / 'data.json').read_text(encoding='utf8'))
@@ -180,6 +204,29 @@ for year in YEARS:
                       'reviewer_notes': ' | '.join(errors)})
     by_year[year] = {'checked': len(checked), 'changes_what_was_printed': len(major),
                      'by_transcription': dict(Counter(obs[r['id']]['transcription'] for r in major))}
+
+# 4b · 1784, 1785 and 1786, which no review read, checked on a sample for the errata only: the printings chosen by the rule
+# in outputs/errata_1784_1786/README.md (sample.json, stated before any checking) and their scan_verdicts/. Their rows join
+# transcription.csv (printing ids E84-, E85-, E86-); their counts stay apart from the reviewed years' totals.
+reviewed_trans = list(trans)
+sample = {s['id']: s for s in json.loads((THIN/'sample.json').read_text(encoding='utf8'))} if (THIN/'sample.json').exists() else {}
+sv = {}
+for f in sorted(glob.glob(str(THIN/'scan_verdicts/*.json'))):
+    for r in json.loads(Path(f).read_text(encoding='utf8')):
+        if isinstance(r, dict) and r.get('id') in sample:
+            sv[r['id']] = {**sv.get(r['id'], {}), **r}
+sample_by_year = {}
+for year in sorted({s['year'] for s in sample.values()}):
+    checked = [r for i, r in sorted(sv.items()) if sample[i]['year'] == year and r.get('transcription') in ('faithful', 'minor_errors', 'major_problem')]
+    major = [r for r in checked if r['transcription'] == 'major_problem']
+    for r in major:
+        s, errors = sample[r['id']], r.get('transcription_errors') or []
+        assert errors, r['id']
+        trans.append({'year': year, 'printing': r['id'], 'lccn': s['lccn'], 'newspaper': s['catalogue_title'], 'date': s['date'], 'page': s['page'],
+                      'transcription': s['transcription'], 'leaves_out_text': 'yes' if any(LEAVES.search(e) for e in errors) else '',
+                      'reviewer_notes': 'Checked for the errata only (a sample of 1784-1786): ' + ' | '.join(errors)})
+    sample_by_year[year] = {'sample': sum(1 for s in sample.values() if s['year'] == year), 'checked': len(checked),
+                            'changes_what_was_printed': len(major)}
 
 
 shown = {p['lccn']: p['name'] for y in data['reviewed'] for p in y['newspapers']}
@@ -205,11 +252,15 @@ summary = {
               'gus_1793': len(GUS), 'release': '0.10.2', 'gus_release': '0.11.7'},
     'second_scan': {'issues': 2, 'pages': 2 + len(ni_second), 'release': '0.11.7', 'releases': ['0.11.7', '0.11.13']},
     'swapped_pages': {'issues': len(swapped), 'pages': sum(len(v) for v in swapped.values()), 'release': '0.11.7'},
+    'thin_years': thin_block,
     'transcription': {'years': list(YEARS), 'checked': sum(b['checked'] for b in by_year.values()),
-                      'changes_what_was_printed': len(trans), 'leaves_out_text': sum(1 for r in trans if r['leaves_out_text']),
+                      'changes_what_was_printed': len(reviewed_trans), 'leaves_out_text': sum(1 for r in reviewed_trans if r['leaves_out_text']),
                       'by_year': by_year,
                       'audit': {'stories': audit['audited'], 'located': located, 'own_calls': audit['raw_reviewer_counts']['transcription']['major_problem'],
-                                'strict_rule': tr['major_problem']['count']}},
+                                'strict_rule': tr['major_problem']['count']},
+                      'sample_1784_1786': {'by_year': sample_by_year, 'checked': sum(b['checked'] for b in sample_by_year.values()),
+                                           'changes_what_was_printed': sum(b['changes_what_was_printed'] for b in sample_by_year.values()),
+                                           'rule': 'outputs/errata_1784_1786/README.md#the-transcription-sample'}},
     'examples': {
         'staves': {'printings': staves, 'of': 9, **example(staves[0], 'ſtaves', 'slaves')},
         'war_inevitable': example('S07-110', 'WAR INEVITABLE!!!', 'NECESSARY INFORMATION!!'),
@@ -275,8 +326,15 @@ pages, where only some are concerned), what is wrong, how it was found, and what
 - **Pages filed in another issue.** Pages 3 and 4 of the *National Intelligencer* of 9 July and 8 September 1806 are filed
   in each other's issues: found by their datelines and by comparing each page with its neighbours (1806;
   `outputs/story_discovery_1806/check_duplicate_pages_1806.py`, `outputs/story_discovery_1806/check_page_neighbours_1806.py`).
-
-## `transcription.csv`: {t["changes_what_was_printed"]} printings whose transcription changes what was printed
+''' + (f'''- **Found by the reviews of the years with few surviving papers ({thin_block["issues"]} issues).** The reviews of 1770 to 1799
+  (read on 23 and 24 November 2026), the review of 1801 and a check of every masthead of 1784, 1785 and 1786 on the scans
+  found {"; ".join(f"{n} {PLURAL[p][1] if n == 1 else PLURAL[p][0]}" for p, n in sorted(thin_block["by_problem"].items(), key=lambda kv: -kv[1]))}.
+  Two papers, the *Connecticut Courant* of 1773-74 and the *Royal Gazette* of Charleston of 1781-82, head each issue with a
+  range of days and are filed under its first day, though each appeared on its last; the collection files other such papers
+  under the last day. Data release v{thin_block["corrected_in"]} corrects {thin_block["corrected"]} of these issues; {thin_block["not_corrected"]} wait: second copies whose
+  pages are to be read on their scans, and RevX pages too garbled for the page check's rule (`outputs/errata_1784_1786/`).
+''' if thin else '') + f'''
+## `transcription.csv`: {len(trans)} printings whose transcription changes what was printed
 
 Every printing of the reviewed stories of {", ".join(map(str, YEARS[:-1]))} and {YEARS[-1]} was read against its scan:
 {t["checked"]} printings, of which {t["changes_what_was_printed"]} ({pct(t["changes_what_was_printed"], t["checked"])}) carry a misreading
@@ -292,7 +350,17 @@ Examples: "ſtaves" read as "slaves" in {len(staves)} of the {summary["examples"
 Congress opening the ports (1776); "WAR INEVITABLE!!!" read as "NECESSARY INFORMATION!!" (1807); "Junot" read as "Juan" and
 "(MURAT.)" as "(MANUEL.)" (1808). {t["leaves_out_text"]} of the {t["changes_what_was_printed"]} leave printed text out, often
 behind a bare "...".
+''' + (f'''
+No review read 1784, 1785 or 1786 (too few papers survive for any item to reach the bar), so these years were checked on a
+sample, for this list only: every printing of the eleven texts the count of 1784 found in two or three papers, and for each
+month of 1785 and 1786 the first passage both surviving papers printed, chosen by that rule before any checking
+(`outputs/errata_1784_1786/`). It is a sample of reprinted items, chosen so that each month and both papers are covered, not
+every page, so its rate is not the archive's. Its rows in `transcription.csv` have printing ids E84-, E85- and E86-, and
+their notes say "Checked for the errata only"; they are not in the counts above.
 
+| Year | Sample | Printings read | Changes what was printed |
+|---|---|---|---|
+''' + ''.join(f'| {y} | {b["sample"]} | {b["checked"]} | {b["changes_what_was_printed"]} |\n' for y, b in sample_by_year.items()) if sample_by_year else '') + f'''
 The matched stories (found automatically, all years) were not read one by one. A random sample of {t["audit"]["stories"]} of
 them was read against the scans: {t["audit"]["own_calls"]} of the {t["audit"]["located"]} passages found
 ({pct(t["audit"]["own_calls"], t["audit"]["located"])}) had a fact-changing misreading by the reviewers' own calls, and
@@ -312,10 +380,15 @@ them was read against the scans: {t["audit"]["own_calls"]} of the {t["audit"]["l
 - Release v0.11.7 dates the two 1793 issues as printed, files the 1806 pages under the issues they belong to, and leaves the
   second scan out of the analysis (77,747 usable pages rather than 77,749). One reviewed printing stands on a corrected
   page: Captain Fanning's account of 1793, which takes its issue's printed date, 13 July.
-- The reviewed passages keep the transcription as it is, and their notes name each error.
+''' + (f'''- Release v{thin_block["corrected_in"]} dates 169 issues as printed or issued (162 of them dated by the last day of their ranges),
+  files 16 pages with the issues they belong to (12 of them in four issues the collection did not hold), and leaves 347
+  pages of second scans and second copies out of the analysis (77,743 usable pages become 77,396). The reviewed printings
+  on corrected pages take their issues' dates.
+''' if thin else '') + f'''- The reviewed passages keep the transcription as it is, and their notes name each error.
 
 `summary.json` holds the counts and the examples the site's Findings page shows.
 ''', encoding='utf8')
-print(json.dumps({k: summary[k] for k in ('pages', 'dates', 'second_scan', 'swapped_pages')}, indent=1))
+print(json.dumps({k: summary[k] for k in ('pages', 'dates', 'second_scan', 'swapped_pages', 'thin_years')}, indent=1))
+print('sample 1784-1786:', summary['transcription']['sample_1784_1786'])
 print('transcription:', {k: v for k, v in summary['transcription'].items() if k != 'by_year'}, {y: (b['checked'], b['changes_what_was_printed']) for y, b in by_year.items()})
 print('rows:', len(filing), 'filing,', len(trans), 'transcription')

@@ -302,6 +302,16 @@ Read by the same rule and published as built at the owner's standing word, the s
 
 - **Not admitted:** 124 items of 1799 joined the list (3,279 in all).
 
+### Filing corrections and the errata of 1784–1786 (data release v0.11.40, 24 November 2026)
+
+No review reads 1784, 1785 or 1786 (Y-1784, Y-1785-86), so the archive errata had nothing for them. A side session checked them for the errata only: every masthead of their 346 issues was read on its scan (one issue is filed under the day its masthead misprints: the *New-Jersey Gazette* of Monday 13 March 1786, filed under Sunday the 12th), and a sample of 75 printings, chosen by a rule stated before checking, was read against the scans (2 misreadings change what was printed, one error in two papers: 'ſailed' read as 'failed'). The sample is a sample, labelled so in the errata; its rate is not the archive's.
+
+The same session gathered the filing problems the thin-year reviews had found, and release v0.11.40 corrects them, at the owner's word (`pipeline/archive_data/correct_filing_thin.py`; every case is listed in the archive errata):
+- **Issue dates (169 issues):** issues take the dates they print, or for a misprinted masthead the day of issue; two range-dated runs, the *Connecticut Courant* of 1773–74 and the *Royal Gazette* of Charleston of 1781–82, are dated by the last day of each range, the day they appeared, as the collection dates its other range-dated papers (C-16).
+- **Pages in the wrong issue:** four pages of Vermont papers join the *New-Hampshire Gazette* of 12 January 1782; four supplements and sheets the collection lacked become issues of their own (12 pages; C-18).
+- **Second scans and copies (347 pages):** twelve second scans and the 110 whole second copies filed as "edition 2" (the *Kentucky Gazette* of 1787–1793 most of all) leave the analysis, as second scans did before (C-17). Usable pages: 77,743 → 77,396.
+- **The matched layer:** the moved pages were matched again at their new dates (the stored matches reproduced exactly first): 48,270 matched stories → 48,251, 164,677 printings → 164,217; 21 radio titles were recorded again. No reviewed story gains or loses a paper; 36 reviewed printings take their issues' new dates.
+
 ### What the reviews read and did not admit (22 November 2026)
 
 By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8) 388 since 1800 and 1804 were reviewed (v0.11.10), 477 since 1802 and 1803 (v0.11.12), 580 since 1801 and 1810 (v0.11.15), 2,176 since the first thin years (v0.11.30), 2,854 since the second (v0.11.35), 3,155 since the third (v0.11.38) and 3,279 since 1799 (v0.11.39), each with the number of papers, its kind and its reason.
@@ -558,7 +568,7 @@ The second of them, storylines assembled from what the papers printed, has a pag
 
 Home follows the order in which a visitor comes to understand the site, without becoming a form. Below the stars it asks one thing, "What do you want to see?", and each of its six answers opens the instrument and the arrangement that show it: where a story started (the telescope's Place view), what it was about (Topic), when in the year (Orbit), how it spread (Pulses), how many over time (the telescope from the side) and what a day sounded like (Radio). Everything else is chosen later, on the instrument, when it changes what is seen.
 
-Before any pattern come three facts about the source, shown as facts: what the archive is (110 newspapers, 77,743 usable pages since release v0.11.13), how much of it survives each year (a small bar chart; two papers for 1785 and 1786), and the two kinds of evidence (found by machine, or read against the scans by hand), with how often the machine's reading changes a fact. Then the findings about what came back and how a story travelled, each with a door into the view that shows it; the Chesapeake thread; and the notebook. The page is written by `pipeline/home_parts.py` from the build's own numbers and the Findings page's titles and doors.
+Before any pattern come three facts about the source, shown as facts: what the archive is (110 newspapers, 77,396 usable pages since release v0.11.40; 77,743 from v0.11.13), how much of it survives each year (a small bar chart; two papers for 1785 and 1786), and the two kinds of evidence (found by machine, or read against the scans by hand), with how often the machine's reading changes a fact. Then the findings about what came back and how a story travelled, each with a door into the view that shows it; the Chesapeake thread; and the notebook. The page is written by `pipeline/home_parts.py` from the build's own numbers and the Findings page's titles and doors.
 
 ### What we found wrong in the archive (12 November 2026)
 
@@ -698,5 +708,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.11.39) |
+| Data release | [`data/`](../data) (v0.11.40) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

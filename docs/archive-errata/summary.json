@@ -68,6 +68,43 @@
   "pages": 4,
   "release": "0.11.7"
  },
+ "thin_years": {
+  "issues": 318,
+  "by_problem": {
+   "Issue filed under the wrong date": 7,
+   "Second scan filed under another date": 10,
+   "Second scan filed under another title": 2,
+   "Pages filed in another issue": 5,
+   "RevX transcriptions filed under the wrong page": 1,
+   "Second copy filed as another edition": 131,
+   "Issue filed under the first day of its range": 162
+  },
+  "corrected_in": "0.11.40",
+  "corrected": 296,
+  "not_corrected": 22,
+  "years": [
+   1770,
+   1771,
+   1773,
+   1774,
+   1776,
+   1778,
+   1779,
+   1781,
+   1782,
+   1783,
+   1786,
+   1787,
+   1789,
+   1790,
+   1791,
+   1792,
+   1793,
+   1796,
+   1801
+  ],
+  "source": "outputs/errata_1784_1786/README.md"
+ },
  "transcription": {
   "years": [
    1770,
@@ -392,6 +429,28 @@
    "located": 187,
    "own_calls": 35,
    "strict_rule": 64
+  },
+  "sample_1784_1786": {
+   "by_year": {
+    "1784": {
+     "sample": 33,
+     "checked": 33,
+     "changes_what_was_printed": 0
+    },
+    "1785": {
+     "sample": 20,
+     "checked": 20,
+     "changes_what_was_printed": 2
+    },
+    "1786": {
+     "sample": 22,
+     "checked": 22,
+     "changes_what_was_printed": 0
+    }
+   },
+   "checked": 75,
+   "changes_what_was_printed": 2,
+   "rule": "outputs/errata_1784_1786/README.md#the-transcription-sample"
   }
  },
  "examples": {

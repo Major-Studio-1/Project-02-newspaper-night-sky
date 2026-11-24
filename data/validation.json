@@ -2,7 +2,7 @@
   "passed": true,
   "counts": {
     "newspapers": 110,
-    "issues": 19445,
+    "issues": 19449,
     "pages": 77793,
     "observations": 6477,
     "groups": 1185,
@@ -12,7 +12,7 @@
     "relations": 25,
     "topics": 24,
     "date_assertions": 16,
-    "eligible_pages": 77743
+    "eligible_pages": 77396
   },
   "normalized_segment_locator_statuses": {
     "unique_normalized_match": 6482
@@ -7058,6 +7058,7 @@
     "Current annotations and date roles carry no untranslated Chinese",
     "Every table correction keeps its old value and reason",
     "Every page filed in another issue keeps its filed issue in its id and names the issue it belongs to, of the same newspaper and edition",
+    "Every issue a filing correction added holds exactly the pages it names, each moved there by a recorded correction",
     "Second scans are left out of the analysis: no census row, matched printing or match",
     "Every census row scores the text that transcribes its page: its own, or a RevX text filed under another page",
     "The filing corrections are recorded as automatic with no review",

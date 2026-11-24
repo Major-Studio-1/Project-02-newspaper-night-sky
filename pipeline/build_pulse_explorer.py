@@ -273,7 +273,7 @@ REVIEWED={
           ('trade','Trade and the colonies',['boston-merchants-vote-to-alter-non-importation-october-1770']),
           ('government','Colonial government',['williamsburg-report-death-of-lord-botetourt-october-1770', 'letter-from-london-6-september-1770-hutchinson-governor'])],
         'children':{},
-        'expect':(4, 448)},
+        'expect':(4, 450)},
   # A thin year (release v0.11.17): 11 stories by the thin-year rule (Y-THIN as amended, B1), the categories as the review proposed them.
   1772:{'categories':[
           ('colonies','London and the colonies',['london-report-the-king-in-council-on-the-duke-of-cumberland-1771', 'london-report-proclamation-for-emigrants-to-america-1772', 'st-james-receiver-general-of-virginia-1772', 'boston-report-bernard-expected-governor-of-barbados-1772', 'boston-report-dudingston-promoted-captain-1772', 'london-report-dartmouth-lenient-measures-1772', 'london-war-office-orders-for-officers-in-america-1772']),
@@ -289,7 +289,7 @@ REVIEWED={
         'children':{'bills-for-massachusetts-bay-printed-june-1774':['bill-for-regulating-the-government-of-massachusetts-bay-1774', 'bill-for-the-impartial-administration-of-justice-massachusetts-bay-1774'],
                     'continental-congress-at-philadelphia-september-october-1774':['continental-congress-resolution-of-22-september-1774', 'continental-congress-resolves-of-8-october-1774', 'continental-congress-declaration-and-resolves-14-october-1774', 'continental-association-1774'],
                     'scarborough-man-of-war-express-to-england-autumn-1774':['portsmouth-letter-on-the-scarborough-4-october-1774', 'scarborough-returns-to-boston-december-1774']},
-        'expect':(8, 1205)},
+        'expect':(8, 1209)},
   # A thin year (release v0.11.19): 24 stories by the thin-year rule (Y-THIN as amended, B1), the categories as the review proposed them.
   1775:{'categories':[
           ('crown','The Crown, Parliament and London',['opening-of-parliament-november-december-1774', 'london-member-asks-the-lord-mayor-about-the-kings-speech-1774', 'london-ministers-said-to-be-offended-with-general-gage-1774', 'london-transports-for-ireland-howe-and-draper-1774', 'lord-north-on-the-merchants-meetings-january-1775', 'livery-of-london-address-and-the-kings-answer-april-1775', 'west-indies-report-of-the-parliament-house-pulled-down-1775', 'city-of-london-address-and-petition-july-1775', 'kings-proclamation-for-suppressing-rebellion-and-sedition-1775']),
@@ -354,7 +354,7 @@ REVIEWED={
           ('congress','Congress and the public finances',['plan-for-a-national-bank-may-1781', 'congress-on-a-loan-for-citizens-of-south-carolina-and-georgia-23-july-1781'])],
         'children':{'britain-and-the-united-provinces-december-1780':['kings-manifesto-against-the-united-provinces-december-1780', 'order-for-general-reprisals-against-the-united-provinces-20-december-1780'],
                     'the-surrender-at-york-october-december-1781':['washington-to-congress-near-york-19-october-1781', 'cornwallis-to-clinton-york-town-20-october-1781']},
-        'expect':(7, 1623)},
+        'expect':(7, 1615)},
   # A thin year (release v0.11.25): 30 stories by the thin-year rule (Y-THIN as amended, B1), the categories as the review proposed them.
   1782:{'categories':[
           ('war','The war in America',['head-quarters-orders-of-10-january-1782-on-leave-of-absence', 'cornwallis-letter-to-clinton-of-13-october-1781', 'letter-from-camden-south-carolina-february-1782', 'washington-letter-of-10-may-1782-with-carleton-letter', 'greene-letters-of-may-1782', 'charlestown-report-savannah-evacuated-july-1782', 'fishkill-report-rochambeau-at-verplanck-point-september-1782', 'brig-brought-into-beverly-by-her-prisoners-september-1782', 'letter-from-fort-pitt-3-september-1782', 'greene-letters-of-28-and-29-august-1782-with-leslie-and-gist', 'portsmouth-report-captain-snider-from-canada-october-1782', 'letter-from-greene-camp-of-2-september-1782', 'fishkill-report-lloyds-neck-evacuated-october-1782', 'head-quarters-verplanck-point-orders-of-24-october-1782', 'letter-from-uxbridge-near-charlestown-5-october-1782']),
@@ -363,7 +363,7 @@ REVIEWED={
         'children':{'carleton-and-digby-letter-and-congress-august-1782':['carleton-and-digby-letter-to-washington-2-august-1782', 'congress-resolutions-of-12-august-1782-on-the-letter'],
                     'greene-letters-of-may-1782':['greene-letter-of-21-may-1782-on-a-proposed-cessation-of-hostilities', 'greene-letter-of-31-may-1782-with-wayne-letter'],
                     'siege-of-gibraltar-autumn-1782':['gibraltar-paragraph-of-10-august-1782', 'elliot-letter-of-12-september-1782-from-a-cork-gazette', 'boston-report-of-a-brig-from-cadiz-29-november-1782', 'hague-1-october-1782-letter-from-paris-on-the-siege']},
-        'expect':(8, 1509)},
+        'expect':(8, 1517)},
   # A thin year (release v0.11.26): 22 stories by the thin-year rule (Y-THIN as amended, B1), the categories as the review proposed them.
   1783:{'categories':[
           ('peace','The peace',['paris-the-negotiations-for-peace-seem-to-be-broken-up-october-1782', 'townshend-letter-to-the-bank-of-england-november-1782', 'basseterre-report-of-a-peace-concluded-january-1783', 'brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782', 'the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783', 'lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783']),
@@ -402,14 +402,14 @@ REVIEWED={
   1771:{'categories':[
           ('parliament','London and Parliament',['wilkes-letter-to-the-speaker-march-1771'])],
         'children':{},
-        'expect':(4, 546)},
+        'expect':(4, 544)},
   # A thin year (release v0.11.32): 49 stories by the thin-year rule (Y-THIN as amended, B1), the categories as the review proposed them.
   1773:{'categories':[
           ('colonies','The colonies and the tea',['boston-custom-house-notice-on-registers-december-1772', 'letter-from-a-gentleman-on-fortifying-the-town-1773', 'new-york-report-the-ministry-to-repeal-the-tea-duty-january-1773', 'london-letter-on-the-orphan-house-in-georgia-1772', 'london-report-dispatches-for-the-governors-in-america-1772', 'virginia-burgesses-resolutions-of-12-march-1773', 'boston-report-fire-in-the-custom-house-march-1773', 'massachusetts-house-resolutions-answering-virginia-may-1773', 'annapolis-letter-on-the-maryland-bank-stock-july-1773', 'london-report-emigration-from-the-north-of-ireland-1773', 'new-york-report-the-mississippi-packet-sails-july-1773', 'london-gazette-governors-of-south-carolina-and-nova-scotia-june-1773', 'south-carolina-commons-house-on-the-virginia-letter-july-1773', 'london-report-a-governor-for-the-ohio-colony-july-1773', 'london-report-french-refugees-for-new-york-july-1773', 'new-york-report-three-tea-ships-october-1773', 'london-report-colony-agents-warned-on-the-bounties-august-1773', 'new-york-report-tea-agents-appointed-december-1773']),
           ('britain','King, Parliament and London',['chester-letter-on-a-gunpowder-explosion-november-1772', 'london-report-amherst-sworn-of-the-privy-council-1772', 'king-speech-opening-parliament-26-november-1772', 'london-report-the-recorder-s-charge-to-the-grand-jury-1772', 'london-report-a-sudden-fog-1773', 'london-report-burke-on-the-door-keepers-april-1773', 'london-report-the-speaker-reads-the-sheriffs-letter-april-1773', 'wilkes-letter-to-the-speaker-20-april-1773', 'london-report-ships-for-the-north-pole-1773', 'london-common-council-on-the-east-india-bill-28-may-1773', 'portsmouth-letter-on-the-king-s-visit-to-the-fleet-may-1773', 'london-report-lord-north-moves-a-mark-of-favour-for-general-monckton-1773', 'london-report-the-midsummer-day-common-hall-june-1773', 'king-speech-closing-the-session-1-july-1773', 'london-report-the-french-ambassador-at-portsmouth-1773', 'london-report-the-king-s-gifts-at-portsmouth-june-1773', 'london-paragraph-a-scotch-peruke-maker-july-1773']),
           ('abroad','Europe, the war and the islands',['london-report-a-frigate-fired-upon-at-carthagena-1772', 'report-captain-henshaw-from-st-vincent-february-1773', 'london-report-the-hotel-dieu-burnt-at-paris-1773', 'st-vincent-report-a-treaty-with-the-caribs-february-1773', 'paris-report-rumours-of-war-april-1773', 'london-report-a-loss-on-the-river-canton-1773', 'vienna-report-advices-from-constantinople-may-1773', 'dresden-report-a-storm-at-reichenbach-june-1773', 'temeswar-letter-on-the-turks-and-russians-may-1773', 'philadelphia-report-french-and-spanish-navy-laid-up-july-1773', 'honduras-letter-on-a-species-of-tigers-june-1773', 'constantinople-letter-on-the-turkish-fleet-may-1773', 'amsterdam-letter-a-courier-from-paris-august-1773', 'paris-letter-the-charge-d-affaires-to-leave-london-august-1773'])],
         'children':{},
-        'expect':(6, 846)},
+        'expect':(5, 842)},
   # A thin year (release v0.11.33): 18 stories by the thin-year rule (Y-THIN as amended, B1), the categories as the review proposed them.
   1791:{'categories':[
           ('government','The new government: Congress, the President and the Federal District',['the-acts-admitting-kentucky-and-vermont-into-the-union-february-1791', 'presidents-message-of-14-february-1791-on-commerce-with-great-britain', 'act-for-raising-and-adding-another-regiment-march-1791', 'alexandria-the-first-corner-stone-of-the-federal-district-april-1791', 'the-presidents-speech-and-the-answers-of-the-two-houses-october-1791']),

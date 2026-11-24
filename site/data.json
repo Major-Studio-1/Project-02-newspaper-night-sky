@@ -1,5 +1,5 @@
 {
-  "release_version": "0.11.39",
+  "release_version": "0.11.40",
   "reviewed": [
     {
       "year": 1770,
@@ -9,7 +9,7 @@
           "lccn": "sn83021193",
           "name": "Massachusetts Spy",
           "title": "The Massachusetts spy",
-          "issues": 17,
+          "issues": 18,
           "place": "Boston, Mass.",
           "place_raw": "Boston [Mass.]",
           "lat": 42.36,
@@ -833,6 +833,13 @@
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn83021193",
+          "publication_date": "1770-12-27",
+          "observed_issues_editions": 1,
+          "observed_pages": 2,
+          "eligible_pages": 2
         }
       ],
       "groups": [
@@ -1206,7 +1213,7 @@
           "lccn": "sn83021193",
           "name": "Massachusetts Spy",
           "title": "The Massachusetts spy",
-          "issues": 26,
+          "issues": 25,
           "place": "Boston, Mass.",
           "place_raw": "Boston [Mass.]",
           "lat": 42.36,
@@ -2184,13 +2191,6 @@
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
-        },
-        {
-          "newspaper_id": "paper:sn83021193",
-          "publication_date": "1771-12-27",
-          "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025582",
@@ -5177,17 +5177,6 @@
       "year": 1773,
       "newspapers": [
         {
-          "id": "paper:sn82016376",
-          "lccn": "sn82016376",
-          "name": "Connecticut Courant · sn82016376",
-          "title": "The Connecticut courant",
-          "issues": 1,
-          "place": "Hartford, Conn.",
-          "place_raw": "Hartford, Conn.",
-          "lat": 41.764,
-          "lon": -72.685
-        },
-        {
           "id": "paper:sn83021126",
           "lccn": "sn83021126",
           "name": "Dunlap's Pennsylvania Packet",
@@ -6145,7 +6134,7 @@
           "publication_date": "1773-08-27",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021194",
@@ -6661,13 +6650,6 @@
         {
           "newspaper_id": "paper:sn83021126",
           "publication_date": "1773-12-27",
-          "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
-        },
-        {
-          "newspaper_id": "paper:sn82016376",
-          "publication_date": "1773-12-28",
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
@@ -12632,7 +12614,7 @@
           "lccn": "sn82016376",
           "name": "Connecticut Courant · sn82016376",
           "title": "The Connecticut courant",
-          "issues": 19,
+          "issues": 20,
           "place": "Hartford, Conn.",
           "place_raw": "Hartford, Conn.",
           "lat": 41.764,
@@ -12714,6 +12696,13 @@
           "eligible_pages": 4
         },
         {
+          "newspaper_id": "paper:sn82016376",
+          "publication_date": "1774-01-04",
+          "observed_issues_editions": 1,
+          "observed_pages": 4,
+          "eligible_pages": 4
+        },
+        {
           "newspaper_id": "paper:sn84024739",
           "publication_date": "1774-01-06",
           "observed_issues_editions": 1,
@@ -12765,13 +12754,6 @@
         {
           "newspaper_id": "paper:sn83021126",
           "publication_date": "1774-01-17",
-          "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
-        },
-        {
-          "newspaper_id": "paper:sn82016376",
-          "publication_date": "1774-01-18",
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
@@ -13123,8 +13105,8 @@
           "newspaper_id": "paper:sn82016376",
           "publication_date": "1774-03-29",
           "observed_issues_editions": 1,
-          "observed_pages": 6,
-          "eligible_pages": 6
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021194",
@@ -13193,8 +13175,8 @@
           "newspaper_id": "paper:sn82016376",
           "publication_date": "1774-04-12",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 6,
+          "eligible_pages": 6
         },
         {
           "newspaper_id": "paper:sn84024739",
@@ -13348,7 +13330,7 @@
           "publication_date": "1774-05-10",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 3
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021194",
@@ -13383,7 +13365,7 @@
           "publication_date": "1774-05-17",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 3
         },
         {
           "newspaper_id": "paper:sn83021194",
@@ -13461,6 +13443,13 @@
           "observed_issues_editions": 1,
           "observed_pages": 6,
           "eligible_pages": 6
+        },
+        {
+          "newspaper_id": "paper:sn82016376",
+          "publication_date": "1774-05-31",
+          "observed_issues_editions": 1,
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021194",
@@ -13542,6 +13531,13 @@
         {
           "newspaper_id": "paper:sn82016139",
           "publication_date": "1774-06-14",
+          "observed_issues_editions": 1,
+          "observed_pages": 4,
+          "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn83021194",
+          "publication_date": "1774-06-16",
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
@@ -13663,7 +13659,7 @@
           "publication_date": "1774-07-07",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn84024739",
@@ -13724,13 +13720,6 @@
         {
           "newspaper_id": "paper:sn83025582",
           "publication_date": "1774-07-15",
-          "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
-        },
-        {
-          "newspaper_id": "paper:sn83021194",
-          "publication_date": "1774-07-16",
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
@@ -14736,13 +14725,13 @@
           "definition": "Printings of a paragraph of the London news of early February 1774: 'On Saturday last the Privy Council met to hear the arguments for and against the petition of the Assembly of Boston (which was sometime since presented by their Agent, Dr. Franklin) \"praying that his Majesty would be pleased to remove the Governor, &c.\"'; it names the counsel for the petition and says that the Solicitor General, instead of answering their arguments, 'contented himself with pronouncing a most severe philippic' on Dr. Franklin. A London paper's account, partisan in its words; the papers print it in their London news. A paragraph of the same news, that Dr. Franklin was dismissed as Postmaster General, is in 5 papers and not chosen (X-1800-01).",
           "members": [
             {
-              "id": "obs:expansion-1774:S74-033",
+              "id": "obs:expansion-1774:S74-035",
               "roles": [
                 "report"
               ]
             },
             {
-              "id": "obs:expansion-1774:S74-035",
+              "id": "obs:expansion-1774:S74-033",
               "roles": [
                 "report"
               ]
@@ -14776,12 +14765,6 @@
           "definition": "Printings of the act of Parliament of March 1774, 'An Act to discontinue, in such manner, and for such time as are therein mentioned, the landing and discharging, lading or shipping of goods, wares and merchandize, at the town, and within the harbour, of Boston, in the province of Massachusetts Bay, in North America': from 1 June 1774 no goods may be landed or shipped at Boston until the King in Council declares that trade may resume, which he may do when the East India Company has been paid for the tea destroyed and peace and obedience to the laws restored. Several papers print it after a London paragraph of 4 April ('The following is the much-talked-of Boston Port-Bill, which on Thursday last received the Royal Assent'). Counted where the act is printed whole; later documents that recite its title are not counted (C-07). The act of Parliament.",
           "members": [
             {
-              "id": "obs:expansion-1774:S74-039",
-              "roles": [
-                "published_document"
-              ]
-            },
-            {
               "id": "obs:expansion-1774:S74-040",
               "roles": [
                 "published_document"
@@ -14789,6 +14772,12 @@
             },
             {
               "id": "obs:expansion-1774:S74-041",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1774:S74-039",
               "roles": [
                 "published_document"
               ]
@@ -15518,13 +15507,13 @@
           "definition": "Printings of a Boston paragraph of 7 February 1774: 'The greatest contest at present between the friends of Government and the friends of Liberty, seems to be, whether the Judges of the Superior Court shall receive their Salaries as usual by the Grants of the General Assembly of this Province, or be dependent upon the Crown for their Support'; it says that both sides agree that if the latter takes place, the courts of justice will be turned into courts of politics. A Boston paper's own account of the question, with its argument; the papers print it in their Boston news.",
           "members": [
             {
-              "id": "obs:expansion-1774:S74-005",
+              "id": "obs:expansion-1774:S74-006",
               "roles": [
                 "report"
               ]
             },
             {
-              "id": "obs:expansion-1774:S74-006",
+              "id": "obs:expansion-1774:S74-005",
               "roles": [
                 "report"
               ]
@@ -15552,12 +15541,6 @@
           "definition": "Printings of the declaration that Benjamin Franklin, agent of the Massachusetts House of Representatives in London, published in a letter of December 1773 to the printer of a London paper (the Morning Chronicle in one printing, the London Chronicle in another): 'Finding that two Gentlemen have been unfortunately engaged in a Duel, about a Transaction and its Circumstances of which both of them are totally ignorant and innocent, I think it incumbent on me to declare ... that I alone am the Person who obtained, and transmitted to Boston, the Letters in Question'; the letters, he says, were not of the nature of private letters between friends but were written by public officers on public affairs, to procure public measures. The New-Hampshire Gazette, the Pennsylvania Packet and Purdie and Dixon's Virginia Gazette print the letter; the Connecticut Courant and the Massachusetts Spy print a London report of the duel that gives the declaration in Franklin's words turned into indirect speech ('Benjamin Franklin, Esq; agent for the house of representatives of this province ... has published a declaration, That he alone was the person who obtained and transmitted to Boston the letters in question'). Counted together, a letter with a paragraph made from it (C-02, as X-1801-04): 5 papers, every paper that survives for its weeks. Franklin's own declaration.",
           "members": [
             {
-              "id": "obs:expansion-1774:S74-008",
-              "roles": [
-                "published_document"
-              ]
-            },
-            {
               "id": "obs:expansion-1774:S74-009",
               "roles": [
                 "published_document"
@@ -15571,6 +15554,12 @@
             },
             {
               "id": "obs:expansion-1774:S74-012",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1774:S74-008",
               "roles": [
                 "published_document"
               ]
@@ -15616,13 +15605,13 @@
               ]
             },
             {
-              "id": "obs:expansion-1774:S74-056",
+              "id": "obs:expansion-1774:S74-063",
               "roles": [
                 "published_document"
               ]
             },
             {
-              "id": "obs:expansion-1774:S74-063",
+              "id": "obs:expansion-1774:S74-056",
               "roles": [
                 "published_document"
               ]
@@ -16182,13 +16171,13 @@
           "definition": "Printings of a short extract of a letter from a gentleman in England to his friend in Philadelphia, printed from Philadelphia in March 1774: 'The warlike preparations of the French I imagine will alarm all Europe; what their designs are, time must bring forth. The insurrection at Petersburg, we imagine is set on foot by them, and that his Prussian Majesty is at the bottom of scheme'; it expects fleets and armies to be sent to different parts. A private letter printed at second hand, with the writer's conjectures.",
           "members": [
             {
-              "id": "obs:expansion-1774:S74-016",
+              "id": "obs:expansion-1774:S74-020",
               "roles": [
                 "report"
               ]
             },
             {
-              "id": "obs:expansion-1774:S74-020",
+              "id": "obs:expansion-1774:S74-016",
               "roles": [
                 "report"
               ]
@@ -16318,8 +16307,8 @@
           "label": "Boston, 7 February 1774: 'The greatest contest at present between the friends of Government and the friends of Liberty' is whether the judges are paid by the Assembly or by the Crown",
           "category": "1774-colonies",
           "members": [
-            "obs:expansion-1774:S74-005",
             "obs:expansion-1774:S74-006",
+            "obs:expansion-1774:S74-005",
             "obs:expansion-1774:S74-007",
             "obs:expansion-1774:S74-010"
           ]
@@ -16329,10 +16318,10 @@
           "label": "Dr. Franklin's declaration that he alone obtained the Hutchinson letters and sent them to Boston, after the duel of Mr. Whately and Mr. Temple",
           "category": "1774-colonies",
           "members": [
-            "obs:expansion-1774:S74-008",
             "obs:expansion-1774:S74-009",
             "obs:expansion-1774:S74-011",
             "obs:expansion-1774:S74-012",
+            "obs:expansion-1774:S74-008",
             "obs:expansion-1774:S74-025"
           ]
         },
@@ -16377,8 +16366,8 @@
           "label": "'A gentleman in England writes his friend in Philadelphia: The warlike preparations of the French I imagine will alarm all Europe'",
           "category": "1774-world",
           "members": [
-            "obs:expansion-1774:S74-016",
             "obs:expansion-1774:S74-020",
+            "obs:expansion-1774:S74-016",
             "obs:expansion-1774:S74-022",
             "obs:expansion-1774:S74-027",
             "obs:expansion-1774:S74-034"
@@ -16389,8 +16378,8 @@
           "label": "London, February 1774: the Privy Council hears the petition of the Massachusetts Assembly to remove the Governor",
           "category": "1774-crown",
           "members": [
-            "obs:expansion-1774:S74-033",
             "obs:expansion-1774:S74-035",
+            "obs:expansion-1774:S74-033",
             "obs:expansion-1774:S74-036",
             "obs:expansion-1774:S74-037",
             "obs:expansion-1774:S74-038"
@@ -16401,9 +16390,9 @@
           "label": "The act of Parliament to discontinue the landing and shipping of goods at the town and harbour of Boston (the Boston Port Act), as the papers printed it in May 1774",
           "category": "1774-crown",
           "members": [
-            "obs:expansion-1774:S74-039",
             "obs:expansion-1774:S74-040",
             "obs:expansion-1774:S74-041",
+            "obs:expansion-1774:S74-039",
             "obs:expansion-1774:S74-042",
             "obs:expansion-1774:S74-043"
           ]
@@ -16417,8 +16406,8 @@
             "obs:expansion-1774:S74-045",
             "obs:expansion-1774:S74-046",
             "obs:expansion-1774:S74-055",
-            "obs:expansion-1774:S74-056",
-            "obs:expansion-1774:S74-063"
+            "obs:expansion-1774:S74-063",
+            "obs:expansion-1774:S74-056"
           ]
         },
         {
@@ -16712,7 +16701,7 @@
           "node": "sn82016376",
           "page_id": "page:sn82016376:1774-04-05:1:5",
           "issue_id": "issue:sn82016376:1774-04-05:1",
-          "date": "1774-04-05",
+          "date": "1774-04-12",
           "page": 5,
           "excerpt": " My Lords, and Gentlemen, THE unusual length of the last session of Parliament made me desirous of giving you as long a recess as the public service would admit. I have, therefore, been glad to find myself under no necessity of calling you from your respective counties at an earlier season; and I doubt not but you are now met together in the best disposition, for applying yourselves to the dispatch of the public business.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-04-05_1_5.pdf?download=true",
@@ -16722,23 +16711,6 @@
           "transcription": "RevX",
           "summary": "The Connecticut Courant prints the King's speech of 13 January.",
           "note": "The Courant dates this issue 'From Tuesday, April 5, to Tuesday, April 12, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
-        },
-        {
-          "id": "obs:expansion-1774:S74-033",
-          "legacy_id": "S74-033",
-          "node": "sn82016376",
-          "page_id": "page:sn82016376:1774-04-12:1:1",
-          "issue_id": "issue:sn82016376:1774-04-12:1",
-          "date": "1774-04-12",
-          "page": 1,
-          "excerpt": "On Saturday last the Privy Council met to hear the arguments for and against the petition of the Assembly of Boston (which was sometime since presented by their Agent, Dr. Franklin) \"praying that his Majesty would be pleased to remove the Governor, &c.\" Sergeant Glynn and Mr. Dunning were counsel for the petition and urged very strongly the expediency and necessity of granting the prayer of it.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-04-12_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1774__evidence__S74-033.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "London, February 1774: the Privy Council hears the Massachusetts Assembly's petition to remove Governor Hutchinson; a London paper says the Solicitor General answered with an attack on Dr. Franklin.",
-          "note": "Earliest printing found. The Courant dates this issue 'From Tuesday, April 12, to Tuesday, April 19, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
         },
         {
           "id": "obs:expansion-1774:S74-035",
@@ -16756,6 +16728,23 @@
           "transcription": "RevX",
           "summary": "Dunlap's Pennsylvania Packet prints the London paragraph on the Privy Council's hearing.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1774:S74-033",
+          "legacy_id": "S74-033",
+          "node": "sn82016376",
+          "page_id": "page:sn82016376:1774-04-12:1:1",
+          "issue_id": "issue:sn82016376:1774-04-12:1",
+          "date": "1774-04-19",
+          "page": 1,
+          "excerpt": "On Saturday last the Privy Council met to hear the arguments for and against the petition of the Assembly of Boston (which was sometime since presented by their Agent, Dr. Franklin) \"praying that his Majesty would be pleased to remove the Governor, &c.\" Sergeant Glynn and Mr. Dunning were counsel for the petition and urged very strongly the expediency and necessity of granting the prayer of it.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-04-12_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1774__evidence__S74-033.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "London, February 1774: the Privy Council hears the Massachusetts Assembly's petition to remove Governor Hutchinson; a London paper says the Solicitor General answered with an attack on Dr. Franklin.",
+          "note": "Earliest printing found. The Courant dates this issue 'From Tuesday, April 12, to Tuesday, April 19, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
         },
         {
           "id": "obs:expansion-1774:S74-036",
@@ -16809,23 +16798,6 @@
           "note": "Same item as the other printings."
         },
         {
-          "id": "obs:expansion-1774:S74-039",
-          "legacy_id": "S74-039",
-          "node": "sn82016376",
-          "page_id": "page:sn82016376:1774-05-10:1:2",
-          "issue_id": "issue:sn82016376:1774-05-10:1",
-          "date": "1774-05-10",
-          "page": 2,
-          "excerpt": "An Act to discontinue in such Manner, for such Time or is therein mentioned, the landing and discharging, lading or shipping, of Goods, Wares and Merchandise at the Town and within the Harbour of Boston in the Province of Massachusetts Bay in North America. WHEREAS dangerous commotions and insurrections have been fomented and raised in the Town of Boston, in",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-05-10_1_2.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1774__evidence__S74-039.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Boston Port Act: from 1 June 1774 the landing and shipping of goods at Boston is stopped until the King in Council allows it again.",
-          "note": "Earliest printing found. The Courant dates this issue 'From Tuesday, May 10, to Tuesday, May 17, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
-        },
-        {
           "id": "obs:expansion-1774:S74-040",
           "legacy_id": "S74-040",
           "node": "sn83021194",
@@ -16858,6 +16830,23 @@
           "transcription": "RevX",
           "summary": "Dunlap's Pennsylvania Packet prints the Boston Port Act.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1774:S74-039",
+          "legacy_id": "S74-039",
+          "node": "sn82016376",
+          "page_id": "page:sn82016376:1774-05-10:1:2",
+          "issue_id": "issue:sn82016376:1774-05-10:1",
+          "date": "1774-05-17",
+          "page": 2,
+          "excerpt": "An Act to discontinue in such Manner, for such Time or is therein mentioned, the landing and discharging, lading or shipping, of Goods, Wares and Merchandise at the Town and within the Harbour of Boston in the Province of Massachusetts Bay in North America. WHEREAS dangerous commotions and insurrections have been fomented and raised in the Town of Boston, in",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-05-10_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1774__evidence__S74-039.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Boston Port Act: from 1 June 1774 the landing and shipping of goods at Boston is stopped until the King in Council allows it again.",
+          "note": "Earliest printing found. The Courant dates this issue 'From Tuesday, May 10, to Tuesday, May 17, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
         },
         {
           "id": "obs:expansion-1774:S74-042",
@@ -18069,23 +18058,6 @@
           "note": "Same item as the other printings."
         },
         {
-          "id": "obs:expansion-1774:S74-005",
-          "legacy_id": "S74-005",
-          "node": "sn82016376",
-          "page_id": "page:sn82016376:1774-02-08:1:1",
-          "issue_id": "issue:sn82016376:1774-02-08:1",
-          "date": "1774-02-08",
-          "page": 1,
-          "excerpt": "BOSTON, Feb. 7. The greatest contest at present between the friends of Government and the friends of Liberty, seems to be, whether the Judges of the Superior Court shall receive their Salaries as usual by the Grants of the General Assembly of this Province, or be dependent upon the Crown for their Support.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-02-08_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1774__evidence__S74-005.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "Boston, 7 February 1774: the contest between the friends of government and of liberty is whether the judges of the Superior Court are paid by the Assembly or by the Crown.",
-          "note": "Earliest printing found. The Courant dates this issue 'From Tuesday, February 8, to Tuesday, February 15, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
-        },
-        {
           "id": "obs:expansion-1774:S74-006",
           "legacy_id": "S74-006",
           "node": "sn83025582",
@@ -18101,6 +18073,23 @@
           "transcription": "RevX",
           "summary": "The New-Hampshire Gazette prints the Boston paragraph on the judges' salaries.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1774:S74-005",
+          "legacy_id": "S74-005",
+          "node": "sn82016376",
+          "page_id": "page:sn82016376:1774-02-08:1:1",
+          "issue_id": "issue:sn82016376:1774-02-08:1",
+          "date": "1774-02-15",
+          "page": 1,
+          "excerpt": "BOSTON, Feb. 7. The greatest contest at present between the friends of Government and the friends of Liberty, seems to be, whether the Judges of the Superior Court shall receive their Salaries as usual by the Grants of the General Assembly of this Province, or be dependent upon the Crown for their Support.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-02-08_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1774__evidence__S74-005.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Boston, 7 February 1774: the contest between the friends of government and of liberty is whether the judges of the Superior Court are paid by the Assembly or by the Crown.",
+          "note": "Earliest printing found. The Courant dates this issue 'From Tuesday, February 8, to Tuesday, February 15, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
         },
         {
           "id": "obs:expansion-1774:S74-007",
@@ -18135,23 +18124,6 @@
           "transcription": "RevX",
           "summary": "Purdie and Dixon's Virginia Gazette prints the Boston paragraph on the judges' salaries.",
           "note": "Same item as the other printings."
-        },
-        {
-          "id": "obs:expansion-1774:S74-008",
-          "legacy_id": "S74-008",
-          "node": "sn82016376",
-          "page_id": "page:sn82016376:1774-03-08:1:3",
-          "issue_id": "issue:sn82016376:1774-03-08:1",
-          "date": "1774-03-08",
-          "page": 3,
-          "excerpt": "Benjamin Franklin, Esq; agent for the house of representatives of this province, for the prevention of further mischief between the parties, has published a declaration, That he alone was the person who obtained and transmitted to Boston the letters in question. That Mr. W. could not communicate them, because they were never in his possession: and for the same reason, they could not be taken from him by Mr.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-03-08_1_3.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1774__evidence__S74-008.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "Dr. Franklin declares that he alone obtained the Hutchinson letters and sent them to Boston, so that the two gentlemen who fought a duel over them are innocent of it.",
-          "note": "Earliest printing found. Printed within a London report of the duel, in indirect speech. The Courant dates this issue 'From Tuesday, March 8, to Tuesday, March 15, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
         },
         {
           "id": "obs:expansion-1774:S74-009",
@@ -18203,6 +18175,23 @@
           "transcription": "RevX",
           "summary": "Dunlap's Pennsylvania Packet prints Dr. Franklin's declaration on the Hutchinson letters.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1774:S74-008",
+          "legacy_id": "S74-008",
+          "node": "sn82016376",
+          "page_id": "page:sn82016376:1774-03-08:1:3",
+          "issue_id": "issue:sn82016376:1774-03-08:1",
+          "date": "1774-03-15",
+          "page": 3,
+          "excerpt": "Benjamin Franklin, Esq; agent for the house of representatives of this province, for the prevention of further mischief between the parties, has published a declaration, That he alone was the person who obtained and transmitted to Boston the letters in question. That Mr. W. could not communicate them, because they were never in his possession: and for the same reason, they could not be taken from him by Mr.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-03-08_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1774__evidence__S74-008.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dr. Franklin declares that he alone obtained the Hutchinson letters and sent them to Boston, so that the two gentlemen who fought a duel over them are innocent of it.",
+          "note": "Earliest printing found. Printed within a London report of the duel, in indirect speech. The Courant dates this issue 'From Tuesday, March 8, to Tuesday, March 15, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
         },
         {
           "id": "obs:expansion-1774:S74-025",
@@ -18290,6 +18279,23 @@
           "note": "Same item as the other printings."
         },
         {
+          "id": "obs:expansion-1774:S74-063",
+          "legacy_id": "S74-063",
+          "node": "sn83021194",
+          "page_id": "page:sn83021194:1774-07-16:1:2",
+          "issue_id": "issue:sn83021194:1774-07-16:1",
+          "date": "1774-06-16",
+          "page": 2,
+          "excerpt": "WILLIAMSBURGH, in Virginia, May 26. On Tuesday the house of Burgesses here came into the following Resolution: \"This house being deeply impressed with apprehensions of the great dangers to be derived to British America from the hostile invasion of the city of Boston, in our sister colony of Massachusetts-Bay, whose commerce and harbour are, on the 1st of June next, to be stopped by an armed force, deem it highly necessary that the said 1st day of",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021194/1774-07-16_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1774__evidence__S74-063.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Massachusetts Spy prints the Burgesses' resolution of 24 May.",
+          "note": "The issue is filed under 16 July 1774; its first page prints 'Thursday, June 16, 1774' (number 176), so this printing appeared on 16 June."
+        },
+        {
           "id": "obs:expansion-1774:S74-056",
           "legacy_id": "S74-056",
           "node": "sn83025582",
@@ -18305,23 +18311,6 @@
           "transcription": "RevX",
           "summary": "The New-Hampshire Gazette prints the Burgesses' resolution of 24 May.",
           "note": "Same item as the other printings."
-        },
-        {
-          "id": "obs:expansion-1774:S74-063",
-          "legacy_id": "S74-063",
-          "node": "sn83021194",
-          "page_id": "page:sn83021194:1774-07-16:1:2",
-          "issue_id": "issue:sn83021194:1774-07-16:1",
-          "date": "1774-07-16",
-          "page": 2,
-          "excerpt": "WILLIAMSBURGH, in Virginia, May 26. On Tuesday the house of Burgesses here came into the following Resolution: \"This house being deeply impressed with apprehensions of the great dangers to be derived to British America from the hostile invasion of the city of Boston, in our sister colony of Massachusetts-Bay, whose commerce and harbour are, on the 1st of June next, to be stopped by an armed force, deem it highly necessary that the said 1st day of",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021194/1774-07-16_1_2.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1774__evidence__S74-063.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Massachusetts Spy prints the Burgesses' resolution of 24 May.",
-          "note": "The issue is filed under 16 July 1774; its first page prints 'Thursday, June 16, 1774' (number 176), so this printing appeared on 16 June."
         },
         {
           "id": "obs:expansion-1774:S74-090",
@@ -19026,7 +19015,7 @@
           "node": "sn82016376",
           "page_id": "page:sn82016376:1774-03-22:1:2",
           "issue_id": "issue:sn82016376:1774-03-22:1",
-          "date": "1774-03-22",
+          "date": "1774-03-29",
           "page": 2,
           "excerpt": "Jan. 21. Lord Viscount Pitt, son to the Earl of Chatham, is to embark next month for North America, to make the tour of the British colonies on that continent.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-03-22_1_2.pdf?download=true",
@@ -19111,7 +19100,7 @@
           "node": "sn82016376",
           "page_id": "page:sn82016376:1774-03-22:1:2",
           "issue_id": "issue:sn82016376:1774-03-22:1",
-          "date": "1774-03-22",
+          "date": "1774-03-29",
           "page": 2,
           "excerpt": "Jan 26. A letter from the Lower Elbe, dated Jan. 13, says, \"The insurrection in Russia is at present the topic of every conversation. It seems to have happened in the most critical time, when fresh troops were greatly wanted; but have been obliged to recall many regiments that were upon their march for Moldavia; and the troops which were cantoned about Warsaw have received sudden orders to march for Petersburg.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-03-22_1_2.pdf?download=true",
@@ -19174,23 +19163,6 @@
           "note": "Same item as the other printings."
         },
         {
-          "id": "obs:expansion-1774:S74-016",
-          "legacy_id": "S74-016",
-          "node": "sn82016376",
-          "page_id": "page:sn82016376:1774-03-22:1:2",
-          "issue_id": "issue:sn82016376:1774-03-22:1",
-          "date": "1774-03-22",
-          "page": 2,
-          "excerpt": "A Gentleman in England, writes his Friend in Philadelphia \"The warlike preparations of the French I imagine will alarm all Europe; what their Designs are, Time must bring forth. The Insurrection at Petersburg, we imagine is set on Foot by them, and that his Prussian Majesty is at the Bottom of Scheme. We expect soon to hear of the fitting",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-03-22_1_2.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1774__evidence__S74-016.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "A gentleman in England writes that the warlike preparations of the French will alarm all Europe, and supposes them behind the insurrection in Russia.",
-          "note": "Earliest printing found. The Courant dates this issue 'From Tuesday, March 22, to Tuesday, March 29, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
-        },
-        {
           "id": "obs:expansion-1774:S74-020",
           "legacy_id": "S74-020",
           "node": "sn83021126",
@@ -19206,6 +19178,23 @@
           "transcription": "RevX",
           "summary": "Dunlap's Pennsylvania Packet prints the letter on the warlike preparations of the French.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1774:S74-016",
+          "legacy_id": "S74-016",
+          "node": "sn82016376",
+          "page_id": "page:sn82016376:1774-03-22:1:2",
+          "issue_id": "issue:sn82016376:1774-03-22:1",
+          "date": "1774-03-29",
+          "page": 2,
+          "excerpt": "A Gentleman in England, writes his Friend in Philadelphia \"The warlike preparations of the French I imagine will alarm all Europe; what their Designs are, Time must bring forth. The Insurrection at Petersburg, we imagine is set on Foot by them, and that his Prussian Majesty is at the Bottom of Scheme. We expect soon to hear of the fitting",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016376/1774-03-22_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1774__evidence__S74-016.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "A gentleman in England writes that the warlike preparations of the French will alarm all Europe, and supposes them behind the insurrection in Russia.",
+          "note": "Earliest printing found. The Courant dates this issue 'From Tuesday, March 22, to Tuesday, March 29, 1774', and the collection files it under the first date; by its dating it appeared at the end of that week."
         },
         {
           "id": "obs:expansion-1774:S74-022",
@@ -29568,7 +29557,7 @@
           "publication_date": "1776-06-01",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025894",
@@ -29988,7 +29977,7 @@
           "publication_date": "1776-07-05",
           "observed_issues_editions": 2,
           "observed_pages": 16,
-          "eligible_pages": 16
+          "eligible_pages": 8
         },
         {
           "newspaper_id": "paper:sn83025583",
@@ -30268,7 +30257,7 @@
           "publication_date": "1776-07-26",
           "observed_issues_editions": 2,
           "observed_pages": 12,
-          "eligible_pages": 12
+          "eligible_pages": 6
         },
         {
           "newspaper_id": "paper:sn83025583",
@@ -49658,7 +49647,7 @@
           "lccn": "sn83025583",
           "name": "Freeman's Journal",
           "title": "The Freeman's journal, or, New-Hampshire gazette",
-          "issues": 7,
+          "issues": 8,
           "place": "Portsmouth, N.H.",
           "place_raw": "Portsmouth, N.H.",
           "lat": 43.071,
@@ -49702,7 +49691,7 @@
           "lccn": "sn84024739",
           "name": "Virginia Gazette · sn84024739",
           "title": "The Virginia gazette",
-          "issues": 12,
+          "issues": 13,
           "place": "Williamsburg, Va.",
           "place_raw": "Williamsburg [Va.]",
           "lat": 37.271,
@@ -49774,8 +49763,8 @@
           "newspaper_id": "paper:sn83025583",
           "publication_date": "1778-01-13",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -49871,13 +49860,6 @@
         {
           "newspaper_id": "paper:sn83021183",
           "publication_date": "1778-01-29",
-          "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
-        },
-        {
-          "newspaper_id": "paper:sn83025583",
-          "publication_date": "1778-01-31",
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
@@ -49986,6 +49968,13 @@
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn83025583",
+          "publication_date": "1778-02-24",
+          "observed_issues_editions": 1,
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn84023855",
@@ -50177,6 +50166,13 @@
           "eligible_pages": 4
         },
         {
+          "newspaper_id": "paper:sn83025583",
+          "publication_date": "1778-03-31",
+          "observed_issues_editions": 1,
+          "observed_pages": 4,
+          "eligible_pages": 4
+        },
+        {
           "newspaper_id": "paper:sn84023855",
           "publication_date": "1778-03-31",
           "observed_issues_editions": 1,
@@ -50313,8 +50309,8 @@
           "newspaper_id": "paper:sn84024739",
           "publication_date": "1778-04-24",
           "observed_issues_editions": 1,
-          "observed_pages": 6,
-          "eligible_pages": 6
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83030493",
@@ -50357,6 +50353,13 @@
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn84024739",
+          "publication_date": "1778-05-04",
+          "observed_issues_editions": 1,
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn84023855",
@@ -50636,7 +50639,7 @@
           "publication_date": "1778-06-24",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn83021183",
@@ -51560,12 +51563,6 @@
           "definition": "Printings of the address 'To the Inhabitants of New-Jersey, Pennsylvania, Maryland and Virginia. Friends, Countrymen and Fellow Citizens! After three campaigns, during which the brave subjects of these States have contended, not unsuccessfully, with one of the most powerful kingdoms on earth, we now find ourselves at least upon a level with our opponents'; it recommends that the inhabitants put up and feed as many of their stock-cattle as they can spare, so that they may be driven to the army in May, June and July, and promises a bounty. General Washington's own address, from headquarters at Valley Forge, as the papers printed it from the New-Jersey Gazette of 25 February.",
           "members": [
             {
-              "id": "obs:expansion-1778:S78-006",
-              "roles": [
-                "published_document"
-              ]
-            },
-            {
               "id": "obs:expansion-1778:S78-012",
               "roles": [
                 "published_document"
@@ -51579,6 +51576,12 @@
             },
             {
               "id": "obs:expansion-1778:S78-020",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1778:S78-006",
               "roles": [
                 "published_document"
               ]
@@ -53300,17 +53303,6 @@
           ]
         },
         {
-          "id": "group:washington-address-to-the-inhabitants-on-cattle-for-the-army-february-1778",
-          "label": "General Washington's address to the inhabitants of New Jersey, Pennsylvania, Maryland and Virginia, February 1778: cattle to be fattened for the army",
-          "category": "1778-war",
-          "members": [
-            "obs:expansion-1778:S78-006",
-            "obs:expansion-1778:S78-012",
-            "obs:expansion-1778:S78-013",
-            "obs:expansion-1778:S78-020"
-          ]
-        },
-        {
           "id": "group:house-of-lords-debate-on-the-address-20-november-1777",
           "label": "House of Lords, 20 November 1777: the debate on the address of thanks for the King's speech, as a London account printed it",
           "category": "1778-britain",
@@ -53319,6 +53311,17 @@
             "obs:expansion-1778:S78-011",
             "obs:expansion-1778:S78-015",
             "obs:expansion-1778:S78-018"
+          ]
+        },
+        {
+          "id": "group:washington-address-to-the-inhabitants-on-cattle-for-the-army-february-1778",
+          "label": "General Washington's address to the inhabitants of New Jersey, Pennsylvania, Maryland and Virginia, February 1778: cattle to be fattened for the army",
+          "category": "1778-war",
+          "members": [
+            "obs:expansion-1778:S78-012",
+            "obs:expansion-1778:S78-013",
+            "obs:expansion-1778:S78-020",
+            "obs:expansion-1778:S78-006"
           ]
         },
         {
@@ -53792,24 +53795,6 @@
           "note": "Same item as the other printings."
         },
         {
-          "id": "obs:expansion-1778:S78-006",
-          "legacy_id": "S78-006",
-          "node": "sn83025583",
-          "page_id": "page:sn83025583:1778-01-31:1:1",
-          "issue_id": "issue:sn83025583:1778-01-31:1",
-          "date": "1778-01-31",
-          "page": 1,
-          "excerpt": "BURLINGTON, February 25. To the Inhabitants of New-Jersey, Pennsylvania, Maryland, and Virginia. Friends, Countrymen, and Fellow Citizens! FOR three campaigns, during which the brave subjects of these States have contended, not unsuccessfully, with one of the most powerful kingdoms on earth, we now find ourselves at least upon a level with our opponents;",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025583/1778-01-31_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1778__evidence__S78-006-1.jpg",
-            "assets/story_discovery_1778__evidence__S78-006-2.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Freeman's Journal, or New-Hampshire Gazette prints General Washington's address to the inhabitants.",
-          "note": "Filed under 31 January 1778; the issue's first page prints 'TUESDAY MARCH, 31, 1778' and No. 42 (the issues of 3 and 10 March are Nos. 38 and 39), so it is the issue of 31 March 1778."
-        },
-        {
           "id": "obs:expansion-1778:S78-012",
           "legacy_id": "S78-012",
           "node": "sn83025471",
@@ -53860,6 +53845,24 @@
           "transcription": "RevX",
           "summary": "The Connecticut Courant prints General Washington's address to the inhabitants.",
           "note": "The Connecticut Courant misprints the dateline 'BULINGTON, Feb. 25.'"
+        },
+        {
+          "id": "obs:expansion-1778:S78-006",
+          "legacy_id": "S78-006",
+          "node": "sn83025583",
+          "page_id": "page:sn83025583:1778-01-31:1:1",
+          "issue_id": "issue:sn83025583:1778-01-31:1",
+          "date": "1778-03-31",
+          "page": 1,
+          "excerpt": "BURLINGTON, February 25. To the Inhabitants of New-Jersey, Pennsylvania, Maryland, and Virginia. Friends, Countrymen, and Fellow Citizens! FOR three campaigns, during which the brave subjects of these States have contended, not unsuccessfully, with one of the most powerful kingdoms on earth, we now find ourselves at least upon a level with our opponents;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025583/1778-01-31_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1778__evidence__S78-006-1.jpg",
+            "assets/story_discovery_1778__evidence__S78-006-2.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Freeman's Journal, or New-Hampshire Gazette prints General Washington's address to the inhabitants.",
+          "note": "Filed under 31 January 1778; the issue's first page prints 'TUESDAY MARCH, 31, 1778' and No. 42 (the issues of 3 and 10 March are Nos. 38 and 39), so it is the issue of 31 March 1778."
         },
         {
           "id": "obs:expansion-1778:S78-014",
@@ -57199,7 +57202,7 @@
           "publication_date": "1779-04-10",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030493",
@@ -57853,13 +57856,6 @@
           "eligible_pages": 4
         },
         {
-          "newspaper_id": "paper:sn83021183",
-          "publication_date": "1779-07-02",
-          "observed_issues_editions": 1,
-          "observed_pages": 1,
-          "eligible_pages": 1
-        },
-        {
           "newspaper_id": "paper:sn83021127",
           "publication_date": "1779-07-03",
           "observed_issues_editions": 1,
@@ -57872,6 +57868,13 @@
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn83021183",
+          "publication_date": "1779-07-05",
+          "observed_issues_editions": 1,
+          "observed_pages": 1,
+          "eligible_pages": 1
         },
         {
           "newspaper_id": "paper:sn83030493",
@@ -70940,7 +70943,7 @@
           "lccn": "sn83025789",
           "name": "Royal Gazette",
           "title": "The royal gazette",
-          "issues": 87,
+          "issues": 86,
           "place": "Charleston, S.C.",
           "place_raw": "[Charleston] S.C.",
           "lat": 32.777,
@@ -71538,13 +71541,6 @@
           "eligible_pages": 4
         },
         {
-          "newspaper_id": "paper:sn83025789",
-          "publication_date": "1781-03-28",
-          "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
-        },
-        {
           "newspaper_id": "paper:sn83021127",
           "publication_date": "1781-03-31",
           "observed_issues_editions": 1,
@@ -71555,8 +71551,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-03-31",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025584",
@@ -71877,8 +71873,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-05-09",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -71947,8 +71943,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-05-19",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025584",
@@ -72157,8 +72153,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-06-13",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -72178,8 +72174,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-06-16",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025584",
@@ -72220,8 +72216,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-06-20",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -72283,8 +72279,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-06-27",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -72661,8 +72657,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-08-08",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -72682,8 +72678,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-08-11",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025584",
@@ -73165,8 +73161,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-10-03",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -73193,8 +73189,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-10-06",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030493",
@@ -73249,8 +73245,8 @@
           "newspaper_id": "paper:sn83025585",
           "publication_date": "1781-10-13",
           "observed_issues_editions": 1,
-          "observed_pages": 8,
-          "eligible_pages": 8
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025789",
@@ -73508,8 +73504,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-11-10",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83030493",
@@ -73543,8 +73539,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-11-14",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -73571,8 +73567,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-11-17",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83030493",
@@ -73606,8 +73602,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-11-21",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -73886,8 +73882,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-12-22",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83030493",
@@ -73921,8 +73917,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1781-12-26",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -75859,7 +75855,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-03-31:1:3",
           "issue_id": "issue:sn83025789:1781-03-31:1",
-          "date": "1781-03-31",
+          "date": "1781-04-04",
           "page": 3,
           "excerpt": "\"By authentick advices we learn, that General Morgan collected near one hundred prisoners, by parties sent out for the purpose, after the accounts he gave in his letter to General Greene, dated the 19th of January last. That upon receiving the news of Colonel Tarleton's defeat, Lord Cornwallis marched with his army in pursuit of the light-infantry and the prisoners.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-03-31_1_3.pdf?download=true",
@@ -75961,7 +75957,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-04-28:1:1",
           "issue_id": "issue:sn83025789:1781-04-28:1",
-          "date": "1781-04-28",
+          "date": "1781-05-02",
           "page": 1,
           "excerpt": "On Friday the 16th instant, at 6 A. M. the Iris made the signal for discovering five strange sail to the N. N. E. and soon after hailed the Admiral that they were large ships standing for the Capes of Virginia, and supposed to be distant about three miles, the",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-04-28_1_1.pdf?download=true",
@@ -76063,7 +76059,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-05-19:1:1",
           "issue_id": "issue:sn83025789:1781-05-19:1",
-          "date": "1781-05-19",
+          "date": "1781-05-23",
           "page": 1,
           "excerpt": "Head-Quarters, Iron Works, North-Carolina, March 10, 1781. SIR, SINCE I had the honour of addressing your Excellency last, there have been some changes in our circumstances. On the 2d, Lieut. Col. Lee, with a detachment of riflemen, attacked the advance of the British army, under Col. Tarleton, near Allamance, and killed and wounded by report, about thirty of them.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-05-19_1_1.pdf?download=true",
@@ -76166,7 +76162,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-07-28:1:4",
           "issue_id": "issue:sn83025789:1781-07-28:1",
-          "date": "1781-07-28",
+          "date": "1781-08-01",
           "page": 4,
           "excerpt": "By CHARLES Earl Cornwallis, Lieutenant-General of his Majesty's Forces, &c. &c. &c. A P R O C L A M A T I O N. WHEREAS, by the blessing of Almighty God, his Majesty's arms have been crowned with signal success, by the complete victory obtained over the Rebel forces",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-07-28_1_4.pdf?download=true",
@@ -76422,7 +76418,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-07-25:1:3",
           "issue_id": "issue:sn83025789:1781-07-25:1",
-          "date": "1781-07-25",
+          "date": "1781-07-28",
           "page": 3,
           "excerpt": "Mr. Tyree's plantation, twenty miles from Williamsburg, SIR, June 27, 1781. MY letter of the 28th informed you of the enemy's retrograde movement to Richmond, where they had made a stop. Our loss, at the Point of Fork, chiefly consisted of old arms, out of repair, and some cannon, most of which have been since recovered.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-07-25_1_3.pdf?download=true",
@@ -76609,7 +76605,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-10-24:1:2",
           "issue_id": "issue:sn83025789:1781-10-24:1",
-          "date": "1781-10-24",
+          "date": "1781-10-27",
           "page": 2,
           "excerpt": "We have just received the disagreeable news, that out of forty men Col. Willet sent out on a scout from fort Plain (his present station) only twelve returned; the rest either being killed or taken, by a superior force of the enemy.\" WANTED, a young man of a good character, to serve as an apprentice in a store.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-10-24_1_2.pdf?download=true",
@@ -76694,7 +76690,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-10-06:1:3",
           "issue_id": "issue:sn83025789:1781-10-06:1",
-          "date": "1781-10-06",
+          "date": "1781-10-10",
           "page": 3,
           "excerpt": "The following is said to be a pretty accurate account of the engagement off the Chesapeake, the 5th instant, between the British and French fleets. THE first certain notice our Admiral received of the enemy's fleet being actually upon the coast, was from the advanced ship of the fleet on",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-10-06_1_3.pdf?download=true",
@@ -76881,7 +76877,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-10-20:1:3",
           "issue_id": "issue:sn83025789:1781-10-20:1",
-          "date": "1781-10-20",
+          "date": "1781-10-24",
           "page": 3,
           "excerpt": "extract of a letter from Count de Graffe, to the Hon. the Chevalier de la Luzerne, Minister plenipotentiary of France. Cape Henry, September 13, 1781. \"Nothing gave me greater pleasure than the approach of the armies under General Washington and Count de Rochambeau. In order to hasten their arriva, I",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-10-20_1_3.pdf?download=true",
@@ -76983,7 +76979,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-11-21:1:2",
           "issue_id": "issue:sn83025789:1781-11-21:1",
-          "date": "1781-11-21",
+          "date": "1781-11-24",
           "page": 2,
           "excerpt": "Head-Quarters, Martin's Tavern, near Ferguson's Swamp, South-Carolina, September 11, 1781. S I R, IN my dispatch of the twenty-fifth of August, I informed your Excellency, that we were on our march for Friday's Ferry, to form a junction with the State troops and a body of militia collecting at that place, with an intention to make an attack upon the British army laying at Col.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-11-21_1_2.pdf?download=true",
@@ -77119,7 +77115,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-11-28:1:2",
           "issue_id": "issue:sn83025789:1781-11-28:1",
-          "date": "1781-11-28",
+          "date": "1781-12-01",
           "page": 2,
           "excerpt": "I HAVE the honour to inform Congress, that a reduction of the British army under the command of Lord Cornwallis, is most happily effected. The unremitting ardour which actuated every officer and soldier in the combined army on this occasion, has principally led to this event, at an earlier period than my most sanguine hopes had induced me to expect.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-11-28_1_2.pdf?download=true",
@@ -77187,7 +77183,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-12-19:1:1",
           "issue_id": "issue:sn83025789:1781-12-19:1",
-          "date": "1781-12-19",
+          "date": "1781-12-22",
           "page": 1,
           "excerpt": "letter from Lieutenant-General Earl CORNWALLIS, to his Excellency the Commander in Chief, which you are desired to publish in your next Gazette. I am, your obedient servent, OL. DELANCEY, Adjutant-General. November 23, 1781. Mr. JAMES RIVINGTON, Printer, &c. York-Town, in Virginia, October 20th, 1781. SIR, I HAVE the mortification to",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-12-19_1_1.pdf?download=true",
@@ -77561,7 +77557,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-04-04:1:2",
           "issue_id": "issue:sn83025789:1781-04-04:1",
-          "date": "1781-04-04",
+          "date": "1781-04-07",
           "page": 2,
           "excerpt": "Basseterre, (St. Christopher) Feb. 15. The following is an extract of a letter from St. Eustatius, dated Feb. 14.—“The strictest discipline and decorum is kept up by the military here; a bomb battery and several new fortifications are constructing; Tumble-Down-Dick point, and the hill that commands both it, the town and the harbour, are to be strongly fortified;",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-04-04_1_2.pdf?download=true",
@@ -77867,7 +77863,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1781-10-24:1:2",
           "issue_id": "issue:sn83025789:1781-10-24:1",
-          "date": "1781-10-24",
+          "date": "1781-10-27",
           "page": 2,
           "excerpt": "ADMIRALTY-OFFICE, AUGUST 9, 1781. Lieutenant RIVETT, of his Majesty's cutter the Surprise, arrived here this afternoon, with a letter from Vice-Admiral PARKER, to Mr. STEPHENS, of which the following is a copy. SIR, Fortitude, at Sea, August 6, 1781. YESTERDAY morning we fell in with the Dutch squadron, with a large convoy, on the Dogger Bank.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1781-10-24_1_2.pdf?download=true",
@@ -78109,7 +78105,7 @@
           "lccn": "sn83025789",
           "name": "Royal Gazette",
           "title": "The royal gazette",
-          "issues": 62,
+          "issues": 63,
           "place": "Charleston, S.C.",
           "place_raw": "[Charleston] S.C.",
           "lat": 32.777,
@@ -78186,8 +78182,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-01-02",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78214,8 +78210,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-01-05",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78263,15 +78259,15 @@
           "newspaper_id": "paper:sn83025585",
           "publication_date": "1782-01-12",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 8,
+          "eligible_pages": 8
         },
         {
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-01-12",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78333,8 +78329,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-01-19",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78361,8 +78357,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-01-23",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78473,8 +78469,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-02-06",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn84026485",
@@ -78774,8 +78770,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-03-13",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78802,8 +78798,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-03-16",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78830,8 +78826,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-03-20",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn84026485",
@@ -78865,8 +78861,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-03-23",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78893,8 +78889,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-03-27",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -78928,8 +78924,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-03-30",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79012,8 +79008,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-04-10",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn84026485",
@@ -79047,8 +79043,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-04-13",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79075,8 +79071,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-04-17",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79131,8 +79127,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-04-24",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79187,8 +79183,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-05-01",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79243,8 +79239,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-05-08",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79271,8 +79267,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-05-11",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79299,8 +79295,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-05-15",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79530,8 +79526,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-06-12",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79558,8 +79554,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-06-15",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79670,8 +79666,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-06-29",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83030493",
@@ -79705,8 +79701,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-07-03",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79733,8 +79729,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-07-06",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79761,8 +79757,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-07-10",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79789,8 +79785,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-07-13",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79845,8 +79841,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-07-20",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79901,8 +79897,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-07-27",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79929,8 +79925,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-07-31",
           "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79957,8 +79953,8 @@
           "newspaper_id": "paper:sn83025789",
           "publication_date": "1782-08-03",
           "observed_issues_editions": 1,
-          "observed_pages": 2,
-          "eligible_pages": 2
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -79980,6 +79976,13 @@
           "observed_issues_editions": 1,
           "observed_pages": 4,
           "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn83025789",
+          "publication_date": "1782-08-07",
+          "observed_issues_editions": 1,
+          "observed_pages": 2,
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83021127",
@@ -80988,13 +80991,13 @@
               ]
             },
             {
-              "id": "obs:expansion-1782:S82-019",
+              "id": "obs:expansion-1782:S82-021",
               "roles": [
                 "published_document"
               ]
             },
             {
-              "id": "obs:expansion-1782:S82-021",
+              "id": "obs:expansion-1782:S82-019",
               "roles": [
                 "published_document"
               ]
@@ -81074,12 +81077,6 @@
               ]
             },
             {
-              "id": "obs:expansion-1782:S82-056",
-              "roles": [
-                "published_document"
-              ]
-            },
-            {
               "id": "obs:expansion-1782:S82-057",
               "roles": [
                 "published_document"
@@ -81087,6 +81084,12 @@
             },
             {
               "id": "obs:expansion-1782:S82-058",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1782:S82-056",
               "roles": [
                 "published_document"
               ]
@@ -82550,8 +82553,8 @@
             "obs:expansion-1782:S82-009",
             "obs:expansion-1782:S82-013",
             "obs:expansion-1782:S82-018",
-            "obs:expansion-1782:S82-019",
             "obs:expansion-1782:S82-021",
+            "obs:expansion-1782:S82-019",
             "obs:expansion-1782:S82-022"
           ]
         },
@@ -82648,9 +82651,9 @@
             "obs:expansion-1782:S82-050",
             "obs:expansion-1782:S82-052",
             "obs:expansion-1782:S82-053",
-            "obs:expansion-1782:S82-056",
             "obs:expansion-1782:S82-057",
-            "obs:expansion-1782:S82-058"
+            "obs:expansion-1782:S82-058",
+            "obs:expansion-1782:S82-056"
           ]
         },
         {
@@ -83062,7 +83065,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-02-16:1:1",
           "issue_id": "issue:sn83025789:1782-02-16:1",
-          "date": "1782-02-16",
+          "date": "1782-02-20",
           "page": 1,
           "excerpt": "Head-Quarters, Philadelphia, Thursday, Jan. 10, 1782. ORDERS. AS it is expected, that in the course of the present winter, many of the officers and men belonging to the army of the United States, will be indulged with leave of absence from their corps for a limited time; and it is absolutely necessary the strictest punctuality",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-02-16_1_1.pdf?download=true",
@@ -83125,23 +83128,6 @@
           "note": "Same item as the other printings."
         },
         {
-          "id": "obs:expansion-1782:S82-019",
-          "legacy_id": "S82-019",
-          "node": "sn83025789",
-          "page_id": "page:sn83025789:1782-02-27:1:1",
-          "issue_id": "issue:sn83025789:1782-02-27:1",
-          "date": "1782-02-27",
-          "page": 1,
-          "excerpt": "Copy of a letter from the Earl CORNWALLIS, to his Excellency Sir HENRY CLINTON, dated York-Town, Virginia, Oct. 13. S I R, LAST evening the enemy carried my two advanced redoubts on the left by storm, and during the night have included them in their second parallel, which they are at present busy in perfecting.",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-02-27_1_1.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1782__evidence__S82-019.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Royal Gazette prints Lord Cornwallis's letter of 13 October 1781 to Sir Henry Clinton.",
-          "note": "Filed under the first day of the range its masthead prints: 'From Wednesday, February 27, to Saturday, March 2, 1782'."
-        },
-        {
           "id": "obs:expansion-1782:S82-021",
           "legacy_id": "S82-021",
           "node": "sn83025585",
@@ -83157,6 +83143,23 @@
           "transcription": "RevX",
           "summary": "The New-Hampshire Gazette prints Lord Cornwallis's letter of 13 October 1781 to Sir Henry Clinton.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1782:S82-019",
+          "legacy_id": "S82-019",
+          "node": "sn83025789",
+          "page_id": "page:sn83025789:1782-02-27:1:1",
+          "issue_id": "issue:sn83025789:1782-02-27:1",
+          "date": "1782-03-02",
+          "page": 1,
+          "excerpt": "Copy of a letter from the Earl CORNWALLIS, to his Excellency Sir HENRY CLINTON, dated York-Town, Virginia, Oct. 13. S I R, LAST evening the enemy carried my two advanced redoubts on the left by storm, and during the night have included them in their second parallel, which they are at present busy in perfecting.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-02-27_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1782__evidence__S82-019.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Royal Gazette prints Lord Cornwallis's letter of 13 October 1781 to Sir Henry Clinton.",
+          "note": "Filed under the first day of the range its masthead prints: 'From Wednesday, February 27, to Saturday, March 2, 1782'."
         },
         {
           "id": "obs:expansion-1782:S82-022",
@@ -83312,23 +83315,6 @@
           "note": "Same item as the other printings."
         },
         {
-          "id": "obs:expansion-1782:S82-056",
-          "legacy_id": "S82-056",
-          "node": "sn83025789",
-          "page_id": "page:sn83025789:1782-06-15:1:2",
-          "issue_id": "issue:sn83025789:1782-06-15:1",
-          "date": "1782-06-15",
-          "page": 2,
-          "excerpt": "Extra of a Letter from his Excellency General Washington to Congress, dated Head-Quarters, May 10, 1782. \"JUST as I am closing these dispatches, a letter from Sir Guy Carleton is handed me, covering sundry printed papers; a copy of which, with the papers, I have now the honour to inclose to your Excellency, together with the copy of my answer to him;",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-06-15_1_2.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1782__evidence__S82-056.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Royal Gazette prints General Washington's letter of 10 May 1782 with Sir Guy Carleton's letter.",
-          "note": "Filed under the first day of the range its masthead prints: 'From Saturday, June 15, to Wednesday, June 19, 1782'."
-        },
-        {
           "id": "obs:expansion-1782:S82-057",
           "legacy_id": "S82-057",
           "node": "sn84023855",
@@ -83361,6 +83347,23 @@
           "transcription": "RevX",
           "summary": "The New-Jersey Gazette prints General Washington's letter of 10 May 1782 with Sir Guy Carleton's letter.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1782:S82-056",
+          "legacy_id": "S82-056",
+          "node": "sn83025789",
+          "page_id": "page:sn83025789:1782-06-15:1:2",
+          "issue_id": "issue:sn83025789:1782-06-15:1",
+          "date": "1782-06-19",
+          "page": 2,
+          "excerpt": "Extra of a Letter from his Excellency General Washington to Congress, dated Head-Quarters, May 10, 1782. \"JUST as I am closing these dispatches, a letter from Sir Guy Carleton is handed me, covering sundry printed papers; a copy of which, with the papers, I have now the honour to inclose to your Excellency, together with the copy of my answer to him;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-06-15_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1782__evidence__S82-056.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Royal Gazette prints General Washington's letter of 10 May 1782 with Sir Guy Carleton's letter.",
+          "note": "Filed under the first day of the range its masthead prints: 'From Saturday, June 15, to Wednesday, June 19, 1782'."
         },
         {
           "id": "obs:expansion-1782:S82-059",
@@ -83487,7 +83490,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-07-31:1:2",
           "issue_id": "issue:sn83025789:1782-07-31:1",
-          "date": "1782-07-31",
+          "date": "1782-08-03",
           "page": 2,
           "excerpt": "Extract of a letter from Major-General Greene, to his Excellency the President of Congress, dated Head Quarters, near Bacon's Bridge, South-Carolina, May 21, 1782. \"SIR, \"I DO myself the honour to enclose to your Excellency a copy of a resolution of the British House of Commons and the King's reply, which were sent out to",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-07-31_1_2.pdf?download=true",
@@ -83504,7 +83507,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-07-31:1:2",
           "issue_id": "issue:sn83025789:1782-07-31:1",
-          "date": "1782-07-31",
+          "date": "1782-08-03",
           "page": 2,
           "excerpt": "Extract of another letter from General Greene, dated near Bacon's Bridge, South-Carolina, May 31st, 1782. \"SIR, \"I HAD the honour to address your Excellency on the 21st inst. on the subject of a verbal message from Lieutenant-General Leslie, proposing a cessation of hostilities in this country. Since then I have received a letter from him on the subject;",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-07-31_1_2.pdf?download=true",
@@ -83521,7 +83524,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-07-24:1:3",
           "issue_id": "issue:sn83025789:1782-07-24:1",
-          "date": "1782-07-24",
+          "date": "1782-07-27",
           "page": 3,
           "excerpt": "The town of Savannah was evacuated by the British troops on the 11th of this month; the publick stores and the effects of the inhabitants who have come away, being previously removed down to the island of Tybee. On the 20th of the same month, a fleet failed from Tybee for Jamaica, with about 1300",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-07-24_1_3.pdf?download=true",
@@ -84304,7 +84307,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-02-27:1:1",
           "issue_id": "issue:sn83025789:1782-02-27:1",
-          "date": "1782-02-27",
+          "date": "1782-03-02",
           "page": 1,
           "excerpt": "MY LORDS AND GENTLEMEN, WHEN I last met you in Parliament, I acquainted you with the arduous situation of publick affairs at that time, and I represented to you the objects which I had in view, and the resolution with which I was determined to persevere in the defence of my dominions against the combined",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-02-27_1_1.pdf?download=true",
@@ -84390,7 +84393,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-04-24:1:2",
           "issue_id": "issue:sn83025789:1782-04-24:1",
-          "date": "1782-04-24",
+          "date": "1782-04-27",
           "page": 2,
           "excerpt": "RICHMOND, in VIRGINIA, March 23. Extra of a letter from Monsieur MOUNEREAU, merchant, dated Port St. Pierre, Martinico, March 3, 1782. You have no doubt been informed of the reduction of the island of St. Christopher, which capitulated on the 12th ult. at ten o'clock P. M. Nevis surrendered immediately, and Monferrat had the same fate. Monsieur de Re Saint,",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-04-24_1_2.pdf?download=true",
@@ -84475,7 +84478,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-05-22:1:3",
           "issue_id": "issue:sn83025789:1782-05-22:1",
-          "date": "1782-05-22",
+          "date": "1782-05-25",
           "page": 3,
           "excerpt": "The authentick accounts we have lately received of the conclusion of a new treaty between France and the States of Holland, is very important: it destroys all idea of a separate peace between England and that republick. The treaty with France has been for some time warmly demanded by the old republicans of Holland, and opposed with every art by the British party.",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-05-22_1_3.pdf?download=true",
@@ -84560,7 +84563,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-06-15:1:2",
           "issue_id": "issue:sn83025789:1782-06-15:1",
-          "date": "1782-06-15",
+          "date": "1782-06-19",
           "page": 2,
           "excerpt": "The following account of a sea engagement between the French and the British fleet under the orders of Sir George B. Rodney, is translated from the Martinico Gazette, of April 18, brought by the brig Swan, Capt. Goodbye, who arrived at Newbury last Thursday, in 20 days from Martinico. M. de Graffe having held the",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-06-15_1_2.pdf?download=true",
@@ -84645,7 +84648,7 @@
           "node": "sn83025789",
           "page_id": "page:sn83025789:1782-06-15:1:2",
           "issue_id": "issue:sn83025789:1782-06-15:1",
-          "date": "1782-06-15",
+          "date": "1782-06-19",
           "page": 2,
           "excerpt": "TRANSLATION of the Handbill printed in Amsterdam. Extra Tidings from the United States of Holland to the United States of North-America, that is to say, the Seven Provinces of Holland have declared America Free and Independent States. WE, the United States of Holland, have these twenty-five years past seen the iniquity of the British administration",
           "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025789/1782-06-15_1_2.pdf?download=true",
@@ -86685,7 +86688,7 @@
           "publication_date": "1783-05-17",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn84045495",
@@ -86734,7 +86737,7 @@
           "publication_date": "1783-05-24",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn84024758",
@@ -91052,7 +91055,7 @@
           "lccn": "sn83030137",
           "name": "New-York Packet",
           "title": "The New-York packet",
-          "issues": 102,
+          "issues": 103,
           "place": "New York, N.Y.",
           "place_raw": "New York [N.Y.]",
           "lat": 40.713,
@@ -91085,7 +91088,7 @@
           "lccn": "sn83030586",
           "name": "Independent Journal",
           "title": "Independent journal, or, The general advertiser",
-          "issues": 25,
+          "issues": 26,
           "place": "New York, N.Y.",
           "place_raw": "New-York [N.Y.]",
           "lat": 40.713,
@@ -92050,7 +92053,7 @@
           "publication_date": "1787-08-18",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -92085,7 +92088,7 @@
           "publication_date": "1787-08-25",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -92148,7 +92151,7 @@
           "publication_date": "1787-09-08",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -92168,8 +92171,8 @@
           "newspaper_id": "paper:sn83030586",
           "publication_date": "1787-09-12",
           "observed_issues_editions": 1,
-          "observed_pages": 8,
-          "eligible_pages": 8
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83030565",
@@ -92190,7 +92193,7 @@
           "publication_date": "1787-09-15",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -92225,10 +92228,17 @@
           "publication_date": "1787-09-22",
           "observed_issues_editions": 2,
           "observed_pages": 6,
-          "eligible_pages": 6
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025587",
+          "publication_date": "1787-09-22",
+          "observed_issues_editions": 1,
+          "observed_pages": 4,
+          "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn83030586",
           "publication_date": "1787-09-22",
           "observed_issues_editions": 1,
           "observed_pages": 4,
@@ -92280,8 +92290,8 @@
           "newspaper_id": "paper:sn83030137",
           "publication_date": "1787-10-02",
           "observed_issues_editions": 1,
-          "observed_pages": 8,
-          "eligible_pages": 8
+          "observed_pages": 4,
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83030006",
@@ -92319,11 +92329,18 @@
           "eligible_pages": 4
         },
         {
+          "newspaper_id": "paper:sn83030137",
+          "publication_date": "1787-10-05",
+          "observed_issues_editions": 1,
+          "observed_pages": 4,
+          "eligible_pages": 4
+        },
+        {
           "newspaper_id": "paper:sn82014784",
           "publication_date": "1787-10-06",
           "observed_issues_editions": 2,
           "observed_pages": 5,
-          "eligible_pages": 5
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -92813,7 +92830,7 @@
           "publication_date": "1787-11-17",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030007",
@@ -93100,7 +93117,7 @@
           "publication_date": "1787-12-15",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030007",
@@ -93184,7 +93201,7 @@
           "publication_date": "1787-12-22",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030007",
@@ -93328,12 +93345,6 @@
           "definition": "Printings of the result of the deliberations of the Federal Convention at Philadelphia, 17 September 1787: the Constitution ('We, the People of the United States, in order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common Defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America'), the Convention's resolutions that it be laid before Congress and submitted to conventions chosen by the people, and the letter of General Washington, its President, to the President of Congress ('We have now the honor to submit to the consideration of the United States in Congress assembled, that Constitution which has appeared to us the most advisable'). Printed together, counted as one item by whichever part stands first (X-1810-01). The Convention's own acts and words.",
           "members": [
             {
-              "id": "obs:expansion-1787:S87-019",
-              "roles": [
-                "published_document"
-              ]
-            },
-            {
               "id": "obs:expansion-1787:S87-020",
               "roles": [
                 "published_document"
@@ -93341,6 +93352,12 @@
             },
             {
               "id": "obs:expansion-1787:S87-021",
+              "roles": [
+                "published_document"
+              ]
+            },
+            {
+              "id": "obs:expansion-1787:S87-019",
               "roles": [
                 "published_document"
               ]
@@ -93368,13 +93385,13 @@
           "definition": "Printings of a paragraph from the Wilmington Gazette, late September 1787: 'his Excellency General Washington passed through Wilmington, on his return from Philadelphia to his seat in Mount Vernon, and on the same day, in crossing the bridge near the Head of Elk, the bridge gave way and his horse fell into the river. His Excellency had alighted in order to walk over the bridge, which fortunate circumstance probably saved a life so dear to his country'. A report from a paper, at second hand.",
           "members": [
             {
-              "id": "obs:expansion-1787:S87-022",
+              "id": "obs:expansion-1787:S87-023",
               "roles": [
                 "report"
               ]
             },
             {
-              "id": "obs:expansion-1787:S87-023",
+              "id": "obs:expansion-1787:S87-022",
               "roles": [
                 "report"
               ]
@@ -93870,9 +93887,9 @@
           "label": "The result of the Federal Convention, September 1787: the Constitution, with the Convention's resolutions and General Washington's letter to the President of Congress",
           "category": "1787-convention",
           "members": [
-            "obs:expansion-1787:S87-019",
             "obs:expansion-1787:S87-020",
             "obs:expansion-1787:S87-021",
+            "obs:expansion-1787:S87-019",
             "obs:expansion-1787:S87-024",
             "obs:expansion-1787:S87-039"
           ]
@@ -93882,8 +93899,8 @@
           "label": "Wilmington, September 1787: General Washington, returning to Mount Vernon, alights to walk over the bridge near the Head of Elk, which gives way",
           "category": "1787-convention",
           "members": [
-            "obs:expansion-1787:S87-022",
             "obs:expansion-1787:S87-023",
+            "obs:expansion-1787:S87-022",
             "obs:expansion-1787:S87-028",
             "obs:expansion-1787:S87-031"
           ]
@@ -93958,23 +93975,6 @@
       ],
       "observations": [
         {
-          "id": "obs:expansion-1787:S87-019",
-          "legacy_id": "S87-019",
-          "node": "sn83030586",
-          "page_id": "page:sn83030586:1787-09-12:1:5",
-          "issue_id": "issue:sn83030586:1787-09-12:1",
-          "date": "1787-09-12",
-          "page": 5,
-          "excerpt": "Copy of the Result of the Deliberations of the FEDERAL CONVENTION. In Convention, September 17, 1787. SIR, WE have now the honor to submit to the consideration of the United States in Congress assembled, that Constitution which has appeared to us the most advisable. The friends of our country have long seen and desired, that",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030586/1787-09-12_1_5.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1787__evidence__S87-019.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "The Federal Convention, 17 September 1787: the Constitution.",
-          "note": "Earliest printing found. Printed in the Supplement to the Independent Journal of Saturday 22 September 1787, as its heading on this page reads; the archive files the supplement with the issue of 12 September (pages 5 to 8). The supplement prints General Washington's letter before the Constitution."
-        },
-        {
           "id": "obs:expansion-1787:S87-020",
           "legacy_id": "S87-020",
           "node": "sn83021129",
@@ -94007,6 +94007,23 @@
           "transcription": "RevX",
           "summary": "The New-York Packet prints the result of the Federal Convention.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1787:S87-019",
+          "legacy_id": "S87-019",
+          "node": "sn83030586",
+          "page_id": "page:sn83030586:1787-09-12:1:5",
+          "issue_id": "issue:sn83030586:1787-09-22:1",
+          "date": "1787-09-22",
+          "page": 5,
+          "excerpt": "Copy of the Result of the Deliberations of the FEDERAL CONVENTION. In Convention, September 17, 1787. SIR, WE have now the honor to submit to the consideration of the United States in Congress assembled, that Constitution which has appeared to us the most advisable. The friends of our country have long seen and desired, that",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030586/1787-09-12_1_5.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1787__evidence__S87-019.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Federal Convention, 17 September 1787: the Constitution.",
+          "note": "Earliest printing found. Printed in the Supplement to the Independent Journal of Saturday 22 September 1787, as its heading on this page reads; the archive files the supplement with the issue of 12 September (pages 5 to 8). The supplement prints General Washington's letter before the Constitution."
         },
         {
           "id": "obs:expansion-1787:S87-024",
@@ -94044,23 +94061,6 @@
           "note": "Same item as the other printings."
         },
         {
-          "id": "obs:expansion-1787:S87-022",
-          "legacy_id": "S87-022",
-          "node": "sn83030137",
-          "page_id": "page:sn83030137:1787-10-02:1:6",
-          "issue_id": "issue:sn83030137:1787-10-02:1",
-          "date": "1787-10-02",
-          "page": 6,
-          "excerpt": "On Wednesday the 26th ult. His Excellency General Washington passed through Wilmington, on his return from Philadelphia to his seat in Mount Vernon, and on the same day, in crossing the bridge near the Head of Elk, the bridge gave way and his horse fell into the river. His Excellency",
-          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030137/1787-10-02_1_6.pdf?download=true",
-          "scans": [
-            "assets/story_discovery_1787__evidence__S87-022.jpg"
-          ],
-          "transcription": "RevX",
-          "summary": "Wilmington, September 1787: General Washington at the Head of Elk.",
-          "note": "Earliest printing found. Printed in the New-York Packet of Friday 5 October 1787 (No. 738, its masthead on page 5); the archive files that issue with the issue of 2 October (pages 5 to 8)."
-        },
-        {
           "id": "obs:expansion-1787:S87-023",
           "legacy_id": "S87-023",
           "node": "sn83030006",
@@ -94076,6 +94076,23 @@
           "transcription": "RevX",
           "summary": "The Daily Advertiser prints the Wilmington paragraph on General Washington.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1787:S87-022",
+          "legacy_id": "S87-022",
+          "node": "sn83030137",
+          "page_id": "page:sn83030137:1787-10-02:1:6",
+          "issue_id": "issue:sn83030137:1787-10-05:1",
+          "date": "1787-10-05",
+          "page": 6,
+          "excerpt": "On Wednesday the 26th ult. His Excellency General Washington passed through Wilmington, on his return from Philadelphia to his seat in Mount Vernon, and on the same day, in crossing the bridge near the Head of Elk, the bridge gave way and his horse fell into the river. His Excellency",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030137/1787-10-02_1_6.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1787__evidence__S87-022.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Wilmington, September 1787: General Washington at the Head of Elk.",
+          "note": "Earliest printing found. Printed in the New-York Packet of Friday 5 October 1787 (No. 738, its masthead on page 5); the archive files that issue with the issue of 2 October (pages 5 to 8)."
         },
         {
           "id": "obs:expansion-1787:S87-028",
@@ -100245,7 +100262,7 @@
           "publication_date": "1789-01-10",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100259,7 +100276,7 @@
           "publication_date": "1789-01-17",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100273,7 +100290,7 @@
           "publication_date": "1789-01-24",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100287,7 +100304,7 @@
           "publication_date": "1789-01-31",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100301,7 +100318,7 @@
           "publication_date": "1789-02-07",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100315,7 +100332,7 @@
           "publication_date": "1789-02-14",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100329,7 +100346,7 @@
           "publication_date": "1789-02-21",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100343,7 +100360,7 @@
           "publication_date": "1789-02-28",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100357,7 +100374,7 @@
           "publication_date": "1789-03-07",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100371,7 +100388,7 @@
           "publication_date": "1789-03-14",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100385,7 +100402,7 @@
           "publication_date": "1789-03-21",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100399,7 +100416,7 @@
           "publication_date": "1789-03-28",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100413,7 +100430,7 @@
           "publication_date": "1789-04-04",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100427,7 +100444,7 @@
           "publication_date": "1789-04-11",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -100448,7 +100465,7 @@
           "publication_date": "1789-04-18",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100476,7 +100493,7 @@
           "publication_date": "1789-04-25",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100602,7 +100619,7 @@
           "publication_date": "1789-06-06",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100630,7 +100647,7 @@
           "publication_date": "1789-06-13",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100658,7 +100675,7 @@
           "publication_date": "1789-06-20",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100714,7 +100731,7 @@
           "publication_date": "1789-07-04",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100742,7 +100759,7 @@
           "publication_date": "1789-07-11",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100770,7 +100787,7 @@
           "publication_date": "1789-07-18",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100791,7 +100808,7 @@
           "publication_date": "1789-07-25",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100847,7 +100864,7 @@
           "publication_date": "1789-08-08",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100875,7 +100892,7 @@
           "publication_date": "1789-08-15",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100910,7 +100927,7 @@
           "publication_date": "1789-08-22",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100945,7 +100962,7 @@
           "publication_date": "1789-08-29",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -100980,7 +100997,7 @@
           "publication_date": "1789-09-05",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101015,7 +101032,7 @@
           "publication_date": "1789-09-12",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101043,7 +101060,7 @@
           "publication_date": "1789-09-19",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101078,7 +101095,7 @@
           "publication_date": "1789-09-26",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101113,7 +101130,7 @@
           "publication_date": "1789-10-03",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101148,7 +101165,7 @@
           "publication_date": "1789-10-10",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101183,7 +101200,7 @@
           "publication_date": "1789-10-17",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101218,7 +101235,7 @@
           "publication_date": "1789-10-24",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101253,7 +101270,7 @@
           "publication_date": "1789-10-31",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101288,7 +101305,7 @@
           "publication_date": "1789-11-07",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101323,7 +101340,7 @@
           "publication_date": "1789-11-14",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101358,7 +101375,7 @@
           "publication_date": "1789-11-21",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101386,7 +101403,7 @@
           "publication_date": "1789-11-28",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101407,7 +101424,7 @@
           "publication_date": "1789-12-05",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101435,7 +101452,7 @@
           "publication_date": "1789-12-12",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101463,7 +101480,7 @@
           "publication_date": "1789-12-19",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -101498,7 +101515,7 @@
           "publication_date": "1789-12-26",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102305,7 +102322,7 @@
           "publication_date": "1790-01-02",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102326,7 +102343,7 @@
           "publication_date": "1790-01-05",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102347,14 +102364,14 @@
           "publication_date": "1790-01-08",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn82014782",
           "publication_date": "1790-01-09",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102375,7 +102392,7 @@
           "publication_date": "1790-01-12",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102396,14 +102413,14 @@
           "publication_date": "1790-01-15",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn82014782",
           "publication_date": "1790-01-16",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102424,7 +102441,7 @@
           "publication_date": "1790-01-19",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102445,14 +102462,14 @@
           "publication_date": "1790-01-22",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn82014782",
           "publication_date": "1790-01-23",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102487,7 +102504,7 @@
           "publication_date": "1790-01-30",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102522,7 +102539,7 @@
           "publication_date": "1790-02-06",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102550,7 +102567,7 @@
           "publication_date": "1790-02-13",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102585,7 +102602,7 @@
           "publication_date": "1790-02-20",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102613,7 +102630,7 @@
           "publication_date": "1790-02-27",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102648,7 +102665,7 @@
           "publication_date": "1790-03-06",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -102732,7 +102749,7 @@
           "publication_date": "1790-03-22",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102767,7 +102784,7 @@
           "publication_date": "1790-03-29",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102802,7 +102819,7 @@
           "publication_date": "1790-04-05",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102907,7 +102924,7 @@
           "publication_date": "1790-04-26",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102942,7 +102959,7 @@
           "publication_date": "1790-05-03",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102970,7 +102987,7 @@
           "publication_date": "1790-05-10",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -102998,7 +103015,7 @@
           "publication_date": "1790-05-17",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83025587",
@@ -103061,7 +103078,7 @@
           "publication_date": "1790-05-31",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -103096,7 +103113,7 @@
           "publication_date": "1790-06-07",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -103131,7 +103148,7 @@
           "publication_date": "1790-06-14",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -103166,7 +103183,7 @@
           "publication_date": "1790-06-21",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -103194,7 +103211,7 @@
           "publication_date": "1790-06-28",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -103264,7 +103281,7 @@
           "publication_date": "1790-07-12",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -103299,7 +103316,7 @@
           "publication_date": "1790-07-19",
           "observed_issues_editions": 2,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 2
         },
         {
           "newspaper_id": "paper:sn83030483",
@@ -103425,7 +103442,7 @@
           "publication_date": "1790-08-19",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn84023133",
@@ -105495,7 +105512,7 @@
           "publication_date": "1791-05-26",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn84023133",
@@ -112524,13 +112541,6 @@
           "eligible_pages": 4
         },
         {
-          "newspaper_id": "paper:sn83030483",
-          "publication_date": "1792-12-03",
-          "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
-        },
-        {
           "newspaper_id": "paper:sn84038410",
           "publication_date": "1792-12-03",
           "observed_issues_editions": 1,
@@ -112546,6 +112556,13 @@
         },
         {
           "newspaper_id": "paper:sn83025887",
+          "publication_date": "1792-12-05",
+          "observed_issues_editions": 1,
+          "observed_pages": 4,
+          "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn83030483",
           "publication_date": "1792-12-05",
           "observed_issues_editions": 1,
           "observed_pages": 4,
@@ -117031,7 +117048,7 @@
           "publication_date": "1793-01-05",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117150,7 +117167,7 @@
           "publication_date": "1793-01-19",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117213,7 +117230,7 @@
           "publication_date": "1793-01-26",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117283,7 +117300,7 @@
           "publication_date": "1793-02-02",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117346,7 +117363,7 @@
           "publication_date": "1793-02-09",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117409,7 +117426,7 @@
           "publication_date": "1793-02-16",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117465,7 +117482,7 @@
           "publication_date": "1793-02-23",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117528,7 +117545,7 @@
           "publication_date": "1793-03-02",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117640,7 +117657,7 @@
           "publication_date": "1793-03-16",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117696,7 +117713,7 @@
           "publication_date": "1793-03-23",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117752,7 +117769,7 @@
           "publication_date": "1793-03-30",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117864,7 +117881,7 @@
           "publication_date": "1793-04-13",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117920,7 +117937,7 @@
           "publication_date": "1793-04-20",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -117976,7 +117993,7 @@
           "publication_date": "1793-04-27",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118214,7 +118231,7 @@
           "publication_date": "1793-05-25",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118277,7 +118294,7 @@
           "publication_date": "1793-06-01",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118347,7 +118364,7 @@
           "publication_date": "1793-06-08",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118529,7 +118546,7 @@
           "publication_date": "1793-06-29",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118592,7 +118609,7 @@
           "publication_date": "1793-07-06",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118655,7 +118672,7 @@
           "publication_date": "1793-07-13",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118781,7 +118798,7 @@
           "publication_date": "1793-07-27",
           "observed_issues_editions": 2,
           "observed_pages": 12,
-          "eligible_pages": 12
+          "eligible_pages": 6
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118844,7 +118861,7 @@
           "publication_date": "1793-08-03",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -118900,7 +118917,7 @@
           "publication_date": "1793-08-10",
           "observed_issues_editions": 2,
           "observed_pages": 12,
-          "eligible_pages": 12
+          "eligible_pages": 6
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -119110,7 +119127,7 @@
           "publication_date": "1793-08-31",
           "observed_issues_editions": 2,
           "observed_pages": 12,
-          "eligible_pages": 12
+          "eligible_pages": 6
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -119180,7 +119197,7 @@
           "publication_date": "1793-09-07",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -119250,7 +119267,7 @@
           "publication_date": "1793-09-14",
           "observed_issues_editions": 2,
           "observed_pages": 8,
-          "eligible_pages": 8
+          "eligible_pages": 4
         },
         {
           "newspaper_id": "paper:sn83025887",
@@ -139473,7 +139490,7 @@
           "publication_date": "1796-04-09",
           "observed_issues_editions": 1,
           "observed_pages": 4,
-          "eligible_pages": 4
+          "eligible_pages": 0
         },
         {
           "newspaper_id": "paper:sn84026273",
@@ -181130,13 +181147,6 @@
           "eligible_pages": 4
         },
         {
-          "newspaper_id": "paper:sn84038116",
-          "publication_date": "1801-11-16",
-          "observed_issues_editions": 1,
-          "observed_pages": 4,
-          "eligible_pages": 4
-        },
-        {
           "newspaper_id": "paper:sn83025588",
           "publication_date": "1801-11-17",
           "observed_issues_editions": 1,
@@ -181173,6 +181183,13 @@
         },
         {
           "newspaper_id": "paper:sn84024011",
+          "publication_date": "1801-11-18",
+          "observed_issues_editions": 1,
+          "observed_pages": 4,
+          "eligible_pages": 4
+        },
+        {
+          "newspaper_id": "paper:sn84038116",
           "publication_date": "1801-11-18",
           "observed_issues_editions": 1,
           "observed_pages": 4,

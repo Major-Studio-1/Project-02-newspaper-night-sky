@@ -328,7 +328,7 @@ def archive(e, repo):
     a, k, base = t['audit'], d['kentucky'], f'{repo}/blob/main/docs/archive-errata/'
     pct = lambda n, of: f'{100 * n / of:.0f}%'
     years = t['years']; yt = ', '.join(map(str, years[:-1])) + f' and {years[-1]}'
-    n_filing = p['issues'] + d['issues'] + e['second_scan']['issues'] + e.get('swapped_pages', {}).get('issues', 0)
+    n_filing = p['issues'] + d['issues'] + e['second_scan']['issues'] + e.get('swapped_pages', {}).get('issues', 0) + e.get('thin_years', {}).get('issues', 0)
     rep = p['by_kind'].get('duplicate', 0)
     items = [
         ('Transcriptions filed under the wrong page',

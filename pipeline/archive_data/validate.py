@@ -24,7 +24,10 @@ def validate(release):
     expected=json.loads(row[0]) if row else V010_EXPECTED
     counts={t:db.execute('SELECT COUNT(*) FROM '+t).fetchone()[0] for t in ['newspapers','issues','pages','observations','groups','memberships','group_hierarchy','claims','relations','topics','date_assertions']}
     counts['eligible_pages']=db.execute('SELECT SUM(eligible) FROM page_assessments').fetchone()[0]
-    check('Full source inventory reconciles',counts['pages']==77793 and counts['issues']==19445 and counts['newspapers']==110)
+    # v0.11.40 on: a filing correction may add an issue for pages the collection files with another issue (metadata issues_added).
+    added_row=db.execute("SELECT value_json FROM metadata WHERE key='issues_added'").fetchone()
+    issues_added=json.loads(added_row[0]) if added_row else []
+    check('Full source inventory reconciles',counts['pages']==77793 and counts['issues']==19445+len(issues_added) and counts['newspapers']==110)
     # v0.11.7 on: a page found to be a second scan of another page is left out by a recorded table correction.
     log_row=db.execute("SELECT value_json FROM metadata WHERE key='table_corrections'").fetchone()
     table_log=json.loads(log_row[0]) if log_row else []
@@ -231,6 +234,10 @@ def validate(release):
         check('Every page filed in another issue keeps its filed issue in its id and names the issue it belongs to, of the same newspaper and edition',
               bool(moves) and all(c['column'] == 'issue_id' and 'issue:'+c['id'].split(':', 1)[1].rsplit(':', 1)[0] == c['from'] and page_issue_now[c['id']] == c['to']
                                   and paper[c['from']] == paper[c['to']] for c in moves))
+        if issues_added:
+            check('Every issue a filing correction added holds exactly the pages it names, each moved there by a recorded correction',
+                  all(sorted(p for p, i in page_issue_now.items() if i == a['id']) == sorted(a['page_ids']) for a in issues_added)
+                  and all(any(c['id'] == p and c['to'] == a['id'] for c in moves) for a in issues_added for p in a['page_ids']))
         seconds = {c['id'].split('@')[0] for c in table_log if c['table'] == 'page_assessments' and c['column'] == 'eligible'}
         used = set(scores['page_id'].to_pylist())
         if (release/'derived/reuse_family_appearances.parquet').exists():
