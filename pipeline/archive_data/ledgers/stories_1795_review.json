@@ -1,0 +1,943 @@
+{
+ "findings": {
+  "S95-001": [
+   "Scan matches the excerpt, under the heading 'The Whisky Boys.'; it prints '20' and 'jail'."
+  ],
+  "S95-002": [
+   "Scan reads '20' (its 0 is partly broken but round and on the line; the reviewing session read it on an enlargement, 24 November); the transcription '25' changes the number of prisoners. The rest matches; the paper prints 'gaol'."
+  ],
+  "S95-003": [
+   "Scan matches the excerpt except that it prints 'Pittsburg', which the transcription gives as 'Pittsburgh'; it prints '20' and 'goal'."
+  ],
+  "S95-004": [
+   "Scan matches the excerpt; it prints '20' and 'goal'."
+  ],
+  "S95-005": [
+   "Scan reads 'an encreasing prospect' (an old spelling of 'increasing'); the transcription 'encroaching' is a different word that changes the sense. The rest of the excerpt matches."
+  ],
+  "S95-006": [
+   "The tear cuts the first lines, but the visible letters read 'consola…' and 'contin…': the transcription's 'concern' and 'confirmation' are different words that change the sense. Below the tear the scan matches the excerpt (it prints 'encreasing', which the transcription modernises)."
+  ],
+  "S95-007": [
+   "Scan matches the excerpt, except that it prints 'encreasing', which the transcription modernises to 'increasing'."
+  ],
+  "S95-008": [
+   "Scan matches the excerpt; it prints '20' and 'goal'."
+  ],
+  "S95-009": [
+   "Scan reads 'an encreasing prospect'; the transcription 'encroaching' is a different word that changes the sense. The rest of the excerpt matches."
+  ],
+  "S95-010": [
+   "Scan matches the excerpt; the worn word reads 'encreasing', which the transcription modernises to 'increasing'."
+  ],
+  "S95-011": [
+   "Scan matches the excerpt apart from small misreadings: the print has 'Custom' (transcribed 'Cuthom') and 'Chesapeak' (transcribed 'Chesapeake'). It prints 'February 3'."
+  ],
+  "S95-012": [
+   "Scan matches the excerpt; it prints 'and' and 'to me'."
+  ],
+  "S95-013": [
+   "Scan matches the excerpt; it prints 'and' and 'to me'."
+  ],
+  "S95-014": [
+   "Scan matches the excerpt; it prints 'and' and 'to me'. The crop shows the heading 'Most Gracious SPEECH.' above the salutation, which the excerpt lacks."
+  ],
+  "S95-015": [
+   "Scan matches the excerpt; the print spells 'Chesapeak', which the transcription modernises to 'Chesapeake'. It prints 'February 3'."
+  ],
+  "S95-016": [
+   "Scan matches the excerpt; the paper prints 'yesterday', the Philadelphia form."
+  ],
+  "S95-017": [
+   "Scan matches the excerpt; it prints 'and' and 'to me'. The crop shows the end of a heading ('...liament:') above, which the excerpt lacks."
+  ],
+  "S95-018": [
+   "Scan prints the dateline 'BOSTON, JAN. 18.' as the transcription reads it, although the letter below is dated Feb. 3: a printed date, not a transcription error. The transcription reads 'Extract' as 'Extra'; the rest matches."
+  ],
+  "S95-019": [
+   "Scan matches the excerpt, including 'Greatbritain' printed as one word; it prints 'so'. The print appears to read 'Otwego', which the transcription gives as 'Oswego'."
+  ],
+  "S95-020": [
+   "Scan matches the excerpt except that the transcription reads 'Extract' as 'Extra'. It prints 'Feb. 3', under its own heading 'New Ambassador from France.'"
+  ],
+  "S95-021": [
+   "Scan reads 'so' (with a long s) where the transcription has 'to', and 'Oswego' where it has 'Ofwego': small misreadings that do not change the sense. The rest matches."
+  ],
+  "S95-022": [
+   "Scan matches the excerpt except that the transcription reads the long s of 'Oswego' as 'Ofwego'; it prints 'so'."
+  ],
+  "S95-023": [
+   "Scan matches the excerpt; it prints 'and' and 'to me'. The crop shows the end of a heading ('Parliament;—') above, which the excerpt lacks."
+  ],
+  "S95-024": [
+   "Scan matches the excerpt; it prints 'so'."
+  ],
+  "S95-025": [
+   "Scan matches the excerpt, headings included; the letter is dated 'February 2, 1795'."
+  ],
+  "S95-026": [
+   "Scan matches the excerpt; it prints 'so'."
+  ],
+  "S95-027": [
+   "Scan reads 'satisfaction for me' and 'interest' where the other printings have 'to me' and 'interests': printed differences, not transcription errors. The excerpt matches the scan."
+  ],
+  "S95-028": [
+   "Scan matches the excerpt except that the transcription drops 'us' after 'assures' (printed close up), which does not change the sense. The paragraph ends with the credit '[Aurora.]'."
+  ],
+  "S95-029": [
+   "Scan matches the excerpt, dateline 'Newyork, Feb. 21.' included; the paper prints 'last Tuesday', the New York form."
+  ],
+  "S95-030": [
+   "The two crops (foot of one column, top of the next) match the excerpt, except that the print has 'an uniform' where the transcription modernises it to 'a uniform': a transcription difference, not a printed one."
+  ],
+  "S95-031": [
+   "Scan matches the excerpt; the paper prints 'last Tuesday', the New York form."
+  ],
+  "S95-032": [
+   "Scan matches the excerpt, heading 'NATURALIZATION LAW, Of the UNITED STATES.' included."
+  ],
+  "S95-033": [
+   "Scan matches the excerpt; the paper prints 'last Tuesday', the New York form."
+  ],
+  "S95-034": [
+   "Scan matches the excerpt; the crop shows the act, not the brig Lydia paragraph on the same page."
+  ],
+  "S95-035": [
+   "Scan matches the excerpt; a fold crosses the second and third lines, but they can be read. The crop shows the brig Lydia paragraph, not the act on the same page."
+  ],
+  "S95-036": [
+   "Scan matches the excerpt."
+  ],
+  "S95-037": [
+   "Scan matches the excerpt, dateline 'MARCH 4.' included."
+  ],
+  "S95-038": [
+   "The locator's crop began below the heading; the excerpt now starts with the heading, and the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan; the paper prints two letters to two gentlemen where the other printings have one letter to a gentleman."
+  ],
+  "S95-039": [
+   "Scan matches the excerpt, dateline 'MARCH 9.' included."
+  ],
+  "S95-040": [
+   "Scan matches the excerpt; the paper prints a shorter form of the paragraph, ending 'He has refused money.'"
+  ],
+  "S95-041": [
+   "Scan matches the excerpt: 'Important and Pleasing News', the letter dated 'Feb. 2, 1795'. The page is dark and stained but readable."
+  ],
+  "S95-042": [
+   "Scan matches the excerpt, which opens with the quoted dateline 'Newyork, March 9.'"
+  ],
+  "S95-043": [
+   "Scan matches the excerpt, including the paper's own spelling 'canon'."
+  ],
+  "S95-044": [
+   "Scan matches the headings and the letter's first words, but the print goes on ('—you will see by the official papers now transmitted...') where the transcription closes the letter with '...': words dropped. 'Extract' is read as 'Extra'."
+  ],
+  "S95-045": [
+   "Scan matches the excerpt."
+  ],
+  "S95-046": [
+   "Scan dates the letter 'February 2, 1725', a printer's error where the other printings have 1795; the transcription's '1775' changes the printed year. The rest matches, including the paper's spelling 'Grenville'."
+  ],
+  "S95-047": [
+   "Scan matches the excerpt in substance. The captain's name is blotted except its ending '-kerly', so the transcription's 'Shackery' drops a letter; the paper misprints 'addresses' for 'addressed', which the transcription silently corrects."
+  ],
+  "S95-048": [
+   "Scan matches the excerpt; it prints 'February 3'. The scan is small and soft, but every word can be read."
+  ],
+  "S95-049": [
+   "Scan matches the excerpt except for names a letter off: it prints 'Pruys', 'Thoen' and 'P. J. B. P.', which the transcription gives as 'Pruyss', 'Thoem' and 'P. J. B. F.'."
+  ],
+  "S95-050": [
+   "Scan reads 'hail you with vows of health'; the transcription's 'bail' and 'views' are different words that change the sense. Several names are also a letter or two off ('Pruis', 'Tboen', 'Wisseleus', 'Vandenfluut')."
+  ],
+  "S95-051": [
+   "The CA text is garbled throughout but can be read as the proclamation's heading, salutation and first names; no garble reads as another fact. The print has 'Prays' where the other printings have 'Pruys'."
+  ],
+  "S95-052": [
+   "The locator's crop showed the end of the proclamation; the crop was placed by hand (24 November). It shows the heading and the whole excerpt: RevX gives 'S. Willems', a different name, for the printed 'S. Wiseleus' and 'had you' for 'hail you', and garbles four more names ('Pruss', 'Van Lier', 'Oudou', 'Vandenclois')."
+  ],
+  "S95-053": [
+   "Scan matches the excerpt except two names the transcription garbles ('Witteus', 'Vandeuluis'); 'Van Haller' is worn and cannot be confirmed. The print itself has 'COMMITTEE' (singular) and 'Von Laer'."
+  ],
+  "S95-054": [
+   "Scan reads 'My Lords & Gentlemen' with an ampersand, as the transcription has it: a printed difference. The rest matches; the scan is small but legible."
+  ],
+  "S95-055": [
+   "Scan matches the excerpt, dateline 'BALTIMORE, March 9.' included; the crop shows the Algiers paragraph, not the page's other items. The scan is coarse but readable."
+  ],
+  "S95-056": [
+   "Scan reads 'NEW-YORK, March 12.' where the other printings have March 9: a printed difference, not a transcription error. The rest matches; the print appears to have 'addressed' where the transcription has 'adressed', a minor slip."
+  ],
+  "S95-057": [
+   "The locator's crops took in part of the next column; the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan; the paper prints 'so'."
+  ],
+  "S95-058": [
+   "Scan matches the excerpt and prints 'April 16th'. The print has the misprint 'conrary', which the transcription silently corrects to 'contrary'."
+  ],
+  "S95-059": [
+   "The locator's crops also showed the act's end and other notices; the excerpt now starts with the heading 'LAW OF THE UNITED STATES' printed above the act, and the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan, including the paper's spelling 'compleat'."
+  ],
+  "S95-060": [
+   "Scan reads 'left there the 11th inst.', as the other printings do; the transcription '17th' is a transcription error that changes the date. The rest matches across the two crops."
+  ],
+  "S95-061": [
+   "Scan matches the excerpt and prints 'April 16'."
+  ],
+  "S95-062": [
+   "Scan matches the excerpt and reads '11th instant'; the transcription shortens 'instant' to 'inst.' and spells the printed 'M'Intire' as 'McIntire'."
+  ],
+  "S95-063": [
+   "Scan matches the excerpt and reads '11th'; the transcription drops one letter of the place name 'Marygatt'."
+  ],
+  "S95-064": [
+   "Scan reads 'G. Pruys'; the transcription 'Prins' turns it into a different name. The missing salutation and the shortened list of names are in the print itself, not transcription errors."
+  ],
+  "S95-065": [
+   "Scan matches the excerpt and prints 'April 16th'."
+  ],
+  "S95-066": [
+   "Scan matches the excerpt and reads '11th instant'. The place name is worn (checked on an enlargement) and looks like 'Marygatt', so 'Marygirt' is at most a small garble of the same name."
+  ],
+  "S95-067": [
+   "Scan matches the excerpt: 'Saturday', 'March 25, which contain' and '1000'. The transcription modernises the printed 'Rousillon' to 'Roussillon'."
+  ],
+  "S95-068": [
+   "Scan matches the excerpt; the transcription modernises the printed 'Rousillon' to 'Roussillon'."
+  ],
+  "S95-069": [
+   "Scan matches the excerpt, including this paper's own wording 'He brought papers to 25 March, containing'. The transcription reads the long s in 'Rousillon' as f."
+  ],
+  "S95-070": [
+   "Scan matches the excerpt and prints 'April 16'. The crop is small but legible."
+  ],
+  "S95-071": [
+   "Scan matches the excerpt (checked on enlargements of a low-resolution page). This paper prints 'Sunday', 'March 24' and, most likely, '1500' killed where the other printings have Saturday, March 25 and 1000: printed differences, not transcription errors."
+  ],
+  "S95-072": [
+   "Scan matches the excerpt; the transcription drops the long s of the printed 'Rousillon'."
+  ],
+  "S95-073": [
+   "Scan matches the excerpt and reads '11th'; the transcription shortens '3d instant' to '3d inst.'. The crop is small but legible."
+  ],
+  "S95-074": [
+   "Scan matches the excerpt except one word: the print has 'Rewbel assended' (a misspelling of 'ascended'), and the transcription 'attended' turns it into a different word that changes the sense."
+  ],
+  "S95-075": [
+   "Scan reads 'Rewbel' twice, as the New-Hampshire Gazette does; the transcription 'Robespierre' changes the name. The transcription also puts words the print does not have ('lays before you the following articles of the Treaty') in place of the printed 'says he, has followed your intention'."
+  ],
+  "S95-076": [
+   "Scan matches the excerpt except the name: the print has 'REUBEL' (with a large initial R), which the transcription gives as 'RUEBEL', a small garble of the same name."
+  ],
+  "S95-077": [
+   "Scan matches the excerpt and reads 'About one o'clock'."
+  ],
+  "S95-078": [
+   "Scan matches the excerpt."
+  ],
+  "S95-079": [
+   "Scan matches the excerpt. This paper prints 'About nine o'clock' where the other printings have 'one o'clock': a printed difference, not a transcription error."
+  ],
+  "S95-080": [
+   "Scan matches the excerpt and reads 'one o'clock'."
+  ],
+  "S95-081": [
+   "Scan matches the excerpt and reads 'one o'clock'."
+  ],
+  "S95-082": [
+   "Scan reads 'the unlawful and riotous proceeding'; the transcription 'vicious' is a different word that changes how the event is described. The rest matches the excerpt."
+  ],
+  "S95-083": [
+   "The CA text is garbled but changes no fact. The paper prints 'disagreeable tax; but' and 'riotous proceedings' where the other printings have 'task—But' and 'proceeding', and misprints its heading 'UMWARRANTABLE': printed differences, not transcription errors."
+  ],
+  "S95-084": [
+   "Scan matches the excerpt except 'talk', a misreading of the long s in 'taſk' that changes no fact. The scan reads 'riotous'."
+  ],
+  "S95-085": [
+   "Scan matches the excerpt; the second crop shows its last word, 'ported', at the head of the next column. This paper prints 'disgrace on our fellow citizens' where the others have 'upon'."
+  ],
+  "S95-086": [
+   "Scan matches the excerpt."
+  ],
+  "S95-087": [
+   "Crop shows the treaty's heading 'TREATY, &c.' and its opening; they match the excerpt."
+  ],
+  "S95-088": [
+   "Crop shows the treaty's full heading and its opening; they match the excerpt."
+  ],
+  "S95-089": [
+   "The locator's crop began at the treaty's second line; the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan; the paper misprints 'referance', which the transcription silently corrects."
+  ],
+  "S95-090": [
+   "Crop shows the heading 'TREATY, &c.' and the opening; on this small, blurred scan the words match the excerpt, though spellings such as 'Britannic' and 'pretensions' cannot be confirmed letter by letter."
+  ],
+  "S95-091": [
+   "Scan matches the excerpt. It prints 'LONDON, AUG. 21.' where the other printings have 22 August: a printed difference, not a transcription error."
+  ],
+  "S95-092": [
+   "The paper prints only the item's first paragraph, ending 'Holland.'; the excerpt ran on into the next item, a letter headed 'For the Gazette', and now ends at 'Holland.' (24 November). The crop, placed by hand, shows the whole excerpt, which matches the scan."
+  ],
+  "S95-093": [
+   "Scan matches the excerpt, including the printed 'Loyd's'."
+  ],
+  "S95-094": [
+   "Scan matches the excerpt; the dateline 'AUGUST. 22.' stands below the heading 'War with Holland.'"
+  ],
+  "S95-095": [
+   "Scan matches the excerpt; its heading is the paper's own dateline, Philadelphia, Thursday evening, 12 November 1795."
+  ],
+  "S95-096": [
+   "Scan matches the excerpt."
+  ],
+  "S95-097": [
+   "Scan matches the excerpt."
+  ],
+  "S95-098": [
+   "Scan prints the fraction ½ after '17 and' (its upper figure is plainly 1; the lower is worn); the transcription '3/4' changes the keel length. The rest matches the excerpt."
+  ],
+  "S95-099": [
+   "Scan prints 'Dispatchs', a misprint the transcription silently corrects to 'Dispatches'; otherwise it matches the excerpt."
+  ],
+  "S95-100": [
+   "Scan matches the excerpt except 'redi-ousness', a garble of 'tedi-ousness'. The paper prints 'NOV. 13' and '17 and an half' where other printings have Nov. 12 and 1-2: printed differences, not transcription errors."
+  ],
+  "S95-101": [
+   "Scan matches the excerpt as far as this blurred scan can be read. The line above the item is a source line, 'From a Philadelphia paper of November 11', rightly left out of the excerpt."
+  ],
+  "S95-102": [
+   "Scan matches the excerpt across both crops (the item runs from the foot of one column to the top of the next). The scan is small but legible."
+  ]
+ },
+ "crops": {
+  "S95-001": [
+   "S95-001-1.jpg",
+   "S95-001-2.jpg"
+  ],
+  "S95-002": [
+   "S95-002.jpg"
+  ],
+  "S95-003": [
+   "S95-003.jpg"
+  ],
+  "S95-004": [
+   "S95-004.jpg"
+  ],
+  "S95-005": [
+   "S95-005.jpg"
+  ],
+  "S95-006": [
+   "S95-006.jpg"
+  ],
+  "S95-007": [
+   "S95-007.jpg"
+  ],
+  "S95-008": [
+   "S95-008.jpg"
+  ],
+  "S95-009": [
+   "S95-009.jpg"
+  ],
+  "S95-010": [
+   "S95-010.jpg"
+  ],
+  "S95-011": [
+   "S95-011.jpg"
+  ],
+  "S95-012": [
+   "S95-012.jpg"
+  ],
+  "S95-013": [
+   "S95-013.jpg"
+  ],
+  "S95-014": [
+   "S95-014.jpg"
+  ],
+  "S95-015": [
+   "S95-015.jpg"
+  ],
+  "S95-016": [
+   "S95-016.jpg"
+  ],
+  "S95-017": [
+   "S95-017.jpg"
+  ],
+  "S95-018": [
+   "S95-018.jpg"
+  ],
+  "S95-019": [
+   "S95-019.jpg"
+  ],
+  "S95-020": [
+   "S95-020.jpg"
+  ],
+  "S95-021": [
+   "S95-021.jpg"
+  ],
+  "S95-022": [
+   "S95-022.jpg"
+  ],
+  "S95-023": [
+   "S95-023.jpg"
+  ],
+  "S95-024": [
+   "S95-024.jpg"
+  ],
+  "S95-025": [
+   "S95-025.jpg"
+  ],
+  "S95-026": [
+   "S95-026.jpg"
+  ],
+  "S95-027": [
+   "S95-027.jpg"
+  ],
+  "S95-028": [
+   "S95-028.jpg"
+  ],
+  "S95-029": [
+   "S95-029.jpg"
+  ],
+  "S95-030": [
+   "S95-030-1.jpg",
+   "S95-030-2.jpg"
+  ],
+  "S95-031": [
+   "S95-031.jpg"
+  ],
+  "S95-032": [
+   "S95-032.jpg"
+  ],
+  "S95-033": [
+   "S95-033.jpg"
+  ],
+  "S95-034": [
+   "S95-034.jpg"
+  ],
+  "S95-035": [
+   "S95-035.jpg"
+  ],
+  "S95-036": [
+   "S95-036.jpg"
+  ],
+  "S95-037": [
+   "S95-037.jpg"
+  ],
+  "S95-038": [
+   "S95-038.jpg"
+  ],
+  "S95-039": [
+   "S95-039.jpg"
+  ],
+  "S95-040": [
+   "S95-040.jpg"
+  ],
+  "S95-041": [
+   "S95-041.jpg"
+  ],
+  "S95-042": [
+   "S95-042.jpg"
+  ],
+  "S95-043": [
+   "S95-043.jpg"
+  ],
+  "S95-044": [
+   "S95-044.jpg"
+  ],
+  "S95-045": [
+   "S95-045.jpg"
+  ],
+  "S95-046": [
+   "S95-046.jpg"
+  ],
+  "S95-047": [
+   "S95-047.jpg"
+  ],
+  "S95-048": [
+   "S95-048.jpg"
+  ],
+  "S95-049": [
+   "S95-049.jpg"
+  ],
+  "S95-050": [
+   "S95-050.jpg"
+  ],
+  "S95-051": [
+   "S95-051.jpg"
+  ],
+  "S95-052": [
+   "S95-052.jpg"
+  ],
+  "S95-053": [
+   "S95-053.jpg"
+  ],
+  "S95-054": [
+   "S95-054.jpg"
+  ],
+  "S95-055": [
+   "S95-055.jpg"
+  ],
+  "S95-056": [
+   "S95-056.jpg"
+  ],
+  "S95-057": [
+   "S95-057.jpg"
+  ],
+  "S95-058": [
+   "S95-058.jpg"
+  ],
+  "S95-059": [
+   "S95-059.jpg"
+  ],
+  "S95-060": [
+   "S95-060-1.jpg",
+   "S95-060-2.jpg"
+  ],
+  "S95-061": [
+   "S95-061.jpg"
+  ],
+  "S95-062": [
+   "S95-062.jpg"
+  ],
+  "S95-063": [
+   "S95-063.jpg"
+  ],
+  "S95-064": [
+   "S95-064.jpg"
+  ],
+  "S95-065": [
+   "S95-065.jpg"
+  ],
+  "S95-066": [
+   "S95-066.jpg"
+  ],
+  "S95-067": [
+   "S95-067.jpg"
+  ],
+  "S95-068": [
+   "S95-068.jpg"
+  ],
+  "S95-069": [
+   "S95-069.jpg"
+  ],
+  "S95-070": [
+   "S95-070.jpg"
+  ],
+  "S95-071": [
+   "S95-071.jpg"
+  ],
+  "S95-072": [
+   "S95-072.jpg"
+  ],
+  "S95-073": [
+   "S95-073.jpg"
+  ],
+  "S95-074": [
+   "S95-074.jpg"
+  ],
+  "S95-075": [
+   "S95-075.jpg"
+  ],
+  "S95-076": [
+   "S95-076.jpg"
+  ],
+  "S95-077": [
+   "S95-077.jpg"
+  ],
+  "S95-078": [
+   "S95-078.jpg"
+  ],
+  "S95-079": [
+   "S95-079.jpg"
+  ],
+  "S95-080": [
+   "S95-080.jpg"
+  ],
+  "S95-081": [
+   "S95-081.jpg"
+  ],
+  "S95-082": [
+   "S95-082.jpg"
+  ],
+  "S95-083": [
+   "S95-083.jpg"
+  ],
+  "S95-084": [
+   "S95-084.jpg"
+  ],
+  "S95-085": [
+   "S95-085-1.jpg",
+   "S95-085-2.jpg"
+  ],
+  "S95-086": [
+   "S95-086.jpg"
+  ],
+  "S95-087": [
+   "S95-087.jpg"
+  ],
+  "S95-088": [
+   "S95-088.jpg"
+  ],
+  "S95-089": [
+   "S95-089.jpg"
+  ],
+  "S95-090": [
+   "S95-090.jpg"
+  ],
+  "S95-091": [
+   "S95-091.jpg"
+  ],
+  "S95-092": [
+   "S95-092.jpg"
+  ],
+  "S95-093": [
+   "S95-093.jpg"
+  ],
+  "S95-094": [
+   "S95-094.jpg"
+  ],
+  "S95-095": [
+   "S95-095.jpg"
+  ],
+  "S95-096": [
+   "S95-096.jpg"
+  ],
+  "S95-097": [
+   "S95-097.jpg"
+  ],
+  "S95-098": [
+   "S95-098.jpg"
+  ],
+  "S95-099": [
+   "S95-099.jpg"
+  ],
+  "S95-100": [
+   "S95-100.jpg"
+  ],
+  "S95-101": [
+   "S95-101.jpg"
+  ],
+  "S95-102": [
+   "S95-102-1.jpg",
+   "S95-102-2.jpg"
+  ]
+ },
+ "boxes": {
+  "S95-006": [
+   [
+    3480,
+    790,
+    4630,
+    1650
+   ]
+  ],
+  "S95-038": [
+   [
+    1656,
+    1760,
+    2672,
+    2300
+   ]
+  ],
+  "S95-051": [
+   [
+    2480,
+    6620,
+    3490,
+    7170
+   ]
+  ],
+  "S95-052": [
+   [
+    2975,
+    2010,
+    3745,
+    2505
+   ]
+  ],
+  "S95-057": [
+   [
+    598,
+    1462,
+    941,
+    1749
+   ]
+  ],
+  "S95-059": [
+   [
+    194,
+    162,
+    520,
+    564
+   ]
+  ],
+  "S95-089": [
+   [
+    2150,
+    5600,
+    3170,
+    6625
+   ]
+  ],
+  "S95-092": [
+   [
+    1358,
+    6778,
+    2380,
+    7167
+   ]
+  ],
+  "S95-102": [
+   [
+    437,
+    2222,
+    775,
+    2428
+   ],
+   [
+    795,
+    195,
+    1110,
+    260
+   ]
+  ]
+ },
+ "notes": {
+  "S95-001": "Earliest printing found. Prints the heading 'The Whisky Boys.' above the dateline, which the other printings lack, and 'jail', where they print 'gaol' or 'goal'.",
+  "S95-007": "Prints 'U. STATES' and 'war, an encreasing', with a comma where the Columbian Informer, the American Herald of Liberty and the New-Hampshire Gazette print a dash.",
+  "S95-018": "Prints the dateline 'BOSTON, JAN. 18.' directly above 'FRENCH AMBASSADOR.', over the Baltimore letter of 3 February.",
+  "S95-020": "Prints the letter under 'FEBRUARY 16. New Ambassador from France.', where the New-Hampshire Gazette and the Mirrour print 'FRENCH AMBASSADOR.'",
+  "S95-027": "Prints 'satisfaction for me' and 'interest' where the other printings have 'to me' and 'interests'.",
+  "S95-038": "Prints 'Extract of two letters dated Fort Washington, February 2, to two gentlemen in this city', with no year, where the other printings have one letter 'to a gentleman'.",
+  "S95-040": "Prints a shorter form of the paragraph ('glad', 'brethren', 'is to have'), which ends 'He has refused money.'",
+  "S95-043": "Prints 'glad' and 'brethren', as the Mirrour, and the misprint 'canon' for 'cannon'.",
+  "S95-046": "Dates the letter 'February 2, 1725', a misprint for 1795, and prints 'Grenville' for Greenville.",
+  "S95-047": "Prints '7th Jan.' and the misprint 'addresses' for 'addressed'.",
+  "S95-050": "Prints 'J. Van Hoffen' where the New-Hampshire Gazette prints 'Haffen'.",
+  "S95-051": "Prints 'Prays' where the other printings have 'Pruys'.",
+  "S95-052": "Prints the heading with 'Committee' (singular), 'J. Theon' where the others have 'Thoen', and 'P. J. B. P, Van Vander Aa'.",
+  "S95-053": "Prints 'COMMITTEE' (singular) and 'D. Von Laer' where the New-Hampshire Gazette, the Mirrour and the American Herald of Liberty print 'Committees' and 'Van Laer'.",
+  "S95-056": "Dates the paragraph 'NEW-YORK, March 12.' where the other printings have March 9.",
+  "S95-058": "Earliest printing found. Prints the misprint 'conrary' for 'contrary', which RevX corrects.",
+  "S95-059": "Prints the heading 'LAW OF THE UNITED STATES' above the act and the spelling 'compleat'.",
+  "S95-064": "Prints no 'Brave Citizens' and six names where the New-Hampshire Gazette prints ten: 'J. Tho. C. Von. Laer' and 'E. Vander Aa' each run two names into one, and two names are not printed; the heading has 'Committee' (singular).",
+  "S95-069": "Prints 'He brought papers to 25 March, containing' where the other printings have 'Capt. Kennedy brought papers to March 25, which contain'.",
+  "S95-071": "Prints 'Sunday evening', 'papers to March 24' and, as far as the scan can be read, '1500' killed, where the other printings have Saturday, March 25 and 1000; it leaves out 'which contain very little intelligence'.",
+  "S95-074": "Earliest printing found. Prints the translation 'presented by Rewbel', as the Gazette of the United States, with the misprint 'assended' for 'ascended'.",
+  "S95-075": "Prints the translation 'presented by Rewbel', as the New-Hampshire Gazette.",
+  "S95-076": "Prints the other translation ('Reubel ... ascended the tribune; he said'), as the Federal Mirror.",
+  "S95-078": "Prints the other translation ('Reubel ... ascended the tribune; he said'), under 'SESSIONS OF 11TH APRIL'.",
+  "S95-079": "Prints 'About nine o'clock' where the other printings have 'About one o'clock'.",
+  "S95-080": "Prints 'the proceedings commenced' and 'he plead as usual' where the Gazette of the United States and the Patowmac Guardian print 'the proceeding commenced' and 'he had pled in the usual form'.",
+  "S95-081": "Prints 'he plead as usual', as the New-Hampshire Gazette.",
+  "S95-082": "Earliest printing found. Has no '[FACTS.]' line under the heading, which the other printings print.",
+  "S95-083": "Prints the heading misprinted 'UMWARRANTABLE PROCEEDINGS', 'a very disagreeable tax; but' where the others have 'task—But', and 'riotous proceedings' (the others: 'proceeding').",
+  "S95-084": "Prints the dateline 'JUNE 24.' with no place name.",
+  "S95-085": "Prints 'disgrace on our fellow citizens' where the other printings have 'upon'.",
+  "S95-087": "Earliest printing found. Prints the heading 'TREATY, &c.' and the spelling 'Britannick'.",
+  "S95-089": "Prints the misprint 'referance' for 'reference'.",
+  "S95-091": "Earliest printing found. Dates the paragraph 'LONDON, AUG. 21.' where the other printings have 22 August.",
+  "S95-092": "Prints only the paragraph's first sentence, which ends 'Holland.'",
+  "S95-094": "Prints the date 'AUGUST. 22.' below the heading, with no place name.",
+  "S95-096": "Earliest printing found. Prints the London form 'On Saturday dispatches were received at the Admiralty Office', 'Sir John B. Warren' and 'the Artois, Sir Edward Nagel', without 'frigate'.",
+  "S95-097": "Prints the London form 'Dispatches were received the 15th Sept.', 'Bourlace' and 'Sir Edwards Nagel'.",
+  "S95-099": "Prints the London form 'Dispatchs were received the 15th Sept.', with the misprint 'Dispatchs', 'Bourlace', '&' and 'Sir Edwards Nagel'.",
+  "S95-100": "Dates the paragraph 'PHILADELPHIA, NOV. 13.' where the other printings have 12 November, and prints '17 and an half'.",
+  "S95-102": "Prints the form 'On Saturday dispatches were received at the Admiralty Office' under 'Sept. 22.', with 'Borlase'."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1795 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 481 items found on the pages, 145 in 4 or more papers by the finder's count), and again with the families of 1794 over the 1795 pages (items_from_1794.json: 65 items found, 16 in 4 or more). Every item in 3 or more papers was compared by machine with every page and counted again by its opening; a sweep of seven-word sequences shared by 4 or more papers found 446 runs, and the runs no finder item covers were read. Counted item by item (153 entries; the daily proceedings of Congress and of the state legislatures left out as digests), 130 items meet the bar (count_1795.md); where an item's family or run also holds other texts (the acts share their formulas), its papers were counted by its own words. The admitted and chosen items were counted again by their own words over all 1,668 pages in both transcriptions, and read on every page.",
+  "selection_rule": "The thin-year rule (Y-THIN, as amended on 23 November 2026, the owner's choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; as in R-01, the eligible items printed by every newspaper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35); one affair's items as in X-1800-01; digests are not admitted; sub-stories (C-01), private persons (R-04) and the list of items read and not admitted (R-03) as in every year. In 1795 4 to 8 papers survive for an item's weeks, so the bar is 4 or 5.",
+  "paper_counting": "1795 has 11 catalogue series, which are 9 papers (C-04, X-1795-02): the Gazette of the United States (200 issues, daily, under two catalogue numbers, to 30 June and from 8 July, to 30 November), the New-Hampshire Gazette (52), the Kentucky Gazette (49), the Concord paper (44: The Mirrour to 3 April, The Federal Mirror from 10 April), the American Herald of Liberty (29), the Columbian Informer (16, to 21 April), the Patowmac Guardian (12), The Eagle (8, May to October) and The Phoenix (1, 17 January). No 1795 issue has a corrected date; the release's map lists 5 misfiled RevX pages of 1795, none of them a page of this ledger.",
+  "items_admitted": {
+   "presidents-proclamation-for-a-day-of-thanksgiving-1-january-1795": "count entry 14 (I95-0017, I95-0018, I94-0003); searches of its own words; chosen to cover the months and the kinds of news.",
+   "philadelphia-insurgents-from-the-westward-lodged-in-the-jail-december-1794": "count entry 7 (I95-0016); searches of its own words; chosen to cover the months and the kinds of news.",
+   "baltimore-letter-french-ships-of-the-line-in-the-chesapeake-february-1795": "count entry 42 (I95-0004); searches of its own words; chosen to cover the months and the kinds of news.",
+   "the-kings-speech-at-the-opening-of-parliament-30-december-1794": "count entry 44 (I95-0002, I95-0001, I95-0207, R164); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795": "count entry 58 (I95-0005); searches of its own words; chosen to cover the months and the kinds of news.",
+   "the-presidents-message-on-the-georgia-land-sales-february-1795": "count entry 54 (R190); searches of its own words; chosen to cover the months and the kinds of news.",
+   "fort-washington-letter-the-indians-apply-for-a-treaty-of-peace-february-1795": "count entry 64 (I95-0027, I95-0082); searches of its own words; chosen to cover the months and the kinds of news.",
+   "a-correspondent-on-a-treaty-with-the-dey-of-algiers-march-1795": "count entry 68 (I95-0028); searches of its own words; chosen to cover the months and the kinds of news.",
+   "act-to-establish-an-uniform-rule-of-naturalization-january-1795": "count entry 70 (I95-0029, I95-0013); searches of its own words; chosen to cover the months and the kinds of news.",
+   "new-york-the-brig-lydia-from-amsterdam-march-1795": "count entry 72 (I95-0006, R243); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795": "count entry 83 (I95-0031, I95-0007, I95-0244); searches of its own words; chosen to cover the months and the kinds of news.",
+   "secretary-of-states-circular-of-16-april-1795-on-ships-of-war": "count entry 98 (I95-0102); searches of its own words; chosen to cover the months and the kinds of news.",
+   "the-sloop-delia-from-st-martins-the-island-taken-april-1795": "count entry 107 (I95-0037); searches of its own words; chosen to cover the months and the kinds of news.",
+   "from-the-argus-the-port-mary-from-liverpool-may-1795": "count entry 115 (I95-0038); searches of its own words; chosen to cover the months and the kinds of news.",
+   "treaty-of-peace-between-the-french-republic-and-the-king-of-prussia-april-1795": "count entry 126 (I95-0121, I95-0122, I95-0123, I95-0127 and more); searches of its own words; chosen to cover the months and the kinds of news.",
+   "london-the-judgment-of-mr-hastings-in-westminster-hall-may-1795": "count entry 129 (I95-0125); searches of its own words; chosen to cover the months and the kinds of news.",
+   "boston-unwarrantable-proceedings-a-vessel-burned-at-the-long-wharf-june-1795": "count entry 137 (I95-0040, I95-0041); searches of its own words; chosen to cover the months and the kinds of news.",
+   "treaty-of-amity-commerce-and-navigation-with-great-britain-november-1794": "count entry 144 (I95-0010, I95-0014, I95-0051, I95-0008 and more); searches of its own words; chosen to cover the months and the kinds of news.",
+   "london-war-with-holland-august-1795": "count entry 148 (I95-0385, I95-0143); searches of its own words; chosen to cover the months and the kinds of news.",
+   "philadelphia-the-schooner-white-fish-from-lake-erie-november-1795": "count entry 151 (I95-0144); searches of its own words; chosen to cover the months and the kinds of news.",
+   "commodore-warrens-dispatches-from-quiberon-bay-september-1795": "count entry 152 (I95-0145); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part."
+  },
+  "counted_item_by_item": {
+   "Paper counts": "Of 130 items eligible by the count, 3 are printed by every paper that survives for their weeks, counted by their own words, and are admitted: the King's speech at the opening of Parliament (7 of 7), the brig Lydia's news from Amsterdam (6 of 6) and Commodore Warren's dispatches from Quiberon Bay (4 of 4). 18 are chosen; the others are listed as not chosen, except five items on private persons, listed for the owner.",
+   "The treaty with Great Britain by its own words": "The treaty is in 4 papers by its own words: the Patowmac Guardian's printing of 18 July is 'concluded from our last', and its issue of 11 July does not survive (C-06); the Kentucky Gazette's essay of 3 October and the Gazette of the United States' commentaries quote its articles (C-07); the Gazette of the United States has no issue from 1 to 7 July.",
+   "Printed forms counted together": "The paragraph on the President's message on the Georgia lands, the sloop Delia's report and Commodore Warren's dispatches in a Philadelphia or London form and a New York form; the treaty with Prussia in two translations (C-02). The Patowmac Guardian's own paragraph on the French ships in the Chesapeake is another text and is not counted with the Baltimore letter.",
+   "The acts by their own words": "The automatic families join the acts of Congress and of New Hampshire by their formulas; counted by each act's opening, the naturalization act is in 5 papers and the others in 3 or fewer (below the bar)."
+  },
+  "not_admitted": {
+   "London, 23 October, by an arrival at Charleston: messengers from Vienna and from the Duke of York's army; Nimeguen on the point of being invested (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Boston, 3 January, 'Latest from France': Paris papers to 30 October by the schooner Sea-Flower from Bordeaux; the battles on the Meuse; the Convention orders the trial of Carrier (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Philadelphia, 27 December: the German Lutheran Church at Fourth Street and Cherry Alley burns (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Articles indicative of a peace in Europe, from a London paper of October: the Diet at Ratisbon to debate a cessation of hostilities; a letter from Frankfort of 12 October (5)": "In 5 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Ratisbon, 16 October: the Elector Palatine proposes in the Diet an honourable and speedy peace with the French Republic; a letter from Vienna of 18 October (3)": "In 3 papers of the 7 that survive for its weeks; the bar is 4. Below the bar.",
+   "The answer of the New Hampshire legislature to the Governor's address ('Impressed with the importance of guarding the rights of the citizens of this State') (4)": "In 4 papers (January) of the 7 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Arnheim, 21 October, from a correspondent with the Duke of York's army: 'On my entrance into this town, I found 5000 of the Duke of York's army' (4)": "In 4 papers (January) of the 7 that survive for its weeks, a letter or report; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Middleburgh, 23 October: a boat from Dordrecht brings word that the French have taken Heusden and Breda (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, October: the French put in requisition 6,000 young girls in Brabant to attend the sick in their military hospitals (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, October: the French found 300,000 florins in the military chest taken at Bois-le-Duc (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "An Act making appropriations for the support of the military establishment for the year 1795, and for the expenses of the militia lately called into the service of the United States (3)": "In 3 papers of the 7 that survive for its weeks (own words: the act's title and enacting clause (acts_scan.txt); the unit opens the session's formula, which the families share with every act); the bar is 4. Below the bar.",
+   "An Act authorizing the transfer of the stock standing to the credit of certain states (3)": "In 3 papers of the 8 that survive for its weeks (own words: the act's title and enacting clause); the bar is 5. Below the bar.",
+   "'State of French politics, from the fall of Robespierre to the 7th November', written in France and communicated by Capt. Bradford, just arrived from L'Orient (4)": "In 4 papers (January) of the 7 that survive for its weeks, a letter or report; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "'Stadtholder declared Dictator': a report that the Stadtholder has been proclaimed Dictator by the states of Holland (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "An Act making appropriations for the support of government for the year 1795 (3)": "In 3 papers of the 7 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+   "New York, 14 January, 'From Europe': the fortress of Luxemburg and the French mode of conquering (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "An Act to regulate the pay of the non-commissioned officers, musicians and privates of the militia of the United States, when called into actual service, and for other purposes (4)": "In 4 papers of the 8 that survive for its weeks (own words: the act (the Columbian Informer of 6 January and the Mirrour of 9 January print the House's account of the bill, not the act)); the bar is 5. Below the bar.",
+   "New Hampshire: An Act to prevent damage being done by horses, mules and jacks (4)": "In 4 papers (January) of the 7 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "The Senate's address to the President of 22 November 1794, in answer to his speech, with his reply (1)": "In 1 paper of the 7 that survive for its weeks (own words: in 1795 only the Kentucky Gazette prints it (the unit's family joins it with the Senate's answer of December 1795)); the bar is 4. Below the bar.",
+   "Stockbridge, 6 January: a letter from Paris, New York, on the Indian treaty just closed ('they have all become yankees') (4)": "In 4 papers (January) of the 7 that survive for its weeks, a letter or report; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "New Hampshire: An Act in addition to the act to prevent the destruction of salmon, shad and alewives in the Merrimack river (3)": "In 3 papers of the 6 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+   "London: peace expected between several of the allied powers and the French Republic; letters from Amsterdam that the King of Spain has also made peace (5)": "In 5 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "The President's message of 30 December 1794 laying before Congress the Secretary of War's report on the frontiers and the Indian tribes (4)": "In 4 papers (January) of the 7 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "An anecdote from the London papers: a barber's sign of Absalom hanging by his hair ('if he had worn a wig') (3)": "In 3 papers of the 7 that survive for its weeks; the bar is 4. Below the bar.",
+   "'French politeness': Pichegru's message to the Duke of York to remove from Nimeguen (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "New Hampshire: An Act for extending the boundaries of certain towns (on the Connecticut river) (4)": "In 4 papers (January) of the 6 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "New Hampshire: An Act granting to each company of cavalry seventeen dollars to furnish instruments of music and colours (4)": "In 4 papers (January) of the 6 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "New Hampshire: An Act for raising twenty-six thousand six hundred and sixty-six dollars and sixty-seven cents for the use of this State (4)": "In 4 papers (January) of the 6 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Paris, 6 November 1794: a letter announcing peace between France and Prussia, signed at Neufchatel ('It is with great pleasure we announce to you the good news') (5)": "In 5 papers (January) of the 6 that survive for its weeks, a letter or report; not chosen: one affair's items (X-1800-01): the peace between France and Prussia: the treaty with Prussia (chosen) is in the ledger.",
+   "New Hampshire: An Act for the preservation of salmon and shad in the Connecticut river (3)": "In 3 papers of the 6 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+   "The treaty with the Six Nations concluded at Canandaigua, 11 November 1794, with the President's ratification of 21 January 1795 and the Secretary of War's letter of 27 January transmitting it (4)": "In 4 papers (January) of the 7 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Capt. Luce's report: the news of the surrender of Maestricht reached Havre on 10 November; at Paris all tranquil, provisions plenty and cheap (4)": "In 4 papers (January) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "'Commercial treaty': letters from London of 27 November and 6 December (the American funds rise on the news of the treaty), and the reports brought by the Betsey (5)": "In 5 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the Western Posts (chosen, the most widely printed item of the news of the treaty, 6 of 7) and the treaty itself (chosen) are in the ledger.",
+   "Thorn, 1 November: the Supreme Council of Warsaw after the loss of Kosciuszko (4)": "In 4 papers (February) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, 18 November, 'Treaty with the United States': the differences adjusted, and the leading terms of the arrangement (5)": "In 5 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the Western Posts (chosen, the most widely printed item of the news of the treaty, 6 of 7) and the treaty itself (chosen) are in the ledger.",
+   "Mr. Jay to his brother, 21 November 1794: 'the treaty I was sent here to negotiate was signed the day before yesterday' (5)": "In 5 papers (February) of the 7 that survive for its weeks, a letter or report; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the Western Posts (chosen, the most widely printed item of the news of the treaty, 6 of 7) and the treaty itself (chosen) are in the ledger.",
+   "London, 11-16 November: the French in full possession of the left bank of the Rhine up to Mentz (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Paris, 'Convention triumphant': the Jacobins' club broken up after the arrest of Carrier (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Genoa, 12 November: a Corsican vessel from Ajaccio reports a fight between two parties; the Paolists divided (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, 2 January: the French in possession of Fort St. Andre and the Bommel Waert; consternation at Amsterdam (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "St. Fernando de Figueres, 28 November: the Representative of the People with the army of the Eastern Pyrenees on the victory of the 20th (4)": "In 4 papers (February) of the 7 that survive for its weeks, a letter or report; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Mr. Fenwick, consul at Bordeaux, to Mr. Johnson, consul at London, Paris, 15 November: American vessels to go free (5)": "In 5 papers (February) of the 7 that survive for its weeks, a letter or report; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "London: an attempt to poison the Duke of York (5)": "In 5 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "New Hampshire: An Act providing for the compensation of certain persons employed in apprehending and bringing to justice offenders against the laws of this state (3)": "In 3 papers of the 7 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+   "Paris, 4 December, 'Peace!': the Committee of Public Safety's report on the rumours of peace ('No, Frenchmen, no') (4)": "In 4 papers (February) of the 7 that survive for its weeks, a document; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "An anecdote: the English resident at Berlin and the King of Prussia ('is God one of our allies?') (4)": "In 4 papers (February) of the 7 that survive for its weeks, an essay or verse; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+   "Portland, 9 February, 'Barcelona taken': news brought by a vessel from Lisbon (5)": "In 5 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "A letter from a citizen of one of the southern states, 7 January 1795: speculations in Georgia lands (4)": "In 4 papers (February) of the 7 that survive for its weeks, a letter or report; not chosen: one affair's items (X-1800-01): the Georgia land sales: the paragraph on the President's message (chosen) is in the ledger.",
+   "'The Georgia business is of the most alarming nature' (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the Georgia land sales: the paragraph on the President's message (chosen) is in the ledger.",
+   "Philadelphia: an extract from a sermon by the Rev. Dr. Smith of Princeton ('Among the favourable circumstances accompanying the establishment of the federal system') (4)": "In 4 papers (February) of the 7 that survive for its weeks, an essay or verse; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+   "Philadelphia, 24 February: the President's birthday celebrated (3)": "In 3 papers of the 7 that survive for its weeks; the bar is 4. Below the bar.",
+   "Boston, 21 February: an 'important arret' of the Committees of Public Safety, Finances, Commerce and Supplies on the vessels of the United States and other neutral powers (4)": "In 4 papers (February) of the 7 that survive for its weeks, a document; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "An account of a fancy piece presented to Mrs. Washington on the President's birthday (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "'Appointments, by authority': the Postmaster General, the Comptroller of the Treasury and the Purveyor of Public Supplies (5)": "In 5 papers (February) of the 7 that survive for its weeks, a notice; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+   "Boston, 25 February, 'From France direct': the brig Ceres from Bordeaux with Paris papers to late December (5)": "In 5 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "An Act to amend the act making alterations in the Treasury and War departments (3)": "In 3 papers of the 7 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+   "'A singular examination, before a certain Justice of the Peace, lately in England' (4)": "In 4 papers of the 8 that survive for its weeks; the bar is 5. Below the bar.",
+   "An Act supplementary to the several acts imposing duties on goods, wares and merchandise imported into the United States (3)": "In 3 papers of the 6 that survive for its weeks (own words: the act's preamble and enacting clause); the bar is 4. Below the bar.",
+   "Boston, 7 March: a Paris paper says Condorcet is dead; the treaty is mentioned in the Paris papers without disapproval (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "New York, 12 March: London papers to 8 January by the ship Diana from Bristol: letters from the British army and from Holland on the French crossing the frozen rivers; 'The last hope' (5)": "In 5 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Boston, 11 March, 'Naval engagement': a French and an English frigate in the West Indies, from an American captain who was on board the English ship (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Paris, 16 December, translated for the Centinel: 'Let the people of France learn wisdom by their past sufferings' (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Albany, 6 March: twelve hundred sleighs with families from the east pass through the city in three days (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "New York Agricultural Society: Maunsell's method of raising potatoes from the shoots (4)": "In 4 papers (March) of the 6 that survive for its weeks, an essay or verse; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+   "Salem, 17 March: the brig Union from Lisbon: a French fleet of 33 sail of the line reported in the English Channel (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Boston, 25 March, 'Post roads': the stages on the road between Boston and New Haven (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, 'Petitions for peace': the cities and towns that petition the House of Commons (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, 7 February: vessels from Flushing arrive at Dover; Major Meade: the French summon Bergen-op-Zoom (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Amsterdam, 20 January: 'The revolutions of this are stamped with a character totally different from all others' (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "An Act for continuing and regulating the military establishment of the United States (2)": "In 2 papers of the 7 that survive for its weeks (own words: the act (the run joins it with the New Hampshire salmon act by the formula 'And be it further enacted')); the bar is 4. Below the bar.",
+   "11 February: the Hollanders establish a convention; the proclamation of the States General ('The Representatives of the French people who are at present in this country') (5)": "In 5 papers (April) of the 6 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the revolution in Holland: the proclamation of the Revolutionary Committees of Amsterdam (chosen) is in the ledger.",
+   "Paris, 7 February, from Brussels, 19 January: the capitulation of the town and province of Utrecht (4)": "In 4 papers (April) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Paris, 2 February, from Perpignan, 11 January: the bad weather delays the army; the enemy's fleets suffer (4)": "In 4 papers (April) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Paris, 27 January: the immense riches the victory has delivered to the Republicans in Holland (5)": "In 5 papers (April) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the revolution in Holland: the proclamation of the Revolutionary Committees of Amsterdam (chosen) is in the ledger.",
+   "The National Convention, 2 February: Clauzel reads a letter from the Representatives with the armies of the North on their interview with the minister from the Hague (4)": "In 4 papers (April) of the 6 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "London, 15 January: the action of the 8th at Gueldermalsen (4)": "In 4 papers (April) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, 13-24 January: the money paid to the King of Prussia; the Secretary at War's statement of the forces in British pay (3)": "In 3 papers of the 6 that survive for its weeks; the bar is 4. Below the bar.",
+   "Paris, 7 January: the commander in chief of the army of the North to the Representative Bellegarde, Bois-le-Duc, 29 December (4)": "In 4 papers (April) of the 6 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Helvoet, 17 January: a letter on the confusion among the English ('The Rotterdam post is this moment arrived') (4)": "In 4 papers (April) of the 6 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Heidelberg, 26 December: the capitulation of Fort du Rhine, near Mannheim (4)": "In 4 papers (April) of the 6 that survive for its weeks, a document; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Mr. Pinckney to Mr. Johnson, consul, 30 January 1795: Mr. Monroe writes that the Convention will carry the treaty of commerce into full effect (5)": "In 5 papers (April) of the 8 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Additional instructions to the commanders of British ships of war and privateers, 9 February 1795: Dutch vessels to be brought in (4)": "In 4 papers (April) of the 7 that survive for its weeks, a document; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "The treaty of peace between the French Republic and the Grand Duke of Tuscany, read in the Convention by Richard (5)": "In 5 papers (April) of the 8 that survive for its weeks, a document; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Boston, 27 April, 'Capture of Roses': the Representatives with the army of the Eastern Pyrenees to the Committee of Public Safety (4)": "In 4 papers (April) of the 7 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Boston, 23 April: 'The tide of liberty... is now overflowing Europe'; the French resolved to humble the pride of Great Britain (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Boston, 25 April: the Convention passes to the order of the day on Genet's insinuations against the President; an Algerine squadron in the Atlantic (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, 9 March: Lord Grenville's conference with the two Dutch commissioners (5)": "In 5 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, 6 March: a courier from Dublin: Mr. Grattan and Sir John Parnell to bear witness to the agreement between Earl Fitzwilliam and Mr. Pitt (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Frankfort, 3 February: the King of Prussia proposes an armistice for all the combined powers (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "'The Dutch exiles in England are preparing to embark for this asylum of all nations' (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Horse Guards, 10 March: Lieutenant General Harcourt's dispatch from Osnaburg of 18 February (4)": "In 4 papers (April) of the 7 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "A letter from St. Eustatius, 1 April, to a merchant in Philadelphia: the English declare war against the Dutch (4)": "In 4 papers (May) of the 7 that survive for its weeks, a letter or report; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "London: in Germany 'every individual able to bear arms is summoned to appear'; a messenger from the army at Osnaburg (3)": "In 3 papers of the 6 that survive for its weeks (own words: the Gazette of the United States (25 April) prints the sentence inside another paragraph); the bar is 4. Below the bar.",
+   "An Act for the more effectual recovery of debts due from individuals to the United States (2)": "In 2 papers of the 6 that survive for its weeks (own words: the act (the Gazette of the United States and the Columbian Informer print the bill's first section in the House's debate)); the bar is 4. Below the bar.",
+   "'Tanning': the French new method of tanning invented by Citizen Seguin (4)": "In 4 papers (May) of the 6 that survive for its weeks, an essay or verse; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+   "London, 18 March: a Spanish packet at Falmouth brings word that the Spanish army in Roussillon has attacked the French (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "London, 21 March: Dutch merchants escaped from the Texel; letters from Paris: judgment of death against Barere and his accomplices, and a rising in the faubourgs (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "From Grenada, 14 April: a ship captain who lay there from 3 March to 4 April tells of 'the insurrection and massacre' (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Philadelphia, 13 May: an American consul in England to the Secretary of State, 10 February: the wheat crop short, grain at an enormous price (4)": "In 4 papers (May) of the 6 that survive for its weeks, a letter or report; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "New York, 18 May: the ship Amsterdam Packet from Greenock with London papers to 28 March (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Paris, 24 March: the Spanish court asks for a negotiator to settle a final and lasting peace (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Brussels, 16 March: the Austrians expected to cross the Rhine to Luxembourg (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "A letter from Lisbon, 3 April: the Dey of Algiers declares war against Spain; an action between the French and the English in the Mediterranean (4)": "In 4 papers (May) of the 6 that survive for its weeks, a letter or report; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "'Peach trees': the peach grafted on the plum (4)": "In 4 papers (May) of the 5 that survive for its weeks, an essay or verse; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+   "London, 1 April: a treaty of alliance with the Empress of Russia signed (3)": "In 3 papers of the 6 that survive for its weeks; the bar is 4. Below the bar.",
+   "From Amsterdam, 1 March: Citizen Adams and the inspection of American vessels in the ports of Holland (4)": "In 4 papers (June) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "A letter from the Hague, 8 April: risings of the Orange party in several cities of Holland (4)": "In 4 papers (June) of the 6 that survive for its weeks, a letter or report; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "London, 3 May: the burning of the Boyne man of war at Spithead (4)": "In 4 papers (June) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "The King of Sweden's letter to the National Convention accrediting his ambassador extraordinary (4)": "In 4 papers (June) of the 6 that survive for its weeks, a document; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Boston, 17 June, from Bayonne: the young men from Bordeaux southward put in requisition against Spain (4)": "In 4 papers (June) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Philadelphia, 16 June: dispatches from France for the French minister: peace with Spain, Sardinia and the Two Sicilies reported (4)": "In 4 papers (June) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "A letter from Bordeaux, 22 April, to the editor: 'The people here are perfectly tranquil' (4)": "In 4 papers (June) of the 6 that survive for its weeks, a letter or report; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Articles of agreement between the French and Batavian people for an alliance (5)": "In 5 papers (June) of the 7 that survive for its weeks, a document; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "London, 5 May: the Hamburg mail: preliminaries of peace with the Landgrave of Hesse Cassel nearly concluded (3)": "In 3 papers of the 7 that survive for its weeks; the bar is 4. Below the bar.",
+   "Boston, 22 June, 'Illegal and hasty adjudication': a crowd at the Long Wharf burns a vessel said to be a New Providence or Bermudian privateer (4)": "In 4 papers (June) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the burning of a vessel at Boston: the Boston account 'Unwarrantable Proceedings' (chosen, 5 of 7) is in the ledger.",
+   "The Governor of Massachusetts's proclamation on the burning of the vessel Betsy at the Long Wharf (4)": "In 4 papers (June) of the 7 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the burning of a vessel at Boston: the Boston account 'Unwarrantable Proceedings' (chosen, 5 of 7) is in the ledger; the Governor's proclamation is not chosen, as the chosen band takes about as many stories as a standard year.",
+   "From the Aurora: the population of the states whose senators voted for and against the treaty (4)": "In 4 papers (June) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the treaty itself (chosen) is in the ledger.",
+   "The Governor of Massachusetts's message to the legislature on the same affair, and the legislature's resolution offering a reward (4)": "In 4 papers (June) of the 7 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the burning of a vessel at Boston: the Boston account 'Unwarrantable Proceedings' (chosen, 5 of 7) is in the ledger; the Governor's message is not chosen, as the chosen band takes about as many stories as a standard year.",
+   "From the Gazette of the United States: 'Fire, fire, fire, help, help, the town is on fire' (4)": "In 4 papers (July) of the 6 that survive for its weeks, an essay or verse; not chosen: July is covered by the treaty with Great Britain, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+   "The National Convention, 25 May: Laporte's report and the decree against the insurgents of the faubourg Saint-Antoine (4)": "In 4 papers (July) of the 6 that survive for its weeks, a document; not chosen: July is covered by the treaty with Great Britain, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "New Spice Island: the ship Halcyon, exploring a passage from Botany Bay to China, finds an island near New Guinea (5)": "In 5 papers (July) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: July is covered by the treaty with Great Britain, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "The propositions offered in the Senate as substitutes for the resolution ratifying the treaty: Mr. Burr's and Mr. Tazewell's motions (4)": "In 4 papers (July) of the 6 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the treaty itself (chosen) is in the ledger.",
+   "The memorial of the citizens of Philadelphia, the Northern Liberties and Southwark to the President on the treaty (3)": "In 3 papers of the 5 that survive for its weeks; the bar is 4. Below the bar.",
+   "London, 12 August: a rupture between Great Britain and Spain spoken of, after the cession of the Spanish part of St. Domingo to France (4)": "In 4 papers (October) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: October is covered by the London paragraph 'War with Holland', and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "An extract from Governor Gilman's proclamation for the annual thanksgiving in New Hampshire (3)": "In 3 papers of the 6 that survive for its weeks; the bar is 4. Below the bar.",
+   "London: the Spanish government to send a force to St. Domingo until the French can take possession (4)": "In 4 papers (November) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: November is covered by Commodore Warren's dispatches (admitted) and the schooner White Fish, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "The Senate's answer to the President's speech at the opening of the session, December 1795 (2)": "In 2 papers of the 2 that survive for its weeks (own words (the unit's family joins it with the Senate's address of November 1794)); the bar is 4. Below the bar.",
+   "Other items of 3 papers or fewer (by count)": "The other items the finder lists, and the passages the sweep found in fewer than 4 papers, were compared by machine with every page and counted again by their openings; none reaches 4 papers. They were not read one by one."
+  },
+  "for_the_owner": {
+   "Salem, January 1795: a report that an American brig was run down at sea, and of the one survivor (4)": "In 4 papers (January to March) of the 7 that survive for its weeks; it turns on private persons, a ship's crew and its survivor, named in the paragraph (R-04): listed for the owner, without names; not admitted.",
+   "Boston, February 1795: 'A horrid murder!': a report of a killing in a household at Andover (5)": "In 5 papers (February and March) of the 7 that survive for its weeks; a killing in a private household, its persons named (R-04): listed for the owner, without names; not admitted.",
+   "Newport, February 1795: the fortunes of the family of the French admiral of the American war (4)": "In 4 papers (February and March) of the 7 that survive for its weeks; it turns on the admiral's daughters, private persons (R-04): listed for the owner, without names; not admitted.",
+   "Lexington, May 1795: a party of about fifty men out on Paint Creek, a branch of the Scioto, falls in with an Indian camp (4)": "In 4 papers (May to July) of the 6 that survive for its weeks; it turns on a private armed party, its leader named (R-04): listed for the owner, without names; not admitted.",
+   "Philadelphia, June 1795: the Supreme Court ends the trials of those concerned in the insurrection to the westward (4)": "In 4 papers (June) of the 6 that survive for its weeks; it turns on two private persons found guilty of treason and named in it (R-04): listed for the owner, without names; not admitted."
+  },
+  "for_user_decision": {
+   "The choice for 1795": "As built (X-1795-01): 3 groups admitted by the rule's first part and 18 chosen, 21 stories and 102 printings; the other eligible items are listed as not chosen.",
+   "One paper under two numbers or titles": "As built (X-1795-02): the Gazette of the United States under two catalogue numbers, and The Mirrour and The Federal Mirror of Concord, each counted as one paper (C-04).",
+   "Printed forms counted together": "As built (X-1795-03): the Georgia message, the sloop Delia, the treaty with Prussia and Commodore Warren's dispatches, each with its other form (C-02).",
+   "The treaty with Great Britain": "As built (X-1795-04): 4 papers by its own words, chosen; for the February news of the treaty the Western Posts (6 of 7) is chosen and Mr. Jay's letter to his brother (5 of 7) is not (X-1800-01).",
+   "The acts by their own words": "As built (X-1795-05): each act counted by its own opening; only the naturalization act reaches the bar.",
+   "A transcription that garbles an opening": "As built (X-1795-06): the Mirrour's printing of the President's proclamation, on a page torn at the top right, is counted: its opening survives in part, RevX garbles it, and the scan check reads it on the scan.",
+   "Five items on private persons": "Listed for the owner without names (X-1795-07).",
+   "A sweep for short items at 4 papers": "The sweep of seven-word sequences shared by 4 or more papers was run for 1795 (X-1795-08).",
+   "Grading calls on the transcriptions": "The scan check graded the transcriptions by the protocol (C-14), as for 1774, 1775, 1783 and 1791. Calls the owner may revisit: (1) a word read as another real word that changes the sense is fact-changing, even where it is one or two words: 'encroaching' for the printed 'encreasing' (S95-005, S95-009), 'bail you with views' for 'hail you with vows' (S95-050), 'vicious' for 'riotous' (S95-082), and 'attended' for the misprint 'assended' (S95-074); (2) a name read as another name is fact-changing ('Robespierre' for Rewbel, S95-075; 'S. Willems' for S. Wiseleus, S95-052; 'Prins' for Pruys, S95-064, medium confidence), while a name a letter or two off is minor ('Pruyss', 'Thoem', 'P. J. B. F.'); (3) on the torn page of the Mirrour of 16 January, words lost to the tear are not counted, but RevX's 'concern' and 'confirmation' where the surviving letters read 'consola…' and 'contin…' are fact-changing (S95-006); (4) a misprinted year read as another year is fact-changing ('1775' for the printed '1725', S95-046), while a misprint RevX corrects silently is minor and recorded as a printed difference ('conrary', 'referance', 'Dispatchs'); (5) figures read on enlargements: the broken '20' that RevX reads '25' (S95-002) and the worn fraction '½' that it reads '3/4' (S95-098, medium confidence); (6) where RevX closes an item with '...' and the print goes on, the words are counted as dropped, fact-changing (S95-044)."
+  }
+ },
+ "verdict_summary": {
+  "yes": 102,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 55,
+  "minor_errors": 33,
+  "major_problem": 14,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 93,
+  "manual_box": 9
+ }
+}

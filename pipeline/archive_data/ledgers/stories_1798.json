@@ -1,0 +1,3492 @@
+{
+  "ledger_id": "ledger:stories-1798",
+  "ledger_version": 1,
+  "base_release": "0.11.37",
+  "target_release": "0.11.38",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1798",
+  "evidence_dir": "outputs/story_discovery_1798/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1798, and of 1797 where they reach the 1798 pages (long-running ones included), counted by machine over all 1,656 pages of 1798 in both transcriptions and joined into documents; the admitted and chosen items counted again by their own opening (the acts of Congress by their first section), and scan checks of each admitted passage, by the thin-year rule (Y-THIN, as amended with the owner's choice B1): eligible when printed by more than half of the papers that survive for the item's weeks and by at least 4; eligible items printed by every paper that survives for their weeks admitted; the others chosen to cover the months and the kinds of news",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1798/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1798/items_from_1797.json": "retrieval_candidates",
+    "outputs/story_discovery_1798/counts_1798.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1798.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1798_review.json": "scan_review",
+    "outputs/story_discovery_1798/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1798/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S98-001",
+      "page_key": "sn83025881|1798-01-04|1|3",
+      "excerpt_start": "Extract of a letter from a",
+      "excerpt_end": "chief, on this expedition. There is to",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "havre-letter-of-6-november-1797-a-project-of-a-descent-on-england"
+      ],
+      "summary": "A letter from Havre of 6 November 1797 on a descent on England.",
+      "note": "Earliest printing found. The Gazette of the United States misprints 'Buon-parte' across a line break.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print has 'Buon-parte' (no 'a' at the line break), which the transcription silently corrects to 'Buonaparte': a printer's slip, not a change of fact. The letter is dated 'Havre, 6th Nov. 1797.' and came by the 'Roſetta'."
+      ],
+      "crops": [
+        "S98-001.jpg"
+      ],
+      "family": [
+        "R1797-0653",
+        "R1798-0010",
+        "R1798-0081"
+      ],
+      "scan_boxes": [
+        [
+          1700,
+          5550,
+          2590,
+          6150
+        ]
+      ]
+    },
+    {
+      "id": "S98-002",
+      "page_key": "sn84024710|1798-01-12|1|2",
+      "excerpt_start": "November 10. It is said that",
+      "excerpt_end": "the opening of Congress? And secondly, whether",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-of-what-the-directory-demands-of-the-american-envoys-november-1797"
+      ],
+      "summary": "Paris, 10 November 1797: what the Directory demands of the American envoys.",
+      "note": "Earliest printing found. The Virginia Argus prints the report under the date line 'November 10.', without 'PARIS'.",
+      "scan_findings": [
+        "Scan matches the excerpt, under 'November 10.' with 'first,' spelled out. The print has 'And 2dly,' where the transcription writes 'secondly', a minor difference."
+      ],
+      "crops": [
+        "S98-002.jpg"
+      ],
+      "family": [
+        "R1797-0129",
+        "R1797-0666",
+        "R1797-0667",
+        "R1797-0668",
+        "R1798-0027",
+        "R1798-0028",
+        "R1798-0029",
+        "R1798-0219"
+      ]
+    },
+    {
+      "id": "S98-003",
+      "page_key": "sn84024710|1798-01-12|1|3",
+      "excerpt_start": "Extra.—A letter from a gentleman in",
+      "excerpt_end": "this expedition. There is to be immediately",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "havre-letter-of-6-november-1797-a-project-of-a-descent-on-england"
+      ],
+      "summary": "The Virginia Argus prints the letter from Havre.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'Extract of a letter'; the transcription 'Extra.—A letter' garbles the opening without changing a fact. The rest matches, with 'Havre, 6th Nov. 1797', 'project' and 'Rosetta'."
+      ],
+      "crops": [
+        "S98-003.jpg"
+      ],
+      "family": [
+        "R1798-0010",
+        "R1798-0081"
+      ]
+    },
+    {
+      "id": "S98-004",
+      "page_key": "sn83025881|1798-01-15|1|2",
+      "excerpt_start": "PARIS, November 10. It is said",
+      "excerpt_end": "at the opening of Congress? and 2dly,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-of-what-the-directory-demands-of-the-american-envoys-november-1797"
+      ],
+      "summary": "The Gazette of the United States prints the Paris report of the Directory's demands.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-004.jpg"
+      ],
+      "family": [
+        "R1798-0028",
+        "R1798-0029"
+      ]
+    },
+    {
+      "id": "S98-005",
+      "page_key": "sn83025525|1798-01-16|1|3",
+      "excerpt_start": "Extract of a letter from a",
+      "excerpt_end": "this expedition. There is to be immediately",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "havre-letter-of-6-november-1797-a-project-of-a-descent-on-england"
+      ],
+      "summary": "The Mirror prints the letter from Havre.",
+      "note": "The Mirror dates the letter 'HAVRE, NOV. 6', without the year, and misprints 'immeditely'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the letter is dated 'HAVRE, NOV. 6' with no year. The print's misprint 'immeditely' is silently corrected to 'immediately' in the transcription."
+      ],
+      "crops": [
+        "S98-005.jpg"
+      ],
+      "family": [
+        "R1797-0130",
+        "R1797-0132",
+        "R1798-0010",
+        "R1798-0218"
+      ]
+    },
+    {
+      "id": "S98-006",
+      "page_key": "sn83025881|1798-01-19|1|3",
+      "excerpt_start": "Yesterday in the Senate of the",
+      "excerpt_end": "for leave to bring in a bill...",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-senate-on-a-motion-to-repeal-the-stamp-duty-january-1798"
+      ],
+      "summary": "The Senate, January 1798: the vote on repealing the stamp duty.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "The opening matches, but the transcription stops at '...' where the print goes on: words dropped. The print names 'Mr. Greene' of 'Rhode-Island'; a fold in the paper hides part of the line on the stamped vellum."
+      ],
+      "crops": [
+        "S98-006.jpg"
+      ]
+    },
+    {
+      "id": "S98-007",
+      "page_key": "sn83025525|1798-01-30|1|3",
+      "excerpt_start": "PARIS, NOV. 10. It is said",
+      "excerpt_end": "the opening of Congress? and 2dly, whether",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-of-what-the-directory-demands-of-the-american-envoys-november-1797"
+      ],
+      "summary": "The Mirror prints the Paris report of the Directory's demands.",
+      "note": "The Mirror prints 'the 16th May last', without 'of'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print itself has 'the 16th May last' without 'of'."
+      ],
+      "crops": [
+        "S98-007.jpg"
+      ],
+      "family": [
+        "R1797-0027",
+        "R1797-0624",
+        "R1798-0027",
+        "R1798-0029",
+        "R1798-0085",
+        "R1798-0257"
+      ]
+    },
+    {
+      "id": "S98-008",
+      "page_key": "sn84024710|1798-01-30|1|2",
+      "excerpt_start": "January 19. Yesterday in the Senate",
+      "excerpt_end": "State—the yeas and nays were as follows.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-senate-on-a-motion-to-repeal-the-stamp-duty-january-1798"
+      ],
+      "summary": "The Virginia Argus prints the report of the Senate's vote on the stamp duty.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, under 'January 19.'; the transcription's 'follows' for the print's 'follow' is minor."
+      ],
+      "crops": [
+        "S98-008.jpg"
+      ],
+      "family": [
+        "R1798-0031",
+        "R1798-0237",
+        "R1798-0251",
+        "R1798-0258",
+        "R1798-0259",
+        "R1798-0260"
+      ]
+    },
+    {
+      "id": "S98-009",
+      "page_key": "sn82014782|1798-01-31|1|3",
+      "excerpt_start": "January 5. Extract of a letter",
+      "excerpt_end": "in chief on this expedition. There is",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "havre-letter-of-6-november-1797-a-project-of-a-descent-on-england"
+      ],
+      "summary": "The Kentucky Gazette prints the letter from Havre.",
+      "note": "The Kentucky Gazette prints the letter under the date line 'January 5.', dates it 'Havre, Nov. 1797.' without the day, and reads 'prospect' where the other papers read 'project'.",
+      "scan_findings": [
+        "Scan matches in substance; the print itself dates the letter 'Havre, Nov. 1797' with no day and reads 'prospect' for 'project' (printed differences). The transcription has 'merchant' for 'mercantile', and its 'Roletta' is probably a misreading of 'Rosetta' with a long s, which this low-resolution scan cannot settle."
+      ],
+      "crops": [
+        "S98-009.jpg"
+      ],
+      "family": [
+        "R1797-0001",
+        "R1797-0632",
+        "R1797-0655",
+        "R1798-0010"
+      ]
+    },
+    {
+      "id": "S98-010",
+      "page_key": "sn83025588|1798-01-31|1|2",
+      "excerpt_start": "PARIS, Nov. 10. It is said",
+      "excerpt_end": "at the opening of Congress? and 2dly,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-of-what-the-directory-demands-of-the-american-envoys-november-1797"
+      ],
+      "summary": "The New Hampshire Gazette prints the Paris report of the Directory's demands.",
+      "note": "The New Hampshire Gazette prints 'outrages' where the other papers print 'outrage', and misprints 'Speeeh'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print itself has 'outrages' where the other printings have 'outrage'. Its misprint 'Speeeh' is silently corrected to 'Speech' in the transcription."
+      ],
+      "crops": [
+        "S98-010.jpg"
+      ],
+      "family": [
+        "R1797-0027",
+        "R1797-0137",
+        "R1797-0634",
+        "R1798-0027",
+        "R1798-0028",
+        "R1798-0029",
+        "R1798-0085",
+        "R1798-0227",
+        "R1798-0257"
+      ]
+    },
+    {
+      "id": "S98-011",
+      "page_key": "sn83025588|1798-01-31|1|3",
+      "excerpt_start": "STAMP ACT. Yesterday in the Senate",
+      "excerpt_end": "state—the Yeas and Nays were as follows:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-senate-on-a-motion-to-repeal-the-stamp-duty-january-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the report of the Senate's vote on the stamp duty.",
+      "note": "The New Hampshire Gazette prints the vote under its own heading 'STAMP ACT.' and reads 'upon a motion to bring in a bill', without 'for leave'.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'STAMP ACT.'; the print itself omits 'for leave' ('upon a motion to bring in a bill'). The transcription's 'follows' for the print's 'follow' is minor."
+      ],
+      "crops": [
+        "S98-011.jpg"
+      ],
+      "family": [
+        "R1798-0031",
+        "R1798-0256",
+        "R1798-0263"
+      ]
+    },
+    {
+      "id": "S98-012",
+      "page_key": "sn83025525|1798-02-06|1|2",
+      "excerpt_start": "IN SENATE—JAN. 20. Upon a motion",
+      "excerpt_end": "Greene, Jackson, Langdon, Livermore, Martin, Mason, Tazewell—11.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-senate-on-a-motion-to-repeal-the-stamp-duty-january-1798"
+      ],
+      "summary": "The Mirror prints the report of the Senate's vote on the stamp duty.",
+      "note": "The Mirror prints the vote under 'IN SENATE—JAN. 20.', opens it 'Upon a motion' without 'Yesterday', and gives the state as 'R. Island'.",
+      "scan_findings": [
+        "Scan matches the excerpt across the two crops, under 'IN SENATE—JAN. 20.', with 'R. Island' and the eleven yeas as transcribed. A damaged letter in 'vellum' is read 'velum', a minor difference."
+      ],
+      "crops": [
+        "S98-012-1.jpg",
+        "S98-012-2.jpg"
+      ],
+      "family": [
+        "R1798-0028",
+        "R1798-0031",
+        "R1798-0084",
+        "R1798-0196",
+        "R1798-0235",
+        "R1798-0238"
+      ]
+    },
+    {
+      "id": "S98-013",
+      "page_key": "sn82014782|1798-02-14|1|3",
+      "excerpt_start": "November 10. It is said that",
+      "excerpt_end": "of Congress? And 2ndly, whether they are",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-of-what-the-directory-demands-of-the-american-envoys-november-1797"
+      ],
+      "summary": "The Kentucky Gazette prints the Paris report of the Directory's demands.",
+      "note": "The Kentucky Gazette prints 'And 2ndly' and 'the outrage offered the French government', without 'to'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the date line 'November 10.' stands directly above, and the paper prints '1ſt' and '2ndly'."
+      ],
+      "crops": [
+        "S98-013.jpg"
+      ],
+      "scan_boxes": [
+        [
+          25,
+          530,
+          435,
+          920
+        ]
+      ]
+    },
+    {
+      "id": "S98-014",
+      "page_key": "sn83025881|1798-03-05|1|3",
+      "excerpt_start": "Gentlemen of the Senate and Gentlemen",
+      "excerpt_end": "which will require some days to be",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-5-march-1798-the-first-dispatches-from-the-envoys"
+      ],
+      "summary": "The President's message of 5 March 1798 on the first dispatches.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print goes on 'to be decyphered', so the 'be' point marks only where the excerpt was cut."
+      ],
+      "crops": [
+        "S98-014.jpg"
+      ],
+      "family": [
+        "R1798-0016",
+        "R1798-0098",
+        "R1798-0300"
+      ]
+    },
+    {
+      "id": "S98-015",
+      "page_key": "sn83025881|1798-03-06|1|2",
+      "excerpt_start": "Gentlemen of the Senate and Gentlemen",
+      "excerpt_end": "character, which will require some days to",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-5-march-1798-the-first-dispatches-from-the-envoys"
+      ],
+      "summary": "The Gazette of the United States prints the President's message of 5 March 1798.",
+      "note": "Printed again.",
+      "scan_findings": [
+        "Scan matches the excerpt; like GUS 03-05 the print reads 'to be decyphered', so the 'be' point marks only where the excerpt was cut."
+      ],
+      "crops": [
+        "S98-015.jpg"
+      ],
+      "family": [
+        "R1798-0016"
+      ]
+    },
+    {
+      "id": "S98-016",
+      "page_key": "sn82014782|1798-03-14|1|3",
+      "excerpt_start": "PHILADELPHIA, January 22. On Thursday in",
+      "excerpt_end": "state—the yeas and nays were as follows:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-senate-on-a-motion-to-repeal-the-stamp-duty-january-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the report of the Senate's vote on the stamp duty.",
+      "note": "The Kentucky Gazette prints the vote under the dateline 'PHILADELPHIA, January 22.', opens it 'On Thursday' where the other papers print 'Yesterday', and spells the senator 'Mr. Green'.",
+      "scan_findings": [
+        "The second crop matches the excerpt (the first is a sliver with no text). The print itself reads 'On Thursday' for 'Yesterday', under 'PHILADELPHIA, January 22.', and spells the senator 'Green'."
+      ],
+      "crops": [
+        "S98-016-1.jpg",
+        "S98-016-2.jpg"
+      ],
+      "family": [
+        "R1798-0031"
+      ]
+    },
+    {
+      "id": "S98-017",
+      "page_key": "sn83025881|1798-03-19|1|3",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "and maturely considered. While I feel a",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-19-march-1798-on-the-dispatches-from-the-envoys"
+      ],
+      "summary": "The President's message of 19 March 1798 on the envoys' dispatches.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-017.jpg"
+      ],
+      "family": [
+        "R1798-0017"
+      ]
+    },
+    {
+      "id": "S98-018",
+      "page_key": "sn83025525|1798-03-20|1|3",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "which is dated the 8th of Jan.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-5-march-1798-the-first-dispatches-from-the-envoys"
+      ],
+      "summary": "The Mirror prints the President's message of 5 March 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt over both crops; the last words, 'which is dated the 8th of Jan.', stand just below the second crop and were read on an enlarged view. The print spells 'decyphered', which the transcription modernises to 'deciphered'."
+      ],
+      "crops": [
+        "S98-018-1.jpg",
+        "S98-018-2.jpg"
+      ],
+      "family": [
+        "R1798-0016",
+        "R1798-0061",
+        "R1798-0317",
+        "R1798-0318",
+        "R1798-0319",
+        "R1798-0334",
+        "R1798-0335"
+      ],
+      "scan_boxes": [
+        [
+          1265,
+          6790,
+          2560,
+          7869
+        ],
+        [
+          2100,
+          470,
+          3420,
+          980
+        ]
+      ]
+    },
+    {
+      "id": "S98-019",
+      "page_key": "sn83025588|1798-03-21|1|2",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "1798. (No. 5.) PARIS, Jan. 8th, 1798.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-5-march-1798-the-first-dispatches-from-the-envoys"
+      ],
+      "summary": "The New Hampshire Gazette prints the President's message of 5 March 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The crop shows the whole message, but the transcription drops its last two sentences, from 'They are all in a character' to 'without loss of time' (with the date of the last dispatch), and goes straight to the signature: a fact-changing omission. The rest matches."
+      ],
+      "crops": [
+        "S98-019.jpg"
+      ],
+      "family": [
+        "R1798-0016",
+        "R1798-0103",
+        "R1798-0334",
+        "R1798-0335",
+        "R1798-0336",
+        "R1798-0343"
+      ]
+    },
+    {
+      "id": "S98-020",
+      "page_key": "sn83025881|1798-03-22|1|3",
+      "excerpt_start": "[CIRCULAR to the COLLECTORS of the",
+      "excerpt_end": "of April 1797, in such manner as",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "treasury-circular-of-21-march-1798-to-the-collectors-of-the-customs"
+      ],
+      "summary": "The Treasury's circular of 21 March 1798 to the collectors of the customs.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-020.jpg"
+      ],
+      "family": [
+        "R1798-0017",
+        "R1798-0198"
+      ]
+    },
+    {
+      "id": "S98-021",
+      "page_key": "sn83025881|1798-03-27|1|3",
+      "excerpt_start": "BY THE President of the United",
+      "excerpt_end": "duty which the people owe to him,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-proclamation-of-23-march-1798-for-a-day-of-humiliation-fasting-and-prayer"
+      ],
+      "summary": "The President's proclamation of 23 March 1798 for a day of fasting.",
+      "note": "Earliest printing found. The Gazette of the United States prints 'the protection and the blessing of Almighty God' where the other papers print 'the protection and blessing'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The Gazette of the United States prints 'the protection and the blessing' where the other printings have 'the protection and blessing': a printed difference."
+      ],
+      "crops": [
+        "S98-021.jpg"
+      ],
+      "family": [
+        "R1798-0068",
+        "R1798-0348"
+      ]
+    },
+    {
+      "id": "S98-022",
+      "page_key": "sn83025525|1798-04-03|1|3",
+      "excerpt_start": "PRESIDENT'S MESSAGE. Gentlemen of the Senate,",
+      "excerpt_end": "been examined and maturely considered. While I",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-19-march-1798-on-the-dispatches-from-the-envoys"
+      ],
+      "summary": "The Mirror prints the President's message of 19 March 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'PRESIDENT's MESSAGE.'; the print goes on 'While I feel a', so the 'feel a' point marks only where the excerpt was cut."
+      ],
+      "crops": [
+        "S98-022.jpg"
+      ],
+      "family": [
+        "R1798-0017",
+        "R1798-0345"
+      ]
+    },
+    {
+      "id": "S98-023",
+      "page_key": "sn82014782|1798-04-04|1|2",
+      "excerpt_start": "Gentlemen of the senate and gentlemen",
+      "excerpt_end": "last which is dated the 8th Jan.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-5-march-1798-the-first-dispatches-from-the-envoys"
+      ],
+      "summary": "The Kentucky Gazette prints the President's message of 5 March 1798.",
+      "note": "The Kentucky Gazette prints 'dated the 8th Jan.', without 'of'.",
+      "scan_findings": [
+        "Scan matches the excerpt on a low-resolution scan; the print itself has 'dated the 8th Jan.' without 'of'."
+      ],
+      "crops": [
+        "S98-023.jpg"
+      ],
+      "family": [
+        "R1798-0016",
+        "R1798-0096",
+        "R1798-0097",
+        "R1798-0098",
+        "R1798-0300",
+        "R1798-0304"
+      ]
+    },
+    {
+      "id": "S98-024",
+      "page_key": "sn83025588|1798-04-04|1|2",
+      "excerpt_start": "President’s Meflage. Gentlemen of the Senate,",
+      "excerpt_end": "examined and maturely considered. WHiLe I feel",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-19-march-1798-on-the-dispatches-from-the-envoys"
+      ],
+      "summary": "The New Hampshire Gazette prints the President's message of 19 March 1798.",
+      "note": "The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+      "scan_findings": [
+        "Scan matches the excerpt under the heading 'President's Message.'. The older CA text garbles the long s ('Meflage', 'Houfeof') but changes no fact."
+      ],
+      "crops": [
+        "S98-024.jpg"
+      ],
+      "transcription_field": "ca_ocr_text"
+    },
+    {
+      "id": "S98-025",
+      "page_key": "sn83025881|1798-04-04|1|2",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "Envoy Extraordinary of the United States, to",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-3-april-1798-laying-the-instructions-and-dispatches-before-congress"
+      ],
+      "summary": "The President's message of 3 April 1798 with the envoys' dispatches.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'the Envoys Extraordinary'; the transcription's singular 'Envoy' changes the number of envoys. The rest matches."
+      ],
+      "crops": [
+        "S98-025.jpg"
+      ],
+      "family": [
+        "R1798-0033"
+      ]
+    },
+    {
+      "id": "S98-026",
+      "page_key": "sn83025525|1798-04-10|1|2",
+      "excerpt_start": "By the PRESIDENT of the United",
+      "excerpt_end": "which the people owe to Him, but",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-proclamation-of-23-march-1798-for-a-day-of-humiliation-fasting-and-prayer"
+      ],
+      "summary": "The Mirror prints the President's proclamation of a fast.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-026.jpg"
+      ],
+      "family": [
+        "R1798-0068",
+        "R1798-0320",
+        "R1798-0321"
+      ]
+    },
+    {
+      "id": "S98-027",
+      "page_key": "sn83025525|1798-04-10|1|3",
+      "excerpt_start": "CIRCULAR. To the Collectors of the",
+      "excerpt_end": "day of April, 1797, in such manner",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "treasury-circular-of-21-march-1798-to-the-collectors-of-the-customs"
+      ],
+      "summary": "The Mirror prints the Treasury's circular of 21 March 1798.",
+      "note": "The Mirror prints 'under the present circumstances', as the Gazette (Portland) does, where the Gazette of the United States and the New Hampshire Gazette print 'under present circumstances'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The Mirror prints 'under the present circumstances' where the Gazette of the United States has 'under present circumstances': a printed difference."
+      ],
+      "crops": [
+        "S98-027.jpg"
+      ],
+      "family": [
+        "R1798-0017",
+        "R1798-0068",
+        "R1798-0106"
+      ]
+    },
+    {
+      "id": "S98-028",
+      "page_key": "sn83025588|1798-04-11|1|2",
+      "excerpt_start": "United States’ Fafl. By the President",
+      "excerpt_end": "of this truth is not only an",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-proclamation-of-23-march-1798-for-a-day-of-humiliation-fasting-and-prayer"
+      ],
+      "summary": "The New Hampshire Gazette prints the President's proclamation of a fast.",
+      "note": "The New Hampshire Gazette prints the proclamation under its own heading 'United States' Fast.'. The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+      "scan_findings": [
+        "Scan matches the proclamation under the paper's heading 'United States' Fast.'. The older CA text is garbled in places ('Fafl', 'aLmicuTY gop', the drop capital A moved), but no fact changes."
+      ],
+      "crops": [
+        "S98-028.jpg"
+      ],
+      "transcription_field": "ca_ocr_text"
+    },
+    {
+      "id": "S98-029",
+      "page_key": "sn83025588|1798-04-11|1|2",
+      "excerpt_start": "CIRCULAR. - . To the Cozrecrors",
+      "excerpt_end": "this department on the Bth day of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "treasury-circular-of-21-march-1798-to-the-collectors-of-the-customs"
+      ],
+      "summary": "The New Hampshire Gazette prints the Treasury's circular of 21 March 1798.",
+      "note": "The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+      "scan_findings": [
+        "Scan matches the circular. The older CA text is garbled in the small capitals, the date line and a few words ('Cozrecrors', 'March™2l', 'Bth' for '8th'), but no fact changes."
+      ],
+      "crops": [
+        "S98-029.jpg"
+      ],
+      "transcription_field": "ca_ocr_text"
+    },
+    {
+      "id": "S98-030",
+      "page_key": "sn83045634|1798-04-16|1|2",
+      "excerpt_start": "MESSAGE TO CONGRESS. Gentlemen of the",
+      "excerpt_end": "have been examined and maturely considered. While",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-19-march-1798-on-the-dispatches-from-the-envoys"
+      ],
+      "summary": "The Gazette (Portland) prints the President's message of 19 March 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading 'MESSAGE TO CONGRESS.' stands directly above the salutation."
+      ],
+      "crops": [
+        "S98-030.jpg"
+      ],
+      "family": [
+        "R1798-0017",
+        "R1798-0018",
+        "R1798-0068",
+        "R1798-0352"
+      ],
+      "scan_boxes": [
+        [
+          30,
+          1050,
+          640,
+          1620
+        ]
+      ]
+    },
+    {
+      "id": "S98-031",
+      "page_key": "sn83045634|1798-04-16|1|2",
+      "excerpt_start": "A PROCLAMATION, By THE PRESIDENT of",
+      "excerpt_end": "which the people owe to Him, but",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-proclamation-of-23-march-1798-for-a-day-of-humiliation-fasting-and-prayer"
+      ],
+      "summary": "The Gazette (Portland) prints the President's proclamation of a fast.",
+      "note": "The Gazette (Portland) sets 'A PROCLAMATION,' above 'By THE PRESIDENT of the United States of America.'",
+      "scan_findings": [
+        "Scan matches the excerpt. The Gazette (Portland) sets 'A PROCLAMATION,' above 'By THE PRESIDENT': a printed difference of order."
+      ],
+      "crops": [
+        "S98-031.jpg"
+      ],
+      "family": [
+        "R1798-0017",
+        "R1798-0018",
+        "R1798-0068",
+        "R1798-0352"
+      ]
+    },
+    {
+      "id": "S98-032",
+      "page_key": "sn83045634|1798-04-16|1|2",
+      "excerpt_start": "IT has been determined by the",
+      "excerpt_end": "employed in a regular and lawful commerce.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "treasury-circular-of-21-march-1798-to-the-collectors-of-the-customs"
+      ],
+      "summary": "The Gazette (Portland) prints the Treasury's circular of 21 March 1798.",
+      "note": "The Gazette (Portland) prints the circular under its own sentence 'On the 21st of March, the following instructions were issued to the Collectors of the Customs.', without the department's date line or 'SIR,', and reads 'under the present circumstances'. The page's left margin is torn.",
+      "scan_findings": [
+        "Scan reads 'in such manner as [no] longer to restrain vessels' (the left margin is torn; 'longer' is clear); the transcription 'as to restrain vessels' drops 'no longer' and reverses the sense. The Gazette (Portland) prints the circular under its own sentence 'On the 21st of March, the following instructions were issued to the Collectors of the Customs.', without the department's date line or 'SIR'."
+      ],
+      "crops": [
+        "S98-032.jpg"
+      ],
+      "family": [
+        "R1798-0017",
+        "R1798-0018",
+        "R1798-0068",
+        "R1798-0352"
+      ]
+    },
+    {
+      "id": "S98-033",
+      "page_key": "sn82014782|1798-04-18|1|2",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "and maturely considered. While I feel a",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-19-march-1798-on-the-dispatches-from-the-envoys"
+      ],
+      "summary": "The Kentucky Gazette prints the President's message of 19 March 1798.",
+      "note": "The Kentucky Gazette prints 'on the fifth instant' where the other papers print 'of the fifth instant'.",
+      "scan_findings": [
+        "Scan matches the excerpt on a low-resolution scan; the print itself reads 'on the fifth instant' where the other printings have 'of'."
+      ],
+      "crops": [
+        "S98-033.jpg"
+      ],
+      "family": [
+        "R1798-0017",
+        "R1798-0094",
+        "R1798-0312"
+      ]
+    },
+    {
+      "id": "S98-034",
+      "page_key": "sn82014782|1798-04-18|1|2",
+      "excerpt_start": "C I R C U L",
+      "excerpt_end": "from this department on the 8th day",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "treasury-circular-of-21-march-1798-to-the-collectors-of-the-customs"
+      ],
+      "summary": "The Kentucky Gazette prints the Treasury's circular of 21 March 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading and date line included."
+      ],
+      "crops": [
+        "S98-034.jpg"
+      ],
+      "family": [
+        "R1798-0017",
+        "R1798-0094",
+        "R1798-0312"
+      ],
+      "scan_boxes": [
+        [
+          865,
+          446,
+          1220,
+          760
+        ]
+      ]
+    },
+    {
+      "id": "S98-035",
+      "page_key": "sn83025588|1798-04-18|1|3",
+      "excerpt_start": "Gentlemen of the Senatey, and Gentlemen",
+      "excerpt_end": "from the Envoys Extraordinary of the United",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-3-april-1798-laying-the-instructions-and-dispatches-before-congress"
+      ],
+      "summary": "The New Hampshire Gazette prints the President's message of 3 April 1798.",
+      "note": "The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+      "scan_findings": [
+        "Scan matches the message. The older CA text is garbled in a few words ('Senatey', 'requeflt', 'inftru&ions'), but no fact changes."
+      ],
+      "crops": [
+        "S98-035.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1798-0018",
+        "R1798-0033",
+        "R1798-0367",
+        "R1798-0374",
+        "R1798-0376"
+      ]
+    },
+    {
+      "id": "S98-036",
+      "page_key": "sn83025525|1798-04-24|1|2",
+      "excerpt_start": "Gentlemen of the Senate, and \"Gentlemen",
+      "excerpt_end": "Envoy Extraordinary of the United States to",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-3-april-1798-laying-the-instructions-and-dispatches-before-congress"
+      ],
+      "summary": "The Mirror prints the President's message of 3 April 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'the Envoys Extraordinary'; the transcription's singular 'Envoy' changes the number of envoys. The rest matches."
+      ],
+      "crops": [
+        "S98-036.jpg"
+      ],
+      "family": [
+        "R1798-0033",
+        "R1798-0195",
+        "R1798-0322",
+        "R1798-0333",
+        "R1798-0376"
+      ]
+    },
+    {
+      "id": "S98-037",
+      "page_key": "sn82014782|1798-04-25|1|2",
+      "excerpt_start": "Gentlemen of the Senate and gentlemen",
+      "excerpt_end": "envoys extraordinary of the United States to",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+        "president-message-of-3-april-1798-laying-the-instructions-and-dispatches-before-congress"
+      ],
+      "summary": "The Kentucky Gazette prints the President's message of 3 April 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt (a coarse scan)."
+      ],
+      "crops": [
+        "S98-037.jpg"
+      ],
+      "family": [
+        "R1798-0018",
+        "R1798-0033"
+      ]
+    },
+    {
+      "id": "S98-038",
+      "page_key": "sn83025881|1798-05-04|1|3",
+      "excerpt_start": "Copy of a letter from General",
+      "excerpt_end": "have taken 20 cannon and 9 colours.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "berne-5-march-1798-general-schauenburgs-letter"
+      ],
+      "summary": "Berne, 5 March 1798: General Schauenburg's letter.",
+      "note": "Earliest printing found. The Gazette of the United States spells the general 'Schauenberg', as the Kentucky Gazette does.",
+      "scan_findings": [
+        "Scan reads 'General Schauenberg' and 'The Switzers'; the transcription's 'Schauenburg' and 'Swissers' are minor errors that keep the name and the sense."
+      ],
+      "crops": [
+        "S98-038.jpg"
+      ],
+      "family": [
+        "R1798-0072",
+        "R1798-0116"
+      ],
+      "scan_boxes": [
+        [
+          1725,
+          5890,
+          2625,
+          6320
+        ]
+      ]
+    },
+    {
+      "id": "S98-039",
+      "page_key": "sn83025588|1798-05-08|1|2",
+      "excerpt_start": "Resolved—that a committee be appointed to",
+      "excerpt_end": "as may be dangerous to its peace",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-senate-a-motion-on-removing-aliens-april-1798"
+      ],
+      "summary": "The Senate, April 1798: a motion on removing aliens.",
+      "note": "Earliest printing found. The New Hampshire Gazette prints 'for removing from the United States', without 'the territory of'. The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+      "scan_findings": [
+        "Scan matches the motion; the older CA text is garbled in a few words ('mac it' for 'made'). The New Hampshire Gazette prints 'removing from the United States', without 'the territory of': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S98-039.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1798-0109",
+        "R1798-0111",
+        "R1798-0117",
+        "R1798-0383",
+        "R1798-0395",
+        "R1798-0396",
+        "R1798-0400"
+      ]
+    },
+    {
+      "id": "S98-040",
+      "page_key": "sn83045634|1798-05-14|1|3",
+      "excerpt_start": "A motion has been made in",
+      "excerpt_end": "be dangerous to its peace and safety.\"",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-senate-a-motion-on-removing-aliens-april-1798"
+      ],
+      "summary": "The Gazette (Portland) prints the Senate's motion on aliens.",
+      "note": "The Gazette (Portland) runs the motion into its own sentence ('A motion has been made in the Senate,'), without 'Resolved', and ends it at 'peace and safety', without the clause on returns of aliens.",
+      "scan_findings": [
+        "The second crop matches the excerpt (the first shows only a stray word). The Gazette (Portland) reports the motion in its own sentence and ends it at 'peace and safety', without the clause on returns of aliens."
+      ],
+      "crops": [
+        "S98-040-1.jpg",
+        "S98-040-2.jpg"
+      ],
+      "family": [
+        "R1798-0115"
+      ]
+    },
+    {
+      "id": "S98-041",
+      "page_key": "sn83025525|1798-05-15|1|2",
+      "excerpt_start": "Resolved, That a committee be appointed",
+      "excerpt_end": "citizenship, as may be dangerous to its",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-senate-a-motion-on-removing-aliens-april-1798"
+      ],
+      "summary": "The Mirror prints the Senate's motion on aliens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-041.jpg"
+      ],
+      "family": [
+        "R1798-0034",
+        "R1798-0071",
+        "R1798-0117",
+        "R1798-0393"
+      ]
+    },
+    {
+      "id": "S98-042",
+      "page_key": "sn83025588|1798-05-15|1|3",
+      "excerpt_start": "Copy of a letter from General",
+      "excerpt_end": "have taken 20 cannon and 9 colors.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "berne-5-march-1798-general-schauenburgs-letter"
+      ],
+      "summary": "The New Hampshire Gazette prints General Schauenburg's letter from Berne.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the letter, except that it reads 'The Switzers have lost many men' where the transcription has 'Swiss', a modernised word that keeps the sense. The second crop shows the next item, from Basle."
+      ],
+      "crops": [
+        "S98-042-1.jpg",
+        "S98-042-2.jpg"
+      ],
+      "family": [
+        "R1798-0116",
+        "R1798-0119",
+        "R1798-0407",
+        "R1798-0408",
+        "R1798-0409",
+        "R1798-0410",
+        "R1798-0412"
+      ]
+    },
+    {
+      "id": "S98-043",
+      "page_key": "sn82014782|1798-05-16|1|2",
+      "excerpt_start": "Resolved, That a committee be appointed",
+      "excerpt_end": "citizenship, as may be dangerous to its",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-senate-a-motion-on-removing-aliens-april-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the Senate's motion on aliens.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt over both crops (the line ends cut by the second crop were read on an enlarged view). The paper prints the motion whole, with its second part on returns of aliens landed."
+      ],
+      "crops": [
+        "S98-043-1.jpg",
+        "S98-043-2.jpg"
+      ],
+      "family": [
+        "R1798-0014",
+        "R1798-0034",
+        "R1798-0117",
+        "R1798-0382",
+        "R1798-0413",
+        "R1798-0414"
+      ],
+      "scan_boxes": [
+        [
+          140,
+          2430,
+          520,
+          2620
+        ],
+        [
+          400,
+          110,
+          820,
+          440
+        ]
+      ]
+    },
+    {
+      "id": "S98-044",
+      "page_key": "sn83025881|1798-05-21|1|3",
+      "excerpt_start": "(AUTHENTIC.) Consular Office of the United",
+      "excerpt_end": "released by the Consul of that nation;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "amsterdam-20-march-1798-the-american-consuls-letter-on-the-ship-america"
+      ],
+      "summary": "Amsterdam, 20 March 1798: the consul's letter on the ship America.",
+      "note": "Earliest printing found. The Gazette of the United States dates the letter 'Amsterdam, March 20.', without the year.",
+      "scan_findings": [
+        "Scan matches the excerpt. The Gazette of the United States dates the letter 'March 20.' without the year: a printed difference."
+      ],
+      "crops": [
+        "S98-044.jpg"
+      ],
+      "family": [
+        "R1798-0005",
+        "R1798-0036",
+        "R1798-0423"
+      ]
+    },
+    {
+      "id": "S98-045",
+      "page_key": "sn83045634|1798-05-21|1|2",
+      "excerpt_start": "Authentic from Amsterdam. Mr. Bourne, Consul",
+      "excerpt_end": "released by the consul of that nation;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "amsterdam-20-march-1798-the-american-consuls-letter-on-the-ship-america"
+      ],
+      "summary": "The Gazette (Portland) prints the consul's letter from Amsterdam.",
+      "note": "The Gazette (Portland) gives the letter inside its own sentence naming the consul, Mr. Bourne, without the consular heading or the salutation.",
+      "scan_findings": [
+        "Scan matches the excerpt. The Gazette (Portland) gives the letter in its own sentence naming the consul, Mr. Bourne, without the consular heading or the salutation."
+      ],
+      "crops": [
+        "S98-045.jpg"
+      ],
+      "family": [
+        "R1798-0036",
+        "R1798-0055",
+        "R1798-0422"
+      ]
+    },
+    {
+      "id": "S98-046",
+      "page_key": "sn83025525|1798-05-22|1|3",
+      "excerpt_start": "Copy of a letter from General",
+      "excerpt_end": "have taken 20 cannon and 9 colours.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "berne-5-march-1798-general-schauenburgs-letter"
+      ],
+      "summary": "The Mirror prints General Schauenburg's letter from Berne.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-046.jpg"
+      ],
+      "family": [
+        "R1798-0072",
+        "R1798-0407",
+        "R1798-0408",
+        "R1798-0409",
+        "R1798-0426"
+      ]
+    },
+    {
+      "id": "S98-047",
+      "page_key": "sn83025588|1798-05-22|1|3",
+      "excerpt_start": "AUTHENTIC. Consular Office of the United",
+      "excerpt_end": "released by the Consul of that nation;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "amsterdam-20-march-1798-the-american-consuls-letter-on-the-ship-america"
+      ],
+      "summary": "The New Hampshire Gazette prints the consul's letter from Amsterdam.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-047.jpg"
+      ],
+      "family": [
+        "R1798-0036",
+        "R1798-0037",
+        "R1798-0118",
+        "R1798-0122",
+        "R1798-0422",
+        "R1798-0423",
+        "R1798-0424"
+      ]
+    },
+    {
+      "id": "S98-048",
+      "page_key": "sn82014782|1798-05-23|1|2",
+      "excerpt_start": "Copy of a letter from gen.",
+      "excerpt_end": "is the same with that of Solothurn.\"",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "berne-5-march-1798-general-schauenburgs-letter"
+      ],
+      "summary": "The Kentucky Gazette prints General Schauenburg's letter from Berne.",
+      "note": "The Kentucky Gazette prints 'gen. Schauenberg', has no sentence on the Swiss losses ('The Switzers have lost many men.') and misprints 'coulours'.",
+      "scan_findings": [
+        "The second crop matches the letter (the first shows a stray word); the scan reads '9 coulours', a printer's misprint that the transcription gives as 'coulers'. The Kentucky Gazette prints 'gen. Schauenberg' and has no sentence on the Swiss losses: printed differences."
+      ],
+      "crops": [
+        "S98-048-1.jpg",
+        "S98-048-2.jpg"
+      ],
+      "family": [
+        "R1798-0054",
+        "R1798-0072",
+        "R1798-0113",
+        "R1798-0119",
+        "R1798-0387"
+      ]
+    },
+    {
+      "id": "S98-049",
+      "page_key": "sn83025881|1798-05-28|1|3",
+      "excerpt_start": "AN ACT, More effectually to protect",
+      "excerpt_end": "the vessels and property of citizens thereof,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-more-effectually-to-protect-the-commerce-and-coasts-may-1798"
+      ],
+      "summary": "The act of May 1798 to protect the commerce and coasts.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The act has no heading of its own; the line above it ends 'United States on Saturday last.'"
+      ],
+      "crops": [
+        "S98-049.jpg"
+      ],
+      "family": [
+        "R1798-0005",
+        "R1798-0124",
+        "R1798-0430"
+      ]
+    },
+    {
+      "id": "S98-050",
+      "page_key": "sn83025881|1798-05-30|1|2",
+      "excerpt_start": "AN ACT More effectually to protect",
+      "excerpt_end": "the vessels and property of citizens thereof,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-more-effectually-to-protect-the-commerce-and-coasts-may-1798"
+      ],
+      "summary": "The Gazette of the United States prints the act to protect the commerce and coasts.",
+      "note": "Printed again.",
+      "scan_findings": [
+        "Scan matches the excerpt: the act's own text printed again, under a short rule; any caption above it lies outside the crop."
+      ],
+      "crops": [
+        "S98-050.jpg"
+      ],
+      "family": [
+        "R1798-0005"
+      ]
+    },
+    {
+      "id": "S98-051",
+      "page_key": "sn83025881|1798-06-06|1|3",
+      "excerpt_start": "WHEREAS the French Republic, regardless of",
+      "excerpt_end": "interest and honor of the United States;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-house-6-june-1798-mr-fosters-resolutions-on-the-treaties-with-france"
+      ],
+      "summary": "The House, 6 June 1798: Mr. Foster's resolutions on the treaties with France.",
+      "note": "Earliest printing found. The Gazette of the United States prints 'stipulation' and 'made or subsisting' in this printing, and misprints 'Unitted States'.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'stipulation' and 'made or subsisting' as printed here. The print's misprint 'Unitted States' is silently corrected to 'United' in the transcription."
+      ],
+      "crops": [
+        "S98-051.jpg"
+      ],
+      "family": [
+        "R1798-0007",
+        "R1798-0008"
+      ]
+    },
+    {
+      "id": "S98-052",
+      "page_key": "sn83025881|1798-06-07|1|3",
+      "excerpt_start": "WHEREAS the French Republic, regardless of",
+      "excerpt_end": "interest and honor of the United States;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-house-6-june-1798-mr-fosters-resolutions-on-the-treaties-with-france"
+      ],
+      "summary": "The Gazette of the United States prints Mr. Foster's resolutions.",
+      "note": "Printed again. This printing reads 'stipulations' and 'made and subsisting' (6 June: 'stipulation', 'made or subsisting'); both misprint 'Unitted States'.",
+      "scan_findings": [
+        "Scan matches the excerpt; this printing reads 'stipulations' and 'made and subsisting' where GUS 06-06 has 'stipulation' and 'made or subsisting'. The misprint 'Unitted States' is silently corrected to 'United' in the transcription."
+      ],
+      "crops": [
+        "S98-052.jpg"
+      ],
+      "family": [
+        "R1798-0007"
+      ]
+    },
+    {
+      "id": "S98-053",
+      "page_key": "sn83045634|1798-06-11|1|2",
+      "excerpt_start": "Captures and Reprisals! An ACT, more",
+      "excerpt_end": "have recently captured the vessels and property",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-more-effectually-to-protect-the-commerce-and-coasts-may-1798"
+      ],
+      "summary": "The Gazette (Portland) prints the act to protect the commerce and coasts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the paper's heading 'Captures and Reprisals!'. The item runs on at the top of the next column with 'perty of citizens thereof', so the print has the words the excerpt leaves off after 'property'."
+      ],
+      "crops": [
+        "S98-053-1.jpg",
+        "S98-053-2.jpg"
+      ],
+      "family": [
+        "R1798-0005",
+        "R1798-0064",
+        "R1798-0450"
+      ]
+    },
+    {
+      "id": "S98-054",
+      "page_key": "sn82014782|1798-06-13|1|2",
+      "excerpt_start": "AUTHENTIC. Consular Office of the United",
+      "excerpt_end": "French cruiser, has been immediately released by",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "amsterdam-20-march-1798-the-american-consuls-letter-on-the-ship-america"
+      ],
+      "summary": "The Kentucky Gazette prints the consul's letter from Amsterdam.",
+      "note": "The Kentucky Gazette prints 'capt. Henthaw' and a doubled 'the' ('of the the first opportunity').",
+      "scan_findings": [
+        "Scan matches the excerpt as far as the coarse scan shows; the doubled 'the' and the shipmaster's name 'Henthaw' are as the Kentucky Gazette printed them, not transcription errors."
+      ],
+      "crops": [
+        "S98-054.jpg"
+      ],
+      "family": [
+        "R1798-0036",
+        "R1798-0427"
+      ]
+    },
+    {
+      "id": "S98-055",
+      "page_key": "sn82014782|1798-06-13|1|3",
+      "excerpt_start": "An act, more effectually to protect",
+      "excerpt_end": "committed depredations on the commerce of the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-more-effectually-to-protect-the-commerce-and-coasts-may-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the act to protect the commerce and coasts.",
+      "note": "Only the Kentucky Gazette prints the line 'Passed the Senate the 22d, the House of Representatives the 26th, May, 1798.' under the title.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the line 'Passed the Senate the 22d, the House of Representatives the 26th, May, 1798.' under the title, which only this printing has. The scan is small; the dates were read on an enlarged copy."
+      ],
+      "crops": [
+        "S98-055.jpg"
+      ],
+      "family": [
+        "R1798-0005",
+        "R1798-0056"
+      ]
+    },
+    {
+      "id": "S98-056",
+      "page_key": "sn84024710|1798-06-15|1|2",
+      "excerpt_start": "WHEREAS the French republic, regardless of",
+      "excerpt_end": "interest and honor of the United States;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-house-6-june-1798-mr-fosters-resolutions-on-the-treaties-with-france"
+      ],
+      "summary": "The Virginia Argus prints Mr. Foster's resolutions.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-056.jpg"
+      ],
+      "family": [
+        "R1798-0007",
+        "R1798-0008",
+        "R1798-0414",
+        "R1798-0453"
+      ]
+    },
+    {
+      "id": "S98-057",
+      "page_key": "sn83045634|1798-06-18|1|2",
+      "excerpt_start": "WHEREAS the French Republic, regardless of",
+      "excerpt_end": "in a manner highly injurious to the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-house-6-june-1798-mr-fosters-resolutions-on-the-treaties-with-france"
+      ],
+      "summary": "The Gazette (Portland) prints Mr. Foster's resolutions.",
+      "note": "The Gazette (Portland) prints 'stipulation' and 'made or subsisting'.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'stipulation' and 'made or subsisting' as printed here."
+      ],
+      "crops": [
+        "S98-057.jpg"
+      ],
+      "family": [
+        "R1798-0005",
+        "R1798-0007",
+        "R1798-0008",
+        "R1798-0435"
+      ]
+    },
+    {
+      "id": "S98-058",
+      "page_key": "sn83025588|1798-06-19|1|2",
+      "excerpt_start": "IMPORTANT Laws of the United States.",
+      "excerpt_end": "United States, and have recently captured the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-more-effectually-to-protect-the-commerce-and-coasts-may-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the act to protect the commerce and coasts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'ſailing' with a long s; the transcription 'failing' makes it a different word. The title prints 'U. States', as the transcription has; the rest matches."
+      ],
+      "crops": [
+        "S98-058.jpg"
+      ],
+      "family": [
+        "R1798-0005",
+        "R1798-0007",
+        "R1798-0008"
+      ]
+    },
+    {
+      "id": "S98-059",
+      "page_key": "sn83025588|1798-06-19|1|2",
+      "excerpt_start": "WHEREAS the French Republic, regardless of",
+      "excerpt_end": "interest and honour of the United States;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-house-6-june-1798-mr-fosters-resolutions-on-the-treaties-with-france"
+      ],
+      "summary": "The New Hampshire Gazette prints Mr. Foster's resolutions.",
+      "note": "The New Hampshire Gazette prints 'ought to ensue a due observance' where the other papers print 'ensure' or 'insure', and 'honour'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself reads 'ought to ensue' where the others have 'ensure' or 'insure', and 'honour': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S98-059.jpg"
+      ],
+      "family": [
+        "R1798-0005",
+        "R1798-0007",
+        "R1798-0008"
+      ]
+    },
+    {
+      "id": "S98-060",
+      "page_key": "sn82014782|1798-06-27|1|2",
+      "excerpt_start": "Whereas, the French republic, regardless of",
+      "excerpt_end": "in a manner highly injurious to the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-house-6-june-1798-mr-fosters-resolutions-on-the-treaties-with-france"
+      ],
+      "summary": "The Kentucky Gazette prints Mr. Foster's resolutions.",
+      "note": "The Kentucky Gazette prints 'insure' where the Gazette of the United States prints 'ensure', and 'made, and subsisting'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print reads 'insure' where GUS prints 'ensure', a printed difference. The scan is small."
+      ],
+      "crops": [
+        "S98-060.jpg"
+      ],
+      "family": [
+        "R1798-0003",
+        "R1798-0007",
+        "R1798-0008",
+        "R1798-0434"
+      ]
+    },
+    {
+      "id": "S98-061",
+      "page_key": "sn84024710|1798-06-29|1|1",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "a letter received by him from Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-message-of-21-june-1798-on-general-marshalls-arrival"
+      ],
+      "summary": "The President's message of 21 June 1798 on General Marshall's arrival.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Envoys' in the plural. The scan is small; that line was checked on an enlarged copy."
+      ],
+      "crops": [
+        "S98-061.jpg"
+      ],
+      "family": [
+        "R1798-0022"
+      ]
+    },
+    {
+      "id": "S98-062",
+      "page_key": "sn83045634|1798-07-02|1|2",
+      "excerpt_start": "QenlUmr1 of the Senate, and Gentlemen",
+      "excerpt_end": "think it my duty to communicate to",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-message-of-21-june-1798-on-general-marshalls-arrival"
+      ],
+      "summary": "The Gazette (Portland) prints the President's message of 21 June 1798.",
+      "note": "RevX lacks the opening of this item, so the excerpt comes from the older CA transcription.",
+      "scan_findings": [
+        "Scan matches the wording of the excerpt; the CA text is garbled throughout ('QenlUmr1', 'Htuft', 'Grn. Marlhall', '1' for 'I'), but no garble makes another word, number or name. The print reads 'Gen. Marshall' and 'envoys' in the plural."
+      ],
+      "crops": [
+        "S98-062.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1798-0022",
+        "R1798-0128"
+      ]
+    },
+    {
+      "id": "S98-063",
+      "page_key": "sn83025588|1798-07-03|1|2",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "a letter received by him from Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-message-of-21-june-1798-on-general-marshalls-arrival"
+      ],
+      "summary": "The New Hampshire Gazette prints the President's message of 21 June 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Envoys' in the plural."
+      ],
+      "crops": [
+        "S98-063.jpg"
+      ],
+      "family": [
+        "R1798-0022",
+        "R1798-0462",
+        "R1798-0468"
+      ]
+    },
+    {
+      "id": "S98-064",
+      "page_key": "sn83025881|1798-07-09|1|3",
+      "excerpt_start": "We have the satisfaction to announce",
+      "excerpt_end": "the prize was brought to Fort Mifflin.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-delaware-sloop-of-war-captain-decatur-and-a-french-privateer-july-1798"
+      ],
+      "summary": "Philadelphia, July 1798: the Delaware captures a French privateer.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-064.jpg"
+      ],
+      "family": [
+        "R1798-0003",
+        "R1798-0011",
+        "R1798-0482"
+      ]
+    },
+    {
+      "id": "S98-065",
+      "page_key": "sn82014782|1798-07-11|1|2",
+      "excerpt_start": "Gentlemen of the senate, and Gentlemen",
+      "excerpt_end": "a letter received by him from Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-message-of-21-june-1798-on-general-marshalls-arrival"
+      ],
+      "summary": "The Kentucky Gazette prints the President's message of 21 June 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper's own dateline and introductory sentence stand above the salutation."
+      ],
+      "crops": [
+        "S98-065.jpg"
+      ],
+      "family": [
+        "R1798-0022"
+      ],
+      "scan_boxes": [
+        [
+          165,
+          150,
+          520,
+          845
+        ]
+      ]
+    },
+    {
+      "id": "S98-066",
+      "page_key": "sn83025588|1798-07-17|1|3",
+      "excerpt_start": "A French Pirate captured. [No 1.]",
+      "excerpt_end": "the prize was brought to Fort Mifflin.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-delaware-sloop-of-war-captain-decatur-and-a-french-privateer-july-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the report of the Delaware's capture.",
+      "note": "The New Hampshire Gazette prints the second form of the report ('Yesterday Capt. Decater ... arrived at the Navy-Office. He informs, that'), under its own heading 'A French Pirate captured. [No 1.]', and misprints 'Decater'.",
+      "scan_findings": [
+        "Scan reads 'the Delaware ſailed' with a long s (checked on an enlarged copy); the transcription 'failed' makes it a different word that changes the sense. The print's misprint 'Capt. Decater' is silently corrected to 'Decatur'; the rest matches."
+      ],
+      "crops": [
+        "S98-066.jpg"
+      ],
+      "family": [
+        "R1798-0011",
+        "R1798-0182",
+        "R1798-0493",
+        "R1798-0494"
+      ]
+    },
+    {
+      "id": "S98-067",
+      "page_key": "sn83045634|1798-07-23|1|3",
+      "excerpt_start": "Particulars of the First Capture: Being",
+      "excerpt_end": "captured a French privateer Schooner of 12",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-delaware-sloop-of-war-captain-decatur-and-a-french-privateer-july-1798"
+      ],
+      "summary": "The Gazette (Portland) prints the report of the Delaware's capture.",
+      "note": "The Gazette (Portland) prints the second form of the report under its own heading 'Particulars of the First Capture: Being the first Installment to Talleyrand's Douceur!', and misprints 'Decater'.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the paper's heading 'Particulars of the First Capture: Being the first Installment to Talleyrand's Douceur!'. The print's misprint 'Capt. Decater' is silently corrected to 'Decatur'."
+      ],
+      "crops": [
+        "S98-067.jpg"
+      ],
+      "family": [
+        "R1798-0011"
+      ]
+    },
+    {
+      "id": "S98-068",
+      "page_key": "sn83025525|1798-07-24|1|3",
+      "excerpt_start": "PHILADELPHIA, JULY 9. A French Pirate",
+      "excerpt_end": "the prize was brought to Fort Mifflin.—Capt.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-delaware-sloop-of-war-captain-decatur-and-a-french-privateer-july-1798"
+      ],
+      "summary": "The Mirror prints the report of the Delaware's capture.",
+      "note": "The Mirror prints 'Captain Decatur', 'Egg-Harbor' and 'who only went to sea', without 'out'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has 'Captain', 'Egg-Harbor' and 'went to sea' without 'out', as the transcription gives."
+      ],
+      "crops": [
+        "S98-068.jpg"
+      ],
+      "family": [
+        "R1798-0011",
+        "R1798-0132"
+      ]
+    },
+    {
+      "id": "S98-069",
+      "page_key": "sn83045634|1798-07-30|1|2",
+      "excerpt_start": "An act in addition to the",
+      "excerpt_end": "shall unlawfully combine or conspire together with",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-the-punishment-of-certain-crimes-sedition-july-1798"
+      ],
+      "summary": "The act of 14 July 1798 on sedition.",
+      "note": "Earliest printing found. The Gazette (Portland) prints the act without a section number.",
+      "scan_findings": [
+        "Scan matches the excerpt. The act stands without a section number."
+      ],
+      "crops": [
+        "S98-069.jpg"
+      ],
+      "family": [
+        "R1798-0003",
+        "R1798-0039",
+        "R1798-0477"
+      ]
+    },
+    {
+      "id": "S98-070",
+      "page_key": "sn83045634|1798-07-30|1|2",
+      "excerpt_start": "Senate of the United States, July",
+      "excerpt_end": "and Commander in Chief of the army.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-message-of-18-july-1798-with-general-washingtons-letter"
+      ],
+      "summary": "The President's message of 18 July 1798 with General Washington's letter.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the message is signed 'JOHN ADAMS.' below it."
+      ],
+      "crops": [
+        "S98-070.jpg"
+      ],
+      "family": [
+        "R1798-0003",
+        "R1798-0039",
+        "R1798-0477"
+      ]
+    },
+    {
+      "id": "S98-071",
+      "page_key": "sn83025525|1798-07-31|1|2",
+      "excerpt_start": "GLORIOUS TIDINGS! Senate of the United",
+      "excerpt_end": "General's acceptance of his appointment, as Lieut.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-message-of-18-july-1798-with-general-washingtons-letter"
+      ],
+      "summary": "The Mirror prints the President's message of 18 July 1798.",
+      "note": "The Mirror prints 'as Lieut. General' where the other papers print 'Lieutenant General'.",
+      "scan_findings": [
+        "Scan matches the excerpt over the two crops, under the paper's heading 'GLORIOUS TIDINGS!'."
+      ],
+      "crops": [
+        "S98-071-1.jpg",
+        "S98-071-2.jpg"
+      ],
+      "family": [
+        "R1798-0039",
+        "R1798-0492",
+        "R1798-0501"
+      ]
+    },
+    {
+      "id": "S98-072",
+      "page_key": "sn83025588|1798-07-31|1|1",
+      "excerpt_start": "SENATE OF THE UNITED STATES. JULY",
+      "excerpt_end": "and Commander in Chief of the Army.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-message-of-18-july-1798-with-general-washingtons-letter"
+      ],
+      "summary": "The New Hampshire Gazette prints the President's message of 18 July 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-072.jpg"
+      ],
+      "family": [
+        "R1798-0039",
+        "R1798-0130",
+        "R1798-0182"
+      ]
+    },
+    {
+      "id": "S98-073",
+      "page_key": "sn82014782|1798-08-01|1|3",
+      "excerpt_start": "July 12. The Delaware sloop of",
+      "excerpt_end": "New-Castle, and brought this intelligence to town.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-delaware-sloop-of-war-captain-decatur-and-a-french-privateer-july-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the report of the Delaware's capture.",
+      "note": "The Kentucky Gazette opens the report 'The Delaware sloop of war', under the date line 'July 12.', and prints 'on Sunday' where the other papers print 'last evening'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself reads 'on Sunday' where the others have 'last evening', and opens 'The Delaware sloop of war' under the date line 'July 12.': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S98-073.jpg"
+      ],
+      "family": [
+        "R1798-0011",
+        "R1798-0478",
+        "R1798-0504"
+      ]
+    },
+    {
+      "id": "S98-074",
+      "page_key": "sn83025588|1798-08-07|1|1",
+      "excerpt_start": "Sedition Bill, Or a GAG for",
+      "excerpt_end": "States of America, in Congress assembled. That",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-the-punishment-of-certain-crimes-sedition-july-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the act on sedition.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included."
+      ],
+      "crops": [
+        "S98-074.jpg"
+      ],
+      "family": [
+        "R1798-0003",
+        "R1798-0515"
+      ]
+    },
+    {
+      "id": "S98-075",
+      "page_key": "sn82014782|1798-08-08|1|1",
+      "excerpt_start": "An Act in addition to the",
+      "excerpt_end": "person shall unlawfully combine or conspire together",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-the-punishment-of-certain-crimes-sedition-july-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the act on sedition.",
+      "note": "The Kentucky Gazette prints 'any person' where the other papers print 'any persons', doubles 'the' ('of the the United States') and gives no section number.",
+      "scan_findings": [
+        "The second crop shows the act and matches the excerpt, including the printer's doubled 'the the'; the first crop is a blank sliver. This paper prints 'any person' in the singular."
+      ],
+      "crops": [
+        "S98-075-1.jpg",
+        "S98-075-2.jpg"
+      ],
+      "family": [
+        "R1798-0003"
+      ]
+    },
+    {
+      "id": "S98-076",
+      "page_key": "sn82014782|1798-08-08|1|2",
+      "excerpt_start": "SENATE of the UNITED STATES. July",
+      "excerpt_end": "and commander in chief of the army.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-message-of-18-july-1798-with-general-washingtons-letter"
+      ],
+      "summary": "The Kentucky Gazette prints the President's message of 18 July 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Below the signature, the next date line reads 'July 17, 1798' where NHG 07-31 prints 'July 7': a printed difference outside the excerpt."
+      ],
+      "crops": [
+        "S98-076.jpg"
+      ],
+      "family": [
+        "R1798-0039",
+        "R1798-0514"
+      ]
+    },
+    {
+      "id": "S98-077",
+      "page_key": "sn83045634|1798-08-27|1|2",
+      "excerpt_start": "By the Clef du Cabinet des",
+      "excerpt_end": "thereof the following letters passed between Mr.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-papers-of-june-1798-on-the-envoys-dispatches"
+      ],
+      "summary": "June 1798: French papers on the envoys' dispatches.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-077.jpg"
+      ],
+      "family": [
+        "R1798-0012",
+        "R1798-0139",
+        "R1798-0534"
+      ]
+    },
+    {
+      "id": "S98-078",
+      "page_key": "sn83025588|1798-08-28|1|3",
+      "excerpt_start": "By the Clef du Cabinet des",
+      "excerpt_end": "to Congress on the 3d of April.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-papers-of-june-1798-on-the-envoys-dispatches"
+      ],
+      "summary": "The New Hampshire Gazette prints the report from French papers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-078.jpg"
+      ],
+      "family": [
+        "R1798-0012",
+        "R1798-0040",
+        "R1798-0535",
+        "R1798-0536",
+        "R1798-0537"
+      ]
+    },
+    {
+      "id": "S98-079",
+      "page_key": "sn83025881|1798-08-30|1|3",
+      "excerpt_start": "By the Clef du Cabinet des",
+      "excerpt_end": "thereof the following letters passed between Mr.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-papers-of-june-1798-on-the-envoys-dispatches"
+      ],
+      "summary": "The Gazette of the United States prints the report from French papers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-079.jpg"
+      ],
+      "family": [
+        "R1798-0012",
+        "R1798-0040",
+        "R1798-0541"
+      ]
+    },
+    {
+      "id": "S98-080",
+      "page_key": "sn83025525|1798-09-04|1|2",
+      "excerpt_start": "SEDITION BILL; Or a GAG for",
+      "excerpt_end": "of America, in Congress assembled, That if",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-the-punishment-of-certain-crimes-sedition-july-1798"
+      ],
+      "summary": "The Mirror prints the act on sedition.",
+      "note": "The Mirror prints 'in addition to an act' where the other papers print 'to the act', and 'SECT. I.'",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included; the transcription writes the printed 'SECT. I.' as 'Sec. 1.'. The title's 'in addition to an act' is printed so."
+      ],
+      "crops": [
+        "S98-080.jpg"
+      ],
+      "family": [
+        "R1798-0003",
+        "R1798-0487",
+        "R1798-0535"
+      ]
+    },
+    {
+      "id": "S98-081",
+      "page_key": "sn83025525|1798-09-04|1|3",
+      "excerpt_start": "By the Clef du Cabinet des",
+      "excerpt_end": "thereof the following letters passed between Mr.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-papers-of-june-1798-on-the-envoys-dispatches"
+      ],
+      "summary": "The Mirror prints the report from French papers.",
+      "note": "The Mirror misprints the paper's title 'Clef da Cabinet'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print reads 'Clef da Cabinet', which the transcription silently corrects to 'du'."
+      ],
+      "crops": [
+        "S98-081.jpg"
+      ],
+      "family": [
+        "R1798-0012",
+        "R1798-0040",
+        "R1798-0536"
+      ]
+    },
+    {
+      "id": "S98-082",
+      "page_key": "sn82014782|1798-09-19|1|2",
+      "excerpt_start": "By a French paper of the",
+      "excerpt_end": "thereof the following letters passed between Mr.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-papers-of-june-1798-on-the-envoys-dispatches"
+      ],
+      "summary": "The Kentucky Gazette prints the report from French papers.",
+      "note": "The Kentucky Gazette prints the paragraph under 'PHILADELPHIA, August 31.', reads 'By a French paper' without its title, and doubles 'of' ('the 10th of of June').",
+      "scan_findings": [
+        "Scan matches the excerpt; the printer doubled 'of' ('10th of of June'), which the transcription drops. A dateline 'PHILADELPHIA, August 31.' stands above."
+      ],
+      "crops": [
+        "S98-082.jpg"
+      ],
+      "family": [
+        "R1798-0012",
+        "R1798-0140",
+        "R1798-0540"
+      ]
+    },
+    {
+      "id": "S98-083",
+      "page_key": "sn83025881|1798-09-29|1|1",
+      "excerpt_start": "PARIS, July 12. Letter from the",
+      "excerpt_end": "endeavouring to concert with you to re-establish",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "minister-of-foreign-relations-to-mr-gerry-12-july-1798"
+      ],
+      "summary": "Paris, 12 July 1798: the minister's letter to Mr. Gerry.",
+      "note": "Earliest printing found. The Gazette of the United States dates the letter 'PARIS, July 12.' without the Messidor date and reads 'enclosing him his passport.' The paper's own paragraph above it ends '...the Interesting Details of these and other Important Occurrences.'",
+      "scan_findings": [
+        "Scan matches the excerpt except 'endeavouring in concert with you', which the transcription reads 'to concert': a minor error. 'Important Occurrences.' ends the paper's own heading above 'PARIS, July 12.', so the excerpt rightly starts at the dateline."
+      ],
+      "crops": [
+        "S98-083.jpg"
+      ],
+      "family": [
+        "R1798-0001",
+        "R1798-0023"
+      ]
+    },
+    {
+      "id": "S98-084",
+      "page_key": "sn83025588|1798-10-02|1|2",
+      "excerpt_start": "PARIS, (24 MESSIDOR) JULY 12. Letter,",
+      "excerpt_end": "Directory, by endeavouring in concert with you,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "minister-of-foreign-relations-to-mr-gerry-12-july-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the minister's letter to Mr. Gerry.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-084.jpg"
+      ],
+      "family": [
+        "R1798-0001",
+        "R1798-0576",
+        "R1798-0578"
+      ]
+    },
+    {
+      "id": "S98-085",
+      "page_key": "sn83025525|1798-10-08|1|1",
+      "excerpt_start": "PARIS, (24 Messidor) JULY 12. Letter",
+      "excerpt_end": "Directory, by endeavoring in concert with you,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "minister-of-foreign-relations-to-mr-gerry-12-july-1798"
+      ],
+      "summary": "The Mirror prints the minister's letter to Mr. Gerry.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt over both crops; the dateline reads 'PARIS, (24 Meſſidor) JULY 12.'"
+      ],
+      "crops": [
+        "S98-085-1.jpg",
+        "S98-085-2.jpg"
+      ],
+      "family": [
+        "R1798-0001",
+        "R1798-0182"
+      ],
+      "scan_boxes": [
+        [
+          1240,
+          6780,
+          2340,
+          7300
+        ],
+        [
+          2325,
+          1310,
+          3320,
+          1480
+        ]
+      ]
+    },
+    {
+      "id": "S98-086",
+      "page_key": "sn83045634|1798-10-08|1|1",
+      "excerpt_start": "PARIS (24 MESSIDOR) JULY 12, Letter",
+      "excerpt_end": "in concert with you, to re-establish the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "minister-of-foreign-relations-to-mr-gerry-12-july-1798"
+      ],
+      "summary": "The Gazette (Portland) prints the minister's letter to Mr. Gerry.",
+      "note": "The Gazette (Portland)'s heading ends 'Envoy of the United States.', without the passports, and misprints 'Forreign'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print's 'Forreign' is silently corrected to 'Foreign'. This paper's heading says nothing of the passport."
+      ],
+      "crops": [
+        "S98-086.jpg"
+      ],
+      "family": [
+        "R1798-0001"
+      ]
+    },
+    {
+      "id": "S98-087",
+      "page_key": "sn83045634|1798-10-08|1|1",
+      "excerpt_start": "Mr. Gerry's answer to the Minister",
+      "excerpt_end": "United States the French Republic is accused",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "mr-gerrys-answer-to-the-minister-20-july-1798"
+      ],
+      "summary": "Paris, 20 July 1798: Mr. Gerry's answer to the minister.",
+      "note": "Earliest printing found. The Gazette (Portland) prints '(the 12 July)'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the printed '(the 12 July)'."
+      ],
+      "crops": [
+        "S98-087.jpg"
+      ],
+      "family": [
+        "R1798-0001"
+      ]
+    },
+    {
+      "id": "S98-088",
+      "page_key": "sn83025588|1798-10-09|1|1",
+      "excerpt_start": "Mr. Gerry's answer to the Minister",
+      "excerpt_end": "United States the French Republic is accused",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "mr-gerrys-answer-to-the-minister-20-july-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints Mr. Gerry's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except the apostrophe: the print reads 'Affair's', the transcription 'Affairs's'."
+      ],
+      "crops": [
+        "S98-088.jpg"
+      ],
+      "family": [
+        "R1798-0001"
+      ]
+    },
+    {
+      "id": "S98-089",
+      "page_key": "sn83025588|1798-10-09|1|2",
+      "excerpt_start": "The magazines which have been forming",
+      "excerpt_end": "by the Euphrates to the Persian Gulf.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-letter-on-the-preparations-for-buonapartes-expedition-1798"
+      ],
+      "summary": "Alexandria, June 1798: the preparations for Buonaparte's expedition.",
+      "note": "Earliest printing found. The New Hampshire Gazette prints the letter without a dateline, after its own sentence ending '...Buonaparte's Expedition—', and reads 'forming' and 'We are taught'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the top line, with the first words 'The ma-', is cut at the crop's edge but readable."
+      ],
+      "crops": [
+        "S98-089.jpg"
+      ],
+      "family": [
+        "R1798-0009",
+        "R1798-0041",
+        "R1798-0149",
+        "R1798-0583",
+        "R1798-0585",
+        "R1798-0589",
+        "R1798-0590"
+      ]
+    },
+    {
+      "id": "S98-090",
+      "page_key": "sn90062451|1798-10-09|1|2",
+      "excerpt_start": "PARIS, JULY 12. Letters, from the",
+      "excerpt_end": "endeavouring in concert with you to re-establish",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "minister-of-foreign-relations-to-mr-gerry-12-july-1798"
+      ],
+      "summary": "The Eagle prints the minister's letter to Mr. Gerry.",
+      "note": "The Eagle prints 'Letters, from the Minister' and 'enclosing him his passport.'",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading's plural 'Letters,' is printed so."
+      ],
+      "crops": [
+        "S98-090.jpg"
+      ],
+      "family": [
+        "R1798-0001"
+      ]
+    },
+    {
+      "id": "S98-091",
+      "page_key": "sn84024710|1798-10-12|1|2",
+      "excerpt_start": "Mr. Gerry's answer to the minister",
+      "excerpt_end": "alleged that in the United States the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "mr-gerrys-answer-to-the-minister-20-july-1798"
+      ],
+      "summary": "The Virginia Argus prints Mr. Gerry's answer.",
+      "note": "The Virginia Argus prints Mr. Gerry's note of 25 July above the answer, and dates the answer 'Paris, July 20, '98.' at the top of the next column.",
+      "scan_findings": [
+        "The two crops show the note of 25 July, the heading and the letter's opening; they match the excerpt except 'You alledge', given as 'You alleged'. The print has 'the French republic is accused', words the point says this transcription lacks just after the excerpt."
+      ],
+      "crops": [
+        "S98-091-1.jpg",
+        "S98-091-2.jpg"
+      ],
+      "family": [
+        "R1798-0001",
+        "R1798-0593"
+      ]
+    },
+    {
+      "id": "S98-092",
+      "page_key": "sn83025525|1798-10-15|1|1",
+      "excerpt_start": "MR. GERRY'S ANSWER, To the Minister",
+      "excerpt_end": "the United States the French Republic is",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "mr-gerrys-answer-to-the-minister-20-july-1798"
+      ],
+      "summary": "The Mirror prints Mr. Gerry's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-092.jpg"
+      ],
+      "family": [
+        "R1798-0001"
+      ]
+    },
+    {
+      "id": "S98-093",
+      "page_key": "sn83025525|1798-10-15|1|2",
+      "excerpt_start": "The magazines which have been forming",
+      "excerpt_end": "by the Euphrates to the Persian Gulf.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-letter-on-the-preparations-for-buonapartes-expedition-1798"
+      ],
+      "summary": "The Mirror prints the letter from Alexandria.",
+      "note": "The Mirror prints the letter without a dateline, after its own sentence ending '...Buonaparte's Expedition.', and reads 'forming', 'We are taught' and 'Gulph'.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the print spells 'Gulph', which the transcription modernises to 'Gulf'."
+      ],
+      "crops": [
+        "S98-093.jpg"
+      ],
+      "family": [
+        "R1798-0001",
+        "R1798-0009"
+      ]
+    },
+    {
+      "id": "S98-094",
+      "page_key": "sn83045634|1798-10-15|1|2",
+      "excerpt_start": "ALEXANDRIA (Egypt) JUNE 4. \"The magazines",
+      "excerpt_end": "by the Euphrates to the Persian Gulph.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-letter-on-the-preparations-for-buonapartes-expedition-1798"
+      ],
+      "summary": "The Gazette (Portland) prints the letter from Alexandria.",
+      "note": "The Gazette (Portland) dates the letter 'ALEXANDRIA (Egypt) JUNE 4.' and reads 'which have been formed here' and 'We were taught' (the New Hampshire Gazette and the Mirror: 'forming', 'We are taught').",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-094.jpg"
+      ],
+      "family": [
+        "R1798-0009",
+        "R1798-0044",
+        "R1798-0599"
+      ]
+    },
+    {
+      "id": "S98-095",
+      "page_key": "sn84024710|1798-10-16|1|3",
+      "excerpt_start": "ALEXANDRIA, June 20. The measures which",
+      "excerpt_end": "by the Euphrates to the Persian Gulf.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-letter-on-the-preparations-for-buonapartes-expedition-1798"
+      ],
+      "summary": "The Virginia Argus prints the letter from Alexandria.",
+      "note": "The Virginia Argus dates the letter 'ALEXANDRIA, June 10.' (the Gazette (Portland) and the Kentucky Gazette: 'June 4.'), and reads 'formed' and 'We were taught'.",
+      "scan_findings": [
+        "Scan reads 'ALEXANDRIA, June 10.'; the transcription's 'June 20' changes the date. The faint first line appears to read 'The magazines which have been formed', as in the other printings, so 'measures ... adopted' is also a misreading."
+      ],
+      "crops": [
+        "S98-095.jpg"
+      ],
+      "family": [
+        "R1798-0009",
+        "R1798-0557",
+        "R1798-0609"
+      ]
+    },
+    {
+      "id": "S98-096",
+      "page_key": "sn90062451|1798-10-16|1|2",
+      "excerpt_start": "Mr. Gerry's Answer, To the letter",
+      "excerpt_end": "is accused of not wishing for peace;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "mr-gerrys-answer-to-the-minister-20-july-1798"
+      ],
+      "summary": "The Eagle prints Mr. Gerry's answer.",
+      "note": "The Eagle prints Mr. Gerry's note of 25 July above the answer, and gives the date of the minister's letter as '[July 12]'.",
+      "scan_findings": [
+        "Scan matches the excerpt; this paper prints the date as '[July 12]' in brackets."
+      ],
+      "crops": [
+        "S98-096.jpg"
+      ],
+      "family": [
+        "R1798-0001",
+        "R1798-0148",
+        "R1798-0153",
+        "R1798-0590"
+      ]
+    },
+    {
+      "id": "S98-097",
+      "page_key": "sn82014782|1798-10-24|1|1",
+      "excerpt_start": "PARIS, July 12. Letter from the",
+      "excerpt_end": "endeavouring in concert with you to re-establish",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "minister-of-foreign-relations-to-mr-gerry-12-july-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the minister's letter to Mr. Gerry.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-097.jpg"
+      ],
+      "family": [
+        "R1798-0001"
+      ]
+    },
+    {
+      "id": "S98-098",
+      "page_key": "sn82014782|1798-10-24|1|2",
+      "excerpt_start": "MR. GERRY'S ANSWER. Paris, July 20,",
+      "excerpt_end": "you recur to the arrival of M.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+        "mr-gerrys-answer-to-the-minister-20-july-1798"
+      ],
+      "summary": "The Kentucky Gazette prints Mr. Gerry's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The first and fourth crops show the heading and the opening, which match the excerpt except the modernised 'allege' for the printed 'alledge'; the second and third crops show a later passage of the letter and the next column."
+      ],
+      "crops": [
+        "S98-098-1.jpg",
+        "S98-098-2.jpg",
+        "S98-098-3.jpg",
+        "S98-098-4.jpg"
+      ],
+      "family": [
+        "R1798-0001"
+      ]
+    },
+    {
+      "id": "S98-099",
+      "page_key": "sn82014782|1798-11-07|1|2",
+      "excerpt_start": "From Alexandria, June 4. The magazines",
+      "excerpt_end": "by the Euphrates to the Persian gulph.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "alexandria-letter-on-the-preparations-for-buonapartes-expedition-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the letter from Alexandria.",
+      "note": "The Kentucky Gazette dates the letter 'From Alexandria, June 4.' and reads 'by the way of Cyprus' where the other papers read 'the Isle of Cyprus'.",
+      "scan_findings": [
+        "Scan matches the excerpt; this paper prints 'by the way of Cyprus' where the others print 'the Isle of Cyprus'."
+      ],
+      "crops": [
+        "S98-099.jpg"
+      ],
+      "family": [
+        "R1798-0009",
+        "R1798-0597"
+      ]
+    },
+    {
+      "id": "S98-100",
+      "page_key": "sn83025881|1798-11-22|1|2",
+      "excerpt_start": "MINUTE OF FACTS Stated in the",
+      "excerpt_end": "Alexandria, where they expected a passive reception.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798"
+      ],
+      "summary": "1798: the minute of facts in the dispatches to Lord St. Vincent.",
+      "note": "Earliest printing found. The Gazette of the United States prints 'on attempt', without 'an', and the misprints 'laud', 'ouly', 'expectec' and 'Vincsnt'.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the print's misprints 'laud', 'ouly', 'expectec' and 'Vincsnt', which the transcription reads as meant. The heading stands directly above; the numbers are in words and the print has 'on attempt' without 'an'."
+      ],
+      "crops": [
+        "S98-100.jpg"
+      ],
+      "family": [
+        "R1798-0004",
+        "R1798-0025",
+        "R1798-0686"
+      ]
+    },
+    {
+      "id": "S98-101",
+      "page_key": "sn83025881|1798-11-23|1|2",
+      "excerpt_start": "MINUTE OF FACTS Stated in the",
+      "excerpt_end": "Alexandria, where they expected a passive reception.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798"
+      ],
+      "summary": "The Gazette of the United States prints the minute of facts.",
+      "note": "Printed again, from the same type: 'land' is set right here, 'expectec' and 'Vincsnt' stay.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the misprints 'expectec' and 'Vincsnt', which the transcription reads as meant; it repeats the 22 November printing line for line. The heading stands directly above, with the numbers in words and 'on attempt' without 'an'."
+      ],
+      "crops": [
+        "S98-101.jpg"
+      ],
+      "family": [
+        "R1798-0004"
+      ]
+    },
+    {
+      "id": "S98-102",
+      "page_key": "sn83025881|1798-11-30|1|2",
+      "excerpt_start": "AN ACT In addition to the",
+      "excerpt_end": "any person, shall unlawfully combine or conspire",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-for-the-punishment-of-certain-crimes-sedition-july-1798"
+      ],
+      "summary": "The Gazette of the United States prints the act on sedition.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The crop shows the act's heading, title and first section as the essay recites them. The transcription's 'any person,' misreads the printed 'any persons' (the sense of the clause is unchanged); it also modernises 'entituled' and corrects the printed 'United State'."
+      ],
+      "crops": [
+        "S98-102.jpg"
+      ],
+      "family": [
+        "R1798-0003"
+      ]
+    },
+    {
+      "id": "S98-103",
+      "page_key": "sn84024710|1798-11-30|1|3",
+      "excerpt_start": "Minute of facts stated in the",
+      "excerpt_end": "Alexandria, where they expected a passive reception.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798"
+      ],
+      "summary": "The Virginia Argus prints the minute of facts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells 'dispatches' where the transcription has 'despatches'. The scan is small and faint, so the spelling is read with medium confidence."
+      ],
+      "crops": [
+        "S98-103.jpg"
+      ],
+      "family": [
+        "R1798-0004"
+      ]
+    },
+    {
+      "id": "S98-104",
+      "page_key": "sn83025881|1798-12-01|1|3",
+      "excerpt_start": "Vanguard, off the Mouth of the Nile, August 3, 1798. MY",
+      "excerpt_end": "off the mouth of the Nile. The",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "rear-admiral-nelsons-letter-of-3-august-1798"
+      ],
+      "summary": "Off the mouth of the Nile, 3 August 1798: Rear-Admiral Nelson's letter.",
+      "note": "Earliest printing found. The Gazette of the United States prints 'in the late battle' where the other papers print 'in the battle'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the letter's own date line stands directly above 'MY LORD,' and the print has 'in the late battle'."
+      ],
+      "crops": [
+        "S98-104.jpg"
+      ],
+      "family": [
+        "R1798-0049",
+        "R1798-0698",
+        "R1798-0699",
+        "R1798-0700"
+      ],
+      "scan_boxes": [
+        [
+          241,
+          3557,
+          1041,
+          4008
+        ]
+      ]
+    },
+    {
+      "id": "S98-105",
+      "page_key": "sn83045634|1798-12-03|1|3",
+      "excerpt_start": "Minute of facts stated in the",
+      "excerpt_end": "Alexandria, where they expected a passive reception.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798"
+      ],
+      "summary": "The Gazette (Portland) prints the minute of facts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading stands directly above, and the print has 'on an attempt'."
+      ],
+      "crops": [
+        "S98-105.jpg"
+      ],
+      "family": [
+        "R1798-0004",
+        "R1798-0025",
+        "R1798-0049"
+      ]
+    },
+    {
+      "id": "S98-106",
+      "page_key": "sn83045634|1798-12-03|1|3",
+      "excerpt_start": "FROM THE LONDON GAZETTE—OCT. 2. Copy",
+      "excerpt_end": "at sunset on the 1st of Aug.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "rear-admiral-nelsons-letter-of-3-august-1798"
+      ],
+      "summary": "The Gazette (Portland) prints Rear-Admiral Nelson's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the London Gazette line and the title of the letter stand directly above 'MY LORD,', and the print has 'in the battle'."
+      ],
+      "crops": [
+        "S98-106.jpg"
+      ],
+      "family": [
+        "R1798-0004",
+        "R1798-0025",
+        "R1798-0049"
+      ]
+    },
+    {
+      "id": "S98-107",
+      "page_key": "sn83025588|1798-12-05|1|2",
+      "excerpt_start": "The Official Signature. From the LONDON",
+      "excerpt_end": "in the battle, by a great victory",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "rear-admiral-nelsons-letter-of-3-august-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints Rear-Admiral Nelson's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading 'The Official Signature.' stands directly above the London Gazette line, and the print has 'in the battle,'."
+      ],
+      "crops": [
+        "S98-107.jpg"
+      ],
+      "family": [
+        "R1798-0049",
+        "R1798-0166",
+        "R1798-0705",
+        "R1798-0706",
+        "R1798-0707",
+        "R1798-0708"
+      ]
+    },
+    {
+      "id": "S98-108",
+      "page_key": "sn83025588|1798-12-05|1|3",
+      "excerpt_start": "Minute of facts stated in the",
+      "excerpt_end": "Alexandria, where they expected a passive reception.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the minute of facts.",
+      "note": "The New Hampshire Gazette prints 'thirty-eight thousand' and 'in an attempt' (the Gazette of the United States: 'on attempt'; the Virginia Argus and the Gazette (Portland): 'on an attempt').",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading stands directly above, and the print has 'in an attempt'."
+      ],
+      "crops": [
+        "S98-108.jpg"
+      ],
+      "family": [
+        "R1798-0004",
+        "R1798-0167",
+        "R1798-0168",
+        "R1798-0169",
+        "R1798-0170",
+        "R1798-0171",
+        "R1798-0709"
+      ]
+    },
+    {
+      "id": "S98-109",
+      "page_key": "sn83025881|1798-12-08|1|3",
+      "excerpt_start": "Gentlemen of the Senate and Gentlemen",
+      "excerpt_end": "for gratitude and mutual congratulations, that the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+        "president-speech-to-both-houses-8-december-1798"
+      ],
+      "summary": "The President's speech of 8 December 1798.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the salutation stands directly below the paper's own sentence, which is not part of the item."
+      ],
+      "crops": [
+        "S98-109.jpg"
+      ],
+      "family": [
+        "R1798-0002",
+        "R1798-0668",
+        "R1798-0669"
+      ],
+      "scan_boxes": [
+        [
+          240,
+          1180,
+          950,
+          1845
+        ]
+      ]
+    },
+    {
+      "id": "S98-110",
+      "page_key": "sn83025525|1798-12-10|1|1",
+      "excerpt_start": "OFFICIAL!—AUTHENTIC! Nelson's Victory From the LONDON",
+      "excerpt_end": "the battle, by a great victory over",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "rear-admiral-nelsons-letter-of-3-august-1798"
+      ],
+      "summary": "The Mirror prints Rear-Admiral Nelson's letter.",
+      "note": "The Mirror prints 'Earl of St Vincents'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print reads 'Earl of St Vincents', which the transcription gives as 'St. Vincent'. The headings 'OFFICIAL!—AUTHENTIC!' and 'Nelson's Victory' stand directly above."
+      ],
+      "crops": [
+        "S98-110.jpg"
+      ],
+      "family": [
+        "R1798-0049",
+        "R1798-0598",
+        "R1798-0716"
+      ]
+    },
+    {
+      "id": "S98-111",
+      "page_key": "sn83025881|1798-12-12|1|3",
+      "excerpt_start": "To the PRESIDENT of the UNITED",
+      "excerpt_end": "Sympathy for the sufferings of our fellow-citizens,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+        "the-senates-answer-to-the-presidents-speech-12-december-1798"
+      ],
+      "summary": "The Senate's answer of 12 December 1798 to the President's speech.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'the late afflicting dispensations'; the transcription's 'affliction' is a minor error that keeps the sense."
+      ],
+      "crops": [
+        "S98-111.jpg"
+      ],
+      "family": [
+        "R1798-0002",
+        "R1798-0175"
+      ],
+      "scan_boxes": [
+        [
+          215,
+          2730,
+          945,
+          3315
+        ]
+      ]
+    },
+    {
+      "id": "S98-112",
+      "page_key": "sn82014782|1798-12-19|1|3",
+      "excerpt_start": "The French transports ran into the",
+      "excerpt_end": "dispatches state, that the only supplies Buonaparte",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-action-off-the-mouth-of-the-nile-august-1798",
+        "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the minute of facts.",
+      "note": "The Kentucky Gazette prints the minute without a heading, with the numbers in figures ('38000', '2000') and 'a few days provision'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print has no heading, gives the numbers in figures ('38000', '2000') and reads 'in an attempt'."
+      ],
+      "crops": [
+        "S98-112.jpg"
+      ],
+      "family": [
+        "R1798-0004"
+      ]
+    },
+    {
+      "id": "S98-113",
+      "page_key": "sn83025588|1798-12-19|1|3",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen of the House of Representatives,",
+      "excerpt_end": "for gratitude and mutual congratulations, that the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+        "president-speech-to-both-houses-8-december-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the President's speech of 8 December 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-113.jpg"
+      ],
+      "family": [
+        "R1798-0002",
+        "R1798-0172"
+      ]
+    },
+    {
+      "id": "S98-114",
+      "page_key": "sn83025525|1798-12-24|1|2",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "for gratitude and mutual congratulations, that the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+        "president-speech-to-both-houses-8-december-1798"
+      ],
+      "summary": "The Mirror prints the President's speech of 8 December 1798.",
+      "note": "The Mirror's own sentence above the speech ends '...addressed the two Houses in the following SPEECH.', with 'SPEECH.' set as a heading.",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading 'SPEECH.' stands above the salutation."
+      ],
+      "crops": [
+        "S98-114.jpg"
+      ],
+      "family": [
+        "R1798-0002",
+        "R1798-0167"
+      ]
+    },
+    {
+      "id": "S98-115",
+      "page_key": "sn83045634|1798-12-24|1|1",
+      "excerpt_start": "Gentlemen of the Senate, and Gentlemen",
+      "excerpt_end": "for gratitude and mutual congratulations, that the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+        "president-speech-to-both-houses-8-december-1798"
+      ],
+      "summary": "The Gazette (Portland) prints the President's speech of 8 December 1798.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-115.jpg"
+      ],
+      "family": [
+        "R1798-0002"
+      ]
+    },
+    {
+      "id": "S98-116",
+      "page_key": "sn83045634|1798-12-24|1|2",
+      "excerpt_start": "To the PRESIDENT of the United",
+      "excerpt_end": "Sympathy for the sufferings of our fellow",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+        "the-senates-answer-to-the-presidents-speech-12-december-1798"
+      ],
+      "summary": "The Gazette (Portland) prints the Senate's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'the late afflicting dispensations'; the transcription's 'affliction' is a minor error that keeps the sense. The paper prints 'fellow citizens' as two words."
+      ],
+      "crops": [
+        "S98-116.jpg"
+      ],
+      "family": [
+        "R1798-0002",
+        "R1798-0050",
+        "R1798-0173",
+        "R1798-0723",
+        "R1798-0739"
+      ],
+      "scan_boxes": [
+        [
+          1275,
+          279,
+          1899,
+          573
+        ]
+      ]
+    },
+    {
+      "id": "S98-117",
+      "page_key": "sn83025588|1798-12-26|1|2",
+      "excerpt_start": "To the President of the U.",
+      "excerpt_end": "Sympathy for the sufferings of our fellow-citizens,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+        "the-senates-answer-to-the-presidents-speech-12-december-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the Senate's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'the late afflicting dispensations'; the transcription's 'affliction,' with an added comma is a misreading that leaves the sense close. The rest matches the excerpt."
+      ],
+      "crops": [
+        "S98-117.jpg"
+      ],
+      "family": [
+        "R1798-0002",
+        "R1798-0050",
+        "R1798-0711",
+        "R1798-0713",
+        "R1798-0714",
+        "R1798-0722",
+        "R1798-0740"
+      ]
+    },
+    {
+      "id": "S98-118",
+      "page_key": "sn83025525|1798-12-31|1|1",
+      "excerpt_start": "To the President of the United",
+      "excerpt_end": "Sympathy for the sufferings of our fellow",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+        "the-senates-answer-to-the-presidents-speech-12-december-1798"
+      ],
+      "summary": "The Mirror prints the Senate's answer.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'afflicting' and 'fellow citizens' without a hyphen."
+      ],
+      "crops": [
+        "S98-118.jpg"
+      ],
+      "family": [
+        "R1798-0002"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "havre-letter-of-6-november-1797-a-project-of-a-descent-on-england",
+      "kind": "document_group",
+      "label": "A letter from Havre of 6 November 1797: 'a project of an absolute descent on England'",
+      "definition": "Printings of an extract of a letter: 'Extract of a letter from a gentleman in Havre to a respectable mercantile house in this city, received by the Rosetta. Havre, 6th Nov. 1797. There is now a project of an absolute descent on England! The immortal Buonaparte is appointed commander in chief, on this expedition'. A letter of an unnamed writer, at second hand, as the papers printed it.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "paris-report-of-what-the-directory-demands-of-the-american-envoys-november-1797",
+      "kind": "document_group",
+      "label": "Paris, 10 November 1797: a report of what the Directory demands of the American envoys",
+      "definition": "Printings of a paragraph of the Paris news of 10 November: 'It is said that the Directory demands of the American Plenipotentiaries: first, whether their instructions allow them to give satisfaction for the outrage offered to the French government, in the speech the President made on the 16th of May last, at the opening of Congress? And secondly, whether they are authorised to re-establish the respective position in which the states stood in 1778'. A report at second hand ('it is said'), as the papers printed it.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "the-senate-on-a-motion-to-repeal-the-stamp-duty-january-1798",
+      "kind": "document_group",
+      "label": "The Senate, January 1798: the yeas and nays on Mr. Greene's motion for leave to bring in a bill to repeal the stamp duty",
+      "definition": "Printings of a report of the Senate's proceedings: 'Yesterday in the Senate of the United States, upon a motion for leave to bring in a bill to repeal the law laying a duty on stamped vellum, &c. made by Mr. Greene, a member from Rhode-Island, in pursuance of instructions from that State—the yeas and nays were as follows'. A report of Congress's proceedings, with the senators' names as the papers printed them.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+      "kind": "context_group",
+      "label": "The envoys' dispatches, March and April 1798: the President's messages to Congress and the Treasury's circular",
+      "definition": "The President's messages to both Houses of 5 March (the first dispatches from the envoys at Paris), 19 March (the dispatches examined) and 3 April (the instructions and dispatches laid before Congress), and the Treasury's circular of 21 March to the collectors of the customs on vessels sailing armed: one affair's separate public acts (X-1800-01), as the papers printed them.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "president-message-of-5-march-1798-the-first-dispatches-from-the-envoys",
+      "kind": "document_group",
+      "label": "The President's message of 5 March 1798 on the first dispatches from the envoys at Paris",
+      "definition": "Printings of the message: 'Gentlemen of the Senate and Gentlemen of the House of Representatives, The first dispatches from our envoys extraordinary since their arrival at Paris, were received at the Secretary of State's office, at a late hour the last evening—They are all in a character, which will require some days to be deciphered, except the last which is dated the 8th of January, 1798'. The President's own words, printed with the envoys' letter of 8 January.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "president-message-of-19-march-1798-on-the-dispatches-from-the-envoys",
+      "kind": "document_group",
+      "label": "The President's message of 19 March 1798 on the dispatches from the envoys",
+      "definition": "Printings of the message: 'THE dispatches, from the Envoys Extraordinary of the United States to the French Republic, which were mentioned in my message, to both Houses of Congress, of the fifth instant, have been examined and maturely considered. While I feel a satisfaction in informing you, that their exertions, for the adjustment of the differences, between the two nations, have been sincere and unremitted, it is incumbent on me, to declare, that I perceive no ground of expectation, that the objects of their mission, can be accomplished, on terms compatible, with the safety, honor, or the essential interests of the nation'. The President's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "treasury-circular-of-21-march-1798-to-the-collectors-of-the-customs",
+      "kind": "document_group",
+      "label": "The Treasury's circular of 21 March 1798 to the collectors of the customs: vessels no longer restrained from sailing armed",
+      "definition": "Printings of the circular: 'Treasury Department, March 21. SIR, IT has been determined by the President of the United States, that under present circumstances, it has become necessary to modify the instructions issued from this department on the 8th day of April 1797, in such manner as no longer to restrain vessels of the United States from sailing in an armed condition, when destined to be employed in a regular and lawful commerce'. The Treasury's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "president-proclamation-of-23-march-1798-for-a-day-of-humiliation-fasting-and-prayer",
+      "kind": "document_group",
+      "label": "The President's proclamation of 23 March 1798 for a day of solemn humiliation, fasting and prayer",
+      "definition": "Printings of the proclamation: 'BY THE President of the United States of America, A PROCLAMATION. As the safety and prosperity of nations ultimately and essentially depend on the protection and the blessing of Almighty God; and the national acknowledgment of this truth is not only an indispensable duty which the people owe to him, but a duty whose natural influence is favorable to the promotion of that Morality and Piety, without which social Happiness cannot exist'. The President's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "president-message-of-3-april-1798-laying-the-instructions-and-dispatches-before-congress",
+      "kind": "document_group",
+      "label": "The President's message of 3 April 1798 laying the envoys' instructions and dispatches before Congress",
+      "definition": "Printings of the message: 'In compliance with the request of the House of Representatives, expressed in their resolution of the 2d of this month, I transmit to both Houses the instructions to and dispatches from the Envoys Extraordinary of the United States to the French Republic, which were mentioned in my message of the 19th of March last, omitting only some names, and a few expressions descriptive of the persons'. The President's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "the-senate-a-motion-on-removing-aliens-april-1798",
+      "kind": "document_group",
+      "label": "The Senate, April 1798: a motion for a committee on removing aliens who may be dangerous, and on returns of aliens landed",
+      "definition": "Printings of a motion made in the Senate: 'Resolved, That a committee be appointed to consider whether any and what provision ought to be made by law, for removing from the territory of the United States, such aliens born, not entitled by the constitution and laws thereof, to the rights of citizenship, as may be dangerous to its peace and safety'. A motion in Congress, as the papers printed it.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "berne-5-march-1798-general-schauenburgs-letter",
+      "kind": "document_group",
+      "label": "Berne, 5 March 1798: General Schauenburg's letter on the French troops' entry into the city",
+      "definition": "Printings of a letter: 'Copy of a letter from General Schauenburg, commander of the French troops. Berne, March 5. We yesterday entered this city. An engagement took place, which continued for three hours, and was on both sides obstinately contested. The Swissers have lost many men. We have taken 20 cannon and 9 colours'. The French commander's own account, as the papers printed it.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "amsterdam-20-march-1798-the-american-consuls-letter-on-the-ship-america",
+      "kind": "document_group",
+      "label": "Amsterdam, 20 March 1798: the American consul's letter that the ship America, brought in by a French cruiser, has been released",
+      "definition": "Printings of a letter: 'Consular Office of the United States of America, Amsterdam, March 20. Mr. Benjamin Russell, Boston, SIR, I AVAIL myself of the first opportunity to acquaint you that the ship America, Capt. Henshaw, from New-York, lately brought in here by a French cruiser, has been immediately released by the Consul of that nation'. The consul's own words, from a Boston paper.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "act-more-effectually-to-protect-the-commerce-and-coasts-may-1798",
+      "kind": "document_group",
+      "label": "The act of May 1798 more effectually to protect the commerce and coasts of the United States",
+      "definition": "Printings of the act: 'AN ACT More effectually to protect the Commerce and Coasts of the United States. WHEREAS armed vessels, sailing under authority, or pretence of authority, from the Republic of France, have committed depredations on the commerce of the United States, and have recently captured the vessels and property of citizens thereof, on and near the coasts'. An act of Congress, as the papers printed it; the Senate's bill, printed earlier in other words ('armed vessels belonging to the Republic of France'), is counted apart (X-1809-07).",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "the-house-6-june-1798-mr-fosters-resolutions-on-the-treaties-with-france",
+      "kind": "document_group",
+      "label": "The House, 6 June 1798: Mr. Dwight Foster's resolutions that the French Republic has violated the treaties",
+      "definition": "Printings of the resolutions laid before the House of Representatives: 'WHEREAS the French Republic, regardless of those principles of good faith which ought to ensure a due observance of treaties, have, in various instances, violated the express stipulation of the treaties heretofore made or subsisting between the United States and the French nation ... Resolved, That it is expedient to make a legislative declaration'. Resolutions moved in Congress, as the papers printed them; Mr. Blount's resolutions in the same words on Great Britain are another text (C-07).",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "president-message-of-21-june-1798-on-general-marshalls-arrival",
+      "kind": "document_group",
+      "label": "The President's message of 21 June 1798 on General Marshall's arrival, communicating Mr. Gerry's letter",
+      "definition": "Printings of the message: 'WHILE I congratulate you on the arrival of General Marshall, one of our late Envoys Extraordinary to the French Republic, at a place of safety, where he is justly held in honor, I think it my duty to communicate to you a letter received by him from Mr. Gerry, the only one of the three who has not received a congé'. The President's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "the-delaware-sloop-of-war-captain-decatur-and-a-french-privateer-july-1798",
+      "kind": "document_group",
+      "label": "Philadelphia, July 1798: reports that the Delaware sloop of war, Captain Decatur, has captured a French privateer schooner off Egg Harbour",
+      "definition": "Printings of a Philadelphia paragraph in two forms: 'We have the satisfaction to announce to our readers that the Delaware sloop of war, capt. Decatur, (who only went out to sea on Friday) on Saturday evening captured a French privateer schooner of 12 guns and 70 men, close in with Egg-Harbour', and 'Yesterday Capt. Decatur, of the United States Sloop Delaware arrived at the Navy-Office. He informs, that the Delaware sailed on Friday last, and on Saturday evening captured a French privateer schooner of 12 guns and 70 men, close in with Egg Harbour'. Reports at second hand, in the papers' words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "president-message-of-18-july-1798-with-general-washingtons-letter",
+      "kind": "document_group",
+      "label": "The President's message to the Senate of 18 July 1798 with General Washington's letter accepting the command of the army",
+      "definition": "Printings of the message: 'BELIEVING that the letter received this morning from General WASHINGTON will give high satisfaction to the Senate, I transmit them a copy of it, and congratulate them and the public on this great event, the General's acceptance of his appointment, as Lieutenant General and Commander in Chief of the army', with the General's letter from Mount-Vernon of 13 July. The President's and the General's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "act-for-the-punishment-of-certain-crimes-sedition-july-1798",
+      "kind": "document_group",
+      "label": "The act of 14 July 1798 in addition to the act for the punishment of certain crimes against the United States (sedition)",
+      "definition": "Printings of the act: 'An Act in addition to the act, entitled \"An act for the punishment of certain crimes against the United States.\" Sec. 1. BE it enacted by the Senate and House of Representatives of the United States of America, in Congress assembled, That if any persons shall unlawfully combine or conspire together, with intent to oppose any measure or measures of the government of the United States, which are or shall be directed by proper authority'. An act of Congress, as the papers printed it; the Senate's bill, printed earlier in other words ('whether citizens or aliens'), is counted apart (X-1809-07), and essays quoting the act do not count (C-07).",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "french-papers-of-june-1798-on-the-envoys-dispatches",
+      "kind": "document_group",
+      "label": "June 1798: a report from French papers that the French government has received the American envoys' dispatches, with Mr. Gerry's and M. Talleyrand's letters",
+      "definition": "Printings of a paragraph: 'By the Clef du Cabinet des Souverains, of the 10th June, it appears that the French government had received an English paper containing the dispatches from the American envoys to the President of the U. S. which were communicated by the President to Congress the 3d April. In consequence thereof the following letters passed between Mr. Gerry & M. Talleyrand'. A report from French papers, at second hand.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+      "kind": "context_group",
+      "label": "Paris, July 1798: the French minister of foreign relations' letter to Mr. Gerry enclosing his passport, and Mr. Gerry's answer",
+      "definition": "The minister's letter of 12 July (24 Messidor) and Mr. Gerry's answer of 20 July, printed from London papers in September and October: one affair's separate public documents (X-1800-01), each in the writer's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "minister-of-foreign-relations-to-mr-gerry-12-july-1798",
+      "kind": "document_group",
+      "label": "Paris, 12 July 1798: the French minister of foreign relations' letter to Mr. Gerry, enclosing his passport",
+      "definition": "Printings of the letter: 'Letter, from the Minister of foreign relations, to Mr. Gerry, Envoy of the United States, enclosing him his Passports. As long, Sir, as I had room to flatter myself that I might fulfil the wishes of the Executive Directory, by endeavouring in concert with you'. The French minister's own words, in translation.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "mr-gerrys-answer-to-the-minister-20-july-1798",
+      "kind": "document_group",
+      "label": "Paris, 20 July 1798: Mr. Gerry's answer to the minister of foreign relations",
+      "definition": "Printings of the letter: 'Citizen Minister, I RECEIVED on the 27th Messidor, your letter of the 24th, (the 12th July) on which permit me to make some observations. You alledge that in the United States the French Republic is accused of not wishing for peace'. Mr. Gerry's own words; most papers print it after his note of 25 July asking the minister to publish a translation of it (one publication, counted by the answer's opening, X-1810-01).",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "alexandria-letter-on-the-preparations-for-buonapartes-expedition-1798",
+      "kind": "document_group",
+      "label": "Alexandria, June 1798: a letter on the preparations made there for Buonaparte's expedition",
+      "definition": "Printings of a letter from Alexandria, from a Paris paper: 'The magazines which have been forming here are all ready. We are taught to expect the arrival of 40,000 men; they now speak but of 20,000. The other 20,000 are to go by the Isle of Cyprus to Aleppo, and from thence to pass by the Euphrates to the Persian Gulf'. A letter of an unnamed writer, at second hand, as the papers printed it.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "the-action-off-the-mouth-of-the-nile-august-1798",
+      "kind": "context_group",
+      "label": "Off the mouth of the Nile, August 1798: Rear-Admiral Nelson's letter to the Earl of St. Vincent, and the minute of facts in the dispatches",
+      "definition": "The 'minute of facts stated in the dispatches to Lord St. Vincent' and Rear-Admiral Nelson's letter of 3 August, printed from London papers in November and December: one affair's items (X-1800-01), a British summary and the British commander's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798",
+      "kind": "document_group",
+      "label": "1798: the 'minute of facts stated in the dispatches to Lord St. Vincent' on the French at the Nile",
+      "definition": "Printings of a minute: 'MINUTE OF FACTS Stated in the Dispatches to Lord St. Vincent. The French transports ran into the Nile, and Buonaparte landed with only a few days provisions on hand, with about thirty eight thousand men, two thousand having been cut to pieces on attempt to land at Alexandria'. A British summary of the dispatches, as the papers printed it.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "rear-admiral-nelsons-letter-of-3-august-1798",
+      "kind": "document_group",
+      "label": "Off the mouth of the Nile, 3 August 1798: Rear-Admiral Nelson's letter to the Earl of St. Vincent",
+      "definition": "Printings of the letter: 'Vanguard, off the Mouth of the Nile, August 3, 1798. MY LORD, Almighty God has blessed his majesty's arms in the late battle, by a great victory over the fleet of the enemy, whom I attacked at sun-set on the 1st of August, off the mouth of the Nile'. The British commander's own words, from the London Gazette.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+      "kind": "context_group",
+      "label": "The opening of the session, December 1798: the President's speech to both Houses and the Senate's answer",
+      "definition": "The President's speech to both Houses of Congress of 8 December 1798 and the Senate's answer of 12 December: one affair's separate public acts (X-1800-01), each in its authors' own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "president-speech-to-both-houses-8-december-1798",
+      "kind": "document_group",
+      "label": "The President's speech to both Houses of Congress, 8 December 1798",
+      "definition": "Printings of the speech: 'Gentlemen of the Senate, and Gentlemen of the House of Representatives, WHILE with reverence and resignation we contemplate the dispensations of Divine Providence, in the alarming and destructive pestilence with which several of our cities and towns have been visited, there is cause for gratitude and mutual congratulations'. The President's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    },
+    {
+      "id": "the-senates-answer-to-the-presidents-speech-12-december-1798",
+      "kind": "document_group",
+      "label": "The Senate's answer of 12 December 1798 to the President's speech",
+      "definition": "Printings of the answer: 'To the PRESIDENT of the United States. SIR, THE Senate of the United States join you in thanks to Almighty God for the removal of the late afflicting dispensations of his Providence, and for the patriotic spirit, and general prosperity of our country'. The Senate's own words.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+      "child": "president-message-of-5-march-1798-the-first-dispatches-from-the-envoys"
+    },
+    {
+      "parent": "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+      "child": "president-message-of-19-march-1798-on-the-dispatches-from-the-envoys"
+    },
+    {
+      "parent": "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+      "child": "treasury-circular-of-21-march-1798-to-the-collectors-of-the-customs"
+    },
+    {
+      "parent": "the-envoys-dispatches-the-presidents-messages-march-and-april-1798",
+      "child": "president-message-of-3-april-1798-laying-the-instructions-and-dispatches-before-congress"
+    },
+    {
+      "parent": "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+      "child": "minister-of-foreign-relations-to-mr-gerry-12-july-1798"
+    },
+    {
+      "parent": "mr-gerry-and-the-french-minister-of-foreign-relations-july-1798",
+      "child": "mr-gerrys-answer-to-the-minister-20-july-1798"
+    },
+    {
+      "parent": "the-action-off-the-mouth-of-the-nile-august-1798",
+      "child": "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798"
+    },
+    {
+      "parent": "the-action-off-the-mouth-of-the-nile-august-1798",
+      "child": "rear-admiral-nelsons-letter-of-3-august-1798"
+    },
+    {
+      "parent": "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+      "child": "president-speech-to-both-houses-8-december-1798"
+    },
+    {
+      "parent": "the-presidents-speech-of-8-december-1798-and-the-senates-answer",
+      "child": "the-senates-answer-to-the-presidents-speech-12-december-1798"
+    }
+  ],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "selection_rule": "The thin-year rule (register Y-THIN, chosen by the owner on 23 November 2026 and amended the same night with the owner's choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks, and by at least 4; the eligible items printed by every newspaper that survives for their weeks are admitted (4 in 1798), and the others are chosen to cover the months and the kinds of news, about as many stories as a standard year (a target, not a quota); one affair's items are handled as in X-1800-01; the eligible items not chosen are listed here.",
+    "paper_counting": "1798 has 8 catalogue series, which are 8 papers. The Gazette (Portland) survives from April, the Virginia Argus in 10 issues, the Wilmington Mercury in September and October and the Eagle of Hanover in 2 issues; 4 to 8 papers are in print in any three weeks, so an item needs 4 papers, and 5 in the weeks when all 8 are in print.",
+    "not_admitted": {
+      "1798: state resolutions to amend the Constitution against foreign influence (4)": "Below the bar: by its opening in 4 of the 8 papers that survive for its weeks (needs 5): the Gazette of the United States (9 July), the Gazette (12 November), the New Hampshire Gazette (14 November) and the Virginia Argus (27 November). Counted as a candidate and read.",
+      "1798: warlike preparations on the Rhine (4)": "Eligible: by its opening in 4 of the 7 papers that survive for its weeks (needs 4): the Gazette (22 October), the New Hampshire Gazette (24 October), the Mirror (29 October) and the Gazette of the United States (5 December); not chosen. Its month (October) and kind are covered by the stories chosen: the French minister's letter to Mr. Gerry, Mr. Gerry's answer and the letter from Alexandria on Buonaparte's expedition.",
+      "An act of Congress of 1798, as the item finder found it at the enacting formula ('Approved ... JOHN ADAMS, President of the United States. An Act ...') (by machine 4)": "Read: the machine count reaches several acts and reports of the debates through the enacting formula and the words of approval, and is not a count of one text (X-1798-02).",
+      "An act of Congress of 1798, as the item finder found it at the enacting formula ('BE it enacted by the Senate and House of Representatives ...') (by machine 4)": "Read: the machine count reaches several acts and bills through the enacting formula, and is not a count of one text (X-1798-02).",
+      "Bordeaux, 25 March 1798: the three American envoys still in Paris, not received (4)": "Eligible: by its opening in 4 of the 6 papers that survive for its weeks (needs 4): the New Hampshire Gazette (22 May), the Gazette of the United States (24 May), the Mirror (29 May) and the Kentucky Gazette (20 June); not chosen. Its month (May) and kind are covered by the stories chosen: General Schauenburg's letter from Berne, the consul's letter from Amsterdam, the Senate's motion on aliens and the act to protect the commerce and coasts. The President's messages on the envoys' dispatches are chosen.",
+      "February 1798: Benjamin Hawkins and the Indian boundary (2)": "Below the bar: by its opening in 2 of the 6 papers that survive for its weeks (needs 4): the Gazette of the United States (27 January) and the Mirror (20 February). Counted as a candidate and read.",
+      "From the Petersburg Intelligencer: an account of Talleyrand-Périgord (4)": "Eligible: by its opening in 4 of the 5 papers that survive for its weeks (needs 4): the Gazette of the United States (2 May), the New Hampshire Gazette (15 May), the Mirror (22 May) and the Kentucky Gazette (6 June); not chosen. Its month (May) and kind are covered by the stories chosen: General Schauenburg's letter from Berne, the consul's letter from Amsterdam, the Senate's motion on aliens and the act to protect the commerce and coasts.",
+      "January 1798: a report of a letter from citizen Mangourit seen at Charleston (4)": "Eligible: by its opening in 4 of the 5 papers that survive for its weeks (needs 4): the Gazette of the United States (29 January), the Mirror (13 February), the New Hampshire Gazette (14 February) and the Kentucky Gazette (14 March); not chosen. Its month (January) and kind are covered by the stories chosen: the letter from Havre, the Paris report of the Directory's demands on the envoys and the Senate's vote on the stamp duty.",
+      "July 6. Extract of a letter from a gentleman at Cape François, dated 27th June, to a merchant... (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4); not chosen. Its month (July) and kind are covered by the stories chosen: the report of the Delaware's capture of a French privateer, the President's message with General Washington's letter and the act on sedition. (Read: the machine count included the Gazette (Portland) of 23 July, whose page holds the report of the Delaware's capture next to it; the letter is not on that page.)",
+      "London, 1 January 1798: a French plan of invasion by rafts (4)": "Eligible: by its opening in 4 of the 5 papers that survive for its weeks (needs 4): the New Hampshire Gazette (7 March), the Gazette of the United States (10 March), the Mirror (13 March) and the Kentucky Gazette (11 April); not chosen. Its month (March) and kind are covered by the stories chosen: the President's messages of 5 and 19 March on the envoys' dispatches, the Treasury's circular and the proclamation of a fast.",
+      "London, 20 November 1797: letters from Madrid that Spain refuses the French a passage against Portugal (4)": "Eligible: by its opening in 4 of the 5 papers that survive for its weeks (needs 4): the Virginia Argus (12 January), the Gazette of the United States (15 January), the Mirror (30 January) and the New Hampshire Gazette (31 January); not chosen. Its month (January) and kind are covered by the stories chosen: the letter from Havre, the Paris report of the Directory's demands on the envoys and the Senate's vote on the stamp duty.",
+      "London, October 1798: the mail brings a corroboration of the defeat of the French fleet by Admiral Nelson (4)": "Eligible: by its opening in 4 of the 6 papers that survive for its weeks (needs 4): the New Hampshire Gazette (14 November), the Gazette (19 November), the Virginia Argus (27 November) and the Kentucky Gazette (26 December); not chosen. Its month (November) and kind are covered by the stories chosen: the letter from Alexandria and the minute of facts from the mouth of the Nile. The minute of facts and Rear-Admiral Nelson's letter on the same action are chosen.",
+      "November 1798: Mr. Gerry's answer to the corporation of Trenton (4)": "Eligible: by its opening in 4 of the 6 papers that survive for its weeks (needs 4): the Gazette of the United States (3 November), the Gazette (19 November), the New Hampshire Gazette (21 November) and the Mirror (26 November); not chosen. Its month (November) and kind are covered by the stories chosen: the letter from Alexandria and the minute of facts from the mouth of the Nile. Not chosen on reading: the Gazette (Portland), the New Hampshire Gazette and the Mirror print an extract after their own words (X-1798-08).",
+      "Off the mouth of the Nile, August 1798: the return of the killed and wounded in the British fleet, printed with the minute of facts (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4); not chosen. Its month (November) and kind are covered by the stories chosen: the letter from Alexandria and the minute of facts from the mouth of the Nile.",
+      "Paris, 8 November 1797: a report on French designs on Hamburg (4)": "Eligible: by its opening in 4 of the 5 papers that survive for its weeks (needs 4): the Gazette of the United States (22 January), the Mirror (6 February), the New Hampshire Gazette (7 February) and the Kentucky Gazette (7 March); not chosen. Its month (January) and kind are covered by the stories chosen: the letter from Havre, the Paris report of the Directory's demands on the envoys and the Senate's vote on the stamp duty.",
+      "Philadelphia, 5 June 1798: the dispatches from the envoys communicated to Congress (3)": "Below the bar: by its opening in 3 of the 6 papers that survive for its weeks (needs 4): the Gazette of the United States (5 June), the Gazette (18 June) and the New Hampshire Gazette (19 June). Counted as a candidate and read. The President's message of 3 April with the envoys' dispatches is chosen.",
+      "SWITZERLAND, March 7. The war betwixt France and a part of this country has begun. The French have... (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4); not chosen. Its month (May) and kind are covered by the stories chosen: General Schauenburg's letter from Berne, the consul's letter from Amsterdam, the Senate's motion on aliens and the act to protect the commerce and coasts.",
+      "Salem, 6 March 1798: latest from France, by the schooner Violet arrived at Gloucester (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4); not chosen. Its month (March) and kind are covered by the stories chosen: the President's messages of 5 and 19 March on the envoys' dispatches, the Treasury's circular and the proclamation of a fast.",
+      "Stenton, 5 November 1798: a letter of Dr. Logan from Bordeaux, published at his wife's request (5)": "Eligible: by its opening in 5 of the 6 papers that survive for its weeks (needs 4): the Gazette of the United States (10 November), the New Hampshire Gazette (21 November), the Mirror (26 November), the Gazette (26 November) and the Kentucky Gazette (12 December); not chosen. Its month (November) and kind are covered by the stories chosen: the letter from Alexandria and the minute of facts from the mouth of the Nile.",
+      "The King's answer to the address of his two Houses of Parliament, 1797 ('Nothing could be more satisfactory to me than this unanimous declaration') (4)": "Eligible: by its opening in 4 of the 5 papers that survive for its weeks (needs 4): the Virginia Argus (12 January), the Gazette of the United States (15 January), the New Hampshire Gazette (31 January) and the Mirror (6 February); not chosen. Its month (January) and kind are covered by the stories chosen: the letter from Havre, the Paris report of the Directory's demands on the envoys and the Senate's vote on the stamp duty. Not chosen on reading: the Virginia Argus prints its opening at the foot of a page that has no RevX transcription (X-1798-08).",
+      "The Senate's bill for the punishment of certain crimes (sedition), July 1798 (4)": "Eligible: printed before the act, in other words ('whether citizens or aliens'; 'any measure'), by the Gazette of the United States (6 July), the Kentucky Gazette (18 July), the Mirror and the New Hampshire Gazette (24 July), 4 of the 5 papers that survive for its weeks (needs 4); not chosen, as the act it became is chosen (X-1798-03).",
+      "The Senate's bill more effectually to protect the commerce and coasts of the United States, May 1798 (3)": "Below the bar, read: printed before the act, in other words ('armed vessels belonging to the Republic of France'), by the Gazette of the United States (21 May), the Mirror and the New Hampshire Gazette (5 June); counted apart from the act, which is chosen (X-1798-03).",
+      "The Senate's bill to declare the treaties with France no longer obligatory, July 1798 (2)": "Below the bar, read: printed in the House's proceedings ('the following Bill from the Senate ... hitherto concluded') by the Mirror and the New Hampshire Gazette (24 July); counted apart from the act, which is in 3 papers (X-1798-03).",
+      "The act in addition to the act for the punishment of certain crimes (sedition), as the item finder found it at its title and the enacting formula (by machine 5)": "Read: the machine count reaches other acts through the enacting formula; the act's own first section is counted on its own (X-1798-02).",
+      "The act of 13 June 1798 to suspend the commercial intercourse between the United States and France (1)": "Below the bar, read: printed in full by the Gazette of the United States only (15 June); the House's bill, in other words, by the Gazette of the United States (1 June), the Gazette (Portland, 11 June) and the Kentucky Gazette (20 June), 3 papers, also below the bar (X-1798-03).",
+      "The act of 25 June 1798 concerning aliens (3)": "Below the bar, read: printed in full by the New Hampshire Gazette (31 July), and its first section and proviso in short ('&c.') by the Gazette of the United States (21 June) and the Gazette (Portland, 9 July); essays quoting its first section (the Kentucky Gazette, 1 August; the Gazette (Portland) and the New Hampshire Gazette in October) do not count (C-07).",
+      "The act of 28 May 1798 authorizing the President to raise a provisional army (3)": "Below the bar: by its opening in 3 of the 6 papers that survive for its weeks (needs 4): the Gazette of the United States (30 May), the New Hampshire Gazette (19 June) and the Mirror (26 June). Counted as a candidate and read. Read: the act is printed in full by the Gazette of the United States (30 May), the New Hampshire Gazette (19 June) and the Mirror (26 June); the Gazette (Portland) prints its section on companies of volunteers alone (18 June), and the House's debates on the bill and an essay quote its words (C-07).",
+      "The act of 7 July 1798 declaring the treaties with France no longer obligatory (3)": "Below the bar: by its opening in 3 of the 5 papers that survive for its weeks (needs 4): the Gazette of the United States (9 July), the Gazette (23 July) and the Kentucky Gazette (8 August). Counted as a candidate and read. The Senate's bill in other words ('hitherto concluded'), printed by the Mirror and the New Hampshire Gazette on 24 July, is counted apart (X-1798-03).",
+      "The act to postpone for a limited time the duties on stamped vellum, parchment and paper, as the item finder found it at the enacting formula (by machine 5)": "Read: the act itself is printed by the Mirror (23 January), the Kentucky Gazette (31 January, and again in April and May) and the New Hampshire Gazette (31 January), 3 papers, below the bar; the machine count reaches other acts' pages through the enacting formula (X-1798-02).",
+      "The proviso of the act concerning aliens, June 1798, as the item finder found it (by machine 4)": "Read: a passage of the act concerning aliens, which is listed with its count (3 papers); the Mirror's page (17 July) holds another text.",
+      "VENICE, September 30. In our neighborhood every thing assumes a warlike appearance. In the magazines and foundries they... (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4); not chosen. Its month (December) and kind are covered by the stories chosen: Rear-Admiral Nelson's letter, the President's speech of 8 December and the Senate's answer.",
+      "Weymouth, Oct. 8. \"This morning the Royal Family and Nobility went on board the St. Fiorenzo frigate, where... (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4); not chosen. Its month (December) and kind are covered by the stories chosen: Rear-Admiral Nelson's letter, the President's speech of 8 December and the Senate's answer."
+    },
+    "for_the_owner": {},
+    "method": "The automatic families first printed in 1798 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 387 items, 83 in 4 or more papers by the finder's count), and the families of 1797 were looked for on the 1798 pages (items_from_1797.json). Every item in 3 or more papers was counted by machine by about 100 words of its text from the finder's position, over all 1,656 pages in both transcriptions (a dense run of its word 5-grams, at least a quarter of them); the counts were joined into documents where two items stand at the same place on the same pages, or where two documents titled by the same opening stand on mostly the same pages. Every item the machine put in every surviving paper, and the news considered for choosing, was counted again by about 70 words from its own opening, the acts of Congress by their first section's own words (counts_1798.json), and every page found was read; the bills printed before the acts they became, in other words, are counted apart. Each admitted printing was checked against its page scan.",
+    "items_admitted": {
+      "havre-letter-of-6-november-1797-a-project-of-a-descent-on-england": "counts_1798.json: havre_descent_nov1797",
+      "paris-report-of-what-the-directory-demands-of-the-american-envoys-november-1797": "counts_1798.json: directory_demands",
+      "the-senate-on-a-motion-to-repeal-the-stamp-duty-january-1798": "counts_1798.json: senate_stamp_repeal",
+      "president-message-of-5-march-1798-the-first-dispatches-from-the-envoys": "counts_1798.json: president_mar5",
+      "president-message-of-19-march-1798-on-the-dispatches-from-the-envoys": "counts_1798.json: president_mar19",
+      "treasury-circular-of-21-march-1798-to-the-collectors-of-the-customs": "counts_1798.json: treasury_circular_mar21",
+      "president-proclamation-of-23-march-1798-for-a-day-of-humiliation-fasting-and-prayer": "counts_1798.json: fast_proclamation",
+      "president-message-of-3-april-1798-laying-the-instructions-and-dispatches-before-congress": "counts_1798.json: president_apr3_dispatches",
+      "the-senate-a-motion-on-removing-aliens-april-1798": "counts_1798.json: senate_aliens",
+      "berne-5-march-1798-general-schauenburgs-letter": "counts_1798.json: schauenburg_berne",
+      "amsterdam-20-march-1798-the-american-consuls-letter-on-the-ship-america": "counts_1798.json: consul_amsterdam",
+      "act-more-effectually-to-protect-the-commerce-and-coasts-may-1798": "counts_1798.json: act_protect_commerce",
+      "the-house-6-june-1798-mr-fosters-resolutions-on-the-treaties-with-france": "counts_1798.json: foster_resolutions",
+      "president-message-of-21-june-1798-on-general-marshalls-arrival": "counts_1798.json: president_jun21_marshall",
+      "the-delaware-sloop-of-war-captain-decatur-and-a-french-privateer-july-1798": "counts_1798.json: delaware_capture",
+      "president-message-of-18-july-1798-with-general-washingtons-letter": "counts_1798.json: president_jul18_washington",
+      "french-papers-of-june-1798-on-the-envoys-dispatches": "counts_1798.json: french_receive_dispatches",
+      "minister-of-foreign-relations-to-mr-gerry-12-july-1798": "counts_1798.json: talleyrand_gerry_jul12",
+      "mr-gerrys-answer-to-the-minister-20-july-1798": "counts_1798.json: gerry_answer_jul20",
+      "alexandria-letter-on-the-preparations-for-buonapartes-expedition-1798": "counts_1798.json: bonaparte_expedition",
+      "minute-of-facts-stated-in-the-dispatches-to-lord-st-vincent-1798": "counts_1798.json: nile_minute",
+      "rear-admiral-nelsons-letter-of-3-august-1798": "counts_1798.json: nelson_letter",
+      "the-senates-answer-to-the-presidents-speech-12-december-1798": "counts_1798.json: senate_answer_dec",
+      "act-for-the-punishment-of-certain-crimes-sedition-july-1798": "counts_1798.json: act_sedition_s1",
+      "president-speech-to-both-houses-8-december-1798": "counts_1798.json: president_speech_dec8_b"
+    },
+    "counted_item_by_item": {
+      "Paper counts": "Counted by their own words, 43 items of 1798 are eligible: 29 in 4 papers, 12 in 5, 2 in 6, 0 in 7. 4 items are printed by every paper that survives for their weeks and are admitted; 21 more are chosen to cover the months and the kinds of news (one affair's items under a parent story, X-1800-01). 11 more eligible items counted by their opening are not chosen, and 6 documents of the item finder are eligible by their own words and not chosen; all are listed with their counts. 5 candidates counted by their opening are below the bar and listed. 172 more documents of the item finder are below the bar by their own words (docs_1798.json); they are not listed one by one. The bills counted apart from their acts, the act printed in full by one paper and the documents of the item finder that stand at the enacting formula are listed as read.",
+      "Titles of the items not chosen": "Each eligible document of the item finder not chosen is listed by its own words: the dateline or heading before the finder's position and the words that follow (some begin inside the item, where the finder's position does); a notice or advertisement that names a private person is described instead (R-04). Each candidate counted by its opening is listed by a title of the review's."
+    },
+    "for_user_decision": {
+      "The papers in print and the bar (X-1798-00)": "8 catalogue series, 8 papers; the Gazette (Portland) survives from April, the Virginia Argus in 10 issues, the Wilmington Mercury in September and October and the Eagle in 2 issues; 4 to 8 papers are in print in any three weeks, so an item needs 4 papers, and 5 in the weeks when all 8 are in print.",
+      "Choosing among the eligible items (X-1798-01)": "As built (B1): 4 items printed by every surviving paper are admitted, and 21 more are chosen to cover the months and the kinds of news: the President's messages and the Treasury's circular on the envoys' dispatches, the proclamation of a fast, the acts and motions of Congress on France and on aliens and sedition, the letters of Mr. Gerry and the French minister, General Washington's acceptance, the war in Europe and Egypt, and the Senate's answer to the President's speech: 19 stories in 29 groups. The other eligible items are not chosen and are listed with their counts.",
+      "The acts of Congress counted by their first section (X-1798-02)": "As built (C-02): the acts open with the enacting formula ('BE it enacted by the Senate and House of Representatives ...'), so counts by their opening reach every act's pages; each act was counted again by its first section's own words, and the pages were read. Documents of the item finder that stand at the formula are listed with a note that their machine counts reach other acts.",
+      "A bill counted apart from its act (X-1798-03)": "As built (X-1809-07, X-1803-10): the Senate's bill more effectually to protect the commerce and coasts (3 papers), the Senate's bill to declare the treaties with France void (2 papers) and the House's bill to suspend the commercial intercourse with France (3 papers) are counted apart from the acts they became; the act declaring the treaties void is then in 3 of 5 papers and the act suspending the intercourse in 1, below the bar.",
+      "One affair's items (X-1798-04)": "As built (X-1800-01): the envoys' dispatches (the President's messages of 5 March, 19 March and 3 April, and the Treasury's circular of 21 March), Mr. Gerry's correspondence with the French minister (the minister's letter of 12 July and Mr. Gerry's answer of 20 July), the action off the mouth of the Nile (the minute of facts and Rear-Admiral Nelson's letter) and the opening of the session in December (the President's speech of 8 December and the Senate's answer) are each a parent story with their separate public acts or documents as sub-stories.",
+      "Printed again counts again (X-1798-05)": "As built (C-08): the Gazette of the United States printed the President's message of 5 March, the act to protect the commerce and coasts, Mr. Foster's resolutions and the minute of facts twice; each printing is in its group.",
+      "One report in two forms (X-1798-06)": "As built: the Philadelphia report of the Delaware's capture of a French privateer is printed in two forms ('We have the satisfaction to announce ...' and 'Yesterday Capt. Decatur ... arrived at the Navy-Office. He informs ...'), sharing the account of the capture word for word; they are one item. The report from French papers on the envoys' dispatches stands inside a longer Boston report in four papers and alone in the Kentucky Gazette.",
+      "Another text that shares the words (X-1798-07)": "As built (C-07): Mr. Blount's resolutions on Great Britain, moved in the words of Mr. Foster's on France, are another text; an essay quoting a clause of the President's message of 3 April does not count as a printing. The Gazette of the United States of 30 November prints the act on sedition whole, from its heading to 'Approved, July 14th, 1798. JOHN ADAMS', inside an essay ('it will be expedient to recite it here from beginning to end'): a whole reprint inside commentary counts (X-1802-04), and the act is in 5 of the 8 papers that survive for its weeks with it (without it, 4 of 5): eligible either way.",
+      "Items not chosen on reading (X-1798-08)": "As built: the King's answer to the two Houses of Parliament (4 of 5 papers) is not chosen because the Virginia Argus prints its opening at the foot of a page that has no RevX transcription; Mr. Gerry's answer to the corporation of Trenton (4 of 6) is not chosen because three of the four papers print an extract after their own words. Either can be added after a scan check.",
+      "Headings above an item (X-1798-09)": "As built (as X-1794-09): an excerpt starts with the heading, dateline or date line printed directly above the item; a paper's own dateline, the dateline of the paper an act or a letter was taken from, a paper's own sentence introducing an item, the session's caption over an act ('Fifth Congress of the United States: at the second session ...', with 'LAWS OF THE UNITED STATES. By Authority.') and a country or section heading stay out and are noted.",
+      "Titles of the items not chosen (X-1798-10)": "As built: every eligible item not chosen is listed by its own opening words; notices and advertisements are not chosen (C-10) and are described without the private persons they name (R-04); documents of the item finder that stand at an act's enacting formula are described, with a note that their machine count reaches other acts.",
+      "Filing and dates (X-1798-11)": "Data: the release's map of misfiled RevX pages lists 27 pages of 1798, all of the New Hampshire Gazette (January to July), each holding the text of another page of the same issue; four of them hold printings of the ledger (4, 11 and 18 April, 8 May), whose excerpts come from the CA transcription.",
+      "Grading calls on the transcriptions (X-1798-12)": "See the README's scan check."
+    }
+  }
+}

@@ -1,0 +1,3132 @@
+{
+  "ledger_id": "ledger:stories-1795",
+  "ledger_version": 1,
+  "base_release": "0.11.35",
+  "target_release": "0.11.36",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1795",
+  "evidence_dir": "outputs/story_discovery_1795/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1795, and of 1794 where they reach the 1795 pages (long-running ones included), every item in 3 or more papers compared by machine with every page and counted again by its opening, a sweep of word-for-word passages shared by 4 or more papers for short items the families miss, phrase searches on all 1,668 pages of 1795 in both transcriptions, reading of every hit, and scan checks of each admitted passage, by the thin-year rule (Y-THIN, as amended on 23 November 2026: an item printed by more than half of the papers that survive for its weeks, and by at least 4, is eligible; the items printed by every paper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1795/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1795/items_from_1794.json": "retrieval_candidates",
+    "outputs/story_discovery_1795/count_1795.json": "retrieval_candidates",
+    "outputs/story_discovery_1795/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1795/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1795.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1795_review.json": "scan_review",
+    "outputs/story_discovery_1795/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1795/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S95-001",
+      "page_key": "sn83025523|1795-01-09|1|3",
+      "excerpt_start": "The Whisky Boys. PHILADELPHIA, DEC. 26.",
+      "excerpt_end": "horse, under the command of Major Dunham.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-insurgents-from-the-westward-lodged-in-the-jail-december-1794"
+      ],
+      "summary": "Twenty of the western insurgents refused bail at Pittsburgh are brought to Philadelphia and lodged in the jail.",
+      "note": "Earliest printing found. Prints the heading 'The Whisky Boys.' above the dateline, which the other printings lack, and 'jail', where they print 'gaol' or 'goal'.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the heading 'The Whisky Boys.'; it prints '20' and 'jail'."
+      ],
+      "crops": [
+        "S95-001-1.jpg",
+        "S95-001-2.jpg"
+      ],
+      "family": [
+        "R1795-0043",
+        "R1795-0120"
+      ]
+    },
+    {
+      "id": "S95-002",
+      "page_key": "sn84023134|1795-01-10|1|3",
+      "excerpt_start": "PHILADELPHIA, Dec. 26. YESTERDAY arrived from",
+      "excerpt_end": "horse, under the command of Major DUNHAM.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-insurgents-from-the-westward-lodged-in-the-jail-december-1794"
+      ],
+      "summary": "The American Herald of Liberty prints the Philadelphia paragraph on the insurgents.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads '20' (its 0 is partly broken but round and on the line; the reviewing session read it on an enlargement, 24 November); the transcription '25' changes the number of prisoners. The rest matches; the paper prints 'gaol'."
+      ],
+      "crops": [
+        "S95-002.jpg"
+      ],
+      "family": [
+        "R1794-0098",
+        "R1794-0532",
+        "R1794-1598",
+        "R1795-0036",
+        "R1795-0043",
+        "R1795-0125",
+        "R1795-0328"
+      ]
+    },
+    {
+      "id": "S95-003",
+      "page_key": "sn83025588|1795-01-13|1|3",
+      "excerpt_start": "PHILADELPHIA, Dec. 26. Yesterday arrived from",
+      "excerpt_end": "horse, under the command of Major DUNHAM.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-insurgents-from-the-westward-lodged-in-the-jail-december-1794"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Philadelphia paragraph on the insurgents.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that it prints 'Pittsburg', which the transcription gives as 'Pittsburgh'; it prints '20' and 'goal'."
+      ],
+      "crops": [
+        "S95-003.jpg"
+      ],
+      "family": [
+        "R1794-0060",
+        "R1794-1556",
+        "R1795-0035",
+        "R1795-0125",
+        "R1795-0332",
+        "R1795-0333",
+        "R1795-0335"
+      ]
+    },
+    {
+      "id": "S95-004",
+      "page_key": "sn84023313|1795-01-13|1|3",
+      "excerpt_start": "PHILADELPHIA, DEC. 26. Yesterday arrived from",
+      "excerpt_end": "horse, under the command of Major DUNHAM.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-insurgents-from-the-westward-lodged-in-the-jail-december-1794"
+      ],
+      "summary": "The Columbian Informer prints the Philadelphia paragraph on the insurgents.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints '20' and 'goal'."
+      ],
+      "crops": [
+        "S95-004.jpg"
+      ],
+      "family": [
+        "R1794-0060",
+        "R1794-1584",
+        "R1795-0024"
+      ]
+    },
+    {
+      "id": "S95-005",
+      "page_key": "sn84023313|1795-01-13|1|3",
+      "excerpt_start": "A PROCLAMATION. BY THE PRESIDENT OF",
+      "excerpt_end": "internal tranquility we have enjoyed—the recent confirmation",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-proclamation-for-a-day-of-thanksgiving-1-january-1795"
+      ],
+      "summary": "The President proclaims 19 February a day of public thanksgiving and prayer for the condition of the United States.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'an encreasing prospect' (an old spelling of 'increasing'); the transcription 'encroaching' is a different word that changes the sense. The rest of the excerpt matches."
+      ],
+      "crops": [
+        "S95-005.jpg"
+      ],
+      "family": [
+        "R1794-0060",
+        "R1794-1584",
+        "R1795-0024"
+      ]
+    },
+    {
+      "id": "S95-006",
+      "page_key": "sn83025523|1795-01-16|1|3",
+      "excerpt_start": "By the W: present condition of",
+      "excerpt_end": "prosperity of all classes of our citizens;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-proclamation-for-a-day-of-thanksgiving-1-january-1795"
+      ],
+      "summary": "The Mirrour prints the President's proclamation of 1 January.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The tear cuts the first lines, but the visible letters read 'consola…' and 'contin…': the transcription's 'concern' and 'confirmation' are different words that change the sense. Below the tear the scan matches the excerpt (it prints 'encreasing', which the transcription modernises)."
+      ],
+      "crops": [
+        "S95-006.jpg"
+      ],
+      "family": [
+        "R1795-0024",
+        "R1795-0035",
+        "R1795-0309",
+        "R1795-0332",
+        "R1795-0333",
+        "R1795-0342"
+      ],
+      "scan_boxes": [
+        [
+          3480,
+          790,
+          4630,
+          1650
+        ]
+      ]
+    },
+    {
+      "id": "S95-007",
+      "page_key": "sn84023045|1795-01-17|1|2",
+      "excerpt_start": "A PROCLAMATION; By the PRESIDENT of",
+      "excerpt_end": "of internal tranquility we have enjoyed—the recent",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-proclamation-for-a-day-of-thanksgiving-1-january-1795"
+      ],
+      "summary": "The Phoenix prints the President's proclamation of 1 January.",
+      "note": "Prints 'U. STATES' and 'war, an encreasing', with a comma where the Columbian Informer, the American Herald of Liberty and the New-Hampshire Gazette print a dash.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that it prints 'encreasing', which the transcription modernises to 'increasing'."
+      ],
+      "crops": [
+        "S95-007.jpg"
+      ],
+      "family": [
+        "R1794-0060",
+        "R1795-0024",
+        "R1795-0335",
+        "R1795-0343",
+        "R1795-0344"
+      ]
+    },
+    {
+      "id": "S95-008",
+      "page_key": "sn84023045|1795-01-17|1|3",
+      "excerpt_start": "YESTERDAY arrived from the westward, and",
+      "excerpt_end": "horse, under the command of Major Dunham.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-insurgents-from-the-westward-lodged-in-the-jail-december-1794"
+      ],
+      "summary": "The Phoenix prints the Philadelphia paragraph on the insurgents.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints '20' and 'goal'."
+      ],
+      "crops": [
+        "S95-008.jpg"
+      ],
+      "family": [
+        "R1794-0230",
+        "R1794-1602",
+        "R1795-0043",
+        "R1795-0044"
+      ]
+    },
+    {
+      "id": "S95-009",
+      "page_key": "sn84023134|1795-01-17|1|3",
+      "excerpt_start": "A PROCLAMATION, By the PRESIDENT of",
+      "excerpt_end": "internal tranquility we have enjoyed—the recent confirmation",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-proclamation-for-a-day-of-thanksgiving-1-january-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the President's proclamation of 1 January.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'an encreasing prospect'; the transcription 'encroaching' is a different word that changes the sense. The rest of the excerpt matches."
+      ],
+      "crops": [
+        "S95-009.jpg"
+      ],
+      "family": [
+        "R1794-0060",
+        "R1795-0024",
+        "R1795-0035",
+        "R1795-0044",
+        "R1795-0118",
+        "R1795-0119",
+        "R1795-0343"
+      ]
+    },
+    {
+      "id": "S95-010",
+      "page_key": "sn83025588|1795-01-20|1|1",
+      "excerpt_start": "A Proclamation : By THE PRESIDENT",
+      "excerpt_end": "of internal tranquility we have enjoyed—the recent",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "presidents-proclamation-for-a-day-of-thanksgiving-1-january-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the President's proclamation of 1 January.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the worn word reads 'encreasing', which the transcription modernises to 'increasing'."
+      ],
+      "crops": [
+        "S95-010.jpg"
+      ],
+      "family": [
+        "R1794-1597",
+        "R1794-1601",
+        "R1795-0024",
+        "R1795-0129"
+      ]
+    },
+    {
+      "id": "S95-011",
+      "page_key": "sn84026271|1795-02-06|1|3",
+      "excerpt_start": "Extract of a Letter from Baltimore,",
+      "excerpt_end": "a New Treaty between France and America.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-letter-french-ships-of-the-line-in-the-chesapeake-february-1795"
+      ],
+      "summary": "A letter from Baltimore reports two French ships of the line and three frigates arrived in the Chesapeake with an ambassador on board.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from small misreadings: the print has 'Custom' (transcribed 'Cuthom') and 'Chesapeak' (transcribed 'Chesapeake'). It prints 'February 3'."
+      ],
+      "crops": [
+        "S95-011.jpg"
+      ],
+      "family": [
+        "R1795-0046",
+        "R1795-0104",
+        "R1795-0142",
+        "R1795-0390"
+      ]
+    },
+    {
+      "id": "S95-012",
+      "page_key": "sn83025588|1795-02-10|1|3",
+      "excerpt_start": "His Majesty's Speech To both Houses",
+      "excerpt_end": "full exertion of your energy and wisdom.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-kings-speech-at-the-opening-of-parliament-30-december-1794"
+      ],
+      "summary": "The King opens the session of Parliament with a speech on the war with France.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'and' and 'to me'."
+      ],
+      "crops": [
+        "S95-012.jpg"
+      ],
+      "family": [
+        "R1795-0001",
+        "R1795-0026",
+        "R1795-0050",
+        "R1795-0143",
+        "R1795-0405"
+      ]
+    },
+    {
+      "id": "S95-013",
+      "page_key": "sn84023134|1795-02-14|1|2",
+      "excerpt_start": "My Lords and Gentlemen, After the",
+      "excerpt_end": "and reverses which we have experienced in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-kings-speech-at-the-opening-of-parliament-30-december-1794"
+      ],
+      "summary": "The American Herald of Liberty prints the King's speech of 30 December 1794.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'and' and 'to me'."
+      ],
+      "crops": [
+        "S95-013.jpg"
+      ],
+      "family": [
+        "R1795-0001",
+        "R1795-0025",
+        "R1795-0409"
+      ]
+    },
+    {
+      "id": "S95-014",
+      "page_key": "sn84026271|1795-02-16|1|2",
+      "excerpt_start": "My Lords and Gentlemen. After the",
+      "excerpt_end": "and reverses which we have experienced in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-kings-speech-at-the-opening-of-parliament-30-december-1794"
+      ],
+      "summary": "The Gazette of the United States prints the King's speech of 30 December 1794.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'and' and 'to me'. The crop shows the heading 'Most Gracious SPEECH.' above the salutation, which the excerpt lacks."
+      ],
+      "crops": [
+        "S95-014.jpg"
+      ],
+      "family": [
+        "R1795-0001",
+        "R1795-0039",
+        "R1795-0149"
+      ]
+    },
+    {
+      "id": "S95-015",
+      "page_key": "sn83025588|1795-02-17|1|3",
+      "excerpt_start": "FRENCH AMBASSADOR. Extract of a letter",
+      "excerpt_end": "the National Convention to the United States;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-letter-french-ships-of-the-line-in-the-chesapeake-february-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Baltimore letter on the French ships.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print spells 'Chesapeak', which the transcription modernises to 'Chesapeake'. It prints 'February 3'."
+      ],
+      "crops": [
+        "S95-015.jpg"
+      ],
+      "family": [
+        "R1795-0028",
+        "R1795-0046",
+        "R1795-0142",
+        "R1795-0151",
+        "R1795-0287",
+        "R1795-0390"
+      ]
+    },
+    {
+      "id": "S95-016",
+      "page_key": "sn84026271|1795-02-18|1|3",
+      "excerpt_start": "In the House of Representatives of",
+      "excerpt_end": "the sales, was on motion of Mr.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-presidents-message-on-the-georgia-land-sales-february-1795"
+      ],
+      "summary": "The President sends the House of Representatives a message on Georgia's sales of lands in the Indian country, a subject 'involving the Peace and welfare of the United States'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints 'yesterday', the Philadelphia form."
+      ],
+      "crops": [
+        "S95-016.jpg"
+      ]
+    },
+    {
+      "id": "S95-017",
+      "page_key": "sn83025523|1795-02-20|1|1",
+      "excerpt_start": "My Lords and Gentlemen, AFTER the",
+      "excerpt_end": "and reverses which we have experienced in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-kings-speech-at-the-opening-of-parliament-30-december-1794"
+      ],
+      "summary": "The Mirrour prints the King's speech of 30 December 1794.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'and' and 'to me'. The crop shows the end of a heading ('...liament:') above, which the excerpt lacks."
+      ],
+      "crops": [
+        "S95-017.jpg"
+      ],
+      "family": [
+        "R1795-0001",
+        "R1795-0386"
+      ]
+    },
+    {
+      "id": "S95-018",
+      "page_key": "sn83025523|1795-02-20|1|3",
+      "excerpt_start": "BOSTON, JAN. 18. FRENCH AMBASSADOR. Extra",
+      "excerpt_end": "the National Convention to the United States;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-letter-french-ships-of-the-line-in-the-chesapeake-february-1795"
+      ],
+      "summary": "The Mirrour prints the Baltimore letter on the French ships.",
+      "note": "Prints the dateline 'BOSTON, JAN. 18.' directly above 'FRENCH AMBASSADOR.', over the Baltimore letter of 3 February.",
+      "scan_findings": [
+        "Scan prints the dateline 'BOSTON, JAN. 18.' as the transcription reads it, although the letter below is dated Feb. 3: a printed date, not a transcription error. The transcription reads 'Extract' as 'Extra'; the rest matches."
+      ],
+      "crops": [
+        "S95-018.jpg"
+      ],
+      "family": [
+        "R1795-0007",
+        "R1795-0028",
+        "R1795-0029",
+        "R1795-0046",
+        "R1795-0151",
+        "R1795-0285",
+        "R1795-0423",
+        "R1795-0429"
+      ]
+    },
+    {
+      "id": "S95-019",
+      "page_key": "sn83025523|1795-02-20|1|3",
+      "excerpt_start": "The Western Posts, Which have so",
+      "excerpt_end": "to prevent illicit trade in furs, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795"
+      ],
+      "summary": "A Boston paper describes the four western posts that the British are to deliver up in June 1796.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Greatbritain' printed as one word; it prints 'so'. The print appears to read 'Otwego', which the transcription gives as 'Oswego'."
+      ],
+      "crops": [
+        "S95-019.jpg"
+      ],
+      "family": [
+        "R1795-0007",
+        "R1795-0028",
+        "R1795-0029",
+        "R1795-0046",
+        "R1795-0151",
+        "R1795-0285",
+        "R1795-0423",
+        "R1795-0429"
+      ]
+    },
+    {
+      "id": "S95-020",
+      "page_key": "sn84023134|1795-02-21|1|2",
+      "excerpt_start": "FEBRUARY 16. New Ambassador from France.",
+      "excerpt_end": "on board an Ambassador from the National",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-letter-french-ships-of-the-line-in-the-chesapeake-february-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the Baltimore letter on the French ships.",
+      "note": "Prints the letter under 'FEBRUARY 16. New Ambassador from France.', where the New-Hampshire Gazette and the Mirrour print 'FRENCH AMBASSADOR.'",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription reads 'Extract' as 'Extra'. It prints 'Feb. 3', under its own heading 'New Ambassador from France.'"
+      ],
+      "crops": [
+        "S95-020.jpg"
+      ],
+      "family": [
+        "R1795-0007",
+        "R1795-0028",
+        "R1795-0029",
+        "R1795-0046",
+        "R1795-0048",
+        "R1795-0104",
+        "R1795-0151",
+        "R1795-0423",
+        "R1795-0430"
+      ]
+    },
+    {
+      "id": "S95-021",
+      "page_key": "sn84023134|1795-02-21|1|2",
+      "excerpt_start": "BOSTON, FEB. 18. THE WESTERN POSTS,",
+      "excerpt_end": "to prevent illicit trade in furs, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the paragraph on the Western Posts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'so' (with a long s) where the transcription has 'to', and 'Oswego' where it has 'Ofwego': small misreadings that do not change the sense. The rest matches."
+      ],
+      "crops": [
+        "S95-021.jpg"
+      ],
+      "family": [
+        "R1795-0007",
+        "R1795-0028",
+        "R1795-0029",
+        "R1795-0046",
+        "R1795-0048",
+        "R1795-0104",
+        "R1795-0151",
+        "R1795-0423",
+        "R1795-0430"
+      ]
+    },
+    {
+      "id": "S95-022",
+      "page_key": "sn83025588|1795-02-24|1|2",
+      "excerpt_start": "FEBRUARY 18. THE WESTERN POSTS. Which",
+      "excerpt_end": "to prevent illicit trade in furs, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the Western Posts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription reads the long s of 'Oswego' as 'Ofwego'; it prints 'so'."
+      ],
+      "crops": [
+        "S95-022.jpg"
+      ],
+      "family": [
+        "R1795-0007",
+        "R1795-0048",
+        "R1795-0049",
+        "R1795-0146",
+        "R1795-0396",
+        "R1795-0414",
+        "R1795-0434",
+        "R1795-0441",
+        "R1795-0442"
+      ]
+    },
+    {
+      "id": "S95-023",
+      "page_key": "sn84023313|1795-02-24|1|2",
+      "excerpt_start": "My Lords and Gentlemen, After the",
+      "excerpt_end": "and reverses which we have experienced in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-kings-speech-at-the-opening-of-parliament-30-december-1794"
+      ],
+      "summary": "The Columbian Informer prints the King's speech of 30 December 1794.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'and' and 'to me'. The crop shows the end of a heading ('Parliament;—') above, which the excerpt lacks."
+      ],
+      "crops": [
+        "S95-023.jpg"
+      ],
+      "family": [
+        "R1795-0001",
+        "R1795-0102",
+        "R1795-0141",
+        "R1795-0150",
+        "R1795-0407",
+        "R1795-0418",
+        "R1795-0428"
+      ]
+    },
+    {
+      "id": "S95-024",
+      "page_key": "sn84023313|1795-02-24|1|3",
+      "excerpt_start": "February 18. THE WESTERN POSTS, Which",
+      "excerpt_end": "to prevent illicit trade in furs, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795"
+      ],
+      "summary": "The Columbian Informer prints the paragraph on the Western Posts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'so'."
+      ],
+      "crops": [
+        "S95-024.jpg"
+      ],
+      "family": [
+        "R1795-0007",
+        "R1795-0027",
+        "R1795-0049",
+        "R1795-0154",
+        "R1795-0404"
+      ]
+    },
+    {
+      "id": "S95-025",
+      "page_key": "sn84026271|1795-02-28|1|3",
+      "excerpt_start": "PHILADELPHIA, Feb. 28. Important and pleasing",
+      "excerpt_end": "at Greenville on the 15th June next.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "fort-washington-letter-the-indians-apply-for-a-treaty-of-peace-february-1795"
+      ],
+      "summary": "A letter from Fort Washington reports that the Indians have generally applied by their deputies for a treaty of peace, and preliminary articles are signed.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, headings included; the letter is dated 'February 2, 1795'."
+      ],
+      "crops": [
+        "S95-025.jpg"
+      ],
+      "family": [
+        "R1795-0005"
+      ]
+    },
+    {
+      "id": "S95-026",
+      "page_key": "sn84026271|1795-03-02|1|3",
+      "excerpt_start": "BOSTON, Feb. 18. THE WESTERN POSTS,",
+      "excerpt_end": "to prevent illicit trade in furs, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795"
+      ],
+      "summary": "The Gazette of the United States prints the paragraph on the Western Posts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'so'."
+      ],
+      "crops": [
+        "S95-026.jpg"
+      ],
+      "family": [
+        "R1795-0007",
+        "R1795-0054",
+        "R1795-0441"
+      ]
+    },
+    {
+      "id": "S95-027",
+      "page_key": "sn84038410|1795-03-02|1|2",
+      "excerpt_start": "My Lords and Gentlemen, AFTER the",
+      "excerpt_end": "and reverses which we have experienced in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-kings-speech-at-the-opening-of-parliament-30-december-1794"
+      ],
+      "summary": "The Patowmac Guardian prints the King's speech of 30 December 1794.",
+      "note": "Prints 'satisfaction for me' and 'interest' where the other printings have 'to me' and 'interests'.",
+      "scan_findings": [
+        "Scan reads 'satisfaction for me' and 'interest' where the other printings have 'to me' and 'interests': printed differences, not transcription errors. The excerpt matches the scan."
+      ],
+      "crops": [
+        "S95-027.jpg"
+      ],
+      "family": [
+        "R1795-0001",
+        "R1795-0050"
+      ]
+    },
+    {
+      "id": "S95-028",
+      "page_key": "sn84026271|1795-03-04|1|3",
+      "excerpt_start": "A correspondent assures upon good authority,",
+      "excerpt_end": "quantity of arms, cannon and military stores.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-a-treaty-with-the-dey-of-algiers-march-1795"
+      ],
+      "summary": "A correspondent reports that a treaty with the Dey of Algiers for the redemption of the American captives is concluded or in forwardness.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription drops 'us' after 'assures' (printed close up), which does not change the sense. The paragraph ends with the credit '[Aurora.]'."
+      ],
+      "crops": [
+        "S95-028.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0282",
+        "R1795-0455"
+      ]
+    },
+    {
+      "id": "S95-029",
+      "page_key": "sn83025523|1795-03-06|1|3",
+      "excerpt_start": "Newyork, Feb. 21. In the House",
+      "excerpt_end": "Peace and welfare of the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-presidents-message-on-the-georgia-land-sales-february-1795"
+      ],
+      "summary": "The Mirrour prints the paragraph on the President's message about the Georgia land sales.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, dateline 'Newyork, Feb. 21.' included; the paper prints 'last Tuesday', the New York form."
+      ],
+      "crops": [
+        "S95-029.jpg"
+      ],
+      "family": [
+        "R1795-0026",
+        "R1795-0158",
+        "R1795-0159",
+        "R1795-0162",
+        "R1795-0406",
+        "R1795-0456",
+        "R1795-0457"
+      ]
+    },
+    {
+      "id": "S95-030",
+      "page_key": "sn84023134|1795-03-07|1|1",
+      "excerpt_start": "An Act to establish a uniform",
+      "excerpt_end": "of the United States of America, in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-to-establish-an-uniform-rule-of-naturalization-january-1795"
+      ],
+      "summary": "Congress sets a uniform rule of naturalization: a free white alien may become a citizen on the conditions the act lays down.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "The two crops (foot of one column, top of the next) match the excerpt, except that the print has 'an uniform' where the transcription modernises it to 'a uniform': a transcription difference, not a printed one."
+      ],
+      "crops": [
+        "S95-030-1.jpg",
+        "S95-030-2.jpg"
+      ],
+      "family": [
+        "R1795-0016"
+      ]
+    },
+    {
+      "id": "S95-031",
+      "page_key": "sn84023134|1795-03-07|1|3",
+      "excerpt_start": "NEW-YORK, FEB. 21. IN the House",
+      "excerpt_end": "Peace and welfare of the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-presidents-message-on-the-georgia-land-sales-february-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the paragraph on the President's message about the Georgia land sales.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints 'last Tuesday', the New York form."
+      ],
+      "crops": [
+        "S95-031.jpg"
+      ],
+      "family": [
+        "R1795-0159",
+        "R1795-0163",
+        "R1795-0273",
+        "R1795-0365",
+        "R1795-0451",
+        "R1795-0456"
+      ]
+    },
+    {
+      "id": "S95-032",
+      "page_key": "sn83025588|1795-03-10|1|2",
+      "excerpt_start": "NATURALIZATION LAW, Of the UNITED STATES.",
+      "excerpt_end": "the Senate and House of Representatives of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-to-establish-an-uniform-rule-of-naturalization-january-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the naturalization act.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading 'NATURALIZATION LAW, Of the UNITED STATES.' included."
+      ],
+      "crops": [
+        "S95-032.jpg"
+      ],
+      "family": [
+        "R1795-0016",
+        "R1795-0047",
+        "R1795-0105",
+        "R1795-0403",
+        "R1795-0430",
+        "R1795-0461"
+      ]
+    },
+    {
+      "id": "S95-033",
+      "page_key": "sn83025588|1795-03-10|1|2",
+      "excerpt_start": "NEW-YORK, Feb. 21. In the House",
+      "excerpt_end": "great importance involving the Peace and welfare",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-presidents-message-on-the-georgia-land-sales-february-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the President's message about the Georgia land sales.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints 'last Tuesday', the New York form."
+      ],
+      "crops": [
+        "S95-033.jpg"
+      ],
+      "family": [
+        "R1795-0016",
+        "R1795-0047",
+        "R1795-0105",
+        "R1795-0403",
+        "R1795-0430",
+        "R1795-0461"
+      ]
+    },
+    {
+      "id": "S95-034",
+      "page_key": "sn84026271|1795-03-11|1|3",
+      "excerpt_start": "An ACT to establish an uniform",
+      "excerpt_end": "of the United States of America, in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-to-establish-an-uniform-rule-of-naturalization-january-1795"
+      ],
+      "summary": "The Gazette of the United States prints the naturalization act.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the crop shows the act, not the brig Lydia paragraph on the same page."
+      ],
+      "crops": [
+        "S95-034.jpg"
+      ],
+      "family": [
+        "R1795-0006",
+        "R1795-0016",
+        "R1795-0165",
+        "R1795-0463"
+      ]
+    },
+    {
+      "id": "S95-035",
+      "page_key": "sn84026271|1795-03-11|1|3",
+      "excerpt_start": "On Saturday arrived the brig Lydia,",
+      "excerpt_end": "and drove in the Posts established there.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-the-brig-lydia-from-amsterdam-march-1795"
+      ],
+      "summary": "The brig Lydia arrives at New York from Amsterdam with letters on the progress of the French in Holland.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; a fold crosses the second and third lines, but they can be read. The crop shows the brig Lydia paragraph, not the act on the same page."
+      ],
+      "crops": [
+        "S95-035.jpg"
+      ],
+      "family": [
+        "R1795-0006",
+        "R1795-0016",
+        "R1795-0165",
+        "R1795-0463"
+      ]
+    },
+    {
+      "id": "S95-036",
+      "page_key": "sn83025523|1795-03-13|1|1",
+      "excerpt_start": "An Act to establish an uniform",
+      "excerpt_end": "of the United States of America, in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-to-establish-an-uniform-rule-of-naturalization-january-1795"
+      ],
+      "summary": "The Mirrour prints the naturalization act.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S95-036.jpg"
+      ],
+      "family": [
+        "R1794-0004",
+        "R1795-0016",
+        "R1795-0103",
+        "R1795-0287"
+      ]
+    },
+    {
+      "id": "S95-037",
+      "page_key": "sn83025588|1795-03-17|1|2",
+      "excerpt_start": "MARCH 4. A Correspondent assures us",
+      "excerpt_end": "quantity of arms cannon and military stores.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-a-treaty-with-the-dey-of-algiers-march-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on a treaty with Algiers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, dateline 'MARCH 4.' included."
+      ],
+      "crops": [
+        "S95-037.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0011",
+        "R1795-0055",
+        "R1795-0058",
+        "R1795-0152",
+        "R1795-0446",
+        "R1795-0484"
+      ]
+    },
+    {
+      "id": "S95-038",
+      "page_key": "sn83025588|1795-03-17|1|2",
+      "excerpt_start": "Received by EXPRESS from Head-Quarters. Extract",
+      "excerpt_end": "at Greenville on the 15th June next.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "fort-washington-letter-the-indians-apply-for-a-treaty-of-peace-february-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the letter from Fort Washington.",
+      "note": "Prints 'Extract of two letters dated Fort Washington, February 2, to two gentlemen in this city', with no year, where the other printings have one letter 'to a gentleman'.",
+      "scan_findings": [
+        "The locator's crop began below the heading; the excerpt now starts with the heading, and the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan; the paper prints two letters to two gentlemen where the other printings have one letter to a gentleman."
+      ],
+      "crops": [
+        "S95-038.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0011",
+        "R1795-0055",
+        "R1795-0058",
+        "R1795-0152",
+        "R1795-0446",
+        "R1795-0484"
+      ],
+      "scan_boxes": [
+        [
+          1656,
+          1760,
+          2672,
+          2300
+        ]
+      ]
+    },
+    {
+      "id": "S95-039",
+      "page_key": "sn83025588|1795-03-17|1|3",
+      "excerpt_start": "MARCH 9. On Saturday arrived the",
+      "excerpt_end": "and drove in the Posts established there.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-the-brig-lydia-from-amsterdam-march-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the New York paragraph on the brig Lydia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, dateline 'MARCH 9.' included."
+      ],
+      "crops": [
+        "S95-039.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0011",
+        "R1795-0059",
+        "R1795-0477",
+        "R1795-0478",
+        "R1795-0479"
+      ]
+    },
+    {
+      "id": "S95-040",
+      "page_key": "sn83025523|1795-03-20|1|3",
+      "excerpt_start": "A correspondent assures us, upon good",
+      "excerpt_end": "and military stores. He has refused money.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-a-treaty-with-the-dey-of-algiers-march-1795"
+      ],
+      "summary": "The Mirrour prints the paragraph on a treaty with Algiers.",
+      "note": "Prints a shorter form of the paragraph ('glad', 'brethren', 'is to have'), which ends 'He has refused money.'",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints a shorter form of the paragraph, ending 'He has refused money.'"
+      ],
+      "crops": [
+        "S95-040.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0059",
+        "R1795-0091",
+        "R1795-0478",
+        "R1795-0486"
+      ]
+    },
+    {
+      "id": "S95-041",
+      "page_key": "sn83025523|1795-03-20|1|3",
+      "excerpt_start": "PHILADELPHIA, FEB. 28. Important and Pleasing",
+      "excerpt_end": "Greenville, on the 15th of June next.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "fort-washington-letter-the-indians-apply-for-a-treaty-of-peace-february-1795"
+      ],
+      "summary": "The Mirrour prints the letter from Fort Washington.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt: 'Important and Pleasing News', the letter dated 'Feb. 2, 1795'. The page is dark and stained but readable."
+      ],
+      "crops": [
+        "S95-041.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0059",
+        "R1795-0091",
+        "R1795-0478",
+        "R1795-0486"
+      ]
+    },
+    {
+      "id": "S95-042",
+      "page_key": "sn83025523|1795-03-20|1|3",
+      "excerpt_start": "\"Newyork, March 9. On Saturday arrived",
+      "excerpt_end": "and drove in the posts established there.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-the-brig-lydia-from-amsterdam-march-1795"
+      ],
+      "summary": "The Mirrour prints the New York paragraph on the brig Lydia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, which opens with the quoted dateline 'Newyork, March 9.'"
+      ],
+      "crops": [
+        "S95-042.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0059",
+        "R1795-0091",
+        "R1795-0478",
+        "R1795-0486"
+      ]
+    },
+    {
+      "id": "S95-043",
+      "page_key": "sn84023134|1795-03-21|1|2",
+      "excerpt_start": "A Correspondent assures us, upon good",
+      "excerpt_end": "quantity of arms, canon, and military stores.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-a-treaty-with-the-dey-of-algiers-march-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the paragraph on a treaty with Algiers.",
+      "note": "Prints 'glad' and 'brethren', as the Mirrour, and the misprint 'canon' for 'cannon'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the paper's own spelling 'canon'."
+      ],
+      "crops": [
+        "S95-043.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0011",
+        "R1795-0477",
+        "R1795-0490"
+      ]
+    },
+    {
+      "id": "S95-044",
+      "page_key": "sn84023134|1795-03-21|1|2",
+      "excerpt_start": "PHILADELPHIA, Feb. 28. Important and pleasing",
+      "excerpt_end": "Treaty of Peace with the United States...\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "fort-washington-letter-the-indians-apply-for-a-treaty-of-peace-february-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the letter from Fort Washington.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the headings and the letter's first words, but the print goes on ('—you will see by the official papers now transmitted...') where the transcription closes the letter with '...': words dropped. 'Extract' is read as 'Extra'."
+      ],
+      "crops": [
+        "S95-044.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0011",
+        "R1795-0477",
+        "R1795-0490"
+      ]
+    },
+    {
+      "id": "S95-045",
+      "page_key": "sn84023134|1795-03-21|1|2",
+      "excerpt_start": "On Saturday arrived the brig Lydia,",
+      "excerpt_end": "and drove in the posts established there.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-the-brig-lydia-from-amsterdam-march-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the New York paragraph on the brig Lydia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S95-045.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0011",
+        "R1795-0477",
+        "R1795-0490"
+      ]
+    },
+    {
+      "id": "S95-046",
+      "page_key": "sn84023313|1795-03-24|1|2",
+      "excerpt_start": "PHILADELPHIA, Feb. 28. Important and pleasing",
+      "excerpt_end": "at Grenville, on the 15th June next.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "fort-washington-letter-the-indians-apply-for-a-treaty-of-peace-february-1795"
+      ],
+      "summary": "The Columbian Informer prints the letter from Fort Washington.",
+      "note": "Dates the letter 'February 2, 1725', a misprint for 1795, and prints 'Grenville' for Greenville.",
+      "scan_findings": [
+        "Scan dates the letter 'February 2, 1725', a printer's error where the other printings have 1795; the transcription's '1775' changes the printed year. The rest matches, including the paper's spelling 'Grenville'."
+      ],
+      "crops": [
+        "S95-046.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0011",
+        "R1795-0053",
+        "R1795-0152",
+        "R1795-0421",
+        "R1795-0432"
+      ]
+    },
+    {
+      "id": "S95-047",
+      "page_key": "sn84023313|1795-03-24|1|3",
+      "excerpt_start": "NEWYORK, MARCH 9. On Saturday arrived",
+      "excerpt_end": "and drove in the posts established there.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-the-brig-lydia-from-amsterdam-march-1795"
+      ],
+      "summary": "The Columbian Informer prints the New York paragraph on the brig Lydia.",
+      "note": "Prints '7th Jan.' and the misprint 'addresses' for 'addressed'.",
+      "scan_findings": [
+        "Scan matches the excerpt in substance. The captain's name is blotted except its ending '-kerly', so the transcription's 'Shackery' drops a letter; the paper misprints 'addresses' for 'addressed', which the transcription silently corrects."
+      ],
+      "crops": [
+        "S95-047.jpg"
+      ],
+      "family": [
+        "R1795-0006",
+        "R1795-0470"
+      ]
+    },
+    {
+      "id": "S95-048",
+      "page_key": "sn82014782|1795-03-28|1|2",
+      "excerpt_start": "Extract of a letter from Baltimore,",
+      "excerpt_end": "Convention to the United States; and it",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-letter-french-ships-of-the-line-in-the-chesapeake-february-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the Baltimore letter on the French ships.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'February 3'. The scan is small and soft, but every word can be read."
+      ],
+      "crops": [
+        "S95-048.jpg"
+      ],
+      "family": [
+        "R1795-0025",
+        "R1795-0140",
+        "R1795-0373",
+        "R1795-0379",
+        "R1795-0420"
+      ]
+    },
+    {
+      "id": "S95-049",
+      "page_key": "sn83025588|1795-03-31|1|2",
+      "excerpt_start": "PROCLAMATION, Of the Revolutionary Committees of",
+      "excerpt_end": "and fraternity. “By the mighty aid of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795"
+      ],
+      "summary": "The Revolutionary Committees of Amsterdam address the citizens in a proclamation.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except for names a letter off: it prints 'Pruys', 'Thoen' and 'P. J. B. P.', which the transcription gives as 'Pruyss', 'Thoem' and 'P. J. B. F.'."
+      ],
+      "crops": [
+        "S95-049.jpg"
+      ],
+      "family": [
+        "R1795-0004"
+      ]
+    },
+    {
+      "id": "S95-050",
+      "page_key": "sn83025523|1795-04-03|1|3",
+      "excerpt_start": "PROCLAMATION. Of the Revolutionary Committees of",
+      "excerpt_end": "and fraternity. “By the mighty aid of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795"
+      ],
+      "summary": "The Mirrour prints the proclamation of the Revolutionary Committees of Amsterdam.",
+      "note": "Prints 'J. Van Hoffen' where the New-Hampshire Gazette prints 'Haffen'.",
+      "scan_findings": [
+        "Scan reads 'hail you with vows of health'; the transcription's 'bail' and 'views' are different words that change the sense. Several names are also a letter or two off ('Pruis', 'Tboen', 'Wisseleus', 'Vandenfluut')."
+      ],
+      "crops": [
+        "S95-050.jpg"
+      ],
+      "family": [
+        "R1795-0004",
+        "R1795-0167",
+        "R1795-0527"
+      ]
+    },
+    {
+      "id": "S95-051",
+      "page_key": "sn84023134|1795-04-04|1|1",
+      "excerpt_start": "PROCLAMATION, df. the Revolutionary Committees of",
+      "excerpt_end": "J. A. Goges. j. rhotn, D. 'Pan",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the proclamation of the Revolutionary Committees of Amsterdam.",
+      "note": "Prints 'Prays' where the other printings have 'Pruys'.",
+      "scan_findings": [
+        "The CA text is garbled throughout but can be read as the proclamation's heading, salutation and first names; no garble reads as another fact. The print has 'Prays' where the other printings have 'Pruys'."
+      ],
+      "crops": [
+        "S95-051.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1795-0004",
+        "R1795-0060"
+      ],
+      "scan_boxes": [
+        [
+          2480,
+          6620,
+          3490,
+          7170
+        ]
+      ]
+    },
+    {
+      "id": "S95-052",
+      "page_key": "sn84026271|1795-04-04|1|2",
+      "excerpt_start": "PROCLAMATION of the Revolutionary Committee of",
+      "excerpt_end": "health and fraternity.\" \"By the mighty aid",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795"
+      ],
+      "summary": "The Gazette of the United States prints the proclamation of the Revolutionary Committees of Amsterdam.",
+      "note": "Prints the heading with 'Committee' (singular), 'J. Theon' where the others have 'Thoen', and 'P. J. B. P, Van Vander Aa'.",
+      "scan_findings": [
+        "The locator's crop showed the end of the proclamation; the crop was placed by hand (24 November). It shows the heading and the whole excerpt: RevX gives 'S. Willems', a different name, for the printed 'S. Wiseleus' and 'had you' for 'hail you', and garbles four more names ('Pruss', 'Van Lier', 'Oudou', 'Vandenclois')."
+      ],
+      "crops": [
+        "S95-052.jpg"
+      ],
+      "family": [
+        "R1795-0004",
+        "R1795-0095",
+        "R1795-0176"
+      ],
+      "scan_boxes": [
+        [
+          2975,
+          2010,
+          3745,
+          2505
+        ]
+      ]
+    },
+    {
+      "id": "S95-053",
+      "page_key": "sn84023313|1795-04-07|1|3",
+      "excerpt_start": "PROCLAMATION OF THE REVOLUTIONARY COMMITTEE OF",
+      "excerpt_end": "health and fraternity. \"By the mighty aid",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795"
+      ],
+      "summary": "The Columbian Informer prints the proclamation of the Revolutionary Committees of Amsterdam.",
+      "note": "Prints 'COMMITTEE' (singular) and 'D. Von Laer' where the New-Hampshire Gazette, the Mirrour and the American Herald of Liberty print 'Committees' and 'Van Laer'.",
+      "scan_findings": [
+        "Scan matches the excerpt except two names the transcription garbles ('Witteus', 'Vandeuluis'); 'Van Haller' is worn and cannot be confirmed. The print itself has 'COMMITTEE' (singular) and 'Von Laer'."
+      ],
+      "crops": [
+        "S95-053.jpg"
+      ],
+      "family": [
+        "R1795-0004",
+        "R1795-0175"
+      ]
+    },
+    {
+      "id": "S95-054",
+      "page_key": "sn82014782|1795-04-11|1|4",
+      "excerpt_start": "My Lords & Gentlemen, After the",
+      "excerpt_end": "and reverses which we have experienced in",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-kings-speech-at-the-opening-of-parliament-30-december-1794"
+      ],
+      "summary": "The Kentucky Gazette prints the King's speech of 30 December 1794.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'My Lords & Gentlemen' with an ampersand, as the transcription has it: a printed difference. The rest matches; the scan is small but legible."
+      ],
+      "crops": [
+        "S95-054.jpg"
+      ],
+      "family": [
+        "R1794-0004",
+        "R1795-0001"
+      ]
+    },
+    {
+      "id": "S95-055",
+      "page_key": "sn82014782|1795-04-18|1|4",
+      "excerpt_start": "BALTIMORE, March 9. A correspondent assures",
+      "excerpt_end": "quantity of arms, cannon and military stores.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "a-correspondent-on-a-treaty-with-the-dey-of-algiers-march-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the paragraph on a treaty with Algiers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, dateline 'BALTIMORE, March 9.' included; the crop shows the Algiers paragraph, not the page's other items. The scan is coarse but readable."
+      ],
+      "crops": [
+        "S95-055.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0007",
+        "R1795-0011",
+        "R1795-0052"
+      ]
+    },
+    {
+      "id": "S95-056",
+      "page_key": "sn82014782|1795-04-18|1|4",
+      "excerpt_start": "NEW-YORK, March 12. On Saturday arrived",
+      "excerpt_end": "and drove in the posts established there.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-the-brig-lydia-from-amsterdam-march-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the New York paragraph on the brig Lydia.",
+      "note": "Dates the paragraph 'NEW-YORK, March 12.' where the other printings have March 9.",
+      "scan_findings": [
+        "Scan reads 'NEW-YORK, March 12.' where the other printings have March 9: a printed difference, not a transcription error. The rest matches; the print appears to have 'addressed' where the transcription has 'adressed', a minor slip."
+      ],
+      "crops": [
+        "S95-056.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0007",
+        "R1795-0011",
+        "R1795-0052"
+      ]
+    },
+    {
+      "id": "S95-057",
+      "page_key": "sn82014782|1795-04-18|1|4",
+      "excerpt_start": "THE WESTERN POSTS. Which have so",
+      "excerpt_end": "to prevent illicit trade in furs, &c.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the paragraph on the Western Posts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The locator's crops took in part of the next column; the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan; the paper prints 'so'."
+      ],
+      "crops": [
+        "S95-057.jpg"
+      ],
+      "family": [
+        "R1795-0005",
+        "R1795-0006",
+        "R1795-0007",
+        "R1795-0011",
+        "R1795-0052"
+      ],
+      "scan_boxes": [
+        [
+          598,
+          1462,
+          941,
+          1749
+        ]
+      ]
+    },
+    {
+      "id": "S95-058",
+      "page_key": "sn84026271|1795-04-24|1|3",
+      "excerpt_start": "(CIRCULAR.) Department of State, April 16th,",
+      "excerpt_end": "to carry on hostile expeditions from thence.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "secretary-of-states-circular-of-16-april-1795-on-ships-of-war"
+      ],
+      "summary": "The Secretary of State's circular: belligerent ships of war are not to take a station in American waters to carry on hostile expeditions.",
+      "note": "Earliest printing found. Prints the misprint 'conrary' for 'contrary', which RevX corrects.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints 'April 16th'. The print has the misprint 'conrary', which the transcription silently corrects to 'contrary'."
+      ],
+      "crops": [
+        "S95-058.jpg"
+      ],
+      "family": [
+        "R1795-0017",
+        "R1795-0066",
+        "R1795-0186",
+        "R1795-0574",
+        "R1795-0575",
+        "R1795-0576",
+        "R1795-0577"
+      ]
+    },
+    {
+      "id": "S95-059",
+      "page_key": "sn82014782|1795-04-25|1|4",
+      "excerpt_start": "L A W OF THE UNITED",
+      "excerpt_end": "by the Senate and house of Representatives",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "act-to-establish-an-uniform-rule-of-naturalization-january-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the naturalization act.",
+      "note": "Prints the heading 'LAW OF THE UNITED STATES' above the act and the spelling 'compleat'.",
+      "scan_findings": [
+        "The locator's crops also showed the act's end and other notices; the excerpt now starts with the heading 'LAW OF THE UNITED STATES' printed above the act, and the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan, including the paper's spelling 'compleat'."
+      ],
+      "crops": [
+        "S95-059.jpg"
+      ],
+      "family": [
+        "R1795-0016",
+        "R1795-0450"
+      ],
+      "scan_boxes": [
+        [
+          194,
+          162,
+          520,
+          564
+        ]
+      ]
+    },
+    {
+      "id": "S95-060",
+      "page_key": "sn84026271|1795-04-30|1|3",
+      "excerpt_start": "Capt. McIntire, of the sloop Delia",
+      "excerpt_end": "the Dutch and French at Great Bay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-sloop-delia-from-st-martins-the-island-taken-april-1795"
+      ],
+      "summary": "The sloop Delia from St. Martins reports the island taken by the French and the Dutch Patriots on 3 April.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'left there the 11th inst.', as the other printings do; the transcription '17th' is a transcription error that changes the date. The rest matches across the two crops."
+      ],
+      "crops": [
+        "S95-060-1.jpg",
+        "S95-060-2.jpg"
+      ],
+      "family": [
+        "R1795-0019",
+        "R1795-0069",
+        "R1795-0188",
+        "R1795-0595",
+        "R1795-0598",
+        "R1795-0599"
+      ]
+    },
+    {
+      "id": "S95-061",
+      "page_key": "sn83025588|1795-05-05|1|3",
+      "excerpt_start": "(CIRCULAR.) Department of State, April 16,",
+      "excerpt_end": "to carry on hostile expeditions from thence.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "secretary-of-states-circular-of-16-april-1795-on-ships-of-war"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Secretary of State's circular.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints 'April 16'."
+      ],
+      "crops": [
+        "S95-061.jpg"
+      ],
+      "family": [
+        "R1795-0019",
+        "R1795-0066",
+        "R1795-0191",
+        "R1795-0560",
+        "R1795-0613"
+      ]
+    },
+    {
+      "id": "S95-062",
+      "page_key": "sn83025588|1795-05-05|1|3",
+      "excerpt_start": "From NEW-YORK, APRIL 29. Capt. McIntire,",
+      "excerpt_end": "the Dutch and French at Great Bay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-sloop-delia-from-st-martins-the-island-taken-april-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the report by the sloop Delia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads '11th instant'; the transcription shortens 'instant' to 'inst.' and spells the printed 'M'Intire' as 'McIntire'."
+      ],
+      "crops": [
+        "S95-062.jpg"
+      ],
+      "family": [
+        "R1795-0019",
+        "R1795-0066",
+        "R1795-0191",
+        "R1795-0560",
+        "R1795-0613"
+      ]
+    },
+    {
+      "id": "S95-063",
+      "page_key": "sn83025524|1795-05-08|1|3",
+      "excerpt_start": "CONFIRMATION. NEWYORK, APRIL 29. Capt. M'Intire,",
+      "excerpt_end": "the Dutch and French at Great Bay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-sloop-delia-from-st-martins-the-island-taken-april-1795"
+      ],
+      "summary": "The Federal Mirror prints the report by the sloop Delia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads '11th'; the transcription drops one letter of the place name 'Marygatt'."
+      ],
+      "crops": [
+        "S95-063.jpg"
+      ],
+      "family": [
+        "R1795-0018",
+        "R1795-0019",
+        "R1795-0194",
+        "R1795-0613"
+      ]
+    },
+    {
+      "id": "S95-064",
+      "page_key": "sn82014782|1795-05-09|1|3",
+      "excerpt_start": "PROCLAMATION Of the Revolutionary Committee of",
+      "excerpt_end": "cast off the tyranny which oppressed you.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the proclamation of the Revolutionary Committees of Amsterdam.",
+      "note": "Prints no 'Brave Citizens' and six names where the New-Hampshire Gazette prints ten: 'J. Tho. C. Von. Laer' and 'E. Vander Aa' each run two names into one, and two names are not printed; the heading has 'Committee' (singular).",
+      "scan_findings": [
+        "Scan reads 'G. Pruys'; the transcription 'Prins' turns it into a different name. The missing salutation and the shortened list of names are in the print itself, not transcription errors."
+      ],
+      "crops": [
+        "S95-064.jpg"
+      ],
+      "family": [
+        "R1795-0004",
+        "R1795-0178",
+        "R1795-0533"
+      ]
+    },
+    {
+      "id": "S95-065",
+      "page_key": "sn84023134|1795-05-09|1|2",
+      "excerpt_start": "(CIRCULAR.) Department of State, April 16th,",
+      "excerpt_end": "to carry on hostile expeditions from thence.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "secretary-of-states-circular-of-16-april-1795-on-ships-of-war"
+      ],
+      "summary": "The American Herald of Liberty prints the Secretary of State's circular.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints 'April 16th'."
+      ],
+      "crops": [
+        "S95-065.jpg"
+      ],
+      "family": [
+        "R1795-0066",
+        "R1795-0068",
+        "R1795-0191",
+        "R1795-0588",
+        "R1795-0589",
+        "R1795-0590"
+      ]
+    },
+    {
+      "id": "S95-066",
+      "page_key": "sn84023134|1795-05-09|1|3",
+      "excerpt_start": "CONFIRMATION. NEW-YORK, APRIL 29. Capt. M'Intire,",
+      "excerpt_end": "the Dutch and French at Great Bay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-sloop-delia-from-st-martins-the-island-taken-april-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the report by the sloop Delia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads '11th instant'. The place name is worn (checked on an enlargement) and looks like 'Marygatt', so 'Marygirt' is at most a small garble of the same name."
+      ],
+      "crops": [
+        "S95-066.jpg"
+      ],
+      "family": [
+        "R1795-0018",
+        "R1795-0019",
+        "R1795-0200",
+        "R1795-0628"
+      ]
+    },
+    {
+      "id": "S95-067",
+      "page_key": "sn84026271|1795-05-12|1|3",
+      "excerpt_start": "The Port Mary, Capt. Kennedy, arrived",
+      "excerpt_end": "and 2000 taken prisoners, but the Capt.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "from-the-argus-the-port-mary-from-liverpool-may-1795"
+      ],
+      "summary": "The Port Mary arrives at New York from Liverpool with papers to 25 March and a Corunna account of a battle in Roussillon.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt: 'Saturday', 'March 25, which contain' and '1000'. The transcription modernises the printed 'Rousillon' to 'Roussillon'."
+      ],
+      "crops": [
+        "S95-067.jpg"
+      ],
+      "family": [
+        "R1795-0020",
+        "R1795-0040",
+        "R1795-0204",
+        "R1795-0637",
+        "R1795-0641"
+      ]
+    },
+    {
+      "id": "S95-068",
+      "page_key": "sn84023134|1795-05-21|1|3",
+      "excerpt_start": "The Port Mary, Capt. Kennedy, arrived",
+      "excerpt_end": "and 2000 taken prisoners, but the Capt.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "from-the-argus-the-port-mary-from-liverpool-may-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the paragraph on the Port Mary.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the transcription modernises the printed 'Rousillon' to 'Roussillon'."
+      ],
+      "crops": [
+        "S95-068.jpg"
+      ],
+      "family": [
+        "R1795-0020",
+        "R1795-0034",
+        "R1795-0074",
+        "R1795-0202",
+        "R1795-0207",
+        "R1795-0208",
+        "R1795-0209",
+        "R1795-0614",
+        "R1795-0624",
+        "R1795-0653",
+        "R1795-0664",
+        "R1795-0665"
+      ]
+    },
+    {
+      "id": "S95-069",
+      "page_key": "sn83025524|1795-05-22|1|3",
+      "excerpt_start": "The Port Mary, Capt. Kennedy, arrived",
+      "excerpt_end": "and 2000 taken prisoners, but the Capt.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "from-the-argus-the-port-mary-from-liverpool-may-1795"
+      ],
+      "summary": "The Federal Mirror prints the paragraph on the Port Mary.",
+      "note": "Prints 'He brought papers to 25 March, containing' where the other printings have 'Capt. Kennedy brought papers to March 25, which contain'.",
+      "scan_findings": [
+        "Scan matches the excerpt, including this paper's own wording 'He brought papers to 25 March, containing'. The transcription reads the long s in 'Rousillon' as f."
+      ],
+      "crops": [
+        "S95-069.jpg"
+      ],
+      "family": [
+        "R1795-0020",
+        "R1795-0034",
+        "R1795-0074",
+        "R1795-0198",
+        "R1795-0207",
+        "R1795-0631",
+        "R1795-0664",
+        "R1795-0667"
+      ]
+    },
+    {
+      "id": "S95-070",
+      "page_key": "sn82014782|1795-05-23|1|1",
+      "excerpt_start": "(CIRCULAR.) Department of State, April 16,",
+      "excerpt_end": "to carry on hostile expeditions from thence.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "secretary-of-states-circular-of-16-april-1795-on-ships-of-war"
+      ],
+      "summary": "The Kentucky Gazette prints the Secretary of State's circular.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints 'April 16'. The crop is small but legible."
+      ],
+      "crops": [
+        "S95-070.jpg"
+      ],
+      "family": [
+        "R1795-0066",
+        "R1795-0186",
+        "R1795-0574",
+        "R1795-0578"
+      ]
+    },
+    {
+      "id": "S95-071",
+      "page_key": "sn84038410|1795-05-23|1|3",
+      "excerpt_start": "NEW-YORK, May 11. The Port Mary,",
+      "excerpt_end": "1500 killed and 2000 taken prisoners, but",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "from-the-argus-the-port-mary-from-liverpool-may-1795"
+      ],
+      "summary": "The Patowmac Guardian prints the paragraph on the Port Mary.",
+      "note": "Prints 'Sunday evening', 'papers to March 24' and, as far as the scan can be read, '1500' killed, where the other printings have Saturday, March 25 and 1000; it leaves out 'which contain very little intelligence'.",
+      "scan_findings": [
+        "Scan matches the excerpt (checked on enlargements of a low-resolution page). This paper prints 'Sunday', 'March 24' and, most likely, '1500' killed where the other printings have Saturday, March 25 and 1000: printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S95-071.jpg"
+      ],
+      "family": [
+        "R1795-0020",
+        "R1795-0040",
+        "R1795-0204",
+        "R1795-0620",
+        "R1795-0643",
+        "R1795-0644"
+      ]
+    },
+    {
+      "id": "S95-072",
+      "page_key": "sn83025588|1795-05-26|1|2",
+      "excerpt_start": "The Port Mary, Capt. Kennedy, arrived",
+      "excerpt_end": "and 2000 taken prisoners, but the Capt.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "from-the-argus-the-port-mary-from-liverpool-may-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the Port Mary.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the transcription drops the long s of the printed 'Rousillon'."
+      ],
+      "crops": [
+        "S95-072.jpg"
+      ],
+      "family": [
+        "R1795-0020",
+        "R1795-0074",
+        "R1795-0207",
+        "R1795-0637",
+        "R1795-0665"
+      ]
+    },
+    {
+      "id": "S95-073",
+      "page_key": "sn82014782|1795-05-30|1|1",
+      "excerpt_start": "NEW-YORK, April 29. Captain M'Intire, of",
+      "excerpt_end": "the Dutch and French at Great Bay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "the-sloop-delia-from-st-martins-the-island-taken-april-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the report by the sloop Delia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads '11th'; the transcription shortens '3d instant' to '3d inst.'. The crop is small but legible."
+      ],
+      "crops": [
+        "S95-073.jpg"
+      ],
+      "family": [
+        "R1795-0019",
+        "R1795-0198",
+        "R1795-0634"
+      ]
+    },
+    {
+      "id": "S95-074",
+      "page_key": "sn83025588|1795-06-09|1|2",
+      "excerpt_start": "SESSIONS OF 11TH APRIL. TREATY between",
+      "excerpt_end": "partial peace, they present for your ratification,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-peace-between-the-french-republic-and-the-king-of-prussia-april-1795"
+      ],
+      "summary": "Rewbell presents to the National Convention the treaty of peace concluded with the King of Prussia.",
+      "note": "Earliest printing found. Prints the translation 'presented by Rewbel', as the Gazette of the United States, with the misprint 'assended' for 'ascended'.",
+      "scan_findings": [
+        "Scan matches the excerpt except one word: the print has 'Rewbel assended' (a misspelling of 'ascended'), and the transcription 'attended' turns it into a different word that changes the sense."
+      ],
+      "crops": [
+        "S95-074.jpg"
+      ],
+      "family": [
+        "R1795-0009",
+        "R1795-0078",
+        "R1795-0211",
+        "R1795-0668",
+        "R1795-0686",
+        "R1795-0696"
+      ]
+    },
+    {
+      "id": "S95-075",
+      "page_key": "sn84026271|1795-06-10|1|3",
+      "excerpt_start": "SESSION OF 11TH APRIL. TREATY between",
+      "excerpt_end": "Treaty concluded with the King of Prussia;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-peace-between-the-french-republic-and-the-king-of-prussia-april-1795"
+      ],
+      "summary": "The Gazette of the United States prints the treaty with the King of Prussia.",
+      "note": "Prints the translation 'presented by Rewbel', as the New-Hampshire Gazette.",
+      "scan_findings": [
+        "Scan reads 'Rewbel' twice, as the New-Hampshire Gazette does; the transcription 'Robespierre' changes the name. The transcription also puts words the print does not have ('lays before you the following articles of the Treaty') in place of the printed 'says he, has followed your intention'."
+      ],
+      "crops": [
+        "S95-075.jpg"
+      ],
+      "family": [
+        "R1795-0009"
+      ]
+    },
+    {
+      "id": "S95-076",
+      "page_key": "sn84023134|1795-06-11|1|2",
+      "excerpt_start": "Report of a TREATY with PRUSSIA.",
+      "excerpt_end": "Prussia .—We have not, for a moment,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-peace-between-the-french-republic-and-the-king-of-prussia-april-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the treaty with the King of Prussia.",
+      "note": "Prints the other translation ('Reubel ... ascended the tribune; he said'), as the Federal Mirror.",
+      "scan_findings": [
+        "Scan matches the excerpt except the name: the print has 'REUBEL' (with a large initial R), which the transcription gives as 'RUEBEL', a small garble of the same name."
+      ],
+      "crops": [
+        "S95-076.jpg"
+      ],
+      "family": [
+        "R1795-0009",
+        "R1795-0672"
+      ]
+    },
+    {
+      "id": "S95-077",
+      "page_key": "sn84026271|1795-06-12|1|3",
+      "excerpt_start": "LONDON, May 5. WESTMINSTER HALL. Judgment",
+      "excerpt_end": "while his judges determined on his case.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-judgment-of-mr-hastings-in-westminster-hall-may-1795"
+      ],
+      "summary": "A London report of the Lords' judgment on Mr. Hastings in Westminster Hall.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'About one o'clock'."
+      ],
+      "crops": [
+        "S95-077.jpg"
+      ],
+      "family": [
+        "R1795-0009",
+        "R1795-0080",
+        "R1795-0719",
+        "R1795-0720",
+        "R1795-0723",
+        "R1795-0724"
+      ]
+    },
+    {
+      "id": "S95-078",
+      "page_key": "sn83025524|1795-06-19|1|1",
+      "excerpt_start": "Report of a Treaty with Prussia.",
+      "excerpt_end": "Prussia. We have not, for a moment,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-peace-between-the-french-republic-and-the-king-of-prussia-april-1795"
+      ],
+      "summary": "The Federal Mirror prints the treaty with the King of Prussia.",
+      "note": "Prints the other translation ('Reubel ... ascended the tribune; he said'), under 'SESSIONS OF 11TH APRIL'.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S95-078.jpg"
+      ],
+      "family": [
+        "R1795-0009"
+      ]
+    },
+    {
+      "id": "S95-079",
+      "page_key": "sn84038410|1795-06-20|1|3",
+      "excerpt_start": "JUDGMENT OF MR. HASTINGS. About nine",
+      "excerpt_end": "judges determined on his case. The lord",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-judgment-of-mr-hastings-in-westminster-hall-may-1795"
+      ],
+      "summary": "The Patowmac Guardian prints the London report of Mr. Hastings's judgment.",
+      "note": "Prints 'About nine o'clock' where the other printings have 'About one o'clock'.",
+      "scan_findings": [
+        "Scan matches the excerpt. This paper prints 'About nine o'clock' where the other printings have 'one o'clock': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S95-079.jpg"
+      ],
+      "family": [
+        "R1795-0021",
+        "R1795-0080",
+        "R1795-0114",
+        "R1795-0217",
+        "R1795-0709"
+      ]
+    },
+    {
+      "id": "S95-080",
+      "page_key": "sn83025588|1795-06-23|1|3",
+      "excerpt_start": "JUDGMENT OF MR. HASTINGS. About one",
+      "excerpt_end": "whole house had been interrogated 16 times;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-judgment-of-mr-hastings-in-westminster-hall-may-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the London report of Mr. Hastings's judgment.",
+      "note": "Prints 'the proceedings commenced' and 'he plead as usual' where the Gazette of the United States and the Patowmac Guardian print 'the proceeding commenced' and 'he had pled in the usual form'.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'one o'clock'."
+      ],
+      "crops": [
+        "S95-080.jpg"
+      ],
+      "family": [
+        "R1795-0080",
+        "R1795-0082",
+        "R1795-0114",
+        "R1795-0115",
+        "R1795-0729"
+      ]
+    },
+    {
+      "id": "S95-081",
+      "page_key": "sn84023134|1795-06-25|1|2",
+      "excerpt_start": "Judgment of Mr. Hastings. About one",
+      "excerpt_end": "whole house had been interrogated 16 times;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-the-judgment-of-mr-hastings-in-westminster-hall-may-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the London report of Mr. Hastings's judgment.",
+      "note": "Prints 'he plead as usual', as the New-Hampshire Gazette.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'one o'clock'."
+      ],
+      "crops": [
+        "S95-081.jpg"
+      ],
+      "family": [
+        "R1795-0080",
+        "R1795-0113",
+        "R1795-0115",
+        "R1795-0220",
+        "R1795-0224",
+        "R1795-0754"
+      ]
+    },
+    {
+      "id": "S95-082",
+      "page_key": "sn83025524|1795-06-26|1|3",
+      "excerpt_start": "BOSTON, JUNE 24. UNWARRANTABLE PROCEEDINGS. To",
+      "excerpt_end": "On Friday last, it was reported, that",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-unwarrantable-proceedings-a-vessel-burned-at-the-long-wharf-june-1795"
+      ],
+      "summary": "A Boston paper records the burning of a vessel on Saturday night as 'unlawful and vicious proceeding'.",
+      "note": "Earliest printing found. Has no '[FACTS.]' line under the heading, which the other printings print.",
+      "scan_findings": [
+        "Scan reads 'the unlawful and riotous proceeding'; the transcription 'vicious' is a different word that changes how the event is described. The rest matches the excerpt."
+      ],
+      "crops": [
+        "S95-082.jpg"
+      ],
+      "family": [
+        "R1795-0008",
+        "R1795-0081",
+        "R1795-0221",
+        "R1795-0706"
+      ]
+    },
+    {
+      "id": "S95-083",
+      "page_key": "sn84026271|1795-06-29|1|3",
+      "excerpt_start": "BOSTON, June 24. UMIT ARRANT ABLR",
+      "excerpt_end": "progress we shall endeavor to narrate with",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-unwarrantable-proceedings-a-vessel-burned-at-the-long-wharf-june-1795"
+      ],
+      "summary": "The Gazette of the United States prints the Boston account of the burning of the vessel.",
+      "note": "Prints the heading misprinted 'UMWARRANTABLE PROCEEDINGS', 'a very disagreeable tax; but' where the others have 'task—But', and 'riotous proceedings' (the others: 'proceeding').",
+      "scan_findings": [
+        "The CA text is garbled but changes no fact. The paper prints 'disagreeable tax; but' and 'riotous proceedings' where the other printings have 'task—But' and 'proceeding', and misprints its heading 'UMWARRANTABLE': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S95-083.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1795-0008"
+      ]
+    },
+    {
+      "id": "S95-084",
+      "page_key": "sn83025588|1795-06-30|1|2",
+      "excerpt_start": "JUNE 24. UNWARRANTABLE PROCEEDINGS. [FACTS.] To",
+      "excerpt_end": "On Friday last, it was reported, that",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-unwarrantable-proceedings-a-vessel-burned-at-the-long-wharf-june-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Boston account of the burning of the vessel.",
+      "note": "Prints the dateline 'JUNE 24.' with no place name.",
+      "scan_findings": [
+        "Scan matches the excerpt except 'talk', a misreading of the long s in 'taſk' that changes no fact. The scan reads 'riotous'."
+      ],
+      "crops": [
+        "S95-084.jpg"
+      ],
+      "family": [
+        "R1795-0008",
+        "R1795-0081",
+        "R1795-0113",
+        "R1795-0724",
+        "R1795-0763"
+      ]
+    },
+    {
+      "id": "S95-085",
+      "page_key": "sn84023134|1795-07-02|1|2",
+      "excerpt_start": "BOSTON, June 24. Unwarrantable Proceedings. [FACTS]",
+      "excerpt_end": "impartiality. On Friday last, it was reported,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-unwarrantable-proceedings-a-vessel-burned-at-the-long-wharf-june-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the Boston account of the burning of the vessel.",
+      "note": "Prints 'disgrace on our fellow citizens' where the other printings have 'upon'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the second crop shows its last word, 'ported', at the head of the next column. This paper prints 'disgrace on our fellow citizens' where the others have 'upon'."
+      ],
+      "crops": [
+        "S95-085-1.jpg",
+        "S95-085-2.jpg"
+      ],
+      "family": [
+        "R1795-0008",
+        "R1795-0022",
+        "R1795-0222",
+        "R1795-0764",
+        "R1795-0769"
+      ]
+    },
+    {
+      "id": "S95-086",
+      "page_key": "sn84023150|1795-07-13|1|1",
+      "excerpt_start": "BOSTON, JUNE 24. UNWARRANTABLE PROCEEDINGS. [FACTS.]",
+      "excerpt_end": "impartiality: On Friday last, it was reported,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-unwarrantable-proceedings-a-vessel-burned-at-the-long-wharf-june-1795"
+      ],
+      "summary": "The Eagle, or Dartmouth Centinel prints the Boston account of the burning of the vessel.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S95-086.jpg"
+      ],
+      "family": [
+        "R1795-0008"
+      ]
+    },
+    {
+      "id": "S95-087",
+      "page_key": "sn83025588|1795-07-14|1|1",
+      "excerpt_start": "TREATY, &c. HIS Britannick Majesty and",
+      "excerpt_end": "And also to regulate the Commerce and",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-amity-commerce-and-navigation-with-great-britain-november-1794"
+      ],
+      "summary": "The text of the treaty of amity, commerce and navigation between Great Britain and the United States.",
+      "note": "Earliest printing found. Prints the heading 'TREATY, &c.' and the spelling 'Britannick'.",
+      "scan_findings": [
+        "Crop shows the treaty's heading 'TREATY, &c.' and its opening; they match the excerpt."
+      ],
+      "crops": [
+        "S95-087.jpg"
+      ],
+      "family": [
+        "R1795-0003"
+      ]
+    },
+    {
+      "id": "S95-088",
+      "page_key": "sn83025524|1795-07-24|1|1",
+      "excerpt_start": "TREATY OF AMITY, COMMERCE, AND NAVIGATION,",
+      "excerpt_end": "to produce mutual satisfaction and good understanding:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-amity-commerce-and-navigation-with-great-britain-november-1794"
+      ],
+      "summary": "The Federal Mirror prints the treaty with Great Britain.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop shows the treaty's full heading and its opening; they match the excerpt."
+      ],
+      "crops": [
+        "S95-088.jpg"
+      ],
+      "family": [
+        "R1795-0003"
+      ]
+    },
+    {
+      "id": "S95-089",
+      "page_key": "sn84023150|1795-07-27|1|1",
+      "excerpt_start": "TREATY OF AMITY, COMMERCE, and NAVIGATION,",
+      "excerpt_end": "to produce mutual satisfaction and good understanding;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-amity-commerce-and-navigation-with-great-britain-november-1794"
+      ],
+      "summary": "The Eagle, or Dartmouth Centinel prints the treaty with Great Britain.",
+      "note": "Prints the misprint 'referance' for 'reference'.",
+      "scan_findings": [
+        "The locator's crop began at the treaty's second line; the crop was placed by hand (24 November). It shows the heading and the whole excerpt, which match the scan; the paper misprints 'referance', which the transcription silently corrects."
+      ],
+      "crops": [
+        "S95-089.jpg"
+      ],
+      "family": [
+        "R1795-0003"
+      ],
+      "scan_boxes": [
+        [
+          2150,
+          5600,
+          3170,
+          6625
+        ]
+      ]
+    },
+    {
+      "id": "S95-090",
+      "page_key": "sn82014782|1795-08-01|1|1",
+      "excerpt_start": "TREATY, &c. HIS Britannic Majesty and",
+      "excerpt_end": "And also to regulate the Commerce and",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-amity-commerce-and-navigation-with-great-britain-november-1794"
+      ],
+      "summary": "The Kentucky Gazette prints the treaty with Great Britain.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop shows the heading 'TREATY, &c.' and the opening; on this small, blurred scan the words match the excerpt, though spellings such as 'Britannic' and 'pretensions' cannot be confirmed letter by letter."
+      ],
+      "crops": [
+        "S95-090.jpg"
+      ],
+      "family": [
+        "R1795-0003"
+      ]
+    },
+    {
+      "id": "S95-091",
+      "page_key": "sn83025524|1795-10-16|1|1",
+      "excerpt_start": "WAR with HOLLAND! LONDON, AUG. 21.",
+      "excerpt_end": "stuck up at Lloyd's Coffee-House: “DEAL, AUG.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-war-with-holland-august-1795"
+      ],
+      "summary": "A London paper reports that a state of actual hostilities with Holland is approaching, a Dutch fleet being at sea.",
+      "note": "Earliest printing found. Dates the paragraph 'LONDON, AUG. 21.' where the other printings have 22 August.",
+      "scan_findings": [
+        "Scan matches the excerpt. It prints 'LONDON, AUG. 21.' where the other printings have 22 August: a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S95-091.jpg"
+      ],
+      "family": [
+        "R1795-0013",
+        "R1795-0248",
+        "R1795-0911",
+        "R1795-0922",
+        "R1795-0923"
+      ]
+    },
+    {
+      "id": "S95-092",
+      "page_key": "sn83025588|1795-10-20|1|2",
+      "excerpt_start": "LONDON, August 22. WAR with HOLLAND.",
+      "excerpt_end": "actual hostilities between this country and Holland.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-war-with-holland-august-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the London paragraph 'War with Holland'.",
+      "note": "Prints only the paragraph's first sentence, which ends 'Holland.'",
+      "scan_findings": [
+        "The paper prints only the item's first paragraph, ending 'Holland.'; the excerpt ran on into the next item, a letter headed 'For the Gazette', and now ends at 'Holland.' (24 November). The crop, placed by hand, shows the whole excerpt, which matches the scan."
+      ],
+      "crops": [
+        "S95-092.jpg"
+      ],
+      "family": [
+        "R1795-0248"
+      ],
+      "scan_boxes": [
+        [
+          1358,
+          6778,
+          2380,
+          7167
+        ]
+      ]
+    },
+    {
+      "id": "S95-093",
+      "page_key": "sn84023134|1795-10-22|1|1",
+      "excerpt_start": "LONDON, AUG. 22. War with Holland!",
+      "excerpt_end": "stuck up at Loyd's Coffee-House. \"Deal, Aug.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-war-with-holland-august-1795"
+      ],
+      "summary": "The American Herald of Liberty prints the London paragraph 'War with Holland'.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the printed 'Loyd's'."
+      ],
+      "crops": [
+        "S95-093.jpg"
+      ],
+      "family": [
+        "R1795-0013"
+      ]
+    },
+    {
+      "id": "S95-094",
+      "page_key": "sn84023150|1795-10-26|1|2",
+      "excerpt_start": "War with Holland. AUGUST. 22. What",
+      "excerpt_end": "up at Loyd's Coffee House. DEAL, AUG.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-war-with-holland-august-1795"
+      ],
+      "summary": "The Eagle, or Dartmouth Centinel prints the London paragraph 'War with Holland'.",
+      "note": "Prints the date 'AUGUST. 22.' below the heading, with no place name.",
+      "scan_findings": [
+        "Scan matches the excerpt; the dateline 'AUGUST. 22.' stands below the heading 'War with Holland.'"
+      ],
+      "crops": [
+        "S95-094.jpg"
+      ],
+      "family": [
+        "R1795-0013",
+        "R1795-0248",
+        "R1795-0922"
+      ]
+    },
+    {
+      "id": "S95-095",
+      "page_key": "sn84026273|1795-11-12|1|3",
+      "excerpt_start": "Philadelphia, THURSDAY EVENING, NOVEMBER 12, 1795.",
+      "excerpt_end": "keel, and 5 feet 7 inches beam.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-the-schooner-white-fish-from-lake-erie-november-1795"
+      ],
+      "summary": "The schooner White Fish, built on Lake Erie, arrives at Philadelphia after a passage of seven weeks.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; its heading is the paper's own dateline, Philadelphia, Thursday evening, 12 November 1795."
+      ],
+      "crops": [
+        "S95-095.jpg"
+      ],
+      "family": [
+        "R1795-0088",
+        "R1795-0948"
+      ]
+    },
+    {
+      "id": "S95-096",
+      "page_key": "sn84026273|1795-11-19|1|2",
+      "excerpt_start": "September 22. On Saturday dispatches were",
+      "excerpt_end": "of a grand council of war, held",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "commodore-warrens-dispatches-from-quiberon-bay-september-1795"
+      ],
+      "summary": "A London report of Commodore Warren's dispatches from Quiberon Bay.",
+      "note": "Earliest printing found. Prints the London form 'On Saturday dispatches were received at the Admiralty Office', 'Sir John B. Warren' and 'the Artois, Sir Edward Nagel', without 'frigate'.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S95-096.jpg"
+      ],
+      "family": [
+        "R1795-0089"
+      ]
+    },
+    {
+      "id": "S95-097",
+      "page_key": "sn83025588|1795-11-24|1|2",
+      "excerpt_start": "Dispatches were received the 15th Sept.",
+      "excerpt_end": "a grand Council of War held at",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "commodore-warrens-dispatches-from-quiberon-bay-september-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the report of Commodore Warren's dispatches.",
+      "note": "Prints the London form 'Dispatches were received the 15th Sept.', 'Bourlace' and 'Sir Edwards Nagel'.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S95-097.jpg"
+      ],
+      "family": [
+        "R1795-0089",
+        "R1795-0254",
+        "R1795-0910",
+        "R1795-0941",
+        "R1795-0963",
+        "R1795-0964",
+        "R1795-0965",
+        "R1795-0966"
+      ]
+    },
+    {
+      "id": "S95-098",
+      "page_key": "sn83025588|1795-12-01|1|2",
+      "excerpt_start": "PHILADELPHIA, Nov. 12. On Tuesday last",
+      "excerpt_end": "keel, and 5 feet 7 inches beam.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-the-schooner-white-fish-from-lake-erie-november-1795"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the schooner White Fish.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan prints the fraction ½ after '17 and' (its upper figure is plainly 1; the lower is worn); the transcription '3/4' changes the keel length. The rest matches the excerpt."
+      ],
+      "crops": [
+        "S95-098.jpg"
+      ],
+      "family": [
+        "R1795-0088",
+        "R1795-0252",
+        "R1795-0253",
+        "R1795-0958",
+        "R1795-0962"
+      ]
+    },
+    {
+      "id": "S95-099",
+      "page_key": "sn83025524|1795-12-04|1|2",
+      "excerpt_start": "Dispatches were received the 15th Sept.",
+      "excerpt_end": "a grand council of war held at",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "commodore-warrens-dispatches-from-quiberon-bay-september-1795"
+      ],
+      "summary": "The Federal Mirror prints the report of Commodore Warren's dispatches.",
+      "note": "Prints the London form 'Dispatchs were received the 15th Sept.', with the misprint 'Dispatchs', 'Bourlace', '&' and 'Sir Edwards Nagel'.",
+      "scan_findings": [
+        "Scan prints 'Dispatchs', a misprint the transcription silently corrects to 'Dispatches'; otherwise it matches the excerpt."
+      ],
+      "crops": [
+        "S95-099.jpg"
+      ],
+      "family": [
+        "R1795-0089",
+        "R1795-0253",
+        "R1795-0938"
+      ]
+    },
+    {
+      "id": "S95-100",
+      "page_key": "sn83025524|1795-12-11|1|2",
+      "excerpt_start": "PHILADELPHIA, NOV. 13. On Tuesday last",
+      "excerpt_end": "keel, and 5 feet 7 inches beam.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-the-schooner-white-fish-from-lake-erie-november-1795"
+      ],
+      "summary": "The Federal Mirror prints the paragraph on the schooner White Fish.",
+      "note": "Dates the paragraph 'PHILADELPHIA, NOV. 13.' where the other printings have 12 November, and prints '17 and an half'.",
+      "scan_findings": [
+        "Scan matches the excerpt except 'redi-ousness', a garble of 'tedi-ousness'. The paper prints 'NOV. 13' and '17 and an half' where other printings have Nov. 12 and 1-2: printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S95-100.jpg"
+      ],
+      "family": [
+        "R1795-0088",
+        "R1795-0252",
+        "R1795-0981"
+      ]
+    },
+    {
+      "id": "S95-101",
+      "page_key": "sn82014782|1795-12-12|1|3",
+      "excerpt_start": "On Tuesday last arrived here, after",
+      "excerpt_end": "two young men, citizens of the U.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-the-schooner-white-fish-from-lake-erie-november-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the paragraph on the schooner White Fish.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt as far as this blurred scan can be read. The line above the item is a source line, 'From a Philadelphia paper of November 11', rightly left out of the excerpt."
+      ],
+      "crops": [
+        "S95-101.jpg"
+      ],
+      "family": [
+        "R1795-0088",
+        "R1795-0928",
+        "R1795-0945"
+      ]
+    },
+    {
+      "id": "S95-102",
+      "page_key": "sn82014782|1795-12-26|1|3",
+      "excerpt_start": "Sept. 22. On Saturday dispatches were",
+      "excerpt_end": "consequence of a grand council of war,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "commodore-warrens-dispatches-from-quiberon-bay-september-1795"
+      ],
+      "summary": "The Kentucky Gazette prints the report of Commodore Warren's dispatches.",
+      "note": "Prints the form 'On Saturday dispatches were received at the Admiralty Office' under 'Sept. 22.', with 'Borlase'.",
+      "scan_findings": [
+        "Scan matches the excerpt across both crops (the item runs from the foot of one column to the top of the next). The scan is small but legible."
+      ],
+      "crops": [
+        "S95-102-1.jpg",
+        "S95-102-2.jpg"
+      ],
+      "family": [
+        "R1795-0089",
+        "R1795-0969",
+        "R1795-0970"
+      ],
+      "scan_boxes": [
+        [
+          437,
+          2222,
+          775,
+          2428
+        ],
+        [
+          795,
+          195,
+          1110,
+          260
+        ]
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "presidents-proclamation-for-a-day-of-thanksgiving-1-january-1795",
+      "kind": "document_group",
+      "label": "The President's proclamation of 1 January 1795 appointing 19 February a day of public thanksgiving and prayer: 'When we review the calamities, which afflict so many other nations'",
+      "definition": "Printings of the President's proclamation dated 1 January 1795: 'When we review the calamities, which afflict so many other nations, the present condition of the United States affords much matter of consolation and satisfaction. Our exemption hitherto from foreign war—an increasing prospect of the continuance of that exemption—the great degree of internal tranquility we have enjoyed—the recent confirmation of that tranquility by the suppression of an insurrection, which so wantonly threatened it'; it recommends Thursday, 19 February, as a day of public thanksgiving and prayer. The President's own proclamation.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-insurgents-from-the-westward-lodged-in-the-jail-december-1794",
+      "kind": "message_group",
+      "label": "Philadelphia, 26 December 1794: twenty of the insurgents, prisoners at Pittsburgh who were refused bail, are brought from the westward and lodged in the jail of the city",
+      "definition": "Printings of a Philadelphia paragraph of 26 December 1794: 'Yesterday arrived from the westward, and were lodged in the goal of this city, 20 of the Insurgents. They are such of the prisoners confined in the garrison at Pittsburgh, as were refused bail; the residue (about 100) are admitted to bail.' A Philadelphia paper's report.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "baltimore-letter-french-ships-of-the-line-in-the-chesapeake-february-1795",
+      "kind": "message_group",
+      "label": "Baltimore, 3 February 1795: an extract of a letter, 'there are arrived in the Chesapeake two French line of battle ships and three frigates; that they have on board an ambassador'",
+      "definition": "Printings of an extract of a letter from Baltimore dated 3 February 1795: 'There is nothing new here at present but the following which I have just received from the custom house—that there are arrived in the Chesapeake two French line of battle ships and three frigates; that they have on board an ambassador from the National Convention to the United States'. A letter writer's report of what the custom house had heard.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "the-kings-speech-at-the-opening-of-parliament-30-december-1794",
+      "kind": "document_group",
+      "label": "The King's speech to both Houses of Parliament, 30 December 1794: 'After the uniform experience which I have had of your zealous regard for the interests of my people'",
+      "definition": "Printings of the King's speech at the opening of the session of Parliament, 30 December 1794: 'My Lords and Gentlemen, After the uniform experience which I have had of your zealous regard for the interests of my people, it is a great satisfaction to me to recur to your advice and assistance'. The King's own speech, as the papers print it from the London papers.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795",
+      "kind": "message_group",
+      "label": "Boston, 18 February 1795: 'The Western Posts, which have so long been a bone of contention between the United States and Great Britain, and which are to be delivered up to the American arms, in June 1796, are four in number'",
+      "definition": "Printings of a Boston paragraph of 18 February 1795 headed 'The Western Posts': 'The Western Posts, Which have so long been a bone of contention between the United States and Great Britain, and which are to be delivered up to the American arms, in June 1796, are four in number, viz. Oswego, at the entrance of lake Ontario, where the British have a company of foot; and a Custom House, to prevent illicit trade in furs, &c. Niagara, on the same lake'; it describes the four posts one by one. A Boston paper's description.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "the-presidents-message-on-the-georgia-land-sales-february-1795",
+      "kind": "message_group",
+      "label": "February 1795: 'In the House of Representatives of Congress a message was received from the President of the United States, relative to the sales of the lands in the Indian country by the Legislature of Georgia'",
+      "definition": "Printings of a paragraph of February 1795, in a Philadelphia form ('a message was yesterday received') and a New York form of 21 February ('a message was last Tuesday received'): 'In the House of Representatives of Congress a message was last Tuesday received from the President of the United States, relative to the sales of the lands in the Indian country by the Legislature of Georgia; this message represented the subject to be one of great importance involving the Peace and welfare of the United States.' A paper's report of the President's message.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "fort-washington-letter-the-indians-apply-for-a-treaty-of-peace-february-1795",
+      "kind": "message_group",
+      "label": "Philadelphia, 28 February 1795, 'Important and pleasing intelligence': an extract of a letter from Fort Washington of 2 February, 'The Indians have by their Deputies generally applied for a Treaty of Peace with the United States'",
+      "definition": "Printings of an extract of a letter dated Fort Washington, 2 February 1795, which a Philadelphia paper printed on 28 February under 'Important and pleasing Intelligence. Received this Day by Express from Head Quarters': 'The Indians have by their Deputies generally applied for a Treaty of Peace with the United States; you will see by the official papers now transmitted, that preliminary articles are signed'. A letter writer's report from the army's headquarters.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "a-correspondent-on-a-treaty-with-the-dey-of-algiers-march-1795",
+      "kind": "message_group",
+      "label": "March 1795: 'A correspondent assures us upon good authority ... that a treaty of some kind is either concluded or at least in forwardness with the Dey of Algiers for the redemption of our captive citizens'",
+      "definition": "Printings of a paragraph of early March 1795: 'A correspondent assures us upon good authority, and the information must gladden many a heart, that a treaty of some kind is either concluded or at least in forwardness with the Dey of Algiers for the redemption of our captive citizens. He has refused, it appears, money in ransom'. A correspondent's report.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "act-to-establish-an-uniform-rule-of-naturalization-january-1795",
+      "kind": "document_group",
+      "label": "An Act to establish an uniform rule of naturalization, and to repeal the act heretofore passed on that subject (approved 29 January 1795)",
+      "definition": "Printings of the act: 'An Act to establish an uniform rule of naturalization; and to repeal the act heretofore passed on that subject. For carrying into complete effect, the power given by the Constitution, to establish an uniform rule of naturalization throughout the United States: Be it enacted by the Senate and House of Representatives of the United States of America, in Congress assembled, That any alien, being a free white person, may be admitted to become a citizen of the United States, or any of them, on the following conditions'. The act itself, as the papers print it.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "new-york-the-brig-lydia-from-amsterdam-march-1795",
+      "kind": "message_group",
+      "label": "New York, 9 March 1795: 'On Saturday arrived the brig Lydia, Capt. Shackerly, in 56 days from Amsterdam. Letters have been received from thence as late as the 7th January'",
+      "definition": "Printings of a New York paragraph of 9 March 1795: 'On Saturday arrived the brig Lydia, Capt. Shackerly, in 56 days from Amsterdam. Letters have been received from thence as late as the 7th January. We have seen those addressed to a respectable house in this city. They at different dates, state the progress of the French'. A New York paper's report of the letters a ship brought.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795",
+      "kind": "document_group",
+      "label": "The proclamation of the Revolutionary Committees of Amsterdam, January 1795: 'Brave Citizens'",
+      "definition": "Printings of the proclamation of the Revolutionary Committees of Amsterdam of January 1795, which opens 'Brave Citizens, We' and the names of the committee's members, 'forming your Revolutionary Committee, hail you with vows of health and fraternity'. The committee's own proclamation, in translation.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "secretary-of-states-circular-of-16-april-1795-on-ships-of-war",
+      "kind": "document_group",
+      "label": "The Secretary of State's circular of 16 April 1795: ships of war of the belligerent powers not to take a station in the waters of the United States",
+      "definition": "Printings of the circular of the Department of State dated 16 April 1795: 'As it is contrary to the law of Nations, that any of the Belligerent Powers should commit hostility on the waters, which are subject to the exclusive jurisdiction of the United States; so ought not the ships of war, belonging to any Belligerent Power, to take a station in those waters in order to carry on hostile expeditions from thence.' The Secretary of State's own circular.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "the-sloop-delia-from-st-martins-the-island-taken-april-1795",
+      "kind": "message_group",
+      "label": "New York, April 1795: Capt. McIntire of the sloop Delia from St. Martins reports the island taken by the French and the Dutch Patriots on 3 April",
+      "definition": "Printings of a paragraph of late April 1795, in a Philadelphia form ('has obligingly communicated to us the following information') and a New York form of 29 April ('informs'): 'Capt. McIntire, of the sloop Delia, which arrived yesterday from St. Martins, and left there the 11th inst. informs, that St. Martin's was taken possession of by the French and Dutch Patriots, on Sunday, the 3d inst.' A shipmaster's report.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "from-the-argus-the-port-mary-from-liverpool-may-1795",
+      "kind": "message_group",
+      "label": "New York, May 1795, from the Argus: 'The Port Mary, Capt. Kennedy, arrived at this port on Saturday evening in 40 days from Liverpool', with a Corunna account of a battle in Roussillon",
+      "definition": "Printings of a paragraph from the Argus, a new daily paper of New York, of 11 May 1795: 'The Port Mary, Capt. Kennedy, arrived at this port on Saturday evening in 40 days from Liverpool. Capt. Kennedy brought papers to March 25, which contain very little intelligence. A Liverpool paper of March 23, contains a Corunna account of a battle in Roussillon'. A New York paper's report of the papers a ship brought.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "treaty-of-peace-between-the-french-republic-and-the-king-of-prussia-april-1795",
+      "kind": "document_group",
+      "label": "The treaty of peace between the French Republic and the King of Prussia, presented to the National Convention by Rewbell on 11 April 1795",
+      "definition": "Printings of the National Convention's sitting of 11 April 1795, in which Rewbell, in the name of the Committee of Public Safety, presented the treaty of peace concluded with the King of Prussia, in two translations counted as one item (C-02): 'Treaty between Prussia and the French Republic, presented by Rewbel in the name of the Committee of Public Safety' (the New-Hampshire Gazette and the Gazette of the United States) and 'Reubel, in the name of the Committee of Public Safety, ascended the tribune; he said, Your Committee' (the American Herald of Liberty and the Federal Mirror). The Convention's report and the treaty, in translation.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "london-the-judgment-of-mr-hastings-in-westminster-hall-may-1795",
+      "kind": "message_group",
+      "label": "London, May 1795, 'Judgment of Mr. Hastings': the Lords' judgment in Westminster Hall on the impeachment of Warren Hastings",
+      "definition": "Printings of a London report of 5 May 1795 headed 'Judgment of Mr. Hastings': 'About one o'clock the lords being come into the Hall, and the Commons with their managers seated the proceeding commenced. Mr. Hastings was called into court; and as soon as he had pled in the usual form, he was ordered to withdraw, while his judges determined on his case.' A London paper's report of the judgment.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "boston-unwarrantable-proceedings-a-vessel-burned-at-the-long-wharf-june-1795",
+      "kind": "message_group",
+      "label": "Boston, 24 June 1795, 'Unwarrantable Proceedings': a Boston paper's account of the burning on Saturday night of a vessel said to be a privateer",
+      "definition": "Printings of a Boston paragraph of 24 June 1795 headed 'Unwarrantable Proceedings': 'To record any transaction which reflects disgrace upon our fellow citizens, is a very disagreeable task—But silently to pass over the unlawful and vicious proceeding on Saturday night, would argue a gross deficiency of duty. Its rise and progress we shall endeavor to narrate with justice and impartiality.' A Boston paper's account, in its own words of censure.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "treaty-of-amity-commerce-and-navigation-with-great-britain-november-1794",
+      "kind": "document_group",
+      "label": "The treaty of amity, commerce and navigation between Great Britain and the United States, concluded at London on 19 November 1794 (Mr. Jay's treaty)",
+      "definition": "Printings of the treaty, as the papers print it in July and August 1795: its preamble and 'Article I. There shall be a firm, inviolable and universal peace, and a true and sincere friendship between his Britannick Majesty, his heirs and successors, and the United States of America'. The Patowmac Guardian's printing, whose opening was in an issue that does not survive, and commentaries that quote its articles are not counted (C-06, C-07). The treaty itself, as the papers print it.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "london-war-with-holland-august-1795",
+      "kind": "message_group",
+      "label": "London, August 1795, 'War with Holland': 'What was foreseen by many a long time ago, seems now to be quickly approaching—a state of actual hostilities between this country and Holland'",
+      "definition": "Printings of a London paragraph of 21 or 22 August 1795 headed 'War with Holland': 'What was foreseen by many a long time ago, seems now to be quickly approaching—a state of actual hostilities between this country and Holland. That the Dutch have a fleet at sea, is now fully confirmed by the following notice which was yesterday stuck up at Lloyd's Coffee-House'. A London paper's report.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-the-schooner-white-fish-from-lake-erie-november-1795",
+      "kind": "message_group",
+      "label": "Philadelphia, 12 November 1795: 'On Tuesday last arrived here, after a passage of 7 weeks, the schooner White Fish, built last summer at Presqu'Isle on Lake Erie'",
+      "definition": "Printings of a Philadelphia paragraph of 12 November 1795: 'On Tuesday last arrived here, after a passage of 7 weeks, the schooner White Fish, built last summer at Presqu'Isle on Lake Erie. The tediousness of the voyage was owing to the inclemency of the weather. She is only 17 and 1-2 feet keel, and 5 feet 7 inches beam.' A Philadelphia paper's report.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    },
+    {
+      "id": "commodore-warrens-dispatches-from-quiberon-bay-september-1795",
+      "kind": "message_group",
+      "label": "London, September 1795: Commodore Sir John Borlase Warren's dispatches from Quiberon Bay, received at the Admiralty Office",
+      "definition": "Printings of a London report of September 1795, in two forms counted together (C-02): 'On Saturday dispatches were received at the Admiralty Office, from Commodore Sir John B. Warren, dated Quiberon Bay, September 9' (the Gazette of the United States and the Kentucky Gazette) and 'Dispatches were received the 15th Sept. at the Admiralty-Office from Commodore Sir John Bourlace Warren, dated Quiberon Bay' (the New-Hampshire Gazette and the Federal Mirror). A London report of the commodore's dispatches.",
+      "admission_rule": "Reviewed 1795 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1795 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 481 items found on the pages, 145 in 4 or more papers by the finder's count), and again with the families of 1794 over the 1795 pages (items_from_1794.json: 65 items found, 16 in 4 or more). Every item in 3 or more papers was compared by machine with every page and counted again by its opening; a sweep of seven-word sequences shared by 4 or more papers found 446 runs, and the runs no finder item covers were read. Counted item by item (153 entries; the daily proceedings of Congress and of the state legislatures left out as digests), 130 items meet the bar (count_1795.md); where an item's family or run also holds other texts (the acts share their formulas), its papers were counted by its own words. The admitted and chosen items were counted again by their own words over all 1,668 pages in both transcriptions, and read on every page.",
+    "selection_rule": "The thin-year rule (Y-THIN, as amended on 23 November 2026, the owner's choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; as in R-01, the eligible items printed by every newspaper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35); one affair's items as in X-1800-01; digests are not admitted; sub-stories (C-01), private persons (R-04) and the list of items read and not admitted (R-03) as in every year. In 1795 4 to 8 papers survive for an item's weeks, so the bar is 4 or 5.",
+    "paper_counting": "1795 has 11 catalogue series, which are 9 papers (C-04, X-1795-02): the Gazette of the United States (200 issues, daily, under two catalogue numbers, to 30 June and from 8 July, to 30 November), the New-Hampshire Gazette (52), the Kentucky Gazette (49), the Concord paper (44: The Mirrour to 3 April, The Federal Mirror from 10 April), the American Herald of Liberty (29), the Columbian Informer (16, to 21 April), the Patowmac Guardian (12), The Eagle (8, May to October) and The Phoenix (1, 17 January). No 1795 issue has a corrected date; the release's map lists 5 misfiled RevX pages of 1795, none of them a page of this ledger.",
+    "items_admitted": {
+      "presidents-proclamation-for-a-day-of-thanksgiving-1-january-1795": "count entry 14 (I95-0017, I95-0018, I94-0003); searches of its own words; chosen to cover the months and the kinds of news.",
+      "philadelphia-insurgents-from-the-westward-lodged-in-the-jail-december-1794": "count entry 7 (I95-0016); searches of its own words; chosen to cover the months and the kinds of news.",
+      "baltimore-letter-french-ships-of-the-line-in-the-chesapeake-february-1795": "count entry 42 (I95-0004); searches of its own words; chosen to cover the months and the kinds of news.",
+      "the-kings-speech-at-the-opening-of-parliament-30-december-1794": "count entry 44 (I95-0002, I95-0001, I95-0207, R164); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "the-western-posts-to-be-delivered-up-in-june-1796-described-february-1795": "count entry 58 (I95-0005); searches of its own words; chosen to cover the months and the kinds of news.",
+      "the-presidents-message-on-the-georgia-land-sales-february-1795": "count entry 54 (R190); searches of its own words; chosen to cover the months and the kinds of news.",
+      "fort-washington-letter-the-indians-apply-for-a-treaty-of-peace-february-1795": "count entry 64 (I95-0027, I95-0082); searches of its own words; chosen to cover the months and the kinds of news.",
+      "a-correspondent-on-a-treaty-with-the-dey-of-algiers-march-1795": "count entry 68 (I95-0028); searches of its own words; chosen to cover the months and the kinds of news.",
+      "act-to-establish-an-uniform-rule-of-naturalization-january-1795": "count entry 70 (I95-0029, I95-0013); searches of its own words; chosen to cover the months and the kinds of news.",
+      "new-york-the-brig-lydia-from-amsterdam-march-1795": "count entry 72 (I95-0006, R243); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "proclamation-of-the-revolutionary-committees-of-amsterdam-january-1795": "count entry 83 (I95-0031, I95-0007, I95-0244); searches of its own words; chosen to cover the months and the kinds of news.",
+      "secretary-of-states-circular-of-16-april-1795-on-ships-of-war": "count entry 98 (I95-0102); searches of its own words; chosen to cover the months and the kinds of news.",
+      "the-sloop-delia-from-st-martins-the-island-taken-april-1795": "count entry 107 (I95-0037); searches of its own words; chosen to cover the months and the kinds of news.",
+      "from-the-argus-the-port-mary-from-liverpool-may-1795": "count entry 115 (I95-0038); searches of its own words; chosen to cover the months and the kinds of news.",
+      "treaty-of-peace-between-the-french-republic-and-the-king-of-prussia-april-1795": "count entry 126 (I95-0121, I95-0122, I95-0123, I95-0127 and more); searches of its own words; chosen to cover the months and the kinds of news.",
+      "london-the-judgment-of-mr-hastings-in-westminster-hall-may-1795": "count entry 129 (I95-0125); searches of its own words; chosen to cover the months and the kinds of news.",
+      "boston-unwarrantable-proceedings-a-vessel-burned-at-the-long-wharf-june-1795": "count entry 137 (I95-0040, I95-0041); searches of its own words; chosen to cover the months and the kinds of news.",
+      "treaty-of-amity-commerce-and-navigation-with-great-britain-november-1794": "count entry 144 (I95-0010, I95-0014, I95-0051, I95-0008 and more); searches of its own words; chosen to cover the months and the kinds of news.",
+      "london-war-with-holland-august-1795": "count entry 148 (I95-0385, I95-0143); searches of its own words; chosen to cover the months and the kinds of news.",
+      "philadelphia-the-schooner-white-fish-from-lake-erie-november-1795": "count entry 151 (I95-0144); searches of its own words; chosen to cover the months and the kinds of news.",
+      "commodore-warrens-dispatches-from-quiberon-bay-september-1795": "count entry 152 (I95-0145); searches of its own words; printed by every paper that survives for its weeks: admitted by the rule's first part."
+    },
+    "counted_item_by_item": {
+      "Paper counts": "Of 130 items eligible by the count, 3 are printed by every paper that survives for their weeks, counted by their own words, and are admitted: the King's speech at the opening of Parliament (7 of 7), the brig Lydia's news from Amsterdam (6 of 6) and Commodore Warren's dispatches from Quiberon Bay (4 of 4). 18 are chosen; the others are listed as not chosen, except five items on private persons, listed for the owner.",
+      "The treaty with Great Britain by its own words": "The treaty is in 4 papers by its own words: the Patowmac Guardian's printing of 18 July is 'concluded from our last', and its issue of 11 July does not survive (C-06); the Kentucky Gazette's essay of 3 October and the Gazette of the United States' commentaries quote its articles (C-07); the Gazette of the United States has no issue from 1 to 7 July.",
+      "Printed forms counted together": "The paragraph on the President's message on the Georgia lands, the sloop Delia's report and Commodore Warren's dispatches in a Philadelphia or London form and a New York form; the treaty with Prussia in two translations (C-02). The Patowmac Guardian's own paragraph on the French ships in the Chesapeake is another text and is not counted with the Baltimore letter.",
+      "The acts by their own words": "The automatic families join the acts of Congress and of New Hampshire by their formulas; counted by each act's opening, the naturalization act is in 5 papers and the others in 3 or fewer (below the bar)."
+    },
+    "not_admitted": {
+      "London, 23 October, by an arrival at Charleston: messengers from Vienna and from the Duke of York's army; Nimeguen on the point of being invested (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Boston, 3 January, 'Latest from France': Paris papers to 30 October by the schooner Sea-Flower from Bordeaux; the battles on the Meuse; the Convention orders the trial of Carrier (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Philadelphia, 27 December: the German Lutheran Church at Fourth Street and Cherry Alley burns (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Articles indicative of a peace in Europe, from a London paper of October: the Diet at Ratisbon to debate a cessation of hostilities; a letter from Frankfort of 12 October (5)": "In 5 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Ratisbon, 16 October: the Elector Palatine proposes in the Diet an honourable and speedy peace with the French Republic; a letter from Vienna of 18 October (3)": "In 3 papers of the 7 that survive for its weeks; the bar is 4. Below the bar.",
+      "The answer of the New Hampshire legislature to the Governor's address ('Impressed with the importance of guarding the rights of the citizens of this State') (4)": "In 4 papers (January) of the 7 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Arnheim, 21 October, from a correspondent with the Duke of York's army: 'On my entrance into this town, I found 5000 of the Duke of York's army' (4)": "In 4 papers (January) of the 7 that survive for its weeks, a letter or report; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Middleburgh, 23 October: a boat from Dordrecht brings word that the French have taken Heusden and Breda (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, October: the French put in requisition 6,000 young girls in Brabant to attend the sick in their military hospitals (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, October: the French found 300,000 florins in the military chest taken at Bois-le-Duc (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "An Act making appropriations for the support of the military establishment for the year 1795, and for the expenses of the militia lately called into the service of the United States (3)": "In 3 papers of the 7 that survive for its weeks (own words: the act's title and enacting clause (acts_scan.txt); the unit opens the session's formula, which the families share with every act); the bar is 4. Below the bar.",
+      "An Act authorizing the transfer of the stock standing to the credit of certain states (3)": "In 3 papers of the 8 that survive for its weeks (own words: the act's title and enacting clause); the bar is 5. Below the bar.",
+      "'State of French politics, from the fall of Robespierre to the 7th November', written in France and communicated by Capt. Bradford, just arrived from L'Orient (4)": "In 4 papers (January) of the 7 that survive for its weeks, a letter or report; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "'Stadtholder declared Dictator': a report that the Stadtholder has been proclaimed Dictator by the states of Holland (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "An Act making appropriations for the support of government for the year 1795 (3)": "In 3 papers of the 7 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+      "New York, 14 January, 'From Europe': the fortress of Luxemburg and the French mode of conquering (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "An Act to regulate the pay of the non-commissioned officers, musicians and privates of the militia of the United States, when called into actual service, and for other purposes (4)": "In 4 papers of the 8 that survive for its weeks (own words: the act (the Columbian Informer of 6 January and the Mirrour of 9 January print the House's account of the bill, not the act)); the bar is 5. Below the bar.",
+      "New Hampshire: An Act to prevent damage being done by horses, mules and jacks (4)": "In 4 papers (January) of the 7 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The Senate's address to the President of 22 November 1794, in answer to his speech, with his reply (1)": "In 1 paper of the 7 that survive for its weeks (own words: in 1795 only the Kentucky Gazette prints it (the unit's family joins it with the Senate's answer of December 1795)); the bar is 4. Below the bar.",
+      "Stockbridge, 6 January: a letter from Paris, New York, on the Indian treaty just closed ('they have all become yankees') (4)": "In 4 papers (January) of the 7 that survive for its weeks, a letter or report; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "New Hampshire: An Act in addition to the act to prevent the destruction of salmon, shad and alewives in the Merrimack river (3)": "In 3 papers of the 6 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+      "London: peace expected between several of the allied powers and the French Republic; letters from Amsterdam that the King of Spain has also made peace (5)": "In 5 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The President's message of 30 December 1794 laying before Congress the Secretary of War's report on the frontiers and the Indian tribes (4)": "In 4 papers (January) of the 7 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "An anecdote from the London papers: a barber's sign of Absalom hanging by his hair ('if he had worn a wig') (3)": "In 3 papers of the 7 that survive for its weeks; the bar is 4. Below the bar.",
+      "'French politeness': Pichegru's message to the Duke of York to remove from Nimeguen (4)": "In 4 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "New Hampshire: An Act for extending the boundaries of certain towns (on the Connecticut river) (4)": "In 4 papers (January) of the 6 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "New Hampshire: An Act granting to each company of cavalry seventeen dollars to furnish instruments of music and colours (4)": "In 4 papers (January) of the 6 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "New Hampshire: An Act for raising twenty-six thousand six hundred and sixty-six dollars and sixty-seven cents for the use of this State (4)": "In 4 papers (January) of the 6 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Paris, 6 November 1794: a letter announcing peace between France and Prussia, signed at Neufchatel ('It is with great pleasure we announce to you the good news') (5)": "In 5 papers (January) of the 6 that survive for its weeks, a letter or report; not chosen: one affair's items (X-1800-01): the peace between France and Prussia: the treaty with Prussia (chosen) is in the ledger.",
+      "New Hampshire: An Act for the preservation of salmon and shad in the Connecticut river (3)": "In 3 papers of the 6 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+      "The treaty with the Six Nations concluded at Canandaigua, 11 November 1794, with the President's ratification of 21 January 1795 and the Secretary of War's letter of 27 January transmitting it (4)": "In 4 papers (January) of the 7 that survive for its weeks, a document; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Capt. Luce's report: the news of the surrender of Maestricht reached Havre on 10 November; at Paris all tranquil, provisions plenty and cheap (4)": "In 4 papers (January) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: January is covered by the President's proclamation for a day of thanksgiving and the Philadelphia paragraph on the insurgents, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "'Commercial treaty': letters from London of 27 November and 6 December (the American funds rise on the news of the treaty), and the reports brought by the Betsey (5)": "In 5 papers (January) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the Western Posts (chosen, the most widely printed item of the news of the treaty, 6 of 7) and the treaty itself (chosen) are in the ledger.",
+      "Thorn, 1 November: the Supreme Council of Warsaw after the loss of Kosciuszko (4)": "In 4 papers (February) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, 18 November, 'Treaty with the United States': the differences adjusted, and the leading terms of the arrangement (5)": "In 5 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the Western Posts (chosen, the most widely printed item of the news of the treaty, 6 of 7) and the treaty itself (chosen) are in the ledger.",
+      "Mr. Jay to his brother, 21 November 1794: 'the treaty I was sent here to negotiate was signed the day before yesterday' (5)": "In 5 papers (February) of the 7 that survive for its weeks, a letter or report; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the Western Posts (chosen, the most widely printed item of the news of the treaty, 6 of 7) and the treaty itself (chosen) are in the ledger.",
+      "London, 11-16 November: the French in full possession of the left bank of the Rhine up to Mentz (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Paris, 'Convention triumphant': the Jacobins' club broken up after the arrest of Carrier (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Genoa, 12 November: a Corsican vessel from Ajaccio reports a fight between two parties; the Paolists divided (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, 2 January: the French in possession of Fort St. Andre and the Bommel Waert; consternation at Amsterdam (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "St. Fernando de Figueres, 28 November: the Representative of the People with the army of the Eastern Pyrenees on the victory of the 20th (4)": "In 4 papers (February) of the 7 that survive for its weeks, a letter or report; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Mr. Fenwick, consul at Bordeaux, to Mr. Johnson, consul at London, Paris, 15 November: American vessels to go free (5)": "In 5 papers (February) of the 7 that survive for its weeks, a letter or report; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "London: an attempt to poison the Duke of York (5)": "In 5 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "New Hampshire: An Act providing for the compensation of certain persons employed in apprehending and bringing to justice offenders against the laws of this state (3)": "In 3 papers of the 7 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+      "Paris, 4 December, 'Peace!': the Committee of Public Safety's report on the rumours of peace ('No, Frenchmen, no') (4)": "In 4 papers (February) of the 7 that survive for its weeks, a document; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "An anecdote: the English resident at Berlin and the King of Prussia ('is God one of our allies?') (4)": "In 4 papers (February) of the 7 that survive for its weeks, an essay or verse; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Portland, 9 February, 'Barcelona taken': news brought by a vessel from Lisbon (5)": "In 5 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "A letter from a citizen of one of the southern states, 7 January 1795: speculations in Georgia lands (4)": "In 4 papers (February) of the 7 that survive for its weeks, a letter or report; not chosen: one affair's items (X-1800-01): the Georgia land sales: the paragraph on the President's message (chosen) is in the ledger.",
+      "'The Georgia business is of the most alarming nature' (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the Georgia land sales: the paragraph on the President's message (chosen) is in the ledger.",
+      "Philadelphia: an extract from a sermon by the Rev. Dr. Smith of Princeton ('Among the favourable circumstances accompanying the establishment of the federal system') (4)": "In 4 papers (February) of the 7 that survive for its weeks, an essay or verse; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Philadelphia, 24 February: the President's birthday celebrated (3)": "In 3 papers of the 7 that survive for its weeks; the bar is 4. Below the bar.",
+      "Boston, 21 February: an 'important arret' of the Committees of Public Safety, Finances, Commerce and Supplies on the vessels of the United States and other neutral powers (4)": "In 4 papers (February) of the 7 that survive for its weeks, a document; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "An account of a fancy piece presented to Mrs. Washington on the President's birthday (4)": "In 4 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "'Appointments, by authority': the Postmaster General, the Comptroller of the Treasury and the Purveyor of Public Supplies (5)": "In 5 papers (February) of the 7 that survive for its weeks, a notice; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Boston, 25 February, 'From France direct': the brig Ceres from Bordeaux with Paris papers to late December (5)": "In 5 papers (February) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: February is covered by the King's speech (admitted), the Baltimore letter on the French ships, the Western Posts, the President's message on the Georgia lands and the Fort Washington letter, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "An Act to amend the act making alterations in the Treasury and War departments (3)": "In 3 papers of the 7 that survive for its weeks (own words: the act's title and enacting clause); the bar is 4. Below the bar.",
+      "'A singular examination, before a certain Justice of the Peace, lately in England' (4)": "In 4 papers of the 8 that survive for its weeks; the bar is 5. Below the bar.",
+      "An Act supplementary to the several acts imposing duties on goods, wares and merchandise imported into the United States (3)": "In 3 papers of the 6 that survive for its weeks (own words: the act's preamble and enacting clause); the bar is 4. Below the bar.",
+      "Boston, 7 March: a Paris paper says Condorcet is dead; the treaty is mentioned in the Paris papers without disapproval (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "New York, 12 March: London papers to 8 January by the ship Diana from Bristol: letters from the British army and from Holland on the French crossing the frozen rivers; 'The last hope' (5)": "In 5 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Boston, 11 March, 'Naval engagement': a French and an English frigate in the West Indies, from an American captain who was on board the English ship (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Paris, 16 December, translated for the Centinel: 'Let the people of France learn wisdom by their past sufferings' (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Albany, 6 March: twelve hundred sleighs with families from the east pass through the city in three days (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "New York Agricultural Society: Maunsell's method of raising potatoes from the shoots (4)": "In 4 papers (March) of the 6 that survive for its weeks, an essay or verse; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Salem, 17 March: the brig Union from Lisbon: a French fleet of 33 sail of the line reported in the English Channel (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Boston, 25 March, 'Post roads': the stages on the road between Boston and New Haven (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, 'Petitions for peace': the cities and towns that petition the House of Commons (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, 7 February: vessels from Flushing arrive at Dover; Major Meade: the French summon Bergen-op-Zoom (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Amsterdam, 20 January: 'The revolutions of this are stamped with a character totally different from all others' (4)": "In 4 papers (March) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: March is covered by the brig Lydia (admitted), the Algiers paragraph, the naturalization act and the proclamation of the Revolutionary Committees of Amsterdam, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "An Act for continuing and regulating the military establishment of the United States (2)": "In 2 papers of the 7 that survive for its weeks (own words: the act (the run joins it with the New Hampshire salmon act by the formula 'And be it further enacted')); the bar is 4. Below the bar.",
+      "11 February: the Hollanders establish a convention; the proclamation of the States General ('The Representatives of the French people who are at present in this country') (5)": "In 5 papers (April) of the 6 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the revolution in Holland: the proclamation of the Revolutionary Committees of Amsterdam (chosen) is in the ledger.",
+      "Paris, 7 February, from Brussels, 19 January: the capitulation of the town and province of Utrecht (4)": "In 4 papers (April) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Paris, 2 February, from Perpignan, 11 January: the bad weather delays the army; the enemy's fleets suffer (4)": "In 4 papers (April) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Paris, 27 January: the immense riches the victory has delivered to the Republicans in Holland (5)": "In 5 papers (April) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the revolution in Holland: the proclamation of the Revolutionary Committees of Amsterdam (chosen) is in the ledger.",
+      "The National Convention, 2 February: Clauzel reads a letter from the Representatives with the armies of the North on their interview with the minister from the Hague (4)": "In 4 papers (April) of the 6 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "London, 15 January: the action of the 8th at Gueldermalsen (4)": "In 4 papers (April) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, 13-24 January: the money paid to the King of Prussia; the Secretary at War's statement of the forces in British pay (3)": "In 3 papers of the 6 that survive for its weeks; the bar is 4. Below the bar.",
+      "Paris, 7 January: the commander in chief of the army of the North to the Representative Bellegarde, Bois-le-Duc, 29 December (4)": "In 4 papers (April) of the 6 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Helvoet, 17 January: a letter on the confusion among the English ('The Rotterdam post is this moment arrived') (4)": "In 4 papers (April) of the 6 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Heidelberg, 26 December: the capitulation of Fort du Rhine, near Mannheim (4)": "In 4 papers (April) of the 6 that survive for its weeks, a document; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Mr. Pinckney to Mr. Johnson, consul, 30 January 1795: Mr. Monroe writes that the Convention will carry the treaty of commerce into full effect (5)": "In 5 papers (April) of the 8 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Additional instructions to the commanders of British ships of war and privateers, 9 February 1795: Dutch vessels to be brought in (4)": "In 4 papers (April) of the 7 that survive for its weeks, a document; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The treaty of peace between the French Republic and the Grand Duke of Tuscany, read in the Convention by Richard (5)": "In 5 papers (April) of the 8 that survive for its weeks, a document; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Boston, 27 April, 'Capture of Roses': the Representatives with the army of the Eastern Pyrenees to the Committee of Public Safety (4)": "In 4 papers (April) of the 7 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Boston, 23 April: 'The tide of liberty... is now overflowing Europe'; the French resolved to humble the pride of Great Britain (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Boston, 25 April: the Convention passes to the order of the day on Genet's insinuations against the President; an Algerine squadron in the Atlantic (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, 9 March: Lord Grenville's conference with the two Dutch commissioners (5)": "In 5 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, 6 March: a courier from Dublin: Mr. Grattan and Sir John Parnell to bear witness to the agreement between Earl Fitzwilliam and Mr. Pitt (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Frankfort, 3 February: the King of Prussia proposes an armistice for all the combined powers (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "'The Dutch exiles in England are preparing to embark for this asylum of all nations' (4)": "In 4 papers (April) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Horse Guards, 10 March: Lieutenant General Harcourt's dispatch from Osnaburg of 18 February (4)": "In 4 papers (April) of the 7 that survive for its weeks, a letter or report; not chosen: April is covered by the Secretary of State's circular and the sloop Delia's report from St. Martins, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "A letter from St. Eustatius, 1 April, to a merchant in Philadelphia: the English declare war against the Dutch (4)": "In 4 papers (May) of the 7 that survive for its weeks, a letter or report; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "London: in Germany 'every individual able to bear arms is summoned to appear'; a messenger from the army at Osnaburg (3)": "In 3 papers of the 6 that survive for its weeks (own words: the Gazette of the United States (25 April) prints the sentence inside another paragraph); the bar is 4. Below the bar.",
+      "An Act for the more effectual recovery of debts due from individuals to the United States (2)": "In 2 papers of the 6 that survive for its weeks (own words: the act (the Gazette of the United States and the Columbian Informer print the bill's first section in the House's debate)); the bar is 4. Below the bar.",
+      "'Tanning': the French new method of tanning invented by Citizen Seguin (4)": "In 4 papers (May) of the 6 that survive for its weeks, an essay or verse; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "London, 18 March: a Spanish packet at Falmouth brings word that the Spanish army in Roussillon has attacked the French (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "London, 21 March: Dutch merchants escaped from the Texel; letters from Paris: judgment of death against Barere and his accomplices, and a rising in the faubourgs (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "From Grenada, 14 April: a ship captain who lay there from 3 March to 4 April tells of 'the insurrection and massacre' (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Philadelphia, 13 May: an American consul in England to the Secretary of State, 10 February: the wheat crop short, grain at an enormous price (4)": "In 4 papers (May) of the 6 that survive for its weeks, a letter or report; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "New York, 18 May: the ship Amsterdam Packet from Greenock with London papers to 28 March (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Paris, 24 March: the Spanish court asks for a negotiator to settle a final and lasting peace (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Brussels, 16 March: the Austrians expected to cross the Rhine to Luxembourg (4)": "In 4 papers (May) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "A letter from Lisbon, 3 April: the Dey of Algiers declares war against Spain; an action between the French and the English in the Mediterranean (4)": "In 4 papers (May) of the 6 that survive for its weeks, a letter or report; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "'Peach trees': the peach grafted on the plum (4)": "In 4 papers (May) of the 5 that survive for its weeks, an essay or verse; not chosen: May is covered by the Port Mary's news, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "London, 1 April: a treaty of alliance with the Empress of Russia signed (3)": "In 3 papers of the 6 that survive for its weeks; the bar is 4. Below the bar.",
+      "From Amsterdam, 1 March: Citizen Adams and the inspection of American vessels in the ports of Holland (4)": "In 4 papers (June) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "A letter from the Hague, 8 April: risings of the Orange party in several cities of Holland (4)": "In 4 papers (June) of the 6 that survive for its weeks, a letter or report; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "London, 3 May: the burning of the Boyne man of war at Spithead (4)": "In 4 papers (June) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The King of Sweden's letter to the National Convention accrediting his ambassador extraordinary (4)": "In 4 papers (June) of the 6 that survive for its weeks, a document; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Boston, 17 June, from Bayonne: the young men from Bordeaux southward put in requisition against Spain (4)": "In 4 papers (June) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Philadelphia, 16 June: dispatches from France for the French minister: peace with Spain, Sardinia and the Two Sicilies reported (4)": "In 4 papers (June) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "A letter from Bordeaux, 22 April, to the editor: 'The people here are perfectly tranquil' (4)": "In 4 papers (June) of the 6 that survive for its weeks, a letter or report; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Articles of agreement between the French and Batavian people for an alliance (5)": "In 5 papers (June) of the 7 that survive for its weeks, a document; not chosen: June is covered by the treaty with Prussia, the judgment of Mr. Hastings and the Boston account of the burning of a vessel, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "London, 5 May: the Hamburg mail: preliminaries of peace with the Landgrave of Hesse Cassel nearly concluded (3)": "In 3 papers of the 7 that survive for its weeks; the bar is 4. Below the bar.",
+      "Boston, 22 June, 'Illegal and hasty adjudication': a crowd at the Long Wharf burns a vessel said to be a New Providence or Bermudian privateer (4)": "In 4 papers (June) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the burning of a vessel at Boston: the Boston account 'Unwarrantable Proceedings' (chosen, 5 of 7) is in the ledger.",
+      "The Governor of Massachusetts's proclamation on the burning of the vessel Betsy at the Long Wharf (4)": "In 4 papers (June) of the 7 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the burning of a vessel at Boston: the Boston account 'Unwarrantable Proceedings' (chosen, 5 of 7) is in the ledger; the Governor's proclamation is not chosen, as the chosen band takes about as many stories as a standard year.",
+      "From the Aurora: the population of the states whose senators voted for and against the treaty (4)": "In 4 papers (June) of the 7 that survive for its weeks, a single paragraph of a news column; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the treaty itself (chosen) is in the ledger.",
+      "The Governor of Massachusetts's message to the legislature on the same affair, and the legislature's resolution offering a reward (4)": "In 4 papers (June) of the 7 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the burning of a vessel at Boston: the Boston account 'Unwarrantable Proceedings' (chosen, 5 of 7) is in the ledger; the Governor's message is not chosen, as the chosen band takes about as many stories as a standard year.",
+      "From the Gazette of the United States: 'Fire, fire, fire, help, help, the town is on fire' (4)": "In 4 papers (July) of the 6 that survive for its weeks, an essay or verse; not chosen: July is covered by the treaty with Great Britain, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "The National Convention, 25 May: Laporte's report and the decree against the insurgents of the faubourg Saint-Antoine (4)": "In 4 papers (July) of the 6 that survive for its weeks, a document; not chosen: July is covered by the treaty with Great Britain, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "New Spice Island: the ship Halcyon, exploring a passage from Botany Bay to China, finds an island near New Guinea (5)": "In 5 papers (July) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: July is covered by the treaty with Great Britain, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The propositions offered in the Senate as substitutes for the resolution ratifying the treaty: Mr. Burr's and Mr. Tazewell's motions (4)": "In 4 papers (July) of the 6 that survive for its weeks, a document; not chosen: one affair's items (X-1800-01): the treaty with Great Britain: the treaty itself (chosen) is in the ledger.",
+      "The memorial of the citizens of Philadelphia, the Northern Liberties and Southwark to the President on the treaty (3)": "In 3 papers of the 5 that survive for its weeks; the bar is 4. Below the bar.",
+      "London, 12 August: a rupture between Great Britain and Spain spoken of, after the cession of the Spanish part of St. Domingo to France (4)": "In 4 papers (October) of the 6 that survive for its weeks, a single paragraph of a news column; not chosen: October is covered by the London paragraph 'War with Holland', and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "An extract from Governor Gilman's proclamation for the annual thanksgiving in New Hampshire (3)": "In 3 papers of the 6 that survive for its weeks; the bar is 4. Below the bar.",
+      "London: the Spanish government to send a force to St. Domingo until the French can take possession (4)": "In 4 papers (November) of the 5 that survive for its weeks, a single paragraph of a news column; not chosen: November is covered by Commodore Warren's dispatches (admitted) and the schooner White Fish, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The Senate's answer to the President's speech at the opening of the session, December 1795 (2)": "In 2 papers of the 2 that survive for its weeks (own words (the unit's family joins it with the Senate's address of November 1794)); the bar is 4. Below the bar.",
+      "Other items of 3 papers or fewer (by count)": "The other items the finder lists, and the passages the sweep found in fewer than 4 papers, were compared by machine with every page and counted again by their openings; none reaches 4 papers. They were not read one by one."
+    },
+    "for_the_owner": {
+      "Salem, January 1795: a report that an American brig was run down at sea, and of the one survivor (4)": "In 4 papers (January to March) of the 7 that survive for its weeks; it turns on private persons, a ship's crew and its survivor, named in the paragraph (R-04): listed for the owner, without names; not admitted.",
+      "Boston, February 1795: 'A horrid murder!': a report of a killing in a household at Andover (5)": "In 5 papers (February and March) of the 7 that survive for its weeks; a killing in a private household, its persons named (R-04): listed for the owner, without names; not admitted.",
+      "Newport, February 1795: the fortunes of the family of the French admiral of the American war (4)": "In 4 papers (February and March) of the 7 that survive for its weeks; it turns on the admiral's daughters, private persons (R-04): listed for the owner, without names; not admitted.",
+      "Lexington, May 1795: a party of about fifty men out on Paint Creek, a branch of the Scioto, falls in with an Indian camp (4)": "In 4 papers (May to July) of the 6 that survive for its weeks; it turns on a private armed party, its leader named (R-04): listed for the owner, without names; not admitted.",
+      "Philadelphia, June 1795: the Supreme Court ends the trials of those concerned in the insurrection to the westward (4)": "In 4 papers (June) of the 6 that survive for its weeks; it turns on two private persons found guilty of treason and named in it (R-04): listed for the owner, without names; not admitted."
+    },
+    "for_user_decision": {
+      "The choice for 1795": "As built (X-1795-01): 3 groups admitted by the rule's first part and 18 chosen, 21 stories and 102 printings; the other eligible items are listed as not chosen.",
+      "One paper under two numbers or titles": "As built (X-1795-02): the Gazette of the United States under two catalogue numbers, and The Mirrour and The Federal Mirror of Concord, each counted as one paper (C-04).",
+      "Printed forms counted together": "As built (X-1795-03): the Georgia message, the sloop Delia, the treaty with Prussia and Commodore Warren's dispatches, each with its other form (C-02).",
+      "The treaty with Great Britain": "As built (X-1795-04): 4 papers by its own words, chosen; for the February news of the treaty the Western Posts (6 of 7) is chosen and Mr. Jay's letter to his brother (5 of 7) is not (X-1800-01).",
+      "The acts by their own words": "As built (X-1795-05): each act counted by its own opening; only the naturalization act reaches the bar.",
+      "A transcription that garbles an opening": "As built (X-1795-06): the Mirrour's printing of the President's proclamation, on a page torn at the top right, is counted: its opening survives in part, RevX garbles it, and the scan check reads it on the scan.",
+      "Five items on private persons": "Listed for the owner without names (X-1795-07).",
+      "A sweep for short items at 4 papers": "The sweep of seven-word sequences shared by 4 or more papers was run for 1795 (X-1795-08).",
+      "Grading calls on the transcriptions": "The scan check graded the transcriptions by the protocol (C-14), as for 1774, 1775, 1783 and 1791. Calls the owner may revisit: (1) a word read as another real word that changes the sense is fact-changing, even where it is one or two words: 'encroaching' for the printed 'encreasing' (S95-005, S95-009), 'bail you with views' for 'hail you with vows' (S95-050), 'vicious' for 'riotous' (S95-082), and 'attended' for the misprint 'assended' (S95-074); (2) a name read as another name is fact-changing ('Robespierre' for Rewbel, S95-075; 'S. Willems' for S. Wiseleus, S95-052; 'Prins' for Pruys, S95-064, medium confidence), while a name a letter or two off is minor ('Pruyss', 'Thoem', 'P. J. B. F.'); (3) on the torn page of the Mirrour of 16 January, words lost to the tear are not counted, but RevX's 'concern' and 'confirmation' where the surviving letters read 'consola…' and 'contin…' are fact-changing (S95-006); (4) a misprinted year read as another year is fact-changing ('1775' for the printed '1725', S95-046), while a misprint RevX corrects silently is minor and recorded as a printed difference ('conrary', 'referance', 'Dispatchs'); (5) figures read on enlargements: the broken '20' that RevX reads '25' (S95-002) and the worn fraction '½' that it reads '3/4' (S95-098, medium confidence); (6) where RevX closes an item with '...' and the print goes on, the words are counted as dropped, fact-changing (S95-044)."
+    }
+  }
+}

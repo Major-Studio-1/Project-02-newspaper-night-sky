@@ -1,0 +1,3517 @@
+{
+  "ledger_id": "ledger:stories-1796",
+  "ledger_version": 1,
+  "base_release": "0.11.36",
+  "target_release": "0.11.37",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1796",
+  "evidence_dir": "outputs/story_discovery_1796/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1796, and of 1795 where they reach the 1796 pages (long-running ones included), counts of every item in 3 or more papers by its own opening over all 1,552 pages of 1796 in both transcriptions, a sweep of word-for-word passages shared by 4 or more papers for short items the families miss, reading of every item that meets the bar, and scan checks of each admitted and chosen passage, by the thin-year rule as amended (register Y-THIN, B1: more than half of the papers that survive for the item's weeks, and at least 4, make an item eligible; items printed by every paper in print are admitted, the others chosen to cover the months and the kinds of news)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1796/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1796/items_from_1795.json": "retrieval_candidates",
+    "outputs/story_discovery_1796/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1796/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1796.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1796_review.json": "scan_review",
+    "outputs/story_discovery_1796/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1796/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S96-001",
+      "page_key": "sn83025588|1796-01-09|1|3",
+      "excerpt_start": "On Sunday last arrived in this",
+      "excerpt_end": "to detail it. He declares, that assignats",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-schooner-industry-from-st-malo-oral-intelligence-from-france-1796"
+      ],
+      "summary": "Boston, January 1796: oral news from France.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'He ſailed' with a long s; the transcription 'failed' makes it a different word. The rest matches."
+      ],
+      "crops": [
+        "S96-001.jpg"
+      ],
+      "family": [
+        "R1796-0012",
+        "R1796-0198"
+      ]
+    },
+    {
+      "id": "S96-002",
+      "page_key": "sn84026273|1796-01-14|1|3",
+      "excerpt_start": "On Sunday last arrived in this",
+      "excerpt_end": "to detail it. He declares that assignats",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-schooner-industry-from-st-malo-oral-intelligence-from-france-1796"
+      ],
+      "summary": "The Gazette of the United States prints the Boston report of the Industry.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'in this harbour ſchooner Induſtry'; the transcription '(Schuylkill)' puts a river's name in place of 'schooner', which changes the sense, and 'failed' for 'ſailed' is a different word. The rest matches."
+      ],
+      "crops": [
+        "S96-002.jpg"
+      ],
+      "family": [
+        "R1796-0012",
+        "R1796-0200",
+        "R1796-0203"
+      ]
+    },
+    {
+      "id": "S96-003",
+      "page_key": "sn84038410|1796-01-28|1|2",
+      "excerpt_start": "On Sunday last arrived in this",
+      "excerpt_end": "to detail it. He declares, that assignats",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-schooner-industry-from-st-malo-oral-intelligence-from-france-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Boston report of the Industry.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the printed 'melancholly'. On this small scan the long s of 'ſailed' cannot be told from an f, so 'failed' is not counted."
+      ],
+      "crops": [
+        "S96-003.jpg"
+      ],
+      "family": [
+        "R1796-0012",
+        "R1796-0057",
+        "R1796-0059",
+        "R1796-0200"
+      ]
+    },
+    {
+      "id": "S96-004",
+      "page_key": "sn82014782|1796-02-20|1|1",
+      "excerpt_start": "On Sunday last arrived in this",
+      "excerpt_end": "our duty to detail it. He declares,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-schooner-industry-from-st-malo-oral-intelligence-from-france-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Boston report of the Industry.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints 'harbor, the ſchooner'. On this small scan the long s of 'ſailed' cannot be told from an f, so 'failed' is not counted."
+      ],
+      "crops": [
+        "S96-004.jpg"
+      ],
+      "family": [
+        "R1796-0012",
+        "R1796-0056"
+      ]
+    },
+    {
+      "id": "S96-005",
+      "page_key": "sn84026273|1796-02-22|1|3",
+      "excerpt_start": "There are yet changes in the",
+      "excerpt_end": "operate advantageously to the army of Gen.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-papers-borders-of-the-rhine-changes-in-the-french-army-november-1795"
+      ],
+      "summary": "The Rhine, November 1795: the French army's disposition.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print has the short form 'tho't', which the transcription spells out as 'thought'."
+      ],
+      "crops": [
+        "S96-005.jpg"
+      ],
+      "family": [
+        "R1796-0001",
+        "R1796-0066",
+        "R1796-0246",
+        "R1796-0247"
+      ]
+    },
+    {
+      "id": "S96-006",
+      "page_key": "sn84026273|1796-02-23|1|3",
+      "excerpt_start": "We have been favored with a",
+      "excerpt_end": "by the British King. His Majesty's Ratification.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "charleston-paper-forms-of-ratification-of-the-treaty-with-great-britain-1796"
+      ],
+      "summary": "The British treaty, 1796: its ratifications.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-006.jpg"
+      ],
+      "family": [
+        "R1796-0009"
+      ]
+    },
+    {
+      "id": "S96-007",
+      "page_key": "sn83025588|1796-03-05|1|3",
+      "excerpt_start": "We have been favoured with a",
+      "excerpt_end": "by the British King.] HIS MAJESTY'S RATIFICATION.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "charleston-paper-forms-of-ratification-of-the-treaty-with-great-britain-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the forms of ratification of the British treaty.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-007.jpg"
+      ],
+      "family": [
+        "R1796-0001",
+        "R1796-0009"
+      ]
+    },
+    {
+      "id": "S96-008",
+      "page_key": "sn84038410|1796-03-10|1|1",
+      "excerpt_start": "We have been favoured with a",
+      "excerpt_end": "the faith, duke of Brunswick and Lunenburgh...",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "charleston-paper-forms-of-ratification-of-the-treaty-with-great-britain-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the forms of ratification of the British treaty.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The print has the Charleston paper's whole introduction, but the transcription drops its second sentence ('From it we have extracted the forms of Ratification ... acceded to by the British King') and breaks off with '...' where the print goes on. The rest matches."
+      ],
+      "crops": [
+        "S96-008.jpg"
+      ],
+      "family": [
+        "R1796-0009"
+      ]
+    },
+    {
+      "id": "S96-009",
+      "page_key": "sn84038410|1796-03-10|1|2",
+      "excerpt_start": "THERE are yet changes in the",
+      "excerpt_end": "of general Pichegru, are fallen back again.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-papers-borders-of-the-rhine-changes-in-the-french-army-november-1795"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Paris papers' article from the Rhine.",
+      "note": "Same item as the other printings. The paper dates the article 'November 18'; the other papers print 8 November.",
+      "scan_findings": [
+        "Scan reads 'Hatry'; the transcription 'Harry' turns the general's name into a different one. The print itself reads 'Lefelore', 'Labn' and 'which were thought', and dates the item 'November 18' where the other papers print Nov. 8."
+      ],
+      "crops": [
+        "S96-009.jpg"
+      ],
+      "family": [
+        "R1796-0001",
+        "R1796-0065",
+        "R1796-0252",
+        "R1796-0253",
+        "R1796-0255"
+      ]
+    },
+    {
+      "id": "S96-010",
+      "page_key": "sn83025588|1796-03-12|1|2",
+      "excerpt_start": "There are yet changes in the",
+      "excerpt_end": "operate advantageously to the army of Gen.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-papers-borders-of-the-rhine-changes-in-the-french-army-november-1795"
+      ],
+      "summary": "The New Hampshire Gazette prints the Paris papers' article from the Rhine.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except the name 'D'Herville', which the transcription gives as 'D'Hervillie', still the same name. The paper prints 'Sieg' where GUS prints 'Seig'."
+      ],
+      "crops": [
+        "S96-010.jpg"
+      ],
+      "family": [
+        "R1796-0001",
+        "R1796-0036",
+        "R1796-0066",
+        "R1796-0240",
+        "R1796-0257"
+      ]
+    },
+    {
+      "id": "S96-011",
+      "page_key": "sn82014782|1796-03-19|1|3",
+      "excerpt_start": "George the third by the grace",
+      "excerpt_end": "secretary of state for foreign affairs, &c.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "charleston-paper-forms-of-ratification-of-the-treaty-with-great-britain-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the forms of ratification of the British treaty.",
+      "note": "Printed without the Charleston paper's words, from His Majesty's ratification (C-02); the President's ratification follows on 26 March.",
+      "scan_findings": [
+        "Scan matches the excerpt except spellings: the print's 'Greenville', 'Wotton' and 'councellor' become 'Grenville', 'Wootton' and 'counsellor'; the names stay the same."
+      ],
+      "crops": [
+        "S96-011.jpg"
+      ],
+      "family": [
+        "R1796-0009",
+        "R1796-0249",
+        "R1796-0250"
+      ]
+    },
+    {
+      "id": "S96-012",
+      "page_key": "sn83025524|1796-03-29|1|2",
+      "excerpt_start": "THERE are yet changes in the",
+      "excerpt_end": "operate advantageously to the army of Gen.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-papers-borders-of-the-rhine-changes-in-the-french-army-november-1795"
+      ],
+      "summary": "The Federal Mirror prints the Paris papers' article from the Rhine.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except 'Hattry' for the printed 'Ha-try', a name off by a letter; the print's misprint 'aud' is corrected to 'and'. The paper prints 'Sieg' where GUS prints 'Seig'."
+      ],
+      "crops": [
+        "S96-012.jpg"
+      ],
+      "family": [
+        "R1796-0001",
+        "R1796-0066",
+        "R1796-0180",
+        "R1796-0257"
+      ]
+    },
+    {
+      "id": "S96-013",
+      "page_key": "sn84026273|1796-04-07|1|3",
+      "excerpt_start": "Resolved, That, it being declared by",
+      "excerpt_end": "not claim any agency in making treaties;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "house-of-representatives-mr-blount-resolutions-on-treaties-april-1796"
+      ],
+      "summary": "The House, April 1796: Mr. Blount's resolutions on treaties.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-013.jpg"
+      ],
+      "family": [
+        "R1796-0007"
+      ]
+    },
+    {
+      "id": "S96-014",
+      "page_key": "sn84026273|1796-04-13|1|3",
+      "excerpt_start": "Extract of a letter from Port-au-Prince,",
+      "excerpt_end": "in this City, shall be inserted to-morrow.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "port-au-prince-letter-unsuccessful-attack-on-leogane-1796"
+      ],
+      "summary": "Port-au-Prince, March 1796: the attack on Leogane.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. Its last sentence is the editor's separate notice printed after the letter ('The Extract of a Letter from a Gentleman in Baltimore-Town ... ſhall be inſerted to-morrow')."
+      ],
+      "crops": [
+        "S96-014.jpg"
+      ]
+    },
+    {
+      "id": "S96-015",
+      "page_key": "sn84038410|1796-04-14|1|1",
+      "excerpt_start": "TREATY BETWEEN THE UNITED STATES AND",
+      "excerpt_end": "permanent basis, the friendship and good correspondence...",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-friendship-limits-and-navigation-with-spain-1795"
+      ],
+      "summary": "The treaty with Spain, 1795.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Crop shows the heading and the opening; they match the excerpt as far as the faint print can be read. The transcription breaks off with '...' after 'correspondence' where the print goes on with the treaty: words dropped."
+      ],
+      "crops": [
+        "S96-015.jpg"
+      ],
+      "scan_boxes": [
+        [
+          739,
+          312,
+          1113,
+          470
+        ]
+      ]
+    },
+    {
+      "id": "S96-016",
+      "page_key": "sn84038410|1796-04-14|1|3",
+      "excerpt_start": "Resolved, That it being declared by",
+      "excerpt_end": "any agency in making Treaties, but that",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "house-of-representatives-mr-blount-resolutions-on-treaties-april-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints Mr. Blount's resolutions.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop shows the whole excerpt, and the small, faint scan matches it as far as it can be read. The paper prints '2d section' and 'the advice of the Senate' without 'and consent': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S96-016.jpg"
+      ],
+      "family": [
+        "R1796-0007",
+        "R1796-0037",
+        "R1796-0068",
+        "R1796-0069"
+      ],
+      "scan_boxes": [
+        [
+          44,
+          1610,
+          412,
+          1749
+        ]
+      ]
+    },
+    {
+      "id": "S96-017",
+      "page_key": "sn83025588|1796-04-16|1|1",
+      "excerpt_start": "TREATY BETWEEN THE UNITED STATES AND",
+      "excerpt_end": "advantage and reciprocal utility to both nations.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-friendship-limits-and-navigation-with-spain-1795"
+      ],
+      "summary": "The New Hampshire Gazette prints the treaty with Spain.",
+      "note": "The New Hampshire Gazette of 16 April 1796 (No. 2055) is filed again under 9 April; this printing uses the 16 April key.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the print reads 'the ſettlements whereof', which the transcription gives as 'settlement'."
+      ],
+      "crops": [
+        "S96-017.jpg"
+      ],
+      "family": [
+        "R1796-0008",
+        "R1796-0042"
+      ]
+    },
+    {
+      "id": "S96-018",
+      "page_key": "sn84026273|1796-04-18|1|3",
+      "excerpt_start": "The America has brought home an",
+      "excerpt_end": "species that grow to an enormous size.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-the-ship-america-brings-home-an-elephant-1796"
+      ],
+      "summary": "Philadelphia, April 1796: an elephant from Bengal.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. It prints 'a great curiosity' and 'of the species that grow' where NHG and FM have 'a very great curiosity' and 'of a species that grows': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S96-018.jpg"
+      ],
+      "family": [
+        "R1796-0044",
+        "R1796-0045",
+        "R1796-0299"
+      ]
+    },
+    {
+      "id": "S96-019",
+      "page_key": "sn84038410|1796-04-21|1|3",
+      "excerpt_start": "Extract of a letter from Port",
+      "excerpt_end": "Black, of the ship Ann, from St.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "port-au-prince-letter-unsuccessful-attack-on-leogane-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the letter from Port-au-Prince.",
+      "note": "Same item as the other printings. The paper prints 'Leogale', and its date for the letter looks like 'March 29' where the other papers print the 27th.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print itself reads 'Leogale' and 'arrival'. The letter's date figure is unclear on this small scan (it looks more like 29 than 27), so the transcription's '29' is not counted as an error."
+      ],
+      "crops": [
+        "S96-019.jpg"
+      ],
+      "family": [
+        "R1796-0072",
+        "R1796-0282",
+        "R1796-0306"
+      ]
+    },
+    {
+      "id": "S96-020",
+      "page_key": "sn83025588|1796-04-23|1|1",
+      "excerpt_start": "Resolved, That, it being declared by",
+      "excerpt_end": "claim any agency in making treaties; but",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "house-of-representatives-mr-blount-resolutions-on-treaties-april-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints Mr. Blount's resolutions.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-020.jpg"
+      ],
+      "family": [
+        "R1796-0007",
+        "R1796-0069",
+        "R1796-0288",
+        "R1796-0293",
+        "R1796-0294",
+        "R1796-0313"
+      ]
+    },
+    {
+      "id": "S96-021",
+      "page_key": "sn83025588|1796-04-23|1|2",
+      "excerpt_start": "Extract of a letter from Port-au-Prince,",
+      "excerpt_end": "Tuesday last, at Fayette county, Union town,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "port-au-prince-letter-unsuccessful-attack-on-leogane-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the letter from Port-au-Prince.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except the place name: the print reads 'Leogane', which the transcription garbles to 'Leonan'. The excerpt runs on into the next paragraph (Pittsburgh, April 2), as printed."
+      ],
+      "crops": [
+        "S96-021.jpg"
+      ],
+      "family": [
+        "R1796-0070",
+        "R1796-0286",
+        "R1796-0287",
+        "R1796-0312",
+        "R1796-0314"
+      ]
+    },
+    {
+      "id": "S96-022",
+      "page_key": "sn84023150|1796-04-25|1|1",
+      "excerpt_start": "T R E A T Y",
+      "excerpt_end": "advantage and reciprocal utility to both nations.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-friendship-limits-and-navigation-with-spain-1795"
+      ],
+      "summary": "The Eagle, or, Dartmouth Centinel prints the treaty with Spain.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop shows the heading and the whole excerpt, and they match, except that the word after 'happily' begins 'pr' before a stain, so the transcription's 'subsists' is not what is printed (the sense is the same). The stain also hides the words before 'respondence', so 'good' cannot be checked."
+      ],
+      "crops": [
+        "S96-022.jpg"
+      ],
+      "family": [
+        "R1796-0008"
+      ],
+      "scan_boxes": [
+        [
+          304,
+          1631,
+          1337,
+          2820
+        ]
+      ]
+    },
+    {
+      "id": "S96-023",
+      "page_key": "sn83025524|1796-04-26|1|3",
+      "excerpt_start": "Extract of a letter from Portauince,",
+      "excerpt_end": "Westindies mention, that three of the vessels",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "port-au-prince-letter-unsuccessful-attack-on-leogane-1796"
+      ],
+      "summary": "The Federal Mirror prints the letter from Port-au-Prince.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except two garbles: 'Portauince' for the printed 'Portauprince' and 'Accoonts' for 'Accounts'. The second crop shows only the word 'lately', past the end of the excerpt."
+      ],
+      "crops": [
+        "S96-023-1.jpg",
+        "S96-023-2.jpg"
+      ],
+      "family": [
+        "R1796-0070",
+        "R1796-0313",
+        "R1796-0314",
+        "R1796-0316"
+      ]
+    },
+    {
+      "id": "S96-024",
+      "page_key": "sn84026273|1796-04-27|1|3",
+      "excerpt_start": "The Paris papers to the 6th,",
+      "excerpt_end": "and that no journal (public print) will",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-paragraph-the-paris-papers-to-the-6th-march-1796"
+      ],
+      "summary": "London, March 1796: the Paris papers and the press.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-024.jpg"
+      ],
+      "family": [
+        "R1796-0013",
+        "R1796-0322",
+        "R1796-0323",
+        "R1796-0324",
+        "R1796-0325"
+      ]
+    },
+    {
+      "id": "S96-025",
+      "page_key": "sn84038410|1796-04-28|1|3",
+      "excerpt_start": "Capt. Crownfield, of the ship America",
+      "excerpt_end": "in America, and a very great curiosity.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-the-ship-america-brings-home-an-elephant-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the paragraph on the elephant.",
+      "note": "Printed in the paper's own words: 'Capt. Crowninshield, of the ship America, arrived from the Isle of France, brought home an ELEPHANT' (C-02). The captain's name is read from the scan; RevX reads it 'Crownfield'.",
+      "scan_findings": [
+        "The paper's own opening, naming the ship's captain, is printed, and the rest matches the excerpt. The captain's name is printed longer than in the transcription, which turns it into a different name; 'ELLE-HANT' is a garble."
+      ],
+      "crops": [
+        "S96-025.jpg"
+      ],
+      "family": [
+        "R1796-0300",
+        "R1796-0315",
+        "R1796-0328",
+        "R1796-0330"
+      ],
+      "scan_boxes": [
+        [
+          0,
+          1530,
+          490,
+          1660
+        ]
+      ]
+    },
+    {
+      "id": "S96-026",
+      "page_key": "sn82014782|1796-04-30|1|3",
+      "excerpt_start": "Resolved, That it being declared by",
+      "excerpt_end": "any agency in making treaties, but that",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "house-of-representatives-mr-blount-resolutions-on-treaties-april-1796"
+      ],
+      "summary": "The Kentucky Gazette prints Mr. Blount's resolutions.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints '2d' for both section and article, as transcribed."
+      ],
+      "crops": [
+        "S96-026.jpg"
+      ],
+      "family": [
+        "R1796-0007",
+        "R1796-0068"
+      ]
+    },
+    {
+      "id": "S96-027",
+      "page_key": "sn83025588|1796-04-30|1|2",
+      "excerpt_start": "An express passed through this city",
+      "excerpt_end": "27. SALEM. We noticed in our last,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "albany-paragraph-express-with-lord-dorchester-dispatches-western-posts-1796"
+      ],
+      "summary": "Albany, April 1796: dispatches on the western posts.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except 'these dispatches', read as 'those' (minor). The '27. SALEM.' at the end of the excerpt is the next item's dateline and heading, not part of the Albany paragraph."
+      ],
+      "crops": [
+        "S96-027.jpg"
+      ],
+      "family": [
+        "R1796-0013",
+        "R1796-0014",
+        "R1796-0045",
+        "R1796-0046",
+        "R1796-0305",
+        "R1796-0306",
+        "R1796-0322",
+        "R1796-0323",
+        "R1796-0324",
+        "R1796-0325",
+        "R1796-0333"
+      ]
+    },
+    {
+      "id": "S96-028",
+      "page_key": "sn83025588|1796-04-30|1|2",
+      "excerpt_start": "The Paris papers to the 6th,",
+      "excerpt_end": "and that no journal (public print) will",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-paragraph-the-paris-papers-to-the-6th-march-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the London paragraph on the Paris papers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except 'restraint', read as 'restraints' (a minor slip)."
+      ],
+      "crops": [
+        "S96-028.jpg"
+      ],
+      "family": [
+        "R1796-0013",
+        "R1796-0014",
+        "R1796-0045",
+        "R1796-0046",
+        "R1796-0305",
+        "R1796-0306",
+        "R1796-0322",
+        "R1796-0323",
+        "R1796-0324",
+        "R1796-0325",
+        "R1796-0333"
+      ]
+    },
+    {
+      "id": "S96-029",
+      "page_key": "sn83025588|1796-04-30|1|2",
+      "excerpt_start": "The America, has brought home an",
+      "excerpt_end": "species that grows to an enormous size.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-the-ship-america-brings-home-an-elephant-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the paragraph on the elephant.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-029.jpg"
+      ],
+      "family": [
+        "R1796-0013",
+        "R1796-0014",
+        "R1796-0045",
+        "R1796-0046",
+        "R1796-0305",
+        "R1796-0306",
+        "R1796-0322",
+        "R1796-0323",
+        "R1796-0324",
+        "R1796-0325",
+        "R1796-0333"
+      ]
+    },
+    {
+      "id": "S96-030",
+      "page_key": "sn83025524|1796-05-03|1|3",
+      "excerpt_start": "An express passed through this city",
+      "excerpt_end": "WORTH joined. NEW YORK, APRIL 18. We",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "albany-paragraph-express-with-lord-dorchester-dispatches-western-posts-1796"
+      ],
+      "summary": "The Federal Mirror prints the Albany paragraph on Lord Dorchester's dispatches.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the words after 'dispatches' belong to the next items."
+      ],
+      "crops": [
+        "S96-030.jpg"
+      ],
+      "family": [
+        "R1796-0013",
+        "R1796-0045",
+        "R1796-0333"
+      ]
+    },
+    {
+      "id": "S96-031",
+      "page_key": "sn83025524|1796-05-03|1|3",
+      "excerpt_start": "The Paris papers to the 6th,",
+      "excerpt_end": "and that no journal (public print) will",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-paragraph-the-paris-papers-to-the-6th-march-1796"
+      ],
+      "summary": "The Federal Mirror prints the London paragraph on the Paris papers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; its worn type is read correctly."
+      ],
+      "crops": [
+        "S96-031.jpg"
+      ],
+      "family": [
+        "R1796-0013",
+        "R1796-0045",
+        "R1796-0333"
+      ]
+    },
+    {
+      "id": "S96-032",
+      "page_key": "sn83025524|1796-05-03|1|3",
+      "excerpt_start": "The America, has brought home an",
+      "excerpt_end": "species that grows to an enormous size.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-the-ship-america-brings-home-an-elephant-1796"
+      ],
+      "summary": "The Federal Mirror prints the paragraph on the elephant.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; like NHG it prints 'a very great curiosity' and 'of a species that grows'."
+      ],
+      "crops": [
+        "S96-032.jpg"
+      ],
+      "family": [
+        "R1796-0013",
+        "R1796-0045",
+        "R1796-0333"
+      ]
+    },
+    {
+      "id": "S96-033",
+      "page_key": "sn84026273|1796-05-05|1|3",
+      "excerpt_start": "A London paper of the 19th",
+      "excerpt_end": "some beneficial arrangements are to be completed.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-paragraph-london-paper-probability-of-war-between-spain-and-england-1796"
+      ],
+      "summary": "New York, May 1796: Spain and England.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads '19th March'. A stain hides the left half of two lines: the print has words before 'it is an agreed point' that the transcription leaves out, and the phrase before ', that Spain shall break' ends in '-in,', so 'the two nations' is not what is printed."
+      ],
+      "crops": [
+        "S96-033.jpg"
+      ],
+      "family": [
+        "R1796-0015",
+        "R1796-0340",
+        "R1796-0341"
+      ],
+      "scan_boxes": [
+        [
+          229,
+          1001,
+          1082,
+          1608
+        ]
+      ]
+    },
+    {
+      "id": "S96-034",
+      "page_key": "sn82014782|1796-05-07|1|3",
+      "excerpt_start": "An express passed through this city",
+      "excerpt_end": "Gaz.] An extract of a letter from",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "albany-paragraph-express-with-lord-dorchester-dispatches-western-posts-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Albany paragraph on Lord Dorchester's dispatches.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'Western posts' and the credit to the Albany Gazette."
+      ],
+      "crops": [
+        "S96-034.jpg"
+      ],
+      "family": [
+        "R1796-0185"
+      ]
+    },
+    {
+      "id": "S96-035",
+      "page_key": "sn84038410|1796-05-12|1|3",
+      "excerpt_start": "i\\ London p?iXT of ilit? fS.h",
+      "excerpt_end": "..a agrren : hcir.cu J t' .",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-paragraph-london-paper-probability-of-war-between-spain-and-england-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the New York paragraph on Spain and England.",
+      "note": "The RevX transcriptions of this issue are shifted by one page (the RevX text filed as page 2 is page 3's), which the release's map of misfiled pages does not list; the item stands on page 3, and its excerpt is cut from page 3's CA text. The paper prints 'the 18th March'; the other papers print the 19th.",
+      "scan_findings": [
+        "Crop (page 3) shows the whole paragraph; this page's CA text is garbled throughout, but no garble reads as a different fact. The paper prints '18th March' and 'between France and Spain'."
+      ],
+      "crops": [
+        "S96-035.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "scan_boxes": [
+        [
+          427,
+          1153,
+          795,
+          1263
+        ]
+      ]
+    },
+    {
+      "id": "S96-036",
+      "page_key": "sn84026273|1796-05-13|1|3",
+      "excerpt_start": "A public misfortune is announced: it",
+      "excerpt_end": "was accepted on the 24th Ventose, (March",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-pichegru-resigns-the-command-of-the-army-of-the-rhine-1796"
+      ],
+      "summary": "Paris, March 1796: Pichegru resigns.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print's 'Mozelle' is modernised to 'Moselle' in the transcription (minor)."
+      ],
+      "crops": [
+        "S96-036.jpg"
+      ],
+      "family": [
+        "R1796-0017",
+        "R1796-0359",
+        "R1796-0361",
+        "R1796-0362"
+      ]
+    },
+    {
+      "id": "S96-037",
+      "page_key": "sn83025588|1796-05-14|1|3",
+      "excerpt_start": "A London paper of the 10th",
+      "excerpt_end": "that Spain shall break with Great Britain;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-paragraph-london-paper-probability-of-war-between-spain-and-england-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the New York paragraph on Spain and England.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads '19th March'; the transcription '10th' is a transcription error that changes the date. The rest of the excerpt matches."
+      ],
+      "crops": [
+        "S96-037.jpg"
+      ],
+      "family": [
+        "R1796-0015",
+        "R1796-0076",
+        "R1796-0334"
+      ]
+    },
+    {
+      "id": "S96-038",
+      "page_key": "sn84026273|1796-05-18|1|3",
+      "excerpt_start": "We have put into our hand",
+      "excerpt_end": "of their possessions in the West Indies;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-paragraph-letter-from-paris-on-a-conspiracy-against-the-british-treaty-1796"
+      ],
+      "summary": "New York, May 1796: a letter from Paris on the British treaty.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'instigate'; the transcription's 'incite' is a near-synonym, a minor error. The print's 'our hand' (singular) is a printed difference."
+      ],
+      "crops": [
+        "S96-038.jpg"
+      ],
+      "family": [
+        "R1796-0370",
+        "R1796-0371",
+        "R1796-0372"
+      ]
+    },
+    {
+      "id": "S96-039",
+      "page_key": "sn84038410|1796-05-19|1|2",
+      "excerpt_start": "A public misfortune is announced: it",
+      "excerpt_end": "was accepted on the 24th Ventose, (March",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-pichegru-resigns-the-command-of-the-army-of-the-rhine-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Paris paragraph on Pichegru.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt as far as this faint, low-resolution crop can be read; whether it prints 'Moselle' or 'Mozelle' cannot be told."
+      ],
+      "crops": [
+        "S96-039.jpg"
+      ],
+      "family": [
+        "R1796-0017",
+        "R1796-0352",
+        "R1796-0353",
+        "R1796-0354",
+        "R1796-0362",
+        "R1796-0374"
+      ]
+    },
+    {
+      "id": "S96-040",
+      "page_key": "sn84026273|1796-05-20|1|2",
+      "excerpt_start": "Resolved, That it being declared by",
+      "excerpt_end": "when a treaty stipulates regulations on any",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "house-of-representatives-mr-blount-resolutions-on-treaties-april-1796"
+      ],
+      "summary": "The Gazette of the United States prints Mr. Blount's resolutions.",
+      "note": "Printed again, as the resolutions were entered on the House's journals (C-08).",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'article in the Conſtitution'. The print's misprint 'aud' is corrected to 'and' in the transcription."
+      ],
+      "crops": [
+        "S96-040.jpg"
+      ],
+      "family": [
+        "R1796-0007",
+        "R1796-0376"
+      ]
+    },
+    {
+      "id": "S96-041",
+      "page_key": "sn82014782|1796-05-21|1|2",
+      "excerpt_start": "The Paris papers to the 6th",
+      "excerpt_end": "and that no journal (public print) will",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-paragraph-the-paris-papers-to-the-6th-march-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the London paragraph on the Paris papers.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-041.jpg"
+      ],
+      "family": [
+        "R1796-0013",
+        "R1796-0076",
+        "R1796-0365"
+      ]
+    },
+    {
+      "id": "S96-042",
+      "page_key": "sn83025588|1796-05-21|1|2",
+      "excerpt_start": "A public misfortune is announced; it",
+      "excerpt_end": "(March 14) by the Directory! March 27.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-pichegru-resigns-the-command-of-the-army-of-the-rhine-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the Paris paragraph on Pichegru.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print's 'Mozelle' is modernised to 'Moselle' in the transcription (minor)."
+      ],
+      "crops": [
+        "S96-042.jpg"
+      ],
+      "family": [
+        "R1796-0078",
+        "R1796-0330",
+        "R1796-0381",
+        "R1796-0382",
+        "R1796-0384"
+      ]
+    },
+    {
+      "id": "S96-043",
+      "page_key": "sn82014782|1796-05-28|1|2",
+      "excerpt_start": "A London paper of the 19th",
+      "excerpt_end": "that Spain shall break with Great Britain;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-paragraph-london-paper-probability-of-war-between-spain-and-england-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the New York paragraph on Spain and England.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it reads '19th of March' and 'accounts of a probability', the latter a printed difference. The scan is small, so the date's digits are read with some doubt."
+      ],
+      "crops": [
+        "S96-043.jpg"
+      ],
+      "family": [
+        "R1796-0015"
+      ]
+    },
+    {
+      "id": "S96-044",
+      "page_key": "sn83025588|1796-05-28|1|2",
+      "excerpt_start": "We have put into our hands",
+      "excerpt_end": "guarantee of their possessions in the West-Indies;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-paragraph-letter-from-paris-on-a-conspiracy-against-the-british-treaty-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the New York paragraph on the letter from Paris.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-044.jpg"
+      ],
+      "family": [
+        "R1796-0361",
+        "R1796-0363",
+        "R1796-0370",
+        "R1796-0371",
+        "R1796-0372",
+        "R1796-0390",
+        "R1796-0397",
+        "R1796-0398"
+      ]
+    },
+    {
+      "id": "S96-045",
+      "page_key": "sn83025524|1796-05-31|1|1",
+      "excerpt_start": "A TREATY, Between the UNITED STATES",
+      "excerpt_end": "advantage and reciprocal utility to both nations.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treaty-of-friendship-limits-and-navigation-with-spain-1795"
+      ],
+      "summary": "The Federal Mirror prints the treaty with Spain.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-045.jpg"
+      ],
+      "family": [
+        "R1796-0008",
+        "R1796-0402"
+      ]
+    },
+    {
+      "id": "S96-046",
+      "page_key": "sn83025524|1796-05-31|1|2",
+      "excerpt_start": "A public misfortune is announced; it",
+      "excerpt_end": "14) by the Directory! M ARCH 27.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-pichegru-resigns-the-command-of-the-army-of-the-rhine-1796"
+      ],
+      "summary": "The Federal Mirror prints the Paris paragraph on Pichegru.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-046.jpg"
+      ],
+      "family": [
+        "R1796-0008",
+        "R1796-0017",
+        "R1796-0382"
+      ]
+    },
+    {
+      "id": "S96-047",
+      "page_key": "sn83025524|1796-05-31|1|3",
+      "excerpt_start": "We have put into our hands",
+      "excerpt_end": "guarantee of their possessions in the Westindies;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-paragraph-letter-from-paris-on-a-conspiracy-against-the-british-treaty-1796"
+      ],
+      "summary": "The Federal Mirror prints the New York paragraph on the letter from Paris.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print's 'West-indies', broken at a line end, is joined as 'Westindies'."
+      ],
+      "crops": [
+        "S96-047.jpg"
+      ],
+      "family": [
+        "R1796-0378",
+        "R1796-0379",
+        "R1796-0381",
+        "R1796-0397"
+      ]
+    },
+    {
+      "id": "S96-048",
+      "page_key": "sn84026273|1796-06-04|1|2",
+      "excerpt_start": "Late last night we received the",
+      "excerpt_end": "be the result of the measures Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "london-papers-communicated-by-lord-grenville-on-a-general-pacification-1796"
+      ],
+      "summary": "London, April 1796: notes on a general peace.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'from Mr. Wickham'. It prints the name 'Greenvile', which the transcription corrects to 'Grenville'."
+      ],
+      "crops": [
+        "S96-048.jpg"
+      ],
+      "family": [
+        "R1796-0010"
+      ]
+    },
+    {
+      "id": "S96-049",
+      "page_key": "sn84038410|1796-06-09|1|2",
+      "excerpt_start": "Late last night we received the",
+      "excerpt_end": "be the result of the measures Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "london-papers-communicated-by-lord-grenville-on-a-general-pacification-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the papers on a general pacification.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'by Mr. Wickham' where GUS prints 'from': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S96-049.jpg"
+      ],
+      "family": [
+        "R1796-0010",
+        "R1796-0401",
+        "R1796-0421"
+      ]
+    },
+    {
+      "id": "S96-050",
+      "page_key": "sn82014782|1796-06-11|1|1",
+      "excerpt_start": "We have put into our hands",
+      "excerpt_end": "guarantee of their possessions in the W.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-paragraph-letter-from-paris-on-a-conspiracy-against-the-british-treaty-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the New York paragraph on the letter from Paris.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. It prints 'certain Americans' and 'W. Indies' where the other printings have 'American citizens' and 'West Indies': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S96-050.jpg"
+      ],
+      "family": [
+        "R1796-0017"
+      ]
+    },
+    {
+      "id": "S96-051",
+      "page_key": "sn84026273|1796-06-11|1|3",
+      "excerpt_start": "A gentleman who left Niagara the",
+      "excerpt_end": "they being so soon to become unnecessary;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "albany-paragraph-gentleman-from-niagara-british-preparing-to-evacuate-the-garrisons-1796"
+      ],
+      "summary": "Albany, June 1796: the British preparing to leave Niagara.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'No permits'; the transcription 'No pecuniary' changes the sense. The paper prints 'government' where FM and KG print 'governor': a printed difference."
+      ],
+      "crops": [
+        "S96-051.jpg"
+      ],
+      "family": [
+        "R1796-0019",
+        "R1796-0080",
+        "R1796-0427",
+        "R1796-0428"
+      ]
+    },
+    {
+      "id": "S96-052",
+      "page_key": "sn83025524|1796-06-14|1|3",
+      "excerpt_start": "Prospect of Peace terminated. London, April",
+      "excerpt_end": "the result of the measures which Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "london-papers-communicated-by-lord-grenville-on-a-general-pacification-1796"
+      ],
+      "summary": "The Federal Mirror prints the papers on a general pacification.",
+      "note": "Printed under the paper's own heading, 'Prospect of Peace terminated. London, April 14.', and in its own words: 'The following very IMPORTANT PAPERS, were yesterday communicated by Lord Grenville' (C-02).",
+      "scan_findings": [
+        "The item begins at the foot of the first column, under the heading 'Prospect of Peace terminated.' and the dateline 'London, April 14.' (first crop), and runs on at the top of the next column from 'yesterday communicated' (second crop). Together the two crops show the whole excerpt, which matches the print except that the transcription drops a letter of 'Grenville'. (The recheck crop, widened upward first, showed no heading above 'yesterday': the top of that column is blank, so the opening was found at the foot of the column before it.)"
+      ],
+      "crops": [
+        "S96-052-1.jpg",
+        "S96-052-2.jpg"
+      ],
+      "family": [
+        "R1796-0010",
+        "R1796-0032"
+      ],
+      "scan_boxes": [
+        [
+          230,
+          6650,
+          1390,
+          7900
+        ],
+        [
+          1360,
+          330,
+          2445,
+          1320
+        ]
+      ]
+    },
+    {
+      "id": "S96-053",
+      "page_key": "sn84026273|1796-06-14|1|2",
+      "excerpt_start": "Mr. Grey gave notice, that as",
+      "excerpt_end": "an illegal misapplication of the public money.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-oracle-mr-grey-notice-of-resolutions-impeaching-ministers-1796"
+      ],
+      "summary": "London, April 1796: Mr. Grey's notice.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'a direct inculpation'; the transcription 'inculcation' changes the sense. The paper prints 'Thursday se’nnight' as 'ſen’night' and misprints 'IMPEACHMCNT', which the transcription corrects."
+      ],
+      "crops": [
+        "S96-053.jpg"
+      ]
+    },
+    {
+      "id": "S96-054",
+      "page_key": "sn84026273|1796-06-16|1|3",
+      "excerpt_start": "Afflicting news has been received from",
+      "excerpt_end": "Republican symbols, and hoisted the White Flag.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-royalist-assemblages-in-the-department-of-cher-1796"
+      ],
+      "summary": "Paris, April 1796: Royalists in the Cher.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-054.jpg"
+      ],
+      "family": [
+        "R1796-0004",
+        "R1796-0032",
+        "R1796-0168",
+        "R1796-0171",
+        "R1796-0442"
+      ]
+    },
+    {
+      "id": "S96-055",
+      "page_key": "sn83025524|1796-06-21|1|3",
+      "excerpt_start": "A gentleman who left Niagara the",
+      "excerpt_end": "they being so soon to become unnecessary;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "albany-paragraph-gentleman-from-niagara-british-preparing-to-evacuate-the-garrisons-1796"
+      ],
+      "summary": "The Federal Mirror prints the Albany paragraph on Niagara.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt across the two crops; the paper introduces it 'From the Frontiers, via Albany'."
+      ],
+      "crops": [
+        "S96-055-1.jpg",
+        "S96-055-2.jpg"
+      ],
+      "family": [
+        "R1796-0003",
+        "R1796-0019",
+        "R1796-0425",
+        "R1796-0457"
+      ]
+    },
+    {
+      "id": "S96-056",
+      "page_key": "sn84038410|1796-06-23|1|2",
+      "excerpt_start": "An express passed through this city",
+      "excerpt_end": "Saturday last the Madison Hunters rendezvoused at",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "albany-paragraph-express-with-lord-dorchester-dispatches-western-posts-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Albany paragraph on Lord Dorchester's dispatches.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'Western Posts' with a long s; the transcription 'Western Ports' turns the posts into ports, a change of sense. The paper prints the paragraph under a Lexington, Kentucky dateline with no Albany credit: a printed difference."
+      ],
+      "crops": [
+        "S96-056.jpg"
+      ],
+      "family": [
+        "R1796-0003",
+        "R1796-0004",
+        "R1796-0082",
+        "R1796-0380",
+        "R1796-0433",
+        "R1796-0436",
+        "R1796-0465"
+      ]
+    },
+    {
+      "id": "S96-057",
+      "page_key": "sn84038410|1796-06-23|1|2",
+      "excerpt_start": "Afflicting news has been received from",
+      "excerpt_end": "Government has ordered troops to march thither;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-royalist-assemblages-in-the-department-of-cher-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Paris paragraph on the Cher.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan prints the full paragraph; the transcription drops the sentences from 'The town of Sancerre' to the leader's description and reads 'ment' for 'tuent': words dropped."
+      ],
+      "crops": [
+        "S96-057-1.jpg",
+        "S96-057-2.jpg"
+      ],
+      "family": [
+        "R1796-0003",
+        "R1796-0004",
+        "R1796-0082",
+        "R1796-0380",
+        "R1796-0433",
+        "R1796-0436",
+        "R1796-0465"
+      ]
+    },
+    {
+      "id": "S96-058",
+      "page_key": "sn84038410|1796-06-23|1|3",
+      "excerpt_start": "A gentleman who left Niagara the",
+      "excerpt_end": "they being so soon to become unnecessary;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "albany-paragraph-gentleman-from-niagara-british-preparing-to-evacuate-the-garrisons-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Albany paragraph on Niagara.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'and arrived at Philadelphia' and 'government', which FM 06-21 does not: printed differences."
+      ],
+      "crops": [
+        "S96-058.jpg"
+      ],
+      "family": [
+        "R1796-0019",
+        "R1796-0438",
+        "R1796-0442",
+        "R1796-0466"
+      ]
+    },
+    {
+      "id": "S96-059",
+      "page_key": "sn83025588|1796-06-25|1|2",
+      "excerpt_start": "Mr. GREY gave notice, that as",
+      "excerpt_end": "for illegal misapplication of the public money.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-oracle-mr-grey-notice-of-resolutions-impeaching-ministers-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the London report of Mr. Grey's notice.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'Thursday se’nnight' (a week); the transcription 'fortnight' changes the date, and 'imputation' stands for the printed 'inculpation'. The paper prints 'should be' where GUS and PG print 'would be': a printed difference."
+      ],
+      "crops": [
+        "S96-059.jpg"
+      ],
+      "family": [
+        "R1796-0080",
+        "R1796-0087",
+        "R1796-0419",
+        "R1796-0423",
+        "R1796-0439",
+        "R1796-0452",
+        "R1796-0453",
+        "R1796-0473",
+        "R1796-0474"
+      ]
+    },
+    {
+      "id": "S96-060",
+      "page_key": "sn83025524|1796-06-28|1|1",
+      "excerpt_start": "Mr. GREY gave notice, that as",
+      "excerpt_end": "some resolutions, the tendency of which should",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-oracle-mr-grey-notice-of-resolutions-impeaching-ministers-1796"
+      ],
+      "summary": "The Federal Mirror prints the London report of Mr. Grey's notice.",
+      "note": "Same item as the other printings. The paper credits the Oracle 'of May 23'; the other papers, 'of April 23'.",
+      "scan_findings": [
+        "Crop shows the whole excerpt; scan reads 'Thursday sennight', and the transcription 'Thursday next' changes the day named. The paper's introduction cites the Oracle 'of May 23' where the story's text has 23 April: a printed difference."
+      ],
+      "crops": [
+        "S96-060.jpg"
+      ],
+      "family": [
+        "R1796-0422",
+        "R1796-0424",
+        "R1796-0427",
+        "R1796-0428"
+      ],
+      "scan_boxes": [
+        [
+          3640,
+          6560,
+          4735,
+          7190
+        ]
+      ]
+    },
+    {
+      "id": "S96-061",
+      "page_key": "sn84038410|1796-06-30|1|3",
+      "excerpt_start": "Mr. Grey gave notice, that as",
+      "excerpt_end": "for illegal misapplication of the public money.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-oracle-mr-grey-notice-of-resolutions-impeaching-ministers-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the London report of Mr. Grey's notice.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Faint scan; it reads 'Thursday se’nnight' and 'a direct inculpation', so the transcription's 'Thursday night' changes the date and its first 'impeachment' changes the word. The paper introduces it 'A London paper of April 23, says'."
+      ],
+      "crops": [
+        "S96-061.jpg"
+      ]
+    },
+    {
+      "id": "S96-062",
+      "page_key": "sn83025881|1796-07-01|1|3",
+      "excerpt_start": "The United States' brig Sophia, failed",
+      "excerpt_end": "board the means of fulfilling the terms",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-brig-sophia-sails-for-algiers-with-the-means-of-the-treaty-1796"
+      ],
+      "summary": "Philadelphia, June 1796: the Sophia sails for Algiers.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'ſailed' with a long s; the transcription 'failed' changes the sense. The paper prints 'for Europe' where FM prints 'to Europe': a printed difference."
+      ],
+      "crops": [
+        "S96-062.jpg"
+      ],
+      "family": [
+        "R1796-0090"
+      ]
+    },
+    {
+      "id": "S96-063",
+      "page_key": "sn82014782|1796-07-02|1|1",
+      "excerpt_start": "Late last night we received the",
+      "excerpt_end": "be the result of the measures Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "london-papers-communicated-by-lord-grenville-on-a-general-pacification-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the papers on a general pacification.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'lord Greenville' and the missing 'and' before 'appear'."
+      ],
+      "crops": [
+        "S96-063.jpg"
+      ],
+      "family": [
+        "R1796-0010",
+        "R1796-0457",
+        "R1796-0481"
+      ]
+    },
+    {
+      "id": "S96-064",
+      "page_key": "sn82014782|1796-07-02|1|3",
+      "excerpt_start": "A gentleman who left Niagara the",
+      "excerpt_end": "they being so soon to become unnecessary;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "albany-paragraph-gentleman-from-niagara-british-preparing-to-evacuate-the-garrisons-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Albany paragraph on Niagara.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints the date in words, 'the fifteenth ult.', where FM prints '15th': a printed difference."
+      ],
+      "crops": [
+        "S96-064.jpg"
+      ],
+      "family": [
+        "R1796-0019",
+        "R1796-0406",
+        "R1796-0416",
+        "R1796-0449",
+        "R1796-0495"
+      ]
+    },
+    {
+      "id": "S96-065",
+      "page_key": "sn83025588|1796-07-02|1|2",
+      "excerpt_start": "AFFLICTING news has been received from",
+      "excerpt_end": "Republican symbols, and hoisted the white flag.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-royalist-assemblages-in-the-department-of-cher-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the Paris paragraph on the Cher.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for 'assemblies' (printed 'assemblages') and 'Sancerre' (printed 'Sancere', which the transcription corrects)."
+      ],
+      "crops": [
+        "S96-065.jpg"
+      ],
+      "family": [
+        "R1796-0004",
+        "R1796-0083",
+        "R1796-0084",
+        "R1796-0090",
+        "R1796-0455",
+        "R1796-0456",
+        "R1796-0463",
+        "R1796-0465"
+      ]
+    },
+    {
+      "id": "S96-066",
+      "page_key": "sn82014782|1796-07-09|1|1",
+      "excerpt_start": "Afflicting news has been received from",
+      "excerpt_end": "Republican symbols, and hoisted the white flag.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-royalist-assemblages-in-the-department-of-cher-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Paris paragraph on the Cher.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-066.jpg"
+      ],
+      "family": [
+        "R1796-0004"
+      ]
+    },
+    {
+      "id": "S96-067",
+      "page_key": "sn83025588|1796-07-09|1|3",
+      "excerpt_start": "The United States brig Sophia, failed",
+      "excerpt_end": "the means of fulfilling the terms of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-brig-sophia-sails-for-algiers-with-the-means-of-the-treaty-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the paragraph on the Sophia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'ſailed' with a long s; the transcription 'failed' changes the sense. Otherwise the scan matches."
+      ],
+      "crops": [
+        "S96-067.jpg"
+      ],
+      "family": [
+        "R1796-0038",
+        "R1796-0477"
+      ]
+    },
+    {
+      "id": "S96-068",
+      "page_key": "sn83025524|1796-07-12|1|2",
+      "excerpt_start": "Afflicting news has been received from",
+      "excerpt_end": "Republican symbols, and hoisted the White Flag.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-paragraph-royalist-assemblages-in-the-department-of-cher-1796"
+      ],
+      "summary": "The Federal Mirror prints the Paris paragraph on the Cher.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for 'assemblies', printed 'assemblages': a near-synonym that does not change the facts."
+      ],
+      "crops": [
+        "S96-068.jpg"
+      ],
+      "family": [
+        "R1796-0004",
+        "R1796-0018",
+        "R1796-0445",
+        "R1796-0510"
+      ]
+    },
+    {
+      "id": "S96-069",
+      "page_key": "sn83025524|1796-07-12|1|3",
+      "excerpt_start": "The United States brig Sophia, failed",
+      "excerpt_end": "board the means of fulfilling the terms",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-brig-sophia-sails-for-algiers-with-the-means-of-the-treaty-1796"
+      ],
+      "summary": "The Federal Mirror prints the paragraph on the Sophia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'ſailed' with a long s; the transcription 'failed' changes the sense. The paragraph is dated 'Philadelphia, June 30' and otherwise matches."
+      ],
+      "crops": [
+        "S96-069.jpg"
+      ],
+      "family": [
+        "R1796-0092",
+        "R1796-0444",
+        "R1796-0468",
+        "R1796-0504"
+      ]
+    },
+    {
+      "id": "S96-070",
+      "page_key": "sn84038410|1796-07-14|1|3",
+      "excerpt_start": "The United States' brig Sophia failed",
+      "excerpt_end": "the means of fulfilling the terms of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-brig-sophia-sails-for-algiers-with-the-means-of-the-treaty-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the paragraph on the Sophia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it is too coarse to tell 'ſailed' from 'failed'. Under 'MARTINSBURG, July 14' the paper prints 'from Philadelphia' where the others print 'from this port': a printed difference."
+      ],
+      "crops": [
+        "S96-070.jpg"
+      ],
+      "family": [
+        "R1796-0093",
+        "R1796-0511"
+      ]
+    },
+    {
+      "id": "S96-071",
+      "page_key": "sn83025588|1796-07-16|1|2",
+      "excerpt_start": "ARMY OF ITALY. A letter from",
+      "excerpt_end": "King of Sardinia more than 15 millions.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-army-of-italy-buonaparte-letter-tortona-taken-1796"
+      ],
+      "summary": "Italy, May 1796: Tortona taken.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-071.jpg"
+      ],
+      "family": [
+        "R1796-0022",
+        "R1796-0038",
+        "R1796-0513",
+        "R1796-0514",
+        "R1796-0519",
+        "R1796-0520"
+      ]
+    },
+    {
+      "id": "S96-072",
+      "page_key": "sn83025881|1796-07-18|1|2",
+      "excerpt_start": "ARMY OF ITALY. A letter from",
+      "excerpt_end": "king of Sardinia more than 15 millions.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-army-of-italy-buonaparte-letter-tortona-taken-1796"
+      ],
+      "summary": "The Gazette of the United States, & Philadelphia Daily Advertiser prints the Paris article on Buonaparte's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that it prints 'Buonparte', which the transcription corrects. The paper prints 'mentions' and 'Tortona' where NHG prints 'mentioning' and 'Tortone': printed differences."
+      ],
+      "crops": [
+        "S96-072.jpg"
+      ],
+      "family": [
+        "R1796-0022",
+        "R1796-0095",
+        "R1796-0096",
+        "R1796-0517",
+        "R1796-0518",
+        "R1796-0519"
+      ]
+    },
+    {
+      "id": "S96-073",
+      "page_key": "sn82014782|1796-07-23|1|2",
+      "excerpt_start": "The United States brig Sophia Tailed",
+      "excerpt_end": "board rhe means of fulfilling the terms",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-paragraph-brig-sophia-sails-for-algiers-with-the-means-of-the-treaty-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the paragraph on the Sophia.",
+      "note": "RevX lacks the opening of this item, so the excerpt comes from the older CA transcription.",
+      "scan_findings": [
+        "The CA text is garbled throughout ('Tailed', 'Tew', 'Lilbon tor', 'fliort', 'Sopliih'), but no garble reads as a different fact; the scan prints the paragraph as FM does."
+      ],
+      "crops": [
+        "S96-073.jpg"
+      ],
+      "transcription_field": "ca_ocr_text",
+      "family": [
+        "R1796-0088",
+        "R1796-0489"
+      ]
+    },
+    {
+      "id": "S96-074",
+      "page_key": "sn84038410|1796-07-28|1|2",
+      "excerpt_start": "A letter from Gen. Buonaparte, of",
+      "excerpt_end": "king of Sardinia more than 15 millions.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-army-of-italy-buonaparte-letter-tortona-taken-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Paris article on Buonaparte's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that it prints 'Bounaparte', which the transcription corrects. The paper dates the paragraph 'Paris, May 1.'"
+      ],
+      "crops": [
+        "S96-074.jpg"
+      ],
+      "family": [
+        "R1796-0022",
+        "R1796-0038",
+        "R1796-0091",
+        "R1796-0092",
+        "R1796-0506"
+      ]
+    },
+    {
+      "id": "S96-075",
+      "page_key": "sn84038410|1796-07-28|1|3",
+      "excerpt_start": "Capt. Atkinson, from Cape Breton, informs,",
+      "excerpt_end": "50 guns. Three of the squadron were",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-brig-harriot-from-cape-francois-fleet-from-brest-1796"
+      ],
+      "summary": "Cape Francois, July 1796: a fleet from Brest.",
+      "note": "Earliest printing found. Printed in the paper's own words: 'Capt. Atkinson, from Cape Francois, informs, that' (C-02).",
+      "scan_findings": [
+        "Scan reads 'from Cape Francois' and 'arrived from Breſt'; the transcription 'Cape Breton' and 'Breton' change both place names. On this small scan the long s of 'ſailed' cannot be told from an f, so 'failed' is not counted."
+      ],
+      "crops": [
+        "S96-075.jpg"
+      ],
+      "family": [
+        "R1796-0023",
+        "R1796-0094",
+        "R1796-0097",
+        "R1796-0538",
+        "R1796-0539",
+        "R1796-0540"
+      ]
+    },
+    {
+      "id": "S96-076",
+      "page_key": "sn83025881|1796-07-29|1|3",
+      "excerpt_start": "Last Wednesday, Capt. Seward arrived here,",
+      "excerpt_end": "condemned by their courts of Vice Admiralty.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "newburyport-report-capt-seward-from-bermuda-attachments-expected-1796"
+      ],
+      "summary": "Bermuda, July 1796: attachments expected.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints '8 days' and no 'Important—and true.' heading."
+      ],
+      "crops": [
+        "S96-076.jpg"
+      ],
+      "family": [
+        "R1796-0024",
+        "R1796-0025",
+        "R1796-0544",
+        "R1796-0545"
+      ]
+    },
+    {
+      "id": "S96-077",
+      "page_key": "sn83025588|1796-07-30|1|2",
+      "excerpt_start": "Yesterday arrived, the brig Harriot, Capt.",
+      "excerpt_end": "he failed, a fleet of 5 sail",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-brig-harriot-from-cape-francois-fleet-from-brest-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the Baltimore report from Cape Francois.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'ſailed' with a long s; the transcription 'failed' changes the sense. Two vessel names are slightly garbled ('Sifers' for 'Siſters', 'Betsy' for 'Betſey'); the rest matches."
+      ],
+      "crops": [
+        "S96-077.jpg"
+      ],
+      "family": [
+        "R1796-0023",
+        "R1796-0097",
+        "R1796-0098",
+        "R1796-0524",
+        "R1796-0526",
+        "R1796-0546",
+        "R1796-0549"
+      ]
+    },
+    {
+      "id": "S96-078",
+      "page_key": "sn83025588|1796-07-30|1|3",
+      "excerpt_start": "Important—and true. Last Wednesday Capt. Seward",
+      "excerpt_end": "unlawfully condemned by their Courts of Vice-Admiralty.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "newburyport-report-capt-seward-from-bermuda-attachments-expected-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the Newburyport report from Bermuda.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints '9 days' where GUS prints 8, under the heading 'Important—and true.': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S96-078.jpg"
+      ],
+      "family": [
+        "R1796-0025",
+        "R1796-0102",
+        "R1796-0525",
+        "R1796-0536",
+        "R1796-0541",
+        "R1796-0547",
+        "R1796-0548",
+        "R1796-0550",
+        "R1796-0554"
+      ]
+    },
+    {
+      "id": "S96-079",
+      "page_key": "sn83025881|1796-08-03|1|2",
+      "excerpt_start": "Extract of a letter from Capt.",
+      "excerpt_end": "king's forces were embarked and sent off;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "captain-bruff-letter-to-the-secretary-of-war-fort-oswego-delivered-1796"
+      ],
+      "summary": "Fort Oswego, July 1796: the post given up.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'the king's ſtores were embarked', as NHG and FM print; the transcription 'forces' changes the sense. 'Olwego' for 'Oſwego' is a small misreading of the same name."
+      ],
+      "crops": [
+        "S96-079.jpg"
+      ],
+      "family": [
+        "R1796-0105",
+        "R1796-0106",
+        "R1796-0510"
+      ]
+    },
+    {
+      "id": "S96-080",
+      "page_key": "sn84038410|1796-08-04|1|2",
+      "excerpt_start": "Capt. Seward, in 8 days from",
+      "excerpt_end": "condemned by their courts of Vice Admiralty.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "newburyport-report-capt-seward-from-bermuda-attachments-expected-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Newburyport report from Bermuda.",
+      "note": "Printed in the paper's own words: 'Capt. Seward, in 8 days from Bermuda, brings information' (C-02).",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper tells the item in its own words, without 'Last Wednesday' and with 'in 8 days' and 'brings': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S96-080.jpg"
+      ],
+      "family": [
+        "R1796-0024",
+        "R1796-0025",
+        "R1796-0100",
+        "R1796-0537",
+        "R1796-0544",
+        "R1796-0554",
+        "R1796-0570"
+      ]
+    },
+    {
+      "id": "S96-081",
+      "page_key": "sn83025881|1796-08-05|1|3",
+      "excerpt_start": "Tuesday arrived the brig Baron de",
+      "excerpt_end": "Marcell, master, the other Temeraire, Pigo, master;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-brig-baron-de-carondelet-plundered-by-french-privateers-1796"
+      ],
+      "summary": "Leghorn, 1796: the Baron de Carondelet plundered.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'ſailed' with a long s; the transcription 'failed' changes the sense, and it drops the last letter of the first privateer master's name. The figures (80 days, 13th May, 3 leagues) match."
+      ],
+      "crops": [
+        "S96-081.jpg"
+      ],
+      "family": [
+        "R1796-0026",
+        "R1796-0050",
+        "R1796-0572",
+        "R1796-0575"
+      ]
+    },
+    {
+      "id": "S96-082",
+      "page_key": "sn82014782|1796-08-13|1|2",
+      "excerpt_start": "Yesterday arrived the brig Harriot, capt.",
+      "excerpt_end": "sailed, a fleet of 5 sail arrived",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-brig-harriot-from-cape-francois-fleet-from-brest-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Baltimore report from Cape Francois.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads '15 days', as NHG and FM; the transcription '35' changes the number. The scan is coarse: the vessel and master names and the long s of 'ſailed' cannot be checked letter by letter."
+      ],
+      "crops": [
+        "S96-082.jpg"
+      ],
+      "family": [
+        "R1796-0022",
+        "R1796-0023",
+        "R1796-0094",
+        "R1796-0095",
+        "R1796-0096",
+        "R1796-0539",
+        "R1796-0540"
+      ]
+    },
+    {
+      "id": "S96-083",
+      "page_key": "sn82014782|1796-08-13|1|2",
+      "excerpt_start": "ARMY OF ITALY. A letter from",
+      "excerpt_end": "king of Sardinia more than fifteen millions.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-army-of-italy-buonaparte-letter-tortona-taken-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Paris article on Buonaparte's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Blurred scan, but it matches the excerpt, including 'fifteen millions' in words where NHG prints '15': a printed difference."
+      ],
+      "crops": [
+        "S96-083.jpg"
+      ],
+      "family": [
+        "R1796-0022",
+        "R1796-0023",
+        "R1796-0094",
+        "R1796-0095",
+        "R1796-0096",
+        "R1796-0539",
+        "R1796-0540"
+      ]
+    },
+    {
+      "id": "S96-084",
+      "page_key": "sn83025588|1796-08-13|1|2",
+      "excerpt_start": "Extract of a letter from Capt.",
+      "excerpt_end": "king's forces were embarked and sent off;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "captain-bruff-letter-to-the-secretary-of-war-fort-oswego-delivered-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints Captain Bruff's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'the king's ſtores were embarked'; the transcription 'forces' changes the sense. 'Ojawego' is a garble of the printed 'Oſwego'."
+      ],
+      "crops": [
+        "S96-084.jpg"
+      ],
+      "family": [
+        "R1796-0024",
+        "R1796-0026",
+        "R1796-0106",
+        "R1796-0543",
+        "R1796-0555",
+        "R1796-0561",
+        "R1796-0573",
+        "R1796-0596",
+        "R1796-0599"
+      ]
+    },
+    {
+      "id": "S96-085",
+      "page_key": "sn83025588|1796-08-13|1|2",
+      "excerpt_start": "Yesterday arrived the brig Baron de",
+      "excerpt_end": "2 privateers, one called Rondeleu, Marcellis, master;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-brig-baron-de-carondelet-plundered-by-french-privateers-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the New York report of the Baron de Carondelet.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'in 80 days' and 'the 13th May', as GUS; the transcription '82' and '19th' change the number and the date, and 'failed' for 'ſailed' changes the sense. The paper prints 'Yeſterday' and '2 privateers' without 'French': printed differences."
+      ],
+      "crops": [
+        "S96-085.jpg"
+      ],
+      "family": [
+        "R1796-0024",
+        "R1796-0026",
+        "R1796-0106",
+        "R1796-0543",
+        "R1796-0555",
+        "R1796-0561",
+        "R1796-0573",
+        "R1796-0596",
+        "R1796-0599"
+      ]
+    },
+    {
+      "id": "S96-086",
+      "page_key": "sn83025524|1796-08-16|1|3",
+      "excerpt_start": "Yesterday arrived the brig Harriot, Capt.",
+      "excerpt_end": "on board Le Vengeance of 50 guns.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "baltimore-report-brig-harriot-from-cape-francois-fleet-from-brest-1796"
+      ],
+      "summary": "The Federal Mirror prints the Baltimore report from Cape Francois.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'ſailed' with a long s; the transcription 'failed' changes the sense. Otherwise the scan matches; the paper prints 'five', '15 days' and 'Breſt', and leaves out the list of vessels left at the Cape."
+      ],
+      "crops": [
+        "S96-086.jpg"
+      ],
+      "family": [
+        "R1796-0023",
+        "R1796-0024",
+        "R1796-0104",
+        "R1796-0571"
+      ]
+    },
+    {
+      "id": "S96-087",
+      "page_key": "sn83025881|1796-08-17|1|3",
+      "excerpt_start": "It is generally reported in the",
+      "excerpt_end": "during the negotiations. It is further added,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-the-emperor-requests-an-armistice-june-1796"
+      ],
+      "summary": "Paris, June 1796: an armistice asked.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the transcription modernises the printed 'negociations'. The paragraph is dated 'PARIS, 29 Prairial, June 18'."
+      ],
+      "crops": [
+        "S96-087.jpg"
+      ],
+      "family": [
+        "R1796-0116",
+        "R1796-0602",
+        "R1796-0603"
+      ]
+    },
+    {
+      "id": "S96-088",
+      "page_key": "sn84038410|1796-08-18|1|3",
+      "excerpt_start": "Extract of a letter from Capt. James",
+      "excerpt_end": "instant, that the King's stores were embarked...",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "captain-bruff-letter-to-the-secretary-of-war-fort-oswego-delivered-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints Captain Bruff's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop shows the heading and the excerpt; they match apart from the garble 'Ojivogo' for 'Oswego', but the transcription breaks off with '...' after 'embarked' where the print goes on: words dropped. The paper prints 'the King's stores'; the date of the commandant's letter is blurred, more like '19th' than '13th'."
+      ],
+      "crops": [
+        "S96-088.jpg"
+      ],
+      "scan_boxes": [
+        [
+          430,
+          1160,
+          808,
+          1310
+        ]
+      ]
+    },
+    {
+      "id": "S96-089",
+      "page_key": "sn83025588|1796-08-20|1|3",
+      "excerpt_start": "From FORT DAUPHIN. Capt. Nason informs",
+      "excerpt_end": "of their colonial despotism upon the Americans.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-fort-dauphin-delivered-to-the-french-1796"
+      ],
+      "summary": "Hispaniola, 1796: Fort Dauphin delivered.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-089.jpg"
+      ],
+      "family": [
+        "R1796-0580",
+        "R1796-0593",
+        "R1796-0607",
+        "R1796-0608"
+      ]
+    },
+    {
+      "id": "S96-090",
+      "page_key": "sn83025524|1796-08-23|1|2",
+      "excerpt_start": "Extra of a letter from Capt.",
+      "excerpt_end": "king's stores were embarked and sent off;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "captain-bruff-letter-to-the-secretary-of-war-fort-oswego-delivered-1796"
+      ],
+      "summary": "The Federal Mirror prints Captain Bruff's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including 'the king's ſtores'; only the heading's first word, 'Extract', is cut to 'Extra'."
+      ],
+      "crops": [
+        "S96-090.jpg"
+      ],
+      "family": [
+        "R1796-0048",
+        "R1796-0050",
+        "R1796-0106",
+        "R1796-0569"
+      ]
+    },
+    {
+      "id": "S96-091",
+      "page_key": "sn83025524|1796-08-23|1|3",
+      "excerpt_start": "From FORT DAUPHIN. Captain Nason informs",
+      "excerpt_end": "of their colonial despotism upon the Americans.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-fort-dauphin-delivered-to-the-french-1796"
+      ],
+      "summary": "The Federal Mirror prints the Boston report of Fort Dauphin.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper spells out 'Captain'."
+      ],
+      "crops": [
+        "S96-091.jpg"
+      ],
+      "family": [
+        "R1796-0026",
+        "R1796-0114",
+        "R1796-0119",
+        "R1796-0607"
+      ]
+    },
+    {
+      "id": "S96-092",
+      "page_key": "sn83025524|1796-08-23|1|3",
+      "excerpt_start": "Yesterday arrived the brig Baron de",
+      "excerpt_end": "but more particularly a passenger on board;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-brig-baron-de-carondelet-plundered-by-french-privateers-1796"
+      ],
+      "summary": "The Federal Mirror prints the New York report of the Baron de Carondelet.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except one letter of the first privateer master's name. An ink blot covers one letter of the second privateer's name ('Ta-mer?ire'), so 'Tamersire' cannot be checked; the paper prints no 'French'."
+      ],
+      "crops": [
+        "S96-092.jpg"
+      ],
+      "family": [
+        "R1796-0026",
+        "R1796-0114",
+        "R1796-0119",
+        "R1796-0607"
+      ]
+    },
+    {
+      "id": "S96-093",
+      "page_key": "sn83025881|1796-08-24|1|3",
+      "excerpt_start": "From FORT DAUPHIN. Capt. Nelson informs",
+      "excerpt_end": "of their colonial despotism upon the Americans.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-fort-dauphin-delivered-to-the-french-1796"
+      ],
+      "summary": "The Gazette of the United States, & Philadelphia Daily Advertiser prints the Boston report of Fort Dauphin.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The paper prints the captain's name with an e where the other papers have an a; the transcription adds a letter and makes it a different, familiar name. The rest matches."
+      ],
+      "crops": [
+        "S96-093.jpg"
+      ],
+      "family": [
+        "R1796-0608"
+      ]
+    },
+    {
+      "id": "S96-094",
+      "page_key": "sn84038410|1796-08-25|1|2",
+      "excerpt_start": "It is generally reported in the",
+      "excerpt_end": "during the negotiations. It is further added",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-the-emperor-requests-an-armistice-june-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints the Paris report of an armistice.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the transcription modernises 'negociations'. The paper prints 'Ments' where GUS and NHG print 'MENTZ': a printed difference."
+      ],
+      "crops": [
+        "S96-094.jpg"
+      ],
+      "family": [
+        "R1796-0115",
+        "R1796-0116",
+        "R1796-0559",
+        "R1796-0602"
+      ]
+    },
+    {
+      "id": "S96-095",
+      "page_key": "sn82014782|1796-08-27|1|2",
+      "excerpt_start": "Important—and true. Last Wednesday Capt. Seward",
+      "excerpt_end": "condemned by the courts of vice Admiralty.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "newburyport-report-capt-seward-from-bermuda-attachments-expected-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Newburyport report from Bermuda.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'nine days' where GUS prints 8, under the italic heading 'Important—and true.': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S96-095.jpg"
+      ],
+      "family": [
+        "R1796-0025",
+        "R1796-0102",
+        "R1796-0108",
+        "R1796-0581",
+        "R1796-0596"
+      ]
+    },
+    {
+      "id": "S96-096",
+      "page_key": "sn83025588|1796-08-27|1|3",
+      "excerpt_start": "It is generally reported in the",
+      "excerpt_end": "during the negotiations. It is further added,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-the-emperor-requests-an-armistice-june-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the Paris report of an armistice.",
+      "note": "Same item as the other printings. The paper dates the article 'PARIS, June 8.'; the other papers print June 18.",
+      "scan_findings": [
+        "Scan matches the excerpt; the transcription modernises 'negociations'. The paragraph is dated 'PARIS, June 8.' where GUS and PG print June 18: a printed difference."
+      ],
+      "crops": [
+        "S96-096.jpg"
+      ],
+      "family": [
+        "R1796-0113",
+        "R1796-0118",
+        "R1796-0592",
+        "R1796-0595",
+        "R1796-0600",
+        "R1796-0604",
+        "R1796-0617",
+        "R1796-0624",
+        "R1796-0625",
+        "R1796-0626",
+        "R1796-0627",
+        "R1796-0630"
+      ]
+    },
+    {
+      "id": "S96-097",
+      "page_key": "sn83025881|1796-08-30|1|3",
+      "excerpt_start": "The Prince of Peace has declared",
+      "excerpt_end": "them to it by force of arms.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-the-prince-of-peace-declaration-to-lord-bute-1796"
+      ],
+      "summary": "Madrid, June 1796: the Prince of Peace and Lord Bute.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'rejecting', 'the King of Spain' and 'in justification', as the other printings do; the transcription's 'making', 'the Prince of Peace' and 'to publication' are transcription errors that change the sense. A crease crosses one line but leaves it readable."
+      ],
+      "crops": [
+        "S96-097.jpg"
+      ],
+      "family": [
+        "R1796-0121",
+        "R1796-0122",
+        "R1796-0635"
+      ]
+    },
+    {
+      "id": "S96-098",
+      "page_key": "sn82014782|1796-09-03|1|1",
+      "excerpt_start": "Capt. M'Call sailed from Leghorn, on",
+      "excerpt_end": "vessel, but more particularly a passenger on",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-brig-baron-de-carondelet-plundered-by-french-privateers-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the New York report of the Baron de Carondelet.",
+      "note": "Printed in the paper's own words: 'Capt. M'Call sailed from Leghorn, on the 10th May last, and was boarded' (C-02). The paper dates the boarding 'the 10th May'; the New York paragraph prints the 13th.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints '10th May' where GUS prints 13th, and 'three leagues': printed differences, not transcription errors; on this coarse scan the date is read with medium confidence."
+      ],
+      "crops": [
+        "S96-098.jpg"
+      ],
+      "family": [
+        "R1796-0026",
+        "R1796-0110",
+        "R1796-0111",
+        "R1796-0566",
+        "R1796-0572",
+        "R1796-0583"
+      ]
+    },
+    {
+      "id": "S96-099",
+      "page_key": "sn83025588|1796-09-10|1|2",
+      "excerpt_start": "The Prince of peace has declared",
+      "excerpt_end": "them to it by force of arms.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-the-prince-of-peace-declaration-to-lord-bute-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the Madrid paragraph.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-099.jpg"
+      ],
+      "family": [
+        "R1796-0040",
+        "R1796-0120",
+        "R1796-0122",
+        "R1796-0603",
+        "R1796-0631",
+        "R1796-0656",
+        "R1796-0662",
+        "R1796-0663"
+      ]
+    },
+    {
+      "id": "S96-100",
+      "page_key": "sn82014782|1796-09-17|1|1",
+      "excerpt_start": "It is generally reported in the",
+      "excerpt_end": "pledges during the negotiation. It is further",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-report-the-emperor-requests-an-armistice-june-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Paris report of an armistice.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'Five Hundred' where GUS prints 500: a printed difference, not a transcription error. The coarse scan does not show whether the last word is 'further' or 'farther'."
+      ],
+      "crops": [
+        "S96-100.jpg"
+      ],
+      "family": [
+        "R1796-0116",
+        "R1796-0117",
+        "R1796-0118",
+        "R1796-0606"
+      ]
+    },
+    {
+      "id": "S96-101",
+      "page_key": "sn82014782|1796-09-17|1|2",
+      "excerpt_start": "Capt. Nason informs us, Fort Dauphin",
+      "excerpt_end": "of their colonial despotism upon the Americans.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-fort-dauphin-delivered-to-the-french-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Boston report of Fort Dauphin.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the transcription silently corrects the printed 'collonial'. The paper prints no 'From FORT DAUPHIN.' heading and reads 'the article of the French and Spanish treaty': printed differences."
+      ],
+      "crops": [
+        "S96-101.jpg"
+      ],
+      "family": [
+        "R1796-0051",
+        "R1796-0114",
+        "R1796-0551",
+        "R1796-0610",
+        "R1796-0611",
+        "R1796-0612",
+        "R1796-0613",
+        "R1796-0618"
+      ]
+    },
+    {
+      "id": "S96-102",
+      "page_key": "sn84038410|1796-09-22|1|3",
+      "excerpt_start": "By an arrival yesterday from Guadaloupe,",
+      "excerpt_end": "reinforcement of seven thousand troops, at Barbados.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "st-croix-report-english-ships-carried-into-guadaloupe-1796"
+      ],
+      "summary": "Guadaloupe, August 1796: English ships taken.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-102.jpg"
+      ],
+      "family": [
+        "R1796-0011"
+      ]
+    },
+    {
+      "id": "S96-103",
+      "page_key": "sn82014782|1796-09-24|1|2",
+      "excerpt_start": "The prince of Peace has declared",
+      "excerpt_end": "them to it by force of arms.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-the-prince-of-peace-declaration-to-lord-bute-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the Madrid paragraph.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, including the printer's stray 'to' in 'those to powers'."
+      ],
+      "crops": [
+        "S96-103.jpg"
+      ],
+      "family": [
+        "R1796-0120",
+        "R1796-0635",
+        "R1796-0647"
+      ]
+    },
+    {
+      "id": "S96-104",
+      "page_key": "sn83025588|1796-09-24|1|3",
+      "excerpt_start": "By an arrival yesterday from Guadalupe,",
+      "excerpt_end": "reinforcement of seven thousand troops at Barbadoes.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "st-croix-report-english-ships-carried-into-guadaloupe-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints the St. Croix report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for 'Guadaloupe', which RevX modernises to 'Guadalupe' (minor). NHG prints 'seven thousand' and 'vessel'."
+      ],
+      "crops": [
+        "S96-104.jpg"
+      ],
+      "family": [
+        "R1796-0124",
+        "R1796-0128",
+        "R1796-0653"
+      ]
+    },
+    {
+      "id": "S96-105",
+      "page_key": "sn84023150|1796-09-26|1|2",
+      "excerpt_start": "The Prince of Peace has declared",
+      "excerpt_end": "them to it by force of arms.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "madrid-the-prince-of-peace-declaration-to-lord-bute-1796"
+      ],
+      "summary": "The Eagle, or, Dartmouth Centinel prints the Madrid paragraph.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The Eagle prints 'of general peace' without 'a' and 'those power': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S96-105.jpg"
+      ],
+      "family": [
+        "R1796-0005",
+        "R1796-0011",
+        "R1796-0662",
+        "R1796-0663"
+      ]
+    },
+    {
+      "id": "S96-106",
+      "page_key": "sn83025524|1796-09-27|1|3",
+      "excerpt_start": "By an arrival yesterday from Guadaloupe,",
+      "excerpt_end": "a reinforcement of 7000 troops, at Barbadoes.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "st-croix-report-english-ships-carried-into-guadaloupe-1796"
+      ],
+      "summary": "The Federal Mirror prints the St. Croix report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, apart from 'v. s.' for 'vessel' and a dropped 'these'. The paper prints the reinforcement as '7000' in figures where the New Hampshire Gazette's text has 'seven thousand': a printed difference."
+      ],
+      "crops": [
+        "S96-106.jpg"
+      ],
+      "family": [
+        "R1796-0124",
+        "R1796-0650",
+        "R1796-0661"
+      ],
+      "scan_boxes": [
+        [
+          3490,
+          650,
+          4625,
+          1100
+        ]
+      ]
+    },
+    {
+      "id": "S96-107",
+      "page_key": "sn83025881|1796-10-14|1|2",
+      "excerpt_start": "ARMY OF THE RHINE AND MOSELLE.",
+      "excerpt_end": "of 450 men, who were made prisoners.\"",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-moreau-official-details-of-the-action-at-neresheim-august-1796"
+      ],
+      "summary": "Neresheim, August 1796: General Moreau's report.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt but for 'instant', which the transcription shortens to 'inst.' (minor). GUS dates the letter '26th Thermidor, August 13.'"
+      ],
+      "crops": [
+        "S96-107.jpg"
+      ],
+      "family": [
+        "R1796-0002"
+      ]
+    },
+    {
+      "id": "S96-108",
+      "page_key": "sn82014782|1796-10-15|1|2",
+      "excerpt_start": "By an arrival yest. from Gaudaloupe,",
+      "excerpt_end": "a reinforcement of 7000 troops, at Barbadoes.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "st-croix-report-english-ships-carried-into-guadaloupe-1796"
+      ],
+      "summary": "The Kentucky Gazette prints the St. Croix report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The first crop shows the whole item, which matches the excerpt to 'at Barbadoes.', where the item ends above a rule (the excerpt was shortened to end there after the first check). The paper prints '7000' where the New Hampshire Gazette has 'seven thousand'."
+      ],
+      "crops": [
+        "S96-108-1.jpg",
+        "S96-108-2.jpg"
+      ]
+    },
+    {
+      "id": "S96-109",
+      "page_key": "sn83025588|1796-10-22|1|3",
+      "excerpt_start": "OFFICIAL DETAILS. Army of the Sambre",
+      "excerpt_end": "of 450 men, who were made prisoners.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-moreau-official-details-of-the-action-at-neresheim-august-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints General Moreau's report.",
+      "note": "Same item as the other printings. The paper heads the report 'Army of the Sambre & Meuse' and dates it 'Aug. 15'; the other papers print 'Army of the Rhine and Moselle' and August 13.",
+      "scan_findings": [
+        "Scan matches the excerpt; RevX silently corrects the misprint 'Amieus' to 'Amiens' (minor). NHG prints 'Aug. 15.' and the heading 'Army of the Sambre & Meuse': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S96-109.jpg"
+      ],
+      "family": [
+        "R1796-0002",
+        "R1796-0138",
+        "R1796-0752",
+        "R1796-0753",
+        "R1796-0759"
+      ]
+    },
+    {
+      "id": "S96-110",
+      "page_key": "sn83025524|1796-10-25|1|3",
+      "excerpt_start": "AMIENS, Aug. 15. On the 21st",
+      "excerpt_end": "difficult, from the nature of the country.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-moreau-official-details-of-the-action-at-neresheim-august-1796"
+      ],
+      "summary": "The Federal Mirror prints General Moreau's report.",
+      "note": "Printed as 'the following letter From Gen. MOREAU. AMIENS, Aug. 15.' (C-02).",
+      "scan_findings": [
+        "Scan matches the excerpt. FM dates the letter 'AMIENS, Aug. 15.' where GUS has '26th Thermidor, August 13.': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S96-110.jpg"
+      ],
+      "family": [
+        "R1796-0002",
+        "R1796-0752"
+      ]
+    },
+    {
+      "id": "S96-111",
+      "page_key": "sn84038410|1796-10-27|1|3",
+      "excerpt_start": "ARMY OF THE RHINE AND MOSELLE.",
+      "excerpt_end": "of 450 men, who were made prisoners.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-moreau-official-details-of-the-action-at-neresheim-august-1796"
+      ],
+      "summary": "The Potomac Guardian, & Berkeley Advertiser prints General Moreau's report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for 'Thermidor', whose broken T the transcription reads as 'Nermidor' (minor garble)."
+      ],
+      "crops": [
+        "S96-111.jpg"
+      ],
+      "family": [
+        "R1796-0002",
+        "R1796-0137",
+        "R1796-0139",
+        "R1796-0765",
+        "R1796-0769"
+      ]
+    },
+    {
+      "id": "S96-112",
+      "page_key": "sn83025881|1796-10-28|1|3",
+      "excerpt_start": "PROCLAMATION. By his excellency Sir John",
+      "excerpt_end": "state, that the most indubitable proofs of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-sir-john-wentworth-at-halifax-on-hostilities-with-spain-1796"
+      ],
+      "summary": "Halifax, October 1796: a proclamation against Spain.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan prints the line 'J. Wentworth.' (the governor's signature) between the title and 'Whereas'; the transcription leaves it out. Otherwise it matches, with 'L. L. D.' and 'his majesty's province'."
+      ],
+      "crops": [
+        "S96-112.jpg"
+      ],
+      "family": [
+        "R1796-0029",
+        "R1796-0140"
+      ]
+    },
+    {
+      "id": "S96-113",
+      "page_key": "sn83025588|1796-10-29|1|3",
+      "excerpt_start": "PROCLAMATION By his Excellency Sir John",
+      "excerpt_end": "of State, that the most undoubtable proofs",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-sir-john-wentworth-at-halifax-on-hostilities-with-spain-1796"
+      ],
+      "summary": "The New Hampshire Gazette prints Sir John Wentworth's proclamation.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt but for 'indubitable', which the transcription reads 'undoubtable' (minor). NHG prints 'Lieut. Governor' without 'L. L. D.': a printed difference."
+      ],
+      "crops": [
+        "S96-113.jpg"
+      ],
+      "family": [
+        "R1796-0029",
+        "R1796-0141",
+        "R1796-0143",
+        "R1796-0770",
+        "R1796-0771",
+        "R1796-0776",
+        "R1796-0777"
+      ]
+    },
+    {
+      "id": "S96-114",
+      "page_key": "sn83025524|1796-11-01|1|3",
+      "excerpt_start": "PROCLAMATION By his Excellency Sir John",
+      "excerpt_end": "Secretaries of State, that the most indubitable",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-sir-john-wentworth-at-halifax-on-hostilities-with-spain-1796"
+      ],
+      "summary": "The Federal Mirror prints Sir John Wentworth's proclamation.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print's 'Novascotia' is spaced 'Nova Scotia' in the transcription (minor). FM prints 'Lieut. Governor' without 'L. L. D.': a printed difference."
+      ],
+      "crops": [
+        "S96-114.jpg"
+      ],
+      "family": [
+        "R1796-0029",
+        "R1796-0138",
+        "R1796-0750",
+        "R1796-0771"
+      ]
+    },
+    {
+      "id": "S96-115",
+      "page_key": "sn82014782|1796-11-12|1|2",
+      "excerpt_start": "ARMY OF THE RHINE AND MOSELLE.",
+      "excerpt_end": "of 450 men, who were made prisoners.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-moreau-official-details-of-the-action-at-neresheim-august-1796"
+      ],
+      "summary": "The Kentucky Gazette prints General Moreau's report.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S96-115.jpg"
+      ],
+      "family": [
+        "R1796-0002",
+        "R1796-0136",
+        "R1796-0727",
+        "R1796-0733",
+        "R1796-0749"
+      ]
+    },
+    {
+      "id": "S96-116",
+      "page_key": "sn82014782|1796-12-17|1|3",
+      "excerpt_start": "By his excellency Sir John Wantworth,",
+      "excerpt_end": "state, that the most indubitable proofs of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "proclamation-of-sir-john-wentworth-at-halifax-on-hostilities-with-spain-1796"
+      ],
+      "summary": "The Kentucky Gazette prints Sir John Wentworth's proclamation.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop shows the heading, the title and the opening of the proclamation, and they match the excerpt, but the signature line printed between the title and 'Whereas' ('WANWORTH.') is left out of the transcription, as is the heading 'PROCLAMATION,'. The paper prints 'the province' and misspells the governor's name: printed differences."
+      ],
+      "crops": [
+        "S96-116.jpg"
+      ],
+      "family": [
+        "R1796-0029",
+        "R1796-0030",
+        "R1796-0143"
+      ],
+      "scan_boxes": [
+        [
+          755,
+          330,
+          1115,
+          570
+        ]
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "boston-report-schooner-industry-from-st-malo-oral-intelligence-from-france-1796",
+      "kind": "message_group",
+      "label": "Boston, January 1796: the schooner Industry, 51 days from St. Malo, brings no newspapers; her captain's oral intelligence from France 'is melancholy'",
+      "definition": "Printings of a Boston paragraph of early January 1796: 'On Sunday last arrived in this harbour Schooner Industry, Capt. Atkins, in 51 days from St. Maloes, in France'; he brought no newspapers, and 'His oral intelligence is melancholy': the exchange of assignats and the distress of the common people. A report of a ship's news.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "paris-papers-borders-of-the-rhine-changes-in-the-french-army-november-1795",
+      "kind": "message_group",
+      "label": "Paris papers, November 1795, from the borders of the Rhine: 'There are yet changes in the disposition of the French army'",
+      "definition": "Printings of an article of the Paris papers dated from the borders of the Rhine, 8 November 1795: 'There are yet changes in the disposition of the French army'; the movements of the divisions follow. A report from the Paris papers, in translation.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "charleston-paper-forms-of-ratification-of-the-treaty-with-great-britain-1796",
+      "kind": "document_group",
+      "label": "Charleston, February 1796: the forms of ratification of the treaty between the United States and Great Britain, by the King and by the President",
+      "definition": "Printings of a Charleston paper's copy of the forms of ratification of the treaty of amity, commerce and navigation between the United States and Great Britain: 'We have been favored with a Copy of the treaty between the United States and Great Britain, as ratified by the President and the British King'; His Majesty's ratification ('George the third, by the grace of God king of Great Britain'), with the additional article, and the President's. The Kentucky Gazette prints the ratifications without the Charleston paper's words (C-02). The two governments' own acts, as a paper printed them.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "house-of-representatives-mr-blount-resolutions-on-treaties-april-1796",
+      "kind": "document_group",
+      "label": "House of Representatives, 6 April 1796: Mr. Blount's resolutions that the House claims no agency in making treaties, but that treaties touching the powers of Congress depend on its laws",
+      "definition": "Printings of the resolutions Mr. Blount moved in the committee of the whole on the President's message, 6 April 1796: 'Resolved, That, it being declared by the second section of the second article of the constitution, \"That the President shall have power, by and with the advice and consent of the Senate, to make treaties, provided two thirds of the Senate present concur,\" the House of Representatives do not claim any agency in making treaties; but that when a treaty stipulates regulations on any of the subjects submitted by the constitution to the power of Congress, it must depend for its execution, as to such stipulations, on a law or laws to be passed by Congress'. The House's resolutions as moved, printed within its proceedings.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "port-au-prince-letter-unsuccessful-attack-on-leogane-1796",
+      "kind": "message_group",
+      "label": "Port-au-Prince, March 1796: a letter tells that the British fleet came back after an unsuccessful attack on Leogane",
+      "definition": "Printings of an extract of a letter from Port-au-Prince of 27 March 1796: 'The inhabitants here were much disappointed by the arrival of the fleet yesterday, after an unsuccessful attack on Leogane—The French forces there prove to be stronger than was expected'. A letter printed at second hand.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "treaty-of-friendship-limits-and-navigation-with-spain-1795",
+      "kind": "document_group",
+      "label": "The treaty of friendship, limits and navigation between the United States and his Catholic Majesty, signed in October 1795",
+      "definition": "Printings of the treaty between the United States and Spain: 'His Catholic Majesty and the United States of America desiring to consolidate on a permanent basis, the friendship and good correspondence which happily prevails between the two parties, have determined to establish by a Convention, several points'; the boundaries, the navigation of the Mississippi and the articles that follow. The two governments' own treaty.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-paragraph-the-ship-america-brings-home-an-elephant-1796",
+      "kind": "message_group",
+      "label": "Philadelphia, April 1796: the ship America has brought home an elephant from Bengal, 'the first ever seen in America'",
+      "definition": "Printings of a Philadelphia paragraph of April 1796: 'The America has brought home an ELEPHANT, from Bengal, in perfect health. It is the first ever seen in America, and a great curiosity.' The Patowmac Guardian prints it in its own words, naming the ship's captain ('Capt. Crowninshield, of the ship America, arrived from the Isle of France, brought home an ELEPHANT', C-02). A report of a ship's arrival.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "london-paragraph-the-paris-papers-to-the-6th-march-1796",
+      "kind": "message_group",
+      "label": "London, 13 March 1796: the Paris papers to the 6th bring nothing important, except that a restraint is to be put on the liberty of the press",
+      "definition": "Printings of a London paragraph of 13 March 1796: 'The Paris papers to the 6th, were received in town on Thursday, which brought nothing important: They only mention, that a restraint is going to be put on the liberty of the press'. A report from the London papers.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "albany-paragraph-express-with-lord-dorchester-dispatches-western-posts-1796",
+      "kind": "message_group",
+      "label": "Albany, 11 April 1796: an express with Lord Dorchester's dispatches for the President, said to include his proclamation for surrendering the Western Posts",
+      "definition": "Printings of an Albany paragraph of 11 April 1796: 'An express passed through this city last week, with dispatches for THE PRESIDENT of the United States, from Lord Dorchester—it is reported his Lordship's Proclamation for the surrender of the Western Posts, was among these dispatches'. A report of what is reported.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "new-york-paragraph-london-paper-probability-of-war-between-spain-and-england-1796",
+      "kind": "message_group",
+      "label": "New York, May 1796: a London paper of March, by the ship Assistance, brings accounts of the probability of a war between Spain and England",
+      "definition": "Printings of a New York paragraph of early May 1796: 'A London paper of the 19th March, received by the ship Assistance, brings accounts of the probability of a War between Spain and England. It is believed at Paris that it is an agreed point between France and Spain, that Spain shall break with Great Britain'. A report from a London paper.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "paris-paragraph-pichegru-resigns-the-command-of-the-army-of-the-rhine-1796",
+      "kind": "message_group",
+      "label": "Paris, 24 March 1796: 'A public misfortune is announced': Pichegru has sent in his resignation of the command of the army of the Rhine and the Moselle",
+      "definition": "Printings of a Paris paragraph of 24 March 1796: 'A public misfortune is announced: it appears, alas! to be too true. Pichegru has sent in his resignation of the command of the army of the Rhine and the Mozelle'. A report from the Paris papers, in translation.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "new-york-paragraph-letter-from-paris-on-a-conspiracy-against-the-british-treaty-1796",
+      "kind": "message_group",
+      "label": "New York, May 1796: a letter from Paris said to disclose an attempt of certain American citizens to instigate the French government to oppose the British treaty",
+      "definition": "Printings of a New York paragraph of May 1796 (the Kentucky Gazette names the New-York Minerva): 'We have put into our hands a letter from Paris, disclosing a nefarious conspiracy—no less than an attempt of certain American citizens to instigate the French government to take a decided part in opposing the execution of the British treaty'. The paper's allegation, from a letter.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "london-papers-communicated-by-lord-grenville-on-a-general-pacification-1796",
+      "kind": "document_group",
+      "label": "London, April 1796: the papers Lord Grenville communicated to the foreign ministers: Mr. Wickham's note to M. Barthelemy on a general pacification, and the answers",
+      "definition": "Printings of a London article of 11 April 1796: 'Late last night we received the following very important papers, which were yesterday communicated by lord Grenville to all the foreign ministers resident at this court': Mr. Wickham's note to M. Barthelemy of 8 March on the dispositions of France toward a general pacification, the French answer and the British court's reply. The governments' own papers, as a London paper printed them.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "albany-paragraph-gentleman-from-niagara-british-preparing-to-evacuate-the-garrisons-1796",
+      "kind": "message_group",
+      "label": "Albany, June 1796: a gentleman who left Niagara reports that the British are preparing to evacuate the garrisons",
+      "definition": "Printings of an Albany paragraph of June 1796: 'A gentleman who left Niagara the 15th ult. informs, that every preparation was making by the British for evacuating the garrisons'. A report at second hand.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "london-oracle-mr-grey-notice-of-resolutions-impeaching-ministers-1796",
+      "kind": "message_group",
+      "label": "London, April 1796, from the Oracle: Mr. Grey gives notice of resolutions leading to an impeachment of His Majesty's ministers for misapplying public money",
+      "definition": "Printings of a London report of April 1796 (from the Oracle of 23 April): 'Mr. GREY gave notice, that as the papers which he lately moved for were now before the house, he should on Thursday se'nnight, move some resolutions' leading to 'an IMPEACHMENT AGAINST HIS MAJESTY'S MINISTERS, for illegal misapplication of the public money'. A report of Parliament's proceedings.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "paris-paragraph-royalist-assemblages-in-the-department-of-cher-1796",
+      "kind": "message_group",
+      "label": "Paris, 10 April 1796: 'Afflicting news' from the Department of Cher: the assemblages of Royalists have become more numerous",
+      "definition": "Printings of a Paris paragraph of 10 April 1796: 'Afflicting news has been received from the Department of Cher. The assemblages of Royalists which have been formed there are become more numerous'; the town of Sancerre is said to be in their hands. A report from the Paris papers, in translation.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-paragraph-brig-sophia-sails-for-algiers-with-the-means-of-the-treaty-1796",
+      "kind": "message_group",
+      "label": "Philadelphia, 30 June 1796: the United States brig Sophia has sailed for Lisbon and Algiers with the means of fulfilling the treaty with the Dey",
+      "definition": "Printings of a Philadelphia paragraph of 30 June 1796: 'The United States brig Sophia, sailed a few days ago from this port to Europe—She is to touch at Lisbon, for a short time, and from thence proceed to Algiers'; she 'has on board the means of fulfilling the terms of our treaty with the Dey and Regency'. A news paragraph.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "paris-army-of-italy-buonaparte-letter-tortona-taken-1796",
+      "kind": "message_group",
+      "label": "Paris, May 1796, Army of Italy: a letter from General Buonaparte to the Directory says the army has taken possession of Tortona",
+      "definition": "Printings of a Paris article of May 1796: 'ARMY OF ITALY. A letter from Gen. Buonaparte, of the 17th Floreal, addressed to the Executive Directory', mentions that the army of Italy has taken possession of Tortona, 'a very fine fortress'. A report of a general's letter, from the Paris papers.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "baltimore-report-brig-harriot-from-cape-francois-fleet-from-brest-1796",
+      "kind": "message_group",
+      "label": "Baltimore, July 1796: the brig Harriot, from Cape Francois, reports that a fleet of five sail from Brest arrived there, with captures made on the passage",
+      "definition": "Printings of a Baltimore paragraph of mid-July 1796: 'Yesterday arrived the brig Harriot, Capt. Atkinson, 15 days from Cape Francois'; 'a few days before he sailed, a fleet of 5 sail arrived from Brest', which had captured three British transports and a Portuguese vessel on the passage. The Patowmac Guardian prints it in its own words (C-02). A report of a ship's news.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "newburyport-report-capt-seward-from-bermuda-attachments-expected-1796",
+      "kind": "message_group",
+      "label": "Newburyport, 23 July 1796: Captain Seward, from Bermuda, reports that its people expect attachments on their estates to refund American property condemned there",
+      "definition": "Printings of a Newburyport paragraph of 23 July 1796: 'Important—and true. Last Wednesday Capt. Seward arrived here, 9 days from Bermuda, bringing information that the inhabitants of that place were expecting attachments from the Court of Great-Britain, on their private Estates', to refund American property illegally condemned by their vice-admiralty court. The Patowmac Guardian prints it in its own words (C-02). A report of a ship's news.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "captain-bruff-letter-to-the-secretary-of-war-fort-oswego-delivered-1796",
+      "kind": "document_group",
+      "label": "Captain Bruff to the Secretary of War, Fort Oswego, 15 July 1796: the British commandant of Fort Ontario has given up the post",
+      "definition": "Printings of an extract of a letter from Captain James Bruff to the Secretary of War, Fort Oswego or Ontario, 15 July 1796, published at Philadelphia under 'IMPORTANT. PLEASING. AUTHENTIC. The western posts taken possession of': 'I have the pleasure to announce that the British commandant of Fort Ontario wrote to me on the 13th inst.' that the post was to be given up. An officer's own letter.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "new-york-report-brig-baron-de-carondelet-plundered-by-french-privateers-1796",
+      "kind": "message_group",
+      "label": "New York, August 1796: the brig Baron de Carondelet, from Leghorn, was boarded and plundered by two French privateers; her captain brings dispatches on the Algerine treaty",
+      "definition": "Printings of a New York paragraph of 4 August 1796: the brig Baron de Carondelet, Capt. James M'Call, 80 days from Leghorn, 'was boarded, 3 leagues to the westward of the road, by two French privateers' and plundered; 'Capt. M'Call has brought dispatches from the American Consul to the Secretary of State, relating to the Algerine Treaty'. The Kentucky Gazette prints it in its own words ('Capt. M'Call sailed from Leghorn', C-02). A report of a ship's news.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "paris-report-the-emperor-requests-an-armistice-june-1796",
+      "kind": "message_group",
+      "label": "Paris, June 1796: it is reported in the Council of Five Hundred that a courier has come from the Emperor to ask an armistice",
+      "definition": "Printings of a Paris article of June 1796, translated at New York: 'It is generally reported in the Council of 500, that a courier is arrived who in the name of the Emperor requests an ARMISTICE', and 'that the PRELIMINARY OF PEACE is signed between the Directory and the Envoys of the Cabinet of Vienna'. A report of what is reported.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "boston-report-fort-dauphin-delivered-to-the-french-1796",
+      "kind": "message_group",
+      "label": "Boston, 1796: Captain Nason reports that Fort Dauphin was delivered to the French under the treaty that cedes Spanish Hispaniola",
+      "definition": "Printings of a Boston paragraph: 'From FORT DAUPHIN. Capt. Nason informs us, Fort Dauphin was delivered to the French, just previous to his sailing, in pursuance of the Article in the French and Spanish Treaty, which cedes Spanish Hispaniola to the French'. A report of a ship's news.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "madrid-the-prince-of-peace-declaration-to-lord-bute-1796",
+      "kind": "message_group",
+      "label": "Madrid, 1 June 1796: the Prince of Peace declares to Lord Bute that Spain would compel England to a general peace by force of arms",
+      "definition": "Printings of a Madrid paragraph of 1 June 1796: 'The Prince of Peace has declared to lord Bute that \"if the English government should persist in rejecting all propositions for the conclusion of a general peace\"', Spain would 'determine to compel them to it by force of arms'. A report from the European papers.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "st-croix-report-english-ships-carried-into-guadaloupe-1796",
+      "kind": "message_group",
+      "label": "Christiansted, St. Croix, 17 August 1796: by an arrival from Guadaloupe, 24 English ships have been carried into that port within three weeks",
+      "definition": "Printings of a St. Croix paragraph of 17 August 1796: 'By an arrival yesterday from Guadaloupe, we learn, that 24 valuable English ships have been, within these three weeks, carried into that port. By a vessel from Antigua this morning, we are informed of the arrival of a reinforcement of seven thousand troops, at Barbados'. A report of ships' news.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "general-moreau-official-details-of-the-action-at-neresheim-august-1796",
+      "kind": "document_group",
+      "label": "General Moreau to the Executive Directory, 13 August 1796: official details of the attack on the enemy's positions at Neresheim",
+      "definition": "Printings of General Moreau's report to the Executive Directory, headquarters at Amiens, 26 Thermidor (13 August 1796), printed as 'OFFICIAL DETAILS': 'On the 21st inst. (August 8) we attacked the enemy in their positions at Neresheim'. The Federal Mirror prints it as 'the following letter From Gen. MOREAU. AMIENS, Aug. 15.' (C-02). The general's own report, in translation.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    },
+    {
+      "id": "proclamation-of-sir-john-wentworth-at-halifax-on-hostilities-with-spain-1796",
+      "kind": "document_group",
+      "label": "Halifax, October 1796: the proclamation of Sir John Wentworth, lieutenant governor of Nova Scotia, on the King's orders against Spain",
+      "definition": "Printings of a proclamation by Sir John Wentworth, lieutenant governor of Nova Scotia, at Halifax, October 1796: 'WHEREAS information has been communicated to me by his Grace the Duke of Portland' that 'the most indubitable proofs of the hostile intentions of the court of Spain against Great Britain' have determined the King to order his naval officers to seize Spanish ships. A governor's own proclamation.",
+      "admission_rule": "Reviewed 1796 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1796 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json), and the families of 1795 were split again over the 1796 pages (items_from_1795.json). Every item in 3 or more papers was counted by its own opening over all 1,552 pages in both transcriptions and merged into text units (46 of 160 met the bar); every page was swept for seven-word sequences shared by 4 or more papers (sweep_new and sweep_recheck: the passages no item covers); every unit and passage that meets the bar was read, with each eligible item's opening checked on every page it counts, and the chosen items' openings were searched over all pages (phrase_hits.json).",
+    "selection_rule": "The thin-year rule (register Y-THIN) as amended by the owner's choice B1 on 23 November 2026: an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks, and by at least 4; digests are not. As in R-01, items printed by every newspaper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35, a target, not a quota); one affair's items as in X-1800-01. The eligible items not chosen are listed with their counts and are not checked against the scans. Sub-stories (C-01), private persons (R-04) and the list of items read and not admitted (R-03) apply as in every year.",
+    "paper_counting": "1796 has 7 catalogue series, which are 6 papers (C-04): the Gazette of the United States (Philadelphia, under two numbers, the second from 1 July), the New Hampshire Gazette (Portsmouth), the Kentucky Gazette (Lexington), the Federal Mirror (Concord, to November), the Patowmac Guardian (29 issues) and the Eagle, or, Dartmouth Centinel (Hanover, six issues). The release's map lists five misfiled RevX pages for 1796 (the Gazette of the United States of 7 and 31 May, 18 August and 25 November); no chosen printing is on them.",
+    "items_admitted": {
+      "boston-report-schooner-industry-from-st-malo-oral-intelligence-from-france-1796": "classify_1796.tsv I001 (units U002)",
+      "paris-papers-borders-of-the-rhine-changes-in-the-french-army-november-1795": "classify_1796.tsv I014 (units U014)",
+      "charleston-paper-forms-of-ratification-of-the-treaty-with-great-britain-1796": "classify_1796.tsv I017 (units U017,U018,U019,U020)",
+      "house-of-representatives-mr-blount-resolutions-on-treaties-april-1796": "classify_1796.tsv I023 (units U025)",
+      "treaty-of-friendship-limits-and-navigation-with-spain-1795": "classify_1796.tsv I024 (units U029,U030,U031,U033)",
+      "port-au-prince-letter-unsuccessful-attack-on-leogane-1796": "classify_1796.tsv I029 (units sweep)",
+      "philadelphia-paragraph-the-ship-america-brings-home-an-elephant-1796": "classify_1796.tsv I030 (units U036)",
+      "london-paragraph-the-paris-papers-to-the-6th-march-1796": "classify_1796.tsv I036 (units U043)",
+      "albany-paragraph-express-with-lord-dorchester-dispatches-western-posts-1796": "classify_1796.tsv I040 (units sweep)",
+      "new-york-paragraph-london-paper-probability-of-war-between-spain-and-england-1796": "classify_1796.tsv I041 (units U046)",
+      "paris-paragraph-pichegru-resigns-the-command-of-the-army-of-the-rhine-1796": "classify_1796.tsv I047 (units sweep)",
+      "new-york-paragraph-letter-from-paris-on-a-conspiracy-against-the-british-treaty-1796": "classify_1796.tsv I048 (units sweep)",
+      "london-papers-communicated-by-lord-grenville-on-a-general-pacification-1796": "classify_1796.tsv I052 (units U057,U058)",
+      "albany-paragraph-gentleman-from-niagara-british-preparing-to-evacuate-the-garrisons-1796": "classify_1796.tsv I054 (units U061)",
+      "london-oracle-mr-grey-notice-of-resolutions-impeaching-ministers-1796": "classify_1796.tsv I059 (units sweep)",
+      "paris-paragraph-royalist-assemblages-in-the-department-of-cher-1796": "classify_1796.tsv I060 (units U066)",
+      "philadelphia-paragraph-brig-sophia-sails-for-algiers-with-the-means-of-the-treaty-1796": "classify_1796.tsv I074 (units sweep)",
+      "paris-army-of-italy-buonaparte-letter-tortona-taken-1796": "classify_1796.tsv I080 (units U082)",
+      "baltimore-report-brig-harriot-from-cape-francois-fleet-from-brest-1796": "classify_1796.tsv I092 (units U097)",
+      "newburyport-report-capt-seward-from-bermuda-attachments-expected-1796": "classify_1796.tsv I095 (units U100)",
+      "captain-bruff-letter-to-the-secretary-of-war-fort-oswego-delivered-1796": "classify_1796.tsv I099 (units U103)",
+      "new-york-report-brig-baron-de-carondelet-plundered-by-french-privateers-1796": "classify_1796.tsv I104 (units U102)",
+      "paris-report-the-emperor-requests-an-armistice-june-1796": "classify_1796.tsv I118 (units sweep)",
+      "boston-report-fort-dauphin-delivered-to-the-french-1796": "classify_1796.tsv I122 (units sweep)",
+      "madrid-the-prince-of-peace-declaration-to-lord-bute-1796": "classify_1796.tsv I128 (units sweep)",
+      "st-croix-report-english-ships-carried-into-guadaloupe-1796": "classify_1796.tsv I135 (units sweep)",
+      "general-moreau-official-details-of-the-action-at-neresheim-august-1796": "classify_1796.tsv I148 (units U145,U146) (admitted: printed by every paper in print)",
+      "proclamation-of-sir-john-wentworth-at-halifax-on-hostilities-with-spain-1796": "classify_1796.tsv I151 (units U149)"
+    },
+    "counted_item_by_item": {
+      "Paper counts": "Every finder item of 1796 in 3 or more papers (and of 1795 over the 1796 pages) was counted by its own opening over all 1,552 pages in both transcriptions and merged into text units: 46 of 160 units met the bar. Reading them, with the sweep's passages, gave 162 items: 47 eligible and 115 below the bar. One is printed by every paper that survives for its weeks and is admitted; 27 are chosen (28 stories, 28 groups, 115 printings); 18 eligible items are listed as not chosen and 1 for the owner.",
+      "The bar": "Y-THIN: more than half of the papers that survive for the item's weeks (a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and at least 4. 1796 has 6 papers: the Gazette of the United States (Philadelphia, daily, under two catalogue numbers), the New Hampshire Gazette and the Kentucky Gazette survive all year, the Federal Mirror to November, the Patowmac Guardian in 29 issues, and the Eagle, or, Dartmouth Centinel in six; 4 or 5 papers are in print in most weeks, 6 when an issue of the Eagle falls in them. The bar is 4.",
+      "Counted by their openings": "The reading checked every eligible item's opening on each page it counts; this review read every printing of the chosen items again before cutting their excerpts, and their counts stand.",
+      "Printed forms together": "C-02: the Patowmac Guardian prints the elephant, Captain Atkinson's news and Captain Seward's in its own words; the Kentucky Gazette prints the Baron de Carondelet in its own words and the ratifications of the British treaty without the Charleston paper's words; the Federal Mirror prints the papers on a general peace under its own heading ('Prospect of Peace terminated. London, April 14. The following very IMPORTANT PAPERS, were yesterday communicated') and General Moreau's report as a letter dated 'AMIENS, Aug. 15.'",
+      "Printed in parts": "The Kentucky Gazette prints the ratifications of the British treaty in two issues (19 and 26 March); the treaty with Spain runs over pages 1 and 2 in three papers. Each printing counts once, by its opening.",
+      "One paper under two catalogue numbers": "C-04: the Gazette of the United States is sn84026273 to 30 June and sn83025881 from 1 July ('Gazette of the United States, & Philadelphia Daily Advertiser'); it is counted as one paper."
+    },
+    "not_admitted": {
+      "A letter from London of 5 November 1795, received by the packet: 'M. Monneron was empowered to treat for peace, even to the relinquishment of Austrian Flanders'; the negotiation broke off over annexing the Low Countries (3)": "By its own words below the bar for its weeks (3 papers, needs 4). KG dates it Philadelphia, 16 January; PG Baltimore, 26 January. NHG 03-05 p2 only names Monneron in other news.",
+      "Boston, 4 January 1796: the brig Katy, Capt. Pease, 59 days from Nantes, brought no French papers; 'The reports at Nantz were, that Charette had been defeated', that Spain had declared war against England, and of a Portuguese fleet (3)": "By its own words below the bar for its weeks (3 papers, needs 4). PG reads the master's name 'Peale'.",
+      "Philadelphia, 1 January 1796: the address of the Minister Plenipotentiary of the French Republic on presenting the colours of that republic to the President: 'I come to acquit myself of a duty very dear to my heart' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). Printed together with the President's answer (I005, a separate document). FM's text reads 'acquaint myself'.",
+      "The President's answer to the French minister on receiving the colours of France, 1 January 1796: 'I receive, Sir, with lively sensibility, the symbol of the triumphs and of the enfranchisements of your nation' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The second document of U005; printed after the address (I004) on the same pages.",
+      "'Armies on the Rhine': 'The latest Paris papers dated the 7th November' (1795) say 'the greatest uncertainty reigns respecting the position of the armies of the Rhine' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). KG heads it 'Armes of the Rhine' and reads 'uncertainty prevails'.",
+      "Baltimore, 19 January 1796: a passenger arrived from Berbice in the brig John reports that 'the negroes employed by the British to act as pioneers to their expected forces, had been disbanded', and gives the prices of flour and coffee at St. Bartholomew's (3)": "By its own words below the bar for its weeks (3 papers, needs 4). PG prints it after the Monneron letter (I002) and reads 'Barbary' for Berbice. The passenger is named in the papers.",
+      "From a London paper of November 1795: 'THE PIOUS THEFT: Or, the WIDOW and her ORPHANS—a true Story, founded on the late scarcity of bread', at Birmingham (3)": "By its own words below the bar for its weeks (3 papers, needs 4). It turns on private persons and is described without names (R-04).",
+      "Portland, 28 January 1796: the brig Fame, Capt. Jordan, 68 days from St. Ubes, reports that a packet arrived at Lisbon brought the account of the capture of fourteen English East Indiamen off the Cape of Good Hope by a French squadron, and that the consul at Lisbon had accounts of 'the defeat of the Austrian army' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). RevX reads 'Indians' for Indiamen on NHG 02-06.",
+      "Norfolk, 1 February 1796: extracts of letters: 'an express has arrived from the governor prohibiting the shipment of the horses' for the British cavalry, 'and soldiers are now collecting to enforce this order' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). KG 03-12 p3 counted from the unit (81 grams).",
+      "An Act making appropriations for the support of Government for the year 1796 (approved February 1796) (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "New York, 5 February 1796 (the Argus): 'Notwithstanding the almost innumerable assertions, that the British Fleet and army had arrived in the West-Indies, we this day find, by capt. Tillinghast, who sailed from Liverpool Nov. 27, that they had not then sailed' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). PG and KG print before it the line 'Captain Tillinghast says, that the much talked of West-India fleet and army had not sailed'; NHG begins at 'Notwithstanding'. GUS 02-19 p3 is another report by the same master.",
+      "Boston, 17 February 1796: 'TREATY WITH SPAIN': the ship Ruby, Capt. Cole, 70 days from Spain, arrived 'bringing with him, as expected, a Treaty of Commerce, &c. between the United States and the Court of Spain' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Bonn, 16 November 1795: Adjutant-General Coulangé to the general commanding at Liege: 'It is malevolence which spreads alarm on account of our armies'; General Marceau 'has completely beaten Clairfayt' (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (GUS, KG, NHG, PG); not chosen: of one affair with the Paris papers' article from the Rhine, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "London, 26 November 1795: a letter from Scarborough of 23 November says 'The Vengeance French national cutter, of 20 guns' has captured British vessels off the Yorkshire coast (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Report of the Committee of Ways and Means on internal revenues, read in the House of Representatives on 23 February 1796: 'Resolved, That it will be expedient to abolish the tax laid on spirits distilled from materials of the growth or produce of the United States', with resolutions on drawbacks and on licences to retailers (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U021 is the later part. GUS 05-13 p2 and NHG 05-28 p1 (with GUS 05-12 p3 and PG 05-19 p3) print the resolutions again inside the House's proceedings of May (not counted again).",
+      "London, January 1796: 'a meeting of the Whig Club was held at the Crown and Anchor tavern', addressed by Mr. Erskine; 'No publication has been read with more admiration, than the late speech of General Washington' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "The President's message to the House of Representatives, 29 March 1796: 'I send herewith a copy of the treaty of Friendship, Limits, and Navigation, concluded on the 27th of October last, between the United States and his Catholic majesty' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). sweep_recheck:17-19 are its body and the treaty's (I024).",
+      "House of Representatives, 4 April 1796, in committee of the whole on the report of the Committee of Ways and Means: 'Resolved, That the Secretary of the Treasury be directed to prepare and report to the House of Representatives at the next session, a plan for laying and collecting direct taxes, by apportionment among the several states' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). sweep_recheck:21 (shared with the committee's report, I026). Pages: GUS 04-05 p3, PG 04-14 p3, NHG 04-23 p1.",
+      "Philadelphia, 5 April 1796: 'IMPORTANT! Extract of a letter from Samuel Bayard, Esq. agent of the United States in London', 17 January 1796: 'As soon as Ministry learn the line of conduct which the House of Representatives mean to pursue, I am persuaded their conduct, as it regards us, will be less fluctuating' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). NHG prints it on 04-09 and again on 04-16.",
+      "The President's message to the House of Representatives, 30 March 1796, declining its request for the papers of the British treaty: 'With the utmost attention, I have considered your resolution of the 24th Inst. requesting me to lay before your house, a copy of the instructions to the minister of the United States who negotiated the treaty' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U032 is its later part (the journals of the General Convention). NHG prints it on 04-09 and again on 04-16. GUS 05-26 p3 (a meeting's resolutions) only recites it (C-07); EAG 04-04 p2 is another text. sweep_recheck:20 and :22 are its body.",
+      "Report of the Committee of Ways and Means on finance, 17 March 1796: 'That the Secretary of the treasury be directed to prepare and report to the House of Representatives, at the next session, a plan for raising the sum of two million of dollars by apportionment, among the several states' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). NHG prints it on 04-09 and again on 04-16. GUS 04-05 p3, PG 04-14 p3 and NHG 04-23 p1 print the resolution agreed on 4 April instead (I021), not the report.",
+      "Circular of the Department of State, 25 March 1796: 'The news papers frequently give accounts of impressment of American seamen, and other outrages committed upon our citizens by British ships of war'; information is asked for, 'verified by the oaths of informants' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). NHG prints it on 04-09 and 04-16.",
+      "Pittsburgh, 2 April 1796: at Uniontown, Fayette county, 'the Grand Jury presented to the court a petition for carrying into effect the British and Spanish treaties, signed by them unanimously' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "New York, 18 April 1796: 'We are informed by one of the Managers of the Alms-House Lottery, that the Ten Thousand Dollar prize, drawn on Friday, is the property of a free black man', formerly the slave of a tavern keeper, whose widow he has long supported (3)": "By its own words below the bar for its weeks (3 papers, needs 4). It turns on private persons and is described without names (R-04).",
+      "House of Representatives, 19 April 1796: Mr. Livingston's resolutions 'relative to the situation of certain merchants of the United States, in consequence of spoliations committed upon their property by foreign powers': 'That provision ought to be made by law, for the purpose of ascertaining the amount of losses' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U038 is the motion and U037 the resolutions. NHG 04-30 p3 is another text.",
+      "Boston, 1 April 1796: 'FROM IRELAND. Papers by the Franklin, captain M'Lean, from Dublin, brings intelligence of a formidable and extensive conspiracy, to separate that country from England, and establish a republican form of government' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "House of Representatives, Thursday 21 April 1796: petitions presented for and against the British treaty: 'Mr. Muhlenberg presented a petition from 800 inhabitants of the city of Philadelphia', and others from Trenton and from merchants of Philadelphia (3)": "By its own words below the bar for its weeks (3 papers, needs 4). A day's proceedings on one matter. Its matches with GUS 06-04 p3, KG 06-11 p2 and PG 06-23 p1 (21-39 grams) are the list of acts (I051), not this text.",
+      "London, 12 March 1796: 'Mr. Grey established the very strong facts which he undertook to present to the House of Commons': 'above seventy seven millions, eight hundred thousand pounds of debt, incurred by the present war, had already been funded' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "House of Representatives, 28 April 1796, in committee of the whole on the resolution for carrying the British treaty into effect: 'Mr. Preston spoke against the motion, and Mr. Ames in favor of it', with cries of 'committee rise' and 'the question' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Extract of a letter from a gentleman of Augusta (Georgia), 12 April 1796, on the state's records: 'upon examining the records in the Secretary's office, I find that the Ex-Senator has omitted to consume that part of the record which contained the mortgages' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The persons named are state officers and a former senator.",
+      "'THE MEMORIAL OF THE SUBSCRIBERS, MERCHANTS AND TRADERS OF PHILADELPHIA' to the House of Representatives: they 'are now seriously alarmed' lest the measures for carrying the treaty with Great Britain into operation 'should be further delayed or entirely omitted' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "London, 15 March 1796: 'The Hamburg Mail which became due yesterday, arrived in town this morning. The accounts from Germany state, in the most decisive terms, that the Emperor is making every possible exertion for carrying on the war' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'WEST-INDIES. Our latest advices from the West-Indies, state, that Admiral Parker, with the British fleet, and from 8 to 12,000 troops, arrived at Barbadoes about the 6th April'; the British had sent reinforcements to attack St. Lucia; an embargo on the windward islands (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, KG, NHG); not chosen: of one affair with the letter from Port-au-Prince, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Boston, May 1796: 'Extract of a letter from a gentleman in Guadalupe, to his friend in Boston': 'the army of the Republic continues to distinguish itself in this quarter; it has recently signalized itself in the defence of Leogane' (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, KG, NHG); not chosen: of one affair with the letter from Port-au-Prince, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Basle, 9 March 1796: 'I have just learnt most important news from a correspondent': a baron lately arrived from London has had conferences with Mr. Pitt 'on the subject of Peace', the result of which he has made known to the French government (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Paris papers, 1 April 1796: 'Charette has at length been taken and shot. Entirely defeated by the Republican army—his troops dispersed'; he had 'assumed the dress of a peasant' (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, KG, PG); not chosen: of one affair with the Paris paragraph on the Cher, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Charleston, 20 May 1796: Capt. Philips of the brig Aurora, from Surinam, fell in with 'a fleet of 11 sail of armed ships' from France, 'with troops on board, bound to Cape Francois' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'ACTS Passed at the First Session of the Fourth Congress': the numbered list of the session's acts, from 'An act making appropriations for the support of government for the year 1796' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). Part of U011 with U056. KG prints the list in three parts (06-11, 06-18 'A continuation of the list of acts', 06-25 p2); PG's heading reads '5th Congress'. FM 08-16 p1 (26 grams) is an act, not the list.",
+      "London, 22 April 1796: 'A letter was received at the Admiralty on Wednesday night from the first lieutenant of the Diamond frigate', containing an account of the capture of Sir Sidney Smith in the port of Havre (3)": "By its own words below the bar for its weeks (3 papers, needs 4). Another text than the officer's letter of I062.",
+      "Philadelphia, June 1796: 'the new copper-bottomed ship Mount Vernon belonging to this port outward bound for London' was taken an hour after the pilot left her 'by the French privateer Schooner Flying Fish' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "From the London Courier of 25 February 1796: 'The YORKSHIRE PHENOMENON': a letter on 'The very singular phenomenon which took place near my house in Yorkshire, on Sunday the 20th of December, 1795' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). An account of a natural event, told by a private gentleman; it does not turn on him.",
+      "Martinique news: the brig Delight, Capt. Robert Tate, 22 days from Fort Royal Bay, reports that 'St. Lucia was not taken the 11th May' and that 'a French fleet of 9 sail of the line, and a number of frigates full of troops' was reported at the Carenage (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Extract of a letter from a French gentleman, Baltimore, 10 June 1796: 'Last night I received a letter dated Cayenne': the new governor and officers have arrived there; 'The Republican brig Le Crocodile' has taken the Portuguese ship La Princesse Royale near the mouth of the Amazon (3)": "By its own words below the bar for its weeks (3 papers, needs 4). FM 06-28 p3 prints only the second part (the Crocodile) under the same heading (C-06), not counted; with it the unit has 4 papers.",
+      "An Act providing for the sale of the lands of the United States, in the territory north-west of the river Ohio, and above the mouth of Kentucky river (May 1796): 'That a Surveyor General shall be appointed' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U067 with part of U011 (GUS 06-16 p2, KG 06-18 p1, FM 08-23 p1-2). The Treasury's notices of the sales under this act (U011's other pages) are set aside.",
+      "London, April 1796: 'Capture of Sir Sydney Smith': 'The following particulars, are from an officer of the frigate, dated OFF BRIGHTON': 'On the 18th inst. in the afternoon, Sir SIDNEY SMITH ordered five boats' to be manned (3)": "By its own words below the bar for its weeks (3 papers, needs 4). KG prints it with another lead-in (C-02). GUS 06-10 p3 (56 grams) prints the Admiralty account (I053) instead.",
+      "France, April 1796: 'The Vendéens, on the 7th of April, sent two of their leaders with a flag of truce to summon the garrison of Tinchéray to surrender'; they set fire to the town (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "From the Gazette of the United States, June 1796: 'MR. FENNO. I send you the substance of a letter from a man in public office under the French Republic at the Cape, to another Frenchman in this country' on a plan concerning American merchants (3)": "By its own words below the bar for its weeks (3 papers, needs 4). An account at second hand, as the writer says ('from memory').",
+      "Paris, April 1796: General Buonaparte to the Executive Directory, 'Head Quarters at Carcare, 25th Germinal': 'The campaign in Italy has commenced. I have to give you an account of the battle of Montenotte' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). Printed before the Directory's message (I066).",
+      "Paris, April 1796: the Executive Directory's message to the Council of Five Hundred: 'the fortunate battle of Montenotte ... was only for the invincible army of Italy, the prelude to successes still more brilliant': a victory at Monte Lezino, 'The enemy lost ten thousand five hundred men' (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (FM, GUS, KG, PG); not chosen: of one affair with the Paris paragraph on Pichegru, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Extract of a letter received by a merchant in New York from Bermuda, 12 June 1796: 'positive orders are received from the Commissioners of the customs, to allow no West-India produce to be shipped from hence to any foreign port, without paying the foreign duties' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Salem, 17 June 1796: extract of a letter from the Isle of France, 25 March: 'The Modesty Privateer arrived here 5 days ago from a most successful cruise' in the Bay of Bengal, with the Triton East-Indiaman among her prizes (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Paris, 21 April 1796: the commissioner with the army of Italy to the Executive Directory: 'The army of Italy has opened the campaign, and that with success truly calculated to strike an impression on the coalesced powers' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "From Cadiz, 6 May 1796: 'Capt. Holbrook, from Cadiz, informs us, that Admiral Richery's Squadron was still lying there, although ready for sea' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Extract of a letter from a merchant at Gibraltar to a house in New York, 9 May 1796: 'The Algerines have given 3 months for the United States to accomplish their agreement, which we hope will be time enough. We have some fear of a rupture with Spain' (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (GUS, KG, NHG, PG); not chosen: of one affair with the paragraph on the Sophia, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "London, 27 April 1796: 'Already the campaign has commenced in Italy, and the Austro Sardinian army has experienced two severe defeats, in which they lost killed, wounded, and prisoners, 14,500 men' (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (FM, GUS, KG, PG); not chosen: of one affair with the Paris paragraph on Pichegru, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Extract of a letter from a gentleman 'belonging to this town, now in Paris', 1 April 1796: 'Wonderful to relate, you may purchase bills in Paris on any part of the world ... from 7 to 18 per cent. discount' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "London, 14 May 1796: 'An American house in this city has stopped payment for a very large sum, in consequence of speculations in corn and rice from America' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U078 joins this paragraph and the next (I078); counted by their own openings, each has 3 papers.",
+      "'Conspiracy at Paris': Council of Five Hundred, 10 May 1796: Goddard, for a commission, proposes 'to authorise the Members of the Central Bureau' of Paris, Bordeaux, Lyons and Marseilles 'to decree mandates of arrest' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "France, 1796: La Vendée 'is restored to peace and tranquility'; 'This peaceful change is attributed in a great measure to the proclamation circulated by Gen. Hoche, granting an amnesty to the deserters' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "London, 17 May 1796: 'French papers state, that hostilities had not, according to their latest advice, recommenced on the Rhine'; a report prevails at Paris that the negotiations for peace had been renewed (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The second paragraph of U078 (see I075).",
+      "Anecdote, 'The Pumpkin and Paddy': a farmer tells a newly arrived Irishman that pumpkins are 'Mare's eggs' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). A joke, as the papers print it.",
+      "Boston, 12 July 1796: 'From Lisbon. Schooner Catharine, Cox, in 45 days. Reports were confidently circulated, that Spain and England had commenced war'; from France, Capt. Tibbets's verbal report of a French victory on the Rhine (3)": "By its own words below the bar for its weeks (3 papers, needs 4). PG 07-28 p3 (54 grams) prints the other report of I082, not this one.",
+      "Boston, July 1796: 'The verbal information by the arrival from France, mentions, that the campaign on the Rhine had opened no less bloody and successful to the French, than in Italy' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'Insurrection at Paris': Council of Five Hundred, 10 May 1796: a second message from the Directory: 'It cannot be dissembled that the Commune of Paris is the resort of all the immoral beings of the Republic' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "The letter of the Commissary of the Executive Directory with the armies of Italy and the Alps on the battle of Lodi: 'Immortal glory to the brave army of Italy! thanks and gratitude to the wise and bold commander who directs it!' (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (EAG, GUS, KG, NHG); not chosen: of one affair with the Paris article on Buonaparte's letter, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "'RIOTS IN AMSTERDAM': by the ship Three Friends, 48 days from Amsterdam, 'we learn that the inhabitants of that city were placed in a disagreeable situation' by bands of 'cannoniers' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Philadelphia, 19 July 1796: copy of a letter to a merchant of the city from Captain Cochrane of the British frigate Thetis, 10 July, on the brig John of Belfast: 'As I have no wish to interrupt the trade of real American citizens' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Brussels, 9 May 1796: 'Gen. Marceau, who commands the right wing of the army on the Sambre and Meuse', has brought his troops into a position that the Austrian generals asked the reason of (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "From the Boston Centinel: 'OF THE WESTERN POSTS, &c.': a correspondent signing Constantius sends 'EXTRACTS From a Journey into the Western Territory', on Kingston, Niagara and the posts (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U091 is its later part.",
+      "Paris, 20 May 1796: copy of a letter from General Buonaparte to the Executive Directory, Head-Quarters at Lodi, 22 Floreal: 'I was of opinion that the crossing of the river Po, would have been the boldest action of the campaign ... but I have now to relate the battle of Lody' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "The Executive Directory to the armies of the Sambre and Meuse, of the Rhine and Moselle, and of the North: 'Defenders of your country, Again the din of war is re-echoed from the Banks of the Rhine!' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Milan, 9 May 1796: 'The French have finally crossed the Po, about Codogno; they are now in possession of Codogno and Casal Pusterengo'; the corps of General Liptay was 'very ill treated' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'Conditions of a suspension of arms concluded between the French army and the Duke of Parma', by General Buonaparte and the Duke's plenipotentiaries, under the mediation of the minister of Spain at Parma (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Vienna, 3 May 1796: 'The unexpected events of the Milanese have determined the court to send with the utmost expedition to the army of Beaulieu, all the garrisons, not only of Tyrol' but of Styria, Carinthia and Carniola (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, NHG, PG); not chosen: of one affair with the Paris article on Buonaparte's letter, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Alicante, 10 May 1796: 'The cloud which lately obscured the negotiations between the United States and Algiers, is entirely dissipated: A letter from one of the first houses in Alicant, says, \"Our subsequent letter will advise you, of the final settlement between the United States and the Regency of Algiers\"' (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (GUS, KG, NHG, PG); not chosen: of one affair with the paragraph on the Sophia, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Extract of a letter from the island of Cayenne to 'a French gentleman of character in this town', 2 June 1796: 'The English have taken another method to procure money; they have fabricated five millions sterling in dollars, the value of each not exceeding two shillings sterling' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). An allegation, as the letter makes it.",
+      "From a Hamburg paper of 13 May: 'Letter of the American Consul at Algiers, to the American Consul at Marseilles', Algiers, 5 April 1796: 'After many difficulties and anxiety, I have succeeded this day, to establish and to renew our treaty with the Regency of Algiers' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). Part of U102 (its 41 grams on GUS 08-01 p2); NHG and FM print it just before the report of I104.",
+      "'ARMY OF ITALY. Crossing of the Mincio—Battle of Borghetto—Capture of the Fortress of Peschiera': Buonaparte to the Executive Directory, Peschiera, 13 Prairial (1 June 1796): 'After the battle of Lody, Beaulieu crossed the Oglio and the Mincio' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'BATTLE on the RHINE. ARMY OF THE SAMBRE AND MEUSE': extract of a letter from General Jourdan to the Executive Directory, 19 Prairial (7 June 1796): 'I have the honor of addressing a copy of Gen. Kleber's report to you': the enemy beaten at Altenkirchen (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U105 joins this letter and the commissary's that follows it (I103).",
+      "Paris, Council of Five Hundred, sitting of 10 June 1796: 'Messages from the directory were read; the first announced that the King of Sardinia had notified the Treaty concluded with the French Republic; the second gave details of a fresh victory' at Altenkirchen (3)": "By its own words below the bar for its weeks (3 papers, needs 4). A short report of one sitting on two messages.",
+      "The Commissary of the Executive Directory with the army of the Sambre and the Meuse to the Directory, 19 Prairial (7 June 1796): 'To announce another battle is only relating another victory!—The brave Kleber has totally defeated near Altenkirchen' the Austrian corps (3)": "By its own words below the bar for its weeks (3 papers, needs 4). Printed after Jourdan's letter (I101) in all three papers.",
+      "Port-au-Prince, 1796: the petition of the master of the American ship Mercury, of New York, to the British commander at Port-au-Prince, on the conduct of Captain Pigot of the frigate Success: 'That your petitioner being on his passage from Saint Marks to this port' was run foul of by the Success (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The papers print it as 'official evidence' of Captain Pigot's 'barbarity'; the master is named as the petitioner.",
+      "'Future progress of the French in Germany, from the AURORA': 'As Gen. Kleber advances towards the river Mein, the Republican troops stationed on the left bank of the Rhine, will cross the latter river' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). A forecast, as the Aurora makes it.",
+      "Fredericksburg, 27 July 1796: 'The following truly melancholy and distressing circumstance': a man of King George county, bitten by a mad dog about three years before, has been seized with the symptoms (3)": "By its own words below the bar for its weeks (3 papers, needs 4). It turns on private persons and is described without names (R-04).",
+      "'FRENCH VICTORY ON THE RHINE. Received at Salem from Bourdeaux where it was published in a hand bill': Paris, 7 June 1796: Duchatel, representative of the people, to the president of the administration of the Gironde (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "From an English paper: 'Mr. Fox concludes an address to the electors of Westminster, as follows: \"That I have opposed a war, unjust in its principle and ruinous in its consequences\"' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'WEST INDIA INTELLIGENCE': by an arrival from Cape Nicholas Mole, the Quebec and another frigate, convoying five transports from Barbadoes to the Mole, were chased off Cape Francois 'by three French 74 gun ships', which took the convoy (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "The ship General Washington, Capt. Price, from Cadiz, was brought to on 26 June 'by a ship of 18 guns, which proved to be a Moorish cruiser'; his mate saw on board the crew of the brig Emmeline, of Boston, taken (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Augusta (Georgia), 23 July 1796: 'The failure at the late treaty with the Creek Indians, in the accomplishment of the object of the state of Georgia': a letter on it 'from the commissioners of the United States, written upon the spot' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Baltimore, 5 August 1796: the master of the brig Triton, at Leogane, sends 'the following advertisement for publication': 'BE IT KNOWN throughout the United States' that a seaman of the Triton has informed the officers of French privateers (3)": "By its own words below the bar for its weeks (3 papers, needs 4). It turns on private persons and is described without names (R-04).",
+      "Extract of a letter from Londonderry, 1 May 1796: 'I never knew more people going to America than there are this year. We have had very troublesome times with Defenders and Peep O'day boys' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Salem, 9 August 1796: 'Capt. John Barton, from Rochefort, informs, that the celebrated Capt. Barney, late of Baltimore, has the command of a squadron of frigates, 8 in number', to sail on a secret expedition, 'conjectured the West Indies was their destination' (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, KG, NHG); not chosen: of one affair with the Baltimore report from Cape Francois, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "From the Aurora: extract of a letter dated Bordeaux, 23 June 1796: 'Extraordinary couriers inform us this moment, that the preliminaries of peace with the Emperor are signed' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). A report, as the letter gives it.",
+      "Cologne, 18 Prairial (June 1796): 'A courier arrived this morning informs us, that the left wing of the army of the Sambre and the Meuse, pursued its victorious march'; the general of division Bonnard to General Davoust on the capture of the Austrian entrenchments at Altenkirchen (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Madrid, 12 May 1796: 'It is certain that our court is in full negotiation with the French republic, for an alliance, offensive and defensive' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'Extract of a letter from BEAULIEU to the Council of the Emperor': 'I demanded of you a general and you sent me Argenteau' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The papers print it as Beaulieu's letter.",
+      "Boston, 17 August 1796: a gentleman of the town 'who has resided some years in France, arrived from that Republic since our last'; on his passage he was taken by the British frigate La Raison, and he speaks of France (3)": "By its own words below the bar for its weeks (3 papers, needs 4). It turns on private persons and is described without names (R-04).",
+      "'The ship Hope of this port is arrived at St. Thomas': on her passage from France she was chased off Tortola by the tender of the British sloop of war Bull Dog, which fired on her (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Paris, 20 June 1796: 'ARMY OF THE SAMBRE AND MEUSE. Jourdan, commander in chief': 'that part of the army which was to retreat to Neuwied, passed the river the day before yesterday in the greatest order' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "London, 9 July 1796: 'By letters received from Jersey, we learn, that General Gordon, the commander in chief there, having received intimation that a considerable French force had been collected' on the coast opposite, prepared against 'an attempt upon that island' (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (EAG, GUS, KG, NHG); not chosen: of one affair with the Paris article on Buonaparte's letter, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "New York, 27 August 1796: extract of a letter from Capt. James Neill, of the brig Mary Ann, Cadiz, 12 July: 'Thank GOD, I am here! For I had a very fortunate escape from two Algerines I fell in with, off Cape Palos' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Letters from General Buonaparte to the Executive Directory: 'Head Quarters at Pistoja, June 26. Prince Pignatelli, citizen Directors, is just arrived at this place, with instructions from his court, who has accepted the armistice' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'VICTORY OF THE FRENCH ON THE RHINE': the Executive Directory to the Council of Five Hundred, 6 July 1796: 'Victory is as faithful to the armies of the republic in Germany, as she has been in Italy. We have to announce to you a battle gained at Renchen' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Extract of a letter from an eminent house in Lisbon, 23 July 1796: 'This court has laid an embargo on the Dutch ships and forbid all intercourse with the states of Holland—a rupture not in the least expected' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Capt. Leonard, 28 days from Curacao, reports that on 12 August 'admiral Brackel, commander of the Dutch fleet in Surinam, had sent orders to the governor of Curacoa' to make the garrison and fleet strike the Orange flag and swear to the new Batavian constitution (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Boston, 10 September 1796: 'We stop the press, to notice the arrival here, this morning, of Capt. Swaine, 56 days from Bremen': that on 12 July, near Frankfort, 'a severe engagement took place between the French and Austrian armies, which ended in the total defeat of the latter' (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (EAG, GUS, KG, PG); not chosen: of one affair with General Moreau's report, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Boston, September 1796: a vessel from France, put in in distress, brings Paris papers to 17 July; 'Capt. Meale informs, that two engagements had taken place on the Rhine about the 11th of July, in both which the Austrians were DEFEATED' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'GAZETTE FRANCOISE, July 14. The citadel of Milan has surrendered to the French arms, fourteen days after the trenches were opened' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Boston, 23 September 1796: 'FROM FRANCE. Capt. Bennett, who arrived on Wednesday, from Bayonne, in France, had a passage of 44 days'; the only paper he brought, of 3 August, 'contained accounts of the capture of Frankfort' (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (FM, GUS, KG, NHG); not chosen: of one affair with General Moreau's report, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Salem, September 1796: 'From India—the Latest': by an arrival 115 days from Calcutta, papers to 14 May, with 'the conditions of the surrender of Colombo, in the Island of Ceylon' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "New York, 24 September 1796: extract of a letter from an American in Lisbon to his brother, 11 August: 'Ever since I have been here, there has been the greatest appearance of a rupture between Spain and England. It has at length taken place' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U137 is its later part ('The Portuguese are in expectation of a visit from the French').",
+      "Extract of a letter from a mercantile house in Lisbon, 11 August 1796: 'The political situation of Portugal becomes very critical, since it is no longer to be doubted, that WAR will immediately take place between England and Spain' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). U137 runs from the close of the first Lisbon letter (I138) into this one; FM heads it 'Extract of another letter, from a merchant in Lisbon'.",
+      "Aux Cayes, August 1796: a decree of the French delegation in the south of St. Domingo (session of 9 Thermidor), 'in the case of an American vessel captured on her passage to a British port': 'Considering that the ports and towns of St. Domingo, in which the English flag is flying have been delivered up by rebellious Frenchmen', to carry supplies there infringes neutrality (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, KG, NHG); not chosen: of one affair with the Boston report of Fort Dauphin, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "London, August 1796: the note which the Marquis de las Casas, the Spanish ambassador, presented to Lord Grenville: 'the Spanish cabinet ... retraces the origin of the coalition' and lists its grievances against Britain, from 'The St. Jago prize ship' to the 'capture and evacuation of Toulon' (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, KG, NHG); not chosen: of one affair with the Madrid paragraph, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "'FROM LISBON. Capt. Gooding, who left that port, Aug. 12, informs, that war between England and Spain was then generally expected' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'COMPLETE RUIN OF THE AUSTRIAN ARMY IN ITALY!': Council of Five Hundred, 13 August 1796: the Directory's message: the commander of the army of Italy 'has transmitted to the directory the history of five memorable days' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). GUS prints it twice on 10-07 (p2 and p3).",
+      "London, 19 August 1796: 'The intelligence which we have this day to relate, is of so awful and tremendous a nature, that we cannot, without considerable agitation and pain, discharge our duty in communicating it to the public' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). A London paper's own comment on the Austrian defeats.",
+      "From the London Morning Chronicle of 9 August 1796: an official note of the French Minister of Foreign Affairs to the ambassador in Switzerland: 'The French Government is informed, that the English ... have just given the most positive orders to the commanders of their ships of war to seize, indiscriminately, all the cargoes' bound to French ports (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "General Buonaparte to the Executive Directory, Head-Quarters at Castiglione, 19 Thermidor (6 August 1796): 'Our military achievements have succeeded one another so rapidly since the 11th, that I have found it impossible to transmit you an account of them before this time' (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, KG, NHG); not chosen: of one affair with General Moreau's report, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Buonaparte's 'Second Letter' to the Executive Directory, Verona, 21 Thermidor (8 August 1796): 'On the morning of the 19th, Citizens Directors, the enemy were posted in a line with the Mincio' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Boston, 14 October 1796: 'ATTACK ON HALIFAX': a vessel arrived at Cape Ann fell in with 'a French fleet of 11 sail of the line and 6 frigates, from France, bound on an expedition against Halifax' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). A report, as the papers give it.",
+      "'NEWFOUNDLAND.—The attack on the island of St. Johns, by a French squadron is confirmed with the destruction of the hamlets at Bulls Bay and Placentia' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'LONDON—Sept. 17. Gen. Moreau has gained another victory. After passing the Lech, and defeating the Austrian Gen. Latour' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "A letter to a British minister on Jourdan's retreat in Germany, September 1796: 'From information of the most authentic nature ... I can venture to assure your lordship, that they are in a state of the utmost confusion and despondency' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "General Jourdan to the Executive Directory, 7 Fructidor (24 August 1796): 'Prince Charles had joined Gen. Wartenleben with a body of 25,000 men; and that on the 5th he attacked Gen. Bernadotte' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "'AMERICAN CLAIMS. In the High Court of Admiralty': the claim made by Samuel Bayard, agent of the United States, for the owners of the schooner Relief, seized by the British forces at Martinique, against General Sir Charles Grey and Admiral Sir John Jervis (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The owners and master are named in the papers.",
+      "New York, 29 October 1796: extract of a letter from a respectable house in Amsterdam, 19 September: 'The news of the day is, that the King of Prussia has declared war against the Emperor of Germany, that his troops are marching'; 'How far the news is certain we cannot say' (4 of 5 in print)": "Eligible: printed by 4 of the 5 papers that survive for its weeks (FM, GUS, KG, NHG); not chosen: of one affair with General Moreau's report, chosen for the same weeks (X-1800-01; X-1796-01). Not checked against the scans.",
+      "Philadelphia, October 1796: the note of the Minister Plenipotentiary of the French Republic to the Secretary of State, 27 October: 'in conformity to the orders of his government' he transmits the Executive Directory's resolution of 14 Messidor on the conduct of the Republic's ships of war toward neutral vessels (3)": "By its own words below the bar for its weeks (3 papers, needs 4). Printed with the Secretary of State's answer (I158) on NHG 11-19 and KG 12-10. GUS 10-31 p2 prints the note, but both its transcriptions lack the first lines (counted).",
+      "'AUTHENTIC. DEPARTMENT OF STATE. November 1, 1796': the Secretary of State to the French minister: 'I have the honour to acknowledge the receipt of your note of the 27th ult. covering a decree of the Executive Directory of the French republic, concerning the commerce of neutral nations' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Baltimore, 1 November 1796: the schooner Godfrey, Capt. Jones, 13 days from Halifax: 'a number of expresses had arrived at Halifax, all bringing accounts of the surrender of Newfoundland to the French' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). A report, as the master gives it.",
+      "From the Aurora, November 1796: 'To relieve in some degree the impatience of the public as to Mr. Adet's last note to our executive we promised an outline of its contents' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The full note of 15 November (PG 12-08 p1 and 12-22, NHG 12-10 p1 and 12-17 p1-2) is in 2 papers; sweep_new:72 is shared by the outline and the note.",
+      "Norfolk, 19 November 1796: 'HIGHLY INTERESTING': the brig Moses Myers, Capt. Cooper, from Malaga, 3 October: 'The embargo continued on all British vessels' (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Salem, 22 November 1796: 'Sailing of a Spanish Fleet': Capt. Munford, from Cadiz, sailed on 26 September 'in company with a Spanish Fleet of 22 sail of the line, and 18 frigates and sloops of war' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). GUS and PG read the master's name 'Mugford'.",
+      "Formulas, digests, advertisements and the bodies of counted items that stand in 4 or more papers (7 text units and the sweep's passages of the same kind)": "Not items (C-07, C-09, C-10): the list of the session's acts, House proceedings, notices of land sales and other advertisements, and passages that are the bodies of items already counted. They were read and not counted (classify_1796_setaside.txt).",
+      "Washington's address to the people of the United States (the Farewell Address, September 1796) (2)": "By the reading's count printed in 2 papers (the New Hampshire Gazette, 1 October, and the Kentucky Gazette, 22 October). Read, below the bar; listed because readers will look for it."
+    },
+    "for_the_owner": {
+      "From the New York Diary, May 1796: 'A few days since, a circumstance occurred in this city, which no person can reflect on without sensations of horror and detestation': a carter's savage treatment of his overloaded horse (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (EAG, FM, GUS, NHG); it turns on private persons (R-04) and is not chosen; listed without names. Not checked against the scans."
+    },
+    "for_user_decision": {
+      "The papers in print, the bar and the choice (X-1796-00)": "As built: Y-THIN as amended (B1) with 6 papers (7 catalogue series, C-04); the bar of 4 makes 47 items eligible. One is printed by every paper in print and admitted (General Moreau's report, 5 of 5); 27 others are chosen (28 stories, 28 groups, 115 printings); 18 are listed as not chosen and 1 for the owner.",
+      "Choosing among the eligible items (X-1796-01)": "As built: the eligible items are taken in order of their papers and first printing, and each is chosen unless an item of the same affair, as the reading names it, is already chosen within a month of it (X-1800-01). So the year keeps one story of the war in Europe every second or third month (the Rhine in February, Pichegru in May, Italy in July, General Moreau's report in October), one of the Algiers affair (the Sophia, 5 papers), and one of the Royalists in France (the Cher, 5 papers). No item is eligible in March, November or December.",
+      "Items printed in their own words (X-1796-02)": "As built (C-02): seven printings, one in each of seven stories, print the item in the paper's own words or without its lead (the elephant, Captain Atkinson, Captain Seward, the Baron de Carondelet, the ratifications, the papers on a general peace, General Moreau's letter); each is counted with the item and its excerpt starts where that paper's item starts. Without them, six of these stories would have 3 papers.",
+      "Private persons (X-1796-03)": "As built (R-04): one eligible item turns on a private person (a carter's cruelty to his horse, New York, May, 4 of 6) and is listed for the owner without names; five more items that turn on private persons are below the bar and listed without names.",
+      "Data issues (X-1796-04)": "As built: the New Hampshire Gazette of 16 April (No. 2055) is filed twice, under 9 and 16 April, so its issue of 9 April does not survive; the ledger uses the 16 April keys, and the in-print counts treat the 9 April filing as a second copy. RevX reads the Patowmac Guardian of 14 April as 'TUESDAY' (a Thursday). The Gazette of the United States stands under two catalogue numbers (C-04). The Patowmac Guardian of 12 May has its RevX transcriptions shifted by one page (the text filed as page 2 is page 3's), which the release's map does not list; the Spain and England printing is on page 3 and its excerpt is cut from the CA text there. A filing correction can re-file that issue's RevX pages."
+    }
+  }
+}

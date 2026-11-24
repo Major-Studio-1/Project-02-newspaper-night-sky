@@ -42,10 +42,10 @@ pages, where only some are concerned), what is wrong, how it was found, and what
   in each other's issues: found by their datelines and by comparing each page with its neighbours (1806;
   `pipeline/story_discovery_1806/check_duplicate_pages_1806.py`, `pipeline/story_discovery_1806/check_page_neighbours_1806.py`).
 
-## `transcription.csv`: 676 printings whose transcription changes what was printed
+## `transcription.csv`: 729 printings whose transcription changes what was printed
 
-Every printing of the reviewed stories of 1770, 1771, 1772, 1773, 1774, 1775, 1776, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1787, 1788, 1789, 1790, 1791, 1792, 1793, 1794, 1797, 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809 and 1810 was read against its scan:
-5827 printings, of which 676 (12%) carry a misreading
+Every printing of the reviewed stories of 1770, 1771, 1772, 1773, 1774, 1775, 1776, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1787, 1788, 1789, 1790, 1791, 1792, 1793, 1794, 1795, 1796, 1797, 1798, 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809 and 1810 was read against its scan:
+6163 printings, of which 729 (12%) carry a misreading
 that changes a fact (a number, a date, a name, or a word with another meaning) or leave printed text out. For 1797 the count is the 33 printings of its later reading; its other 107 were checked against their scans before verdicts were recorded in this form. One row per
 printing: the newspaper, the date and page, which transcription the passage was taken from (RevX, or CA where RevX is
 missing or misfiled), whether printed text is left out, and the reviewers' notes, mostly in the form
@@ -75,7 +75,10 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 | 1792 | 146 | 15 |
 | 1793 | 135 | 9 |
 | 1794 | 192 | 12 |
+| 1795 | 102 | 14 |
+| 1796 | 116 | 31 |
 | 1797 | 33 | 3 |
+| 1798 | 118 | 8 |
 | 1800 | 182 | 25 |
 | 1801 | 160 | 25 |
 | 1802 | 132 | 23 |
@@ -90,7 +93,7 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 
 Examples: "ſtaves" read as "slaves" in 8 of the 9 printings of the resolution of
 Congress opening the ports (1776); "WAR INEVITABLE!!!" read as "NECESSARY INFORMATION!!" (1807); "Junot" read as "Juan" and
-"(MURAT.)" as "(MANUEL.)" (1808). 171 of the 676 leave printed text out, often
+"(MURAT.)" as "(MANUEL.)" (1808). 182 of the 729 leave printed text out, often
 behind a bare "...".
 
 The matched stories (found automatically, all years) were not read one by one. A random sample of 200 of

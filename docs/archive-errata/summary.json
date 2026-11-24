@@ -92,7 +92,10 @@
    1792,
    1793,
    1794,
+   1795,
+   1796,
    1797,
+   1798,
    1800,
    1801,
    1802,
@@ -105,9 +108,9 @@
    1809,
    1810
   ],
-  "checked": 5827,
-  "changes_what_was_printed": 676,
-  "leaves_out_text": 171,
+  "checked": 6163,
+  "changes_what_was_printed": 729,
+  "leaves_out_text": 182,
   "by_year": {
    "1770": {
     "checked": 12,
@@ -263,11 +266,32 @@
      "RevX": 12
     }
    },
+   "1795": {
+    "checked": 102,
+    "changes_what_was_printed": 14,
+    "by_transcription": {
+     "RevX": 14
+    }
+   },
+   "1796": {
+    "checked": 116,
+    "changes_what_was_printed": 31,
+    "by_transcription": {
+     "RevX": 31
+    }
+   },
    "1797": {
     "checked": 33,
     "changes_what_was_printed": 3,
     "by_transcription": {
      "RevX": 3
+    }
+   },
+   "1798": {
+    "checked": 118,
+    "changes_what_was_printed": 8,
+    "by_transcription": {
+     "RevX": 8
     }
    },
    "1800": {
