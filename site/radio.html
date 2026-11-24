@@ -59,8 +59,38 @@ h1{font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-.02em;margin
 /* The Music tab: the first sketch's picture and its controls, in its style. */
 .mcard{border:1px solid #2a3550;border-radius:22px;padding:16px 18px 18px;background:linear-gradient(180deg,#0e1628,#090e1b);box-shadow:inset 0 1px 0 #ffffff12,0 20px 60px #00000080}
 .m-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;margin-bottom:12px}
-.m-bar .ctl{display:inline-flex;align-items:center;gap:8px}.m-bar .label{font-size:12.5px;color:var(--muted);display:inline-flex;align-items:center}
-.m-bar output{font:500 14px/1 system-ui,sans-serif;min-width:3ch;font-variant-numeric:tabular-nums}
+.m-bar .ctl,.m-when .ctl{display:inline-flex;align-items:center;gap:8px}.m-bar .label,.m-when .label{font-size:12.5px;color:var(--muted);display:inline-flex;align-items:center}
+/* Play (the owner, 23 November: easy to find): the tab's one main control, in the gold of the radio's power when on and of
+   the picture's "now"; until the first press it breathes softly. */
+#m-play{min-height:40px;padding:6px 18px 6px 14px;font-size:14px;font-weight:600;color:var(--ink);border-color:#ffd27a73;
+  background:linear-gradient(180deg,#ffd27a2b,#ffd27a0d 60%,#ffd27a1a);box-shadow:inset 0 1px 1px #ffffff3d,0 2px 14px #ffd27a1f}
+#m-play:hover{background:linear-gradient(180deg,#ffd27a3d,#ffd27a14 60%,#ffd27a24)}
+#m-play .ico{width:18px;height:18px;opacity:1;color:var(--gold)}
+#m-play[aria-pressed="true"]{border-color:#ffd27aa6;box-shadow:inset 0 1px 1px #ffffff52,0 0 22px #ffd27a40}
+#m-play[aria-pressed="true"] .ico{color:var(--gold);filter:drop-shadow(0 0 5px #ffd27a)}
+#m-play.invite{animation:m-invite 2.4s ease-in-out infinite}
+@keyframes m-invite{0%,100%{box-shadow:inset 0 1px 1px #ffffff3d,0 0 0 0 #ffd27a00,0 2px 14px #ffd27a1f}50%{box-shadow:inset 0 1px 1px #ffffff3d,0 0 0 6px #ffd27a24,0 2px 20px #ffd27a40}}
+@media(prefers-reduced-motion:reduce){#m-play.invite{animation:none;box-shadow:inset 0 1px 1px #ffffff3d,0 0 0 3px #ffd27a26}}
+/* When (the owner, 23 November: a year is chosen exactly, not on a slider): the year strip of Pulses, one slot per year,
+   its bar the newspapers that survive that year and a gold dot where stories were checked by hand; the years before
+   and after; and the season, which follows the music through the year and starts it at a season's first month. */
+.m-when{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin:0 0 12px}
+.m-yearpick{display:flex;align-items:center;gap:8px;flex:1 1 560px;min-width:0}
+.m-yearnow{font:600 17px/1 system-ui,sans-serif;font-variant-numeric:tabular-nums;min-width:2.9em;text-align:center}
+.m-step.toggle{width:30px;height:30px;padding:0;justify-content:center;font-size:17px;line-height:1;color:var(--ink)}.m-step.toggle::before{display:none}.m-step:disabled{opacity:.35;cursor:default}
+.m-when .years-wrap{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:1px;margin-left:4px}
+.m-when .years{position:relative;display:flex;align-items:stretch;height:30px;padding:3px 4px 0;border-radius:8px;background:#070b17;border:1px solid var(--line);touch-action:pan-y;-webkit-user-select:none;user-select:none;cursor:pointer}
+.m-when .years button{-webkit-appearance:none;appearance:none;position:relative;z-index:1;flex:1 1 0;min-width:0;padding:0;margin:0;border:0;border-radius:2px;background:none;color:inherit;font:inherit;display:flex;align-items:flex-end;justify-content:center;cursor:pointer}
+.m-when .years button:hover .bar{background:#46587e}.m-when .years button:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+.m-when .years .bar{display:block;width:max(2px,56%);border-radius:1px 1px 0 0;background:#2c3955;transition:background .2s}
+.m-when .years button[aria-pressed="true"] .bar{background:#56698f}
+.m-when .years button.reviewed::before{content:"";position:absolute;top:2px;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--gold)}
+.m-when .years .band{position:absolute;z-index:0;top:3px;bottom:0;left:0;width:0;border-radius:2px;pointer-events:none;background:#8ccfff22;box-shadow:inset 0 0 0 1px #8ccfff88;
+  transition:transform .3s cubic-bezier(.3,1.3,.5,1),width .3s cubic-bezier(.3,1.3,.5,1)}
+.m-when .years.dragging .band,.m-when .years:not(.ready) .band{transition:none}
+.m-when .years .moment{position:absolute;z-index:2;top:0;bottom:0;left:0;width:2px;margin-left:-1px;border-radius:1px;background:#cfe9ff;pointer-events:none}
+.m-when .years-axis{position:relative;height:15px;font-size:11px;color:#8b98b5}.m-when .years-axis span{position:absolute;top:2px;transform:translateX(-50%)}
+.m-when .years-axis span::before{content:"";position:absolute;left:50%;top:-2px;width:1px;height:3px;background:#28334c}
 .m-shelf{margin:0 0 10px}.m-shelf-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:6px}
 .m-shelf-head h2{font-size:14px;font-weight:600;margin:0}.m-shelf-head span{font-size:12.5px;color:var(--muted)}
 .m-rail{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;padding:2px 2px 8px;scrollbar-width:thin;scrollbar-color:#28334c transparent}
@@ -74,16 +104,21 @@ h1{font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-.02em;margin
 .m-card .meta{font-size:11.5px;color:var(--muted)}
 .m-view{position:relative;border:1px solid #1c2640;border-radius:12px;background:#050711b3;overflow:hidden}
 .m-view canvas{display:block;width:100%;height:290px}
-.m-now{display:flex;flex-wrap:wrap;gap:2px 16px;align-items:baseline;margin:8px 2px 0}
-.m-date{font-size:17px;font-weight:500;min-width:250px;font-variant-numeric:tabular-nums}
-.m-what,.m-sum{color:var(--muted);font-size:12.5px}.m-sum{margin:4px 2px 0}
+/* The day under the picture keeps one height while it plays (the owner, 23 November: the text below it jumped): the
+   date in a column of its own, and three lines (who printed, the strings, the story on the keyboard), each cut short
+   with an ellipsis rather than wrapping. */
+.m-now{display:grid;grid-template-columns:15.5em minmax(0,1fr);gap:0 16px;align-items:start;margin:8px 2px 0;font-size:17px}
+.m-date{font-size:1em;font-weight:500;line-height:1.45;font-variant-numeric:tabular-nums;white-space:nowrap}
+.m-what{display:grid;color:var(--muted);font-size:12.5px;line-height:1.5}.m-what span{min-height:1.5em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.m-sum{color:var(--muted);font-size:12.5px;line-height:1.45;margin:6px 2px 0;min-height:2.9em}
 .m-key{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:14px}
 .m-key div{border:1px solid #1c2640;border-radius:12px;padding:9px 12px;background:#0b1222b3;font-size:12.5px;color:#c9d3e8}
 .m-key b{display:block;color:var(--ink);font-size:13px;margin-bottom:2px}
 .m-key [data-for]{display:none}.mcard[data-sound="wood"] [data-for~="wood"],.mcard[data-sound="piano"] [data-for~="piano"],.mcard[data-sound="concerto"] [data-for~="concerto"]{display:inline}
-@media(max-width:720px){.mcard{padding:12px;border-radius:18px}.m-view canvas{height:240px}.m-card{flex-basis:180px}.m-date{min-width:0}}
-body.exhibit .tabs,body.exhibit .m-bar,body.exhibit .m-shelf,body.exhibit .m-key,body.exhibit .m-sum{display:none}
-body.exhibit .m-view canvas{height:62vh}body.exhibit .m-date{font-size:2.6vw}body.exhibit .m-what{font-size:1.1vw}
+@media(max-width:720px){.mcard{padding:12px;border-radius:18px}.m-view canvas{height:240px}.m-card{flex-basis:180px}
+  .m-now{grid-template-columns:minmax(0,1fr)}.m-sum{min-height:5.8em}.m-yearpick{flex-basis:100%;flex-wrap:wrap}.m-when .years-wrap{flex:1 1 100%;margin-left:0}.m-when .years-axis span.minor{display:none}}
+body.exhibit .tabs,body.exhibit .m-bar,body.exhibit .m-when,body.exhibit .m-shelf,body.exhibit .m-key,body.exhibit .m-sum{display:none}
+body.exhibit .m-view canvas{height:62vh}body.exhibit .m-now{font-size:2.6vw}body.exhibit .m-what{font-size:1.1vw}
 /* Exhibition: no header or notes, larger type, the cursor hidden when still. */
 body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .notes,body.exhibit .lede,body.exhibit .knobs .vol,body.exhibit .voice{display:none}
 body.exhibit .radio{max-width:none;padding:3vh 4vw}
@@ -107,7 +142,7 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 <h1>Listen</h1>
 <div class="tabs"><span class="seg slide" id="tabs" role="group" aria-label="What to listen to"><button type="button" data-tab="radio" aria-pressed="true" title="The radio: the newspapers read aloud, day by day">Radio</button><button type="button" data-tab="music" aria-pressed="false" title="Music from the data, with its picture">Music</button></span></div>
 <p class="lede" id="lede-radio">Tune to a year between 1770 and 1810 and listen to what its newspapers printed, one morning after another. The radio starts on today's date in the year on the dial. Recorded voices read the passages aloud (your browser's own voice reads any passage without a recording); nothing is sent anywhere.</p>
-<p class="lede" id="lede-music" hidden>Music from the newspapers that survive, with no words: every note is a surviving issue or a printing of a story, and the picture shows them as they sound. Choose a year or one of its stories and press Play; at Normal a week of printing passes in two seconds.</p>
+<p class="lede" id="lede-music" hidden>Music from the newspapers that survive, with no words: every note is a surviving issue or a printing of a story, and the picture shows them as they sound. Choose a year, a season or one of its stories and press Play; at Normal a week of printing passes in two seconds.</p>
 <section class="set" aria-label="The radio">
   <div class="dial-window">
     <div class="scale" id="scale" aria-hidden="true"><div class="needle" id="needle"></div></div>
@@ -135,12 +170,18 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
     <button id="m-play" class="toggle play has-ico" type="button" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Play</span></button>
     <span class="ctl"><span class="label" id="m-speed-label">Speed</span><span class="seg slide" data-roving id="m-speed" role="group" aria-labelledby="m-speed-label"><button type="button" data-v="1.75" title="A week of printing in four seconds">Slow</button><button type="button" data-v="3.5" title="A week of printing in two seconds: the music's own pace">Normal</button><button type="button" data-v="7" title="A week of printing in a second">Fast</button></span></span>
     <span class="ctl"><span class="label" id="m-sound-label">Sound</span><span class="seg slide" data-roving id="m-sound" role="group" aria-labelledby="m-sound-label"><button type="button" data-sound="wood" title="Wooden bars for the surviving issues, plucked strings for the printings">Wood</button><button type="button" data-sound="piano" title="A recorded grand piano over soft strings">Piano</button><button type="button" data-sound="concerto" title="The piano with a flute and a clarinet">Concerto</button></span></span>
-    <span class="ctl"><span class="label">Year</span><input id="m-year" class="glass-range" type="range" min="1770" max="1810" step="1" aria-label="Year"><output id="m-year-out"></output></span>
     <span class="ctl"><span class="label" title="Volume"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-volume"/></svg></span><input id="m-vol" class="glass-range" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume"></span>
+  </div>
+  <div class="m-when">
+    <div class="m-yearpick"><span class="label" id="m-year-label">Year</span>
+      <button type="button" class="toggle m-step" id="m-prev" aria-label="The year before" title="The year before">‹</button><b class="m-yearnow" id="m-yearnow"></b><button type="button" class="toggle m-step" id="m-next" aria-label="The year after" title="The year after">›</button>
+      <div class="years-wrap"><div id="m-years" class="years" role="group" aria-labelledby="m-year-label" title="Each bar: the newspapers that survive that year in this archive (gold dot: stories checked by hand). Tap a year, or slide along the bars"></div><div id="m-years-axis" class="years-axis" aria-hidden="true"></div></div>
+    </div>
+    <span class="ctl"><span class="label" id="m-season-label">Season</span><span class="seg slide" data-roving id="m-season" role="group" aria-labelledby="m-season-label"><button type="button" data-season="winter" title="Winter: from 1 January; December is winter again, as the next one begins">Winter</button><button type="button" data-season="spring" title="Spring: March to May">Spring</button><button type="button" data-season="summer" title="Summer: June to August">Summer</button><button type="button" data-season="autumn" title="Autumn: September to November">Autumn</button></span></span>
   </div>
   <section class="m-shelf" aria-labelledby="m-shelf-title"><div class="m-shelf-head"><h2 id="m-shelf-title">One story</h2><span>Choose one and every printing of it plays; choose it again to go back to the year.</span></div><div id="m-stories" class="m-rail"></div></section>
   <div class="m-view"><canvas id="m-cv" aria-label="Newspapers by latitude, north at the top; time runs left to right; the gold line is now"></canvas></div>
-  <div class="m-now"><span class="m-date" id="m-date"></span><span class="m-what" id="m-what"></span></div>
+  <div class="m-now"><span class="m-date" id="m-date"></span><div class="m-what" id="m-what"><span></span><span></span><span></span></div></div>
   <p class="m-sum" id="m-sum"></p>
   <div class="m-key">
     <div><b>Presses</b>Each surviving issue is a grey dot<span data-for="wood"> and a soft wooden note, its pitch the town's latitude, south low and north high</span><span data-for="piano concerto"> and a step of the piano's left hand, which rocks through each bar's chord and climbs higher when more newspapers print</span>; struck, it glows. A day with no surviving issue is a rest.</div>
@@ -340,8 +381,48 @@ $('voice').addEventListener('click', () => { Radio.nextVoice(); syncVoice(); });
 // and stories come from the same year file the radio reads.
 const MUSIC_GAIN = 4, EPOCH = Date.UTC(1770, 0, 1), MSOUNDS = ['wood', 'piano', 'concerto'], MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const dayOf = iso => Math.round((Date.parse(iso + 'T00:00:00Z') - EPOCH) / 864e5);
+// The seasons and the month each starts the year at; December is winter again, as the next winter begins (Wood's strings
+// take the same seasons). ?season= opens the year at one.
+const SEASONS = {winter: 0, spring: 2, summer: 5, autumn: 8}, seasonOf = day => { const m = new Date(EPOCH + Math.floor(day) * 864e5).getUTCMonth(); return m === 11 || m < 2 ? 'winter' : m < 5 ? 'spring' : m < 8 ? 'summer' : 'autumn'; };
 const mc = {year: clampYear(Number(params.get('year')) || year), story: params.get('story') || null, speed: [1.75, 3.5, 7].includes(Number(params.get('speed'))) ? Number(params.get('speed')) : 3.5,
+  season: params.get('season') in SEASONS ? params.get('season') : null,
   playing: false, day: null, from: 0, to: 0, last: 0, timer: 0, raf: 0, token: 0, built: null, pic: null, prefetched: false};
+// The year strip, as on Pulses but for one year: a slot per year, its bar the newspapers that survive it, a gold dot where
+// stories were checked by hand, the chosen year under a pale band and the music's moment in it as a thin line.
+const yearsEl = $('m-years'), yearBtns = [], yBand = document.createElement('i'), yMoment = document.createElement('i');
+yBand.className = 'band'; yMoment.className = 'moment'; yMoment.hidden = true; yearsEl.append(yBand, yMoment);
+{
+  const most = Math.max(1, ...BOOT.years.map(y => y.papers || 0)), n = (k, w) => `${(k || 0).toLocaleString('en-US')} ${w}${k === 1 ? '' : 's'}`;
+  for (const y of BOOT.years) {
+    const b = document.createElement('button'); b.type = 'button'; b.dataset.year = String(y.year); b.tabIndex = -1;
+    const text = `${y.year}: ${n(y.papers, 'newspaper')}, ${n(y.pages, 'page')}, ${y.matched.toLocaleString('en-US')} matched ${y.matched === 1 ? 'story' : 'stories'}${y.reviewed ? `, ${y.reviewed} reviewed` : ''}`;
+    b.setAttribute('aria-label', text); b.title = text; if (y.reviewed) b.classList.add('reviewed');
+    const bar = document.createElement('i'); bar.className = 'bar'; bar.style.height = Math.max(10, Math.round(100 * (y.papers || 0) / most)) + '%'; b.append(bar);
+    yearsEl.append(b); yearBtns[y.year - 1770] = b;
+  }
+  for (let y = 1770; y <= 1810; y += 5) { const s = document.createElement('span'); s.dataset.year = String(y); s.textContent = y; if (y % 10) s.className = 'minor'; $('m-years-axis').append(s); }
+}
+function mStrip(y = mc.year) {   // the year chosen (or, while a finger slides along the bars, the one under it)
+  for (const b of yearBtns) { const on = Number(b.dataset.year) === y; b.setAttribute('aria-pressed', String(on)); b.tabIndex = on ? 0 : -1; }
+  $('m-yearnow').textContent = String(y); $('m-prev').disabled = y <= 1770; $('m-next').disabled = y >= 1810;
+  const b = yearBtns[y - 1770]; if (!b || !b.offsetWidth) return;
+  yBand.style.transform = `translateX(${b.offsetLeft}px)`; yBand.style.width = b.offsetWidth + 'px';
+  for (const s of $('m-years-axis').children) { const t = yearBtns[Number(s.dataset.year) - 1770]; s.style.left = (t.offsetLeft + t.offsetWidth / 2) + 'px'; }
+  if (!yearsEl.classList.contains('ready')) requestAnimationFrame(() => requestAnimationFrame(() => yearsEl.classList.add('ready')));
+  mMoment(y === mc.year);
+}
+function mMoment(show = true) {   // where the music is in its year
+  const b = yearBtns[mc.year - 1770], y0 = dayOf(mc.year + '-01-01'), f = mc.day == null ? -1 : (mc.day - y0) / (dayOf((mc.year + 1) + '-01-01') - y0);
+  yMoment.hidden = !show || !b || !b.offsetWidth || f < 0 || f >= 1; if (yMoment.hidden) return;
+  yMoment.style.transform = `translateX(${b.offsetLeft + f * b.offsetWidth}px)`;
+}
+function mSeasonSync() {   // the season of the day in view: the glass slides on as the music passes into the next
+  const s = mc.day == null ? null : seasonOf(Math.max(mc.from, Math.min(mc.to, mc.day)));
+  if (s === mSeasonSync.s) return; mSeasonSync.s = s;
+  for (const b of $('m-season').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.season === s));
+  Glass.sync();
+}
+function mSay(msg) { const [a, b, c] = $('m-what').children; a.textContent = msg; b.textContent = c.textContent = ''; }
 function musicYear(data) {   // the year's newspapers, surviving issues and stories, in the shapes music.js and the shelf read
   if (data.music) return data.music;
   const {raw, rev} = data, y = data.year;
@@ -366,10 +447,10 @@ function musicYear(data) {   // the year's newspapers, surviving issues and stor
     all: stories.flatMap(s => s.pr.map(([d, p]) => ({d, p, s: s.id, rev: s.rev})))};
 }
 async function mYear(y, play = mc.playing) {   // a year: its data, its shelf, and the picture at its first day
-  const token = ++mc.token; mc.year = y; $('m-year').value = String(y); $('m-year-out').textContent = String(y);
+  const token = ++mc.token; mc.year = y; mStrip();
   if (mc.playing) mPause();
   let data;
-  try { data = await loadYear(y); } catch { $('m-what').textContent = 'Could not load ' + y + '. Check the connection and try again.'; return; }
+  try { data = await loadYear(y); } catch { mSay('Could not load ' + y + '. Check the connection and try again.'); return; }
   if (token !== mc.token || tab !== 'music') return;
   mc.built = musicYear(data); mc.prefetched = false; Music.data(mc.built.index); mShelf(); mView();
   if (play) mPlay();
@@ -379,7 +460,8 @@ function mView() {   // the year, or one of its stories: what plays and what the
   const s = mc.story && b.byId.get(mc.story); if (!s) mc.story = null;
   if (s) { mc.from = s.first - 5; mc.to = s.last + 12; Music.view({from: mc.from, to: mc.to, story: true, printings: s.pr.map(([d, p]) => ({d, p, s: s.id, rev: s.rev})), labels: b.labels}); }
   else { mc.from = dayOf(mc.year + '-01-01'); mc.to = dayOf(mc.year + '-12-31'); Music.view({from: mc.from, to: mc.to, story: false, printings: b.all, labels: b.labels}); }
-  mc.day = mc.from;
+  mc.day = !s && mc.season ? dayOf(`${mc.year}-${pad(SEASONS[mc.season] + 1)}-01`) : mc.from;   // a season: from its first month
+  mSeasonSync(); mMoment();
   for (const c of $('m-stories').querySelectorAll('.m-card')) c.setAttribute('aria-pressed', String(c.dataset.id === mc.story));
   mSum(); mDraw(); mRemember();
 }
@@ -404,6 +486,7 @@ function mPlay() {
   Music.setLevel(MUSIC_GAIN * Number($('m-vol').value) / .8); Music.setSpeed(mc.speed);
   if (!Music.on) Music.setOn(true).then(mSync, mSync);
   if (mc.day >= mc.to + 1) mc.day = mc.from;   // at the end: from the start again
+  $('m-play').classList.remove('invite');
   mc.playing = true; mc.last = performance.now();
   clearInterval(mc.timer); mc.timer = setInterval(mTick, 100); mTick(); mFrame(); mSyncPlay();
 }
@@ -418,7 +501,7 @@ function mTick() {   // the playhead moves on, on a timer, so it keeps going in 
   Music.follow({day: mc.day, speed: mc.speed, playing: true});
   const next = mc.year >= 1810 ? 1770 : mc.year + 1;
   if (!mc.story && !mc.prefetched && mc.day > mc.to - 40) { mc.prefetched = true; loadYear(next).catch(() => {}); }   // ready in time
-  if (mc.day >= mc.to + 1) { if (mc.story) mPause(); else { mc.story = null; mYear(next, true); } }   // a story ends; a year runs on into the next
+  if (mc.day >= mc.to + 1) { if (mc.story) mPause(); else { mc.story = mc.season = null; mYear(next, true); } }   // a story ends; a year runs on into the next, from 1 January
 }
 function mFrame() {
   if (mc.raf) return;
@@ -430,7 +513,11 @@ function mDraw() {
   const day = mc.playing ? Math.min(mc.to + 1, mc.day + (performance.now() - mc.last) / 1000 * mc.speed) : mc.day;
   mc.pic.draw(day);
   const t = performance.now(); if (mc.playing && mDraw.t && t - mDraw.t < 220) return; mDraw.t = t;   // the words a few times a second
-  const w = mc.pic.words(Math.max(mc.from, Math.min(mc.to, Math.floor(day)))); $('m-date').textContent = w.date; $('m-what').textContent = w.what;
+  const w = mc.pic.words(Math.max(mc.from, Math.min(mc.to, Math.floor(day))));
+  const parts = w.what ? w.what.split(' · ') : [], lines = [parts[0] || '', parts[1] || '', parts.slice(2).join(' · ')], [a, b, c] = $('m-what').children;   // who printed; the strings; the story
+  $('m-date').textContent = w.date; a.textContent = lines[0]; b.textContent = lines[1]; c.textContent = lines[2];
+  a.title = lines[0]; b.title = lines[1]; c.title = lines[2];
+  mSeasonSync(); mMoment();
 }
 function mSync() {   // the sound chosen, and the key that describes it
   const s = window.Music ? Music.sound : 'wood'; $('mcard').dataset.sound = s;
@@ -441,7 +528,7 @@ function mSync() {   // the sound chosen, and the key that describes it
 function mSyncPlay() { $('m-play').setAttribute('aria-pressed', String(mc.playing)); $('m-play').querySelector('.lbl').textContent = mc.playing ? 'Pause' : 'Play'; }
 function mRemember() {   // the tab's view in the address: ?tab=music&year=1806 (&story=, &sound=, &speed=)
   if (tab !== 'music' || exhibit) return;
-  const q = new URLSearchParams(); q.set('tab', 'music'); q.set('year', String(mc.year)); if (mc.story) q.set('story', mc.story);
+  const q = new URLSearchParams(); q.set('tab', 'music'); q.set('year', String(mc.year)); if (mc.story) q.set('story', mc.story); else if (mc.season) q.set('season', mc.season);
   if (window.Music && Music.sound !== 'wood') q.set('sound', Music.sound); if (mc.speed !== 3.5) q.set('speed', String(mc.speed));
   try { history.replaceState(null, '', '?' + q.toString().replace(/%3A/g, ':')); } catch {}
 }
@@ -453,7 +540,7 @@ function setTab(t, play = false) {
   $('mcard').hidden = !m; $('lede-music').hidden = !m;
   if (m) {
     if (on) setOn(false);
-    if (!window.Music) { $('m-what').textContent = 'The music could not be loaded.'; return; }
+    if (!window.Music) { mSay('The music could not be loaded.'); return; }
     if (!mc.pic) mc.pic = Music.picture($('m-cv'));
     Music.setSpeed(mc.speed); mSync();
     if (!mc.built || mc.built.year !== mc.year) mYear(mc.year, play); else { mView(); if (play) mPlay(); }
@@ -477,10 +564,40 @@ $('m-sound').addEventListener('click', e => {
 $('m-stories').addEventListener('click', e => {
   const c = e.target.closest('.m-card'); if (!c) return;
   const play = mc.playing; if (play) mPause();
-  mc.story = mc.story === c.dataset.id ? null : c.dataset.id; mView(); if (play) mPlay();
+  mc.story = mc.story === c.dataset.id ? null : c.dataset.id; mc.season = null; mView(); if (play) mPlay();
 });
-$('m-year').addEventListener('input', e => { $('m-year-out').textContent = e.target.value; });
-$('m-year').addEventListener('change', e => { mc.story = null; mYear(clampYear(Number(e.target.value))); });
+// The year: a tap on the strip (or a finger slid along it, chosen where it is let go), the steps beside it, or the arrow
+// keys on the strip. A new year starts on 1 January; the same year again leaves a story for the year.
+function mChooseYear(y) {
+  y = clampYear(y); const same = y === mc.year && mc.built && mc.built.year === y;
+  if (same && !mc.story && !mc.season) return mStrip();
+  mc.story = mc.season = null;
+  if (same) { const play = mc.playing; if (play) mPause(); mView(); if (play) mPlay(); } else mYear(y);
+}
+let yPick = null;
+const yearAt = x => { let best = 1770, d = Infinity; for (const b of yearBtns) { const r = b.getBoundingClientRect(), m = Math.abs(r.left + r.width / 2 - x); if (m < d) { d = m; best = Number(b.dataset.year); } } return best; };
+yearsEl.addEventListener('pointerdown', e => {
+  if (e.button !== 0) return; yPick = {id: e.pointerId, y: yearAt(e.clientX)};
+  try { yearsEl.setPointerCapture(e.pointerId); } catch {} yearsEl.classList.add('dragging'); mStrip(yPick.y);
+});
+yearsEl.addEventListener('pointermove', e => { if (yPick && e.pointerId === yPick.id) { const y = yearAt(e.clientX); if (y !== yPick.y) { yPick.y = y; mStrip(y); } } });
+yearsEl.addEventListener('pointerup', e => { if (!yPick || e.pointerId !== yPick.id) return; const y = yPick.y; yPick = null; yearsEl.classList.remove('dragging'); mChooseYear(y); });
+yearsEl.addEventListener('pointercancel', e => { if (yPick && e.pointerId === yPick.id) { yPick = null; yearsEl.classList.remove('dragging'); mStrip(); } });
+yearsEl.addEventListener('click', e => { if (e.detail === 0 && e.target.closest('button')) mChooseYear(Number(e.target.closest('button').dataset.year)); });   // Enter or Space on a year
+yearsEl.addEventListener('keydown', e => {
+  const step = {ArrowLeft: -1, ArrowDown: -1, ArrowRight: 1, ArrowUp: 1, PageDown: -10, PageUp: 10}[e.key];
+  const y = step ? mc.year + step : e.key === 'Home' ? 1770 : e.key === 'End' ? 1810 : null; if (y == null) return;
+  e.preventDefault(); mChooseYear(y); yearBtns[clampYear(y) - 1770].focus();
+});
+$('m-prev').addEventListener('click', () => mChooseYear(mc.year - 1));
+$('m-next').addEventListener('click', () => mChooseYear(mc.year + 1));
+new ResizeObserver(() => mStrip()).observe(yearsEl);
+// The season: the year on the strip from that season's first month (a story gives way to the year).
+$('m-season').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || !mc.built || mc.built.year !== mc.year) return;
+  const play = mc.playing; if (play) mPause();
+  mc.story = null; mc.season = b.dataset.season; mSeasonSync.s = undefined; mView(); if (play) mPlay();
+});
 $('m-vol').addEventListener('input', () => { if (window.Music) Music.setLevel(MUSIC_GAIN * Number($('m-vol').value) / .8); });
 document.addEventListener('keydown', e => {   // Space plays and pauses the music, as on Pulses, unless a control has the focus
   if (tab !== 'music' || exhibit || e.code !== 'Space' || e.target.closest('input,button,select,textarea,summary,a')) return;
@@ -500,7 +617,7 @@ if (exhibit) {
   document.addEventListener('keydown', e => {
     if (e.target instanceof HTMLInputElement) return;
     if (e.key === ' ') { e.preventDefault(); if (tab === 'music') { if (mc.playing) mPause(); else mPlay(); } else { Radio.unlock(); setOn(!on); } }
-    else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const step = e.key === 'ArrowRight' ? 1 : -1; if (tab === 'music') { mc.story = null; mYear(clampYear(mc.year + step)); } else tune(year + step); }
+    else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const step = e.key === 'ArrowRight' ? 1 : -1; if (tab === 'music') { mc.story = mc.season = null; mYear(clampYear(mc.year + step)); } else tune(year + step); }
     else if (e.key.toLowerCase() === 'n' && on) { skipping = true; Radio.stop(); }
     else if (e.key.toLowerCase() === 'f') document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.();
   });
@@ -509,13 +626,15 @@ if (window.Music) {   // the music's sound: from the address, or the one last ch
   let k = null; try { k = localStorage.getItem('nns-music-sound'); } catch {}
   const s = params.get('sound'); Music.setSound(MSOUNDS.includes(s) ? s : MSOUNDS.includes(k) ? k : 'wood');
 }
-Glass.init(); mSync(); $('m-year').value = String(mc.year); $('m-year-out').textContent = String(mc.year);
+Glass.init(); mSync(); mStrip(); if (!exhibit) $('m-play').classList.add('invite');   // Play breathes until it is first pressed
 buildScale(); syncDial(); idle(); loadYear(year).catch(() => {});
+// Only the exhibition or a link that asks for it (?on=1) starts the sound here. The owner (23 November 2026): on this page
+// the radio waits for its button, even when it was on on the page before; Telescope and Pulses still carry it on.
 let kept = null; try { kept = sessionStorage.getItem('nns-radio'); } catch {}
-if (tab === 'music') { const play = exhibit || ['1', 'on'].includes(params.get('on')); setTab('music', play); if (play && !Radio.unlock()) $('touch').classList.add('show'); }   // sound needs a touch first
-else if (['1', 'on'].includes(params.get('on')) || exhibit || (kept === 'on' && params.get('on') !== '0')) {   // sound needs a touch first, unless the browser already allows it
-  const sound = Radio.unlock(); setOn(true); if (!sound) $('touch').classList.add('show');
-}
+const asked = exhibit || ['1', 'on'].includes(params.get('on'));
+if (tab === 'music') { setTab('music', asked); if (asked && !Radio.unlock()) $('touch').classList.add('show'); }   // sound needs a touch first
+else if (asked) { const sound = Radio.unlock(); setOn(true); if (!sound) $('touch').classList.add('show'); }   // sound needs a touch first, unless the browser already allows it
+if (!asked && kept === 'on') try { sessionStorage.setItem('nns-radio', 'off'); } catch {}   // the switch shows off here, and stays off on the next page
 })();
 </script>
 </body>
