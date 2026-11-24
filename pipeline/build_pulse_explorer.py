@@ -982,7 +982,7 @@ n_notebook=notebook_parts.check(notebook,{'index.html','telescope.html','pulses.
 print(f'notebook: {n_notebook} entries')
 # Stories: the storylines checked above, each piece's opening beside its scan crop (the crops are already in assets/).
 from PIL import Image
-stories_html=stories_parts.render(storylines,lambda src:Image.open(OUT/src).size)
+stories_html=stories_parts.render(storylines,lambda src:Image.open(OUT/src).size,sky=stars)
 (OUT/'stories.html').write_text(fill(fill_text((ROOT/'stories.html').read_text(encoding='utf8').replace('__STORIES__',stories_html)),'stories',VER,N_STARS),encoding='utf8')
 # Home (work/home_parts.py): the question, three facts about the source, the findings as ready views, a storyline and the
 # notebook; and a sample of stars for the hero sky, drawn by the page itself.
