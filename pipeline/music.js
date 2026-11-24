@@ -701,7 +701,7 @@ return {CHORDS, CYCLE, PALETTE, harmony, LADDER, CONTOUR, MEL, Q, TARGET, OCTAVE
 // with the winds off), adapted to the site: the data comes from Pulses' own index, the passage is what Pulses plays (one
 // story, or an overview of the chosen years' stories), and Pulses' playhead drives the scheduler. No picture, no bench.
 const M = NS, END = M.dayOf(1811);
-const S = {on: false, sound: 'wood', speed: 14, volume: .7, test: false};
+const S = {on: false, sound: 'wood', speed: 14, volume: .7, level: 1, test: false};
 const adagio = () => S.sound !== 'wood', winds = () => S.sound === 'concerto';
 let INDEX = null, A = null, V = null, E = null, P = null, ready = false, airOn = false, prepared = null;
 let last = {day: 0, speed: 14, playing: false};
@@ -880,7 +880,7 @@ const paceLevel = () => S.speed >= 56 ? .75 : S.speed >= 7 ? .84 : S.speed <= 2 
 // At the music's own paces (4 days a second or slower), every issue sounds and whole busy years crowd it: measured over
 // the whole of 1806 and 1809, the loudest second came within 8.5 to 9.2 dB of the voices, so all three sounds are 1 dB
 // softer there (23 November 2026, evening). The balance within the music is unchanged.
-const volumeAt = speed => S.volume * (speed <= 4 ? .89 : 1);
+const volumeAt = speed => S.volume * S.level * (speed <= 4 ? .89 : 1);
 const airLevel = () => adagio() ? .011 : .03;   // a faint breath, so a gap in the archive is heard as a gap, never as silence
 
 // Wood: wooden bars for the presses, plucked strings for the stories, strings on the season's chord, a felt drum at New Year.
@@ -1146,9 +1146,14 @@ async function render({seconds = 30, from = null, rate = 22050, keep = false} = 
 
 window.Music = {
   SOUNDS: ['wood', 'piano', 'concerto'],
-  data(index) { INDEX = index; A = null; if (V && V.pending && S.on) setView(V.pending); },   // Pulses' years/index.json, once loaded
+  // The newspapers and their surviving issues: Pulses' years/index.json, once loaded, or the radio's year (its newspapers
+  // and surviving issues, the same shape for one year). Whatever was worked out from the last one is forgotten.
+  data(index) { INDEX = index; A = null; cache.firsts.clear(); cache.active.clear(); clearCaches(); if (V && V.pending && S.on) setView(V.pending); },
   view(v) { if ((!S.on && !S.test) || !archive()) { V = {pending: v}; return; } setView(v); },   // the passage Pulses plays (kept, unread, while off)
   follow, setOn, setSound, unlock,
+  // How loud, against the levels above (1: under the radio's voices, as on Pulses). The radio's music station plays alone,
+  // so it is as loud as the voices would be (the owner, 23 November 2026).
+  setLevel(x) { S.level = Math.max(0, Math.min(8, Number(x) || 0)); if (E) E.setVolume(volumeAt(S.speed)); },
   get on() { return S.on; }, get sound() { return S.sound; },
   // for silent checks only
   _check: {

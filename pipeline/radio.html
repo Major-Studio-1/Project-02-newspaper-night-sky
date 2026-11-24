@@ -53,8 +53,10 @@ h1{font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-.02em;margin
 .touch{position:fixed;left:50%;bottom:3vh;transform:translateX(-50%);z-index:60;display:none;padding:10px 20px;border-radius:99px;border:1px solid #ffd27a88;
   background:#0b1222f2;color:var(--ink);font:500 clamp(15px,1.3vw,28px)/1.3 system-ui,sans-serif;cursor:pointer;box-shadow:0 0 30px #ffd27a33}
 .touch.show{display:block}
+/* The station (Voices or Music) and the music's sound: one-step choices (glass.js), as on Pulses. */
+.knobs .seg.slide{display:flex;width:100%}.knobs .seg.slide button{flex:1}
 /* Exhibition: no header or notes, larger type, the cursor hidden when still. */
-body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .notes,body.exhibit .lede,body.exhibit .knobs .vol,body.exhibit .voice{display:none}
+body.exhibit .site-header,body.exhibit .site-footer,body.exhibit .notes,body.exhibit .lede,body.exhibit .knobs .vol,body.exhibit .voice,body.exhibit .station-row{display:none}
 body.exhibit .radio{max-width:none;padding:3vh 4vw}
 body.exhibit h1{font-size:2.4vw}
 body.exhibit .dial-window{height:18vh}body.exhibit .scale .lbl{font-size:1.25vw}
@@ -74,7 +76,7 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 __SITE_HEADER__
 <main class="radio">
 <h1>Radio</h1>
-<p class="lede">Tune to a year between 1770 and 1810 and listen to what its newspapers printed, one morning after another. The radio starts on today's date in the year on the dial. Recorded voices read the passages aloud (your browser's own voice reads any passage without a recording); nothing is sent anywhere.</p>
+<p class="lede">Tune to a year between 1770 and 1810 and listen to what its newspapers printed, one morning after another. The radio starts on today's date in the year on the dial. Recorded voices read the passages aloud (your browser's own voice reads any passage without a recording); nothing is sent anywhere. Choose <b>Music</b> to hear the year as music instead, with no words.</p>
 <section class="set" aria-label="The radio">
   <div class="dial-window">
     <div class="scale" id="scale" aria-hidden="true"><div class="needle" id="needle"></div></div>
@@ -85,6 +87,8 @@ __SITE_HEADER__
     <button id="power" class="power" type="button" aria-pressed="false">__ICON_power__<span class="lbl">Turn on</span></button>
     <div class="now"><p class="now-date" id="now-date"></p><p class="now-where" id="now-where"></p></div>
     <div class="knobs">
+    <div class="row station-row"><span class="seg slide" data-roving id="station" role="group" aria-label="Station"><button type="button" data-station="voices" title="Voices: the newspapers read aloud">Voices</button><button type="button" data-station="music" title="Music: the same year as music, with no words">Music</button></span></div>
+    <div class="row station-row" id="sound-row" hidden><span class="seg slide" data-roving id="sound" role="group" aria-label="Sound of the music"><button type="button" data-sound="wood" title="Wood: wooden bars for the surviving issues, plucked strings for the passages">Wood</button><button type="button" data-sound="piano" title="Piano: a recorded grand piano over soft strings">Piano</button><button type="button" data-sound="concerto" title="Concerto: the piano with a flute and a clarinet">Concerto</button></span></div>
       <div class="row"><button id="skip" class="knob" type="button" disabled title="Skip to the next passage">__ICON_skip__Next</button></div>
       <label class="vol"><span>__ICON_volume__Volume</span><input id="volume" class="glass-range" type="range" min="0" max="1" step="0.05"></label>
       <button id="voice" class="voice knob" type="button" title="Try another of your browser's voices">__ICON_voice__<span class="lbl">Voice</span></button>
@@ -104,6 +108,7 @@ __SITE_HEADER__
     <li><b>The order:</b> each day starts with a greeting to the town of the first paper. Then the radio moves to the next day with surviving pages. Days with no surviving page are skipped, which is a gap in the archive, not silence in the town.</li>
     <li><b>The voices</b> were recorded once, when the site was built, with Kokoro, an open speech model: two announcers who take turns, and nine readers, each newspaper keeping one. They are modern and synthetic, not voices of the time. A passage without a recording is read by your browser's own voice, which differs between browsers and devices (Edge offers natural voices; Voice tries another).</li>
     <li><b>The sounds</b> are made in your browser for atmosphere: the hiss of the set, church bells, a ship's bell in harbour towns, horses on busy streets, birds in the country and a drum under war news. They are not recordings of the time. New York's police siren is a deliberate anachronism.</li>
+    <li><b>The music:</b> choose <b>Music</b> instead of Voices and the radio plays the same year with no words, as music: Wood, Piano or Concerto, the music of <a href="pulses.html">Pulses</a>. Each note is a surviving issue or a passage the voices would read; a week of printing passes in two seconds, and the set shows the date and the stories printed most widely that week. <a href="method.html#music">How the music works, and whose recordings it plays</a>.</li>
   </ul>
 </section>
 </main>
@@ -112,6 +117,7 @@ __SITE_FOOTER__
 <script type="application/json" id="radio-data">__RADIO_DATA__</script>
 <script src="glass.js"></script>
 <script src="radio.js"></script>
+<script src="music.js"></script>
 <script>
 (() => {
 'use strict';
@@ -133,6 +139,8 @@ let md = (() => {
   const t = new Date(); return [t.getMonth() + 1, t.getDate()];
 })();
 let on = false, runToken = 0, cursor = null, qi = 0, previous = null, current = null, first = true, skipping = false;
+// The station: Voices (the newspapers read aloud) or Music (the same year as music, with no words; music.js).
+let station = (params.get('station') || saved.station) === 'music' && window.Music ? 'music' : 'voices';
 const cache = new Map(); let reviewedAll = null;
 
 // ---- The year's printings, day by day: one passage from each paper that printed on a date ----
@@ -148,7 +156,7 @@ function loadYear(y) {
       for (const g of raw.groups) for (const m of g.members) storyOf.set(m.id ?? m, g);
       for (const o of raw.observations) {
         const g = storyOf.get(o.id), p = papers.get(o.node); if (!g || !p) continue;
-        add({id: o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: g.label, text: o.excerpt, tier: 'matched', check: o.ck, reach: g.newspapers,
+        add({id: o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: g.label, text: o.excerpt, tier: 'matched', check: o.ck, reach: g.newspapers, sid: g.id,
           pulse: `pulses.html?year=${y}&focus=${encodeURIComponent(g.id)}`, sky: `telescope.html?story=${encodeURIComponent(g.id.replace(/^auto:/, ''))}`});
       }
       if (rev) {
@@ -157,7 +165,7 @@ function loadYear(y) {
         for (const s of rev.stories) { const ids = s.members.map(m => m.id ?? m); ids.forEach(id => top.set(id, s)); reach.set(s.id, new Set(ids.map(id => node.get(id))).size); }
         for (const o of rev.observations) {
           const s = top.get(o.id), p = rp.get(o.node); if (!s || !p) continue;
-          add({id: o.id, clip: 'p:' + o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: s.label, text: o.excerpt, tier: 'reviewed', check: 'c', reach: reach.get(s.id) || 1,
+          add({id: o.id, clip: 'p:' + o.id, date: o.date, lccn: p.lccn, place: p.place, paper: p.name, title: s.label, text: o.excerpt, tier: 'reviewed', check: 'c', reach: reach.get(s.id) || 1, sid: s.id,
             war: /war|armies/i.test(cat.get(s.category) || ''), pulse: `pulses.html?year=${y}&focus=${encodeURIComponent(s.id)}`, sky: `telescope.html?story=${encodeURIComponent(s.id)}`});
         }
       }
@@ -165,7 +173,7 @@ function loadYear(y) {
         const best = new Map(); for (const it of list) { const b = best.get(it.lccn); if (!b || rank(it) > rank(b)) best.set(it.lccn, it); }
         byDate.set(d, [...best.values()].sort((a, b) => rank(b) - rank(a)).slice(0, 6));
       }
-      return {year: y, byDate, dates: [...byDate.keys()].sort()};
+      return {year: y, byDate, dates: [...byDate.keys()].sort(), newspapers: raw.newspapers, coverage: raw.coverage};   // the last two for the music
     })();
     cache.set(y, p); p.catch(() => cache.delete(y));
   }
@@ -201,18 +209,104 @@ async function run() {
   }
 }
 function setOn(value) {
-  on = value; $('power').setAttribute('aria-pressed', String(on)); $('power').querySelector('.lbl').textContent = on ? 'Turn off' : 'Turn on'; $('skip').disabled = !on;
+  on = value; $('power').setAttribute('aria-pressed', String(on)); $('power').querySelector('.lbl').textContent = on ? 'Turn off' : 'Turn on'; $('skip').disabled = !on || station === 'music';
   $('radio').setAttribute('aria-pressed', String(on)); try { sessionStorage.setItem('nns-radio', on ? 'on' : 'off'); } catch {}
-  if (on) { first = true; previous = null; Radio.welcome(); hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
-  else { runToken++; Radio.stop(true); idle(); }
+  if (on && station === 'music') { hint(''); startMusic(); }
+  else if (on) { first = true; previous = null; Radio.welcome(); hint(Radio.hasVoice ? '' : 'This browser offers no voice, so the radio shows the words instead.'); run(); }
+  else { runToken++; Radio.stop(true); stopMusic(true); idle(); }
 }
 function tune(y) {
   const was = year; year = clampYear(y); syncDial(); save();
+  if (station === 'music') { if (on && year !== was) startMusic(); return; }   // the music moves to the year on the dial, from the same date
   if (year === was && cursor) return;
   cursor = null; qi = 0; previous = null;
   if (on) { first = false; Radio.stop(); runToken++; Radio.cue('scratch'); setTimeout(() => Radio.cue('tune'), 180); setTimeout(() => { if (on) run(); }, 650); }   // a new station: the record stops, the dial turns
   else idle();
 }
+
+// ---- The music station: the same year and the same newspapers, heard as music with no words (music.js, the music of
+// Pulses: Wood, Piano or Concerto). The year's surviving issues are its presses, and the passages the voices would read
+// are its printings. A week of printing passes in two seconds, the music's own pace; the date on the set moves on with
+// it, and at the end of the year the next one follows, as with the voices. Nothing speaks over it, so it plays about as
+// loud as the voices would (the owner, 23 November 2026), not under them as on Pulses.
+const PACE = 3.5, MUSIC_GAIN = 4, EPOCH = Date.UTC(1770, 0, 1);
+const dayOf = iso => Math.round((Date.parse(iso + 'T00:00:00Z') - EPOCH) / 864e5), isoOf = d => new Date(EPOCH + d * 864e5).toISOString().slice(0, 10);
+const musicLevel = () => MUSIC_GAIN * Number($('volume').value) / .8;   // the volume knob moves the music as it moves the voices
+let tape = null;   // the music's playhead: {token, data, from, to, day, last, shown, week, timer}
+function forMusic(data) {   // the year's newspapers and surviving issues in the shape music.js reads (as Pulses' index), and its passages
+  if (data.music) return data.music;
+  const papers = data.newspapers.map(p => ({lccn: p.lccn, lat: p.lat, lon: p.lon})), at = new Map(papers.map((p, i) => [p.lccn, i]));
+  const coverage = {d: [], p: [], pages: []};
+  for (const c of data.coverage) {
+    const i = at.get(String(c.newspaper_id).replace('paper:', '')); if (i === undefined) continue;
+    coverage.d.push(dayOf(c.publication_date)); coverage.p.push(i); coverage.pages.push(c.observed_pages || 4);
+  }
+  const printings = [];
+  for (const [date, items] of data.byDate) for (const it of items) printings.push({d: dayOf(date), p: it.lccn, s: it.sid, rev: it.tier === 'reviewed'});
+  return data.music = {index: {papers, coverage}, printings};
+}
+async function startMusic() {
+  if (!window.Music) { hint('The music could not be loaded.'); setOn(false); return; }
+  const token = ++runToken; stopMusic(false); Radio.stop(true);
+  let data;
+  try { data = await loadYear(year); } catch { hint('Could not load ' + year + '. Check the connection and turn the radio on again.'); setOn(false); return; }
+  if (token !== runToken || !on || station !== 'music') return;
+  const from = dayOf(year + '-01-01'), to = dayOf(year + '-12-31'), m = forMusic(data);
+  Music.setLevel(musicLevel()); Music.data(m.index);
+  if (!Music.on) Music.setOn(true).then(syncStation, syncStation);
+  Music.view({from, to, story: false, printings: m.printings});
+  tape = {token, data, from, to, day: Math.min(to, Math.max(from, dayOf(target()))), last: performance.now(), shown: null, week: null, next: false};
+  tape.timer = setInterval(roll, 100); roll();
+}
+function roll() {   // the playhead moves on, on a timer, so it keeps going in a background tab while the music sounds
+  const t = tape; if (!t || !on || t.token !== runToken) return;
+  const now = performance.now(); t.day = Math.min(t.to + 1, t.day + Math.min(2, (now - t.last) / 1000) * PACE); t.last = now;
+  Music.follow({day: t.day, speed: PACE, playing: true});
+  const d = Math.min(t.to, Math.floor(t.day));
+  if (d !== t.shown) { t.shown = d; showMusic(t, d); }
+  if (!t.next && t.day > t.to - 40) { t.next = true; loadYear(year >= 1810 ? 1770 : year + 1).catch(() => {}); }   // the next year, ready in time
+  if (t.day >= t.to + 1) { year = year >= 1810 ? 1770 : year + 1; md = [1, 1]; syncDial(); save(); startMusic(); }
+}
+function stopMusic(off) {
+  if (tape) { clearInterval(tape.timer); tape = null; }
+  if (window.Music && Music.on) { Music.follow({day: 0, speed: PACE, playing: false}); if (off) Music.setOn(false); }
+}
+function showMusic(t, d) {   // the date as it passes, and each week the stories that week's papers printed most widely
+  const iso = isoOf(d); md = [Number(iso.slice(5, 7)), Number(iso.slice(8, 10))];
+  $('now-date').textContent = Radio.writtenDate(iso);
+  const week = Math.floor((d - t.from) / 7); if (week === t.week) return; t.week = week;
+  const w0 = t.from + week * 7, seen = new Set(), stories = [], papers = new Set();
+  for (let x = w0; x < w0 + 7; x++) for (const it of t.data.byDate.get(isoOf(x)) || []) { papers.add(it.lccn); if (!seen.has(it.sid)) { seen.add(it.sid); stories.push(it); } }
+  stories.sort((a, b) => (b.tier === 'reviewed') - (a.tier === 'reviewed') || b.reach - a.reach);
+  $('now-where').textContent = papers.size ? `${papers.size} newspaper${papers.size === 1 ? '' : 's'} printed passages this week` : 'No passage survives from this week';
+  $('cap-intro').textContent = 'Music · ' + ({wood: 'Wood', piano: 'Piano', concerto: 'Concerto'}[Music.sound] || '') + ' · a week in two seconds';
+  const box = $('cap-text'); box.replaceChildren();
+  for (const it of stories.slice(0, 3)) { const s = document.createElement('span'); s.className = 'now'; s.textContent = it.title.length > 110 ? it.title.slice(0, 108) + '…' : it.title; box.append(s, document.createElement('br')); }
+  if (!stories.length) box.textContent = 'The music goes on with the surviving issues: a gap in the archive, not silence in the towns.';
+  const meta = $('cap-meta'); meta.replaceChildren();
+  if (stories[0] && !exhibit) for (const [label, href] of [['Follow this story ↗', stories[0].pulse], ['See it in the sky ↗', stories[0].sky]]) { const a = document.createElement('a'); a.href = href; a.textContent = label; meta.append(a); }
+}
+function setStation(s) {
+  if (s === station || (s === 'music' && !window.Music)) return;
+  station = s; save(); syncStation();
+  if (!on) { idle(); return; }
+  runToken++; Radio.stop(true); stopMusic(s !== 'music'); $('skip').disabled = s === 'music';
+  if (s === 'music') startMusic(); else { first = true; previous = null; cursor = null; qi = 0; Radio.welcome(); run(); }
+}
+function syncStation() {
+  for (const b of $('station').querySelectorAll('button')) b.setAttribute('aria-pressed', String(b.dataset.station === station));
+  $('sound-row').hidden = station !== 'music';
+  for (const b of $('sound').querySelectorAll('button')) b.setAttribute('aria-pressed', String(!!window.Music && b.dataset.sound === Music.sound));
+  $('voice').disabled = station === 'music' || !Radio.voice;
+  Glass.sync();
+}
+$('station').addEventListener('click', e => { const b = e.target.closest('button'); if (b) { Radio.unlock(); setStation(b.dataset.station); } });
+$('sound').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || !window.Music) return;
+  try { localStorage.setItem('nns-music-sound', b.dataset.sound); } catch {}
+  Music.setSound(b.dataset.sound).then(syncStation, syncStation); syncStation();
+  if (tape) tape.week = null;   // the caption names the sound
+});
 
 // ---- What the set shows ----
 function show(it) {
@@ -230,7 +324,7 @@ function idle() {
   $('now-date').textContent = `${d} ${MONTHS[m - 1]} ${year}`;
   const y = YEARS.get(year);
   $('now-where').textContent = y ? `${y.papers} newspaper${y.papers === 1 ? '' : 's'} survive from ${year}${y.reviewed ? ` · ${y.reviewed} reviewed stories` : ''}` : '';
-  if (!on) { $('cap-intro').textContent = ''; $('cap-text').textContent = 'Turn the radio on to hear the first paper printed on or after this date.'; $('cap-meta').replaceChildren(); }
+  if (!on) { $('cap-intro').textContent = ''; $('cap-text').textContent = station === 'music' ? `Turn the radio on to hear ${year} as music from this date: each note a surviving issue or a passage.` : 'Turn the radio on to hear the first paper printed on or after this date.'; $('cap-meta').replaceChildren(); }
 }
 Radio.onCaption(({intro, lines, index}) => {
   $('cap-intro').textContent = intro;
@@ -257,11 +351,11 @@ function syncDial() {
   const y = YEARS.get(year); $('dial').setAttribute('aria-valuetext', `${year}${y ? `, ${y.papers} newspapers survive` : ''}`);
   if (!on) idle();
 }
-function save() { try { localStorage.setItem(STORE, JSON.stringify({year})); } catch {} }
+function save() { try { localStorage.setItem(STORE, JSON.stringify({year, station})); } catch {} }
 let lastStep = year;
 $('dial').addEventListener('input', () => {
   const y = clampYear(Number($('dial').value)); $('needle').style.left = ((y - 1770) / 40 * 100) + '%';
-  if (on && y !== lastStep) Radio.cue('tune'); lastStep = y;
+  if (on && station === 'voices' && y !== lastStep) Radio.cue('tune'); lastStep = y;
   if (!on) { year = y; idle(); }
 });
 $('dial').addEventListener('change', () => tune(Number($('dial').value)));
@@ -269,9 +363,9 @@ $('power').addEventListener('click', () => { Radio.unlock(); setOn(!on); });
 $('radio').addEventListener('click', () => { Radio.unlock(); setOn(!on); });   // the header's switch, the same on every page that reads aloud
 $('skip').addEventListener('click', () => { if (!on) return; skipping = true; Radio.stop(); });
 $('volume').value = String(Radio.volume);
-$('volume').addEventListener('input', () => Radio.setVolume(Number($('volume').value)));
+$('volume').addEventListener('input', () => { Radio.setVolume(Number($('volume').value)); if (window.Music) Music.setLevel(musicLevel()); });
 function syncVoice() {
-  const v = Radio.voice; $('voice').disabled = !v;
+  const v = Radio.voice; $('voice').disabled = !v || station === 'music';
   $('voice').querySelector('.lbl').textContent = v ? 'Voice: ' + v.name.replace(/^(Microsoft|Google)\s+/, '').replace(/\s*[-–(].*$/, '') : 'No voice in this browser';
   $('voice').title = v ? v.name + ' · tap for another voice' : '';
 }
@@ -296,6 +390,11 @@ if (exhibit) {
     else if (e.key.toLowerCase() === 'f') document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.();
   });
 }
+if (window.Music) {   // the music's sound: from the address, or the one last chosen in this browser (shared with Pulses); Wood at first
+  let k = null; try { k = localStorage.getItem('nns-music-sound'); } catch {}
+  const s = params.get('sound'); Music.setSound(Music.SOUNDS.includes(s) ? s : Music.SOUNDS.includes(k) ? k : 'wood');
+}
+Glass.init(); syncStation();
 buildScale(); syncDial(); idle(); loadYear(year).catch(() => {});
 let kept = null; try { kept = sessionStorage.getItem('nns-radio'); } catch {}
 if (['1', 'on'].includes(params.get('on')) || exhibit || (kept === 'on' && params.get('on') !== '0')) {   // sound needs a touch first, unless the browser already allows it
