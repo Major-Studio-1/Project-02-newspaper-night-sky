@@ -2,6 +2,12 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.11.39 (2026-11-24)
+
+One ledger release, the last thin year, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/` with topic rows for the new groups, made again in year order with its real base and target. `CURRENT.json` points to v0.11.39. In 1799 the rule's first part admits 36 items, kept as the rule reads (X-1799-01, as X-1773-01).
+
+- **v0.11.39 · 1799** (`stories_1799.json`, made with `--base 0.11.38 --target 0.11.39`): 44 stories, 44 groups and 189 printings, by the thin-year rule. 7,044 checks.
+
 ## Changes in v0.11.36 to v0.11.38 (2026-11-24)
 
 Three ledger releases, the third batch of thin years, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/` with topic rows for the new groups, made again in year order with its real base and target. `CURRENT.json` points to v0.11.38.

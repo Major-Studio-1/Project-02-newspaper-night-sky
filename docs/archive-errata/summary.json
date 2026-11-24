@@ -96,6 +96,7 @@
    1796,
    1797,
    1798,
+   1799,
    1800,
    1801,
    1802,
@@ -108,9 +109,9 @@
    1809,
    1810
   ],
-  "checked": 6163,
-  "changes_what_was_printed": 729,
-  "leaves_out_text": 182,
+  "checked": 6352,
+  "changes_what_was_printed": 756,
+  "leaves_out_text": 188,
   "by_year": {
    "1770": {
     "checked": 12,
@@ -292,6 +293,13 @@
     "changes_what_was_printed": 8,
     "by_transcription": {
      "RevX": 8
+    }
+   },
+   "1799": {
+    "checked": 189,
+    "changes_what_was_printed": 27,
+    "by_transcription": {
+     "RevX": 27
     }
    },
    "1800": {

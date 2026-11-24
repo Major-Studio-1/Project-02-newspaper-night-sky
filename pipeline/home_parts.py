@@ -52,7 +52,15 @@ def render(*, years, thin, newspapers, pages, matched, reviewed, reviewed_years,
     tr, raw = audit['transcription'], audit['raw_reviewer_counts']['transcription']
     located = tr['faithful']['count'] + tr['minor_errors']['count'] + tr['major_problem']['count']
     one_in = round(located / raw['major_problem'])
-    ry = ', '.join(map(str, reviewed_years[:-1])) + f' and {reviewed_years[-1]}'
+    # The reviewed years as runs (1770–1783 and 1787–1810), not one by one: thirty-eight years read as a list would fill the card.
+    runs = []
+    for y in sorted(reviewed_years):
+        if runs and y == runs[-1][1] + 1:
+            runs[-1][1] = y
+        else:
+            runs.append([y, y])
+    parts = [f'{a}–{b}' if b > a else str(a) for a, b in runs]
+    ry = parts[0] if len(parts) == 1 else ', '.join(parts[:-1]) + f' and {parts[-1]}'
     facts = [
         ('One surviving archive',
          f'<p class="big"><span><b>{newspapers}</b> newspapers</span><span><b>{pages:,}</b> pages</span><span><b>1770–1810</b></span></p>',
@@ -75,7 +83,9 @@ def render(*, years, thin, newspapers, pages, matched, reviewed, reviewed_years,
                f'<h2 id="source-title">What you are looking at</h2></div><div class="facts3">{cells}</div></section>')
 
     # Findings: the tested patterns as ready views (the source's own findings, 1 and 2, are the facts above).
-    bowls = ''.join(f'<article class="bowl"><span class="n">{n} · {esc(kind)}</span><h3>{esc(title)}</h3><p class="links">'
+    # No number on Home: findings 1 and 2 are the facts above, so the cards would start at 3 (the owner, 24 November 2026);
+    # the Findings page keeps the numbers, and each card's link opens its finding there.
+    bowls = ''.join(f'<article class="bowl"><span class="n">{esc(kind)}</span><h3>{esc(title)}</h3><p class="links">'
                     f'<a href="{esc(link)}">{esc(label)}</a><a href="findings.html#f{n}">Read the finding</a></p></article>'
                     for n, kind, title, label, link in findings if n > 2)
     out.append('<section class="bowls" aria-labelledby="bowls-title"><div class="head"><p class="k">Findings</p><h2 id="bowls-title">What the archive shows</h2>'
