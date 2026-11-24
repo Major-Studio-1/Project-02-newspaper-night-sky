@@ -1,0 +1,1695 @@
+{
+  "ledger_id": "ledger:stories-1772",
+  "ledger_version": 1,
+  "base_release": "0.11.16",
+  "target_release": "0.11.17",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1772",
+  "evidence_dir": "outputs/story_discovery_1772/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1772, and of 1771 where they reach the 1772 pages (long-running ones included), every item in 3 or more papers counted again by the first 40 words of its opening against every page, papers that comparison missed looked for again by their words and their names, and read, a sweep of word-for-word passages shared by 4 or more papers for items the families miss, phrase searches on all 675 pages of 1772 in both transcriptions for every admitted and chosen item, and scan checks of each admitted passage, by the thin-year rule (Y-THIN as amended on 23 November 2026: an item printed by more than half of the newspapers that survive for its weeks, and by at least 4, is eligible; items printed by every surviving paper are admitted, the others chosen to cover the months and the kinds of news; single paragraphs from runs of news counted by their own words, C-09)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1772/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1772/items_from_1771.json": "retrieval_candidates",
+    "outputs/story_discovery_1772/counted_items.json": "retrieval_candidates",
+    "outputs/story_discovery_1772/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1772/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1772.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1772_review.json": "scan_review",
+    "outputs/story_discovery_1772/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1772/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S72-001",
+      "page_key": "sn83021193|1772-01-23|1|2",
+      "excerpt_start": "A very great Personage last Thursday,",
+      "excerpt_end": "eternal separation between himself and the Duke.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-the-king-in-council-on-the-duke-of-cumberland-1771"
+      ],
+      "summary": "London, November 1771: a report of the King's words in Council on the 'late act' of his brother the Duke of Cumberland.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph follows the end of another paragraph, with no dateline."
+      ],
+      "crops": [
+        "S72-001.jpg"
+      ],
+      "family": [
+        "R1772-0181",
+        "R1772-0182",
+        "R1772-0183",
+        "R1772-0184",
+        "R1772-0186",
+        "R1772-0188"
+      ]
+    },
+    {
+      "id": "S72-002",
+      "page_key": "sn83025582|1772-01-31|1|2",
+      "excerpt_start": "A very great personage last Thursday,",
+      "excerpt_end": "eternal separation between him and the D.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-the-king-in-council-on-the-duke-of-cumberland-1771"
+      ],
+      "summary": "The New-Hampshire Gazette prints the London report of the King in Council.",
+      "note": "Prints 'the D. of C.' and 'the D.' for the Duke of Cumberland and the Duke (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt, including the abbreviations 'D. of C.' and 'D.', which are in the print; the print's spelling 'seperation' is modernised to 'separation'."
+      ],
+      "crops": [
+        "S72-002.jpg"
+      ],
+      "family": [
+        "R1772-0185",
+        "R1772-0188"
+      ]
+    },
+    {
+      "id": "S72-003",
+      "page_key": "sn84024741|1772-02-06|1|2",
+      "excerpt_start": "L O N D O N,",
+      "excerpt_end": "of Cumberland would cause an eternal separa-",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-the-king-in-council-on-the-duke-of-cumberland-1771"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the London report of the King in Council.",
+      "note": "Prints the paragraph under 'LONDON, November 13.' and names the 'Duke of Grafton' where the other printings have Gloucester (scan).",
+      "scan_findings": [
+        "The crop, cut again to the page's edge, shows the paragraph under 'LONDON, November 13.'; the scan itself stops at the column's right edge, so the last letters of four lines are lost. The print reads 'a very Great Personage'; the transcription's 'Petition' is another word that changes the sense. The print names the 'Duke of Grafton' where the other printings have Gloucester: a printed difference, read on the enlarged page image."
+      ],
+      "crops": [
+        "S72-003.jpg"
+      ],
+      "family": [
+        "R1772-0196"
+      ],
+      "scan_boxes": [
+        [
+          1110,
+          2315,
+          1623,
+          2470
+        ]
+      ]
+    },
+    {
+      "id": "S72-004",
+      "page_key": "sn84024739|1772-02-13|1|2",
+      "excerpt_start": "LONDON, November 11. LAST Thursday a",
+      "excerpt_end": "eternal Separation between himself and the Duke;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-the-king-in-council-on-the-duke-of-cumberland-1771"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the London report of the King in Council.",
+      "note": "Prints the paragraph under 'LONDON, November 11.' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt, under the dateline 'LONDON, November 11.'"
+      ],
+      "crops": [
+        "S72-004.jpg"
+      ],
+      "family": [
+        "R1772-0196",
+        "R1772-0202"
+      ]
+    },
+    {
+      "id": "S72-005",
+      "page_key": "sn83021193|1772-03-05|1|3",
+      "excerpt_start": "Captain Prince, on his passage, touched",
+      "excerpt_end": "standing in the whole town of Granada.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-captain-prince-fire-at-grenada-1772"
+      ],
+      "summary": "New York, February 1772: a shipmaster's report of a fire in Grenada.",
+      "note": "Earliest printing found. Prints 'Captain Prince, on his passage' without 'from Cayenne', and spells the island 'Granada' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself has no 'from Cayenne' and spells the island 'Granada': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S72-005.jpg"
+      ],
+      "family": [
+        "R1772-0221",
+        "R1772-0222",
+        "R1772-0223"
+      ]
+    },
+    {
+      "id": "S72-006",
+      "page_key": "sn83025582|1772-03-06|1|2",
+      "excerpt_start": "Capt. Prince, from Cayenne, on his",
+      "excerpt_end": "standing in the whole Town of Grenada.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-captain-prince-fire-at-grenada-1772"
+      ],
+      "summary": "The New-Hampshire Gazette prints the New York report of the fire in Grenada.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-006.jpg"
+      ],
+      "family": [
+        "R1772-0202",
+        "R1772-0210",
+        "R1772-0221",
+        "R1772-0224",
+        "R1772-0226"
+      ]
+    },
+    {
+      "id": "S72-007",
+      "page_key": "sn84024739|1772-03-12|1|3",
+      "excerpt_start": "Captain Prince, from Cayenne, on his",
+      "excerpt_end": "standing in the whole Town of Grenada.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-captain-prince-fire-at-grenada-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the New York report of the fire in Grenada.",
+      "note": "Gives the numbers in words: 'six Hundred Houses' and 'forty' (scan).",
+      "scan_findings": [
+        "The crop, cut again by hand on the page image, shows the paragraph in the New York news of 10 February. Scan matches the excerpt; this print gives the numbers in words ('six Hundred Houses', 'forty')."
+      ],
+      "crops": [
+        "S72-007.jpg"
+      ],
+      "family": [
+        "R1772-0021",
+        "R1772-0023",
+        "R1772-0152"
+      ],
+      "scan_boxes": [
+        [
+          35,
+          1640,
+          575,
+          1760
+        ]
+      ]
+    },
+    {
+      "id": "S72-008",
+      "page_key": "sn84024741|1772-03-12|1|2",
+      "excerpt_start": "Captain Prince, from Cayenne, on his",
+      "excerpt_end": "standing in the whole town of Grenada.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-captain-prince-fire-at-grenada-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the New York report of the fire in Grenada.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The crop, cut again by hand on the page image, shows the paragraph in the New York news of 17 February. The print reads 'on his passage touch-ed at the windward islands', the word broken across two lines; the transcription's 'on his passage southward' puts another word in its place, which changes what the shipmaster did: fact-changing. The rest matches."
+      ],
+      "crops": [
+        "S72-008.jpg"
+      ],
+      "family": [
+        "R1772-0015",
+        "R1772-0016",
+        "R1772-0018",
+        "R1772-0021",
+        "R1772-0231",
+        "R1772-0232",
+        "R1772-0233",
+        "R1772-0235"
+      ],
+      "scan_boxes": [
+        [
+          670,
+          1310,
+          1180,
+          1460
+        ]
+      ]
+    },
+    {
+      "id": "S72-009",
+      "page_key": "sn83025790|1772-10-05|1|6",
+      "excerpt_start": "Christianstadt, (in St. Croix) Sept. 4.",
+      "excerpt_end": "to describe the horrors of the night;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "christiansted-report-hurricane-september-1772"
+      ],
+      "summary": "St. Croix, September 1772: a report from Christiansted of a hurricane.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription modernises the print's 'horrours' to 'horrors'."
+      ],
+      "crops": [
+        "S72-009.jpg"
+      ],
+      "family": [
+        "R1772-0002",
+        "R1772-0003",
+        "R1772-0012",
+        "R1772-0066"
+      ]
+    },
+    {
+      "id": "S72-010",
+      "page_key": "sn83021194|1772-10-15|1|2",
+      "excerpt_start": "CHRISTIANSTED, [St. Croix] Sept. 4. On",
+      "excerpt_end": "to describe the horrors of the night;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "christiansted-report-hurricane-september-1772"
+      ],
+      "summary": "The Massachusetts Spy prints the Christiansted report of the hurricane.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription writes the print's 'Æ' in 'CHRISTIANSTÆD' as 'E'."
+      ],
+      "crops": [
+        "S72-010.jpg"
+      ],
+      "family": [
+        "R1772-0002",
+        "R1772-0432",
+        "R1772-0435",
+        "R1772-0436"
+      ]
+    },
+    {
+      "id": "S72-011",
+      "page_key": "sn83025582|1772-10-23|1|2",
+      "excerpt_start": "It is said that a proclamation",
+      "excerpt_end": "the country, and facilitate the Mississippi scheme.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-proclamation-for-emigrants-to-america-1772"
+      ],
+      "summary": "London, August 1772: a report that a proclamation would offer advantages to people embarking for America.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print spells 'Missisipi', which the transcription modernises to 'Mississippi'."
+      ],
+      "crops": [
+        "S72-011.jpg"
+      ],
+      "family": [
+        "R1772-0444",
+        "R1772-0445",
+        "R1772-0446"
+      ]
+    },
+    {
+      "id": "S72-012",
+      "page_key": "sn83021194|1772-10-29|1|1",
+      "excerpt_start": "Extract of a letter from Hamburg,",
+      "excerpt_end": "be dispatched for France, the other for",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hamburg-letter-on-the-revolution-in-sweden-1772"
+      ],
+      "summary": "Hamburg, August 1772: a letter on the news from Sweden that the King had been declared absolute.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "The crop, cut again to the letter, shows its heading and opening at the foot of page 1. Scan matches the excerpt except that it reads 'two expresses' and 'Hamburgh', which the transcription gives as 'two express' and 'Hamburg' (minor). The first figure of the date is worn; it reads as 'Aug. 25.', as the other printings date the letter."
+      ],
+      "crops": [
+        "S72-012.jpg"
+      ],
+      "family": [
+        "R1772-0071",
+        "R1772-0074",
+        "R1772-0429",
+        "R1772-0452",
+        "R1772-0453"
+      ],
+      "scan_boxes": [
+        [
+          3031,
+          5985,
+          4019,
+          6499
+        ]
+      ]
+    },
+    {
+      "id": "S72-013",
+      "page_key": "sn83021194|1772-10-29|1|2",
+      "excerpt_start": "It is said that a proclamation",
+      "excerpt_end": "the country, and facilitate the Mississippi scheme.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-proclamation-for-emigrants-to-america-1772"
+      ],
+      "summary": "The Massachusetts Spy prints the London report of a proclamation for people embarking for America.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-013.jpg"
+      ],
+      "family": [
+        "R1772-0067",
+        "R1772-0073",
+        "R1772-0412",
+        "R1772-0428",
+        "R1772-0445",
+        "R1772-0449"
+      ]
+    },
+    {
+      "id": "S72-014",
+      "page_key": "sn83021194|1772-10-29|1|2",
+      "excerpt_start": "ST. JAMES'S, Sept. 1. The King",
+      "excerpt_end": "within his colony and dominion of Virginia.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "st-james-receiver-general-of-virginia-1772"
+      ],
+      "summary": "St. James's, September 1772: a notice that the King granted the office of Receiver General of his revenues in Virginia.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-014.jpg"
+      ],
+      "family": [
+        "R1772-0067",
+        "R1772-0073",
+        "R1772-0412",
+        "R1772-0428",
+        "R1772-0445",
+        "R1772-0449"
+      ]
+    },
+    {
+      "id": "S72-015",
+      "page_key": "sn84024739|1772-10-29|1|1",
+      "excerpt_start": "CHRISTIANSTADT (St. Croix) September 4. ON",
+      "excerpt_end": "to describe the Horrors of the Night;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "christiansted-report-hurricane-september-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the Christiansted report of the hurricane.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription modernises the print's 'Horrours' to 'Horrors' (minor), read on the enlarged page image."
+      ],
+      "crops": [
+        "S72-015.jpg"
+      ],
+      "family": [
+        "R1772-0002",
+        "R1772-0003",
+        "R1772-0012",
+        "R1772-0447",
+        "R1772-0448",
+        "R1772-0451"
+      ]
+    },
+    {
+      "id": "S72-016",
+      "page_key": "sn84024741|1772-10-29|1|1",
+      "excerpt_start": "CHRISTIANSTED (St. Croix) Sept. 4. O",
+      "excerpt_end": "to describe the horrors of the night;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "christiansted-report-hurricane-september-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the Christiansted report of the hurricane.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription writes the print's 'Æ' in 'CHRISTIANSTÆD' as 'E'."
+      ],
+      "crops": [
+        "S72-016.jpg"
+      ],
+      "family": [
+        "R1772-0002",
+        "R1772-0003",
+        "R1772-0447"
+      ]
+    },
+    {
+      "id": "S72-017",
+      "page_key": "sn83025582|1772-10-30|1|1",
+      "excerpt_start": "St. James's, Sept. 1. The King",
+      "excerpt_end": "within his colony and dominion of Virginia.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "st-james-receiver-general-of-virginia-1772"
+      ],
+      "summary": "The New-Hampshire Gazette prints the notice of the Receiver General of Virginia.",
+      "note": "Prints 'the office of Receiver-General of his Majesty's revenues', without 'all' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt but for an apostrophe: the print has 'Esq'rs,'. The print itself lacks 'all' before 'his Majesty's revenues': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S72-017.jpg"
+      ],
+      "family": [
+        "R1772-0071",
+        "R1772-0075",
+        "R1772-0449",
+        "R1772-0456",
+        "R1772-0457"
+      ]
+    },
+    {
+      "id": "S72-018",
+      "page_key": "sn84024739|1772-11-05|1|2",
+      "excerpt_start": "It is said that a Proclamation",
+      "excerpt_end": "the Country and facilitate the Mississippi Scheme.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-proclamation-for-emigrants-to-america-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the London report of a proclamation for people embarking for America.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The crop, cut again by hand on the page image, shows the paragraph after a letter from Milan; scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-018.jpg"
+      ],
+      "family": [
+        "R1772-0071",
+        "R1772-0074",
+        "R1772-0075",
+        "R1772-0444",
+        "R1772-0452",
+        "R1772-0453",
+        "R1772-0459",
+        "R1772-0460",
+        "R1772-0464"
+      ],
+      "scan_boxes": [
+        [
+          35,
+          1268,
+          575,
+          1342
+        ]
+      ]
+    },
+    {
+      "id": "S72-019",
+      "page_key": "sn84024739|1772-11-05|1|2",
+      "excerpt_start": "The King has been pleased to",
+      "excerpt_end": "within his Colony and Dominion of Virginia.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "st-james-receiver-general-of-virginia-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the notice of the Receiver General of Virginia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; VG1 prints the notice without the St. James's dateline."
+      ],
+      "crops": [
+        "S72-019.jpg"
+      ],
+      "family": [
+        "R1772-0071",
+        "R1772-0074",
+        "R1772-0075",
+        "R1772-0444",
+        "R1772-0452",
+        "R1772-0453",
+        "R1772-0459",
+        "R1772-0460",
+        "R1772-0464"
+      ]
+    },
+    {
+      "id": "S72-020",
+      "page_key": "sn84024739|1772-11-05|1|3",
+      "excerpt_start": "Extract of a Letter from Hamburg,",
+      "excerpt_end": "despatched for France, the other for England.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hamburg-letter-on-the-revolution-in-sweden-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the letter from Hamburg on Sweden.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-020.jpg"
+      ],
+      "family": [
+        "R1772-0073",
+        "R1772-0089",
+        "R1772-0120",
+        "R1772-0421",
+        "R1772-0463"
+      ]
+    },
+    {
+      "id": "S72-021",
+      "page_key": "sn84024741|1772-11-05|1|1",
+      "excerpt_start": "A letter from Hambourg, dated August",
+      "excerpt_end": "the King of Sweden their absolute Sovereign.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hamburg-letter-on-the-revolution-in-sweden-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the letter from Hamburg on Sweden.",
+      "note": "Prints the letter in other words: 'A letter from Hambourg, dated August 25, says, The day before yesterday two couriers, dispatched from Stockholm, passed through this city ...' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt; Rind's paper prints the letter in other words, as the definition says."
+      ],
+      "crops": [
+        "S72-021.jpg"
+      ],
+      "family": [
+        "R1772-0075",
+        "R1772-0460"
+      ]
+    },
+    {
+      "id": "S72-022",
+      "page_key": "sn84024741|1772-11-05|1|1",
+      "excerpt_start": "August 24. It is said that",
+      "excerpt_end": "the country, and facilitate the Mississippi scheme.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-proclamation-for-emigrants-to-america-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the London report of a proclamation for people embarking for America.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The crop, cut again by hand on the page image, shows the paragraph under its date 'August 24.'; scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-022.jpg"
+      ],
+      "family": [
+        "R1772-0075",
+        "R1772-0460"
+      ],
+      "scan_boxes": [
+        [
+          30,
+          1260,
+          510,
+          1362
+        ]
+      ]
+    },
+    {
+      "id": "S72-023",
+      "page_key": "sn84024741|1772-11-05|1|2",
+      "excerpt_start": "St. James's, Sept. 1. The King",
+      "excerpt_end": "within his colony and dominion of Virginia.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "st-james-receiver-general-of-virginia-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the notice of the Receiver General of Virginia.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-023.jpg"
+      ],
+      "family": [
+        "R1772-0089",
+        "R1772-0103",
+        "R1772-0108",
+        "R1772-0110",
+        "R1772-0119",
+        "R1772-0120",
+        "R1772-0143",
+        "R1772-0144"
+      ]
+    },
+    {
+      "id": "S72-024",
+      "page_key": "sn83021194|1772-11-19|1|1",
+      "excerpt_start": "By Letters from Barbados, we learn",
+      "excerpt_end": "Bernard would be appointed to that government.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-bernard-expected-governor-of-barbados-1772"
+      ],
+      "summary": "Boston, November 1772: a report that Sir Francis Bernard was expected to be appointed governor of Barbados.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-024.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0471"
+      ]
+    },
+    {
+      "id": "S72-025",
+      "page_key": "sn83021194|1772-11-19|1|1",
+      "excerpt_start": "We have advice from England, that",
+      "excerpt_end": "of Captain, by his Majesty's express command.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-dudingston-promoted-captain-1772"
+      ],
+      "summary": "Boston, November 1772: a report that the commander of the Gaspee schooner had been promoted to captain.",
+      "note": "Earliest printing found. Spells the officer's name 'Duddingston', as the New-Hampshire Gazette does, where the Virginia papers print 'Dudingston' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt except the names: the print reads 'Duddingston' and 'Gaspee', where the transcription drops an s ('Duddington') and adds an accent ('Gaspée'); both minor."
+      ],
+      "crops": [
+        "S72-025.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0471"
+      ]
+    },
+    {
+      "id": "S72-026",
+      "page_key": "sn83021194|1772-11-19|1|3",
+      "excerpt_start": "Sept. 25. A correspondent informs us",
+      "excerpt_end": "measures shall be adopted towards the Americans.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-dartmouth-lenient-measures-1772"
+      ],
+      "summary": "London, September 1772: a report that Lord Dartmouth had resolved on 'the most lenient measures' towards the Americans.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-026.jpg"
+      ],
+      "family": [
+        "R1772-0472",
+        "R1772-0473",
+        "R1772-0474",
+        "R1772-0476"
+      ]
+    },
+    {
+      "id": "S72-027",
+      "page_key": "sn83021194|1772-11-19|1|3",
+      "excerpt_start": "Orders are stuck up at the",
+      "excerpt_end": "and America to join them without delay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-war-office-orders-for-officers-in-america-1772"
+      ],
+      "summary": "London, September 1772: a report of orders at the War-Office for soldiers absent from regiments in the West Indies and America.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-027.jpg"
+      ],
+      "family": [
+        "R1772-0472",
+        "R1772-0473",
+        "R1772-0474",
+        "R1772-0476"
+      ]
+    },
+    {
+      "id": "S72-028",
+      "page_key": "sn83025582|1772-11-20|1|1",
+      "excerpt_start": "By Letters from Barbados, we learn",
+      "excerpt_end": "Bernard would be appointed to that Government.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-bernard-expected-governor-of-barbados-1772"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Boston report on Sir Francis Bernard and Barbados.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-028.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0077",
+        "R1772-0438",
+        "R1772-0461",
+        "R1772-0477",
+        "R1772-0478",
+        "R1772-0479"
+      ]
+    },
+    {
+      "id": "S72-029",
+      "page_key": "sn83025582|1772-11-20|1|1",
+      "excerpt_start": "We have Advice from England that",
+      "excerpt_end": "of Captain, by his Majesty's express Command.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-dudingston-promoted-captain-1772"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Boston report on the commander of the Gaspee.",
+      "note": "Spells the officer's name 'Duddingston', as the Massachusetts Spy does, where the Virginia papers print 'Dudingston' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt. NHG, like MS, prints 'Duddingston' where the Virginia papers print 'Dudingston': a printed difference."
+      ],
+      "crops": [
+        "S72-029.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0077",
+        "R1772-0438",
+        "R1772-0461",
+        "R1772-0477",
+        "R1772-0478",
+        "R1772-0479"
+      ]
+    },
+    {
+      "id": "S72-030",
+      "page_key": "sn83025582|1772-11-20|1|1",
+      "excerpt_start": "A Correspondent informs us, that Lord",
+      "excerpt_end": "Measures shall be adopted towards the Americans.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-dartmouth-lenient-measures-1772"
+      ],
+      "summary": "The New-Hampshire Gazette prints the London report on Lord Dartmouth.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-030.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0077",
+        "R1772-0438",
+        "R1772-0461",
+        "R1772-0477",
+        "R1772-0478",
+        "R1772-0479"
+      ]
+    },
+    {
+      "id": "S72-031",
+      "page_key": "sn83025582|1772-11-20|1|1",
+      "excerpt_start": "Orders are stuck up at the",
+      "excerpt_end": "and America to join them without Delay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-war-office-orders-for-officers-in-america-1772"
+      ],
+      "summary": "The New-Hampshire Gazette prints the London report of the War-Office orders.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print itself has 'Commission'd' and 'on the Duty'."
+      ],
+      "crops": [
+        "S72-031.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0077",
+        "R1772-0438",
+        "R1772-0461",
+        "R1772-0477",
+        "R1772-0478",
+        "R1772-0479"
+      ]
+    },
+    {
+      "id": "S72-032",
+      "page_key": "sn83025582|1772-11-20|1|2",
+      "excerpt_start": "Extract of a letter from Hamburg,",
+      "excerpt_end": "despatched for France, the other for England;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "hamburg-letter-on-the-revolution-in-sweden-1772"
+      ],
+      "summary": "The New-Hampshire Gazette prints the letter from Hamburg on Sweden.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that it reads 'two expresses were dispatched' and 'Hamburgh', where the transcription has 'two express were despatched' and 'Hamburg': minor transcription errors, not printed differences (read on the enlarged page image)."
+      ],
+      "crops": [
+        "S72-032.jpg"
+      ],
+      "family": [
+        "R1772-0004",
+        "R1772-0073",
+        "R1772-0465",
+        "R1772-0468",
+        "R1772-0469",
+        "R1772-0471",
+        "R1772-0474"
+      ]
+    },
+    {
+      "id": "S72-033",
+      "page_key": "sn83025582|1772-11-27|1|2",
+      "excerpt_start": "P H I L A D",
+      "excerpt_end": "are on their way for this city.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-forts-chartres-and-pitt-1772"
+      ],
+      "summary": "Philadelphia, November 1772: a report that the forts Chartres and Pitt were destroyed by orders from England.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "The crop, cut again by hand on the page image, shows the dateline 'PHILADELPHIA, November 11.' and the paragraph; scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-033.jpg"
+      ],
+      "family": [
+        "R1772-0081",
+        "R1772-0082",
+        "R1772-0443",
+        "R1772-0484",
+        "R1772-0485"
+      ],
+      "scan_boxes": [
+        [
+          2460,
+          1945,
+          3430,
+          2168
+        ]
+      ]
+    },
+    {
+      "id": "S72-034",
+      "page_key": "sn83025582|1772-11-27|1|2",
+      "excerpt_start": "We are assured the frontier inhabitants",
+      "excerpt_end": "we fear the application is without success.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-frontier-petition-1772"
+      ],
+      "summary": "Philadelphia, November 1772: a report that the frontier inhabitants had petitioned the Governor.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-034.jpg"
+      ],
+      "family": [
+        "R1772-0081",
+        "R1772-0082",
+        "R1772-0443",
+        "R1772-0484",
+        "R1772-0485"
+      ]
+    },
+    {
+      "id": "S72-035",
+      "page_key": "sn83025582|1772-11-27|1|2",
+      "excerpt_start": "On Saturday Kayashuto, the great Seneca",
+      "excerpt_end": "of the greatest importance to the colonies.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-seneca-chief-from-johnson-hall-1772"
+      ],
+      "summary": "Philadelphia, November 1772: a report that the great Seneca chief had returned from a visit to Sir William Johnson.",
+      "note": "Earliest printing found. Prints a shorter text: 'On Saturday Kayashuto, the great Seneca chief, returned to this city from a visit to Sir William Johnson', without 'last' and without Johnson's Hall (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt. NHG prints a shorter text, 'On Saturday' without 'last' and 'from a visit to Sir William Johnson' without Johnson's Hall: printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S72-035.jpg"
+      ],
+      "family": [
+        "R1772-0081",
+        "R1772-0082",
+        "R1772-0443",
+        "R1772-0484",
+        "R1772-0485"
+      ]
+    },
+    {
+      "id": "S72-036",
+      "page_key": "sn84024739|1772-12-03|1|1",
+      "excerpt_start": "The Forts Chartres and Piu, by",
+      "excerpt_end": "are on their Way for this City.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-forts-chartres-and-pitt-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the Philadelphia report of the forts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except two words: the print reads 'Pitt' (transcription 'Piu') and 'Garrisons' (transcription 'Garrison'), both minor, read on the enlarged page image. VG1's word order 'by Orders from England, are destroyed' is printed."
+      ],
+      "crops": [
+        "S72-036.jpg"
+      ],
+      "family": [
+        "R1772-0004",
+        "R1772-0013",
+        "R1772-0076",
+        "R1772-0079",
+        "R1772-0081",
+        "R1772-0082",
+        "R1772-0472",
+        "R1772-0486"
+      ]
+    },
+    {
+      "id": "S72-037",
+      "page_key": "sn84024739|1772-12-03|1|1",
+      "excerpt_start": "We are assured the Frontier Inhabitants",
+      "excerpt_end": "fear the Application will be without Success.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-frontier-petition-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the Philadelphia report of the frontier petition.",
+      "note": "Prints 'but we fear the Application will be without Success', where the other printings have 'is without success' (scan).",
+      "scan_findings": [
+        "The crop, cut again by hand on the page image, shows the sentence at the foot of the column; scan matches the excerpt except that the print spells 'Gover-nour' (transcription 'Governor', minor). The print reads 'will be without Success' where the other printings have 'is without success': a printed difference."
+      ],
+      "crops": [
+        "S72-037.jpg"
+      ],
+      "family": [
+        "R1772-0004",
+        "R1772-0013",
+        "R1772-0076",
+        "R1772-0079",
+        "R1772-0081",
+        "R1772-0082",
+        "R1772-0472",
+        "R1772-0486"
+      ],
+      "scan_boxes": [
+        [
+          555,
+          2470,
+          1095,
+          2580
+        ]
+      ]
+    },
+    {
+      "id": "S72-038",
+      "page_key": "sn84024739|1772-12-03|1|1",
+      "excerpt_start": "PHILADELPHIA, November 11. ON Saturday last",
+      "excerpt_end": "of the greatest Importance to the Colonies.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-seneca-chief-from-johnson-hall-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the Philadelphia report of the Seneca chief.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except the chief's name: the print reads 'Kayashuta', garbled in the transcription as 'Kayaoutha' (minor). VG1 prints 'Johnson Hall' without the possessive: a printed difference; the name was read on the enlarged page image."
+      ],
+      "crops": [
+        "S72-038.jpg"
+      ],
+      "family": [
+        "R1772-0004",
+        "R1772-0013",
+        "R1772-0076",
+        "R1772-0079",
+        "R1772-0081",
+        "R1772-0082",
+        "R1772-0472",
+        "R1772-0486"
+      ]
+    },
+    {
+      "id": "S72-039",
+      "page_key": "sn84024741|1772-12-03|1|2",
+      "excerpt_start": "The forts Chartres and Pitt are,",
+      "excerpt_end": "are on their way for this city.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-forts-chartres-and-pitt-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the Philadelphia report of the forts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-039.jpg"
+      ],
+      "family": [
+        "R1772-0004",
+        "R1772-0013",
+        "R1772-0081",
+        "R1772-0104",
+        "R1772-0462",
+        "R1772-0486"
+      ]
+    },
+    {
+      "id": "S72-040",
+      "page_key": "sn84024741|1772-12-03|1|2",
+      "excerpt_start": "We are assured the frontier inhabitants",
+      "excerpt_end": "we fear the application is without success.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-frontier-petition-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the Philadelphia report of the frontier petition.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-040.jpg"
+      ],
+      "family": [
+        "R1772-0004",
+        "R1772-0013",
+        "R1772-0081",
+        "R1772-0104",
+        "R1772-0462",
+        "R1772-0486"
+      ]
+    },
+    {
+      "id": "S72-041",
+      "page_key": "sn84024741|1772-12-03|1|2",
+      "excerpt_start": "PHILADELPHIA, November 11. On Saturday last",
+      "excerpt_end": "of the greatest importance to the colonies.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-seneca-chief-from-johnson-hall-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the Philadelphia report of the Seneca chief.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-041.jpg"
+      ],
+      "family": [
+        "R1772-0004",
+        "R1772-0013",
+        "R1772-0081",
+        "R1772-0104",
+        "R1772-0462",
+        "R1772-0486"
+      ]
+    },
+    {
+      "id": "S72-042",
+      "page_key": "sn83021194|1772-12-04|1|1",
+      "excerpt_start": "The forts Chartres and Pitt are,",
+      "excerpt_end": "are on their way to this city.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-forts-chartres-and-pitt-1772"
+      ],
+      "summary": "The Massachusetts Spy prints the Philadelphia report of the forts.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. MS prints 'to this city' where the other printings have 'for this city': a printed difference."
+      ],
+      "crops": [
+        "S72-042.jpg"
+      ],
+      "family": [
+        "R1772-0082"
+      ]
+    },
+    {
+      "id": "S72-043",
+      "page_key": "sn83021194|1772-12-04|1|1",
+      "excerpt_start": "We are assured the frontier inhabitants",
+      "excerpt_end": "we fear the application is without success.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-frontier-petition-1772"
+      ],
+      "summary": "The Massachusetts Spy prints the Philadelphia report of the frontier petition.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. MS prints 'who have referred them' where the others print 'who has': a printed difference. The word 'fear' is partly broken in the print but legible."
+      ],
+      "crops": [
+        "S72-043.jpg"
+      ],
+      "family": [
+        "R1772-0082"
+      ]
+    },
+    {
+      "id": "S72-044",
+      "page_key": "sn83021194|1772-12-04|1|1",
+      "excerpt_start": "PHILADELPHIA, November 11. On Saturday last",
+      "excerpt_end": "of the greatest importance to the colonies.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-of-11-november-1772-on-the-frontier",
+        "philadelphia-report-seneca-chief-from-johnson-hall-1772"
+      ],
+      "summary": "The Massachusetts Spy prints the Philadelphia report of the Seneca chief.",
+      "note": "Prints 'had been' where the Virginia papers print 'has been', and the misprint 'were' for 'where' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt except the chief's name, which the print gives as 'Kayashuta' and the transcription as 'Kayahtuta'; the print's misprint 'were' for 'where' is silently corrected. MS prints 'had been' where the Virginia papers print 'has been': a printed difference."
+      ],
+      "crops": [
+        "S72-044.jpg"
+      ],
+      "family": [
+        "R1772-0082"
+      ]
+    },
+    {
+      "id": "S72-045",
+      "page_key": "sn84024739|1772-12-10|1|1",
+      "excerpt_start": "A Correspondent informs us that Lord",
+      "excerpt_end": "Measures shall be adopted towards the Americans.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-dartmouth-lenient-measures-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the London report on Lord Dartmouth.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-045.jpg"
+      ],
+      "family": [
+        "R1772-0077",
+        "R1772-0446",
+        "R1772-0478",
+        "R1772-0479",
+        "R1772-0491",
+        "R1772-0492",
+        "R1772-0493",
+        "R1772-0494",
+        "R1772-0495",
+        "R1772-0496"
+      ]
+    },
+    {
+      "id": "S72-046",
+      "page_key": "sn84024739|1772-12-10|1|1",
+      "excerpt_start": "Orders are stuck up at the",
+      "excerpt_end": "and America, to join them without Delay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-war-office-orders-for-officers-in-america-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the London report of the War-Office orders.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-046.jpg"
+      ],
+      "family": [
+        "R1772-0077",
+        "R1772-0446",
+        "R1772-0478",
+        "R1772-0479",
+        "R1772-0491",
+        "R1772-0492",
+        "R1772-0493",
+        "R1772-0494",
+        "R1772-0495",
+        "R1772-0496"
+      ]
+    },
+    {
+      "id": "S72-047",
+      "page_key": "sn84024739|1772-12-10|1|2",
+      "excerpt_start": "By Letters from Barbadoes we learn",
+      "excerpt_end": "Bernard would be appointed to that Government.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-bernard-expected-governor-of-barbados-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the Boston report on Sir Francis Bernard and Barbados.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. VG1 prints the 'Barbadoes' spelling and 'it was expected Sir Francis Bernard' without 'that': printed differences; the last letter of 'Barbadoes' is faint in this small crop."
+      ],
+      "crops": [
+        "S72-047.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0083",
+        "R1772-0483",
+        "R1772-0484"
+      ]
+    },
+    {
+      "id": "S72-048",
+      "page_key": "sn84024739|1772-12-10|1|2",
+      "excerpt_start": "BOSTON, November 12. WE have Advice",
+      "excerpt_end": "of Captain, by his Majesty's express Command.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-dudingston-promoted-captain-1772"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the Boston report on the commander of the Gaspee.",
+      "note": "Prints the paragraph under 'BOSTON, November 12.' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt except the schooner's name: the print reads 'Gaspee' (with a long s), garbled in the transcription as 'Gaffee' (minor: a garble of the same name, though it hides the name from a search). 'BOSTON, November 12.' stands directly above; the name was read on the enlarged page image."
+      ],
+      "crops": [
+        "S72-048.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0083",
+        "R1772-0483",
+        "R1772-0484"
+      ]
+    },
+    {
+      "id": "S72-049",
+      "page_key": "sn84024741|1772-12-10|1|5",
+      "excerpt_start": "By letters from Barbados, we learn,",
+      "excerpt_end": "Bernard would be appointed to that government.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-bernard-expected-governor-of-barbados-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the Boston report on Sir Francis Bernard and Barbados.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-049.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0475",
+        "R1772-0496",
+        "R1772-0497"
+      ]
+    },
+    {
+      "id": "S72-050",
+      "page_key": "sn84024741|1772-12-10|1|5",
+      "excerpt_start": "We have advice from England, that",
+      "excerpt_end": "of Captain, by his Majesty's express command.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-dudingston-promoted-captain-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the Boston report on the commander of the Gaspee.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-050.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0475",
+        "R1772-0496",
+        "R1772-0497"
+      ]
+    },
+    {
+      "id": "S72-051",
+      "page_key": "sn84024741|1772-12-10|1|5",
+      "excerpt_start": "A correspondent informs us, that Lord",
+      "excerpt_end": "measures shall be adopted towards the Americans.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-dartmouth-lenient-measures-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the London report on Lord Dartmouth.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-051.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0475",
+        "R1772-0496",
+        "R1772-0497"
+      ]
+    },
+    {
+      "id": "S72-052",
+      "page_key": "sn84024741|1772-12-10|1|5",
+      "excerpt_start": "Orders are stuck up at the",
+      "excerpt_end": "and America, to join them without delay.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-war-office-orders-for-officers-in-america-1772"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the London report of the War-Office orders.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S72-052.jpg"
+      ],
+      "family": [
+        "R1772-0005",
+        "R1772-0475",
+        "R1772-0496",
+        "R1772-0497"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "london-report-the-king-in-council-on-the-duke-of-cumberland-1771",
+      "kind": "message_group",
+      "label": "London, November 1771: 'A very great Personage last Thursday, in Council, after expressing the most tender concern for the Duke of Gloucester, thought proper to take notice, that the late act of the Duke of Cumberland would cause an eternal separation between himself and the Duke'",
+      "definition": "Printings of a London paragraph of November 1771 (dated 11 and 13 November in the Virginia papers): 'A very great Personage last Thursday, in Council, after expressing the most tender concern for the Duke of Gloucester, thought proper to take notice, that the late act of the Duke of Cumberland would cause an eternal separation between himself and the Duke. Upon which tears being seen to gush, a motion was made to adjourn the Council; but the great Personage, resuming his wonted firmness, told the Council, that no private concerns respecting himself should ever retard the public business of the kingdom ...'. A London paper's report, as the papers reprinted it.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "new-york-report-captain-prince-fire-at-grenada-1772",
+      "kind": "message_group",
+      "label": "New York, February 1772: 'Captain Prince, from Cayenne, on his passage, touched at the Windward Islands, where he was informed, that on the 27th of December last, a most terrible fire broke out in the Island of Grenada, which burnt down no less than 600 houses'",
+      "definition": "Printings of a New York paragraph of February 1772: 'Captain Prince, from Cayenne, on his passage, touched at the Windward Islands, where he was informed, that on the 27th of December last, a most terrible fire broke out in the Island of Grenada, which burnt down no less than 600 houses; and that not more than 40 were left standing in the whole town of Grenada.' A shipmaster's report at second hand. Letters from the islands on the same fire, in other words, are other texts.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "london-report-proclamation-for-emigrants-to-america-1772",
+      "kind": "message_group",
+      "label": "London, August 1772: 'It is said that a proclamation will shortly be issued, offering great advantages to those people who embark for America, in order to cultivate the country, and facilitate the Mississippi scheme'",
+      "definition": "Printings of a London paragraph of August 1772 (dated 24 August in Rind's Virginia Gazette): 'It is said that a proclamation will shortly be issued, offering great advantages to those people who embark for America, in order to cultivate the country, and facilitate the Mississippi scheme.' A London report of what 'is said'.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "st-james-receiver-general-of-virginia-1772",
+      "kind": "message_group",
+      "label": "St. James's, 1 September 1772: 'The King has been pleased to grant unto George James Williams and Francis North, Esqrs. the office of Receiver General of all his Majesty's revenues within his colony and dominion of Virginia'",
+      "definition": "Printings of a notice from St. James's of 1 September 1772: 'The King has been pleased to grant unto George James Williams and Francis North, Esqrs. the office of Receiver General of all his Majesty's revenues within his colony and dominion of Virginia.' An official notice of an appointment, as the London papers gave it.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "hamburg-letter-on-the-revolution-in-sweden-1772",
+      "kind": "message_group",
+      "label": "Hamburg, 25 August 1772: 'The day before yesterday two express were dispatched from Stockholm ... The four great cities ... have declared his Majesty, the King of Sweden, as their absolute sovereign'",
+      "definition": "Printings of an extract of a letter from Hamburg of 25 August 1772: 'The day before yesterday two express were dispatched from Stockholm, and passed through this city ... it is no longer a secret here. The following is the intelligence they brought: \"The four great cities, namely, Christianstadt, Joenkjoeping, Landscrona, and Gothenburgh, have declared his Majesty, the King of Sweden, as their absolute sovereign ...\"'. A letter at second hand. Rind's Virginia Gazette prints the same letter in other words ('A letter from Hambourg, dated August 25, says ... two couriers, dispatched from Stockholm ...'), counted with it (C-02).",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "london-war-office-orders-for-officers-in-america-1772",
+      "kind": "message_group",
+      "label": "London, September 1772: 'Orders are stuck up at the War-Office for all persons (commissioned and private) absent from regiments on duty in the West Indies and America to join them without delay'",
+      "definition": "Printings of a London paragraph of September 1772: 'Orders are stuck up at the War-Office for all persons (commissioned and private) absent from regiments on duty in the West Indies and America to join them without delay.' A London report of an order.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "london-report-dartmouth-lenient-measures-1772",
+      "kind": "message_group",
+      "label": "London, 25 September 1772: 'A correspondent informs us that Lord Dartmouth has signified his determined resolution that the most lenient measures shall be adopted towards the Americans'",
+      "definition": "Printings of a London paragraph of 25 September 1772: 'A correspondent informs us that Lord Dartmouth has signified his determined resolution that the most lenient measures shall be adopted towards the Americans.' A London paper's report from a correspondent.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "boston-report-bernard-expected-governor-of-barbados-1772",
+      "kind": "message_group",
+      "label": "Boston, November 1772: 'By letters from Barbados, we learn that it was expected that Sir Francis Bernard would be appointed to that government'",
+      "definition": "Printings of a Boston paragraph of November 1772: 'By letters from Barbados, we learn that it was expected that Sir Francis Bernard would be appointed to that government.' A report of an expectation, from letters.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "boston-report-dudingston-promoted-captain-1772",
+      "kind": "message_group",
+      "label": "Boston, November 1772: 'We have advice from England, that Lieutenant Dudingston, who commanded the Gaspee armed schooner that was burnt at Rhode-Island, is promoted to the rank of Captain, by his Majesty's express command'",
+      "definition": "Printings of a Boston paragraph of November 1772 (dated 12 November in Purdie and Dixon's Virginia Gazette): 'We have advice from England, that Lieutenant Dudingston, who commanded the Gaspee armed schooner that was burnt at Rhode-Island, is promoted to the rank of Captain, by his Majesty's express command.'",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-report-of-11-november-1772-on-the-frontier",
+      "kind": "context_group",
+      "label": "Philadelphia, 11 November 1772: three paragraphs on the frontier, as the papers printed them in November and December",
+      "definition": "Three paragraphs of a Philadelphia report of 11 November 1772, each printed by every newspaper that survives for its weeks and each counted by its own words (C-09): the great Seneca chief's return from a visit to Sir William Johnson; the forts Chartres and Pitt destroyed by orders from England; and the frontier inhabitants' petition to the Governor on that subject.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-report-seneca-chief-from-johnson-hall-1772",
+      "kind": "message_group",
+      "label": "Philadelphia, 11 November 1772: 'On Saturday last Kayashuta, the great Seneca Chief, returned to this city from Johnson's Hall, where he has been on a visit to Sir William Johnson, of the greatest importance to the colonies'",
+      "definition": "Printings of a Philadelphia paragraph of 11 November 1772: 'On Saturday last Kayashuta, the great Seneca Chief, returned to this city from Johnson's Hall, where he has been on a visit to Sir William Johnson, of the greatest importance to the colonies ...'. The papers spell the chief's name in several ways.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-report-forts-chartres-and-pitt-1772",
+      "kind": "message_group",
+      "label": "Philadelphia, 11 November 1772: 'The forts Chartres and Pitt are, by orders from England, destroyed, the barracks levelled to the ground, and abandoned by the garrisons'",
+      "definition": "Printings of a Philadelphia paragraph of 11 November 1772: 'The forts Chartres and Pitt are, by orders from England, destroyed, the barracks levelled to the ground, and abandoned by the garrisons, who are soon expected, as they are on their way for this city.'",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-report-frontier-petition-1772",
+      "kind": "message_group",
+      "label": "Philadelphia, 11 November 1772: 'We are assured the frontier inhabitants of this province have presented the Governor with a petition on that subject'",
+      "definition": "Printings of a Philadelphia paragraph of 11 November 1772: 'We are assured the frontier inhabitants of this province have presented the Governor with a petition on that subject, who has referred them to General Gage, at New-York, but we fear the application is without success.' The subject is the forts' abandonment, in the paragraph before.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    },
+    {
+      "id": "christiansted-report-hurricane-september-1772",
+      "kind": "message_group",
+      "label": "Christiansted (St. Croix), 4 September 1772: 'On Monday night last blew the most violent hurricane that has ever been known here, or perhaps on any island, in the memory of man'",
+      "definition": "Printings of a Christiansted (St. Croix) paragraph of 4 September 1772: 'On Monday night last blew the most violent hurricane that has ever been known here, or perhaps on any island, in the memory of man. Words are wanting to describe the horrors of the night ...'. A report from the island, as the papers reprinted it. Accounts of the same storm from other islands are other texts.",
+      "admission_rule": "Reviewed 1772 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "philadelphia-report-of-11-november-1772-on-the-frontier",
+      "child": "philadelphia-report-seneca-chief-from-johnson-hall-1772"
+    },
+    {
+      "parent": "philadelphia-report-of-11-november-1772-on-the-frontier",
+      "child": "philadelphia-report-forts-chartres-and-pitt-1772"
+    },
+    {
+      "parent": "philadelphia-report-of-11-november-1772-on-the-frontier",
+      "child": "philadelphia-report-frontier-petition-1772"
+    }
+  ],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1772 that reach 3 or more papers, and those of 1771 over the 1772 pages, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 135 items printed somewhere, 5 reaching 4 papers by the finder's counts; items_from_1771.json). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1772 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (92 texts). For every text one paper short of the bar, the missing paper was looked for again on its pages, by the text's words (the best page within its weeks) and by its names (the pages holding three or more of its proper names), and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09): 55 clusters, each read, among them single paragraphs from runs of news printed by every surviving paper. Every admitted, chosen and listed item was then counted by phrase searches of its opening over all 675 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+    "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news; digests are not admitted. Single paragraphs from runs of news are counted by their own words (C-09). In 1772 four papers survive only where Rind's Virginia Gazette has an issue (late January to May, and October to December), and five in the weeks of the South-Carolina and American General Gazette's one issue (5 October): 12 items are printed by every surviving paper and admitted, 1 eligible item printed by four of five papers is chosen, and 4 that turn on private persons are listed for the owner (R-04).",
+    "paper_counting": "1772 has 6 catalogue series, which are 5 papers: the Massachusetts Spy (Boston; 48 issues) all year, under two catalogue numbers (sn83021193 to 1 October; sn83021194, 'or, Thomas's Boston Journal', from 8 October), counted as one paper (C-04); the New-Hampshire Gazette and Historical Chronicle (Portsmouth; 52 issues); two Virginia Gazettes, both printed at Williamsburg by different printers, Alexander Purdie and John Dixon (sn84024739; 52 issues) and William Rind (sn84024741; 18 issues, from 6 February: five in February to May, the rest from 8 October); and one issue of the South-Carolina and American General Gazette (Charlestown, 5 October). Papers in print in any three weeks: 3 (June to mid-September, and a few weeks in January, March and April) or 4; 5 in the weeks of 5 October.",
+    "counted_item_by_item": {
+      "Paper counts": "The 13 admitted and chosen items and the 4 listed for the owner were counted by phrase searches of their openings, every hit read; their papers are in the README's table of stories. The texts read and below the bar are listed in not_admitted with their counts.",
+      "Paragraphs in runs of news": "London, Boston and Philadelphia news reached the papers in runs of short paragraphs, and the four papers often reprinted the same runs. Each paragraph is counted by its own opening sentence (C-09): of the Philadelphia report of 11 November, the Seneca chief's return, the forts Chartres and Pitt and the frontier petition are each printed by all four papers (one parent group); of the Boston paragraphs of November, the former governor's expected appointment to Barbados and the commander of the Gaspee are admitted and the paragraph on his inheritance goes to the owner; of the London paragraphs of September, the Receiver General of Virginia is admitted, and those on the Board of Trade's commission, the Secretary of New York and the proclamation on the Gaspee are each in 3 of 4.",
+      "One letter in two wordings": "Rind's Virginia Gazette prints the letter from Hamburg of 25 August on the revolution in Sweden in other words ('A letter from Hambourg, dated August 25, says ... two couriers, dispatched from Stockholm ...'); it is counted with the other three (C-02).",
+      "A passage printed without the opening": "The New-Hampshire Gazette prints from the Antigua account of 5 September only the passage on the harbours, under its own introduction ('We learn from Antigua that ...'); it does not count as a printing (C-06), so the account is in 3 of the 5 papers of its weeks.",
+      "Accounts of one hurricane": "The papers printed several accounts of the hurricane of late August in the Leeward Islands, each counted by its own words: from Christiansted (chosen, 4 of 5), Antigua (3 of 5), Basseterre (3 of 4) and others in fewer papers."
+    },
+    "for_user_decision": {
+      "Four items that turn on private persons": "As built (R-04): a London paragraph that a banking house has paid all bills presented to it; a paragraph on a woman in Derbyshire delivered of six children; a Boston paragraph on a former governor's inheritance from a relation; and a paragraph on an American woman's wax-work admired in England. Each is printed by every paper that survives for its weeks; they are listed for the owner, without names. If the owner sees any of them as a public matter, it is admitted by the rule's first part, after a scan check of its printings.",
+      "The King in Council on the Duke of Cumberland": "As built: admitted. The paragraph reports the King's words in Council on his brother's 'late act' (the Duke of Cumberland's marriage); it turns on the royal family, public persons in a public setting, so R-04 is not applied. If the owner sees it as private, it goes to the owner's list.",
+      "The floor of four papers where three survive": "As built: from June to mid-September only three papers survive (Rind's Virginia Gazette has no surviving issue), so nothing printed only then reaches the bar of 4, as in 1770, 1789 and 1790."
+    },
+    "chosen": {
+      "Christiansted (St. Croix), 4 September 1772: 'On Monday night last blew the most violent hurricane that has ever been known here' (4)": "chosen: the only eligible account of the West Indian hurricane of 1772, which the papers printed from October to December; the New-Hampshire Gazette prints other accounts"
+    },
+    "not_admitted": {
+      "St. John's, Antigua, 5 September 1772: 'On Monday last a most dreadful storm happened here' (the New-Hampshire Gazette prints a passage from its middle under its own introduction, C-06) (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette prints only a passage from its middle ('We learn from Antigua that all the vessels in the different Harbours there ... were either sunk, overset, or driven ashore'), under its own introduction, so it does not count as a printing (C-06); the Massachusetts Spy does not print it.",
+      "London, September 1772: a commission under the Great Seal for the commissioners for trade and plantations (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette's surviving issues do not print it.",
+      "London, September 1772: a reversionary grant of the office of Secretary of New York to William Knox (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print it.",
+      "London, September 1772: a proclamation offering a reward of 500l. for discovering the persons concerned in burning the Gaspee schooner (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print it (they print other reports on the schooner's burning).",
+      "New York, January 1772: the Governor's speech opening the session of the General Assembly ('While I reflect on the important duties attendant on the elevated station') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print it.",
+      "Hartford, January 1772: a report of a house fire at Sandisfield (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+      "Warsaw, 9 November 1771: 'His Majesty the King of Poland, thank Heaven, is pretty well, considering the late horrid attempt made on his sacred person' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+      "Trenton, 2 February 1772: a merchant's letter on a fire (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+      "London, winter 1771-72: a run of shipping news and a treaty of commerce between the English and the Russians ('The Neptune ... from Boston to Hull, is totally lost near Margate') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "London, 12 November 1771: the cause between Sir James Lowther and the Duke of Portland on the forest of Inglewood, before the Barons of the Exchequer (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+      "A letter from St. Christopher's, 20 January 1772: 'We have certain Advice of the Town of St. George, at Grenada, being entirely consumed by Fire' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (NHG) was looked for again, by its words and by its names, and does not print it.",
+      "1772: a paragraph on an invention for illuminating light-houses (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+      "Charlestown, 12 February 1772: a letter from St. Eustatia of 17 January on the Spaniards and a schooner at Crab Island (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Westminster, 21 January 1772: 'This day his Majesty came to the House of Peers' (the King's speech at the opening of the session of Parliament) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "London, 30 January 1772: an express from Copenhagen with an account of a revolution there (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "London, 1772: a correspondent on Colonel Keith, the British minister at the Danish court, in the late revolution (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Williamsburg, 9 April 1772: the death of a man of fortune transported to Virginia for theft (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Paris, 1772: a letter from a countess to her friend in Scotland on people of rank and fashion (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "London, 1772: 'An Event has happened within these few Days which is likely to be productive of a War' (French troops for the East Indies) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "1772: 'If a native either of England, Ireland, or Scotland, commits any misdemeanor in Spain' (the Spanish court's use of British mechanics) (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (SCG, VG1) was looked for again, by its words and by its names, and does not print it.",
+      "St. Croix, September 1772: 'Yesterday arrived here the schooner Hopewell ... from St. Eustatius' (the hurricane off St. Eustatius) (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS, NHG) was looked for again, by its words and by its names, and does not print it.",
+      "London, 8 August 1772: a case in Chancery on a guardian who took his ward abroad (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS, NHG) was looked for again, by its words and by its names, and does not print it.",
+      "Smyrna, 27 July 1772: a captain from Alexandria deposes on the Russian fleet and the Greeks (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Rome, 12 June 1772: a letter reporting that Cardinal York had died there (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+      "Basseterre, 2 September 1772: an account of the hurricane, from the St. Christopher's Gazette ('We inserted in our last the account of a hard gale of wind') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+      "A letter from Surinam, 5 September 1772: 'This colony is in the greatest distress occasioned by an insurrection of the slaves' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "A letter from Mentz, 6 August 1772: 'A man arrived in this city about six days ago from the neighbouring country, attended by a retinue' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Boston, November 1772: the town's petition to the Governor, from Faneuil Hall, that the General Assembly be allowed to meet ('These, Sir, are the sentiments and apprehensions of this metropolis') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (NHG) was looked for again, by its words and by its names, and does not print it.",
+      "Boston, November 1772: the Governor's reply to the town's committee ('The Royal Charter refers to the Governor full power and authority') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (NHG) was looked for again, by its words and by its names, and does not print it.",
+      "South Carolina, autumn 1772: the Governor's speech to the General Assembly ('that happy poise of power which is the peculiar characteristic and palladium of a legislature') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (NHG) was looked for again, by its words and by its names, and does not print it.",
+      "Newport, 2 November 1772: a severe storm, and vessels that arrived in it (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "London, 5 September 1772: a description of the silver cup presented to Mr. Alderman Wilkes (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Stockholm, 15 August 1772: public prayers in all the churches for the late revolution (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+      "London, 8 October 1772: the speech of Mr. Alderman Wilkes to the Livery at Guildhall ('I want powers to express the deep sense I have of the distinguished honour you have done me') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "London, October 1772: a speech to the Livery after the poll ('I can never, Gentlemen, sufficiently acknowledge the Honour you have done me') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Boston, November 1772: the town's letter to the towns of the province ('A free communication of your sentiments, to this town, of our common danger, is earnestly solicited') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+      "Other items of 3 papers or fewer (by count)": "The other items the finder lists, compared by machine on the first 40 words of their openings with every page of 1772: 35 are printed by every paper that survives for their weeks but where only three papers survive (from June to mid-September, when Rind's Virginia Gazette has no surviving issue), which the bar's floor of 4 leaves out; the others reach 2 papers or fewer. None reaches the bar, and a later printing by a fourth paper was looked for (latecheck.py). Not read one by one."
+    },
+    "for_the_owner": {
+      "London, 10 August 1772: a banking house has paid all bills presented to it and is ready to pay all demands, with interest (4)": "A one-sentence London paragraph of 10 August 1772 that turns on private persons: a banking house 'have paid all bills that have been presented to them, and are ready to pay all demands, with interest, as they shall be tendered' (the credit crisis of that summer) (R-04). In 4 of the 4 papers that survive for its weeks (needs 4): it would be admitted by the rule's first part if the owner sees it as a public matter.",
+      "Derbyshire, 1772: a woman delivered of six children in three labours (4)": "A paragraph that turns on a private person: a woman in Derbyshire delivered of six children in three labours, four of them dead (R-04). In 4 of the 4 papers that survive for its weeks (needs 4): it would be admitted by the rule's first part if the owner sees it as a public matter.",
+      "Boston, November 1772: a former governor's inheritance from a relation in England (4)": "A Boston paragraph of November 1772 that turns on private affairs: a former governor of the province and his children left a large estate by a relation who died in England (R-04). In 4 of the 4 papers that survive for its weeks (needs 4): it would be admitted by the rule's first part if the owner sees it as a public matter; the paragraphs printed with it on the former governor's expected appointment to Barbados and on the commander of the Gaspee are admitted.",
+      "November 1772: an American woman's wax-work admired in England (4)": "A paragraph of November 1772 that turns on a private person: an American woman's wax-work admired in England, where persons of the first distinction sat for their likenesses (R-04). In 4 of the 4 papers that survive for its weeks (needs 4): it would be admitted by the rule's first part if the owner sees it as a public matter."
+    },
+    "counts": {
+      "eligible_items": 17,
+      "admitted_by_the_first_part": 12,
+      "chosen_items": 1,
+      "not_chosen_listed": 0,
+      "digests": 0,
+      "read_below_the_bar": 36
+    }
+  }
+}

@@ -1,0 +1,977 @@
+{
+  "ledger_id": "ledger:stories-1788",
+  "ledger_version": 1,
+  "base_release": "0.11.27",
+  "target_release": "0.11.28",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1788",
+  "evidence_dir": "outputs/story_discovery_1788/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1788, and of 1787 where they reach the 1788 pages (long-running ones included), counted by machine over all 2,379 pages of 1788 in both transcriptions and joined into documents; the admitted and chosen items counted again by their own opening, and scan checks of each admitted passage, by the thin-year rule (Y-THIN, as amended with the owner's choice B1): eligible when printed by more than half of the papers that survive for the item's weeks and by at least 4; eligible items printed by every paper that survives for their weeks admitted; the others chosen to cover the months and the kinds of news",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1788/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1788/items_from_1787.json": "retrieval_candidates",
+    "outputs/story_discovery_1788/counts_1788.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1788.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1788_review.json": "scan_review",
+    "outputs/story_discovery_1788/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1788/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S88-001",
+      "page_key": "sn83030007|1788-01-17|1|2",
+      "excerpt_start": "Extract of a letter of a",
+      "excerpt_end": "am pleased that the proceedings of it",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-president-of-the-federal-convention-to-a-friend-in-fredericksburg-january-1788"
+      ],
+      "summary": "A letter of the President of the late Federal Convention to a friend in Fredericksburg, Virginia.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except the place name: the print reads 'Fredericksburgh', the transcription 'Frederickburgh', a minor error. The print goes on 'have met your approbation', as the other printings do."
+      ],
+      "crops": [
+        "S88-001.jpg"
+      ],
+      "family": [
+        "R1788-0009"
+      ]
+    },
+    {
+      "id": "S88-002",
+      "page_key": "sn83030137|1788-01-18|1|3",
+      "excerpt_start": "Extract of a letter of a",
+      "excerpt_end": "am pleased that the proceedings of it",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-president-of-the-federal-convention-to-a-friend-in-fredericksburg-january-1788"
+      ],
+      "summary": "The New-York Packet prints the letter of the President of the late Federal Convention to a friend in Fredericksburg.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the transcription drops the long s in 'Fredericksburgh' and modernises 'Fœderal', both minor. The crop was placed by hand on a gridded page image (second placement) and shows the heading and the letter's opening."
+      ],
+      "crops": [
+        "S88-002.jpg"
+      ],
+      "family": [
+        "R1787-0162",
+        "R1788-0009",
+        "R1788-0040",
+        "R1788-0151",
+        "R1788-0263",
+        "R1788-0264",
+        "R1788-0280",
+        "R1788-0282"
+      ],
+      "scan_boxes": [
+        [
+          1262,
+          1840,
+          2342,
+          2290
+        ]
+      ]
+    },
+    {
+      "id": "S88-003",
+      "page_key": "sn83030566|1788-01-19|1|3",
+      "excerpt_start": "Extract of a letter of a",
+      "excerpt_end": "and am pleased that the proceedings of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-president-of-the-federal-convention-to-a-friend-in-fredericksburg-january-1788"
+      ],
+      "summary": "The New-York Journal prints the letter of the President of the late Federal Convention to a friend in Fredericksburg.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except the place name: the print reads 'Fredericksburgh', the transcription 'Frederickburg', a minor error. The print has 'proceedings of it have met your approbation', like the Daily Advertiser."
+      ],
+      "crops": [
+        "S88-003.jpg"
+      ],
+      "family": [
+        "R1788-0009",
+        "R1788-0161",
+        "R1788-0261"
+      ]
+    },
+    {
+      "id": "S88-004",
+      "page_key": "sn83025587|1788-01-30|1|3",
+      "excerpt_start": "Extract of a letter, of a",
+      "excerpt_end": "proceedings of it have met your approbation.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "letter-of-the-president-of-the-federal-convention-to-a-friend-in-fredericksburg-january-1788"
+      ],
+      "summary": "The New-Hampshire Gazette prints the letter of the President of the late Federal Convention to a friend in Fredericksburg.",
+      "note": "The New-Hampshire Gazette prints the letter under its own dateline 'PORTSMOUTH, Jan. 30.', with 'your congratulations' without 'kind', and the place as 'Fredericksburg' (the Daily Advertiser and the New-York Journal 'Fredericksburgh').",
+      "scan_findings": [
+        "Scan matches the excerpt except the place name: the print reads 'Fredericksburg', the transcription 'Frederickburg', a minor error. The print has 'your congratulations' without 'kind', where the Daily Advertiser and the New-York Journal print 'your kind congratulation': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S88-004.jpg"
+      ],
+      "family": [
+        "R1788-0009"
+      ]
+    },
+    {
+      "id": "S88-005",
+      "page_key": "sn83030007|1788-04-10|1|2",
+      "excerpt_start": "An ACT of King's Council of",
+      "excerpt_end": "between the two Nations connections reciprocally useful:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-council-of-state-act-on-commerce-with-the-united-states-december-1787"
+      ],
+      "summary": "The King of France's Council of State, 29 December 1787: an act for the encouragement of the commerce of France with the United States.",
+      "note": "Earliest printing found. The Daily Advertiser prints 'An ACT of King's Council', without 'the'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'An ACT of King's Council' without the 'the' of the Daily Advertiser's second printing and the New-York Journal: a printed difference."
+      ],
+      "crops": [
+        "S88-005.jpg"
+      ],
+      "family": [
+        "R1788-0003",
+        "R1788-0204"
+      ]
+    },
+    {
+      "id": "S88-006",
+      "page_key": "sn83025587|1788-04-30|1|1",
+      "excerpt_start": "An ACT of the King's Council",
+      "excerpt_end": "between the two nations connections reciprocally useful:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-council-of-state-act-on-commerce-with-the-united-states-december-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints the act of the King of France's Council of State on commerce with the United States.",
+      "note": "The New-Hampshire Gazette prints the act under 'PHILADELPHIA, April 12.', the dateline of the paper it was taken from.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'PHILADELPHIA, April 12.' stands directly above the act's title, which reads 'of the King's Council'."
+      ],
+      "crops": [
+        "S88-006.jpg"
+      ],
+      "family": [
+        "R1788-0003",
+        "R1788-0515"
+      ],
+      "scan_boxes": [
+        [
+          760,
+          1940,
+          1430,
+          2480
+        ]
+      ]
+    },
+    {
+      "id": "S88-007",
+      "page_key": "sn83030007|1788-05-21|1|2",
+      "excerpt_start": "An ACT of the King's Council",
+      "excerpt_end": "between the two nations connections, reciprocally useful;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-council-of-state-act-on-commerce-with-the-united-states-december-1787"
+      ],
+      "summary": "The Daily Advertiser prints the act of the King of France's Council of State on commerce with the United States.",
+      "note": "Printed again: the Daily Advertiser's second printing of the act, set in new type ('of the King's').",
+      "scan_findings": [
+        "The new single crop shows the whole excerpt, and it matches the speckled print. It is the same act, printed again from its title."
+      ],
+      "crops": [
+        "S88-007.jpg"
+      ],
+      "family": [
+        "R1788-0003",
+        "R1788-0204",
+        "R1788-0502",
+        "R1788-0596"
+      ],
+      "scan_boxes": [
+        [
+          2317,
+          296,
+          3414,
+          831
+        ]
+      ]
+    },
+    {
+      "id": "S88-008",
+      "page_key": "sn82014784|1788-05-24|2|2",
+      "excerpt_start": "An ACT of the Kings Council",
+      "excerpt_end": "between the two nations connections reciprocally useful:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-council-of-state-act-on-commerce-with-the-united-states-december-1787"
+      ],
+      "summary": "The Kentucke Gazette prints the act of the King of France's Council of State on commerce with the United States.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt on a low-resolution page; the act's date reads 'December 29, 1787.'"
+      ],
+      "crops": [
+        "S88-008.jpg"
+      ],
+      "family": [
+        "R1788-0003"
+      ],
+      "scan_boxes": [
+        [
+          705,
+          370,
+          1215,
+          665
+        ]
+      ]
+    },
+    {
+      "id": "S88-009",
+      "page_key": "sn83030566|1788-06-11|1|2",
+      "excerpt_start": "AN ACT of the King's Council",
+      "excerpt_end": "between the two nations connections reciprocally useful:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "french-council-of-state-act-on-commerce-with-the-united-states-december-1787"
+      ],
+      "summary": "The New-York Journal prints the act of the King of France's Council of State on commerce with the United States.",
+      "note": "The New-York Journal prints the act directly below the signature of its covering letter, 'LE CT. DE LA LUZERNE'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The act stands directly below the signature of the covering letter (Le Ct. de la Luzerne)."
+      ],
+      "crops": [
+        "S88-009.jpg"
+      ],
+      "family": [
+        "R1788-0003",
+        "R1788-0204"
+      ]
+    },
+    {
+      "id": "S88-010",
+      "page_key": "sn83030007|1788-06-19|1|2",
+      "excerpt_start": "According to order the House was",
+      "excerpt_end": "thereon to report. \"That in their opinion",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-the-district-of-kentucky-june-1788"
+      ],
+      "summary": "Congress, 2 and 3 June 1788: the report that the district of Kentucky be erected into an independent State.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The entry follows directly on the end of the resolution on a debt, with no date line between."
+      ],
+      "crops": [
+        "S88-010.jpg"
+      ],
+      "family": [
+        "R1788-0004",
+        "R1788-0613",
+        "R1788-0614",
+        "R1788-0669",
+        "R1788-0670",
+        "R1788-0671"
+      ]
+    },
+    {
+      "id": "S88-011",
+      "page_key": "sn83030566|1788-06-21|1|3",
+      "excerpt_start": "According to order the house was",
+      "excerpt_end": "thereon to report, \"That in their opinion",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-the-district-of-kentucky-june-1788"
+      ],
+      "summary": "The New-York Journal prints the Journal of Congress of 2 and 3 June 1788 on the district of Kentucky.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The entry follows directly on the end of the resolution on a debt, with no date line between."
+      ],
+      "crops": [
+        "S88-011.jpg"
+      ],
+      "family": [
+        "R1788-0004",
+        "R1788-0015",
+        "R1788-0120",
+        "R1788-0679"
+      ]
+    },
+    {
+      "id": "S88-012",
+      "page_key": "sn83030586|1788-07-02|1|1",
+      "excerpt_start": "WE the delegates of the people",
+      "excerpt_end": "the most mature deliberation will enable us",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "virginia-convention-ratifies-the-constitution-june-1788"
+      ],
+      "summary": "The Virginia convention's act ratifying the Constitution, June 1788.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S88-012.jpg"
+      ],
+      "family": [
+        "R1788-0002"
+      ]
+    },
+    {
+      "id": "S88-013",
+      "page_key": "sn83025587|1788-07-03|1|3",
+      "excerpt_start": "Extract from the JOURNALS of CONGRESS,",
+      "excerpt_end": "to them and agreed thereon to report:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-the-district-of-kentucky-june-1788"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Journal of Congress of 2 and 3 June 1788 on the district of Kentucky.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with the heading directly above the item."
+      ],
+      "crops": [
+        "S88-013.jpg"
+      ],
+      "family": [
+        "R1788-0004",
+        "R1788-0646",
+        "R1788-0669",
+        "R1788-0711"
+      ]
+    },
+    {
+      "id": "S88-014",
+      "page_key": "sn83030007|1788-07-03|1|2",
+      "excerpt_start": "WE the delegates of the people",
+      "excerpt_end": "the most mature deliberation will enable us",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "virginia-convention-ratifies-the-constitution-june-1788"
+      ],
+      "summary": "The Daily Advertiser prints the Virginia convention's ratification.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print opens with a quotation mark."
+      ],
+      "crops": [
+        "S88-014.jpg"
+      ],
+      "family": [
+        "R1788-0002",
+        "R1788-0706",
+        "R1788-0709",
+        "R1788-0710",
+        "R1788-0713"
+      ]
+    },
+    {
+      "id": "S88-015",
+      "page_key": "sn83030566|1788-07-03|1|2",
+      "excerpt_start": "WE, the delegates of the people",
+      "excerpt_end": "the most mature deliberation will enable us,",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "virginia-convention-ratifies-the-constitution-june-1788"
+      ],
+      "summary": "The New-York Journal prints the Virginia convention's ratification.",
+      "note": "The New-York Journal prints the act under a heading that ends 'by the VIRGINIA CONVENTION, on Tuesday, the 24th instant.'",
+      "scan_findings": [
+        "Scan matches the excerpt. It stands under a heading line ending 'by the VIRGINIA CONVENTION, on Tuesday, the 24th instant.'"
+      ],
+      "crops": [
+        "S88-015.jpg"
+      ],
+      "family": [
+        "R1788-0001",
+        "R1788-0002",
+        "R1788-0702",
+        "R1788-0709",
+        "R1788-0710"
+      ]
+    },
+    {
+      "id": "S88-016",
+      "page_key": "sn83030007|1788-07-19|1|2",
+      "excerpt_start": "Monday, June 2, 1788. According to",
+      "excerpt_end": "to them, and agreed thereon to report—",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-the-district-of-kentucky-june-1788"
+      ],
+      "summary": "The Daily Advertiser prints the Journal of Congress of 2 and 3 June 1788 on the district of Kentucky.",
+      "note": "Printed again: the Daily Advertiser's second printing of the entry, under 'Monday, June 2, 1788.', in a longer run of the journal's entries on Kentucky.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'Monday, June 2, 1788.' directly above the item. It is the same entry as the Daily Advertiser's printing of 19 June, set again with other punctuation."
+      ],
+      "crops": [
+        "S88-016.jpg"
+      ],
+      "family": [
+        "R1788-0004",
+        "R1788-0076",
+        "R1788-0124",
+        "R1788-0751",
+        "R1788-0752"
+      ]
+    },
+    {
+      "id": "S88-017",
+      "page_key": "sn82014784|1788-07-26|2|2",
+      "excerpt_start": "WE the delegates of the people",
+      "excerpt_end": "the most mature deliberation will enable us",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "virginia-convention-ratifies-the-constitution-june-1788"
+      ],
+      "summary": "The Kentucke Gazette prints the Virginia convention's ratification.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop is a strip across three columns; the right-hand column shows the whole excerpt, which matches the small, blurred print."
+      ],
+      "crops": [
+        "S88-017.jpg"
+      ],
+      "family": [
+        "R1788-0002",
+        "R1788-0602"
+      ]
+    },
+    {
+      "id": "S88-018",
+      "page_key": "sn82014784|1788-08-30|2|1",
+      "excerpt_start": "June 2 1788. According to order",
+      "excerpt_end": "them, and agreed thereon to report, \"That",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-the-district-of-kentucky-june-1788"
+      ],
+      "summary": "The Kentucke Gazette prints the Journal of Congress of 2 and 3 June 1788 on the district of Kentucky.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt on worn type (read enlarged), with 'June 2 1788.' directly above the item. The first crop shows only its first lines; the second shows the whole excerpt."
+      ],
+      "crops": [
+        "S88-018-1.jpg",
+        "S88-018-2.jpg"
+      ],
+      "family": [
+        "R1788-0004",
+        "R1788-0017"
+      ]
+    },
+    {
+      "id": "S88-019",
+      "page_key": "sn83025587|1788-09-11|1|3",
+      "excerpt_start": "SERIOUS and ACTUAL TROUBLES in FRANCE.",
+      "excerpt_end": "refused to serve him against their country.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-lorient-on-troubles-in-france-july-1788"
+      ],
+      "summary": "A letter from L'Orient of 17 July 1788 on troubles in France.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'SERIOUS and ACTUAL TROUBLES in FRANCE.' stands directly above the letter, and the print reads 'Capt. Kelsa, dated July 17.'"
+      ],
+      "crops": [
+        "S88-019.jpg"
+      ],
+      "family": [
+        "R1788-0011",
+        "R1788-0837"
+      ]
+    },
+    {
+      "id": "S88-020",
+      "page_key": "sn83030007|1788-09-15|1|2",
+      "excerpt_start": "By the United States in Congress",
+      "excerpt_end": "for the People of the United States;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-putting-the-constitution-into-operation-13-september-1788"
+      ],
+      "summary": "Congress, 13 September 1788: the days for appointing electors, choosing the President and beginning proceedings under the Constitution.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, from the heading with 'September 13, 1788' to 'People of the United States;'. The print has no 'of' before 'February'."
+      ],
+      "crops": [
+        "S88-020.jpg"
+      ],
+      "family": [
+        "R1788-0005"
+      ],
+      "scan_boxes": [
+        [
+          3420,
+          1695,
+          4440,
+          2150
+        ]
+      ]
+    },
+    {
+      "id": "S88-021",
+      "page_key": "sn83030007|1788-09-16|1|2",
+      "excerpt_start": "BOSTON, September 9. Extract of a",
+      "excerpt_end": "refused to serve him against their country.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-lorient-on-troubles-in-france-july-1788"
+      ],
+      "summary": "The Daily Advertiser prints the letter from L'Orient of 17 July.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'Capt. Kelsa' (the last letter worn), the name the other printings' transcriptions give; the transcription 'Kelli' changes the captain's name. The rest of the excerpt matches, and 'BOSTON, September 9.' stands directly above the letter."
+      ],
+      "crops": [
+        "S88-021.jpg"
+      ],
+      "family": [
+        "R1788-0011",
+        "R1788-0086",
+        "R1788-0117",
+        "R1788-0842",
+        "R1788-0843",
+        "R1788-0844"
+      ],
+      "scan_boxes": [
+        [
+          2282,
+          145,
+          3335,
+          670
+        ]
+      ]
+    },
+    {
+      "id": "S88-022",
+      "page_key": "sn83025587|1788-09-18|1|3",
+      "excerpt_start": "We learn from Nova-Scotia, that the",
+      "excerpt_end": "ARNOLD we behold a fatal example of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "nova-scotia-report-that-benedict-arnold-is-suspected-of-setting-fire-to-his-house-1788"
+      ],
+      "summary": "From Nova Scotia: a report that Benedict Arnold is suspected of setting fire to his own house or store.",
+      "note": "Earliest printing found. The New-Hampshire Gazette prints 'We learn' and 'his own house' (the New-York Packet and the Daily Advertiser 'We hear' and 'his own store').",
+      "scan_findings": [
+        "Scan matches the excerpt: the print reads 'We learn' and 'his own house'."
+      ],
+      "crops": [
+        "S88-022.jpg"
+      ],
+      "family": [
+        "R1788-0012",
+        "R1788-0087",
+        "R1788-0829",
+        "R1788-0850"
+      ]
+    },
+    {
+      "id": "S88-023",
+      "page_key": "sn83030567|1788-09-18|1|3",
+      "excerpt_start": "By the UNITED STATES IN CONGRESS",
+      "excerpt_end": "for the people of the United States;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-putting-the-constitution-into-operation-13-september-1788"
+      ],
+      "summary": "The New-York Journal prints the resolution of Congress of 13 September 1788.",
+      "note": "The New-York Journal dates the act 'Sept. 13, 1788' and prints 'the 21st of February' (the Daily Advertiser and the Kentucke Gazette 'the 21st February').",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading prints 'Sept. 13, 1788.' The act stands under a rule after the end of another item, and the words that follow ('whereupon Congress on the 28th') are the act's."
+      ],
+      "crops": [
+        "S88-023.jpg"
+      ],
+      "family": [
+        "R1788-0005",
+        "R1788-0011",
+        "R1788-0088",
+        "R1788-0115",
+        "R1788-0121",
+        "R1788-0846",
+        "R1788-0848"
+      ],
+      "scan_boxes": [
+        [
+          2398,
+          4308,
+          3408,
+          4961
+        ]
+      ]
+    },
+    {
+      "id": "S88-024",
+      "page_key": "sn83030567|1788-09-18|1|3",
+      "excerpt_start": "ACTUAL TROUBLES IN FRANCE. Extract of",
+      "excerpt_end": "refused to serve him against their country.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-lorient-on-troubles-in-france-july-1788"
+      ],
+      "summary": "The New-York Journal prints the letter from L'Orient of 17 July.",
+      "note": "The New-York Journal prints the letter under the heading 'ACTUAL TROUBLES in FRANCE.', with 'Capt. Kelsa, July 17.' (without 'dated').",
+      "scan_findings": [
+        "Scan matches the excerpt. 'ACTUAL TROUBLES in FRANCE.' stands directly above the letter, and the print reads 'Capt. Kelsa, July 17.' without 'dated'."
+      ],
+      "crops": [
+        "S88-024.jpg"
+      ],
+      "family": [
+        "R1788-0005",
+        "R1788-0011",
+        "R1788-0088",
+        "R1788-0115",
+        "R1788-0121",
+        "R1788-0846",
+        "R1788-0848"
+      ]
+    },
+    {
+      "id": "S88-025",
+      "page_key": "sn83030137|1788-09-19|1|3",
+      "excerpt_start": "We hear from Nova-Scotia, that the",
+      "excerpt_end": "In Arnold we behold a fatal example",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "nova-scotia-report-that-benedict-arnold-is-suspected-of-setting-fire-to-his-house-1788"
+      ],
+      "summary": "The New-York Packet prints the report from Nova Scotia on Benedict Arnold.",
+      "note": "The New-York Packet prints 'We hear' and 'his own store' (the New-Hampshire Gazette and the New-York Journal 'We learn' and 'his own house').",
+      "scan_findings": [
+        "Scan matches the excerpt: the print reads 'We hear' and 'his own store', with no dateline above the paragraph."
+      ],
+      "crops": [
+        "S88-025.jpg"
+      ],
+      "family": [
+        "R1788-0012",
+        "R1788-0087",
+        "R1788-0117",
+        "R1788-0145",
+        "R1788-0150",
+        "R1788-0214",
+        "R1788-0215",
+        "R1788-0850"
+      ]
+    },
+    {
+      "id": "S88-026",
+      "page_key": "sn83030007|1788-09-20|1|2",
+      "excerpt_start": "We hear from Nova-Scotia, that the",
+      "excerpt_end": "Arnold, we behold a fatal example of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "nova-scotia-report-that-benedict-arnold-is-suspected-of-setting-fire-to-his-house-1788"
+      ],
+      "summary": "The Daily Advertiser prints the report from Nova Scotia on Benedict Arnold.",
+      "note": "The Daily Advertiser prints 'We hear' and 'his own store' (the New-Hampshire Gazette and the New-York Journal 'We learn' and 'his own house').",
+      "scan_findings": [
+        "Scan matches the excerpt: the print reads 'We hear' and 'his own store'."
+      ],
+      "crops": [
+        "S88-026.jpg"
+      ],
+      "family": [
+        "R1788-0012",
+        "R1788-0016",
+        "R1788-0087",
+        "R1788-0853",
+        "R1788-0858"
+      ]
+    },
+    {
+      "id": "S88-027",
+      "page_key": "sn83025587|1788-09-25|1|3",
+      "excerpt_start": "BY THE UNITED STATES IN CONGRESS",
+      "excerpt_end": "for the people of the United States:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-putting-the-constitution-into-operation-13-september-1788"
+      ],
+      "summary": "The New-Hampshire Gazette prints the resolution of Congress of 13 September 1788.",
+      "note": "The New-Hampshire Gazette prints the act under 'NEW-YORK, September 16.', the dateline of the paper it was taken from, and 'the 21st of February'.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'NEW-YORK, September 16.' stands directly above the act's heading, which prints 'September 13, 1788.'"
+      ],
+      "crops": [
+        "S88-027.jpg"
+      ],
+      "family": [
+        "R1788-0005",
+        "R1788-0085",
+        "R1788-0840",
+        "R1788-0871",
+        "R1788-0873"
+      ],
+      "scan_boxes": [
+        [
+          311,
+          2544,
+          1026,
+          3028
+        ]
+      ]
+    },
+    {
+      "id": "S88-028",
+      "page_key": "sn83030567|1788-09-25|1|2",
+      "excerpt_start": "NEWPORT, Sept. 11. We learn from",
+      "excerpt_end": "of his property. In ARNOLD we behold",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "nova-scotia-report-that-benedict-arnold-is-suspected-of-setting-fire-to-his-house-1788"
+      ],
+      "summary": "The New-York Journal prints the report from Nova Scotia on Benedict Arnold.",
+      "note": "The New-York Journal prints the paragraph under 'NEWPORT, Sept. 11.', with 'We learn' and 'his own house'.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'NEWPORT, Sept. 11.' stands directly above the paragraph, and the print reads 'We learn' and 'his own house'."
+      ],
+      "crops": [
+        "S88-028.jpg"
+      ],
+      "family": [
+        "R1788-0012",
+        "R1788-0086",
+        "R1788-0847",
+        "R1788-0854",
+        "R1788-0869",
+        "R1788-0872"
+      ]
+    },
+    {
+      "id": "S88-029",
+      "page_key": "sn82014784|1788-11-01|2|1",
+      "excerpt_start": "By the United States in Congress",
+      "excerpt_end": "for the people of the United States;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-on-putting-the-constitution-into-operation-13-september-1788"
+      ],
+      "summary": "The Kentucke Gazette prints the resolution of Congress of 13 September 1788.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt on a low-resolution page, with no 'of' before 'February'. The '1' of '17th' does not show on the scan (a blank space stands before '7th'), so that digit cannot be confirmed there."
+      ],
+      "crops": [
+        "S88-029.jpg"
+      ],
+      "family": [
+        "R1788-0005",
+        "R1788-0011",
+        "R1788-0184",
+        "R1788-0799"
+      ],
+      "scan_boxes": [
+        [
+          1165,
+          1440,
+          1665,
+          1720
+        ]
+      ]
+    },
+    {
+      "id": "S88-030",
+      "page_key": "sn82014784|1788-11-01|2|1",
+      "excerpt_start": "Extract of a letter from L'Orient,",
+      "excerpt_end": "refused to serve him against their country.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-lorient-on-troubles-in-france-july-1788"
+      ],
+      "summary": "The Kentucke Gazette prints the letter from L'Orient of 17 July.",
+      "note": "The Kentucke Gazette prints the letter without a heading, adds 'arrived at Boston, dated', and misprints 'counry'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print has the misprint 'counry', which the transcription silently corrects to 'country'. No heading stands above the letter, and the print reads 'Capt Kelsa, arrived at Boston, dated July 17.'"
+      ],
+      "crops": [
+        "S88-030.jpg"
+      ],
+      "family": [
+        "R1788-0005",
+        "R1788-0011",
+        "R1788-0184",
+        "R1788-0799"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "letter-of-the-president-of-the-federal-convention-to-a-friend-in-fredericksburg-january-1788",
+      "kind": "document_group",
+      "label": "A letter of the President of the late Federal Convention to a friend in Fredericksburg, Virginia, on his return from the Convention",
+      "definition": "Printings of an extract of a letter 'of a late date, from the illustrious President of the late Federal Convention, to his friend in Frederickburgh, Virginia', taken from Mr. Green's Virginia Herald: 'I thank you for your kind congratulation on my safe return from the Convention'; the writer gives his view of the Constitution the Convention proposed. The letter-writer's own words, as the papers printed them.",
+      "admission_rule": "Reviewed 1788 printings, checked against the scan."
+    },
+    {
+      "id": "french-council-of-state-act-on-commerce-with-the-united-states-december-1787",
+      "kind": "document_group",
+      "label": "The King of France's Council of State, 29 December 1787: an act for the encouragement of the commerce of France with the United States",
+      "definition": "Printings of the act 'of King's Council of State, for the Encouragement of the Commerce of France with the United States of America. December 29, 1787. Extract from the Records of the Council of State. The King, desirous of encouraging the commerce of his subjects with the United States of America'; it sets the duties and privileges on American goods in France. An act of the French government, printed after the letter with which a French official sent it.",
+      "admission_rule": "Reviewed 1788 printings, checked against the scan."
+    },
+    {
+      "id": "congress-on-the-district-of-kentucky-june-1788",
+      "kind": "document_group",
+      "label": "Congress, 2 and 3 June 1788: the report that the district of Kentucky be erected into an independent State, and its committee to prepare an act",
+      "definition": "Printings of the Journal of Congress of 2 and 3 June 1788: 'According to order the House was resolved into a Committee of the whole ... and Mr. Otis reported ... That in their opinion it is expedient that the district of Kentucky be erected into an Independent State'; on 3 June Congress agreed to the report and chose a committee of a member from each State to prepare an act. The Journal of Congress.",
+      "admission_rule": "Reviewed 1788 printings, checked against the scan."
+    },
+    {
+      "id": "virginia-convention-ratifies-the-constitution-june-1788",
+      "kind": "document_group",
+      "label": "The Virginia convention's act ratifying the Constitution, June 1788",
+      "definition": "Printings of the Virginia convention's ratification: 'We the delegates of the people of Virginia, duly elected, in pursuance of a recommendation of the General Assembly, and now met in Convention, having fully and fairly investigated and discussed the proceedings of the Federal Convention'. The convention's own act.",
+      "admission_rule": "Reviewed 1788 printings, checked against the scan."
+    },
+    {
+      "id": "congress-on-putting-the-constitution-into-operation-13-september-1788",
+      "kind": "document_group",
+      "label": "Congress, 13 September 1788: the days for appointing electors, for choosing the President and for beginning proceedings under the Constitution",
+      "definition": "Printings of the resolution of Congress of 13 September 1788: 'Whereas the Convention assembled in Philadelphia, pursuant to the Resolution of Congress of the 21st February, 1787, did, on the 17th of September in the same year, report to the United States in Congress assembled a Constitution'; it resolves the days for appointing electors and for their votes, and the time and place for commencing proceedings under the Constitution. The resolution of Congress; the drafts read in Congress in August are not counted.",
+      "admission_rule": "Reviewed 1788 printings, checked against the scan."
+    },
+    {
+      "id": "letter-from-lorient-on-troubles-in-france-july-1788",
+      "kind": "document_group",
+      "label": "A letter from L'Orient of 17 July 1788 on troubles in France",
+      "definition": "Printings of an extract of a letter from L'Orient, 'received by the Brig Lively ... dated July 17': 'In this unfortunate and unhappy country we cannot depend upon any thing. The King is now at WAR with his subjects, & there are many regiments of infantry that have refused'. A letter-writer's account; the New-Hampshire Gazette heads it 'SERIOUS and ACTUAL TROUBLES in FRANCE.'",
+      "admission_rule": "Reviewed 1788 printings, checked against the scan."
+    },
+    {
+      "id": "nova-scotia-report-that-benedict-arnold-is-suspected-of-setting-fire-to-his-house-1788",
+      "kind": "document_group",
+      "label": "From Nova Scotia, September 1788: a report that Benedict Arnold is suspected of setting fire to his own house or store",
+      "definition": "Printings of a paragraph: 'We learn from Nova-Scotia, that the highest suspicion prevails there, that the infamous Traitor BENEDICT ARNOLD, set fire to his own house, having previously effected an insurance in London upon it to a much larger amount than the real value of his property' (the New-York Packet and the Daily Advertiser print 'We hear' and 'his own store'). A report of a suspicion, in the papers' own words (an allegation).",
+      "admission_rule": "Reviewed 1788 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "selection_rule": "The thin-year rule (register Y-THIN, chosen by the owner on 23 November 2026 and amended the same night with the owner's choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks, and by at least 4; the eligible items printed by every newspaper that survives for their weeks are admitted (1 in 1788), and the others are chosen to cover the months and the kinds of news, about as many stories as a standard year (a target, not a quota); one affair's items are handled as in X-1800-01; the eligible items not chosen are listed here.",
+    "paper_counting": "1788 has 7 catalogue series, which are 6 papers (C-04): the New-York Journal under two catalogue numbers (sn83030566, daily, to 26 July; sn83030567, weekly, from 31 July). The New-York Packet (5 issues) and the Independent Journal (2 issues) survive only in a few weeks, so 4 or 5 papers are in print in any three weeks and an item needs 4 papers all year.",
+    "not_admitted": {
+      "A notice by the petitioning creditors of an insolvent debtor to all his creditors, to appear before a judge of the mayor's court of New-York (a form printed for several debtors) (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4); not chosen. A notice, not news (C-10); the private persons it names are not named here (R-04). In the daily papers the same form runs for months, and the machine count joins several notices of one form.",
+      "A notice to the persons indebted to an insolvent debtor of the city of New-York, and to those with claims against him, from his assignee (a form printed for several debtors) (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4); not chosen. A notice, not news (C-10); the private persons it names are not named here (R-04). In the daily papers the same form runs for months, and the machine count joins several notices of one form.",
+      "A notice, by order of an alderman and judge of the mayor's court of New-York, to the creditors of an insolvent debtor (a form printed for several debtors) (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4); not chosen. A notice, not news (C-10); the private persons it names are not named here (R-04). In the daily papers the same form runs for months, and the machine count joins several notices of one form.",
+      "A notice, by order of the chief justice of the supreme court of New-York, to an absent debtor and all others concerned, under the act for relief against absconding and absent debtors (a form printed for several debtors) (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4); not chosen. A notice, not news (C-10); the private persons it names are not named here (R-04). In the daily papers the same form runs for months, and the machine count joins several notices of one form.",
+      "An advertisement of a book just published: Conductor Generalis, or the office, duty and authority of justices of the peace (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4); not chosen. An advertisement, not news (C-10).",
+      "An order of the Court of Chancery of New-York in a suit for the sale of mortgaged premises (a form printed for several suits) (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4); not chosen. A notice, not news (C-10); the private persons it names are not named here (R-04). In the daily papers the same form runs for months, and the machine count joins several notices of one form.",
+      "Extracts from the Journal of Congress, 2 and 3 June 1788 (2)": "Below the bar: by its opening in 2 of the 5 papers that survive for its weeks (needs 4): the Daily Advertiser (19 June) and the New-York Journal (21 June). Counted as a candidate and read. The resolution on the district of Kentucky, printed among these extracts, is counted on its own (4 papers) and chosen.",
+      "London, 13 August 1788: letters from Algiers that the Dey has put the French consul (in one paper, the French captives) in irons (3)": "Below the bar: by its own words in 3 of the 5 papers that survive for its weeks (needs 4): the Daily Advertiser (10 October), the New-York Journal (30 October) and the New-Hampshire Gazette (26 November). Counted as a candidate and read. Counted by its first 70 words, its count had joined the paragraph printed after it, London, 2 September, on a change in the French ministry (the Daily Advertiser of 27 October, the New-York Journal of 30 October, the Kentucke Gazette of 27 December: 3 papers, also below the bar). The New-Hampshire Gazette dates the paragraph 'Sept. 2'.",
+      "New York, January 1788: the Count de Moustier, minister of France, arrives in the frigate l'Aigrette (2)": "Below the bar: by its opening in 2 of the 5 papers that survive for its weeks (needs 4): the Daily Advertiser (19 January) and the New-York Packet (22 January). Counted as a candidate and read.",
+      "Portsmouth, October 1788: the Count de Moustier arrives in the town (3)": "Below the bar: by its opening in 3 of the 5 papers that survive for its weeks (needs 4): the New-Hampshire Gazette (2 October), the Daily Advertiser (11 October) and the Kentucke Gazette (6 December). Counted as a candidate and read.",
+      "The Massachusetts convention's ratification of the Constitution, February 1788 (3)": "Below the bar: by its opening in 3 of the 5 papers that survive for its weeks (needs 4): the New-Hampshire Gazette (6 February), the Daily Advertiser (11 February) and the New-York Journal (11 February). Counted as a candidate and read.",
+      "The New Hampshire convention's ratification of the Constitution, June 1788 (2)": "Below the bar: by its opening in 2 of the 4 papers that survive for its weeks (needs 4): the Daily Advertiser (5 July) and the New-York Journal (10 July). Counted as a candidate and read.",
+      "The New York convention's ratification of the Constitution, July 1788 (2)": "Below the bar: by its opening in 2 of the 4 papers that survive for its weeks (needs 4): the Daily Advertiser (31 July) and the New-York Journal (7 August). Counted as a candidate and read.",
+      "The Virginia convention, 27 June 1788: the declaration of rights and the amendments it recommends (3)": "Below the bar: by its opening in 3 of the 4 papers that survive for its weeks (needs 4): the Daily Advertiser (9 July), the New-York Journal (10 July) and the Kentucke Gazette (9 August). Counted as a candidate and read. The Daily Advertiser of 3 September and the New-Hampshire Gazette of 18 September print the North Carolina convention's declaration of rights and amendments of 2 August, which repeats much of Virginia's text; counted by their shared words, the two had been joined (C-07). North Carolina's resolution and declaration are in 3 papers by their opening (with the New-York Journal of 4 September), also below the bar."
+    },
+    "for_the_owner": {},
+    "method": "The automatic families first printed in 1788 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json), and the families of 1787 were looked for on the 1788 pages (items_from_1787.json). Every item in 3 or more papers was counted by machine by about 100 words of its text from the finder's position, over all 2,379 pages in both transcriptions (a dense run of its word 5-grams, at least a quarter of them); the counts were joined into documents (items standing together on most of the same pages). The news among the documents in 3 or more papers was counted again by about 70 words from its own opening (counts_1788.json), and the pages that print another text sharing the words were read and left out. Each admitted printing was checked against its page scan.",
+    "items_admitted": {
+      "letter-of-the-president-of-the-federal-convention-to-a-friend-in-fredericksburg-january-1788": "counts_1788.json: washington_letter_fredericksburg",
+      "french-council-of-state-act-on-commerce-with-the-united-states-december-1787": "counts_1788.json: french_council_commerce",
+      "congress-on-the-district-of-kentucky-june-1788": "counts_1788.json: congress_kentucky_report",
+      "virginia-convention-ratifies-the-constitution-june-1788": "counts_1788.json: virginia_ratification",
+      "congress-on-putting-the-constitution-into-operation-13-september-1788": "counts_1788.json: congress_sep13_1788",
+      "letter-from-lorient-on-troubles-in-france-july-1788": "counts_1788.json: lorient_troubles",
+      "nova-scotia-report-that-benedict-arnold-is-suspected-of-setting-fire-to-his-house-1788": "counts_1788.json: arnold_fire"
+    },
+    "counted_item_by_item": {
+      "Paper counts": "Counted by their own words and joined into documents, 13 items of 1788 are eligible: 13 in 4 papers, 0 in 5, 0 in 6. 1 item is printed by every paper that survives for its weeks and is admitted; 6 more are chosen to cover the months and the kinds of news; together they are 7 of the eligible documents. 6 eligible items, all notices or advertisements, are not chosen and are listed with their counts. 8 more candidates counted by their opening are below the bar and listed. 108 more documents of the item finder are in 3 papers or fewer by their own words, below the bar (docs_1788.json); they are not listed one by one.",
+      "Titles of the items not chosen": "Each eligible item not chosen is a notice or an advertisement and is described, not quoted, so as not to name the private persons it names; each candidate below the bar is listed by a title of the review's."
+    },
+    "for_user_decision": {
+      "The papers in print and the bar (X-1788-00)": "7 catalogue series, 6 papers (the New-York Journal under two catalogue numbers, C-04); the New-York Packet (5 issues) and the Independent Journal (2 issues) survive only in a few weeks, so 4 or 5 papers are in print in any three weeks and an item needs 4 papers all year: where only 4 survive, every one of them.",
+      "Choosing among the eligible items (X-1788-01)": "As built (B1): 13 items are eligible; 1 printed by every surviving paper is admitted (the French act on commerce with the United States), the 6 other news items are all chosen (7 stories), and the 6 notices and advertisements are not chosen (C-10). Seven stories is far under the target of about 20 to 35; the target is not a quota, and nothing else reaches the bar.",
+      "Another text that shares the words (X-1788-02)": "As built (C-07): the Daily Advertiser of 3 September and the New-Hampshire Gazette of 18 September print the North Carolina convention's declaration of rights and amendments, which repeats much of Virginia's; they are not printings of Virginia's amendments, which are in 3 papers by their opening and below the bar.",
+      "A paragraph counted by its own words (X-1788-03)": "As built (C-02): the London paragraph on letters from Algiers (the Dey puts the French consul, in one paper the French captives, in irons) is in 3 papers by its own words, below the bar; counted by its first 70 words, its count had joined the paragraph printed after it on a change in the French ministry (3 papers, also below).",
+      "Printed again counts again (X-1788-04)": "As built (C-08): the Daily Advertiser prints the French act on commerce a second time on 21 May, and the journal of Congress on Kentucky a second time on 19 July, in a longer run of the journal's entries on Kentucky.",
+      "The ratifications of the Constitution (X-1788-05)": "As built: only Virginia's ratification reaches the bar (4 papers, chosen); New Hampshire's (3), Massachusetts's (3) and New York's (2), Virginia's amendments (3) and the extracts from the journal of Congress of 2 and 3 June (2) were counted by their opening and are listed below the bar.",
+      "Headings above an item (X-1788-06)": "As built: an excerpt starts with the heading or date line printed directly above the item ('Extract from the JOURNALS of CONGRESS, June 2, 1788.', 'June 2 1788.', the headings and the Boston dateline over the letter from L'Orient, 'NEWPORT, Sept. 11.'); a paper's own dateline over its local column, or the dateline of the paper an act was taken from, stays out of the excerpt of an act or a letter and is noted.",
+      "Notices and titles of the items not chosen (X-1788-07)": "As built: the eligible notices (insolvent debtors, an absent debtor, a decree in chancery) and a book advertisement are not chosen (C-10) and are described without the private persons they name (R-04); in the daily papers the same forms run for months, so the machine joins several notices of one form.",
+      "Filing and dates (X-1788-08)": "Data: the Kentucke Gazette's pages are filed as edition 2. The release's map of misfiled RevX pages lists 10 pages of 1788 (5 of the Daily Advertiser, 5 of the New-York Journal), each holding the text of another page of the same issue; none holds a printing of the ledger, and a paper's count is not changed by them.",
+      "Grading calls on the transcriptions (X-1788-09)": "See the README's scan check."
+    }
+  }
+}

@@ -1,0 +1,487 @@
+{
+ "findings": {
+  "S72-001": [
+   "Scan matches the excerpt. The paragraph follows the end of another paragraph, with no dateline."
+  ],
+  "S72-002": [
+   "Scan matches the excerpt, including the abbreviations 'D. of C.' and 'D.', which are in the print; the print's spelling 'seperation' is modernised to 'separation'."
+  ],
+  "S72-003": [
+   "The crop, cut again to the page's edge, shows the paragraph under 'LONDON, November 13.'; the scan itself stops at the column's right edge, so the last letters of four lines are lost. The print reads 'a very Great Personage'; the transcription's 'Petition' is another word that changes the sense. The print names the 'Duke of Grafton' where the other printings have Gloucester: a printed difference, read on the enlarged page image."
+  ],
+  "S72-004": [
+   "Scan matches the excerpt, under the dateline 'LONDON, November 11.'"
+  ],
+  "S72-005": [
+   "Scan matches the excerpt. The print itself has no 'from Cayenne' and spells the island 'Granada': printed differences, not transcription errors."
+  ],
+  "S72-006": [
+   "Scan matches the excerpt."
+  ],
+  "S72-007": [
+   "The crop, cut again by hand on the page image, shows the paragraph in the New York news of 10 February. Scan matches the excerpt; this print gives the numbers in words ('six Hundred Houses', 'forty')."
+  ],
+  "S72-008": [
+   "The crop, cut again by hand on the page image, shows the paragraph in the New York news of 17 February. The print reads 'on his passage touch-ed at the windward islands', the word broken across two lines; the transcription's 'on his passage southward' puts another word in its place, which changes what the shipmaster did: fact-changing. The rest matches."
+  ],
+  "S72-009": [
+   "Scan matches the excerpt except that the transcription modernises the print's 'horrours' to 'horrors'."
+  ],
+  "S72-010": [
+   "Scan matches the excerpt except that the transcription writes the print's 'Æ' in 'CHRISTIANSTÆD' as 'E'."
+  ],
+  "S72-011": [
+   "Scan matches the excerpt, except that the print spells 'Missisipi', which the transcription modernises to 'Mississippi'."
+  ],
+  "S72-012": [
+   "The crop, cut again to the letter, shows its heading and opening at the foot of page 1. Scan matches the excerpt except that it reads 'two expresses' and 'Hamburgh', which the transcription gives as 'two express' and 'Hamburg' (minor). The first figure of the date is worn; it reads as 'Aug. 25.', as the other printings date the letter."
+  ],
+  "S72-013": [
+   "Scan matches the excerpt."
+  ],
+  "S72-014": [
+   "Scan matches the excerpt."
+  ],
+  "S72-015": [
+   "Scan matches the excerpt except that the transcription modernises the print's 'Horrours' to 'Horrors' (minor), read on the enlarged page image."
+  ],
+  "S72-016": [
+   "Scan matches the excerpt except that the transcription writes the print's 'Æ' in 'CHRISTIANSTÆD' as 'E'."
+  ],
+  "S72-017": [
+   "Scan matches the excerpt but for an apostrophe: the print has 'Esq'rs,'. The print itself lacks 'all' before 'his Majesty's revenues': a printed difference, not a transcription error."
+  ],
+  "S72-018": [
+   "The crop, cut again by hand on the page image, shows the paragraph after a letter from Milan; scan matches the excerpt."
+  ],
+  "S72-019": [
+   "Scan matches the excerpt; VG1 prints the notice without the St. James's dateline."
+  ],
+  "S72-020": [
+   "Scan matches the excerpt."
+  ],
+  "S72-021": [
+   "Scan matches the excerpt; Rind's paper prints the letter in other words, as the definition says."
+  ],
+  "S72-022": [
+   "The crop, cut again by hand on the page image, shows the paragraph under its date 'August 24.'; scan matches the excerpt."
+  ],
+  "S72-023": [
+   "Scan matches the excerpt."
+  ],
+  "S72-024": [
+   "Scan matches the excerpt."
+  ],
+  "S72-025": [
+   "Scan matches the excerpt except the names: the print reads 'Duddingston' and 'Gaspee', where the transcription drops an s ('Duddington') and adds an accent ('Gaspée'); both minor."
+  ],
+  "S72-026": [
+   "Scan matches the excerpt."
+  ],
+  "S72-027": [
+   "Scan matches the excerpt."
+  ],
+  "S72-028": [
+   "Scan matches the excerpt."
+  ],
+  "S72-029": [
+   "Scan matches the excerpt. NHG, like MS, prints 'Duddingston' where the Virginia papers print 'Dudingston': a printed difference."
+  ],
+  "S72-030": [
+   "Scan matches the excerpt."
+  ],
+  "S72-031": [
+   "Scan matches the excerpt; the print itself has 'Commission'd' and 'on the Duty'."
+  ],
+  "S72-032": [
+   "Scan matches the excerpt except that it reads 'two expresses were dispatched' and 'Hamburgh', where the transcription has 'two express were despatched' and 'Hamburg': minor transcription errors, not printed differences (read on the enlarged page image)."
+  ],
+  "S72-033": [
+   "The crop, cut again by hand on the page image, shows the dateline 'PHILADELPHIA, November 11.' and the paragraph; scan matches the excerpt."
+  ],
+  "S72-034": [
+   "Scan matches the excerpt."
+  ],
+  "S72-035": [
+   "Scan matches the excerpt. NHG prints a shorter text, 'On Saturday' without 'last' and 'from a visit to Sir William Johnson' without Johnson's Hall: printed differences, not transcription errors."
+  ],
+  "S72-036": [
+   "Scan matches the excerpt except two words: the print reads 'Pitt' (transcription 'Piu') and 'Garrisons' (transcription 'Garrison'), both minor, read on the enlarged page image. VG1's word order 'by Orders from England, are destroyed' is printed."
+  ],
+  "S72-037": [
+   "The crop, cut again by hand on the page image, shows the sentence at the foot of the column; scan matches the excerpt except that the print spells 'Gover-nour' (transcription 'Governor', minor). The print reads 'will be without Success' where the other printings have 'is without success': a printed difference."
+  ],
+  "S72-038": [
+   "Scan matches the excerpt except the chief's name: the print reads 'Kayashuta', garbled in the transcription as 'Kayaoutha' (minor). VG1 prints 'Johnson Hall' without the possessive: a printed difference; the name was read on the enlarged page image."
+  ],
+  "S72-039": [
+   "Scan matches the excerpt."
+  ],
+  "S72-040": [
+   "Scan matches the excerpt."
+  ],
+  "S72-041": [
+   "Scan matches the excerpt."
+  ],
+  "S72-042": [
+   "Scan matches the excerpt. MS prints 'to this city' where the other printings have 'for this city': a printed difference."
+  ],
+  "S72-043": [
+   "Scan matches the excerpt. MS prints 'who have referred them' where the others print 'who has': a printed difference. The word 'fear' is partly broken in the print but legible."
+  ],
+  "S72-044": [
+   "Scan matches the excerpt except the chief's name, which the print gives as 'Kayashuta' and the transcription as 'Kayahtuta'; the print's misprint 'were' for 'where' is silently corrected. MS prints 'had been' where the Virginia papers print 'has been': a printed difference."
+  ],
+  "S72-045": [
+   "Scan matches the excerpt."
+  ],
+  "S72-046": [
+   "Scan matches the excerpt."
+  ],
+  "S72-047": [
+   "Scan matches the excerpt. VG1 prints the 'Barbadoes' spelling and 'it was expected Sir Francis Bernard' without 'that': printed differences; the last letter of 'Barbadoes' is faint in this small crop."
+  ],
+  "S72-048": [
+   "Scan matches the excerpt except the schooner's name: the print reads 'Gaspee' (with a long s), garbled in the transcription as 'Gaffee' (minor: a garble of the same name, though it hides the name from a search). 'BOSTON, November 12.' stands directly above; the name was read on the enlarged page image."
+  ],
+  "S72-049": [
+   "Scan matches the excerpt."
+  ],
+  "S72-050": [
+   "Scan matches the excerpt."
+  ],
+  "S72-051": [
+   "Scan matches the excerpt."
+  ],
+  "S72-052": [
+   "Scan matches the excerpt."
+  ]
+ },
+ "crops": {
+  "S72-001": [
+   "S72-001.jpg"
+  ],
+  "S72-002": [
+   "S72-002.jpg"
+  ],
+  "S72-003": [
+   "S72-003.jpg"
+  ],
+  "S72-004": [
+   "S72-004.jpg"
+  ],
+  "S72-005": [
+   "S72-005.jpg"
+  ],
+  "S72-006": [
+   "S72-006.jpg"
+  ],
+  "S72-007": [
+   "S72-007.jpg"
+  ],
+  "S72-008": [
+   "S72-008.jpg"
+  ],
+  "S72-009": [
+   "S72-009.jpg"
+  ],
+  "S72-010": [
+   "S72-010.jpg"
+  ],
+  "S72-011": [
+   "S72-011.jpg"
+  ],
+  "S72-012": [
+   "S72-012.jpg"
+  ],
+  "S72-013": [
+   "S72-013.jpg"
+  ],
+  "S72-014": [
+   "S72-014.jpg"
+  ],
+  "S72-015": [
+   "S72-015.jpg"
+  ],
+  "S72-016": [
+   "S72-016.jpg"
+  ],
+  "S72-017": [
+   "S72-017.jpg"
+  ],
+  "S72-018": [
+   "S72-018.jpg"
+  ],
+  "S72-019": [
+   "S72-019.jpg"
+  ],
+  "S72-020": [
+   "S72-020.jpg"
+  ],
+  "S72-021": [
+   "S72-021.jpg"
+  ],
+  "S72-022": [
+   "S72-022.jpg"
+  ],
+  "S72-023": [
+   "S72-023.jpg"
+  ],
+  "S72-024": [
+   "S72-024.jpg"
+  ],
+  "S72-025": [
+   "S72-025.jpg"
+  ],
+  "S72-026": [
+   "S72-026.jpg"
+  ],
+  "S72-027": [
+   "S72-027.jpg"
+  ],
+  "S72-028": [
+   "S72-028.jpg"
+  ],
+  "S72-029": [
+   "S72-029.jpg"
+  ],
+  "S72-030": [
+   "S72-030.jpg"
+  ],
+  "S72-031": [
+   "S72-031.jpg"
+  ],
+  "S72-032": [
+   "S72-032.jpg"
+  ],
+  "S72-033": [
+   "S72-033.jpg"
+  ],
+  "S72-034": [
+   "S72-034.jpg"
+  ],
+  "S72-035": [
+   "S72-035.jpg"
+  ],
+  "S72-036": [
+   "S72-036.jpg"
+  ],
+  "S72-037": [
+   "S72-037.jpg"
+  ],
+  "S72-038": [
+   "S72-038.jpg"
+  ],
+  "S72-039": [
+   "S72-039.jpg"
+  ],
+  "S72-040": [
+   "S72-040.jpg"
+  ],
+  "S72-041": [
+   "S72-041.jpg"
+  ],
+  "S72-042": [
+   "S72-042.jpg"
+  ],
+  "S72-043": [
+   "S72-043.jpg"
+  ],
+  "S72-044": [
+   "S72-044.jpg"
+  ],
+  "S72-045": [
+   "S72-045.jpg"
+  ],
+  "S72-046": [
+   "S72-046.jpg"
+  ],
+  "S72-047": [
+   "S72-047.jpg"
+  ],
+  "S72-048": [
+   "S72-048.jpg"
+  ],
+  "S72-049": [
+   "S72-049.jpg"
+  ],
+  "S72-050": [
+   "S72-050.jpg"
+  ],
+  "S72-051": [
+   "S72-051.jpg"
+  ],
+  "S72-052": [
+   "S72-052.jpg"
+  ]
+ },
+ "boxes": {
+  "S72-003": [
+   [
+    1110,
+    2315,
+    1623,
+    2470
+   ]
+  ],
+  "S72-007": [
+   [
+    35,
+    1640,
+    575,
+    1760
+   ]
+  ],
+  "S72-008": [
+   [
+    670,
+    1310,
+    1180,
+    1460
+   ]
+  ],
+  "S72-012": [
+   [
+    3031,
+    5985,
+    4019,
+    6499
+   ]
+  ],
+  "S72-018": [
+   [
+    35,
+    1268,
+    575,
+    1342
+   ]
+  ],
+  "S72-022": [
+   [
+    30,
+    1260,
+    510,
+    1362
+   ]
+  ],
+  "S72-033": [
+   [
+    2460,
+    1945,
+    3430,
+    2168
+   ]
+  ],
+  "S72-037": [
+   [
+    555,
+    2470,
+    1095,
+    2580
+   ]
+  ]
+ },
+ "notes": {
+  "S72-002": "Prints 'the D. of C.' and 'the D.' for the Duke of Cumberland and the Duke (scan).",
+  "S72-003": "Prints the paragraph under 'LONDON, November 13.' and names the 'Duke of Grafton' where the other printings have Gloucester (scan).",
+  "S72-004": "Prints the paragraph under 'LONDON, November 11.' (scan).",
+  "S72-005": "Prints 'Captain Prince, on his passage' without 'from Cayenne', and spells the island 'Granada' (scan).",
+  "S72-007": "Gives the numbers in words: 'six Hundred Houses' and 'forty' (scan).",
+  "S72-017": "Prints 'the office of Receiver-General of his Majesty's revenues', without 'all' (scan).",
+  "S72-021": "Prints the letter in other words: 'A letter from Hambourg, dated August 25, says, The day before yesterday two couriers, dispatched from Stockholm, passed through this city ...' (scan).",
+  "S72-025": "Spells the officer's name 'Duddingston', as the New-Hampshire Gazette does, where the Virginia papers print 'Dudingston' (scan).",
+  "S72-029": "Spells the officer's name 'Duddingston', as the Massachusetts Spy does, where the Virginia papers print 'Dudingston' (scan).",
+  "S72-035": "Prints a shorter text: 'On Saturday Kayashuto, the great Seneca chief, returned to this city from a visit to Sir William Johnson', without 'last' and without Johnson's Hall (scan).",
+  "S72-037": "Prints 'but we fear the Application will be without Success', where the other printings have 'is without success' (scan).",
+  "S72-044": "Prints 'had been' where the Virginia papers print 'has been', and the misprint 'were' for 'where' (scan).",
+  "S72-048": "Prints the paragraph under 'BOSTON, November 12.' (scan)."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1772 that reach 3 or more papers, and those of 1771 over the 1772 pages, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 135 items printed somewhere, 5 reaching 4 papers by the finder's counts; items_from_1771.json). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1772 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (92 texts). For every text one paper short of the bar, the missing paper was looked for again on its pages, by the text's words (the best page within its weeks) and by its names (the pages holding three or more of its proper names), and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09): 55 clusters, each read, among them single paragraphs from runs of news printed by every surviving paper. Every admitted, chosen and listed item was then counted by phrase searches of its opening over all 675 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+  "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news; digests are not admitted. Single paragraphs from runs of news are counted by their own words (C-09). In 1772 four papers survive only where Rind's Virginia Gazette has an issue (late January to May, and October to December), and five in the weeks of the South-Carolina and American General Gazette's one issue (5 October): 12 items are printed by every surviving paper and admitted, 1 eligible item printed by four of five papers is chosen, and 4 that turn on private persons are listed for the owner (R-04).",
+  "paper_counting": "1772 has 6 catalogue series, which are 5 papers: the Massachusetts Spy (Boston; 48 issues) all year, under two catalogue numbers (sn83021193 to 1 October; sn83021194, 'or, Thomas's Boston Journal', from 8 October), counted as one paper (C-04); the New-Hampshire Gazette and Historical Chronicle (Portsmouth; 52 issues); two Virginia Gazettes, both printed at Williamsburg by different printers, Alexander Purdie and John Dixon (sn84024739; 52 issues) and William Rind (sn84024741; 18 issues, from 6 February: five in February to May, the rest from 8 October); and one issue of the South-Carolina and American General Gazette (Charlestown, 5 October). Papers in print in any three weeks: 3 (June to mid-September, and a few weeks in January, March and April) or 4; 5 in the weeks of 5 October.",
+  "counted_item_by_item": {
+   "Paper counts": "The 13 admitted and chosen items and the 4 listed for the owner were counted by phrase searches of their openings, every hit read; their papers are in the README's table of stories. The texts read and below the bar are listed in not_admitted with their counts.",
+   "Paragraphs in runs of news": "London, Boston and Philadelphia news reached the papers in runs of short paragraphs, and the four papers often reprinted the same runs. Each paragraph is counted by its own opening sentence (C-09): of the Philadelphia report of 11 November, the Seneca chief's return, the forts Chartres and Pitt and the frontier petition are each printed by all four papers (one parent group); of the Boston paragraphs of November, the former governor's expected appointment to Barbados and the commander of the Gaspee are admitted and the paragraph on his inheritance goes to the owner; of the London paragraphs of September, the Receiver General of Virginia is admitted, and those on the Board of Trade's commission, the Secretary of New York and the proclamation on the Gaspee are each in 3 of 4.",
+   "One letter in two wordings": "Rind's Virginia Gazette prints the letter from Hamburg of 25 August on the revolution in Sweden in other words ('A letter from Hambourg, dated August 25, says ... two couriers, dispatched from Stockholm ...'); it is counted with the other three (C-02).",
+   "A passage printed without the opening": "The New-Hampshire Gazette prints from the Antigua account of 5 September only the passage on the harbours, under its own introduction ('We learn from Antigua that ...'); it does not count as a printing (C-06), so the account is in 3 of the 5 papers of its weeks.",
+   "Accounts of one hurricane": "The papers printed several accounts of the hurricane of late August in the Leeward Islands, each counted by its own words: from Christiansted (chosen, 4 of 5), Antigua (3 of 5), Basseterre (3 of 4) and others in fewer papers."
+  },
+  "for_user_decision": {
+   "Four items that turn on private persons": "As built (R-04): a London paragraph that a banking house has paid all bills presented to it; a paragraph on a woman in Derbyshire delivered of six children; a Boston paragraph on a former governor's inheritance from a relation; and a paragraph on an American woman's wax-work admired in England. Each is printed by every paper that survives for its weeks; they are listed for the owner, without names. If the owner sees any of them as a public matter, it is admitted by the rule's first part, after a scan check of its printings.",
+   "The King in Council on the Duke of Cumberland": "As built: admitted. The paragraph reports the King's words in Council on his brother's 'late act' (the Duke of Cumberland's marriage); it turns on the royal family, public persons in a public setting, so R-04 is not applied. If the owner sees it as private, it goes to the owner's list.",
+   "The floor of four papers where three survive": "As built: from June to mid-September only three papers survive (Rind's Virginia Gazette has no surviving issue), so nothing printed only then reaches the bar of 4, as in 1770, 1789 and 1790."
+  },
+  "chosen": {
+   "Christiansted (St. Croix), 4 September 1772: 'On Monday night last blew the most violent hurricane that has ever been known here' (4)": "chosen: the only eligible account of the West Indian hurricane of 1772, which the papers printed from October to December; the New-Hampshire Gazette prints other accounts"
+  },
+  "not_admitted": {
+   "St. John's, Antigua, 5 September 1772: 'On Monday last a most dreadful storm happened here' (the New-Hampshire Gazette prints a passage from its middle under its own introduction, C-06) (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette prints only a passage from its middle ('We learn from Antigua that all the vessels in the different Harbours there ... were either sunk, overset, or driven ashore'), under its own introduction, so it does not count as a printing (C-06); the Massachusetts Spy does not print it.",
+   "London, September 1772: a commission under the Great Seal for the commissioners for trade and plantations (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette's surviving issues do not print it.",
+   "London, September 1772: a reversionary grant of the office of Secretary of New York to William Knox (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print it.",
+   "London, September 1772: a proclamation offering a reward of 500l. for discovering the persons concerned in burning the Gaspee schooner (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print it (they print other reports on the schooner's burning).",
+   "New York, January 1772: the Governor's speech opening the session of the General Assembly ('While I reflect on the important duties attendant on the elevated station') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print it.",
+   "Hartford, January 1772: a report of a house fire at Sandisfield (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+   "Warsaw, 9 November 1771: 'His Majesty the King of Poland, thank Heaven, is pretty well, considering the late horrid attempt made on his sacred person' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+   "Trenton, 2 February 1772: a merchant's letter on a fire (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+   "London, winter 1771-72: a run of shipping news and a treaty of commerce between the English and the Russians ('The Neptune ... from Boston to Hull, is totally lost near Margate') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "London, 12 November 1771: the cause between Sir James Lowther and the Duke of Portland on the forest of Inglewood, before the Barons of the Exchequer (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+   "A letter from St. Christopher's, 20 January 1772: 'We have certain Advice of the Town of St. George, at Grenada, being entirely consumed by Fire' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (NHG) was looked for again, by its words and by its names, and does not print it.",
+   "1772: a paragraph on an invention for illuminating light-houses (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+   "Charlestown, 12 February 1772: a letter from St. Eustatia of 17 January on the Spaniards and a schooner at Crab Island (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "Westminster, 21 January 1772: 'This day his Majesty came to the House of Peers' (the King's speech at the opening of the session of Parliament) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "London, 30 January 1772: an express from Copenhagen with an account of a revolution there (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "London, 1772: a correspondent on Colonel Keith, the British minister at the Danish court, in the late revolution (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "Williamsburg, 9 April 1772: the death of a man of fortune transported to Virginia for theft (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "Paris, 1772: a letter from a countess to her friend in Scotland on people of rank and fashion (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "London, 1772: 'An Event has happened within these few Days which is likely to be productive of a War' (French troops for the East Indies) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "1772: 'If a native either of England, Ireland, or Scotland, commits any misdemeanor in Spain' (the Spanish court's use of British mechanics) (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (SCG, VG1) was looked for again, by its words and by its names, and does not print it.",
+   "St. Croix, September 1772: 'Yesterday arrived here the schooner Hopewell ... from St. Eustatius' (the hurricane off St. Eustatius) (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS, NHG) was looked for again, by its words and by its names, and does not print it.",
+   "London, 8 August 1772: a case in Chancery on a guardian who took his ward abroad (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS, NHG) was looked for again, by its words and by its names, and does not print it.",
+   "Smyrna, 27 July 1772: a captain from Alexandria deposes on the Russian fleet and the Greeks (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "Rome, 12 June 1772: a letter reporting that Cardinal York had died there (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+   "Basseterre, 2 September 1772: an account of the hurricane, from the St. Christopher's Gazette ('We inserted in our last the account of a hard gale of wind') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (MS) was looked for again, by its words and by its names, and does not print it.",
+   "A letter from Surinam, 5 September 1772: 'This colony is in the greatest distress occasioned by an insurrection of the slaves' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "A letter from Mentz, 6 August 1772: 'A man arrived in this city about six days ago from the neighbouring country, attended by a retinue' (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "Boston, November 1772: the town's petition to the Governor, from Faneuil Hall, that the General Assembly be allowed to meet ('These, Sir, are the sentiments and apprehensions of this metropolis') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (NHG) was looked for again, by its words and by its names, and does not print it.",
+   "Boston, November 1772: the Governor's reply to the town's committee ('The Royal Charter refers to the Governor full power and authority') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (NHG) was looked for again, by its words and by its names, and does not print it.",
+   "South Carolina, autumn 1772: the Governor's speech to the General Assembly ('that happy poise of power which is the peculiar characteristic and palladium of a legislature') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (NHG) was looked for again, by its words and by its names, and does not print it.",
+   "Newport, 2 November 1772: a severe storm, and vessels that arrived in it (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "London, 5 September 1772: a description of the silver cup presented to Mr. Alderman Wilkes (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "Stockholm, 15 August 1772: public prayers in all the churches for the late revolution (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG1) was looked for again, by its words and by its names, and does not print it.",
+   "London, 8 October 1772: the speech of Mr. Alderman Wilkes to the Livery at Guildhall ('I want powers to express the deep sense I have of the distinguished honour you have done me') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "London, October 1772: a speech to the Livery after the poll ('I can never, Gentlemen, sufficiently acknowledge the Honour you have done me') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "Boston, November 1772: the town's letter to the towns of the province ('A free communication of your sentiments, to this town, of our common danger, is earnestly solicited') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paper that does not print it (VG2) was looked for again, by its words and by its names, and does not print it.",
+   "Other items of 3 papers or fewer (by count)": "The other items the finder lists, compared by machine on the first 40 words of their openings with every page of 1772: 35 are printed by every paper that survives for their weeks but where only three papers survive (from June to mid-September, when Rind's Virginia Gazette has no surviving issue), which the bar's floor of 4 leaves out; the others reach 2 papers or fewer. None reaches the bar, and a later printing by a fourth paper was looked for (latecheck.py). Not read one by one."
+  },
+  "for_the_owner": {
+   "London, 10 August 1772: a banking house has paid all bills presented to it and is ready to pay all demands, with interest (4)": "A one-sentence London paragraph of 10 August 1772 that turns on private persons: a banking house 'have paid all bills that have been presented to them, and are ready to pay all demands, with interest, as they shall be tendered' (the credit crisis of that summer) (R-04). In 4 of the 4 papers that survive for its weeks (needs 4): it would be admitted by the rule's first part if the owner sees it as a public matter.",
+   "Derbyshire, 1772: a woman delivered of six children in three labours (4)": "A paragraph that turns on a private person: a woman in Derbyshire delivered of six children in three labours, four of them dead (R-04). In 4 of the 4 papers that survive for its weeks (needs 4): it would be admitted by the rule's first part if the owner sees it as a public matter.",
+   "Boston, November 1772: a former governor's inheritance from a relation in England (4)": "A Boston paragraph of November 1772 that turns on private affairs: a former governor of the province and his children left a large estate by a relation who died in England (R-04). In 4 of the 4 papers that survive for its weeks (needs 4): it would be admitted by the rule's first part if the owner sees it as a public matter; the paragraphs printed with it on the former governor's expected appointment to Barbados and on the commander of the Gaspee are admitted.",
+   "November 1772: an American woman's wax-work admired in England (4)": "A paragraph of November 1772 that turns on a private person: an American woman's wax-work admired in England, where persons of the first distinction sat for their likenesses (R-04). In 4 of the 4 papers that survive for its weeks (needs 4): it would be admitted by the rule's first part if the owner sees it as a public matter."
+  },
+  "counts": {
+   "eligible_items": 17,
+   "admitted_by_the_first_part": 12,
+   "chosen_items": 1,
+   "not_chosen_listed": 0,
+   "digests": 0,
+   "read_below_the_bar": 36
+  }
+ },
+ "verdict_summary": {
+  "yes": 52,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 35,
+  "minor_errors": 15,
+  "major_problem": 2,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 44,
+  "manual_box": 8
+ }
+}

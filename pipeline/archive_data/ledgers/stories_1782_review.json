@@ -1,0 +1,1446 @@
+{
+ "findings": {
+  "S82-001": [
+   "Scan matches the excerpt, except that the print reads 'United Sates', a misprint that RevX silently corrects to 'States'."
+  ],
+  "S82-002": [
+   "Scan matches the excerpt, except that the print reads 'United Sates', a misprint that RevX silently corrects. Where the excerpt breaks off with '...', the print goes on with the full text."
+  ],
+  "S82-003": [
+   "Scan matches the excerpt, except that the print reads 'United Sates', a misprint that RevX silently corrects. Where the excerpt breaks off with '...', the print goes on with the full text."
+  ],
+  "S82-004": [
+   "Scan matches the excerpt, except that the print reads 'United Sates', a misprint that RevX silently corrects. Where the excerpt breaks off with '...', the print goes on with the full text."
+  ],
+  "S82-005": [
+   "Scan matches the excerpt, except that the print reads 'United Sates', a misprint that RevX silently corrects to 'States'."
+  ],
+  "S82-006": [
+   "Scan reads 'Jan. 10, 1782'; the transcription '1783' is a transcription error that changes the date. RevX also drops the heading 'ORDERS.'; the rest matches."
+  ],
+  "S82-007": [
+   "Scan matches the excerpt, except that the print reads 'United Sates', a misprint that RevX silently corrects to 'States'."
+  ],
+  "S82-008": [
+   "Scan matches the excerpt."
+  ],
+  "S82-009": [
+   "Scan matches the excerpt. The print itself has 'York, Virginia, Octo. 15, 1781', so these are printed wording, not transcription errors."
+  ],
+  "S82-010": [
+   "Crop shows the speech's opening. The CA text matches the print apart from words split at line ends and a stray '/'; the excerpt starts at 'WHEN', below the printed salutation."
+  ],
+  "S82-011": [
+   "Scan matches the excerpt. The heading leaves out 'Thursday', which the other printings have: a printed difference."
+  ],
+  "S82-012": [
+   "Scan matches the excerpt. The print names its source, 'From the PENNSYLVANIA PACKET, dated January 17, 1782', and reads 'and it is absolutely necessary' where the others have 'and as it is': a printed difference."
+  ],
+  "S82-013": [
+   "Scan matches the excerpt. The print reads 'York, Virginia, Octo. 15, 1781' where CC, RG and NHG have 'York-Town' and October 13: a printed difference, not a transcription error."
+  ],
+  "S82-014": [
+   "Scan matches the excerpt."
+  ],
+  "S82-015": [
+   "Scan matches the excerpt; the heading above gives 'the 27th of November last'."
+  ],
+  "S82-016": [
+   "Scan matches the excerpt. Only the lower half of the heading above the speech shows, and it reads 'Tuesday, November 27, 1781.'; the tops of the letters are cut off."
+  ],
+  "S82-017": [
+   "Scan matches the excerpt; the heading above reads 'November 27th, 1781'."
+  ],
+  "S82-018": [
+   "Scan matches the excerpt; the print reads 'York-Town, Virginia, October 13, 1781', where PP has 'York, Virginia, Octo. 15': a printed difference."
+  ],
+  "S82-019": [
+   "Scan matches the excerpt; the print reads 'York-Town, Virginia, Oct. 13.', with no year."
+  ],
+  "S82-020": [
+   "Scan matches the excerpt; the heading above reads 'on Tuesday, November 27th, 1781'."
+  ],
+  "S82-021": [
+   "Scan matches the excerpt; the print reads 'York-Town, Virginia, October 13, 1781'."
+  ],
+  "S82-022": [
+   "Scan matches the excerpt. The print dates the letter 'October 15' (CC, RG and NHG are transcribed 'October 13'): a printed difference, not a transcription error."
+  ],
+  "S82-023": [
+   "Scan matches the excerpt; the day is 'the 21st of Feb.'"
+  ],
+  "S82-024": [
+   "Scan matches the excerpt; the day is 'the 21st of February'."
+  ],
+  "S82-025": [
+   "The rest of the excerpt matches. The date line is faded: the zoom shows '5, [1]782' with no trace of a '2', so the transcription's 'February 25' is not supported by the scan, but the figure cannot be settled for certain."
+  ],
+  "S82-026": [
+   "Scan matches the excerpt; the letter is dated 'Feb. 5, 1782'."
+  ],
+  "S82-027": [
+   "Scan matches the excerpt; the day is 'the 21st of February'."
+  ],
+  "S82-028": [
+   "Scan matches the excerpt, under 'PHILADELPHIA, MARCH 13'; the letter is dated 'February 5, 1782'."
+  ],
+  "S82-029": [
+   "Scan matches the excerpt; the day is 'the 21st of February'."
+  ],
+  "S82-030": [
+   "Scan matches the excerpt (worn print); the day is 'the 21st of February'."
+  ],
+  "S82-031": [
+   "Scan matches the excerpt, under 'PHILADELPHIA, March 13'; the letter is dated 'February 5'. The print seems to read 'ſtil', which the transcription gives as 'still'."
+  ],
+  "S82-032": [
+   "Scan matches the excerpt except the dateline: its blotted last figure has the shape of a 3, so the print reads 'March 13' and the transcription's 'March 15' changes the date. The letter is dated 'February 5.'"
+  ],
+  "S82-033": [
+   "Scan reads 'Monsieur Monnereau, merchant, dated Fort St. Pierre'; the transcription's 'Dumerneau' changes the writer's name ('Port' for 'Fort' is minor). The rest matches."
+  ],
+  "S82-034": [
+   "Scan matches the excerpt but for the name: the print reads 'Monnereau', which the transcription shortens to 'Monnerau' (same name, minor). The print has 'St. Kitts', 'March 1, 1782' and the misprint 'Motſerrat'; the '1' of '12th' is blotted at the column's edge."
+  ],
+  "S82-035": [
+   "Scan matches the excerpt; the item runs from the foot of one column (first crop) to the head of the next (second crop)."
+  ],
+  "S82-036": [
+   "Scan matches the excerpt (worn print) and reads 'account'. The print spells 'seperate', a spelling of the time that the transcription gives as 'separate'."
+  ],
+  "S82-037": [
+   "Scan matches the excerpt; it reads 'account'."
+  ],
+  "S82-038": [
+   "Scan matches the excerpt."
+  ],
+  "S82-039": [
+   "Scan matches the excerpt, with the print's 'Republick'; it reads 'account'."
+  ],
+  "S82-040": [
+   "Scan reads 'March 1, 1782', as PP and NJJ print it; the transcription's 'March 3' is a transcription error that changes the date. The print also reads 'MONNEREAU' (transcribed 'MOUNEREAU', minor) and repeats 'reduction of the', which the transcription drops silently. The dateline 'RICHMOND, in VIRGINIA, March 23.' above the letter (added to the excerpt on 24 November, when the openings of each story’s printings were compared) is as printed."
+  ],
+  "S82-041": [
+   "Scan matches the excerpt; the print has 'The authentic accounts' under the dateline 'BOSTON, April 11.'"
+  ],
+  "S82-042": [
+   "Scan matches the excerpt; the master is 'Capt. Goodhue'."
+  ],
+  "S82-043": [
+   "Scan matches the excerpt in substance and reads 'Capt. Goodhue'. The print has the misprint 'Gazzette', which the transcription corrects; the transcription also reads the long s of 'Grasse' as f and drops the apostrophe of 'bro't'."
+  ],
+  "S82-044": [
+   "Scan matches the excerpt; it reads 'The authentick accounts' (plural)."
+  ],
+  "S82-045": [
+   "Scan matches the excerpt. The print has its own heading, 'A Declaration of INDEPENDENCE ...', with the date 'the Twenty eighth of March, 1782' in it."
+  ],
+  "S82-046": [
+   "Scan matches the excerpt except that the long s of 'Grasse' is read as 'Graffe'; the master is 'captain Goodhue'."
+  ],
+  "S82-047": [
+   "Scan matches the excerpt and has the 'Extra tidings' heading; the crop does not reach the date."
+  ],
+  "S82-048": [
+   "Scan matches the excerpt; it reads 'Capt. Goodhue'."
+  ],
+  "S82-049": [
+   "Scan matches the excerpt and has the 'Extra tidings' heading; the crop does not reach the date."
+  ],
+  "S82-050": [
+   "Scan matches the excerpt, including the printer's misprint 'in handed me' for 'is handed me'."
+  ],
+  "S82-051": [
+   "Scan matches the excerpt and has the 'Extra tidings' heading; the crop does not reach the date."
+  ],
+  "S82-052": [
+   "Scan matches the excerpt except that the heading's 'Extract' is transcribed 'Extra'; the print reads 'dispatches' and 'May 10, 1782'."
+  ],
+  "S82-053": [
+   "Scan matches the excerpt."
+  ],
+  "S82-054": [
+   "Scan matches the excerpt and has the 'Extra Tidings' heading; the crop does not reach the date."
+  ],
+  "S82-055": [
+   "The transcription drops a printed line ('fleet under the command of his Excellency the Count de Grasse,') and reads the master's name 'Goodhue' as 'Goodbye'. The crop's right edge cuts the last letters of several lines."
+  ],
+  "S82-056": [
+   "Scan matches the excerpt except 'Extract' transcribed 'Extra' and 'enclose' transcribed 'inclose'; the print reads 'dispatches' and 'May 10, 1782'."
+  ],
+  "S82-057": [
+   "Scan matches the excerpt except 'Extra' for 'Extract'; the print itself spells the name 'Carlton'."
+  ],
+  "S82-058": [
+   "Scan matches the excerpt. The print reads 'despatches' where NYG and RG print 'dispatches': a printed difference, not a transcription error; the date is 'May 10, 1782'."
+  ],
+  "S82-059": [
+   "Scan matches the excerpt; the letter is dated 'May 21, 1782'."
+  ],
+  "S82-060": [
+   "Scan matches the excerpt and dates the letter 'May 31, 1782'. The heading prints 'South-Carolna', which the transcription corrects silently."
+  ],
+  "S82-061": [
+   "Scan matches the excerpt; the letter is dated 'May 21, 1782'."
+  ],
+  "S82-062": [
+   "Scan matches the excerpt. The print dates the letter 'May 21, 1782' where the PP prints May 31: a printed difference, not a transcription error."
+  ],
+  "S82-063": [
+   "Scan matches the excerpt; the letter is dated 'May 21, 1782'."
+  ],
+  "S82-064": [
+   "Scan matches the excerpt; the letter is dated 'May 31, 1782'."
+  ],
+  "S82-065": [
+   "Scan reads 'about 1800'; the transcription '1300' changes the figure. RevX also reads the long s of 'ſailed' as 'failed', a different word; the rest matches."
+  ],
+  "S82-066": [
+   "Scan reads 'Poſey's'; RevX reads the long s as 'l', and 'Poley's' makes it a different name. The rest matches, and the crop shows General Wayne's letter dated 'Ebenezer, 24th May, 1782'."
+  ],
+  "S82-067": [
+   "The crop, cut again higher, shows the heading 'Extract of a letter from Major-General Greene, to his Excellency the President of Congress, dated Head Quarters, near Bacon's Bridge, South-Carolina, May 21, 1782.' and the letter's opening; scan matches the excerpt."
+  ],
+  "S82-068": [
+   "Scan matches the excerpt; the letter is dated 'May 31st, 1782'."
+  ],
+  "S82-069": [
+   "Scan matches the excerpt; this crop shows the opening of the letter in the issue of 10 August."
+  ],
+  "S82-070": [
+   "Scan matches the excerpt, printed under 'HARTFORD, August 13.'; the paper prints 'Sir Guy Carlton'."
+  ],
+  "S82-071": [
+   "Scan matches the excerpt; RevX modernises the print's 'pacifick' to 'pacific'."
+  ],
+  "S82-072": [
+   "Scan matches the excerpt; this second printing follows Congress's resolution of 12 August."
+  ],
+  "S82-073": [
+   "Scan matches the excerpt, printed under 'Philadelphia, August 15.'."
+  ],
+  "S82-074": [
+   "Scan matches the excerpt; the paper prints 'Sir Guy Carlton', under a dateline that appears to read 'HARTFORD, August 13.'."
+  ],
+  "S82-075": [
+   "Scan matches the excerpt where the print survives. No 'By' is visible before 'the UNITED STATES', but the left edge where it would stand is damaged, so whether it was printed cannot be settled."
+  ],
+  "S82-076": [
+   "Scan matches the excerpt."
+  ],
+  "S82-077": [
+   "Scan matches the excerpt: the heading reads 'By the UNITED STATES in CONGRESS assembled, August 12, 1782.' and the first line 'WHEREAS from the late publications,'."
+  ],
+  "S82-078": [
+   "Scan matches the excerpt, dateline 'CHARLESTOWN, (South-Carolina,) July 30.' included, except that RevX reads the long s of 'ſailed' as 'failed', a different word."
+  ],
+  "S82-079": [
+   "Scan reads 'Savanna' where the other printings have Savannah: a printed difference, transcribed faithfully. RevX reads the long s of 'ſailed' as 'failed', a different word; the rest matches."
+  ],
+  "S82-080": [
+   "Scan matches the excerpt."
+  ],
+  "S82-081": [
+   "Scan matches the excerpt."
+  ],
+  "S82-082": [
+   "Scan matches the excerpt except that RevX silently drops the printer's doubled 'of'. The paper prints 'testimony to your zeal' where NJJ and PP have 'testimony of your zeal': a printed difference."
+  ],
+  "S82-083": [
+   "Scan matches the excerpt; the heading with the date stands above the crop."
+  ],
+  "S82-084": [
+   "Scan matches the excerpt; the heading above it gives Thursday, July 11, 1782."
+  ],
+  "S82-085": [
+   "Scan matches the excerpt."
+  ],
+  "S82-086": [
+   "Scan matches the excerpt, except that the dateline appears to read 'FISH-KILK', a printer's misprint that the transcription corrects to FISH-KILL."
+  ],
+  "S82-087": [
+   "Scan matches the excerpt except that it reads 'ſailed' (sailed); the transcription 'failed' turns it into a different word that changes the sense."
+  ],
+  "S82-088": [
+   "Scan matches the excerpt; it prints 'his ſuit' where the others have 'suite', a printed difference, not a transcription error. The crop clips the first letter of a few lines, which stay readable."
+  ],
+  "S82-089": [
+   "Scan matches the excerpt, which opens with the date 'July 30.' (added to the excerpt on 24 November, when the openings of each story’s printings were compared)."
+  ],
+  "S82-090": [
+   "Scan matches the excerpt and the dateline 'FISH-KILL, September 19.' above it (added to the excerpt on 24 November, when the openings of each story’s printings were compared); the crop was cut again higher to show the dateline whole."
+  ],
+  "S82-091": [
+   "Scan matches the excerpt, with 16 guns, 21 prisoners and 62 of the brig's people; the transcription modernises the printed 'Labradore' to 'Labrador'."
+  ],
+  "S82-092": [
+   "Scan matches the excerpt; PP prints 'till the last of July' and 'frontier'."
+  ],
+  "S82-093": [
+   "Scan matches the excerpt."
+  ],
+  "S82-094": [
+   "Scan matches the excerpt: the heading and the opening of the resolutions are shown."
+  ],
+  "S82-095": [
+   "Scan matches the excerpt; the print goes on past the excerpt's '...' ('whilst they operate with vigour against its allies...')."
+  ],
+  "S82-096": [
+   "Scan matches the excerpt."
+  ],
+  "S82-097": [
+   "Scan matches the excerpt; the print goes on past the excerpt's '...' with the full text ('; and by the treaty of alliance...')."
+  ],
+  "S82-098": [
+   "Scan reads 'Yesterday se'nnight arrived'; the transcription's 'Yesterday night' changes the timing. The print has the misprint 'captured be her', which the transcription silently corrects to 'by'."
+  ],
+  "S82-099": [
+   "Scan matches the excerpt."
+  ],
+  "S82-100": [
+   "Scan reads '16 guns', as CC prints; the transcription's '15 guns' changes the number. The rest matches."
+  ],
+  "S82-101": [
+   "Scan reads the dateline 'FISH-KILL, October 10.'; the transcription garbles the place name as 'F I S HH A M'. The rest matches."
+  ],
+  "S82-102": [
+   "Scan matches the excerpt; it is Congress's own proclamation, not a state's."
+  ],
+  "S82-103": [
+   "Scan matches the excerpt."
+  ],
+  "S82-104": [
+   "Scan matches the excerpt."
+  ],
+  "S82-105": [
+   "Scan matches the excerpt. The print has 'to the laſt' and 'Hanna's town'."
+  ],
+  "S82-106": [
+   "Scan matches the excerpt; the date reads 'September 30, 1782'."
+  ],
+  "S82-107": [
+   "Scan matches the excerpt. The faint word after 'marched' reads 'from', so 'from Lake Champlain' is the print's own wording, not a transcription error."
+  ],
+  "S82-108": [
+   "Scan reads 'Yeſterday ſe'nnight' (a week ago yesterday); the transcription 'Yesterday last' changes when the brig arrived. The rest matches: '16 guns', '21' and '62', under the dateline 'Oct. 1.', which is in the excerpt since 24 November, when the openings of each story’s printings were compared."
+  ],
+  "S82-109": [
+   "Scan matches the excerpt, heading 'October 4, 1782' included. The print's misprint 'treary' is silently corrected to 'treaty' in the transcription."
+  ],
+  "S82-110": [
+   "Scan matches the excerpt; the print has 'FISH-KILL, October 10.' and 'the 22d ult.'"
+  ],
+  "S82-111": [
+   "Scan matches the excerpt; the print has 'Greene' and 'Auguſt 28, 1782'."
+  ],
+  "S82-112": [
+   "Scan matches the excerpt; the print has 'marched for Lake Champlain' and '4000'."
+  ],
+  "S82-113": [
+   "Scan matches the excerpt across the two crops; the worn figures read '22d ult.'"
+  ],
+  "S82-114": [
+   "Scan matches the excerpt, with 'to the laſt' and 'Hanna's town'. The print's misprint 'conntry' is silently corrected to 'country' in the transcription."
+  ],
+  "S82-115": [
+   "Scan matches the excerpt; the crop shows the heading and the opening 'WHEREAS by the articles of confederation'."
+  ],
+  "S82-116": [
+   "Scan matches the excerpt; the print has 'Greene' and 'Auguſt 28.'"
+  ],
+  "S82-117": [
+   "Scan matches the excerpt; the crop shows Congress's own proclamation, not a state's recital of it."
+  ],
+  "S82-118": [
+   "Scan matches the excerpt; the date reads 'September 2, 1782', under 'PHILADELPHIA October 16.'"
+  ],
+  "S82-119": [
+   "Scan matches the excerpt, with 'marched for Lake-Champlain' and '4000'. The transcription reads the long s of 'Eſopus' as 'Efopus', a minor garble."
+  ],
+  "S82-120": [
+   "Scan matches the excerpt, with 'Aug. 10.' before the paragraph."
+  ],
+  "S82-121": [
+   "Scan matches the excerpt. The print has 'thoſe United States' where NJG and CC have 'theſe': a printed difference, not a transcription error."
+  ],
+  "S82-122": [
+   "Scan matches the excerpt. The print has 'Green' without the final e, a printed difference, and the date 'Aug, 28.'"
+  ],
+  "S82-123": [
+   "Scan matches the excerpt; the date reads 'September 30, 1782'. The print has 'this kingdom' where CC has 'his kingdom': a printed difference, not a transcription error."
+  ],
+  "S82-124": [
+   "Scan matches the excerpt, with 'Aug. 10' before the paragraph."
+  ],
+  "S82-125": [
+   "Scan matches the excerpt; it is Congress's proclamation itself, under the dateline 'Philadelphia, October 15'."
+  ],
+  "S82-126": [
+   "Scan matches the excerpt, which opens 'August 10.'"
+  ],
+  "S82-127": [
+   "Scan matches the excerpt; the letter is dated 'September 2'."
+  ],
+  "S82-129": [
+   "Scan matches the excerpt; it reads 'to the last of July' and 'Hanna's town'."
+  ],
+  "S82-130": [
+   "Scan matches the excerpt. The first figure of '100 guns' is faint but reads as a 1."
+  ],
+  "S82-131": [
+   "Scan matches the excerpt."
+  ],
+  "S82-132": [
+   "Scan matches the excerpt; it is Congress's proclamation itself, not a state's proclamation reciting it."
+  ],
+  "S82-133": [
+   "Scan matches the excerpt; the date reads 'October 24.'"
+  ],
+  "S82-134": [
+   "Scan reads 'The fame acquired' (an f, not a long s); the transcription's 'same' changes the sense. The print has no 'Aug. 10.' before 'The attention of all Europe'."
+  ],
+  "S82-135": [
+   "Scan matches the excerpt; the date reads 'Oct. 24, 1782.'"
+  ],
+  "S82-136": [
+   "Scan matches the excerpt; the date reads 'October 24, 1782.'"
+  ],
+  "S82-137": [
+   "Scan matches the excerpt; the date reads 'October 24.'"
+  ],
+  "S82-138": [
+   "Scan matches the excerpt except that the transcription modernises the print's 'melancholly'. It reads '100 guns' and has no date before the paragraph."
+  ],
+  "S82-139": [
+   "Scan reads '110 guns' where the other printings have 100 guns: a printed difference, not a transcription error. Otherwise the scan matches, except that the transcription corrects the print's 'preceeding'."
+  ],
+  "S82-140": [
+   "Scan matches the excerpt. It reads 'August 29.' where the Packet and the New-Jersey Gazette have Aug. 31: a printed difference, not a transcription error."
+  ],
+  "S82-141": [
+   "Scan matches the excerpt, including the Cork gazette and Admiralty-Office lines; it reads 'with the subsequent account'."
+  ],
+  "S82-142": [
+   "Scan matches the excerpt across the two crops, with the two lines above the letter, 'Admiralty-Office, September 10, 1782.' and 'Extract of a Letter from Gov. Elliott, to Secretary Ste-vens, dated Sept. 12, 1782.' (added to the excerpt on 24 November, when the openings of each story’s printings were compared); crop 1 was cut again higher to show them whole. The print dates the Admiralty line 10 September, where three other papers have the 19th: a printed difference."
+  ],
+  "S82-143": [
+   "Scan matches the excerpt, at the foot of the crop below other local paragraphs; the '7' of '1782' is blotted but readable."
+  ],
+  "S82-144": [
+   "Scan matches the excerpt, except that the transcription reads the long s of 'Asgill' as an f. Where the excerpt breaks off at 'relative thereto...', the print goes on with the full text."
+  ],
+  "S82-145": [
+   "Scan matches the excerpt; where the excerpt breaks off at 'Spaniards...', the print goes on with the full text ('in their so much boasted attack...'). The line 'Admiralty Office, September 19, 1782,' above the letter's heading (added to the excerpt on 24 November, when the openings of each story’s printings were compared) is as printed."
+  ],
+  "S82-146": [
+   "Scan matches the excerpt; this print has 'the 26th ultimo' where the other three have '26th ult.' Like the other prints, it reads 'coast of Barbara'. The dateline 'BOSTON, November 29.' above it (added to the excerpt on 24 November, when the openings of each story’s printings were compared) is as printed; the crop was cut again higher to show it whole."
+  ],
+  "S82-147": [
+   "Scan matches the excerpt, under the heading 'BOSTON, November 29.', which is in the excerpt since 24 November, when the openings of each story’s printings were compared; it reads '26th ult.' and 'coast of Barbara'."
+  ],
+  "S82-148": [
+   "Scan matches the excerpt. This print has no heading naming Captain Asgill above the resolution."
+  ],
+  "S82-149": [
+   "Scan reads 'Paris, September 26.' (the last figure small but a 6); the transcription's '25' changes the date, so the 25 is the transcription's, not the print's."
+  ],
+  "S82-150": [
+   "Scan matches the excerpt, with the full heading ('A Gazette Extraordinary, printed at Cork ... Admiralty Office, Sept. 19, 1782', 'Governor Elliott'). It reads 'with the subsequent account'."
+  ],
+  "S82-151": [
+   "Scan matches the excerpt; the letter is dated 'Paris, September 26', set on the same line as 'SIR,'."
+  ],
+  "S82-152": [
+   "Scan matches the excerpt."
+  ],
+  "S82-153": [
+   "Scan matches the excerpt except that the transcription reads the printed 'stood' as 'flood', a long-s misreading that does not change the facts. It reads '26th ult.' and 'coast of Barbara'. The print heads the paragraph 'Nov. 29.', which is in the excerpt since 24 November, when the openings of each story’s printings were compared."
+  ],
+  "S82-154": [
+   "Scan reads 'they have threatened to carry away' (the word worn but legible); the transcription's 'been ordered' changes the sense. '1500' is confirmed; the rest matches."
+  ],
+  "S82-155": [
+   "Scan matches the excerpt except that the transcription reads the long s of 'Asgill' as f ('Afgill'), a minor error. The heading 'Copy of an order of Congress, releasing Capt. Asgill' stands under 'NEW-YORK, November 23.'"
+  ],
+  "S82-156": [
+   "Scan matches the excerpt and reads 'Paris, September 26.' The print spells 'seige', which the transcription corrects to 'siege'."
+  ],
+  "S82-157": [
+   "Scan matches the excerpt and reads 'the eighth of November' and '12,000 troops'. The print has two misprints, 'mouth' for month and 'dominious' for dominions, which the transcription silently corrects."
+  ],
+  "S82-158": [
+   "Scan matches the excerpt across the two crops (a column break after 'private in-'); the letter is dated 'Paris, September 26.'"
+  ],
+  "S82-159": [
+   "Scan matches the excerpt, under the heading 'From a Boston paper of November 29.'; it reads '26th ult.' and 'coast of Barbara'."
+  ],
+  "S82-160": [
+   "Scan matches the excerpt, heading included ('Copy of an Order of Congress releasing Capt. Asgill')."
+  ],
+  "S82-161": [
+   "Scan matches the excerpt, which opens with 'Dec. 5.' (added to the excerpt on 24 November, when the openings of each story’s printings were compared); it reads 'the eighth of November' and '12,000 troops'."
+  ],
+  "S82-162": [
+   "Scan matches the excerpt and reads 'with a subsequent account'. The two lines above the letter, 'Admiralty-Office, Sept. 9, 1782.' and 'Extract of a letter from Gov. Elliot, to Secreta-ry Stevens, dated Sept. 12, 1782.' (added to the excerpt on 24 November, when the openings of each story’s printings were compared), are as printed; the crop was cut again higher to show them whole. The print dates the Admiralty line 9 September, where three other papers have the 19th: a printed difference. The print appears to misprint 'opportunty', which the transcription corrects."
+  ],
+  "S82-163": [
+   "Scan matches the excerpt across the two crops and reads 'the eighth of November' and '12,000 troops'. The transcription's 'disfused' is a garble of the printed 'dif-fused' that does not change the sense. The date line 'December 5.' above it (added to the excerpt on 24 November, when the openings of each story’s printings were compared) is as printed."
+  ],
+  "S82-164": [
+   "Scan matches the excerpt except that the transcription reads the long s of 'sail' as f ('ninety fail'), a minor error. It reads 'threatened' and '1500'."
+  ],
+  "S82-165": [
+   "Scan matches the excerpt except that the transcription reads the long s of 'sail' as f ('90 fail'), a minor error. It reads 'threatened' and '1500'."
+  ],
+  "S82-166": [
+   "Scan matches the excerpt; it reads 'threatened' and '1500'."
+  ]
+ },
+ "crops": {
+  "S82-001": [
+   "S82-001.jpg"
+  ],
+  "S82-002": [
+   "S82-002.jpg"
+  ],
+  "S82-003": [
+   "S82-003.jpg"
+  ],
+  "S82-004": [
+   "S82-004.jpg"
+  ],
+  "S82-005": [
+   "S82-005.jpg"
+  ],
+  "S82-006": [
+   "S82-006-1.jpg",
+   "S82-006-2.jpg"
+  ],
+  "S82-007": [
+   "S82-007.jpg"
+  ],
+  "S82-008": [
+   "S82-008.jpg"
+  ],
+  "S82-009": [
+   "S82-009.jpg"
+  ],
+  "S82-010": [
+   "S82-010.jpg"
+  ],
+  "S82-011": [
+   "S82-011.jpg"
+  ],
+  "S82-012": [
+   "S82-012.jpg"
+  ],
+  "S82-013": [
+   "S82-013.jpg"
+  ],
+  "S82-014": [
+   "S82-014.jpg"
+  ],
+  "S82-015": [
+   "S82-015.jpg"
+  ],
+  "S82-016": [
+   "S82-016.jpg"
+  ],
+  "S82-017": [
+   "S82-017.jpg"
+  ],
+  "S82-018": [
+   "S82-018.jpg"
+  ],
+  "S82-019": [
+   "S82-019.jpg"
+  ],
+  "S82-020": [
+   "S82-020.jpg"
+  ],
+  "S82-021": [
+   "S82-021.jpg"
+  ],
+  "S82-022": [
+   "S82-022.jpg"
+  ],
+  "S82-023": [
+   "S82-023.jpg"
+  ],
+  "S82-024": [
+   "S82-024.jpg"
+  ],
+  "S82-025": [
+   "S82-025.jpg"
+  ],
+  "S82-026": [
+   "S82-026.jpg"
+  ],
+  "S82-027": [
+   "S82-027.jpg"
+  ],
+  "S82-028": [
+   "S82-028.jpg"
+  ],
+  "S82-029": [
+   "S82-029.jpg"
+  ],
+  "S82-030": [
+   "S82-030.jpg"
+  ],
+  "S82-031": [
+   "S82-031.jpg"
+  ],
+  "S82-032": [
+   "S82-032.jpg"
+  ],
+  "S82-033": [
+   "S82-033.jpg"
+  ],
+  "S82-034": [
+   "S82-034.jpg"
+  ],
+  "S82-035": [
+   "S82-035-1.jpg",
+   "S82-035-2.jpg"
+  ],
+  "S82-036": [
+   "S82-036.jpg"
+  ],
+  "S82-037": [
+   "S82-037.jpg"
+  ],
+  "S82-038": [
+   "S82-038.jpg"
+  ],
+  "S82-039": [
+   "S82-039.jpg"
+  ],
+  "S82-040": [
+   "S82-040.jpg"
+  ],
+  "S82-041": [
+   "S82-041.jpg"
+  ],
+  "S82-042": [
+   "S82-042.jpg"
+  ],
+  "S82-043": [
+   "S82-043.jpg"
+  ],
+  "S82-044": [
+   "S82-044.jpg"
+  ],
+  "S82-045": [
+   "S82-045.jpg"
+  ],
+  "S82-046": [
+   "S82-046.jpg"
+  ],
+  "S82-047": [
+   "S82-047.jpg"
+  ],
+  "S82-048": [
+   "S82-048.jpg"
+  ],
+  "S82-049": [
+   "S82-049.jpg"
+  ],
+  "S82-050": [
+   "S82-050.jpg"
+  ],
+  "S82-051": [
+   "S82-051.jpg"
+  ],
+  "S82-052": [
+   "S82-052.jpg"
+  ],
+  "S82-053": [
+   "S82-053.jpg"
+  ],
+  "S82-054": [
+   "S82-054.jpg"
+  ],
+  "S82-055": [
+   "S82-055.jpg"
+  ],
+  "S82-056": [
+   "S82-056.jpg"
+  ],
+  "S82-057": [
+   "S82-057.jpg"
+  ],
+  "S82-058": [
+   "S82-058.jpg"
+  ],
+  "S82-059": [
+   "S82-059.jpg"
+  ],
+  "S82-060": [
+   "S82-060.jpg"
+  ],
+  "S82-061": [
+   "S82-061.jpg"
+  ],
+  "S82-062": [
+   "S82-062.jpg"
+  ],
+  "S82-063": [
+   "S82-063.jpg"
+  ],
+  "S82-064": [
+   "S82-064.jpg"
+  ],
+  "S82-065": [
+   "S82-065.jpg"
+  ],
+  "S82-066": [
+   "S82-066.jpg"
+  ],
+  "S82-067": [
+   "S82-067.jpg"
+  ],
+  "S82-068": [
+   "S82-068.jpg"
+  ],
+  "S82-069": [
+   "S82-069.jpg"
+  ],
+  "S82-070": [
+   "S82-070.jpg"
+  ],
+  "S82-071": [
+   "S82-071.jpg"
+  ],
+  "S82-072": [
+   "S82-072.jpg"
+  ],
+  "S82-073": [
+   "S82-073.jpg"
+  ],
+  "S82-074": [
+   "S82-074.jpg"
+  ],
+  "S82-075": [
+   "S82-075.jpg"
+  ],
+  "S82-076": [
+   "S82-076.jpg"
+  ],
+  "S82-077": [
+   "S82-077.jpg"
+  ],
+  "S82-078": [
+   "S82-078.jpg"
+  ],
+  "S82-079": [
+   "S82-079.jpg"
+  ],
+  "S82-080": [
+   "S82-080.jpg"
+  ],
+  "S82-081": [
+   "S82-081.jpg"
+  ],
+  "S82-082": [
+   "S82-082.jpg"
+  ],
+  "S82-083": [
+   "S82-083.jpg"
+  ],
+  "S82-084": [
+   "S82-084.jpg"
+  ],
+  "S82-085": [
+   "S82-085.jpg"
+  ],
+  "S82-086": [
+   "S82-086.jpg"
+  ],
+  "S82-087": [
+   "S82-087.jpg"
+  ],
+  "S82-088": [
+   "S82-088.jpg"
+  ],
+  "S82-089": [
+   "S82-089.jpg"
+  ],
+  "S82-090": [
+   "S82-090.jpg"
+  ],
+  "S82-091": [
+   "S82-091.jpg"
+  ],
+  "S82-092": [
+   "S82-092.jpg"
+  ],
+  "S82-093": [
+   "S82-093.jpg"
+  ],
+  "S82-094": [
+   "S82-094.jpg"
+  ],
+  "S82-095": [
+   "S82-095.jpg"
+  ],
+  "S82-096": [
+   "S82-096.jpg"
+  ],
+  "S82-097": [
+   "S82-097.jpg"
+  ],
+  "S82-098": [
+   "S82-098.jpg"
+  ],
+  "S82-099": [
+   "S82-099.jpg"
+  ],
+  "S82-100": [
+   "S82-100.jpg"
+  ],
+  "S82-101": [
+   "S82-101.jpg"
+  ],
+  "S82-102": [
+   "S82-102.jpg"
+  ],
+  "S82-103": [
+   "S82-103.jpg"
+  ],
+  "S82-104": [
+   "S82-104.jpg"
+  ],
+  "S82-105": [
+   "S82-105.jpg"
+  ],
+  "S82-106": [
+   "S82-106.jpg"
+  ],
+  "S82-107": [
+   "S82-107.jpg"
+  ],
+  "S82-108": [
+   "S82-108.jpg"
+  ],
+  "S82-109": [
+   "S82-109.jpg"
+  ],
+  "S82-110": [
+   "S82-110.jpg"
+  ],
+  "S82-111": [
+   "S82-111.jpg"
+  ],
+  "S82-112": [
+   "S82-112.jpg"
+  ],
+  "S82-113": [
+   "S82-113-1.jpg",
+   "S82-113-2.jpg"
+  ],
+  "S82-114": [
+   "S82-114.jpg"
+  ],
+  "S82-115": [
+   "S82-115.jpg"
+  ],
+  "S82-116": [
+   "S82-116.jpg"
+  ],
+  "S82-117": [
+   "S82-117.jpg"
+  ],
+  "S82-118": [
+   "S82-118.jpg"
+  ],
+  "S82-119": [
+   "S82-119.jpg"
+  ],
+  "S82-120": [
+   "S82-120.jpg"
+  ],
+  "S82-121": [
+   "S82-121.jpg"
+  ],
+  "S82-122": [
+   "S82-122.jpg"
+  ],
+  "S82-123": [
+   "S82-123.jpg"
+  ],
+  "S82-124": [
+   "S82-124.jpg"
+  ],
+  "S82-125": [
+   "S82-125.jpg"
+  ],
+  "S82-126": [
+   "S82-126.jpg"
+  ],
+  "S82-127": [
+   "S82-127.jpg"
+  ],
+  "S82-129": [
+   "S82-129.jpg"
+  ],
+  "S82-130": [
+   "S82-130.jpg"
+  ],
+  "S82-131": [
+   "S82-131.jpg"
+  ],
+  "S82-132": [
+   "S82-132.jpg"
+  ],
+  "S82-133": [
+   "S82-133.jpg"
+  ],
+  "S82-134": [
+   "S82-134.jpg"
+  ],
+  "S82-135": [
+   "S82-135.jpg"
+  ],
+  "S82-136": [
+   "S82-136.jpg"
+  ],
+  "S82-137": [
+   "S82-137.jpg"
+  ],
+  "S82-138": [
+   "S82-138.jpg"
+  ],
+  "S82-139": [
+   "S82-139.jpg"
+  ],
+  "S82-140": [
+   "S82-140.jpg"
+  ],
+  "S82-141": [
+   "S82-141.jpg"
+  ],
+  "S82-142": [
+   "S82-142-1.jpg",
+   "S82-142-2.jpg"
+  ],
+  "S82-143": [
+   "S82-143.jpg"
+  ],
+  "S82-144": [
+   "S82-144.jpg"
+  ],
+  "S82-145": [
+   "S82-145.jpg"
+  ],
+  "S82-146": [
+   "S82-146.jpg"
+  ],
+  "S82-147": [
+   "S82-147.jpg"
+  ],
+  "S82-148": [
+   "S82-148.jpg"
+  ],
+  "S82-149": [
+   "S82-149.jpg"
+  ],
+  "S82-150": [
+   "S82-150.jpg"
+  ],
+  "S82-151": [
+   "S82-151.jpg"
+  ],
+  "S82-152": [
+   "S82-152.jpg"
+  ],
+  "S82-153": [
+   "S82-153.jpg"
+  ],
+  "S82-154": [
+   "S82-154.jpg"
+  ],
+  "S82-155": [
+   "S82-155.jpg"
+  ],
+  "S82-156": [
+   "S82-156.jpg"
+  ],
+  "S82-157": [
+   "S82-157.jpg"
+  ],
+  "S82-158": [
+   "S82-158-1.jpg",
+   "S82-158-2.jpg"
+  ],
+  "S82-159": [
+   "S82-159.jpg"
+  ],
+  "S82-160": [
+   "S82-160.jpg"
+  ],
+  "S82-161": [
+   "S82-161.jpg"
+  ],
+  "S82-162": [
+   "S82-162.jpg"
+  ],
+  "S82-163": [
+   "S82-163-1.jpg",
+   "S82-163-2.jpg"
+  ],
+  "S82-164": [
+   "S82-164.jpg"
+  ],
+  "S82-165": [
+   "S82-165.jpg"
+  ],
+  "S82-166": [
+   "S82-166.jpg"
+  ]
+ },
+ "boxes": {
+  "S82-009": [
+   [
+    1741,
+    1624,
+    2943,
+    2210
+   ]
+  ],
+  "S82-033": [
+   [
+    2990,
+    960,
+    4380,
+    1590
+   ]
+  ],
+  "S82-038": [
+   [
+    2414,
+    4328,
+    3561,
+    5079
+   ]
+  ],
+  "S82-041": [
+   [
+    220,
+    4170,
+    1460,
+    4570
+   ]
+  ],
+  "S82-042": [
+   [
+    201,
+    3416,
+    1512,
+    4061
+   ]
+  ],
+  "S82-046": [
+   [
+    1462,
+    1031,
+    2644,
+    2232
+   ]
+  ],
+  "S82-050": [
+   [
+    1497,
+    873,
+    2686,
+    1414
+   ]
+  ],
+  "S82-053": [
+   [
+    503,
+    1020,
+    1788,
+    1787
+   ]
+  ],
+  "S82-055": [
+   [
+    340,
+    3650,
+    1560,
+    4040
+   ]
+  ],
+  "S82-057": [
+   [
+    198,
+    3690,
+    1361,
+    4330
+   ]
+  ],
+  "S82-063": [
+   [
+    1390,
+    2500,
+    2540,
+    2980
+   ]
+  ],
+  "S82-067": [
+   [
+    1520,
+    6020,
+    2900,
+    6450
+   ]
+  ],
+  "S82-068": [
+   [
+    2890,
+    810,
+    4230,
+    1200
+   ]
+  ],
+  "S82-069": [
+   [
+    244,
+    5217,
+    1430,
+    5848
+   ]
+  ],
+  "S82-075": [
+   [
+    80,
+    600,
+    1340,
+    1330
+   ]
+  ],
+  "S82-077": [
+   [
+    3140,
+    3150,
+    4420,
+    4104
+   ]
+  ],
+  "S82-083": [
+   [
+    1336,
+    1994,
+    2504,
+    2602
+   ]
+  ],
+  "S82-085": [
+   [
+    2602,
+    5764,
+    3803,
+    6132
+   ]
+  ],
+  "S82-090": [
+   [
+    3151,
+    4302,
+    4439,
+    5019
+   ]
+  ],
+  "S82-094": [
+   [
+    2620,
+    200,
+    3810,
+    800
+   ]
+  ],
+  "S82-101": [
+   [
+    2655,
+    5489,
+    3853,
+    6029
+   ]
+  ],
+  "S82-103": [
+   [
+    238,
+    5073,
+    1434,
+    5603
+   ]
+  ],
+  "S82-131": [
+   [
+    1821,
+    3567,
+    3157,
+    4302
+   ]
+  ],
+  "S82-142": [
+   [
+    1500,
+    5157,
+    2638,
+    5520
+   ],
+   [
+    2617,
+    220,
+    3763,
+    494
+   ]
+  ],
+  "S82-146": [
+   [
+    3033,
+    798,
+    4296,
+    1598
+   ]
+  ],
+  "S82-152": [
+   [
+    159,
+    2483,
+    1468,
+    3337
+   ]
+  ],
+  "S82-162": [
+   [
+    159,
+    458,
+    1327,
+    1041
+   ]
+  ]
+ },
+ "notes": {
+  "S82-009": "Dates the letter 'York, Virginia, Octo. 15, 1781', where the Connecticut Courant, the Royal Gazette and the New-Hampshire Gazette have York-Town and 13 October (scan).",
+  "S82-012": "Prints the orders under the line 'From the Pennsylvania Packet, dated January 17, 1782', and reads 'and it is absolutely necessary' where the other printings have 'and as it is' (scan). Filed under the first day of the range its masthead prints: 'From Saturday, February 16, to Wednesday, February 20, 1782'.",
+  "S82-013": "Dates the letter 'York, Virginia, Octo. 15, 1781', where the Connecticut Courant, the Royal Gazette and the New-Hampshire Gazette have York-Town and 13 October (scan).",
+  "S82-019": "Filed under the first day of the range its masthead prints: 'From Wednesday, February 27, to Saturday, March 2, 1782'.",
+  "S82-020": "Filed under the first day of the range its masthead prints: 'From Wednesday, February 27, to Saturday, March 2, 1782'.",
+  "S82-022": "Dates the letter 'October 15', as the Pennsylvania Packet does, where the other printings have 13 October (scan).",
+  "S82-025": "The day in the letter's date is faded on the scan ('...5, 1782'); the transcription reads 'February 25', the other printings 'February 5' (scan).",
+  "S82-040": "Filed under the first day of the range its masthead prints: 'From Wednesday, April 24, to Saturday, April 27, 1782'.",
+  "S82-044": "Filed under the first day of the range its masthead prints: 'From Wednesday, May 22, to Saturday, May 25, 1782'.",
+  "S82-054": "Filed under the first day of the range its masthead prints: 'From Saturday, June 15, to Wednesday, June 19, 1782'.",
+  "S82-055": "Filed under the first day of the range its masthead prints: 'From Saturday, June 15, to Wednesday, June 19, 1782'.",
+  "S82-056": "Filed under the first day of the range its masthead prints: 'From Saturday, June 15, to Wednesday, June 19, 1782'.",
+  "S82-062": "Dates the letter 'May 21, 1782', where the other printings have May 31 (scan).",
+  "S82-065": "Filed under the first day of the range its masthead prints: 'From Wednesday, July 24, to Saturday, July 27, 1782'.",
+  "S82-067": "Filed under the first day of the range its masthead prints: 'From Wednesday, July 31, to Saturday, August 3, 1782'.",
+  "S82-068": "Filed under the first day of the range its masthead prints: 'From Wednesday, July 31, to Saturday, August 3, 1782'.",
+  "S82-075": "Prints '[For the letter see our last paper.]' after the first resolution (scan).",
+  "S82-076": "Prints '[This letter was published in this Paper of the 13th instant.]' (scan).",
+  "S82-086": "Prints the dateline 'FISH-KILK, September 19.', a misprint (scan).",
+  "S82-098": "Prints 'Yesterday se'nnight arrived' (a week before yesterday), where the New-Hampshire Gazette and the Pennsylvania Packet have 'Yesterday arrived', and the misprint 'captured be her' (scan).",
+  "S82-107": "Prints 'had marched from Lake Champlain', where the other printings have 'for' (scan).",
+  "S82-108": "Prints 'Yesterday se'nnight arrived', as the Connecticut Courant does, where the New-Hampshire Gazette and the Pennsylvania Packet have 'Yesterday arrived' (scan).",
+  "S82-138": "Prints 'half past ten in the morning', where the other printings have 'ten o'clock' (scan).",
+  "S82-139": "Prints '110 guns', where the other printings have 100 (scan).",
+  "S82-140": "Dates the paragraph 'August 29.', where the Pennsylvania Packet and the New-Jersey Gazette have 'Aug. 31.' (scan).",
+  "S82-142": "Dates the Admiralty line 'September 10, 1782', where the New-Jersey Gazette, the Pennsylvania Packet and the New-Hampshire Gazette have Sept. 19 and the Connecticut Courant Sept. 9 (scan).",
+  "S82-162": "Dates the Admiralty line 'Sept. 9, 1782', where the New-Jersey Gazette, the Pennsylvania Packet and the New-Hampshire Gazette have Sept. 19 and the New-Jersey Journal September 10 (scan)."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1782 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 550 items printed somewhere). The same script was run with year 1781 over the 1782 pages (items_from_1781.json: 47 items, 5 of them in 4 or more papers by the finder's count). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1782 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (395 texts). For every text at the bar or one paper short of it, the papers the comparison missed were looked for again on their pages (the best page within the text's weeks) and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09); each was read. Every admitted and chosen item was then counted by phrase searches of its opening over all 1,509 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+  "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35, a target, not a quota); digests are not admitted. In 1782, 22 items are printed by every paper that survives for their weeks, 19 of them from September to December, when only the four year-round papers survive; 13 items are chosen, in 11 stories, so that every month from January to September has one.",
+  "paper_counting": "1782 has 8 catalogue series, which are 8 papers: no paper is under two catalogue numbers. The Pennsylvania Packet (Philadelphia, three a week, 157 issues), the Connecticut Courant (Hartford; Tuesdays, 53), the New-Jersey Gazette (Trenton; Wednesdays, 52) and the New-Hampshire Gazette and General Advertiser (Portsmouth; Saturdays, 52) run all year; the Royal Gazette (Charleston, held by the British) to 3 August (62 issues); the New-Jersey Journal (Chatham) survives in 9 issues, the Royal South-Carolina Gazette (Charleston) in 3 and the New-York Gazette, and the Weekly Mercury (New York, held by the British) in 2. Papers in print in any three weeks: 4 to 7; 7 in March, 5 or 6 in most windows from January to July, and only the four year-round papers in 67 windows, most of them from August on.",
+  "counted_item_by_item": {
+   "Paper counts": "By the first 40 words of their openings, the eligible items not chosen are as listed in not_admitted (with their counts). The admitted and chosen items were counted by phrase searches of their openings and every hit read; their counts and the papers that survive for their weeks are in the README's table of stories.",
+   "Joins made by the finder": "The finder chains items printed together: the King's speech of 27 November 1781 with the addresses of both Houses, the King's answer to the Lords and Lord Cornwallis's letter; General Greene's letters of 21 and 31 May; Congress's resolutions of 4 October with General Greene's letters of August. Each was counted apart by its own opening.",
+   "A letter and what it encloses": "General Washington's letter of 10 May is counted with Sir Guy Carleton's letter that it encloses; General Greene's letters of 28 and 29 August with General Leslie's letter and General Gist's report; General Greene's letter of 31 May with General Wayne's letter, which the New-Hampshire Gazette prints alone (as X-1810-01, and 1779's General Putnam letter, X-1779-03).",
+   "Printed again counts again": "The Pennsylvania Packet printed the orders of 10 January in six issues, and the King's speech of 27 November 1781, Lord Cornwallis's letter, Sir Guy Carleton and Admiral Digby's letter and Congress's resolutions of 4 October twice each.",
+   "Pages that only quote or recite an item": "Not counted (C-07): papers that quote Sir Guy Carleton and Admiral Digby's letter inside other texts in October to December; states' proclamations that recite Congress's proclamation of thanksgiving; a state assembly's resolutions in the Connecticut Courant of 29 October that repeat the preamble of Congress's resolutions of 4 October; the New-Jersey Journal's comment that quotes the King's speech of 27 November 1781.",
+   "Extracts without the opening": "Not counted (C-06): the New-Hampshire Gazette's extract of the letter from Paris of 9 August (its second paragraph, under the same heading), and its extract of General Greene's letter of 31 May ('Flying parties of the British cavalry ...'), printed after it had printed General Wayne's letter."
+  },
+  "for_user_decision": {
+   "The first part in the autumn": "As built: 22 items printed by every newspaper that survives for their weeks are admitted, 19 of them from September to December, when only the four year-round papers (the Pennsylvania Packet, the Connecticut Courant, the New-Jersey Gazette and the New-Hampshire Gazette) survive; with the 11 chosen stories, 30 stories in all. The rule's first part reads 'every newspaper that survives for their weeks', however few survive; the audit could ask for more papers (Y-THIN, 'Reopen if').",
+   "The choice under the amended rule (B1)": "As built: 13 items chosen in 11 stories (General Greene's letter of 21 May is a sub-story of an admitted parent; Congress's resolutions of 12 August stand with Sir Guy Carleton and Admiral Digby's letter under a parent), so that every month from January to September has a story; the other eligible items listed as not chosen with their counts. Any not-chosen item can be added after a scan check of its printings.",
+   "Digests among the items printed by every paper": "As built (C-09): the news by the ship Apollo (4 of 4), the substance of the Leyden papers (printed in parts), the news a Salem cartel brought, and the news by the ship Carolina (4 of 4, one paper rewording its first sentence) are runs of unrelated reports and are not admitted, as 1805's news by the Palmyra and 1808's by the Camilla.",
+   "A letter with its enclosure, printed in parts": "As built: General Greene's letter of 31 May with General Wayne's letter is printed by all five papers that survive for its weeks, counting the New-Hampshire Gazette, which prints General Wayne's letter alone; without that printing it is in 4 of 5 and would be chosen, not admitted by the first part.",
+   "Extracts without the opening": "As built (C-06): the letter from Paris of 9 August and the Paris paragraph on Mr. Franklin and Mr. Jay with the Count de Aranda are each in 3 of the 4 surviving papers by their openings, below the bar.",
+   "Both sides": "As built (R-02): the Royal Gazette of Charleston's own report of Savannah's evacuation, the British commanders' letters (Lord Cornwallis, Sir Guy Carleton and Admiral Digby, General Leslie) and Governor Elliot's letter as a Cork paper printed it are admitted and described as theirs; the Amsterdam handbill as the papers describe it.",
+   "Single surviving issues": "As built (as X-1779-02): the New-York Gazette's 2 issues, the Royal South-Carolina Gazette's 3 and the New-Jersey Journal's 9 count among the papers that survive for an item's weeks when they fall in its window."
+  },
+  "not_admitted": {
+   "Martinico, 1 November 1781: the schooner Defiance from the Spanish coast with news for the allies (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "General orders, Highlands, 25 December 1781: Captain Williams's excursion on the lines (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "London, October 1781: Commodore Keith Stewart ordered to return with his squadron to the Downs (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "London, 15 October 1781: the Dutch East-India ships taken by Commodore Johnstone safe at St. Helena (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "London, 22 October 1781: 'No news of any kind has been yet received from America' (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "Boston, 3 January: a ship with English goods bound to the West Indies sent into port (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "The French account of the retaking of St. Eustatius, from the Martinique Gazette of 6 December 1781 (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "Baltimore, 1 January: a London paper on Admiral Arbuthnot's request to justify his conduct (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "Philadelphia, 12 January: an ordinance of Congress amending the ordinance on captures on water (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "New-York, 7 January: the schooner Prince William Henry from Savannah (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "Boston, 24 January: the British fleet from New-York for the West Indies left two ships of the line (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "January: the ship Flora, Captain Lyle, in 50 days from Sweden, with prizes (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "Boston, 24 January: the Cicero arrived at Beverly from Bilbao, with passengers (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: January and its kind of news are covered (the orders of 10 January on leave of absence).",
+   "Head-Quarters, Philadelphia, 18 January 1782: orders on soldiers used as servants (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "'That the displeasure and vengeance of Heaven is generally marked in the misfortunes of those whose offences...' (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "Providence, 26 January: Captain Worth, of the brig Sally, from Nantes (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "London, 25 October 1781: 'M. le Motte Piquet has sailed with 10 or 12 ships of the line for the West Indies' (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "London, 18 October 1781: the Terrible, man of war, destroyed in America (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "The King's answer to the address of the House of Lords, November 1781: 'My lords, I thank you for this very dutiful and affectionate address' (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the King's speech of 27 November 1781).",
+   "The address of the House of Lords to the King, 27 November 1781 (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the King's speech of 27 November 1781).",
+   "Sir Henry Clinton to Lord George Germain, off the Chesapeake, 1781 (published at Whitehall, 27 November) (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (Lord Cornwallis's letter of 13 October 1781).",
+   "General Washington's proclamation of February 1782 pardoning deserters who return (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "The brigantine Fox, Captain Steel, from Cadiz, with extracts of letters (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "The foreign mails: the death of the Comte de Maurepas and the Emperor's accession to the armed neutrality (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "Philadelphia, 21 February: a letter from St. Croix, 19 January: no more letters of marque for the Virgin Islands (6)": "Eligible: in 6 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "Madrid, 5 October 1781: the last letter from the camp at Gibraltar (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "London, 3 November 1781: a letter from Lisbon: 'The French Cabinet are straining every nerve to embroil this Court in the present war' (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "London, 10 November 1781: a commercial treaty between Britain and the Emperor said to be nearly concluded (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "Philadelphia, 20 February: an Antigua paper's account of the late naval engagement in the West Indies (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "Sir Eyre Coote to Colonel Braithwaite, 6 July 1781: the battle with Hyder Ally (6)": "Eligible: in 6 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "Hague, 24 December 1781: the answer to the Empress of Russia's offer of mediation (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "London, 2 December 1781: debates in the House of Lords on the King's speech (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the King's speech of 27 November 1781).",
+   "The protest entered against the proceedings in the House of Lords, 27 November 1781 (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the King's speech of 27 November 1781).",
+   "Baltimore, 26 February: the schooner Antelope, Captain Folger, from Havana (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "A flag from Bermuda: a passenger's report from Cape François (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "London, 1 January 1782: Mr. Laurens before the Privy Council (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "A letter: 'It is certain that England has rejected the mediation of the northern powers in favour of Holland' (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "Richmond, 2 March: Major Fontiero with dispatches from General Greene (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "A letter from Kentucky, 6 December 1781: the fate of Colonel Lochry and his corps (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "Boston, 7 March: Captain Jonathan Parsons from Cape François (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "London, 13 December 1781: the petition of the inhabitants of Westminster to the King (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "A report of the House of Commons, December 1781: 'that from the misfortunes and calamities of the war...' (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "London: letters from Lord Rawdon on his arrival at Brest (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "Philadelphia, 20 March, 'From the London Gazette of December 12': three arrangements acceded to in the cabinet (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "The supplies granted by Parliament for 1782 (a list) (5)": "Digest, not admitted: a list: the supplies granted by Parliament, item by item; in 5 of the 7 papers that survive for its weeks (needs 4).",
+   "A letter from Augusta, 16 December 1781 (General Twiggs to General Greene, in one paper's heading) (6)": "Eligible: in 6 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "The prosecution of London printers for a paragraph on the Empress of Russia, with a printer's speech in court (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "Port-Royal (Grenada), 14 February: troops from Toulon arrived at Minorca (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "Port-Royal (Grenada), 14 February: the success of American privateers (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "The articles of capitulation of St. Kitts, February 1782 (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: the same affair and weeks as a chosen story (the Martinique letter on St. Kitts).",
+   "A sally from Charlestown under Colonel Thompson (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "The London Gazette's account of the sortie from Gibraltar, 27 November 1781 (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "Rear-Admiral Kempenfelt's letter on taking ships of a French convoy, December 1781 (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: February and its kind of news are covered (the King's speech of 27 November 1781; Lord Cornwallis's letter of 13 October 1781).",
+   "South Carolina's assembly votes General Greene a present of lands to the amount of 10,000 guineas (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "Richmond, 25 March: dispatches from Count de Grasse to Count Rochambeau on the taking of St. Kitts (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the Martinique letter on St. Kitts).",
+   "Chatham, 27 March: a detachment of about 400 men sailed from New-York (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: April and its kind of news are covered (the Boston comment on the treaty between France and Holland).",
+   "Boston, 4 April: a letter from Brest, 4 February: the capture of Lord Cornwallis; the fleet ready to sail (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: April and its kind of news are covered (the Boston comment on the treaty between France and Holland).",
+   "Salem, 4 April: a vessel cut out of the harbour of Cape Ann, and the inhabitants' spirit (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: April and its kind of news are covered (the Boston comment on the treaty between France and Holland).",
+   "Philadelphia: the house of the Minister of France damaged by lightning (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: April and its kind of news are covered (the Boston comment on the treaty between France and Holland).",
+   "April 1782: the Emperor orders the Austrian Barrier dismantled (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: April and its kind of news are covered (the Boston comment on the treaty between France and Holland).",
+   "Boston, 11 April: a letter from France: the British ministry divided after the news of Lord Cornwallis's capture (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: April and its kind of news are covered (the Boston comment on the treaty between France and Holland).",
+   "London: Welbore Ellis to be Secretary of State; Lord George Germain to the House of Peers as Viscount Sackville (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: March and its kind of news are covered (the report on Vermont's unions; the letter from Camden; the Martinique letter on St. Kitts).",
+   "A letter: the French force at Martinique 40 sail of the line, the British at St. Lucia 39 (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: April and its kind of news are covered (the Boston comment on the treaty between France and Holland).",
+   "General Washington to Sir Henry Clinton on the murder of Captain Huddy, April 1782, with the refugees' label (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "London, 2 March 1782: the House of Commons' address against offensive war in America, and the King's answer (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "The privateer schooner Recovery brought in as a prize to the privateer Holker (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "New-York, 8 May: Sir Guy Carleton arrived as commander in chief and commissioner for peace (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "At the Court at St. James's, March 1782: the appointments of the new ministry (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "London: the new cabinet to accede to the four requisitions of the military congress in Ireland (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "London, 30 March: 'In this season of national disgrace and misfortune, a change of administration may revive the public hope' (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "Kingston (Jamaica), 27 April: a Jamaica paper announces Admiral Rodney's victory (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the Martinico Gazette's account of the sea engagement).",
+   "London, 2 April: the bill to enable the King to conclude a peace or truce with the colonies (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "May 1782: the Minister of France's speech to Congress on the birth of the Dauphin (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "Royal Gazette Extraordinary, New-York, 12 May: from the Antigua Gazette, the news of Admiral Rodney's victory (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the Martinico Gazette's account of the sea engagement).",
+   "Richmond, 11 May: 'our accounts from the frontiers of this State afford a gloomy prospect' (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "Boston, 13 May: a letter from Martinique, 17 April: reports of the engagement between de Grasse and Rodney (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the Martinico Gazette's account of the sea engagement).",
+   "A letter from a house in Amsterdam, 25 March 1782: 'this whole nation now unites with one voice' (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "Boston, 20 May: a packet from France with dispatches for Congress (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "London, 1782: 'even now negotiation may effect what he is afraid the sword never can' (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "London, 9 March: the Emperor and the Czarina agree on a war against the Turks (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "A state assembly's resolutions against a separate peace with Great Britain, May 1782 (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: May and its kind of news are covered (the Martinico Gazette's account of the sea engagement; the Amsterdam handbill).",
+   "'Common Sense' to Sir Guy Carleton, on the captain held for retaliation (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Salem, 30 May: Captain Thompson from Charlestown (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Sir Guy Carleton to furnish vessels with passports for families banished from Charlestown (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Captain Hyler's armed boats in Shrewsbury River (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Richmond, 25 May: an officer's account of an attempt to surprise General Greene's camp (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Boston, 13 June: the French schooner La Levrette from Cape François (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Philadelphia, 19 June: the southern post stopped near Little Gunpowder Falls (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Parker's Ferry (South Carolina), 19 June: General Marion and the people on Little Pedee (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Kingston (Jamaica), 11 May: a Spanish squadron off Rattan (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Philadelphia: Mr. Clymer and Mr. Rutledge before the general assembly; the designs against Kentucky (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Boston, 20 June: a letter from the eastern parts: a reinforcement at the river St. John's (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Parties of Indians and Tories at the head of the Mohawk River, June 1782 (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: June and its kind of news are covered (General Washington's letter of 10 May with Sir Guy Carleton's letter).",
+   "Captains Hyler and Story take the schooner Skip Jack in New-York bay (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: July and its kind of news are covered (General Greene's letters of May; the Charlestown report of the evacuation of Savannah).",
+   "Admiralty-Office, 30 April 1782: Vice-Admiral Milbanke's letter from Plymouth (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: July and its kind of news are covered (General Greene's letters of May; the Charlestown report of the evacuation of Savannah).",
+   "Admiralty-Office, 27 April 1782: Vice-Admiral Barrington's letter on French ships taken (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: July and its kind of news are covered (General Greene's letters of May; the Charlestown report of the evacuation of Savannah).",
+   "A Dutch text on the alliance with France: 'That we have saved from the brink of the precipice...' (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: July and its kind of news are covered (General Greene's letters of May; the Charlestown report of the evacuation of Savannah).",
+   "London, 16 May: 'It is happy for us that the mails of Holland come to hand very irregularly' (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: July and its kind of news are covered (General Greene's letters of May; the Charlestown report of the evacuation of Savannah).",
+   "'The distress which is necessarily attendant on events of such a nature, was alleviated...' (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: July and its kind of news are covered (General Greene's letters of May; the Charlestown report of the evacuation of Savannah).",
+   "Salem, 25 July: Captain Deland, in the brig Diana, from Cadiz (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: July and its kind of news are covered (General Greene's letters of May; the Charlestown report of the evacuation of Savannah).",
+   "Charlestown, Head Quarters, 7 August 1782: notice to inhabitants who wish to remove to East Florida (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "London, 28 May (from the Courier de l'Europe): Mr. Adams's communication; Mr. Oswald sent to Versailles (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "August 1782: the garrison of Savannah arrived at Charlestown (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the Charlestown report of the evacuation of Savannah).",
+   "Charlestown, 7 August: the editors of the Royal Gazette discontinue its publication (4)": "Eligible: in 4 of the 7 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "Hague, 21 April: the States General's resolution of 19 April to receive Mr. Adams (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "New-York, 7 August: the inhabitants within the British lines asked to appoint persons to confer (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "General Greene to the President of Congress, Ashley Hill, 14 July 1782 (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "A letter from Lausanne, 18 May: the insurrection at Geneva (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "June 1782: Creek Indians' attack on General Wayne's camp near Savannah (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "Head-Quarters, Newburgh, 3 August 1782: general orders (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "London, 22 June: the Dutch refuse to negotiate a separate peace (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "Constantinople, 18 April: the grand vizier and the price of coffee (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "Salem, 22 August: a third cartel from England arrived at Marblehead (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "Fish-Kill, 22 August: a letter from Albany, 17 August (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: August and its kind of news are covered (Sir Guy Carleton and Admiral Digby's letter; Congress's resolutions of 12 August).",
+   "The Magnifique, a French 74, lost in the harbour of Boston; a ship of the line to be presented to the King of France (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: September and its kind of news are covered (the King's speech of 11 July 1782; the Fish-Kill report of the Count de Rochambeau; the brig brought into Beverly).",
+   "Congress, 12 August 1782: approving General Washington's conduct in the case of Captain Huddy's murder (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: September and its kind of news are covered (the King's speech of 11 July 1782; the Fish-Kill report of the Count de Rochambeau; the brig brought into Beverly).",
+   "Boston, 5 September: a vessel at Newport from France; a passenger's account (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: September and its kind of news are covered (the King's speech of 11 July 1782; the Fish-Kill report of the Count de Rochambeau; the brig brought into Beverly).",
+   "Mr. Sansom express from General Greene's head-quarters near Charlestown (5)": "Eligible: in 5 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: September and its kind of news are covered (the King's speech of 11 July 1782; the Fish-Kill report of the Count de Rochambeau; the brig brought into Beverly).",
+   "Philadelphia, 14 September: a letter from Amsterdam, 1 July (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: September and its kind of news are covered (the King's speech of 11 July 1782; the Fish-Kill report of the Count de Rochambeau; the brig brought into Beverly).",
+   "A letter from Amsterdam, 11 July 1782: the Dutch fleet sailed from the Texel (4)": "Eligible: in 4 of the 6 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: September and its kind of news are covered (the King's speech of 11 July 1782; the Fish-Kill report of the Count de Rochambeau; the brig brought into Beverly).",
+   "London, July: 'The nation is in a most uncouth situation, from the so early and sudden change of administration' (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: September and its kind of news are covered (the King's speech of 11 July 1782; the Fish-Kill report of the Count de Rochambeau; the brig brought into Beverly).",
+   "Boston, October 1782: the news by the ship Apollo (4)": "Digest, not admitted: news by a ship: 'By the ship Apollo, we learn, that ...', a run of unrelated reports (C-09, as 1805's news by the Palmyra and 1808's by the Camilla); in 4 of the 4 papers that survive for its weeks (needs 4).",
+   "Boston, 24 October: 'We have received the Leyden Papers to August 20. The substance of what they contain...' (4)": "Digest, not admitted: a summary of foreign papers: 'The substance of what they contain ... is--- That ...', a run of unrelated reports (C-09); the papers print it in parts; in 4 of the 4 papers that survive for its weeks (needs 4).",
+   "Salem, 17 October: a cartel from Newfoundland, and the news by a frigate from England (4)": "Digest, not admitted: news by a ship: a cartel's arrival and 'the following interesting intelligence, brought by a frigate', a run of unrelated reports (C-09); in 4 of the 4 papers that survive for its weeks (needs 4).",
+   "A letter from Paris, 9 August 1782: Mr. Fitzherbert's first audience (the New-Hampshire Gazette prints the letter's second paragraph under the same heading, without its opening) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette prints the letter's second paragraph under the same heading, without its opening (C-06).",
+   "Paris, 8 July: Mr. Franklin and Mr. Jay dine with the Count de Aranda (the Connecticut Courant prints the Brussels paragraph that follows it, not this one) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Connecticut Courant prints the Brussels paragraph that follows it, not this one.",
+   "Philadelphia, 2 November: the ship Carolina's arrival, and 'the principal accounts brought by her' (4)": "Digest, not admitted: news by a ship: 'the principal accounts brought by her are, that ...', a run of unrelated reports (C-09); the New-Hampshire Gazette words its first sentence differently; in 4 of the 4 papers that survive for its weeks (needs 4).",
+   "Philadelphia, November: the stockholders of the Bank of North-America elect directors (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: November and its kind of news are covered (the loss of the Royal George; the orders at Verplanck's Point; Governor Elliot's letter; the order releasing Captain Asgill; the brig from Cadiz).",
+   "Office of Finance, 8 November 1782: notice of counterfeit notes (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: November and its kind of news are covered (the loss of the Royal George; the orders at Verplanck's Point; Governor Elliot's letter; the order releasing Captain Asgill; the brig from Cadiz).",
+   "Boston, 14 November: the report of a repulse at Gibraltar, and the account from Bilbao (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the accounts of the siege of Gibraltar).",
+   "London, 24 September: Governor Franklin arrived; the instructions to Sir Guy Carleton (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: November and its kind of news are covered (the loss of the Royal George; the orders at Verplanck's Point; Governor Elliot's letter; the order releasing Captain Asgill; the brig from Cadiz).",
+   "London, September: 'the joint letter of Sir Guy Carleton and Admiral Digby goes much further' (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: November and its kind of news are covered (the loss of the Royal George; the orders at Verplanck's Point; Governor Elliot's letter; the order releasing Captain Asgill; the brig from Cadiz).",
+   "A letter from l'Orient, 28 September: Admiral Howe sailed from Torbay for the relief of Gibraltar (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: the same affair and weeks as a chosen story (the accounts of the siege of Gibraltar).",
+   "London, September 1782: the restoration of Canada to be insisted on by France; Lord Rodney's name (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: November and its kind of news are covered (the loss of the Royal George; the orders at Verplanck's Point; Governor Elliot's letter; the order releasing Captain Asgill; the brig from Cadiz).",
+   "London: five sail of the line detached from Cadiz for the East Indies (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by its opening (found by the sweep); not chosen: November and its kind of news are covered (the loss of the Royal George; the orders at Verplanck's Point; Governor Elliot's letter; the order releasing Captain Asgill; the brig from Cadiz).",
+   "Salem, 21 November: extracts of letters between General Washington and Sir Guy Carleton (4)": "Eligible: in 4 of the 5 papers that survive for its weeks (needs 4), counted by machine on the first 40 words of its opening; not chosen: November and its kind of news are covered (the loss of the Royal George; the orders at Verplanck's Point; Governor Elliot's letter; the order releasing Captain Asgill; the brig from Cadiz).",
+   "The address of the House of Commons to the King, November 1781 (5)": "Eligible: in 5 of the 7 papers that survive for its weeks (needs 4), counted by phrase searches of its opening; not chosen: the same affair and weeks as a chosen story (the King's speech of 27 November 1781).",
+   "Other items of 3 papers or fewer (by count)": "The other items the finder lists in 3 papers or fewer, compared by machine on the first 40 words of their openings with every page of 1782 (papers the comparison missed were looked for again when an item was one paper short); none reaches the bar. Not read one by one."
+  },
+  "for_the_owner": {
+   "Boston, 28 February: one of the three saved from the vessel cast ashore on Plum Island (4)": "A report of a shipwreck's survivors, turning on private persons (R-04); described without names, as 1779 listed a brig lost with her crew (X-1779-08). In 4 of the 7 papers that survive for its weeks (needs 4)."
+  },
+  "counts": {
+   "eligible_items": 166,
+   "admitted_by_the_first_part": 22,
+   "chosen_items": 13,
+   "not_chosen_listed": 130,
+   "digests": 5,
+   "read_below_the_bar": 2
+  }
+ },
+ "verdict_summary": {
+  "yes": 165,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 114,
+  "minor_errors": 34,
+  "major_problem": 17,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 138,
+  "pdf_text_layer_sequence": 9,
+  "manual_box": 13,
+  "pdf_text_layer_window": 4,
+  "pdf_text_layer_anchor": 1
+ }
+}

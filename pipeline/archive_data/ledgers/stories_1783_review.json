@@ -1,0 +1,895 @@
+{
+ "findings": {
+  "S83-001": [
+   "Scan reads 'detached strong parties'; the transcription 'detached from parties' loses the word 'strong', a transcription error that changes the sense. The letter is dated November 27, and the rest of the excerpt matches."
+  ],
+  "S83-002": [
+   "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+  ],
+  "S83-003": [
+   "Scan reads 'which sailed from Jamaica' with a long s; the transcription 'failed' is a transcription error that changes the sense. The counts (62, 15, 9, 14, 2, 1; total 103) match."
+  ],
+  "S83-004": [
+   "Scan matches the excerpt."
+  ],
+  "S83-005": [
+   "Scan matches the excerpt apart from one modernised spelling ('surprized' given as 'surprised'). The heading dates the letter November 17 where the other printings have 27, and the paper omits 'afterwards': printed differences, not transcription errors."
+  ],
+  "S83-006": [
+   "Scan matches the excerpt except that 'aid-de-camp', broken over two lines, is given as 'aide-camp', a minor garble."
+  ],
+  "S83-007": [
+   "Scan matches the excerpt except that the print's 'Shawaneses town' is given as 'Shawanese town', a minor difference. The paper prints 'principle' for 'principal': a printed difference."
+  ],
+  "S83-008": [
+   "Scan reads 'which sailed from Jamaica' with a long s; the transcription 'failed' is a transcription error that changes the sense. The rest of the excerpt, counts included, matches."
+  ],
+  "S83-009": [
+   "Scan matches the excerpt. The paper spells 'despatches' where the others print 'dispatches': a printed difference."
+  ],
+  "S83-010": [
+   "Scan matches the excerpt. Just after it the paper prints 'in asserting the cause of America' without 'and defending': a printed difference."
+  ],
+  "S83-011": [
+   "Scan matches the excerpt. The paper prints 'had so freely exercised' where the others print 'has': a printed difference, not a transcription error."
+  ],
+  "S83-012": [
+   "Scan reads 'which sailed from Jamaica' with a long s; the transcription 'failed' is a transcription error that changes the sense. The paper misprints 'af November', which the transcription silently corrects to 'of'; the counts match."
+  ],
+  "S83-013": [
+   "The two crops together show the whole excerpt, which runs from the foot of one column to the head of the next; it matches apart from the modernised spelling 'negotiations' (print 'negociations')."
+  ],
+  "S83-014": [
+   "Scan matches the excerpt. The paper spells the secretary's name 'Townshend' where the other printings have 'Townsend': a printed difference."
+  ],
+  "S83-015": [
+   "Scan matches the excerpt except that the paper spells 'Shawenese', which the transcription gives as 'Shawanese', a minor difference. The letter is dated November 27 and the writer is styled 'Gen. Clarke'."
+  ],
+  "S83-016": [
+   "Scan matches the excerpt."
+  ],
+  "S83-017": [
+   "Scan matches the excerpt. The paper prints '15 years' in figures and spells 'honor': printed differences."
+  ],
+  "S83-018": [
+   "Scan matches the excerpt and prints '1800' barrels where the other printings have 1600: a printed difference, not a transcription error. The print's misprint 'Commanper' is silently corrected to 'Commander' in the transcription."
+  ],
+  "S83-019": [
+   "Scan matches the excerpt. The paper prints only the state of the convoy ships, under its own heading naming 'the Jamaica fleet (of 103 sail)', without the count of the merchant ships."
+  ],
+  "S83-020": [
+   "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+  ],
+  "S83-021": [
+   "Scan matches the excerpt. The dateline reads 'Jan. 18' where the other printings have January 16: a printed difference, not a transcription error."
+  ],
+  "S83-022": [
+   "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+  ],
+  "S83-023": [
+   "Crop extended by hand (24 November); it shows the whole excerpt, which matches the scan apart from the modern spelling 'negotiations' for the printed 'negociations'."
+  ],
+  "S83-024": [
+   "Scan matches the excerpt; the heading and first lines are in the first crop and the rest at the head of the next column."
+  ],
+  "S83-025": [
+   "Scan matches the excerpt; the Courant prints 'February 3. Wednesday', '1600' and '5th', and spells the captain 'MANLEY' first and 'Manly' after."
+  ],
+  "S83-026": [
+   "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+  ],
+  "S83-027": [
+   "Scan matches the excerpt."
+  ],
+  "S83-028": [
+   "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+  ],
+  "S83-029": [
+   "Scan matches the excerpt except the privateer captain's surname, which the print spells without the 'i' the transcription adds, a one-letter slip; the New-Jersey Gazette and the Courant print another spelling, a printed difference."
+  ],
+  "S83-030": [
+   "Scan matches the excerpt; the Gazette dates the paragraph 11 February and says the privateer arrived 'this evening', where the Packet has 12 February and 'last night': printed differences."
+  ],
+  "S83-031": [
+   "Scan matches the excerpt."
+  ],
+  "S83-032": [
+   "Scan matches the excerpt."
+  ],
+  "S83-033": [
+   "Scan matches the excerpt; the Courant prints '23', 'Dec.' and 'inst.' and spells the secretary of state 'Townsend'."
+  ],
+  "S83-034": [
+   "Scan matches the excerpt as far as 'confirmed', but the transcription stops there with '...' while the print goes on ('we heartily wish it to be true. It is said the intelligence comes from good au-'), so words are dropped."
+  ],
+  "S83-035": [
+   "Scan matches the excerpt; the Gazette spells 'BASSETTERRE' and prints 'concluded on between': printed differences, not transcription errors."
+  ],
+  "S83-036": [
+   "Scan matches the excerpt; like the transcription, the print names no captain for the privateer. The print's misprint 'Demeber' in the letter's date is silently corrected to 'December' in the transcription."
+  ],
+  "S83-037": [
+   "Scan matches the excerpt."
+  ],
+  "S83-038": [
+   "The transcription drops a whole sentence that the print has between 'common wreck.' and 'Congress will recollect' ('Under greater difficulties than were apprehended by the most timid ... more than I presumed to hope.'); the rest matches the scan."
+  ],
+  "S83-039": [
+   "Scan matches the excerpt; the letter runs from the foot of one column to the head of the next."
+  ],
+  "S83-040": [
+   "Scan matches the excerpt."
+  ],
+  "S83-041": [
+   "Crop placed by hand on the letter (24 November): the scan matches the excerpt."
+  ],
+  "S83-042": [
+   "Scan matches the excerpt; the Gazette spells 'Britannick' and 'Lawrens': printed spellings, not transcription errors."
+  ],
+  "S83-043": [
+   "Scan matches the excerpt, banner heading included."
+  ],
+  "S83-044": [
+   "Scan matches the excerpt. Just past it the Courant prints 'the Commissioners of his said Majesty', plural, where the other printings have 'Commissioner': a printed difference."
+  ],
+  "S83-045": [
+   "Scan matches the excerpt."
+  ],
+  "S83-046": [
+   "Scan matches the excerpt."
+  ],
+  "S83-047": [
+   "Scan matches the excerpt; the articles follow the signatures 'Alleyne Fitz-Herbert' and 'Le Comte d'Aranda' of another treaty, so the crop shows the right item."
+  ],
+  "S83-048": [
+   "Scan matches the excerpt."
+  ],
+  "S83-049": [
+   "Crop placed by hand on the proclamation's opening (24 November): the scan matches the excerpt; it prints 'Thirtieth'."
+  ],
+  "S83-050": [
+   "Scan matches the excerpt."
+  ],
+  "S83-051": [
+   "Scan reads 'Thirteenth day of November' where the other printings have 'Thirtieth': a printed difference, not a transcription error. The transcription leaves out the King's signature line 'G. R.'."
+  ],
+  "S83-052": [
+   "Scan matches the excerpt. Congress's proclamation is recited within a New Jersey proclamation ('...lowing, to wit,'); the print goes on after 'Majesty,' where the excerpt ends with a full stop."
+  ],
+  "S83-053": [
+   "Scan matches the excerpt; 'observation' is the paper's own wording, where NJJ, PP and CC print 'observance'. The thirteen crops overlap and show the opening and the lines that follow."
+  ],
+  "S83-054": [
+   "Scan matches the excerpt."
+  ],
+  "S83-055": [
+   "Crop placed by hand on the proclamation's opening (24 November): the scan matches the excerpt; it prints '30th' and 'the Minister Plenipotentiary'."
+  ],
+  "S83-056": [
+   "Scan matches the excerpt."
+  ],
+  "S83-057": [
+   "Scan matches the excerpt."
+  ],
+  "S83-058": [
+   "Scan matches the excerpt; this printing has no title line between 'A PROCLAMATION.' and 'WHEREAS'."
+  ],
+  "S83-059": [
+   "Scan matches the excerpt."
+  ],
+  "S83-060": [
+   "Scan matches the excerpt; the orders stand under the dateline 'CHATHAM, April 23.'."
+  ],
+  "S83-061": [
+   "Scan matches the excerpt. It prints 'for assuring' and 'open for the American flag'; the 'late London paper' paragraph that follows is a separate item."
+  ],
+  "S83-062": [
+   "Crop placed by hand on the orders (24 November): the scan matches the excerpt; it heads them 'GENERAL ORDERS', prints '12', and misprints 'o'clolck', which the transcription corrects."
+  ],
+  "S83-063": [
+   "Scan matches the excerpt except that it prints 'publickly', which the transcription modernises to 'publicly'."
+  ],
+  "S83-064": [
+   "Scan matches the excerpt."
+  ],
+  "S83-065": [
+   "The second crop shows the opening under the masthead 'Tuesday, May 6, 1783' and matches the excerpt; the first crop shows only a stray '1783.'."
+  ],
+  "S83-066": [
+   "Scan matches the excerpt. Like the Pennsylvania Packet it prints 'for assuring' and 'open for', and goes on with the 'late London paper' item."
+  ],
+  "S83-067": [
+   "Scan matches the excerpt. This printing has no 'it is said' before the number: a printed difference, not a transcription error."
+  ],
+  "S83-068": [
+   "Scan matches the excerpt. It prints 'to assure' and 'open to the American flag', followed by a separate paragraph on vessels from New-York and a ship from Dublin."
+  ],
+  "S83-069": [
+   "Scan matches the excerpt, headed 'PHILADELPHIA, April 30', with 'to assure' and 'open to'. The paper prints 'to' twice across a line break, which the transcription silently drops."
+  ],
+  "S83-070": [
+   "Scan matches the excerpt; the heading reads 'Public Papers', a printed difference."
+  ],
+  "S83-071": [
+   "Scan matches the excerpt. Dated 'April 29', it prints 'for assuring' and 'open for the American flag', as the Pennsylvania Packet does."
+  ],
+  "S83-072": [
+   "Scan matches the excerpt. The crop looks identical to S83-070's (SCAG, same day), show-through included: the two may be one page filed under two titles."
+  ],
+  "S83-073": [
+   "Scan matches the excerpt and reads 'General Wayne is gone'; the transcription modernises the printed 'negociate' to 'negotiate'."
+  ],
+  "S83-074": [
+   "The item runs from the foot of one column to the top of the next; the two crops show it all. Scan reads 'General Wayne has gone' where the other printings have 'is gone': a printed difference, not a transcription error."
+  ],
+  "S83-075": [
+   "Scan matches the excerpt; the last line is cut at the foot of the crop but legible."
+  ],
+  "S83-076": [
+   "Scan matches the excerpt; the print is faint in places but legible. An enlarged view shows 'as follow :' with no 's', where the transcription has 'follows'."
+  ],
+  "S83-077": [
+   "Scan matches the excerpt; the last line is cut at the foot of the crop but legible and reads 'before this town'."
+  ],
+  "S83-078": [
+   "Scan matches the excerpt, under the heading 'Philadelphia; June 10'."
+  ],
+  "S83-079": [
+   "Scan matches the excerpt and prints '50,000l.'. It spells 'retreive', which the transcription corrects to 'retrieve'."
+  ],
+  "S83-080": [
+   "Scan matches the excerpt."
+  ],
+  "S83-081": [
+   "Scan matches the excerpt, headed 'PHILADELPHIA, June 4' and reading 'is gone'. It prints 'Savanna' and 'negociate', which the transcription gives as 'Savannah' and 'negotiate'."
+  ],
+  "S83-082": [
+   "Scan matches the excerpt. This paper prints 'despatches' and 'as follows', where the other printings have 'dispatches' and 'as follow'."
+  ],
+  "S83-083": [
+   "Scan matches the excerpt. It is headed 'PHILADELPHIA, June 11' where the Pennsylvania Packet has June 10: a printed difference, not a transcription error."
+  ],
+  "S83-084": [
+   "Scan matches the excerpt, headed 'PHILADELPHIA, June 4' and reading 'is gone'. This paper prints 'Savannah' where the other three print 'Savanna'; the transcription modernises 'negociate'."
+  ],
+  "S83-085": [
+   "Scan matches the excerpt; it reads 'before this town'."
+  ],
+  "S83-086": [
+   "Scan matches the excerpt apart from spelling: it prints the misprint 'assembed' and 'merchandize', given as 'assembled' and 'merchandise'. The paper heads the paragraph 'HARTFORD, June 24' and prints 'sessions'."
+  ],
+  "S83-087": [
+   "Scan matches the excerpt and prints '50,000l.'. The paper leaves out 'will' ('by the wisdom of the Legislature, retrieve her character'): a printed difference, faithfully transcribed."
+  ],
+  "S83-088": [
+   "Scan matches the excerpt in the paper's own wording ('We learn from Portsmouth, that on the 6th inst.'); it reads 'before that town' where the other printings have 'this town'."
+  ],
+  "S83-089": [
+   "Scan matches the excerpt apart from spelling: it prints 'merchandize', and the faint print appears to read 'sessions' where the transcription has 'session'. The crop shows no dateline for the paragraph."
+  ],
+  "S83-090": [
+   "Scan matches the excerpt; it reads 'before this town'."
+  ],
+  "S83-091": [
+   "The second crop shows the whole item (the first shows only a stray fragment of other text). Scan reads 'before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense, and 'fladtholder' is a garble of 'stadtholder'."
+  ],
+  "S83-092": [
+   "Scan matches the excerpt. It prints the sum in words, 'Fifty Thousand pounds', and 'The honorable the General Assembly of this state'."
+  ],
+  "S83-093": [
+   "Scan matches the excerpt and prints the sum in words, 'fifty thousand pounds'. The faint heading prints 'Juue 7' (an 'n' set upside down), which the transcription gives as 'June 7'."
+  ],
+  "S83-094": [
+   "Scan reads 'before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense. The rest matches; this paper prints 'who arrived here'."
+  ],
+  "S83-095": [
+   "Scan reads 'before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense. The rest of the excerpt, '14 days' included, matches."
+  ],
+  "S83-096": [
+   "Scan reads 'or sailed up the North river' with a long s; the transcription 'failed' is a transcription error that changes the sense. The paper's damaged 'vent' (its e broken) is garbled as '& nt', a minor error."
+  ],
+  "S83-097": [
+   "Scan matches the excerpt, 'July 2. Capt.' and '14 days' included. The transcription drops the worn t of 'Stadtholder', a minor error."
+  ],
+  "S83-098": [
+   "Scan matches the excerpt; the print is worn and faint in places, but every word can be read."
+  ],
+  "S83-099": [
+   "Scan matches this paper's own wording of the paragraph. The paper prints 'audiance', which the transcription silently corrects to 'audience', a minor difference."
+  ],
+  "S83-100": [
+   "Scan reads 'or sailed up the North River' with a long s; the transcription 'failed' is a transcription error that changes the sense. The rest matches, with 'the harbour' and 'vent'."
+  ],
+  "S83-101": [
+   "Scan matches the excerpt, with 'the harbour', 'sailed' and 'vent'."
+  ],
+  "S83-102": [
+   "Scan matches the excerpt."
+  ],
+  "S83-103": [
+   "Scan reads 'April, 29' where the other printings have April 20: a printed difference, not a transcription error. The paper prints 'conferrence', which the transcription silently corrects to 'conference'; the rest matches."
+  ],
+  "S83-104": [
+   "Scan matches the excerpt."
+  ],
+  "S83-105": [
+   "Scan matches the excerpt. This paper prints 'vessel' and 'ports' where the others print 'vessels' and 'port', and 'that harbour' as the Pennsylvania Packet does."
+  ],
+  "S83-106": [
+   "Crop shows the heading and the first lines, through 'which he left about a month'; they match. The rest of the excerpt, 'since, in company with 200 Americans ... he is sorry to', is below the crop. Crop extended by hand (24 November) to the end of the excerpt, which matches the scan."
+  ],
+  "S83-107": [
+   "Crop shows the item under the Philadelphia heading through 'from Barbadoes, of the arrival of a packet from Eng-' (the last line cut); the rest of the excerpt, 'England ... in a tumult among', is below the crop. Scan reads 'before he sailed' with a long s; the transcription 'failed' changes the sense, and the rest shown matches. Crop extended by hand (24 November) to the end of the excerpt; the rest matches."
+  ],
+  "S83-108": [
+   "Scan matches the excerpt. This paper's printing leaves out 'last week' and 'by the Indians', which the other printings have."
+  ],
+  "S83-109": [
+   "Scan matches the excerpt, 'Capt.' and 'two hundred' included."
+  ]
+ },
+ "crops": {
+  "S83-001": [
+   "S83-001.jpg"
+  ],
+  "S83-002": [
+   "S83-002.jpg"
+  ],
+  "S83-003": [
+   "S83-003.jpg"
+  ],
+  "S83-004": [
+   "S83-004.jpg"
+  ],
+  "S83-005": [
+   "S83-005.jpg"
+  ],
+  "S83-006": [
+   "S83-006.jpg"
+  ],
+  "S83-007": [
+   "S83-007.jpg"
+  ],
+  "S83-008": [
+   "S83-008.jpg"
+  ],
+  "S83-009": [
+   "S83-009.jpg"
+  ],
+  "S83-010": [
+   "S83-010.jpg"
+  ],
+  "S83-011": [
+   "S83-011.jpg"
+  ],
+  "S83-012": [
+   "S83-012.jpg"
+  ],
+  "S83-013": [
+   "S83-013-1.jpg",
+   "S83-013-2.jpg"
+  ],
+  "S83-014": [
+   "S83-014.jpg"
+  ],
+  "S83-015": [
+   "S83-015.jpg"
+  ],
+  "S83-016": [
+   "S83-016.jpg"
+  ],
+  "S83-017": [
+   "S83-017.jpg"
+  ],
+  "S83-018": [
+   "S83-018-1.jpg",
+   "S83-018-2.jpg"
+  ],
+  "S83-019": [
+   "S83-019.jpg"
+  ],
+  "S83-020": [
+   "S83-020.jpg"
+  ],
+  "S83-021": [
+   "S83-021.jpg"
+  ],
+  "S83-022": [
+   "S83-022.jpg"
+  ],
+  "S83-023": [
+   "S83-023.jpg"
+  ],
+  "S83-024": [
+   "S83-024-1.jpg",
+   "S83-024-2.jpg"
+  ],
+  "S83-025": [
+   "S83-025.jpg"
+  ],
+  "S83-026": [
+   "S83-026.jpg"
+  ],
+  "S83-027": [
+   "S83-027.jpg"
+  ],
+  "S83-028": [
+   "S83-028.jpg"
+  ],
+  "S83-029": [
+   "S83-029.jpg"
+  ],
+  "S83-030": [
+   "S83-030.jpg"
+  ],
+  "S83-031": [
+   "S83-031.jpg"
+  ],
+  "S83-032": [
+   "S83-032.jpg"
+  ],
+  "S83-033": [
+   "S83-033.jpg"
+  ],
+  "S83-034": [
+   "S83-034.jpg"
+  ],
+  "S83-035": [
+   "S83-035.jpg"
+  ],
+  "S83-036": [
+   "S83-036.jpg"
+  ],
+  "S83-037": [
+   "S83-037.jpg"
+  ],
+  "S83-038": [
+   "S83-038.jpg"
+  ],
+  "S83-039": [
+   "S83-039-1.jpg",
+   "S83-039-2.jpg"
+  ],
+  "S83-040": [
+   "S83-040.jpg"
+  ],
+  "S83-041": [
+   "S83-041.jpg"
+  ],
+  "S83-042": [
+   "S83-042.jpg"
+  ],
+  "S83-043": [
+   "S83-043.jpg"
+  ],
+  "S83-044": [
+   "S83-044.jpg"
+  ],
+  "S83-045": [
+   "S83-045.jpg"
+  ],
+  "S83-046": [
+   "S83-046.jpg"
+  ],
+  "S83-047": [
+   "S83-047.jpg"
+  ],
+  "S83-048": [
+   "S83-048.jpg"
+  ],
+  "S83-049": [
+   "S83-049.jpg"
+  ],
+  "S83-050": [
+   "S83-050.jpg"
+  ],
+  "S83-051": [
+   "S83-051.jpg"
+  ],
+  "S83-052": [
+   "S83-052.jpg"
+  ],
+  "S83-053": [
+   "S83-053-1.jpg",
+   "S83-053-2.jpg",
+   "S83-053-3.jpg",
+   "S83-053-4.jpg",
+   "S83-053-5.jpg",
+   "S83-053-6.jpg",
+   "S83-053-7.jpg",
+   "S83-053-8.jpg",
+   "S83-053-9.jpg",
+   "S83-053-10.jpg",
+   "S83-053-11.jpg",
+   "S83-053-12.jpg",
+   "S83-053-13.jpg"
+  ],
+  "S83-054": [
+   "S83-054.jpg"
+  ],
+  "S83-055": [
+   "S83-055.jpg"
+  ],
+  "S83-056": [
+   "S83-056.jpg"
+  ],
+  "S83-057": [
+   "S83-057.jpg"
+  ],
+  "S83-058": [
+   "S83-058.jpg"
+  ],
+  "S83-059": [
+   "S83-059.jpg"
+  ],
+  "S83-060": [
+   "S83-060.jpg"
+  ],
+  "S83-061": [
+   "S83-061.jpg"
+  ],
+  "S83-062": [
+   "S83-062.jpg"
+  ],
+  "S83-063": [
+   "S83-063.jpg"
+  ],
+  "S83-064": [
+   "S83-064.jpg"
+  ],
+  "S83-065": [
+   "S83-065-1.jpg",
+   "S83-065-2.jpg"
+  ],
+  "S83-066": [
+   "S83-066.jpg"
+  ],
+  "S83-067": [
+   "S83-067.jpg"
+  ],
+  "S83-068": [
+   "S83-068.jpg"
+  ],
+  "S83-069": [
+   "S83-069.jpg"
+  ],
+  "S83-070": [
+   "S83-070.jpg"
+  ],
+  "S83-071": [
+   "S83-071.jpg"
+  ],
+  "S83-072": [
+   "S83-072.jpg"
+  ],
+  "S83-073": [
+   "S83-073.jpg"
+  ],
+  "S83-074": [
+   "S83-074-1.jpg",
+   "S83-074-2.jpg"
+  ],
+  "S83-075": [
+   "S83-075.jpg"
+  ],
+  "S83-076": [
+   "S83-076.jpg"
+  ],
+  "S83-077": [
+   "S83-077.jpg"
+  ],
+  "S83-078": [
+   "S83-078.jpg"
+  ],
+  "S83-079": [
+   "S83-079.jpg"
+  ],
+  "S83-080": [
+   "S83-080.jpg"
+  ],
+  "S83-081": [
+   "S83-081.jpg"
+  ],
+  "S83-082": [
+   "S83-082.jpg"
+  ],
+  "S83-083": [
+   "S83-083.jpg"
+  ],
+  "S83-084": [
+   "S83-084.jpg"
+  ],
+  "S83-085": [
+   "S83-085.jpg"
+  ],
+  "S83-086": [
+   "S83-086.jpg"
+  ],
+  "S83-087": [
+   "S83-087.jpg"
+  ],
+  "S83-088": [
+   "S83-088.jpg"
+  ],
+  "S83-089": [
+   "S83-089.jpg"
+  ],
+  "S83-090": [
+   "S83-090.jpg"
+  ],
+  "S83-091": [
+   "S83-091-1.jpg",
+   "S83-091-2.jpg"
+  ],
+  "S83-092": [
+   "S83-092.jpg"
+  ],
+  "S83-093": [
+   "S83-093.jpg"
+  ],
+  "S83-094": [
+   "S83-094.jpg"
+  ],
+  "S83-095": [
+   "S83-095.jpg"
+  ],
+  "S83-096": [
+   "S83-096.jpg"
+  ],
+  "S83-097": [
+   "S83-097.jpg"
+  ],
+  "S83-098": [
+   "S83-098.jpg"
+  ],
+  "S83-099": [
+   "S83-099.jpg"
+  ],
+  "S83-100": [
+   "S83-100.jpg"
+  ],
+  "S83-101": [
+   "S83-101.jpg"
+  ],
+  "S83-102": [
+   "S83-102.jpg"
+  ],
+  "S83-103": [
+   "S83-103.jpg"
+  ],
+  "S83-104": [
+   "S83-104.jpg"
+  ],
+  "S83-105": [
+   "S83-105.jpg"
+  ],
+  "S83-106": [
+   "S83-106.jpg"
+  ],
+  "S83-107": [
+   "S83-107.jpg"
+  ],
+  "S83-108": [
+   "S83-108.jpg"
+  ],
+  "S83-109": [
+   "S83-109.jpg"
+  ]
+ },
+ "boxes": {
+  "S83-011": [
+   [
+    2546,
+    981,
+    3739,
+    1642
+   ]
+  ],
+  "S83-023": [
+   [
+    240,
+    3535,
+    1540,
+    4080
+   ]
+  ],
+  "S83-041": [
+   [
+    1336,
+    800,
+    2516,
+    1560
+   ]
+  ],
+  "S83-049": [
+   [
+    1400,
+    1880,
+    2620,
+    2830
+   ]
+  ],
+  "S83-055": [
+   [
+    170,
+    2730,
+    1370,
+    3440
+   ]
+  ],
+  "S83-058": [
+   [
+    1569,
+    2453,
+    2824,
+    3436
+   ]
+  ],
+  "S83-060": [
+   [
+    2660,
+    3819,
+    3857,
+    4514
+   ]
+  ],
+  "S83-062": [
+   [
+    180,
+    1400,
+    1310,
+    2080
+   ]
+  ],
+  "S83-069": [
+   [
+    1781,
+    5140,
+    3048,
+    5915
+   ]
+  ],
+  "S83-075": [
+   [
+    2615,
+    2002,
+    3808,
+    2716
+   ]
+  ],
+  "S83-077": [
+   [
+    1565,
+    1271,
+    2821,
+    1721
+   ]
+  ],
+  "S83-093": [
+   [
+    273,
+    2054,
+    1582,
+    2658
+   ]
+  ],
+  "S83-106": [
+   [
+    1353,
+    2700,
+    2535,
+    3170
+   ]
+  ],
+  "S83-107": [
+   [
+    1381,
+    5070,
+    2532,
+    5400
+   ]
+  ]
+ },
+ "notes": {},
+ "dispositions": {
+  "method": "The automatic families first printed in 1783 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 230 items found on the pages, 60 in 4 or more papers by the finder's count), and again with the families of 1782 over the 1783 pages (items_from_1782.json: 34 items, 1 in 4 or more). Every item in 3 or more papers was compared by machine with every page and counted again by its opening; a sweep of seven-word sequences shared by 4 or more papers found 186 runs, and the runs no finder item covers were read. Counted item by item (55 entries), 47 items meet the bar by the count of their openings (count_1783.md). The admitted and chosen items were counted again by their own words with phrase searches over all 1,100 pages in both transcriptions, and read on every page.",
+  "selection_rule": "The thin-year rule (Y-THIN, as amended on 23 November 2026, the owner's choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; as in R-01, the eligible items printed by every newspaper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35); one affair's items as in X-1800-01; digests are not admitted; sub-stories (C-01), private persons (R-04) and the list of items read and not admitted (R-03) as in every year. In 1783 4 to 7 papers survive for the weeks of every item in the ledger, so the bar is 4 for each; from mid-October fewer than 4 papers survive and no item can be eligible.",
+  "paper_counting": "1783 has 9 catalogue series, which are 9 papers: the Pennsylvania Packet (122 issues, to 11 October), the New-Hampshire Gazette (51), the Connecticut Courant (41, to 9 December) and the New-Jersey Gazette (29) carry most of the year; the Gazette of the State of South-Carolina survives from 16 July, the New-Jersey Journal in 4 issues to 9 April, and three Charleston papers in 6 issues of April and May. No 1783 issue has a corrected date; the release's map lists no misfiled RevX page of 1783.",
+  "items_admitted": {
+   "general-clark-letter-on-the-expedition-from-the-ohio-november-1782": "count entry 3 (I83-0023); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "mr-miller-late-printer-of-the-london-evening-post-arrives-january-1783": "count entry 5 (I83-0025); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "paris-the-negotiations-for-peace-seem-to-be-broken-up-october-1782": "count entry 6 (I83-0024); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "london-evening-post-statement-of-the-jamaica-fleet-of-july-1782": "count entry 7 (I83-0026); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "major-burnet-arrives-with-general-greenes-dispatches-january-1783": "count entry 8 (I83-0027, I83-0028); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "townshend-letter-to-the-bank-of-england-november-1782": "count entry 9 (I83-0029); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "basseterre-report-of-a-peace-concluded-january-1783": "count entry 10 (I83-0030); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "prize-ship-of-20-guns-to-the-frigate-hague-january-1783": "count entry 11 (R035); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782": "count entry 13 (I83-0031); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "mr-morris-letter-to-congress-on-his-office-january-1783": "count entry 17 (I83-0035, I83-0034); phrase searches; chosen to cover the months and the kinds of news.",
+   "provisional-articles-of-peace-30-november-1782": "count entry 20 (I83-0017, I83-0006, I83-0015); phrase searches; chosen to cover the months and the kinds of news.",
+   "preliminary-articles-between-great-britain-and-france-20-january-1783": "count entry 22 (I83-0013, I83-0003, I83-0014, I83-0020 and more); phrase searches; chosen to cover the months and the kinds of news.",
+   "kings-proclamation-of-the-cessation-of-arms-february-1783": "count entry 23 (I83-0004); phrase searches; chosen to cover the months and the kinds of news.",
+   "congress-proclamation-of-the-cessation-of-arms-11-april-1783": "count entry 24 (I83-0005, I83-0043); phrase searches; chosen to cover the months and the kinds of news.",
+   "washington-orders-for-proclaiming-the-cessation-of-hostilities-18-april-1783": "count entry 31 (I83-0045, I83-0021, I83-0046, I83-0047); phrase searches; chosen to cover the months and the kinds of news.",
+   "tell-it-to-the-whole-world-the-prisoners-at-new-york-april-1783": "count entry 27 (I83-0001); phrase searches; chosen to cover the months and the kinds of news.",
+   "philadelphia-port-open-to-vessels-from-any-foreign-port-april-1783": "count entry 30 (I83-0002, I83-0011); phrase searches; chosen to cover the months and the kinds of news.",
+   "continental-troops-march-to-charleston-june-1783": "count entry 40 (I83-0051); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "versailles-dispatches-of-m-de-suffren-march-1783": "count entry 41 (I83-0052); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "maryland-act-to-invest-congress-with-power-to-levy-duties-june-1783": "count entry 42 (I83-0053); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "virginia-assembly-votes-50000-pounds-to-congress-june-1783": "count entry 43 (I83-0054); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "french-frigate-with-stores-for-the-america-portsmouth-june-1783": "count entry 47 (R169); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "schooner-molly-from-grenada-report-on-the-stadtholder-july-1783": "count entry 49 (I83-0012); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "no-foreign-vessels-entered-at-new-york-july-1783": "count entry 51 (I83-0059); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783": "count entry 52 (R181); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+   "captain-dalton-arrives-from-canada-august-1783": "count entry 53 (I83-0060); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part."
+  },
+  "counted_item_by_item": {
+   "Paper counts": "Of 47 items eligible by the count, 18 reach every paper that survives for their weeks; read again by their own words, all 18 do (17 in 4 of 4, one in 5 of 5) and are admitted. 8 are chosen; the others are listed as not chosen, except one item on a private person, listed for the owner, and the definitive treaty, below the bar by its own words.",
+   "The papers of the peace": "By their own words the provisional articles, the preliminary articles with France and the two proclamations of the cessation of arms are each in 4 papers, where the count of their openings found 5; Washington's orders of 18 April are in 4 of 6.",
+   "Printed forms counted together": "The New-Hampshire Gazette's state of the Jamaica convoy, the New-Jersey Gazette's report of the French frigate, the New-Hampshire Gazette's Lisbon paragraph in other words, and Congress's proclamation as the New-Jersey Gazette prints it within a New Jersey proclamation (C-02).",
+   "Texts apart": "London reports of the reading of the King's proclamation are not counted (C-07); the preliminary articles between Great Britain and Spain are another text; the definitive treaty is counted by its own words, apart from the provisional articles whose words it repeats."
+  },
+  "not_admitted": {
+   "Philadelphia: 'a commission has passed the great seal of Great-Britain' authorising Mr. Oswald to treat with the commissioners of the United States (4)": "In 4 papers (January) by the count, a single paragraph of a news column; not chosen: one affair's items in the same weeks (X-1800-01): the news of the negotiations for peace (the Paris paragraph and Mr. Townshend's letter to the Bank of England, admitted) is in the ledger.",
+   "Paris: the negotiators for peace meet at the French minister's (Mr. Fitzherbert and Mr. Oswald for Great Britain, Dr. Franklin for the United States) (3)": "In 3 papers of the 5 that survive for its weeks by the count; the bar is 4. Below the bar.",
+   "A private letter from Paris, 1 November 1782, on the negotiators for peace (3)": "In 3 papers of the 4 that survive for its weeks by the count; the bar is 4. Below the bar.",
+   "Congress, 17 January 1783: on the report of a committee on a letter of 19 December (5)": "In 5 papers (February) by the count, a document; not chosen: February is covered by the Basseterre report of a peace, the Hague's prize and the letter taken in the brig Ranger, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Head-quarters, New York, 18 February 1783: notice to persons within the lines whose houses or lands have been withheld from them (4)": "In 4 papers (February) by the count, a document; not chosen: February is covered by the Basseterre report of a peace, the Hague's prize and the letter taken in the brig Ranger, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "General Lincoln's notification to officers and prisoners on parole (5)": "In 5 papers (February) by the count, a notice; not chosen: February is covered by the Basseterre report of a peace, the Hague's prize and the letter taken in the brig Ranger, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+   "Montserrat, 26 January: a Portuguese brig from Guadeloupe brings news (4)": "In 4 papers (March) by the count, a letter or report; not chosen: March is covered by Mr. Morris's letter to Congress and the provisional articles of peace, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Philadelphia, 13 March: the Washington packet arrives from L'Orient; outlines of the articles of a treaty between Great Britain and the United States (4)": "In 4 papers (March) by the count, a single paragraph of a news column; not chosen: one affair's items in the same weeks (X-1800-01): the provisional articles of peace (chosen), whose 'outlines' it gives is in the ledger.",
+   "London: an address to the King: 'his majesty has been graciously and affectionately pleased' (4)": "In 4 papers (March) by the count, a document; not chosen: March is covered by Mr. Morris's letter to Congress and the provisional articles of peace, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "The heads of the preliminaries of peace signed at Versailles, 20 January 1783, and the arrival of the news by the Triumph sloop (4)": "In 4 papers (March) (by its own words ('The Principal Articles of the Preliminaries') in 4 papers), a document; not chosen: one affair's items in the same weeks (X-1800-01): the preliminary articles between Great Britain and France (chosen), whose heads it gives is in the ledger.",
+   "Congress: the officers' half pay commuted for five years' full pay (4)": "In 4 papers (April) by the count, a document; not chosen: April is covered by the preliminary articles with France, the King's proclamation and Congress's proclamation of the cessation of arms, General Washington's orders of 18 April, the notice 'Tell it to the whole World' and the Philadelphia paragraph on the ports, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "The proceedings of the army near New Windsor, March 1783: the anonymous addresses, General Washington's address to the officers and their resolutions (4)": "In 4 papers (April) by the count, a document; not chosen: April is covered by the preliminary articles with France, the King's proclamation and Congress's proclamation of the cessation of arms, General Washington's orders of 18 April, the notice 'Tell it to the whole World' and the Philadelphia paragraph on the ports, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Baltimore, 22 April: the ships Nonsuch and York arrive from Nantes (3)": "3 papers of 6 once the South-Carolina and American General Gazette left out: its issues are the Weekly Gazette's scans (C-05). Below the bar.",
+   "The French court said to be determined to keep up a greater peace establishment of their navy (3)": "3 papers of 6 once the South-Carolina and American General Gazette left out: its issues are the Weekly Gazette's scans (C-05). Below the bar.",
+   "Persons passing through from New York: little appearance of a speedy evacuation of New York (4)": "In 4 papers (May) by the count, a single paragraph of a news column; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "The ship Hawk arrives from Marseilles by Gibraltar (4)": "In 4 papers (May) by the count, a single paragraph of a news column; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Brigadier General Clark and other officers arrive from New York to conduct the British prisoners (3)": "In 3 papers of the 6 that survive for its weeks by the count; the bar is 4. Below the bar.",
+   "An abstract of the bill for the provisional establishment and regulation of trade between Great Britain and the United States (4)": "In 4 papers (May) by the count, a document; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "South Carolina: persons sent to St. Augustine to claim the property carried there during the war, to be restored by the treaty (3)": "3 papers of 6 once the South-Carolina and American General Gazette left out: its issues are the Weekly Gazette's scans (C-05). Below the bar.",
+   "London: 'The danger with which the nation is threatened from the disappointment of the general hope that an administration was on the point of being formed' (4)": "In 4 papers (May) by the count, a single paragraph of a news column; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "'Our harbour is now ornamented with the flags of seven independent powers' (4)": "In 4 papers (May) by the count, a single paragraph of a news column; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Congress's plan for restoring public credit: the duties recommended to the several states (3)": "In 3 papers of the 5 that survive for its weeks by the count; the bar is 4. Below the bar.",
+   "A private letter from a French officer in India to his friend in Paris on the fighting in India (4)": "In 4 papers (June) by the count, a letter or report; not chosen: one affair's items in the same weeks (X-1800-01): the Versailles paragraph on M. de Suffren's dispatches from the East Indies (admitted) is in the ledger.",
+   "The Emperor has not yet acknowledged the independence of America by any formal act (4)": "In 4 papers (June) by the count, a single paragraph of a news column; not chosen: June is covered by the troops' march to Charleston, the Versailles paragraph on M. de Suffren's dispatches, Maryland's act and Virginia's payment for Congress, and the French frigate at Portsmouth, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Charleston, 14 June: two letters from Mr. Laurens of 1 and 7 April (4)": "In 4 papers (July) by the count, a single paragraph of a news column; not chosen: July is covered by the report brought by the schooner Molly, the report that no foreign vessels are entered at New York and the Lisbon paragraph on a treaty of commerce, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+   "Congress resolves that the secretary at war communicate to the commander in chief the state of the troops (4)": "In 4 papers (July) by the count, a document; not chosen: July is covered by the report brought by the schooner Molly, the report that no foreign vessels are entered at New York and the Lisbon paragraph on a treaty of commerce, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+   "Congress's proclamation of 18 October 1783: the armies of the United States discharged (2)": "2 papers by its own words (NHG, SCG); the sweep run joined it with other texts. Below the bar.",
+   "The definitive treaty of peace between Great Britain and the United States, signed 3 September 1783, printed in December (2)": "Counted at 5 papers by the count, which joined it with the provisional articles whose words it repeats; by its own words ('the most serene and most potent Prince George the Third', 'to forget all past misunderstandings and differences') it is in 2 papers (the Connecticut Courant of 9 December, the Gazette of the State of South-Carolina of 18 December) of the 4 that survive for its weeks. Below the bar.",
+   "Other items of 3 papers or fewer (by count)": "The other items the finder lists, and the passages the sweep found in fewer than 4 papers, were compared by machine with every page and counted again by their openings; none reaches 4 papers. They were not read one by one."
+  },
+  "for_the_owner": {
+   "Wilmington, Delaware: a brig from New York whose master, a former inhabitant who had joined the British, is not allowed to land (4)": "In 4 papers (June to August) of the 5 that survive for its weeks; it turns on the brig's master, a private person named as its subject (R-04): listed for the owner, without names; not admitted."
+  },
+  "for_user_decision": {
+   "The choice for 1783": "As built (X-1783-01): 18 groups admitted by the rule's first part and 8 chosen, 22 stories and 110 printings; the other eligible items are listed as not chosen.",
+   "The papers of the peace and the heads of the preliminaries": "As built (X-1783-02): the provisional articles, the preliminary articles with France, both proclamations of the cessation of arms and Washington's orders are chosen as separate public acts; the heads of the preliminaries and the Washington packet's outlines are not chosen (X-1800-01).",
+   "The definitive treaty by its own words": "As built (X-1783-03): 2 papers of the 4 that survive in December; below the bar.",
+   "Printed forms counted together": "As built (X-1783-04): the Jamaica convoy, the French frigate and the Lisbon paragraph, each with a paper's own form (C-02).",
+   "Congress's proclamation with a state's recital": "As built (X-1783-05): the New-Jersey Gazette's printing within a New Jersey proclamation is counted (C-02); not counted, the group would fall below the bar.",
+   "An anonymous allegation chosen": "As built (X-1783-06): 'Tell it to the whole World' is chosen and described as an anonymous writer's allegation.",
+   "A London printer named": "As built (X-1783-07): Mr. Miller, late printer of the London Evening Post, is named as the papers print him.",
+   "One item on a private person": "Listed for the owner without names (X-1783-08).",
+   "A sweep for short items at 4 papers": "The sweep of seven-word sequences shared by 4 or more papers was run for 1783 (X-1783-09).",
+   "Grading calls on the transcriptions": "The scan check graded the transcriptions by the protocol (C-14), as for 1774 and 1775. Calls the owner may revisit: (1) a long s read as f that makes another word is fact-changing ('failed' for 'sailed': S83-003, S83-008, S83-012 in the statement of the Jamaica fleet; S83-091, S83-094, S83-095, S83-107 in the report brought by the schooner Molly; S83-096, S83-100 in the report on New York's port); (2) where RevX ends an excerpt with '...' and the print goes on, the words are counted as dropped, fact-changing (S83-034); (3) words or a line left out are fact-changing: 'strong' lost from 'detached strong parties' (S83-001), a whole sentence of Mr. Morris's letter (S83-038) and the King's signature line 'G. R.' (S83-051); (4) modern spellings ('negotiations' for 'negociations', 'publicly' for 'publickly') and misprints that RevX silently corrects are minor."
+  }
+ },
+ "verdict_summary": {
+  "yes": 109,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 67,
+  "minor_errors": 29,
+  "major_problem": 13,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 95,
+  "pdf_text_layer_window": 7,
+  "manual_box": 7
+ }
+}

@@ -65,6 +65,23 @@ RULES = {
            "stories of the first two rounds, the candidate families read on 6 November and not chosen, and the "
            "items round three read and did not admit."),
 }
+# The thin years (Y-THIN as amended on 23 November 2026, B1), released from 24 November 2026: the rule, then the year's
+# own sentence where its review proposed one.
+RULE_THIN = ("Read by the thin-year rule (register Y-THIN, chosen by the owner on 23 November 2026 and amended the "
+             "same night, B1): an item, counted by its own words, is eligible when it was printed by more than half of "
+             "the papers that survive for its weeks, and by at least 4, except digests; items printed by every paper that "
+             "survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the "
+             "kinds of news, about as many stories as a standard year. The eligible items not chosen are listed with "
+             "their counts, made by machine on their openings and not checked on the scans.")
+THIN_OWN = {
+    1770: "With four papers, an item reaches the bar only when all four print it.",
+    1772: "Four papers survive in most weeks, so an item reaches the bar only when all four print it.",
+    1782: "From September only the four year-round papers survive, so the items all four printed are admitted.",
+    1789: "With four papers, an item reaches the bar only when all four print it, and all such items are admitted.",
+    1790: "Items printed by every paper of their weeks are admitted; the two other eligible items are chosen.",
+}
+for _year in (1770, 1772, 1774, 1775, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1787, 1788, 1789, 1790):
+    RULES[_year] = RULE_THIN + (' ' + THIN_OWN[_year] if _year in THIN_OWN else '')
 STATUS_PHRASES = {
     ADMITTED_LATER: 'items that a later round admitted',
     'duplicate': 'repeats of an item listed from another key',

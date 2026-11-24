@@ -1,0 +1,1691 @@
+{
+  "ledger_id": "ledger:stories-1787",
+  "ledger_version": 1,
+  "base_release": "0.11.26",
+  "target_release": "0.11.27",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1787",
+  "evidence_dir": "outputs/story_discovery_1787/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1787, and of 1786 where they reach the 1787 pages (long-running ones included), counts of every item in 3 or more papers by its own opening over all 1,297 pages of 1787 in both transcriptions, a sweep of word-for-word passages shared by 4 or more papers for short items the families miss, reading of every item that meets the bar, and scan checks of each admitted and chosen passage, by the thin-year rule as amended (register Y-THIN, B1: more than half of the papers that survive for the item's weeks, and at least 4, make an item eligible; items printed by every paper in print are admitted, the others chosen to cover the months and the kinds of news)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1787/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1787/items_from_1786.json": "retrieval_candidates",
+    "outputs/story_discovery_1787/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1787/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1787.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1787_review.json": "scan_review",
+    "outputs/story_discovery_1787/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1787/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S87-001",
+      "page_key": "sn83030137|1787-04-10|1|2",
+      "excerpt_start": "The following are the Heads of",
+      "excerpt_end": "prisoners, and their effects considered as prizes;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "heads-of-the-treaty-with-the-emperor-of-morocco-1786"
+      ],
+      "summary": "The treaty with Morocco, July 1786: its heads.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'concluded betwixt the Americans'; the transcription's 'between' modernises the word (minor). The rest of the excerpt matches."
+      ],
+      "crops": [
+        "S87-001.jpg"
+      ],
+      "family": [
+        "R1787-0006",
+        "R1787-0319",
+        "R1787-0320",
+        "R1787-0382"
+      ]
+    },
+    {
+      "id": "S87-002",
+      "page_key": "sn83030586|1787-04-11|1|2",
+      "excerpt_start": "The following are the Heads of",
+      "excerpt_end": "prisoners, and their effects considered as prizes;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "heads-of-the-treaty-with-the-emperor-of-morocco-1786"
+      ],
+      "summary": "The Independent Journal prints the heads of the treaty with Morocco.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included; the heading prints 'betwixt'. The item stands at the foot of the second column, directly after the quoted Paris letter ending '...especially in the present circumstances.'"
+      ],
+      "crops": [
+        "S87-002.jpg"
+      ],
+      "family": [
+        "R1787-0006",
+        "R1787-0383",
+        "R1787-0384",
+        "R1787-0385",
+        "R1787-0386",
+        "R1787-0387"
+      ],
+      "scan_boxes": [
+        [
+          1180,
+          5906,
+          2262,
+          6392
+        ]
+      ]
+    },
+    {
+      "id": "S87-003",
+      "page_key": "sn83030565|1787-04-19|1|3",
+      "excerpt_start": "On Friday last the United States",
+      "excerpt_end": "America, and the King of Great Britain.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-recommends-the-states-repeal-laws-inconsistent-with-the-treaty-of-peace-april-1787"
+      ],
+      "summary": "Congress, April 1787: the States to repeal laws against the treaty.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-003.jpg"
+      ],
+      "family": [
+        "R1787-0066",
+        "R1787-0067",
+        "R1787-0225",
+        "R1787-0392",
+        "R1787-0393"
+      ]
+    },
+    {
+      "id": "S87-004",
+      "page_key": "sn83030137|1787-04-20|1|2",
+      "excerpt_start": "On Friday last the United States",
+      "excerpt_end": "America, and the King of Great Britain.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-recommends-the-states-repeal-laws-inconsistent-with-the-treaty-of-peace-april-1787"
+      ],
+      "summary": "The New-York Packet prints the New York paragraph on Congress's resolution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-004.jpg"
+      ],
+      "family": [
+        "R1787-0066",
+        "R1787-0391",
+        "R1787-0393",
+        "R1787-0395",
+        "R1787-0396",
+        "R1787-0397",
+        "R1787-0398"
+      ]
+    },
+    {
+      "id": "S87-005",
+      "page_key": "sn83030586|1787-04-21|1|3",
+      "excerpt_start": "On Friday last the United States",
+      "excerpt_end": "America, and the King of Great Britain.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-recommends-the-states-repeal-laws-inconsistent-with-the-treaty-of-peace-april-1787"
+      ],
+      "summary": "The Independent Journal prints the New York paragraph on Congress's resolution.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-005.jpg"
+      ],
+      "family": [
+        "R1787-0158",
+        "R1787-0209",
+        "R1787-0396",
+        "R1787-0397",
+        "R1787-0404",
+        "R1787-0405"
+      ]
+    },
+    {
+      "id": "S87-006",
+      "page_key": "sn83025586|1787-04-28|1|1",
+      "excerpt_start": "The following are the Heads of",
+      "excerpt_end": "prisoners, and their effects considered as prizes;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "heads-of-the-treaty-with-the-emperor-of-morocco-1786"
+      ],
+      "summary": "The New-Hampshire Gazette prints the heads of the treaty with Morocco.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-006.jpg"
+      ],
+      "family": [
+        "R1787-0006",
+        "R1787-0382",
+        "R1787-0383",
+        "R1787-0384"
+      ]
+    },
+    {
+      "id": "S87-007",
+      "page_key": "sn83025586|1787-04-28|1|3",
+      "excerpt_start": "Yesterday the United States in Congress",
+      "excerpt_end": "of America and the King of Great-Britain.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-recommends-the-states-repeal-laws-inconsistent-with-the-treaty-of-peace-april-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints the New York paragraph on Congress's resolution.",
+      "note": "Dated 'April 14', with 'Yesterday' for 'On Friday last'.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph is dated 'April 14.' and reads 'Yesterday' where the New York papers read 'On Friday last': a printed difference."
+      ],
+      "crops": [
+        "S87-007.jpg"
+      ],
+      "family": [
+        "R1787-0065",
+        "R1787-0415"
+      ]
+    },
+    {
+      "id": "S87-008",
+      "page_key": "sn83030565|1787-05-03|1|1",
+      "excerpt_start": "Heads of the Treaty of Peace",
+      "excerpt_end": "prisoners, and their effects considered as prizes;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "heads-of-the-treaty-with-the-emperor-of-morocco-1786"
+      ],
+      "summary": "The New-York Journal prints the heads of the treaty with Morocco.",
+      "note": "The paper prints it '[Omitted several Weeks for want of Room.]'",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints the title without 'The following are the' and reads 'between' where NYP and NHG print 'betwixt': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S87-008.jpg"
+      ],
+      "family": [
+        "R1787-0006",
+        "R1787-0172",
+        "R1787-0201",
+        "R1787-0208"
+      ]
+    },
+    {
+      "id": "S87-009",
+      "page_key": "sn83025587|1787-07-07|1|2",
+      "excerpt_start": "We are informed, by a gentleman",
+      "excerpt_end": "territories, when he came away from thence;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-british-ship-maria-on-lake-champlain-1787"
+      ],
+      "summary": "Boston, 1787: the British ship Maria on Lake Champlain.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. It reads 'the 18th ult.' where the NYJ transcription has '13th inst.': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S87-009.jpg"
+      ],
+      "family": [
+        "R1787-0488",
+        "R1787-0489",
+        "R1787-0490"
+      ]
+    },
+    {
+      "id": "S87-010",
+      "page_key": "sn83030137|1787-07-10|1|2",
+      "excerpt_start": "We are informed, via Boston, that",
+      "excerpt_end": "smuggling business) belonging to the United States;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-british-ship-maria-on-lake-champlain-1787"
+      ],
+      "summary": "The New-York Packet prints the Boston report of the ship Maria.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. This paper prints a shorter version ('via Boston', 'on Lake-Champlain'): printed differences."
+      ],
+      "crops": [
+        "S87-010.jpg"
+      ],
+      "family": [
+        "R1787-0077",
+        "R1787-0492",
+        "R1787-0493",
+        "R1787-0494",
+        "R1787-0495"
+      ]
+    },
+    {
+      "id": "S87-011",
+      "page_key": "sn83030565|1787-07-12|1|3",
+      "excerpt_start": "WE are informed, by a gentleman",
+      "excerpt_end": "our territories, when he came from thence;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-british-ship-maria-on-lake-champlain-1787"
+      ],
+      "summary": "The New-York Journal prints the Boston report of the ship Maria.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads '18th inst.'; the transcription '13th inst.' is a transcription error that changes the date. The rest of the excerpt matches; the paragraph stands under 'BOSTON, June 29.'"
+      ],
+      "crops": [
+        "S87-011.jpg"
+      ],
+      "family": [
+        "R1787-0077",
+        "R1787-0240",
+        "R1787-0472",
+        "R1787-0488",
+        "R1787-0494",
+        "R1787-0498"
+      ],
+      "scan_boxes": [
+        [
+          231,
+          3058,
+          1247,
+          3655
+        ]
+      ]
+    },
+    {
+      "id": "S87-012",
+      "page_key": "sn83030137|1787-07-17|1|2",
+      "excerpt_start": "By the UNITED STATES in CONGRESS",
+      "excerpt_end": "of such pension, deposit with the proper",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-12-july-1787-certificates-for-pensioned-officers"
+      ],
+      "summary": "Congress, 12 July 1787: certificates for pensioned officers.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-012.jpg"
+      ],
+      "family": [
+        "R1787-0450",
+        "R1787-0490",
+        "R1787-0503",
+        "R1787-0505"
+      ]
+    },
+    {
+      "id": "S87-013",
+      "page_key": "sn83030586|1787-07-18|1|2",
+      "excerpt_start": "AN ORDINANCE for the GOVERNMENT of",
+      "excerpt_end": "the opinion of Congress, make it expedient.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "ordinance-for-the-government-of-the-territory-north-west-of-the-river-ohio-1787"
+      ],
+      "summary": "Congress, July 1787: the ordinance for the territory north-west of the Ohio.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-013.jpg"
+      ],
+      "family": [
+        "R1787-0012",
+        "R1787-0079",
+        "R1787-0508",
+        "R1787-0509",
+        "R1787-0510"
+      ]
+    },
+    {
+      "id": "S87-014",
+      "page_key": "sn83030586|1787-07-18|1|3",
+      "excerpt_start": "By the UNITED STATES in CONGRESS",
+      "excerpt_end": "of such pension, deposit with the proper",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-12-july-1787-certificates-for-pensioned-officers"
+      ],
+      "summary": "The Independent Journal prints Congress's resolution of 12 July.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop 2 shows the heading and opening at the top of the column, matching the excerpt except that the print has the misprint 'pervious', which the transcription silently corrects to 'previous'. Crop 1 shows only the word 'Edenton,' and none of this item."
+      ],
+      "crops": [
+        "S87-014-1.jpg",
+        "S87-014-2.jpg"
+      ],
+      "family": [
+        "R1787-0002",
+        "R1787-0009",
+        "R1787-0012"
+      ],
+      "scan_boxes": [
+        [
+          794,
+          6903,
+          1044,
+          7037
+        ],
+        [
+          1277,
+          259,
+          2385,
+          927
+        ]
+      ]
+    },
+    {
+      "id": "S87-015",
+      "page_key": "sn83030137|1787-07-20|1|2",
+      "excerpt_start": "An ORDINANCE for the GOVERNMENT of",
+      "excerpt_end": "the opinion of Congress, make it expedient.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "ordinance-for-the-government-of-the-territory-north-west-of-the-river-ohio-1787"
+      ],
+      "summary": "The New-York Packet prints the ordinance for the north-west territory.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-015.jpg"
+      ],
+      "family": [
+        "R1787-0012",
+        "R1787-0079",
+        "R1787-0504",
+        "R1787-0511",
+        "R1787-0512"
+      ]
+    },
+    {
+      "id": "S87-016",
+      "page_key": "sn83030565|1787-07-26|1|2",
+      "excerpt_start": "AN ORDINANCE FOR THE GOVERNMENT OF",
+      "excerpt_end": "the opinion of Congress, make it expedient.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "ordinance-for-the-government-of-the-territory-north-west-of-the-river-ohio-1787"
+      ],
+      "summary": "The New-York Journal prints the ordinance for the north-west territory.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-016.jpg"
+      ],
+      "family": [
+        "R1787-0012",
+        "R1787-0513"
+      ]
+    },
+    {
+      "id": "S87-017",
+      "page_key": "sn83025587|1787-07-28|1|2",
+      "excerpt_start": "By the UNITED STATES in CONGRES",
+      "excerpt_end": "of such pensions, deposit, with the proper",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-12-july-1787-certificates-for-pensioned-officers"
+      ],
+      "summary": "The New-Hampshire Gazette prints Congress's resolution of 12 July.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. It reads 'their behalf' where NYP 07-17 reads 'that behalf', and prints the misprint 'CONGRES': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S87-017.jpg"
+      ],
+      "family": [
+        "R1787-0077",
+        "R1787-0523"
+      ]
+    },
+    {
+      "id": "S87-018",
+      "page_key": "sn83030565|1787-08-02|1|2",
+      "excerpt_start": "IN CONGRESS, July 12, 1787. Resolved,",
+      "excerpt_end": "the proper officers appointed to discharge the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-12-july-1787-certificates-for-pensioned-officers"
+      ],
+      "summary": "The New-York Journal prints Congress's resolution of 12 July.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-018.jpg"
+      ],
+      "family": [
+        "R1787-0491",
+        "R1787-0514",
+        "R1787-0515",
+        "R1787-0536"
+      ]
+    },
+    {
+      "id": "S87-019",
+      "page_key": "sn83030586|1787-09-12|1|5",
+      "excerpt_start": "Copy of the Result of the",
+      "excerpt_end": "country have long seen and desired, that",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "result-of-the-federal-convention-the-constitution-september-1787"
+      ],
+      "summary": "The Federal Convention, 17 September 1787: the Constitution.",
+      "note": "Earliest printing found. Printed in the Supplement to the Independent Journal of Saturday 22 September 1787, as its heading on this page reads; the archive files the supplement with the issue of 12 September (pages 5 to 8). The supplement prints General Washington's letter before the Constitution.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that it prints 'adviseable', which the transcription modernises to 'advisable' (minor). The page opens with the Convention's letter, as the supplement prints it first."
+      ],
+      "crops": [
+        "S87-019.jpg"
+      ],
+      "family": [
+        "R1787-0001"
+      ]
+    },
+    {
+      "id": "S87-020",
+      "page_key": "sn83021129|1787-09-19|1|1",
+      "excerpt_start": "W E, the People of the",
+      "excerpt_end": "R T I C L E I.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "result-of-the-federal-convention-the-constitution-september-1787"
+      ],
+      "summary": "The Pennsylvania Packet, and Daily Advertiser prints the result of the Federal Convention.",
+      "note": "The Pennsylvania Packet, and Daily Advertiser of 19 September 1787, the one issue of that paper in the collection.",
+      "scan_findings": [
+        "Scan matches the excerpt; the spaced 'A R T I C L E I.' is how the heading is printed."
+      ],
+      "crops": [
+        "S87-020.jpg"
+      ],
+      "family": [
+        "R1787-0001"
+      ]
+    },
+    {
+      "id": "S87-021",
+      "page_key": "sn83030137|1787-09-21|1|2",
+      "excerpt_start": "WE, the PEOPLE of the UNITED",
+      "excerpt_end": "United States of America. ARTICLE I. Sec.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "result-of-the-federal-convention-the-constitution-september-1787"
+      ],
+      "summary": "The New-York Packet prints the result of the Federal Convention.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it prints 'Sect. 1.' where the transcription ends 'Sec.' (minor)."
+      ],
+      "crops": [
+        "S87-021.jpg"
+      ],
+      "family": [
+        "R1787-0001"
+      ]
+    },
+    {
+      "id": "S87-022",
+      "page_key": "sn83030137|1787-10-02|1|6",
+      "excerpt_start": "On Wednesday the 26th ult. His",
+      "excerpt_end": "horse fell into the river. His Excellency",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilmington-report-general-washington-at-the-bridge-near-the-head-of-elk-1787"
+      ],
+      "summary": "Wilmington, September 1787: General Washington at the Head of Elk.",
+      "note": "Earliest printing found. Printed in the New-York Packet of Friday 5 October 1787 (No. 738, its masthead on page 5); the archive files that issue with the issue of 2 October (pages 5 to 8).",
+      "scan_findings": [
+        "Scan matches the excerpt. The dateline 'New-York, October 5.' directly above shows the issue's printed date, 5 October; the paragraph ends with the credit '(Wilmington Gazette.)'."
+      ],
+      "crops": [
+        "S87-022.jpg"
+      ],
+      "family": [
+        "R1787-0612",
+        "R1787-0613"
+      ],
+      "scan_boxes": [
+        [
+          2465,
+          5014,
+          3532,
+          5719
+        ]
+      ]
+    },
+    {
+      "id": "S87-023",
+      "page_key": "sn83030006|1787-10-05|1|2",
+      "excerpt_start": "On Wednesday sen'night his Excellency Gen.",
+      "excerpt_end": "into the river. His Excellency had alighted",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilmington-report-general-washington-at-the-bridge-near-the-head-of-elk-1787"
+      ],
+      "summary": "The Daily Advertiser prints the Wilmington paragraph on General Washington.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. It reads 'sen'night' (a week ago) where the IJ and NYP transcriptions read 'the 26th ult.': a printed difference."
+      ],
+      "crops": [
+        "S87-023.jpg"
+      ],
+      "family": [
+        "R1787-0032",
+        "R1787-0037",
+        "R1787-0083",
+        "R1787-0616",
+        "R1787-0617"
+      ]
+    },
+    {
+      "id": "S87-024",
+      "page_key": "sn83025587|1787-10-06|1|1",
+      "excerpt_start": "PROCEEDINGS OF THE Grand Federal Convention.",
+      "excerpt_end": "Constitution for the United States of America.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "result-of-the-federal-convention-the-constitution-september-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints the result of the Federal Convention.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. 'ARTICLE I.' and 'Sect. 1.' are printed after the preamble; the excerpt stops before them."
+      ],
+      "crops": [
+        "S87-024.jpg"
+      ],
+      "family": [
+        "R1787-0001"
+      ]
+    },
+    {
+      "id": "S87-025",
+      "page_key": "sn83025587|1787-10-06|1|3",
+      "excerpt_start": "Extract of a letter from an",
+      "excerpt_end": "enter any French ports in the West-Indies,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cape-francois-letter-passes-required-for-american-vessels-in-french-west-indies-1787"
+      ],
+      "summary": "Cape Francois, September 1787: passes for American vessels.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'to a gentleman in this town' where the Daily Advertiser has 'in Boston': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S87-025-1.jpg",
+        "S87-025-2.jpg"
+      ],
+      "family": [
+        "R1787-0254",
+        "R1787-0607",
+        "R1787-0623"
+      ]
+    },
+    {
+      "id": "S87-026",
+      "page_key": "sn83030006|1787-10-06|1|2",
+      "excerpt_start": "Extract of a letter from an",
+      "excerpt_end": "resident at the place of his departure.\"",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cape-francois-letter-passes-required-for-american-vessels-in-french-west-indies-1787"
+      ],
+      "summary": "The Daily Advertiser prints the Cape Francois letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the dateline 'New-York, Oct. 6.'; it reads '4th ult.' and 'Boston'."
+      ],
+      "crops": [
+        "S87-026.jpg"
+      ],
+      "family": [
+        "R1787-0002",
+        "R1787-0005",
+        "R1787-0084",
+        "R1787-0618"
+      ]
+    },
+    {
+      "id": "S87-027",
+      "page_key": "sn83030586|1787-10-06|1|2",
+      "excerpt_start": "Extract of a letter from an",
+      "excerpt_end": "enter any French ports in the West-Indies,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cape-francois-letter-passes-required-for-american-vessels-in-french-west-indies-1787"
+      ],
+      "summary": "The Independent Journal prints the Cape Francois letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paper prints 'the 4th ult.', that is 4 September. A printer's note on the mercantile interest follows the letter and runs past the foot of the crop."
+      ],
+      "crops": [
+        "S87-027.jpg"
+      ],
+      "family": [
+        "R1787-0084",
+        "R1787-0085",
+        "R1787-0616",
+        "R1787-0618",
+        "R1787-0619",
+        "R1787-0621",
+        "R1787-0622",
+        "R1787-0623"
+      ],
+      "scan_boxes": [
+        [
+          3383,
+          1957,
+          4506,
+          2603
+        ]
+      ]
+    },
+    {
+      "id": "S87-028",
+      "page_key": "sn83030586|1787-10-06|1|2",
+      "excerpt_start": "On Wednesday the 26th ult. his",
+      "excerpt_end": "fell into the river. His Excellency had",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilmington-report-general-washington-at-the-bridge-near-the-head-of-elk-1787"
+      ],
+      "summary": "The Independent Journal prints the Wilmington paragraph on General Washington.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the dateline 'New-York, October 6.'. Unlike the New-York Packet, this paper prints no credit to the Wilmington Gazette."
+      ],
+      "crops": [
+        "S87-028.jpg"
+      ],
+      "family": [
+        "R1787-0084",
+        "R1787-0085",
+        "R1787-0616",
+        "R1787-0618",
+        "R1787-0619",
+        "R1787-0621",
+        "R1787-0622",
+        "R1787-0623"
+      ],
+      "scan_boxes": [
+        [
+          3387,
+          1213,
+          4510,
+          2065
+        ]
+      ]
+    },
+    {
+      "id": "S87-029",
+      "page_key": "sn83030137|1787-10-09|1|2",
+      "excerpt_start": "Extract of a letter from an",
+      "excerpt_end": "resident at the place of his departure.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "cape-francois-letter-passes-required-for-american-vessels-in-french-west-indies-1787"
+      ],
+      "summary": "The New-York Packet prints the Cape Francois letter.",
+      "note": "Same item as the other printings. The paper dates the letter 'the 24th ult.'; the other papers print 'the 4th ult.'",
+      "scan_findings": [
+        "Scan matches the excerpt, apart from a cedilla the transcription adds. The paper prints 'the 24th ult.' where the Independent Journal prints 'the 4th ult.': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S87-029.jpg"
+      ],
+      "family": [
+        "R1787-0085",
+        "R1787-0086",
+        "R1787-0624",
+        "R1787-0626",
+        "R1787-0627"
+      ],
+      "scan_boxes": [
+        [
+          2416,
+          6305,
+          3492,
+          7080
+        ]
+      ]
+    },
+    {
+      "id": "S87-030",
+      "page_key": "sn82014784|1787-10-13|2|2",
+      "excerpt_start": "We are informed by a gentleman",
+      "excerpt_end": "our territory when she came from thence,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-report-british-ship-maria-on-lake-champlain-1787"
+      ],
+      "summary": "The Kentucke Gazette prints the Boston report of the ship Maria.",
+      "note": "The Kentucke Gazette of 13 October 1787; the same page is filed again as page 4 of the issue of 6 October. This copy is very faint; its readings were settled on the second copy of the page.",
+      "scan_findings": [
+        "This copy is very faint; the clearer copy of the same page filed under 6 October settles the readings: 'Maria' and 'the line' show faintly here and clearly there, and the day '18th' and '20 guns' can be read only there. The transcription's 'Marsh', '22', 'the lake' and 'she came' (print 'he came') are errors that change the facts; 'has', 'Boston' and 'on the lake' are printed as transcribed."
+      ],
+      "crops": [
+        "S87-030.jpg"
+      ],
+      "family": [
+        "R1787-0240"
+      ],
+      "scan_boxes": [
+        [
+          648,
+          1293,
+          1172,
+          1560
+        ]
+      ]
+    },
+    {
+      "id": "S87-031",
+      "page_key": "sn83025587|1787-10-13|1|3",
+      "excerpt_start": "On Wednesday last, his excellency general",
+      "excerpt_end": "into the river.—His excellency had alighted in",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "wilmington-report-general-washington-at-the-bridge-near-the-head-of-elk-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Wilmington paragraph on General Washington.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Under 'PHILADELPHIA, October 3.' it reads 'Wednesday last', 'this city' and 'on Mount Vernon': printed differences from the New York papers, not transcription errors."
+      ],
+      "crops": [
+        "S87-031.jpg"
+      ],
+      "family": [
+        "R1787-0085",
+        "R1787-0567",
+        "R1787-0649"
+      ]
+    },
+    {
+      "id": "S87-032",
+      "page_key": "sn83030006|1787-10-16|1|2",
+      "excerpt_start": "By the UNITED STATES in CONGRESS",
+      "excerpt_end": "is wanting, for the services of the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-requisition-for-1787-11-october-1787"
+      ],
+      "summary": "Congress, 11 October 1787: the requisition.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt (second crop); the print's comma after 'Mr' is made a stop. The first crop shows only a stray fragment of another column."
+      ],
+      "crops": [
+        "S87-032-1.jpg",
+        "S87-032-2.jpg"
+      ],
+      "family": [
+        "R1787-0007",
+        "R1787-0220",
+        "R1787-0228",
+        "R1787-0260",
+        "R1787-0655"
+      ]
+    },
+    {
+      "id": "S87-033",
+      "page_key": "sn83030007|1787-10-17|1|2",
+      "excerpt_start": "Congress yesterday appointed the Hon. Samuel",
+      "excerpt_end": "the Western Territory of the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-appoints-judges-in-the-western-territory-october-1787"
+      ],
+      "summary": "Congress, 16 October 1787: judges for the western territory.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'John Armstrong, jun.'; the transcription's 'Esq.' drops 'jun.', which tells which John Armstrong was appointed. The paper prints 'Congress yesterday appointed', without 'Tuesday last'."
+      ],
+      "crops": [
+        "S87-033.jpg"
+      ],
+      "family": [
+        "R1787-0090",
+        "R1787-0657"
+      ]
+    },
+    {
+      "id": "S87-034",
+      "page_key": "sn83030586|1787-10-17|1|2",
+      "excerpt_start": "By the UNITED STATES in CONGRESS",
+      "excerpt_end": "is wanting, for the services of the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-requisition-for-1787-11-october-1787"
+      ],
+      "summary": "The Independent Journal prints Congress's requisition of 11 October.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, apart from capitals ('THE Committee'). The item follows the ship news under a rule."
+      ],
+      "crops": [
+        "S87-034.jpg"
+      ],
+      "family": [
+        "R1787-0007",
+        "R1787-0090",
+        "R1787-0658"
+      ]
+    },
+    {
+      "id": "S87-035",
+      "page_key": "sn83030565|1787-10-18|1|3",
+      "excerpt_start": "Tuesday last, Congress appointed the hon.",
+      "excerpt_end": "the western territory of the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-appoints-judges-in-the-western-territory-october-1787"
+      ],
+      "summary": "The New-York Journal prints the paragraph on the judges of the western territory.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt (second crop). The first crop shows only the foot of another item ('1787.' and a mark '35—')."
+      ],
+      "crops": [
+        "S87-035-1.jpg",
+        "S87-035-2.jpg"
+      ],
+      "family": [
+        "R1787-0002",
+        "R1787-0003",
+        "R1787-0004",
+        "R1787-0005"
+      ]
+    },
+    {
+      "id": "S87-036",
+      "page_key": "sn83030565|1787-10-18|2|2",
+      "excerpt_start": "By the UNITED STATES in CONGRESS",
+      "excerpt_end": "is wanting, for the services of the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-requisition-for-1787-11-october-1787"
+      ],
+      "summary": "The New-York Journal prints Congress's requisition of 11 October.",
+      "note": "Printed in the New-York Journal Extraordinary of 18 October 1787 (filed as edition 2 of that date).",
+      "scan_findings": [
+        "Scan matches the excerpt. The crop shows no title, so it cannot confirm that the page belongs to the Extraordinary of 18 October."
+      ],
+      "crops": [
+        "S87-036.jpg"
+      ],
+      "family": [
+        "R1787-0007",
+        "R1787-0263",
+        "R1787-0608"
+      ]
+    },
+    {
+      "id": "S87-037",
+      "page_key": "sn83030137|1787-10-19|1|2",
+      "excerpt_start": "Congress on Tuesday last, appointed the",
+      "excerpt_end": "the Western Territory of the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-appoints-judges-in-the-western-territory-october-1787"
+      ],
+      "summary": "The New-York Packet prints the paragraph on the judges of the western territory.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except 'Esq'rs,', which the transcription gives as 'Esq's,' (minor). The paper prints 'Congress on Tuesday last, appointed'."
+      ],
+      "crops": [
+        "S87-037.jpg"
+      ],
+      "family": [
+        "R1787-0007",
+        "R1787-0090",
+        "R1787-0657",
+        "R1787-0659",
+        "R1787-0660",
+        "R1787-0661",
+        "R1787-0662"
+      ]
+    },
+    {
+      "id": "S87-038",
+      "page_key": "sn83030137|1787-10-19|1|2",
+      "excerpt_start": "By the United States in Congress",
+      "excerpt_end": "is wanting, for the services of the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "congress-requisition-for-1787-11-october-1787"
+      ],
+      "summary": "The New-York Packet prints Congress's requisition of 11 October.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-038.jpg"
+      ],
+      "family": [
+        "R1787-0007",
+        "R1787-0090",
+        "R1787-0657",
+        "R1787-0659",
+        "R1787-0660",
+        "R1787-0661",
+        "R1787-0662"
+      ]
+    },
+    {
+      "id": "S87-039",
+      "page_key": "sn82014784|1787-10-20|1|2",
+      "excerpt_start": "WE, the people of the United",
+      "excerpt_end": "States of America. ARTICLE I. Section 1.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "result-of-the-federal-convention-the-constitution-september-1787"
+      ],
+      "summary": "The Kentucke Gazette prints the result of the Federal Convention.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop 2 shows the heading 'From the Pittsburgh Gazette' and the Constitution's opening through 'Section 1.', matching the excerpt; the paper prints 'blessing' in the singular. Crop 1 shows the close of another item (a resolution to be advertised in the Kentucke Gazette, signed by its chairman), not part of this one."
+      ],
+      "crops": [
+        "S87-039-1.jpg",
+        "S87-039-2.jpg"
+      ],
+      "family": [
+        "R1787-0001"
+      ],
+      "scan_boxes": [
+        [
+          1020,
+          1961,
+          1455,
+          2065
+        ],
+        [
+          121,
+          1792,
+          570,
+          2033
+        ]
+      ]
+    },
+    {
+      "id": "S87-040",
+      "page_key": "sn83025587|1787-10-27|1|3",
+      "excerpt_start": "On the 16th instant, Congress appointed",
+      "excerpt_end": "the western territory of the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-appoints-judges-in-the-western-territory-october-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the judges of the western territory.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the dateline 'BOSTON, October 26.'; the paper gives the day as 'On the 16th instant'. Its 'Varaum' appears to be a misprint for Varnum, which the transcription corrects."
+      ],
+      "crops": [
+        "S87-040.jpg"
+      ],
+      "family": [
+        "R1787-0013",
+        "R1787-0658",
+        "R1787-0674"
+      ]
+    },
+    {
+      "id": "S87-041",
+      "page_key": "sn82014784|1787-11-03|1|1",
+      "excerpt_start": "An Ordinance of the Government of",
+      "excerpt_end": "the opinion of Congress, make it expedient.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "ordinance-for-the-government-of-the-territory-north-west-of-the-river-ohio-1787"
+      ],
+      "summary": "The Kentucke Gazette prints the ordinance for the north-west territory.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, title included. The title reads 'An Ordinance of the Government' (the NYJ transcription has 'for'), so the transcription is faithful here."
+      ],
+      "crops": [
+        "S87-041.jpg"
+      ],
+      "family": [
+        "R1787-0001",
+        "R1787-0012"
+      ],
+      "scan_boxes": [
+        [
+          550,
+          836,
+          1008,
+          1028
+        ]
+      ]
+    },
+    {
+      "id": "S87-042",
+      "page_key": "sn83030007|1787-11-08|1|2",
+      "excerpt_start": "Extract of a letter from an",
+      "excerpt_end": "it was general throughout the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-letter-on-virginia-additional-duty-on-british-ships-1787"
+      ],
+      "summary": "London, July 1787: a letter on Virginia's duty on British ships.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S87-042.jpg"
+      ],
+      "family": [
+        "R1787-0097",
+        "R1787-0099",
+        "R1787-0100",
+        "R1787-0621",
+        "R1787-0687"
+      ],
+      "scan_boxes": [
+        [
+          329,
+          2435,
+          1381,
+          3165
+        ]
+      ]
+    },
+    {
+      "id": "S87-043",
+      "page_key": "sn83030007|1787-11-08|1|2",
+      "excerpt_start": "The Caraftacus, Sewall from Charleston, South-Carolina,",
+      "excerpt_end": "by Renegadoes. After having rummaged the vessel,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-ship-caractacus-taken-by-an-algerine-corsair-1787"
+      ],
+      "summary": "Philadelphia, November 1787: the Caractacus and the Algerine corsair.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the heading 'SHIP-NEWS.'. The ship is printed 'Caractacus'; the transcription's 'Caraftacus' misreads the ct ligature (minor)."
+      ],
+      "crops": [
+        "S87-043.jpg"
+      ],
+      "family": [
+        "R1787-0097",
+        "R1787-0099",
+        "R1787-0100",
+        "R1787-0621",
+        "R1787-0687"
+      ]
+    },
+    {
+      "id": "S87-044",
+      "page_key": "sn83030565|1787-11-08|1|3",
+      "excerpt_start": "A letter from an American gentleman",
+      "excerpt_end": "it was general throughout the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-letter-on-virginia-additional-duty-on-british-ships-1787"
+      ],
+      "summary": "The New-York Journal prints the London letter on Virginia's duty.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper introduces the letter in running text ('A letter from ... says:'), not as an 'Extract'."
+      ],
+      "crops": [
+        "S87-044.jpg"
+      ],
+      "family": [
+        "R1787-0004",
+        "R1787-0010",
+        "R1787-0011",
+        "R1787-0048",
+        "R1787-0096",
+        "R1787-0099"
+      ]
+    },
+    {
+      "id": "S87-045",
+      "page_key": "sn83025587|1787-11-09|1|3",
+      "excerpt_start": "Congress we hear, have appointed the",
+      "excerpt_end": "the Western Territory of the United States.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "congress-appoints-judges-in-the-western-territory-october-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the judges of the western territory.",
+      "note": "Printed again, in the paper's own words under Portsmouth, 9 November ('Congress we hear, have appointed').",
+      "scan_findings": [
+        "Scan matches the excerpt, under the dateline 'PORTSMOUTH, Nov. 9.'; the paper prints 'jr.' and names no day."
+      ],
+      "crops": [
+        "S87-045.jpg"
+      ],
+      "family": [
+        "R1787-0265",
+        "R1787-0661",
+        "R1787-0671"
+      ]
+    },
+    {
+      "id": "S87-046",
+      "page_key": "sn83030137|1787-11-09|1|2",
+      "excerpt_start": "Extract of a letter from an",
+      "excerpt_end": "it was general throughout the United States:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-letter-on-virginia-additional-duty-on-british-ships-1787"
+      ],
+      "summary": "The New-York Packet prints the London letter on Virginia's duty.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, heading included; the letter stands in the column dated 'New-York, November 9.'"
+      ],
+      "crops": [
+        "S87-046.jpg"
+      ],
+      "family": [
+        "R1787-0097",
+        "R1787-0099",
+        "R1787-0685",
+        "R1787-0688"
+      ],
+      "scan_boxes": [
+        [
+          3530,
+          1666,
+          4580,
+          2248
+        ]
+      ]
+    },
+    {
+      "id": "S87-047",
+      "page_key": "sn83030137|1787-11-09|1|3",
+      "excerpt_start": "The Cerastacus, Seward from Charleston, South-Carolina,",
+      "excerpt_end": "by renegades. After having rummaged the vessel,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-ship-caractacus-taken-by-an-algerine-corsair-1787"
+      ],
+      "summary": "The New-York Packet prints the Philadelphia paragraph on the Caractacus.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The transcription changes the master's surname to a different name: a fact-changing error. The ship's name is printed 'Ceractacus'; 'Cerastacus' is a minor misreading of the ct ligature."
+      ],
+      "crops": [
+        "S87-047.jpg"
+      ],
+      "family": [
+        "R1787-0011",
+        "R1787-0098",
+        "R1787-0100",
+        "R1787-0180",
+        "R1787-0690"
+      ]
+    },
+    {
+      "id": "S87-048",
+      "page_key": "sn83030586|1787-11-10|1|2",
+      "excerpt_start": "The Caraacus, Sewall, from Charleston, South-Carolina,",
+      "excerpt_end": "by renegadoes. After having rummaged the vessel,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-ship-caractacus-taken-by-an-algerine-corsair-1787"
+      ],
+      "summary": "The Independent Journal prints the Philadelphia paragraph on the Caractacus.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'a stout bark'; the transcription's 'float' is a long-s misreading that turns it into a different word. The paper's own misprint 'maned' (for 'manned') is kept."
+      ],
+      "crops": [
+        "S87-048.jpg"
+      ],
+      "family": [
+        "R1787-0049",
+        "R1787-0098",
+        "R1787-0100",
+        "R1787-0688",
+        "R1787-0691"
+      ]
+    },
+    {
+      "id": "S87-049",
+      "page_key": "sn83025587|1787-11-28|1|2",
+      "excerpt_start": "A letter from an American gentleman",
+      "excerpt_end": "has raised the value of American ships",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-letter-on-virginia-additional-duty-on-british-ships-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints the London letter on Virginia's duty.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints a shorter form: no 'Extract of', no date or Richmond correspondent, no '&c.' and no 'General'."
+      ],
+      "crops": [
+        "S87-049.jpg"
+      ],
+      "family": [
+        "R1787-0689",
+        "R1787-0698",
+        "R1787-0699",
+        "R1787-0727"
+      ]
+    },
+    {
+      "id": "S87-050",
+      "page_key": "sn83025587|1787-11-28|1|2",
+      "excerpt_start": "The Cerastacus, Sewell, from Carolina, bound",
+      "excerpt_end": "suffered her to proceed on her voyage.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-report-ship-caractacus-taken-by-an-algerine-corsair-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Philadelphia paragraph on the Caractacus.",
+      "note": "Same item as the other printings. The paper prints 'Sewell', 'from Carolina' and 'within twenty leagues', where the New York papers print 'Sewall', 'from Charleston, South-Carolina' and '30 leagues'.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the dateline 'PHILADELPHIA, Nov. 3.'. The paper prints 'twenty leagues' and 'from Carolina' where the New York papers have '30 leagues' and 'from Charleston, South-Carolina': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S87-050.jpg"
+      ],
+      "family": [
+        "R1787-0689",
+        "R1787-0698",
+        "R1787-0699",
+        "R1787-0727"
+      ]
+    },
+    {
+      "id": "S87-051",
+      "page_key": "sn83030007|1787-12-13|1|2",
+      "excerpt_start": "Mr. Oswald, I SEND you an",
+      "excerpt_end": "enclosing a paragraph respecting me in Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-jay-letter-denying-sentiments-against-the-constitution-december-1787"
+      ],
+      "summary": "Mr. Jay, 1 December 1787: his letter on the Constitution.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt: the note to the printer, its signature and dates, and 'Dear Sir' are all printed."
+      ],
+      "crops": [
+        "S87-051.jpg"
+      ],
+      "family": [
+        "R1787-0016"
+      ]
+    },
+    {
+      "id": "S87-052",
+      "page_key": "sn83030137|1787-12-14|1|3",
+      "excerpt_start": "I send you an extract of",
+      "excerpt_end": "Mr. Oswald's paper of the same date.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-jay-letter-denying-sentiments-against-the-constitution-december-1787"
+      ],
+      "summary": "The New-York Packet prints Mr. Jay's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The transcription leaves out the sender's signature and the line 'Philadelphia, Dec. 7, 1787.', and puts 'John Jay.' after the New-York date line, where the print has none: words dropped and added. The paper prints no salutation to the printer."
+      ],
+      "crops": [
+        "S87-052.jpg"
+      ],
+      "family": [
+        "R1787-0008",
+        "R1787-0016",
+        "R1787-0021",
+        "R1787-0038",
+        "R1787-0144",
+        "R1787-0162",
+        "R1787-0223"
+      ]
+    },
+    {
+      "id": "S87-053",
+      "page_key": "sn83030586|1787-12-15|1|2",
+      "excerpt_start": "MR. OSWALD, I send you an",
+      "excerpt_end": "enclosing a paragraph, respecting me in Mr.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-jay-letter-denying-sentiments-against-the-constitution-december-1787"
+      ],
+      "summary": "The Independent Journal prints Mr. Jay's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'New-York, 1st Dec. 1787.'; the transcription's '18 Dec.' changes the date of Mr. Jay's letter. The paper prints no 'Dear Sir'."
+      ],
+      "crops": [
+        "S87-053.jpg"
+      ],
+      "family": [
+        "R1787-0016",
+        "R1787-0038",
+        "R1787-0767"
+      ]
+    },
+    {
+      "id": "S87-054",
+      "page_key": "sn83025587|1787-12-26|1|3",
+      "excerpt_start": "Extract of a letter from Mr.",
+      "excerpt_end": "the charge of sentiments it imputes to",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-jay-letter-denying-sentiments-against-the-constitution-december-1787"
+      ],
+      "summary": "The New-Hampshire Gazette prints Mr. Jay's letter.",
+      "note": "Printed without the note that sends the letter to the printer.",
+      "scan_findings": [
+        "Scan reads 'deny the change of sentiments'; the transcription's 'charge' is a different word that changes the sense. The paper prints the letter without the note to the printer and without 'Dear Sir'."
+      ],
+      "crops": [
+        "S87-054.jpg"
+      ],
+      "family": [
+        "R1787-0016",
+        "R1787-0115",
+        "R1787-0796",
+        "R1787-0797"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "heads-of-the-treaty-with-the-emperor-of-morocco-1786",
+      "kind": "document_group",
+      "label": "The heads of the treaty of peace between the United States and the Emperor of Morocco, concluded in July 1786",
+      "definition": "Printings of 'the Heads of the Treaty of Peace concluded betwixt the Americans and the Emperor of Morocco, July 24, 1786': 'If the Americans are at war with any other nation, their vessels are to be allowed to take refuge in any of the ports belonging to his Imperial Majesty'; the articles on prisoners, salutes, merchants and consuls follow. A summary of the treaty's articles as the papers printed it.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "congress-recommends-the-states-repeal-laws-inconsistent-with-the-treaty-of-peace-april-1787",
+      "kind": "message_group",
+      "label": "New York, April 1787: Congress recommends that the States repeal their laws inconsistent with the treaty of peace",
+      "definition": "Printings of a New York paragraph of April 1787: 'On Friday last the United States in Congress assembled passed a resolution recommending it to the different states, to repeal all their laws, now in force, which are inconsistent with the treaty of peace between the United States of America, and the King of Great Britain' (one paper dates it 'April 14' and reads 'Yesterday'). A news paragraph reporting Congress's resolution.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "boston-report-british-ship-maria-on-lake-champlain-1787",
+      "kind": "message_group",
+      "label": "Boston, summer 1787: a gentleman from Lake Champlain reports that the British have fitted out the ship Maria, of 20 guns, to cruise on the lake",
+      "definition": "Printings of a Boston paragraph of June and July 1787: 'We are informed, by a gentleman of this town, who left Lake Champlain the 18th ult. that the British have fitted out the ship Maria, of 20 guns, in order to cruise on that Lake; that she was three miles from the line, within our territories, when he came from thence; that she had taken one vessel (said to have been on the smuggling business) belonging to the United States'. A report at second hand.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "congress-12-july-1787-certificates-for-pensioned-officers",
+      "kind": "document_group",
+      "label": "Congress, 12 July 1787: officers of the late army entitled to pensions to deposit a certificate that no balance is due from them",
+      "definition": "Printings of Congress's resolution of 12 July 1787: 'That all officers in the line of the late army who may be entitled to pensions, in pursuance of the acts of Congress in that behalf made, shall previous to the receipt of such pension, deposit with the proper officers appointed to discharge the same in the States in which they reside, a certificate from the Commissioner of Army Accounts, purporting that no balance is due from the claimant to the United States'. Congress's own resolution.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "ordinance-for-the-government-of-the-territory-north-west-of-the-river-ohio-1787",
+      "kind": "document_group",
+      "label": "Congress, 13 July 1787: an ordinance for the government of the territory of the United States north-west of the river Ohio",
+      "definition": "Printings of 'An Ordinance for the Government of the Territory of the United States, North-West of the River Ohio': 'Be it ordained by the United States in Congress assembled, That the said territory, for the purposes of temporary government, be one district'; the governor, secretary and judges, the general assembly, and the articles of compact, among them that 'there shall be neither slavery nor involuntary servitude in the said territory' and that 'the utmost good faith shall always be observed towards the Indians'. Congress's own ordinance.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "result-of-the-federal-convention-the-constitution-september-1787",
+      "kind": "document_group",
+      "label": "The result of the Federal Convention, September 1787: the Constitution, with the Convention's resolutions and General Washington's letter to the President of Congress",
+      "definition": "Printings of the result of the deliberations of the Federal Convention at Philadelphia, 17 September 1787: the Constitution ('We, the People of the United States, in order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common Defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America'), the Convention's resolutions that it be laid before Congress and submitted to conventions chosen by the people, and the letter of General Washington, its President, to the President of Congress ('We have now the honor to submit to the consideration of the United States in Congress assembled, that Constitution which has appeared to us the most advisable'). Printed together, counted as one item by whichever part stands first (X-1810-01). The Convention's own acts and words.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "wilmington-report-general-washington-at-the-bridge-near-the-head-of-elk-1787",
+      "kind": "message_group",
+      "label": "Wilmington, September 1787: General Washington, returning to Mount Vernon, alights to walk over the bridge near the Head of Elk, which gives way",
+      "definition": "Printings of a paragraph from the Wilmington Gazette, late September 1787: 'his Excellency General Washington passed through Wilmington, on his return from Philadelphia to his seat in Mount Vernon, and on the same day, in crossing the bridge near the Head of Elk, the bridge gave way and his horse fell into the river. His Excellency had alighted in order to walk over the bridge, which fortunate circumstance probably saved a life so dear to his country'. A report from a paper, at second hand.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "cape-francois-letter-passes-required-for-american-vessels-in-french-west-indies-1787",
+      "kind": "message_group",
+      "label": "Cape Francois, September 1787: by an ordinance, no American vessel may enter a French port in the West Indies without a pass from the consul",
+      "definition": "Printings of an extract of a letter from an American house in Cape Francois, Hispaniola, of 4 September 1787, to a gentleman in Boston: 'We are informed by an Ordinance of this day, that NO American vessel (except in distress) will be permitted to enter any French ports in the West-Indies, unless the Captain is provided with a Pass from the Consul resident at the place of his departure'. A merchants' letter reporting a French ordinance.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "congress-requisition-for-1787-11-october-1787",
+      "kind": "document_group",
+      "label": "Congress, 11 October 1787: the requisition for 1787",
+      "definition": "Printings of Congress's resolutions of 11 October 1787 on a report of the Board of Treasury and a motion of Mr. Kean 'respecting the requisition for 1787': the sums wanting for the year's interest on the foreign and domestic debt, the quotas of the states, and the indents of interest to be received in payment. Congress's own resolutions.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "congress-appoints-judges-in-the-western-territory-october-1787",
+      "kind": "message_group",
+      "label": "New York, October 1787: Congress appoints Samuel Holden Parsons, John Armstrong and James M. Varnum judges in the western territory",
+      "definition": "Printings of a paragraph of October 1787: 'Congress yesterday appointed the Hon. Samuel Holden Parsons, John Armstrong, jun. and James M. Varnum, Esqrs. to be Judges in the Western Territory of the United States' (the time words change with each paper's date). A news paragraph reporting Congress's appointments.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "london-letter-on-virginia-additional-duty-on-british-ships-1787",
+      "kind": "message_group",
+      "label": "London, 17 July 1787: an American gentleman's letter calls Virginia's additional duty on British ships a wise measure",
+      "definition": "Printings of an extract of a letter from an American gentleman in London, 17 July 1787, to his correspondent in Richmond: 'The additional duty on British ships, &c. laid by the last General Assembly of Virginia, is in my opinion, a wise measure, but would be much more so, if it was general throughout the United States. It has raised the value of American ships here'. A private letter printed at second hand, its writer's opinion.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-report-ship-caractacus-taken-by-an-algerine-corsair-1787",
+      "kind": "message_group",
+      "label": "Philadelphia, November 1787: the ship Caractacus, from Charleston for France, taken by an Algerine corsair under Spanish colours",
+      "definition": "Printings of a Philadelphia paragraph of November 1787: 'The Caractacus, Sewall, from Charleston, South-Carolina, bound for France, laden with rice, chiefly, and some indigo, was captured within 30 leagues of her destination, by a stout bark, mounting 22 guns, under Spanish colours, which proved an Algerine corsair' (the New-York Packet and the New-Hampshire Gazette print the ship's name 'Ceractacus', and the New-Hampshire Gazette 'twenty leagues'); after rummaging the vessel they let her proceed. A report of a ship's news.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    },
+    {
+      "id": "mr-jay-letter-denying-sentiments-against-the-constitution-december-1787",
+      "kind": "document_group",
+      "label": "Mr. Jay's letter of 1 December 1787, from the Independent Gazetteer: he authorises the denial of sentiments imputed to him against the proposed Constitution",
+      "definition": "Printings of a letter of John Jay, New York, 1 December 1787, sent to the Independent Gazetteer of Philadelphia by the man he wrote to: 'I thank you for your obliging letter of the 24th ult. enclosing a paragraph respecting me in Mr. Oswald's paper of the same date'; he authorises its denial, 'and to declare, that, in my opinion, it is advisable for the people of America to adopt the Constitution proposed by the late Convention'. A letter and the note that sends it are counted as one item (X-1810-01). Mr. Jay's own letter.",
+      "admission_rule": "Reviewed 1787 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1787 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 240 items printed somewhere), and the families of 1786 were looked for on the 1787 pages (none reach them). Every item in 3 or more papers was counted by its own opening over all 1,297 pages in both transcriptions and merged into text units (33 of 123 met the bar); every page was swept for seven-word sequences shared by 4 or more papers, read with the stricter coverage test of 24 November (97 passages no item covers); every unit and passage that meets the bar was read, and the chosen items' openings were searched over all pages.",
+    "selection_rule": "The thin-year rule (register Y-THIN) as amended by the owner's choice B1 on 23 November 2026: an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks, and by at least 4; digests are not. As in R-01, items printed by every newspaper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35, a target, not a quota); one affair's items as in X-1800-01. The eligible items not chosen are listed with their counts and are not checked against the scans. Sub-stories (C-01), private persons (R-04) and the list of items read and not admitted (R-03) apply as in every year.",
+    "paper_counting": "1787 has 10 catalogue series, which are 7 papers (C-04): the New-York Packet; the Independent Journal (New York); the New-York Journal (the weekly register to 8 November, then the daily patriotic register); the Daily Advertiser (New York, from 1 October, under two catalogue numbers); the New-Hampshire Gazette (Portsmouth, Fowle's to 2 June, then under a second number); the Kentucke Gazette (Lexington, from 18 August); and the Pennsylvania Packet, and Daily Advertiser (Philadelphia, one issue, 19 September). The release's map lists no misfiled RevX page for 1787; three issues are filed under another date (X-1787-02).",
+    "items_admitted": {
+      "heads-of-the-treaty-with-the-emperor-of-morocco-1786": "classify_1787.tsv C01 (units U027 U026)",
+      "congress-recommends-the-states-repeal-laws-inconsistent-with-the-treaty-of-peace-april-1787": "classify_1787.tsv C02 (units sweep)",
+      "congress-12-july-1787-certificates-for-pensioned-officers": "classify_1787.tsv C03 (units sweep)",
+      "ordinance-for-the-government-of-the-territory-north-west-of-the-river-ohio-1787": "classify_1787.tsv C04 (units U044 U045 U046)",
+      "boston-report-british-ship-maria-on-lake-champlain-1787": "classify_1787.tsv C05 (units sweep)",
+      "result-of-the-federal-convention-the-constitution-september-1787": "classify_1787.tsv C06 (units U054-U066)",
+      "wilmington-report-general-washington-at-the-bridge-near-the-head-of-elk-1787": "classify_1787.tsv C07 (units sweep)",
+      "cape-francois-letter-passes-required-for-american-vessels-in-french-west-indies-1787": "classify_1787.tsv C08 (units sweep)",
+      "congress-requisition-for-1787-11-october-1787": "classify_1787.tsv C09 (units U078 U079)",
+      "congress-appoints-judges-in-the-western-territory-october-1787": "classify_1787.tsv C10 (units sweep)",
+      "london-letter-on-virginia-additional-duty-on-british-ships-1787": "classify_1787.tsv C12 (units U096)",
+      "philadelphia-report-ship-caractacus-taken-by-an-algerine-corsair-1787": "classify_1787.tsv C13 (units U097)",
+      "mr-jay-letter-denying-sentiments-against-the-constitution-december-1787": "classify_1787.tsv C14 (units U106)"
+    },
+    "counted_item_by_item": {
+      "Paper counts": "Every finder item of 1787 in 3 or more papers (and of 1786 over the 1787 pages: none) was counted by its own opening over all 1,297 pages in both transcriptions and merged into text units: 33 of 123 units met the bar, of which 7 are advertisements and legal notices and 13 are parts of the Constitution. Reading them, with the sweep's passages, gave 25 items read: 15 eligible and 10 below the bar (with The Federalist's numbers, each in 3 papers, as one line). Three are printed by every paper that survives for their weeks and are admitted; 10 are chosen (13 stories, 13 groups, 54 printings); 1 eligible item is listed as not chosen and 1 for the owner.",
+      "The bar": "Y-THIN: more than half of the papers that survive for the item's weeks (a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and at least 4. 1787 has 7 papers: 4 are in print from January to April, 3 in May and June, 4 or 5 in July and August, and 6 from September to December (7 when the Pennsylvania Packet, and Daily Advertiser's one issue, 19 September, falls in an item's weeks); the bar is 4, and no item can reach it in May and June.",
+      "Letters printed together": "A letter and the papers it sends are one item (X-1810-01): the Constitution, the Convention's resolutions and General Washington's letter (the Independent Journal's supplement prints the letter first); Mr. Jay's letter and the note that sends it to the printer (the New-Hampshire Gazette prints the letter without the note).",
+      "Printed with other time words": "The April paragraph on Congress's resolution (the New-Hampshire Gazette dates it 'April 14' and reads 'Yesterday' for 'On Friday last') and the October paragraph on the judges of the western territory ('yesterday', 'Tuesday last', 'On the 16th instant') are counted as one item each: the words are the same apart from the time.",
+      "Printed again": "C-08: the New-Hampshire Gazette reports the judges of the western territory again on 9 November, in its own words under Portsmouth.",
+      "Pages that quote an item or print a later part": "Not counted (C-07): the Daily Advertiser's printing of Congress's resolution of 21 February inside an essay by Cato (15 October); the New-York Journal's essays that quote the Constitution at length (18 October and later); the reports of the Pennsylvania convention that quote Mr. Mason's objections. Not counted (C-06): the Kentucke Gazette's printing of only the later articles of the treaty with Morocco (18 August, 'continued from our last'); the New-Hampshire Gazette's printing of only the later part of the requisition, with the quotas (21 November).",
+      "The Kentucke Gazette filed twice": "The Kentucke Gazette is filed twice for most of its issues (editions 1 and 2, two copies of the same issue); a paper is counted once, and the ledger uses edition 1 unless its page is filed under another date."
+    },
+    "not_admitted": {
+      "A Philadelphia paragraph of 17 October 1787: letters from Boston say that Mr. Gerry is censured for not signing the Constitution; a report from Virginia on Mr. Mason's arrival (4 of 6 in print)": "Eligible: printed by 4 of the 6 papers that survive for its weeks (DA, IJ, NHG, NYP); not chosen: of an affair already chosen in the same weeks (X-1800-01). Not checked against the scans.",
+      "Congress, 21 February 1787: 'in the opinion of Congress it is expedient that on the second Monday in May next, a Convention of delegates ... be held at Philadelphia' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The Daily Advertiser (15 October) prints it inside an essay by Cato (C-07); the New-York Journal printed it again on 31 May.",
+      "The States' acts appointing deputies to the Convention at Philadelphia (Virginia's; others), which share the Annapolis report's words 'to render the federal constitution adequate to the exigencies of the union' (1-2 each)": "By its own words below the bar for its weeks (each in 1 or 2 papers). Quoted again in essays (New-York Journal, 13 September; New-York Packet, 12 October).",
+      "Whitehall, 24 February 1787: George Miller appointed the King's consul in North and South Carolina and Georgia (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "The objections of George Mason, a delegate of Virginia to the Convention, to the proposed Constitution ('There is no declaration of rights') (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The Daily Advertiser and the New-York Journal (22 December) quote a passage in reports of the Pennsylvania convention (C-07).",
+      "The ratification of the Constitution by the convention of Delaware (Dover, December 1787) (3)": "By its own words below the bar for its weeks (3 papers, needs 4).",
+      "Petersburg, 6 December 1787: 'the Indians are determined to continue their hostilities on the frontier settlements' (3)": "By its own words below the bar for its weeks (3 papers, needs 4). The New-Hampshire Gazette (28 November) prints a Baltimore paragraph with the same words.",
+      "Congress, 3 July 1787, on a report of the Secretary for Foreign Affairs: well pleased with Thomas Barclay's conduct of the negotiations with Morocco (2)": "By its own words below the bar for its weeks (2 papers, needs 4).",
+      "Congress, 5 October 1787, on a report of the Secretary for Foreign Affairs: John Adams permitted to return from London (2)": "By its own words below the bar for its weeks (2 papers, needs 4).",
+      "Cato on the proposed Constitution ('The establishment of a vice president is as unnecessary as it is dangerous') (2)": "By its own words below the bar for its weeks (2 papers, needs 4).",
+      "The Federalist (Publius), its numbers of October to December 1787: each in 3 papers (3 each)": "By its own words below the bar for its weeks (3 papers, needs 4). Counted by machine with every page, not read one by one.",
+      "Advertisements, legal notices and formulas that stand in 4 or more papers (7 text units and the sweep's passages of the same kind)": "Not news items (C-10): insolvent and absent debtors' notices, a decree in chancery, notices of sales, merchants' and makers' advertisements (among them the New-York Air Furnace and a druggists' list), the assize of bread, theatre bills, a society's meeting notices, and recurring formulas of headings and requests to printers. They were read and not counted; the notices name private persons, so they are listed by count only (R-04)."
+    },
+    "for_the_owner": {
+      "A Pittsburgh report: a young Seneca man at an Indian camp on the Allegheny, among whom the smallpox raged, defied the disease and died within hours; communicated by the interpreter of the United States (4 of 7 in print)": "Eligible: printed by 4 of the 7 papers that survive for its weeks (IJ, KG, NHG, NYP); it turns on a private person (R-04) and is not chosen; listed without names. Not checked against the scans."
+    },
+    "for_user_decision": {
+      "The papers in print, the bar and the choice (X-1787-00)": "As built: Y-THIN as amended (B1), with 7 papers (10 catalogue series; three papers stand under two numbers each, C-04); the bar of 4 makes 15 items eligible. Three are printed by every paper in print and admitted; 10 others are chosen (13 stories, 13 groups, 54 printings); one is listed as not chosen and one for the owner.",
+      "Choosing among the eligible items (X-1787-01)": "As built: every eligible item is chosen except the Philadelphia paragraph on Mr. Gerry and Mr. Mason (October), of the affair of the Constitution in the same weeks (X-1800-01). No item is eligible from January to March or in May and June; the call for the Convention (Congress, 21 February) stands in 3 of the 4 papers in print.",
+      "Pages filed under another date (X-1787-02)": "As built: the Independent Journal's supplement of 22 September (filed with the issue of 12 September), the New-York Packet of 5 October (filed with 2 October) and the Kentucke Gazette's pages of 13 October (filed also under 6 October) keep the release's page keys; their printings carry notes with the printed dates. A filing correction, as in v0.11.7 and v0.11.13, can date them as printed at the owner's word.",
+      "Private persons (X-1787-03)": "As built (R-04): the Pittsburgh report of a young Seneca man's death among the smallpox (4 of 7) turns on one man and is listed for the owner without names; it can be admitted at the owner's word.",
+      "Advertisements and legal notices (X-1787-04)": "As built (C-10): seven text units over the bar, and many sweep passages, are advertisements, legal notices and formulas; they are not news items and are not counted. The New York dailies print the same notices for weeks.",
+      "The Federalist (X-1787-05)": "As built: each number of The Federalist printed in 1787 stands in 3 papers (the Independent Journal, the New-York Packet and the Daily Advertiser), below the bar of 4; they are listed as one line."
+    }
+  }
+}

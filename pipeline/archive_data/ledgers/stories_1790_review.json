@@ -1,0 +1,216 @@
+{
+ "findings": {
+  "S90-001": [
+   "Scan matches the excerpt; the salutation and the large initial 'I' of 'I EMBRACE' are printed."
+  ],
+  "S90-002": [
+   "Scan matches the excerpt, printed under the heading 'SPEECH.'; the large initial 'I' is printed."
+  ],
+  "S90-003": [
+   "Scan matches the excerpt, except that the transcription leaves out the large initial 'I' of 'I EMBRACE', which is printed. This print spells 'favourable', as transcribed."
+  ],
+  "S90-004": [
+   "Scan matches the excerpt. The report is printed after the House's proceedings ('Adjourned till Monday'), opening with a quotation mark."
+  ],
+  "S90-005": [
+   "Scan matches the excerpt."
+  ],
+  "S90-006": [
+   "Scan matches the excerpt, which follows this print's shorter wording ('reports' without 'respectfully', 'the 9th of Jan.'); the transcription silently corrects the printer's misprint 'modificaions'. The heading date is March 4, 1790."
+  ],
+  "S90-007": [
+   "The speech stands in the second column of the crop and matches the excerpt, except that the transcription leaves out the printed initial 'I' of 'I EMBRACE'. The scan is small and blurred, so 'favorable' is read with medium confidence."
+  ],
+  "S90-008": [
+   "Crops drawn by hand show the heading and the report's opening, carried over to the next column; scan matches the excerpt, except that the print has the misprint 'DEPARNMENT', which the transcription corrects."
+  ],
+  "S90-009": [
+   "Scan matches the excerpt."
+  ],
+  "S90-010": [
+   "Scan matches the excerpt. The paragraph follows the end of another item, with no heading or dateline."
+  ],
+  "S90-011": [
+   "Scan matches the excerpt. The paragraph follows the end of another item ('...and Sweden.'), with no heading or dateline."
+  ],
+  "S90-012": [
+   "Scan matches the excerpt."
+  ],
+  "S90-013": [
+   "Scan matches the excerpt; 'late occurred' is the print's own wording, a printed difference, not a transcription error. The heading above is cut off by the crop but looks like 'ANECDOTE.'."
+  ],
+  "S90-014": [
+   "Scan matches the excerpt. NHG prints the paragraph inside its longer text, without a dateline, under a centred line 'The WESTERN POSTS—'."
+  ],
+  "S90-015": [
+   "Scan matches the excerpt, dateline included. The paragraph stands under 'AMERICAN ADVICES.' and 'BOSTON, NOV. 3.'."
+  ],
+  "S90-016": [
+   "Scan matches the excerpt; the italic opening line is blurred but readable."
+  ],
+  "S90-017": [
+   "Scan matches the excerpt. GUS prints the paragraph inside its longer text, directly after the line on President Mifflin's election as Governor, with no dateline."
+  ],
+  "S90-018": [
+   "Scan matches the excerpt; the crop is small but every word is legible. The paragraph follows the end of another item, with no dateline."
+  ],
+  "S90-019": [
+   "The second scan shows the paragraph's opening, and it matches the excerpt. KG sets the paragraph in italic type, after the end of another item."
+  ],
+  "S90-020": [
+   "A crop drawn by hand shows the dateline 'BOSTON, November 10.' and the paragraph; scan matches the excerpt."
+  ]
+ },
+ "crops": {
+  "S90-001": [
+   "S90-001.jpg"
+  ],
+  "S90-002": [
+   "S90-002.jpg"
+  ],
+  "S90-003": [
+   "S90-003.jpg"
+  ],
+  "S90-004": [
+   "S90-004.jpg"
+  ],
+  "S90-005": [
+   "S90-005.jpg"
+  ],
+  "S90-006": [
+   "S90-006.jpg"
+  ],
+  "S90-007": [
+   "S90-007.jpg"
+  ],
+  "S90-008": [
+   "S90-008-1.jpg",
+   "S90-008-2.jpg"
+  ],
+  "S90-009": [
+   "S90-009.jpg"
+  ],
+  "S90-010": [
+   "S90-010.jpg"
+  ],
+  "S90-011": [
+   "S90-011.jpg"
+  ],
+  "S90-012": [
+   "S90-012.jpg"
+  ],
+  "S90-013": [
+   "S90-013.jpg"
+  ],
+  "S90-014": [
+   "S90-014.jpg"
+  ],
+  "S90-015": [
+   "S90-015.jpg"
+  ],
+  "S90-016": [
+   "S90-016.jpg"
+  ],
+  "S90-017": [
+   "S90-017.jpg"
+  ],
+  "S90-018": [
+   "S90-018.jpg"
+  ],
+  "S90-019": [
+   "S90-019.jpg"
+  ],
+  "S90-020": [
+   "S90-020.jpg"
+  ]
+ },
+ "boxes": {
+  "S90-008": [
+   [
+    465,
+    2045,
+    805,
+    2375
+   ],
+   [
+    805,
+    85,
+    1140,
+    205
+   ]
+  ],
+  "S90-020": [
+   [
+    80,
+    205,
+    625,
+    415
+   ]
+  ]
+ },
+ "notes": {
+  "S90-006": "Prints 'the Secretary of the Treasury reports' without 'respectfully', 'the 9th of Jan. past', and the misprint 'modificaions' (scan).",
+  "S90-008": "The first of three parts (17, 24 and 31 May), each under the report's heading; prints the misprint 'DEPARNMENT' in the heading (scan).",
+  "S90-013": "Prints the anecdote under the heading 'Anecdote', with 'late occurred', where the other printings have 'lately' (scan).",
+  "S90-014": "Prints the paragraph inside a longer review of public affairs, without a dateline (scan).",
+  "S90-015": "Prints the paragraph under 'American Advices. BOSTON, NOV. 3.' (scan).",
+  "S90-017": "Prints the paragraph inside a longer review of public affairs, without a dateline (scan).",
+  "S90-019": "The issue survives only as a second scan; the paragraph is set in italic type (scan).",
+  "S90-020": "Dates the paragraph 'BOSTON, November 10.', where the New-Hampshire Gazetteer has 3 November (scan)."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1790 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 209 items printed somewhere). The same script was run with year 1789 over the 1790 pages (items_from_1789.json: 38 items). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1790 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (115 texts). For every text at the bar or one paper short of it, the papers the comparison missed were looked for again on their pages (the best page within the text's weeks) and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09); each was read. The acts of Congress were counted act by act, a page counting when it prints the act's enacting words, not only its title. Every admitted and chosen item was then counted by phrase searches of its opening over all 950 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+  "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35, a target, not a quota); digests are not admitted. In 1790, 5 items are eligible: 3 are printed by every paper that survives for their weeks and are admitted; the other 2 are chosen, since with so few eligible items each adds a month or a kind of news.",
+  "paper_counting": "1790 has 5 catalogue series, which are 5 papers. The New-Hampshire Gazette and General Advertiser (Portsmouth; 51 issues), the Gazette of the United States (New York, then Philadelphia from November; Wednesdays and Saturdays, 104 issues) and the New-Hampshire Gazetteer (Exeter; 41 issues) run all year; the Kentucky Gazette (Lexington) survives from January to 2 August and from 4 to 18 December (34 issues, most scanned twice; five of them, among them those of December, survive only as second scans, C-05); the Patowmac Guardian, and Berkeley Advertiser (Shepherdstown, Virginia; Mondays) from 15 November (7 issues). Papers in print in any three weeks: 4 from January to July; 3 from mid-August to October, when the Kentucky Gazette's issues do not survive; 4 or 5 in November and December.",
+  "counted_item_by_item": {
+   "Paper counts": "The admitted and chosen items were counted by phrase searches of their openings and every hit read; their counts and the papers that survive for their weeks are in the README's table of stories. The items read and below the bar are listed in not_admitted with their counts.",
+   "A report printed in parts": "The Kentucky Gazette prints the Secretary of the Treasury's report of 4 March in three parts (17, 24 and 31 May), each under the report's heading; it is counted once, on 17 May, where its opening stands.",
+   "A paragraph inside a longer text": "The Boston paragraph on the Western Posts stands alone under its dateline in the New-Hampshire Gazetteer and the Patowmac Guardian, and inside a longer review of public affairs in the New-Hampshire Gazette and the Gazette of the United States; it is counted by its own words (as 1782 and 1789 counted reports inside longer paragraphs).",
+   "The acts of Congress": "Each act is its own item, counted where its enacting words are printed; lists of the session's acts that give only their titles, and journals naming the bills, are not counted (C-07). No act of 1790 is printed in full by 4 papers; eight are printed by three (the Gazette of the United States and the two New-Hampshire papers).",
+   "Notices that share their regulations": "The War Office printed two notices to the invalid pensioners (one of 1789, in the Kentucky Gazette; one naming the places of payment, in the Gazette of the United States and the New-Hampshire Gazetteer), each followed by the same regulations; the regulations are counted by their own opening (3 of 4), the New-Hampshire Gazette printing them after its own summary of the notice, without that opening (C-06).",
+   "Quotations": "A correspondent's letter quoting the President's speech of 8 January (the Gazette of the United States, 14 April) is not counted (C-07).",
+   "Second scans": "The Kentucky Gazette's second scans hold the same issues and are not counted again (C-05); five of its issues survive only as second scans, and the essay on war is counted there (4 December)."
+  },
+  "for_user_decision": {
+   "The choice under the amended rule (B1)": "As built: the two eligible items not printed by every surviving paper (the paragraph against the idea that wars are necessary, 4 of 5, and the Boston paragraph on the Western Posts, 4 of 5) are chosen, since the year has only five eligible items and each adds a kind of news; the year has 5 stories, far below a standard year's range, because few items reach four papers.",
+   "An anecdote admitted by the first part": "As built (C-10): the anecdote of a French gentleman, a story told for amusement, is printed by all four papers that survive for its weeks and is admitted by the rule's first part, as 1793's sea serpent stood; 1797 did not choose an anecdote, but there it was in the chosen band.",
+   "The floor of four papers from August to October": "As built: from mid-August to October only three papers survive (the Kentucky Gazette's issues do not), so nothing printed only then reaches the bar of 4; items printed by all three of them are below it, among them the September paragraph on the Western Posts and the British commanders of 1784.",
+   "The proceedings of the House": "As built (C-09): the House's proceedings, which the Gazette of the United States reported and the other papers reprinted in parts, are runs of a day's business; the day of 5 March is in all four papers and is not admitted."
+  },
+  "not_admitted": {
+   "House of Representatives, the proceedings of 5 March 1790 ('A message from the Senate informing that they have passed an act to accept of the cession of certain lands in the Western Territory ...') (4)": "Digest, not admitted: the proceedings of a day of the House, a run of unrelated business (C-09); the Gazette of the United States reported the proceedings and the other papers reprinted them in parts; in 4 of the 4 papers that survive for its weeks (needs 4).",
+   "The President's speech to both Houses of Congress, 8 December 1790 ('In meeting you again I feel much satisfaction ...') (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the Kentucky Gazette's surviving issues of December (second scans only) and the New-Hampshire Gazetteer's do not print it.",
+   "The Secretary of the Treasury's report on the public credit, January 1790 (its plan for the debt: 'every hundred dollars subscribed, payable in the debt ...') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Kentucky Gazette's surviving issues do not print it.",
+   "The War Office's regulations for paying the invalid pensioners ('The returns which have been or shall be made to the Secretary for the department of war ... Every application for payment must be accompanied by the following vouchers'), printed after one of two War Office notices (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Kentucky Gazette, the Gazette of the United States and the New-Hampshire Gazetteer print the regulations from their opening, after one of two War Office notices (each notice in one or two papers); the New-Hampshire Gazette prints them after its own summary of the notice, without their opening sentence (C-06).",
+   "Philadelphia, 1 December 1790: 'Saturday last the President of the United States, his Lady and Family, arrived in this city from Virginia' (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette's and the Kentucky Gazette's surviving issues of December do not print it.",
+   "The attending physician's account of Doctor Franklin's last illness, April 1790 ('The stone, with which he had been afflicted ...') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazetteer's surviving issues do not print it.",
+   "The acts of the second session of Congress printed in full by three papers each (the Gazette of the United States and the two New-Hampshire papers; the Kentucky Gazette's surviving issues print none of them): naturalization, the authentication of public records, processes in the courts, the exportation of goods not inspected, the acceptance of North Carolina's cession of its western lands, the government of the territory south of the Ohio, the remission of forfeitures, and one act for the relief of a merchant house (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; each counted where its enacting words are printed; lists of the session's acts give only their titles (C-07).",
+   "September 1790: 'Western Posts. In 1784, Congress deputed Gen. Hull, to demand of Gen. Haldimand, the Governor of Canada, the surrender of the Posts within the United States' (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for its weeks; the bar asks for at least 4, and the Kentucky Gazette's issues of August to November do not survive.",
+   "Other items of 3 papers or fewer (by count)": "The other items the finder lists in 3 papers or fewer, compared by machine on the first 40 words of their openings with every page of 1790 (papers the comparison missed were looked for again when an item was one paper short); none reaches the bar. Among them are items printed by all three papers that survive from mid-August to October, when the Kentucky Gazette's issues do not survive, which the bar's floor of 4 leaves out. Not read one by one."
+  },
+  "for_the_owner": {},
+  "counts": {
+   "eligible_items": 5,
+   "admitted_by_the_first_part": 3,
+   "chosen_items": 2,
+   "not_chosen_listed": 0,
+   "digests": 1,
+   "read_below_the_bar": 7
+  }
+ },
+ "verdict_summary": {
+  "yes": 20,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 16,
+  "minor_errors": 4,
+  "major_problem": 0,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 18,
+  "manual_box": 2
+ }
+}

@@ -239,9 +239,34 @@ Four rounds then read the stories earlier rounds had held back for framing, by e
 - **Decisions:** on 23 November 2026 the owner kept every point of the 1810 review as built, and asked that 1801 show the other side of two admitted documents: the remonstrance of the merchants of New Haven, and a Knoxville paper's report that the Cherokees refused to sell land or permit roads, each in 6 papers, now stand as sub-stories beside the President's reply and the Nashville paragraph on the commissioners' aims. Every other point of 1801 stays as built: two items that turn on private persons stay out, listed without names.
 - **Not admitted:** 46 items for 1801 and 57 for 1810 joined the list (580 in all).
 
+### The thin years, first batch: 1770 to 1790 (data releases v0.11.16 to v0.11.30, 24 November 2026)
+
+In most years before 1800 few papers survive, and almost no single item reaches seven papers, so the standard rule would admit almost nothing. The owner chose a rule for these thin years on 23 November 2026 (register, Y-THIN): an item is eligible when it was printed by more than half of the papers that survive for its weeks, and by at least four; items printed by every one of them are admitted, and the others are chosen to cover the months and the kinds of news, about as many stories as in a standard year. Four review sessions read the years overnight, one year at a time, and every printing was checked against its scan as in the other years. On 24 November the owner had each finished review published as built: 273 stories with 1,625 printings in fifteen years. 1784 has no item in four papers (Y-1784), and 1785 and 1786 have too few papers to be read (Y-1785-86). The other thin years follow as their reviews finish.
+
+| Year | Release | Stories | Printings | Categories |
+|---|---|---|---|---|
+| 1770 | v0.11.16 | 3 | 12 | Trade and the colonies · Colonial government |
+| 1772 | v0.11.17 | 11 | 52 | London and the colonies · The frontier · The islands and Europe |
+| 1774 | v0.11.18 | 25 | 159 | The Crown, Parliament and the governor · The colonies: meetings, assemblies and the Congress · Europe and the world |
+| 1775 | v0.11.19 | 24 | 206 | The Crown, Parliament and London · The colonies and the Congress · The war in America |
+| 1777 | v0.11.20 | 26 | 186 | War and the armies · Britain, France and Europe · Congress and American government |
+| 1778 | v0.11.21 | 26 | 161 | The war in America · Britain's peace offers, Parliament and Congress · France, the alliance and Europe |
+| 1779 | v0.11.22 | 27 | 161 | The war in America · Britain, Spain and the war at sea · Congress, the currency and public life |
+| 1780 | v0.11.23 | 23 | 142 | War and the armies · Britain, Europe and the West Indies · Congress and American government |
+| 1781 | v0.11.24 | 25 | 144 | The war in America · Britain, the Dutch Republic and Europe · Congress and the public finances |
+| 1782 | v0.11.25 | 30 | 165 | The war in America · Britain, France, Spain and Holland; the war at sea · Congress, the peace and public life |
+| 1783 | v0.11.26 | 22 | 109 | The peace · The end of the war: the army, the prisoners and the debt · Ships, ports and news by sea |
+| 1787 | v0.11.27 | 13 | 54 | The Convention and the Constitution · Foreign powers, trade and the sea · Congress and American government |
+| 1788 | v0.11.28 | 7 | 30 | The Constitution and Congress · News from abroad |
+| 1789 | v0.11.29 | 6 | 24 | The new federal government · War and unrest in Europe · American public life |
+| 1790 | v0.11.30 | 5 | 20 | The federal government · American public life · The western posts and Britain |
+
+- **Not admitted:** 1,596 items of these years joined the list (2,176 in all); the eligible items not chosen are listed with their counts, made by machine on their openings and not checked on the scans.
+- **The radio:** their passages were recorded on a school lab PC from the ledgers before the release, with the same voices and keys as on this laptop.
+
 ### What the reviews read and did not admit (22 November 2026)
 
-By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8) 388 since 1800 and 1804 were reviewed (v0.11.10), 477 since 1802 and 1803 (v0.11.12) and 580 since 1801 and 1810 (v0.11.15), each with the number of papers, its kind and its reason.
+By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8) 388 since 1800 and 1804 were reviewed (v0.11.10), 477 since 1802 and 1803 (v0.11.12), 580 since 1801 and 1810 (v0.11.15) and 2,176 since the first thin years (v0.11.30), each with the number of papers, its kind and its reason.
 
 - **Kinds:** below the rule (118), not chosen because its months and kind of news were already covered (80), digests, lists and proceedings (14), private persons (17) and other (54, most of them 1797's).
 - **Complete by check:** the script stops unless every key of `not_admitted`, `for_the_owner` and `for_user_decision` in every ledger (128 keys in 15 ledgers) is listed or accounted for: 32 items a later round admitted, 11 repeats, 4 counting decisions and 2 notes on admitted stories. It also checks that each of the 122 families of 1797 that were read is admitted or listed.
@@ -382,7 +407,7 @@ The pulse view is a direct translation of the admitted group records:
 Version 1 (below) is kept as `telescope-v1.html`.
 
 
-`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4, 199 since v0.11.6, 207 since v0.11.8, 243 since v0.11.10, 280 since v0.11.12 and 315 since v0.11.15).
+`telescope.html` shows every story at once as a field of stars: 48,127 matched stories plus the 21 reviewed ones (48,270 and 98 since data release v0.10.2; 143 reviewed since v0.11.4, 199 since v0.11.6, 207 since v0.11.8, 243 since v0.11.10, 280 since v0.11.12, 315 since v0.11.15 and 588 since v0.11.30).
 
 - **Left to right:** the date of first printing.
 - **Up and down:** the average latitude of the towns whose papers printed the story, north at the top. A small fixed scatter, up to 0.12°, keeps stories printed by the same papers from stacking into a line.
@@ -627,5 +652,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.11.15) |
+| Data release | [`data/`](../data) (v0.11.30) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

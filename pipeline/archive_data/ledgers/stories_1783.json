@@ -1,0 +1,3234 @@
+{
+  "ledger_id": "ledger:stories-1783",
+  "ledger_version": 1,
+  "base_release": "0.11.25",
+  "target_release": "0.11.26",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1783",
+  "evidence_dir": "outputs/story_discovery_1783/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1783, and of 1782 where they reach the 1783 pages (long-running ones included), every item in 3 or more papers compared by machine with every page and counted again by its opening, a sweep of word-for-word passages shared by 4 or more papers for short items the families miss, phrase searches on all 1,100 pages of 1783 in both transcriptions, reading of every hit, and scan checks of each admitted passage, by the thin-year rule (Y-THIN, as amended on 23 November 2026: an item printed by more than half of the papers that survive for its weeks, and by at least 4, is eligible; the items printed by every paper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1783/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1783/items_from_1782.json": "retrieval_candidates",
+    "outputs/story_discovery_1783/count_1783.json": "retrieval_candidates",
+    "outputs/story_discovery_1783/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1783/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1783.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1783_review.json": "scan_review",
+    "outputs/story_discovery_1783/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1783/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S83-001",
+      "page_key": "sn83021127|1783-01-07|1|2",
+      "excerpt_start": "RICHMOND, (Virginia) December 28. Extract of",
+      "excerpt_end": "their towns were laid in ashes, and",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-clark-letter-on-the-expedition-from-the-ohio-november-1782"
+      ],
+      "summary": "General Clark writes on 27 November 1782 that his force left the Ohio and 'surprised the principal Shawanese town'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'detached strong parties'; the transcription 'detached from parties' loses the word 'strong', a transcription error that changes the sense. The letter is dated November 27, and the rest of the excerpt matches."
+      ],
+      "crops": [
+        "S83-001.jpg"
+      ],
+      "family": [
+        "R1783-0012",
+        "R1783-0045",
+        "R1783-0140",
+        "R1783-0141"
+      ]
+    },
+    {
+      "id": "S83-002",
+      "page_key": "sn83021127|1783-01-14|1|1",
+      "excerpt_start": "Oct. 24. The negotiations for peace",
+      "excerpt_end": "contents of these propositions are not mentioned.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-the-negotiations-for-peace-seem-to-be-broken-up-october-1782"
+      ],
+      "summary": "Paris, 24 October 1782: the negotiations for peace 'seem to be broken up', the propositions of the court of London rejected.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+      ],
+      "crops": [
+        "S83-002.jpg"
+      ],
+      "family": [
+        "R1783-0018"
+      ]
+    },
+    {
+      "id": "S83-003",
+      "page_key": "sn83021127|1783-01-14|1|3",
+      "excerpt_start": "The London Evening Post of the",
+      "excerpt_end": "that were convoy to the above Fleet.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-evening-post-statement-of-the-jamaica-fleet-of-july-1782"
+      ],
+      "summary": "The London Evening Post's statement of the Jamaica fleet of 25 July 1782: of 103 merchant ships, 62 arrived and 15 were taken.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'which sailed from Jamaica' with a long s; the transcription 'failed' is a transcription error that changes the sense. The counts (62, 15, 9, 14, 2, 1; total 103) match."
+      ],
+      "crops": [
+        "S83-003.jpg"
+      ],
+      "family": [
+        "R1783-0019",
+        "R1783-0020",
+        "R1783-0047",
+        "R1783-0150",
+        "R1783-0151",
+        "R1783-0157"
+      ]
+    },
+    {
+      "id": "S83-004",
+      "page_key": "sn83021127|1783-01-14|1|3",
+      "excerpt_start": "Philadelphia, Jan. 14. In the Ostend",
+      "excerpt_end": "of his country and honour to himself;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "mr-miller-late-printer-of-the-london-evening-post-arrives-january-1783"
+      ],
+      "summary": "Mr. Miller, late printer of the London Evening Post, arrives at Baltimore in the Ostend cutter.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-004.jpg"
+      ],
+      "family": [
+        "R1783-0019",
+        "R1783-0020",
+        "R1783-0047",
+        "R1783-0150",
+        "R1783-0151",
+        "R1783-0157"
+      ]
+    },
+    {
+      "id": "S83-005",
+      "page_key": "sn83025471|1783-01-15|1|2",
+      "excerpt_start": "DECEMBER 28. Extract of a letter",
+      "excerpt_end": "laid in ashes, and every thing they",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-clark-letter-on-the-expedition-from-the-ohio-november-1782"
+      ],
+      "summary": "The New-Jersey Gazette prints General Clark's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from one modernised spelling ('surprized' given as 'surprised'). The heading dates the letter November 17 where the other printings have 27, and the paper omits 'afterwards': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S83-005.jpg"
+      ],
+      "family": [
+        "R1783-0012",
+        "R1783-0134",
+        "R1783-0144"
+      ]
+    },
+    {
+      "id": "S83-006",
+      "page_key": "sn83021127|1783-01-16|1|1",
+      "excerpt_start": "Philadelphia, Jan. 16. On Tuesday evening",
+      "excerpt_end": "\"I have the honour to communicate to",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "major-burnet-arrives-with-general-greenes-dispatches-january-1783"
+      ],
+      "summary": "Major Burnet arrives at Philadelphia with General Greene's letter of 19 December 1782 on the evacuation of Charleston.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except that 'aid-de-camp', broken over two lines, is given as 'aide-camp', a minor garble."
+      ],
+      "crops": [
+        "S83-006.jpg"
+      ],
+      "family": [
+        "R1783-0013"
+      ]
+    },
+    {
+      "id": "S83-007",
+      "page_key": "sn84023855|1783-01-21|1|2",
+      "excerpt_start": "RICHMOND, December 28. Extract of a",
+      "excerpt_end": "towns were laid in ashes, and every",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-clark-letter-on-the-expedition-from-the-ohio-november-1782"
+      ],
+      "summary": "The Connecticut Courant prints General Clark's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the print's 'Shawaneses town' is given as 'Shawanese town', a minor difference. The paper prints 'principle' for 'principal': a printed difference."
+      ],
+      "crops": [
+        "S83-007.jpg"
+      ],
+      "family": [
+        "R1782-0124",
+        "R1783-0012",
+        "R1783-0164"
+      ]
+    },
+    {
+      "id": "S83-008",
+      "page_key": "sn83025471|1783-01-22|1|2",
+      "excerpt_start": "The London Evening Post of the",
+      "excerpt_end": "Missing, 14. Re-taken, 2. Put back, 1.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-evening-post-statement-of-the-jamaica-fleet-of-july-1782"
+      ],
+      "summary": "The New-Jersey Gazette prints the statement of the Jamaica fleet.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'which sailed from Jamaica' with a long s; the transcription 'failed' is a transcription error that changes the sense. The rest of the excerpt, counts included, matches."
+      ],
+      "crops": [
+        "S83-008.jpg"
+      ],
+      "family": [
+        "R1782-0811",
+        "R1783-0013",
+        "R1783-0019",
+        "R1783-0020",
+        "R1783-0146",
+        "R1783-0159"
+      ]
+    },
+    {
+      "id": "S83-009",
+      "page_key": "sn83025471|1783-01-22|1|2",
+      "excerpt_start": "Jan. 16. On Tuesday evening Major",
+      "excerpt_end": "\"I have the honour to communicate to",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "major-burnet-arrives-with-general-greenes-dispatches-january-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Philadelphia report of Major Burnet's arrival with General Greene's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper spells 'despatches' where the others print 'dispatches': a printed difference."
+      ],
+      "crops": [
+        "S83-009.jpg"
+      ],
+      "family": [
+        "R1782-0811",
+        "R1783-0013",
+        "R1783-0019",
+        "R1783-0020",
+        "R1783-0146",
+        "R1783-0159"
+      ]
+    },
+    {
+      "id": "S83-010",
+      "page_key": "sn83025471|1783-01-22|1|2",
+      "excerpt_start": "January 14. In the Ostend cutter,",
+      "excerpt_end": "of his country and honour to himself;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "mr-miller-late-printer-of-the-london-evening-post-arrives-january-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Philadelphia report of Mr. Miller's arrival.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Just after it the paper prints 'in asserting the cause of America' without 'and defending': a printed difference."
+      ],
+      "crops": [
+        "S83-010.jpg"
+      ],
+      "family": [
+        "R1782-0811",
+        "R1783-0013",
+        "R1783-0019",
+        "R1783-0020",
+        "R1783-0146",
+        "R1783-0159"
+      ]
+    },
+    {
+      "id": "S83-011",
+      "page_key": "sn84023855|1783-01-28|1|2",
+      "excerpt_start": "P H I L A D",
+      "excerpt_end": "for these fifteen years past, had so",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "mr-miller-late-printer-of-the-london-evening-post-arrives-january-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Philadelphia report of Mr. Miller's arrival.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints 'had so freely exercised' where the others print 'has': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S83-011.jpg"
+      ],
+      "family": [
+        "R1783-0019",
+        "R1783-0136",
+        "R1783-0149",
+        "R1783-0156",
+        "R1783-0167",
+        "R1783-0168",
+        "R1783-0172"
+      ],
+      "scan_boxes": [
+        [
+          2546,
+          981,
+          3739,
+          1642
+        ]
+      ]
+    },
+    {
+      "id": "S83-012",
+      "page_key": "sn84023855|1783-01-28|1|3",
+      "excerpt_start": "The London Evening Post of the",
+      "excerpt_end": "Missing 14. Retaken 2. Put back 1.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-evening-post-statement-of-the-jamaica-fleet-of-july-1782"
+      ],
+      "summary": "The Connecticut Courant prints the statement of the Jamaica fleet.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'which sailed from Jamaica' with a long s; the transcription 'failed' is a transcription error that changes the sense. The paper misprints 'af November', which the transcription silently corrects to 'of'; the counts match."
+      ],
+      "crops": [
+        "S83-012.jpg"
+      ],
+      "family": [
+        "R1782-0827",
+        "R1783-0020",
+        "R1783-0176",
+        "R1783-0177"
+      ]
+    },
+    {
+      "id": "S83-013",
+      "page_key": "sn83025471|1783-01-29|1|1",
+      "excerpt_start": "Oct. 24. The negotiations for peace",
+      "excerpt_end": "contents of these propositions are not mentioned.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-the-negotiations-for-peace-seem-to-be-broken-up-october-1782"
+      ],
+      "summary": "The New-Jersey Gazette prints the Paris paragraph on the negotiations for peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The two crops together show the whole excerpt, which runs from the foot of one column to the head of the next; it matches apart from the modernised spelling 'negotiations' (print 'negociations')."
+      ],
+      "crops": [
+        "S83-013-1.jpg",
+        "S83-013-2.jpg"
+      ],
+      "family": [
+        "R1783-0018",
+        "R1783-0049",
+        "R1783-0153"
+      ]
+    },
+    {
+      "id": "S83-014",
+      "page_key": "sn83021127|1783-01-30|1|2",
+      "excerpt_start": "L O N D O N,",
+      "excerpt_end": "resulting from speculations in the funds, during",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "townshend-letter-to-the-bank-of-england-november-1782"
+      ],
+      "summary": "London, 23 November 1782: Mr. Townshend writes to the Bank of England that the negotiations at Paris are near a crisis.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper spells the secretary's name 'Townshend' where the other printings have 'Townsend': a printed difference."
+      ],
+      "crops": [
+        "S83-014.jpg"
+      ],
+      "family": [
+        "R1783-0021"
+      ]
+    },
+    {
+      "id": "S83-015",
+      "page_key": "sn83025585|1783-02-01|1|1",
+      "excerpt_start": "RICHMOND, (Virginia) December 28. Extract of",
+      "excerpt_end": "their towns were laid in ashes, and",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "general-clark-letter-on-the-expedition-from-the-ohio-november-1782"
+      ],
+      "summary": "The New-Hampshire Gazette prints General Clark's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the paper spells 'Shawenese', which the transcription gives as 'Shawanese', a minor difference. The letter is dated November 27 and the writer is styled 'Gen. Clarke'."
+      ],
+      "crops": [
+        "S83-015.jpg"
+      ],
+      "family": [
+        "R1782-0124",
+        "R1783-0012"
+      ]
+    },
+    {
+      "id": "S83-016",
+      "page_key": "sn83025585|1783-02-01|1|2",
+      "excerpt_start": "PHILADELPHIA, January 16. On Tuesday evening",
+      "excerpt_end": "Quarters, December 19, 1782. \" I HAVE",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "major-burnet-arrives-with-general-greenes-dispatches-january-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Philadelphia report of Major Burnet's arrival with General Greene's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-016.jpg"
+      ],
+      "family": [
+        "R1783-0013",
+        "R1783-0019",
+        "R1783-0141",
+        "R1783-0178"
+      ]
+    },
+    {
+      "id": "S83-017",
+      "page_key": "sn83025585|1783-02-01|1|2",
+      "excerpt_start": "In the Ostend cutter, which arrived",
+      "excerpt_end": "asserting and defending the cause of America.—Mr.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "mr-miller-late-printer-of-the-london-evening-post-arrives-january-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Philadelphia report of Mr. Miller's arrival.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints '15 years' in figures and spells 'honor': printed differences."
+      ],
+      "crops": [
+        "S83-017.jpg"
+      ],
+      "family": [
+        "R1783-0013",
+        "R1783-0019",
+        "R1783-0141",
+        "R1783-0178"
+      ]
+    },
+    {
+      "id": "S83-018",
+      "page_key": "sn83025585|1783-02-01|1|2",
+      "excerpt_start": "B O S T O N,",
+      "excerpt_end": "on board—This is the fifth prize Capt.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prize-ship-of-20-guns-to-the-frigate-hague-january-1783"
+      ],
+      "summary": "Boston: a ship of 20 guns, from St. Lucia, arrives as a prize to the Continental frigate Hague.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints '1800' barrels where the other printings have 1600: a printed difference, not a transcription error. The print's misprint 'Commanper' is silently corrected to 'Commander' in the transcription."
+      ],
+      "crops": [
+        "S83-018-1.jpg",
+        "S83-018-2.jpg"
+      ],
+      "family": [
+        "R1783-0013",
+        "R1783-0019",
+        "R1783-0141",
+        "R1783-0178"
+      ]
+    },
+    {
+      "id": "S83-019",
+      "page_key": "sn83025585|1783-02-01|1|3",
+      "excerpt_start": "State of the ships that were",
+      "excerpt_end": "150 leagues to the westward of Corvo.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-evening-post-statement-of-the-jamaica-fleet-of-july-1782"
+      ],
+      "summary": "The New-Hampshire Gazette prints the statement of the Jamaica fleet.",
+      "note": "Prints the state of the ships of the convoy, 'as taken from the London evening post, of Nov. 12', without the statement of the merchant ships (counted with it, C-02).",
+      "scan_findings": [
+        "Scan matches the excerpt. The paper prints only the state of the convoy ships, under its own heading naming 'the Jamaica fleet (of 103 sail)', without the count of the merchant ships."
+      ],
+      "crops": [
+        "S83-019.jpg"
+      ],
+      "family": [
+        "R1783-0020",
+        "R1783-0045"
+      ]
+    },
+    {
+      "id": "S83-020",
+      "page_key": "sn84023855|1783-02-04|1|1",
+      "excerpt_start": "Oct. 24. The negotiations for peace",
+      "excerpt_end": "contents of these propositions are not mentioned.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-the-negotiations-for-peace-seem-to-be-broken-up-october-1782"
+      ],
+      "summary": "The Connecticut Courant prints the Paris paragraph on the negotiations for peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+      ],
+      "crops": [
+        "S83-020.jpg"
+      ],
+      "family": [
+        "R1783-0018",
+        "R1783-0049",
+        "R1783-0154"
+      ]
+    },
+    {
+      "id": "S83-021",
+      "page_key": "sn84023855|1783-02-04|1|2",
+      "excerpt_start": "PHILADELPHIA, Jan. 18. On Tuesday evening",
+      "excerpt_end": "1782. \"I have the honor to communicate",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "major-burnet-arrives-with-general-greenes-dispatches-january-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Philadelphia report of Major Burnet's arrival with General Greene's letter.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The dateline reads 'Jan. 18' where the other printings have January 16: a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S83-021.jpg"
+      ],
+      "family": [
+        "R1783-0013",
+        "R1783-0050",
+        "R1783-0053"
+      ]
+    },
+    {
+      "id": "S83-022",
+      "page_key": "sn83025471|1783-02-05|1|2",
+      "excerpt_start": "November 23, 1782. This day the",
+      "excerpt_end": "during the uncertain state of negotiations of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "townshend-letter-to-the-bank-of-england-november-1782"
+      ],
+      "summary": "The New-Jersey Gazette prints Mr. Townshend's letter to the Bank of England.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+      ],
+      "crops": [
+        "S83-022.jpg"
+      ],
+      "family": [
+        "R1783-0021",
+        "R1783-0052",
+        "R1783-0152",
+        "R1783-0164",
+        "R1783-0175",
+        "R1783-0176"
+      ]
+    },
+    {
+      "id": "S83-023",
+      "page_key": "sn83025585|1783-02-08|1|2",
+      "excerpt_start": "P A R I S, October",
+      "excerpt_end": "contents of these propositions are not mentioned.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "paris-the-negotiations-for-peace-seem-to-be-broken-up-october-1782"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Paris paragraph on the negotiations for peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop extended by hand (24 November); it shows the whole excerpt, which matches the scan apart from the modern spelling 'negotiations' for the printed 'negociations'."
+      ],
+      "crops": [
+        "S83-023.jpg"
+      ],
+      "family": [
+        "R1783-0018",
+        "R1783-0047",
+        "R1783-0048",
+        "R1783-0125",
+        "R1783-0177",
+        "R1783-0186"
+      ],
+      "scan_boxes": [
+        [
+          240,
+          3535,
+          1540,
+          4080
+        ]
+      ]
+    },
+    {
+      "id": "S83-024",
+      "page_key": "sn83021127|1783-02-11|1|3",
+      "excerpt_start": "BASSETERRE, (St. Christopher,) Jan. 15. The",
+      "excerpt_end": "is said that the intelligence comes from",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "basseterre-report-of-a-peace-concluded-january-1783"
+      ],
+      "summary": "Basseterre, 15 January 1783: the news of a peace concluded between the powers at war 'seems now to be confirmed'.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading and first lines are in the first crop and the rest at the head of the next column."
+      ],
+      "crops": [
+        "S83-024-1.jpg",
+        "S83-024-2.jpg"
+      ],
+      "family": [
+        "R1783-0055",
+        "R1783-0057"
+      ]
+    },
+    {
+      "id": "S83-025",
+      "page_key": "sn84023855|1783-02-11|1|2",
+      "excerpt_start": "B O S T O N,",
+      "excerpt_end": "on board---This is the 5th prize Capt.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prize-ship-of-20-guns-to-the-frigate-hague-january-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Boston report of the Hague's prize.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the Courant prints 'February 3. Wednesday', '1600' and '5th', and spells the captain 'MANLEY' first and 'Manly' after."
+      ],
+      "crops": [
+        "S83-025.jpg"
+      ],
+      "family": [
+        "R1783-0021",
+        "R1783-0169",
+        "R1783-0170",
+        "R1783-0171",
+        "R1783-0187",
+        "R1783-0189",
+        "R1783-0190"
+      ]
+    },
+    {
+      "id": "S83-026",
+      "page_key": "sn84023855|1783-02-11|1|2",
+      "excerpt_start": "November 23. This day the Governors",
+      "excerpt_end": "during the uncertain state of negotiations of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "townshend-letter-to-the-bank-of-england-november-1782"
+      ],
+      "summary": "The Connecticut Courant prints Mr. Townshend's letter to the Bank of England.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+      ],
+      "crops": [
+        "S83-026.jpg"
+      ],
+      "family": [
+        "R1783-0021",
+        "R1783-0169",
+        "R1783-0170",
+        "R1783-0171",
+        "R1783-0187",
+        "R1783-0189",
+        "R1783-0190"
+      ]
+    },
+    {
+      "id": "S83-027",
+      "page_key": "sn83025471|1783-02-12|1|3",
+      "excerpt_start": "BASSETERRE, January 15. The important and",
+      "excerpt_end": "is said that the intelligence comes from",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "basseterre-report-of-a-peace-concluded-january-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Basseterre report of a peace concluded.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-027.jpg"
+      ],
+      "family": [
+        "R1783-0057"
+      ]
+    },
+    {
+      "id": "S83-028",
+      "page_key": "sn83025585|1783-02-15|1|2",
+      "excerpt_start": "LONDON, November 23. This day the",
+      "excerpt_end": "during the uncertain state of negotiations of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "townshend-letter-to-the-bank-of-england-november-1782"
+      ],
+      "summary": "The New-Hampshire Gazette prints Mr. Townshend's letter to the Bank of England.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from the modernised spelling 'negotiations' (the print reads 'negociations')."
+      ],
+      "crops": [
+        "S83-028.jpg"
+      ],
+      "family": [
+        "R1783-0021",
+        "R1783-0053",
+        "R1783-0187"
+      ]
+    },
+    {
+      "id": "S83-029",
+      "page_key": "sn83021127|1783-02-18|1|3",
+      "excerpt_start": "N E W - Y O",
+      "excerpt_end": "London, dated the 3d of December, 1782.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782"
+      ],
+      "summary": "New York, 12 February 1783: a letter taken in the brig Ranger, Mr. Townshend's to the Lord Mayor of London of 3 December 1782.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except the privateer captain's surname, which the print spells without the 'i' the transcription adds, a one-letter slip; the New-Jersey Gazette and the Courant print another spelling, a printed difference."
+      ],
+      "crops": [
+        "S83-029.jpg"
+      ],
+      "family": [
+        "R1783-0008",
+        "R1783-0056",
+        "R1783-0190",
+        "R1783-0195"
+      ]
+    },
+    {
+      "id": "S83-030",
+      "page_key": "sn83025471|1783-02-19|1|3",
+      "excerpt_start": "NEW-YORK, Feb. 11, 1783. By the",
+      "excerpt_end": "of London, dated the 3d of Dec.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782"
+      ],
+      "summary": "The New-Jersey Gazette prints the New York report of the letter taken in the brig Ranger.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the Gazette dates the paragraph 11 February and says the privateer arrived 'this evening', where the Packet has 12 February and 'last night': printed differences."
+      ],
+      "crops": [
+        "S83-030.jpg"
+      ],
+      "family": [
+        "R1783-0008",
+        "R1783-0050",
+        "R1783-0055",
+        "R1783-0056",
+        "R1783-0194"
+      ]
+    },
+    {
+      "id": "S83-031",
+      "page_key": "sn83025471|1783-02-19|1|3",
+      "excerpt_start": "BOSTON, February 3. Wednesday arrived safe",
+      "excerpt_end": "sent into port on his late cruize.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prize-ship-of-20-guns-to-the-frigate-hague-january-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Boston report of the Hague's prize.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-031.jpg"
+      ],
+      "family": [
+        "R1783-0008",
+        "R1783-0050",
+        "R1783-0055",
+        "R1783-0056",
+        "R1783-0194"
+      ]
+    },
+    {
+      "id": "S83-032",
+      "page_key": "sn83021127|1783-02-20|1|2",
+      "excerpt_start": "Wednesday arrived safe in port, a",
+      "excerpt_end": "sent into port on his late cruise.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "prize-ship-of-20-guns-to-the-frigate-hague-january-1783"
+      ],
+      "summary": "The Pennsylvania Packet prints the Boston report of the Hague's prize.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-032.jpg"
+      ],
+      "family": [
+        "R1783-0125"
+      ]
+    },
+    {
+      "id": "S83-033",
+      "page_key": "sn84023855|1783-02-25|1|2",
+      "excerpt_start": "NEW - YORK, Feb. 12. By",
+      "excerpt_end": "London, dated the 3d of December, 1782.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782"
+      ],
+      "summary": "The Connecticut Courant prints the New York report of the letter taken in the brig Ranger.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the Courant prints '23', 'Dec.' and 'inst.' and spells the secretary of state 'Townsend'."
+      ],
+      "crops": [
+        "S83-033.jpg"
+      ],
+      "family": [
+        "R1783-0008"
+      ]
+    },
+    {
+      "id": "S83-034",
+      "page_key": "sn84023855|1783-02-25|1|3",
+      "excerpt_start": "BASSATERRE, January 15. THE important and",
+      "excerpt_end": "daily, and seems now to be confirmed...",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "basseterre-report-of-a-peace-concluded-january-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Basseterre report of a peace concluded.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt as far as 'confirmed', but the transcription stops there with '...' while the print goes on ('we heartily wish it to be true. It is said the intelligence comes from good au-'), so words are dropped."
+      ],
+      "crops": [
+        "S83-034.jpg"
+      ],
+      "family": [
+        "R1783-0055",
+        "R1783-0199"
+      ]
+    },
+    {
+      "id": "S83-035",
+      "page_key": "sn83025585|1783-03-01|1|2",
+      "excerpt_start": "BASSETTERRE, (St. Christopher) January 15. The",
+      "excerpt_end": "It is said that the intelligence comes",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "basseterre-report-of-a-peace-concluded-january-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Basseterre report of a peace concluded.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the Gazette spells 'BASSETTERRE' and prints 'concluded on between': printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S83-035.jpg"
+      ],
+      "family": [
+        "R1783-0008",
+        "R1783-0023",
+        "R1783-0037",
+        "R1783-0038",
+        "R1783-0057",
+        "R1783-0203"
+      ]
+    },
+    {
+      "id": "S83-036",
+      "page_key": "sn83025585|1783-03-01|1|2",
+      "excerpt_start": "NEW-YORK, February 11. By the brig",
+      "excerpt_end": "London, dated the 3d of December, 1782.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782"
+      ],
+      "summary": "The New-Hampshire Gazette prints the New York report of the letter taken in the brig Ranger.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; like the transcription, the print names no captain for the privateer. The print's misprint 'Demeber' in the letter's date is silently corrected to 'December' in the transcription."
+      ],
+      "crops": [
+        "S83-036.jpg"
+      ],
+      "family": [
+        "R1783-0008",
+        "R1783-0023",
+        "R1783-0037",
+        "R1783-0038",
+        "R1783-0057",
+        "R1783-0203"
+      ]
+    },
+    {
+      "id": "S83-037",
+      "page_key": "sn83021127|1783-03-04|1|3",
+      "excerpt_start": "Office of Finance, January 24, 1783.",
+      "excerpt_end": "most timid, and with less support than",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-morris-letter-to-congress-on-his-office-january-1783"
+      ],
+      "summary": "Mr. Morris, superintendent of finance, writes to Congress that only the public danger made him accept his office.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-037.jpg"
+      ],
+      "family": [
+        "R1783-0014",
+        "R1783-0039"
+      ]
+    },
+    {
+      "id": "S83-038",
+      "page_key": "sn83025471|1783-03-12|1|3",
+      "excerpt_start": "Office of Finance, Jan 24, 1783.",
+      "excerpt_end": "take no part in past transactions. My",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-morris-letter-to-congress-on-his-office-january-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints Mr. Morris's letter to Congress.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The transcription drops a whole sentence that the print has between 'common wreck.' and 'Congress will recollect' ('Under greater difficulties than were apprehended by the most timid ... more than I presumed to hope.'); the rest matches the scan."
+      ],
+      "crops": [
+        "S83-038.jpg"
+      ],
+      "family": [
+        "R1783-0014",
+        "R1783-0211"
+      ]
+    },
+    {
+      "id": "S83-039",
+      "page_key": "sn84026485|1783-03-12|1|2",
+      "excerpt_start": "Office of Finance, January 24, 1783.",
+      "excerpt_end": "and with less support than was expected",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-morris-letter-to-congress-on-his-office-january-1783"
+      ],
+      "summary": "The New-Jersey Journal prints Mr. Morris's letter to Congress.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the letter runs from the foot of one column to the head of the next."
+      ],
+      "crops": [
+        "S83-039-1.jpg",
+        "S83-039-2.jpg"
+      ],
+      "family": [
+        "R1783-0014",
+        "R1783-0023"
+      ]
+    },
+    {
+      "id": "S83-040",
+      "page_key": "sn83021127|1783-03-18|1|3",
+      "excerpt_start": "ARTICLES agreed upon by and between",
+      "excerpt_end": "the said states, for treating of peace",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "provisional-articles-of-peace-30-november-1782"
+      ],
+      "summary": "The provisional articles of peace agreed at Paris on 30 November 1782 between Richard Oswald and the American commissioners.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-040.jpg"
+      ],
+      "family": [
+        "R1783-0009",
+        "R1783-0232",
+        "R1783-0233"
+      ]
+    },
+    {
+      "id": "S83-041",
+      "page_key": "sn84023855|1783-03-18|1|3",
+      "excerpt_start": "Office of Finance, January 24, 1783.",
+      "excerpt_end": "and with less support than was expected",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "mr-morris-letter-to-congress-on-his-office-january-1783"
+      ],
+      "summary": "The Connecticut Courant prints Mr. Morris's letter to Congress.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop placed by hand on the letter (24 November): the scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-041.jpg"
+      ],
+      "family": [
+        "R1783-0014",
+        "R1783-0230"
+      ],
+      "scan_boxes": [
+        [
+          1336,
+          800,
+          2516,
+          1560
+        ]
+      ]
+    },
+    {
+      "id": "S83-042",
+      "page_key": "sn83025471|1783-03-19|1|2",
+      "excerpt_start": "ARTICLES agreed upon by and between",
+      "excerpt_end": "the said States, for treating of peace",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "provisional-articles-of-peace-30-november-1782"
+      ],
+      "summary": "The New-Jersey Gazette prints the provisional articles of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the Gazette spells 'Britannick' and 'Lawrens': printed spellings, not transcription errors."
+      ],
+      "crops": [
+        "S83-042.jpg"
+      ],
+      "family": [
+        "R1783-0009",
+        "R1783-0031"
+      ]
+    },
+    {
+      "id": "S83-043",
+      "page_key": "sn83021127|1783-04-08|1|5",
+      "excerpt_start": "Authentic Copy of the Preliminary Articles",
+      "excerpt_end": "equally animated with a desire of putting",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "preliminary-articles-between-great-britain-and-france-20-january-1783"
+      ],
+      "summary": "The preliminary articles of peace between Great Britain and France, signed at Versailles on 20 January 1783, in translation.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, banner heading included."
+      ],
+      "crops": [
+        "S83-043.jpg"
+      ],
+      "family": [
+        "R1783-0003"
+      ]
+    },
+    {
+      "id": "S83-044",
+      "page_key": "sn84023855|1783-04-08|1|2",
+      "excerpt_start": "Articles agreed upon by and between",
+      "excerpt_end": "the said States, for treating of peace",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "provisional-articles-of-peace-30-november-1782"
+      ],
+      "summary": "The Connecticut Courant prints the provisional articles of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Just past it the Courant prints 'the Commissioners of his said Majesty', plural, where the other printings have 'Commissioner': a printed difference."
+      ],
+      "crops": [
+        "S83-044.jpg"
+      ],
+      "family": [
+        "R1783-0004",
+        "R1783-0009"
+      ]
+    },
+    {
+      "id": "S83-045",
+      "page_key": "sn84026485|1783-04-09|1|2",
+      "excerpt_start": "BY THE KING. A Proclamation, Declaring",
+      "excerpt_end": "signed at Paris, on the Thirtieth Day",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "kings-proclamation-of-the-cessation-of-arms-february-1783"
+      ],
+      "summary": "The King's proclamation declaring the cessation of arms by sea and land agreed upon with France, Spain, the States General and the United States.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-045.jpg"
+      ],
+      "family": [
+        "R1783-0003",
+        "R1783-0067",
+        "R1783-0243",
+        "R1783-0245"
+      ]
+    },
+    {
+      "id": "S83-046",
+      "page_key": "sn83021127|1783-04-10|1|1",
+      "excerpt_start": "Translation of the Preliminary Articles of Peace, between His Britannic Majesty and the Most Christian",
+      "excerpt_end": "of a destructive war, and of re-establishing",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "preliminary-articles-between-great-britain-and-france-20-january-1783"
+      ],
+      "summary": "The Pennsylvania Packet prints the preliminary articles between Great Britain and France.",
+      "note": "Printed again.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-046.jpg"
+      ],
+      "family": [
+        "R1783-0003"
+      ]
+    },
+    {
+      "id": "S83-047",
+      "page_key": "sn83021127|1783-04-10|1|2",
+      "excerpt_start": "Articles agreed upon by and between",
+      "excerpt_end": "on their behalf, on the other part;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "provisional-articles-of-peace-30-november-1782"
+      ],
+      "summary": "The Pennsylvania Packet prints the provisional articles of peace.",
+      "note": "Printed again.",
+      "scan_findings": [
+        "Scan matches the excerpt; the articles follow the signatures 'Alleyne Fitz-Herbert' and 'Le Comte d'Aranda' of another treaty, so the crop shows the right item."
+      ],
+      "crops": [
+        "S83-047.jpg"
+      ],
+      "family": [
+        "R1783-0003",
+        "R1783-0009"
+      ]
+    },
+    {
+      "id": "S83-048",
+      "page_key": "sn83021127|1783-04-10|1|3",
+      "excerpt_start": "By the KING. A PROCLAMATION, Declaring",
+      "excerpt_end": "R. WHEREAS Provisional Articles were signed at",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "kings-proclamation-of-the-cessation-of-arms-february-1783"
+      ],
+      "summary": "The Pennsylvania Packet prints the King's proclamation of the cessation of arms.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-048.jpg"
+      ],
+      "family": [
+        "R1783-0003",
+        "R1783-0249",
+        "R1783-0250"
+      ]
+    },
+    {
+      "id": "S83-049",
+      "page_key": "sn83021127|1783-04-12|1|3",
+      "excerpt_start": "By the United States of America",
+      "excerpt_end": "between the Ministers Plenipotentiary of the United-States",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "congress-proclamation-of-the-cessation-of-arms-11-april-1783"
+      ],
+      "summary": "Congress proclaims on 11 April 1783 the cessation of arms agreed upon between the United States and the King.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Crop placed by hand on the proclamation's opening (24 November): the scan matches the excerpt; it prints 'Thirtieth'."
+      ],
+      "crops": [
+        "S83-049.jpg"
+      ],
+      "family": [
+        "R1783-0003",
+        "R1783-0130",
+        "R1783-0253"
+      ],
+      "scan_boxes": [
+        [
+          1400,
+          1880,
+          2620,
+          2830
+        ]
+      ]
+    },
+    {
+      "id": "S83-050",
+      "page_key": "sn83025585|1783-04-12|1|2",
+      "excerpt_start": "ARTICLES agreed upon by and between",
+      "excerpt_end": "on their behalf, on the other part;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "provisional-articles-of-peace-30-november-1782"
+      ],
+      "summary": "The New-Hampshire Gazette prints the provisional articles of peace.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-050.jpg"
+      ],
+      "family": [
+        "R1783-0009"
+      ]
+    },
+    {
+      "id": "S83-051",
+      "page_key": "sn84023855|1783-04-15|1|3",
+      "excerpt_start": "BY THE KING, A PROCLAMATION. Declaring",
+      "excerpt_end": "Paris, on the Thirteenth day of November",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "kings-proclamation-of-the-cessation-of-arms-february-1783"
+      ],
+      "summary": "The Connecticut Courant prints the King's proclamation of the cessation of arms.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'Thirteenth day of November' where the other printings have 'Thirtieth': a printed difference, not a transcription error. The transcription leaves out the King's signature line 'G. R.'."
+      ],
+      "crops": [
+        "S83-051.jpg"
+      ],
+      "family": [
+        "R1783-0003",
+        "R1783-0066",
+        "R1783-0067"
+      ]
+    },
+    {
+      "id": "S83-052",
+      "page_key": "sn83025471|1783-04-16|1|2",
+      "excerpt_start": "WHEREAS provisional articles were signed at",
+      "excerpt_end": "States of America and His Britannick Majesty.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "congress-proclamation-of-the-cessation-of-arms-11-april-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints Congress's proclamation of the cessation of arms.",
+      "note": "Recited whole within a New Jersey proclamation ('in the words following, to wit'), counted with the printings of the proclamation itself (C-02).",
+      "scan_findings": [
+        "Scan matches the excerpt. Congress's proclamation is recited within a New Jersey proclamation ('...lowing, to wit,'); the print goes on after 'Majesty,' where the excerpt ends with a full stop."
+      ],
+      "crops": [
+        "S83-052.jpg"
+      ],
+      "family": [
+        "R1783-0003"
+      ]
+    },
+    {
+      "id": "S83-053",
+      "page_key": "sn83025585|1783-04-19|1|3",
+      "excerpt_start": "By the KING. A PROCLAMATION, Declaring",
+      "excerpt_end": "signed at Paris, on the thirtieth day",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "kings-proclamation-of-the-cessation-of-arms-february-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the King's proclamation of the cessation of arms.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; 'observation' is the paper's own wording, where NJJ, PP and CC print 'observance'. The thirteen crops overlap and show the opening and the lines that follow."
+      ],
+      "crops": [
+        "S83-053-1.jpg",
+        "S83-053-2.jpg",
+        "S83-053-3.jpg",
+        "S83-053-4.jpg",
+        "S83-053-5.jpg",
+        "S83-053-6.jpg",
+        "S83-053-7.jpg",
+        "S83-053-8.jpg",
+        "S83-053-9.jpg",
+        "S83-053-10.jpg",
+        "S83-053-11.jpg",
+        "S83-053-12.jpg",
+        "S83-053-13.jpg"
+      ],
+      "family": [
+        "R1783-0002",
+        "R1783-0003"
+      ]
+    },
+    {
+      "id": "S83-054",
+      "page_key": "sn83025585|1783-04-19|1|3",
+      "excerpt_start": "To all Printers of Public News-Papers.",
+      "excerpt_end": "FOUR American Prisoners, have suffered death by",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "tell-it-to-the-whole-world-the-prisoners-at-new-york-april-1783"
+      ],
+      "summary": "A notice signed 'An American' asks every newspaper to publish that, 'it is said', 11,644 American prisoners died on board the prison ship Jersey at New York.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-054.jpg"
+      ],
+      "family": [
+        "R1783-0002",
+        "R1783-0003"
+      ]
+    },
+    {
+      "id": "S83-055",
+      "page_key": "sn84023855|1783-04-22|1|3",
+      "excerpt_start": "By the UNITED STATES, of AMERICA",
+      "excerpt_end": "last, between the Minister Plenipotentiary of the",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "congress-proclamation-of-the-cessation-of-arms-11-april-1783"
+      ],
+      "summary": "The Connecticut Courant prints Congress's proclamation of the cessation of arms.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop placed by hand on the proclamation's opening (24 November): the scan matches the excerpt; it prints '30th' and 'the Minister Plenipotentiary'."
+      ],
+      "crops": [
+        "S83-055.jpg"
+      ],
+      "family": [
+        "R1783-0003",
+        "R1783-0247",
+        "R1783-0250"
+      ],
+      "scan_boxes": [
+        [
+          170,
+          2730,
+          1370,
+          3440
+        ]
+      ]
+    },
+    {
+      "id": "S83-056",
+      "page_key": "sn83025471|1783-04-23|1|2",
+      "excerpt_start": "Translation of the PRELIMINARY ARTICLES of",
+      "excerpt_end": "of a destructive war, and of re-establishing",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "preliminary-articles-between-great-britain-and-france-20-january-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the preliminary articles between Great Britain and France.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-056.jpg"
+      ],
+      "family": [
+        "R1783-0003",
+        "R1783-0278"
+      ]
+    },
+    {
+      "id": "S83-057",
+      "page_key": "sn83025585|1783-04-26|1|1",
+      "excerpt_start": "Translation of the PRELIMINARY ARTICLES OF",
+      "excerpt_end": "calamities of a destructive war, and of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "preliminary-articles-between-great-britain-and-france-20-january-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the preliminary articles between Great Britain and France.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-057.jpg"
+      ],
+      "family": [
+        "R1783-0003"
+      ]
+    },
+    {
+      "id": "S83-058",
+      "page_key": "sn83025585|1783-04-26|1|3",
+      "excerpt_start": "BY THE United States of America,",
+      "excerpt_end": "constitute the Treaty of Peace proposed to",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "congress-proclamation-of-the-cessation-of-arms-11-april-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints Congress's proclamation of the cessation of arms.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; this printing has no title line between 'A PROCLAMATION.' and 'WHEREAS'."
+      ],
+      "crops": [
+        "S83-058.jpg"
+      ],
+      "family": [
+        "R1783-0003",
+        "R1783-0248",
+        "R1783-0249"
+      ],
+      "scan_boxes": [
+        [
+          1569,
+          2453,
+          2824,
+          3436
+        ]
+      ]
+    },
+    {
+      "id": "S83-059",
+      "page_key": "sn83021127|1783-04-29|1|2",
+      "excerpt_start": "To all Printers of Public News-Papers.",
+      "excerpt_end": "American prisoners, have suffered death by their",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "tell-it-to-the-whole-world-the-prisoners-at-new-york-april-1783"
+      ],
+      "summary": "The Pennsylvania Packet prints the notice 'Tell it to the whole World'.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-059.jpg"
+      ],
+      "family": [
+        "R1783-0002",
+        "R1783-0010",
+        "R1783-0068"
+      ]
+    },
+    {
+      "id": "S83-060",
+      "page_key": "sn83021127|1783-04-29|1|2",
+      "excerpt_start": "H E A D Q U",
+      "excerpt_end": "every regiment and corps of the army;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "washington-orders-for-proclaiming-the-cessation-of-hostilities-18-april-1783"
+      ],
+      "summary": "General Washington orders on 18 April 1783 that the cessation of hostilities be proclaimed to the army.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the orders stand under the dateline 'CHATHAM, April 23.'."
+      ],
+      "crops": [
+        "S83-060.jpg"
+      ],
+      "family": [
+        "R1783-0002",
+        "R1783-0010",
+        "R1783-0068"
+      ],
+      "scan_boxes": [
+        [
+          2660,
+          3819,
+          3857,
+          4514
+        ]
+      ]
+    },
+    {
+      "id": "S83-061",
+      "page_key": "sn83021127|1783-04-29|1|3",
+      "excerpt_start": "We have good authority for assuring",
+      "excerpt_end": "for the American flag. A late London",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-port-open-to-vessels-from-any-foreign-port-april-1783"
+      ],
+      "summary": "Philadelphia, 29 April 1783: the port is open to vessels from any foreign port, and New York to the American flag.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. It prints 'for assuring' and 'open for the American flag'; the 'late London paper' paragraph that follows is a separate item."
+      ],
+      "crops": [
+        "S83-061.jpg"
+      ],
+      "family": [
+        "R1783-0010",
+        "R1783-0071",
+        "R1783-0284"
+      ]
+    },
+    {
+      "id": "S83-062",
+      "page_key": "sn84023855|1783-04-29|1|3",
+      "excerpt_start": "G E N E R A",
+      "excerpt_end": "every regiment and corps of the army;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "washington-orders-for-proclaiming-the-cessation-of-hostilities-18-april-1783"
+      ],
+      "summary": "The Connecticut Courant prints General Washington's orders of 18 April.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop placed by hand on the orders (24 November): the scan matches the excerpt; it heads them 'GENERAL ORDERS', prints '12', and misprints 'o'clolck', which the transcription corrects."
+      ],
+      "crops": [
+        "S83-062.jpg"
+      ],
+      "family": [
+        "R1783-0010"
+      ],
+      "scan_boxes": [
+        [
+          180,
+          1400,
+          1310,
+          2080
+        ]
+      ]
+    },
+    {
+      "id": "S83-063",
+      "page_key": "sn83025471|1783-04-30|1|2",
+      "excerpt_start": "HEAD-QUARTERS, April 18, 1783. The Commander",
+      "excerpt_end": "every regiment and corps of the army;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "washington-orders-for-proclaiming-the-cessation-of-hostilities-18-april-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints General Washington's orders of 18 April.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt except that it prints 'publickly', which the transcription modernises to 'publicly'."
+      ],
+      "crops": [
+        "S83-063.jpg"
+      ],
+      "family": [
+        "R1783-0009",
+        "R1783-0010",
+        "R1783-0255",
+        "R1783-0274",
+        "R1783-0275",
+        "R1783-0276",
+        "R1783-0277"
+      ]
+    },
+    {
+      "id": "S83-064",
+      "page_key": "sn83025585|1783-05-03|1|3",
+      "excerpt_start": "GENERAL ORDERS. Head Quarters, Newburgh, April",
+      "excerpt_end": "every regiment and corps of the army;",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "washington-orders-for-proclaiming-the-cessation-of-hostilities-18-april-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints General Washington's orders of 18 April.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-064.jpg"
+      ],
+      "family": [
+        "R1783-0010"
+      ]
+    },
+    {
+      "id": "S83-065",
+      "page_key": "sn84023855|1783-05-06|1|1",
+      "excerpt_start": "Translation of the Preliminary Articles of",
+      "excerpt_end": "calamities of a destructive war, and of",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+        "preliminary-articles-between-great-britain-and-france-20-january-1783"
+      ],
+      "summary": "The Connecticut Courant prints the preliminary articles between Great Britain and France.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The second crop shows the opening under the masthead 'Tuesday, May 6, 1783' and matches the excerpt; the first crop shows only a stray '1783.'."
+      ],
+      "crops": [
+        "S83-065-1.jpg",
+        "S83-065-2.jpg"
+      ],
+      "family": [
+        "R1783-0003"
+      ]
+    },
+    {
+      "id": "S83-066",
+      "page_key": "sn83025471|1783-05-07|1|2",
+      "excerpt_start": "We have good authority for assuring",
+      "excerpt_end": "for the American flag. A late London",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-port-open-to-vessels-from-any-foreign-port-april-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Philadelphia report of the ports open.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Like the Pennsylvania Packet it prints 'for assuring' and 'open for', and goes on with the 'late London paper' item."
+      ],
+      "crops": [
+        "S83-066.jpg"
+      ],
+      "family": [
+        "R1783-0001",
+        "R1783-0024",
+        "R1783-0069",
+        "R1783-0071",
+        "R1783-0130",
+        "R1783-0253",
+        "R1783-0254"
+      ]
+    },
+    {
+      "id": "S83-067",
+      "page_key": "sn83025471|1783-05-07|1|3",
+      "excerpt_start": "To all the Printers of Publick",
+      "excerpt_end": "American Prisoners, have suffered death by their",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "tell-it-to-the-whole-world-the-prisoners-at-new-york-april-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the notice 'Tell it to the whole World'.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. This printing has no 'it is said' before the number: a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S83-067.jpg"
+      ],
+      "family": [
+        "R1783-0002",
+        "R1783-0281"
+      ]
+    },
+    {
+      "id": "S83-068",
+      "page_key": "sn84023855|1783-05-13|1|2",
+      "excerpt_start": "We have good authority to assure",
+      "excerpt_end": "and yesterday arrived a ship from Dublin.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-port-open-to-vessels-from-any-foreign-port-april-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Philadelphia report of the ports open.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. It prints 'to assure' and 'open to the American flag', followed by a separate paragraph on vessels from New-York and a ship from Dublin."
+      ],
+      "crops": [
+        "S83-068.jpg"
+      ],
+      "family": [
+        "R1783-0070",
+        "R1783-0291"
+      ]
+    },
+    {
+      "id": "S83-069",
+      "page_key": "sn83025585|1783-05-17|1|2",
+      "excerpt_start": "P H I L A D",
+      "excerpt_end": "this time open to the American flag.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-port-open-to-vessels-from-any-foreign-port-april-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Philadelphia report of the ports open.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, headed 'PHILADELPHIA, April 30', with 'to assure' and 'open to'. The paper prints 'to' twice across a line break, which the transcription silently drops."
+      ],
+      "crops": [
+        "S83-069.jpg"
+      ],
+      "family": [
+        "R1783-0011",
+        "R1783-0071",
+        "R1783-0282"
+      ],
+      "scan_boxes": [
+        [
+          1781,
+          5140,
+          3048,
+          5915
+        ]
+      ]
+    },
+    {
+      "id": "S83-070",
+      "page_key": "sn84024758|1783-05-24|1|4",
+      "excerpt_start": "To all Printers of Public Papers.",
+      "excerpt_end": "American Prisoners, have suffered death by their",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "tell-it-to-the-whole-world-the-prisoners-at-new-york-april-1783"
+      ],
+      "summary": "The South-Carolina Gazette and General Advertiser prints the notice 'Tell it to the whole World'.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the heading reads 'Public Papers', a printed difference."
+      ],
+      "crops": [
+        "S83-070.jpg"
+      ],
+      "family": [
+        "R1783-0002",
+        "R1783-0077"
+      ]
+    },
+    {
+      "id": "S83-071",
+      "page_key": "sn84045495|1783-05-24|1|2",
+      "excerpt_start": "April 29. We have good authority",
+      "excerpt_end": "this time open for the American flag.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "philadelphia-port-open-to-vessels-from-any-foreign-port-april-1783"
+      ],
+      "summary": "The South-Carolina Weekly Gazette prints the Philadelphia report of the ports open.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. Dated 'April 29', it prints 'for assuring' and 'open for the American flag', as the Pennsylvania Packet does."
+      ],
+      "crops": [
+        "S83-071.jpg"
+      ],
+      "family": [
+        "R1783-0001",
+        "R1783-0002",
+        "R1783-0040",
+        "R1783-0316",
+        "R1783-0317"
+      ]
+    },
+    {
+      "id": "S83-072",
+      "page_key": "sn84045495|1783-05-24|1|2",
+      "excerpt_start": "To all Printers of Public Newspapers.",
+      "excerpt_end": "American prisoners, have suffered death by their",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "tell-it-to-the-whole-world-the-prisoners-at-new-york-april-1783"
+      ],
+      "summary": "The South-Carolina Weekly Gazette prints the notice 'Tell it to the whole World'.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The crop looks identical to S83-070's (SCAG, same day), show-through included: the two may be one page filed under two titles."
+      ],
+      "crops": [
+        "S83-072.jpg"
+      ],
+      "family": [
+        "R1783-0001",
+        "R1783-0002",
+        "R1783-0040",
+        "R1783-0316",
+        "R1783-0317"
+      ]
+    },
+    {
+      "id": "S83-073",
+      "page_key": "sn83021127|1783-06-03|1|3",
+      "excerpt_start": "The continental troops who were at",
+      "excerpt_end": "are to negotiate the business at Augusta.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "continental-troops-march-to-charleston-june-1783"
+      ],
+      "summary": "The continental troops at Savannah march to Charleston to be carried home by sea; General Wayne goes to treat with Indian nations at Augusta.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt and reads 'General Wayne is gone'; the transcription modernises the printed 'negociate' to 'negotiate'."
+      ],
+      "crops": [
+        "S83-073.jpg"
+      ],
+      "family": [
+        "R1783-0085",
+        "R1783-0335"
+      ]
+    },
+    {
+      "id": "S83-074",
+      "page_key": "sn83025471|1783-06-04|1|3",
+      "excerpt_start": "The continental troops who were at",
+      "excerpt_end": "are to negotiate the business at Augusta.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "continental-troops-march-to-charleston-june-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the report of the troops' march to Charleston.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The item runs from the foot of one column to the top of the next; the two crops show it all. Scan reads 'General Wayne has gone' where the other printings have 'is gone': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S83-074-1.jpg",
+        "S83-074-2.jpg"
+      ],
+      "family": [
+        "R1783-0084",
+        "R1783-0085",
+        "R1783-0324",
+        "R1783-0325"
+      ]
+    },
+    {
+      "id": "S83-075",
+      "page_key": "sn83021127|1783-06-07|1|2",
+      "excerpt_start": "V E R S A I",
+      "excerpt_end": "has been already mentioned, conclude as follow:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "versailles-dispatches-of-m-de-suffren-march-1783"
+      ],
+      "summary": "Versailles, 28 March 1783: the King receives M. de Suffren's dispatches on the proceedings in the East Indies.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the last line is cut at the foot of the crop but legible."
+      ],
+      "crops": [
+        "S83-075.jpg"
+      ],
+      "family": [
+        "R1783-0025",
+        "R1783-0034",
+        "R1783-0089",
+        "R1783-0090",
+        "R1783-0339",
+        "R1783-0340"
+      ],
+      "scan_boxes": [
+        [
+          2615,
+          2002,
+          3808,
+          2716
+        ]
+      ]
+    },
+    {
+      "id": "S83-076",
+      "page_key": "sn83025585|1783-06-07|1|2",
+      "excerpt_start": "VERSAILLES, March 28. On the 25th",
+      "excerpt_end": "conclude as follows: \"M. Duchemin died with",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "versailles-dispatches-of-m-de-suffren-march-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Versailles report of M. de Suffren's dispatches.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print is faint in places but legible. An enlarged view shows 'as follow :' with no 's', where the transcription has 'follows'."
+      ],
+      "crops": [
+        "S83-076.jpg"
+      ],
+      "family": [
+        "R1783-0025",
+        "R1783-0089",
+        "R1783-0290",
+        "R1783-0312"
+      ]
+    },
+    {
+      "id": "S83-077",
+      "page_key": "sn83025585|1783-06-07|1|3",
+      "excerpt_start": "P O R T S M",
+      "excerpt_end": "before this town. She brings nothing new.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-frigate-with-stores-for-the-america-portsmouth-june-1783"
+      ],
+      "summary": "Portsmouth, New Hampshire: a French frigate arrives with stores for the ship America, of 74 guns.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the last line is cut at the foot of the crop but legible and reads 'before this town'."
+      ],
+      "crops": [
+        "S83-077.jpg"
+      ],
+      "family": [
+        "R1783-0034",
+        "R1783-0323"
+      ],
+      "scan_boxes": [
+        [
+          1565,
+          1271,
+          2821,
+          1721
+        ]
+      ]
+    },
+    {
+      "id": "S83-078",
+      "page_key": "sn83021127|1783-06-10|1|3",
+      "excerpt_start": "Philadelphia, June 10. The general assembly",
+      "excerpt_end": "contracted by Congress during the late war.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "maryland-act-to-invest-congress-with-power-to-levy-duties-june-1783"
+      ],
+      "summary": "Philadelphia, 10 June 1783: Maryland's assembly passes an act giving Congress power to levy duties on imports, to pay the debt of the war.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, under the heading 'Philadelphia; June 10'."
+      ],
+      "crops": [
+        "S83-078.jpg"
+      ],
+      "family": [
+        "R1783-0092",
+        "R1783-0094"
+      ]
+    },
+    {
+      "id": "S83-079",
+      "page_key": "sn83021127|1783-06-17|1|3",
+      "excerpt_start": "RICHMOND, (Virginia) June 7. The honorable",
+      "excerpt_end": "faith and exertion among the United States;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "virginia-assembly-votes-50000-pounds-to-congress-june-1783"
+      ],
+      "summary": "Richmond, 7 June 1783: Virginia's assembly votes an immediate payment of £50,000 to Congress.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints '50,000l.'. It spells 'retreive', which the transcription corrects to 'retrieve'."
+      ],
+      "crops": [
+        "S83-079.jpg"
+      ],
+      "family": [
+        "R1783-0026",
+        "R1783-0352"
+      ]
+    },
+    {
+      "id": "S83-080",
+      "page_key": "sn84023855|1783-06-17|1|1",
+      "excerpt_start": "Versailles, March 28. On the 25th",
+      "excerpt_end": "as follow: \"M. Duchemin died with his",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "versailles-dispatches-of-m-de-suffren-march-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Versailles report of M. de Suffren's dispatches.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-080.jpg"
+      ],
+      "family": [
+        "R1783-0025",
+        "R1783-0088",
+        "R1783-0089",
+        "R1783-0090"
+      ]
+    },
+    {
+      "id": "S83-081",
+      "page_key": "sn84023855|1783-06-17|1|3",
+      "excerpt_start": "PHILADELPHIA, June 4. The continental troops",
+      "excerpt_end": "are to negotiate the business at Augusta.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "continental-troops-march-to-charleston-june-1783"
+      ],
+      "summary": "The Connecticut Courant prints the report of the troops' march to Charleston.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, headed 'PHILADELPHIA, June 4' and reading 'is gone'. It prints 'Savanna' and 'negociate', which the transcription gives as 'Savannah' and 'negotiate'."
+      ],
+      "crops": [
+        "S83-081.jpg"
+      ],
+      "family": [
+        "R1783-0085",
+        "R1783-0086",
+        "R1783-0346"
+      ]
+    },
+    {
+      "id": "S83-082",
+      "page_key": "sn83025471|1783-06-18|1|1",
+      "excerpt_start": "VERSAILLES, March 28. On the 25th",
+      "excerpt_end": "as follows: “M. Duchemin died with his",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "versailles-dispatches-of-m-de-suffren-march-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Versailles report of M. de Suffren's dispatches.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. This paper prints 'despatches' and 'as follows', where the other printings have 'dispatches' and 'as follow'."
+      ],
+      "crops": [
+        "S83-082.jpg"
+      ],
+      "family": [
+        "R1783-0025",
+        "R1783-0033",
+        "R1783-0340",
+        "R1783-0342"
+      ]
+    },
+    {
+      "id": "S83-083",
+      "page_key": "sn83025471|1783-06-18|1|4",
+      "excerpt_start": "PHILADELPHIA, June 11. The General Assembly",
+      "excerpt_end": "contracted by Congress during the late war.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "maryland-act-to-invest-congress-with-power-to-levy-duties-june-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Philadelphia report of Maryland's act.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. It is headed 'PHILADELPHIA, June 11' where the Pennsylvania Packet has June 10: a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S83-083.jpg"
+      ],
+      "family": [
+        "R1783-0092",
+        "R1783-0116"
+      ]
+    },
+    {
+      "id": "S83-084",
+      "page_key": "sn83025585|1783-06-21|1|2",
+      "excerpt_start": "PHILADELPHIA, June 4. The continental troops",
+      "excerpt_end": "are to negotiate the business at Augusta.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "continental-troops-march-to-charleston-june-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the report of the troops' march to Charleston.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, headed 'PHILADELPHIA, June 4' and reading 'is gone'. This paper prints 'Savannah' where the other three print 'Savanna'; the transcription modernises 'negociate'."
+      ],
+      "crops": [
+        "S83-084.jpg"
+      ],
+      "family": [
+        "R1783-0042",
+        "R1783-0087",
+        "R1783-0095",
+        "R1783-0335",
+        "R1783-0349",
+        "R1783-0354",
+        "R1783-0355"
+      ]
+    },
+    {
+      "id": "S83-085",
+      "page_key": "sn84023855|1783-06-24|1|3",
+      "excerpt_start": "PORTSMOUTH, June 7. Yesterday arrived here",
+      "excerpt_end": "before this town. She brings nothing new.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-frigate-with-stores-for-the-america-portsmouth-june-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Portsmouth report of the French frigate.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it reads 'before this town'."
+      ],
+      "crops": [
+        "S83-085.jpg"
+      ],
+      "family": [
+        "R1783-0092",
+        "R1783-0358",
+        "R1783-0360",
+        "R1783-0362",
+        "R1783-0364"
+      ]
+    },
+    {
+      "id": "S83-086",
+      "page_key": "sn84023855|1783-06-24|1|3",
+      "excerpt_start": "HARTFORD, June 24. The General Assembly",
+      "excerpt_end": "contracted by Congress during the late war.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "maryland-act-to-invest-congress-with-power-to-levy-duties-june-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Philadelphia report of Maryland's act.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from spelling: it prints the misprint 'assembed' and 'merchandize', given as 'assembled' and 'merchandise'. The paper heads the paragraph 'HARTFORD, June 24' and prints 'sessions'."
+      ],
+      "crops": [
+        "S83-086.jpg"
+      ],
+      "family": [
+        "R1783-0092",
+        "R1783-0358",
+        "R1783-0360",
+        "R1783-0362",
+        "R1783-0364"
+      ]
+    },
+    {
+      "id": "S83-087",
+      "page_key": "sn83025471|1783-06-25|1|2",
+      "excerpt_start": "RICHMOND, (Virginia) June 7. The honourable",
+      "excerpt_end": "the wisdom of the Legislature, retrieve her",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "virginia-assembly-votes-50000-pounds-to-congress-june-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Richmond report of Virginia's payment to Congress.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints '50,000l.'. The paper leaves out 'will' ('by the wisdom of the Legislature, retrieve her character'): a printed difference, faithfully transcribed."
+      ],
+      "crops": [
+        "S83-087.jpg"
+      ],
+      "family": [
+        "R1783-0006",
+        "R1783-0026",
+        "R1783-0366"
+      ]
+    },
+    {
+      "id": "S83-088",
+      "page_key": "sn83025471|1783-06-25|1|3",
+      "excerpt_start": "We learn from Portsmouth, that on",
+      "excerpt_end": "before that town. She brings nothing new.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-frigate-with-stores-for-the-america-portsmouth-june-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the Portsmouth report of the French frigate.",
+      "note": "Prints it in other words, 'We learn from Portsmouth, that on the 6th inst. arrived there a French frigate' (counted with it, C-02).",
+      "scan_findings": [
+        "Scan matches the excerpt in the paper's own wording ('We learn from Portsmouth, that on the 6th inst.'); it reads 'before that town' where the other printings have 'this town'."
+      ],
+      "crops": [
+        "S83-088.jpg"
+      ],
+      "family": [
+        "R1783-0352",
+        "R1783-0353"
+      ]
+    },
+    {
+      "id": "S83-089",
+      "page_key": "sn83025585|1783-06-28|1|2",
+      "excerpt_start": "The General Assembly of Maryland, at",
+      "excerpt_end": "contracted by Congress during the late war.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "maryland-act-to-invest-congress-with-power-to-levy-duties-june-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Philadelphia report of Maryland's act.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt apart from spelling: it prints 'merchandize', and the faint print appears to read 'sessions' where the transcription has 'session'. The crop shows no dateline for the paragraph."
+      ],
+      "crops": [
+        "S83-089.jpg"
+      ],
+      "family": [
+        "R1783-0086",
+        "R1783-0091",
+        "R1783-0358",
+        "R1783-0370"
+      ]
+    },
+    {
+      "id": "S83-090",
+      "page_key": "sn83021127|1783-07-01|1|2",
+      "excerpt_start": "PORTSMOUTH, June 7. Yesterday arrived here,",
+      "excerpt_end": "before this town. She brings nothing new.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "french-frigate-with-stores-for-the-america-portsmouth-june-1783"
+      ],
+      "summary": "The Pennsylvania Packet prints the Portsmouth report of the French frigate.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; it reads 'before this town'."
+      ],
+      "crops": [
+        "S83-090.jpg"
+      ],
+      "family": [
+        "R1783-0079",
+        "R1783-0083",
+        "R1783-0350",
+        "R1783-0354",
+        "R1783-0362",
+        "R1783-0372"
+      ]
+    },
+    {
+      "id": "S83-091",
+      "page_key": "sn83021127|1783-07-01|1|3",
+      "excerpt_start": "Captain Burrows, in the schooner Molly,",
+      "excerpt_end": "was lately killed in a tumult among",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "schooner-molly-from-grenada-report-on-the-stadtholder-july-1783"
+      ],
+      "summary": "Captain Burrows of the schooner Molly, from Grenada, reports an account from Barbados that the stadtholder was killed in a tumult at Amsterdam.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "The second crop shows the whole item (the first shows only a stray fragment of other text). Scan reads 'before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense, and 'fladtholder' is a garble of 'stadtholder'."
+      ],
+      "crops": [
+        "S83-091-1.jpg",
+        "S83-091-2.jpg"
+      ],
+      "family": [
+        "R1783-0005",
+        "R1783-0027",
+        "R1783-0371"
+      ]
+    },
+    {
+      "id": "S83-092",
+      "page_key": "sn84023855|1783-07-01|1|3",
+      "excerpt_start": "RICHMOND, (Virginia) June 7. The honorable",
+      "excerpt_end": "affords sensible pleasure that Virginia, by the",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "virginia-assembly-votes-50000-pounds-to-congress-june-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Richmond report of Virginia's payment to Congress.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. It prints the sum in words, 'Fifty Thousand pounds', and 'The honorable the General Assembly of this state'."
+      ],
+      "crops": [
+        "S83-092.jpg"
+      ],
+      "family": [
+        "R1783-0026",
+        "R1783-0348",
+        "R1783-0356"
+      ]
+    },
+    {
+      "id": "S83-093",
+      "page_key": "sn83025585|1783-07-05|1|2",
+      "excerpt_start": "R I C H M O",
+      "excerpt_end": "fully equal to that demand, it affords",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "virginia-assembly-votes-50000-pounds-to-congress-june-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Richmond report of Virginia's payment to Congress.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt and prints the sum in words, 'fifty thousand pounds'. The faint heading prints 'Juue 7' (an 'n' set upside down), which the transcription gives as 'June 7'."
+      ],
+      "crops": [
+        "S83-093.jpg"
+      ],
+      "family": [
+        "R1783-0026",
+        "R1783-0372"
+      ],
+      "scan_boxes": [
+        [
+          273,
+          2054,
+          1582,
+          2658
+        ]
+      ]
+    },
+    {
+      "id": "S83-094",
+      "page_key": "sn83025471|1783-07-09|1|3",
+      "excerpt_start": "Captain Burrows, in the schooner Molly,",
+      "excerpt_end": "a tumult among the people of Amsterdam.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "schooner-molly-from-grenada-report-on-the-stadtholder-july-1783"
+      ],
+      "summary": "The New-Jersey Gazette prints the report brought by the schooner Molly.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense. The rest matches; this paper prints 'who arrived here'."
+      ],
+      "crops": [
+        "S83-094.jpg"
+      ],
+      "family": [
+        "R1783-0005",
+        "R1783-0132"
+      ]
+    },
+    {
+      "id": "S83-095",
+      "page_key": "sn84023855|1783-07-15|1|3",
+      "excerpt_start": "Captain Burrows, in the schooner Molly,",
+      "excerpt_end": "was lately killed in a tumult among",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "schooner-molly-from-grenada-report-on-the-stadtholder-july-1783"
+      ],
+      "summary": "The Connecticut Courant prints the report brought by the schooner Molly.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense. The rest of the excerpt, '14 days' included, matches."
+      ],
+      "crops": [
+        "S83-095.jpg"
+      ],
+      "family": [
+        "R1783-0005",
+        "R1783-0027",
+        "R1783-0371",
+        "R1783-0384"
+      ]
+    },
+    {
+      "id": "S83-096",
+      "page_key": "sn83021127|1783-07-17|1|2",
+      "excerpt_start": "No foreign vessels can yet be",
+      "excerpt_end": "find sure & nt for their cargo.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "no-foreign-vessels-entered-at-new-york-july-1783"
+      ],
+      "summary": "No foreign vessels can yet be entered at New York, nor may the American flag fly in its harbour.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan reads 'or sailed up the North river' with a long s; the transcription 'failed' is a transcription error that changes the sense. The paper's damaged 'vent' (its e broken) is garbled as '& nt', a minor error."
+      ],
+      "crops": [
+        "S83-096.jpg"
+      ],
+      "family": [
+        "R1783-0099",
+        "R1783-0390"
+      ]
+    },
+    {
+      "id": "S83-097",
+      "page_key": "sn83025585|1783-07-19|1|2",
+      "excerpt_start": "July 2. Capt. Burrows, in the",
+      "excerpt_end": "Prince Stadholder was lately killed in a",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "schooner-molly-from-grenada-report-on-the-stadtholder-july-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the report brought by the schooner Molly.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, 'July 2. Capt.' and '14 days' included. The transcription drops the worn t of 'Stadtholder', a minor error."
+      ],
+      "crops": [
+        "S83-097.jpg"
+      ],
+      "family": [
+        "R1783-0005",
+        "R1783-0016",
+        "R1783-0027",
+        "R1783-0392"
+      ]
+    },
+    {
+      "id": "S83-098",
+      "page_key": "sn83021127|1783-07-26|1|2",
+      "excerpt_start": "L I S B O N,",
+      "excerpt_end": "and the United-States, are nearly agreed upon;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783"
+      ],
+      "summary": "Lisbon, 20 April 1783: an American is received by the Queen, and a treaty of commerce with the United States is said to be nearly agreed.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the print is worn and faint in places, but every word can be read."
+      ],
+      "crops": [
+        "S83-098.jpg"
+      ],
+      "family": [
+        "R1783-0401"
+      ]
+    },
+    {
+      "id": "S83-099",
+      "page_key": "sn83025585|1783-07-26|1|2",
+      "excerpt_start": "LISBON (Portugal) April 20. An American",
+      "excerpt_end": "Court and the United States, are nearly",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Lisbon paragraph on a treaty of commerce.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches this paper's own wording of the paragraph. The paper prints 'audiance', which the transcription silently corrects to 'audience', a minor difference."
+      ],
+      "crops": [
+        "S83-099.jpg"
+      ],
+      "family": [
+        "R1783-0398",
+        "R1783-0399"
+      ]
+    },
+    {
+      "id": "S83-100",
+      "page_key": "sn84023855|1783-07-29|1|3",
+      "excerpt_start": "No foreign vessels can yet be",
+      "excerpt_end": "they find sure vent for their cargoes.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "no-foreign-vessels-entered-at-new-york-july-1783"
+      ],
+      "summary": "The Connecticut Courant prints the report that no foreign vessels are entered at New York.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'or sailed up the North River' with a long s; the transcription 'failed' is a transcription error that changes the sense. The rest matches, with 'the harbour' and 'vent'."
+      ],
+      "crops": [
+        "S83-100.jpg"
+      ],
+      "family": [
+        "R1783-0099",
+        "R1783-0382"
+      ]
+    },
+    {
+      "id": "S83-101",
+      "page_key": "sn83025585|1783-08-02|1|2",
+      "excerpt_start": "No foreign vessels can yet be",
+      "excerpt_end": "they find sure vent for their cargoes.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "no-foreign-vessels-entered-at-new-york-july-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the report that no foreign vessels are entered at New York.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, with 'the harbour', 'sailed' and 'vent'."
+      ],
+      "crops": [
+        "S83-101.jpg"
+      ],
+      "family": [
+        "R1783-0099",
+        "R1783-0378",
+        "R1783-0390",
+        "R1783-0391",
+        "R1783-0404"
+      ]
+    },
+    {
+      "id": "S83-102",
+      "page_key": "sn84023855|1783-08-05|1|3",
+      "excerpt_start": "Lisbon, April 20. An American of",
+      "excerpt_end": "the United States, are nearly agreed upon;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Lisbon paragraph on a treaty of commerce.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-102.jpg"
+      ],
+      "family": [
+        "R1783-0101",
+        "R1783-0102",
+        "R1783-0393",
+        "R1783-0401",
+        "R1783-0405"
+      ]
+    },
+    {
+      "id": "S83-103",
+      "page_key": "sn84026945|1783-08-06|1|3",
+      "excerpt_start": "LISBON, April, 29. An American of",
+      "excerpt_end": "the United States, are nearly agreed upon;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783"
+      ],
+      "summary": "The Gazette of the State of South-Carolina prints the Lisbon paragraph on a treaty of commerce.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads 'April, 29' where the other printings have April 20: a printed difference, not a transcription error. The paper prints 'conferrence', which the transcription silently corrects to 'conference'; the rest matches."
+      ],
+      "crops": [
+        "S83-103.jpg"
+      ],
+      "family": [
+        "R1783-0102",
+        "R1783-0119"
+      ]
+    },
+    {
+      "id": "S83-104",
+      "page_key": "sn83021127|1783-08-12|1|2",
+      "excerpt_start": "Philadelphia, August 12. Captain Dalton, superintendant",
+      "excerpt_end": "still retained as prisoners by the Indians.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "captain-dalton-arrives-from-canada-august-1783"
+      ],
+      "summary": "Philadelphia, 12 August 1783: Captain Dalton arrives from Canada with 200 Americans released from captivity; others are still held.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S83-104.jpg"
+      ],
+      "family": [
+        "R1783-0028",
+        "R1783-0413",
+        "R1783-0414",
+        "R1783-0415",
+        "R1783-0416"
+      ]
+    },
+    {
+      "id": "S83-105",
+      "page_key": "sn84026945|1783-08-13|1|3",
+      "excerpt_start": "No foreign vessel can yet be",
+      "excerpt_end": "they find sure vent for their cargoes.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "no-foreign-vessels-entered-at-new-york-july-1783"
+      ],
+      "summary": "The Gazette of the State of South-Carolina prints the report that no foreign vessels are entered at New York.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. This paper prints 'vessel' and 'ports' where the others print 'vessels' and 'port', and 'that harbour' as the Pennsylvania Packet does."
+      ],
+      "crops": [
+        "S83-105.jpg"
+      ],
+      "family": [
+        "R1783-0387",
+        "R1783-0388"
+      ]
+    },
+    {
+      "id": "S83-106",
+      "page_key": "sn84023855|1783-08-26|1|2",
+      "excerpt_start": "P H I L A D",
+      "excerpt_end": "the savages. But he is sorry to",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "captain-dalton-arrives-from-canada-august-1783"
+      ],
+      "summary": "The Connecticut Courant prints the Philadelphia report of Captain Dalton's arrival.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop shows the heading and the first lines, through 'which he left about a month'; they match. The rest of the excerpt, 'since, in company with 200 Americans ... he is sorry to', is below the crop. Crop extended by hand (24 November) to the end of the excerpt, which matches the scan."
+      ],
+      "crops": [
+        "S83-106.jpg"
+      ],
+      "family": [
+        "R1783-0028",
+        "R1783-0100",
+        "R1783-0420",
+        "R1783-0427",
+        "R1783-0428"
+      ],
+      "scan_boxes": [
+        [
+          1353,
+          2700,
+          2535,
+          3170
+        ]
+      ]
+    },
+    {
+      "id": "S83-107",
+      "page_key": "sn84026945|1783-08-27|1|3",
+      "excerpt_start": "Capt. Burrows, in the schooner Molly,",
+      "excerpt_end": "was lately killed in a tumult among",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "schooner-molly-from-grenada-report-on-the-stadtholder-july-1783"
+      ],
+      "summary": "The Gazette of the State of South-Carolina prints the report brought by the schooner Molly.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Crop shows the item under the Philadelphia heading through 'from Barbadoes, of the arrival of a packet from Eng-' (the last line cut); the rest of the excerpt, 'England ... in a tumult among', is below the crop. Scan reads 'before he sailed' with a long s; the transcription 'failed' changes the sense, and the rest shown matches. Crop extended by hand (24 November) to the end of the excerpt; the rest matches."
+      ],
+      "crops": [
+        "S83-107.jpg"
+      ],
+      "family": [
+        "R1783-0005"
+      ],
+      "scan_boxes": [
+        [
+          1381,
+          5070,
+          2532,
+          5400
+        ]
+      ]
+    },
+    {
+      "id": "S83-108",
+      "page_key": "sn83025585|1783-08-30|1|3",
+      "excerpt_start": "PHILADELPHIA, August 12. Capt. Dalton, Superintendent",
+      "excerpt_end": "sufferers, who are still retained as prisoners.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "captain-dalton-arrives-from-canada-august-1783"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Philadelphia report of Captain Dalton's arrival.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. This paper's printing leaves out 'last week' and 'by the Indians', which the other printings have."
+      ],
+      "crops": [
+        "S83-108.jpg"
+      ],
+      "family": [
+        "R1783-0028",
+        "R1783-0105",
+        "R1783-0415",
+        "R1783-0423"
+      ]
+    },
+    {
+      "id": "S83-109",
+      "page_key": "sn84026945|1783-09-24|1|2",
+      "excerpt_start": "PHILADELPHIA, August 12. Capt. Dalton, superintendant",
+      "excerpt_end": "still retained as prisoners by the Indians.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "captain-dalton-arrives-from-canada-august-1783"
+      ],
+      "summary": "The Gazette of the State of South-Carolina prints the Philadelphia report of Captain Dalton's arrival.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, 'Capt.' and 'two hundred' included."
+      ],
+      "crops": [
+        "S83-109.jpg"
+      ],
+      "family": [
+        "R1783-0028"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "general-clark-letter-on-the-expedition-from-the-ohio-november-1782",
+      "kind": "document_group",
+      "label": "Richmond, December 1782: an extract of a letter from General Clark, dated Lincoln, 27 November 1782, on his expedition from the Ohio",
+      "definition": "Printings of an extract of a letter from General Clark, dated Lincoln, 27 November 1782, that the papers print from Richmond, 28 December: 'We left the Ohio the 4th inst. with 1050 men, surprised the principal Shawanese town on the evening of the 10th, and immediately detached parties to different quarters; in a few hours afterwards two thirds of their towns were laid in ashes, and every thing they were possessed of destroyed'. General Clark's own account of his expedition against the Shawnee towns, as the papers print it.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "mr-miller-late-printer-of-the-london-evening-post-arrives-january-1783",
+      "kind": "message_group",
+      "label": "Philadelphia, January 1783: 'In the Ostend cutter, which arrived at Baltimore on Wednesday last, came passenger Mr. Miller, late printer of the London Evening Post'",
+      "definition": "Printings of a Philadelphia paragraph of 14 January 1783: 'In the Ostend cutter, which arrived at Baltimore on Wednesday last, came passenger Mr. Miller, late printer of the London Evening Post, and also of the London Courant, who for these fifteen years past, has so freely exercised the liberty of the press, to the advantage of his country and honour to himself; but particularly in asserting and defending the cause of America.' A Philadelphia paper's report.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "paris-the-negotiations-for-peace-seem-to-be-broken-up-october-1782",
+      "kind": "message_group",
+      "label": "Paris news of 24 October 1782: 'The negotiations for peace seem to be broken up'",
+      "definition": "Printings of a paragraph of the Paris news, dated 24 October 1782: 'The negotiations for peace seem to be broken up; the propositions made on the part of the court of London, in the conferences which have been opened, are rejected. The contents of these propositions are not mentioned.' A paragraph of the European news, printed in January and February 1783.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "london-evening-post-statement-of-the-jamaica-fleet-of-july-1782",
+      "kind": "message_group",
+      "label": "The London Evening Post's statement of the fleet that sailed from Jamaica on 25 July 1782 under convoy of the Ramillies",
+      "definition": "Printings of a paragraph from the London Evening Post of 12 November 1782: 'The London Evening Post of the 12th of November last, contains the following statement of the fleet which sailed from Jamaica on the 25th of July, under convoy of the Ramilies, and several other men of war'; the statement counts the merchant ships (arrived 62, taken 15, foundered 9, missing 14, retaken 2, put back 1) and gives the state of each ship of the convoy ('Ramilies 74, Quitted by her people, and burnt on the 21st of September'). A London paper's statement, printed at second hand.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "major-burnet-arrives-with-general-greenes-dispatches-january-1783",
+      "kind": "message_group",
+      "label": "Philadelphia, January 1783: Major Burnet arrives from Charleston with General Greene's dispatches on the evacuation of the town",
+      "definition": "Printings of a Philadelphia paragraph of 16 January 1783: 'On Tuesday evening major Burnet, aide-camp to the honourable major general Greene, arrived here, in twenty-one days from Charlestown, with dispatches from the General; of which the following is an extract', and the extract of General Greene's letter to the president of Congress, dated headquarters, 19 December 1782: 'I have the honour to communicate to your excellency the agreeable information of the evacuation of Charlestown'. A Philadelphia paper's report, with the general's own letter.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "townshend-letter-to-the-bank-of-england-november-1782",
+      "kind": "document_group",
+      "label": "London, 23 November 1782: Mr. Townshend's letter to the governors and directors of the Bank of England on the negotiations at Paris",
+      "definition": "Printings of a London paragraph of 23 November 1782 and the letter it introduces: 'This day the governors and directors of the bank of England, received the following letter from the honourable T. Townshend, secretary for the home department. Whitehall, Nov. 22, 1782. Gentlemen, His majesty's ministers, anxious to prevent as early as possible, the mischiefs too commonly resulting from speculations in the funds, during the uncertain state of negotiations of peace'; it says that 'the negotiations now carrying on at Paris, are thought so near a crisis, as to promise a decisive conclusion, either for peace or war, before the meeting of parliament'. The secretary of state's own letter, with a London paper's introduction.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "basseterre-report-of-a-peace-concluded-january-1783",
+      "kind": "message_group",
+      "label": "Basseterre, St. Christopher, 15 January 1783: 'The important and agreeable intelligence of a PEACE being concluded between the belligerent powers ... seems now to be confirmed'",
+      "definition": "Printings of a paragraph from Basseterre, St. Christopher, of 15 January 1783: 'The important and agreeable intelligence of a PEACE being concluded between the belligerent powers, which has circulated here for some time, gains ground daily, and seems now to be confirmed; we heartily wish it to be true: It is said that the intelligence comes from good authority'; it gives terms that are 'said to be', beginning 'America to be acknowledged an independent state by all parties'. A West India paper's report of what is said.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "prize-ship-of-20-guns-to-the-frigate-hague-january-1783",
+      "kind": "message_group",
+      "label": "Boston, January 1783: a ship of 20 guns, prize to the Continental frigate Hague, John Manley, Esq; commander, arrives",
+      "definition": "Printings of a Boston paragraph of late January 1783: 'Yesterday arrived safe in port a ship of 20 guns, prize to the Continental frigate Hague, John Manly, Esq; Commander, she was from St. Lucia bound to St. Martins, and has about 1800 barrels provisions on board—This is the fifth prize Capt. Manly has sent into port on his late cruise.' The other papers print it from Boston as 'Wednesday arrived'. A Boston paper's report.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782",
+      "kind": "message_group",
+      "label": "New York, 12 February 1783: by the brig Ranger, taken by the Eagle privateer, Mr. Townshend's letter to the Lord Mayor of London of 3 December 1782",
+      "definition": "Printings of a New York paragraph of 12 February 1783: 'By the brig Ranger, captain Roger Boyce, who left France the 23d of December, 1782, and was captured on the 6th instant, by the Eagle privateer, captain George Benneison, which arrived here last night, the following letter was received', with the extract of Mr. Townshend's letter to the Lord Mayor of London of 3 December 1782: 'I take the earliest opportunity to inform your lordship, that an express has just arrived from Paris, who brings the preliminary articles for a peace, signed on the 30th of November, by the ambassadors on the part of England, and those on the part of the united states of America'. A New York paper's report, with the secretary of state's own letter.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "mr-morris-letter-to-congress-on-his-office-january-1783",
+      "kind": "document_group",
+      "label": "Office of Finance, 24 January 1783: Mr. Morris's letter to Congress, 'As nothing but the public danger would have induced me to accept my office'",
+      "definition": "Printings of the letter of Mr. Morris, superintendent of finance, to Congress, dated Office of Finance, 24 January 1783, which the papers print in March, 'the resignation of the superintendant of finance having occasioned much conversation': 'As nothing but the public danger would have induced me to accept my office, so I was determined to hold it until the danger was past, or else to meet my ruin in the common wreck'; he writes that funding the public debts on solid revenues was 'the last essential work of our glorious revolution'. Mr. Morris's own letter.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+      "kind": "context_group",
+      "label": "The articles of peace and the cessation of arms, as the papers printed them from March to May 1783",
+      "definition": "Five public papers of the peace, as the papers printed them in the spring of 1783: the provisional articles agreed at Paris on 30 November 1782 between the King's commissioner and the commissioners of the United States; the preliminary articles between Great Britain and France signed at Versailles on 20 January 1783; the King's proclamation of the cessation of arms; the proclamation of the United States in Congress assembled of 11 April; and General Washington's orders of 18 April for proclaiming the cessation of hostilities to the army. Contains those five groups.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "provisional-articles-of-peace-30-november-1782",
+      "kind": "document_group",
+      "label": "The provisional articles of peace agreed at Paris on 30 November 1782 between Richard Oswald and the commissioners of the United States",
+      "definition": "Printings of the provisional articles: 'Articles agreed upon by and between Richard Oswald, esquire, the commissioner of his Britannic majesty, for treating of peace with the commissioners of the united states of America, in behalf of his said majesty on the one part, and John Adams, Benjamin Franklin, John Jay, and Henry Laurens, four of the commissioners of the said states'; the first article reads 'His Britannic majesty acknowledges the said united states ... to be free, sovereign, and independent states'. The articles themselves, as the papers print them.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "preliminary-articles-between-great-britain-and-france-20-january-1783",
+      "kind": "document_group",
+      "label": "The preliminary articles of peace between Great Britain and France, signed at Versailles on 20 January 1783",
+      "definition": "Printings of a translation of the preliminary articles: 'Translation of the Preliminary Articles of Peace, between His Britannic Majesty and the Most Christian King; signed at Versailles the 20th of January, 1783. In the name of the most Holy Trinity. The King of Great-Britain and the Most Christian King, equally animated with a desire of putting an end to the calamities of a destructive war'. The articles themselves, in translation.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "kings-proclamation-of-the-cessation-of-arms-february-1783",
+      "kind": "document_group",
+      "label": "The King's proclamation declaring the cessation of arms, as well by sea as land, agreed upon between him, the Most Christian King, the King of Spain, the States General and the United States",
+      "definition": "Printings of the King's proclamation: 'By the King. A Proclamation, Declaring the Cessation of Arms, as well by Sea as Land, agreed upon between His Majesty, the Most Christian King, the King of Spain, the States General of the United Provinces, and the United States of America, and enjoining the Observance thereof. George R. Whereas Provisional Articles were signed at Paris, on the Thirtieth Day of November last, between Our Commissioner for treating of Peace with the Commissioners of the United States of America, and the Commissioners of the said States'. London reports of its reading at the Royal Exchange, which name its title, are not counted (C-07). The King's own proclamation.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "congress-proclamation-of-the-cessation-of-arms-11-april-1783",
+      "kind": "document_group",
+      "label": "The proclamation of the United States in Congress assembled, 11 April 1783, declaring the cessation of arms agreed upon between the United States and the King",
+      "definition": "Printings of the proclamation of Congress of 11 April 1783: 'By the United States of America in Congress assembled. A Proclamation, Declaring the Cessation of Arms, as well by Sea as by Land, agreed upon between the United-States of America and His Britannic Majesty; and enjoining the Observance thereof. Whereas Provisional Articles were signed at Paris on the Thirtieth Day of November last, between the Ministers Plenipotentiary of the United-States of America for treating of Peace'. The New-Jersey Gazette prints it whole within a New Jersey proclamation, which recites it 'in the words following, to wit' (counted, C-02; X-1783-05). Congress's own proclamation.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "washington-orders-for-proclaiming-the-cessation-of-hostilities-18-april-1783",
+      "kind": "document_group",
+      "label": "Head-quarters, 18 April 1783: General Washington's orders that the cessation of hostilities be publicly proclaimed to the army",
+      "definition": "Printings of the orders of 18 April 1783: 'The commander in chief orders the cessation of hostilities between the united states of America and the king of Great-Britain, to be publicly proclaimed to morrow at twelve o'clock, at the new building; and that the proclamation, which will be communicated herewith, be read to morrow evening at the head of every regiment and corps of the army; after which the chaplains, with the several brigades, will render thanks to Almighty God'. The commander in chief's own orders.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "tell-it-to-the-whole-world-the-prisoners-at-new-york-april-1783",
+      "kind": "message_group",
+      "label": "'To all Printers of Public News-Papers. Tell it to the whole World': a notice signed 'An American' on the American prisoners said to have died in the prison ship at New York",
+      "definition": "Printings of a notice signed 'An American': 'To all Printers of Public News-Papers. Tell it to the whole World, and let it be published in every News-Paper throughout America, Europe, Asia and Africa, to the everlasting disgrace and infamy of the British King's Commanders at New-York, That during the late War, it is said, Eleven Thousand Six Hundred and Forty Four American Prisoners, have suffered death by their inhumane, cruel, savage and barbarous usage on board the filthy and malignant British Prison Ship called the Jersey, lying at New-York.' An anonymous writer's allegation, of a number that 'it is said'.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "philadelphia-port-open-to-vessels-from-any-foreign-port-april-1783",
+      "kind": "message_group",
+      "label": "Philadelphia, April 1783: 'this port is now open for the reception of vessels from any foreign port', and New York open for the American flag",
+      "definition": "Printings of a Philadelphia paragraph of 29 April 1783: 'We have good authority for assuring our readers, that this port is now open for the reception of vessels from any foreign port.—Several vessels from different parts of the united states have lately arrived at New-York, that port being at this time open for the American flag.' A Philadelphia paper's report.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "continental-troops-march-to-charleston-june-1783",
+      "kind": "message_group",
+      "label": "June 1783: 'The continental troops who were at Savanna, are on their march to Charlestown, where vessels are providing to transport them to their respective states'",
+      "definition": "Printings of a paragraph of the southern news, printed from early June 1783: 'The continental troops who were at Savanna, are on their march to Charlestown, where vessels are providing to transport them to their respective states. General Wayne is gone to settle a treaty of peace with some tribes of Indians on the frontiers of Georgia. They are to negotiate the business at Augusta.' A paper's report of news from the south.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "versailles-dispatches-of-m-de-suffren-march-1783",
+      "kind": "message_group",
+      "label": "Versailles, 28 March 1783: the King receives official dispatches from M. de Suffren on the proceedings in the East Indies",
+      "definition": "Printings of a paragraph from Versailles of 28 March 1783: 'On the 25th of this month, the king received some official dispatches from M. de Suffrein, which after giving a detail of the late proceedings in the East Indies between the French and English fleets, as has been already mentioned, conclude as follow', with what the dispatches report of the fighting near Madras. The French court's account of the dispatches, in the European news.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "maryland-act-to-invest-congress-with-power-to-levy-duties-june-1783",
+      "kind": "message_group",
+      "label": "Philadelphia, 10 June 1783: the general assembly of Maryland passes an act to invest Congress with a power to levy duties on imported goods",
+      "definition": "Printings of a Philadelphia paragraph of 10 June 1783: 'The general assembly of Maryland, at their last session, passed an act to invest the United States in Congress assembled, with a power to levy for the use of the said states, certain duties on imported foreign goods, wares and merchandizes, as a fund for the payment of the debt contracted by Congress during the late war.' A Philadelphia paper's report.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "virginia-assembly-votes-50000-pounds-to-congress-june-1783",
+      "kind": "message_group",
+      "label": "Richmond, 7 June 1783: 'The honorable general assembly have voted an immediate payment of 50,000l. to Congress'",
+      "definition": "Printings of a Richmond paragraph of 7 June 1783: 'The honorable general assembly have voted an immediate payment of 50,000l. to Congress; and the funds out of which this money is directed to be paid, being fully equal to that demand, it affords sensible pleasure that Virginia, by the wisdom of the legislature, will retrieve her character of good faith and exertion among the United States'. A Richmond paper's report and comment.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "french-frigate-with-stores-for-the-america-portsmouth-june-1783",
+      "kind": "message_group",
+      "label": "Portsmouth, New Hampshire, 7 June 1783: a French frigate arrives from France with stores for the ship America, of 74 guns",
+      "definition": "Printings of a Portsmouth paragraph of 7 June 1783: 'Yesterday arrived here a French frigate in 44 days from France, with stores, &c. for the ship America, of 74 guns, now lying before this town. She brings nothing new.' A Portsmouth paper's report.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "schooner-molly-from-grenada-report-on-the-stadtholder-july-1783",
+      "kind": "message_group",
+      "label": "Philadelphia, July 1783: Captain Burrows, in the schooner Molly from Grenada, brings 'an account that the prince stadtholder was lately killed in a tumult'",
+      "definition": "Printings of a Philadelphia paragraph of late June 1783: 'Captain Burrows, in the schooner Molly, arrived here last Saturday from Grenada, in fourteen days passage, informs us, that before he sailed, advice was received from Barbadoes of the arrival of a packet from England, which brought an account that the prince stadtholder was lately killed in a tumult among the people of Amsterdam.—If this be true, it is likely that some trouble will ensue'. A report at third hand, which the paper itself doubts ('If this be true').",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "no-foreign-vessels-entered-at-new-york-july-1783",
+      "kind": "message_group",
+      "label": "July 1783: 'No foreign vessels can yet be entered at New-York, neither is the American flag suffered to fly in that harbour'",
+      "definition": "Printings of a paragraph of July 1783: 'No foreign vessels can yet be entered at New-York, neither is the American flag suffered to fly in that harbour. The few French and others that arrived hitherto, have either returned and entered some other port, or sailed up the North river'. A paper's report.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783",
+      "kind": "message_group",
+      "label": "Lisbon, 20 April 1783: an American of distinction received by the Queen, and the articles of a treaty of commerce with the United States 'nearly agreed upon'",
+      "definition": "Printings of a Lisbon paragraph of 20 April 1783: 'An American of distinction, who has for some time past resided in this capital, was admitted a few days since to a private audience of the queen, and had a pretty long conference with her majesty. It is assured, that the articles of the treaty of commerce, which is upon the tapis between our court and the United-States, are nearly agreed upon'. The New-Hampshire Gazette prints it in other words ('We are assured that the articles of the treaty of commerce, which is on the tapis'), counted with it (C-02). A paragraph of the European news.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    },
+    {
+      "id": "captain-dalton-arrives-from-canada-august-1783",
+      "kind": "message_group",
+      "label": "Philadelphia, 12 August 1783: Captain Dalton, superintendent of Indian affairs for the United States, arrives from Canada with 200 Americans",
+      "definition": "Printings of a Philadelphia paragraph of 12 August 1783: 'Captain Dalton, superintendant of Indian affairs for the United States, arrived here last week from Canada, which he left about a month since, in company with 200 Americans, who are at length happily liberated from a cruel captivity'; it says that a number of others 'are still retained as prisoners by the Indians'. A Philadelphia paper's report; the excerpts end before it turns to Captain Dalton's family.",
+      "admission_rule": "Reviewed 1783 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [
+    {
+      "parent": "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+      "child": "provisional-articles-of-peace-30-november-1782"
+    },
+    {
+      "parent": "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+      "child": "preliminary-articles-between-great-britain-and-france-20-january-1783"
+    },
+    {
+      "parent": "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+      "child": "kings-proclamation-of-the-cessation-of-arms-february-1783"
+    },
+    {
+      "parent": "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+      "child": "congress-proclamation-of-the-cessation-of-arms-11-april-1783"
+    },
+    {
+      "parent": "the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
+      "child": "washington-orders-for-proclaiming-the-cessation-of-hostilities-18-april-1783"
+    }
+  ],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1783 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 230 items found on the pages, 60 in 4 or more papers by the finder's count), and again with the families of 1782 over the 1783 pages (items_from_1782.json: 34 items, 1 in 4 or more). Every item in 3 or more papers was compared by machine with every page and counted again by its opening; a sweep of seven-word sequences shared by 4 or more papers found 186 runs, and the runs no finder item covers were read. Counted item by item (55 entries), 47 items meet the bar by the count of their openings (count_1783.md). The admitted and chosen items were counted again by their own words with phrase searches over all 1,100 pages in both transcriptions, and read on every page.",
+    "selection_rule": "The thin-year rule (Y-THIN, as amended on 23 November 2026, the owner's choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; as in R-01, the eligible items printed by every newspaper that survives for their weeks are admitted, and the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35); one affair's items as in X-1800-01; digests are not admitted; sub-stories (C-01), private persons (R-04) and the list of items read and not admitted (R-03) as in every year. In 1783 4 to 7 papers survive for the weeks of every item in the ledger, so the bar is 4 for each; from mid-October fewer than 4 papers survive and no item can be eligible.",
+    "paper_counting": "1783 has 9 catalogue series, which are 9 papers: the Pennsylvania Packet (122 issues, to 11 October), the New-Hampshire Gazette (51), the Connecticut Courant (41, to 9 December) and the New-Jersey Gazette (29) carry most of the year; the Gazette of the State of South-Carolina survives from 16 July, the New-Jersey Journal in 4 issues to 9 April, and three Charleston papers in 6 issues of April and May. No 1783 issue has a corrected date; the release's map lists no misfiled RevX page of 1783.",
+    "items_admitted": {
+      "general-clark-letter-on-the-expedition-from-the-ohio-november-1782": "count entry 3 (I83-0023); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "mr-miller-late-printer-of-the-london-evening-post-arrives-january-1783": "count entry 5 (I83-0025); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "paris-the-negotiations-for-peace-seem-to-be-broken-up-october-1782": "count entry 6 (I83-0024); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "london-evening-post-statement-of-the-jamaica-fleet-of-july-1782": "count entry 7 (I83-0026); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "major-burnet-arrives-with-general-greenes-dispatches-january-1783": "count entry 8 (I83-0027, I83-0028); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "townshend-letter-to-the-bank-of-england-november-1782": "count entry 9 (I83-0029); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "basseterre-report-of-a-peace-concluded-january-1783": "count entry 10 (I83-0030); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "prize-ship-of-20-guns-to-the-frigate-hague-january-1783": "count entry 11 (R035); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782": "count entry 13 (I83-0031); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "mr-morris-letter-to-congress-on-his-office-january-1783": "count entry 17 (I83-0035, I83-0034); phrase searches; chosen to cover the months and the kinds of news.",
+      "provisional-articles-of-peace-30-november-1782": "count entry 20 (I83-0017, I83-0006, I83-0015); phrase searches; chosen to cover the months and the kinds of news.",
+      "preliminary-articles-between-great-britain-and-france-20-january-1783": "count entry 22 (I83-0013, I83-0003, I83-0014, I83-0020 and more); phrase searches; chosen to cover the months and the kinds of news.",
+      "kings-proclamation-of-the-cessation-of-arms-february-1783": "count entry 23 (I83-0004); phrase searches; chosen to cover the months and the kinds of news.",
+      "congress-proclamation-of-the-cessation-of-arms-11-april-1783": "count entry 24 (I83-0005, I83-0043); phrase searches; chosen to cover the months and the kinds of news.",
+      "washington-orders-for-proclaiming-the-cessation-of-hostilities-18-april-1783": "count entry 31 (I83-0045, I83-0021, I83-0046, I83-0047); phrase searches; chosen to cover the months and the kinds of news.",
+      "tell-it-to-the-whole-world-the-prisoners-at-new-york-april-1783": "count entry 27 (I83-0001); phrase searches; chosen to cover the months and the kinds of news.",
+      "philadelphia-port-open-to-vessels-from-any-foreign-port-april-1783": "count entry 30 (I83-0002, I83-0011); phrase searches; chosen to cover the months and the kinds of news.",
+      "continental-troops-march-to-charleston-june-1783": "count entry 40 (I83-0051); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "versailles-dispatches-of-m-de-suffren-march-1783": "count entry 41 (I83-0052); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "maryland-act-to-invest-congress-with-power-to-levy-duties-june-1783": "count entry 42 (I83-0053); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "virginia-assembly-votes-50000-pounds-to-congress-june-1783": "count entry 43 (I83-0054); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "french-frigate-with-stores-for-the-america-portsmouth-june-1783": "count entry 47 (R169); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "schooner-molly-from-grenada-report-on-the-stadtholder-july-1783": "count entry 49 (I83-0012); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "no-foreign-vessels-entered-at-new-york-july-1783": "count entry 51 (I83-0059); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783": "count entry 52 (R181); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part.",
+      "captain-dalton-arrives-from-canada-august-1783": "count entry 53 (I83-0060); phrase searches; printed by every paper that survives for its weeks: admitted by the rule's first part."
+    },
+    "counted_item_by_item": {
+      "Paper counts": "Of 47 items eligible by the count, 18 reach every paper that survives for their weeks; read again by their own words, all 18 do (17 in 4 of 4, one in 5 of 5) and are admitted. 8 are chosen; the others are listed as not chosen, except one item on a private person, listed for the owner, and the definitive treaty, below the bar by its own words.",
+      "The papers of the peace": "By their own words the provisional articles, the preliminary articles with France and the two proclamations of the cessation of arms are each in 4 papers, where the count of their openings found 5; Washington's orders of 18 April are in 4 of 6.",
+      "Printed forms counted together": "The New-Hampshire Gazette's state of the Jamaica convoy, the New-Jersey Gazette's report of the French frigate, the New-Hampshire Gazette's Lisbon paragraph in other words, and Congress's proclamation as the New-Jersey Gazette prints it within a New Jersey proclamation (C-02).",
+      "Texts apart": "London reports of the reading of the King's proclamation are not counted (C-07); the preliminary articles between Great Britain and Spain are another text; the definitive treaty is counted by its own words, apart from the provisional articles whose words it repeats."
+    },
+    "not_admitted": {
+      "Philadelphia: 'a commission has passed the great seal of Great-Britain' authorising Mr. Oswald to treat with the commissioners of the United States (4)": "In 4 papers (January) by the count, a single paragraph of a news column; not chosen: one affair's items in the same weeks (X-1800-01): the news of the negotiations for peace (the Paris paragraph and Mr. Townshend's letter to the Bank of England, admitted) is in the ledger.",
+      "Paris: the negotiators for peace meet at the French minister's (Mr. Fitzherbert and Mr. Oswald for Great Britain, Dr. Franklin for the United States) (3)": "In 3 papers of the 5 that survive for its weeks by the count; the bar is 4. Below the bar.",
+      "A private letter from Paris, 1 November 1782, on the negotiators for peace (3)": "In 3 papers of the 4 that survive for its weeks by the count; the bar is 4. Below the bar.",
+      "Congress, 17 January 1783: on the report of a committee on a letter of 19 December (5)": "In 5 papers (February) by the count, a document; not chosen: February is covered by the Basseterre report of a peace, the Hague's prize and the letter taken in the brig Ranger, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Head-quarters, New York, 18 February 1783: notice to persons within the lines whose houses or lands have been withheld from them (4)": "In 4 papers (February) by the count, a document; not chosen: February is covered by the Basseterre report of a peace, the Hague's prize and the letter taken in the brig Ranger, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "General Lincoln's notification to officers and prisoners on parole (5)": "In 5 papers (February) by the count, a notice; not chosen: February is covered by the Basseterre report of a peace, the Hague's prize and the letter taken in the brig Ranger, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). Verse, essays and notices are not chosen when the months are covered (C-10).",
+      "Montserrat, 26 January: a Portuguese brig from Guadeloupe brings news (4)": "In 4 papers (March) by the count, a letter or report; not chosen: March is covered by Mr. Morris's letter to Congress and the provisional articles of peace, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Philadelphia, 13 March: the Washington packet arrives from L'Orient; outlines of the articles of a treaty between Great Britain and the United States (4)": "In 4 papers (March) by the count, a single paragraph of a news column; not chosen: one affair's items in the same weeks (X-1800-01): the provisional articles of peace (chosen), whose 'outlines' it gives is in the ledger.",
+      "London: an address to the King: 'his majesty has been graciously and affectionately pleased' (4)": "In 4 papers (March) by the count, a document; not chosen: March is covered by Mr. Morris's letter to Congress and the provisional articles of peace, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The heads of the preliminaries of peace signed at Versailles, 20 January 1783, and the arrival of the news by the Triumph sloop (4)": "In 4 papers (March) (by its own words ('The Principal Articles of the Preliminaries') in 4 papers), a document; not chosen: one affair's items in the same weeks (X-1800-01): the preliminary articles between Great Britain and France (chosen), whose heads it gives is in the ledger.",
+      "Congress: the officers' half pay commuted for five years' full pay (4)": "In 4 papers (April) by the count, a document; not chosen: April is covered by the preliminary articles with France, the King's proclamation and Congress's proclamation of the cessation of arms, General Washington's orders of 18 April, the notice 'Tell it to the whole World' and the Philadelphia paragraph on the ports, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "The proceedings of the army near New Windsor, March 1783: the anonymous addresses, General Washington's address to the officers and their resolutions (4)": "In 4 papers (April) by the count, a document; not chosen: April is covered by the preliminary articles with France, the King's proclamation and Congress's proclamation of the cessation of arms, General Washington's orders of 18 April, the notice 'Tell it to the whole World' and the Philadelphia paragraph on the ports, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Baltimore, 22 April: the ships Nonsuch and York arrive from Nantes (3)": "3 papers of 6 once the South-Carolina and American General Gazette left out: its issues are the Weekly Gazette's scans (C-05). Below the bar.",
+      "The French court said to be determined to keep up a greater peace establishment of their navy (3)": "3 papers of 6 once the South-Carolina and American General Gazette left out: its issues are the Weekly Gazette's scans (C-05). Below the bar.",
+      "Persons passing through from New York: little appearance of a speedy evacuation of New York (4)": "In 4 papers (May) by the count, a single paragraph of a news column; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "The ship Hawk arrives from Marseilles by Gibraltar (4)": "In 4 papers (May) by the count, a single paragraph of a news column; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Brigadier General Clark and other officers arrive from New York to conduct the British prisoners (3)": "In 3 papers of the 6 that survive for its weeks by the count; the bar is 4. Below the bar.",
+      "An abstract of the bill for the provisional establishment and regulation of trade between Great Britain and the United States (4)": "In 4 papers (May) by the count, a document; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "South Carolina: persons sent to St. Augustine to claim the property carried there during the war, to be restored by the treaty (3)": "3 papers of 6 once the South-Carolina and American General Gazette left out: its issues are the Weekly Gazette's scans (C-05). Below the bar.",
+      "London: 'The danger with which the nation is threatened from the disappointment of the general hope that an administration was on the point of being formed' (4)": "In 4 papers (May) by the count, a single paragraph of a news column; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "'Our harbour is now ornamented with the flags of seven independent powers' (4)": "In 4 papers (May) by the count, a single paragraph of a news column; not chosen: May is covered by the notice 'Tell it to the whole World', the paragraph on the ports and the preliminary articles with France, all printed into May, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Congress's plan for restoring public credit: the duties recommended to the several states (3)": "In 3 papers of the 5 that survive for its weeks by the count; the bar is 4. Below the bar.",
+      "A private letter from a French officer in India to his friend in Paris on the fighting in India (4)": "In 4 papers (June) by the count, a letter or report; not chosen: one affair's items in the same weeks (X-1800-01): the Versailles paragraph on M. de Suffren's dispatches from the East Indies (admitted) is in the ledger.",
+      "The Emperor has not yet acknowledged the independence of America by any formal act (4)": "In 4 papers (June) by the count, a single paragraph of a news column; not chosen: June is covered by the troops' march to Charleston, the Versailles paragraph on M. de Suffren's dispatches, Maryland's act and Virginia's payment for Congress, and the French frigate at Portsmouth, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Charleston, 14 June: two letters from Mr. Laurens of 1 and 7 April (4)": "In 4 papers (July) by the count, a single paragraph of a news column; not chosen: July is covered by the report brought by the schooner Molly, the report that no foreign vessels are entered at New York and the Lisbon paragraph on a treaty of commerce, and the chosen band takes about as many stories as a standard year (Y-THIN as amended). A single paragraph of a news column (C-09).",
+      "Congress resolves that the secretary at war communicate to the commander in chief the state of the troops (4)": "In 4 papers (July) by the count, a document; not chosen: July is covered by the report brought by the schooner Molly, the report that no foreign vessels are entered at New York and the Lisbon paragraph on a treaty of commerce, and the chosen band takes about as many stories as a standard year (Y-THIN as amended).",
+      "Congress's proclamation of 18 October 1783: the armies of the United States discharged (2)": "2 papers by its own words (NHG, SCG); the sweep run joined it with other texts. Below the bar.",
+      "The definitive treaty of peace between Great Britain and the United States, signed 3 September 1783, printed in December (2)": "Counted at 5 papers by the count, which joined it with the provisional articles whose words it repeats; by its own words ('the most serene and most potent Prince George the Third', 'to forget all past misunderstandings and differences') it is in 2 papers (the Connecticut Courant of 9 December, the Gazette of the State of South-Carolina of 18 December) of the 4 that survive for its weeks. Below the bar.",
+      "Other items of 3 papers or fewer (by count)": "The other items the finder lists, and the passages the sweep found in fewer than 4 papers, were compared by machine with every page and counted again by their openings; none reaches 4 papers. They were not read one by one."
+    },
+    "for_the_owner": {
+      "Wilmington, Delaware: a brig from New York whose master, a former inhabitant who had joined the British, is not allowed to land (4)": "In 4 papers (June to August) of the 5 that survive for its weeks; it turns on the brig's master, a private person named as its subject (R-04): listed for the owner, without names; not admitted."
+    },
+    "for_user_decision": {
+      "The choice for 1783": "As built (X-1783-01): 18 groups admitted by the rule's first part and 8 chosen, 22 stories and 110 printings; the other eligible items are listed as not chosen.",
+      "The papers of the peace and the heads of the preliminaries": "As built (X-1783-02): the provisional articles, the preliminary articles with France, both proclamations of the cessation of arms and Washington's orders are chosen as separate public acts; the heads of the preliminaries and the Washington packet's outlines are not chosen (X-1800-01).",
+      "The definitive treaty by its own words": "As built (X-1783-03): 2 papers of the 4 that survive in December; below the bar.",
+      "Printed forms counted together": "As built (X-1783-04): the Jamaica convoy, the French frigate and the Lisbon paragraph, each with a paper's own form (C-02).",
+      "Congress's proclamation with a state's recital": "As built (X-1783-05): the New-Jersey Gazette's printing within a New Jersey proclamation is counted (C-02); not counted, the group would fall below the bar.",
+      "An anonymous allegation chosen": "As built (X-1783-06): 'Tell it to the whole World' is chosen and described as an anonymous writer's allegation.",
+      "A London printer named": "As built (X-1783-07): Mr. Miller, late printer of the London Evening Post, is named as the papers print him.",
+      "One item on a private person": "Listed for the owner without names (X-1783-08).",
+      "A sweep for short items at 4 papers": "The sweep of seven-word sequences shared by 4 or more papers was run for 1783 (X-1783-09).",
+      "Grading calls on the transcriptions": "The scan check graded the transcriptions by the protocol (C-14), as for 1774 and 1775. Calls the owner may revisit: (1) a long s read as f that makes another word is fact-changing ('failed' for 'sailed': S83-003, S83-008, S83-012 in the statement of the Jamaica fleet; S83-091, S83-094, S83-095, S83-107 in the report brought by the schooner Molly; S83-096, S83-100 in the report on New York's port); (2) where RevX ends an excerpt with '...' and the print goes on, the words are counted as dropped, fact-changing (S83-034); (3) words or a line left out are fact-changing: 'strong' lost from 'detached strong parties' (S83-001), a whole sentence of Mr. Morris's letter (S83-038) and the King's signature line 'G. R.' (S83-051); (4) modern spellings ('negotiations' for 'negociations', 'publicly' for 'publickly') and misprints that RevX silently corrects are minor."
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
- "made": "2026-11-23",
+ "made": "2026-11-24",
  "script": "work/archive_errata.py",
  "archive": {
   "dataset": "RevolutionCrossroads/loc_chronicling_america_1770-1810",
@@ -70,7 +70,22 @@
  },
  "transcription": {
   "years": [
+   1770,
+   1772,
+   1774,
+   1775,
    1776,
+   1777,
+   1778,
+   1779,
+   1780,
+   1781,
+   1782,
+   1783,
+   1787,
+   1788,
+   1789,
+   1790,
    1793,
    1797,
    1800,
@@ -85,16 +100,120 @@
    1809,
    1810
   ],
-  "checked": 3552,
-  "changes_what_was_printed": 438,
-  "leaves_out_text": 111,
+  "checked": 5179,
+  "changes_what_was_printed": 626,
+  "leaves_out_text": 159,
   "by_year": {
+   "1770": {
+    "checked": 12,
+    "changes_what_was_printed": 1,
+    "by_transcription": {
+     "RevX": 1
+    }
+   },
+   "1772": {
+    "checked": 52,
+    "changes_what_was_printed": 2,
+    "by_transcription": {
+     "RevX": 2
+    }
+   },
+   "1774": {
+    "checked": 159,
+    "changes_what_was_printed": 21,
+    "by_transcription": {
+     "RevX": 21
+    }
+   },
+   "1775": {
+    "checked": 206,
+    "changes_what_was_printed": 24,
+    "by_transcription": {
+     "RevX": 22,
+     "CA": 2
+    }
+   },
    "1776": {
     "checked": 350,
     "changes_what_was_printed": 50,
     "by_transcription": {
      "RevX": 50
     }
+   },
+   "1777": {
+    "checked": 186,
+    "changes_what_was_printed": 35,
+    "by_transcription": {
+     "RevX": 35
+    }
+   },
+   "1778": {
+    "checked": 161,
+    "changes_what_was_printed": 22,
+    "by_transcription": {
+     "RevX": 22
+    }
+   },
+   "1779": {
+    "checked": 162,
+    "changes_what_was_printed": 14,
+    "by_transcription": {
+     "RevX": 14
+    }
+   },
+   "1780": {
+    "checked": 142,
+    "changes_what_was_printed": 21,
+    "by_transcription": {
+     "RevX": 21
+    }
+   },
+   "1781": {
+    "checked": 144,
+    "changes_what_was_printed": 7,
+    "by_transcription": {
+     "RevX": 7
+    }
+   },
+   "1782": {
+    "checked": 166,
+    "changes_what_was_printed": 17,
+    "by_transcription": {
+     "RevX": 17
+    }
+   },
+   "1783": {
+    "checked": 109,
+    "changes_what_was_printed": 13,
+    "by_transcription": {
+     "RevX": 13
+    }
+   },
+   "1787": {
+    "checked": 54,
+    "changes_what_was_printed": 8,
+    "by_transcription": {
+     "RevX": 8
+    }
+   },
+   "1788": {
+    "checked": 30,
+    "changes_what_was_printed": 1,
+    "by_transcription": {
+     "RevX": 1
+    }
+   },
+   "1789": {
+    "checked": 24,
+    "changes_what_was_printed": 2,
+    "by_transcription": {
+     "RevX": 2
+    }
+   },
+   "1790": {
+    "checked": 20,
+    "changes_what_was_printed": 0,
+    "by_transcription": {}
    },
    "1793": {
     "checked": 135,

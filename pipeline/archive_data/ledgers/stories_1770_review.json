@@ -1,0 +1,147 @@
+{
+ "findings": {
+  "S70-001": [
+   "Scan matches the excerpt. No dateline stands above the paragraph, only the end of the preceding paragraph."
+  ],
+  "S70-002": [
+   "Scan matches the excerpt, except that the transcription modernises the print's 'Governour' to 'Governor' (minor)."
+  ],
+  "S70-003": [
+   "Scan matches the excerpt; the transcription only adds a comma after 'NORBORNE' (minor)."
+  ],
+  "S70-004": [
+   "Scan matches the excerpt, under the dateline 'BOSTON, October 11.'. The print abbreviates 'G. Britain': a printed difference, not a transcription error."
+  ],
+  "S70-005": [
+   "Scan matches the excerpt as far as this low-resolution crop shows: the words can be read, the punctuation not closely. No dateline stands above the paragraph, only the end of the preceding one."
+  ],
+  "S70-006": [
+   "Scan matches the excerpt. No dateline stands above the paragraph, only the end of the preceding paragraph."
+  ],
+  "S70-007": [
+   "Scan reads 'shewn himself a friend to it', as the other printings do; the transcription's 'been' is a different word that changes the sense. The word lies partly under a library stamp but its letters can be made out."
+  ],
+  "S70-008": [
+   "Scan matches the excerpt and the dateline 'WILLIAMSBURG, [Virginia] October 18.' above it (added to the excerpt on 24 November, when the openings of each story’s printings were compared); the crop, which had cut the dateline, was cut again higher to show it whole."
+  ],
+  "S70-009": [
+   "Scan matches the excerpt. The print sets 'Mr. Hutchinson is Governor.' in large type on a line of its own."
+  ],
+  "S70-010": [
+   "Scan matches the excerpt and the dateline 'WILLIAMSBURG, in Virginia, October 18, 1770.' above it (added to the excerpt on 24 November, when the openings of each story’s printings were compared). The print reads 'Lieutenant Governor, General' where the other printings have 'Lieutenant, Governor General': a printed difference, not a transcription error."
+  ],
+  "S70-011": [
+   "Scan matches the excerpt, except that the transcription modernises the print's 'Governour' (twice) to 'Governor' (minor). The crop is low-resolution and cannot show whether the print spells 'shown' or 'shewn'."
+  ],
+  "S70-012": [
+   "Scan matches the excerpt. The print reads 'condition' where MS and NHG have 'constitution': a printed difference, not a transcription error."
+  ]
+ },
+ "crops": {
+  "S70-001": [
+   "S70-001.jpg"
+  ],
+  "S70-002": [
+   "S70-002.jpg"
+  ],
+  "S70-003": [
+   "S70-003.jpg"
+  ],
+  "S70-004": [
+   "S70-004.jpg"
+  ],
+  "S70-005": [
+   "S70-005.jpg"
+  ],
+  "S70-006": [
+   "S70-006.jpg"
+  ],
+  "S70-007": [
+   "S70-007.jpg"
+  ],
+  "S70-008": [
+   "S70-008.jpg"
+  ],
+  "S70-009": [
+   "S70-009.jpg"
+  ],
+  "S70-010": [
+   "S70-010.jpg"
+  ],
+  "S70-011": [
+   "S70-011.jpg"
+  ],
+  "S70-012": [
+   "S70-012.jpg"
+  ]
+ },
+ "boxes": {
+  "S70-008": [
+   [
+    2171,
+    350,
+    3789,
+    1041
+   ]
+  ]
+ },
+ "notes": {
+  "S70-004": "Prints the vote under the dateline 'BOSTON, October 11.', with 'G. Britain' where the other printings have 'Great Britain' (scan).",
+  "S70-007": "Earliest printing found. Prints 'knows their constitution', as the New-Hampshire Gazette does, where the two Virginia Gazettes print 'condition' (scan).",
+  "S70-008": "Prints the report under the dateline 'WILLIAMSBURG, [Virginia] October 18.' (scan).",
+  "S70-009": "Prints 'knows their Constitution', as the Massachusetts Spy does, where the two Virginia Gazettes print 'condition', and sets 'Mr. Hutchinson is Governor.' in large type on a line of its own (scan).",
+  "S70-010": "Prints the report under the dateline 'WILLIAMSBURG, in Virginia, October 18, 1770.', and reads 'his Majesty's Lieutenant Governor, General and Commander in Chief' where the other printings have 'Lieutenant, Governor General and Commander in Chief' (scan).",
+  "S70-011": "Dates the letter 'Sept. 6.' without the year, and prints 'knows their condition', as Rind's Virginia Gazette does, where the Massachusetts Spy and the New-Hampshire Gazette print 'constitution' (scan).",
+  "S70-012": "Prints 'knows their condition', as Purdie and Dixon's Virginia Gazette does, where the Massachusetts Spy and the New-Hampshire Gazette print 'constitution' (scan)."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1770 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 32 items printed somewhere; the collection begins in 1770, so there are no families of 1769). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1770 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (21 texts). For every text at the bar or one paper short of it, the papers the comparison missed were looked for again on their pages (the best page within the text's weeks) and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09); each was read. Every admitted item was then counted by phrase searches of its opening over all 448 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+  "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news; digests are not admitted. 1770 has four papers, so an item reaches the bar only when all four print it: every eligible item is printed by every paper that survives for its weeks, three are admitted, and one that turns on private lives is listed for the owner (R-04); nothing is chosen. The fourth paper, the Massachusetts Spy, survives from 23 August, so no item reaches the bar unless it was still being printed after that day.",
+  "paper_counting": "1770 has 4 catalogue series, which are 4 papers: the New-Hampshire Gazette and Historical Chronicle (Portsmouth; 50 issues) all year; two Virginia Gazettes, both printed at Williamsburg by different printers, Alexander Purdie and John Dixon (sn84024739; 26 issues, from 15 February) and William Rind (sn84024741; 19 issues, from 25 January); and the Massachusetts Spy (Boston; 17 issues) from 23 August. Papers in print in any three weeks: 1 to 3 before late August; 4 in most windows from late August to December.",
+  "counted_item_by_item": {
+   "Paper counts": "The three admitted items and the one listed for the owner are each printed by all four papers, counted by phrase searches of their openings and every hit read; their papers are in the README's table of stories. The items read and below the bar are listed in not_admitted with their counts.",
+   "A paragraph in a run of news": "The Boston report of the merchants' vote follows a paragraph on the House of Representatives at Cambridge in three papers; the New-Hampshire Gazette prints the vote without it. Each is counted by its own opening: the vote in 4 of 4, the paragraph on the House in 3 of 4.",
+   "Notices that only name an item's subject": "Proclamations and notices in the Virginia papers that name the governor, Lord Botetourt, are not counted with the report of his death."
+  },
+  "for_user_decision": {
+   "The floor of four papers before 23 August": "As built: before 23 August only three papers survive (in January and February fewer), so no item printed only then reaches the bar of 4; the town of Boston's account of the night of 5 March 1770, and its committee to the Lieutenant Governor, are printed by all three papers that survive for their weeks and are below the bar, as is the King's speech of 9 January. All three admitted items were first printed in October.",
+   "A paragraph on a nobleman's private life": "As built (R-04): a one-sentence London paragraph on what 'appeared upon a late trial' about a nobleman's mistresses since his marriage is printed by every paper that survives for its weeks, but it turns on private lives, so it is listed for the owner, without names (it names no one). If the owner sees it as a public matter, it is admitted by the rule's first part."
+  },
+  "not_admitted": {
+   "Boston, 12 March 1770: 'The town of Boston affords a recent and melancholy demonstration of the destructive consequences of quartering troops among citizens in time of peace' (the town's account of the night of 5 March) (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for its weeks (the New-Hampshire Gazette and the two Virginia Gazettes); the bar asks for at least 4, and the Massachusetts Spy survives only from 23 August.",
+   "Boston, March 1770: the town's committee to the Lieutenant Governor in Council for the removal of the troops, and his words to the Council (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for their weeks; the bar asks for at least 4, and the Massachusetts Spy survives only from 23 August.",
+   "The King's speech to both Houses of Parliament, 9 January 1770 ('It is with much concern ...') (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for its weeks; the bar asks for at least 4, and the Massachusetts Spy survives only from 23 August.",
+   "Boston, 13 September 1770: the students of the senior class of Harvard College to take their degrees in cloth of their own manufacture (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print it.",
+   "Boston, October 1770: the House of Representatives at Cambridge votes to proceed to business (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette prints the merchants' vote that follows it (admitted), not this paragraph.",
+   "London, summer 1770: accounts of two victories of the Russians over the Turks, by sea and land (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print them.",
+   "Boston, November 1770: the trial of Captain Thomas Preston of the 29th Regiment at the Superior Court (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues of November and December do not print it.",
+   "Other items of 3 papers or fewer (by count)": "The other items the finder lists in 3 papers or fewer, compared by machine on the first 40 words of their openings with every page of 1770 (papers the comparison missed were looked for again when an item was one paper short); none reaches the bar. Among them are items printed by all three papers that survive before 23 August, when the Massachusetts Spy's surviving issues begin, which the bar's floor of 4 leaves out. Not read one by one."
+  },
+  "for_the_owner": {
+   "London, 1770: a paragraph on what 'appeared upon a late trial' about a nobleman's private life (4)": "A one-sentence London paragraph that turns on private lives: what 'appeared upon a late trial' about a nobleman's mistresses since his marriage (R-04); it names no one. Printed by every paper that survives for its weeks (the Massachusetts Spy, the New-Hampshire Gazette, which prints 'seven' where the others have 'eleven', and both Virginia Gazettes): it would be admitted by the rule's first part if the owner sees it as a public matter. In 4 of the 4 papers that survive for its weeks (needs 4)."
+  },
+  "counts": {
+   "eligible_items": 4,
+   "admitted_by_the_first_part": 3,
+   "chosen_items": 0,
+   "not_chosen_listed": 0,
+   "digests": 0,
+   "read_below_the_bar": 7
+  }
+ },
+ "verdict_summary": {
+  "yes": 12,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 8,
+  "minor_errors": 3,
+  "major_problem": 1,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 11,
+  "manual_box": 1
+ }
+}

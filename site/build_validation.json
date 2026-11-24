@@ -1,13 +1,133 @@
 {
   "passed": true,
-  "release_version": "0.11.15",
+  "release_version": "0.11.30",
   "reviewed_years": [
+    {
+      "year": 1770,
+      "newspapers": 4,
+      "passages": 12,
+      "group_views": 3,
+      "stories": 3,
+      "categories": 2
+    },
+    {
+      "year": 1772,
+      "newspapers": 6,
+      "passages": 52,
+      "group_views": 14,
+      "stories": 11,
+      "categories": 3
+    },
+    {
+      "year": 1774,
+      "newspapers": 8,
+      "passages": 159,
+      "group_views": 33,
+      "stories": 25,
+      "categories": 3
+    },
+    {
+      "year": 1775,
+      "newspapers": 7,
+      "passages": 206,
+      "group_views": 44,
+      "stories": 24,
+      "categories": 3
+    },
     {
       "year": 1776,
       "newspapers": 16,
       "passages": 351,
       "group_views": 48,
       "stories": 33,
+      "categories": 3
+    },
+    {
+      "year": 1777,
+      "newspapers": 11,
+      "passages": 186,
+      "group_views": 43,
+      "stories": 26,
+      "categories": 3
+    },
+    {
+      "year": 1778,
+      "newspapers": 11,
+      "passages": 161,
+      "group_views": 38,
+      "stories": 26,
+      "categories": 3
+    },
+    {
+      "year": 1779,
+      "newspapers": 9,
+      "passages": 161,
+      "group_views": 32,
+      "stories": 27,
+      "categories": 3
+    },
+    {
+      "year": 1780,
+      "newspapers": 7,
+      "passages": 142,
+      "group_views": 33,
+      "stories": 23,
+      "categories": 3
+    },
+    {
+      "year": 1781,
+      "newspapers": 7,
+      "passages": 144,
+      "group_views": 29,
+      "stories": 25,
+      "categories": 3
+    },
+    {
+      "year": 1782,
+      "newspapers": 8,
+      "passages": 165,
+      "group_views": 38,
+      "stories": 30,
+      "categories": 3
+    },
+    {
+      "year": 1783,
+      "newspapers": 9,
+      "passages": 109,
+      "group_views": 27,
+      "stories": 22,
+      "categories": 3
+    },
+    {
+      "year": 1787,
+      "newspapers": 10,
+      "passages": 54,
+      "group_views": 13,
+      "stories": 13,
+      "categories": 3
+    },
+    {
+      "year": 1788,
+      "newspapers": 7,
+      "passages": 30,
+      "group_views": 7,
+      "stories": 7,
+      "categories": 2
+    },
+    {
+      "year": 1789,
+      "newspapers": 5,
+      "passages": 24,
+      "group_views": 6,
+      "stories": 6,
+      "categories": 3
+    },
+    {
+      "year": 1790,
+      "newspapers": 5,
+      "passages": 20,
+      "group_views": 5,
+      "stories": 5,
       "categories": 3
     },
     {
@@ -115,20 +235,20 @@
       "categories": 3
     }
   ],
-  "curated_passages": 3659,
-  "group_views": 557,
-  "stories_in_overview": 315,
-  "overview_categories": 42,
+  "curated_passages": 5284,
+  "group_views": 922,
+  "stories_in_overview": 588,
+  "overview_categories": 85,
   "years": 41,
   "matched_families": 48270,
-  "reviewed_twins": 259,
-  "sky_stars": 48326,
-  "trace_words": 3106,
-  "trace_stories": 45940,
+  "reviewed_twins": 511,
+  "sky_stars": 48347,
+  "trace_words": 3102,
+  "trace_stories": 45993,
   "year_files_mb": 106.1,
   "year_index_mb": 8.9,
-  "telescope_stars": 48326,
-  "telescope_mb": 7.7,
+  "telescope_stars": 48347,
+  "telescope_mb": 7.8,
   "telescope_text_mb": 24.4,
   "story_topic_lanes": 23,
   "edges": 0,
@@ -175,25 +295,25 @@
     }
   ],
   "recorded_voices": {
-    "clips": 10984,
-    "packs": 355,
-    "mb": 492.4,
-    "reviewed_passages_recorded": 3659,
-    "reviewed_passages": 3659,
-    "titles_recorded": 6795,
+    "clips": 12435,
+    "packs": 628,
+    "mb": 631.4,
+    "reviewed_passages_recorded": 5284,
+    "reviewed_passages": 5284,
+    "titles_recorded": 6621,
     "announcer_clips": 265
   },
   "pages_sha256": {
-    "index.html": "27256f8b1ff1014fc1dba69905ea6089d052b3b38ab336c3ff32cced78b043f2",
-    "telescope.html": "7bf5dc7729a5380514bab6ac8df7c33e42063de964fe4b534208ca35c41c51f8",
-    "pulses.html": "1c8ee4ea4c21caacbd05e7b2116c121fbbd5ede91ed1eaea12e8f6dc508d0d78",
-    "radio.html": "43512004dcc830048f370f14571a6b718e9e5c9d8c0f03eeef5e4937b21f3e6c",
-    "stories.html": "2cdf20f92e75e5dc07e2bf481ac2b27d782f7ef7f9a6c2a49f62b3b9fb86b8b8",
-    "exhibit.html": "b8cbe989af09e587d66fa60318650e3dc39029466a66dd0bc0accbd2da19ecc3",
-    "method.html": "8363b15eb6e93aa37e6c52bb995bd8370a75630404b8961ced40525fe641b33a",
-    "notes.html": "686fa1cf0219c2fad9c6d0b3cb056167e05724c3ef00778b8e069e53fd73d3e9",
-    "findings.html": "073bbcde882b3a2c89796659366a15074286bc175f9cbe18553f62cee13c2c5b",
-    "notebook.html": "93a0ecf129595f7e93ff25ee1f9a947c67bd306dce2fd2baae74e36f0d8dfbdc",
+    "index.html": "53505a0fa5a6845aae58ce9f219b8f598a4a6205932396499132b82134773ee9",
+    "telescope.html": "6f876b13a6f919838f95a1ccfd7aa53d6129d685b8735dbde87ff109d2a28fe9",
+    "pulses.html": "f73741a9097b1d305bfe68a1ab8b5f7177598dcd2dfcd85ec7febff0118c85ed",
+    "radio.html": "4507d92a0509624402551aee1f4c866563e921bad16d966d4009dbe922a5f8e2",
+    "stories.html": "653e10c7727b7e7c79b21c902f572a92dd2243170bb7ec107daed6c74ccfe762",
+    "exhibit.html": "30ec0f447be36cd87b0835ffc822d83dbbb3ffd39b0fb27455d0d6c8f183f1c8",
+    "method.html": "2d8948766df3ac822fb023c3ae666703f7b64e4feab979f0da3ef6dab4c4d3ab",
+    "notes.html": "07f571128d627353008d3e56b26638b981bd5e67fe5ef1d25b118423c7b26a3c",
+    "findings.html": "0eda31f8d4424625cacf87d2f3335f095da851ec9943f1d58507b8a7f900ca30",
+    "notebook.html": "743ca1fd681c4b0abca250bf871f11ce9617bc8ff234c635b6c0f0d1c9a97e5c",
     "site.css": "a0f51851b8960ceeeaa92ca39594855623b08f19453bcc6d151387c2ee2a97cc",
     "glass.js": "b5c672fe664886b79ca0fb561a2c9017a1d4c13e72de5e04921a50f1f42c2b4d",
     "radio.js": "e61144d2b5a1f6e39c5cb114ddbbea6118e4aaee3ff51e3a79094d39d1bd8791",

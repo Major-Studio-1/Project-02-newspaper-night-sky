@@ -1,0 +1,628 @@
+{
+  "ledger_id": "ledger:stories-1790",
+  "ledger_version": 1,
+  "base_release": "0.11.29",
+  "target_release": "0.11.30",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1790",
+  "evidence_dir": "outputs/story_discovery_1790/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1790, and of 1789 where they reach the 1790 pages (long-running ones included), every item in 3 or more papers counted again by the first 40 words of its opening against every page, papers that comparison missed looked for again and read, a sweep of word-for-word passages shared by 4 or more papers for items the families miss, phrase searches on all 950 pages of 1790 in both transcriptions for every admitted and chosen item, and scan checks of each admitted passage, by the thin-year rule (Y-THIN as amended on 23 November 2026: an item printed by more than half of the newspapers that survive for its weeks, and by at least 4, is eligible; items printed by every surviving paper are admitted, the others chosen to cover the months and the kinds of news)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1790/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1790/items_from_1789.json": "retrieval_candidates",
+    "outputs/story_discovery_1790/counted_items.json": "retrieval_candidates",
+    "outputs/story_discovery_1790/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1790/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1790.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1790_review.json": "scan_review",
+    "outputs/story_discovery_1790/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1790/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S90-001",
+      "page_key": "sn83030483|1790-01-09|1|3",
+      "excerpt_start": "FELLOW-CITIZENS of the SENATE, and HOUSE",
+      "excerpt_end": "present favorable prospects of our public affairs.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-speech-to-both-houses-8-january-1790"
+      ],
+      "summary": "New-York, January 1790: the President's speech to both Houses at the opening of the session.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the salutation and the large initial 'I' of 'I EMBRACE' are printed."
+      ],
+      "crops": [
+        "S90-001.jpg"
+      ],
+      "family": [
+        "R1790-0003",
+        "R1790-0141",
+        "R1790-0142"
+      ]
+    },
+    {
+      "id": "S90-002",
+      "page_key": "sn83025587|1790-01-20|1|3",
+      "excerpt_start": "FELLOW-CITIZENS of the SENATE, and HOUSE",
+      "excerpt_end": "present favorable prospects of our public affairs.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-speech-to-both-houses-8-january-1790"
+      ],
+      "summary": "The New-Hampshire Gazette prints the President's speech of 8 January 1790.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, printed under the heading 'SPEECH.'; the large initial 'I' is printed."
+      ],
+      "crops": [
+        "S90-002.jpg"
+      ],
+      "family": [
+        "R1789-0115",
+        "R1789-0393",
+        "R1790-0003",
+        "R1790-0161"
+      ]
+    },
+    {
+      "id": "S90-003",
+      "page_key": "sn84023133|1790-01-23|1|2",
+      "excerpt_start": "FELLOW CITIZENS of the SENATE and",
+      "excerpt_end": "present favourable prospects of our public affairs.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-speech-to-both-houses-8-january-1790"
+      ],
+      "summary": "The New-Hampshire Gazetteer prints the President's speech of 8 January 1790.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the transcription leaves out the large initial 'I' of 'I EMBRACE', which is printed. This print spells 'favourable', as transcribed."
+      ],
+      "crops": [
+        "S90-003.jpg"
+      ],
+      "family": [
+        "R1790-0003"
+      ]
+    },
+    {
+      "id": "S90-004",
+      "page_key": "sn83030483|1790-03-06|1|2",
+      "excerpt_start": "TREASURY DEPARTMENT, March 4, 1790. In",
+      "excerpt_end": "may be obtained from the following objects:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-report-of-4-march-1790-on-further-revenue"
+      ],
+      "summary": "New-York, March 1790: the Secretary of the Treasury's report on the funds for paying interest on the states' debts.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The report is printed after the House's proceedings ('Adjourned till Monday'), opening with a quotation mark."
+      ],
+      "crops": [
+        "S90-004.jpg"
+      ],
+      "family": [
+        "R1790-0002",
+        "R1790-0025",
+        "R1790-0224"
+      ]
+    },
+    {
+      "id": "S90-005",
+      "page_key": "sn83025587|1790-03-24|1|1",
+      "excerpt_start": "Treasury-Department, March 4, 1790. In obedience",
+      "excerpt_end": "may be obtained from the following objects:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-report-of-4-march-1790-on-further-revenue"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Secretary of the Treasury's report of 4 March 1790.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S90-005.jpg"
+      ],
+      "family": [
+        "R1790-0002",
+        "R1790-0025",
+        "R1790-0224"
+      ]
+    },
+    {
+      "id": "S90-006",
+      "page_key": "sn84023133|1790-03-27|1|1",
+      "excerpt_start": "Treasury-Department, March 4. 1790. In obedience",
+      "excerpt_end": "may be obtained from the following objects:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-report-of-4-march-1790-on-further-revenue"
+      ],
+      "summary": "The New-Hampshire Gazetteer prints the Secretary of the Treasury's report of 4 March 1790.",
+      "note": "Prints 'the Secretary of the Treasury reports' without 'respectfully', 'the 9th of Jan. past', and the misprint 'modificaions' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt, which follows this print's shorter wording ('reports' without 'respectfully', 'the 9th of Jan.'); the transcription silently corrects the printer's misprint 'modificaions'. The heading date is March 4, 1790."
+      ],
+      "crops": [
+        "S90-006.jpg"
+      ],
+      "family": [
+        "R1790-0002",
+        "R1790-0025"
+      ]
+    },
+    {
+      "id": "S90-007",
+      "page_key": "sn82014782|1790-04-05|1|2",
+      "excerpt_start": "Fellow-citizens of the Senate and House",
+      "excerpt_end": "present favorable prospects of our public affairs.",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "president-speech-to-both-houses-8-january-1790"
+      ],
+      "summary": "The Kentucky Gazette prints the President's speech of 8 January 1790.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "The speech stands in the second column of the crop and matches the excerpt, except that the transcription leaves out the printed initial 'I' of 'I EMBRACE'. The scan is small and blurred, so 'favorable' is read with medium confidence."
+      ],
+      "crops": [
+        "S90-007.jpg"
+      ],
+      "family": [
+        "R1790-0003",
+        "R1790-0121",
+        "R1790-0122"
+      ]
+    },
+    {
+      "id": "S90-008",
+      "page_key": "sn82014782|1790-05-17|1|2",
+      "excerpt_start": "TREASURY DEPARTMENT, March 4, 1790. In",
+      "excerpt_end": "may be obtained from the following objects:",
+      "roles": [
+        "published_document"
+      ],
+      "groups": [
+        "treasury-report-of-4-march-1790-on-further-revenue"
+      ],
+      "summary": "The Kentucky Gazette prints the Secretary of the Treasury's report of 4 March 1790.",
+      "note": "The first of three parts (17, 24 and 31 May), each under the report's heading; prints the misprint 'DEPARNMENT' in the heading (scan).",
+      "scan_findings": [
+        "Crops drawn by hand show the heading and the report's opening, carried over to the next column; scan matches the excerpt, except that the print has the misprint 'DEPARNMENT', which the transcription corrects."
+      ],
+      "crops": [
+        "S90-008-1.jpg",
+        "S90-008-2.jpg"
+      ],
+      "family": [
+        "R1790-0002"
+      ],
+      "scan_boxes": [
+        [
+          465,
+          2045,
+          805,
+          2375
+        ],
+        [
+          805,
+          85,
+          1140,
+          205
+        ]
+      ]
+    },
+    {
+      "id": "S90-009",
+      "page_key": "sn83030483|1790-09-22|1|1",
+      "excerpt_start": "The following incident lately occurred in",
+      "excerpt_end": "seated himself beside a beautiful young lady;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "anecdote-of-a-french-gentleman-1790"
+      ],
+      "summary": "Autumn 1790: an anecdote of a French gentleman in a country town of the eastern States.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S90-009.jpg"
+      ],
+      "family": [
+        "R1790-0008",
+        "R1790-0466",
+        "R1790-0467",
+        "R1790-0468"
+      ]
+    },
+    {
+      "id": "S90-010",
+      "page_key": "sn83030483|1790-09-25|1|3",
+      "excerpt_start": "There is a strange idea that",
+      "excerpt_end": "of this most capital of all misfortunes:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "essay-on-the-idea-that-wars-are-necessary-1790"
+      ],
+      "summary": "Autumn 1790: a paragraph against the idea that wars are necessary.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph follows the end of another item, with no heading or dateline."
+      ],
+      "crops": [
+        "S90-010.jpg"
+      ],
+      "family": [
+        "R1790-0009",
+        "R1790-0085",
+        "R1790-0089",
+        "R1790-0473",
+        "R1790-0474",
+        "R1790-0476"
+      ]
+    },
+    {
+      "id": "S90-011",
+      "page_key": "sn83025587|1790-10-07|1|3",
+      "excerpt_start": "There is a strange idea that",
+      "excerpt_end": "of this most capital of all misfortunes:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "essay-on-the-idea-that-wars-are-necessary-1790"
+      ],
+      "summary": "The New-Hampshire Gazette prints the paragraph on the idea that wars are necessary.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. The paragraph follows the end of another item ('...and Sweden.'), with no heading or dateline."
+      ],
+      "crops": [
+        "S90-011.jpg"
+      ],
+      "family": [
+        "R1790-0009",
+        "R1790-0111",
+        "R1790-0473",
+        "R1790-0493"
+      ]
+    },
+    {
+      "id": "S90-012",
+      "page_key": "sn83025587|1790-10-14|1|3",
+      "excerpt_start": "The following incident lately occurred in",
+      "excerpt_end": "seated himself beside a beautiful young lady;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "anecdote-of-a-french-gentleman-1790"
+      ],
+      "summary": "The New-Hampshire Gazette prints the anecdote of a French gentleman.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S90-012.jpg"
+      ],
+      "family": [
+        "R1790-0008",
+        "R1790-0087",
+        "R1790-0487",
+        "R1790-0502"
+      ]
+    },
+    {
+      "id": "S90-013",
+      "page_key": "sn84023133|1790-10-16|1|4",
+      "excerpt_start": "THE following incident late occurred in",
+      "excerpt_end": "seated himself beside a beautiful young lady;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "anecdote-of-a-french-gentleman-1790"
+      ],
+      "summary": "The New-Hampshire Gazetteer prints the anecdote of a French gentleman.",
+      "note": "Prints the anecdote under the heading 'Anecdote', with 'late occurred', where the other printings have 'lately' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt; 'late occurred' is the print's own wording, a printed difference, not a transcription error. The heading above is cut off by the crop but looks like 'ANECDOTE.'."
+      ],
+      "crops": [
+        "S90-013.jpg"
+      ],
+      "family": [
+        "R1790-0008"
+      ]
+    },
+    {
+      "id": "S90-014",
+      "page_key": "sn83025587|1790-11-06|1|2",
+      "excerpt_start": "The WESTERN POSTS— Those barriers of",
+      "excerpt_end": "and troops.—That at Niagara , in particular.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-paragraph-the-western-posts-still-retained-november-1790"
+      ],
+      "summary": "Boston, November 1790: a paragraph on the western posts that the British still hold.",
+      "note": "Earliest printing found. Prints the paragraph inside a longer review of public affairs, without a dateline (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt. NHG prints the paragraph inside its longer text, without a dateline, under a centred line 'The WESTERN POSTS—'."
+      ],
+      "crops": [
+        "S90-014.jpg"
+      ],
+      "family": [
+        "R1790-0092",
+        "R1790-0521"
+      ]
+    },
+    {
+      "id": "S90-015",
+      "page_key": "sn84023133|1790-11-13|1|2",
+      "excerpt_start": "BOSTON, NOV. 3. The WESTERN POSTS—",
+      "excerpt_end": "and troops.—That at Niagara , in particular.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-paragraph-the-western-posts-still-retained-november-1790"
+      ],
+      "summary": "The New-Hampshire Gazetteer prints the Boston paragraph on the Western Posts.",
+      "note": "Prints the paragraph under 'American Advices. BOSTON, NOV. 3.' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt, dateline included. The paragraph stands under 'AMERICAN ADVICES.' and 'BOSTON, NOV. 3.'."
+      ],
+      "crops": [
+        "S90-015.jpg"
+      ],
+      "family": [
+        "R1790-0092",
+        "R1790-0540"
+      ]
+    },
+    {
+      "id": "S90-016",
+      "page_key": "sn84038410|1790-11-15|1|4",
+      "excerpt_start": "The following incident lately occurred in",
+      "excerpt_end": "seated himself beside a beautiful young lady;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "anecdote-of-a-french-gentleman-1790"
+      ],
+      "summary": "The Patowmac Guardian prints the anecdote of a French gentleman.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the italic opening line is blurred but readable."
+      ],
+      "crops": [
+        "S90-016.jpg"
+      ],
+      "family": [
+        "R1790-0001",
+        "R1790-0008",
+        "R1790-0091"
+      ]
+    },
+    {
+      "id": "S90-017",
+      "page_key": "sn83030483|1790-11-17|1|2",
+      "excerpt_start": "The Western Posts, those barriers of",
+      "excerpt_end": "and troops. That at Niagara, in particular.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-paragraph-the-western-posts-still-retained-november-1790"
+      ],
+      "summary": "The Gazette of the United-States prints the Boston paragraph on the Western Posts.",
+      "note": "Prints the paragraph inside a longer review of public affairs, without a dateline (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt. GUS prints the paragraph inside its longer text, directly after the line on President Mifflin's election as Governor, with no dateline."
+      ],
+      "crops": [
+        "S90-017.jpg"
+      ],
+      "family": [
+        "R1790-0523"
+      ]
+    },
+    {
+      "id": "S90-018",
+      "page_key": "sn84038410|1790-11-22|1|3",
+      "excerpt_start": "There is a strange idea that",
+      "excerpt_end": "of this most capital of all misfortunes;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "essay-on-the-idea-that-wars-are-necessary-1790"
+      ],
+      "summary": "The Patowmac Guardian prints the paragraph on the idea that wars are necessary.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the crop is small but every word is legible. The paragraph follows the end of another item, with no dateline."
+      ],
+      "crops": [
+        "S90-018.jpg"
+      ],
+      "family": [
+        "R1790-0009",
+        "R1790-0494",
+        "R1790-0513",
+        "R1790-0524"
+      ]
+    },
+    {
+      "id": "S90-019",
+      "page_key": "sn82014782|1790-12-04|2|3",
+      "excerpt_start": "There is a strange idea that",
+      "excerpt_end": "of this most capital of all misfortunes:",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "essay-on-the-idea-that-wars-are-necessary-1790"
+      ],
+      "summary": "The Kentucky Gazette prints the paragraph on the idea that wars are necessary.",
+      "note": "The issue survives only as a second scan; the paragraph is set in italic type (scan).",
+      "scan_findings": [
+        "The second scan shows the paragraph's opening, and it matches the excerpt. KG sets the paragraph in italic type, after the end of another item."
+      ],
+      "crops": [
+        "S90-019.jpg"
+      ],
+      "family": [
+        "R1790-0009",
+        "R1790-0442",
+        "R1790-0474"
+      ]
+    },
+    {
+      "id": "S90-020",
+      "page_key": "sn84038410|1790-12-06|1|2",
+      "excerpt_start": "B O S T O N,",
+      "excerpt_end": "and troops: that at Niagara in particular,",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-paragraph-the-western-posts-still-retained-november-1790"
+      ],
+      "summary": "The Patowmac Guardian prints the Boston paragraph on the Western Posts.",
+      "note": "Dates the paragraph 'BOSTON, November 10.', where the New-Hampshire Gazetteer has 3 November (scan).",
+      "scan_findings": [
+        "A crop drawn by hand shows the dateline 'BOSTON, November 10.' and the paragraph; scan matches the excerpt."
+      ],
+      "crops": [
+        "S90-020.jpg"
+      ],
+      "family": [
+        "R1790-0092",
+        "R1790-0099",
+        "R1790-0536"
+      ],
+      "scan_boxes": [
+        [
+          80,
+          205,
+          625,
+          415
+        ]
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "president-speech-to-both-houses-8-january-1790",
+      "kind": "document_group",
+      "label": "The President's speech to both Houses of Congress, 8 January 1790: 'I embrace with great satisfaction the opportunity, which now presents itself, of congratulating you on the present favorable prospects of our public affairs'",
+      "definition": "Printings of the speech the President made to the Senate and the House of Representatives in the Senate Chamber at New-York on 8 January 1790, at the opening of the session, as the papers print it from the proceedings: 'Fellow-Citizens of the Senate, and House of Representatives. I embrace with great satisfaction the opportunity, which now presents itself, of congratulating you on the present favorable prospects of our public affairs. The recent accession of the important State of North-Carolina to the Constitution of the United States ...'. A correspondent's letter that quotes the speech is not counted (C-07).",
+      "admission_rule": "Reviewed 1790 printings, checked against the scan."
+    },
+    {
+      "id": "treasury-report-of-4-march-1790-on-further-revenue",
+      "kind": "document_group",
+      "label": "Treasury Department, 4 March 1790: the Secretary of the Treasury reports 'that in his opinion, the funds in the first instance requisite towards the payment of interest on the debts of the individual States ... may be obtained from the following objects'",
+      "definition": "Printings of the Secretary of the Treasury's report to the House of Representatives, 'Treasury Department, March 4, 1790. In obedience to the Order of the House of Representatives, of the second inst. The Secretary of the Treasury respectfully reports, THAT in his opinion, the funds in the first instance requisite towards the payment of interest on the debts of the individual States, according to the modifications proposed by him in his report of the ninth of January past, may be obtained from the following objects: An increase of the general product of the duties on goods imported ...'. The New-Hampshire papers print it inside their reports of the House's proceedings; the Kentucky Gazette prints it in three parts (17, 24 and 31 May), each under the report's heading, counted once, where its opening stands.",
+      "admission_rule": "Reviewed 1790 printings, checked against the scan."
+    },
+    {
+      "id": "anecdote-of-a-french-gentleman-1790",
+      "kind": "message_group",
+      "label": "Autumn 1790: 'The following incident lately occurred in one of the eastern States. A French Gentleman, totally unacquainted with our language ...'",
+      "definition": "Printings of an anecdote, headed 'Anecdote' in the New-Hampshire Gazetteer: 'The following incident lately occurred in one of the eastern States. A French Gentleman, totally unacquainted with our language, being introduced to a circle of young ladies and gentlemen in a country town, after the usual compliments had passed, he seated himself beside a beautiful young lady ...'. No one is named. A story told for amusement, as the papers print it (C-10).",
+      "admission_rule": "Reviewed 1790 printings, checked against the scan."
+    },
+    {
+      "id": "essay-on-the-idea-that-wars-are-necessary-1790",
+      "kind": "message_group",
+      "label": "Autumn 1790: 'There is a strange idea that prevails in the world, that wars are necessary at the return of different periods in the age of a nation'",
+      "definition": "Printings of a paragraph of comment: 'There is a strange idea that prevails in the world, that wars are necessary at the return of different periods in the age of a nation; and on this principle there are those who justify a pleasing anticipation of this most capital of all misfortunes: It will however be generally found on examination, that this insensibility to the misery of our species, arises from an unprincipled love of gain ...'. A writer's opinion, as the papers print it.",
+      "admission_rule": "Reviewed 1790 printings, checked against the scan."
+    },
+    {
+      "id": "boston-paragraph-the-western-posts-still-retained-november-1790",
+      "kind": "message_group",
+      "label": "Boston, November 1790: 'The Western Posts—Those barriers of the United States—are still retained by the British'",
+      "definition": "Printings of a Boston paragraph, dated 3 November in the New-Hampshire Gazetteer and 10 November in the Patowmac Guardian (the New-Hampshire Gazette and the Gazette of the United States print it inside a longer review of public affairs): 'The Western Posts—Those barriers of the United States—are still retained by the British; and we are told, have lately been strengthened by additional fortifications and troops.—That at Niagara, in particular ...'. A paper's report and comment, in its own words.",
+      "admission_rule": "Reviewed 1790 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1790 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 209 items printed somewhere). The same script was run with year 1789 over the 1790 pages (items_from_1789.json: 38 items). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1790 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (115 texts). For every text at the bar or one paper short of it, the papers the comparison missed were looked for again on their pages (the best page within the text's weeks) and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09); each was read. The acts of Congress were counted act by act, a page counting when it prints the act's enacting words, not only its title. Every admitted and chosen item was then counted by phrase searches of its opening over all 950 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+    "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news, about as many stories as a standard year (about 20 to 35, a target, not a quota); digests are not admitted. In 1790, 5 items are eligible: 3 are printed by every paper that survives for their weeks and are admitted; the other 2 are chosen, since with so few eligible items each adds a month or a kind of news.",
+    "paper_counting": "1790 has 5 catalogue series, which are 5 papers. The New-Hampshire Gazette and General Advertiser (Portsmouth; 51 issues), the Gazette of the United States (New York, then Philadelphia from November; Wednesdays and Saturdays, 104 issues) and the New-Hampshire Gazetteer (Exeter; 41 issues) run all year; the Kentucky Gazette (Lexington) survives from January to 2 August and from 4 to 18 December (34 issues, most scanned twice; five of them, among them those of December, survive only as second scans, C-05); the Patowmac Guardian, and Berkeley Advertiser (Shepherdstown, Virginia; Mondays) from 15 November (7 issues). Papers in print in any three weeks: 4 from January to July; 3 from mid-August to October, when the Kentucky Gazette's issues do not survive; 4 or 5 in November and December.",
+    "counted_item_by_item": {
+      "Paper counts": "The admitted and chosen items were counted by phrase searches of their openings and every hit read; their counts and the papers that survive for their weeks are in the README's table of stories. The items read and below the bar are listed in not_admitted with their counts.",
+      "A report printed in parts": "The Kentucky Gazette prints the Secretary of the Treasury's report of 4 March in three parts (17, 24 and 31 May), each under the report's heading; it is counted once, on 17 May, where its opening stands.",
+      "A paragraph inside a longer text": "The Boston paragraph on the Western Posts stands alone under its dateline in the New-Hampshire Gazetteer and the Patowmac Guardian, and inside a longer review of public affairs in the New-Hampshire Gazette and the Gazette of the United States; it is counted by its own words (as 1782 and 1789 counted reports inside longer paragraphs).",
+      "The acts of Congress": "Each act is its own item, counted where its enacting words are printed; lists of the session's acts that give only their titles, and journals naming the bills, are not counted (C-07). No act of 1790 is printed in full by 4 papers; eight are printed by three (the Gazette of the United States and the two New-Hampshire papers).",
+      "Notices that share their regulations": "The War Office printed two notices to the invalid pensioners (one of 1789, in the Kentucky Gazette; one naming the places of payment, in the Gazette of the United States and the New-Hampshire Gazetteer), each followed by the same regulations; the regulations are counted by their own opening (3 of 4), the New-Hampshire Gazette printing them after its own summary of the notice, without that opening (C-06).",
+      "Quotations": "A correspondent's letter quoting the President's speech of 8 January (the Gazette of the United States, 14 April) is not counted (C-07).",
+      "Second scans": "The Kentucky Gazette's second scans hold the same issues and are not counted again (C-05); five of its issues survive only as second scans, and the essay on war is counted there (4 December)."
+    },
+    "for_user_decision": {
+      "The choice under the amended rule (B1)": "As built: the two eligible items not printed by every surviving paper (the paragraph against the idea that wars are necessary, 4 of 5, and the Boston paragraph on the Western Posts, 4 of 5) are chosen, since the year has only five eligible items and each adds a kind of news; the year has 5 stories, far below a standard year's range, because few items reach four papers.",
+      "An anecdote admitted by the first part": "As built (C-10): the anecdote of a French gentleman, a story told for amusement, is printed by all four papers that survive for its weeks and is admitted by the rule's first part, as 1793's sea serpent stood; 1797 did not choose an anecdote, but there it was in the chosen band.",
+      "The floor of four papers from August to October": "As built: from mid-August to October only three papers survive (the Kentucky Gazette's issues do not), so nothing printed only then reaches the bar of 4; items printed by all three of them are below it, among them the September paragraph on the Western Posts and the British commanders of 1784.",
+      "The proceedings of the House": "As built (C-09): the House's proceedings, which the Gazette of the United States reported and the other papers reprinted in parts, are runs of a day's business; the day of 5 March is in all four papers and is not admitted."
+    },
+    "not_admitted": {
+      "House of Representatives, the proceedings of 5 March 1790 ('A message from the Senate informing that they have passed an act to accept of the cession of certain lands in the Western Territory ...') (4)": "Digest, not admitted: the proceedings of a day of the House, a run of unrelated business (C-09); the Gazette of the United States reported the proceedings and the other papers reprinted them in parts; in 4 of the 4 papers that survive for its weeks (needs 4).",
+      "The President's speech to both Houses of Congress, 8 December 1790 ('In meeting you again I feel much satisfaction ...') (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the Kentucky Gazette's surviving issues of December (second scans only) and the New-Hampshire Gazetteer's do not print it.",
+      "The Secretary of the Treasury's report on the public credit, January 1790 (its plan for the debt: 'every hundred dollars subscribed, payable in the debt ...') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Kentucky Gazette's surviving issues do not print it.",
+      "The War Office's regulations for paying the invalid pensioners ('The returns which have been or shall be made to the Secretary for the department of war ... Every application for payment must be accompanied by the following vouchers'), printed after one of two War Office notices (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Kentucky Gazette, the Gazette of the United States and the New-Hampshire Gazetteer print the regulations from their opening, after one of two War Office notices (each notice in one or two papers); the New-Hampshire Gazette prints them after its own summary of the notice, without their opening sentence (C-06).",
+      "Philadelphia, 1 December 1790: 'Saturday last the President of the United States, his Lady and Family, arrived in this city from Virginia' (3)": "Read and below the bar: in 3 of the 5 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette's and the Kentucky Gazette's surviving issues of December do not print it.",
+      "The attending physician's account of Doctor Franklin's last illness, April 1790 ('The stone, with which he had been afflicted ...') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazetteer's surviving issues do not print it.",
+      "The acts of the second session of Congress printed in full by three papers each (the Gazette of the United States and the two New-Hampshire papers; the Kentucky Gazette's surviving issues print none of them): naturalization, the authentication of public records, processes in the courts, the exportation of goods not inspected, the acceptance of North Carolina's cession of its western lands, the government of the territory south of the Ohio, the remission of forfeitures, and one act for the relief of a merchant house (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; each counted where its enacting words are printed; lists of the session's acts give only their titles (C-07).",
+      "September 1790: 'Western Posts. In 1784, Congress deputed Gen. Hull, to demand of Gen. Haldimand, the Governor of Canada, the surrender of the Posts within the United States' (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for its weeks; the bar asks for at least 4, and the Kentucky Gazette's issues of August to November do not survive.",
+      "Other items of 3 papers or fewer (by count)": "The other items the finder lists in 3 papers or fewer, compared by machine on the first 40 words of their openings with every page of 1790 (papers the comparison missed were looked for again when an item was one paper short); none reaches the bar. Among them are items printed by all three papers that survive from mid-August to October, when the Kentucky Gazette's issues do not survive, which the bar's floor of 4 leaves out. Not read one by one."
+    },
+    "for_the_owner": {},
+    "counts": {
+      "eligible_items": 5,
+      "admitted_by_the_first_part": 3,
+      "chosen_items": 2,
+      "not_chosen_listed": 0,
+      "digests": 1,
+      "read_below_the_bar": 7
+    }
+  }
+}

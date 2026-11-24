@@ -2,6 +2,31 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.11.14 to v0.11.30 (2026-11-23 and 2026-11-24)
+
+Seventeen ledger releases, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/` with topic rows for the new groups. `CURRENT.json` points to v0.11.30.
+
+- **v0.11.14 · 1810** (`stories_1810.json`, made on v0.11.13): 20 stories, 30 groups and 222 printings in 11 papers, by the standard rule. 3,891 checks.
+- **v0.11.15 · 1801** (`stories_1801.json`, made on v0.11.14): 15 stories, 26 groups and 160 printings in 11 papers, by the standard rule, with two sub-stories in 6 papers at the owner's word (X-1801-08). 4,064 checks.
+
+The first thin years (24 November 2026), read by the thin-year rule (Y-THIN as amended on 23 November, B1): an item is eligible when it was printed by more than half of the newspapers that survive for its weeks, and by at least 4; items printed by every surviving paper are admitted, and the other eligible items are chosen to cover the months and the kinds of news. Each review's ledger was written against v0.11.15 and made again in year order with its real base and target; nothing else in a ledger changes with them. 1784 has no item over the bar and no release (Y-1784).
+
+- **v0.11.16 · 1770** (`stories_1770.json`, made with `--base 0.11.15 --target 0.11.16`): 3 stories, 3 groups and 12 printings, by the thin-year rule. 4,076 checks.
+- **v0.11.17 · 1772** (`stories_1772.json`, made with `--base 0.11.16 --target 0.11.17`): 11 stories, 14 groups and 52 printings, by the thin-year rule. 4,128 checks.
+- **v0.11.18 · 1774** (`stories_1774.json`, made with `--base 0.11.17 --target 0.11.18`): 25 stories, 33 groups and 159 printings, by the thin-year rule. 4,289 checks.
+- **v0.11.19 · 1775** (`stories_1775.json`, made with `--base 0.11.18 --target 0.11.19`): 24 stories, 44 groups and 206 printings, by the thin-year rule. 4,505 checks.
+- **v0.11.20 · 1777** (`stories_1777.json`, made with `--base 0.11.19 --target 0.11.20`): 26 stories, 43 groups and 186 printings, by the thin-year rule. 4,703 checks.
+- **v0.11.21 · 1778** (`stories_1778.json`, made with `--base 0.11.20 --target 0.11.21`): 26 stories, 38 groups and 161 printings, by the thin-year rule. 4,874 checks.
+- **v0.11.22 · 1779** (`stories_1779.json`, made with `--base 0.11.21 --target 0.11.22`): 27 stories, 32 groups and 161 printings, by the thin-year rule. 5,041 checks.
+- **v0.11.23 · 1780** (`stories_1780.json`, made with `--base 0.11.22 --target 0.11.23`): 23 stories, 33 groups and 142 printings, by the thin-year rule. 5,190 checks.
+- **v0.11.24 · 1781** (`stories_1781.json`, made with `--base 0.11.23 --target 0.11.24`): 25 stories, 29 groups and 144 printings, by the thin-year rule. 5,338 checks.
+- **v0.11.25 · 1782** (`stories_1782.json`, made with `--base 0.11.24 --target 0.11.25`): 30 stories, 38 groups and 165 printings, by the thin-year rule. 5,509 checks.
+- **v0.11.26 · 1783** (`stories_1783.json`, made with `--base 0.11.25 --target 0.11.26`): 22 stories, 27 groups and 109 printings, by the thin-year rule. 5,637 checks.
+- **v0.11.27 · 1787** (`stories_1787.json`, made with `--base 0.11.26 --target 0.11.27`): 13 stories, 13 groups and 54 printings, by the thin-year rule. 5,696 checks.
+- **v0.11.28 · 1788** (`stories_1788.json`, made with `--base 0.11.27 --target 0.11.28`): 7 stories, 7 groups and 30 printings, by the thin-year rule. 5,727 checks.
+- **v0.11.29 · 1789** (`stories_1789.json`, made with `--base 0.11.28 --target 0.11.29`): 6 stories, 6 groups and 24 printings, by the thin-year rule. 5,751 checks.
+- **v0.11.30 · 1790** (`stories_1790.json`, made with `--base 0.11.29 --target 0.11.30`): 5 stories, 5 groups and 20 printings, by the thin-year rule. 5,772 checks.
+
 ## Changes in v0.11.11 to v0.11.13 (2026-11-23)
 
 Two ledger releases, each made by `apply_ledger.py --keep-current` from a review ledger in `ledgers/` with topic rows for the new groups, and a correction release. `CURRENT.json` points to v0.11.13. Each year's README in `outputs/story_discovery_YEAR/` gives the selection, the scan check and the points the owner decided (every point kept as built, 23 November); the rules and exceptions are in `docs/rules-and-exceptions.md`.

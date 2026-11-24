@@ -1,0 +1,407 @@
+{
+  "ledger_id": "ledger:stories-1770",
+  "ledger_version": 1,
+  "base_release": "0.11.15",
+  "target_release": "0.11.16",
+  "recorded_date": "2026-11-24",
+  "namespace": "expansion-1770",
+  "evidence_dir": "outputs/story_discovery_1770/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "Single printed items split from the automatic families of 1770 (long-running ones included; the collection begins in 1770), every item in 3 or more papers counted again by the first 40 words of its opening against every page, papers that comparison missed looked for again and read, a sweep of word-for-word passages shared by 4 or more papers for items the families miss, phrase searches on all 448 pages of 1770 in both transcriptions for every admitted item, and scan checks of each admitted passage, by the thin-year rule (Y-THIN as amended on 23 November 2026: an item printed by more than half of the newspapers that survive for its weeks, and by at least 4, is eligible; items printed by every surviving paper are admitted, the others chosen to cover the months and the kinds of news; in 1770 every eligible item is printed by all four papers)",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "work/story_items.py": "retrieval_code",
+    "work/story_phrase_search.py": "retrieval_code",
+    "outputs/story_discovery_1770/items.json": "retrieval_candidates",
+    "outputs/story_discovery_1770/counted_items.json": "retrieval_candidates",
+    "outputs/story_discovery_1770/phrase_patterns.json": "retrieval_patterns",
+    "outputs/story_discovery_1770/phrase_hits.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1770.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1770_review.json": "scan_review",
+    "outputs/story_discovery_1770/SCAN_PROTOCOL.md": "review_protocol",
+    "outputs/story_discovery_1770/scan_points.json": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S70-001",
+      "page_key": "sn83021193|1770-10-13|1|1",
+      "excerpt_start": "At a meeting of the merchants",
+      "excerpt_end": "purpose of raising a revenue in America.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-merchants-vote-to-alter-non-importation-october-1770"
+      ],
+      "summary": "Boston, October 1770: a report that the merchants voted to alter the agreement not to import British goods.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt. No dateline stands above the paragraph, only the end of the preceding paragraph."
+      ],
+      "crops": [
+        "S70-001.jpg"
+      ],
+      "family": [
+        "R1770-0013",
+        "R1770-0224"
+      ]
+    },
+    {
+      "id": "S70-002",
+      "page_key": "sn84024739|1770-10-18|1|2",
+      "excerpt_start": "WILLIAMSBURG, October 18. ON Monday the",
+      "excerpt_end": "Virginia, and Vice Admiral of the same.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "williamsburg-report-death-of-lord-botetourt-october-1770"
+      ],
+      "summary": "Williamsburg, October 1770: a report of the death of the governor of Virginia, Lord Botetourt.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the transcription modernises the print's 'Governour' to 'Governor' (minor)."
+      ],
+      "crops": [
+        "S70-002.jpg"
+      ],
+      "family": [
+        "R1770-0001",
+        "R1770-0007",
+        "R1770-0014",
+        "R1770-0024",
+        "R1770-0041",
+        "R1770-0225",
+        "R1770-0227"
+      ]
+    },
+    {
+      "id": "S70-003",
+      "page_key": "sn84024741|1770-10-18|1|2",
+      "excerpt_start": "WILLIAMSBURG, October 18. On Monday the",
+      "excerpt_end": "Virginia, and Vice Admiral of the same.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "williamsburg-report-death-of-lord-botetourt-october-1770"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the Williamsburg report of Lord Botetourt's death.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the transcription only adds a comma after 'NORBORNE' (minor)."
+      ],
+      "crops": [
+        "S70-003.jpg"
+      ],
+      "family": [
+        "R1770-0001",
+        "R1770-0007",
+        "R1770-0020",
+        "R1770-0035",
+        "R1770-0055",
+        "R1770-0226",
+        "R1770-0227"
+      ]
+    },
+    {
+      "id": "S70-004",
+      "page_key": "sn83025582|1770-10-19|1|2",
+      "excerpt_start": "B O S T O N,",
+      "excerpt_end": "Purpose of raising a Revenue in America.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-merchants-vote-to-alter-non-importation-october-1770"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Boston report of the merchants' vote.",
+      "note": "Prints the vote under the dateline 'BOSTON, October 11.', with 'G. Britain' where the other printings have 'Great Britain' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt, under the dateline 'BOSTON, October 11.'. The print abbreviates 'G. Britain': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S70-004.jpg"
+      ],
+      "family": [
+        "R1770-0014",
+        "R1770-0228",
+        "R1770-0230"
+      ]
+    },
+    {
+      "id": "S70-005",
+      "page_key": "sn84024739|1770-11-01|1|2",
+      "excerpt_start": "At a meeting of the merchants",
+      "excerpt_end": "purpose of raising a revenue in America.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-merchants-vote-to-alter-non-importation-october-1770"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the Boston report of the merchants' vote.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt as far as this low-resolution crop shows: the words can be read, the punctuation not closely. No dateline stands above the paragraph, only the end of the preceding one."
+      ],
+      "crops": [
+        "S70-005.jpg"
+      ],
+      "family": [
+        "R1770-0013",
+        "R1770-0036",
+        "R1770-0058",
+        "R1770-0073",
+        "R1770-0223",
+        "R1770-0242"
+      ]
+    },
+    {
+      "id": "S70-006",
+      "page_key": "sn84024741|1770-11-01|1|2",
+      "excerpt_start": "At a meeting of the merchants",
+      "excerpt_end": "purpose of raising a revenue in America.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "boston-merchants-vote-to-alter-non-importation-october-1770"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the Boston report of the merchants' vote.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt. No dateline stands above the paragraph, only the end of the preceding paragraph."
+      ],
+      "crops": [
+        "S70-006.jpg"
+      ],
+      "family": [
+        "R1770-0013",
+        "R1770-0036",
+        "R1770-0073",
+        "R1770-0241",
+        "R1770-0242"
+      ]
+    },
+    {
+      "id": "S70-007",
+      "page_key": "sn83021193|1770-11-05|1|4",
+      "excerpt_start": "Extract of a Letter from London,",
+      "excerpt_end": "life-time been himself a friend to it.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-london-6-september-1770-hutchinson-governor"
+      ],
+      "summary": "London, September 1770: a letter on Mr. Hutchinson's appointment as governor of Massachusetts-Bay.",
+      "note": "Earliest printing found. Prints 'knows their constitution', as the New-Hampshire Gazette does, where the two Virginia Gazettes print 'condition' (scan).",
+      "scan_findings": [
+        "Scan reads 'shewn himself a friend to it', as the other printings do; the transcription's 'been' is a different word that changes the sense. The word lies partly under a library stamp but its letters can be made out."
+      ],
+      "crops": [
+        "S70-007.jpg"
+      ],
+      "family": [
+        "R1770-0002"
+      ]
+    },
+    {
+      "id": "S70-008",
+      "page_key": "sn83021193|1770-11-08|1|4",
+      "excerpt_start": "WILLIAMSBURG, [ Virginia ] October 18.",
+      "excerpt_end": "of Virginia, and Vice-Admiral of the same.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "williamsburg-report-death-of-lord-botetourt-october-1770"
+      ],
+      "summary": "The Massachusetts Spy prints the Williamsburg report of Lord Botetourt's death.",
+      "note": "Prints the report under the dateline 'WILLIAMSBURG, [Virginia] October 18.' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt and the dateline 'WILLIAMSBURG, [Virginia] October 18.' above it (added to the excerpt on 24 November, when the openings of each story’s printings were compared); the crop, which had cut the dateline, was cut again higher to show it whole."
+      ],
+      "crops": [
+        "S70-008.jpg"
+      ],
+      "family": [
+        "R1770-0001"
+      ],
+      "scan_boxes": [
+        [
+          2171,
+          350,
+          3789,
+          1041
+        ]
+      ]
+    },
+    {
+      "id": "S70-009",
+      "page_key": "sn83025582|1770-11-09|1|3",
+      "excerpt_start": "Extract of a Letter from London,",
+      "excerpt_end": "Life-time shewn himself a Friend to it.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-london-6-september-1770-hutchinson-governor"
+      ],
+      "summary": "The New-Hampshire Gazette prints the letter from London of 6 September 1770.",
+      "note": "Prints 'knows their Constitution', as the Massachusetts Spy does, where the two Virginia Gazettes print 'condition', and sets 'Mr. Hutchinson is Governor.' in large type on a line of its own (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt. The print sets 'Mr. Hutchinson is Governor.' in large type on a line of its own."
+      ],
+      "crops": [
+        "S70-009.jpg"
+      ],
+      "family": [
+        "R1770-0002",
+        "R1770-0234"
+      ]
+    },
+    {
+      "id": "S70-010",
+      "page_key": "sn83025582|1770-11-16|1|2",
+      "excerpt_start": "WILLIAMSBURG, in Virginia, October 18, 1770.",
+      "excerpt_end": "of Virginia, and Vice-Admiral of the same.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "williamsburg-report-death-of-lord-botetourt-october-1770"
+      ],
+      "summary": "The New-Hampshire Gazette prints the Williamsburg report of Lord Botetourt's death.",
+      "note": "Prints the report under the dateline 'WILLIAMSBURG, in Virginia, October 18, 1770.', and reads 'his Majesty's Lieutenant Governor, General and Commander in Chief' where the other printings have 'Lieutenant, Governor General and Commander in Chief' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt and the dateline 'WILLIAMSBURG, in Virginia, October 18, 1770.' above it (added to the excerpt on 24 November, when the openings of each story’s printings were compared). The print reads 'Lieutenant Governor, General' where the other printings have 'Lieutenant, Governor General': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S70-010.jpg"
+      ],
+      "family": [
+        "R1770-0001",
+        "R1770-0235"
+      ]
+    },
+    {
+      "id": "S70-011",
+      "page_key": "sn84024739|1770-11-29|1|1",
+      "excerpt_start": "Extract of a letter from London,",
+      "excerpt_end": "lifetime shown himself a friend to it.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-london-6-september-1770-hutchinson-governor"
+      ],
+      "summary": "The Virginia Gazette (Purdie and Dixon) prints the letter from London of 6 September 1770.",
+      "note": "Dates the letter 'Sept. 6.' without the year, and prints 'knows their condition', as Rind's Virginia Gazette does, where the Massachusetts Spy and the New-Hampshire Gazette print 'constitution' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the transcription modernises the print's 'Governour' (twice) to 'Governor' (minor). The crop is low-resolution and cannot show whether the print spells 'shown' or 'shewn'."
+      ],
+      "crops": [
+        "S70-011.jpg"
+      ],
+      "family": [
+        "R1770-0002",
+        "R1770-0077",
+        "R1770-0258",
+        "R1770-0261",
+        "R1770-0275",
+        "R1770-0279"
+      ]
+    },
+    {
+      "id": "S70-012",
+      "page_key": "sn84024741|1770-11-29|1|1",
+      "excerpt_start": "Extract of a letter from London,",
+      "excerpt_end": "life-time shewn himself a friend to it.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "letter-from-london-6-september-1770-hutchinson-governor"
+      ],
+      "summary": "The Virginia Gazette (Rind) prints the letter from London of 6 September 1770.",
+      "note": "Prints 'knows their condition', as Purdie and Dixon's Virginia Gazette does, where the Massachusetts Spy and the New-Hampshire Gazette print 'constitution' (scan).",
+      "scan_findings": [
+        "Scan matches the excerpt. The print reads 'condition' where MS and NHG have 'constitution': a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S70-012.jpg"
+      ],
+      "family": [
+        "R1770-0002",
+        "R1770-0254",
+        "R1770-0255",
+        "R1770-0270",
+        "R1770-0280"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "boston-merchants-vote-to-alter-non-importation-october-1770",
+      "kind": "message_group",
+      "label": "Boston, October 1770: 'At a meeting of the merchants in this town, at the British Coffee-House, it was unanimously voted to alter the Non-Importation Agreement'",
+      "definition": "Printings of a Boston paragraph of October 1770 (dated 11 October in the New-Hampshire Gazette): 'At a meeting of the merchants in this town at the British Coffee-House, it was unanimously voted to alter the Non-Importation Agreement, and to open the importation of goods from Great-Britain, except Teas, and such other articles as are, or may be subject to duties for the purpose of raising a revenue in America.' Other towns' votes on their own agreements, in like words, are other texts.",
+      "admission_rule": "Reviewed 1770 printings, checked against the scan."
+    },
+    {
+      "id": "williamsburg-report-death-of-lord-botetourt-october-1770",
+      "kind": "message_group",
+      "label": "Williamsburg, 18 October 1770: 'On Monday the 15th instant, about one o'clock in the morning, departed this life, universally lamented throughout this colony, his Excellency the Right Honourable Norborne Baron de Botetourt'",
+      "definition": "Printings of a Williamsburg paragraph of 18 October 1770: 'On Monday the 15th instant, about one o'clock in the morning, departed this life, universally lamented throughout this colony, his Excellency the Right Honourable Norborne Baron de Botetourt, his Majesty's Lieutenant and Governor General of the colony and dominion of Virginia ...'. A report of the governor's death, in the Virginia papers' words. Proclamations and notices that only name the governor are not counted.",
+      "admission_rule": "Reviewed 1770 printings, checked against the scan."
+    },
+    {
+      "id": "letter-from-london-6-september-1770-hutchinson-governor",
+      "kind": "message_group",
+      "label": "A letter from London, 6 September 1770: 'Mr. Hutchinson is Governor.—The province I am sure ought to be very thankful for the having one born among themselves'",
+      "definition": "Printings of an extract of a letter from London dated 6 September 1770: 'Mr. Hutchinson is Governor.—The province I am sure ought to be very thankful for the having one born among themselves ...'. A letter at second hand, as the papers print it; the Virginia papers print it after a paragraph on Dr. Franklin.",
+      "admission_rule": "Reviewed 1770 printings, checked against the scan."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "The automatic families first printed in 1770 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json: 32 items printed somewhere; the collection begins in 1770, so there are no families of 1769). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1770 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (21 texts). For every text at the bar or one paper short of it, the papers the comparison missed were looked for again on their pages (the best page within the text's weeks) and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09); each was read. Every admitted item was then counted by phrase searches of its opening over all 448 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+    "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news; digests are not admitted. 1770 has four papers, so an item reaches the bar only when all four print it: every eligible item is printed by every paper that survives for its weeks, three are admitted, and one that turns on private lives is listed for the owner (R-04); nothing is chosen. The fourth paper, the Massachusetts Spy, survives from 23 August, so no item reaches the bar unless it was still being printed after that day.",
+    "paper_counting": "1770 has 4 catalogue series, which are 4 papers: the New-Hampshire Gazette and Historical Chronicle (Portsmouth; 50 issues) all year; two Virginia Gazettes, both printed at Williamsburg by different printers, Alexander Purdie and John Dixon (sn84024739; 26 issues, from 15 February) and William Rind (sn84024741; 19 issues, from 25 January); and the Massachusetts Spy (Boston; 17 issues) from 23 August. Papers in print in any three weeks: 1 to 3 before late August; 4 in most windows from late August to December.",
+    "counted_item_by_item": {
+      "Paper counts": "The three admitted items and the one listed for the owner are each printed by all four papers, counted by phrase searches of their openings and every hit read; their papers are in the README's table of stories. The items read and below the bar are listed in not_admitted with their counts.",
+      "A paragraph in a run of news": "The Boston report of the merchants' vote follows a paragraph on the House of Representatives at Cambridge in three papers; the New-Hampshire Gazette prints the vote without it. Each is counted by its own opening: the vote in 4 of 4, the paragraph on the House in 3 of 4.",
+      "Notices that only name an item's subject": "Proclamations and notices in the Virginia papers that name the governor, Lord Botetourt, are not counted with the report of his death."
+    },
+    "for_user_decision": {
+      "The floor of four papers before 23 August": "As built: before 23 August only three papers survive (in January and February fewer), so no item printed only then reaches the bar of 4; the town of Boston's account of the night of 5 March 1770, and its committee to the Lieutenant Governor, are printed by all three papers that survive for their weeks and are below the bar, as is the King's speech of 9 January. All three admitted items were first printed in October.",
+      "A paragraph on a nobleman's private life": "As built (R-04): a one-sentence London paragraph on what 'appeared upon a late trial' about a nobleman's mistresses since his marriage is printed by every paper that survives for its weeks, but it turns on private lives, so it is listed for the owner, without names (it names no one). If the owner sees it as a public matter, it is admitted by the rule's first part."
+    },
+    "not_admitted": {
+      "Boston, 12 March 1770: 'The town of Boston affords a recent and melancholy demonstration of the destructive consequences of quartering troops among citizens in time of peace' (the town's account of the night of 5 March) (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for its weeks (the New-Hampshire Gazette and the two Virginia Gazettes); the bar asks for at least 4, and the Massachusetts Spy survives only from 23 August.",
+      "Boston, March 1770: the town's committee to the Lieutenant Governor in Council for the removal of the troops, and his words to the Council (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for their weeks; the bar asks for at least 4, and the Massachusetts Spy survives only from 23 August.",
+      "The King's speech to both Houses of Parliament, 9 January 1770 ('It is with much concern ...') (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for its weeks; the bar asks for at least 4, and the Massachusetts Spy survives only from 23 August.",
+      "Boston, 13 September 1770: the students of the senior class of Harvard College to take their degrees in cloth of their own manufacture (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print it.",
+      "Boston, October 1770: the House of Representatives at Cambridge votes to proceed to business (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazette prints the merchants' vote that follows it (admitted), not this paragraph.",
+      "London, summer 1770: accounts of two victories of the Russians over the Turks, by sea and land (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues do not print them.",
+      "Boston, November 1770: the trial of Captain Thomas Preston of the 29th Regiment at the Superior Court (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Massachusetts Spy's surviving issues of November and December do not print it.",
+      "Other items of 3 papers or fewer (by count)": "The other items the finder lists in 3 papers or fewer, compared by machine on the first 40 words of their openings with every page of 1770 (papers the comparison missed were looked for again when an item was one paper short); none reaches the bar. Among them are items printed by all three papers that survive before 23 August, when the Massachusetts Spy's surviving issues begin, which the bar's floor of 4 leaves out. Not read one by one."
+    },
+    "for_the_owner": {
+      "London, 1770: a paragraph on what 'appeared upon a late trial' about a nobleman's private life (4)": "A one-sentence London paragraph that turns on private lives: what 'appeared upon a late trial' about a nobleman's mistresses since his marriage (R-04); it names no one. Printed by every paper that survives for its weeks (the Massachusetts Spy, the New-Hampshire Gazette, which prints 'seven' where the others have 'eleven', and both Virginia Gazettes): it would be admitted by the rule's first part if the owner sees it as a public matter. In 4 of the 4 papers that survive for its weeks (needs 4)."
+    },
+    "counts": {
+      "eligible_items": 4,
+      "admitted_by_the_first_part": 3,
+      "chosen_items": 0,
+      "not_chosen_listed": 0,
+      "digests": 0,
+      "read_below_the_bar": 7
+    }
+  }
+}

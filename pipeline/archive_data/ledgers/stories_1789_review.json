@@ -1,0 +1,292 @@
+{
+ "findings": {
+  "S89-001": [
+   "Scan matches the excerpt. Scan reads 'the 1st ult.' where the New-Hampshire papers have 'the first of April': a printed difference, not a transcription error."
+  ],
+  "S89-002": [
+   "The new crop shows the whole excerpt and it matches. The print reads 'Honse' (a turned letter) in 'the Senate and Honse of Representatives', which the transcription silently corrects to 'House'."
+  ],
+  "S89-003": [
+   "Scan matches the excerpt; no dateline stands directly above the paragraph."
+  ],
+  "S89-004": [
+   "Scan matches the excerpt, under the dateline 'BOSTON, JULY 25.'"
+  ],
+  "S89-005": [
+   "Scan matches the excerpt, except that it prints 'Crotia', which the transcription modernises to 'Croatia'."
+  ],
+  "S89-006": [
+   "The hand-drawn crop shows the heading 'REVENUE DEPARTMENT.' and the opening sentence, which match except that the print reads 'affixed to their respective names': the transcription's 'assigned' is a misreading, not a printed difference."
+  ],
+  "S89-007": [
+   "Scan matches the excerpt; the title reads 'to be denominated the Department of FOREIGN AFFAIRS'."
+  ],
+  "S89-008": [
+   "Scan matches the excerpt. The item has no heading, only a rule above it, and is set in italics."
+  ],
+  "S89-009": [
+   "Scan matches the excerpt, except that the print has the misprint 'Cougress', which the transcription silently corrects to 'Congress'."
+  ],
+  "S89-010": [
+   "Scan reads '108 horses', as the other printings do; the transcription '103' changes the number. The print also has 'Crotia' and 'Bannat', which the transcription gives as 'Croatia' and 'Banat'."
+  ],
+  "S89-011": [
+   "Scan matches the excerpt, except that the print reads 'propiticous' in 'Europe appears no less propiticous', a printer's error that the transcription silently corrects to 'propitious'. No dateline stands above the paragraph, and the print has 'Mechanicks'."
+  ],
+  "S89-012": [
+   "Scan matches the excerpt, including 'says a late European paper' and 'the first of April'. The print puts the comma after 'finished' ('Having finished, here they burnt'), where NHG puts it after 'here'."
+  ],
+  "S89-013": [
+   "Scan matches the excerpt, including 'says a late European paper' and 'the first of April', and the heading 'PORTSMOUTH, August 20.' directly above it (added to the excerpt on 24 November, when the openings of each story’s printings were compared); the crop was cut again a little higher to show the heading whole."
+  ],
+  "S89-014": [
+   "Scan matches the excerpt, except that it prints 'Crotia' and 'Bannat' (split 'Ban-nat'), which the transcription gives as 'Croatia' and 'Banat'."
+  ],
+  "S89-015": [
+   "Scan matches the excerpt, with 'NEWYORK, AUGUST 5.' above the heading 'REVENUE DEPARTMENT.'"
+  ],
+  "S89-016": [
+   "Scan reads 'Warna'; the transcription 'Warnar' adds a letter. The rest matches the excerpt."
+  ],
+  "S89-017": [
+   "Scan reads 'Warna'; the transcription 'Warnia' adds a letter. The rest matches the excerpt."
+  ],
+  "S89-018": [
+   "Scan matches the excerpt."
+  ],
+  "S89-019": [
+   "The hand-drawn crop shows the heading and the opening sentence to 'For the State of NEW-HAMP-'; they match the excerpt, with 'affixed' and 'offices in revenue' (the Gazette of the United States prints 'offices in the Revenue')."
+  ],
+  "S89-020": [
+   "The new crop shows the whole excerpt, from the title to 'the Secretary for the department of foreign affairs,', and it matches; the title reads 'denominated'."
+  ],
+  "S89-021": [
+   "The hand-drawn crop shows the dateline 'BOSTON, July 27.' and the paragraph to 'bestowed on them in the new.'; it matches the excerpt, and the print has 'mechanics', without k."
+  ],
+  "S89-022": [
+   "The report stands alone under 'VIENNA, May 13.' and matches the excerpt, with 'a post in the Bannat' and the same figures; the print appears to read 'Bosnians', so 'Boshnians' is a minor misreading. The place after 'They write from' is blotted after 'Cro' even in the zoom: 'Croatia' or 'Crotia' cannot be settled."
+  ],
+  "S89-023": [
+   "The hand-drawn crop shows the heading and the whole report. Scan reads 'A MOST outrageous tumult' and 'a very numerous mob began to set fire to the town magazines'; the transcription's 'ALMOST' and 'began to seize to' are transcription errors, the second dropping the fire. The day is printed 'the first instant', as transcribed."
+  ],
+  "S89-024": [
+   "Scan matches the excerpt. It prints 'Acona' where the other printings have 'Ancona': a printed difference, not a transcription error."
+  ]
+ },
+ "crops": {
+  "S89-001": [
+   "S89-001.jpg"
+  ],
+  "S89-002": [
+   "S89-002.jpg"
+  ],
+  "S89-003": [
+   "S89-003.jpg"
+  ],
+  "S89-004": [
+   "S89-004.jpg"
+  ],
+  "S89-005": [
+   "S89-005.jpg"
+  ],
+  "S89-006": [
+   "S89-006.jpg"
+  ],
+  "S89-007": [
+   "S89-007.jpg"
+  ],
+  "S89-008": [
+   "S89-008.jpg"
+  ],
+  "S89-009": [
+   "S89-009.jpg"
+  ],
+  "S89-010": [
+   "S89-010.jpg"
+  ],
+  "S89-011": [
+   "S89-011.jpg"
+  ],
+  "S89-012": [
+   "S89-012.jpg"
+  ],
+  "S89-013": [
+   "S89-013.jpg"
+  ],
+  "S89-014": [
+   "S89-014.jpg"
+  ],
+  "S89-015": [
+   "S89-015.jpg"
+  ],
+  "S89-016": [
+   "S89-016.jpg"
+  ],
+  "S89-017": [
+   "S89-017.jpg"
+  ],
+  "S89-018": [
+   "S89-018.jpg"
+  ],
+  "S89-019": [
+   "S89-019.jpg"
+  ],
+  "S89-020": [
+   "S89-020.jpg"
+  ],
+  "S89-021": [
+   "S89-021.jpg"
+  ],
+  "S89-022": [
+   "S89-022.jpg"
+  ],
+  "S89-023": [
+   "S89-023.jpg"
+  ],
+  "S89-024": [
+   "S89-024.jpg"
+  ]
+ },
+ "boxes": {
+  "S89-002": [
+   [
+    107,
+    821,
+    932,
+    1390
+   ]
+  ],
+  "S89-006": [
+   [
+    100,
+    1120,
+    960,
+    1450
+   ]
+  ],
+  "S89-013": [
+   [
+    1665,
+    2067,
+    2325,
+    2600
+   ]
+  ],
+  "S89-019": [
+   [
+    515,
+    355,
+    838,
+    690
+   ]
+  ],
+  "S89-020": [
+   [
+    500,
+    200,
+    825,
+    560
+   ]
+  ],
+  "S89-021": [
+   [
+    480,
+    140,
+    820,
+    345
+   ]
+  ],
+  "S89-022": [
+   [
+    1114,
+    596,
+    1452,
+    1471
+   ]
+  ],
+  "S89-023": [
+   [
+    828,
+    1222,
+    1188,
+    1465
+   ]
+  ]
+ },
+ "notes": {
+  "S89-001": "Prints 'On the 1st ult.', where the New-Hampshire papers have 'On the first of April' and the Kentucky Gazette 'On the first instant' (scan).",
+  "S89-002": "Prints 'Honse', a letter set upside down, in 'Senate and House of Representatives' (scan).",
+  "S89-004": "Dates the paragraph 'BOSTON, JULY 25.' (scan).",
+  "S89-008": "Prints the list without the heading 'Revenue Department', in italics (scan).",
+  "S89-009": "Prints 'Cougress', a letter set upside down (scan). Filed under 18 August: the paper's first number prints 'Saturday, August 18, 1789' in its masthead (18 August 1789 was a Tuesday; No. 2 is dated Saturday, August 22).",
+  "S89-010": "Filed under 18 August: the paper's first number prints 'Saturday, August 18, 1789' in its masthead (18 August 1789 was a Tuesday; No. 2 is dated Saturday, August 22).",
+  "S89-011": "Prints 'propiticous', a misprint (scan). Filed under 18 August: the paper's first number prints 'Saturday, August 18, 1789' in its masthead (18 August 1789 was a Tuesday; No. 2 is dated Saturday, August 22).",
+  "S89-012": "Introduces the report as from 'a late European paper' and prints 'On the first of April' (scan). Filed under 18 August: the paper's first number prints 'Saturday, August 18, 1789' in its masthead (18 August 1789 was a Tuesday; No. 2 is dated Saturday, August 22).",
+  "S89-013": "Introduces the report as from 'a late European paper', under the paper's Portsmouth heading of 20 August, and prints 'On the first of April' (scan).",
+  "S89-021": "Dates the paragraph 'BOSTON, July 27.', where the Gazette of the United States has July 25 (scan).",
+  "S89-022": "Prints the report alone under 'VIENNA, May 13.', without the report before it that the Emperor is ill, and reads 'a post in the Bannat' where the other printings have 'of the Bannat' (scan).",
+  "S89-023": "Prints the report directly under 'LONDON, April 9.', with 'On the first instant' (scan).",
+  "S89-024": "Prints 'Acona', where the other printings have 'Ancona' (scan)."
+ },
+ "dispositions": {
+  "method": "The automatic families first printed in 1789 that reach 3 or more papers, long-running ones included, were split into single printed items (story_items.py --long-running, items.json). The same script was run with year 1788 over the 1789 pages (items_from_1788.json). Every finder item in 3 or more papers was counted again by the first 40 words of its opening against every page of 1789 in both transcriptions (a page prints the item when it holds at least 18 of the opening's word 5-grams), and texts read from different printings were merged (74 texts). For every text at the bar or one paper short of it, the papers the comparison missed were looked for again on their pages (the best page within the text's weeks) and read. A sweep of seven-word sequences shared by 4 or more papers, over every page, found items the families miss (as X-1803-09); each was read. The acts of Congress were counted act by act, a page counting when it prints the act's enacting words, not only its title. Every admitted item was then counted by phrase searches of its opening over all 742 pages in both transcriptions, and every hit read (phrase_patterns.json, phrase_hits.json).",
+  "selection_rule": "The thin-year rule (Y-THIN), as amended by the owner on 23 November 2026 (choice B1): an item, counted by its own words, is eligible when it was printed by more than half of the newspapers that survive for its weeks (those with a surviving issue between its first and last printing, and at least in the three weeks from its first printing), and by at least 4; items printed by every newspaper that survives for their weeks are admitted; the other eligible items are chosen to cover the months and the kinds of news; digests are not admitted. 1789 has four papers, so an item reaches the bar only when all four print it: every eligible item is printed by every paper that survives for its weeks and is admitted, and nothing is chosen. The fourth paper, the New-Hampshire Gazetteer, survives from 18 August, so no item reaches the bar unless it was still being printed after that day.",
+  "paper_counting": "1789 has 5 catalogue series, which are 4 papers: the Kentucky Gazette (Lexington) is under two numbers, 'The Kentucke gazette' (sn82014784) to 7 March and 'The Kentucky gazette' (sn82014782) from 14 March (C-04), and 46 of its 47 issues are scanned twice (filed as editions 1 and 2; C-05: each printing is counted once, on the first scan). The New-Hampshire Gazette and General Advertiser (Portsmouth; 51 issues) and the Kentucky Gazette (Saturdays) run all year; the Gazette of the United States (New York, Wednesdays and Saturdays; 73 issues) from 15 April; the New-Hampshire Gazetteer (Exeter, Saturdays; 15 issues) from 18 August. Papers in print in any three weeks: 2 from January to mid-April, 3 to the end of July, and all 4 from the windows that reach 18 August.",
+  "counted_item_by_item": {
+   "Paper counts": "The six admitted items are each printed by all four papers, counted by phrase searches of their openings and every hit read; their papers are in the README's table of stories. The items read and below the bar are listed in not_admitted with their counts.",
+   "A report inside a longer paragraph": "The report from Croatia stands inside a Vienna paragraph of 13 May in three papers, after a report that the Emperor is ill; the Kentucky Gazette prints it alone under the dateline. It is counted by its own opening sentence (as 1782 counted the Charlestown report of Savannah's evacuation inside a longer paragraph): 4 of 4. The report that the Emperor is ill is in 3 of 4. The letter from Ancona is a one-sentence report inside London paragraphs of 10 June (the Gazette of the United States and the Kentucky Gazette) and 15 June (the New-Hampshire papers), counted by its own words.",
+   "The acts of Congress": "Each act is its own item, counted where its enacting words are printed. Lists of the session's acts, which give only their titles (the Gazette of the United States of 3 October, the New-Hampshire Gazette of 15 October and the Kentucky Gazette of 28 November), and the Senate's journal naming its bills are not counted (C-07). Only the act for the Department of Foreign Affairs is printed by all four papers; five more are printed by three.",
+   "The amendments to the Constitution": "Three texts, each counted by its own opening: the report of the House's committee of 28 July (2 of 4), the House's seventeen articles of 24 August (2 of 4: the Gazette of the United States and the Kentucky Gazette, 28 November) and the twelve articles both Houses proposed to the states in September, with their preamble (3 of 4: the Gazette of the United States, the New-Hampshire Gazetteer and the New-Hampshire Gazette). The House's debates in committee, which quote the committee's articles one by one, are not counted (C-07).",
+   "Second scans": "The Kentucky Gazette's second scans (edition 2) hold the same issues and are not counted again (C-05); its issue of 3 January survives only as edition 2."
+  },
+  "for_user_decision": {
+   "The floor of four papers before 18 August": "As built: before 18 August only three papers survive (from January to mid-April only two), so no item first printed then reaches the bar of 4 unless the New-Hampshire Gazetteer still prints it after that day. The President's speech at his inauguration (30 April) is printed by all three papers that survive for its weeks and is not eligible. Five of the six admitted items were first printed between 25 July and 5 August and reach 4 papers because the Gazetteer reprinted them.",
+   "The amendments to the Constitution": "As built: the twelve articles both Houses proposed to the states are in 3 of 4 papers by their own words, below the bar; the Kentucky Gazette prints the House's seventeen articles of 24 August instead (28 November). Counted together, as one proposal in two printed forms (C-02), they would be in 4 of 4 and admitted by the first part.",
+   "A report inside a longer paragraph": "As built: the report from Croatia is counted by its own opening sentence and admitted (4 of 4). Counted as part of the Vienna paragraph, which opens with the report that the Emperor is ill, it would be in 3 of 4 (the Kentucky Gazette prints only the second report), below the bar, as 1782 counted extracts without their opening (X-1782-05).",
+   "The proceedings of the House": "As built (C-09): the House's proceedings, which the Gazette of the United States reported and the other three papers reprinted in parts, are runs of a day's business; the days of 11 August and 16 September are in all four papers and are not admitted."
+  },
+  "not_admitted": {
+   "House of Representatives, the proceedings of 11 August 1789 ('The message received from the President yesterday, was read ...') (4)": "Digest, not admitted: the proceedings of a day of the House, a run of unrelated business (C-09); the Gazette of the United States reported the proceedings and the other three papers reprinted them in parts; in 4 of the 4 papers that survive for its weeks (needs 4).",
+   "House of Representatives, the proceedings of 16 September 1789 ('The bill for the temporary establishment of the Post-Office, was read the first time ...') (4)": "Digest, not admitted: the proceedings of a day of the House, a run of unrelated business (C-09); the Gazette of the United States reported the proceedings and the other three papers reprinted them in parts; in 4 of the 4 papers that survive for its weeks (needs 4).",
+   "The amendments to the Constitution proposed by both Houses to the states, September 1789 ('The Conventions of a number of the States having at the time of their adopting the Constitution, expressed a desire ...'; twelve articles) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Kentucky Gazette prints the House's articles of 24 August instead (28 November; listed next); counted together as one proposal in two printed forms (C-02) they would be in 4 of 4 (README, 'For you to decide').",
+   "The House's articles of amendment to the Constitution, 24 August 1789 ('two thirds of both Houses deeming it necessary'; seventeen articles) (2)": "Read and below the bar: in 2 of the 4 papers that survive for its weeks (needs 4) by its own words; the Gazette of the United States (29 August) and the Kentucky Gazette (28 November); the other papers print the articles both Houses proposed in September.",
+   "The report of the House's committee on amendments to the Constitution, 28 July 1789 ('In the introductory paragraph, before the words \"We the people,\" add ...') (2)": "Read and below the bar: in 2 of the 4 papers that survive for its weeks (needs 4) by its own words; the Gazette of the United States (1 August) and the New-Hampshire Gazette (13 August); the other pages that hold its words quote its articles one by one in the House's debates (C-07).",
+   "The President's proclamation of a day of public thanksgiving and prayer, 3 October 1789 ('Whereas it is the duty of all nations to acknowledge the Providence of Almighty God ...') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the New-Hampshire Gazetteer reports the day appointed but does not print the proclamation; the Kentucky Gazette prints it twice.",
+   "The President's message to the House on the troops in the service of the United States, August 1789 ('I have directed a statement of the troops ...') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; printed inside the House's proceedings; the New-Hampshire Gazetteer's surviving issues do not print it.",
+   "An Act for laying a duty on goods, wares and merchandizes imported into the United States (the impost act, July 1789) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; counted where its enacting words are printed; the New-Hampshire Gazetteer's surviving issues do not print it.",
+   "An Act to regulate the time and manner of administering certain oaths (the first act of the session, June 1789) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; counted where its enacting words are printed; the New-Hampshire Gazetteer's surviving issues do not print it.",
+   "An Act to establish an executive department, to be denominated the Department of War (August 1789) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; counted where its enacting words are printed; the Kentucky Gazette gives only its title, in the list of the session's acts.",
+   "An Act to provide for the government of the territory north-west of the river Ohio (August 1789) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; counted where its enacting words are printed; the Kentucky Gazette gives only its title, in the list of the session's acts.",
+   "An Act for registering and clearing vessels, regulating the coasting trade (September 1789) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; counted where its enacting words are printed; the Kentucky Gazette gives only its title, in the list of the session's acts.",
+   "Vienna, 13 May 1789: 'Our august Sovereign is again ill' (the report before the one from Croatia) (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the paragraph's first report; the Kentucky Gazette prints only the second, the report from Croatia, which is admitted.",
+   "The President's speech to both Houses of Congress at his inauguration, 30 April 1789 ('Among the vicissitudes incident to life ...') (3)": "Read and below the bar: in 3 of the 3 papers that survive for its weeks (needs 4) by its own words; printed by all three papers that survive for its weeks (the Gazette of the United States, the New-Hampshire Gazette and the Kentucky Gazette); the bar asks for at least 4, and the New-Hampshire Gazetteer survives only from 18 August.",
+   "The Convention of North-Carolina adopts the Constitution, November 1789 ('The particulars are: The Convention of North-Carolina met at Fayetteville ...') (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; the Kentucky Gazette's surviving issues of December do not print it.",
+   "The list of the acts passed at the first session of Congress (titles only), October 1789 (3)": "Read and below the bar: in 3 of the 4 papers that survive for its weeks (needs 4) by its own words; a list of titles, not the acts (C-07); the New-Hampshire Gazetteer's surviving issues do not print it.",
+   "Other items of 3 papers or fewer (by count)": "The other items the finder lists in 3 papers or fewer, compared by machine on the first 40 words of their openings with every page of 1789 (papers the comparison missed were looked for again when an item was one paper short); none reaches the bar. Among them are items printed by all three papers that survive before 18 August, which the bar's floor of 4 leaves out. Not read one by one."
+  },
+  "for_the_owner": {},
+  "counts": {
+   "eligible_items": 6,
+   "admitted_by_the_first_part": 6,
+   "chosen_items": 0,
+   "not_chosen_listed": 0,
+   "digests": 2,
+   "read_below_the_bar": 14
+  }
+ },
+ "verdict_summary": {
+  "yes": 24,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 13,
+  "minor_errors": 9,
+  "major_problem": 2,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 16,
+  "manual_box": 8
+ }
+}

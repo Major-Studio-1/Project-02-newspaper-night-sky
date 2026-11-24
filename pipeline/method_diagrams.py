@@ -13,8 +13,8 @@ diagrams on 23 November 2026 (mock-ups: docs/notes/2026-11-24-how-it-works-diagr
 Each diagram is drawn twice, wide (the page's text column) and narrow (phones, under 640 px); CSS shows one. The SVG is
 aria-hidden and each figure carries the same content as a list for screen readers (.sr-only, in site.css). Text stays text.
 Colours are the site's: matched #aab6cf, the three category slots, and the reviewed pill's green and text colour.
-Words that are not numbers live here: the thin-year note in diagram 3 ("6 papers in 1793, 4 in 1797") must change with the
-page's own sentence on thresholds (the Y-THIN years, when they go on the site).
+Words that are not numbers live here: the thin-year note in diagram 3 ("6 papers in 1793, 4 in 1797; in the thin years, over
+half the papers in print, at least 4") must change with the page's own sentence on thresholds.
 """
 import html
 import random
@@ -328,7 +328,7 @@ def bars(x, y, label_w, bar_max, pitch=18, cls='xs'):
 
 
 def d3_wide():
-    s = Svg('dg3w', 660, 470, 'wide')
+    s = Svg('dg3w', 660, 486, 'wide')     # 486: room for the third line of the note
     s(rect(8, 36, 168, 112), text(20, 60, ('1 · Find', 't')),
       text(20, 81, ["The year's matched", 'stories in 3 or more', 'papers, split into single', 'printed items'], lh=17))
     s(s.arrow('M92 148V168'))
@@ -347,7 +347,7 @@ def d3_wide():
       text(216, 276, 'Below the rule: listed'))
     s(rect(204, 308, 228, 106, 'bt'), text(216, 331, ('Any number of papers', 't')),
       text(216, 352, ['Digests, lists, proceedings', '(not one item); items on', 'private persons: the owner', 'decides; listed without names'], lh=17))
-    s(text(204, 438, ['Where few papers survive, the rule is lower:', '6 papers in 1793, 4 in 1797.'], 'm', lh=16))
+    s(text(204, 438, ['Where few papers survive, the rule is lower:', '6 papers in 1793, 4 in 1797; in the thin years,', 'over half the papers in print, at least 4.'], 'm', lh=16))
     # to the two outcomes
     s(s.arrow('M432 80H466'), s.arrow('M432 166H466'), s.arrow('M432 196H452V250H466'),
       s.arrow('M432 266H466'), s.arrow('M432 360H466'))
@@ -364,7 +364,7 @@ def d3_wide():
 
 
 def d3_narrow():
-    s = Svg('dg3n', 360, 843, 'narrow')
+    s = Svg('dg3n', 360, 859, 'narrow')   # 859: the note's third line moves the rest down 16
     s(rect(8, 8, 344, 74), text(20, 31, ('1 · Find', 't')),
       text(20, 52, ["The year's matched stories in 3 or more papers,", 'split into single printed items'], lh=17))
     s(s.arrow('M180 82V100'))
@@ -380,7 +380,8 @@ def d3_narrow():
       text(20, 442, 'Below the rule'))
     s(rect(8, 460, 344, 87, 'bt'), text(20, 482, [[('Any number of papers', 't'), (' → listed', 'cm t')]]),
       text(20, 502, ['Digests, lists and proceedings (not one item);', 'items on private persons: the owner decides;', 'listed without names'], lh=17))
-    s(text(8, 567, ['Where few papers survive, the rule is lower:', '6 papers in 1793, 4 in 1797.'], 'm', lh=16))
+    s(text(8, 567, ['Where few papers survive, the rule is lower:', '6 papers in 1793, 4 in 1797; in the thin years,', 'over half the papers in print, at least 4.'], 'm', lh=16))
+    s('<g transform="translate(0 16)">')   # below the note's third line
     s(s.arrow('M92 589V607'), s.arrow('M268 589V607'))
     s(link('#reviewed', rect(8, 609, 168, 224, 'br'), text(20, 629, ('ADMITTED', 'cap cr')), three(140, 625),
            text(20, 651, ['Every printing', 'checked against its', 'page scan, then', 'grouped'], lh=17),
@@ -391,6 +392,7 @@ def d3_narrow():
       text(196, 673, ['listed, each with', 'its reason'], lh=16),
       bars(196, 713, 82, 30, pitch=17, cls='xxs'),
       text(196, 807, ['Most stay in the sky', 'as matched stars'], 'm', lh=16))
+    s('</g>')
     return s.render()
 
 
@@ -497,7 +499,9 @@ def render(n, crop=SITE_CROP):
         "3, Sort by one rule, the same for every subject. 9 or more papers: every single item is admitted, except digests of unrelated "
         "paragraphs. 7 or 8 papers: chosen to cover the months and the kinds of news; the others are listed. Fewer than 7 papers: below "
         "the rule, listed. Any number of papers: digests, lists and proceedings (not one item) are listed, and so are items that turn on "
-        "private persons, without names, unless the owner decides otherwise. Where few papers survive, the rule is lower: 6 papers in 1793, 4 in 1797.",
+        "private persons, without names, unless the owner decides otherwise. Where few papers survive, the rule is lower: 6 papers in 1793, 4 in 1797; in the thin years, more than half of the "
+        "papers in print, and at least 4: items printed by all of them are admitted, the others chosen to cover the months "
+        "and the kinds of news.",
         f"Admitted: every printing is checked against its page scan, then grouped into reviewed stories: {N['reviewed']} stories with "
         f"{N['rprint']} printings in {YEARS} years.",
         f"Read and not admitted: {N['notadm']} items on a public list, each with its reason: " + ', '.join(f'{n} {k}' for k, n in KINDS)
