@@ -713,7 +713,8 @@ function archive() {
   if (A || !INDEX) return A;
   const papers = INDEX.papers.map((p, i) => {
     const lat = Number.isFinite(p.lat) ? p.lat : 39.95, lon = Number.isFinite(p.lon) ? p.lon : -75.16;
-    return {i, lccn: p.lccn, lat, lon, st: M.step(lat), fm: M.freq(lat), fk: M.freq(lat), fs: M.freq(lat, -1), pan: M.pan(lon)};
+    return {i, lccn: p.lccn, lat, lon, st: M.step(lat), fm: M.freq(lat), fk: M.freq(lat), fs: M.freq(lat, -1), pan: M.pan(lon),
+      town: p.town || String(p.place || '').split(',')[0], name: p.name || ''};   // the town and the paper: the picture's names
   });
   const byDay = new Map(), pages = new Map(), C = INDEX.coverage;
   for (let k = 0; k < C.d.length; k++) {
@@ -743,7 +744,7 @@ function setView(v) {
   // A day's printings, widest stories first (then reviewed before matched, then the older story): the keyboard's order.
   const width = s => papersOf.get(s).size;
   for (const l of byDay.values()) l.sort((x, y) => width(y[0]) - width(x[0]) || rev.get(y[0]) - rev.get(x[0]) || first.get(x[0]) - first.get(y[0]) || a.papers[y[1]].lat - a.papers[x[1]].lat);
-  V = {from: Math.floor(v.from), to: Math.floor(v.to), story: !!v.story, byDay, byStory, rev, n: (v.printings || []).length, storyId: byStory.keys().next().value};
+  V = {from: Math.floor(v.from), to: Math.floor(v.to), story: !!v.story, byDay, byStory, rev, papersOf, labels: v.labels || {}, n: (v.printings || []).length, storyId: byStory.keys().next().value};
   clearCaches();
   if (P) startPlayer(last.day);
 }
@@ -1135,6 +1136,145 @@ async function setSound(v) {
   ready = true; follow(last); preloadOthers(mine);
 }
 
+// ---- The picture, for the Radio page's Music tab: the first sketch's, which the owner liked best, kept in its style.
+// Newspapers by latitude, north at the top; time runs left to right; the gold line is now. Each surviving issue is a
+// grey dot, a little larger when more of its pages survive and a little brighter when it is the paper's first issue of
+// the week (the beat the presses strike full); a struck one glows white. A printing on the stories' keyboard is a ring,
+// gold if reviewed and blue if matched; when it sounds, a soft bar spans the papers that had printed the story in the 40
+// days before, which ring with it. Faint stripes mark the Sundays, when nobody printed. No row lines and no grid, and no
+// colour but the stories and now. When the view is wide, a paper's touching dots join into one grey run. It draws the
+// passage in view at the day it is given, and it draws while the music is off too: nothing sounds and nothing loads.
+let pictured = false;
+const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const TONE = {reviewed: '255,210,122', matched: '140,207,255'}, SHADE = {past: ['#6a7693', '#4a5470'], later: ['#424c66', '#323a52']};   // [first issue of the week, the others]
+const LEVEL_WORDS = ['at rest', 'calm', 'building', 'tense', 'at its height'];
+const EVERY = {week: 'a chord a week', 'two weeks': 'a chord every two weeks', month: 'a chord a month', 'two months': 'a chord every two months', season: 'a chord a season'};
+function makePicture(cv) {
+  pictured = true;
+  const g = cv.getContext('2d'), size = {W: 0, H: 0};
+  let rowsKey = '', rows = [], rowOf = new Map(), labels = null, labelsKey = '', ra = null, rb = null;
+  // The canvas's size is read only when it changes: reading it in every frame, just after the words under the picture
+  // have changed, would make the browser lay out the whole page each frame.
+  new ResizeObserver(([e]) => { size.W = e.contentRect.width; size.H = e.contentRect.height; }).observe(cv);
+  const rowsFor = (y0, y1) => {   // the newspapers with a surviving issue in the years in view (and the story's papers), north at the top
+    const set = new Set();
+    for (let d = M.dayOf(y0); d < M.dayOf(y1 + 1); d++) { const l = A.byDay.get(d); if (l) l.forEach(p => set.add(p)); }
+    if (V.story) for (const [, p] of V.byStory.get(V.storyId) || []) set.add(p);
+    return [...set].sort((a, b) => A.papers[b].lat - A.papers[a].lat || a - b);
+  };
+  function draw(now) {
+    if (!archive() || !V || V.pending) return;
+    if (!size.W) { size.W = cv.clientWidth; size.H = cv.clientHeight; }
+    const dpr = Math.min(2, window.devicePixelRatio || 1), W = size.W, H = size.H; if (!W || !H) return;
+    if (cv.width !== Math.round(W * dpr) || cv.height !== Math.round(H * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
+    g.setTransform(dpr, 0, 0, dpr, 0, 0); g.clearRect(0, 0, W, H);
+    const sp = S.speed, nowD = Math.floor(now), range = [V.from, V.to + 1];
+    // About eighteen seconds of music in view (ten on a phone): two and a half months at a week in two seconds.
+    const gut = W < 600 ? 92 : 178, top = 22, bot = 8, span = Math.min(3653, Math.max(W < 600 ? 35 : 63, Math.round(sp * (W < 600 ? 10 : 18))));
+    const x0 = gut, x1 = W - 8, pxd = (x1 - x0) / span, left = now - span * .3, X = d => x0 + (d - left) * pxd;
+    const d0 = Math.max(range[0], Math.floor(left)), d1 = Math.min(range[1], Math.ceil(left + span) + 1);
+    const ya = M.dayDate(Math.max(0, left)).getUTCFullYear(), yb = M.dayDate(Math.min(END - 1, left + span)).getUTCFullYear();
+    const key = `${ya}:${yb}:${V.from}:${V.to}:${V.story}:${V.storyId}:${V.n}`;
+    if (key !== rowsKey) { rowsKey = key; rows = rowsFor(ya, yb); rowOf = new Map(rows.map((p, i) => [p, i])); }
+    const rh = Math.min(20, (H - top - bot) / Math.max(1, rows.length)), Y = i => top + rh * (i + .5);
+    // Sundays, faintly; months (or years, when the view is wide) by a small tick and their name
+    if (pxd >= 4) { g.beginPath(); for (let d = Math.floor(left); d < left + span + 1; d++) if ((d + 1) % 7 === 0) g.rect(X(d) - pxd / 2, top - 4, pxd, H - top); g.fillStyle = '#0b1122'; g.fill(); }   // day 6 of each week is a Sunday
+    g.font = '11px system-ui,sans-serif'; g.textBaseline = 'alphabetic';
+    if (span <= 500) {
+      const s0 = M.dayDate(Math.max(0, left)); let y = s0.getUTCFullYear(), m = s0.getUTCMonth();
+      for (;;) { const d = M.dayOf(y, m + 1, 1), x = X(d); if (d > left + span) break; if (d >= left) { g.fillStyle = '#2b3a5e'; g.fillRect(Math.round(x - pxd / 2), 4, 1, 13); g.fillStyle = '#8b98b5'; g.fillText(`${SHORT_MONTHS[m]} ${y}`, x - pxd / 2 + 4, 14); } if (++m === 12) { m = 0; y++; } }
+    } else for (let y = ya; y <= yb + 1; y++) { const d = M.dayOf(y), x = X(d); if (d < left || d > left + span) continue; g.fillStyle = '#2b3a5e'; g.fillRect(Math.round(x), 4, 1, 13); g.fillStyle = '#8b98b5'; g.fillText(String(y), x + 4, 14); }
+    // the towns' names, written once into a small picture whenever the rows change, then copied (text is the costliest
+    // thing a canvas draws); rows too thin to name are left unnamed
+    const lk = `${rowsKey}:${W}:${H}:${dpr}`;
+    if (labelsKey !== lk) {
+      labelsKey = lk; labels = labels || document.createElement('canvas');
+      labels.width = Math.max(1, Math.round(gut * dpr)); labels.height = Math.max(1, Math.round(H * dpr));
+      const lg = labels.getContext('2d'); lg.setTransform(dpr, 0, 0, dpr, 0, 0); lg.clearRect(0, 0, gut, H);
+      lg.font = '11.5px system-ui,sans-serif'; lg.textBaseline = 'middle';
+      if (rh >= 9) rows.forEach((p, i) => {
+        const y = Y(i), pp = A.papers[p], town = pp.town;
+        lg.fillStyle = '#c9d3e8'; lg.fillText(town, 6, y);
+        if (W >= 600 && pp.name) { lg.fillStyle = '#66728d'; const tw = lg.measureText(town + ' ').width; let nm = pp.name; while (nm.length > 3 && lg.measureText(nm).width > gut - 12 - tw) nm = nm.slice(0, -2); lg.fillText(nm === pp.name ? nm : nm + '…', 6 + tw, y); }
+      });
+    }
+    g.drawImage(labels, 0, 0, gut, H);
+    // the issues: one path per shade (printed or still to come; first of the week or not), so a busy view is four fills
+    const wide = pxd < 2;
+    for (const [a, b, shades] of [[d0, Math.min(d1, nowD + 1), SHADE.past], [Math.max(d0, nowD + 1), d1, SHADE.later]]) {
+      if (wide) {   // a paper's touching dots join into one grey run
+        const n = rows.length; if (!ra || ra.length < n) { ra = new Float64Array(n + 64); rb = new Float64Array(n + 64); }
+        ra.fill(NaN, 0, n); g.beginPath();
+        const flush = i => g.rect(ra[i] - .9, Y(i) - 1, rb[i] - ra[i] + 1.8, 2);
+        for (let d = a; d < b; d++) {
+          const l = A.byDay.get(d); if (!l) continue; const x = X(d);
+          for (const p of l) { const i = rowOf.get(p); if (i === undefined) continue; if (ra[i] !== ra[i]) { ra[i] = x; rb[i] = x; } else if (x - rb[i] <= 2.5) rb[i] = x; else { flush(i); ra[i] = x; rb[i] = x; } }
+        }
+        for (let i = 0; i < n; i++) if (ra[i] === ra[i]) flush(i);
+        g.fillStyle = shades[1]; g.fill();
+        continue;
+      }
+      for (const first of [true, false]) {
+        g.beginPath();
+        for (let d = a; d < b; d++) {
+          const l = A.byDay.get(d); if (!l) continue; const x = X(d), f = firstsOf(UNITS[1], d);
+          for (const p of l) {
+            if ((f.get(p) === d) !== first) continue; const i = rowOf.get(p); if (i === undefined) continue;
+            const y = Y(i), r = 2.4 * Math.sqrt(fullness(p, d)); g.moveTo(x + r, y); g.arc(x, y, r, 0, 7);
+          }
+        }
+        g.fillStyle = shades[first ? 0 : 1]; g.fill();
+      }
+    }
+    // struck issues glow white for a moment, a full beat a little more
+    const glow = (d, s) => { const age = (now - d) / sp; return age >= 0 && age < s ? 1 - age / s : 0; };
+    const issueRule = unitFor(sp).name === 'issue';
+    for (let d = Math.max(d0, Math.floor(now - 1.1 * sp)); d <= Math.min(d1 - 1, nowD); d++) {
+      const k = glow(d, 1.1); if (!k) continue;
+      for (const o of strikesOn(d)) for (const p of o.ps) {
+        const i = rowOf.get(p); if (i === undefined) continue; const wp = issueRule ? weightOf(p, d) : fullness(p, d);
+        g.fillStyle = `rgba(232,237,247,${.45 + .55 * k})`; g.beginPath(); g.arc(X(d), Y(i), (2.4 + 2.6 * k) * Math.sqrt(Math.max(.6, wp)), 0, 7); g.fill();
+      }
+    }
+    // the stories' keyboard: a ring at each printing it plays; when it sounds, a soft bar spans the papers ringing with it
+    for (let d = d0; d < d1; d++) {
+      const ks = keysOn(d); if (!ks.length) continue;
+      const x = X(d), k = glow(d, 2.2), past = d <= now;
+      if (k) {
+        const ys = ks.flatMap(o => o.ps).concat(ks.ringPapers).map(q => rowOf.get(q)).filter(r => r !== undefined).map(Y);
+        const tone = V.rev.get(ks[0].s) === true ? TONE.reviewed : TONE.matched;
+        if (ys.length) { g.fillStyle = `rgba(${tone},${.22 * k})`; g.fillRect(x - 2, Math.min(...ys) - 4, 4, Math.max(...ys) - Math.min(...ys) + 8); }
+        g.fillStyle = `rgba(${tone},${.5 * k})`; g.beginPath();
+        for (const q of ks.ringPapers) { const i = rowOf.get(q); if (i === undefined) continue; const yy = Y(i); g.moveTo(x + 2.2, yy); g.arc(x, yy, 2.2, 0, 7); }
+        g.fill();
+      }
+      for (const o of ks) {
+        const tone = V.rev.get(o.s) === true ? TONE.reviewed : TONE.matched;
+        g.strokeStyle = `rgba(${tone},${past ? .55 + .45 * k : .3})`; g.lineWidth = 1.4 + 1.4 * k; g.beginPath();
+        for (const p of o.ps) { const i = rowOf.get(p); if (i === undefined) continue; const y = Y(i), r = 5 + 3 * k; g.moveTo(x + r, y); g.arc(x, y, r, 0, 7); }
+        g.stroke();
+      }
+    }
+    // outside the passage, dimmed; now
+    if (range[0] > left) { g.fillStyle = '#050711cc'; g.fillRect(x0, 0, X(range[0] - .5) - x0, H); }
+    if (range[1] < left + span) { g.fillStyle = '#050711cc'; g.fillRect(X(range[1] - .5), 0, x1 - X(range[1] - .5), H); }
+    const xn = X(now); g.fillStyle = '#ffd27a'; g.fillRect(Math.round(xn), top - 6, 1.5, H - top + 6);
+  }
+  function words(d) {   // the day under the picture: who printed, what the strings hold, the story on the keyboard
+    if (!archive() || !V || V.pending) return {date: '', what: ''};
+    const dt = M.dayDate(d), l = A.byDay.get(d) || [], act = activeAround(d).length, ks = keysOn(d);
+    const printing = l.length ? `printing: ${l.slice(0, 4).map(p => A.papers[p].town).join(', ')}${l.length > 4 ? ` and ${l.length - 4} more` : ''}`
+      : dt.getUTCDay() === 0 ? 'Sunday: no paper prints' : 'no surviving issue this day';
+    const c = adagio() ? chordFor(d) : null, b = c && c.bar;
+    const str = `strings: ${act} paper${act === 1 ? '' : 's'} around now${b ? (EVERY[b.unit] ? ` (${c.ch.name}: ${LEVEL_WORDS[c.level]}; ${EVERY[b.unit]})` : '') : S.speed >= 56 ? '' : ` (${M.seasonOf(d)} chord)`}`;
+    const s0 = ks.length ? ks[0].s : undefined, w = s0 !== undefined && V.papersOf.get(s0) ? V.papersOf.get(s0).size : 0;
+    const st = !ks.length ? '' : V.story ? ` · the story printed in ${ks.reduce((n, o) => n + o.n, 0)} paper${ks.length === 1 && ks[0].n === 1 ? '' : 's'} today`
+      : ` · story: “${String(V.labels[s0] || `a story in ${w} papers`).replace(/\s+…$/, '…').slice(0, 80)}” (${w} papers, ${V.rev.get(s0) ? 'reviewed' : 'matched, not checked'})`;
+    return {date: `${WEEKDAYS[dt.getUTCDay()]} ${M.fmt(d)}`, what: `${printing} · ${str}${st}`};
+  }
+  return {draw, words};
+}
+
 // ---- Silent checks: an offline render of what is in view (into memory, never to the speakers)
 async function render({seconds = 30, from = null, rate = 22050, keep = false} = {}) {
   if (!V || V.pending || !archive()) throw new Error('no view');
@@ -1148,9 +1288,13 @@ window.Music = {
   SOUNDS: ['wood', 'piano', 'concerto'],
   // The newspapers and their surviving issues: Pulses' years/index.json, once loaded, or the radio's year (its newspapers
   // and surviving issues, the same shape for one year). Whatever was worked out from the last one is forgotten.
-  data(index) { INDEX = index; A = null; cache.firsts.clear(); cache.active.clear(); clearCaches(); if (V && V.pending && S.on) setView(V.pending); },
-  view(v) { if ((!S.on && !S.test) || !archive()) { V = {pending: v}; return; } setView(v); },   // the passage Pulses plays (kept, unread, while off)
+  data(index) { INDEX = index; A = null; cache.firsts.clear(); cache.active.clear(); clearCaches(); if (V && V.pending && (S.on || pictured)) setView(V.pending); },
+  // the passage Pulses plays (kept, unread, while off, unless a picture shows it)
+  view(v) { if ((!S.on && !S.test && !pictured) || !archive()) { V = {pending: v}; return; } setView(v); },
   follow, setOn, setSound, unlock,
+  // The pace, also while the music is off (the picture and the notes depend on it); while it plays, as follow() does.
+  setSpeed(v) { if (!(v > 0) || v === S.speed) return; if (S.on && E && ready && V && !V.pending) follow({...last, speed: v}); else { S.speed = v; clearCaches(); } },
+  picture: makePicture,   // the Music tab's picture: Music.picture(canvas) gives {draw(day), words(day)}
   // How loud, against the levels above (1: under the radio's voices, as on Pulses). The radio's music station plays alone,
   // so it is as loud as the voices would be (the owner, 23 November 2026).
   setLevel(x) { S.level = Math.max(0, Math.min(8, Number(x) || 0)); if (E) E.setVolume(volumeAt(S.speed)); },
