@@ -17,17 +17,25 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+# Two jobs, as in GitHub's own Pages template. With upload and deploy in one job, the deploy step sometimes looked
+# for the artifact before GitHub had listed it ("No artifacts named github-pages", four times on 24 November 2026);
+# a separate deploy job starts only after the upload job has finished.
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4

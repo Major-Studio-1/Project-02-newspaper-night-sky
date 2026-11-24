@@ -733,7 +733,22 @@ with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro
     n_appendix=appendix_parts.check(appendix,page_date,lambda g:_one('SELECT label FROM groups WHERE id=?',('group:'+g,)),
                                     lambda g,y:_one('SELECT COUNT(*) FROM group_publications WHERE group_id=? AND publication_date LIKE ?',('group:'+g,f'{y}%')))
     appendix_html=appendix_parts.render(appendix,page_date,{p['lccn']:p['name'] for p in idx_papers},f'https://huggingface.co/datasets/{DATASET}/resolve/{REV}/media/')
-method_page=fill_text((ROOT/'method.html').read_text(encoding='utf8')).replace('__APPENDIX__',appendix_html)
+# The three diagrams on How it works (work/method_diagrams.py), drawn from this build's numbers as Findings' charts are.
+# Diagram 2 draws one example word for word; if a review or a correction changes it, the build stops here and says what.
+import csv, method_diagrams
+na_kinds=collections.Counter(r['kind'] for r in csv.DictReader(open(ROOT.parent/'outputs/not_admitted/not_admitted.csv',encoding='utf8',newline='')))
+ex_obs=[observations[m] for s in stories if s['id']==method_diagrams.EXAMPLE_STORY for m in s['members']]
+ex_problem=method_diagrams.check_example([(o['node'],o['date']) for o in ex_obs],twins.get(method_diagrams.EXAMPLE_TWIN),
+    sum(method_diagrams.EXAMPLE_TWIN in page_owner.get((o['node'],o['date'],int(o['page'])),()) for o in ex_obs),[a for o in ex_obs for a in o['scans']])
+assert not ex_problem,ex_problem
+diagrams=method_diagrams.render({'pages':manifest['counts']['pages'],'newspapers':manifest['counts']['newspapers'],'issues':manifest['counts']['issues'],
+    'eligible':manifest['counts']['eligible_pages'],'matched':len(families),'matched_printings':sum(f['appearances'] for f in families),
+    'reviewed':len(stories),'reviewed_printings':len(observations),'reviewed_years':len(reviewed_list),'twinned':len(paired),'twins':len(twins),
+    'stars':N_STARS,'parts':sum(len(d['groups']) for d in reviewed_list)-len(stories),'kinds':dict(na_kinds)})
+method_src=(ROOT/'method.html').read_text(encoding='utf8')
+for key,part in {'__DIAGRAMS_CSS__':diagrams['css'],'__DIAGRAM_PAGE_TO_STAR__':diagrams['page_to_star'],'__DIAGRAM_YEAR__':diagrams['year'],'__DIAGRAM_STORY__':diagrams['story']}.items():
+    assert method_src.count(key)==1,'method.html needs '+key+' once'; method_src=method_src.replace(key,part)
+method_page=fill_text(method_src).replace('__APPENDIX__',appendix_html)
 assert '__APPENDIX__' not in method_page and n_appendix==12, ('appendix', n_appendix)
 (OUT/'method.html').write_text(fill(method_page,'method',VER,N_STARS),encoding='utf8')
 (OUT/'notes.html').write_text(fill(fill_text((ROOT/'notes.html').read_text(encoding='utf8')),'notes',VER,N_STARS),encoding='utf8')

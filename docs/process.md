@@ -498,6 +498,8 @@ Reading the papers against their scans turned up errors in the archive itself, w
 
 At the owner's word, everything handled differently from the reviewed stories is shown, not only recorded: How it works ends with an appendix (`method.html#appendix`), written from `pipeline/appendix.json` by `pipeline/appendix_parts.py`. It has three parts: stories printed in several papers but not shown as reviewed stories because they turn on private persons (the 1776 committee notices, two 1793 reports, three 1806 stories); two 1797 candidates once held back for framing and not read yet; and the four reviewed stories whose excerpts stop short of a private person's name. Each item says what kind of text it is and why it was handled differently, in plain words that do not repeat private persons' names, and lists its printings with links to their page scans. The build checks every printing against the release (its page exists and is printed in the item's year) and every excerpt note against its reviewed group.
 
+**Three diagrams on How it works (23 November 2026).** At the owner's word, the page also shows three diagrams: from a scanned page to a star in the sky, how a year is read (the admission rule), and what a story is made of, the last following one example, Congress's resolutions opening the ports in 1776. They are drawn when the site is built, from the build's own numbers (`pipeline/method_diagrams.py`), so they stay current as years are added; the build stops if the example changes.
+
 ## The website
 
 The views are joined into one site with nine pages and a shared header, plus an exhibition page:
