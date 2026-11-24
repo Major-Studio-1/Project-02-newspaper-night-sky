@@ -8,6 +8,7 @@ a storyline, and the notebook of how it was made. Every number is passed in by t
 import html
 
 import findings_parts
+import stories_parts
 
 esc = html.escape
 WORDS = 'zero one two three four five six seven eight nine ten eleven twelve'.split()
@@ -27,11 +28,17 @@ QUESTIONS = [
     ('What did a day sound like?', 'Tune the radio to any day and hear what its papers printed.', 'Radio', 'radio', 'radio.html'),
 ]
 
+# The storyline Home offers, by its id. The Stories page lists its storylines by year (24 November 2026), so Home does
+# not simply take the first; the build fails if work/stories.json no longer has this one.
+STORYLINE = 'chesapeake-1807'
 
-def render(*, years, thin, newspapers, pages, matched, reviewed, reviewed_years, audit, findings, storyline, notebook_entries):
+
+def render(*, years, thin, newspapers, pages, matched, reviewed, reviewed_years, audit, findings, storylines, notebook_entries):
     """years: [(year, newspapers, pages)]; thin: the years with too little archive (finding 1's rule); audit: the matched
-    audit's summary; findings: [(n, kind, title, door label, door link)] from findings_parts; storyline: the first
-    storyline as checked by stories_parts (or None); notebook_entries: how many entries the notebook has."""
+    audit's summary; findings: [(n, kind, title, door label, door link)] from findings_parts; storylines: the storylines
+    as checked by stories_parts (Home offers the one named STORYLINE); notebook_entries: how many entries the notebook has."""
+    storyline = next((s for s in storylines if s['id'] == STORYLINE), None)
+    assert storyline or not storylines, f'Home offers the storyline {STORYLINE}, which work/stories.json no longer has'
     arch = {y: p for y, p, _ in years}
     out = []
 
@@ -96,9 +103,9 @@ def render(*, years, thin, newspapers, pages, matched, reviewed, reviewed_years,
     doors = []
     if storyline:
         s = storyline
-        doors.append(f'<a class="door" href="stories.html#{esc(s["id"])}"><span class="k">Stories</span><h2>{esc(s["title"])}</h2><p>{esc(s["standfirst"])}</p>'
-                     f'<p class="meta">{s["year"]} · {len(s["by"])} printed pieces · {len(s["every"])} printings · {len({o["node"] for o in s["every"]})} newspapers</p>'
-                     '<span class="go">Read the storyline →</span></a>')
+        doors.append(f'<a class="door" href="stories.html#{esc(s["id"])}"><span class="k">Threads</span><h2>{esc(s["title"])}</h2><p>{esc(s["standfirst"])}</p>'
+                     f'<p class="meta">{s["year"]} · {len(stories_parts.stars(s))} reviewed stories · {len(s["by"])} printed pieces · {len(s["every"])} printings · {len({o["node"] for o in s["every"]})} newspapers</p>'
+                     '<span class="go">Read the thread →</span></a>')
     doors.append('<a class="door" href="notebook.html"><span class="k">Notebook</span><h2>How this was made</h2>'
                  '<p>Told as it happened: what we wanted to know, the decisions and the wrong turns, the archive’s own errors, and the care taken '
                  'for the people who visit and for the people in the papers.</p>'

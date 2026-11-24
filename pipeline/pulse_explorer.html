@@ -11,6 +11,8 @@ __SITE_HEAD__
 @media(max-width:720px){.layout{display:block}.evidence{border-left:0;border-top:1px solid var(--line);padding:22px 0 0;margin-top:24px}.shell{padding:20px 16px}.heading{display:block}.heading>span{display:block;margin-top:8px}.toolbar-inner{gap:7px;padding:9px 12px}.toolbar label{gap:5px}button,select{padding:8px}.sky{grid-template-columns:repeat(2,minmax(0,1fr));min-height:570px;padding-top:15px}.node{width:90px;height:90px}.node-coverage{font-size:11px}#appearances{max-height:none}.clock h2{font-size:18px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 .legend.overview{flex-direction:column;gap:8px}.legend-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.legend-cat{display:flex;align-items:center;gap:6px;font-weight:600;margin-right:4px}.legend button{display:flex;align-items:center;gap:6px;padding:4px 8px;font-size:12px;background:none}.legend button:hover{background:#17213a}#focus-story{display:none;margin:4px 0 6px;font-size:13px}.appearance .dot{display:inline-block;margin-right:6px}
+.music-switch[aria-busy="true"] .ico{animation:music-wait 1.1s ease-in-out infinite}
+@keyframes music-wait{50%{opacity:.3}}@media(prefers-reduced-motion:reduce){.music-switch[aria-busy="true"] .ico{animation:none;opacity:.5}}
 </style>
 <style>
 .search-all{display:flex;gap:6px;margin-top:10px;max-width:460px}.search-all input{flex:1;min-width:0;font:inherit;color:var(--ink);background:#0b1222;border:1px solid var(--line);border-radius:8px;padding:7px 10px}.search-all input::placeholder{color:#6f7d99}.search-all button{padding:7px 12px}.heading h1{display:inline}.telescope-link{margin-left:14px;font-size:14px;white-space:nowrap}
@@ -164,7 +166,7 @@ __SITE_HEADER__
 <p class="map-note">Newspapers sit roughly where they were printed: north at the top, east to the right. Papers are nudged apart so names stay readable, so distances are not to scale.</p>
 <div id="legend" class="legend"><span><i class="dot"></i>Report</span><span><i class="dot challenge"></i>Challenge / commentary ring</span><span><i class="dot later"></i>Later account</span><span><i class="dot document"></i>Document</span><span><i class="dot" style="background:#aab6cf"></i>Matched text, not checked</span></div>
 <p class="strip-note">Bars show how many of the newspapers on the map have surviving pages each week (each day in short views). A low or missing bar means few or no pages survive in the archive, not that the papers were silent. Click a bar to jump there.</p>
-<div class="context"><h3 id="focus-title"></h3><p id="definition"></p><p id="group-counts"></p><div class="acts story-acts"><button type="button" id="hear" class="toggle has-ico" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Hear</span></button><a id="sky-link" class="act-link" href="telescope.html">__ICON_telescope__<span id="sky-link-text">See it in the sky</span></a><a id="story-link" class="act-link" href="stories.html" hidden>__ICON_book__<span>Read the storyline</span></a></div><div id="trace" class="trace story-trace" role="group" aria-label="Trace a word" hidden></div><details><summary>Archive coverage in this period</summary><div id="coverage-list" class="coverage-list"></div><p>Available pages are surviving pages in this dataset. A date without a passage is not proof that a newspaper was silent.</p></details></div>
+<div class="context"><h3 id="focus-title"></h3><p id="definition"></p><p id="group-counts"></p><div class="acts story-acts"><button type="button" id="hear" class="toggle has-ico" aria-pressed="false"><svg class="ico when-off" aria-hidden="true" focusable="false"><use href="#i-play"/></svg><svg class="ico when-on" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg><span class="lbl">Hear</span></button><a id="sky-link" class="act-link" href="telescope.html">__ICON_telescope__<span id="sky-link-text">See it in the sky</span></a><a id="story-link" class="act-link" href="stories.html" hidden>__ICON_book__<span>Read the thread</span></a></div><div id="trace" class="trace story-trace" role="group" aria-label="Trace a word" hidden></div><details><summary>Archive coverage in this period</summary><div id="coverage-list" class="coverage-list"></div><p>Available pages are surviving pages in this dataset. A date without a passage is not proof that a newspaper was silent.</p></details></div>
 </section>
 <aside class="evidence" aria-label="Observed publications and source evidence"><h2>Observed appearances</h2><div id="appearances"></div>
 <div id="selected-evidence"><h3 id="source-title"></h3><p id="source-role"></p><p id="source-summary"></p><p id="source-check" class="check" hidden></p><button id="focus-story" type="button"></button><details id="passage"><summary>Read the passage</summary><blockquote id="excerpt"></blockquote><p id="source-note" class="small muted"></p></details><details id="scan-detail"><summary>View the newspaper scan</summary><div id="scans"></div></details><a id="original" class="source-link" target="_blank" rel="noopener">Open full original page ↗</a><p id="source-page" class="small muted"></p></div>
@@ -898,7 +900,7 @@ function changeGroup(id) {
   $('sky-link-text').textContent = topStory ? 'See this story in the sky' : 'See ' + Y.label + ' in the sky';
   // Read the storyline: a story that a storyline tells (a piece goes to its card; a parent to the act that tells it).
   const told = group && mode === 'group' ? ((BOOT.storylines || {})[group.id] || (BOOT.storylines || {})[topStory]) : null;
-  $('story-link').hidden = !told; if (told) { $('story-link').href = told[0]; $('story-link').title = 'Read it as a storyline: ' + told[1]; }
+  $('story-link').hidden = !told; if (told) { $('story-link').href = told[0]; $('story-link').title = 'Read it as a thread: ' + told[1]; }
   traceWords(mode === 'group' && group ? group.label : '', topStory);
   for (const b of $('min-papers').querySelectorAll('button')) b.setAttribute('aria-pressed', String(mode !== 'group' && Number(b.dataset.k) === group.k));
   Glass.sync();
@@ -1070,7 +1072,7 @@ function syncTour() { $('tour').setAttribute('aria-pressed', String(tour && !tou
 for (const t of ['pointerdown', 'keydown', 'wheel']) document.addEventListener(t, e => { if (!(e.target instanceof Element && e.target.closest('#tour'))) tourHold = performance.now() + TOUR_WAIT; }, {capture: true, passive: true});
 $('tour').addEventListener('click', () => { if (tourAway) { tourAway = false; tour = true; } else tour = !tour; syncTour(); tourHold = performance.now() + 600; save(); });
 setInterval(() => {
-  if (!tour || tourAway || playing || !Y || !group || document.hidden || performance.now() < tourHold) return;
+  if (!tour || tourAway || playing || musicWait || !Y || !group || document.hidden || performance.now() < tourHold) return;   // nor while the music loads
   if ($('passage').open || $('scan-detail').open || (radioOn && Radio.live.count)) return;   // the voices finish first
   if (events.length && day < maxDay) { play(); return; }
   const ids = [...$('shelf').querySelectorAll('.card[data-group]')].map(c => c.dataset.group); if (!ids.length) return;
@@ -1280,23 +1282,38 @@ function musicView() {   // the printings in view, in days since 1 January 1770;
     printings: events.map(e => ({d: d0 + Math.round(e.day), p: e.node, s: storyKey(e), rev: !e.roles.includes('matched_text')}))});
   musicFollow();
 }
+// The sound is ready before the map moves on (the owner, 24 November 2026, as on Listen): when the music is turned on, or
+// its sound changed, while its recordings still load (Piano and Concerto, a few seconds on a first visit), the map holds
+// where it is and the switch says "Loading…"; when the music can sound, the map plays on with it. Wood, or recordings
+// already loaded, start at once with no hold.
+let musicWait = null;   // {was: the map was playing, held: it is held}
+function holdForMusic(p) {
+  const w = musicWait = {was: playing || !!(musicWait && musicWait.was), held: !!(musicWait && musicWait.held)};
+  const timer = setTimeout(() => { if (musicWait !== w) return; w.held = true; if (playing) pause(); syncMusic(); }, 150);
+  const done = () => { clearTimeout(timer); if (musicWait !== w) return; musicWait = null; syncMusic(); if (w.held && w.was && !playing && Music.on) play(); };
+  p.then(done, done);
+}
+function endMusicWait() { const w = musicWait; musicWait = null; if (w && w.held && w.was && !playing) play(); }
 function syncMusic() {   // the switch, and the Sound group beside the pace while the music is on
-  const on = !!(window.Music && Music.on);
-  $('music').setAttribute('aria-pressed', String(on)); $('sound-ctl').hidden = !on;
+  const on = !!(window.Music && Music.on), busy = !!(musicWait && musicWait.held);
+  $('music').setAttribute('aria-pressed', String(on)); $('music').setAttribute('aria-busy', String(busy)); $('sound-ctl').hidden = !on;
+  const label = [...$('music').childNodes].find(n => n.nodeType === 3 && n.textContent.trim()); if (label) label.textContent = busy ? 'Loading…' : 'Music';
   for (const b of $('sound').querySelectorAll('button')) b.setAttribute('aria-pressed', String(on && b.dataset.sound === Music.sound));
   Glass.sync();
 }
 function setMusic(on) {
   if (!window.Music) return;
   try { sessionStorage.setItem('nns-music', on ? 'on' : 'off'); } catch {}
-  Music.setOn(on).then(syncMusic, syncMusic); syncMusic(); tourHold = performance.now() + 600;
+  const done = Music.setOn(on); tourHold = performance.now() + 600;
   syncSpeed();   // one year takes the music's paces while it is on, and its own again when it is off
-  if (on) musicView();
+  if (on) { musicView(); holdForMusic(done); } else { endMusicWait(); done.then(syncMusic, syncMusic); }
+  syncMusic();
 }
 function setSound(v) {   // without its recordings (no connection, no copy beside the page) the music plays Wood, and says so
   if (!window.Music || !MUSIC_SOUNDS.includes(v)) return;
   try { localStorage.setItem('nns-music-sound', v); } catch {}
-  Music.setSound(v).then(syncMusic, syncMusic); syncMusic();
+  const done = Music.setSound(v); if (Music.on) holdForMusic(done); else done.then(syncMusic, syncMusic);
+  syncMusic();
 }
 $('music').addEventListener('click', () => setMusic(!(window.Music && Music.on)));
 $('sound').addEventListener('click', e => { const b = e.target.closest('button'); if (b) setSound(b.dataset.sound); });

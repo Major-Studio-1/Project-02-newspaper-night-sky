@@ -338,11 +338,11 @@
   "matched_printings": 164677,
   "storylines": [
     {
-      "id": "chesapeake-1807",
-      "year": 1807,
-      "pieces": 11,
-      "printings": 101,
-      "newspapers": 10
+      "id": "boston-1774",
+      "year": 1774,
+      "pieces": 13,
+      "printings": 74,
+      "newspapers": 7
     },
     {
       "id": "king-and-congress-1776",
@@ -350,6 +350,34 @@
       "pieces": 11,
       "printings": 94,
       "newspapers": 16
+    },
+    {
+      "id": "commissioners-1778",
+      "year": 1778,
+      "pieces": 14,
+      "printings": 79,
+      "newspapers": 8
+    },
+    {
+      "id": "cowpens-to-york-1781",
+      "year": 1781,
+      "pieces": 11,
+      "printings": 62,
+      "newspapers": 7
+    },
+    {
+      "id": "envoys-1798",
+      "year": 1798,
+      "pieces": 15,
+      "printings": 73,
+      "newspapers": 7
+    },
+    {
+      "id": "chesapeake-1807",
+      "year": 1807,
+      "pieces": 11,
+      "printings": 101,
+      "newspapers": 10
     },
     {
       "id": "embargo-1808",
@@ -376,19 +404,19 @@
     "announcer_clips": 265
   },
   "pages_sha256": {
-    "index.html": "9fbd5acde1c1ac357613365d22b43a256061c8ff5d3a7bd2db6ffdda44d37236",
-    "telescope.html": "b2f8fed2b5f37091f7e79e056db3680f73718144fa0c578b08b48ff750e7fd0c",
-    "pulses.html": "48d4e611f526c0822bf464753a87a7d4cb904cf6c4c3ce471d5aac0698be2450",
-    "radio.html": "0a360729e08b14eba20367031dd3ac647e71db0999479141f55826d5717e12e4",
-    "stories.html": "f9bc4e710e0facbfc7452ec9539080df51201d70177602f61403e7953e2470cc",
+    "index.html": "09e3a29c48c385fd2e5dfd27d7e0c7dfb499b001f469a2f7b48ba0333fe403db",
+    "telescope.html": "2e3cd9b1991c94eee8b9a1c6ef2f8e575484b7bd0c1511311744b2024795848f",
+    "pulses.html": "67832c1e8d09800c15379bf382e453b139de4bcb0a04e7eb859a68a0640520e2",
+    "radio.html": "39f5562135dff175706e698918d3c50cbe1df54ec2413e9ff92643269a961f00",
+    "stories.html": "a3723f5cfdb5dae0d5f1058483a385844831eb127920389295f525037fad9a74",
     "exhibit.html": "fa631200afeb42c4bb2f9c6afc887c958a255ec5fb6d5a14c5d482437c79baa2",
-    "method.html": "f71989bf130e5055b09798e2f6c52a734477e48f87cb3e3521c2a38a47bd608c",
-    "notes.html": "5dbcf8a22230a6d9dd4e39ba4e806c5bb722510949e22f1db0c98e80c5f4e231",
-    "findings.html": "10feac1ce2ca39f27de3e4f25c8bdfcc9c00fbc2c1a368a639b2d53b221adb3d",
-    "notebook.html": "be20f0750c8fceebc13a594ab4c1cffcb0301452e272399fe6c59d00b002f51c",
+    "method.html": "e4b9d361f16e80619165585fdab852104a2b1c0c6767b2bf0fb429a58eb4f8fc",
+    "notes.html": "69711eab183025dcd9c38eec554b4d9037ccec8cf58b2d214eea0bd4d04dc3ae",
+    "findings.html": "d49c35a3ac36dc8bc93b5538200040c49dff977b718afdba06dd1871994917dc",
+    "notebook.html": "009f845e76fae0084a6330096aedccf3580b7dcd7cc88beec9c0735dd77815bb",
     "site.css": "a0f51851b8960ceeeaa92ca39594855623b08f19453bcc6d151387c2ee2a97cc",
     "glass.js": "b5c672fe664886b79ca0fb561a2c9017a1d4c13e72de5e04921a50f1f42c2b4d",
     "radio.js": "83f0ef75d3ad6faa7c336ec803d8ac7ecceb7ba8ec0d3f51eda1c1a4164c09ec",
-    "music.js": "30c1417dfb58f06c43c3b1eeba879a5657979636c5d434a93f5a23dceaa877c4"
+    "music.js": "733e4ad0dbac86e733fbd198b2325e9a718f810e2cb56310e9ca2ceddc8230e7"
   }
 }

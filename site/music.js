@@ -882,7 +882,9 @@ const paceLevel = () => S.speed >= 56 ? .75 : S.speed >= 7 ? .84 : S.speed <= 2 
 // the whole of 1806 and 1809, the loudest second came within 8.5 to 9.2 dB of the voices, so all three sounds are 1 dB
 // softer there (23 November 2026, evening). The balance within the music is unchanged.
 const volumeAt = speed => S.volume * S.level * (speed <= 4 ? .89 : 1);
-const airLevel = () => adagio() ? .011 : .03;   // a faint breath, so a gap in the archive is heard as a gap, never as silence
+// a faint breath, so a gap in the archive is heard as a gap, never as silence; about 3 dB quieter since the owner found it
+// a little loud (24 November 2026: Wood .03 to .021, the piano's sounds .011 to .008)
+const airLevel = () => adagio() ? .008 : .021;
 
 // Wood: wooden bars for the presses, plucked strings for the stories, strings on the season's chord, a felt drum at New Year.
 function makePlayWood(E) {
@@ -1051,10 +1053,13 @@ function makeSource(r) {
 
 // ---- Sound on and off, and following Pulses' playhead
 // The note bank the sound needs: Wood's notes are made by the engine itself; Piano and Concerto load the recorded piano
-// (and Concerto the flute and clarinet) once, the first time they are chosen.
+// (and Concerto the flute and clarinet) once, the first time they are chosen. Concerto starts as soon as the piano is
+// in, and the flute and clarinet join when theirs arrive (the owner, 24 November 2026: the music once waited for all
+// three in silence); until then the piano plays their phrases, as it does in Piano.
 async function prepare(E2) {
   if (!adagio()) { if (E2.adagio) AD.sends(E2, false); return; }
-  const ad = AD.attach(E2); await ad.ready; if (winds()) await ad.loadWinds(); AD.sends(E2, true);
+  const ad = AD.attach(E2); await ad.ready; AD.sends(E2, true);
+  if (winds()) (S.windsDelay ? new Promise(r => setTimeout(r, S.windsDelay)).then(() => ad.loadWinds()) : ad.loadWinds()).catch(() => {});   // a failed load: the piano plays on alone
 }
 // Notes scheduled ahead (up to a third of a second) that have not begun are taken back when the music stops or starts
 // again elsewhere: a pause is heard at once, and nothing sounds twice when play resumes or the music catches up with
@@ -1358,6 +1363,7 @@ window.Music = {
     get log() { return E && E.log; }, get playing() { return !!(P && P.playing); }, get ready() { return ready; },
     get preloaded() { return !!(E && E.adagio && E.adagio.bank && E.adagio.windBank); },   // the piano and the winds, loaded
     set failRecordings(v) { SAMPLES.fail = !!v; },   // the stand-in recordings fail to load, as with no connection
+    set windsDelay(ms) { S.windsDelay = Number(ms) || 0; },   // the winds' recordings arrive this much later, as on a slow first visit
     async takeBack() {   // offline: three bars of Wood scheduled at 0.6 to 1 s, taken back at 0.3 s, leave silence after it
       const once = async back => {
         const OAC = window.OfflineAudioContext || window.webkitOfflineAudioContext, rate = 22050, ctx = new OAC(2, rate * 1.5, rate), E2 = M.Engine(ctx);

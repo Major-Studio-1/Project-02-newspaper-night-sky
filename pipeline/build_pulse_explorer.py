@@ -991,7 +991,7 @@ per_year_stories,thin_years=findings_parts.year_counts(stars)
 home_html=home_parts.render(years=[(y['year'],y['papers'],y['pages']) for y in years_index],thin=thin_years,newspapers=manifest['counts']['newspapers'],
     pages=manifest['counts']['eligible_pages'],matched=len(families),reviewed=len(stories),reviewed_years=sorted(reviewed_data),
     audit=json.loads((ROOT.parent/'outputs/matched_audit/summary.json').read_text(encoding='utf8')),findings=findings_parts.SUMMARY,
-    storyline=storylines[0] if storylines else None,notebook_entries=n_notebook)
+    storylines=storylines,notebook_entries=n_notebook)
 assert len([f for f in findings_parts.SUMMARY if f[0]>2])>=4, 'Home offers the findings as ready views'
 sample=sorted((s for s in stars if not s['long']),key=lambda s:(-s['papers'],-s['prints'],s['first']))[:4500]
 sample.sort(key=lambda s:s['first'])

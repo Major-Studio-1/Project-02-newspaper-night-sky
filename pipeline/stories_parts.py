@@ -1,4 +1,7 @@
-"""Stories: storylines from the ledger work/stories.json, checked and rendered for stories.html.
+"""Threads (stories.html, called Stories until 24 November 2026): the storylines of the ledger work/stories.json, checked
+and rendered. On the site each storyline is a thread (the owner, 24 November 2026): one affair followed through several
+reviewed stories, the stars of the Telescope, in the order the papers printed them; a reviewed story is told in one piece
+or in several (a parent's sub-stories), each piece a printed text with its own card.
 
 A storyline puts the printed pieces of one affair in the order the papers printed them. The ledger is written by hand;
 this module checks it against the reviewed data of the site build (from the current release) and the scan verdicts
@@ -14,11 +17,11 @@ this module checks it against the reviewed data of the site build (from the curr
   - numbers and dates in the paragraphs come from the data ({A.papers} and the like, filled here);
   - the towns of 'reach' are towns of the printing papers, and every Pulses door opens a reviewed group of its year.
 Used by work/build_pulse_explorer.py: check() before the pages boot (links() gives Pulses and the telescope their
-'Read the storyline' links), render() for the page."""
+'Read the thread' links), render() for the page."""
 import glob, html, json, re, unicodedata
 from datetime import date
 from pathlib import Path
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, quote, urlsplit
 
 esc = html.escape
 D = date.fromisoformat
@@ -169,7 +172,11 @@ def check(ledger, reviewed, children, root):
             if u.path == 'telescope.html' and 'story' in qs:
                 assert qs['story'][0] in groups, f'{sid}: door {href} opens no reviewed story of {y}'
         kids_of = {par: {'group:' + c for c in children[y].get(par.split(':', 1)[1], [])} for par in s['parents']}
-        lines.append({**s, 'by': by, 'acts': acts, 'every': every, 'papers': papers, 'obs': obs, 'kids_of': kids_of})
+        parent_of = {'group:' + c: 'group:' + par for par, cs in children[y].items() for c in cs}
+        top_of = {p['group']: parent_of.get(p['group'], p['group']) for p in by.values()}   # the reviewed story (a star) each piece is or belongs to
+        top_label = {t: groups[t]['label'] for t in set(top_of.values())}
+        lines.append({**s, 'by': by, 'acts': acts, 'every': every, 'papers': papers, 'obs': obs, 'kids_of': kids_of,
+                      'top_of': top_of, 'top_label': top_label})
     return lines
 
 
@@ -221,13 +228,28 @@ def _setting(s, p):
     return f'<div class="set"><h4>How the papers set it</h4><ul>{"".join(rows)}</ul></div>'
 
 
+def stars(s):
+    """The reviewed stories a storyline holds (each a star of the Telescope), in the order of their pieces."""
+    return list(dict.fromkeys(s['top_of'][p['group']] for p in sorted(s['by'].values(), key=lambda p: p['key'])))
+
+
+def _star_line(s, p):
+    """Which reviewed story a piece is, or belongs to, with the way to its star (the words Pulses uses: 'See it in the sky')."""
+    top = s['top_of'][p['group']]
+    sky = f'<a href="telescope.html?story={quote(top)}">See it in the sky</a>'
+    if top == p['group']:
+        return f'<p class="star">A reviewed story · {sky}</p>'
+    n = sum(1 for q in s['by'].values() if s['top_of'][q['group']] == top)
+    return f'<p class="star">One of {words(n)} pieces of a reviewed story: {esc(s["top_label"][top])} · {sky}</p>'
+
+
 def _piece(s, p, sizes):
     o = s['obs'][p['quote']]
     name = s['papers'][o['node']]['name']
     second = _figure(s, p['second']['printing'], p['second']['crop'], sizes, p['second']['note']) if p.get('second') else ''
     return (f'<article class="piece" id="{s["id"]}-{p["key"]}" aria-label="{esc(p["label"])}"><div class="meta"><span class="kind">{esc(p["kind"])}</span>'
             f'<span class="when">{p.get("dated", "Dated")} {day(p["signed"], D(p["signed"]).year != s["year"])}</span><span class="who">{esc(p["who"])}</span></div>'
-            f'<p class="says">{p["says"]}</p>'
+            f'{_star_line(s, p)}<p class="says">{p["says"]}</p>'
             f'<div class="evidence"><blockquote>{esc(o["excerpt"].strip())}<cite>The opening as printed in the <i>{esc(name)}</i>, {day(o["date"])}. '
             f'The transcription matches the scan.</cite></blockquote>{_figure(s, p["quote"], p.get("crop") or p["quote"], sizes)}{second}</div>'
             f'{_setting(s, p)}{_printed_by(s, p)}</article>')
@@ -314,9 +336,9 @@ def _storyline(s, sizes):
     if after:
         doors = ''.join(f'<a href="{esc(h)}">{esc(t)}</a>' for t, h in after.get('doors', []))
         epi = f'<div class="epi"><h3>{esc(after["title"])}</h3><p>{after["text"]}</p><p class="doors">{doors}</p></div>'
-    return (f'<section class="story" id="{s["id"]}" aria-labelledby="{s["id"]}-h"><p class="sk">Storyline · {s["year"]}</p>'
+    return (f'<section class="story" id="{s["id"]}" aria-labelledby="{s["id"]}-h"><p class="sk">Thread · {s["year"]}</p>'
             f'<h2 id="{s["id"]}-h">{s["title"]}</h2><p class="stand">{s["standfirst"]}</p>'
-            f'<p class="facts"><span><b>{len(s["by"])}</b> printed pieces</span><span><b>{len(every)}</b> printings</span>'
+            f'<p class="facts"><span><b>{len(stars(s))}</b> reviewed stories</span><span><b>{len(s["by"])}</b> printed pieces</span><span><b>{len(every)}</b> printings</span>'
             f'<span><b>{len({o["node"] for o in every})}</b> newspapers{esc(reach)}</span><span><b>{span(every[0]["date"], every[-1]["date"], True)}</b></span>'
             f'<span>every printing checked against its scan</span></p>'
             f'<figure class="chart"><div class="cw">{_chart(s)}</div><figcaption class="key"><i>●</i> a newspaper\'s printing &nbsp; <em>◇</em> the day the piece was written or signed'
@@ -328,10 +350,10 @@ def _storyline(s, sizes):
 
 
 def render(lines, sizes):
-    """The page's storylines. sizes(src) -> (width, height) of an image on the site."""
+    """The page's threads (the ledger's storylines). sizes(src) -> (width, height) of an image on the site."""
     shelf = ''
     if len(lines) > 1:
-        shelf = '<nav class="shelf" aria-label="Storylines">' + ''.join(
-            f'<a href="#{s["id"]}"><span class="y">{s["year"]}</span><b>{s["title"]}</b><span>{len(s["by"])} pieces, {len(s["every"])} printings, '
-            f'{len({o["node"] for o in s["every"]})} newspapers</span></a>' for s in lines) + '</nav>'
+        shelf = '<nav class="shelf" aria-label="Threads">' + ''.join(
+            f'<a href="#{s["id"]}"><span class="y">{s["year"]}</span><b>{s["title"]}</b><span>{len(stars(s))} reviewed stories, {len(s["by"])} pieces, '
+            f'{len(s["every"])} printings, {len({o["node"] for o in s["every"]})} newspapers</span></a>' for s in lines) + '</nav>'
     return shelf + ''.join(_storyline(s, sizes) for s in lines)
