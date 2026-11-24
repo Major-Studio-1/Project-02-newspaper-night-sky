@@ -269,7 +269,10 @@ function cue(kind, short = false) {
   if (kind === 'ship') { for (const k of short ? [0, .38] : [0, .38, 1.4, 1.78, 2.8, 3.18]) bell(t + k, 1046, [1, 2.0, 2.76, 5.4], 1.4, .05, out); return short ? 300 : 600; }
   if (kind === 'siren') {   // a siren a few streets away: its wail passes across the city and rings between the buildings
     sirenAt = performance.now();
-    const wails = short ? 1 : 4, dur = wails * 3, f = filter('lowpass', 1700), g = gain(0);
+    // Loudest with the greeting, before the reading (the owner, 24 November 2026: a city waking to a siren, then the voice;
+    // it once swelled for six seconds and peaked over the passage): it swells in about a second and a half, holds through
+    // the greeting and fades under the reading.
+    const wails = short ? 1 : 3, dur = wails * 3, f = filter('lowpass', 1700), g = gain(0);
     for (const [type, mul, lvl] of [['sawtooth', 1, .62], ['triangle', 2.004, .22]]) {
       const o = ctx.createOscillator(), og = gain(lvl), base = 610 * mul; o.type = type;
       o.frequency.setValueAtTime(base, t);
@@ -279,8 +282,8 @@ function cue(kind, short = false) {
     }
     f.connect(g).connect(out);
     g.gain.setValueAtTime(0, t);
-    if (short) { g.gain.linearRampToValueAtTime(.011, t + 1); g.gain.linearRampToValueAtTime(0, t + dur - .2); }
-    else { g.gain.linearRampToValueAtTime(.012, t + 2.2); g.gain.linearRampToValueAtTime(.017, t + 6.5); g.gain.linearRampToValueAtTime(0, t + dur - .3); }
+    if (short) { g.gain.linearRampToValueAtTime(.011, t + .6); g.gain.linearRampToValueAtTime(0, t + dur - .2); }
+    else { g.gain.linearRampToValueAtTime(.017, t + 1.4); g.gain.setValueAtTime(.017, t + 3.6); g.gain.linearRampToValueAtTime(0, t + dur - .3); }
     if (pan) { pan.pan.setValueAtTime(short ? -.4 : -.8, t); pan.pan.linearRampToValueAtTime(short ? .3 : .7, t + dur); }
     return 700;
   }
@@ -391,8 +394,9 @@ async function sayRecorded(item, {greet = false, previous = null, chime = false}
     const {y, m, d, wd} = parts(item.date), sameDay = previous && previous.date === item.date;
     const date = [`a:day:${d}`, `a:month:${m}`, `a:year:${y}`], paper = item.lccn ? [`a:paper:${item.lccn}`] : [];
     const ids = greet ? [`a:hello:${name}`, `a:weekday:${DAYS[wd]}`, ...date, ...paper] : sameDay ? paper : [...date, ...paper];
-    cue(item.war ? 'drum' : sc.cue);
+    const own = item.war ? 'drum' : sc.cue, led = cue(own), t0 = performance.now();
     const head_ = await joinClips(ids.filter(hasClip));
+    if (own === 'siren' && led) await wait(Math.max(0, 1000 - (performance.now() - t0)));   // the siren first, then the greeting over it
     if (head_ && live_()) await playRecorded(head_.buf, live_);
     if (!live_()) return false;
     await wait(250);
@@ -433,7 +437,8 @@ async function sayAloud(item, {greet = false, previous = null, rate = 1, mode = 
     duck(true);
     for (const [k, line] of head.lines.entries()) {
       if (!live()) return false;
-      if (k === head.lines.length - 1) cue(item.war ? 'drum' : sc.cue);   // the town's own sound, under the paper's name
+      const own = item.war ? 'drum' : sc.cue;   // the town's own sound, under the paper's name (a siren with the greeting)
+      if (own === 'siren' ? k === 0 : k === head.lines.length - 1) cue(own);
       await speakOne(line, Math.min(1.3, pace()));
     }
     await wait(250);
@@ -556,7 +561,7 @@ async function livePlay(key, text, {pan = 0, level = .5, label = '', words = '',
     if (pn) { pn.pan.value = Math.max(-1, Math.min(1, pan)); src.connect(g).connect(pn).connect(bus); } else src.connect(g).connect(bus);
     g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(lvl, t + .08);
     entry.src = src; entry.g = g; liveChanged();
-    if (lead !== 'full') setTimeout(() => { if (!gone()) cueSoft(own); }, 500);
+    if (lead !== 'full') setTimeout(() => { if (!gone()) cueSoft(own); }, own === 'siren' ? 0 : 500);   // a siren with the greeting
     // A hover hears the opening only: after `cut` seconds the voice fades away (no scratch), as a station drifts off.
     if (cut > 0 && rec.buf.duration > cut + 1.5) setTimeout(() => { if (live.get(key) === entry && !entry.ending && !entry.kept) liveFade(key); }, cut * 1000);
     const heard = await new Promise(resolve => { src.onended = () => resolve(!entry.ending); src.start(t); });

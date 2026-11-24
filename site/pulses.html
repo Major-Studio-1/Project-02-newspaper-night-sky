@@ -240,6 +240,10 @@ let focus = null, hover = null, focusByNode = new Map();  // the story shown as 
 // order and how many matched cards it shows. Topics and words narrow both the shelf and the overview on the map.
 let topicsOn = new Set(), openFamily = -1, findText = '', findRx = [], shelfSort = 'reach', shelfLimit = 24;
 let tour = !reduced.matches, tourHold = 0;  // Tour: play each story on the shelf in turn, waiting while the visitor explores
+// A visit opened on one story by a link (the Telescope's "Follow it", a storyline) plays that story at once and stays on it:
+// the tour waits until the visitor turns it on (the owner, 24 November 2026: after a 20-second wait the story played and the
+// next one followed before it could be read). Kept for this visit only, not saved.
+let tourAway = false;
 const passages = new Map(), yearFiles = new Map();  // passage text of matched printings, loaded a year file at a time
 
 // All years in one slim index (years/index.json): the newspapers, the stories and their printings, and the surviving
@@ -899,6 +903,7 @@ function changeGroup(id) {
   for (const b of $('min-papers').querySelectorAll('button')) b.setAttribute('aria-pressed', String(mode !== 'group' && Number(b.dataset.k) === group.k));
   Glass.sync();
   $('day').max = String(maxDay); $('day').disabled = maxDay === 0;
+  syncSpeed();   // a story's own pace (storyPace)
   $('first-date').textContent = fmt(start, true); $('last-date').textContent = fmt(end, true);
   $('focus-title').textContent = group ? group.label : 'No stories found for ' + Y.label;
   $('definition').textContent = group ? group.definition : 'Neither reviewed nor matched stories exist for these years yet.';
@@ -1061,11 +1066,11 @@ $('years-all').addEventListener('click', () => pickYears(1770, 1810));
 // ---- Tour: the page plays on its own, the current view and then the next card on the shelf. Any touch, click or key
 // holds it for 20 seconds, and an open passage or scan holds it while it is read.
 const TOUR_WAIT = 20000;
-function syncTour() { $('tour').setAttribute('aria-pressed', String(tour)); }
+function syncTour() { $('tour').setAttribute('aria-pressed', String(tour && !tourAway)); }
 for (const t of ['pointerdown', 'keydown', 'wheel']) document.addEventListener(t, e => { if (!(e.target instanceof Element && e.target.closest('#tour'))) tourHold = performance.now() + TOUR_WAIT; }, {capture: true, passive: true});
-$('tour').addEventListener('click', () => { tour = !tour; syncTour(); tourHold = performance.now() + 600; save(); });
+$('tour').addEventListener('click', () => { if (tourAway) { tourAway = false; tour = true; } else tour = !tour; syncTour(); tourHold = performance.now() + 600; save(); });
 setInterval(() => {
-  if (!tour || playing || !Y || !group || document.hidden || performance.now() < tourHold) return;
+  if (!tour || tourAway || playing || !Y || !group || document.hidden || performance.now() < tourHold) return;
   if ($('passage').open || $('scan-detail').open || (radioOn && Radio.live.count)) return;   // the voices finish first
   if (events.length && day < maxDay) { play(); return; }
   const ids = [...$('shelf').querySelectorAll('.card[data-group]')].map(c => c.dataset.group); if (!ids.length) return;
@@ -1320,12 +1325,15 @@ function paces() {   // [slow, normal, fast] in days of printing per second, for
   const k = nearest(LADDER, (Y ? Y.to - Y.from + 1 : 1) * 365.25 / 30), m = Math.max(1, Math.min(LADDER.length - 2, k));
   return LADDER.slice(m - 1, m + 2);
 }
+// One story plays in at least 8 seconds at Normal (16 at Slow, 4 at Fast): at a year's pace a story of a fortnight passed
+// in a second (the owner, 24 November 2026). A pace the address asks for is kept as it is.
+const storyPace = p => mode === 'group' && !exactSpeed && maxDay >= 1 ? Math.max(.02, Math.min(1, maxDay / (8 * p[1]))) : 1;
 function syncSpeed() {
-  const p = paces(), on = exactSpeed ? nearest(p, exactSpeed) : pace;
-  speed = exactSpeed || p[pace];
+  const p = paces(), on = exactSpeed ? nearest(p, exactSpeed) : pace, f = storyPace(p);
+  speed = exactSpeed || p[pace] * f;
   $('speed').querySelectorAll('button').forEach((b, i) => {
     b.setAttribute('aria-pressed', String(i === on));
-    b.title = exactSpeed && i === on ? `${paceWords(exactSpeed)}, as the link asks` : `${b.textContent}: ${paceWords(p[i])}`;
+    b.title = exactSpeed && i === on ? `${paceWords(exactSpeed)}, as the link asks` : `${b.textContent}: ${paceWords(f === 1 ? p[i] : +(p[i] * f).toPrecision(2))}`;
   });
   Glass.sync();
   musicFollow();   // the music takes a new pace at once
@@ -1369,7 +1377,7 @@ function setWatch(on, full = true) {
   if (on === WATCH) return;
   WATCH = on; document.body.classList.toggle('exhibit', on || exhibit); document.body.classList.toggle('watching', on); $('watch-exit').hidden = !on;
   if (on) {
-    watchKeep = {tour}; tour = !reduced.matches; syncTour(); tourHold = 0; Receipt.close();
+    watchKeep = {tour}; tour = !reduced.matches; tourAway = false; syncTour(); tourHold = 0; Receipt.close();
     if (full) document.documentElement.requestFullscreen?.().catch(() => {});
     if (!playing && events.length) play();
     watchWake();
@@ -1519,7 +1527,8 @@ else if (ym) { const a = Number(ym[1]), b = Number(ym[2] || ym[1]); if (a >= 177
 const fromUrl = !!first;
 const opening = (BOOT.reviewed || []).at(-1)?.year || 1797;   // a first visit opens on the latest reviewed year
 if (!first) first = saved && saved.from >= 1770 && saved.to <= 1810 && saved.from <= saved.to ? [saved.from, saved.to] : [opening, opening];
-tourHold = performance.now() + (storyWanted && !exhibit ? TOUR_WAIT : 2500);   // a story opened by a link is read first (an exhibition plays it)
+tourHold = performance.now() + 2500;
+tourAway = !!storyWanted && !exhibit && !WATCH && params.get('tour') !== 'on'; syncTour();   // an exhibition or Watch tours on
 setYearsUI(first[0], first[1]);
 const wantedView = storyWanted || (evWanted === 'checked' ? 'all' : evWanted === 'found' ? 'auto-all' : '') || (fromUrl ? null : saved?.group);
 // A first visit: the stories step peeks open for a few seconds and folds back into its part, so the shelf of stories that
@@ -1536,6 +1545,7 @@ function peekStories() {
 }
 loadRange(first[0], first[1], wantedView).then(() => {
   peekStories();
+  if (tourAway && events.length) setTimeout(() => { if (!playing && day < maxDay) play(); }, 600);   // the linked story plays at once
   if (!fromUrl && saved && Y && saved.from === Y.from && saved.to === Y.to && saved.group === group?.id && Number.isFinite(saved.day) && events.length) {
     day = Math.min(maxDay, Math.max(0, saved.day)); selected = Math.max(0, Math.min(events.length - 1, Number.isInteger(saved.selected) ? saved.selected : 0)); source(selected); draw();
   }

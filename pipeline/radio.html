@@ -466,12 +466,20 @@ function mSum() {   // what the passage holds, and how long it lasts at this pac
   if (s) $('m-sum').textContent = `${s.label} (${s.rev ? 'checked by hand against the scans' : 'found by shared wording, not checked'}): ${s.pr.length} printings in ${s.papers} newspapers, every one a note, over the presses of those weeks. It lasts ${lasts}.`;
   else { const rv = b.stories.filter(x => x.rev).length; $('m-sum').textContent = `${mc.year}: ${b.index.papers.length} newspapers survive; their ${b.index.coverage.d.length.toLocaleString('en-US')} surviving issues are the presses, and the ${b.stories.length.toLocaleString('en-US')} stories printed in three or more of them${rv ? ` (${rv} checked by hand)` : ''} play on the keyboard. The year lasts ${lasts}; then the next one follows.`; }
 }
+// The sound is ready before the picture moves: Piano and Concerto load their recordings the first time (a few seconds on
+// a first visit), and the picture once ran on in silence meanwhile (the owner, 24 November 2026). Play says "Loading"
+// until the music can sound, then picture and music start together; a failed load plays Wood, as music.js does.
+function mWhenReady(go) {
+  mc.loading = true; mSyncPlay();
+  const done = () => { mc.loading = false; mSync(); if (Music.on) go(); else mSyncPlay(); };
+  return Music.setOn(true).then(done, done);
+}
 function mPlay() {
-  if (!window.Music || !mc.built) return;
+  if (!window.Music || !mc.built || mc.loading) return;
   Music.setLevel(MUSIC_GAIN * Number($('volume').value) / .8); Music.setSpeed(mc.speed);
-  if (!Music.on) Music.setOn(true).then(mSync, mSync);
-  if (mc.day >= mc.to + 1) mc.day = mc.from;   // at the end: from the start again
   $('m-play').classList.remove('invite');
+  if (!Music.on) { mWhenReady(mPlay); return; }
+  if (mc.day >= mc.to + 1) mc.day = mc.from;   // at the end: from the start again
   mc.playing = true; mc.last = performance.now();
   clearInterval(mc.timer); mc.timer = setInterval(mTick, 100); mTick(); mFrame(); mSyncPlay();
 }
@@ -510,7 +518,10 @@ function mSync() {   // the sound chosen, and the key that describes it
   for (const b of $('m-speed').querySelectorAll('button')) b.setAttribute('aria-pressed', String(Number(b.dataset.v) === mc.speed));
   Glass.sync();
 }
-function mSyncPlay() { $('m-play').setAttribute('aria-pressed', String(mc.playing)); $('m-play').querySelector('.lbl').textContent = mc.playing ? 'Pause' : 'Play'; }
+function mSyncPlay() {
+  $('m-play').setAttribute('aria-pressed', String(mc.playing)); $('m-play').setAttribute('aria-busy', String(!!mc.loading));
+  $('m-play').querySelector('.lbl').textContent = mc.loading ? 'Loading…' : mc.playing ? 'Pause' : 'Play';
+}
 function mRemember() {   // the tab's view in the address: ?tab=music&year=1806 (&story=, &sound=, &speed=)
   if (tab !== 'music' || exhibit) return;
   const q = new URLSearchParams(); q.set('tab', 'music'); q.set('year', String(mc.year)); if (mc.story) q.set('story', mc.story); else if (mc.season) q.set('season', mc.season);
@@ -545,7 +556,9 @@ $('m-speed').addEventListener('click', e => {
 $('m-sound').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b || !window.Music) return;
   try { localStorage.setItem('nns-music-sound', b.dataset.sound); } catch {}
-  Music.setSound(b.dataset.sound).then(mSync, mSync); mSync(); mRemember();
+  if (mc.playing && Music.on) { mPause(); mc.loading = true; mSyncPlay(); Music.setSound(b.dataset.sound).then(() => { mc.loading = false; mSync(); mPlay(); }, () => { mc.loading = false; mSync(); mPlay(); }); }
+  else Music.setSound(b.dataset.sound).then(mSync, mSync);
+  mSync(); mRemember();
 });
 $('m-stories').addEventListener('click', e => {
   const c = e.target.closest('.m-card'); if (!c) return;
