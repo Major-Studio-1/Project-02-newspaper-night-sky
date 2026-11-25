@@ -1,6 +1,6 @@
 """Items read in the story reviews and not admitted: check the list and publish it.
 
-Reads work/not_admitted.json (curated by hand) and every reviewed-year ledger,
+Reads work/not_admitted.json (curated) and every reviewed-year ledger,
 work/archive_data/ledgers/stories_YEAR[_roundN].json (not the *_review.json
 scan findings, the corrections ledgers or expansion_1797.json).
 

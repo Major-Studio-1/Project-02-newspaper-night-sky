@@ -148,7 +148,7 @@ __SITE_HEADER__
 <span class="ctl" id="sound-ctl" hidden><span class="label" id="sound-label">Sound</span><span class="seg slide" data-roving id="sound" role="group" aria-labelledby="sound-label"><button type="button" data-sound="wood" title="Wood: wooden bars for the surviving issues, plucked strings for the printings">Wood</button><button type="button" data-sound="piano" title="Piano: a recorded grand piano over soft strings">Piano</button><button type="button" data-sound="concerto" title="Concerto: the piano with a flute and a clarinet">Concerto</button></span></span>
 <button id="tour" class="toggle has-ico" type="button" aria-pressed="false" title="Play on its own: each story in turn, from the shelf. Waits while you explore">__ICON_tour__Tour</button><button id="watch" class="watch-btn" type="button" title="Watch: hide every control and let the stories play by themselves, full screen. Esc brings the controls back.">__ICON_fit__<span class="lbl">Watch</span></button></div>
 <div class="year-pick" role="group" aria-labelledby="years-label"><span class="label" id="years-label">Years</span><b id="years-now" class="years-now mono"></b>
-<div class="years-wrap"><div id="years" class="years" title="Each bar: the newspapers that survive that year in this archive (gold dot: stories checked by hand). Tap a year, or drag across several"></div><div id="years-axis" class="years-axis" aria-hidden="true"></div></div>
+<div class="years-wrap"><div id="years" class="years" title="Each bar: the newspapers that survive that year in this archive (gold dot: reviewed stories). Tap a year, or drag across several"></div><div id="years-axis" class="years-axis" aria-hidden="true"></div></div>
 <button id="years-all" class="toggle" type="button" aria-pressed="false" title="All years, 1770–1810">All</button></div>
 <div class="timebar"><div class="timebar-date"><span id="current-date" class="mono"></span><span id="count" class="small mono muted"></span></div>
 <div class="timebar-track"><div class="strip-wrap"><canvas id="strip" aria-hidden="true"></canvas><div id="strip-tip" class="strip-tip" hidden></div></div>
@@ -176,8 +176,8 @@ __SITE_HEADER__
 <!-- The receipt's steps: each waits here until its part of the line opens it, in place, and comes back when it closes. -->
 <div class="rc-steps" hidden>
 <div class="rc-body" id="step-evidence">
-<div class="row"><span class="seg slide" data-roving id="evidence" role="group" aria-label="Which evidence"><button type="button" data-ev="checked" title="The stories read and checked against the page scans by hand, played together">Checked by hand</button><button type="button" data-ev="found" title="The stories found by shared wording, not checked, played together">Found by shared wording</button></span></div>
-<ul class="tiers"><li><span class="rc-dots" aria-hidden="true"><i style="background:#3987e5"></i><i style="background:#d95926"></i><i style="background:#199e70"></i></span><span><b>Checked by hand:</b> <span id="tier-checked"></span></span></li>
+<div class="row"><span class="seg slide" data-roving id="evidence" role="group" aria-label="Which evidence"><button type="button" data-ev="checked" title="The reviewed stories, every printing checked against its page scan, played together">Reviewed</button><button type="button" data-ev="found" title="The stories found by shared wording, not checked, played together">Found by shared wording</button></span></div>
+<ul class="tiers"><li><span class="rc-dots" aria-hidden="true"><i style="background:#3987e5"></i><i style="background:#d95926"></i><i style="background:#199e70"></i></span><span><b>Reviewed:</b> <span id="tier-checked"></span></span></li>
 <li><span class="rc-dot" aria-hidden="true" style="background:#aab6cf"></span><span><b>Found by shared wording, not checked:</b> <span id="tier-found"></span></span></li></ul>
 </div>
 <div class="rc-body" id="step-stories">
@@ -1442,7 +1442,7 @@ const evidenceOf = () => !group ? '' : mode === 'group' ? (group.id.startsWith('
 // The evidence part names the tier with its number of stories (one story: the tier alone); the numbers say they are
 // stories without the word twice on the line (the owner, 23 November 2026).
 function receiptCfg(caption) {
-  const one = mode === 'group' && !!group, ev = evidenceOf(), tier = ev === 'checked' ? 'checked by hand' : 'found by shared wording, not checked';
+  const one = mode === 'group' && !!group, ev = evidenceOf(), tier = ev === 'checked' ? 'reviewed against the scans' : 'found by shared wording, not checked';
   let evidence = '…', stories = '…', colour = '…';
   if (Y && !group) { evidence = 'No stories'; stories = 'none in these years'; colour = 'no colours'; }
   else if (group) {
@@ -1459,7 +1459,7 @@ function receiptCfg(caption) {
     colour = one ? (ev === 'checked' ? 'colour by kind of text' : 'one pale colour') : mode === 'reviewed' ? 'one colour per category' : 'one pale colour';
   }
   return {lead: 'Showing', caption, link: linkFor(), parts: [
-    {key: 'evidence', text: evidence, step: STEPS.evidence, title: 'Which evidence: checked by hand against the page scans, or found by shared wording and not checked'},
+    {key: 'evidence', text: evidence, step: STEPS.evidence, title: 'Which evidence: reviewed, every printing checked against its page scan, or found by shared wording and not checked'},
     {key: 'years', text: Y ? Y.label : '…', step: STEPS.years, title: 'Which years: tap a year on the strip above, or drag across several'},
     {key: 'stories', text: stories, step: STEPS.stories, title: 'Which stories: pick one to follow, or narrow them by reach, topic or words'},
     {key: 'arrange', text: 'on the map, as printed', step: STEPS.arrange, title: 'How the newspapers are placed'},
@@ -1485,9 +1485,9 @@ const REVIEWED_YEARS = (() => {   // the reviewed years in runs, from the data: 
   const t = runs.map(([a, b]) => a === b ? String(a) : `${a}–${b}`); return t.length > 1 ? t.slice(0, -1).join(', ') + ' and ' + t.at(-1) : t[0] || '';
 })();
 const COLOUR_NOTE = {
-  reviewed: 'One colour for each category of the year’s stories checked by hand. A newspaper keeps the colour for 40 days after it prints one, then fades.',
+  reviewed: 'One colour for each category of the year’s reviewed stories. A newspaper keeps the colour for 40 days after it prints one, then fades.',
   matched: 'One pale colour: these stories were found by shared wording and are not checked against the scans.',
-  checked: 'In one story checked by hand, the colours say what kind of text each printing is: a report, a challenge or commentary, a later account, or a document.'};
+  checked: 'In one reviewed story, the colours say what kind of text each printing is: a report, a challenge or commentary, a later account, or a document.'};
 var receiptReady = false;   // var: changeGroup may run before the line is built
 let lastLink = '';
 function syncReceipt() {
@@ -1496,7 +1496,7 @@ function syncReceipt() {
   if (!Y) return;
   const where = Y.label === 'all years' ? 'in all years' : 'in ' + Y.label, ev = evidenceOf();
   $('tier-checked').textContent = Y.stories.length ? `${count(Y.stories.length)} stories ${Y.label === 'all years' ? 'in all years' : 'of ' + Y.label}, read and checked printing by printing against the page scans.`
-    : `none ${where}. The years checked by hand so far: ${REVIEWED_YEARS}.`;
+    : `none ${where}. The reviewed years so far: ${REVIEWED_YEARS}.`;
   $('tier-found').textContent = !INDEX ? 'the stories of all years are still loading.'   // shown at once once the index has come
     : `${count(Y.shortGroups.length)} stories that start ${where}, found by the computer where newspapers print the same passage`
       + (Y.longCount ? `, and ${count(Y.longCount)} long-running texts at the end of the shelf.` : '.');

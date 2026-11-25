@@ -138,7 +138,7 @@ def d1_wide():
            text(165, 288, (f"{N['matched']} matched stories", 't big'), anchor='middle'),
            text(165, 308, f"{N['mprint']} printings · not checked", anchor='middle')))
     s(link('#reviewed', rect(350, 124, 290, 194, 'br'),
-           text(366, 147, ('CHECKED BY HAND', 'cap cr')), three(602, 143),
+           text(366, 147, ('REVIEWED ON THE SCANS', 'cap cr')), three(602, 143),
            text(366, 172, [f'In {YEARS} years, the most widely', 'printed items were read and grouped,',
                            'and every printing was checked', 'against its page scan.'], lh=18),
            s.arrow('M495 240V260'),
@@ -175,7 +175,7 @@ def d1_narrow():
            text(92, 376, f"{N['mprint']} printings", anchor='middle'),
            text(92, 394, ('not checked', 'm cm'), anchor='middle')))
     s(link('#reviewed', rect(184, 124, 168, 282, 'br'),
-           text(196, 145, [('CHECKED', 'cap cr'), ('BY HAND', 'cap cr')], lh=14), three(318, 141),
+           text(196, 145, [('REVIEWED', 'cap cr'), ('ON THE SCANS', 'cap cr')], lh=14), three(318, 141),
            text(196, 184, [f'In {YEARS} years,', 'the most widely', 'printed items were', 'read and grouped,',
                            'and every printing', 'was checked against', 'its page scan.'], lh=17),
            s.arrow('M268 290V310'),
@@ -471,7 +471,7 @@ def render(n, crop=SITE_CROP):
         f"{N['pages']} scanned pages from {N['papers']} newspapers, 1770–1810; {N['usable']} have enough readable text to use.",
         f"Found by shared wording, all 41 years: a computer finds runs of 80 or more words in the same order, printed by two papers "
         f"within 120 days. {N['matches']} matches are joined into {N['matched']} matched stories with {N['mprint']} printings, not checked.",
-        f"Checked by hand, {YEARS} years: the most widely printed items were read and grouped, and every printing was checked "
+        f"Reviewed, {YEARS} years: the most widely printed items were read and grouped, and every printing was checked "
         f"against its page scan: {N['reviewed']} reviewed stories with {N['rprint']} printings.",
         f"One story found twice is drawn once, as its reviewed star: {N['twinned']} of the {N['reviewed']} reviewed stories have a "
         f"matched twin that holds at least half of their printings; {N['twins']} matched stories are such twins.",

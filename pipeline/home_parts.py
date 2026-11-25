@@ -80,8 +80,8 @@ def render(*, years, thin, newspapers, pages, matched, reviewed, reviewed_years,
          [('The finding', 'findings.html#f1')]),
         ('Two kinds of evidence',
          '<p class="misread"><span><i>Printed</i><b>ſtaves</b></span><span><i>Read by the machine</i><b class="wrong">slaves</b></span></p>',
-         f'{matched:,} stories were found by machine, by the wording their printings share; {reviewed} were read and checked against '
-         f'the scans by hand, in {ry}. The machine’s reading changes a fact in about one passage in {WORDS[one_in]}, so the scans have the last word.',
+         f'{matched:,} stories were found by machine, by the wording their printings share; {reviewed} were reviewed, every printing read against '
+         f'its page scan, in {ry}. The machine’s reading changes a fact in about one passage in {WORDS[one_in]}, so the scans have the last word.',
          [('How the stories were checked', 'method.html#checks'), ('What we found wrong in the archive', 'findings.html#archive')]),
     ]
     cells = ''.join(f'<div class="fact"><h3>{esc(h)}</h3>{pic}<p>{esc(text)}</p><p class="links">'

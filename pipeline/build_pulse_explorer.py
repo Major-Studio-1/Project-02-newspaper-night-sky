@@ -538,7 +538,7 @@ def name_papers(papers):
         if names[p['name']]>1 and p['lccn'] not in short_names: p['name']+=' · '+p['lccn']
     assert len({p['name'] for p in papers})==len(papers), 'newspaper names must be distinct'
     return papers
-# ---- The reviewed years: stories read and grouped by hand, every printing checked against its scan ----
+# ---- The reviewed years: stories read and grouped story by story, every printing checked against its scan ----
 observations={};stories=[];reviewed_data={}
 with sqlite3.connect(verified_file('research.sqlite',release).as_uri()+'?mode=ro',uri=True) as db:
     db.row_factory=sqlite3.Row

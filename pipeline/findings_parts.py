@@ -3,7 +3,7 @@
 Each finding has its claim in plain words, one chart drawn from the data at build time, how sure it is, what it does
 not say, and doors into the instruments that show it. The numbers come from the build's own data (the sky's stars,
 the year index) and from the checks' outputs (outputs/matched_audit/summary.json, outputs/story_discovery_all/
-cycle_lengths.json), never typed by hand, so they stay right when the data changes.
+cycle_lengths.json), never typed in, so they stay right when the data changes.
 
 Charts are inline SVG: thin bars with rounded data ends and 2-pixel gaps, recessive axes, a tooltip (<title>) on every
 mark, and the numbers in a table under each chart. Colours: gold for what a finding is about, slate for the rest, as on

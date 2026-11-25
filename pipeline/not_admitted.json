@@ -1,5 +1,5 @@
 {
- "about": "Every item read in the story reviews and not admitted, with its reason; curated by hand from the ledgers' dispositions_summary (not_admitted, for_the_owner, for_user_decision) and the years' READMEs. work/not_admitted.py checks it against every ledger and writes outputs/not_admitted/.",
+ "about": "Every item read in the story reviews and not admitted, with its reason; curated from the ledgers' dispositions_summary (not_admitted, for_the_owner, for_user_decision) and the years' READMEs. work/not_admitted.py checks it against every ledger and writes outputs/not_admitted/.",
  "source_format": {
   "ledger": "stories_YEAR[_roundN].json#section/key, a key of dispositions_summary in work/archive_data/ledgers/",
   "readme": "story_discovery_YEAR/README.md#heading/phrase, a phrase under that heading of outputs/story_discovery_YEAR/README.md"

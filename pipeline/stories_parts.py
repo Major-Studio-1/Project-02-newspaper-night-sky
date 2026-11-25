@@ -3,7 +3,7 @@ and rendered. On the site each storyline is a thread (the owner, 24 November 202
 reviewed stories, the stars of the Telescope, in the order the papers printed them; a reviewed story is told in one piece
 or in several (a parent's sub-stories), each piece a printed text with its own card.
 
-A storyline puts the printed pieces of one affair in the order the papers printed them. The ledger is written by hand;
+A storyline puts the printed pieces of one affair in the order the papers printed them. The ledger is written for each affair, not generated;
 this module checks it against the reviewed data of the site build (from the current release) and the scan verdicts
 (outputs/story_discovery_YEAR/scan_verdicts/), then renders the page. The checks:
   - each piece is a reviewed group of the storyline's year, and the pieces are exactly the sub-stories of its parents

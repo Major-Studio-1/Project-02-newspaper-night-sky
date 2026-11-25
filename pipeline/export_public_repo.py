@@ -9,7 +9,7 @@ the intermediate outputs. The public repository keeps what a reader needs, in fi
   docs/      the process, the seasons check and the site plan
   process/   from the proposal to the site
 
-The files written by hand for the public repository live in work/public/, in their final places.
+The files written for the public repository (not generated) live in work/public/, in their final places.
 This script fills the placeholders in their Markdown (__REPO__, __PAGES_URL__, __PROPOSAL_URL__,
 __RELEASE__, __N_STORIES__, __N_MATCHED__, __N_PRINTINGS__).
 

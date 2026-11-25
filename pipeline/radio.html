@@ -25,7 +25,7 @@ h1{font-size:clamp(28px,3.4vw,40px);font-weight:500;letter-spacing:-.02em;margin
    story instead of the year, what the passage holds, and the key. */
 .station{border:1px solid #2a3550;border-radius:22px;padding:16px 18px 18px;background:linear-gradient(180deg,#0e1628,#090e1b);box-shadow:inset 0 1px 0 #ffffff12,0 20px 60px #00000080}
 /* When: the year strip of Pulses (the owner, 23 November: a year is chosen exactly, not on a slider), one slot per year,
-   its bar the newspapers that survive that year and a gold dot where stories were checked by hand, the chosen year under
+   its bar the newspapers that survive that year and a gold dot where stories were reviewed, the chosen year under
    a pale band and where the station is in it as a thin line; the years before and after; and, for the music, the season,
    which follows it through the year and starts it at a season's first month (dimmed while one story plays). */
 .when{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 14px}
@@ -152,7 +152,7 @@ __SITE_HEADER__
   <div class="when">
     <div class="m-yearpick"><span class="label" id="m-year-label">Year</span>
       <button type="button" class="toggle m-step" id="m-prev" aria-label="The year before" title="The year before">‹</button><b class="m-yearnow" id="m-yearnow"></b><button type="button" class="toggle m-step" id="m-next" aria-label="The year after" title="The year after">›</button></div>
-    <div class="years-wrap"><div id="m-years" class="years" role="group" aria-labelledby="m-year-label" title="Each bar: the newspapers that survive that year in this archive (gold dot: stories checked by hand). Tap a year, or slide along the bars"></div><div id="m-years-axis" class="years-axis" aria-hidden="true"></div></div>
+    <div class="years-wrap"><div id="m-years" class="years" role="group" aria-labelledby="m-year-label" title="Each bar: the newspapers that survive that year in this archive (gold dot: reviewed stories). Tap a year, or slide along the bars"></div><div id="m-years-axis" class="years-axis" aria-hidden="true"></div></div>
     <span class="ctl" data-only="music" hidden><span class="label" id="m-season-label">Season</span><span class="seg slide" data-roving id="m-season" role="group" aria-labelledby="m-season-label"><button type="button" data-season="winter" title="Winter: from 1 January; December is winter again, as the next one begins">Winter</button><button type="button" data-season="spring" title="Spring: March to May">Spring</button><button type="button" data-season="summer" title="Summer: June to August">Summer</button><button type="button" data-season="autumn" title="Autumn: September to November">Autumn</button></span></span>
   </div>
   <div class="set" data-only="radio" role="group" aria-label="The radio">
@@ -370,7 +370,7 @@ const mc = {year, story: params.get('story') || null, speed: [1.75, 3.5, 7].incl
   season: params.get('season') in SEASONS ? params.get('season') : null,
   playing: false, day: null, from: 0, to: 0, last: 0, timer: 0, raf: 0, token: 0, built: null, pic: null, prefetched: false};
 // The year strip, as on Pulses but for one year: a slot per year, its bar the newspapers that survive it, a gold dot where
-// stories were checked by hand, the chosen year under a pale band and the music's moment in it as a thin line.
+// stories were reviewed, the chosen year under a pale band and the music's moment in it as a thin line.
 const yearsEl = $('m-years'), yearBtns = [], yBand = document.createElement('i'), yMoment = document.createElement('i');
 yBand.className = 'band'; yMoment.className = 'moment'; yMoment.hidden = true; yearsEl.append(yBand, yMoment);
 {
@@ -421,7 +421,7 @@ function musicYear(data) {   // the year's newspapers, surviving issues and stor
     const pr = gr.members.map(m => obs.get(m.id ?? m)).filter(o => o && o.date && o.date.startsWith(y + '-')).map(o => [dayOf(o.date), o.node]);
     if (pr.length) stories.push({id: gr.id, label: gr.label, rev: false, pr});
   }
-  if (rev) {   // checked by hand against the scans
+  if (rev) {   // reviewed against the scans
     const ro = new Map(rev.observations.map(o => [o.id, o]));
     for (const s of rev.stories) { const pr = s.members.map(m => ro.get(m.id ?? m)).filter(o => o && o.date).map(o => [dayOf(o.date), o.node]); if (pr.length) stories.push({id: s.id, label: s.label, rev: true, pr}); }
   }
@@ -450,12 +450,12 @@ function mView() {   // the year, or one of its stories: what plays and what the
   $('station').classList.toggle('story', !!mc.story);   // one story plays: the seasons, which belong to the year, dim
   mSum(); mDraw(); mRemember();
 }
-function mShelf() {   // the year's stories: those checked by hand first, then the most widely printed
+function mShelf() {   // the year's stories: the reviewed ones first, then the most widely printed
   const b = mc.built, box = $('m-stories'); box.replaceChildren(); $('m-shelf-title').textContent = 'Or one story from ' + b.year;
   for (const s of b.stories.slice().sort((x, z) => z.rev - x.rev || z.papers - x.papers || x.first - z.first).slice(0, 18)) {
     const c = document.createElement('button'); c.type = 'button'; c.className = 'm-card'; c.dataset.id = s.id; c.setAttribute('aria-pressed', String(mc.story === s.id));
     const tag = document.createElement('span'); tag.className = 'tag'; if (s.rev) tag.append(document.createElement('i'));
-    const dt = new Date(EPOCH + s.first * 864e5); tag.append(`${s.rev ? 'Checked by hand' : 'Found by shared wording'} · ${MON[dt.getUTCMonth()]} ${dt.getUTCFullYear()}`);
+    const dt = new Date(EPOCH + s.first * 864e5); tag.append(`${s.rev ? 'Reviewed' : 'Found by shared wording'} · ${MON[dt.getUTCMonth()]} ${dt.getUTCFullYear()}`);
     const t = document.createElement('span'); t.className = 'title'; t.textContent = s.label;
     const m = document.createElement('span'); m.className = 'meta'; m.textContent = `${s.papers} newspapers · ${s.pr.length} printings`;
     c.append(tag, t, m); box.append(c);
@@ -463,8 +463,8 @@ function mShelf() {   // the year's stories: those checked by hand first, then t
 }
 function mSum() {   // what the passage holds, and how long it lasts at this pace
   const b = mc.built, s = mc.story && b.byId.get(mc.story), secs = Math.round((mc.to - mc.from + 1) / mc.speed), lasts = secs >= 90 ? `about ${Math.round(secs / 60)} minutes` : `${secs} seconds`;
-  if (s) $('m-sum').textContent = `${s.label} (${s.rev ? 'checked by hand against the scans' : 'found by shared wording, not checked'}): ${s.pr.length} printings in ${s.papers} newspapers, every one a note, over the presses of those weeks. It lasts ${lasts}.`;
-  else { const rv = b.stories.filter(x => x.rev).length; $('m-sum').textContent = `${mc.year}: ${b.index.papers.length} newspapers survive; their ${b.index.coverage.d.length.toLocaleString('en-US')} surviving issues are the presses, and the ${b.stories.length.toLocaleString('en-US')} stories printed in three or more of them${rv ? ` (${rv} checked by hand)` : ''} play on the keyboard. The year lasts ${lasts}; then the next one follows.`; }
+  if (s) $('m-sum').textContent = `${s.label} (${s.rev ? 'reviewed: every printing checked against its page scan' : 'found by shared wording, not checked'}): ${s.pr.length} printings in ${s.papers} newspapers, every one a note, over the presses of those weeks. It lasts ${lasts}.`;
+  else { const rv = b.stories.filter(x => x.rev).length; $('m-sum').textContent = `${mc.year}: ${b.index.papers.length} newspapers survive; their ${b.index.coverage.d.length.toLocaleString('en-US')} surviving issues are the presses, and the ${b.stories.length.toLocaleString('en-US')} stories printed in three or more of them${rv ? ` (${rv} reviewed)` : ''} play on the keyboard. The year lasts ${lasts}; then the next one follows.`; }
 }
 // The sound is ready before the picture moves: Piano and Concerto load their recordings the first time (a few seconds on
 // a first visit), and the picture once ran on in silence meanwhile (the owner, 24 November 2026). Play says "Loading"

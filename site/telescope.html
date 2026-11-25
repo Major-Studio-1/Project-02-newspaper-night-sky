@@ -169,7 +169,7 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 <div class="dock">
 <button type="button" id="drift" class="toggle has-ico" aria-pressed="true" title="Let time pass slowly: older stories recede into the distance"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-drift"/></svg>Drift</button>
 <button type="button" id="earlier" class="step" title="Move 'now' earlier" aria-label="Earlier">‹</button>
-<div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Above, the stories in the sky by month; below, how many newspapers survive each year in this archive, with gold dots for the years checked by hand. Click or drag to move 'now'; the bright bracket is the stretch of time you are looking back through. The up and down arrow keys also move through time."></canvas></div>
+<div class="timeline-wrap"><canvas id="timeline" tabindex="0" aria-label="Timeline 1770 to 1810. Above, the stories in the sky by month; below, how many newspapers survive each year in this archive, with gold dots for the reviewed years. Click or drag to move 'now'; the bright bracket is the stretch of time you are looking back through. The up and down arrow keys also move through time."></canvas></div>
 <button type="button" id="later" class="step" title="Move 'now' later" aria-label="Later">›</button>
 <span class="ctl"><span class="label" id="span-label">Look back</span><span class="seg slide" data-roving id="span" role="group" aria-labelledby="span-label"><button type="button" data-years="1">1 year</button><button type="button" data-years="5">5</button><button type="button" data-years="10">10</button><button type="button" data-years="41">All</button></span></span>
 <button type="button" id="watch" class="watch-btn" title="Watch: hide every control and let the sky play by itself, full screen. Esc brings the controls back."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-fit"/></svg><span class="lbl">Watch</span></button>
@@ -179,8 +179,8 @@ body.exhibit.still,body.exhibit.still *{cursor:none!important}
 <!-- The receipt's steps: each waits here until its part of the line opens it, in place, and comes back when it closes. -->
 <div class="rc-steps" hidden>
 <div class="rc-body" id="step-evidence">
-<div class="row"><span class="seg slide" data-roving id="evidence" role="group" aria-label="Which evidence"><button type="button" data-ev="all" title="The stories checked by hand and the stories found by shared wording, together">All stories</button><button type="button" data-ev="checked" title="Only the stories read and checked against the page scans by hand">Checked by hand only</button></span></div>
-<ul class="tiers"><li><span class="rc-dots" aria-hidden="true"><i style="background:#3987e5"></i><i style="background:#d95926"></i><i style="background:#199e70"></i></span><span><b>Checked by hand:</b> <span id="tier-checked"></span></span></li>
+<div class="row"><span class="seg slide" data-roving id="evidence" role="group" aria-label="Which evidence"><button type="button" data-ev="all" title="The reviewed stories and the stories found by shared wording, together">All stories</button><button type="button" data-ev="checked" title="Only the reviewed stories: every printing checked against its page scan">Reviewed only</button></span></div>
+<ul class="tiers"><li><span class="rc-dots" aria-hidden="true"><i style="background:#ffe9c2"></i></span><span><b>Reviewed:</b> <span id="tier-checked"></span></span></li>
 <li><span class="rc-dot" aria-hidden="true" style="background:#aab6cf"></span><span><b>Found by shared wording, not checked:</b> <span id="tier-found"></span></span></li></ul>
 <div class="row"><button type="button" class="toggle" id="long" aria-pressed="false" title="Texts printed again and again over a long time: laws and documents, and also standing notices and advertisements. All of them were found by shared wording.">Long-running texts</button><span class="lab">laws, notices and advertisements printed again and again</span></div>
 </div>
@@ -552,7 +552,7 @@ function resize() {
 const sizes = new ResizeObserver(resize); sizes.observe(view); sizes.observe(tl);
 
 // ---- Visibility, counts and ranges ----
-// One population: reviewed stories always show; "Checked by hand only" hides the ones found automatically (show.matched
+// One population: reviewed stories always show; "Reviewed only" hides the ones found automatically (show.matched
 // false), long-running ones among them included.
 const visible = i => (D.kind[i] ? true : state.show.matched && (D.long[i] ? state.show.long : true)) && D.papers[i] >= state.min;
 let hitCount = -1, TEXT = null, textLoading = null;
@@ -763,7 +763,7 @@ function drawMonthPetals(c) {
 
 // ---- The timeline bar (always fully visible). Two rows on one time line, each with its own scale. Above: the stories in
 // the sky first printed each month (with a search, each year's share that mentions it, in gold). Below: the newspapers
-// that survive each year in this archive, with a gold dot where stories were checked by hand: the same bars as the year
+// that survive each year in this archive, with a gold dot where stories were reviewed: the same bars as the year
 // strip on Pulses, so a thin stretch of sky can be read as a gap in the archive rather than silence. Over both, the
 // stretch you look back through and "now" (the moment), as on Pulses. On a wide bar the rows are named at the left. ----
 const ARCHIVE = BOOT.years || [], maxPapers = Math.max(1, ...ARCHIVE.map(y => y[1])), TL_R = 14;
@@ -825,7 +825,7 @@ function tlName(y) {
   if (!perMonth) countPerMonth();   // the counts, even before the timeline was first drawn
   const [, papers, pages, checked] = row, n = perYear[y - 1770];
   const inWave = searching() && waves ? searchSeries().filter(s => waves[s] && waves[s].set.has(y)) : [];
-  return `${y}: ${papers} ${papers === 1 ? 'newspaper survives' : 'newspapers survive'} in this archive (${pages.toLocaleString('en-US')} pages)${checked ? `; ${checked} stories checked by hand` : ''}. ${n.toLocaleString('en-US')} ${n === 1 ? 'story' : 'stories'} in the sky first printed that year, with these settings.`
+  return `${y}: ${papers} ${papers === 1 ? 'newspaper survives' : 'newspapers survive'} in this archive (${pages.toLocaleString('en-US')} pages)${checked ? `; ${checked} reviewed stories` : ''}. ${n.toLocaleString('en-US')} ${n === 1 ? 'story' : 'stories'} in the sky first printed that year, with these settings.`
     + (inWave.length ? ` A wave year for ${inWave.map(s => s < SLOTS.length ? `“${shortLabel(SLOTS[s].label)}”` : 'the searches together').join(' and ')}.` : '');
 }
 let tlDrag = false;
@@ -842,7 +842,7 @@ function jumpTo(e) { interact(); const r = tl.getBoundingClientRect(); state.now
 
 // ---- Status, list and the search caption ----
 let listTimer = 0, lastList = 0;
-// The receipt line counts the stories in view by their evidence: checked by hand, or found by shared wording (while a
+// The receipt line counts the stories in view by their evidence: reviewed, or found by shared wording (while a
 // search is on, the ones that match it).
 const inView = {checked: 0, found: 0};
 function updateStatus() {
@@ -1236,7 +1236,7 @@ const HOW = {
 const COLOUR_HOW = {
   region: '<b>Colour: Region.</b> Where each story was first printed in this archive: New England, the Middle States, or the South and West.',
   search: '<b>Colour: Search.</b> The stories that match your search, in gold, or in one colour per search when you compare; the other stories turn faint and pale.',
-  off: '<b>Colour: Off.</b> Warm white stars were read and checked against the page scans by hand; cool grey ones were found by shared wording and are not checked.'};
+  off: '<b>Colour: Off.</b> Warm white stars are reviewed stories, every printing checked against its page scan; cool grey ones were found by shared wording and are not checked.'};
 const LAYOUT_NOTE = {   // the arrangement, in the step that chooses it
   place: '<b>Place:</b> each star sits on the map where its story was first printed in this archive, north up.',
   topic: '<b>Topic:</b> each star sits under what its story is about, in a ring of topics.',
@@ -1279,7 +1279,7 @@ function syncButtons() {
     + ' Bigger, brighter stars were printed in more newspapers. Star size, with the colour on the line above the sky, makes them all larger or smaller for your screen; they keep their proportions. ' + COLOUR_HOW[mode]
     + ' <b>Search and compare:</b> a search draws the matching stories a little larger and makes the others faint, and Colour switches to Search. Put “vs” between up to three searches (fever vs ice), or use “Compare with…” after a search: each search gets its own colour, and a white star mentions more than one. The timeline compares their yearly shares, and Orbit their months. Choose Region or Off to keep those colours; the searches are then shown together, as the bright stars. Point at a search or a region in the legend, or tap it, to lift its stars.'
     + ' <b>Moving around:</b> drag to turn the view, right-drag (or Shift-drag, or two fingers) to move it, and Ctrl + scroll (⌘ + scroll on a Mac) or pinch to zoom; a plain scroll moves the page. Place, Topic and Orbit are also on the sky, top right. “Reset view” brings back the whole picture.'
-    + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see, and “All” shows the whole archive. The timeline has two rows: above, the stories in the sky by month; below, how many newspapers survive each year (gold dots: years checked by hand). Where the lower row is thin, the sky is thin because little survives, not because little was printed. <b>A star:</b> point at it to preview it; click it to choose it. Its card stays beside it, with Hear, Follow it in Pulses, and a few words of its title to trace through the years. With the radio on, the chosen story is also heard in full. ✕, Esc or a click on empty sky closes the card.'
+    + ' <b>Moving through time:</b> use the timeline bar, “Earlier” and “Later”, or the ↑ ↓ keys; “Look back” sets how many years deep you see, and “All” shows the whole archive. The timeline has two rows: above, the stories in the sky by month; below, how many newspapers survive each year (gold dots: the reviewed years). Where the lower row is thin, the sky is thin because little survives, not because little was printed. <b>A star:</b> point at it to preview it; click it to choose it. Its card stays beside it, with Hear, Follow it in Pulses, and a few words of its title to trace through the years. With the radio on, the chosen story is also heard in full. ✕, Esc or a click on empty sky closes the card.'
     + (reduced ? '' : ' Drift lets time pass slowly: new stories arrive at the front and older ones recede. It pauses while you explore.');
 }
 function setLayout(name) {
@@ -1586,8 +1586,8 @@ const ARRANGED = {place: 'on the map, where first printed', topic: 'by topic', o
 function receiptCfg(caption) {
   const c = count(inView.checked), f = count(inView.found), names = state.q ? searchNames() : [], m = searching() ? ' that match the search' : '';
   return {lead: 'Showing', caption, link: linkFor(), parts: [
-    {key: 'evidence', step: STEPS.evidence, text: state.show.matched ? `${c} checked by hand + ${f} found by shared wording${state.show.long ? ', long-running too' : ''}` : `${c} checked by hand`,
-      title: `Which evidence. In view${m}: ${c} stories checked by hand against the page scans` + (state.show.matched ? ` and ${f} found by shared wording, not checked` : '')},
+    {key: 'evidence', step: STEPS.evidence, text: state.show.matched ? `${c} reviewed + ${f} found by shared wording${state.show.long ? ', long-running too' : ''}` : `${c} reviewed`,
+      title: `Which evidence. In view${m}: ${c} reviewed stories, every printing checked against its page scan` + (state.show.matched ? ` and ${f} found by shared wording, not checked` : '')},
     {key: 'years', step: STEPS.years, text: yearsText(yearSpan()), title: 'Which years: travel through time on the timeline under the sky'},
     {key: 'stories', step: STEPS.stories, title: 'Which stories: how widely printed, or a search',
       text: `in ${state.min}+ newspapers` + (!names.length ? '' : names.length > 1 ? ', ' + names.map(x => `‘${x}’`).join(' vs ') : `, mentioning ‘${names[0]}’`)},
