@@ -4,18 +4,18 @@
     "newspapers": 110,
     "issues": 19449,
     "pages": 77793,
-    "observations": 6477,
+    "observations": 6480,
     "groups": 1185,
-    "memberships": 8932,
+    "memberships": 8935,
     "group_hierarchy": 354,
     "claims": 15,
     "relations": 25,
     "topics": 24,
     "date_assertions": 16,
-    "eligible_pages": 77396
+    "eligible_pages": 77331
   },
   "normalized_segment_locator_statuses": {
-    "unique_normalized_match": 6482
+    "unique_normalized_match": 6485
   },
   "checks": [
     "SQLite structural integrity",
@@ -7005,6 +7005,9 @@
     "Asset present with preserved bytes: asset:5f2a270f78b1b718bde225b1",
     "Asset present with preserved bytes: asset:354ef4a324906f0d5dd49080",
     "Asset present with preserved bytes: asset:e28bd765a13c34bb22738eee",
+    "Asset present with preserved bytes: asset:969c5a18610bedcd43f746ab",
+    "Asset present with preserved bytes: asset:5eeb0551fd2b51c23070f512",
+    "Asset present with preserved bytes: asset:1c72dffd05118bbfb8557a9f",
     "Pulse projection keeps every prototype observation",
     "Pulse projection exactly preserves dates, pages, roles, excerpts and source URLs",
     "Pulse projection matches the admitted Boyd/Bantry coverage group",

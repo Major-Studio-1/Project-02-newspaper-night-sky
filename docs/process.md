@@ -312,6 +312,14 @@ The same session gathered the filing problems the thin-year reviews had found, a
 - **Second scans and copies (347 pages):** twelve second scans and the 110 whole second copies filed as "edition 2" (the *Kentucky Gazette* of 1787–1793 most of all) leave the analysis, as second scans did before (C-17). Usable pages: 77,743 → 77,396.
 - **The matched layer:** the moved pages were matched again at their new dates (the stored matches reproduced exactly first): 48,270 matched stories → 48,251, 164,677 printings → 164,217; 21 radio titles were recorded again. No reviewed story gains or loses a paper; 36 reviewed printings take their issues' new dates.
 
+### The data's loose ends (data release v0.11.41, 25 November 2026)
+
+At the owner's word ("do it"), one more correction release closed what v0.11.40 left open (`pipeline/archive_data/correct_loose_ends.py`):
+- **Printings missed on misfiled pages (Q-08, closed):** every page whose filing or transcription a release had corrected, 1,719 in all, was compared with every reviewed story printed in the weeks around it. Three printings join their stories, each read on its scan: Adams's reply to the House in the *New Hampshire Gazette* of 13 December 1797 (S97-034, the case that raised the question), the Havre letter in the same paper of 17 January 1798, and the King's speech of May 1776 in Purdie's *Virginia Gazette* of 23 August 1776. Their stories' topic rows were scored again; every other row was reproduced exactly first (C-15). Two more were found printed in the year after their story's and are listed, not added (Q-09).
+- **Partial second copies (C-19):** the 21 left from v0.11.40 were read on the scans; 17 are whole copies after all, four hold pages the other copy lacks. 65 pages leave the analysis: 77,396 usable pages → 77,331.
+- **The *Patowmac Guardian* of 12 May 1796:** its transcriptions, filed one page off, join the page map, read on the scans.
+- No matched story drops, splits or changes its title; three new reviewed passages were recorded for the radio.
+
 ### What the reviews read and did not admit (22 November 2026)
 
 By the rule "one standard, nothing erased", whatever a review read and did not admit stays visible. `pipeline/not_admitted.py` gathers it for every reviewed year from `pipeline/not_admitted.json` into one readable list and a table (in the public repository, `docs/not-admitted/`), linked and counted on How it works: 283 items at first, 304 since 1797 was read again (release v0.11.8) 388 since 1800 and 1804 were reviewed (v0.11.10), 477 since 1802 and 1803 (v0.11.12), 580 since 1801 and 1810 (v0.11.15), 2,176 since the first thin years (v0.11.30), 2,854 since the second (v0.11.35), 3,155 since the third (v0.11.38) and 3,279 since 1799 (v0.11.39), each with the number of papers, its kind and its reason.
@@ -710,5 +718,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.11.40) |
+| Data release | [`data/`](../data) (v0.11.41) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

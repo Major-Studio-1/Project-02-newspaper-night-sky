@@ -1,5 +1,5 @@
 {
- "made": "2026-11-24",
+ "made": "2026-11-25",
  "script": "work/archive_errata.py",
  "archive": {
   "dataset": "RevolutionCrossroads/loc_chronicling_america_1770-1810",
@@ -69,10 +69,10 @@
   "release": "0.11.7"
  },
  "thin_years": {
-  "issues": 318,
+  "issues": 319,
   "by_problem": {
    "Issue filed under the wrong date": 7,
-   "Second scan filed under another date": 10,
+   "Second scan filed under another date": 11,
    "Second scan filed under another title": 2,
    "Pages filed in another issue": 5,
    "RevX transcriptions filed under the wrong page": 1,
@@ -80,8 +80,8 @@
    "Issue filed under the first day of its range": 162
   },
   "corrected_in": "0.11.40",
-  "corrected": 296,
-  "not_corrected": 22,
+  "corrected": 319,
+  "not_corrected": 0,
   "years": [
    1770,
    1771,
@@ -103,7 +103,11 @@
    1796,
    1801
   ],
-  "source": "outputs/errata_1784_1786/README.md"
+  "source": "outputs/errata_1784_1786/README.md",
+  "corrected_by_release": {
+   "0.11.40": 296,
+   "0.11.41": 23
+  }
  },
  "transcription": {
   "years": [

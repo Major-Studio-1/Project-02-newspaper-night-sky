@@ -7,9 +7,9 @@ can be checked on its scan and corrected at the source. The archive holds 77,793
 19,445 issues and editions; each page has the Library of Congress's own OCR (called CA here) and
 an AI transcription made for the Smithsonian's Revolution Crossroads (RevX).
 
-Made by `pipeline/archive_errata.py` from the project's checks, 2026-11-24.
+Made by `pipeline/archive_errata.py` from the project's checks, 2026-11-25.
 
-## `filing.csv`: 570 issues filed in the wrong place
+## `filing.csv`: 571 issues filed in the wrong place
 
 One row per issue: the newspaper's LCCN and catalogue title, the date and edition the issue is filed under (and the
 pages, where only some are concerned), what is wrong, how it was found, and what this project did about it.
@@ -20,7 +20,7 @@ pages, where only some are concerned), what is wrong, how it was found, and what
 | Second copy filed as another edition | 131 |
 | RevX transcriptions filed under the wrong page | 124 |
 | Issue filed under the wrong date | 122 |
-| Second scan filed under another date | 12 |
+| Second scan filed under another date | 13 |
 | RevX transcription repeated under another page | 10 |
 | Pages filed in another issue | 7 |
 | Second scan filed under another title | 2 |
@@ -44,19 +44,18 @@ pages, where only some are concerned), what is wrong, how it was found, and what
 - **Pages filed in another issue.** Pages 3 and 4 of the *National Intelligencer* of 9 July and 8 September 1806 are filed
   in each other's issues: found by their datelines and by comparing each page with its neighbours (1806;
   `pipeline/story_discovery_1806/check_duplicate_pages_1806.py`, `pipeline/story_discovery_1806/check_page_neighbours_1806.py`).
-- **Found by the reviews of the years with few surviving papers (318 issues).** The reviews of 1770 to 1799
+- **Found by the reviews of the years with few surviving papers (319 issues).** The reviews of 1770 to 1799
   (read on 23 and 24 November 2026), the review of 1801 and a check of every masthead of 1784, 1785 and 1786 on the scans
-  found 162 issues filed under the first day of the range of days their mastheads print; 131 second copies of an issue filed as another edition; 10 second scans filed under another date; 7 issues filed under the wrong date; 5 issues holding pages of another issue or sheet; 2 second scans filed under another title; 1 issue whose RevX transcriptions are filed under the wrong page.
+  found 162 issues filed under the first day of the range of days their mastheads print; 131 second copies of an issue filed as another edition; 11 second scans filed under another date; 7 issues filed under the wrong date; 5 issues holding pages of another issue or sheet; 2 second scans filed under another title; 1 issue whose RevX transcriptions are filed under the wrong page.
   Two papers, the *Connecticut Courant* of 1773-74 and the *Royal Gazette* of Charleston of 1781-82, head each issue with a
   range of days and are filed under its first day, though each appeared on its last; the collection files other such papers
-  under the last day. Data release v0.11.40 corrects 296 of these issues; 22 wait: second copies whose
-  pages are to be read on their scans, and RevX pages too garbled for the page check's rule (`pipeline/errata_1784_1786/`).
+  under the last day. Data release v0.11.40 corrects 296 of these issues and v0.11.41 corrects the other 23 (`pipeline/errata_1784_1786/`).
 
 ## `transcription.csv`: 758 printings whose transcription changes what was printed
 
 Every printing of the reviewed stories of 1770, 1771, 1772, 1773, 1774, 1775, 1776, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1787, 1788, 1789, 1790, 1791, 1792, 1793, 1794, 1795, 1796, 1797, 1798, 1799, 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809 and 1810 was read against its scan:
 6352 printings, of which 756 (12%) carry a misreading
-that changes a fact (a number, a date, a name, or a word with another meaning) or leave printed text out. For 1797 the count is the 33 printings of its later reading; its other 107 were checked against their scans before verdicts were recorded in this form. One row per
+that changes a fact (a number, a date, a name, or a word with another meaning) or leave printed text out. For 1797 the count is the 33 printings of its later reading; its other 108 were checked against their scans before verdicts were recorded in this form. One row per
 printing: the newspaper, the date and page, which transcription the passage was taken from (RevX, or CA where RevX is
 missing or misfiled), whether printed text is left out, and the reviewers' notes, mostly in the form
 `scan '…' / transcription '…'`. A printing's notes may also list smaller errors beside the one that changes a fact.
@@ -143,6 +142,8 @@ them was read against the scans: 35 of the 187 passages found
   files 16 pages with the issues they belong to (12 of them in four issues the collection did not hold), and leaves 347
   pages of second scans and second copies out of the analysis (77,743 usable pages become 77,396). The reviewed printings
   on corrected pages take their issues' dates.
+- Release v0.11.41 leaves out 65 more pages of second copies, read on their scans (77,396 usable pages become 77,331), and
+  adds the Patowmac Guardian's RevX pages of 12 May 1796 to the RevX page map, read on their scans (`pipeline/corrections_0_11_41/`).
 - The reviewed passages keep the transcription as it is, and their notes name each error.
 
 `summary.json` holds the counts and the examples the site's Findings page shows.

@@ -161,8 +161,9 @@ filing.append({'problem': 'Second scan filed under another date', 'lccn': lccn, 
 
 # 3d · Filing problems found by the reviews of the years with few surviving papers (23-24 November 2026), the 1801 review's
 # misdated Monitor and the errata check of 1784-1786: outputs/errata_1784_1786/filing_part_b.csv, in this file's columns
-# (made by outputs/errata_1784_1786/make_part_b.py). Data release v0.11.40 corrects most of them
-# (work/archive_data/correct_filing_thin.py); its 'correction' column says which wait.
+# (made by outputs/errata_1784_1786/make_part_b.py; the rows of the partial copies, B25 and B28 by make_partial.py). Data releases
+# v0.11.40 and v0.11.41 correct them (work/archive_data/correct_filing_thin.py, correct_loose_ends.py): the 'release' column says
+# which, the 'correction' column how; 'not_in_this_release' marks a row that waits.
 THIN = ROOT/'outputs/errata_1784_1786'
 THIN_RELEASE = '0.11.40'
 FIELDS = ['problem', 'lccn', 'newspaper', 'filed_date', 'edition', 'page', 'what_is_wrong', 'how_it_was_found', 'in_this_project']
@@ -181,6 +182,10 @@ waiting = [r for r in thin if r.get('correction') == 'not_in_this_release']
 thin_block = {'issues': len(thin), 'by_problem': dict(Counter(r['problem'] for r in thin)), 'corrected_in': THIN_RELEASE,
               'corrected': len(thin) - len(waiting), 'not_corrected': len(waiting),
               'years': sorted({int(r['filed_date'][:4]) for r in thin}), 'source': 'outputs/errata_1784_1786/README.md'}
+by_release = Counter(r.get('release') or THIN_RELEASE for r in thin if r.get('correction') != 'not_in_this_release')
+thin_block['corrected_by_release'] = dict(sorted(by_release.items(), key=lambda kv: [int(x) for x in kv[0].split('.')]))
+thin_text = ' and '.join(('Data release ' if i == 0 else '') + f'v{v} corrects ' + (f'{n} of these issues' if i == 0 else f'the other {n}')
+                         for i, (v, n) in enumerate(thin_block['corrected_by_release'].items())) + (f'; {len(waiting)} wait' if waiting else '')
 
 # 4 · Transcriptions that change what was printed: every reviewed printing the scan check found with a fact-changing
 # problem (a misreading, or printed text left out), in the four reviewed years with structured verdicts.
@@ -331,8 +336,7 @@ pages, where only some are concerned), what is wrong, how it was found, and what
   found {"; ".join(f"{n} {PLURAL[p][1] if n == 1 else PLURAL[p][0]}" for p, n in sorted(thin_block["by_problem"].items(), key=lambda kv: -kv[1]))}.
   Two papers, the *Connecticut Courant* of 1773-74 and the *Royal Gazette* of Charleston of 1781-82, head each issue with a
   range of days and are filed under its first day, though each appeared on its last; the collection files other such papers
-  under the last day. Data release v{thin_block["corrected_in"]} corrects {thin_block["corrected"]} of these issues; {thin_block["not_corrected"]} wait: second copies whose
-  pages are to be read on their scans, and RevX pages too garbled for the page check's rule (`outputs/errata_1784_1786/`).
+  under the last day. {thin_text} (`outputs/errata_1784_1786/`).
 ''' if thin else '') + f'''
 ## `transcription.csv`: {len(trans)} printings whose transcription changes what was printed
 
@@ -380,11 +384,13 @@ them was read against the scans: {t["audit"]["own_calls"]} of the {t["audit"]["l
 - Release v0.11.7 dates the two 1793 issues as printed, files the 1806 pages under the issues they belong to, and leaves the
   second scan out of the analysis (77,747 usable pages rather than 77,749). One reviewed printing stands on a corrected
   page: Captain Fanning's account of 1793, which takes its issue's printed date, 13 July.
-''' + (f'''- Release v{thin_block["corrected_in"]} dates 169 issues as printed or issued (162 of them dated by the last day of their ranges),
+''' + (f'''- Release v0.11.40 dates 169 issues as printed or issued (162 of them dated by the last day of their ranges),
   files 16 pages with the issues they belong to (12 of them in four issues the collection did not hold), and leaves 347
   pages of second scans and second copies out of the analysis (77,743 usable pages become 77,396). The reviewed printings
   on corrected pages take their issues' dates.
-''' if thin else '') + f'''- The reviewed passages keep the transcription as it is, and their notes name each error.
+''' if thin else '') + ('''- Release v0.11.41 leaves out 65 more pages of second copies, read on their scans (77,396 usable pages become 77,331), and
+  adds the Patowmac Guardian's RevX pages of 12 May 1796 to the RevX page map, read on their scans (`outputs/corrections_0_11_41/`).
+''' if '0.11.41' in thin_block['corrected_by_release'] else '') + f'''- The reviewed passages keep the transcription as it is, and their notes name each error.
 
 `summary.json` holds the counts and the examples the site's Findings page shows.
 ''', encoding='utf8')

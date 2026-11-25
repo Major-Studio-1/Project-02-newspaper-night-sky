@@ -2,6 +2,24 @@
 
 This is a reusable, versioned data release underneath the visualizations. It joins the archive inventory, existing inspected passages, grouping decisions, evidence records, and frozen topic-model outputs. It does not add a new historical event census.
 
+## Changes in v0.11.41 (2026-11-25)
+
+A correction release (`correct_loose_ends.py`; evidence in `outputs/corrections_0_11_41/`): the data's remaining loose ends, which the owner asked on 25 November 2026 to clear in one release. Nothing is dated or moved to another issue, so nothing is matched again.
+
+- **Three reviewed printings join their stories** (C-15, Q-08). All three stand on scan pages whose RevX text is filed under another page, so their excerpts come from the CA text. Each was read on its scan.
+  - **S97-034**: Adams's reply to the House, *New Hampshire Gazette* of 13 December 1797. It was kept apart by round three of 1797.
+  - **S98-119**: the Havre letter of 6 November 1797, *New Hampshire Gazette* of 17 January 1798.
+  - **S76-352**: the King's speech of May 1776, Purdie's *Virginia Gazette* of 23 August 1776.
+
+  S98-119 and S76-352 were found by a sweep of every page whose filing or RevX text a release corrected. Their three stories' topic rows are scored again as a batch of their own; the other 1,182 reviewed rows are first reproduced exactly.
+- **The RevX page map gains the *Patowmac Guardian* of 12 May 1796.** Its three rows were read on the scans (B25), because its CA text is too garbled for the map's rule.
+  - Its 3 matched printings and 8 match ends move to the scan pages they transcribe, and their checks are redone.
+  - The census rows of pages 1 to 3 follow the rule of v0.11.7.
+- **65 pages of second copies leave the analysis** (eligible 77,396 → 77,331): the 21 partial copies of edition 2, read on their scans, and the *Kentucke Gazette*'s pages 3 and 4 filed under 20 October 1787, a copy of the issue of 27 October (B28). Of two scans of one printed page the analysis keeps one: the whole page over a part of it, then the one with a RevX transcription, then edition 1 or the edition holding the whole issue.
+  - 378,852 → 378,529 matches;
+  - 164,217 → 164,149 printings;
+  - 59 stories lose a printing; none drops, splits or changes its first printing.
+
 ## Changes in v0.11.40 (2026-11-24)
 
 A correction release (`correct_filing_thin.py`, after the rematch `outputs/errata_1784_1786/release/match_moved_pages.py`; evidence in `outputs/errata_1784_1786/`): the filing problems the reviews of the thin years and the errata check of 1784-1786 found, with the owner's decisions of 24 November 2026. 7,045 checks (one new: every issue a filing correction adds holds exactly the pages a recorded correction moved there).
