@@ -1,5 +1,5 @@
 {
-  "release_version": "0.11.41",
+  "release_version": "0.11.46",
   "reviewed": [
     {
       "year": 1770,
@@ -8343,6 +8343,40 @@
           "child": false
         },
         {
+          "id": "group:london-letter-from-the-lord-camden-a-pirate-brought-in-1773",
+          "kind": "message_group",
+          "label": "London, July 1773: a letter from on board the Lord Camden East-Indiaman: 'As we left the Cape of Good Hope, we met two Dutch men of war bringing in a pirate'",
+          "definition": "Printings of a paragraph of the London news of July 1773 on a letter from on board the Lord Camden East-Indiaman, lately arrived from China: 'As we left the Cape of Good Hope, we met two Dutch men of war bringing in a pirate, which proved to be the Aurora English frigate, with part of her crew, who had murdered the Captain and all the officers, and ran away with the ship.' A London report of a letter from a ship, as the papers reprinted it; the New-Hampshire Gazette introduces the letter in other words (C-02).",
+          "members": [
+            {
+              "id": "obs:expansion-1773:S73-209",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1773:S73-210",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1773:S73-211",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1773:S73-212",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1773-abroad",
+          "child": false
+        },
+        {
           "id": "group:amsterdam-letter-a-courier-from-paris-august-1773",
           "kind": "message_group",
           "label": "Amsterdam (the Hague, or Paris), 20 August 1773: a letter: 'By a Scheveling boat I have an opportunity of sending you this important information, that by a courier arrived last night at the Hague, from Paris, Madame Barre is disgraced'",
@@ -8487,6 +8521,7 @@
             "group:philadelphia-report-french-and-spanish-navy-laid-up-july-1773",
             "group:honduras-letter-on-a-species-of-tigers-june-1773",
             "group:constantinople-letter-on-the-turkish-fleet-may-1773",
+            "group:london-letter-from-the-lord-camden-a-pirate-brought-in-1773",
             "group:amsterdam-letter-a-courier-from-paris-august-1773",
             "group:paris-letter-the-charge-d-affaires-to-leave-london-august-1773"
           ]
@@ -8950,6 +8985,17 @@
             "obs:expansion-1773:S73-159",
             "obs:expansion-1773:S73-164",
             "obs:expansion-1773:S73-168"
+          ]
+        },
+        {
+          "id": "group:london-letter-from-the-lord-camden-a-pirate-brought-in-1773",
+          "label": "London, July 1773: a letter from on board the Lord Camden East-Indiaman: 'As we left the Cape of Good Hope, we met two Dutch men of war bringing in a pirate'",
+          "category": "1773-abroad",
+          "members": [
+            "obs:expansion-1773:S73-209",
+            "obs:expansion-1773:S73-210",
+            "obs:expansion-1773:S73-211",
+            "obs:expansion-1773:S73-212"
           ]
         },
         {
@@ -12421,6 +12467,74 @@
           ],
           "transcription": "RevX",
           "summary": "The Virginia Gazette (Rind) prints the letter from Constantinople.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1773:S73-209",
+          "legacy_id": "S73-209",
+          "node": "sn83021194",
+          "page_id": "page:sn83021194:1773-09-02:1:2",
+          "issue_id": "issue:sn83021194:1773-09-02:1",
+          "date": "1773-09-02",
+          "page": 2,
+          "excerpt": "The following piece of intelligence is an extract from a letter, from on board the Lord Camden East-Indiaman, lately arrived from China: \"As we left the Cape of Good Hope, we met two Dutch men of war bringing in a pirate, which proved to be the Aurora English frigate, with part of her crew, who had murdered the Captain and all the officers, and ran away with the ship.\"",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021194/1773-09-02_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1773__evidence__S73-209.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "London, July 1773: a report of a letter from the Lord Camden East-Indiaman on a pirate brought in by two Dutch men of war.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1773:S73-210",
+          "legacy_id": "S73-210",
+          "node": "sn83025582",
+          "page_id": "page:sn83025582:1773-09-03:1:2",
+          "issue_id": "issue:sn83025582:1773-09-03:1",
+          "date": "1773-09-03",
+          "page": 2,
+          "excerpt": "A letter from on board the Lord Cambden East Indiaman, lately arrived from China, says, \"As we left the Cape of Good-Hope, we met 2 Dutch men of war bringing in a Pirate, which proved to be the Aurora English Frigate, with part of her crew, who had murdered the captain and all the officers, and run away with the",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025582/1773-09-03_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1773__evidence__S73-210.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-Hampshire Gazette prints the London report of the letter from the Lord Camden.",
+          "note": "Introduces the letter in its own words ('A letter from on board the Lord Cambden East Indiaman, lately arrived from China, says') and prints '2 Dutch men of war' and 'run away': the same letter (C-02)."
+        },
+        {
+          "id": "obs:expansion-1773:S73-211",
+          "legacy_id": "S73-211",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1773-09-09:1:2",
+          "issue_id": "issue:sn84024739:1773-09-09:1",
+          "date": "1773-09-09",
+          "page": 2,
+          "excerpt": "The following Piece of Intelligence is an Extract from a Letter from on Board the Lord Cambden East Indiaman, lately arrived from China: \"As we left the Cape of Good Hope, we met two Dutch Men of War bringing in a Pirate, which proved to be the Aurora English Frigate, with Part of her Crew, who had murdered the Captain and all the Officers, and ran away with the Ship.\"",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1773-09-09_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1773__evidence__S73-211.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Virginia Gazette (Purdie and Dixon) prints the London report of the letter from the Lord Camden.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1773:S73-212",
+          "legacy_id": "S73-212",
+          "node": "sn84024741",
+          "page_id": "page:sn84024741:1773-09-09:1:2",
+          "issue_id": "issue:sn84024741:1773-09-09:1",
+          "date": "1773-09-09",
+          "page": 2,
+          "excerpt": "The following piece of intelligence is an extract of a letter from on board the Lord Camden East Indiaman, lately arrived from China: \"As we left the Cape of Good Hope we met two Dutch men of war bringing in a pirate, which proved to be the Aurora English frigate, with part of her crew, who had murdered the captain and all the officers, and ran away with the ship.\"",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024741/1773-09-09_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1773__evidence__S73-212.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Virginia Gazette (Rind) prints the London report of the letter from the Lord Camden.",
           "note": "Same item as the other printings."
         },
         {
@@ -23695,6 +23809,52 @@
           "child": false
         },
         {
+          "id": "group:cambridge-report-a-warm-fire-near-charlestown-neck-august-1775",
+          "kind": "message_group",
+          "label": "Cambridge, 3 August 1775: 'Last Monday morning, near Charlestown Neck, a warm fire began between our advanced parties and those of the enemy'",
+          "definition": "Printings of a paragraph of the news from the camp at Cambridge of 3 August 1775: 'Last Monday morning, near Charlestown Neck, a warm fire began between our advanced parties and those of the enemy, attended with cannonading from the enemy's works on Bunker-Hill. We took two marines prisoners, and killed several of the regulars ...'. A report from the American camp, as the papers printed it; most print it in a run of the camp's news without the dateline.",
+          "members": [
+            {
+              "id": "obs:expansion-1775:S75-207",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1775:S75-208",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1775:S75-209",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1775:S75-210",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1775:S75-211",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1775:S75-212",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1775-war",
+          "child": false
+        },
+        {
           "id": "group:letter-on-a-skirmish-near-st-johns-september-1775",
           "kind": "message_group",
           "label": "A letter from Albany, 2 September 1775: 'we hear there has been a skirmish near St. John's'; General Montgomery sets off toward St. John's",
@@ -23898,6 +24058,7 @@
             "group:providence-letter-on-the-contest-of-17-june-1775",
             "group:burgoyne-and-lee-letters-june-july-1775",
             "group:philadelphia-letter-of-29-july-on-a-london-letter-of-31-may-1775",
+            "group:cambridge-report-a-warm-fire-near-charlestown-neck-august-1775",
             "group:letter-on-a-skirmish-near-st-johns-september-1775",
             "group:washington-address-to-the-inhabitants-of-canada-1775",
             "group:captain-mowat-and-the-burning-of-falmouth-october-1775",
@@ -24198,6 +24359,19 @@
             "obs:expansion-1775:S75-154",
             "obs:expansion-1775:S75-157",
             "obs:expansion-1775:S75-160"
+          ]
+        },
+        {
+          "id": "group:cambridge-report-a-warm-fire-near-charlestown-neck-august-1775",
+          "label": "Cambridge, 3 August 1775: 'Last Monday morning, near Charlestown Neck, a warm fire began between our advanced parties and those of the enemy'",
+          "category": "1775-war",
+          "members": [
+            "obs:expansion-1775:S75-207",
+            "obs:expansion-1775:S75-208",
+            "obs:expansion-1775:S75-209",
+            "obs:expansion-1775:S75-210",
+            "obs:expansion-1775:S75-211",
+            "obs:expansion-1775:S75-212"
           ]
         },
         {
@@ -27435,6 +27609,108 @@
           ],
           "transcription": "RevX",
           "summary": "Dixon and Hunter's Virginia Gazette prints the Philadelphia letter of 29 July.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1775:S75-207",
+          "legacy_id": "S75-207",
+          "node": "sn82016139",
+          "page_id": "page:sn82016139:1775-08-07:1:3",
+          "issue_id": "issue:sn82016139:1775-08-07:1",
+          "date": "1775-08-07",
+          "page": 3,
+          "excerpt": "Last Monday morning near Charlestown Neck, a warm fire began between our advanced parties and those of the enemy, attended with cannonading from the enemy's works on Bunker-Hill. We took two marines prisoners, and killed several of the regulars, with the loss of one man belonging to Marblehead, who was killed with a cannon ball.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82016139/1775-08-07_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1775__evidence__S75-207.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Cambridge, August 1775: a report from the American camp of firing between the advanced parties near Charlestown Neck.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1775:S75-208",
+          "legacy_id": "S75-208",
+          "node": "sn83025582",
+          "page_id": "page:sn83025582:1775-08-08:1:1",
+          "issue_id": "issue:sn83025582:1775-08-08:1",
+          "date": "1775-08-08",
+          "page": 1,
+          "excerpt": "Last Monday Morning, near Charlestown Neck, a warm Fire began between our advanced Parties and those of the Enemy, attended with Cannonading from the Enemy's Works on Bunker-Hill. We took two Marines Prisoners, and killed several of the Regulars, with the Loss of one Man, belonging to Marblehead, who was killed with a Cannon Ball.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025582/1775-08-08_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1775__evidence__S75-208.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-Hampshire Gazette prints the Cambridge report of the firing near Charlestown Neck.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1775:S75-209",
+          "legacy_id": "S75-209",
+          "node": "sn83021126",
+          "page_id": "page:sn83021126:1775-08-14:1:3",
+          "issue_id": "issue:sn83021126:1775-08-14:1",
+          "date": "1775-08-14",
+          "page": 3,
+          "excerpt": "CAMBRIDGE, August 3. Last Monday morning, near Charlestown Neck, a warm fire began between our advanced parties and those of the enemy, attended with cannonading from the enemy's works on Bunker's Hill. We took two marines prisoners, and killed several",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021126/1775-08-14_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1775__evidence__S75-209.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dunlap's Pennsylvania Packet prints the Cambridge report of the firing near Charlestown Neck.",
+          "note": "Prints the dateline 'CAMBRIDGE, August 3.' above the paragraph; the other papers print it without one, in a run of the camp's news."
+        },
+        {
+          "id": "obs:expansion-1775:S75-210",
+          "legacy_id": "S75-210",
+          "node": "sn83030493",
+          "page_id": "page:sn83030493:1775-08-14:1:2",
+          "issue_id": "issue:sn83030493:1775-08-14:1",
+          "date": "1775-08-14",
+          "page": 2,
+          "excerpt": "Last Monday Morning, near Charlestown Neck, a warm Fire began between our advanced Parties and those of the Enemy, attended with Cannonading from the Enemy's Works on Bunker-Hill. We took two Marines Prisoners, and killed several of the Regulars, with the Loss of one Man, belonging to Marblehead, who was killed with a Cannon Ball.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83030493/1775-08-14_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1775__evidence__S75-210.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Gaine's New-York Gazette prints the Cambridge report of the firing near Charlestown Neck.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1775:S75-211",
+          "legacy_id": "S75-211",
+          "node": "sn84024739",
+          "page_id": "page:sn84024739:1775-08-26:1:2",
+          "issue_id": "issue:sn84024739:1775-08-26:1",
+          "date": "1775-08-26",
+          "page": 2,
+          "excerpt": "Last Monday morning, near Charlestown neck, a warm fire began between our advanced parties and those of the enemy, attended with Cannonading from the enemy's works on Bunkers hill. We took two marines prisoners, and killed several of the regulars,",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024739/1775-08-26_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1775__evidence__S75-211.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Dixon and Hunter's Virginia Gazette prints the Cambridge report of the firing near Charlestown Neck.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1775:S75-212",
+          "legacy_id": "S75-212",
+          "node": "sn84024742",
+          "page_id": "page:sn84024742:1775-09-01:1:1",
+          "issue_id": "issue:sn84024742:1775-09-01:1",
+          "date": "1775-09-01",
+          "page": 1,
+          "excerpt": "Last monday morning, near Charlestown neck, a warm fire began between our advanced parties and those of the enemy, attended with cannonading from the enemy's works on Bunker's hill. We took two marines prisoners, and killed several of the regulars,",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84024742/1775-09-01_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1775__evidence__S75-212.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Purdie's Virginia Gazette prints the Cambridge report of the firing near Charlestown Neck.",
           "note": "Same item as the other printings."
         },
         {
@@ -88261,6 +88537,40 @@
           "child": false
         },
         {
+          "id": "group:new-york-report-the-brig-lucy-and-the-frigate-mercury-july-1783",
+          "kind": "message_group",
+          "label": "New York, 23 July 1783: 'Last Monday arrived here the brig Lucy ... from St. Kitts' with a report of the definitive treaty, and 'his majesty's frigate Mercury' from Spithead",
+          "definition": "Printings of a paragraph of the New York news of 23 July 1783: 'Last Monday arrived here the brig Lucy, captain Van Duersen, in twelve days from St. Kitts, bound to Connecticut; from which a report prevails, that the day before he sailed, dispatches were received from Barbadoes, with an account of the definitive treaty being signed ...' and 'Same day arrived from Spithead, his majesty's frigate Mercury, of 28 guns ...', with government's dispatches. A New York report of two arrivals, as the papers reprinted it; the New-Hampshire Gazette prints only the part on the frigate Mercury (C-02).",
+          "members": [
+            {
+              "id": "obs:expansion-1783:S83-110",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1783:S83-111",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1783:S83-112",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1783:S83-113",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1783-peace",
+          "child": false
+        },
+        {
           "id": "group:general-clark-letter-on-the-expedition-from-the-ohio-november-1782",
           "kind": "document_group",
           "label": "Richmond, December 1782: an extract of a letter from General Clark, dated Lincoln, 27 November 1782, on his expedition from the Ohio",
@@ -88833,7 +89143,8 @@
             "group:basseterre-report-of-a-peace-concluded-january-1783",
             "group:brig-ranger-and-mr-townshends-letter-to-the-lord-mayor-december-1782",
             "group:the-articles-of-peace-and-the-cessation-of-arms-printed-march-may-1783",
-            "group:lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783"
+            "group:lisbon-treaty-of-commerce-with-the-united-states-nearly-agreed-april-1783",
+            "group:new-york-report-the-brig-lucy-and-the-frigate-mercury-july-1783"
           ]
         },
         {
@@ -89116,6 +89427,17 @@
             "obs:expansion-1783:S83-099",
             "obs:expansion-1783:S83-102",
             "obs:expansion-1783:S83-103"
+          ]
+        },
+        {
+          "id": "group:new-york-report-the-brig-lucy-and-the-frigate-mercury-july-1783",
+          "label": "New York, 23 July 1783: 'Last Monday arrived here the brig Lucy ... from St. Kitts' with a report of the definitive treaty, and 'his majesty's frigate Mercury' from Spithead",
+          "category": "1783-peace",
+          "members": [
+            "obs:expansion-1783:S83-110",
+            "obs:expansion-1783:S83-111",
+            "obs:expansion-1783:S83-112",
+            "obs:expansion-1783:S83-113"
           ]
         },
         {
@@ -89859,6 +90181,74 @@
           "transcription": "RevX",
           "summary": "The Gazette of the State of South-Carolina prints the Lisbon paragraph on a treaty of commerce.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1783:S83-110",
+          "legacy_id": "S83-110",
+          "node": "sn83021127",
+          "page_id": "page:sn83021127:1783-07-26:1:3",
+          "issue_id": "issue:sn83021127:1783-07-26:1",
+          "date": "1783-07-26",
+          "page": 3,
+          "excerpt": "July 23. Last Monday arrived here the brig Lucy, captain Van Duerfen, in twelve days from St. Kitts, bound to Connecticut; from which a report prevails, that the day before he failed, dispatches were received from Barbadoes, with an account",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021127/1783-07-26_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1783__evidence__S83-110.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "New York, July 1783: a report of the brig Lucy from St. Kitts, with word of the definitive treaty, and of the frigate Mercury from Spithead.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1783:S83-111",
+          "legacy_id": "S83-111",
+          "node": "sn84023855",
+          "page_id": "page:sn84023855:1783-08-05:1:3",
+          "issue_id": "issue:sn84023855:1783-08-05:1",
+          "date": "1783-08-05",
+          "page": 3,
+          "excerpt": "NEW-YORK, July 23. Last Monday arrived here the brig Lucy Captain Van Duerfen, in twelve days from St. Kitts, bound to Connecticut; from which a report prevails, that the day before he failed, dispatches were received from Barbadoes, with an",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84023855/1783-08-05_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1783__evidence__S83-111.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Connecticut Courant prints the New York report of the brig Lucy and the frigate Mercury.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1783:S83-112",
+          "legacy_id": "S83-112",
+          "node": "sn84026945",
+          "page_id": "page:sn84026945:1783-08-06:1:3",
+          "issue_id": "issue:sn84026945:1783-08-06:1",
+          "date": "1783-08-06",
+          "page": 3,
+          "excerpt": "July 23. Last Monday arrived here the brig Lucy, Captain Van Duerfen, in twelve days from St. Kitt's, bound to Connecticut; from which a report prevails, that the day before he failed, dispatches were received from Barbadoes, with an account",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn84026945/1783-08-06_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1783__evidence__S83-112.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Gazette of the State of South-Carolina prints the New York report of the brig Lucy and the frigate Mercury.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1783:S83-113",
+          "legacy_id": "S83-113",
+          "node": "sn83025585",
+          "page_id": "page:sn83025585:1783-08-09:1:2",
+          "issue_id": "issue:sn83025585:1783-08-09:1",
+          "date": "1783-08-09",
+          "page": 2,
+          "excerpt": "July 23. Last Monday arrived from Spithead, his Majesty's frigate Mercury, of 28 guns, commanded by Henry Edwin Stanhope, Esq. This ship had been 6 weeks under orders to bring government's dispatches to their Excellencies the General and Admiral. She sailed the third day of June.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025585/1783-08-09_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1783__evidence__S83-113.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New-Hampshire Gazette prints the New York report of the brig Lucy and the frigate Mercury.",
+          "note": "The New-Hampshire Gazette prints only the part on the frigate Mercury (C-02)."
         },
         {
           "id": "obs:expansion-1783:S83-001",
@@ -155953,6 +156343,74 @@
           "child": false
         },
         {
+          "id": "group:new-york-report-the-spanish-posts-at-the-natchez-february-1798",
+          "kind": "message_group",
+          "label": "New York, 13 February 1798: 'IMPORTANT and SATISFACTORY. By a gentleman of respectability, and of this City, arrived yesterday, in 18 days from New Orleans'",
+          "definition": "Printings of a New York paragraph of 13 February 1798, headed 'IMPORTANT and SATISFACTORY': 'By a gentleman of respectability, and of this City, arrived yesterday, in 18 days from New Orleans, we have the pleasing information, that the Spanish Posts at the Natchez, and other places within our territory, on the river Mississippi, had been at length given up to the American Commissioner, and the troops under his direction ...'. A New York report of a traveller's news, as the papers reprinted it; the New Hampshire Gazette prints it without the heading.",
+          "members": [
+            {
+              "id": "obs:expansion-1798:S98-120",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1798:S98-122",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1798:S98-123",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1798:S98-126",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1798-measures",
+          "child": false
+        },
+        {
+          "id": "group:moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798",
+          "kind": "message_group",
+          "label": "New Orleans, 15 January 1798: the Moniteur de la Louisiane: 'The Governor of this province having received by the last Courier the orders of his Majesty to evacuate the forts of Walnut Hills and Natchez'",
+          "definition": "Printings of a translated extract from the Moniteur de la Louisiane, printed at New Orleans, dated 15 January 1798: 'The Governor of this province having received by the last Courier the orders of his Majesty to evacuate the forts of Walnut Hills and Natchez, immediately took proper measures for their execution, having sent off the necessary advices for Natchez.' A New Orleans paper's notice, as the American papers reprinted it; the Mirror prints it under its own heading, 'GOOD NEWS! New-Orleans, [Spanish Territories] Jan. 15.' (C-02).",
+          "members": [
+            {
+              "id": "obs:expansion-1798:S98-121",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1798:S98-124",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1798:S98-125",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1798:S98-127",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1798-measures",
+          "child": false
+        },
+        {
           "id": "group:president-proclamation-of-23-march-1798-for-a-day-of-humiliation-fasting-and-prayer",
           "kind": "document_group",
           "label": "The President's proclamation of 23 March 1798 for a day of solemn humiliation, fasting and prayer",
@@ -156626,9 +157084,11 @@
         },
         {
           "id": "1798-measures",
-          "label": "The President, Congress and the navy",
+          "label": "The President, Congress, the navy and the frontier",
           "stories": [
             "group:the-senate-on-a-motion-to-repeal-the-stamp-duty-january-1798",
+            "group:new-york-report-the-spanish-posts-at-the-natchez-february-1798",
+            "group:moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798",
             "group:president-proclamation-of-23-march-1798-for-a-day-of-humiliation-fasting-and-prayer",
             "group:the-senate-a-motion-on-removing-aliens-april-1798",
             "group:act-more-effectually-to-protect-the-commerce-and-coasts-may-1798",
@@ -156685,6 +157145,28 @@
             "obs:expansion-1798:S98-011",
             "obs:expansion-1798:S98-012",
             "obs:expansion-1798:S98-016"
+          ]
+        },
+        {
+          "id": "group:new-york-report-the-spanish-posts-at-the-natchez-february-1798",
+          "label": "New York, 13 February 1798: 'IMPORTANT and SATISFACTORY. By a gentleman of respectability, and of this City, arrived yesterday, in 18 days from New Orleans'",
+          "category": "1798-measures",
+          "members": [
+            "obs:expansion-1798:S98-120",
+            "obs:expansion-1798:S98-122",
+            "obs:expansion-1798:S98-123",
+            "obs:expansion-1798:S98-126"
+          ]
+        },
+        {
+          "id": "group:moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798",
+          "label": "New Orleans, 15 January 1798: the Moniteur de la Louisiane: 'The Governor of this province having received by the last Courier the orders of his Majesty to evacuate the forts of Walnut Hills and Natchez'",
+          "category": "1798-measures",
+          "members": [
+            "obs:expansion-1798:S98-121",
+            "obs:expansion-1798:S98-124",
+            "obs:expansion-1798:S98-125",
+            "obs:expansion-1798:S98-127"
           ]
         },
         {
@@ -157830,6 +158312,142 @@
           "transcription": "RevX",
           "summary": "The Kentucky Gazette prints the report of the Senate's vote on the stamp duty.",
           "note": "The Kentucky Gazette prints the vote under the dateline 'PHILADELPHIA, January 22.', opens it 'On Thursday' where the other papers print 'Yesterday', and spells the senator 'Mr. Green'."
+        },
+        {
+          "id": "obs:expansion-1798:S98-120",
+          "legacy_id": "S98-120",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1798-02-14:1:3",
+          "issue_id": "issue:sn83025881:1798-02-14:1",
+          "date": "1798-02-14",
+          "page": 3,
+          "excerpt": "NEW-YORK, February 13. IMPORTANT and SATISFACTORY. By a gentleman of respectability, and of this City, arrived yesterday, in 18 days from New Orleans, we have the pleasing information, that the Spanish Posts at the Natchez, and other places within our",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1798-02-14_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1798__evidence__S98-120.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "New York, February 1798: a report, by a gentleman from New Orleans, that the Spanish posts at the Natchez had been given up to the American commissioner.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1798:S98-122",
+          "legacy_id": "S98-122",
+          "node": "sn83025525",
+          "page_id": "page:sn83025525:1798-02-27:1:3",
+          "issue_id": "issue:sn83025525:1798-02-27:1",
+          "date": "1798-02-27",
+          "page": 3,
+          "excerpt": "NEWYORK, FEB. 12. Important and Satisfactory. By a gentleman of respectability, and of this city, arrived yesterday, in 18 days from N. Orleans, we have the pleasing information, that the Spanish posts at the Natchez, and other places within our",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025525/1798-02-27_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1798__evidence__S98-122.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Mirror prints the New York report on the Spanish posts at the Natchez.",
+          "note": "Dates the report 'NEWYORK, FEB. 12.', where the Gazette of the United States and the Kentucky Gazette print February 13."
+        },
+        {
+          "id": "obs:expansion-1798:S98-123",
+          "legacy_id": "S98-123",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1798-02-28:1:2",
+          "issue_id": "issue:sn83025588:1798-02-28:1",
+          "date": "1798-02-28",
+          "page": 2,
+          "excerpt": "FEBRUARY 14. By a gentleman of respectability, and of this city; arrived on Monday, in 18 days from New-Orleans, we have the pleasing information, that the Spanish posts at the Natchez and other places within our Territory, on the river",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1798-02-28_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1798__evidence__S98-123.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints the New York report on the Spanish posts at the Natchez.",
+          "note": "Prints the report without the heading, under the date line 'FEBRUAY 14.' (so printed), and has 'arrived on Monday' where the others have 'arrived yesterday'."
+        },
+        {
+          "id": "obs:expansion-1798:S98-126",
+          "legacy_id": "S98-126",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1798-03-21:1:2",
+          "issue_id": "issue:sn82014782:1798-03-21:1",
+          "date": "1798-03-21",
+          "page": 2,
+          "excerpt": "NEW-YORK, February 13. IMPORTANT AND SATISFACTORY. By a gentleman of respectability, and of this City, arrived yesterday in 18 days from New-Orleans, we have the pleasing information that the Spanish Posts at the Natchez and other places within our Territory",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1798-03-21_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1798__evidence__S98-126.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints the New York report on the Spanish posts at the Natchez.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1798:S98-121",
+          "legacy_id": "S98-121",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1798-02-16:1:3",
+          "issue_id": "issue:sn83025881:1798-02-16:1",
+          "date": "1798-02-16",
+          "page": 3,
+          "excerpt": "Translated Extract from a paper entitled Moneur de la Louisiane , printed at New Orleans, dated Jan. 15, 1798. The Governor of this province having received by the last Courier the orders of his Majesty to evacuate the forts of",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1798-02-16_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1798__evidence__S98-121.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "New Orleans, January 1798: a notice in the Moniteur de la Louisiane of the Governor's orders to evacuate the forts of Walnut Hills and Natchez.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1798:S98-124",
+          "legacy_id": "S98-124",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1798-02-28:1:3",
+          "issue_id": "issue:sn83025588:1798-02-28:1",
+          "date": "1798-02-28",
+          "page": 3,
+          "excerpt": "PHILADELPHIA, Feb. 16. Translated Extract from a Paper entitled Moteur de la Louisiane , printed at New Orleans, dated, Jan. 15, 1798. \"The Governor of this province having received by the last Courier the orders of his Majesty to evacuate",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1798-02-28_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1798__evidence__S98-124.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints the Moniteur de la Louisiane's notice on the forts of Walnut Hills and Natchez.",
+          "note": "Prints the extract under 'PHILADELPHIA, Feb. 16.', the dateline of the paper it was taken from, and names the paper 'Moniteur de la Louisiana'."
+        },
+        {
+          "id": "obs:expansion-1798:S98-125",
+          "legacy_id": "S98-125",
+          "node": "sn83025525",
+          "page_id": "page:sn83025525:1798-03-06:1:3",
+          "issue_id": "issue:sn83025525:1798-03-06:1",
+          "date": "1798-03-06",
+          "page": 3,
+          "excerpt": "New-Orleans, [Spanish Territory] Jan. 15. THE Governor of this province having received by the last Courier the orders of his Majesty to evacuate the forts at Walnut-Hills and Natchez, immediately took proper measures for their execution, having sent off the necessary advice to the Natchez.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025525/1798-03-06_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1798__evidence__S98-125.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Mirror prints the Moniteur de la Louisiane's notice on the forts of Walnut Hills and Natchez.",
+          "note": "Prints the notice under its own heading, 'GOOD NEWS! New-Orleans, [Spanish Territories] Jan. 15.', without naming the Moniteur de la Louisiane, with 'forts at Walnut-Hills' and 'advices to the Natchez' (C-02)."
+        },
+        {
+          "id": "obs:expansion-1798:S98-127",
+          "legacy_id": "S98-127",
+          "node": "sn82014782",
+          "page_id": "page:sn82014782:1798-04-04:1:3",
+          "issue_id": "issue:sn82014782:1798-04-04:1",
+          "date": "1798-04-04",
+          "page": 3,
+          "excerpt": "Translated extract from a paper, intitled Moniteur de la Louisiane , printed at New-Orleans, dated January 15, 1798. “The governor of this province having received by the last courier the orders of his majesty to evacuate the forts of Walnut",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn82014782/1798-04-04_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1798__evidence__S98-127.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Kentucky Gazette prints the Moniteur de la Louisiane's notice on the forts of Walnut Hills and Natchez.",
+          "note": "Spells the fort 'Natches'."
         },
         {
           "id": "obs:expansion-1798:S98-021",
@@ -162669,6 +163287,40 @@
           "child": false
         },
         {
+          "id": "group:report-mr-adams-has-left-berlin-for-dresden-1799",
+          "kind": "message_group",
+          "label": "September 1799: 'Mr. Adams, the American minister, has left Berlin and proceeded to Dresden'",
+          "definition": "Printings of a sentence of the news of September 1799: 'Mr. Adams, the American minister, has left Berlin and proceeded to Dresden.' A news paragraph as the papers printed it: a paragraph of its own in the Gazette of the United States, the Providence Journal and the New Hampshire Gazette; in the Portland Gazette, the sentence that closes a Boston summary of the London news to 12 August.",
+          "members": [
+            {
+              "id": "obs:expansion-1799:S99-202",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-203",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-204",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-205",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1799-america",
+          "child": false
+        },
+        {
           "id": "group:havana-circular-on-the-admission-of-neutrals-october-1799",
           "kind": "message_group",
           "label": "New York, 9 November 1799: a circular letter from the American consul at Havana: 'I hasten to inform you, that a decree was yesterday passed ... for the admission of neutrals'",
@@ -163006,6 +163658,40 @@
             },
             {
               "id": "obs:expansion-1799:S99-092",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1799-continent",
+          "child": false
+        },
+        {
+          "id": "group:london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799",
+          "kind": "message_group",
+          "label": "London, June 1799: 'The treasures plundered from Rome, Naples, and Tuscany, by the French, are stated to have fallen into the hands of the Austrians'",
+          "definition": "Printings of a sentence of the London news of June 1799: 'The treasures plundered from Rome, Naples, and Tuscany, by the French, are stated to have fallen into the hands of the Austrians at Parma.' A paragraph of the London news, as the papers reprinted it; the Portland Gazette and the New Hampshire Gazette end it at 'the Austrians', and the Providence Journal prints 'at Parmo'.",
+          "members": [
+            {
+              "id": "obs:expansion-1799:S99-190",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-191",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-192",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-193",
               "roles": [
                 "report"
               ]
@@ -163380,6 +164066,74 @@
             },
             {
               "id": "obs:expansion-1799:S99-154",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1799-continent",
+          "child": false
+        },
+        {
+          "id": "group:milan-report-general-ott-dislodged-near-pontremoli-june-1799",
+          "kind": "message_group",
+          "label": "Milan, 12 June 1799: 'After Moreau had detached Generals Victor and Grenier to Genoa ... They then dislodged General Ott, near Pontremoli'",
+          "definition": "Printings of a dated paragraph of the Milan news of June 1799, under 'June 12.': 'After Moreau had detached Generals Victor and Grenier to Genoa, Gen. V. marched to the valley of Taro, to co-operate with Macdonald. They then dislodged General Ott, near Pontremoli, and beat him back as far as Parma.' A paragraph of the news from Italy, as the London papers gave it and the papers reprinted it, after the paragraph on General Bellegarde; the Gazette of the United States prints 'valley of Tora' and 'General Otto', and the Portland Gazette 'Grenter'.",
+          "members": [
+            {
+              "id": "obs:expansion-1799:S99-194",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-196",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-198",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-200",
+              "roles": [
+                "report"
+              ]
+            }
+          ],
+          "category": "1799-continent",
+          "child": false
+        },
+        {
+          "id": "group:verona-report-suwarrow-hastening-towards-genoa-june-1799",
+          "kind": "message_group",
+          "label": "Verona, 14 June 1799: 'In order to cover Macdonald's march by Sarzana to Genoa' ... 'Suwarrow is hastening with the main army towards Genoa'",
+          "definition": "Printings of a paragraph of the news from Italy dated Verona, 14 June 1799: 'In order to cover Macdonald's march by Sarzana to Genoa, Gen. Montrichard was obliged to make a movement with 8000 men against Modena; but Gen. Hohenzollern has repulsed him. General Otto is now collecting his whole force to encounter the enemy; and General Suwarow is hastening with the main army towards Genoa, to support him.' A paragraph of the news from Italy, as the London papers gave it and the papers reprinted it; the New Hampshire Gazette and the Providence Journal print 'has repulsed General Ott, who is now collecting', and the Portland Gazette prints the paragraph abridged (C-02).",
+          "members": [
+            {
+              "id": "obs:expansion-1799:S99-195",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-197",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-199",
+              "roles": [
+                "report"
+              ]
+            },
+            {
+              "id": "obs:expansion-1799:S99-201",
               "roles": [
                 "report"
               ]
@@ -163954,6 +164708,7 @@
             "group:fort-washington-report-from-detroit-may-1799",
             "group:boston-report-the-president-names-fort-independent-august-1799",
             "group:new-york-report-commercial-news-by-the-boyne-august-1799",
+            "group:report-mr-adams-has-left-berlin-for-dresden-1799",
             "group:havana-circular-on-the-admission-of-neutrals-october-1799",
             "group:president-s-speech-to-congress-december-1799"
           ]
@@ -163970,6 +164725,7 @@
             "group:london-report-a-letter-from-milan-on-the-fate-of-italy-1799",
             "group:london-report-the-capture-of-genoa-june-1799",
             "group:london-report-the-hamburg-mail-and-the-defeat-of-the-french-in-italy-june-1799",
+            "group:london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799",
             "group:frontiers-of-swabia-report-the-archduke-at-kloten-june-1799",
             "group:lower-elbe-report-the-vienna-court-gazette-of-19-june-1799",
             "group:milan-report-bellegarde-gone-to-piedmont-june-1799",
@@ -163981,6 +164737,8 @@
             "group:vienna-report-count-melas-writes-june-1799",
             "group:vienna-report-the-archduke-before-zurich-june-1799",
             "group:vienna-report-the-junction-of-macdonald-with-moreau-june-1799",
+            "group:milan-report-general-ott-dislodged-near-pontremoli-june-1799",
+            "group:verona-report-suwarrow-hastening-towards-genoa-june-1799",
             "group:zurich-dispatch-the-two-armies-totally-destroyed-september-1799",
             "group:donaueschingen-report-the-austrians-advancing-october-1799",
             "group:lindau-report-the-bridge-over-the-rhine-september-1799"
@@ -164233,6 +164991,17 @@
           ]
         },
         {
+          "id": "group:london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799",
+          "label": "London, June 1799: 'The treasures plundered from Rome, Naples, and Tuscany, by the French, are stated to have fallen into the hands of the Austrians'",
+          "category": "1799-continent",
+          "members": [
+            "obs:expansion-1799:S99-190",
+            "obs:expansion-1799:S99-191",
+            "obs:expansion-1799:S99-192",
+            "obs:expansion-1799:S99-193"
+          ]
+        },
+        {
           "id": "group:london-report-sweden-joins-the-coalition-june-1799",
           "label": "London, June 1799: 'The King of Sweden, in quality of Duke of Pomerania, has, by his Minister, Baron Bildt, delivered to the Congress of Ratisbon a note'",
           "category": "1799-seas",
@@ -164387,6 +165156,28 @@
           ]
         },
         {
+          "id": "group:milan-report-general-ott-dislodged-near-pontremoli-june-1799",
+          "label": "Milan, 12 June 1799: 'After Moreau had detached Generals Victor and Grenier to Genoa ... They then dislodged General Ott, near Pontremoli'",
+          "category": "1799-continent",
+          "members": [
+            "obs:expansion-1799:S99-194",
+            "obs:expansion-1799:S99-196",
+            "obs:expansion-1799:S99-198",
+            "obs:expansion-1799:S99-200"
+          ]
+        },
+        {
+          "id": "group:verona-report-suwarrow-hastening-towards-genoa-june-1799",
+          "label": "Verona, 14 June 1799: 'In order to cover Macdonald's march by Sarzana to Genoa' ... 'Suwarrow is hastening with the main army towards Genoa'",
+          "category": "1799-continent",
+          "members": [
+            "obs:expansion-1799:S99-195",
+            "obs:expansion-1799:S99-197",
+            "obs:expansion-1799:S99-199",
+            "obs:expansion-1799:S99-201"
+          ]
+        },
+        {
           "id": "group:hamburg-report-the-english-blockade-the-north-sea-ports-june-1799",
           "label": "Hamburg, 29 June 1799: 'The English have closely blockaded all the ports of the North Seas'",
           "category": "1799-seas",
@@ -164429,6 +165220,17 @@
             "obs:expansion-1799:S99-157",
             "obs:expansion-1799:S99-158",
             "obs:expansion-1799:S99-159"
+          ]
+        },
+        {
+          "id": "group:report-mr-adams-has-left-berlin-for-dresden-1799",
+          "label": "September 1799: 'Mr. Adams, the American minister, has left Berlin and proceeded to Dresden'",
+          "category": "1799-america",
+          "members": [
+            "obs:expansion-1799:S99-202",
+            "obs:expansion-1799:S99-203",
+            "obs:expansion-1799:S99-204",
+            "obs:expansion-1799:S99-205"
           ]
         },
         {
@@ -165141,6 +165943,74 @@
           "note": "Same item as the other printings."
         },
         {
+          "id": "obs:expansion-1799:S99-202",
+          "legacy_id": "S99-202",
+          "node": "sn83016063",
+          "page_id": "page:sn83016063:1799-09-30:1:3",
+          "issue_id": "issue:sn83016063:1799-09-30:1",
+          "date": "1799-09-30",
+          "page": 3,
+          "excerpt": "Mr. Adams, the American minister, has left Berlin and proceeded to Dresden.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83016063/1799-09-30_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-202.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "September 1799: a report that Mr. Adams, the American minister at Berlin, had left for Dresden.",
+          "note": "Earliest printing found. The sentence closes a run of news, a Boston summary of the London news to 12 August (a digest), not set as a paragraph of its own."
+        },
+        {
+          "id": "obs:expansion-1799:S99-203",
+          "legacy_id": "S99-203",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1799-10-01:1:2",
+          "issue_id": "issue:sn83025588:1799-10-01:1",
+          "date": "1799-10-01",
+          "page": 2,
+          "excerpt": "Mr. Adams, the American minister, has left Berlin and proceeded to Dresden.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1799-10-01_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-203.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints the sentence on Mr. Adams leaving Berlin for Dresden.",
+          "note": "Prints the sentence as a paragraph of its own."
+        },
+        {
+          "id": "obs:expansion-1799:S99-204",
+          "legacy_id": "S99-204",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1799-10-02:1:3",
+          "issue_id": "issue:sn83025881:1799-10-02:1",
+          "date": "1799-10-02",
+          "page": 3,
+          "excerpt": "Mr. Adams, the American minister, has left Berlin and proceeded to Dresden.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1799-10-02_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-204.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Gazette of the United States prints the sentence on Mr. Adams leaving Berlin for Dresden.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1799:S99-205",
+          "legacy_id": "S99-205",
+          "node": "sn83021629",
+          "page_id": "page:sn83021629:1799-10-09:1:3",
+          "issue_id": "issue:sn83021629:1799-10-09:1",
+          "date": "1799-10-09",
+          "page": 3,
+          "excerpt": "Mr. Adams, the American minister, has left Berlin, and proceeded to Dresden.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021629/1799-10-09_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-205.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Providence Journal prints the sentence on Mr. Adams leaving Berlin for Dresden.",
+          "note": "Same item as the other printings."
+        },
+        {
           "id": "obs:expansion-1799:S99-164",
           "legacy_id": "S99-164",
           "node": "sn83025881",
@@ -165836,6 +166706,74 @@
           "transcription": "RevX",
           "summary": "The Providence Journal prints the London report of the Hamburg mail.",
           "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1799:S99-190",
+          "legacy_id": "S99-190",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1799-08-06:1:2",
+          "issue_id": "issue:sn83025881:1799-08-06:1",
+          "date": "1799-08-06",
+          "page": 2,
+          "excerpt": "The treasures plundered from Rome, Naples, and Tuscany, by the French, are stated to have fallen into the hands of the Austrians at Parma.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1799-08-06_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-190.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "London, June 1799: a report that the treasures the French took from Rome, Naples and Tuscany had fallen into the hands of the Austrians.",
+          "note": "Earliest printing found."
+        },
+        {
+          "id": "obs:expansion-1799:S99-191",
+          "legacy_id": "S99-191",
+          "node": "sn83016063",
+          "page_id": "page:sn83016063:1799-08-12:1:2",
+          "issue_id": "issue:sn83016063:1799-08-12:1",
+          "date": "1799-08-12",
+          "page": 2,
+          "excerpt": "The treasures plundered from Rome, Naples, and Tuscany, by the French, are stated to have fallen into the hands of the Austrians.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83016063/1799-08-12_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-191.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Jenks's Portland Gazette prints the London sentence on the plundered treasures.",
+          "note": "Ends the sentence at 'the Austrians', without 'at Parma', run in after a dash."
+        },
+        {
+          "id": "obs:expansion-1799:S99-192",
+          "legacy_id": "S99-192",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1799-08-13:1:3",
+          "issue_id": "issue:sn83025588:1799-08-13:1",
+          "date": "1799-08-13",
+          "page": 3,
+          "excerpt": "The treasures plundered from Rome, Naples and Tuscany, by the French, are stated to have fallen into the hands of the Austrians.—¶",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1799-08-13_1_3.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-192.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints the London sentence on the plundered treasures.",
+          "note": "Ends the sentence at 'the Austrians', without 'at Parma', and adds, after a pointing hand, 'We believe these are facts.'"
+        },
+        {
+          "id": "obs:expansion-1799:S99-193",
+          "legacy_id": "S99-193",
+          "node": "sn83021629",
+          "page_id": "page:sn83021629:1799-08-14:1:1",
+          "issue_id": "issue:sn83021629:1799-08-14:1",
+          "date": "1799-08-14",
+          "page": 1,
+          "excerpt": "The treasures plundered from Rome, Naples and Tuscany, by the French, are stated to have fallen into the hands of the Austrians at Parma.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021629/1799-08-14_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-193.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Providence Journal prints the London sentence on the plundered treasures.",
+          "note": "Prints 'at Parmo' (so printed)."
         },
         {
           "id": "obs:expansion-1799:S99-103",
@@ -166589,6 +167527,143 @@
           "transcription": "RevX",
           "summary": "The Providence Journal prints the Vienna report on Macdonald's junction.",
           "note": "Same item as the other printings. Prints the paragraph under 'Junction of Macdonald with Moreau.', and 'on the sea coast, in his march' (scan)."
+        },
+        {
+          "id": "obs:expansion-1799:S99-194",
+          "legacy_id": "S99-194",
+          "node": "sn83016063",
+          "page_id": "page:sn83016063:1799-08-26:1:2",
+          "issue_id": "issue:sn83016063:1799-08-26:1",
+          "date": "1799-08-26",
+          "page": 2,
+          "excerpt": "After Moreau had detach ed Gcnerats Vittor and Grenter to Genoa, Gen. Vidor marched to the valley of Taro, to cooperate with Mac donald. They then diflodged General Ott near Pontremoli, and beat him back as far as Parma.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83016063/1799-08-26_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-194.jpg"
+          ],
+          "transcription": "CA",
+          "summary": "Jenks's Portland Gazette prints the Milan paragraph of 12 June on General Ott near Pontremoli.",
+          "note": "Prints 'Gen. Victor' in full where the others have 'Gen. V.', and 'Grenter' for Grenier. The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page."
+        },
+        {
+          "id": "obs:expansion-1799:S99-196",
+          "legacy_id": "S99-196",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1799-08-26:1:2",
+          "issue_id": "issue:sn83025881:1799-08-26:1",
+          "date": "1799-08-26",
+          "page": 2,
+          "excerpt": "June 12. After Moreau had detached Generals Victor and Grenier to Genoa, Gen. V. marched to the valley of Tora, to co-operate with Macdonald. They then dislodged General Otto, near Pontremoli, and beat him back as far as Parma.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1799-08-26_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-196.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Milan, June 1799: a report that the French under Generals Victor and Grenier dislodged General Ott near Pontremoli.",
+          "note": "Earliest printing found. Prints 'valley of Tora' and 'General Otto', where the other papers have Taro and Ott."
+        },
+        {
+          "id": "obs:expansion-1799:S99-198",
+          "legacy_id": "S99-198",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1799-08-27:1:1",
+          "issue_id": "issue:sn83025588:1799-08-27:1",
+          "date": "1799-08-27",
+          "page": 1,
+          "excerpt": "JUNE 12. After Moreau had detached Generals Victor and Grenier to Genoa, Gen. V. marched to the valley of Taro, to co-operate with Macdonald. They then dislodged General Ott, near Pontremoli, and beat him back as far as Parma.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1799-08-27_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-198-1.jpg",
+            "assets/story_discovery_1799__evidence__S99-198-2.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints the Milan paragraph of 12 June on General Ott near Pontremoli.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1799:S99-200",
+          "legacy_id": "S99-200",
+          "node": "sn83021629",
+          "page_id": "page:sn83021629:1799-08-28:1:1",
+          "issue_id": "issue:sn83021629:1799-08-28:1",
+          "date": "1799-08-28",
+          "page": 1,
+          "excerpt": "June 12. After Moreau had detached generals Victor and Grenier to Genoa, Gen. V. marched to the valley of Taro, to co-operate with Macdonald. They then dislodged Gen. Ott, near Pontremoli, and beat him back as far as Parma.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021629/1799-08-28_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-200.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Providence Journal prints the Milan paragraph of 12 June on General Ott near Pontremoli.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1799:S99-195",
+          "legacy_id": "S99-195",
+          "node": "sn83016063",
+          "page_id": "page:sn83016063:1799-08-26:1:2",
+          "issue_id": "issue:sn83016063:1799-08-26:1",
+          "date": "1799-08-26",
+          "page": 2,
+          "excerpt": "Gen. Suwar row is haftening with the main army towards Genoa, to fupport Gen. Ott, who is coile&ing his whole forces to encounter the enemy.",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83016063/1799-08-26_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-195.jpg"
+          ],
+          "transcription": "CA",
+          "summary": "Jenks's Portland Gazette prints the Verona paragraph of 14 June.",
+          "note": "Prints the paragraph abridged: 'Gen. Suwarrow is hastening with the main army towards Genoa, to support Gen. Ott, who is collecting his whole forces to encounter the enemy' (C-02). The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page."
+        },
+        {
+          "id": "obs:expansion-1799:S99-197",
+          "legacy_id": "S99-197",
+          "node": "sn83025881",
+          "page_id": "page:sn83025881:1799-08-26:1:2",
+          "issue_id": "issue:sn83025881:1799-08-26:1",
+          "date": "1799-08-26",
+          "page": 2,
+          "excerpt": "VERONA, June 14. In order to cover Macdonald's march by Sarzana to Genoa, Gen. Montichard was obliged to make a movement with 8000 men against Modena; but Gen. Hohenzollern has repulsed him. General Otto is now collecting his whole force to encounter the enemy;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025881/1799-08-26_1_2.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-197.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "Verona, June 1799: a report of the armies' movements towards Genoa.",
+          "note": "Earliest printing found. Prints 'has repulsed him. General Otto is now collecting', where the New Hampshire Gazette and the Providence Journal have 'has repulsed General Ott, who is now collecting'."
+        },
+        {
+          "id": "obs:expansion-1799:S99-199",
+          "legacy_id": "S99-199",
+          "node": "sn83025588",
+          "page_id": "page:sn83025588:1799-08-27:1:1",
+          "issue_id": "issue:sn83025588:1799-08-27:1",
+          "date": "1799-08-27",
+          "page": 1,
+          "excerpt": "VERONA, JUNE 14 In order to cover Macdonald's march by Sarzana to Genoa, Gen. Montrichard was obliged to make a movement with 8000 men against Modena; but Gen. Hohenzollern has repulsed General Ott, who is now collecting his whole force to encounter the enemy;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83025588/1799-08-27_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-199.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The New Hampshire Gazette prints the Verona paragraph of 14 June.",
+          "note": "Same item as the other printings."
+        },
+        {
+          "id": "obs:expansion-1799:S99-201",
+          "legacy_id": "S99-201",
+          "node": "sn83021629",
+          "page_id": "page:sn83021629:1799-08-28:1:1",
+          "issue_id": "issue:sn83021629:1799-08-28:1",
+          "date": "1799-08-28",
+          "page": 1,
+          "excerpt": "VERONA June 14. In order to cover Macdonald's march by Sarzana to Genoa, Gen. Montrichard was obliged to make a movement with 3000 men against Modena; but Gen. Hohenzollern has repulsed Gen. Ott, who is now collecting his whole force to encounter the enemy;",
+          "source_url": "https://huggingface.co/datasets/RevolutionCrossroads/loc_chronicling_america_1770-1810/resolve/0b97906ad32e269376872934820357fc333151d8/media/sn83021629/1799-08-28_1_1.pdf?download=true",
+          "scans": [
+            "assets/story_discovery_1799__evidence__S99-201.jpg"
+          ],
+          "transcription": "RevX",
+          "summary": "The Providence Journal prints the Verona paragraph of 14 June.",
+          "note": "Same item as the other printings."
         },
         {
           "id": "obs:expansion-1799:S99-168",

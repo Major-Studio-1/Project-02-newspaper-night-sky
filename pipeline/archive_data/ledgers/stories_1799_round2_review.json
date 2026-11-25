@@ -1,0 +1,163 @@
+{
+ "findings": {
+  "S99-190": [
+   "Scan matches the excerpt; the sentence is a paragraph of its own and ends 'at Parma'."
+  ],
+  "S99-191": [
+   "Scan matches the excerpt; the sentence is run in after a dash and ends at 'the Austrians', without 'at Parma'."
+  ],
+  "S99-192": [
+   "Scan matches the excerpt; the sentence is run in after the Milan sentence and ends at 'the Austrians', followed by a dash, a pointing hand and 'We believe these are facts.' The transcription renders the pointing hand as '¶'."
+  ],
+  "S99-193": [
+   "Scan matches the excerpt except the last word: the print misspells the town 'Parmo' (read again on the page image), which the transcription silently corrects to 'Parma'. The sentence is a paragraph of its own."
+  ],
+  "S99-194": [
+   "The CA text is garbled ('Gcnerats', 'Vittor', 'Vidor', 'diflodged') but changes no fact. The print gives 'Gen. Victor' in full where the other papers have 'Gen. V.', and spells the second general 'Grenter' (read again on the page image) where the others print Grenier."
+  ],
+  "S99-195": [
+   "The CA text is garbled ('haftening', 'fupport', 'coile&ing') but changes no fact. The print confirms the abridged paragraph, run in after the dateline 'VERONA, JUNE 14.'; it has 'forces' where the other papers have 'force'."
+  ],
+  "S99-196": [
+   "Scan matches the excerpt. The print itself reads 'valley of Tora' and 'General Otto' where the other papers have Taro and Ott: printed differences, not transcription errors."
+  ],
+  "S99-197": [
+   "Scan matches the excerpt except that the transcription drops a faint 'r' from 'Montrichard'. The print's 'has repulsed him. General Otto is now collecting' differs from NHG and PJ ('has repulsed General Ott, who is now collecting'): a printed difference."
+  ],
+  "S99-198": [
+   "Scan matches the excerpt; the paragraph runs from the foot of the first column (crop 1) to the top of the second (crop 2)."
+  ],
+  "S99-199": [
+   "Scan matches the excerpt."
+  ],
+  "S99-200": [
+   "Scan matches the excerpt."
+  ],
+  "S99-201": [
+   "Scan reads '8000' men (read again on the page image; the last figure is blotted); the transcription '3000' changes the number. The rest matches."
+  ],
+  "S99-202": [
+   "Scan matches the excerpt; the sentence closes a run of news and is followed by a heavy rule."
+  ],
+  "S99-203": [
+   "Scan matches the excerpt; here the sentence is printed as a short paragraph of its own, not run in with dashes."
+  ],
+  "S99-204": [
+   "Scan matches the excerpt; the sentence stands as a paragraph of its own between two short rules."
+  ],
+  "S99-205": [
+   "Scan matches the excerpt; the sentence stands as a paragraph of its own between two short rules."
+  ]
+ },
+ "crops": {
+  "S99-190": [
+   "S99-190.jpg"
+  ],
+  "S99-191": [
+   "S99-191.jpg"
+  ],
+  "S99-192": [
+   "S99-192.jpg"
+  ],
+  "S99-193": [
+   "S99-193.jpg"
+  ],
+  "S99-194": [
+   "S99-194.jpg"
+  ],
+  "S99-195": [
+   "S99-195.jpg"
+  ],
+  "S99-196": [
+   "S99-196.jpg"
+  ],
+  "S99-197": [
+   "S99-197.jpg"
+  ],
+  "S99-198": [
+   "S99-198-1.jpg",
+   "S99-198-2.jpg"
+  ],
+  "S99-199": [
+   "S99-199.jpg"
+  ],
+  "S99-200": [
+   "S99-200.jpg"
+  ],
+  "S99-201": [
+   "S99-201.jpg"
+  ],
+  "S99-202": [
+   "S99-202.jpg"
+  ],
+  "S99-203": [
+   "S99-203.jpg"
+  ],
+  "S99-204": [
+   "S99-204.jpg"
+  ],
+  "S99-205": [
+   "S99-205.jpg"
+  ]
+ },
+ "boxes": {
+  "S99-192": [
+   [
+    1130,
+    7150,
+    1995,
+    7445
+   ]
+  ]
+ },
+ "notes": {
+  "S99-191": "Ends the sentence at 'the Austrians', without 'at Parma', run in after a dash.",
+  "S99-192": "Ends the sentence at 'the Austrians', without 'at Parma', and adds, after a pointing hand, 'We believe these are facts.'",
+  "S99-193": "Prints 'at Parmo' (so printed).",
+  "S99-194": "Prints 'Gen. Victor' in full where the others have 'Gen. V.', and 'Grenter' for Grenier. The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+  "S99-195": "Prints the paragraph abridged: 'Gen. Suwarrow is hastening with the main army towards Genoa, to support Gen. Ott, who is collecting his whole forces to encounter the enemy' (C-02). The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+  "S99-196": "Prints 'valley of Tora' and 'General Otto', where the other papers have Taro and Ott.",
+  "S99-197": "Prints 'has repulsed him. General Otto is now collecting', where the New Hampshire Gazette and the Providence Journal have 'has repulsed General Ott, who is now collecting'.",
+  "S99-202": "The sentence closes a run of news, a Boston summary of the London news to 12 August (a digest), not set as a paragraph of its own.",
+  "S99-203": "Prints the sentence as a paragraph of its own."
+ },
+ "dispositions": {
+  "method": "Round two of 1799. The sweep check of 24 and 25 November 2026 (X-THIN-SWEEP; outputs/story_discovery_1779/sweep_check_25nov.md) read every passage of the 1799 pages shared word for word by 4 or more papers that no counted opening of round one explains, looked each up in the year's lists and counted it by its own opening words against every page of the year in both transcriptions. It found four items printed by every paper that survives for their weeks (the weeks of July to October, when four papers survive, X-1799-01), which round one's lists did not name; asked, the owner chose on 25 November 2026 to admit them as the rule reads. Every printing was checked against its page scan by AI reviewers (scan_batches/round2.json, SCAN_PROTOCOL.md; verdicts in scan_verdicts/round2*.json).",
+  "selection_rule": "As in round one (Y-THIN as amended, B1, and X-1799-01): an item printed by every newspaper that survives for its weeks is admitted; single paragraphs from runs of news are counted by their own words (C-09). Each of the four is printed by all 4 papers of its weeks.",
+  "items_admitted": {
+   "london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799": [
+    "sweep check 1799, c"
+   ],
+   "milan-report-general-ott-dislodged-near-pontremoli-june-1799": [
+    "sweep check 1799, a3"
+   ],
+   "verona-report-suwarrow-hastening-towards-genoa-june-1799": [
+    "sweep check 1799, b3"
+   ],
+   "report-mr-adams-has-left-berlin-for-dresden-1799": [
+    "sweep check 1799, f"
+   ]
+  },
+  "counted_item_by_item": {
+   "The plundered treasures": "4 of the 4 papers that survive for its weeks (GUS 6 August, PG 12 August, NHG 13 August, PJ 14 August), counted by its own words; the Portland Gazette and the New Hampshire Gazette end the sentence at 'the Austrians', without 'at Parma', and the Providence Journal prints 'at Parmo'.",
+   "Milan, 12 June": "4 of 4 (GUS and PG 26 August, NHG 27 August, PJ 28 August), counted by its own opening; a dated paragraph of the Milan news after the paragraph on General Bellegarde (admitted in round one); the Portland Gazette's page is read in its CA transcription, which garbles it.",
+   "Verona, 14 June": "4 of 4 on the same pages, counted by its own opening; the New Hampshire Gazette and the Providence Journal print 'has repulsed General Ott, who is now collecting' where the Gazette of the United States has 'has repulsed him. General Otto is now collecting', and the Portland Gazette prints the paragraph abridged (C-02).",
+   "Mr. Adams": "4 of 4 (PG 30 September, NHG 1 October, GUS 2 October, PJ 9 October), counted by its own words; in the Portland Gazette the sentence closes a Boston summary of the London news to 12 August (a digest, C-09) and is counted as a printing of the sentence; in the other three it is a paragraph of its own."
+  }
+ },
+ "verdict_summary": {
+  "yes": 16,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 10,
+  "minor_errors": 5,
+  "major_problem": 1,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 15,
+  "manual_box": 1
+ }
+}

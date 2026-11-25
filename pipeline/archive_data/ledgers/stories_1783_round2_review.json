@@ -1,0 +1,58 @@
+{
+ "findings": {
+  "S83-110": [
+   "Scan reads 'the day before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense. The captain's name is printed 'Van Duersen' (long s) and read 'Duerfen', a minor error; the rest matches."
+  ],
+  "S83-111": [
+   "Scan reads 'the day before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense. The captain's name is printed 'Van Duersen' (long s) and read 'Duerfen', a minor error; the rest matches."
+  ],
+  "S83-112": [
+   "Scan reads 'the day before he sailed' with a long s; the transcription 'failed' is a transcription error that changes the sense. The captain's name is printed 'Van Duersen' (long s) and read 'Duerfen', a minor error; the rest matches."
+  ],
+  "S83-113": [
+   "Scan matches the excerpt. The paper prints only the part on the frigate Mercury, opening 'Last Monday arrived from Spithead', with 28 guns and her commander Henry Edwin Stanhope."
+  ]
+ },
+ "crops": {
+  "S83-110": [
+   "S83-110.jpg"
+  ],
+  "S83-111": [
+   "S83-111.jpg"
+  ],
+  "S83-112": [
+   "S83-112.jpg"
+  ],
+  "S83-113": [
+   "S83-113.jpg"
+  ]
+ },
+ "boxes": {},
+ "notes": {},
+ "dispositions": {
+  "method": "Round two of 1783. The sweep check of 24 and 25 November 2026 (X-THIN-SWEEP; outputs/story_discovery_1779/sweep_check_25nov.md) read every passage of the 1783 pages shared word for word by 4 or more papers that no counted opening of round one explains, looked each up in the year's lists and counted it by its own opening words against every page of the year in both transcriptions. It found one item printed by every paper that survives for its weeks, which round one's lists did not name; asked, the owner chose on 25 November 2026 to admit it as the rule reads. Every printing was checked against its page scan by AI reviewers (scan_batches/round2.json, SCAN_PROTOCOL.md; verdicts in scan_verdicts/round2*.json).",
+  "selection_rule": "As in round one (Y-THIN as amended, B1): an item printed by every newspaper that survives for its weeks is admitted. The New York paragraph of 23 July is printed by all 4 papers of its weeks, one of them in part (C-02).",
+  "items_admitted": {
+   "new-york-report-the-brig-lucy-and-the-frigate-mercury-july-1783": [
+    "sweep check 1783, a and lu"
+   ]
+  },
+  "counted_item_by_item": {
+   "The New York report of the brig Lucy and the frigate Mercury": "4 of the 4 papers that survive for its weeks (PP 26 July, CC 5 August, SCG 6 August, NHG 9 August); by its opening (the brig Lucy) 3 of 4, and the New-Hampshire Gazette prints only its part on the frigate Mercury, under the same date 'July 23.', counted with the others as an abridged print (C-02)."
+  }
+ },
+ "verdict_summary": {
+  "yes": 4,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 1,
+  "minor_errors": 0,
+  "major_problem": 3,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 4
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "findings": {
+  "S75-207": [
+   "Scan matches the excerpt, except that the print has 'kill'd', which the transcription modernises to 'killed'."
+  ],
+  "S75-208": [
+   "Scan matches the excerpt."
+  ],
+  "S75-209": [
+   "Scan matches the excerpt. This paper prints the dateline 'CAMBRIDGE, August 3.' and 'Bunker's Hill'."
+  ],
+  "S75-210": [
+   "Scan matches the excerpt."
+  ],
+  "S75-211": [
+   "Scan matches the excerpt; the print spells 'Bunkers hill' without an apostrophe."
+  ],
+  "S75-212": [
+   "Scan matches the excerpt."
+  ]
+ },
+ "crops": {
+  "S75-207": [
+   "S75-207.jpg"
+  ],
+  "S75-208": [
+   "S75-208.jpg"
+  ],
+  "S75-209": [
+   "S75-209.jpg"
+  ],
+  "S75-210": [
+   "S75-210.jpg"
+  ],
+  "S75-211": [
+   "S75-211.jpg"
+  ],
+  "S75-212": [
+   "S75-212.jpg"
+  ]
+ },
+ "boxes": {},
+ "notes": {
+  "S75-209": "Prints the dateline 'CAMBRIDGE, August 3.' above the paragraph; the other papers print it without one, in a run of the camp's news."
+ },
+ "dispositions": {
+  "method": "Round two of 1775. The sweep check of 24 and 25 November 2026 (X-THIN-SWEEP; outputs/story_discovery_1779/sweep_check_25nov.md) read every passage of the 1775 pages shared word for word by 4 or more papers that no counted opening of round one explains, looked each up in the year's lists and counted it by its own opening words against every page of the year in both transcriptions. It found one item printed by every paper that survives for its weeks, which round one's lists did not name; asked, the owner chose on 25 November 2026 to admit it as the rule reads. Every printing was checked against its page scan by AI reviewers (scan_batches/round2.json, SCAN_PROTOCOL.md; verdicts in scan_verdicts/round2*.json).",
+  "selection_rule": "As in round one (Y-THIN as amended, B1): an item printed by every newspaper that survives for its weeks is admitted. The Cambridge paragraph of 3 August is printed by all 6 papers of its weeks.",
+  "items_admitted": {
+   "cambridge-report-a-warm-fire-near-charlestown-neck-august-1775": [
+    "sweep check 1775, A2"
+   ]
+  },
+  "counted_item_by_item": {
+   "The Cambridge report of the firing near Charlestown Neck": "6 of the 6 papers that survive for its weeks (CC 7 August, NHG 8 August, PP and NYG 14 August, VGDH 26 August, VGP 1 September), counted by its own words; only the Pennsylvania Packet prints the dateline 'CAMBRIDGE, August 3.', the others print the paragraph in a run of the camp's news."
+  }
+ },
+ "verdict_summary": {
+  "yes": 6,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 5,
+  "minor_errors": 1,
+  "major_problem": 0,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 6
+ }
+}

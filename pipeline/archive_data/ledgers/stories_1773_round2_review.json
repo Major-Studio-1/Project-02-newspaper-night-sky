@@ -1,0 +1,60 @@
+{
+ "findings": {
+  "S73-209": [
+   "Scan matches the excerpt. The letter names the Lord Camden East-Indiaman, two Dutch men of war and the Aurora."
+  ],
+  "S73-210": [
+   "Scan matches the excerpt, which breaks off at 'with the'; the print goes on 'ship.' and adds that the Aurora sailed from Portsmouth over four years before. This paper prints the figure '2' and 'run away'."
+  ],
+  "S73-211": [
+   "Scan matches the excerpt, except that the print appears to spell 'Frigat', which the transcription gives as 'Frigate'; the crop is small, so that last letter is slightly uncertain."
+  ],
+  "S73-212": [
+   "Scan matches the excerpt."
+  ]
+ },
+ "crops": {
+  "S73-209": [
+   "S73-209.jpg"
+  ],
+  "S73-210": [
+   "S73-210.jpg"
+  ],
+  "S73-211": [
+   "S73-211.jpg"
+  ],
+  "S73-212": [
+   "S73-212.jpg"
+  ]
+ },
+ "boxes": {},
+ "notes": {
+  "S73-210": "Introduces the letter in its own words ('A letter from on board the Lord Cambden East Indiaman, lately arrived from China, says') and prints '2 Dutch men of war' and 'run away': the same letter (C-02)."
+ },
+ "dispositions": {
+  "method": "Round two of 1773. The sweep check of 24 and 25 November 2026 (X-THIN-SWEEP; outputs/story_discovery_1779/sweep_check_25nov.md) read every passage of the 1773 pages shared word for word by 4 or more papers that no counted opening of round one explains, looked each up in the year's lists and counted it by its own opening words against every page of the year in both transcriptions. It found one item printed by every paper that survives for its weeks, which round one's lists did not name; asked, the owner chose on 25 November 2026 to admit it as the rule reads. Every printing was checked against its page scan by AI reviewers (scan_batches/round2.json, SCAN_PROTOCOL.md; verdicts in scan_verdicts/round2*.json).",
+  "selection_rule": "As in round one (Y-THIN as amended, B1): an item printed by every newspaper that survives for its weeks is admitted. The letter from the Lord Camden is printed by all 4 papers of its weeks.",
+  "items_admitted": {
+   "london-letter-from-the-lord-camden-a-pirate-brought-in-1773": [
+    "sweep check 1773, T3"
+   ]
+  },
+  "counted_item_by_item": {
+   "The letter from the Lord Camden": "4 of the 4 papers that survive for its weeks (MS 2 September, NHG 3 September, VG1 and VG2 9 September), counted by its own opening; the New-Hampshire Gazette introduces the same letter in its own words ('A letter from on board the Lord Cambden East Indiaman ... says'), counted with the others (C-02)."
+  }
+ },
+ "verdict_summary": {
+  "yes": 4,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 3,
+  "minor_errors": 1,
+  "major_problem": 0,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 4
+ }
+}

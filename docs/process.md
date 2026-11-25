@@ -312,6 +312,13 @@ The same session gathered the filing problems the thin-year reviews had found, a
 - **Second scans and copies (347 pages):** twelve second scans and the 110 whole second copies filed as "edition 2" (the *Kentucky Gazette* of 1787–1793 most of all) leave the analysis, as second scans did before (C-17). Usable pages: 77,743 → 77,396.
 - **The matched layer:** the moved pages were matched again at their new dates (the stored matches reproduced exactly first): 48,270 matched stories → 48,251, 164,677 printings → 164,217; 21 radio titles were recorded again. No reviewed story gains or loses a paper; 36 reviewed printings take their issues' new dates.
 
+### The sweep check of the thin years (data releases v0.11.42 to v0.11.46, 25 November 2026)
+
+The item finder can join the later paragraphs of a run of news to the item before them, so a single paragraph that the rule counts by its own words could stay unread. A check of 1779 and 1782 found such items, and at the owner's word ("do it") every thin year was swept again: every page for word sequences shared by four or more papers, each find read, looked up in the year's lists and counted by its own words.
+- **134 eligible items** the lists did not name, in 17 years (none in 1770–1772, 1777, 1787, 1789 and 1790).
+- **9 were printed by every paper that survives for their weeks**, which the rule's first part admits. Asked, the owner chose to admit them as the rule reads ("按规则收录"): 1773 the Lord Camden letter, 1775 the fire near Charlestown Neck, 1783 the brig Lucy and the frigate Mercury, 1798 two reports on the Spanish posts at the Natchez, 1799 Milan and Verona in June, the plundered treasures, and Mr. Adams leaving Berlin. Each was reviewed in a second round of its year, every one of its 38 printings checked against its page scan; one release per year (v0.11.42 to v0.11.46). 1798's category "The President, Congress and the navy" is now "The President, Congress, the navy and the frontier".
+- **The other 125** join the not-admitted list (3,279 → 3,404 items): 116 eligible and not chosen, 6 lists or proceedings, and 3 that turn on private persons, listed without names.
+
 ### The data's loose ends (data release v0.11.41, 25 November 2026)
 
 At the owner's word ("do it"), one more correction release closed what v0.11.40 left open (`pipeline/archive_data/correct_loose_ends.py`):
@@ -718,5 +725,5 @@ How it works:
 | Errors found in the archive itself | `pipeline/archive_errata.py`, with every case in [archive-errata/](archive-errata/) |
 | Checks of the matched stories | `pipeline/transcription_check.py` (every printing against the page's other transcription), `pipeline/audit_matched.py` (the 200-story audit); added to the release, one printing per page, by `pipeline/archive_data/add_checks_layer.py` with `merge_printings.py` |
 | Review decisions and corrections | `pipeline/archive_data/ledgers/`, applied by `pipeline/archive_data/apply_ledger.py`; scan crops made by `pipeline/scan_ledger.py` |
-| Data release | [`data/`](../data) (v0.11.41) |
+| Data release | [`data/`](../data) (v0.11.46) |
 | Website | [`site/`](../site), built by `pipeline/build_pulse_explorer.py` from the templates beside it |

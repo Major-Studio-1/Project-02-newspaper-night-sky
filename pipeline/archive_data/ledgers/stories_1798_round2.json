@@ -1,0 +1,267 @@
+{
+  "ledger_id": "ledger:stories-1798-round2",
+  "ledger_version": 1,
+  "base_release": "0.11.44",
+  "target_release": "0.11.45",
+  "recorded_date": "2026-11-25",
+  "namespace": "expansion-1798",
+  "evidence_dir": "outputs/story_discovery_1798/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "A sweep of every page of the year for passages shared word for word by 4 or more papers that no counted opening of round one explains; each passage read, looked up in the year's lists and counted by its own opening words against every page in both transcriptions, by the thin-year rule (Y-THIN as amended on 23 November 2026: items printed by every newspaper that survives for their weeks are admitted; single paragraphs from runs of news counted by their own words, C-09); the items printed by every surviving paper admitted at the owner's word of 25 November 2026; scan checks of each admitted passage",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "outputs/story_discovery_1779/sweep_check_25nov.md": "retrieval_candidates",
+    "outputs/story_discovery_1798/not_admitted_pending/sweep_1798.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1798_round2.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1798_round2_review.json": "scan_review",
+    "outputs/story_discovery_1798/SCAN_PROTOCOL.md": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S98-120",
+      "page_key": "sn83025881|1798-02-14|1|3",
+      "excerpt_start": "NEW-YORK, February 13. IMPORTANT and SATISFACTORY.",
+      "excerpt_end": "the Natchez, and other places within our",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-the-spanish-posts-at-the-natchez-february-1798"
+      ],
+      "summary": "New York, February 1798: a report, by a gentleman from New Orleans, that the Spanish posts at the Natchez had been given up to the American commissioner.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-120.jpg"
+      ],
+      "family": [
+        "R1798-0279"
+      ]
+    },
+    {
+      "id": "S98-121",
+      "page_key": "sn83025881|1798-02-16|1|3",
+      "excerpt_start": "Translated Extract from a paper entitled",
+      "excerpt_end": "his Majesty to evacuate the forts of",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798"
+      ],
+      "summary": "New Orleans, January 1798: a notice in the Moniteur de la Louisiane of the Governor's orders to evacuate the forts of Walnut Hills and Natchez.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt except the paper's name, printed 'Moniteur' and transcribed 'Moneur', a minor garble."
+      ],
+      "crops": [
+        "S98-121.jpg"
+      ]
+    },
+    {
+      "id": "S98-122",
+      "page_key": "sn83025525|1798-02-27|1|3",
+      "excerpt_start": "NEWYORK, FEB. 12. Important and Satisfactory.",
+      "excerpt_end": "the Natchez, and other places within our",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-the-spanish-posts-at-the-natchez-february-1798"
+      ],
+      "summary": "The Mirror prints the New York report on the Spanish posts at the Natchez.",
+      "note": "Dates the report 'NEWYORK, FEB. 12.', where the Gazette of the United States and the Kentucky Gazette print February 13.",
+      "scan_findings": [
+        "Scan matches the excerpt. This paper dates the item 'NEWYORK, FEB. 12.' where GUS and KG print February 13: a printed difference, not a transcription error."
+      ],
+      "crops": [
+        "S98-122.jpg"
+      ],
+      "family": [
+        "R1798-0032",
+        "R1798-0093",
+        "R1798-0260",
+        "R1798-0274",
+        "R1798-0279",
+        "R1798-0289"
+      ]
+    },
+    {
+      "id": "S98-123",
+      "page_key": "sn83025588|1798-02-28|1|2",
+      "excerpt_start": "FEBRUARY 14. By a gentleman of",
+      "excerpt_end": "places within our Territory, on the river",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-the-spanish-posts-at-the-natchez-february-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the New York report on the Spanish posts at the Natchez.",
+      "note": "Prints the report without the heading, under the date line 'FEBRUAY 14.' (so printed), and has 'arrived on Monday' where the others have 'arrived yesterday'.",
+      "scan_findings": [
+        "Scan matches the excerpt, except that the print's misprinted date line 'FEBRUAY 14.' is silently corrected to 'FEBRUARY'. The paper prints no heading, dates the item February 14 and says 'arrived on Monday': printed differences."
+      ],
+      "crops": [
+        "S98-123.jpg"
+      ],
+      "family": [
+        "R1798-0057",
+        "R1798-0276",
+        "R1798-0277",
+        "R1798-0278",
+        "R1798-0296"
+      ]
+    },
+    {
+      "id": "S98-124",
+      "page_key": "sn83025588|1798-02-28|1|3",
+      "excerpt_start": "PHILADELPHIA, Feb. 16. Translated Extract from",
+      "excerpt_end": "the orders of his Majesty to evacuate",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798"
+      ],
+      "summary": "The New Hampshire Gazette prints the Moniteur de la Louisiane's notice on the forts of Walnut Hills and Natchez.",
+      "note": "Prints the extract under 'PHILADELPHIA, Feb. 16.', the dateline of the paper it was taken from, and names the paper 'Moniteur de la Louisiana'.",
+      "scan_findings": [
+        "Scan matches the excerpt except the paper's name: the print reads 'Moniteur de la Louisiana', transcribed 'Moteur de la Louisiane', both minor. This paper's 'Louisiana' for 'Louisiane' is a printed difference."
+      ],
+      "crops": [
+        "S98-124.jpg"
+      ],
+      "family": [
+        "R1798-0067",
+        "R1798-0096",
+        "R1798-0097",
+        "R1798-0297",
+        "R1798-0298",
+        "R1798-0299"
+      ]
+    },
+    {
+      "id": "S98-125",
+      "page_key": "sn83025525|1798-03-06|1|3",
+      "excerpt_start": "New-Orleans, [Spanish Territory] Jan. 15. THE",
+      "excerpt_end": "off the necessary advice to the Natchez.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798"
+      ],
+      "summary": "The Mirror prints the Moniteur de la Louisiane's notice on the forts of Walnut Hills and Natchez.",
+      "note": "Prints the notice under its own heading, 'GOOD NEWS! New-Orleans, [Spanish Territories] Jan. 15.', without naming the Moniteur de la Louisiane, with 'forts at Walnut-Hills' and 'advices to the Natchez' (C-02).",
+      "scan_findings": [
+        "Scan matches the excerpt except 'advices', given as 'advice', and the bracket, which appears to read 'Spanish Territories' where the transcription has 'Territory'; both minor. The paper prints the item under its own heading 'GOOD NEWS!' with the place and date only."
+      ],
+      "crops": [
+        "S98-125.jpg"
+      ],
+      "family": [
+        "R1798-0099",
+        "R1798-0282",
+        "R1798-0288",
+        "R1798-0297",
+        "R1798-0298",
+        "R1798-0301",
+        "R1798-0303"
+      ]
+    },
+    {
+      "id": "S98-126",
+      "page_key": "sn82014782|1798-03-21|1|2",
+      "excerpt_start": "NEW-YORK, February 13. IMPORTANT AND SATISFACTORY.",
+      "excerpt_end": "Natchez and other places within our Territory",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "new-york-report-the-spanish-posts-at-the-natchez-february-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the New York report on the Spanish posts at the Natchez.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S98-126.jpg"
+      ],
+      "family": [
+        "R1797-0027",
+        "R1798-0032"
+      ]
+    },
+    {
+      "id": "S98-127",
+      "page_key": "sn82014782|1798-04-04|1|3",
+      "excerpt_start": "Translated extract from a paper, intitled",
+      "excerpt_end": "majesty to evacuate the forts of Walnut",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798"
+      ],
+      "summary": "The Kentucky Gazette prints the Moniteur de la Louisiane's notice on the forts of Walnut Hills and Natchez.",
+      "note": "Spells the fort 'Natches'.",
+      "scan_findings": [
+        "Scan matches the excerpt; the crop shows the whole item. This paper spells the fort 'Natches': a printed difference."
+      ],
+      "crops": [
+        "S98-127.jpg"
+      ],
+      "family": [
+        "R1798-0343"
+      ],
+      "scan_boxes": [
+        [
+          60,
+          955,
+          445,
+          1365
+        ]
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "new-york-report-the-spanish-posts-at-the-natchez-february-1798",
+      "kind": "message_group",
+      "label": "New York, 13 February 1798: 'IMPORTANT and SATISFACTORY. By a gentleman of respectability, and of this City, arrived yesterday, in 18 days from New Orleans'",
+      "definition": "Printings of a New York paragraph of 13 February 1798, headed 'IMPORTANT and SATISFACTORY': 'By a gentleman of respectability, and of this City, arrived yesterday, in 18 days from New Orleans, we have the pleasing information, that the Spanish Posts at the Natchez, and other places within our territory, on the river Mississippi, had been at length given up to the American Commissioner, and the troops under his direction ...'. A New York report of a traveller's news, as the papers reprinted it; the New Hampshire Gazette prints it without the heading.",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan (round two: printed by every paper that survives for its weeks, found by the sweep check of 24-25 November 2026 and admitted at the owner's word)."
+    },
+    {
+      "id": "moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798",
+      "kind": "message_group",
+      "label": "New Orleans, 15 January 1798: the Moniteur de la Louisiane: 'The Governor of this province having received by the last Courier the orders of his Majesty to evacuate the forts of Walnut Hills and Natchez'",
+      "definition": "Printings of a translated extract from the Moniteur de la Louisiane, printed at New Orleans, dated 15 January 1798: 'The Governor of this province having received by the last Courier the orders of his Majesty to evacuate the forts of Walnut Hills and Natchez, immediately took proper measures for their execution, having sent off the necessary advices for Natchez.' A New Orleans paper's notice, as the American papers reprinted it; the Mirror prints it under its own heading, 'GOOD NEWS! New-Orleans, [Spanish Territories] Jan. 15.' (C-02).",
+      "admission_rule": "Reviewed 1798 printings, checked against the scan (round two: printed by every paper that survives for its weeks, found by the sweep check of 24-25 November 2026 and admitted at the owner's word)."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "Round two of 1798. The sweep check of 24 and 25 November 2026 (X-THIN-SWEEP; outputs/story_discovery_1779/sweep_check_25nov.md) read every passage of the 1798 pages shared word for word by 4 or more papers that no counted opening of round one explains, looked each up in the year's lists and counted it by its own opening words against every page of the year in both transcriptions. It found two items printed by every paper that survives for their weeks, which round one's lists did not name; asked, the owner chose on 25 November 2026 to admit them as the rule reads. Every printing was checked against its page scan by AI reviewers (scan_batches/round2.json, SCAN_PROTOCOL.md; verdicts in scan_verdicts/round2*.json).",
+    "selection_rule": "As in round one (Y-THIN as amended, B1): an item printed by every newspaper that survives for its weeks is admitted. Both items are printed by all 4 papers of their weeks; they are one affair (the Spanish posts on the Mississippi), and each is admitted by its own count, as the rule's first part reads.",
+    "items_admitted": {
+      "new-york-report-the-spanish-posts-at-the-natchez-february-1798": [
+        "sweep check 1798, a"
+      ],
+      "moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798": [
+        "sweep check 1798, b"
+      ]
+    },
+    "counted_item_by_item": {
+      "The New York report 'IMPORTANT and SATISFACTORY'": "4 of the 4 papers that survive for its weeks (GUS 14 February, MIR 27 February, NHG 28 February, KG 21 March), counted by its own opening; the New Hampshire Gazette prints it without the heading.",
+      "The Moniteur de la Louisiane of 15 January": "4 of the 4 papers that survive for its weeks (GUS 16 February, NHG 28 February, MIR 6 March, KG 4 April), counted by its own words; the Mirror prints it under its own heading ('GOOD NEWS! New-Orleans, [Spanish Territory] Jan. 15.'), counted with the others (C-02)."
+    }
+  }
+}

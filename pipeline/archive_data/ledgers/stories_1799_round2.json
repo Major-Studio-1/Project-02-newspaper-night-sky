@@ -1,0 +1,483 @@
+{
+  "ledger_id": "ledger:stories-1799-round2",
+  "ledger_version": 1,
+  "base_release": "0.11.45",
+  "target_release": "0.11.46",
+  "recorded_date": "2026-11-25",
+  "namespace": "expansion-1799",
+  "evidence_dir": "outputs/story_discovery_1799/evidence",
+  "reviewer": "Claude Code (AI assistant). Not an independent human review.",
+  "method": "A sweep of every page of the year for passages shared word for word by 4 or more papers that no counted opening of round one explains; each passage read, looked up in the year's lists and counted by its own opening words against every page in both transcriptions, by the thin-year rule (Y-THIN as amended on 23 November 2026: items printed by every newspaper that survives for their weeks are admitted; single paragraphs from runs of news counted by their own words, C-09); the items printed by every surviving paper admitted at the owner's word of 25 November 2026; scan checks of each admitted passage",
+  "supporting_files": {
+    "work/year_search_pages.py": "retrieval_code",
+    "outputs/story_discovery_1779/sweep_check_25nov.md": "retrieval_candidates",
+    "outputs/story_discovery_1799/not_admitted_pending/sweep_1799.json": "retrieval_candidates",
+    "work/archive_data/ledgers/make_stories_1799_round2.py": "ledger_code",
+    "work/archive_data/ledgers/stories_1799_round2_review.json": "scan_review",
+    "outputs/story_discovery_1799/SCAN_PROTOCOL.md": "review_protocol"
+  },
+  "scan_scope": "Each crop covers the excerpt, the opening of the printed item. Long documents were not proofread in full.",
+  "observations": [
+    {
+      "id": "S99-190",
+      "page_key": "sn83025881|1799-08-06|1|2",
+      "excerpt_start": "The treasures plundered from Rome, Naples,",
+      "excerpt_end": "the hands of the Austrians at Parma.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799"
+      ],
+      "summary": "London, June 1799: a report that the treasures the French took from Rome, Naples and Tuscany had fallen into the hands of the Austrians.",
+      "note": "Earliest printing found.",
+      "scan_findings": [
+        "Scan matches the excerpt; the sentence is a paragraph of its own and ends 'at Parma'."
+      ],
+      "crops": [
+        "S99-190.jpg"
+      ],
+      "family": [
+        "R1799-0039",
+        "R1799-0058",
+        "R1799-0713",
+        "R1799-0714",
+        "R1799-0715",
+        "R1799-0716",
+        "R1799-0717",
+        "R1799-0719"
+      ]
+    },
+    {
+      "id": "S99-191",
+      "page_key": "sn83016063|1799-08-12|1|2",
+      "excerpt_start": "The treasures plundered from Rome, Naples,",
+      "excerpt_end": "fallen into the hands of the Austrians.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799"
+      ],
+      "summary": "Jenks's Portland Gazette prints the London sentence on the plundered treasures.",
+      "note": "Ends the sentence at 'the Austrians', without 'at Parma', run in after a dash.",
+      "scan_findings": [
+        "Scan matches the excerpt; the sentence is run in after a dash and ends at 'the Austrians', without 'at Parma'."
+      ],
+      "crops": [
+        "S99-191.jpg"
+      ],
+      "family": [
+        "R1799-0039",
+        "R1799-0204",
+        "R1799-0726",
+        "R1799-0727"
+      ]
+    },
+    {
+      "id": "S99-192",
+      "page_key": "sn83025588|1799-08-13|1|3",
+      "excerpt_start": "The treasures plundered from Rome, Naples",
+      "excerpt_end": "fallen into the hands of the Austrians.—¶",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799"
+      ],
+      "summary": "The New Hampshire Gazette prints the London sentence on the plundered treasures.",
+      "note": "Ends the sentence at 'the Austrians', without 'at Parma', and adds, after a pointing hand, 'We believe these are facts.'",
+      "scan_findings": [
+        "Scan matches the excerpt; the sentence is run in after the Milan sentence and ends at 'the Austrians', followed by a dash, a pointing hand and 'We believe these are facts.' The transcription renders the pointing hand as '¶'."
+      ],
+      "crops": [
+        "S99-192.jpg"
+      ],
+      "family": [
+        "R1799-0039",
+        "R1799-0058",
+        "R1799-0199",
+        "R1799-0204",
+        "R1799-0706",
+        "R1799-0707"
+      ],
+      "scan_boxes": [
+        [
+          1130,
+          7150,
+          1995,
+          7445
+        ]
+      ]
+    },
+    {
+      "id": "S99-193",
+      "page_key": "sn83021629|1799-08-14|1|1",
+      "excerpt_start": "The treasures plundered from Rome, Naples",
+      "excerpt_end": "the hands of the Austrians at Parma.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799"
+      ],
+      "summary": "The Providence Journal prints the London sentence on the plundered treasures.",
+      "note": "Prints 'at Parmo' (so printed).",
+      "scan_findings": [
+        "Scan matches the excerpt except the last word: the print misspells the town 'Parmo' (read again on the page image), which the transcription silently corrects to 'Parma'. The sentence is a paragraph of its own."
+      ],
+      "crops": [
+        "S99-193.jpg"
+      ],
+      "family": [
+        "R1799-0039",
+        "R1799-0058",
+        "R1799-0081",
+        "R1799-0713",
+        "R1799-0714",
+        "R1799-0715",
+        "R1799-0716",
+        "R1799-0717"
+      ]
+    },
+    {
+      "id": "S99-194",
+      "page_key": "sn83016063|1799-08-26|1|2",
+      "excerpt_start": "After Moreau had detach ed Gcnerats",
+      "excerpt_end": "beat him back as far as Parma.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "milan-report-general-ott-dislodged-near-pontremoli-june-1799"
+      ],
+      "summary": "Jenks's Portland Gazette prints the Milan paragraph of 12 June on General Ott near Pontremoli.",
+      "note": "Prints 'Gen. Victor' in full where the others have 'Gen. V.', and 'Grenter' for Grenier. The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+      "scan_findings": [
+        "The CA text is garbled ('Gcnerats', 'Vittor', 'Vidor', 'diflodged') but changes no fact. The print gives 'Gen. Victor' in full where the other papers have 'Gen. V.', and spells the second general 'Grenter' (read again on the page image) where the others print Grenier."
+      ],
+      "crops": [
+        "S99-194.jpg"
+      ],
+      "transcription_field": "ca_ocr_text"
+    },
+    {
+      "id": "S99-195",
+      "page_key": "sn83016063|1799-08-26|1|2",
+      "excerpt_start": "Gen. Suwar row is haftening with",
+      "excerpt_end": "his whole forces to encounter the enemy.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "verona-report-suwarrow-hastening-towards-genoa-june-1799"
+      ],
+      "summary": "Jenks's Portland Gazette prints the Verona paragraph of 14 June.",
+      "note": "Prints the paragraph abridged: 'Gen. Suwarrow is hastening with the main army towards Genoa, to support Gen. Ott, who is collecting his whole forces to encounter the enemy' (C-02). The RevX transcription of this page is filed under another page, so the excerpt comes from the older CA transcription of this scan page.",
+      "scan_findings": [
+        "The CA text is garbled ('haftening', 'fupport', 'coile&ing') but changes no fact. The print confirms the abridged paragraph, run in after the dateline 'VERONA, JUNE 14.'; it has 'forces' where the other papers have 'force'."
+      ],
+      "crops": [
+        "S99-195.jpg"
+      ],
+      "transcription_field": "ca_ocr_text"
+    },
+    {
+      "id": "S99-196",
+      "page_key": "sn83025881|1799-08-26|1|2",
+      "excerpt_start": "June 12. After Moreau had detached",
+      "excerpt_end": "beat him back as far as Parma.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "milan-report-general-ott-dislodged-near-pontremoli-june-1799"
+      ],
+      "summary": "Milan, June 1799: a report that the French under Generals Victor and Grenier dislodged General Ott near Pontremoli.",
+      "note": "Earliest printing found. Prints 'valley of Tora' and 'General Otto', where the other papers have Taro and Ott.",
+      "scan_findings": [
+        "Scan matches the excerpt. The print itself reads 'valley of Tora' and 'General Otto' where the other papers have Taro and Ott: printed differences, not transcription errors."
+      ],
+      "crops": [
+        "S99-196.jpg"
+      ],
+      "family": [
+        "R1799-0029"
+      ]
+    },
+    {
+      "id": "S99-197",
+      "page_key": "sn83025881|1799-08-26|1|2",
+      "excerpt_start": "VERONA, June 14. In order to",
+      "excerpt_end": "his whole force to encounter the enemy;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "verona-report-suwarrow-hastening-towards-genoa-june-1799"
+      ],
+      "summary": "Verona, June 1799: a report of the armies' movements towards Genoa.",
+      "note": "Earliest printing found. Prints 'has repulsed him. General Otto is now collecting', where the New Hampshire Gazette and the Providence Journal have 'has repulsed General Ott, who is now collecting'.",
+      "scan_findings": [
+        "Scan matches the excerpt except that the transcription drops a faint 'r' from 'Montrichard'. The print's 'has repulsed him. General Otto is now collecting' differs from NHG and PJ ('has repulsed General Ott, who is now collecting'): a printed difference."
+      ],
+      "crops": [
+        "S99-197.jpg"
+      ],
+      "family": [
+        "R1799-0029"
+      ]
+    },
+    {
+      "id": "S99-198",
+      "page_key": "sn83025588|1799-08-27|1|1",
+      "excerpt_start": "JUNE 12. After Moreau had detached",
+      "excerpt_end": "beat him back as far as Parma.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "milan-report-general-ott-dislodged-near-pontremoli-june-1799"
+      ],
+      "summary": "The New Hampshire Gazette prints the Milan paragraph of 12 June on General Ott near Pontremoli.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the paragraph runs from the foot of the first column (crop 1) to the top of the second (crop 2)."
+      ],
+      "crops": [
+        "S99-198-1.jpg",
+        "S99-198-2.jpg"
+      ],
+      "family": [
+        "R1799-0029"
+      ]
+    },
+    {
+      "id": "S99-199",
+      "page_key": "sn83025588|1799-08-27|1|1",
+      "excerpt_start": "VERONA, JUNE 14 In order to",
+      "excerpt_end": "his whole force to encounter the enemy;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "verona-report-suwarrow-hastening-towards-genoa-june-1799"
+      ],
+      "summary": "The New Hampshire Gazette prints the Verona paragraph of 14 June.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S99-199.jpg"
+      ],
+      "family": [
+        "R1799-0029"
+      ]
+    },
+    {
+      "id": "S99-200",
+      "page_key": "sn83021629|1799-08-28|1|1",
+      "excerpt_start": "June 12. After Moreau had detached",
+      "excerpt_end": "beat him back as far as Parma.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "milan-report-general-ott-dislodged-near-pontremoli-june-1799"
+      ],
+      "summary": "The Providence Journal prints the Milan paragraph of 12 June on General Ott near Pontremoli.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt."
+      ],
+      "crops": [
+        "S99-200.jpg"
+      ],
+      "family": [
+        "R1799-0029"
+      ]
+    },
+    {
+      "id": "S99-201",
+      "page_key": "sn83021629|1799-08-28|1|1",
+      "excerpt_start": "VERONA June 14. In order to",
+      "excerpt_end": "his whole force to encounter the enemy;",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "verona-report-suwarrow-hastening-towards-genoa-june-1799"
+      ],
+      "summary": "The Providence Journal prints the Verona paragraph of 14 June.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan reads '8000' men (read again on the page image; the last figure is blotted); the transcription '3000' changes the number. The rest matches."
+      ],
+      "crops": [
+        "S99-201.jpg"
+      ],
+      "family": [
+        "R1799-0029"
+      ]
+    },
+    {
+      "id": "S99-202",
+      "page_key": "sn83016063|1799-09-30|1|3",
+      "excerpt_start": "Mr. Adams, the American minister, has",
+      "excerpt_end": "has left Berlin and proceeded to Dresden.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "report-mr-adams-has-left-berlin-for-dresden-1799"
+      ],
+      "summary": "September 1799: a report that Mr. Adams, the American minister at Berlin, had left for Dresden.",
+      "note": "Earliest printing found. The sentence closes a run of news, a Boston summary of the London news to 12 August (a digest), not set as a paragraph of its own.",
+      "scan_findings": [
+        "Scan matches the excerpt; the sentence closes a run of news and is followed by a heavy rule."
+      ],
+      "crops": [
+        "S99-202.jpg"
+      ],
+      "family": [
+        "R1799-0219",
+        "R1799-0220",
+        "R1799-0807"
+      ]
+    },
+    {
+      "id": "S99-203",
+      "page_key": "sn83025588|1799-10-01|1|2",
+      "excerpt_start": "Mr. Adams, the American minister, has",
+      "excerpt_end": "has left Berlin and proceeded to Dresden.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "report-mr-adams-has-left-berlin-for-dresden-1799"
+      ],
+      "summary": "The New Hampshire Gazette prints the sentence on Mr. Adams leaving Berlin for Dresden.",
+      "note": "Prints the sentence as a paragraph of its own.",
+      "scan_findings": [
+        "Scan matches the excerpt; here the sentence is printed as a short paragraph of its own, not run in with dashes."
+      ],
+      "crops": [
+        "S99-203.jpg"
+      ],
+      "family": [
+        "R1799-0065",
+        "R1799-0219",
+        "R1799-0220",
+        "R1799-0221",
+        "R1799-0810",
+        "R1799-0819"
+      ]
+    },
+    {
+      "id": "S99-204",
+      "page_key": "sn83025881|1799-10-02|1|3",
+      "excerpt_start": "Mr. Adams, the American minister, has",
+      "excerpt_end": "has left Berlin and proceeded to Dresden.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "report-mr-adams-has-left-berlin-for-dresden-1799"
+      ],
+      "summary": "The Gazette of the United States prints the sentence on Mr. Adams leaving Berlin for Dresden.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the sentence stands as a paragraph of its own between two short rules."
+      ],
+      "crops": [
+        "S99-204.jpg"
+      ],
+      "family": [
+        "R1799-0219",
+        "R1799-0221"
+      ]
+    },
+    {
+      "id": "S99-205",
+      "page_key": "sn83021629|1799-10-09|1|3",
+      "excerpt_start": "Mr. Adams, the American minister, has",
+      "excerpt_end": "has left Berlin, and proceeded to Dresden.",
+      "roles": [
+        "report"
+      ],
+      "groups": [
+        "report-mr-adams-has-left-berlin-for-dresden-1799"
+      ],
+      "summary": "The Providence Journal prints the sentence on Mr. Adams leaving Berlin for Dresden.",
+      "note": "Same item as the other printings.",
+      "scan_findings": [
+        "Scan matches the excerpt; the sentence stands as a paragraph of its own between two short rules."
+      ],
+      "crops": [
+        "S99-205.jpg"
+      ],
+      "family": [
+        "R1799-0814",
+        "R1799-0836"
+      ]
+    }
+  ],
+  "new_groups": [
+    {
+      "id": "london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799",
+      "kind": "message_group",
+      "label": "London, June 1799: 'The treasures plundered from Rome, Naples, and Tuscany, by the French, are stated to have fallen into the hands of the Austrians'",
+      "definition": "Printings of a sentence of the London news of June 1799: 'The treasures plundered from Rome, Naples, and Tuscany, by the French, are stated to have fallen into the hands of the Austrians at Parma.' A paragraph of the London news, as the papers reprinted it; the Portland Gazette and the New Hampshire Gazette end it at 'the Austrians', and the Providence Journal prints 'at Parmo'.",
+      "admission_rule": "Reviewed 1799 printings, checked against the scan (round two: printed by every paper that survives for its weeks, found by the sweep check of 24-25 November 2026 and admitted at the owner's word)."
+    },
+    {
+      "id": "milan-report-general-ott-dislodged-near-pontremoli-june-1799",
+      "kind": "message_group",
+      "label": "Milan, 12 June 1799: 'After Moreau had detached Generals Victor and Grenier to Genoa ... They then dislodged General Ott, near Pontremoli'",
+      "definition": "Printings of a dated paragraph of the Milan news of June 1799, under 'June 12.': 'After Moreau had detached Generals Victor and Grenier to Genoa, Gen. V. marched to the valley of Taro, to co-operate with Macdonald. They then dislodged General Ott, near Pontremoli, and beat him back as far as Parma.' A paragraph of the news from Italy, as the London papers gave it and the papers reprinted it, after the paragraph on General Bellegarde; the Gazette of the United States prints 'valley of Tora' and 'General Otto', and the Portland Gazette 'Grenter'.",
+      "admission_rule": "Reviewed 1799 printings, checked against the scan (round two: printed by every paper that survives for its weeks, found by the sweep check of 24-25 November 2026 and admitted at the owner's word)."
+    },
+    {
+      "id": "verona-report-suwarrow-hastening-towards-genoa-june-1799",
+      "kind": "message_group",
+      "label": "Verona, 14 June 1799: 'In order to cover Macdonald's march by Sarzana to Genoa' ... 'Suwarrow is hastening with the main army towards Genoa'",
+      "definition": "Printings of a paragraph of the news from Italy dated Verona, 14 June 1799: 'In order to cover Macdonald's march by Sarzana to Genoa, Gen. Montrichard was obliged to make a movement with 8000 men against Modena; but Gen. Hohenzollern has repulsed him. General Otto is now collecting his whole force to encounter the enemy; and General Suwarow is hastening with the main army towards Genoa, to support him.' A paragraph of the news from Italy, as the London papers gave it and the papers reprinted it; the New Hampshire Gazette and the Providence Journal print 'has repulsed General Ott, who is now collecting', and the Portland Gazette prints the paragraph abridged (C-02).",
+      "admission_rule": "Reviewed 1799 printings, checked against the scan (round two: printed by every paper that survives for its weeks, found by the sweep check of 24-25 November 2026 and admitted at the owner's word)."
+    },
+    {
+      "id": "report-mr-adams-has-left-berlin-for-dresden-1799",
+      "kind": "message_group",
+      "label": "September 1799: 'Mr. Adams, the American minister, has left Berlin and proceeded to Dresden'",
+      "definition": "Printings of a sentence of the news of September 1799: 'Mr. Adams, the American minister, has left Berlin and proceeded to Dresden.' A news paragraph as the papers printed it: a paragraph of its own in the Gazette of the United States, the Providence Journal and the New Hampshire Gazette; in the Portland Gazette, the sentence that closes a Boston summary of the London news to 12 August.",
+      "admission_rule": "Reviewed 1799 printings, checked against the scan (round two: printed by every paper that survives for its weeks, found by the sweep check of 24-25 November 2026 and admitted at the owner's word)."
+    }
+  ],
+  "new_hierarchy": [],
+  "added_memberships": [],
+  "new_relations": [],
+  "dispositions_summary": {
+    "method": "Round two of 1799. The sweep check of 24 and 25 November 2026 (X-THIN-SWEEP; outputs/story_discovery_1779/sweep_check_25nov.md) read every passage of the 1799 pages shared word for word by 4 or more papers that no counted opening of round one explains, looked each up in the year's lists and counted it by its own opening words against every page of the year in both transcriptions. It found four items printed by every paper that survives for their weeks (the weeks of July to October, when four papers survive, X-1799-01), which round one's lists did not name; asked, the owner chose on 25 November 2026 to admit them as the rule reads. Every printing was checked against its page scan by AI reviewers (scan_batches/round2.json, SCAN_PROTOCOL.md; verdicts in scan_verdicts/round2*.json).",
+    "selection_rule": "As in round one (Y-THIN as amended, B1, and X-1799-01): an item printed by every newspaper that survives for its weeks is admitted; single paragraphs from runs of news are counted by their own words (C-09). Each of the four is printed by all 4 papers of its weeks.",
+    "items_admitted": {
+      "london-report-the-plundered-treasures-in-the-hands-of-the-austrians-1799": [
+        "sweep check 1799, c"
+      ],
+      "milan-report-general-ott-dislodged-near-pontremoli-june-1799": [
+        "sweep check 1799, a3"
+      ],
+      "verona-report-suwarrow-hastening-towards-genoa-june-1799": [
+        "sweep check 1799, b3"
+      ],
+      "report-mr-adams-has-left-berlin-for-dresden-1799": [
+        "sweep check 1799, f"
+      ]
+    },
+    "counted_item_by_item": {
+      "The plundered treasures": "4 of the 4 papers that survive for its weeks (GUS 6 August, PG 12 August, NHG 13 August, PJ 14 August), counted by its own words; the Portland Gazette and the New Hampshire Gazette end the sentence at 'the Austrians', without 'at Parma', and the Providence Journal prints 'at Parmo'.",
+      "Milan, 12 June": "4 of 4 (GUS and PG 26 August, NHG 27 August, PJ 28 August), counted by its own opening; a dated paragraph of the Milan news after the paragraph on General Bellegarde (admitted in round one); the Portland Gazette's page is read in its CA transcription, which garbles it.",
+      "Verona, 14 June": "4 of 4 on the same pages, counted by its own opening; the New Hampshire Gazette and the Providence Journal print 'has repulsed General Ott, who is now collecting' where the Gazette of the United States has 'has repulsed him. General Otto is now collecting', and the Portland Gazette prints the paragraph abridged (C-02).",
+      "Mr. Adams": "4 of 4 (PG 30 September, NHG 1 October, GUS 2 October, PJ 9 October), counted by its own words; in the Portland Gazette the sentence closes a Boston summary of the London news to 12 August (a digest, C-09) and is counted as a printing of the sentence; in the other three it is a paragraph of its own."
+    }
+  }
+}

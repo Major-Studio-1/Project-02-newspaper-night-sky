@@ -51,10 +51,10 @@ pages, where only some are concerned), what is wrong, how it was found, and what
   range of days and are filed under its first day, though each appeared on its last; the collection files other such papers
   under the last day. Data release v0.11.40 corrects 296 of these issues and v0.11.41 corrects the other 23 (`pipeline/errata_1784_1786/`).
 
-## `transcription.csv`: 758 printings whose transcription changes what was printed
+## `transcription.csv`: 762 printings whose transcription changes what was printed
 
 Every printing of the reviewed stories of 1770, 1771, 1772, 1773, 1774, 1775, 1776, 1777, 1778, 1779, 1780, 1781, 1782, 1783, 1787, 1788, 1789, 1790, 1791, 1792, 1793, 1794, 1795, 1796, 1797, 1798, 1799, 1800, 1801, 1802, 1803, 1804, 1805, 1806, 1807, 1808, 1809 and 1810 was read against its scan:
-6352 printings, of which 756 (12%) carry a misreading
+6390 printings, of which 760 (12%) carry a misreading
 that changes a fact (a number, a date, a name, or a word with another meaning) or leave printed text out. For 1797 the count is the 33 printings of its later reading; its other 108 were checked against their scans before verdicts were recorded in this form. One row per
 printing: the newspaper, the date and page, which transcription the passage was taken from (RevX, or CA where RevX is
 missing or misfiled), whether printed text is left out, and the reviewers' notes, mostly in the form
@@ -65,9 +65,9 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 | 1770 | 12 | 1 |
 | 1771 | 4 | 1 |
 | 1772 | 52 | 2 |
-| 1773 | 208 | 16 |
+| 1773 | 212 | 16 |
 | 1774 | 159 | 21 |
-| 1775 | 206 | 24 |
+| 1775 | 212 | 24 |
 | 1776 | 350 | 50 |
 | 1777 | 186 | 35 |
 | 1778 | 161 | 22 |
@@ -75,7 +75,7 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 | 1780 | 142 | 21 |
 | 1781 | 144 | 7 |
 | 1782 | 166 | 17 |
-| 1783 | 109 | 13 |
+| 1783 | 113 | 16 |
 | 1787 | 54 | 8 |
 | 1788 | 30 | 1 |
 | 1789 | 24 | 2 |
@@ -87,8 +87,8 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 | 1795 | 102 | 14 |
 | 1796 | 116 | 31 |
 | 1797 | 33 | 3 |
-| 1798 | 118 | 8 |
-| 1799 | 189 | 27 |
+| 1798 | 126 | 8 |
+| 1799 | 205 | 28 |
 | 1800 | 182 | 25 |
 | 1801 | 160 | 25 |
 | 1802 | 132 | 23 |
@@ -103,7 +103,7 @@ missing or misfiled), whether printed text is left out, and the reviewers' notes
 
 Examples: "ſtaves" read as "slaves" in 8 of the 9 printings of the resolution of
 Congress opening the ports (1776); "WAR INEVITABLE!!!" read as "NECESSARY INFORMATION!!" (1807); "Junot" read as "Juan" and
-"(MURAT.)" as "(MANUEL.)" (1808). 188 of the 756 leave printed text out, often
+"(MURAT.)" as "(MANUEL.)" (1808). 188 of the 760 leave printed text out, often
 behind a bare "...".
 
 No review read 1784, 1785 or 1786 (too few papers survive for any item to reach the bar), so these years were checked on a

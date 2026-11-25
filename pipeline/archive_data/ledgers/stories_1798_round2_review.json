@@ -1,0 +1,102 @@
+{
+ "findings": {
+  "S98-120": [
+   "Scan matches the excerpt."
+  ],
+  "S98-121": [
+   "Scan matches the excerpt except the paper's name, printed 'Moniteur' and transcribed 'Moneur', a minor garble."
+  ],
+  "S98-122": [
+   "Scan matches the excerpt. This paper dates the item 'NEWYORK, FEB. 12.' where GUS and KG print February 13: a printed difference, not a transcription error."
+  ],
+  "S98-123": [
+   "Scan matches the excerpt, except that the print's misprinted date line 'FEBRUAY 14.' is silently corrected to 'FEBRUARY'. The paper prints no heading, dates the item February 14 and says 'arrived on Monday': printed differences."
+  ],
+  "S98-124": [
+   "Scan matches the excerpt except the paper's name: the print reads 'Moniteur de la Louisiana', transcribed 'Moteur de la Louisiane', both minor. This paper's 'Louisiana' for 'Louisiane' is a printed difference."
+  ],
+  "S98-125": [
+   "Scan matches the excerpt except 'advices', given as 'advice', and the bracket, which appears to read 'Spanish Territories' where the transcription has 'Territory'; both minor. The paper prints the item under its own heading 'GOOD NEWS!' with the place and date only."
+  ],
+  "S98-126": [
+   "Scan matches the excerpt."
+  ],
+  "S98-127": [
+   "Scan matches the excerpt; the crop shows the whole item. This paper spells the fort 'Natches': a printed difference."
+  ]
+ },
+ "crops": {
+  "S98-120": [
+   "S98-120.jpg"
+  ],
+  "S98-121": [
+   "S98-121.jpg"
+  ],
+  "S98-122": [
+   "S98-122.jpg"
+  ],
+  "S98-123": [
+   "S98-123.jpg"
+  ],
+  "S98-124": [
+   "S98-124.jpg"
+  ],
+  "S98-125": [
+   "S98-125.jpg"
+  ],
+  "S98-126": [
+   "S98-126.jpg"
+  ],
+  "S98-127": [
+   "S98-127.jpg"
+  ]
+ },
+ "boxes": {
+  "S98-127": [
+   [
+    60,
+    955,
+    445,
+    1365
+   ]
+  ]
+ },
+ "notes": {
+  "S98-122": "Dates the report 'NEWYORK, FEB. 12.', where the Gazette of the United States and the Kentucky Gazette print February 13.",
+  "S98-123": "Prints the report without the heading, under the date line 'FEBRUAY 14.' (so printed), and has 'arrived on Monday' where the others have 'arrived yesterday'.",
+  "S98-124": "Prints the extract under 'PHILADELPHIA, Feb. 16.', the dateline of the paper it was taken from, and names the paper 'Moniteur de la Louisiana'.",
+  "S98-125": "Prints the notice under its own heading, 'GOOD NEWS! New-Orleans, [Spanish Territories] Jan. 15.', without naming the Moniteur de la Louisiane, with 'forts at Walnut-Hills' and 'advices to the Natchez' (C-02).",
+  "S98-127": "Spells the fort 'Natches'."
+ },
+ "dispositions": {
+  "method": "Round two of 1798. The sweep check of 24 and 25 November 2026 (X-THIN-SWEEP; outputs/story_discovery_1779/sweep_check_25nov.md) read every passage of the 1798 pages shared word for word by 4 or more papers that no counted opening of round one explains, looked each up in the year's lists and counted it by its own opening words against every page of the year in both transcriptions. It found two items printed by every paper that survives for their weeks, which round one's lists did not name; asked, the owner chose on 25 November 2026 to admit them as the rule reads. Every printing was checked against its page scan by AI reviewers (scan_batches/round2.json, SCAN_PROTOCOL.md; verdicts in scan_verdicts/round2*.json).",
+  "selection_rule": "As in round one (Y-THIN as amended, B1): an item printed by every newspaper that survives for its weeks is admitted. Both items are printed by all 4 papers of their weeks; they are one affair (the Spanish posts on the Mississippi), and each is admitted by its own count, as the rule's first part reads.",
+  "items_admitted": {
+   "new-york-report-the-spanish-posts-at-the-natchez-february-1798": [
+    "sweep check 1798, a"
+   ],
+   "moniteur-de-la-louisiane-the-governor-to-evacuate-the-forts-january-1798": [
+    "sweep check 1798, b"
+   ]
+  },
+  "counted_item_by_item": {
+   "The New York report 'IMPORTANT and SATISFACTORY'": "4 of the 4 papers that survive for its weeks (GUS 14 February, MIR 27 February, NHG 28 February, KG 21 March), counted by its own opening; the New Hampshire Gazette prints it without the heading.",
+   "The Moniteur de la Louisiane of 15 January": "4 of the 4 papers that survive for its weeks (GUS 16 February, NHG 28 February, MIR 6 March, KG 4 April), counted by its own words; the Mirror prints it under its own heading ('GOOD NEWS! New-Orleans, [Spanish Territory] Jan. 15.'), counted with the others (C-02)."
+  }
+ },
+ "verdict_summary": {
+  "yes": 8,
+  "partly": 0,
+  "no": 0
+ },
+ "transcription_summary": {
+  "faithful": 4,
+  "minor_errors": 4,
+  "major_problem": 0,
+  "not_checked": 0
+ },
+ "crop_methods": {
+  "pdf_text_layer": 7,
+  "manual_box": 1
+ }
+}
