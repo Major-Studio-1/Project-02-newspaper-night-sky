@@ -171,7 +171,9 @@ def sample():
 # introduction each (radio.js joinClips picks the host).
 ANNOUNCER = 'am_michael'
 HOSTS = [('a', 'am_michael'), ('b', 'af_heart')]
-READERS = ['af_bella', 'af_nicole', 'bf_emma', 'bm_george', 'bm_fable', 'af_sarah', 'am_fenrir', 'am_michael', 'am_puck']
+# 2026-11-25: af_nicole, a whispered voice ('like whispering and sounds a bit creepy', the owner), gave way to af_kore in
+# the same place of each list, at the owner's choice after samples, so every other paper and town keeps its voice.
+READERS = ['af_bella', 'af_kore', 'bf_emma', 'bm_george', 'bm_fable', 'af_sarah', 'am_fenrir', 'am_michael', 'am_puck']
 CLIPS = MODELS / 'clips'                      # rendered clips, kept outside the repository (rendering is slow)
 AUDIO = SITE / 'audio'                        # what the site loads: index.json and the packs
 MANIFEST = ROOT / 'work' / 'audio_manifest.json'
@@ -207,7 +209,7 @@ def reader_of(key):
     return READERS[fnv(key) % len(READERS)]
 
 
-FEMALE = ['af_bella', 'af_nicole', 'bf_emma', 'af_sarah']
+FEMALE = ['af_bella', 'af_kore', 'bf_emma', 'af_sarah']
 MALE = ['bm_george', 'bm_fable', 'am_fenrir', 'am_puck']   # am_michael is also a host, so he takes on no new titles
 
 
